@@ -26,6 +26,29 @@
  *                and reported separately, so the map stays honest about what
  *                exists and what was set aside. Whatever *is* written in them
  *                still counts in the page total.
+ *
+ * ── Imported tracks ───────────────────────────────────────────────────────
+ * `imported`     set on a *language* moved in wholesale from the separate
+ *                `frontend-bible` repo on 2026-08-14. Every page already
+ *                exists, so counting pages would report all eleven tracks at
+ *                100% the day they landed — which is exactly what the homepage
+ *                used to imply by showing them no numbers at all. For these,
+ *                "how complete" means **validated to this bible's page
+ *                contract**, not "has text".
+ * `verified`     per phase, on imported tracks only: how many of that chapter's
+ *                pages carry BOTH a tier badge and a dated `> Verified:` line —
+ *                the two marks the F2 conversion pass adds and nothing in the
+ *                raw import has. A phase with `verified` set is scored on that
+ *                number rather than on `pages`, so an imported track starts at
+ *                0% with its page count intact and climbs one validated page at
+ *                a time. Re-measure it, never estimate it — for each chapter
+ *                directory under `docs/<track>/pages`, count the leaf pages
+ *                (README excluded) matching BOTH `db-tier t-` and a line
+ *                starting `> Verified:`.
+ *
+ *                The plan these numbers track is
+ *                `devbible/project_frontend_toolchain_currency_plan.md` in the
+ *                memory store (passes F0–F3).
  */
 
 export const LANGUAGES = {
@@ -323,151 +346,157 @@ export const LANGUAGES = {
   },
   'vite': {
     label: "Vite",
+    imported: true,
     updated: '2026-08-14 13:35',
     docsPath: '/docs/vite',
     pagesPath: '/docs/vite/pages',
     phases: [
-      {n: 1, slug: '01-core-architecture', name: "Core architecture", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 2, slug: '02-cli-and-scaffolding', name: "Cli and scaffolding", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 3, slug: '03-configuration', name: "Configuration", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 4, slug: '04-dev-server-mechanics', name: "Dev server mechanics", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 5, slug: '05-build-system-rollup', name: "Build system rollup", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 6, slug: '06-asset-handling', name: "Asset handling", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 7, slug: '07-env-variables-and-modes', name: "Env variables and modes", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 8, slug: '08-plugin-system', name: "Plugin system", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 9, slug: '09-css-handling', name: "Css handling", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 10, slug: '10-ssr-support', name: "Ssr support", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 11, slug: '11-optimization-and-performance', name: "Optimization and performance", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 12, slug: '12-path-resolution-and-aliases', name: "Path resolution and aliases", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 13, slug: '13-worker-and-wasm-support', name: "Worker and wasm support", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 14, slug: '14-testing-integration', name: "Testing integration", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 15, slug: '15-deployment-considerations', name: "Deployment considerations", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 16, slug: '16-migration-recipes', name: "Migration recipes", part: 'Imported corpus', topics: 1, pages: 1},
+      {n: 1, slug: '01-core-architecture', name: "Core architecture", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 2, slug: '02-cli-and-scaffolding', name: "Cli and scaffolding", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 3, slug: '03-configuration', name: "Configuration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 4, slug: '04-dev-server-mechanics', name: "Dev server mechanics", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 5, slug: '05-build-system-rollup', name: "Build system rollup", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 6, slug: '06-asset-handling', name: "Asset handling", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 7, slug: '07-env-variables-and-modes', name: "Env variables and modes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 8, slug: '08-plugin-system', name: "Plugin system", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 9, slug: '09-css-handling', name: "Css handling", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 10, slug: '10-ssr-support', name: "Ssr support", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 11, slug: '11-optimization-and-performance', name: "Optimization and performance", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 12, slug: '12-path-resolution-and-aliases', name: "Path resolution and aliases", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 13, slug: '13-worker-and-wasm-support', name: "Worker and wasm support", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 14, slug: '14-testing-integration', name: "Testing integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 15, slug: '15-deployment-considerations', name: "Deployment considerations", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 16, slug: '16-migration-recipes', name: "Migration recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
     ],
   },
   'webpack': {
     label: "Webpack",
+    imported: true,
     updated: '2026-08-14 13:35',
     docsPath: '/docs/webpack',
     pagesPath: '/docs/webpack/pages',
     phases: [
-      {n: 1, slug: '01-core-concepts', name: "Core concepts", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 2, slug: '02-configuration', name: "Configuration", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 3, slug: '03-module-resolution', name: "Module resolution", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 4, slug: '04-loaders', name: "Loaders", part: 'Imported corpus', topics: 2, pages: 2},
-      {n: 5, slug: '05-asset-modules', name: "Asset modules", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 6, slug: '06-plugins', name: "Plugins", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 7, slug: '07-code-splitting', name: "Code splitting", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 8, slug: '08-optimization', name: "Optimization", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 9, slug: '09-dev-server-and-hmr', name: "Dev server and hmr", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 10, slug: '10-caching-strategies', name: "Caching strategies", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 11, slug: '11-module-federation', name: "Module federation", part: 'Imported corpus', topics: 5, pages: 5},
-      {n: 12, slug: '12-source-maps', name: "Source maps", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 13, slug: '13-multi-config-and-environment', name: "Multi config and environment", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 14, slug: '14-performance-analysis', name: "Performance analysis", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 15, slug: '15-advanced-custom-tooling', name: "Advanced custom tooling", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1},
+      {n: 1, slug: '01-core-concepts', name: "Core concepts", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 2, slug: '02-configuration', name: "Configuration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 3, slug: '03-module-resolution', name: "Module resolution", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 4, slug: '04-loaders', name: "Loaders", part: 'Imported corpus', topics: 2, pages: 2, verified: 0},
+      {n: 5, slug: '05-asset-modules', name: "Asset modules", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 6, slug: '06-plugins', name: "Plugins", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 7, slug: '07-code-splitting', name: "Code splitting", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 8, slug: '08-optimization', name: "Optimization", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 9, slug: '09-dev-server-and-hmr', name: "Dev server and hmr", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 10, slug: '10-caching-strategies', name: "Caching strategies", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 11, slug: '11-module-federation', name: "Module federation", part: 'Imported corpus', topics: 5, pages: 5, verified: 0},
+      {n: 12, slug: '12-source-maps', name: "Source maps", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 13, slug: '13-multi-config-and-environment', name: "Multi config and environment", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 14, slug: '14-performance-analysis', name: "Performance analysis", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 15, slug: '15-advanced-custom-tooling', name: "Advanced custom tooling", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
     ],
   },
   'babel': {
     label: "Babel",
+    imported: true,
     updated: '2026-08-14 13:35',
     docsPath: '/docs/babel',
     pagesPath: '/docs/babel/pages',
     phases: [
-      {n: 1, slug: '01-why-babel-and-the-compiler-landscape', name: "Why babel and the compiler landscape", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 2, slug: '02-core-compilation-pipeline', name: "Core compilation pipeline", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 3, slug: '03-configuration-system', name: "Configuration system", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 4, slug: '04-presets', name: "Presets", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 5, slug: '05-plugin-ecosystem', name: "Plugin ecosystem", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 6, slug: '06-authoring-custom-plugins', name: "Authoring custom plugins", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 7, slug: '07-typescript-and-jsx-handling', name: "Typescript and jsx handling", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 8, slug: '08-build-tool-integration', name: "Build tool integration", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 9, slug: '09-linter-and-type-checker-interop', name: "Linter and type checker interop", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 10, slug: '10-source-maps-and-debugging', name: "Source maps and debugging", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 11, slug: '11-performance-and-caching', name: "Performance and caching", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 12, slug: '12-monorepo-and-multi-package-strategies', name: "Monorepo and multi package strategies", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 13, slug: '13-cli-and-programmatic-tooling', name: "Cli and programmatic tooling", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 14, slug: '14-nodejs-backend-usage', name: "Nodejs backend usage", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 15, slug: '15-migration-and-decision-recipes', name: "Migration and decision recipes", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1},
+      {n: 1, slug: '01-why-babel-and-the-compiler-landscape', name: "Why babel and the compiler landscape", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 2, slug: '02-core-compilation-pipeline', name: "Core compilation pipeline", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 3, slug: '03-configuration-system', name: "Configuration system", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 4, slug: '04-presets', name: "Presets", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 5, slug: '05-plugin-ecosystem', name: "Plugin ecosystem", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 6, slug: '06-authoring-custom-plugins', name: "Authoring custom plugins", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 7, slug: '07-typescript-and-jsx-handling', name: "Typescript and jsx handling", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 8, slug: '08-build-tool-integration', name: "Build tool integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 9, slug: '09-linter-and-type-checker-interop', name: "Linter and type checker interop", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 10, slug: '10-source-maps-and-debugging', name: "Source maps and debugging", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 11, slug: '11-performance-and-caching', name: "Performance and caching", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 12, slug: '12-monorepo-and-multi-package-strategies', name: "Monorepo and multi package strategies", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 13, slug: '13-cli-and-programmatic-tooling', name: "Cli and programmatic tooling", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 14, slug: '14-nodejs-backend-usage', name: "Nodejs backend usage", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 15, slug: '15-migration-and-decision-recipes', name: "Migration and decision recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
     ],
   },
   'eslint-oxlint': {
     label: "ESLint & Oxlint",
+    imported: true,
     updated: '2026-08-14 13:35',
     docsPath: '/docs/eslint-oxlint',
     pagesPath: '/docs/eslint-oxlint/pages',
     phases: [
-      {n: 1, slug: '01-linting-landscape-and-tooling-decisions', name: "Linting landscape and tooling decisions", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 2, slug: '02-eslint-core-architecture', name: "Eslint core architecture", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 3, slug: '03-eslint-flat-config', name: "Eslint flat config", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 4, slug: '04-eslint-language-options-globals-and-parsing', name: "Eslint language options globals and parsing", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 5, slug: '05-eslint-rules-system', name: "Eslint rules system", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 6, slug: '06-eslint-plugin-ecosystem', name: "Eslint plugin ecosystem", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 7, slug: '07-typescript-eslint', name: "Typescript eslint", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 8, slug: '08-eslint-cli-output-cache-and-fixes', name: "Eslint cli output cache and fixes", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 9, slug: '09-eslint-suppressions-ignores-and-governance', name: "Eslint suppressions ignores and governance", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 10, slug: '10-custom-eslint-rules-and-processors', name: "Custom eslint rules and processors", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 11, slug: '11-eslint-editor-and-local-workflow', name: "Eslint editor and local workflow", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 12, slug: '12-oxlint-core-architecture', name: "Oxlint core architecture", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 13, slug: '13-oxlint-installation-cli-and-config-files', name: "Oxlint installation cli and config files", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 14, slug: '14-oxlint-native-plugins-and-rule-coverage', name: "Oxlint native plugins and rule coverage", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 15, slug: '15-oxlint-type-aware-linting-and-multi-file-analysis', name: "Oxlint type aware linting and multi file analysis", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 16, slug: '16-oxlint-js-plugins-and-extensibility', name: "Oxlint js plugins and extensibility", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 17, slug: '17-oxlint-fixes-ignores-and-diagnostics', name: "Oxlint fixes ignores and diagnostics", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 18, slug: '18-coexistence-eslint-and-oxlint', name: "Coexistence eslint and oxlint", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 19, slug: '19-migration-paths', name: "Migration paths", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 20, slug: '20-ci-monorepos-and-performance-engineering', name: "Ci monorepos and performance engineering", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 21, slug: '21-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1},
+      {n: 1, slug: '01-linting-landscape-and-tooling-decisions', name: "Linting landscape and tooling decisions", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 2, slug: '02-eslint-core-architecture', name: "Eslint core architecture", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 3, slug: '03-eslint-flat-config', name: "Eslint flat config", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 4, slug: '04-eslint-language-options-globals-and-parsing', name: "Eslint language options globals and parsing", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 5, slug: '05-eslint-rules-system', name: "Eslint rules system", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 6, slug: '06-eslint-plugin-ecosystem', name: "Eslint plugin ecosystem", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 7, slug: '07-typescript-eslint', name: "Typescript eslint", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 8, slug: '08-eslint-cli-output-cache-and-fixes', name: "Eslint cli output cache and fixes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 9, slug: '09-eslint-suppressions-ignores-and-governance', name: "Eslint suppressions ignores and governance", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 10, slug: '10-custom-eslint-rules-and-processors', name: "Custom eslint rules and processors", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 11, slug: '11-eslint-editor-and-local-workflow', name: "Eslint editor and local workflow", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 12, slug: '12-oxlint-core-architecture', name: "Oxlint core architecture", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 13, slug: '13-oxlint-installation-cli-and-config-files', name: "Oxlint installation cli and config files", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 14, slug: '14-oxlint-native-plugins-and-rule-coverage', name: "Oxlint native plugins and rule coverage", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 15, slug: '15-oxlint-type-aware-linting-and-multi-file-analysis', name: "Oxlint type aware linting and multi file analysis", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 16, slug: '16-oxlint-js-plugins-and-extensibility', name: "Oxlint js plugins and extensibility", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 17, slug: '17-oxlint-fixes-ignores-and-diagnostics', name: "Oxlint fixes ignores and diagnostics", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 18, slug: '18-coexistence-eslint-and-oxlint', name: "Coexistence eslint and oxlint", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 19, slug: '19-migration-paths', name: "Migration paths", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 20, slug: '20-ci-monorepos-and-performance-engineering', name: "Ci monorepos and performance engineering", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 21, slug: '21-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
     ],
   },
   'jest-rtl': {
     label: "Jest & RTL",
+    imported: true,
     updated: '2026-08-19 20:59',
     docsPath: '/docs/jest-rtl',
     pagesPath: '/docs/jest-rtl/pages',
     phases: [
-      {n: 1, slug: '01-jest-core-concepts', name: "Jest core concepts", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 2, slug: '02-assertions-and-matchers', name: "Assertions and matchers", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 3, slug: '03-mocking', name: "Mocking", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 4, slug: '04-async-testing', name: "Async testing", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 5, slug: '05-snapshot-testing', name: "Snapshot testing", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 6, slug: '06-coverage-and-configuration', name: "Coverage and configuration", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 7, slug: '07-rtl-core-philosophy', name: "Rtl core philosophy", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 8, slug: '08-rtl-queries', name: "Rtl queries", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 9, slug: '09-user-interaction', name: "User interaction", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 10, slug: '10-async-utilities', name: "Async utilities", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 11, slug: '11-custom-render', name: "Custom render", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 12, slug: '12-mocking-network-requests', name: "Mocking network requests", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 13, slug: '13-testing-hooks', name: "Testing hooks", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 14, slug: '14-accessibility-testing', name: "Accessibility testing", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 15, slug: '15-debugging-tests', name: "Debugging tests", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1},
+      {n: 1, slug: '01-jest-core-concepts', name: "Jest core concepts", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 2, slug: '02-assertions-and-matchers', name: "Assertions and matchers", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 3, slug: '03-mocking', name: "Mocking", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 4, slug: '04-async-testing', name: "Async testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 5, slug: '05-snapshot-testing', name: "Snapshot testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 6, slug: '06-coverage-and-configuration', name: "Coverage and configuration", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 7, slug: '07-rtl-core-philosophy', name: "Rtl core philosophy", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 8, slug: '08-rtl-queries', name: "Rtl queries", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 9, slug: '09-user-interaction', name: "User interaction", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 10, slug: '10-async-utilities', name: "Async utilities", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 11, slug: '11-custom-render', name: "Custom render", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 12, slug: '12-mocking-network-requests', name: "Mocking network requests", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 13, slug: '13-testing-hooks', name: "Testing hooks", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 14, slug: '14-accessibility-testing', name: "Accessibility testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 15, slug: '15-debugging-tests', name: "Debugging tests", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
     ],
   },
   'playwright': {
     label: "Playwright",
+    imported: true,
     updated: '2026-08-14 13:35',
     docsPath: '/docs/playwright',
     pagesPath: '/docs/playwright/pages',
     phases: [
-      {n: 1, slug: '01-core-architecture', name: "Core architecture", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 2, slug: '02-test-runner', name: "Test runner", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 3, slug: '03-locators', name: "Locators", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 4, slug: '04-actions-and-interactions', name: "Actions and interactions", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 5, slug: '05-auto-waiting-and-assertions', name: "Auto waiting and assertions", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 6, slug: '06-navigation-and-network', name: "Navigation and network", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 7, slug: '07-authentication-and-state', name: "Authentication and state", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 8, slug: '08-fixtures-and-test-isolation', name: "Fixtures and test isolation", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 9, slug: '09-visual-and-screenshot-testing', name: "Visual and screenshot testing", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 10, slug: '10-debugging-tools', name: "Debugging tools", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 11, slug: '11-parallelism-and-sharding', name: "Parallelism and sharding", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 12, slug: '12-component-testing', name: "Component testing", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 13, slug: '13-api-testing', name: "Api testing", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 14, slug: '14-ci-integration', name: "Ci integration", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 15, slug: '15-advanced-patterns', name: "Advanced patterns", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1},
+      {n: 1, slug: '01-core-architecture', name: "Core architecture", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 2, slug: '02-test-runner', name: "Test runner", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 3, slug: '03-locators', name: "Locators", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 4, slug: '04-actions-and-interactions', name: "Actions and interactions", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 5, slug: '05-auto-waiting-and-assertions', name: "Auto waiting and assertions", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 6, slug: '06-navigation-and-network', name: "Navigation and network", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 7, slug: '07-authentication-and-state', name: "Authentication and state", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 8, slug: '08-fixtures-and-test-isolation', name: "Fixtures and test isolation", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 9, slug: '09-visual-and-screenshot-testing', name: "Visual and screenshot testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 10, slug: '10-debugging-tools', name: "Debugging tools", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 11, slug: '11-parallelism-and-sharding', name: "Parallelism and sharding", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 12, slug: '12-component-testing', name: "Component testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 13, slug: '13-api-testing', name: "Api testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 14, slug: '14-ci-integration', name: "Ci integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 15, slug: '15-advanced-patterns', name: "Advanced patterns", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
     ],
   },
   nextjs: {
@@ -500,113 +529,118 @@ export const LANGUAGES = {
   },
   'redux-toolkit': {
     label: "Redux Toolkit",
+    imported: true,
     updated: '2026-08-14 13:35',
     docsPath: '/docs/redux-toolkit',
     pagesPath: '/docs/redux-toolkit/pages',
     phases: [
-      {n: 1, slug: '01-store-setup', name: "Store setup", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 2, slug: '02-slices-and-actions', name: "Slices and actions", part: 'Imported corpus', topics: 2, pages: 2},
-      {n: 3, slug: '03-async-thunks', name: "Async thunks", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 4, slug: '04-rtk-query', name: "Rtk query", part: 'Imported corpus', topics: 2, pages: 2},
-      {n: 5, slug: '05-selectors-and-normalization', name: "Selectors and normalization", part: 'Imported corpus', topics: 2, pages: 2},
-      {n: 6, slug: '06-middleware', name: "Middleware", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 7, slug: '07-react-redux-integration', name: "React redux integration", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 8, slug: '08-immutability-and-immer', name: "Immutability and immer", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 9, slug: '09-typescript-integration', name: "Typescript integration", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 10, slug: '10-devtools-and-debugging', name: "Devtools and debugging", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 11, slug: '11-code-splitting', name: "Code splitting", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 12, slug: '12-testing', name: "Testing", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 13, slug: '13-migration', name: "Migration", part: 'Imported corpus', topics: 1, pages: 1},
+      {n: 1, slug: '01-store-setup', name: "Store setup", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 2, slug: '02-slices-and-actions', name: "Slices and actions", part: 'Imported corpus', topics: 2, pages: 2, verified: 0},
+      {n: 3, slug: '03-async-thunks', name: "Async thunks", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 4, slug: '04-rtk-query', name: "Rtk query", part: 'Imported corpus', topics: 2, pages: 2, verified: 0},
+      {n: 5, slug: '05-selectors-and-normalization', name: "Selectors and normalization", part: 'Imported corpus', topics: 2, pages: 2, verified: 0},
+      {n: 6, slug: '06-middleware', name: "Middleware", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 7, slug: '07-react-redux-integration', name: "React redux integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 8, slug: '08-immutability-and-immer', name: "Immutability and immer", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 9, slug: '09-typescript-integration', name: "Typescript integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 10, slug: '10-devtools-and-debugging', name: "Devtools and debugging", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 11, slug: '11-code-splitting', name: "Code splitting", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 12, slug: '12-testing', name: "Testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 13, slug: '13-migration', name: "Migration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
     ],
   },
   'tanstack-query': {
     label: "TanStack Query",
+    imported: true,
     updated: '2026-08-14 13:35',
     docsPath: '/docs/tanstack-query',
     pagesPath: '/docs/tanstack-query/pages',
     phases: [
-      {n: 1, slug: '01-core-concepts', name: "Core concepts", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 2, slug: '02-usequery-deep-dive', name: "Usequery deep dive", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 3, slug: '03-query-states', name: "Query states", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 4, slug: '04-caching-and-invalidation', name: "Caching and invalidation", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 5, slug: '05-usemutation', name: "Usemutation", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 6, slug: '06-background-refetching', name: "Background refetching", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 7, slug: '07-pagination-and-infinite-queries', name: "Pagination and infinite queries", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 8, slug: '08-dependent-and-parallel-queries', name: "Dependent and parallel queries", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 9, slug: '09-prefetching-and-ssr', name: "Prefetching and ssr", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 10, slug: '10-suspense-integration', name: "Suspense integration", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 11, slug: '11-devtools', name: "Devtools", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 12, slug: '12-query-cancellation', name: "Query cancellation", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 13, slug: '13-global-configuration', name: "Global configuration", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 14, slug: '14-optimistic-updates-patterns', name: "Optimistic updates patterns", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 15, slug: '15-testing-tanstack-query', name: "Testing tanstack query", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 16, slug: '16-migration-recipes', name: "Migration recipes", part: 'Imported corpus', topics: 1, pages: 1},
+      {n: 1, slug: '01-core-concepts', name: "Core concepts", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 2, slug: '02-usequery-deep-dive', name: "Usequery deep dive", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 3, slug: '03-query-states', name: "Query states", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 4, slug: '04-caching-and-invalidation', name: "Caching and invalidation", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 5, slug: '05-usemutation', name: "Usemutation", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 6, slug: '06-background-refetching', name: "Background refetching", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 7, slug: '07-pagination-and-infinite-queries', name: "Pagination and infinite queries", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 8, slug: '08-dependent-and-parallel-queries', name: "Dependent and parallel queries", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 9, slug: '09-prefetching-and-ssr', name: "Prefetching and ssr", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 10, slug: '10-suspense-integration', name: "Suspense integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 11, slug: '11-devtools', name: "Devtools", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 12, slug: '12-query-cancellation', name: "Query cancellation", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 13, slug: '13-global-configuration', name: "Global configuration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 14, slug: '14-optimistic-updates-patterns', name: "Optimistic updates patterns", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 15, slug: '15-testing-tanstack-query', name: "Testing tanstack query", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 16, slug: '16-migration-recipes', name: "Migration recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
     ],
   },
   'framer-motion': {
     label: "Framer Motion",
+    imported: true,
     updated: '2026-08-14 13:35',
     docsPath: '/docs/framer-motion',
     pagesPath: '/docs/framer-motion/pages',
     phases: [
-      {n: 1, slug: '01-core-concepts', name: "Core concepts", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 2, slug: '02-basic-animation-props', name: "Basic animation props", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 3, slug: '03-transition-types', name: "Transition types", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 4, slug: '04-variants', name: "Variants", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 5, slug: '05-gestures', name: "Gestures", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 6, slug: '06-animatepresence', name: "Animatepresence", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 7, slug: '07-layout-animations', name: "Layout animations", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 8, slug: '08-scroll-linked-animations', name: "Scroll linked animations", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 9, slug: '09-motion-values', name: "Motion values", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 10, slug: '10-animation-controls', name: "Animation controls", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 11, slug: '11-keyframes', name: "Keyframes", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 12, slug: '12-svg-animations', name: "Svg animations", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 13, slug: '13-orchestration-and-staggering', name: "Orchestration and staggering", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 14, slug: '14-performance-considerations', name: "Performance considerations", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 15, slug: '15-advanced-patterns', name: "Advanced patterns", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1},
+      {n: 1, slug: '01-core-concepts', name: "Core concepts", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 2, slug: '02-basic-animation-props', name: "Basic animation props", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 3, slug: '03-transition-types', name: "Transition types", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 4, slug: '04-variants', name: "Variants", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 5, slug: '05-gestures', name: "Gestures", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 6, slug: '06-animatepresence', name: "Animatepresence", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 7, slug: '07-layout-animations', name: "Layout animations", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 8, slug: '08-scroll-linked-animations', name: "Scroll linked animations", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 9, slug: '09-motion-values', name: "Motion values", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 10, slug: '10-animation-controls', name: "Animation controls", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 11, slug: '11-keyframes', name: "Keyframes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 12, slug: '12-svg-animations', name: "Svg animations", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 13, slug: '13-orchestration-and-staggering', name: "Orchestration and staggering", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 14, slug: '14-performance-considerations', name: "Performance considerations", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 15, slug: '15-advanced-patterns', name: "Advanced patterns", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
     ],
   },
   'web-vitals-performance': {
     label: "Web Vitals & Performance",
+    imported: true,
     updated: '2026-08-14 13:35',
     docsPath: '/docs/web-vitals-performance',
     pagesPath: '/docs/web-vitals-performance/pages',
     phases: [
-      {n: 1, slug: '01-core-web-vitals', name: "Core web vitals", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 2, slug: '02-legacy-and-lab-measurement', name: "Legacy and lab measurement", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 3, slug: '03-real-user-monitoring', name: "Real user monitoring", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 4, slug: '04-lcp-optimization', name: "Lcp optimization", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 5, slug: '05-inp-optimization', name: "Inp optimization", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 6, slug: '06-cls-optimization', name: "Cls optimization", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 7, slug: '07-loading-and-rendering-performance', name: "Loading and rendering performance", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 8, slug: '08-bundle-and-media-optimization', name: "Bundle and media optimization", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 9, slug: '09-caching-and-production-monitoring', name: "Caching and production monitoring", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 10, slug: '10-budgets-and-advanced-diagnostics', name: "Budgets and advanced diagnostics", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1},
+      {n: 1, slug: '01-core-web-vitals', name: "Core web vitals", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 2, slug: '02-legacy-and-lab-measurement', name: "Legacy and lab measurement", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 3, slug: '03-real-user-monitoring', name: "Real user monitoring", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 4, slug: '04-lcp-optimization', name: "Lcp optimization", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 5, slug: '05-inp-optimization', name: "Inp optimization", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 6, slug: '06-cls-optimization', name: "Cls optimization", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 7, slug: '07-loading-and-rendering-performance', name: "Loading and rendering performance", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 8, slug: '08-bundle-and-media-optimization', name: "Bundle and media optimization", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 9, slug: '09-caching-and-production-monitoring', name: "Caching and production monitoring", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 10, slug: '10-budgets-and-advanced-diagnostics', name: "Budgets and advanced diagnostics", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
     ],
   },
   'frontend-architecture': {
     label: "Frontend Architecture",
+    imported: true,
     updated: '2026-08-14 13:35',
     docsPath: '/docs/frontend-architecture',
     pagesPath: '/docs/frontend-architecture/pages',
     phases: [
-      {n: 1, slug: '01-project-structure-and-organization', name: "Project structure and organization", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 2, slug: '02-component-architecture', name: "Component architecture", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 3, slug: '03-state-management-decision-tree', name: "State management decision tree", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 4, slug: '04-data-layer-and-api-architecture', name: "Data layer and api architecture", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 5, slug: '05-routing-and-navigation-architecture', name: "Routing and navigation architecture", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 6, slug: '06-styling-architecture', name: "Styling architecture", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 7, slug: '07-monorepo-and-multi-app-strategy', name: "Monorepo and multi app strategy", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 8, slug: '08-environment-and-configuration-management', name: "Environment and configuration management", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 9, slug: '09-authentication-and-authorization-architecture', name: "Authentication and authorization architecture", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 10, slug: '10-error-handling-and-resilience', name: "Error handling and resilience", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 11, slug: '11-observability-and-monitoring', name: "Observability and monitoring", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 12, slug: '12-ci-cd-pipeline-design', name: "Ci cd pipeline design", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 13, slug: '13-testing-strategy', name: "Testing strategy", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 14, slug: '14-performance-and-scalability-patterns', name: "Performance and scalability patterns", part: 'Imported corpus', topics: 1, pages: 1},
-      {n: 15, slug: '15-team-and-collaboration-practices', name: "Team and collaboration practices", part: 'Imported corpus', topics: 1, pages: 1},
+      {n: 1, slug: '01-project-structure-and-organization', name: "Project structure and organization", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 2, slug: '02-component-architecture', name: "Component architecture", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 3, slug: '03-state-management-decision-tree', name: "State management decision tree", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 4, slug: '04-data-layer-and-api-architecture', name: "Data layer and api architecture", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 5, slug: '05-routing-and-navigation-architecture', name: "Routing and navigation architecture", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 6, slug: '06-styling-architecture', name: "Styling architecture", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 7, slug: '07-monorepo-and-multi-app-strategy', name: "Monorepo and multi app strategy", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 8, slug: '08-environment-and-configuration-management', name: "Environment and configuration management", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 9, slug: '09-authentication-and-authorization-architecture', name: "Authentication and authorization architecture", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 10, slug: '10-error-handling-and-resilience', name: "Error handling and resilience", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 11, slug: '11-observability-and-monitoring', name: "Observability and monitoring", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 12, slug: '12-ci-cd-pipeline-design', name: "Ci cd pipeline design", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 13, slug: '13-testing-strategy', name: "Testing strategy", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 14, slug: '14-performance-and-scalability-patterns', name: "Performance and scalability patterns", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 15, slug: '15-team-and-collaboration-practices', name: "Team and collaboration practices", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
     ],
   },
   realworld: {
@@ -675,9 +709,22 @@ export const LANGUAGES = {
   },
 };
 
-/** 'written' | 'writing' | 'parked' | 'planned' for one phase. */
+/**
+ * 'written' | 'writing' | 'validating' | 'imported' | 'parked' | 'planned' for
+ * one phase.
+ *
+ * The two imported states only ever come from a `verified` field, which only
+ * imported tracks carry — a phase written here is scored on its pages, a phase
+ * moved in wholesale is scored on how many of those pages have since been
+ * validated. `imported` means the draft is there and untouched; `validating`
+ * means the conversion pass has started on it.
+ */
 export function phaseStatus(p) {
   if (p.parked) return 'parked';
+  if (p.verified !== undefined) {
+    if (p.verified >= p.topics) return 'written';
+    return p.verified === 0 ? 'imported' : 'validating';
+  }
   if (p.pages === 0) return 'planned';
   return p.pagesPlanned ? 'writing' : 'written';
 }
@@ -686,6 +733,12 @@ export function phaseStatus(p) {
  * Totals for one language. A phase still being written counts pro rata —
  * `pages / pagesPlanned` of its topics — so the bar moves with every page
  * rather than jumping a whole phase at a time.
+ *
+ * On an imported track the same ratio is read off `verified` instead: the
+ * percentage is *pages validated*, and `pagesWritten` still reports every page
+ * that exists. Those two numbers are deliberately allowed to disagree — vite
+ * reads "0% · 16 pages", which is the honest description of a complete draft
+ * nobody has checked.
  */
 export function summarise(langKey) {
   const lang = LANGUAGES[langKey];
@@ -701,10 +754,14 @@ export function summarise(langKey) {
     const status = phaseStatus(p);
     if (status === 'written') return sum + p.topics;
     if (status === 'writing') return sum + (p.topics * p.pages) / p.pagesPlanned;
+    if (status === 'validating') return sum + p.verified;
     return sum;
   }, 0);
   const pagesWritten = phases.reduce((sum, p) => sum + p.pages, 0);
-  const inFlight = active.find((p) => phaseStatus(p) === 'writing') ?? null;
+  // An imported chapter part-way through its conversion is the same kind of
+  // "currently being worked on" as a phase mid-write, so both feed `inFlight`.
+  const inFlight =
+    active.find((p) => phaseStatus(p) === 'writing' || phaseStatus(p) === 'validating') ?? null;
   return {
     ...lang,
     phases,
@@ -713,11 +770,21 @@ export function summarise(langKey) {
     topicsTotal,
     topicsDone: Math.round(topicsDone),
     pagesWritten,
+    // Pages carrying a tier badge and a dated `> Verified:` line. On a track
+    // written here every page has them by contract, so this equals
+    // `pagesWritten`; on an imported one it is the number that moves.
+    pagesValidated: phases.reduce((sum, p) => sum + (p.verified ?? p.pages), 0),
     percent: Math.round((topicsDone / topicsTotal) * 100),
     parkedPhases: parked.length,
     parkedTopicsLeft: parked.reduce((sum, p) => sum + (p.topics - p.pages), 0),
     inFlight,
-    nextPhase: inFlight ?? active.find((p) => p.pages === 0) ?? null,
+    nextPhase:
+      inFlight ??
+      active.find((p) => {
+        const status = phaseStatus(p);
+        return status === 'planned' || status === 'imported';
+      }) ??
+      null,
   };
 }
 

@@ -35,6 +35,19 @@ const previous = Object.fromEntries(
   (fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')).languages : []).map((l) => [l.key, l]),
 );
 
+/**
+ * An imported track counts validated pages, not written ones, so `not-started`
+ * would be a lie about it — the pages are all there, unchecked. It gets its own
+ * three words instead, and `topics`/`completed` are pages rather than syllabus
+ * rows. See the `imported` note at the top of `src/data/progress.js`.
+ */
+function statusOf(s, pending) {
+  if (s.imported) {
+    return pending === 0 ? 'validated' : s.topicsDone === 0 ? 'imported' : 'validating';
+  }
+  return pending === 0 ? 'complete' : s.topicsDone === 0 ? 'not-started' : 'in-progress';
+}
+
 const languages = Object.keys(LANGUAGES).map((key) => {
   const s = summarise(key);
   const prev = previous[key] ?? {};
@@ -43,11 +56,13 @@ const languages = Object.keys(LANGUAGES).map((key) => {
   return {
     key,
     label: s.label,
-    status: HELD.has(prev.status) ? prev.status : pending === 0 ? 'complete' : s.topicsDone === 0 ? 'not-started' : 'in-progress',
+    status: HELD.has(prev.status) ? prev.status : statusOf(s, pending),
     percent: s.percent,
+    counts: s.imported ? 'pages validated' : 'syllabus topics explained',
     topics: s.topicsTotal,
     completed: s.topicsDone,
     pending,
+    imported: !!s.imported,
     phases: `${s.phasesDone}/${s.phasesTotal}`,
     next: phase ? `${phase.n} · ${phase.name}` : null,
     docs: s.docsPath,
@@ -57,12 +72,18 @@ const languages = Object.keys(LANGUAGES).map((key) => {
 });
 
 const count = (status) => languages.filter((l) => l.status === status).length;
-const sum = (field) => languages.reduce((n, l) => n + l[field], 0);
+// The two families count different units — syllabus topics explained on one
+// side, imported pages validated on the other — so they are summed apart. Added
+// together they would report a single meaningless number, which is the mistake
+// the homepage roll-up strip was removed for.
+const written = languages.filter((l) => !l.imported);
+const imported = languages.filter((l) => l.imported);
+const sum = (rows, field) => rows.reduce((n, l) => n + l[field], 0);
 
 const json =
   JSON.stringify(
     {
-      version: 2,
+      version: 3,
       generatedFrom: 'src/data/progress.js',
       // The freshest per-language stamp, not a wall clock: a build timestamp
       // would churn the diff on every run and make --check useless.
@@ -74,10 +95,19 @@ const json =
         notStarted: count('not-started'),
         parked: count('parked'),
         blocked: count('blocked'),
-        topics: sum('topics'),
-        completed: sum('completed'),
-        pending: sum('pending'),
-        percent: Math.round((sum('completed') / sum('topics')) * 100),
+        topics: sum(written, 'topics'),
+        completed: sum(written, 'completed'),
+        pending: sum(written, 'pending'),
+        percent: Math.round((sum(written, 'completed') / sum(written, 'topics')) * 100),
+      },
+      importedTotals: {
+        tracks: imported.length,
+        untouched: count('imported'),
+        validating: count('validating'),
+        validated: count('validated'),
+        pages: sum(imported, 'topics'),
+        pagesValidated: sum(imported, 'completed'),
+        percent: Math.round((sum(imported, 'completed') / sum(imported, 'topics')) * 100),
       },
       languages,
     },

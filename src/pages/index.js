@@ -23,6 +23,20 @@ const storybook = summarise('storybook');
 const realworld = summarise('realworld');
 const java = summarise('java');
 const python = summarise('python');
+// The eleven tracks moved in from the `frontend-bible` repo on 2026-08-14.
+// Their pages all exist, so their percentage measures validation — see the
+// `imported` / `verified` note at the top of `src/data/progress.js`.
+const vite = summarise('vite');
+const webpack = summarise('webpack');
+const babel = summarise('babel');
+const eslint = summarise('eslint-oxlint');
+const jest = summarise('jest-rtl');
+const playwright = summarise('playwright');
+const redux = summarise('redux-toolkit');
+const tanstack = summarise('tanstack-query');
+const framer = summarise('framer-motion');
+const webVitals = summarise('web-vitals-performance');
+const frontendArchitecture = summarise('frontend-architecture');
 
 /**
  * The stack, grouped by the layer it lives in. `to` is set only for
@@ -207,25 +221,91 @@ const LAYERS = [
   },
   {
     name: 'Frontend toolchain',
-    note: 'Imported corpus — moved in, not yet validated. Storybook is the exception: it has a written syllabus and verified pages',
+    note: 'Moved in from the frontend-bible repo on 2026-08-14. Every page here already exists, so the percentage counts pages validated against this bible’s contract — a tier badge and a dated “Verified” line — not pages written. Jest & RTL is through that pass; Storybook was written here from phase 0',
     items: [
-      {name: 'Vite', desc: 'Dual-engine dev server, HMR, plugins, code-splitting', to: '/docs/vite', imported: true},
-      {name: 'Webpack', desc: 'Module Federation, loaders, plugins, Tapable hooks, chunks', to: '/docs/webpack', imported: true},
-      {name: 'Babel', desc: 'Compiler pipeline, presets/plugins, macros, SWC/esbuild migration', to: '/docs/babel', imported: true},
-      {name: 'ESLint & Oxlint', desc: 'Flat config, typescript-eslint, Oxlint, dual-run, CI', to: '/docs/eslint-oxlint', imported: true},
-      {name: 'Jest & RTL', desc: 'JSDOM, async queries, module mocking, userEvent, coverage', to: '/docs/jest-rtl', imported: true},
-      {name: 'Playwright', desc: 'Cross-browser E2E, visual regression, network interception, CI', to: '/docs/playwright', imported: true},
+      {
+        name: 'Vite',
+        desc: 'Dual-engine dev server, HMR, plugins, code-splitting — the draft predates Rolldown and the Environment API',
+        to: '/docs/vite',
+        imported: true,
+        data: vite,
+      },
+      {
+        name: 'Webpack',
+        desc: 'Module Federation, loaders, plugins, Tapable hooks, chunks — the draft never mentions Rspack',
+        to: '/docs/webpack',
+        imported: true,
+        data: webpack,
+      },
+      {
+        name: 'Babel',
+        desc: 'Compiler pipeline, presets/plugins, macros, SWC/esbuild migration — written against 7.x, before Babel 8',
+        to: '/docs/babel',
+        imported: true,
+        data: babel,
+      },
+      {
+        name: 'ESLint & Oxlint',
+        desc: 'Flat config, typescript-eslint, Oxlint, dual-run, CI — three pages still reference .eslintrc, and none name ESLint 10',
+        to: '/docs/eslint-oxlint',
+        imported: true,
+        data: eslint,
+      },
+      {
+        name: 'Jest & RTL',
+        desc: 'JSDOM, async queries, module mocking, userEvent, coverage — validated end to end, with a syllabus and a 14-page configs reference; the version pass to Jest 30 is still owed',
+        to: '/docs/jest-rtl',
+        imported: true,
+        data: jest,
+      },
+      {
+        name: 'Playwright',
+        desc: 'Cross-browser E2E, visual regression, network interception, CI — the draft names no Playwright version anywhere',
+        to: '/docs/playwright',
+        imported: true,
+        data: playwright,
+      },
       {
         name: 'Storybook',
         desc: 'CSF, args and controls, decorators, interaction and a11y testing — written to full depth from phase 0, alongside 22 imported pages',
         to: '/docs/storybook',
         data: storybook,
       },
-      {name: 'Redux Toolkit', desc: 'RTK Query, Immer, entity adapters, custom middleware', to: '/docs/redux-toolkit', imported: true},
-      {name: 'TanStack Query', desc: 'QueryCache internals, mutations, optimistic updates, SSR', to: '/docs/tanstack-query', imported: true},
-      {name: 'Framer Motion', desc: 'Layout animations, FLIP, AnimatePresence, scroll and gestures', to: '/docs/framer-motion', imported: true},
-      {name: 'Web Vitals & Performance', desc: 'LCP, INP, CLS, critical rendering path, budgets', to: '/docs/web-vitals-performance', imported: true},
-      {name: 'Frontend Architecture', desc: 'Micro-frontends, monorepos, state machines, observability', to: '/docs/frontend-architecture', imported: true},
+      {
+        name: 'Redux Toolkit',
+        desc: 'RTK Query, Immer, entity adapters, custom middleware — the least version drift of the eleven, so the draft is the closest to current',
+        to: '/docs/redux-toolkit',
+        imported: true,
+        data: redux,
+      },
+      {
+        name: 'TanStack Query',
+        desc: 'QueryCache internals, mutations, optimistic updates, SSR — the draft predates v5',
+        to: '/docs/tanstack-query',
+        imported: true,
+        data: tanstack,
+      },
+      {
+        name: 'Framer Motion',
+        desc: 'Layout animations, FLIP, AnimatePresence, scroll and gestures — every import in the draft is the old framer-motion package, now motion/react',
+        to: '/docs/framer-motion',
+        imported: true,
+        data: framer,
+      },
+      {
+        name: 'Web Vitals & Performance',
+        desc: 'LCP, INP, CLS, critical rendering path, budgets — two pages still teach FID, retired in 2024',
+        to: '/docs/web-vitals-performance',
+        imported: true,
+        data: webVitals,
+      },
+      {
+        name: 'Frontend Architecture',
+        desc: 'Micro-frontends, monorepos, state machines, observability — not version-pinned by nature; the risk here is stale practice',
+        to: '/docs/frontend-architecture',
+        imported: true,
+        data: frontendArchitecture,
+      },
     ],
   },
   {
@@ -244,6 +324,11 @@ const LAYERS = [
  * One word for where a technology stands. This is what the filter chips filter
  * on and what colours the card, so it is computed once, here, rather than
  * re-derived from three different flags at three different call sites.
+ *
+ * `imported` is provenance, not progress: it stays on a track for as long as its
+ * pages came in from the `frontend-bible` import, and the card's percentage says
+ * how far the validation pass has got through them. That is why the two are read
+ * from different places — the flag from the item, the number from `progress.js`.
  */
 function statusOf(item, layer) {
   if (layer.parked) return 'parked';
@@ -288,7 +373,15 @@ function Card({item, layer}) {
       <div className={styles.cardHead}>
         <h3 className={styles.cardTitle}>{item.name}</h3>
         {data ? (
-          <span className={styles.cardPercent}>{data.percent}%</span>
+          // An imported track keeps its provenance tag next to the number: the
+          // percentage alone would read as "0% written", which is the one thing
+          // it does not mean.
+          <span className={styles.cardStat}>
+            {status === 'imported' && (
+              <span className={styles.cardTag}>{STATUS_LABEL[status]}</span>
+            )}
+            <span className={styles.cardPercent}>{data.percent}%</span>
+          </span>
         ) : (
           <span className={styles.cardTag}>{STATUS_LABEL[status]}</span>
         )}
@@ -296,18 +389,44 @@ function Card({item, layer}) {
       <p className={styles.cardDesc}>{item.desc}</p>
       {data && <Bar percent={data.percent} tone={status} />}
       {data && (
+        // An imported track counts different things, so it says so rather than
+        // borrowing the written-track wording: its chapters are not phases, and
+        // its pages all exist already — what moves is how many are validated.
         <p className={styles.cardMeta}>
-          <span>
-            {data.phasesDone}/{data.phasesTotal} phases
-          </span>
-          <span>{data.topicsTotal} topics</span>
-          <span>
-            {data.pagesWritten} {data.pagesWritten === 1 ? 'page' : 'pages'}
-          </span>
+          {data.imported ? (
+            <>
+              <span>{data.phasesTotal} chapters</span>
+              <span>
+                {data.pagesWritten} {data.pagesWritten === 1 ? 'page' : 'pages'}
+              </span>
+              <span>
+                {data.pagesValidated}/{data.pagesWritten} validated
+              </span>
+            </>
+          ) : (
+            <>
+              <span>
+                {data.phasesDone}/{data.phasesTotal} phases
+              </span>
+              <span>{data.topicsTotal} topics</span>
+              <span>
+                {data.pagesWritten} {data.pagesWritten === 1 ? 'page' : 'pages'}
+              </span>
+            </>
+          )}
+        </p>
+      )}
+      {data?.imported && !data.inFlight && (
+        <p className={styles.cardNote}>
+          {data.percent === 100
+            ? 'Validated to the page contract'
+            : 'Draft · validation not started'}
         </p>
       )}
       {data?.inFlight && (
-        <p className={styles.cardNow}>Writing · {data.inFlight.name}</p>
+        <p className={styles.cardNow}>
+          {data.imported ? 'Validating' : 'Writing'} · {data.inFlight.name}
+        </p>
       )}
     </>
   );

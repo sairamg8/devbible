@@ -299,6 +299,24 @@ a.card:hover {
   margin: 0.1rem 0 0;
 }
 
+/* Same line, no amber: an imported track sitting at 0% is not work in flight,
+   and colouring it like `.cardNow` would claim someone is on it. */
+.cardNote {
+  font-family: var(--db-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.02em;
+  color: var(--db-ink-3);
+  margin: 0.1rem 0 0;
+}
+
+/* The percentage keeps company with a provenance tag on imported cards. */
+.cardStat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  flex: none;
+}
+
 /* ------------------------------------------------------------------- bar */
 
 .bar {
