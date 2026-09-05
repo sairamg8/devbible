@@ -30,7 +30,7 @@ services — is a BFF a god service?"* No, and the distinction is precise enough
 🔴 **The single question that separates them:** *if this component were deleted, would any business
 rule stop being enforced?* A composition layer deleted costs you a convenient endpoint. A god service
 deleted costs you the rules, which is why removing one requires
-[the correction above](#the-correction) rather than a delete.
+[the correction in 17](17-the-god-service.md#the-correction) rather than a delete.
 
 **Composition also has a boundary obligation of its own**, and it is where BFFs go wrong: it may
 **assemble**, and it may not **interpret**. The moment the composition layer computes a total,
