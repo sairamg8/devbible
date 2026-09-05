@@ -199,7 +199,7 @@ At whatever the service was doing that is not instrumented. Most often that is w
 than computing: a connection-pool checkout, a lock, a thread-pool queue, or a blocking call
 through a client nobody wrapped. A profiler answers "computing", and a thread dump answers
 "waiting" — which is why this is the point where a tracing investigation hands off to
-[05 · Thread dumps](../05-thread-dumps/README.md) or [06 · JFR and profiling](../06-jfr-mission-control-and-async-profiler/README.md).
+[05 · Thread dumps](../05-thread-dumps/README.md) or [06 · JFR and profiling](../06-jfr-and-profiling/README.md).
 
 **★ Is span kind ever validated?**
 No. It is explicitly a hint to the backend about how to assemble the trace. Nothing checks that a

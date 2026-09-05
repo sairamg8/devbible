@@ -251,7 +251,7 @@ return { ok: true, title: card.title } as const
 
 **★ Symptom: the action authorizes correctly and the board still shows the old positions to the user who moved the card.** Cause: the wrong invalidation function, or none. This is an invalidation bug rather than an auth bug, and it is the exact failure chapter 8 documents at length. Fix: `updateTag` on the tag the read used, built from the server-derived board id — and before any `redirect()`, since `redirect` throws and anything after it never runs.
 
-**★ Symptom: `revalidatePath('/')` was used "because it also refreshes" and the whole application's cache is being purged by a drag-and-drop.** Cause: reaching for the biggest hammer. Fix: `updateTag(\`board:${boardId}\`)`. The comparison of all five refresh APIs — what each invalidates, where each may be called, and who pays the round trip — is [chapter 8's `10b`](../08-state-management-in-an-rsc-world/10b-refresh-against-the-alternatives.md).
+**★ Symptom: `revalidatePath('/')` was used "because it also refreshes" and the whole application's cache is being purged by a drag-and-drop.** Cause: reaching for the biggest hammer. Fix: ``updateTag(`board:${boardId}`)``. The comparison of all five refresh APIs — what each invalidates, where each may be called, and who pays the round trip — is [chapter 8's `10b`](../08-state-management-in-an-rsc-world/10b-refresh-against-the-alternatives.md).
 
 **★ Symptom: a `try/catch` in the action swallows the `notFound()` that `requireBoardAccess` throws, and the mutation proceeds.** Cause: the interrupt is an exception, and a broad catch caught it. Fix — and note this is more dangerous in an action than in a page, because the code after the catch *writes*:
 
