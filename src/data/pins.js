@@ -56,7 +56,10 @@ export const PINS = {
   },
   postgresql: {
     label: 'PostgreSQL', source: 'eol:postgresql', policy: 'major', cycle: '18',
-    pin: '18.4', patchIndex: 1, checked: '2026-08-31', tracks: ['postgresql', 'nodejs'],
+    // `nextjs` added 2026-09-05: chapter 15 teaches serverless Postgres (Neon) and a
+    // dedicated CRUD-API chapter follows it. A pin cannot see pages outside its declared
+    // tracks, so an undeclared track means the scan reports nothing rather than drift.
+    pin: '18.4', patchIndex: 1, checked: '2026-08-31', tracks: ['postgresql', 'nodejs', 'nextjs'],
     names: ['postgresql', 'postgres'],
   },
   mongodb: {
@@ -157,16 +160,6 @@ export const PINS = {
   undici: {
     label: 'undici', source: 'npm:undici', policy: 'latest',
     pin: '8.10.0', checked: '2026-08-31', tracks: ['nodejs'], names: ['undici'],
-  },
-  // Added 2026-09-03 under the library necessity test: password storage cannot be
-  // taught without it. 6.0.0 published 2025-05-11; `engines: {node: '>= 18'}`.
-  // ⚠️ NOT installed in this checkout — pages about it are doc-verified (T2), never
-  // probed, because a probe needs the package present at the pinned version.
-  bcrypt: {
-    label: 'bcrypt', source: 'npm:bcrypt', policy: 'latest',
-    pin: '6.0.0', checked: '2026-09-03', tracks: ['nodejs', 'expressjs', 'real-world'],
-    names: ['bcrypt'],
-    note: 'Native addon (node-gyp-build). Versions < 5.0.0 mishandle NUL bytes and truncate at 255 chars — a real upgrade boundary, not just a version number.',
   },
   // Added 2026-09-03 under the library necessity test: the Next.js PWA guide's push
   // chapter cannot be taught without it — sending a Web Push message requires VAPID JWT
@@ -273,12 +266,18 @@ export const PINS = {
   },
   // 🔴 bcrypt was taught across 32 pages of this corpus with NO pin at all — the exact gap
   // library-scope.md exists to close. Tracks set from a grep of what actually teaches it.
+  // 2026-09-05: this key was DEFINED TWICE in this object. A duplicate key in an object
+  // literal is silent — the later one wins — so the earlier entry's narrower `tracks`
+  // and its NUL-byte note had been dead since ch10 added the second. Merged here.
+  // ⚠️ NOT installed in this checkout — pages about it are doc-verified (T2), never
+  // probed, because a probe needs the package present at the pinned version.
+  // 6.0.0 published 2025-05-11; `engines: {node: '>= 18'}`.
   bcrypt: {
     label: 'bcrypt', source: 'npm:bcrypt', policy: 'latest',
     pin: '6.0.0', checked: '2026-09-05',
     tracks: ['nextjs', 'nodejs', 'javascript', 'expressjs', 'real-world'],
     names: ['bcrypt'],
-    note: 'Only the first 72 BYTES of a password are used, not the first 72 characters — a multi-byte password is truncated earlier than it looks.',
+    note: 'Only the first 72 BYTES of a password are used, not the first 72 characters — a multi-byte password is truncated earlier than it looks. Native addon (node-gyp-build); versions < 5.0.0 mishandle NUL bytes and truncate at 255 chars, a real upgrade boundary rather than just a version number.',
   },
   prisma: {
     label: 'Prisma', source: 'npm:@prisma/client', policy: 'latest',
