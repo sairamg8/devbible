@@ -209,4 +209,4 @@ Whether it is `server-only`, so a Client Component cannot pull the driver into t
 
 ---
 
-← [01g · Prisma: client and adapters](01g-prisma-the-generated-client-and-driver-adapters.md) · Next → **01h · Prisma and Drizzle as models** *(not written yet)*
+← [01g · Prisma: client and adapters](01g-prisma-the-generated-client-and-driver-adapters.md) · Next → [01h · Prisma and Drizzle as models](01h-prisma-and-drizzle-as-models.md)
