@@ -14,7 +14,7 @@ description: "Why a proxy without a matcher redirects your stylesheets, why matc
 
 ## Without a matcher, proxy runs on your CSS
 
-> *"Without a `matcher`, Proxy runs on **every request**, including static files (`_next/static`), image optimizations (`_next/image`), and assets in the `public/` folder. Consider using a [negative match pattern](#negative-matching) to exclude these paths, otherwise auth logic or redirects can unintentionally block CSS, JS, or images from loading."*
+> *"Without a `matcher`, Proxy runs on **every request**, including static files (`_next/static`), image optimizations (`_next/image`), and assets in the `public/` folder. Consider using a [negative match pattern](https://nextjs.org/docs/app/api-reference/file-conventions/proxy#negative-matching) to exclude these paths, otherwise auth logic or redirects can unintentionally block CSS, JS, or images from loading."*
 
 That is the visible cost, and it is unmistakable in a browser: an unmatched proxy sends every stylesheet and every optimized image through your session decryption, and a redirect rule that fires on `/logo.png` yields a login page where an image should be.
 
@@ -99,7 +99,7 @@ Static `redirects` in `next.config.js` run **before** proxy, so a config-level r
 
 There is a stale argument still in wide circulation: *"middleware runs on the Edge runtime, so it has no Node APIs, so you cannot do real auth there, so do it in the route."* The conclusion is right. The reason has been wrong since 16.0.
 
-> *"Proxy defaults to using the Node.js runtime. The [`runtime`](/docs/app/api-reference/file-conventions/route-segment-config/runtime) config option is not available in Proxy files. Setting the `runtime` config option in Proxy will throw an error."*
+> *"Proxy defaults to using the Node.js runtime. The [`runtime`](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config/runtime) config option is not available in Proxy files. Setting the `runtime` config option in Proxy will throw an error."*
 
 The version history dates it precisely:
 
