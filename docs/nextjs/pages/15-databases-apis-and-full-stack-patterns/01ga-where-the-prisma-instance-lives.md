@@ -133,7 +133,7 @@ The split is structural, not stylistic:
 
 > *"Prisma Migrate uses **database transactions** to check out the current state of the database and the migrations table. However, the Schema Engine is designed to use a **single connection to the database**, and does not support connection pooling with PgBouncer."*
 
-A transaction-mode pooler hands each statement to whichever backend is free, which is precisely the guarantee the Schema Engine needs and cannot get. Which schema changes need that direct route, what a shadow database is for, and how Drizzle Kit answers the same question differently is **01i · Migrations in each** *(not written yet)*.
+A transaction-mode pooler hands each statement to whichever backend is free, which is precisely the guarantee the Schema Engine needs and cannot get. Which schema changes need that direct route, what a shadow database is for, and how Drizzle Kit answers the same question differently is [01i · Migrations in each](01i-migrations-in-each.md).
 
 ## Gotchas
 

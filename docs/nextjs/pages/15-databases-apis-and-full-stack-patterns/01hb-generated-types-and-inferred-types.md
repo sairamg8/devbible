@@ -73,7 +73,7 @@ The `Omit` version compiles forever and is wrong from the first migration that a
 
 🔴 **Neither Prisma's generated types nor Drizzle's inferred types know anything about the database that is actually running.** They describe the schema *file*. If the file says `title` is `NOT NULL` and the deployed database has a nullable `title` because a migration was generated and never applied, both tools hand you a `string`, and both hand you `null` at runtime.
 
-Type safety here means *"your code agrees with your schema file"* — not *"your code agrees with your database"*. What makes those two agree is a migration you actually ran, which is **01i · Migrations in each** *(not written yet)*, and the reason that page has to exist is precisely that no type system closes this gap.
+Type safety here means *"your code agrees with your schema file"* — not *"your code agrees with your database"*. What makes those two agree is a migration you actually ran, which is [01i · Migrations in each](01i-migrations-in-each.md), and the reason that page has to exist is precisely that no type system closes this gap.
 
 Within that ceiling, the failure modes differ, and the difference is smaller than the marketing on either side:
 
@@ -189,7 +189,7 @@ const rows = await prisma.$queryRaw<{ cardCount: number }[]>`
 
 **★ Symptom: `select` narrowed the type but the runtime object still has every column.** Cause: in Prisma this should not happen and usually means a `select` written inside `include`, or a raw query typed as a model. In Drizzle it happens when you pass a *table* rather than a column map — `db.select().from(boards)` selects everything by design. Fix: pass the explicit column map when you want narrowing, and remember that the empty `select()` is "all columns", not "no columns".
 
-**★ Symptom: the types are perfect and production still throws on `null`.** Cause: the ceiling — the schema file and the deployed database disagree, and no compiler can see it. Fix: make "the migration ran" a deploy-time assertion rather than an assumption, and until **01i · Migrations in each** *(not written yet)* lands, treat any type-versus-runtime mismatch as a migration question first and a code question second.
+**★ Symptom: the types are perfect and production still throws on `null`.** Cause: the ceiling — the schema file and the deployed database disagree, and no compiler can see it. Fix: make "the migration ran" a deploy-time assertion rather than an assumption, and until [01i · Migrations in each](01i-migrations-in-each.md) lands, treat any type-versus-runtime mismatch as a migration question first and a code question second.
 
 ## Interview questions
 

@@ -190,4 +190,4 @@ Write the three or four hardest queries the product needs in both tools before c
 
 ---
 
-← [01hb · Generated vs inferred types](01hb-generated-types-and-inferred-types.md) · Next → **01i · Migrations in each** *(not written yet)*
+← [01hb · Generated vs inferred types](01hb-generated-types-and-inferred-types.md) · Next → [01i · Migrations in each](01i-migrations-in-each.md)
