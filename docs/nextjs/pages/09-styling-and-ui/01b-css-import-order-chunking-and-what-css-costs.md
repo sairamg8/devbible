@@ -36,7 +36,7 @@ export function BaseButton() {
 }
 ```
 
-> *"For example, `base-button.module.css` will be ordered before `page.module.css` since `BaseButton` is imported before `page.module.css`."*
+> *"For example, `base-button.module.css` will be ordered before `page.module.css` since `<BaseButton>` is imported before `page.module.css`."*
 > — [Getting Started: CSS](https://nextjs.org/docs/app/getting-started/css)
 
 **Trace why.** The bundler processes `page.tsx` top to bottom. The first import is `./base-button`, so it descends into that module, and *that* module's first import is `base-button.module.css` — so the button's stylesheet is emitted first. Only when the subtree is exhausted does the bundler return to `page.tsx` and reach `./page.module.css`. The stylesheet of a **deeper** component lands **earlier**, and therefore **loses** ties to its parent.

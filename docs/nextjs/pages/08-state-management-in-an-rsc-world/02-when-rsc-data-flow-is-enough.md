@@ -7,7 +7,7 @@ description: "The four moves of the RSC loop, the two structural properties that
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-05 against the [Server Actions guide](https://nextjs.org/docs/app/guides/server-actions), [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) (`lastUpdated: 2026-08-25`), [`refresh`](https://nextjs.org/docs/app/api-reference/functions/refresh) (`lastUpdated: 2026-06-25`), [`revalidateTag`](https://nextjs.org/docs/app/api-reference/functions/revalidateTag), [`useRouter`](https://nextjs.org/docs/app/api-reference/functions/use-router) and [`cookies`](https://nextjs.org/docs/app/api-reference/functions/cookies) (`lastUpdated: 2026-06-09`).
+> Verified: 2026-09-05 against the [Server Actions guide](https://nextjs.org/docs/app/guides/server-actions), [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) (`lastUpdated: 2026-08-25`), [`refresh`](https://nextjs.org/docs/app/api-reference/functions/refresh) (`lastUpdated: 2026-06-25`), [`revalidateTag`](https://nextjs.org/docs/app/api-reference/functions/revalidateTag), [`useRouter`](https://nextjs.org/docs/app/api-reference/functions/use-router), the [Instant navigation guide](https://nextjs.org/docs/app/guides/instant-navigation) and [`cookies`](https://nextjs.org/docs/app/api-reference/functions/cookies) (`lastUpdated: 2026-06-09`).
 > Target: **Next.js 16.3.4** App Router · **React 19.2.8** · TypeScript 7.0.2. Documentation-verified; **no sandbox run**.
 
 **"Do I need a state library" is the wrong question, because the answer is always "for some of it". The right question is where the line falls, and the line is not a matter of taste — it is a structural property of the RSC loop. That loop re-renders **a route segment** and it is triggered by **a request**. Every value whose granularity is coarser than a segment and whose change is caused by something the user asked for is inside the loop, and adding a store for it buys you duplication, a second authority and a bigger bundle. Every value that is finer-grained than a segment, or that changes because of something other than a request, is outside the loop, and refusing a client solution for it buys you prop-drilling you cannot actually perform and round trips you cannot actually parallelise. This page makes both sides of that line testable.**
@@ -24,7 +24,7 @@ Everything Next.js gives you for server state is these four, and nothing else. K
 **2 · Navigate.** A navigation is a new server render of part of the tree, and the *part* matters:
 
 > *"**Client navigations** only re-render below the layout the current and destination routes share, so the fallback UI defined by a `<Suspense>` boundary above that point can't be used during the transition."*
-> — [Instant navigation validation](https://nextjs.org/docs/app/getting-started/caching)
+> — [Instant navigation › What "instant" means](https://nextjs.org/docs/app/guides/instant-navigation#what-instant-means)
 
 **3 · The URL.** `searchParams` are inputs to that render, so changing them re-derives server state without any client mechanism at all. A `<form method="get">` is a complete state update with zero JavaScript.
 
