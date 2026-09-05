@@ -39,7 +39,7 @@ GET /api/cards/8f3e…   -> 403   "this exists and belongs to someone else"
 
 **Three requests and they have started mapping your database.** They cannot read the cards, and they were never trying to — they now know how many exist, and with a sequential or timestamp-ordered identifier they can estimate creation rate, customer count, and growth. For a B2B product that is competitive intelligence; for a medical or legal product it can be worse, because the *existence* of a record is the sensitive fact.
 
-🔴 **The predicate from topic 04 makes the correct answer nearly free.** Because ownership is in the `WHERE` clause rather than in a branch, the DAL cannot distinguish "no such card" from "not your card" — both are zero rows. The naive implementation is therefore already the safe one, and it takes *extra* code to leak:
+🔴 **The predicate from [04c · The ownership predicate](04c-the-ownership-predicate.md) makes the correct answer nearly free.** Because ownership is in the `WHERE` clause rather than in a branch, the DAL cannot distinguish "no such card" from "not your card" — both are zero rows. The naive implementation is therefore already the safe one, and it takes *extra* code to leak:
 
 ```ts
 // ✅ The predicate is in the query, so zero rows is the only outcome.

@@ -99,7 +99,7 @@ CREATE UNIQUE INDEX CONCURRENTLY cards_board_slug_live_key
 ALTER TABLE cards DROP CONSTRAINT cards_board_slug_key;
 ```
 
-🔴 **`CREATE INDEX CONCURRENTLY` cannot run inside a transaction block.** The manual: *"a regular `CREATE INDEX` command can be performed within a transaction block, but `CREATE INDEX CONCURRENTLY` cannot."* Most migration runners wrap each file in `BEGIN`/`COMMIT`, so this has to be a custom migration — the kind of thing topic 02 is about.
+🔴 **`CREATE INDEX CONCURRENTLY` cannot run inside a transaction block.** The manual: *"a regular `CREATE INDEX` command can be performed within a transaction block, but `CREATE INDEX CONCURRENTLY` cannot."* Most migration runners wrap each file in `BEGIN`/`COMMIT`, so this has to be a custom migration — the kind of thing [02c · The migration is a release step](02c-the-migration-is-a-release-step.md) is about.
 
 It can also fail, and the failure state is specific:
 

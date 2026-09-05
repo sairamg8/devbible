@@ -11,7 +11,7 @@ description: "The three mechanisms that each independently forbid a request-span
 > Documentation-verified; **no sandbox run, no timings**.
 > Target: **PostgreSQL 18.4** · `pg` **8.23.0** · `drizzle-orm` **0.45.2** · **Next.js 16.3.4** · Node **24.20.0**.
 
-**Somebody on every team eventually proposes it: open a transaction when the user starts editing, hold it while they work, commit when they press save. It is a clean mental model borrowed from a desktop application with one persistent database connection, and in a serverless HTTP API it is impossible three times over. Each of the three reasons would be sufficient alone, and it is worth being able to state all three, because a colleague who has an answer to one will move to the next. The reason this page belongs in this topic is that the impossibility is not a limitation to work around — it is the premise the whole of topic 07 is built on. Optimistic concurrency exists precisely because the interval between a client's read and its write cannot be locked.**
+**Somebody on every team eventually proposes it: open a transaction when the user starts editing, hold it while they work, commit when they press save. It is a clean mental model borrowed from a desktop application with one persistent database connection, and in a serverless HTTP API it is impossible three times over. Each of the three reasons would be sufficient alone, and it is worth being able to state all three, because a colleague who has an answer to one will move to the next. The reason this page belongs in this topic is that the impossibility is not a limitation to work around — it is the premise the whole of [topic 07 · UPDATE](07-update.md) is built on. Optimistic concurrency exists precisely because the interval between a client's read and its write cannot be locked.**
 
 ## Reason 1 — the manual tells you not to, and the mechanism is unbounded waiting
 
@@ -66,7 +66,7 @@ try {
 
 ## Therefore: the token, not the lock
 
-The whole of topic 07 is the consequence of this page.
+The whole of [topic 07 · UPDATE](07-update.md) — and [07d · Optimistic concurrency with a version column](07d-optimistic-concurrency-with-a-version-column.md) in particular — is the consequence of this page.
 
 ```text
   request 1 (GET)                gap: network + human            request 2 (PATCH)

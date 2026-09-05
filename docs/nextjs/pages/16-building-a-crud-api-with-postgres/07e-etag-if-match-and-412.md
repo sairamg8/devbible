@@ -154,7 +154,7 @@ Which resolves cleanly onto the two encodings:
 | nothing conditional | the server refuses on other grounds (a card that cannot move to a done board, say) | **409** | *"a conflict with the current state of the target resource"* |
 | `If-Match: "…-7"` | the card does not exist | **404** | There is no representation to condition on |
 
-**Why the distinction is not pedantry.** A generic HTTP client, an SDK generator or a caching layer that sees 412 knows what happened: *my validator is stale, re-fetch and re-evaluate.* Seeing 409, it knows only that something about the request conflicted with state — which might be a version, a business rule, or a duplicate key from topic 05. The two failures lead to different client code, so conflating them means the client must parse your error body to recover, which is exactly what status codes exist to avoid.
+**Why the distinction is not pedantry.** A generic HTTP client, an SDK generator or a caching layer that sees 412 knows what happened: *my validator is stale, re-fetch and re-evaluate.* Seeing 409, it knows only that something about the request conflicted with state — which might be a version, a business rule, or a duplicate key from [05c · Constraint violations and SQLSTATE](05c-constraint-violations-and-sqlstate.md). The two failures lead to different client code, so conflating them means the client must parse your error body to recover, which is exactly what status codes exist to avoid.
 
 ⚠️ **A body-carried `version` producing 412 is the mirror-image mistake.** The client sent no header precondition, so a 412 tells it to inspect request headers that do not exist. 409, with the current representation in the body, is the answer.
 

@@ -126,7 +126,7 @@ Every live-row query now filters on `deleted_at IS NULL`. A partial index stores
 > *"A partial index is an index built over a subset of a table; the subset is defined by a conditional expression (called the predicate of the partial index). The index contains entries only for those table rows that satisfy the predicate."*
 > — [PostgreSQL 18 · 11.8](https://www.postgresql.org/docs/18/indexes-partial.html)
 
-Applied to the composite index the chapter's schema already carries for topic 06's keyset pagination:
+Applied to the composite index the chapter's schema already carries for [06d · Keyset pagination](06d-keyset-pagination.md):
 
 ```sql
 CREATE INDEX cards_board_created_live_idx

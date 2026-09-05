@@ -166,7 +166,7 @@ const CardReplacement = z.strictObject({
 await fetch(`/api/cards/${id}`, { method: 'PATCH', body: JSON.stringify({ position: 4096 }) })
 ```
 
-**★ Symptom: a proxy or HTTP client library retries an update and it applies twice.** Cause: the endpoint is a PATCH doing something non-idempotent, and something in the chain treated it as safe to replay. Fix: you cannot forbid this from the server — make the effect idempotent (absolute values, as above), or move the operation to POST with an idempotency key, which is topic 05's subject.
+**★ Symptom: a proxy or HTTP client library retries an update and it applies twice.** Cause: the endpoint is a PATCH doing something non-idempotent, and something in the chain treated it as safe to replay. Fix: you cannot forbid this from the server — make the effect idempotent (absolute values, as above), or move the operation to POST with an idempotency key, which is [05d · Idempotency keys for a retried POST](05d-idempotency-keys-for-a-retried-post.md).
 
 **★ Symptom: PATCH succeeds with a body the API never intended to accept, like `{"id": "..."}` or `{"createdAt": "..."}`.** Cause: the schema was `z.object`, which ignores unrecognised keys, and the handler spread the parsed object into the `SET` clause. Fix: `z.strictObject` for every request body, so an unknown key is a 400 rather than a silent no-op — and never spread client input into a `SET` clause; map it field by field, which [07b](07b-absent-versus-null.md) does.
 

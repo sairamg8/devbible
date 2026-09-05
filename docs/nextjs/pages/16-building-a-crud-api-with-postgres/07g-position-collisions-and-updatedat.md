@@ -186,7 +186,7 @@ export const CardPatch = z.strictObject({
 
 **★ Symptom: rows written in one transaction have `updated_at` values microseconds apart, and a "changed together" query misses some.** Cause: the timestamps came from `new Date()` in application code, evaluated per statement. Fix: use `now()` in SQL — it returns the transaction start time, so every row written in one transaction shares a value, which is exactly what makes "changed in the same operation" answerable.
 
-**★ Symptom: `updated_at` is `timestamp` without a time zone and comparisons across deployments disagree.** Cause: the column stores a wall-clock reading with no offset, so its meaning depends on the session's `TimeZone`. Fix: the chapter's schema already uses `timestamp('updated_at', { withTimeZone: true })`, which stores an absolute instant; changing an existing column is a migration and belongs to topic 02's story.
+**★ Symptom: `updated_at` is `timestamp` without a time zone and comparisons across deployments disagree.** Cause: the column stores a wall-clock reading with no offset, so its meaning depends on the session's `TimeZone`. Fix: the chapter's schema already uses `timestamp('updated_at', { withTimeZone: true })`, which stores an absolute instant; changing an existing column is a migration and belongs to [02c · The migration is a release step](02c-the-migration-is-a-release-step.md).
 
 ## Interview questions
 
