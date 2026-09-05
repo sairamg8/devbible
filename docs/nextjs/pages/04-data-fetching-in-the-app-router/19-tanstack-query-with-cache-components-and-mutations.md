@@ -35,7 +35,7 @@ export async function getProduct(id: string): Promise<Product> {
 
 Within the chosen profile the three durations aim at different caches. `stale` governs how long the Next.js **client** cache may reuse a prefetched RSC payload. `revalidate` and `expire` govern the Next.js **server** cache. Neither has anything to do with TanStack Query's `staleTime`, which governs a third, entirely separate browser cache — the guide is explicit that the two do not need to match. Pick each from the behaviour you want at that layer and stop trying to reconcile them.
 
-The cache directives themselves are covered in **chapter 5, the cache directives** *(not written yet)*.
+The cache directives themselves are covered in [chapter 5 · The three cache directives](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/README.md).
 
 ## Extend the contract to carry a tag
 

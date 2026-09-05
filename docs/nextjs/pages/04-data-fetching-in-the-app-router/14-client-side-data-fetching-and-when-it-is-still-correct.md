@@ -66,7 +66,7 @@ And the rule that governs all three is that the layers keep independent freshnes
 
 Read that twice, because it is counter-intuitive in a useful way. **Durations do not need to match** — a server cache measured in hours and a browser `staleTime` measured in seconds are a perfectly coherent pair. **Identities do.** If the server tags data as `product:42` and the browser keys it as `/api/products/42`, a mutation has to know both, and the two strings have to be derivable from the same source of truth or they will drift.
 
-The cache directives themselves — plain `'use cache'`, `'use cache: remote'` and `'use cache: private'` — are covered in **chapter 5, the cache directives** *(not written yet)*.
+The cache directives themselves — plain `'use cache'`, `'use cache: remote'` and `'use cache: private'` — are covered in [chapter 5 · The three cache directives](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/README.md).
 
 ## Coordinating mutations
 
