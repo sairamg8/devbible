@@ -300,6 +300,17 @@ export const PINS = {
     pin: '0.45.2', checked: '2026-09-05', tracks: ['nextjs'], names: ['drizzle', 'drizzle-orm'],
     note: 'The published docs at orm.drizzle.team describe the 1.0 RELEASE CANDIDATE (drizzle-orm@rc), not this stable line — and the two differ in the relations API: the rc shows defineRelations, while 0.45.2 typings export relations() and no defineRelations at all (read from unpkg 2026-09-05). Bumping this pin to 1.0 is an API migration, not a version bump.',
   },
+  neonServerless: {
+    label: 'Neon serverless driver', source: 'npm:@neondatabase/serverless', policy: 'latest',
+    // Added 2026-09-05 while opening chapter 16. THREE ch15 pages already bolded
+    // **1.1.0** on their `> Target:` lines with no pin behind them, so the claim was
+    // correct (registry `latest` is 1.1.0, confirmed 2026-09-05) but unwatched — the
+    // scanner reports nothing for a version nothing declares, which reads identically
+    // to "no drift". ch16 references the driver by name only, no version claim.
+    pin: '1.1.0', checked: '2026-09-05', tracks: ['nextjs'],
+    names: ['@neondatabase/serverless', 'neon serverless driver'],
+    note: 'The HTTP driver (`neon()`) and the WebSocket driver (`Pool`/`Client`) ship in this one package and have different lifecycle rules — ch15 01e teaches one-shot HTTP queries, 01f the WebSocket pool. A version bump touches both.',
+  },
   drizzleKit: {
     label: 'Drizzle Kit', source: 'npm:drizzle-kit', policy: 'latest',
     pin: '0.31.10', checked: '2026-09-05', tracks: ['nextjs'], names: ['drizzle-kit'],
