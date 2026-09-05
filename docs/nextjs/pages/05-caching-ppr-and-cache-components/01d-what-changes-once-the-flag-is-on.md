@@ -9,6 +9,7 @@ description: "The runtime behaviour changes that arrive with the flag rather tha
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [Migrating to Cache Components](https://nextjs.org/docs/app/guides/migrating-to-cache-components) (docs `lastUpdated` 2026-08-25) and [`cacheComponents`](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheComponents) (`lastUpdated` 2026-06-22).
 > Target: **Next.js 16.3.4**, App Router, Node.js runtime. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **[01c](01c-flipping-the-flag-on-an-existing-app.md) is what you delete. This page is what starts behaving differently on its own — three changes that arrive with the flag, appear in no diff, and are therefore the ones that get attributed to the wrong commit. A breadcrumb component you have not touched in a year begins failing the build. A `GET` Route Handler starts returning 500s because a `try/catch` you wrote for database errors is now catching the framework's control flow. And a form shows last week's success message because routes are no longer unmounted when you navigate away from them. Each has a documented cause and a documented fix; none of them is discoverable by reading your own changes.**
 
