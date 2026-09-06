@@ -193,8 +193,8 @@ already been applied, which is the middle option people forget exists.
 
 **★ How do you find out which operation you are inside?**
 `git status`, always — never guess. It names the state in plain words: *"You are
-currently rebasing branch 'x' on 'y'"*, *"You are currently cherry-picking commit
-<sha>"*, *"All conflicts fixed but you are still merging"*, and for an interactive
+currently rebasing branch 'x' on 'y'"*, *"You are currently cherry-picking commit"*
+followed by the hash, *"All conflicts fixed but you are still merging"*, and for an interactive
 rebase it prints progress as `Last commands done (N commands done)`. Git also
 refuses many commands while an operation is in progress and names the flags to use
 in the refusal. Reading that message is faster and safer than working around it.
