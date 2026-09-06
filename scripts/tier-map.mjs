@@ -63,13 +63,32 @@ const BADGE = /db-tier\s+t-([a-z-]+)/;
 const HEAD_BYTES = 4096;
 
 /**
+ * 🔴 The one way a page can lose the tier this script gives it.
+ *
+ * `plugin-content-docs/lib/props.js` builds every sidebar link with
+ * `customProps: frontMatter.sidebar_custom_props ?? item.customProps`. That is a
+ * REPLACEMENT, not a merge — so a page that declares `sidebar_custom_props` in
+ * its frontmatter silently discards whatever the sidebar generator attached, and
+ * its tier dot, its place in the floor filter and its eligibility as "next
+ * unread" all disappear with it. Nothing fails; the page just quietly stops
+ * having a tier.
+ *
+ * No page in the corpus uses it today. The CLI reports any that appear, because
+ * the day one does is the day this stops being theoretical.
+ */
+const CUSTOM_PROPS = /^sidebar_custom_props\s*:/m;
+
+/** Doc ids whose frontmatter would override the generator's customProps. */
+const overrides = new Set();
+
+/**
  * The first tier badge in a file, as a tier code, or null.
  *
  * Reads the head of the file first. A page whose badge is further down than
  * that is unusual but legal — the fallback reads the whole file rather than
  * silently calling it untiered, because "untiered" is a visible state in the UI.
  */
-function readTier(absPath) {
+function readTier(absPath, id) {
   let head = '';
   let fd;
   try {
@@ -82,6 +101,9 @@ function readTier(absPath) {
   } finally {
     if (fd !== undefined) fs.closeSync(fd);
   }
+
+  // Frontmatter is at the very top, so the head is always enough to see it.
+  if (CUSTOM_PROPS.test(head)) overrides.add(id);
 
   let match = BADGE.exec(head);
   if (!match && head.length === HEAD_BYTES) {
@@ -145,7 +167,7 @@ export function buildTierMap({siteDir = ROOT, docs = null} = {}) {
       const abs = resolveSource(doc.source, siteDir);
       const rel = path.relative(path.join(siteDir, 'docs'), abs).split(path.sep).join('/');
       if (!isTieredPage(rel)) continue;
-      const tier = readTier(abs);
+      const tier = readTier(abs, doc.id);
       if (tier) map.set(doc.id, tier);
     }
   } else {
@@ -175,8 +197,9 @@ function walk(dir, docsRoot, map) {
     if (!entry.name.endsWith('.md')) continue;
     const rel = path.relative(docsRoot, abs).split(path.sep).join('/');
     if (!isTieredPage(rel)) continue;
-    const tier = readTier(abs);
-    if (tier) map.set(rel.replace(/\.md$/, ''), tier);
+    const id = rel.replace(/\.md$/, '');
+    const tier = readTier(abs, id);
+    if (tier) map.set(id, tier);
   }
 }
 
@@ -265,6 +288,18 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
     console.log(
       `\n${[...perTrack].sort((a, b) => b[1] - a[1]).map(([t, n]) => `${t} ${n}`).join(' · ')}`,
     );
+
+    // 🔴 Not a stylistic nag. A page listed here has a tier in its body that will
+    // never reach its sidebar item, because frontmatter `sidebar_custom_props`
+    // REPLACES the generator's customProps rather than merging with it.
+    if (overrides.size > 0) {
+      console.log(
+        `\n🔴 ${overrides.size} page(s) declare sidebar_custom_props and will LOSE their tier:`,
+      );
+      for (const id of [...overrides].sort()) console.log(`   ${id}`);
+      console.log('   Merge the tier into that frontmatter, or drop the override.');
+    }
+
     console.log(`\n${Date.now() - started} ms`);
   }
 }
