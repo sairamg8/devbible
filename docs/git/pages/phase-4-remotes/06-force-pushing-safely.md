@@ -183,6 +183,65 @@ colleagues from a rewrite.
 **Cause:** bare `git push --force` with `push.default` sending somewhere unexpected
 **Fix:** the old commits are still in **your** reflog — `git reflog`, find the tip, push it back. Then set `push.default simple` and use an alias for the lease
 
+## Interview questions
+
+**★ A push is rejected as non-fast-forward. What are the three causes, and why does
+the message not help?**
+Either you rewrote history (rebase, amend or reset) and your version is the correct
+one, or somebody else pushed while you worked and forcing would delete their work.
+The rejection is byte-identical in all cases, so the distinction is yours to make:
+`git fetch` and then `git log --oneline HEAD..'@{u}'`. Empty output means nothing on
+the remote is missing from your branch and forcing loses nothing; non-empty means
+stop and integrate.
+
+**★ What does `--force-with-lease` actually check?**
+That the remote branch still points where your remote-tracking ref says it does. If
+someone pushed since your last fetch, the push is rejected with `stale info` rather
+than overwriting them. That message is not an obstacle — it has just prevented you
+from destroying a colleague's commit, and the correct response is to fetch and read
+what arrived, never to switch to plain `--force` to get past it.
+
+**★ How can the lease still let you destroy someone's work?**
+Because it compares against a ref that a bare `git fetch` updates without touching
+your branch — and most editors fetch in the background without telling you. Their
+push lands, your editor fetches, `origin/feature` now matches the remote, the lease
+check passes, and your force-push overwrites them. `--force-if-includes` closes it by
+also requiring that the commits you would overwrite are reachable from your branch,
+i.e. that you integrated them rather than merely downloaded them. The manual notes it
+is enabled by default when `--force-with-lease` is given without an explicit expected
+value, but spelling it out costs nothing.
+
+**★ How do you stop typing `--force` by accident?**
+An alias, because no config redirects `--force` to the safe version:
+`git config --global alias.pushf 'push --force-with-lease --force-if-includes'`. Then
+`git pushf` is the only forced push you ever type. The habit matters because the two
+commands differ by one word and by whether a colleague's afternoon survives.
+
+**★ When is a force-push legitimate?**
+On your own feature branch after a rebase or an amend, and on a branch you cleaned up
+before anyone reviewed it — with a lease, in both cases. Not on a branch a colleague
+has also committed to, where merging is the answer. Only after telling the reviewer on
+a shared branch under review. Never on `main` or any protected branch, where the tool
+is `git revert`. The deciding question is always whether anyone else has these
+commits, and a message before force-pushing turns a confusing afternoon for someone
+else into a ten-second reset.
+
+**★ Someone force-pushed a branch you had. What do you see, and what is the repair?**
+You hold commits that no longer exist upstream, so your `pull` sees a divergence and —
+with a merging default — merges the old and new versions cleanly, giving you duplicates
+of every rewritten commit with no error anywhere. The repair is `git fetch` followed by
+`git reset --hard origin/<branch>` if you have no unique work, or
+`git rebase --onto origin/<branch> <old-tip> <branch>` if you do. Both depend on
+knowing that a rewrite happened, and that knowledge can only come from the person who
+did it.
+
+**What can a lease never protect against?**
+People who have already pulled. The lease detects a *concurrent push* you have not
+seen; it says nothing about the five colleagues holding your commits, because nobody
+has pushed and the check passes. Git has no idea who has fetched, so this gap is not
+closable by any flag — the only instruments are convention, announcement, and branch
+protection on the host. Use the lease always, and do not mistake it for permission.
+
 ---
 
 ← Prev: [Divergent branches](05-divergent-branches.md) · Next → [`git push` in full](07-git-push.md)
