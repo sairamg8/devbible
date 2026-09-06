@@ -185,6 +185,64 @@ attention. It is the effortless one that deserves the extra minute.
 **Cause:** the rename was accompanied by enough editing to fall below the rename-detection threshold
 **Fix:** resolve by hand, deciding where the edit belongs. In future, commit renames separately from rewrites
 
+## Interview questions
+
+**★ Why does a merge need three inputs rather than two?**
+Because two versions cannot say what *changed*. If your side reads `timeout = 30`
+and theirs reads `timeout = 60`, that is equally consistent with them raising it
+from 30, you lowering it from 60, or both of you changing it from 10 — the first
+two should merge silently and the third is a genuine conflict. The **merge base**,
+the common ancestor, settles it: Git diffs each side against the base, takes any
+hunk that changed on one side only, and conflicts on hunks that changed on both
+sides differently. That is the entire algorithm, and it is why a thousand-line
+branch usually merges cleanly: almost every hunk moved on one side only.
+
+**★ What is the single highest-value merge setting, and why?**
+`merge.conflictStyle = zdiff3`. The default style shows only ours and theirs, which
+tells you what *differs* but not what *changed* — you are guessing which side moved.
+`zdiff3` includes the merge base between the markers, so a conflict where the base
+was 10 and both sides raised it is immediately legible as exactly that. It is a
+refinement of the older `diff3` that trims common lines out of the conflict region,
+so it is strictly the better of the two, and it costs one config line.
+
+**★ What is the difference between `-s ours` and `-X ours`?**
+`-s ours` selects the *ours strategy*: it takes our tree entirely, discards
+everything from the other branch, and still records a merge commit that claims the
+branch was merged. `-X ours` is an *option* to the normal three-way strategy: merge
+properly, take all of their non-conflicting changes, and prefer our version only
+where a hunk genuinely conflicts. Confusing them silently throws away a branch's
+work while leaving history saying it landed. `-s ours` has real uses — marking a
+branch as superseded so future merges skip it — but "make the conflict go away" is
+never one of them.
+
+**★ What is `AUTO_MERGE` and what question does it answer?**
+When the `ort` strategy hits a conflict it writes the auto-merged tree, conflict
+markers included, to a ref called `AUTO_MERGE`. So `git diff AUTO_MERGE` shows
+**only what you changed while resolving**, separated from everything the merge did
+automatically. That is the fastest way to catch the most common resolution mistake:
+deleting a line by accident while stripping markers. Without it you are diffing your
+resolution against a side, which mixes your edits with the merge's own work.
+
+**★ A merge succeeded cleanly and the build broke. What happened, and what does that
+say about clean merges?**
+A semantic conflict. Git merges *text hunks* and has no idea what a function is, so
+if you rename a function in one file while a colleague adds a call to the old name
+in another, both sides touched different hunks, the merge is clean, and the result
+does not compile. The honest reading is that a clean merge means *no textual
+conflict* and nothing more. Conflicted merges force attention; it is the effortless
+ones that reach production, which is why the rule is to build and test after every
+merge, especially the clean ones.
+
+**A merge conflicted on a file neither side changed much. Where do you look?**
+At the merge base, because it is probably not what you assumed — a rebase or a
+squash-merge changes ancestry, so the common ancestor moves and both diffs change
+with it. `git merge-base main feature` names it, and diffing each side against it
+shows what Git is actually comparing. Criss-cross history is the other case:
+when two branches have merged each other at different points there can be several
+common ancestors, `git merge-base --all` lists them, and the default strategy
+merges those bases into a synthetic one — which is where a result can be surprising
+in a way no single diff explains.
+
 ---
 
 ← Prev: [Fast-forward versus a real merge](02-fast-forward-vs-merge.md) · Next → [Resolving a conflict, properly](04-resolving-conflicts.md)
