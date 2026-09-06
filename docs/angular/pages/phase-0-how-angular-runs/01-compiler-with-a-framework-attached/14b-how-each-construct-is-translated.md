@@ -79,7 +79,7 @@ argument arity, argument types and return type included, against the pipe class'
 `transform` signature. This is one of the checks that has **no strictness flag at all**:
 `checkTypeOfPipes` is `true` in the strict configuration and the comment beside it says why —
 *"Pipes are checked in View Engine so there is no strictness flag."*
-(**14k** *(not written yet)* collects the rest of that family.)
+(**[14k](14k-the-checks-with-no-switch.md)** collects the rest of that family.)
 
 A pipe that is not in scope is recorded as **NG8004** `MISSING_PIPE` and then substituted,
 verbatim: *"Use an 'any' value to at least allow the rest of the expression to be checked"* —

@@ -236,4 +236,4 @@ to push in the same direction.
 
 ---
 
-← Prev: [14h · The input-assignment flags](14h-the-input-side-flags.md) · Index: [Topic index](README.md) · Next → **14j · The event, reference and generics flags** *(not written yet)*
+← Prev: [14h · The input-assignment flags](14h-the-input-side-flags.md) · Index: [Topic index](README.md) · Next → [14j · The event, reference and generics flags](14j-the-event-reference-and-generics-flags.md)

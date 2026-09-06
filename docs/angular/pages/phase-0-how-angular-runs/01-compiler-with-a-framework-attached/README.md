@@ -26,7 +26,7 @@ stop being a list of rules and start being consequences.
 
 ## Chunks
 
-🚧 **14 of 17 numbered chunks written, across 59 files.** Eight of the fourteen exhausted their
+🚧 **14 of 17 numbered chunks written, across 61 files.** Nine of the fourteen exhausted their
 subject past the 300-line cap and split into lettered siblings — the cap is a file size, never a
 content budget, so a chunk that ran long became five, six or seven files rather than a shorter
 page. The rows without links are planned and named; a link to a page that does not exist breaks
@@ -97,6 +97,8 @@ concluding an error is absent because it cannot happen.
 | 14g | **[What turning it off costs](14g-what-turning-strict-templates-off-costs.md)** | 🔴 `strictTemplates: false` disables `checkTemplateBodies` and extended diagnostics — the middle tier the guide describes is unreachable at v22 |
 | 14h | **[The input-assignment flags](14h-the-input-side-flags.md)** | 🔴 `strictInputTypes` secretly drives template context guards, so disabling it stops `@if` narrowing — and `strictInputAccessModifiers` is off even under strict, with the tracking issue in its own docs |
 | 14i | **[Attributes, literals, safe nav](14i-attributes-literals-and-safe-navigation.md)** | Why `<input matInput disabled>` is a genuine error and not a compiler bug, why a template object literal can be `any`, and the exact ternary `a?.b` is typed as |
+| 14j | **[Event, reference, generics](14j-the-event-reference-and-generics-flags.md)** | `$event` is typed by two different flags depending on the kind of event, a `#ref` on a DOM node is typed by `document.createElement`, and 🔴 `strictOutputEventTypes` silently covers animation events too |
+| 14k | **[The checks with no switch](14k-the-checks-with-no-switch.md)** | 🔴 Six checks run unconditionally and three are hard-coded off — DOM binding checks are *"not quite ready yet"* and queries are not checked at all — so `$any()` and `!` are the only levers |
 | 15 | **Extended diagnostics** *(not written yet)* | The NG81xx warnings for code that is legal but wrong, how to promote them to errors, and the semver caveat when you do |
 | 16 | **Arriving from React, Vue or Svelte** *(not written yet)* | What "compiled" means in each of the four, what Angular buys with it and what it costs |
 | 17 | **Consequences you actually hit** *(not written yet)* | Errors in a file TypeScript never compiled, NG3003 import cycles, NG8001/NG8002, and expressions that work in the class and fail in the template |
