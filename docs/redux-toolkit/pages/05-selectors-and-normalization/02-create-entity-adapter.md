@@ -4,6 +4,14 @@ sidebar_label: "`createEntityAdapter`"
 sidebar_position: 2
 ---
 
+<span className="db-tier t-understand">Understand</span>
+
+> Verified: 2026-09-06 against the Redux Toolkit documentation for **@reduxjs/toolkit 2.12.0** —
+> [`createEntityAdapter`](https://redux-toolkit.js.org/api/createEntityAdapter),
+> [RTK 2.0 migration](https://redux-toolkit.js.org/usage/migrating-rtk-2).
+> Documentation-validated; **no sandbox run**.
+> Validated: 2026-09-06 · claims + output provenance · session 3a6945a3
+
 # 📦 `createEntityAdapter`: Normalized State & Generated CRUD
 
 ## 1. Under-The-Hood Mechanics
@@ -31,13 +39,19 @@ Every other part of the app references users by `id` string and looks them up in
 | Method | Behavior |
 |---|---|
 | `addOne` / `addMany` | Insert new entities (no-op on existing ids unless combined with upsert) |
-| `setOne` / `setAll` | Add or fully replace one/all entities |
+| `setOne` / `setMany` / `setAll` | Add or fully replace one, several, or the whole collection |
 | `upsertOne` / `upsertMany` | Insert if new, shallow-merge if existing |
 | `updateOne` / `updateMany` | Partial patch of an existing entity via `{ id, changes }` |
 | `removeOne` / `removeMany` / `removeAll` | Delete by id(s) |
 
 ### Generated Selectors
 `usersAdapter.getSelectors()` returns memoized `selectAll`, `selectById`, `selectIds`, `selectEntities`, `selectTotal` — built with `createSelector` internally, so scanning `selectAll` is memoized against the `{ ids, entities }` reference.
+
+### What RTK 2.0 changed here
+`createEntityAdapter` gained an **`Id` generic** — `createEntityAdapter<Comment, string>()` — so the id
+type is no longer inferred as `string | number` regardless of what your entity actually uses. In the same
+release the exported **`Dictionary` type was removed**; the `entities` map is typed with a plain
+`Record` now. Code written against RTK 1.x that imported `Dictionary` will not compile.
 
 ### `sortComparer`
 Passing `sortComparer: (a, b) => a.name.localeCompare(b.name)` to `createEntityAdapter` keeps the `ids` array maintained in sorted order automatically on every insert/update — `selectAll` always returns entities pre-sorted, with no separate sort step needed at read time.
@@ -122,9 +136,14 @@ function CommentHighlight({ commentId }: { commentId: string }) {
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## Gotchas
 
-### ⚠️ Pitfall 1: Assuming `addOne` Overwrites an Existing Entity
+### Expecting `addOne` to update an entity that already exists
+**Symptom.** A "refresh" action appears to do nothing for records already on screen, and works
+perfectly for new ones.
+**Cause.** The docs are explicit: if an entity already exists, "`addOne` and `addMany` will do nothing
+with the new entity". It is not a merge and not a replace — it is a no-op.
+**Fix.**
 ```typescript
 // ❌ WRONG assumption: addOne is a no-op if the id already exists — it will NOT update it
 commentsAdapter.addOne(state, updatedComment); // silently does nothing if id already present!
@@ -133,14 +152,113 @@ commentsAdapter.addOne(state, updatedComment); // silently does nothing if id al
 commentsAdapter.upsertOne(state, updatedComment);
 ```
 
-### ⚠️ Pitfall 2: Forgetting `selectId` for Entities Without an `id` Field
+### Not telling the adapter which field is the id
+**Symptom.** Entities land under a key of `undefined`, and `selectById` never finds anything.
+**Cause.** The default `selectId` is `entity => entity.id`. An API returning `_id`, `uuid` or `sku`
+produces `undefined` ids and every record collapses onto one key.
+**Fix.**
 ```typescript
-// ❌ WRONG: adapter defaults to reading entity.id — throws/misbehaves if your API uses `_id` or `uuid`
+// ❌ WRONG: adapter defaults to reading entity.id — misbehaves if your API uses `_id` or `uuid`
 createEntityAdapter<Comment>();
 
 // ✅ CORRECT: tell the adapter which field is the identity
-createEntityAdapter<Comment>({ selectId: (comment) => comment.uuid });
+createEntityAdapter<Comment, string>({ selectId: (comment) => comment.uuid });
 ```
 
-### ⚠️ Pitfall 3: Manually Re-Sorting After Using Generated Selectors
-Since `sortComparer` already guarantees `selectAll`'s output order, adding a redundant `.sort()` in a component (or in a further `createSelector` on top) is wasted work and, worse, a sign that the sort logic now lives in two places that can drift out of sync. Trust the adapter's maintained order.
+### Expecting `sortComparer` to sort data that arrived another way
+**Symptom.** The list is sorted after an `addOne` and unsorted after the initial load, or after a
+hand-written mutation of `state.ids`.
+**Cause.** Sorting "only kicks in when state is changed via one of the CRUD functions" — the adapter
+maintains order as a side effect of its own operations, not as an invariant it enforces on the state
+shape.
+**Fix.** Route every write through the adapter, `setAll` included. Never assign to `state.ids` or
+`state.entities` directly next to an adapter that believes it owns the order.
+
+### `updateOne` with a whole entity instead of `{ id, changes }`
+**Symptom.** A type error, or a record whose fields are silently replaced by nested nonsense.
+**Cause.** `updateOne` takes an **update object**, not an entity. `upsertOne` takes the entity.
+**Fix.** `updateOne(state, { id, changes: { resolved: true } })` for a partial patch;
+`upsertOne(state, entity)` when you hold the whole record. Note `changes` is a shallow merge — a nested
+object in `changes` replaces its counterpart wholesale rather than merging into it.
+
+### Re-sorting the output of `selectAll`
+**Symptom.** A `.sort()` in a component on top of an adapter that already has a `sortComparer`.
+**Cause.** Not knowing the order is maintained, or inherited code from before the comparer existed.
+**Fix.** Trust the adapter. Worse than the wasted work is that the sort logic now lives in two places
+and can drift; when the comparer changes, the component's copy silently wins.
+
+### Calling `getSelectors()` with no argument and using it against `RootState`
+**Symptom.** `selectAll` returns `undefined`, or TypeScript complains that `ids` is missing from
+`RootState`.
+**Cause.** `getSelectors()` with no argument produces selectors that expect the **slice's** state.
+`getSelectors(state => state.comments)` produces ones that expect the root.
+**Fix.** Pick per call site, and be deliberate about which you export.
+```typescript
+// Against the slice's own state — e.g. inside another selector that already narrowed
+const localSelectors = commentsAdapter.getSelectors();
+
+// Against RootState — what components want
+export const { selectAll: selectAllComments } =
+  commentsAdapter.getSelectors((state: RootState) => state.comments);
+```
+
+### Importing the `Dictionary` type after an RTK 2 upgrade
+**Symptom.** `Module '"@reduxjs/toolkit"' has no exported member 'Dictionary'`.
+**Cause.** RTK 2.0 removed it in favour of standard TypeScript types.
+**Fix.** `Record<string, Comment | undefined>` — and note the `| undefined`, because indexing the
+entities map with an arbitrary id can legitimately miss.
+
+### Normalising something that is really server cache
+**Symptom.** An adapter, a thunk triple and a set of tags all describing the same list.
+**Cause.** `createEntityAdapter` predates RTK Query and a lot of code still hand-normalises data that
+RTK Query already caches by endpoint and argument.
+**Fix.** Normalise **client-owned** state — selections, drafts, optimistic local records, anything the
+server does not own. For server data, let RTK Query hold it, and reach for an adapter inside
+`transformResponse` only when you genuinely need id lookup within a single cached response.
+
+## Interview questions
+
+**★ What problem does normalising state actually solve?**
+Two, and the second is the one that bites. Lookup by id becomes O(1) instead of an O(n) array scan — that
+is the cheap win. The real one is **duplication**: an unnormalised tree stores the same user object inside
+a post's `author`, a comments list and a mentions widget, so updating one copy leaves the others stale and
+the UI disagrees with itself. Normalising stores each entity once and makes everything else hold an id.
+
+**★ What is the shape `createEntityAdapter` maintains, and what is `ids` for?**
+`{ ids: [], entities: {} }`. `entities` is the id-keyed lookup; `ids` is an **ordered** array that *is*
+the sort order. Keeping order in a separate array is what lets the adapter maintain a `sortComparer`
+cheaply and lets `selectAll` produce a correctly ordered array without sorting at read time.
+
+**★ What is the difference between `addOne`, `setOne`, `upsertOne` and `updateOne`?**
+`addOne` inserts and does **nothing** if the id already exists. `setOne` adds or fully replaces.
+`upsertOne` adds, or shallow-merges into an existing entity. `updateOne` patches an existing entity via
+`{ id, changes }` and does nothing if it is absent. The interview-relevant one is `addOne`'s no-op: it
+looks like an upsert, is not, and fails silently.
+
+**When does `sortComparer` actually run?**
+Only when state changes through one of the adapter's own CRUD functions. It is not an invariant enforced
+on the state shape, so data written into `ids`/`entities` by hand — or state hydrated from a persisted
+payload — is not sorted by the adapter's mere existence. Route every write through the adapter and the
+question does not arise.
+
+**Are the selectors from `getSelectors()` memoized, and what are they memoized against?**
+Yes — the docs say each is created with Reselect's `createSelector`. They memoize against the `ids` and
+`entities` references, so `selectAll` only rebuilds its array when the collection actually changes. That
+is what makes it safe to call in a list component; without it, every render would materialise a new array
+and defeat `useSelector`'s reference check.
+
+**What changed for `createEntityAdapter` in RTK 2.0?**
+It gained an `Id` generic, so `createEntityAdapter<Comment, string>()` types the id precisely instead of
+widening to `string | number`, and the exported `Dictionary` type was removed in favour of plain
+`Record`. Both are compile-time breaks rather than behavioural ones, which is why they tend to surface
+as a wall of type errors immediately after a dependency bump.
+
+**Would you use `createEntityAdapter` for data fetched from a server?**
+Usually not any more. RTK Query already caches server data keyed by endpoint and argument, so normalising
+it again duplicates the cache and the invalidation story. Adapters earn their place for **client-owned**
+state — drafts, selections, locally-created records awaiting a save — or inside `transformResponse` when
+you want id lookup within one cached response.
+
+---
+
+← [`createSelector`](./01-create-selector-and-reselect.md) · [Topic index](../README.md) · Next → [Middleware stack & `listenerMiddleware`](../06-middleware/01-default-middleware-and-listener-middleware.md)
