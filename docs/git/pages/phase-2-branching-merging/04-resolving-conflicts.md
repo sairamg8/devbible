@@ -222,6 +222,69 @@ long.
 **Cause:** each rebase replays the same commits over a moved base, hitting the same textual disagreement
 **Fix:** `git config --global rerere.enabled true`. Resolve once and Git replays it — and `git rerere forget <path>` if you get it wrong
 
+## Interview questions
+
+**★ What is a conflict, in terms of the index?**
+Three index entries for one path instead of one: stage 1 is the merge base, stage 2
+is ours, stage 3 is theirs. There is no stage-0 entry, and that absence *is* what
+"unresolved" means to Git. `git status` reports these as doubled codes — `UU` both
+modified, `AA` both added, `DU` deleted by us. Marking a path resolved means
+writing a stage-0 entry, which is exactly what `git add` does. So "add means
+resolved" is not a metaphor or a convention: you are collapsing three entries into
+one.
+
+**★ Walk through resolving a conflict properly.**
+`git status` to see what conflicted and in what way; `git diff` to read the
+conflicting hunks; edit each file to produce the version you actually want and
+remove every marker; `git add` each file to write its stage-0 entry; `git status`
+again to confirm nothing is left unmerged; then `git merge --continue`. Step five is
+the one people skip and the one that catches a file edited but never added, or a
+marker left behind in a file you thought was finished. `git merge --abort` backs out
+at any point before the final step — reliably only if the tree was clean when the
+merge began.
+
+**★ Is picking a side the definition of resolving?**
+No — it is a shortcut that is sometimes right. Resolving means producing the file
+you want, which is frequently neither side: if they raised the timeout to 60 and you
+added a comment explaining why it is 30, the correct result is 60 with an updated
+comment, which exists on neither branch. `--ours` and `--theirs` are whole-file
+tools and earn their place on generated artefacts, but for hand-written code they
+answer a different question from the one the conflict is asking.
+
+**★ How should you resolve a conflicted lockfile?**
+By regenerating it, not by merging it. Take either side wholesale —
+`git checkout --ours package-lock.json` — then run the package manager and `git add`
+the result. A hand-merged lockfile describes a dependency tree that has never been
+installed anywhere, which is a worse outcome than either original, and it will fail
+on somebody else's machine rather than yours. The same applies to compiled assets
+and snapshots: regenerate, do not reconcile.
+
+**★ What does `rerere` do, and what is the one caution?**
+Reuse recorded resolution: Git records how you resolved a conflict and replays that
+resolution automatically the next time it meets the identical one. It exists for
+repeated rebases — rebase a long-lived branch onto a moving `main` and you hit the
+same conflict every round — and it is off by default, which is worth changing
+globally. The caution is that it applies silently, so a resolution you got wrong the
+first time keeps being applied wrongly; `git rerere forget <path>` clears one.
+
+**★ Which commands share this machinery, and how do you know which one you are in?**
+`merge`, `rebase`, `cherry-pick`, `revert`, `pull` and `stash pop` all use the same
+three index stages and the same markers. What differs is only the verb that
+finishes: `--continue` and `--abort` on the matching command, while a conflicted
+`stash pop` is resolved and then dropped by hand. `git status` names the operation
+in progress, so the right move when you are unsure is to read it rather than guess —
+typing `git rebase --continue` inside a merge is a common way to make a confusing
+state worse.
+
+**Why does every technique on this page feel like a mitigation?**
+Because it is. Git refuses to guess, which is why it essentially never silently
+loses a change in a conflicted region — a genuinely strong property — but it also
+means resolution is manual, at text-hunk granularity, with no understanding of the
+language and no memory between rounds. `rerere` adds memory, merge tools add
+ergonomics, `zdiff3` adds information. The structural fix is none of these: a branch
+merged daily conflicts rarely and trivially, and a branch merged after a month
+conflicts in proportion to everything that happened meanwhile.
+
 ---
 
 ← Prev: [The three-way merge](03-three-way-merge.md) · Next → [`git rebase`](05-git-rebase.md)
