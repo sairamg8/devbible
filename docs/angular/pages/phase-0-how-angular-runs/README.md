@@ -4,8 +4,9 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target: Angular 22** (22.1.4, released 3 June 2026; `latest` tagged 27 August
-> 2026). Documentation-validated — every page names its sources on a
+> **Target: Angular 22** (**22.1.5**, `latest` tagged 3 September 2026; the v22
+> line released 3 June 2026. CLI / `@angular/build` / `@angular/ssr` are
+> **22.1.7**). Documentation-validated — every page names its sources on a
 > `> Verified:` line (angular.dev, the Angular GitHub release notes, and the
 > published package metadata). No sandbox: pages carry Angular, TypeScript and
 > JSON source, never fabricated terminal output.
