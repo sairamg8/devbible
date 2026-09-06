@@ -26,7 +26,7 @@ stop being a list of rules and start being consequences.
 
 ## Chunks
 
-🚧 **4 of 17 chunks written.** The rows without links are planned and named; a link to a
+🚧 **5 of 17 chunks written.** The rows without links are planned and named; a link to a
 page that does not exist breaks the build, so they stay as plain text until they land.
 
 | # | Chunk | Covers |
@@ -35,7 +35,7 @@ page that does not exist breaks the build, so they stay as plain text until they
 | 02 | **[What an expression may contain](02-what-a-template-expression-may-contain.md)** | The full supported/unsupported operator tables, the two globals you get, why `new` and every bitwise operator are out |
 | 03 | **[Declarations and `@let`](03-declarations-and-the-let-block.md)** | Why declarations are banned, why `@let` is a *block* rather than an expression, and the three instructions it lowers to |
 | 04 | **[Arrow functions in templates](04-arrow-functions-in-templates.md)** | ⚠️ the one place the docs and the shipped compiler disagree — what v21.2 actually added, what it rejects, and NG8111 |
-| 05 | **Expressions, statements and safe navigation** *(not written yet)* | Binding context vs action context, why assignment is legal in one and not the other, and 🔴 the v22 change that made `?.` return `undefined` |
+| 05 | **[Expressions, statements and safe navigation](05-expressions-statements-and-safe-navigation.md)** | Binding context vs action context, why assignment is legal in one and not the other, and 🔴 the v22 change that made `?.` return `undefined` |
 | 06 | **What the compiler emits: `ɵcmp`** *(not written yet)* | The static component definition, `ɵɵdefineComponent`, `decls` / `vars` / `dependencies`, the `ɵfac`, and what lands in the `.d.ts` |
 | 07 | **The create pass and the update pass** *(not written yet)* | `RenderFlags.Create` vs `RenderFlags.Update`, the slot/index model, `ɵɵadvance`, and why the two passes are one function |
 | 08 | **Instructions, not a virtual DOM** *(not written yet)* | Why Angular emits imperative calls instead of building a vnode tree; the tree-shaking argument; what it costs |

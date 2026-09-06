@@ -62,7 +62,7 @@ The same source file carries a second detail worth knowing: when the parser ente
 function body it switches into action-parsing mode, with the comment *"Arrow function can
 contain assignments even in a binding context."* So an assignment inside an arrow body in a
 property binding is accepted where the identical assignment outside it is not. Chunk
-**05 · Expressions, statements and safe navigation** *(not written yet)* explains what "binding context"
+[05 · Expressions, statements and safe navigation](05-expressions-statements-and-safe-navigation.md) explains what "binding context"
 versus "action context" means and why it is the most important distinction in the grammar.
 
 🔴 **None of this is permission to put logic in templates.** An arrow written inline in a
@@ -183,7 +183,7 @@ same assignment outside it does not.** Cause: the parser enters action-parsing m
 arrow body — the source comment is *"Arrow function can contain assignments even in a
 binding context."* Fix: none needed, but understand the asymmetry before relying on it; it
 is a parser mode, not a documented language guarantee, and chunk
-**05 · Expressions, statements and safe navigation** *(not written yet)* explains the two modes.
+[05 · Expressions, statements and safe navigation](05-expressions-statements-and-safe-navigation.md) explains the two modes.
 
 ## Interview questions
 
@@ -242,4 +242,4 @@ identity per pass — is the consumer `OnPush`?"
 
 ---
 
-← Prev: [03 · Declarations and `@let`](03-declarations-and-the-let-block.md) · Index: [Topic index](README.md) · Next → **05 · Expressions, statements and safe navigation** *(not written yet)*
+← Prev: [03 · Declarations and `@let`](03-declarations-and-the-let-block.md) · Index: [Topic index](README.md) · Next → [05 · Expressions, statements and safe navigation](05-expressions-statements-and-safe-navigation.md)
