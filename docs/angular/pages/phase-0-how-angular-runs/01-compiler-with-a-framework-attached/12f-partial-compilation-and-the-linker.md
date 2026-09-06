@@ -65,7 +65,7 @@ Intermediate, because it is not executable Angular yet — something must conver
 
 ⚠️ `'experimental-local'` is a *third* thing and not a publishing mode. Its errors are covered in
 [10d](10d-import-cycles-and-local-compilation.md), and the mechanism belongs to chunk
-**13 · Where the compiler runs: `ngtsc`** *(not written yet)*.
+**[13 · Where the compiler runs: `ngtsc`](13-where-the-compiler-runs-ngtsc.md)**.
 
 ## What partial mode emits
 

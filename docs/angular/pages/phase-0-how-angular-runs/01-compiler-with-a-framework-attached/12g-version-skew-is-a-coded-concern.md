@@ -82,7 +82,7 @@ being polite about old versions, it is refusing to emit calls to functions that 
 **Type-checking needs symbols that may not exist.** The signals comment says it directly: *"Only
 Angular versions greater than 17.2 have the necessary symbols to type check signals in two-way
 bindings."* The type-check block is generated TypeScript ([06d](06d-the-factory-and-the-d-ts-declaration.md)
-for the declaration side; chunk **14 · Template type checking** *(not written yet)* for the block
+for the declaration side; chunk **[14 · Template type checking](14-template-type-checking.md)** for the block
 itself), and generated TypeScript can only reference types the resolved packages export.
 
 The mechanism this is possible *through* is exactly the one in
@@ -93,7 +93,7 @@ whole build.
 
 Where and how `ngtsc` itself executes — the transformer, `ngc`, and the hard TypeScript peer range
 that is a *different* version-coupling problem — belongs to chunk
-**13 · Where the compiler runs: `ngtsc`** *(not written yet)*.
+**[13 · Where the compiler runs: `ngtsc`](13-where-the-compiler-runs-ngtsc.md)**.
 
 ## Gotchas
 
@@ -195,4 +195,4 @@ degrades silently rather than loudly.
 
 ---
 
-← Prev: [12f · Partial compilation and the linker](12f-partial-compilation-and-the-linker.md) · Index: [Topic index](README.md) · Next → **12h · What locality bought the ecosystem** *(not written yet)*
+← Prev: [12f · Partial compilation and the linker](12f-partial-compilation-and-the-linker.md) · Index: [Topic index](README.md) · Next → [13 · Where the compiler runs: `ngtsc`](13-where-the-compiler-runs-ngtsc.md)

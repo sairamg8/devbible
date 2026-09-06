@@ -26,7 +26,7 @@ stop being a list of rules and start being consequences.
 
 ## Chunks
 
-🚧 **11 of 17 numbered chunks written, across 37 files.** Six of the eleven exhausted their
+🚧 **14 of 17 numbered chunks written, across 52 files.** Eight of the fourteen exhausted their
 subject past the 300-line cap and split into lettered siblings — the cap is a file size, never a
 content budget, so a chunk that ran long became five, six or seven files rather than a shorter
 page. The rows without links are planned and named; a link to a page that does not exist breaks
@@ -76,9 +76,20 @@ concluding an error is absent because it cannot happen.
 | 11b | **[The nine conditions and the barrel trap](11b-the-nine-conditions-and-the-barrel-trap.md)** | 🔴 The guide names two conditions; `registerDeferrableCandidate` applies eight, plus a ninth at the import-declaration level — and **not one of the nine produces a line of build output** |
 | 11c | **[Diagnosing a `@defer` that did not split](11c-diagnosing-a-defer-that-did-not-split.md)** | There is no build error, so this is a procedure: rule out HMR, turn the silence into a diagnostic with `deferredImports`, then read the bundle |
 | 11d | **[What `@defer` never defers](11d-what-defer-never-defers.md)** | Only the primary block gets a resolver — a design-system spinner in a `@placeholder` can cancel the whole benefit |
-| 12 | **Ivy and locality** *(not written yet)* | "The decorator is the compiler", the locality principle, separate compilation, incremental rebuilds and what locality buys the ecosystem |
-| 13 | **Where the compiler runs: `ngtsc`** *(not written yet)* | `@angular/compiler-cli`, a TypeScript *transformer* rather than a separate pass, `ngc`, and 🔴 why that forces the hard TS `>=6.0 <6.1` peer pin |
-| 14 | **Template type checking** *(not written yet)* | `strictTemplates`, the type-check block, all ten strictness flags, and the class of bugs that moves from runtime to build time |
+| 12 | **[Ivy and locality](12-ivy-and-locality.md)** | 🔴 "The decorator is the compiler" — the locality principle stated as the compiler's own design constraint, and why it is what makes separate compilation possible |
+| 12b | **[Inheritance and the undecorated base](12b-inheritance-and-the-undecorated-base.md)** | The one place locality is deliberately broken: a base class in another file whose metadata the derived class must inherit |
+| 12c | **[What inheritance never carries](12c-what-inheritance-never-carries.md)** | The list is short and the omissions are the interesting part — a template, a selector and `imports` are never inherited |
+| 12d | **[Where locality breaks](12d-where-locality-breaks.md)** | The four places the compiler must read another file anyway, each with the reason it has no choice |
+| 12e | **[What locality costs](12e-what-locality-costs.md)** | Faster incremental rebuilds bought with a compiler that cannot see your whole program — and the errors that buys you |
+| 12f | **[Partial compilation and the linker](12f-partial-compilation-and-the-linker.md)** | `ɵɵngDeclareComponent`, `compilationMode: 'partial'`, and the linker that finishes the job at the consumer's version |
+| 12g | **[Version skew is a coded concern](12g-version-skew-is-a-coded-concern.md)** | The declaration format carries a version field on purpose — skew is a case the design handles, not an accident it survives |
+| 13 | **[Where the compiler runs: `ngtsc`](13-where-the-compiler-runs-ngtsc.md)** | `@angular/compiler-cli` as a TypeScript *transformer* rather than a separate pass, and the `.ngtypecheck.ts` shims that exist in both programs |
+| 13b | **[`ngc` is `tsc`, and the pin](13b-ngc-is-tsc-and-the-typescript-pin.md)** | 🔴 Why a transformer forces the hard TypeScript `>=6.0 <6.1` peer pin, and why "which TypeScript" is never a property of your repository alone |
+| 13c | **[The `NG` code is a TypeScript code](13c-the-ng-error-code-is-a-typescript-code.md)** | Angular's diagnostics ride TypeScript's reporting surface — and the negative-enum encoding that decides which codes get a docs link |
+| 13d | **[`compilationMode` and the local portability trap](13d-compilation-mode-and-the-local-portability-trap.md)** | Three modes, one source: what `full`, `partial` and `experimental-local` each decline to look at |
+| 13e | **[The option surface and config-time diagnostics](13e-the-option-surface-and-config-time-diagnostics.md)** | 🔴 When angular.dev and the compiler disagree about whether an option exists, the checked-in golden wins |
+| 14 | **[Template type checking](14-template-type-checking.md)** | `strictTemplates`, the Type Check Block, the strictness flags, and the class of bugs that moves from runtime to build time |
+| 14b | **[How each construct is translated](14b-how-each-construct-is-translated.md)** | Construct by construct: what each piece of template syntax becomes in the TCB, and what the TCB is structurally unable to see |
 | 15 | **Extended diagnostics** *(not written yet)* | The NG81xx warnings for code that is legal but wrong, how to promote them to errors, and the semver caveat when you do |
 | 16 | **Arriving from React, Vue or Svelte** *(not written yet)* | What "compiled" means in each of the four, what Angular buys with it and what it costs |
 | 17 | **Consequences you actually hit** *(not written yet)* | Errors in a file TypeScript never compiled, NG3003 import cycles, NG8001/NG8002, and expressions that work in the class and fail in the template |

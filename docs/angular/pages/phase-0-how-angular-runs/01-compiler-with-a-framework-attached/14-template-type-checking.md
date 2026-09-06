@@ -293,4 +293,4 @@ attributed to the right one.
 
 ---
 
-← Prev: **13 · Where the compiler runs: `ngtsc`** *(not written yet)* · Index: [Topic index](README.md) · Next → [14b · How each template construct becomes TypeScript](14b-how-each-construct-is-translated.md)
+← Prev: [13e · The option surface and config-time diagnostics](13e-the-option-surface-and-config-time-diagnostics.md) · Index: [Topic index](README.md) · Next → [14b · How each template construct becomes TypeScript](14b-how-each-construct-is-translated.md)

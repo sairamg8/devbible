@@ -41,8 +41,7 @@ and, on the decorator compilers specifically:
 and the doc names the two moments it is not: *production builds* (because it has to resolve which
 directive matches each element in order to emit a `dependencies` list —
 [06c](06c-decls-vars-consts-and-dependencies.md)) and *type checking a template* (because it has to
-know the input types of the directives that matched — that is chunk **14 · Template type checking**
-*(not written yet)*).
+know the input types of the directives that matched — that is chunk **[14 · Template type checking](14-template-type-checking.md)**).
 
 The reason is not an implementation shortcut. It is the fact `separate_compilation.md` states in its
 own terms: *"The only pieces of information that are not generated into the definition are the
@@ -55,7 +54,7 @@ matched from elsewhere.
 | Exception | Why it cannot be local | Where it is covered |
 |---|---|---|
 | **Reference inversion** | A template that says `<app-child/>` must become an emitted *import* of the `ChildComponent` class, so the bundler can see the edge. Working out which class a tag refers to needs the selectors of everything in scope. | [08b](08b-the-selector-problem-and-reference-inversion.md) |
-| **Template type-checking** | Checking `[count]="total"` needs the declared type of `count` on whichever directive matched, which is in that directive's `.d.ts`, in another file. | [06d](06d-the-factory-and-the-d-ts-declaration.md) for the `.d.ts` side; chunk **14 · Template type checking** *(not written yet)* for the checking |
+| **Template type-checking** | Checking `[count]="total"` needs the declared type of `count` on whichever directive matched, which is in that directive's `.d.ts`, in another file. | [06d](06d-the-factory-and-the-d-ts-declaration.md) for the `.d.ts` side; chunk **[14 · Template type checking](14-template-type-checking.md)** for the checking |
 
 Both exceptions have the same shape: **the compiler needs to know about the classes in this
 template's scope, and only those.** That is a bounded, explicit set — not "the whole program". The

@@ -43,7 +43,7 @@ angular.dev documents only two of the three:
 
 The two that are constantly confused are `partial` and `experimental-local`, because both sound like "less than full". They are unrelated:
 
-- **`partial` narrows the output.** It reads everything, then declines to bake in decisions that depend on the Angular version, so a consumer's build can finish the job at their version. Its output is not runnable until the linker processes it. That is the whole of **12 · Ivy and locality** *(not written yet)*.
+- **`partial` narrows the output.** It reads everything, then declines to bake in decisions that depend on the Angular version, so a consumer's build can finish the job at their version. Its output is not runnable until the linker processes it. That is the whole of **[12 · Ivy and locality](12-ivy-and-locality.md)**.
 - **`experimental-local` narrows the input.** It reads one file, then emits final, runnable code from it. Nothing further processes the output; the compromise is entirely on the analysis side.
 
 ## What "without using its dependencies" removes

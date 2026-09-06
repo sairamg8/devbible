@@ -173,7 +173,7 @@ The siblings in the same file follow the same design:
 
 ⚠️ There is a second, later compilation mode in which a library ships `ɵɵngDeclareComponent(...)` calls
 instead of `ɵɵdefineComponent(...)` and a linker converts them at the *application's* Angular version.
-**12 · Ivy and locality** *(not written yet)* owns it; the `.d.ts` declarations above are the same in
+**[12 · Ivy and locality](12-ivy-and-locality.md)** owns it; the `.d.ts` declarations above are the same in
 both modes, which is precisely what makes the scheme work.
 
 ## Gotchas

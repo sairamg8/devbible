@@ -199,7 +199,7 @@ component the template is in a file TypeScript does not include; in an inline co
 is a string literal. Only `ngtsc` reads it. Fix: run the Angular Language Service (it is the
 compiler's checker exposed to the editor, not a second implementation) and do not treat a
 green TypeScript check as a green build. Chunk
-**13 · Where the compiler runs: `ngtsc`** *(not written yet)* explains why they are two different programs.
+**[13 · Where the compiler runs: `ngtsc`](13-where-the-compiler-runs-ngtsc.md)** explains why they are two different programs.
 
 **Symptom: a template renders `@if (isAdmin) {` as literal text in the browser.** Cause: the
 file was served as static HTML, or the block is inside something Angular does not compile —
@@ -239,7 +239,7 @@ An inline `template:` is a template-literal expression whose *contents* TypeScri
 reason to inspect. Template checking is a separate feature implemented by
 `@angular/compiler-cli`, which builds a synthetic TypeScript file representing the template
 and asks the TypeScript type checker about *that* — see chunk
-**14 · Template type checking** *(not written yet)*. This is why "it compiles in the IDE" and "it builds" are
+**[14 · Template type checking](14-template-type-checking.md)**. This is why "it compiles in the IDE" and "it builds" are
 different statements in Angular in a way they are not in React.
 
 **Where in the pipeline does an expression like `user.name | titlecase` actually get

@@ -40,8 +40,7 @@ The compiler's job for a `@Component` is to produce:
    format between separately compiled libraries ([06d](06d-the-factory-and-the-d-ts-declaration.md)).
 
 …plus a fourth that exists for the duration of the build only: a **Type Check Block**, emitted into a
-synthetic `.ngtypecheck.ts` file that is never written to disk. **14 · Template type checking**
-*(not written yet)* owns that one.
+synthetic `.ngtypecheck.ts` file that is never written to disk. **[14 · Template type checking](14-template-type-checking.md)** owns that one.
 
 Nothing else. There is no `.metadata.json`, no generated `.ngfactory.ts`, no separate output file — those
 belong to ViewEngine, which `ngtsc` replaced. angular.dev's
@@ -289,7 +288,7 @@ Because emulated encapsulation is implemented by stamping `_ngcontent-*` attribu
 Because the compiler guards each `definitionMap.set` — `selectors` only when there is at least one, `consts` only when the template produced constants, `encapsulation` only when it is not `Emulated`. An absent key is smaller than a key holding a default, and the runtime supplies the default anyway when it builds the `ComponentDef` from the definition object. The practical consequence is that two components can produce definitions with different key sets, so any code that iterates a definition's keys — a test assertion, a devtools panel, a codemod — is reading an implementation detail the framework explicitly declines to freeze.
 
 **Why is it correct to describe `ngtsc` as a TypeScript transformer rather than a separate compiler?**
-Because it runs inside the TypeScript compilation rather than beside it: it is wired in as a custom transformer, so it sees the same `ts.Program`, the same type checker and the same emit pipeline that compiles the rest of your code. That is what makes the output *additive* — there is one emit, producing your `.js` and your `.d.ts`, with Angular's static fields and type declarations added into them. It is also why Angular's TypeScript peer range is a hard pin (`>=6.0 <6.1` at 22.1.5) rather than a suggestion: a transformer depends on compiler internals, and **13 · Where the compiler runs** *(not written yet)* is that argument in full.
+Because it runs inside the TypeScript compilation rather than beside it: it is wired in as a custom transformer, so it sees the same `ts.Program`, the same type checker and the same emit pipeline that compiles the rest of your code. That is what makes the output *additive* — there is one emit, producing your `.js` and your `.d.ts`, with Angular's static fields and type declarations added into them. It is also why Angular's TypeScript peer range is a hard pin (`>=6.0 <6.1` at 22.1.5) rather than a suggestion: a transformer depends on compiler internals, and **[13 · Where the compiler runs](13-where-the-compiler-runs-ngtsc.md)** is that argument in full.
 
 ---
 

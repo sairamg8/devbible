@@ -130,7 +130,7 @@ Error *names* across these six pages are verbatim from `ErrorCode` in `packages/
 
 The dagger appears on every page in this catalogue and its definition is repeated on each, so a page opened cold still carries it.
 
-There is a second and better way to check a number yourself. **If the error in your terminal ends with a `Find more at https://v22.angular.dev/errors/NGxxxx` line, the number is real and the page exists.** `addDiagnosticDetails` in `diagnostics/src/util.ts` appends that suffix only for codes Angular declares with a *negative* enum value, and only ten compiler codes are declared that way — the same ten the encyclopedia lists. No link means no documentation page, not that you misread the number. The encoding behind it is **13 · Where the compiler runs: `ngtsc`** *(not written yet)*.
+There is a second and better way to check a number yourself. **If the error in your terminal ends with a `Find more at https://v22.angular.dev/errors/NGxxxx` line, the number is real and the page exists.** `addDiagnosticDetails` in `diagnostics/src/util.ts` appends that suffix only for codes Angular declares with a *negative* enum value, and only ten compiler codes are declared that way — the same ten the encyclopedia lists. No link means no documentation page, not that you misread the number. The encoding behind it is **[13 · Where the compiler runs: `ngtsc`](13-where-the-compiler-runs-ngtsc.md)**.
 
 ## What the rest of the catalogue covers
 

@@ -71,7 +71,7 @@ export class ProductCard {
 
 `undefined` is in the list and `null` is a *literal* rather than a global, so both work.
 `$any` is not a real function — it is a compiler directive that switches off type checking
-for one sub-expression, covered in chunk **14 · Template type checking** *(not written yet)*.
+for one sub-expression, covered in chunk **[14 · Template type checking](14-template-type-checking.md)**.
 
 ## Local variables beginning with `$`
 
@@ -257,7 +257,7 @@ have a template grammar in which half the language only works in a browser. The 
 is that the template's lexical scope is deliberately the component instance plus template
 variables plus two globals — a closed, statically known set — which is what makes it
 possible to generate a type-check block for a template at all (chunk
-**14 · Template type checking** *(not written yet)*). If templates could reach ambient globals, the checker
+**[14 · Template type checking](14-template-type-checking.md)**). If templates could reach ambient globals, the checker
 would have to model the entire ambient environment. Inject `DOCUMENT`, or read the value
 into a signal in the class.
 
@@ -270,7 +270,7 @@ your `.html` file, unless source maps for the template are in play. This is a la
 why the grammar is small: an expression that cannot construct, cannot assign and cannot
 declare has far fewer ways to throw, and the ones that remain (a null dereference, a bad
 method call) are exactly what the template type checker in chunk
-**14 · Template type checking** *(not written yet)* is designed to catch first.
+**[14 · Template type checking](14-template-type-checking.md)** is designed to catch first.
 
 **Angular supports `instanceof` and `in` as operators but bans `new`. Is that consistent?**
 It is, once you separate *reading* from *creating*. `instanceof` and `in` interrogate a

@@ -240,4 +240,4 @@ and the block works. Angular chose not to warn on a supported state; the only pl
 
 ---
 
-← Prev: [11c · Diagnosing a `@defer` that did not split](11c-diagnosing-a-defer-that-did-not-split.md) · Index: [Topic index](README.md) · Next → **12 · Ivy and locality** *(not written yet)*
+← Prev: [11c · Diagnosing a `@defer` that did not split](11c-diagnosing-a-defer-that-did-not-split.md) · Index: [Topic index](README.md) · Next → **[12 · Ivy and locality](12-ivy-and-locality.md)**

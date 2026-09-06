@@ -156,7 +156,7 @@ Two `MiscOptions` are worth knowing by name because their behaviour is surprisin
 
 That second one is the compilation-unit boundary again, stated in an option's own documentation — see [13d](13d-compilation-mode-and-the-local-portability-trap.md) for what the unit is and how it shrinks.
 
-🔴 **The rule to carry: when angular.dev and the compiler disagree about whether an option exists, the golden wins.** `goldens/public-api/compiler-cli/compiler_options.api.md` is generated from the compiler's own public API and is checked in CI against the source; the reference page is prose maintained by hand. Read the golden at the tag you are actually on. The same principle settles the `strictTemplates` default, which is **14 · Template type checking** *(not written yet)*, and the extended-diagnostics roster, which is **15 · Extended diagnostics** *(not written yet)*.
+🔴 **The rule to carry: when angular.dev and the compiler disagree about whether an option exists, the golden wins.** `goldens/public-api/compiler-cli/compiler_options.api.md` is generated from the compiler's own public API and is checked in CI against the source; the reference page is prose maintained by hand. Read the golden at the tag you are actually on. The same principle settles the `strictTemplates` default, which is **[14 · Template type checking](14-template-type-checking.md)**, and the extended-diagnostics roster, which is **15 · Extended diagnostics** *(not written yet)*.
 
 ## Gotchas
 
@@ -266,4 +266,4 @@ Because a compiler cannot check something it is not compiling. A component that 
 
 ---
 
-← Prev: [13d · `compilationMode` and local mode](13d-compilation-mode-and-the-local-portability-trap.md) · Index: [Topic index](README.md) · Next → **14 · Template type checking** *(not written yet)*
+← Prev: [13d · `compilationMode` and local mode](13d-compilation-mode-and-the-local-portability-trap.md) · Index: [Topic index](README.md) · Next → **[14 · Template type checking](14-template-type-checking.md)**

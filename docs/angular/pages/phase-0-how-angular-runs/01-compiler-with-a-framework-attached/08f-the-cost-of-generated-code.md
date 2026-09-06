@@ -72,7 +72,7 @@ compilationMode?: 'full' | 'partial' | 'experimental-local';
 
 A library builds in `partial` mode, publishing `ɵɵngDeclare*` declarations rather than final
 definitions, and the consumer's build links them — re-compiling the declaration at the application's
-Angular version. **12 · Ivy and locality** *(not written yet)* owns that story.
+Angular version. **[12 · Ivy and locality](12-ivy-and-locality.md)** owns that story.
 
 ## Cost 6 — the runtime still does at runtime what locality kept out of the build
 
@@ -114,7 +114,7 @@ The second-order cost is the one that shows up in a dependency bump. `ngtsc` run
 transformer inside `tsc`, so it is coupled to TypeScript's internal API, and `@angular/compiler-cli`
 declares a hard peer range — at 22.1.5, `typescript: ">=6.0 <6.1"`. **Your TypeScript version is not
 yours to choose**; it is chosen by whichever Angular you are on.
-**13 · Where the compiler runs: `ngtsc`** *(not written yet)* covers the mechanism.
+**[13 · Where the compiler runs: `ngtsc`](13-where-the-compiler-runs-ngtsc.md)** covers the mechanism.
 
 ## Gotchas
 

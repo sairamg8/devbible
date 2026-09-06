@@ -231,7 +231,7 @@ npx ng build                             # the actual application
 node -p "require('./angular.json').projects['my-app'].architect.build.options.tsConfig"
 ```
 
-**Symptom: a library builds against your Angular version in CI and fails for a consumer on a different one.** Cause: the consumer's build runs the consumer's compiler, and their TypeScript is pinned by *their* Angular. Fix: publish with `compilationMode: 'partial'` so the consumer's compiler finishes the job at their version — that mechanism is **12 · Ivy and locality** *(not written yet)*; the point here is that "which TypeScript" is never a property of your repository alone.
+**Symptom: a library builds against your Angular version in CI and fails for a consumer on a different one.** Cause: the consumer's build runs the consumer's compiler, and their TypeScript is pinned by *their* Angular. Fix: publish with `compilationMode: 'partial'` so the consumer's compiler finishes the job at their version — that mechanism is **[12 · Ivy and locality](12-ivy-and-locality.md)**; the point here is that "which TypeScript" is never a property of your repository alone.
 
 ## Interview questions
 

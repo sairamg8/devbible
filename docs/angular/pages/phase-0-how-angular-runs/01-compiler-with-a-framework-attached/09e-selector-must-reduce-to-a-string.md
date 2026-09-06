@@ -102,7 +102,7 @@ The first four all produce `selector must be a string`, and only the *second* se
 
 > *"Unresolved identifier found for @Component.selector field! Did you import this identifier from a file outside of the compilation unit? This is not allowed when Angular compiler runs in local mode. Possible solutions: 1) Move the declarations into a file within the compilation unit, 2) Inline the selector"*
 
-🔴 **This is a real portability trap.** Local compilation deliberately narrows what the compiler is allowed to look at, so a cross-file constant that resolves perfectly well in a full compilation is out of reach. The same source, the same Angular version, two build configurations, two outcomes — and the failing one is usually not the developer's own build. What the compiler runs as and where, including this mode, belongs to **13 · Where the compiler runs: `ngtsc`** *(not written yet)*; the consequence you need here is that **a selector imported from another file is the least portable of the legal forms**, and a string literal is the most.
+🔴 **This is a real portability trap.** Local compilation deliberately narrows what the compiler is allowed to look at, so a cross-file constant that resolves perfectly well in a full compilation is out of reach. The same source, the same Angular version, two build configurations, two outcomes — and the failing one is usually not the developer's own build. What the compiler runs as and where, including this mode, belongs to **[13 · Where the compiler runs: `ngtsc`](13-where-the-compiler-runs-ngtsc.md)**; the consequence you need here is that **a selector imported from another file is the least portable of the legal forms**, and a string literal is the most.
 
 ## The empty-string case
 

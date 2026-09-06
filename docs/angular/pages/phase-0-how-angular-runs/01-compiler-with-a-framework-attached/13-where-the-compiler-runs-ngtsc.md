@@ -152,7 +152,7 @@ export class TypeCheckShimGenerator implements PerFileShimGenerator {
 
 Each one starts life holding a single statement: `'export const USED_FOR_NG_TYPE_CHECKING = true;'`.
 
-🔴 **There is one `.ngtypecheck.ts` per source file, it is in your main program, and it is never written to disk** (`shouldEmit = false`). The doc comment gives the reason and it is a performance reason, not a design flourish: TypeScript will only reuse a program's work when building a second program if *the file sets are identical*, so the main program is padded with the same shims the type-checking program needs. What eventually goes inside them is **14 · Template type checking** *(not written yet)*; the fact that they exist, and exist in both programs, belongs here.
+🔴 **There is one `.ngtypecheck.ts` per source file, it is in your main program, and it is never written to disk** (`shouldEmit = false`). The doc comment gives the reason and it is a performance reason, not a design flourish: TypeScript will only reuse a program's work when building a second program if *the file sets are identical*, so the main program is padded with the same shims the type-checking program needs. What eventually goes inside them is **[14 · Template type checking](14-template-type-checking.md)**; the fact that they exist, and exist in both programs, belongs here.
 
 ## What being a transformer forbids
 
@@ -243,4 +243,4 @@ Because an external template is a resource that has to be fetched, and a build i
 
 ---
 
-← Prev: **12 · Ivy and locality** *(not written yet)* · Index: [Topic index](README.md) · Next → [`ngc` is `tsc`, and that is why the TypeScript pin is hard](13b-ngc-is-tsc-and-the-typescript-pin.md)
+← Prev: [12g · Version skew is a coded concern](12g-version-skew-is-a-coded-concern.md) · Index: [Topic index](README.md) · Next → [`ngc` is `tsc`, and that is why the TypeScript pin is hard](13b-ngc-is-tsc-and-the-typescript-pin.md)
