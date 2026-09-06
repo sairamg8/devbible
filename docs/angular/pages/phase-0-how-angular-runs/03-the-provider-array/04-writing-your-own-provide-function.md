@@ -290,4 +290,4 @@ library with it belongs in a feature function.
 
 ---
 
-← Prev: [EnvironmentProviders vs Provider](03-environmentproviders-vs-provider.md) · Index: [Topic index](README.md) · Next → [Change detection providers](05-change-detection-providers.md)
+← Prev: [EnvironmentProviders vs Provider](03-environmentproviders-vs-provider.md) · Index: [Topic index](README.md) · Next → [`ng update`, not `npm install`](../04-ng-update-not-npm-install/README.md)
