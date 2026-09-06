@@ -157,6 +157,59 @@ tidying afterwards.
 **Cause:** Git does not record who fetched, and cannot
 **Fix:** assume they do. An unnecessary `revert` costs one commit; an unnecessary rewrite costs everyone an afternoon
 
+## Interview questions
+
+**★ Something is pushed and wrong. What are the only two options?**
+Add a commit that undoes it, or rewrite and make everyone else clean up. The
+selector is whether the branch is protected or anyone else has it — where "anyone
+else" includes CI runners, forks and bots — and when in doubt the answer is yes,
+because an unnecessary revert costs one extra commit in `git log` while an
+unnecessary rewrite costs every clone a recovery procedure.
+
+**★ Why is the arithmetic so lopsided?**
+Because the benefit of a rewrite is visible to you and the cost is invisible. You get
+a clean `git log` with no record of the mistake; everyone else gets a recovery
+procedure each, a silent duplicate-commit failure mode if they do not know to run it,
+and a coordination problem that scales with the number of clones — the number you
+cannot see from your terminal. `revert` costs one commit. That is why the rule is
+stated as absolute rather than as a judgement call: the judgement would require
+information Git cannot give you.
+
+**★ Give the order of operations for a leaked credential.**
+Rotate the credential **first** — it has been in every clone, CI cache and fork, and
+possibly a public host, and rotation is the step that actually resolves the incident.
+Then stop tracking the file: `git rm --cached`, add an ignore rule, commit. Then
+*optionally* rewrite history to remove the blob, which is hygiene rather than
+remediation. Then ask the host to purge caches and check forks, because the commit may
+stay reachable by URL even after a rewrite. Hours spent rewriting while the key is
+still valid is the classic and expensive inversion.
+
+**★ Why is "fix a wrong commit message" the most tempting rewrite and the least
+valuable?**
+Because the payoff is a message nobody will read again, and the price is a
+coordinated recovery for everyone holding the branch. It is the clearest case where
+the rewrite is about how the history *looks* to you rather than about what anything
+does, and it is worth naming explicitly precisely because it feels harmless. Leave
+it.
+
+**★ You reverted a commit that added a huge binary and the repository is still huge.
+Why?**
+Because `revert` removes the file from the current tree by adding an inverse commit;
+the blob is still in history and still in the packfile, so nothing about the
+repository's size changes. Only a history rewrite shrinks it, and that requires
+everyone to re-clone — usually not worth it. Prevention through ignore rules and
+size limits is the real answer, which is the same conclusion as the secret case: the
+cheap fix is upstream of the commit.
+
+**What does telling people before a force-push actually save them?**
+The silent failure. Without warning, anyone holding the old commits runs `pull`, Git
+merges the old and new versions **cleanly** because the content is identical, and
+they end up with duplicates of every rewritten commit that then get pushed back — no
+error at any point. With warning, the repair is one command: `git reset --hard
+origin/<branch>`, or `git rebase --onto origin/<branch> <old-tip> <branch>` if they
+have unique local work. The knowledge that a rewrite happened is the entire
+difference, and it can only come from you.
+
 ---
 
 ← Prev: [Undoing a merge](07-undoing-a-merge.md) · Next → [Phase 5 index](README.md)
