@@ -176,6 +176,61 @@ uses one — clean up at merge time.
 **Cause:** the host maps the commit **email** to an account; the name is cosmetic
 **Fix:** ensure `user.email` matches an email registered on your host account, then rewrite again
 
+## Interview questions
+
+**★ How do you pick the right rewriting tool?**
+By how far back the problem is. The last commit's message or a forgotten file is
+`git commit --amend`. Several commits — reorder, squash, drop, reword — is
+`git rebase -i <base>`. A fix for a commit buried in the branch is
+`git commit --fixup=<hash>` now plus `git rebase -i --autosquash` later. Undoing
+commits while keeping the work is `git reset --soft HEAD~n`. And the very first
+commit, which people assume is untouchable, is `git rebase -i --root`.
+
+**★ What does `--amend --only` do, and why is it underused?**
+Plain `--amend` folds in **everything currently staged**, which is wrong the moment
+you have started staging the *next* change — you meant to fix the last commit and you
+have just absorbed unrelated work into it. `--amend --only --no-edit` amends without
+taking staged content, so the previous commit is corrected and your in-progress
+staging survives untouched. It is the difference between a targeted fix and a silent
+merge of two changes.
+
+**★ Describe the `--fixup` workflow and what `--autosquash` actually does.**
+When review feedback lands on commit three of six, you commit the fix immediately as
+`git commit --fixup=<hash>`, producing a message of the form `fixup! <target
+subject>`. Later, `git rebase -i --autosquash main` recognises those markers, matches
+each to its target, **moves it into position** and pre-sets the command — so the todo
+list arrives already correct and you save it unchanged. `rebase.autosquash true`
+makes it the default, and `--fixup=amend:` and `--fixup=reword:` cover the
+content-and-message and message-only variants.
+
+**★ Every commit went in under the wrong `user.email`. How do you fix a whole branch,
+and what is the catch?**
+`git rebase -i --root --exec 'git commit --amend --no-edit --reset-author'` rewrites
+the author of every commit to your current identity. The catch is in the word
+"every": it rewrites the entire history, so it is only appropriate on a branch nobody
+else has. The other catch is that hosts map the commit **email** to an account and
+treat the name as cosmetic, so the rewrite only helps if `user.email` matches an
+address registered on your account. Setting `user.email` per repository is the
+prevention.
+
+**★ Why is `--exec` worth running on a branch you have rewritten?**
+Because every replayed commit is a combination that was never built — your change
+applied to a base it was not written against — and in practice only the tip gets
+tested. `git rebase -i --exec 'npm test' main` runs the command after each commit and
+stops at the first failure, so a history that *looks* bisectable actually is. A
+plausible-looking linear history that fails when someone bisects it a year later is
+worse than an obviously messy one.
+
+**Why does "rebase is dangerous" persist as folklore?**
+Because the danger is real but conditional, and the condition is invisible. Nothing
+about `git rebase -i` indicates which side of the line you are on: the command, the
+output and the behaviour are identical whether the branch is private or shared, and
+the difference is a fact about other people's repositories that Git cannot see. The
+way to make it manageable is to treat the two cases as different activities — before
+the branch is shared, rewriting is a drafting tool you never think about; after it
+is shared, the only additive tool is `revert`. The practical line is the moment you
+open a pull request.
+
 ---
 
 ← Prev: [Recovery with `reflog`](04-reflog-recovery.md) · Next → [Recovering a deleted branch](06-recovering-a-branch.md)
