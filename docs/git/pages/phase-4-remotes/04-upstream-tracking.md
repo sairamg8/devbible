@@ -175,6 +175,62 @@ where a silent push would be wrong.
 **Cause:** `push.default = matching`, the pre-2.0 default, left in a config file
 **Fix:** `git config --global push.default simple`
 
+## Interview questions
+
+**★ What is an upstream, mechanically?**
+Two config lines on the branch: `remote` naming which remote, and `merge` naming the
+branch there. Together they are what makes bare `git push` and bare `git pull` know
+where to go, what produces the ahead/behind counts in `status` and `branch -vv`, and
+what `@{u}` resolves to. A branch without them is why the first push of a new branch
+demands `git push -u origin <name>` and why its `git status` says nothing at all
+about the remote.
+
+**★ How do you stop meeting "the current branch has no upstream branch"?**
+`git config --global push.autoSetupRemote true`. With it on, a bare `git push` from a
+branch with no upstream pushes to a same-named branch on the default remote and sets
+the upstream in passing. It removes the most common single piece of Git friction, and
+for a normal one-remote workflow there is no real downside. The manual alternative is
+just remembering `-u` on the first push of every branch.
+
+**★ What are `@{u}` and `@{push}`, and when do they differ?**
+`@{u}` is the current branch's upstream — where a pull takes from — and `@{push}` is
+where a push would send it. In a normal one-remote setup they are the same ref. They
+diverge in a **triangular** workflow: on a fork you fetch from `upstream` and push to
+`origin`, so `@{u}` is `upstream/main` while `@{push}` is `origin/main`.
+`remote.pushDefault` is what sets that up. Quote both in shells that treat braces
+specially.
+
+**★ Set up the fork workflow in configuration rather than in remembered commands.**
+Add the original as a second remote, fetch it, point `main`'s upstream at it, and
+send pushes to your fork:
+
+```bash
+git remote add upstream https://github.com/original/project.git
+git fetch upstream
+git branch -u upstream/main main
+git config remote.pushDefault origin
+```
+
+Now `git pull` on `main` takes from the original project and `git push` goes to your
+fork, with no long commands to recall. The failure mode this fixes is a `pull` that
+brings in your own fork's commits because the branch was tracking `origin`.
+
+**★ What does `push.default = simple` protect you from, and what was `matching`?**
+`simple` pushes the current branch to its upstream and **refuses** if the upstream
+has a different name — which is exactly the case where a silent push would land
+somewhere you did not mean. `matching` was the pre-2.0 default and pushed every local
+branch that had a same-named remote branch, so one `git push` could publish half a
+dozen branches you had forgotten about. If you find it in an old dotfiles repo,
+replace it.
+
+**Upstream tracking makes commands short. What does it hide?**
+Which remote and which branch they mean. That is fine for weeks, and then you are on
+a branch whose upstream is somebody else's fork, or a release branch tracking a
+differently-named remote branch, and a reflexive `git push` goes somewhere you did
+not intend — Git will not ask, because the config already answered. The two defences
+are cheap: `git branch -vv` when you are unsure what tracks what, and
+`git push --dry-run` when the answer matters.
+
 ---
 
 ← Prev: [Remote-tracking branches](03-remote-tracking-branches.md) · Next → [Divergent branches](05-divergent-branches.md)
