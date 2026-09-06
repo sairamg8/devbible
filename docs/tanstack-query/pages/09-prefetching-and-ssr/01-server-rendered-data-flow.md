@@ -1,25 +1,30 @@
 ---
-title: "Prefetching & SSR: `prefetchQuery()`, `dehydrate()`/`HydrationBoundary` & Next.js Integration"
+title: "Prefetching & SSR: `queryClient.query()`, `dehydrate()`/`HydrationBoundary` & Next.js Integration"
 sidebar_label: "Prefetching & SSR"
 sidebar_position: 1
 ---
 
-# 🔄 Prefetching & SSR: `prefetchQuery()`, `dehydrate()`/`HydrationBoundary` & Next.js Integration
+<span className="db-tier t-understand">Understand</span>
+
+> Verified: 2026-09-06 against the TanStack Query docs — [Prefetching & Router Integration](https://tanstack.com/query/latest/docs/framework/react/guides/prefetching), [Advanced Server Rendering](https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr), [`QueryClient`](https://tanstack.com/query/latest/docs/reference/QueryClient). API surface corrected only — **the rest of this page has not yet had a full validation pass**. Documentation-validated, **no sandbox run**. Target: **@tanstack/react-query 5.102.8**.
+
+# 🔄 Prefetching & SSR: `queryClient.query()`, `dehydrate()`/`HydrationBoundary` & Next.js Integration
 
 ## 1. Under-The-Hood Mechanics
 
 Prefetching populates the cache **ahead of** when a component actually needs it — on hover, on route transition, or on the server before any HTML is sent — turning what would otherwise be a client-side loading spinner into data that's already there the instant a component mounts.
 
 ```
-prefetchQuery({ queryKey, queryFn })
+queryClient.query({ queryKey, queryFn })
         │
         ▼
 Populates the cache with the result, WITHOUT subscribing any component to it —
 a plain "warm the cache ahead of time" operation, distinct from useQuery's
-subscribe-and-render behavior
+subscribe-and-render behavior. It also RESOLVES with the data, and REJECTS if
+the queryFn throws — so a prefetch that must not break the render needs a catch
 
 Server-Side Rendering flow:
-  SERVER: queryClient.prefetchQuery(...) ──► dehydrate(queryClient) ──► serialize cache state to JSON
+  SERVER: queryClient.query(...) ──► dehydrate(queryClient) ──► serialize cache state to JSON
         │
         ▼ (sent to the browser as part of the initial HTML/payload)
   CLIENT: <HydrationBoundary state={dehydratedState}>  ──► REHYDRATES that serialized cache
@@ -30,11 +35,39 @@ Server-Side Rendering flow:
                                                         even though this is the client's FIRST render
 ```
 
+### 🔴 The method is `query()`, not `prefetchQuery()`
+
+`queryClient.prefetchQuery()` is **deprecated**. The prefetching guide is explicit:
+
+> *"These tips replace the use of the now deprecated `prefetchQuery` and `ensureQueryData` methods."*
+> — [Prefetching & Router Integration](https://tanstack.com/query/latest/docs/framework/react/guides/prefetching)
+
+> *"those methods will be removed in the next major version of TanStack Query"*
+
+The replacement is named in the same guide — *"Prefetching a query uses the `query` method."* — and
+`prefetchQuery` no longer appears in the
+[`QueryClient` reference](https://tanstack.com/query/latest/docs/reference/QueryClient) at all.
+
+**The behavioural difference is the part that bites.** `prefetchQuery` swallowed errors; `query()`
+does not. The reference describes it as *"an asynchronous method that can be used to fetch and cache a
+query. It will either resolve with the data or throw with an error."* So an `await`ed prefetch in a
+Server Component will **fail the render** on a backend hiccup unless you catch. The Advanced SSR guide's
+own example does exactly that:
+
+```tsx
+await queryClient
+  .query({
+    queryKey: ['posts'],
+    queryFn: getPosts,
+  })
+  .catch(noop)
+```
+
 ### `dehydrate()`/`HydrationBoundary`: Bridging Server and Client Caches
 A server-rendered page's `QueryClient` instance and the browser's client-side `QueryClient` instance are genuinely separate objects (different processes entirely) — `dehydrate()` serializes the server's cache contents into a plain, JSON-transportable object; `HydrationBoundary` on the client reads that serialized state and merges it into the client's own cache, **before** any component's `useQuery` call runs — meaning the client's very first render already has the data, avoiding a redundant client-side refetch of data the server already fetched.
 
 ### Next.js Integration: Prefetching in Server Components, Hydrating in Client Hooks
-In a Next.js App Router setup, a Server Component prefetches data (calling the actual data-fetching logic directly, or via `prefetchQuery`), wraps its children in `HydrationBoundary`, and a Client Component further down the tree calls `useQuery` with the **identical** `queryKey` — TanStack Query recognizes the match and serves the already-hydrated data immediately, with the Client Component's hook still providing all its usual reactive behavior (refetching, mutations, cache updates) for everything that happens *after* that initial hydrated render.
+In a Next.js App Router setup, a Server Component prefetches data (calling the actual data-fetching logic directly, or via `queryClient.query()`), wraps its children in `HydrationBoundary`, and a Client Component further down the tree calls `useQuery` with the **identical** `queryKey` — TanStack Query recognizes the match and serves the already-hydrated data immediately, with the Client Component's hook still providing all its usual reactive behavior (refetching, mutations, cache updates) for everything that happens *after* that initial hydrated render.
 
 ---
 
@@ -56,10 +89,14 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   const { id } = await params;
   const queryClient = new QueryClient();
 
-  await queryClient.prefetchQuery({
-    queryKey: ['product', id],
-    queryFn: () => fetchProduct(id),
-  });
+  await queryClient
+    .query({
+      queryKey: ['product', id],
+      queryFn: () => fetchProduct(id),
+    })
+    // `query()` REJECTS on failure — without this, one flaky API call fails the whole page render.
+    // The client's useQuery below will simply fetch it itself if nothing was hydrated.
+    .catch(() => {});
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
@@ -94,7 +131,9 @@ function ProductLink({ productId, children }: { productId: string; children: Rea
     <Link
       href={`/products/${productId}`}
       onMouseEnter={() => {
-        queryClient.prefetchQuery({ queryKey: ['product', productId], queryFn: () => fetchProduct(productId) });
+        queryClient
+          .query({ queryKey: ['product', productId], queryFn: () => fetchProduct(productId) })
+          .catch(() => {}); // speculative work must never surface an error to the user
       }}
     >
       {children}
