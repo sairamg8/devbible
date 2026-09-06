@@ -4,6 +4,14 @@ sidebar_label: "`createAsyncThunk`"
 sidebar_position: 1
 ---
 
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-09-06 against the Redux Toolkit documentation for **@reduxjs/toolkit 2.12.0** —
+> [`createAsyncThunk`](https://redux-toolkit.js.org/api/createAsyncThunk),
+> [matching utilities](https://redux-toolkit.js.org/api/matching-utilities).
+> Documentation-validated; **no sandbox run**.
+> Validated: 2026-09-06 · claims + output provenance · session 3a6945a3
+
 # 📦 `createAsyncThunk`: Async Lifecycle, `thunkAPI` & Cancellation
 
 ## 1. Under-The-Hood Mechanics
@@ -31,7 +39,38 @@ Every `payloadCreator` receives `(arg, thunkAPI)`, where `thunkAPI` exposes:
 - `extra` — the "extra argument" injected via `configureStore({ middleware: getDefaultMiddleware({ thunk: { extraArgument } }) })`, typically an API client instance.
 
 ### The `condition` Option
-`condition: (arg, { getState }) => boolean` runs **before** the `pending` action is even dispatched. Returning `false` skips the entire thunk silently (no actions dispatched at all) — the standard way to deduplicate in-flight requests for the same resource.
+`condition: (arg, { getState }) => boolean` runs **before** the `pending` action is even dispatched.
+Returning `false` skips the entire thunk — the docs are explicit that "the default behavior is that no
+actions will be dispatched at all" — which is the standard way to deduplicate in-flight requests for
+the same resource.
+
+🔴 **"No actions at all" is the part that bites.** A component that flips its own loading flag *before*
+dispatching, and expects `pending`/`rejected` to flip it back, hangs forever on a short-circuited
+thunk. If you need the rejection, opt into it: `{ condition, dispatchConditionRejection: true }`
+dispatches a `rejected` action carrying `meta.condition === true`, so you can tell a deduplicated call
+apart from a genuine failure.
+
+### What `dispatch(thunk())` Returns
+Dispatching a thunk returns a promise, and that promise is **not** the payload creator's promise. It
+resolves with the final **action object** — `fulfilled` or `rejected` — and it does not reject on
+failure. Two things hang off it:
+
+- **`.abort()`** — cancels this dispatch, firing the `signal` inside the payload creator.
+- **`.unwrap()`** — converts the action back into a conventional promise: resolves with the payload on
+  success, and **throws** on rejection. This is what you want at a call site that needs `try`/`catch`.
+
+```typescript
+// The action-object form: never throws, so a try/catch around it catches nothing
+const action = await dispatch(fetchUser(id));
+if (fetchUser.fulfilled.match(action)) { /* action.payload is typed here */ }
+
+// The unwrapped form: throws, so ordinary error handling works
+try {
+  const user = await dispatch(fetchUser(id)).unwrap();
+} catch (err) {
+  // the rejectWithValue payload, or the serialised error
+}
+```
 
 ---
 
@@ -122,33 +161,95 @@ export const usersReducer = usersSlice.reducer;
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## Gotchas
 
-### ⚠️ Pitfall 1: Throwing Instead of `rejectWithValue` When Typed Errors Are Needed
+### `try`/`catch` around `dispatch(thunk())` that never catches
+**Symptom.** A failing request shows no error UI, and the `catch` block provably never runs — but the
+`rejected` action *is* in the DevTools log.
+**Cause.** The promise returned by dispatching resolves with the rejected **action object**; it does
+not reject. From the caller's point of view nothing threw.
+**Fix.** `.unwrap()` when you want exception semantics, or match on the action when you do not.
 ```typescript
-// ❌ Loses structured error info — action.payload is undefined, only action.error.message (a string) is available
+// ❌ catch never fires
+try { await dispatch(fetchUser(id)); } catch { showError(); }
+
+// ✅ unwrap re-throws the rejection
+try { await dispatch(fetchUser(id)).unwrap(); } catch (err) { showError(err); }
+```
+
+### Throwing where a typed error was needed
+**Symptom.** `action.payload` is `undefined` in the `rejected` case and all you have is a string.
+**Cause.** A thrown error is serialised onto `action.error`; only `rejectWithValue` populates
+`action.payload`.
+**Fix.**
+```typescript
+// ❌ Loses structured error info — action.payload is undefined, only action.error.message is available
 if (!response.ok) throw new Error('Not found');
 
 // ✅ CORRECT: rejectWithValue makes the error shape available on action.payload with full typing
 if (!response.ok) return rejectWithValue({ code: 'NOT_FOUND', message: 'Not found' });
 ```
+Declare it in the generics too — without `{ rejectValue: FetchUserError }` the payload types as
+`unknown` at every handler.
 
-### ⚠️ Pitfall 2: Ignoring `signal` — Wasted Work After Cancellation/Unmount
-🔴 **`abort()` lives on the promise `dispatch()` returns, never on the thunk itself.**
-`fetchUser.abort()` does not exist — the action creator has `.pending`/`.fulfilled`/`.rejected`
-and nothing else. The documented shape is:
-
+### A `condition` that silently strands the UI
+**Symptom.** A spinner that never stops, only when the user triggers the same fetch twice quickly.
+**Cause.** `condition` returning `false` dispatches **nothing** — no `pending`, no `rejected`. Any
+loading state the caller set by hand is never cleared.
+**Fix.** Either derive loading state from the `pending` action only (never set it manually before
+dispatch), or opt into the rejection so there is always a terminal action:
 ```typescript
-const promise = dispatch(fetchUser(props.userId));
-return () => { promise.abort(); };   // e.g. the cleanup returned from useEffect
+{ condition: (id, { getState }) => !isLoading(getState(), id), dispatchConditionRejection: true }
+// handlers can then check action.meta.condition to distinguish "deduplicated" from "failed"
 ```
 
-That matters beyond the typo: the handle is per-dispatch, so cancelling means keeping the promise
-from the exact call you want to stop — there is no way to reach back through the action creator and
-cancel "whatever is in flight".
+### One global `status` flag for a thunk that runs per-id
+**Symptom.** Two profile widgets load different users; one shows the other's spinner, or a stale
+result wins.
+**Cause.** `status: 'loading'` at the slice root cannot represent "user A loading while user B is
+done". The last `pending` wins and the first `fulfilled` clears it.
+**Fix.** Key async state by the thunk's argument, which is always available as `action.meta.arg`:
+```typescript
+.addCase(fetchUser.pending, (state, action) => {
+  state.byId[action.meta.arg] = { data: null, status: 'loading', error: null };
+})
+```
 
-If a component dispatches a thunk and unmounts before it resolves (whether cancelled through that
-promise handle, or superseded by `condition`), a `payloadCreator` that ignores `signal` still runs to completion and dispatches a `fulfilled` action into a state shape nothing reads anymore — wasted network and CPU, and potential stale-data bugs if a newer request resolves first.
+## Interview questions
 
-### ⚠️ Pitfall 3: Reading `state.users.status` As a Single Global Flag for Multiple Concurrent Requests
-A single top-level `status: 'loading'` flag cannot represent "user A is loading while user B already loaded" — race conditions between two different `arg` values will stomp each other's status. Key async state by the thunk's `arg` (as shown above with `byId[action.meta.arg]`), not by a single flat flag, whenever the same thunk can be in flight for multiple distinct inputs simultaneously.
+**★ What does `createAsyncThunk` actually generate, and what runs it?**
+It generates one action creator with three lifecycle action creators hanging off it —
+`.pending`, `.fulfilled`, `.rejected` — and a payload creator wrapper that dispatches them around your
+promise. There is **no** new middleware involved: it runs on the `redux-thunk` already in the default
+stack. That is the whole mechanism, and it is why a slice consumes it through `extraReducers` like any
+other foreign action.
+
+**★ Why does `await dispatch(myThunk())` not throw when the request fails?**
+Because it resolves with the final action object rather than the payload. Rejection is data, not an
+exception, which is what lets reducers handle it uniformly. `.unwrap()` opts back into exception
+semantics — resolve with the payload, throw on rejection — and is the right call at a component-level
+`try`/`catch`.
+
+**★ `rejectWithValue` versus throwing — what actually differs?**
+Where the information lands. A throw is serialised onto `action.error` (message, name, stack), losing
+any structure. `rejectWithValue(value)` puts `value` on `action.payload`, typed via the `rejectValue`
+generic, so the reducer can distinguish "user not found" from "network down" without parsing strings.
+`isRejectedWithValue` then matches only the deliberate route.
+
+**★ How do you stop two components from firing the same request twice?**
+`condition`, which runs before `pending` and short-circuits the whole thunk when it returns `false`. The
+trap worth naming is that it dispatches *nothing at all* by default, so any manually-set loading flag is
+never cleared — either derive loading purely from `pending`, or pass `dispatchConditionRejection: true`
+and check `action.meta.condition`.
+
+**What is `thunkAPI.extra`, and why would you use it over importing your API client?**
+It is an arbitrary value injected once at store construction —
+`getDefaultMiddleware({ thunk: { extraArgument: { api } } })` — and handed to every payload creator. It
+turns the API client into a dependency of the store rather than a module-level import, so tests can
+build a store with a fake client without mocking module resolution. Type it through the `extra` key of
+the `ThunkApiConfig` generic.
+
+
+---
+
+← [`createAction` & matchers](../02-slices-and-actions/02-create-action-and-matchers.md) · [Topic index](../README.md) · Next → [Cancellation, races & limits](./01b-cancellation-races-and-limits.md)
