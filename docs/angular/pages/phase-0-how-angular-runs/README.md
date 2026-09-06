@@ -19,17 +19,19 @@ bundler could, why the upgrade path runs through `ng update` rather than
 `npm install`, and why a published library on npm contains function calls you
 have never heard of.
 
-🚧 **Scaffolded — 0 of 12 written.** The table below is the phase's running
-order, tier by tier; the pages themselves are the next piece of work. Titles are
-deliberately **not links yet** — a link to a page that does not exist is a broken
-link, and this repo builds with none. Each row becomes a link as its topic
-lands.
+🚧 **In progress — 1 of 12 written, 2 more in flight** (measured off disk
+2026-09-06). Topic **02** is content-complete and wired, 32 chunks; topics **01**
+and **03** are part-written, roughly 5 of 17 chunks each, and are linked to
+whatever is on disk today; topics **04–12** are unstarted. The table below is the
+phase's running order, tier by tier. A title that is **not a link** has no page
+yet — a link to a page that does not exist is a broken link, and this repo builds
+with none. Each row becomes a link as its topic lands.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **A compiler with a framework attached** | <span className="db-tier t-master">Master</span> | Templates are a separate language, compiled ahead of time into instruction calls |
-| 02 | **Standalone by default** | <span className="db-tier t-master">Master</span> | `bootstrapApplication(App, appConfig)`, no `NgModule`, and what `imports` now means |
-| 03 | **The provider array is the wiring** | <span className="db-tier t-master">Master</span> | `ApplicationConfig.providers` — what belongs there and what does not |
+| 01 | [A compiler with a framework attached](01-compiler-with-a-framework-attached/README.md) 🚧 | <span className="db-tier t-master">Master</span> | Templates are a separate language, compiled ahead of time into instruction calls |
+| 02 | [Standalone by default](02-standalone-by-default/README.md) | <span className="db-tier t-master">Master</span> | `bootstrapApplication(App, appConfig)`, no `NgModule`, and what `imports` now means |
+| 03 | [The provider array is the wiring](03-the-provider-array/README.md) 🚧 | <span className="db-tier t-master">Master</span> | `ApplicationConfig.providers` — what belongs there and what does not |
 | 04 | **`ng update`, not `npm install`** | <span className="db-tier t-understand">Understand</span> | Schematics rewrite your source; skipping a major is the expensive mistake |
 | 05 | **The build: `@angular/build`** | <span className="db-tier t-understand">Understand</span> | esbuild for output, Vite for the dev server; Webpack builders are legacy |
 | 06 | **`angular.json` anatomy** | <span className="db-tier t-understand">Understand</span> | Projects, targets, builders, `configurations`, `fileReplacements`, `budgets` |

@@ -1,8 +1,8 @@
 {
   "angular": {
-    "pages": 0,
+    "pages": 47,
     "phases": {
-      "phase-0-how-angular-runs": 0
+      "phase-0-how-angular-runs": 47
     }
   },
   "babel": {
@@ -103,16 +103,16 @@
     }
   },
   "framer-motion": {
-    "pages": 16,
+    "pages": 29,
     "phases": {
       "01-core-concepts": 1,
-      "02-basic-animation-props": 1,
-      "03-transition-types": 1,
+      "02-basic-animation-props": 3,
+      "03-transition-types": 2,
       "04-variants": 1,
-      "05-gestures": 1,
-      "06-animatepresence": 1,
-      "07-layout-animations": 1,
-      "08-scroll-linked-animations": 1,
+      "05-gestures": 4,
+      "06-animatepresence": 4,
+      "07-layout-animations": 4,
+      "08-scroll-linked-animations": 2,
       "09-motion-values": 1,
       "10-animation-controls": 1,
       "11-keyframes": 1,

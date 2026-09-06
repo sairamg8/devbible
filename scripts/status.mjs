@@ -25,9 +25,27 @@ const OUT = path.join(ROOT, 'static/status.json');
 const HELD = new Set(['parked', 'blocked']);
 
 // progress.js is ESM inside a CommonJS-default package, so Node cannot
-// import() it by path. Copy it to a temp .mjs — no transform, no dependency.
+// import() it by path. Copy it to a temp .mjs and load that.
+//
+// 🔴 One line has to be rewritten on the way: progress.js does a bare
+// `import PAGE_COUNTS from './page-counts.json'`. Bundlers resolve that; Node
+// does not — it wants an `with {type: 'json'}` attribute, AND the copy sits in a
+// temp directory where the relative path points at nothing. Both failures are
+// hard throws, so from the day page-counts.json was introduced `yarn status`
+// exited non-zero and status.json quietly froze (it stopped at 2026-09-05 and
+// was found stale on 2026-09-06). `createRequire` against the REAL src/data
+// path fixes both at once: no attribute needed, and the path resolves.
 const tmp = path.join(fs.mkdtempSync(path.join(os.tmpdir(), 'devbible-')), 'progress.mjs');
-fs.copyFileSync(path.join(ROOT, 'src/data/progress.js'), tmp);
+fs.writeFileSync(
+  tmp,
+  fs
+    .readFileSync(path.join(ROOT, 'src/data/progress.js'), 'utf8')
+    .replace(
+      /^import PAGE_COUNTS from '\.\/page-counts\.json';$/m,
+      "import {createRequire} from 'node:module';\n" +
+        `const PAGE_COUNTS = createRequire(${JSON.stringify(pathToFileURL(path.join(ROOT, 'src/data/progress.js')).href)})('./page-counts.json');`,
+    ),
+);
 const {LANGUAGES, summarise} = await import(pathToFileURL(tmp).href);
 
 // Whatever the last file said, keyed by language: `{status, note}`.

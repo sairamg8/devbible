@@ -220,11 +220,18 @@ export const LANGUAGES = {
   },
   angular: {
     label: 'Angular',
-    updated: '2026-08-31 12:05',
+    updated: '2026-09-06 12:22',
     docsPath: '/docs/angular',
     pagesPath: '/docs/angular/pages',
     phases: [
-      {n: 0, slug: 'phase-0-how-angular-runs', name: 'How Angular runs', part: 'The Angular model', topics: 12, pages: 0},
+      // Phase 0 is mid-flight, measured against disk 2026-09-06. Its 47 files are
+      // three topics deep, not twelve: topic 02 `standalone-by-default` is
+      // content-complete and wired (32 files), while topics 01 (7 files) and 03
+      // (8 files) sit at roughly 5 of 17 chunks each and topics 04-12 are
+      // unstarted. Only a finished topic counts, so `pages: 1` — and
+      // `pagesPlanned` is what stops those 47 files reading as a finished phase
+      // and crediting all 12 topics.
+      {n: 0, slug: 'phase-0-how-angular-runs', name: 'How Angular runs', part: 'The Angular model', topics: 12, pages: 1, pagesPlanned: 12},
       {n: 1, slug: 'phase-1-components-templates', name: 'Components and templates', part: 'The Angular model', topics: 16, pages: 0},
       {n: 2, slug: 'phase-2-signals', name: 'Signals', part: 'The Angular model', topics: 15, pages: 0},
       {n: 3, slug: 'phase-3-signal-component-api', name: 'The signal component API', part: 'Components in the signal era', topics: 12, pages: 0},
@@ -634,18 +641,24 @@ export const LANGUAGES = {
   'framer-motion': {
     label: "Framer Motion",
     imported: true,
-    updated: '2026-08-14 13:35',
+    updated: '2026-09-06 08:12',
     docsPath: '/docs/framer-motion',
     pagesPath: '/docs/framer-motion/pages',
+    // Validation batch 1 — chapters 01-08, stamped and split 2026-09-06, measured
+    // off disk not estimated (a page counts once it carries BOTH a tier badge and
+    // a dated `> Verified:` line). `topics`/`pages` follow the file count because
+    // on an imported track the unit is the page, and five of these chapters were
+    // split when the rewrite took them over the 300-line cap. Chapters 09-16 are
+    // still the raw import.
     phases: [
-      {n: 1, slug: '01-core-concepts', name: "Core concepts", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 2, slug: '02-basic-animation-props', name: "Basic animation props", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 3, slug: '03-transition-types', name: "Transition types", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 4, slug: '04-variants', name: "Variants", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 5, slug: '05-gestures', name: "Gestures", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 6, slug: '06-animatepresence', name: "Animatepresence", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 7, slug: '07-layout-animations', name: "Layout animations", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 8, slug: '08-scroll-linked-animations', name: "Scroll linked animations", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 1, slug: '01-core-concepts', name: "Core concepts", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 2, slug: '02-basic-animation-props', name: "Basic animation props", part: 'Imported corpus', topics: 3, pages: 3, verified: 3},
+      {n: 3, slug: '03-transition-types', name: "Transition types", part: 'Imported corpus', topics: 2, pages: 2, verified: 2},
+      {n: 4, slug: '04-variants', name: "Variants", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 5, slug: '05-gestures', name: "Gestures", part: 'Imported corpus', topics: 4, pages: 4, verified: 4},
+      {n: 6, slug: '06-animatepresence', name: "Animatepresence", part: 'Imported corpus', topics: 4, pages: 4, verified: 4},
+      {n: 7, slug: '07-layout-animations', name: "Layout animations", part: 'Imported corpus', topics: 4, pages: 4, verified: 4},
+      {n: 8, slug: '08-scroll-linked-animations', name: "Scroll linked animations", part: 'Imported corpus', topics: 2, pages: 2, verified: 2},
       {n: 9, slug: '09-motion-values', name: "Motion values", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
       {n: 10, slug: '10-animation-controls', name: "Animation controls", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
       {n: 11, slug: '11-keyframes', name: "Keyframes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
