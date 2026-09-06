@@ -190,6 +190,63 @@ review possible at all.
 **Cause:** refs are stored as paths — `feature` cannot be both a file and a directory
 **Fix:** pick a different name. This is also why `git branch -m` sometimes refuses
 
+## Interview questions
+
+**★ What is a branch, physically, and what follows from that?**
+A file under `.git/refs/heads/` containing one 40-character hash and a newline —
+41 bytes. Creating one writes those bytes and **no objects at all**, which the
+page measures: the object count is identical before and after. Three things follow.
+Branching is O(1) regardless of repository size, because nothing is copied.
+Deleting a branch deletes no commits — it removes a pointer, and the commits stay
+in the object store until garbage collection. And a branch name carries no owner
+and no history of its own, so "whose branch is this?" is not a question Git can
+answer.
+
+**★ `git branch -d` refuses on a branch you know was merged. What is it actually
+checking?**
+Reachability, not intent: whether the branch tip is an ancestor of `HEAD` or its
+upstream. A branch that was **squash-merged** produces a new commit with different
+content and no ancestry link, and a **rebased** branch's original commits are
+likewise not ancestors of anything — so in both cases the work has fully landed
+and `-d` still refuses. `-D` is correct there. It also refuses when you run it
+from a branch that lacks the merge, which is why `git branch --merged main` is the
+honest audit rather than deleting from wherever you happen to be standing.
+
+**★ You deleted a branch and think you lost the work. Have you?**
+Almost certainly not. Deleting a branch removes 41 bytes; the commits are
+untouched in the object store and remain recoverable until garbage collection,
+which by default is not soon. `git reflog` finds the old tip and
+`git branch <name> <hash>` recreates the branch at it. The same reasoning covers
+commits made on a detached `HEAD`: they belong to no branch, so moving away leaves
+them unreferenced, and the recovery is identical.
+
+**★ What is detached `HEAD`, and when does it actually cost you something?**
+`HEAD` normally points at a branch *name*; detached means it points straight at a
+commit. It is a normal state rather than an error — Git says so — and it is how
+you look at a tag or an old commit. The cost appears only if you **commit** there:
+those commits belong to no branch, so moving away leaves nothing pointing at them.
+The fix before you move is `git switch -c <name>` to name the work; after you have
+moved, it is `git reflog` and branch from the hash. `git status` names the state on
+its first line, every time.
+
+**★ Why can a repository not have both a `feature` and a `feature/api` branch?**
+Because refs are stored as paths under `.git/refs/heads/`, and `feature` cannot be
+a file and a directory at the same time. Slashes in branch names are not a
+hierarchy Git models — they are just characters that happen to become directories
+on disk and a tree in most UIs. The same storage detail explains why `git branch
+-m` sometimes refuses a rename, and names are further constrained by
+`git check-ref-format`: no spaces, no `..`, no trailing `.lock`.
+
+**Branches are free. Where does the cost actually land?**
+On naming and cleanup. Nothing in Git discourages creating a branch, so the
+friction other systems get from expense has to come from discipline, and usually
+does not come at all — repositories accumulate dozens of stale branches, one of
+which is the real version of something and nobody can say which. Git's only tools
+here are `--merged` and `--no-merged`, and both answer *reachability* rather than
+intent, so they cannot tell you a squash-merged branch is safe to delete. The
+settlement is behavioural: delete branches at the moment they land, while you
+still know they landed.
+
 ---
 
 ← Prev: [Phase 2 index](README.md) · Next → [Fast-forward versus a real merge](02-fast-forward-vs-merge.md)
