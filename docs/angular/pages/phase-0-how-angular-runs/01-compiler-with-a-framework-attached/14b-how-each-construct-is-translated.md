@@ -116,7 +116,7 @@ which the same file documents verbatim:
 ```
 
 and `tcbCreateEventHandler` in `ops/events.ts` re-applies those guards *inside* the generated arrow
-function — its statement is `body = `{ if (${guards.print()}) ${body} }``. That is why a click
+function — its statement is `` body = `{ if (${guards.print()}) ${body} }` ``. That is why a click
 handler written inside `@if (user)` still sees `user` as non-nullable, when the same closure in
 hand-written TypeScript would not.
 
