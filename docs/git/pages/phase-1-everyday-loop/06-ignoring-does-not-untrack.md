@@ -174,6 +174,67 @@ confusing failure into a thirty-second task.
 **Cause:** a tool regenerates it, and it is not ignored
 **Fix:** add it to `.gitignore` — it is untracked, so the rule works immediately. Confirm with `git check-ignore -v`
 
+## Interview questions
+
+**★ You added a file to `.gitignore` and it is still being committed. Why does Git
+not even warn you?**
+Because ignore rules are only consulted when Git is deciding whether to mention an
+*untracked* path. The manual's first paragraph says files already tracked by Git
+are not affected. A tracked path has an index entry pairing it with a blob hash,
+and `status` compares that entry to `HEAD` and to the working tree — nothing on
+that code path looks at ignore rules at all. There is no error because nothing
+went wrong; the rule simply answers a question that is never asked about that file.
+The silence is exactly why the misunderstanding survives.
+
+**★ How do you stop tracking a file without deleting it?**
+`git rm --cached <file>`, then commit. `--cached` removes the index entry and
+leaves the file on disk; plain `git rm` would delete it from your working tree too.
+Add `-r` for a directory. After that commit the path is untracked, so the ignore
+rule finally applies and `status` goes quiet. Verify with `git ls-files <file>` —
+it lists what the index contains with no ignore logic involved, so empty output is
+the direct answer.
+
+**★ What does an untracking commit do to your colleagues?**
+It deletes the file for them. The commit says the path is gone, so their next pull
+removes their copy from disk. For a build artefact that is fine; for `.env` it means
+every colleague silently loses their local configuration with no obvious cause. The
+mitigation is not technical — it is a one-line message before you push, saying the
+file will disappear and pointing at the `.env.example` to copy.
+
+**★ You have just removed a committed secret from tracking. Is the incident closed?**
+No. The blob is still in every earlier commit, in every clone, every fork and every
+CI cache. The order that matters is: **rotate the credential first**, assuming it is
+already compromised; then stop tracking the file and add the ignore rule; and only
+then consider rewriting history, knowing that it invalidates every clone and cannot
+recall what has already been fetched. Doing this in the other order — hours of
+history rewriting while the live key is still valid — is the common and expensive
+mistake.
+
+**★ Why not use `--assume-unchanged` to keep local edits to a tracked config file?**
+Because it is a performance promise, not a suppression flag: it tells Git the file
+will not change so it need not check. Git may still overwrite it, and some
+operations drop the flag silently, so it fails in ways that look like Git losing
+your work. `--skip-worktree` is sturdier and is meant for sparse checkouts, but it
+still conflicts with anything that legitimately updates the file, and merges and
+rebases then fail unreadably. Both are per-clone and invisible — `git ls-files -v`
+and a lowercase status letter is the only way to see them — so the next person
+inherits a mystery. Untrack the file and commit a template instead.
+
+**What is the shape that avoids this problem entirely?**
+Never track the environment file. Ignore `.env`, `.env.local` and `.env.*.local`,
+negate `.env.example`, and commit that example with the same keys and placeholder
+values. The repository then documents what configuration exists without carrying any
+values, and new developers copy one file. It costs nothing at project setup and is
+genuinely unpleasant to retrofit, which is the whole argument for doing it on day
+one.
+
+**A file you deleted keeps reappearing as untracked. What is happening?**
+Something regenerates it — a build step, a test run, an editor — and it is not
+ignored. Because it is untracked, an ignore rule takes effect immediately with no
+`rm --cached` needed, which is the one case where adding a line to `.gitignore` is
+the complete fix. Confirm with `git check-ignore -v` that the rule you added is the
+one deciding it.
+
 ---
 
 ← Prev: [`.gitignore`](05-gitignore.md) · Next → [`git switch` and `git restore`](07-switch-and-restore.md)
