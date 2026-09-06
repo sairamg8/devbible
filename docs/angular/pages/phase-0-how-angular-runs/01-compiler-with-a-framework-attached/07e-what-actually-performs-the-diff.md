@@ -282,4 +282,4 @@ reversed.
 
 ---
 
-← Prev: [07d · `ɵɵadvance` is relative and forward-only](07d-advance-is-relative-and-forward-only.md) · Index: [Topic index](README.md) · Next → **08 · Instructions, not a virtual DOM** *(not written yet)*
+← Prev: [07d · `ɵɵadvance` is relative and forward-only](07d-advance-is-relative-and-forward-only.md) · Index: [Topic index](README.md) · Next → [Instructions, not a virtual DOM](08-instructions-not-a-virtual-dom.md)

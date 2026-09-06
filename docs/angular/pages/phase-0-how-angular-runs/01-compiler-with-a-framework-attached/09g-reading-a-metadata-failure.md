@@ -199,4 +199,4 @@ That the evaluator found *type* information where it needed a value, and produce
 
 ---
 
-← Prev: [09f · imports and lazy loading](09f-imports-and-the-rule-about-lazy-loading.md) · Index: [Topic index](README.md) · Next → **10 · Metadata errors, one by one** *(not written yet)*
+← Prev: [09f · imports and lazy loading](09f-imports-and-the-rule-about-lazy-loading.md) · Index: [Topic index](README.md) · Next → [Metadata errors, one by one](10-metadata-errors-one-by-one.md)

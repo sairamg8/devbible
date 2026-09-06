@@ -262,4 +262,4 @@ It matters when you write a decorator with no parentheses at all. `decorator.arg
 
 ---
 
-← Prev: **08 · Instructions, not a virtual DOM** *(not written yet)* · Index: [Topic index](README.md) · Next → [Gate 2: what is evaluated and what is relayed](09b-gate-two-what-is-evaluated-and-what-is-relayed.md)
+← Prev: [08f · The cost of generated code](08f-the-cost-of-generated-code.md) · Index: [Topic index](README.md) · Next → [Gate 2: what is evaluated and what is relayed](09b-gate-two-what-is-evaluated-and-what-is-relayed.md)

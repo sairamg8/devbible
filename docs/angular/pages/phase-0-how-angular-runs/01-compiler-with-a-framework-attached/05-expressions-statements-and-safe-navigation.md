@@ -243,4 +243,4 @@ because it is a parser behaviour rather than a documented language guarantee.
 
 ---
 
-← Prev: [04 · Arrow functions in templates](04-arrow-functions-in-templates.md) · Index: [Topic index](README.md) · Next → **06 · What the compiler emits: `ɵcmp`** *(not written yet)*
+← Prev: [04 · Arrow functions in templates](04-arrow-functions-in-templates.md) · Index: [Topic index](README.md) · Next → [What the compiler emits: `ɵcmp`](06-what-the-compiler-emits.md)

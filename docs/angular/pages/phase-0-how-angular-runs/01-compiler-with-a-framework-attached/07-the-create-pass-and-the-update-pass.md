@@ -292,4 +292,4 @@ populated by a separate generated function that participates in the same two pha
 
 ---
 
-← Prev: **06 · What the compiler emits: `ɵcmp`** *(not written yet)* · Index: [Topic index](README.md) · Next → [07b · The view is an array](07b-the-view-is-an-array-decls-and-vars.md)
+← Prev: [06d · The `ɵfac` and the `.d.ts`](06d-the-factory-and-the-d-ts-declaration.md) · Index: [Topic index](README.md) · Next → [07b · The view is an array](07b-the-view-is-an-array-decls-and-vars.md)

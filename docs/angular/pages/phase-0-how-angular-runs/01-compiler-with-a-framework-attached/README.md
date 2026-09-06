@@ -26,11 +26,16 @@ stop being a list of rules and start being consequences.
 
 ## Chunks
 
-🚧 **8 of 17 numbered chunks written, across 18 files.** Three of the eight exhausted their
+🚧 **11 of 17 numbered chunks written, across 37 files.** Six of the eleven exhausted their
 subject past the 300-line cap and split into lettered siblings — the cap is a file size, never a
-content budget, so a chunk that ran long became four or five files rather than a shorter page.
-The rows without links are planned and named; a link to a page that does not exist breaks the
-build, so they stay as plain text until they land.
+content budget, so a chunk that ran long became five, six or seven files rather than a shorter
+page. The rows without links are planned and named; a link to a page that does not exist breaks
+the build, so they stay as plain text until they land.
+
+⚠️ **Chunk 10 is a catalogue and is deliberately unfinished.** It carries its own coverage note
+naming every error it does *not* yet reach — `10g` (calls and enums) and `10h` (unsupported
+syntax) are planned, and the `NG2xxx` field-shape family after them. Read the note before
+concluding an error is absent because it cannot happen.
 
 | # | Chunk | Covers |
 |---|---|---|
@@ -48,9 +53,25 @@ build, so they stay as plain text until they land.
 | 07c | **[Addressing the array](07c-how-instructions-address-the-array.md)** | Create instructions carry a slot index because they assign addresses; update instructions carry none because they ride two implicit cursors in global state |
 | 07d | **[`ɵɵadvance`](07d-advance-is-relative-and-forward-only.md)** | A delta rather than an index, asserted positive, flushing child `ngOnInit` on the way past — 🔴 why a template's shape is fixed at compile time |
 | 07e | **[What performs the diff](07e-what-actually-performs-the-diff.md)** | The whole diff is `Object.is` against one array slot per expression; `bindingUpdated` is nine lines and there is no tree to walk |
-| 08 | **Instructions, not a virtual DOM** *(not written yet)* | Why Angular emits imperative calls instead of building a vnode tree; the tree-shaking argument; what it costs |
-| 09 | **Static analysability is the load-bearing constraint** *(not written yet)* | 🔴 NG1001 and the object-literal rule; the partial evaluator; why a `selector` cannot be computed and `imports` must be identifiers |
-| 10 | **Metadata errors, one by one** *(not written yet)* | Non-exported symbols, uninitialised `export let`, destructuring, ambient types, computed enum members, tagged templates — symptom → cause → fix for each |
+| 08 | **[Instructions, not a virtual DOM](08-instructions-not-a-virtual-dom.md)** | 🔴 Nowhere from `@Component` to a mutated DOM node does a value representing the tree exist — Angular deleted the vnode and kept the annotations |
+| 08b | **[The selector problem and reference inversion](08b-the-selector-problem-and-reference-inversion.md)** | The reason is written down: a template resolved through a module at runtime forces the bundle to contain everything that module *could* reach |
+| 08c | **[The instruction set is à la carte](08c-the-instruction-set-is-a-la-carte.md)** | Every instruction is a `{name, moduleName}` pair and there are 215 — which is why the interpolation and pure-function families are numbered |
+| 08d | **[What the fixed shape costs](08d-what-the-fixed-shape-costs.md)** | First half of the bill: a slot count decided at build time, and markup no code of yours may produce |
+| 08e | **[Only compiled classes are renderable](08e-only-compiled-classes-are-renderable.md)** | `ComponentType<T>` defines *consumable for rendering* as *has a `ɵcmp`*, making the renderable set a build-time fact |
+| 08f | **[The cost of generated code](08f-the-cost-of-generated-code.md)** | Second half of the bill: positional and unreadable on purpose, a private ABI with an expiry date, and a compiler that picks your TypeScript |
+| 09 | **[Static analysability is the load-bearing constraint](09-static-analysability-is-the-load-bearing-constraint.md)** | 🔴 Every constraint in this topic reduces to one sentence — the compiler must resolve your metadata to a value without executing your program |
+| 09b | **[What is evaluated and what is relayed](09b-gate-two-what-is-evaluated-and-what-is-relayed.md)** | The rules apply not to your `@Component` but to the enumerable subset of fields the compiler needs a *value* from; everything else is relayed untouched |
+| 09c | **[The partial evaluator is the grammar](09c-the-partial-evaluator-is-the-grammar.md)** | There is no spec of what metadata may contain — there is a 40-line `if/else` chain, and its final `else` is the rule |
+| 09d | **[The single-return-function rule](09d-the-single-return-function-rule.md)** | ⚠️ The folk rule that a helper function cannot build metadata is **false** — the compiler will call it, provided the body is one `return` |
+| 09e | **[`selector` must reduce to a string](09e-selector-must-reduce-to-a-string.md)** | ⚠️ *"A selector cannot be computed"* is the wrong rule — identifiers, property access, template literals and macro calls all work |
+| 09f | **[`imports` and the rule about lazy loading](09f-imports-and-the-rule-about-lazy-loading.md)** | 🔴 *"`imports` must be identifiers"* is false as a **compilation** rule and true as a **lazy-loading** one |
+| 09g | **[Reading a metadata failure](09g-reading-a-metadata-failure.md)** | The prediction procedure: an error is always two sentences and the **second** is the diagnosis |
+| 10 | **[Metadata errors, one by one](10-metadata-errors-one-by-one.md)** | The decoder: every metadata error is one two-part object. ⚠️ Carries the coverage note listing what this catalogue does not yet reach |
+| 10b | **[The decorator argument itself](10b-the-decorator-argument-itself.md)** | Two gates run before the evaluator starts — exactly one argument, and that argument a syntactic object literal — which is why NG1001 has three messages |
+| 10c | **[Symbols the compiler cannot resolve](10c-symbols-the-compiler-cannot-resolve.md)** | 🔴 Three failures look identical and have three unrelated fixes: never found, found but not exported, found but unimportable |
+| 10d | **[Import cycles and local compilation](10d-import-cycles-and-local-compilation.md)** | NG3003 is not about your symbol but about which *file* it lives in; plus the two local-compilation errors |
+| 10e | **[Values that resolve but do not fold](10e-values-that-resolve-but-do-not-fold.md)** | A variable declaration has four outcomes and only one is an error — which is why `export let SELECTOR;` fails the way it does |
+| 10f | **[Destructuring in metadata](10f-destructuring-in-metadata.md)** | ⚠️ Destructuring **works** — the guides saying otherwise quote a compiler Angular stopped shipping; the three forms that genuinely fail share one cause |
 | 11 | **[Why `@defer` can split a bundle no bundler could](11-why-defer-can-split-a-bundle.md)** | The `dependencyResolverFn` the compiler generates, and the two emit modes it hoists |
 | 11b | **[The nine conditions and the barrel trap](11b-the-nine-conditions-and-the-barrel-trap.md)** | 🔴 The guide names two conditions; `registerDeferrableCandidate` applies eight, plus a ninth at the import-declaration level — and **not one of the nine produces a line of build output** |
 | 11c | **[Diagnosing a `@defer` that did not split](11c-diagnosing-a-defer-that-did-not-split.md)** | There is no build error, so this is a procedure: rule out HMR, turn the silence into a diagnostic with `deferredImports`, then read the bundle |

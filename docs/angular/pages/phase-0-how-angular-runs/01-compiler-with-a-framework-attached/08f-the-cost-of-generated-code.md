@@ -246,4 +246,4 @@ needed.
 
 ---
 
-← Prev: [08e · Only compiled classes are renderable](08e-only-compiled-classes-are-renderable.md) · Index: [Topic index](README.md) · Next → **09 · Static analysability is the load-bearing constraint** *(not written yet)*
+← Prev: [08e · Only compiled classes are renderable](08e-only-compiled-classes-are-renderable.md) · Index: [Topic index](README.md) · Next → [Static analysability is the load-bearing constraint](09-static-analysability-is-the-load-bearing-constraint.md)

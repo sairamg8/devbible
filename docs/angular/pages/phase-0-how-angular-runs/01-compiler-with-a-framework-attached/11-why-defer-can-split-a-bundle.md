@@ -294,4 +294,4 @@ is why `deferredImports` is a component-level declaration rather than a block-le
 
 ---
 
-← Prev: **10 · Metadata errors, one by one** *(not written yet)* · Index: [Topic index](README.md) · Next → [11b · The nine conditions and the barrel trap](11b-the-nine-conditions-and-the-barrel-trap.md)
+← Prev: [10f · Destructuring in metadata](10f-destructuring-in-metadata.md) · Index: [Topic index](README.md) · Next → [11b · The nine conditions and the barrel trap](11b-the-nine-conditions-and-the-barrel-trap.md)

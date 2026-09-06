@@ -217,4 +217,4 @@ That the sentence they are quoting is layer two of three, and layer three is whe
 
 ---
 
-← Prev: **09 · Static analysability** *(not written yet)* · Index: [Topic index](README.md) · Next → [The decorator argument itself](10b-the-decorator-argument-itself.md)
+← Prev: [09g · Reading a metadata failure](09g-reading-a-metadata-failure.md) · Index: [Topic index](README.md) · Next → [The decorator argument itself](10b-the-decorator-argument-itself.md)
