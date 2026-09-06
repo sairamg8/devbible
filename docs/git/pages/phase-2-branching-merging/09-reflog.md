@@ -200,6 +200,58 @@ it is.
 **Cause:** the entry chosen was not the one you meant — the descriptions are terse
 **Fix:** `git branch rescue <hash>` first and inspect, rather than `reset --hard` directly. Verify with `git show` before moving anything
 
+## Interview questions
+
+**★ What does the reflog record, and what does it not?**
+It records where **refs pointed** — every movement of `HEAD` and of each branch, in
+your local repository, with the operation that caused it. It does not record file
+content, so uncommitted work is never in it: a `reset --hard` over unstaged edits is
+not a reflog problem, it is unrecoverable. And it is strictly local — never pushed,
+fetched or cloned — so a fresh clone has an almost empty reflog and your colleague's
+cannot help you. The `HEAD` reflog additionally logs branch switches, which makes it
+a complete record of where you have been.
+
+**★ What is the difference between `HEAD@{2}` and `HEAD~2`?**
+`~2` is two commits back in **ancestry**; `@{2}` is two operations back in **time**,
+read out of the reflog. After a reset they point at wildly different things, and
+`@{2}` is the one that undoes what you just did. It is also worth quoting in shells
+that treat braces specially: `git reset --hard 'HEAD@{2}'`. The same `@{...}` syntax
+gives `main@{one.week.ago}` — where that branch pointed a week ago *in this
+repository*, which is a question only your reflog can answer.
+
+**★ Give the recovery procedure, and say which step people skip.**
+Find where you were with `git reflog`; **verify it** with `git show <hash>` or
+`git log --oneline <hash> -5`; then either `git reset --hard <hash>` or, better,
+`git branch rescue <hash>` and inspect before committing to anything. The skipped
+step is the middle one. Reflog descriptions are terse — `rebase (finish): returning
+to refs/heads/feature` — and resetting to the wrong entry while panicking is how one
+recoverable mistake becomes two. Branching is non-destructive and costs nothing.
+
+**★ What are the reflog's three limits?**
+It expires — 90 days for reachable entries and 30 for unreachable ones by default,
+after which `gc` can prune them and the commits they were protecting become
+collectable. It is per-clone, so it does not survive a re-clone and does not exist
+for anyone else. And it only covers committed work, which is the important one: the
+thing people actually lose is uncommitted, and no reflog entry describes it. Setting
+`gc.reflogExpire` to `never` addresses the first limit in a repository that matters.
+
+**★ Something was staged but never committed and then destroyed. Is it gone?**
+Not necessarily. Staging writes a blob into the object store, so the content exists
+even though no commit references it — `git fsck --lost-found` or
+`git fsck --unreachable | grep commit` can surface it. That is the layer beneath the
+reflog: no record of operations, just orphaned objects. It is also the only thing to
+try after `git stash clear`, which the manual warns may be impossible to recover
+from. Content that was only ever on disk has no copy anywhere.
+
+**Why does "Git never loses anything" cause the losses it is meant to prevent?**
+Because the guarantee is about commits and the accidents are about working trees.
+Commits are immutable and refs are pointers, so nothing that moves a pointer can
+destroy history — which makes `rebase`, `reset --hard` and branch deletion routine.
+But `reset --hard` and `restore` destroy content the reflog never saw, and a belief
+in total safety is what produces the carelessness that runs them on an uncommitted
+afternoon. The stance that follows is to commit early and often, including work you
+are ashamed of, and to treat the reflog as a local temporary net rather than a backup.
+
 ---
 
 ← Prev: [The rule about rewriting shared history](08-the-golden-rule.md) · Next → [Aborting cleanly](10-aborting-cleanly.md)
