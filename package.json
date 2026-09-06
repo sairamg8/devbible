@@ -21,7 +21,8 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "currency": "node scripts/currency.mjs",
     "validate": "node scripts/validate.mjs",
-    "linkcheck": "node scripts/linkcheck.mjs"
+    "linkcheck": "node scripts/linkcheck.mjs",
+    "mdxcheck": "node scripts/mdxcheck.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
