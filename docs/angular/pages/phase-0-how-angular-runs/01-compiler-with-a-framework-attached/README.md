@@ -81,4 +81,4 @@ whether a particular `@defer` block will produce a separate chunk.
 
 ---
 
-← Prev: [Phase 0 — How Angular runs](../README.md) · Index: [Phase 0 — How Angular runs](../README.md) · Next → [Standalone by default](../02-standalone-by-default/README.md)
+← Prev: [Phase 0 — How Angular runs](../README.md) · Start → [01 · The template is a separate language](01-the-template-is-a-separate-language.md) · Next topic → [02 · Standalone by default](../02-standalone-by-default/README.md)
