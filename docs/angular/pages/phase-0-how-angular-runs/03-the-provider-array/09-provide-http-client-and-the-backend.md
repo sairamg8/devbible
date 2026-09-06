@@ -121,12 +121,12 @@ Four kinds of decision, spread across seven feature functions:
 | A different XSRF cookie or header name | `withXsrfConfiguration({...})` | ❌ defaults only |
 | XSRF off entirely | `withNoXsrfProtection()` | ❌ it is on by default |
 | `XMLHttpRequest` instead of `fetch` | `withXhr()` | ❌ `fetch` is the default |
-| JSONP | `withJsonpSupport()` | ❌ — and deprecated, see **10 · HTTP features** *(not written yet)* |
+| JSONP | `withJsonpSupport()` | ❌ — and deprecated, see [10 · Interceptor order](10-http-features.md) |
 | Requests routed through the parent injector's chain | `withRequestsMadeViaParent()` | ❌ |
 
 **Availability is not on that list any more**, and that is the whole shift. Every remaining reason
 to call `provideHttpClient()` is a decision you are making, not a dependency you are satisfying. The
-features themselves are **10 · HTTP features** *(not written yet)*; the function
+features themselves are [10 · Interceptor order](10-http-features.md); the function
 that hosts them is [09b](09b-inside-provide-http-client.md), and the backend it picks is
 [09c](09c-the-fetch-default-and-withfetch.md) and
 [09d](09d-withxhr-on-the-server-and-httpclientmodule.md).

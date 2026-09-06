@@ -52,7 +52,7 @@ bootstrapApplication(App, appConfig)
 ```
 
 Two things are worth noticing before anything else. There is no `provideZonelessChangeDetection()`
-in the generated file — **chunk 05** *(not written yet)* explains why. And
+in the generated file — [chunk 05](05-change-detection-providers.md) explains why. And
 `app.config.ts` is a **file name chosen by a schematic**, not an API: the exported symbol could be
 called anything, live anywhere, and be assembled by a function. `bootstrapApplication` only cares
 that the second argument structurally matches `ApplicationConfig`.

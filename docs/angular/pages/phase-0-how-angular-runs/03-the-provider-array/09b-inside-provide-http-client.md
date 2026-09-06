@@ -213,7 +213,7 @@ features into it, or assert the backend the way
 JSDoc on the JSONP error codes in `common/http/src/errors.ts` at `v22.1.5` states the reason
 verbatim — *"JSONP is deprecated as it can cause XSS vulnerabilities. Use standard HTTP requests
 instead. Intent to remove in future versions of Angular."* Fix: move the endpoint to CORS. The
-feature and its migration are **10 · HTTP features** *(not written yet)*.
+feature and its migration are [10 · Interceptor order](10-http-features.md).
 
 ## Interview questions
 

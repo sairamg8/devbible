@@ -104,8 +104,10 @@ export const reportRoutes: Routes = [
 ```
 
 A request made from a service injected inside `/reports` now runs
-`xsrf → reportAudit → (delegate) → xsrf → auth → log → fetch`. Route-level `providers` themselves are
-**15 · Route-level providers** *(not written yet)*.
+`xsrf → reportAudit → (delegate) → xsrf → auth → log → fetch`. Note that `xsrfInterceptorFn` appears
+in **both** chains: each `provideHttpClient()` call pushed it into its own injector's array, and the
+de-duplication is per handler, so a function registered at two levels genuinely runs twice. Route-level
+`providers` themselves are **15 · Route-level providers** *(not written yet)*.
 
 ## The failure mode is later and quieter than it looks
 
@@ -137,7 +139,7 @@ one is a genuine configuration error:
 The asymmetry is the point: two backend overrides in one call degrade to last-wins, which is defined
 behaviour, but delegating to the parent *and* pinning a local backend are two different values for the
 same `HttpBackend` token with no sensible resolution. The full validation block is
-**09 · `provideHttpClient()` and the backend** *(not written yet)*.
+[09 · `provideHttpClient()` and the backend](09-provide-http-client-and-the-backend.md).
 
 ## Gotchas
 

@@ -133,4 +133,4 @@ here; treat "poorly defined" as the specification it is, and do not build on a p
 
 ---
 
-← Prev: [`withXhr()` on the server](09d-withxhr-on-the-server-and-httpclientmodule.md) · Index: [Topic index](README.md) · Next → **10 · HTTP features** *(not written yet)*
+← Prev: [`withXhr()` on the server](09d-withxhr-on-the-server-and-httpclientmodule.md) · Index: [Topic index](README.md) · Next → [10 · Interceptor order](10-http-features.md)

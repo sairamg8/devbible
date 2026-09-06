@@ -109,7 +109,7 @@ on:
   production behaviour of that particular pair is "XSRF disabled", silently.
 - It is a plain `new Error`, **not** a `RuntimeError`, so there is **no `NGxxxx` code** to search for.
   Do not expect one, and do not invent one when writing a runbook. The full `provideHttpClient` body
-  and its second validation are **09 · `provideHttpClient()` and the backend** *(not written yet)*.
+  and its second validation are [09 · `provideHttpClient()` and the backend](09-provide-http-client-and-the-backend.md).
 
 ## There is no feature that turns XSRF back on
 

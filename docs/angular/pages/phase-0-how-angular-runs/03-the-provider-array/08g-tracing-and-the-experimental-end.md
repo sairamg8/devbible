@@ -291,4 +291,4 @@ actually conflict, rather than on a general duplicate check in `provideRouter`
 
 ---
 
-← Prev: [Initial navigation](08f-initial-navigation.md) · Index: [Topic index](README.md) · Next → **09 · `provideHttpClient()` and the backend** *(not written yet)*
+← Prev: [Initial navigation](08f-initial-navigation.md) · Index: [Topic index](README.md) · Next → [09 · `provideHttpClient()` and the backend](09-provide-http-client-and-the-backend.md)

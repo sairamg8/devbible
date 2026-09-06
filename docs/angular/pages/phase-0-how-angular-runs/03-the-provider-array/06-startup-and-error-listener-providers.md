@@ -292,4 +292,4 @@ assumption was.
 
 ---
 
-← Prev: [The polyfill half, and `NoopNgZone`](05d-the-polyfill-half-and-noopngzone.md) · Index: [Topic index](README.md) · Next → [Initializer ordering and failure](06b-initializer-ordering-and-failure.md)
+← Prev: [05h · Hunting a stale binding](05h-hunting-a-stale-binding-in-zoneless.md) · Index: [Topic index](README.md) · Next → [Initializer ordering and failure](06b-initializer-ordering-and-failure.md)

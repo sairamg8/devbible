@@ -160,7 +160,7 @@ because the field is computed as
 This chunk's job ends at *which providers put you in which mode*.
 
 The remaining change-detection provider — `provideCheckNoChangesConfig`, which is **developer
-preview** and dev-mode-only — is **05e · `provideCheckNoChangesConfig`** *(not written yet)*.
+preview** and dev-mode-only — is [05e · `provideCheckNoChangesConfig`](05e-provide-check-no-changes-config.md).
 
 ## Gotchas
 
@@ -296,4 +296,4 @@ both.
 
 ---
 
-← Prev: [The redundant opt-in, and NG0408](05c-the-redundant-opt-in-and-ng0408.md) · Index: [Topic index](README.md) · Next → [Startup and error-listener providers](06-startup-and-error-listener-providers.md)
+← Prev: [The redundant opt-in, and NG0408](05c-the-redundant-opt-in-and-ng0408.md) · Index: [Topic index](README.md) · Next → [05e · `provideCheckNoChangesConfig`](05e-provide-check-no-changes-config.md)

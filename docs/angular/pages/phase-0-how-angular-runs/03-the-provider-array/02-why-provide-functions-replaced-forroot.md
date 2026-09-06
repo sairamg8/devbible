@@ -139,7 +139,7 @@ export class HttpClientModule {}
 
 The legacy module is now a shim over the new function — and it **pins `withXhr()`**. An application
 that still imports `HttpClientModule` is not on the `fetch` backend, no matter what the v22 release
-notes say the default is. **Chunk 10** *(not written yet)* picks that up.
+notes say the default is. [Chunk 10](10-http-features.md) picks that up.
 
 ## Why this is not just tree-shaking
 

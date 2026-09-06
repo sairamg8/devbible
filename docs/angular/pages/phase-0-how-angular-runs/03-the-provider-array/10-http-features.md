@@ -71,7 +71,7 @@ a documented promise — it is a consequence of where the push sits relative to 
 deliberate: a request cannot leave the application without the XSRF interceptor having had first
 refusal. The loop is also why **the order of the feature arguments themselves matters**, which is the
 part people miss. The full `provideHttpClient` body is
-**09 · `provideHttpClient()` and the backend** *(not written yet)*.
+[09 · `provideHttpClient()` and the backend](09-provide-http-client-and-the-backend.md).
 
 ## Execution — `reduceRight`, and the comment that states the rule
 
@@ -225,4 +225,4 @@ handler per configuring injector, covered in [10c](10c-the-interceptor-chain-int
 
 ---
 
-← Prev: **09 · `provideHttpClient()` and the backend** *(not written yet)* · Index: [Topic index](README.md) · Next → [Choosing interceptor positions](10b-choosing-interceptor-positions.md)
+← Prev: [09e · `HttpClientModule`, the end of the road](09e-httpclientmodule-end-of-the-road.md) · Index: [Topic index](README.md) · Next → [Choosing interceptor positions](10b-choosing-interceptor-positions.md)

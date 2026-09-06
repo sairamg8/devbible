@@ -82,9 +82,9 @@ Its doc comment is one sentence:
 
 and its `@see` tag points at the
 [HTTP interceptors guide](https://angular.dev/guide/http/interceptors). Note the token description is
-`ngDevMode`-gated to the empty string, which is why a production `NG0201` for this token carries no
-readable name — the general shape of that is
-[03](03-environmentproviders-vs-provider.md).
+`ngDevMode`-gated to the empty string, so in a production build this token has no readable name at
+all — the same dev-only-message pattern that collapses Angular's runtime errors to a bare code
+([03](03-environmentproviders-vs-provider.md)).
 
 🔴 **`HTTP_INTERCEPTORS` on its own does nothing.** The chain is built exclusively from
 `HTTP_INTERCEPTOR_FNS` and `HTTP_ROOT_INTERCEPTOR_FNS`; the class-based token is read only by
