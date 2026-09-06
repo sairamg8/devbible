@@ -4,6 +4,15 @@ sidebar_label: "Redux DevTools"
 sidebar_position: 1
 ---
 
+<span className="db-tier t-know">Know</span>
+
+> Verified: 2026-09-06 against the Redux Toolkit documentation for **@reduxjs/toolkit 2.12.0** —
+> [`configureStore`](https://redux-toolkit.js.org/api/configureStore) (the `devTools` option) and the
+> [Redux DevTools Extension](https://github.com/reduxjs/redux-devtools) README.
+> Documentation-validated; **no sandbox run** — no extension session was recorded to produce the
+> behaviour described here.
+> Validated: 2026-09-06 · claims + output provenance · session 3a6945a3
+
 # 📦 Redux DevTools: Time-Travel, Action Replay & Trace Mode
 
 ## 1. Under-The-Hood Mechanics
@@ -58,21 +67,89 @@ export const store = configureStore({
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## Gotchas
 
-### ⚠️ Pitfall 1: Shipping `devTools: true` (or Leaving It Unset) to Production
+### Shipping the DevTools connection to production
+**Symptom.** Anyone with the browser extension can read your entire action log and state tree on the
+live site — including whatever tokens or PII travelled through an action payload.
+**Cause.** `devTools` defaults to enabled based on `NODE_ENV`, and a build pipeline that fails to set it
+correctly leaves the connection live.
+**Fix.** Gate explicitly rather than relying on the default, and sanitize regardless.
 ```typescript
 // ❌ RISKY: DevTools defaults to enabled based on NODE_ENV, but a misconfigured build pipeline
-// (e.g. NODE_ENV accidentally 'development' in a prod deploy) exposes the entire action/state log,
-// including any unredacted auth tokens or PII passed through actions, to anyone with the browser extension.
+// exposes the entire action/state log to anyone with the browser extension.
 devTools: true,
 
 // ✅ CORRECT: explicitly gate on environment, and sanitize sensitive fields regardless
 devTools: process.env.NODE_ENV !== 'production' && { actionSanitizer, stateSanitizer },
 ```
 
-### ⚠️ Pitfall 2: High-Frequency Actions Bloating the DevTools Log
-Actions dispatched on every scroll/mousemove/keystroke (without throttling) can balloon the DevTools action log to tens of thousands of entries within seconds, making the extension itself sluggish or crash the tab. Use `actionsDenylist`/`actionsAllowlist` to exclude noisy, low-value action types from being recorded at all.
+### High-frequency actions drowning the log
+**Symptom.** The extension becomes unusable within seconds, or the tab crashes.
+**Cause.** Actions dispatched per scroll, mousemove or keystroke, each with a state snapshot.
+**Fix.** `actionsDenylist` / `actionsAllowlist` keep them out of the recording entirely — cheaper than
+recording and filtering.
 
-### ⚠️ Pitfall 3: Relying on Time-Travel With Non-Serializable or Impure State
-Time-travel replay only works correctly if reducers are pure and state is fully serializable — a reducer that reads `Date.now()` or `Math.random()` internally (instead of receiving them via the action payload) will **not** reproduce the same state on replay, because re-running that reducer during a time-travel jump calls `Date.now()`/`Math.random()` again with a different result. Keep all non-determinism in the action payload, never inside the reducer body.
+### Relying on time-travel with an impure reducer
+**Symptom.** Replaying to step 12 produces different state than the live run did.
+**Cause.** Time-travel re-runs reducers. A reducer calling `Date.now()` or `Math.random()` computes new
+values on replay, so the "same" sequence yields different results.
+**Fix.** All non-determinism belongs in the action payload, generated at dispatch time — which is
+exactly what `prepare` is for. Keep reducers pure and replay is exact.
+
+### A `trace` limit left uncapped
+**Symptom.** The extension slows noticeably, and each action carries an enormous stack.
+**Cause.** `trace: true` captures a stack per dispatch. Without `traceLimit` the whole stack is kept.
+**Fix.** `{ trace: true, traceLimit: 25 }`. Enough to identify the call site, bounded enough to stay
+usable — and remember tracing has a real cost even in development.
+
+### Sanitizers that mutate the action
+**Symptom.** Redacted values appear in the app itself, not merely in the extension.
+**Cause.** `actionSanitizer`/`stateSanitizer` run on the values you hand them; mutating rather than
+copying changes what the app sees.
+**Fix.** Always return a new object — `{ ...action, payload: { ...action.payload, token: '<redacted>' } }`
+— never assign into the original.
+
+### Expecting the extension to show RTK Query cache internals usefully
+**Symptom.** The action log fills with `api/executeQuery/...` entries that obscure application actions.
+**Cause.** RTK Query is implemented in terms of ordinary actions, so all of its internal traffic is
+recorded.
+**Fix.** Denylist the pattern while debugging app logic, and remember the RTK Query cache is inspectable
+as ordinary state under its `reducerPath` — often more useful than reading its actions.
+
+## Interview questions
+
+**★ How does time-travel debugging actually work?**
+The extension records every dispatched action together with the state that resulted. Jumping to an
+earlier point replays the recorded action sequence from the initial state up to the selected index. That
+is only sound because Redux guarantees the two properties it depends on: reducers are pure functions, so
+replaying the same actions produces the same states, and state is immutable, so a snapshot cannot be
+altered after the fact.
+
+**★ What breaks time-travel, and how do you avoid it?**
+Impurity in reducers. A reducer that reads `Date.now()`, `Math.random()` or anything ambient computes
+fresh values on replay, so the recorded sequence no longer reproduces the recorded states. The discipline
+is to generate all non-determinism at dispatch time and carry it in the payload — which is precisely what
+`prepare` exists for. Non-serializable values in state break it for a related reason: the extension
+cannot snapshot what it cannot serialize.
+
+**★ What would you configure before letting a team use DevTools on a real product?**
+Three things. An explicit environment gate rather than the `NODE_ENV` default, because a misconfigured
+build otherwise exposes the whole action log to anyone with the extension. `actionSanitizer` and
+`stateSanitizer` to redact tokens and PII, returning copies rather than mutating. And an
+`actionsDenylist` for high-frequency noise, so the log stays readable and the tab stays alive.
+
+**What does `trace: true` give you, and what does it cost?**
+A JavaScript stack captured at each dispatch, so the extension can show which line called `dispatch` —
+genuinely valuable when the same action type is dispatched from a dozen places. It costs a stack capture
+per action, so pair it with `traceLimit` to bound the depth and treat it as a development-only tool.
+
+**Your action log is full of `api/executeQuery` entries. What is happening?**
+RTK Query is built on ordinary Redux actions, so every cache subscription, fetch and invalidation shows
+up in the log. It is not a misconfiguration. Denylist the pattern while debugging application logic, and
+inspect the cache as state under its `reducerPath` instead — the state view answers "what is cached"
+better than the action log does.
+
+---
+
+← [TypeScript integration](../09-typescript-integration/01-type-inference-patterns.md) · [Topic index](../README.md) · Next → [Code splitting](../11-code-splitting/01-dynamic-reducer-injection.md)
