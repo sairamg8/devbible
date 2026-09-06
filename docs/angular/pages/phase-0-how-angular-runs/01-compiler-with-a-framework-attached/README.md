@@ -26,8 +26,11 @@ stop being a list of rules and start being consequences.
 
 ## Chunks
 
-🚧 **5 of 17 chunks written.** The rows without links are planned and named; a link to a
-page that does not exist breaks the build, so they stay as plain text until they land.
+🚧 **8 of 17 numbered chunks written, across 18 files.** Three of the eight exhausted their
+subject past the 300-line cap and split into lettered siblings — the cap is a file size, never a
+content budget, so a chunk that ran long became four or five files rather than a shorter page.
+The rows without links are planned and named; a link to a page that does not exist breaks the
+build, so they stay as plain text until they land.
 
 | # | Chunk | Covers |
 |---|---|---|
@@ -36,12 +39,22 @@ page that does not exist breaks the build, so they stay as plain text until they
 | 03 | **[Declarations and `@let`](03-declarations-and-the-let-block.md)** | Why declarations are banned, why `@let` is a *block* rather than an expression, and the three instructions it lowers to |
 | 04 | **[Arrow functions in templates](04-arrow-functions-in-templates.md)** | ⚠️ the one place the docs and the shipped compiler disagree — what v21.2 actually added, what it rejects, and NG8111 |
 | 05 | **[Expressions, statements and safe navigation](05-expressions-statements-and-safe-navigation.md)** | Binding context vs action context, why assignment is legal in one and not the other, and 🔴 the v22 change that made `?.` return `undefined` |
-| 06 | **What the compiler emits: `ɵcmp`** *(not written yet)* | The static component definition, `ɵɵdefineComponent`, `decls` / `vars` / `dependencies`, the `ɵfac`, and what lands in the `.d.ts` |
-| 07 | **The create pass and the update pass** *(not written yet)* | `RenderFlags.Create` vs `RenderFlags.Update`, the slot/index model, `ɵɵadvance`, and why the two passes are one function |
+| 06 | **[What the compiler emits: `ɵcmp`](06-what-the-compiler-emits.md)** | The three artefacts a `@Component` becomes, and 🔴 why the emitted field order is what the compiler does *today* and not a contract |
+| 06b | **[Inside `ɵɵdefineComponent`](06b-inside-definecomponent.md)** | A normaliser wrapped in a `toString` trick — the four fields it computes that the compiler never emitted |
+| 06c | **[`decls`, `vars`, `consts`, `dependencies`](06c-decls-vars-consts-and-dependencies.md)** | Two integers that pre-size an array, the constants pool the instruction indices point into, and why the dependency list is sometimes a *function* |
+| 06d | **[The `ɵfac` and the `.d.ts`](06d-the-factory-and-the-d-ts-declaration.md)** | 🔴 `ɵɵComponentDeclaration` is `unknown` — a phantom type whose ten type *arguments* are your component's entire published metadata |
+| 07 | **[The create pass and the update pass](07-the-create-pass-and-the-update-pass.md)** | `RenderFlags.Create` vs `RenderFlags.Update`, and why the two passes are one function |
+| 07b | **[The view is an array](07b-the-view-is-an-array-decls-and-vars.md)** | A 27-slot header and two regions — `decls` and `vars` are literally those region lengths, which is why the compiler can count them and cannot count directive instances |
+| 07c | **[Addressing the array](07c-how-instructions-address-the-array.md)** | Create instructions carry a slot index because they assign addresses; update instructions carry none because they ride two implicit cursors in global state |
+| 07d | **[`ɵɵadvance`](07d-advance-is-relative-and-forward-only.md)** | A delta rather than an index, asserted positive, flushing child `ngOnInit` on the way past — 🔴 why a template's shape is fixed at compile time |
+| 07e | **[What performs the diff](07e-what-actually-performs-the-diff.md)** | The whole diff is `Object.is` against one array slot per expression; `bindingUpdated` is nine lines and there is no tree to walk |
 | 08 | **Instructions, not a virtual DOM** *(not written yet)* | Why Angular emits imperative calls instead of building a vnode tree; the tree-shaking argument; what it costs |
 | 09 | **Static analysability is the load-bearing constraint** *(not written yet)* | 🔴 NG1001 and the object-literal rule; the partial evaluator; why a `selector` cannot be computed and `imports` must be identifiers |
 | 10 | **Metadata errors, one by one** *(not written yet)* | Non-exported symbols, uninitialised `export let`, destructuring, ambient types, computed enum members, tagged templates — symptom → cause → fix for each |
-| 11 | **Why `@defer` can split a bundle no bundler could** *(not written yet)* | The `dependencyResolverFn` the compiler generates, the two conditions a dependency must meet, 🔴 the barrel-file trap that silently un-splits your chunk |
+| 11 | **[Why `@defer` can split a bundle no bundler could](11-why-defer-can-split-a-bundle.md)** | The `dependencyResolverFn` the compiler generates, and the two emit modes it hoists |
+| 11b | **[The nine conditions and the barrel trap](11b-the-nine-conditions-and-the-barrel-trap.md)** | 🔴 The guide names two conditions; `registerDeferrableCandidate` applies eight, plus a ninth at the import-declaration level — and **not one of the nine produces a line of build output** |
+| 11c | **[Diagnosing a `@defer` that did not split](11c-diagnosing-a-defer-that-did-not-split.md)** | There is no build error, so this is a procedure: rule out HMR, turn the silence into a diagnostic with `deferredImports`, then read the bundle |
+| 11d | **[What `@defer` never defers](11d-what-defer-never-defers.md)** | Only the primary block gets a resolver — a design-system spinner in a `@placeholder` can cancel the whole benefit |
 | 12 | **Ivy and locality** *(not written yet)* | "The decorator is the compiler", the locality principle, separate compilation, incremental rebuilds and what locality buys the ecosystem |
 | 13 | **Where the compiler runs: `ngtsc`** *(not written yet)* | `@angular/compiler-cli`, a TypeScript *transformer* rather than a separate pass, `ngc`, and 🔴 why that forces the hard TS `>=6.0 <6.1` peer pin |
 | 14 | **Template type checking** *(not written yet)* | `strictTemplates`, the type-check block, all ten strictness flags, and the class of bugs that moves from runtime to build time |
@@ -82,7 +95,7 @@ whether a particular `@defer` block will produce a separate chunk.
   why that is a debugging tool rather than a deployment option.
 - **Phase 1 — Components and templates** *(not written yet)* — this topic explains the
   machine; that phase explains the language it reads.
-- **Phase 14 — Performance and the build** *(not written yet)* — `@defer` from chunk 08
+- **Phase 14 — Performance and the build** *(not written yet)* — `@defer` from chunks 11–11d
   becomes a budget and a bundle-analysis question there.
 
 ---

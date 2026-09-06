@@ -26,7 +26,7 @@ collected, filter it, or take half. It is legal in `ApplicationConfig.providers`
 `Array<Provider | EnvironmentProviders>` while a component's `providers` array is not. This chunk is
 what the function is and where it may appear; [08b · What it drags in](08b-what-importprovidersfrom-drags-in.md) is the bill,
 [08d · The two errors it raises](08d-the-two-errors-importprovidersfrom-raises.md) is the two errors it raises, and
-**08e · The interop shapes that beat it** *(not written yet)* is the interop that is better than it.**
+[08e · The interop shapes that beat it](08e-the-interop-shapes-that-beat-it.md) is the interop that is better than it.
 
 ## The signature, and the two brands it stamps on the result
 
@@ -110,7 +110,7 @@ export type EnvironmentProviders = {
 root environment injector for the life of the process. The route form makes the router create a child
 `EnvironmentInjector` for that route subtree, so the providers are created on first navigation and are
 invisible everywhere else. When both work, the route form is strictly better, and
-**08e · The interop shapes that beat it** *(not written yet)* shows the shape.
+[08g · Narrowing the injector](08g-narrowing-the-injector-and-the-lifetime.md) shows the shape.
 
 ## The anatomy of a `ModuleWithProviders`, in six lines
 
@@ -164,7 +164,7 @@ bootstrapApplication(App, {
 
 For a `multi: true` token such as `HTTP_INTERCEPTORS` that override does **not** work — a multi record
 accumulates rather than replaces — so there the only real fix is to stop importing the module and
-provide the pieces yourself (**08e · The interop shapes that beat it** *(not written yet)*).
+provide the pieces yourself ([08f · The multi bucket, worked end to end](08f-the-multi-bucket-worked-end-to-end.md)).
 
 **★ Symptom: `importProvidersFrom(SharedModule)` sits in `main.ts` and nobody on the team can say what it brings in.** Cause: this is the function working exactly as designed — a transitive walk with no report and an opaque result. Fix: read `SharedModule`'s own `imports` and `providers` by hand and convert them one at a time, deleting each entry from the module as you go, until the module is empty and the call can be deleted with it. There is no tooling shortcut for the reading step; the schematic in chunk [09 · The standalone migration schematic](09-the-standalone-migration-schematic.md) converts what it recognises and leaves the rest.
 

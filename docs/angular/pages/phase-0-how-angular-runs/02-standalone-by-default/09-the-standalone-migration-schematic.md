@@ -293,4 +293,4 @@ default flip; this one changes your architecture on purpose.
 
 ---
 
-← Prev: [The two errors it raises](08d-the-two-errors-importprovidersfrom-raises.md) · Index: [Topic index](README.md) · Next → [Mode 1 — convert to standalone](09b-mode-1-convert-to-standalone.md)
+← Prev: [When the bridge is honest](08j-when-the-bridge-is-the-honest-answer.md) · Index: [Topic index](README.md) · Next → [Mode 1 — convert to standalone](09b-mode-1-convert-to-standalone.md)

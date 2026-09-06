@@ -60,6 +60,12 @@ actually hit, the migration, and the honest boundary where `NgModule` still exis
 | 8b | 8.1 | **[What it drags in](08b-what-importprovidersfrom-drags-in.md)** | 🔴 The walk is eager and total, the module class is referenced by value so nothing tree-shakes, and the result is an opaque brand you cannot audit |
 | 8c | 8.2 | **[Ordering, cycles and multi tokens](08c-ordering-cycles-and-multi-tokens.md)** | `forRoot()` always beats a plain module; the cycle check is dev-only while the deduplication is not |
 | 8d | 8.3 | **[The two errors it raises](08d-the-two-errors-importprovidersfrom-raises.md)** | NG0800 goes silent in production; NG0207 has two messages under one code, chosen by the `ɵfromNgModule` brand |
+| 8e | 8.4 | **[The interop shapes that beat it](08e-the-interop-shapes-that-beat-it.md)** | What to do *instead* — the three narrowings, and the five buckets a module's contents sort into |
+| 8f | 8.5 | **[The multi bucket, worked end to end](08f-the-multi-bucket-worked-end-to-end.md)** | 🔴 The one bucket where overriding the token does **not** work: `HTTP_INTERCEPTORS` converted by hand, record by record |
+| 8g | 8.6 | **[Narrowing the injector](08g-narrowing-the-injector-and-the-lifetime.md)** | `Route.providers` makes the router build a child `EnvironmentInjector`, so the providers exist on first navigation and nowhere else |
+| 8h | 8.7 | **[Narrowing the lifetime](08h-narrowing-the-lifetime-keeping-the-module-lazy.md)** | Keeping a legacy module behind `loadChildren` so its `forChild` scoping stays explicit instead of being hoisted to the root |
+| 8i | 8.8 | **[What a library should ship](08i-what-a-library-should-ship-instead.md)** | The `provide*` + `with*` shape to publish instead of an `NgModule`, and what the framework's own packages did |
+| 8j | 8.9 | **[When the bridge is honest](08j-when-the-bridge-is-the-honest-answer.md)** | The counterweight — when `importProvidersFrom` is the correct answer and rewriting it is the mistake |
 | 9 | 9 | **[The standalone migration schematic](09-the-standalone-migration-schematic.md)** | `ng generate @angular/core:standalone` is not one migration but three, in a forced order |
 | 9b | 9.1 | **[Mode 1 — convert to standalone](09b-mode-1-convert-to-standalone.md)** | Deletes `standalone: false`, infers each template's real dependencies, moves declared classes into `imports` |
 | 9c | 9.2 | **[Mode 2 — prune NgModules](09c-mode-2-prune-ng-modules.md)** | Five removal criteria, best read backwards as the checklist explaining why your module is still there |
@@ -68,11 +74,15 @@ actually hit, the migration, and the honest boundary where `NgModule` still exis
 | 10c | 10.2 | **[Incremental compilation and the scope cache](10c-incremental-compilation-and-the-scope-cache.md)** | The cache key is the invalidation unit; a module's emit depends on symbols two hops away |
 | 11 | 11 | **[Where `NgModule` still legitimately appears](11-where-ngmodule-still-legitimately-appears.md)** | Not deprecated in v22 — but every first-party Angular module now declares nothing |
 
-✅ **All 11 planned chunks are written, across 31 files.** Eight of them exhausted their subject
-and split into lettered siblings — the 300-line cap is a file size, never a content budget, so a
-chunk that ran long became two or three files rather than a shorter page. One forward reference
-is still deliberately unlinked: **`08e · The interop shapes that beat it`** was never written, and
-chunks 8 and 8c point at it as plain bold text rather than a dangling link.
+✅ **All 11 planned chunks are written, across 38 files, and the topic is CLOSED.** Nine of them
+exhausted their subject and split into lettered siblings — the 300-line cap is a file size, never a
+content budget, so a chunk that ran long became two or three files rather than a shorter page.
+
+The last gap is now filled. `08e · The interop shapes that beat it` had been named by four
+references and never written; it turned out to carry six files' worth of subject (`08e`–`08j`), and
+all four of those references are now live links — 🔴 **each to a different sibling**, because each
+sentence was asking for a different shape: the entry point, the route form, the `multi` bucket and
+the lazy-module case. There are no deliberately-unlinked forward references left in this topic.
 
 ## The one question this topic exists to answer
 

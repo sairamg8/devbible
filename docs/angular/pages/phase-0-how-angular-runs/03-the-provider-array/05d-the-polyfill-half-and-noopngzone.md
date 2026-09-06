@@ -296,4 +296,4 @@ both.
 
 ---
 
-← Prev: [The redundant opt-in, and NG0408](05c-the-redundant-opt-in-and-ng0408.md) · Index: [Topic index](README.md) · Next → **06 · Startup and error-listener providers** *(not written yet)*
+← Prev: [The redundant opt-in, and NG0408](05c-the-redundant-opt-in-and-ng0408.md) · Index: [Topic index](README.md) · Next → [Startup and error-listener providers](06-startup-and-error-listener-providers.md)

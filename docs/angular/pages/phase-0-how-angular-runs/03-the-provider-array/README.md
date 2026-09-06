@@ -25,9 +25,10 @@ convention, the catalogue, and the ways the array goes wrong.
 
 ## Chunks
 
-🚧 **5 of 17 planned chunks written, across 8 files.** Chunk 05 exhausted its subject and
-split into four lettered siblings, which is the 300-line cap working as designed — the cap is
-a file size, never a content budget. The rows without links are planned and named; a link to a
+🚧 **8 of 17 planned chunks written, across 24 files.** Four of the eight exhausted their
+subject and split into lettered siblings, which is the 300-line cap working as designed — the cap
+is a file size, never a content budget, so chunk 06 became seven files and chunk 08 became seven
+rather than either being shortened. The rows without links are planned and named; a link to a
 page that does not exist breaks the build, so they stay as plain text until they land.
 
 | # | Chunk | Covers |
@@ -41,9 +42,22 @@ page that does not exist breaks the build, so they stay as plain text until they
 | 05c | **[The redundant opt-in, and NG0408](05c-the-redundant-opt-in-and-ng0408.md)** | `provideZonelessChangeDetection()` re-registers what the framework already prepended; the six APIs that schedule change detection without Zone.js; NG0914 at call time, NG0408 at bootstrap, both dev-only |
 | 05d | **[The polyfill half, and `NoopNgZone`](05d-the-polyfill-half-and-noopngzone.md)** | 🔴 `zone.js` is an **optional** peer, so `angular.json` and the provider array are two halves nothing keeps in sync — NG0908 in one direction, total silence in the other; `NoopNgZone` and NG0909 |
 | 05e | **`provideCheckNoChangesConfig`** *(not written yet)* | ⚠️ **Developer preview** and dev-mode-only — the last change-detection provider, and the one nothing in a production build ever sees |
-| 06 | **Startup and error-listener providers** *(not written yet)* | `provideAppInitializer()`, `provideEnvironmentInitializer()`, `provideBrowserGlobalErrorListeners()` — what runs before the first render and what happens to a rejection |
-| 07 | **`provideRouter()` and the route array** *(not written yet)* | What the call actually provides, why routes are a value and not a module, and the `Routes` type as the second thing bootstrap consumes |
-| 08 | **Router features, one by one** *(not written yet)* | `withComponentInputBinding`, `withViewTransitions`, `withInMemoryScrolling`, `withPreloading`, `withRouterConfig`, `withHashLocation` — what each turns on and what it costs |
+| 06 | **[Startup and error-listener providers](06-startup-and-error-listener-providers.md)** | The one initializer bootstrap actually waits for, and what "before the first render" means precisely |
+| 06b | **[Initializer ordering and failure](06b-initializer-ordering-and-failure.md)** | 🔴 They start concurrently and are awaited together, so array position decides only when one *starts* — and the injection context ends at the first `await` |
+| 06c | **[When a startup initializer fails](06c-when-a-startup-initializer-fails.md)** | A rejection produces no application at all, and the only thing between that and total silence is the `.catch` the CLI generated in `main.ts` |
+| 06d | **[Environment initializers](06d-environment-initializers.md)** | The return value is thrown away, so an async body is a silent no-op; `{self: true}` means a route injector never inherits the application's |
+| 06e | **[Platform initializers](06e-platform-initializers.md)** | 🔴 The one `provide*` returning a plain `StaticProvider` — so putting it in `app.config.ts` compiles perfectly and never runs |
+| 06f | **[Global error listeners](06f-provide-browser-global-error-listeners.md)** | Two window listeners that both `preventDefault()`; free at startup, a no-op on the server, and it takes the browser's own reporting with it |
+| 06g | **[`ErrorHandler` and NG0402](06g-error-handler-and-ng0402.md)** | No `providedIn`, so the array is the only place to replace it — injected through a lazy function token so your replacement may inject |
+| 07 | **[`provideRouter()` and the route array](07-provide-router-and-the-route-array.md)** | What the call actually provides, why routes are a value and not a module, and `Routes` as the second thing bootstrap consumes |
+| 07b | **[The bootstrap listener and initial navigation](07b-the-bootstrap-listener-and-initial-navigation.md)** | The third provider is what actually *starts* routing — it returns early for every component but the first, so two `provideRouter` calls make two listeners |
+| 08 | **[Router features, one by one](08-router-features-one-by-one.md)** | What a `RouterFeature` *is* as a record, the full inventory, and ⚠️ `scrollOffset`'s missing standalone replacement named as a known gap |
+| 08b | **[`withRouterConfig` and `withHashLocation`](08b-with-router-config-and-hash-location.md)** | The two config-only features — a single `useValue` that **replaces** rather than merges, and one non-multi provider that loses to anything later in the array |
+| 08c | **[`withComponentInputBinding`](08c-with-component-input-binding.md)** | Four sources of route state bound straight to inputs, resolvers winning every collision — and `undefined` written into any bound input the route does not supply |
+| 08d | **[View transitions and scrolling](08d-view-transitions-and-scrolling.md)** | ⚠️ Still developer preview, failing silently on unsupported browsers; in-memory scrolling restores nothing until you pass it options |
+| 08e | **[Preloading and navigation errors](08e-preloading-and-navigation-errors.md)** | Configured by a provider but started by the bootstrap listener; 🔴 an error handler that redirects stops `NavigationError` being emitted at all |
+| 08f | **[Initial navigation](08f-initial-navigation.md)** | The only router features that reach back into bootstrap — one hands you the trigger, the other holds the first paint open until the first navigation finishes |
+| 08g | **[Tracing and the experimental end](08g-tracing-and-the-experimental-end.md)** | What a production user never meets — `withDebugTracing` compiles to an empty provider array, and three more are preview, experimental, or not public API |
 | 09 | **`provideHttpClient()` and the backend** *(not written yet)* | ⚠️ `FetchBackend` is the default in v22 and `withFetch()` is **deprecated**; `withXhr()` is the opt-out. The `HttpClientModule` end of the road |
 | 10 | **HTTP features** *(not written yet)* | `withInterceptors`, `withXsrfConfiguration`, `withInterceptorsFromDi`, and 🔴 why interceptor array order *is* execution order |
 | 11 | **Hydration, animations and the rest** *(not written yet)* | `provideClientHydration()` + `withEventReplay`; ⚠️ `withIncrementalHydration` and `provideAnimationsAsync` are both deprecated in v22 — what replaced them |

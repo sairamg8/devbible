@@ -261,4 +261,4 @@ Angular's error enum uses the sign to separate runtime errors from compiler diag
 
 ---
 
-← Prev: [Ordering, cycles and multi tokens](08c-ordering-cycles-and-multi-tokens.md) · Index: [Topic index](README.md) · Next → [The standalone migration schematic](09-the-standalone-migration-schematic.md)
+← Prev: [Ordering, cycles and multi tokens](08c-ordering-cycles-and-multi-tokens.md) · Index: [Topic index](README.md) · Next → [The interop shapes that beat it](08e-the-interop-shapes-that-beat-it.md)
