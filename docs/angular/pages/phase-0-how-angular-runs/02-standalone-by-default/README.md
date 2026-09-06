@@ -86,4 +86,4 @@ the file that needs editing before you look at the stack trace.
 
 ---
 
-← Prev: [A compiler with a framework attached](../01-compiler-with-a-framework-attached/README.md) · Index: [Phase 0 — How Angular runs](../README.md) · Next → **The provider array is the wiring** *(not written yet)*
+← Prev: [A compiler with a framework attached](../01-compiler-with-a-framework-attached/README.md) · Index: [Phase 0 — How Angular runs](../README.md) · Next → [The provider array is the wiring](../03-the-provider-array/README.md)

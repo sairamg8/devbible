@@ -73,7 +73,7 @@ whether a particular `@defer` block will produce a separate chunk.
 - **[02 · Standalone by default](../02-standalone-by-default/README.md)** — a component's
   `imports` array is the local dependency list this topic's locality principle depends on.
   Standalone is what makes the template dependency graph knowable per file.
-- **03 · The provider array is the wiring** *(not written yet)* — the `provide*` convention
+- **[03 · The provider array is the wiring](../03-the-provider-array/README.md)** — the `provide*` convention
   exists partly because tree-shakable provider functions survive the static analysis that
   `NgModule.forRoot()` fought against.
 - **10 · Partial compilation** *(not written yet)* — `ɵɵngDeclareComponent` and the linker
