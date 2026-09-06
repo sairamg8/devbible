@@ -94,7 +94,7 @@ object.
 - **`provideThing(...)`** — the root setup. Returns `EnvironmentProviders`
   ([chunk 03](03-environmentproviders-vs-provider.md)). Called once, in
   `ApplicationConfig.providers` (or, for a genuinely feature-scoped subsystem, on a route —
-  [chunk 15](15-route-level-providers.md)).
+  **chunk 15** *(not written yet)*).
 - **`withFeature(...)`** — an optional capability, passed as a *variadic argument to its own
   `provide*` function*, never placed in the providers array directly. Returns an opaque feature
   object, not providers.
@@ -120,7 +120,7 @@ export interface HttpFeature<KindT extends HttpFeatureKind> {
 | `HttpClientModule` | `provideHttpClient(...features)` | **deprecated** |
 | `HttpClientXsrfModule.withOptions()` | `withXsrfConfiguration({ ... })` | **deprecated** |
 | `HttpClientJsonpModule` | `withJsonpSupport()` | **deprecated** (and so is the feature) |
-| `BrowserAnimationsModule` | `provideAnimationsAsync()` | both superseded — [chunk 11](11-hydration-animations-and-the-rest.md) |
+| `BrowserAnimationsModule` | `provideAnimationsAsync()` | both superseded — **chunk 11** *(not written yet)* |
 | `BrowserModule` | nothing; `bootstrapApplication` provides it | not needed in a standalone app |
 | `StoreModule.forRoot(reducers)` (NgRx) | `provideStore(reducers)` | NgRx 22.0.0 ships both |
 
@@ -139,7 +139,7 @@ export class HttpClientModule {}
 
 The legacy module is now a shim over the new function — and it **pins `withXhr()`**. An application
 that still imports `HttpClientModule` is not on the `fetch` backend, no matter what the v22 release
-notes say the default is. [Chunk 10](10-http-features.md) picks that up.
+notes say the default is. **Chunk 10** *(not written yet)* picks that up.
 
 ## Why this is not just tree-shaking
 
@@ -201,7 +201,7 @@ export const ordersRoutes: Routes = [
 strangely.** Cause: `provideRouter` registers routes as `{provide: ROUTES, multi: true, useValue: routes}`
 and adds an `APP_BOOTSTRAP_LISTENER`, both multi-providers. A second call does not replace the
 first — it **appends**, so you get both route tables concatenated and two bootstrap listeners. Fix:
-call it once and concatenate the arrays yourself; see [chunk 13](13-order-dependence.md).
+call it once and concatenate the arrays yourself; see **chunk 13** *(not written yet)*.
 
 **★ Symptom: a third-party library's `provideX()` has no effect in a lazily-loaded feature.** Cause:
 you called it in a route's `providers` but the library's own services are `providedIn: 'root'` and

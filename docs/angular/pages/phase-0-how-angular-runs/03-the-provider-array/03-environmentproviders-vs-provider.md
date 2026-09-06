@@ -253,7 +253,7 @@ No. The wrapper is about *where* the providers may be registered, not *when* the
 Registration is eager — the records go into the injector at creation — but instantiation is lazy,
 on first injection, exactly as for a plain `Provider`. The one exception is an initializer, which is
 a multi-provider the framework itself injects during bootstrap
-([chunk 06](06-startup-and-error-listener-providers.md)).
+(**chunk 06** *(not written yet)*).
 
 **Could Angular have used a class instead of a branded type?**
 It could have, and `instanceof` would have worked at runtime. It would have cost a prototype and an
