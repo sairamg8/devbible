@@ -233,6 +233,53 @@ for it before the commit exists.
 **Cause:** naming an ignored file exactly is an explicit request Git will not silently drop
 **Fix:** `git add -f` if it genuinely belongs, or fix the rule. See [`git add`](02-git-add/01-what-add-does.md)
 
+## Interview questions
+
+**★ Why does `!logs/keep.md` fail to re-include the file?**
+Because a parent directory was excluded. The manual is explicit that it is not
+possible to re-include a file if a parent directory of that file is excluded —
+Git does not list excluded directories at all, for performance, so patterns about
+their contents are never evaluated. The fix is to exclude the *contents* rather
+than the directory: `logs/*` followed by `!logs/keep.md`. Every level has to be
+re-opened before a negation inside it can be seen, which is why nested
+allow-lists get fiddly and why `git check-ignore` exists.
+
+**★ A file is ignored and nothing in the project's `.gitignore` mentions it. Where
+do you look?**
+Not at the files — at `git check-ignore -v <path>`, which prints the source file,
+line number and pattern that decided it. There are four precedence levels
+(command-line patterns, `.gitignore` files up the tree, `.git/info/exclude`, and
+`core.excludesFile`), nested `.gitignore` files override their parents, and within
+one level the *last* matching pattern wins. Reasoning about that by reading is how
+an afternoon disappears; the command answers it in one line.
+
+**★ What is the difference between `build/` and `/build/`, and when does it matter?**
+A pattern with no slash at its start or middle matches at every level below the
+`.gitignore`, so `build/` ignores every `build` directory anywhere in the tree.
+A leading slash anchors the pattern to that `.gitignore`'s own directory, so
+`/build/` ignores only the one at the root. In a single-package repository the
+difference is invisible; in a monorepo it is the difference between ignoring twelve
+build directories and ignoring one, and the mistake surfaces as "why is
+`packages/api/build/` not being committed?"
+
+**★ Which ignore rules belong in the project's `.gitignore` and which do not?**
+The project's file is a statement about the project: dependencies, build output,
+local environment files, caches, logs. Your editor's droppings and OS files —
+`.DS_Store`, `.idea/`, `*.swp` — belong in your global ignore file, which
+`core.excludesFile` points at and which defaults to `$XDG_CONFIG_HOME/git/ignore`,
+falling back to `$HOME/.config/git/ignore`. Putting them in the shared file asks
+every colleague to carry your tooling choice. Rules that are specific to one clone
+but not to you personally go in `.git/info/exclude`, which is not committed.
+
+**Is `.gitignore` a reasonable way to keep secrets out of a repository?**
+It is a convenience, not a control. It does nothing for a file that is already
+tracked — ignore rules are consulted only for untracked paths — and nothing at all
+for history, so a credential committed last month is in every clone whatever you
+add today. It also fails silently: a broad rule stops `git status` from ever
+mentioning a genuinely new file, with no warning. The actual controls are not
+having the secret in the working tree, scanning before the commit exists, and
+rotating anything that did get committed.
+
 ---
 
 ← Prev: [`git diff`](04-git-diff.md) · Next → [Ignoring does not untrack](06-ignoring-does-not-untrack.md)
