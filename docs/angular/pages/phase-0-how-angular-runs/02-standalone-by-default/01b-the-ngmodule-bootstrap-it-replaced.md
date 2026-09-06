@@ -98,7 +98,8 @@ export const appConfig: ApplicationConfig = {
 
 This is a small case of the general pattern the whole standalone design is built on: what an
 `NgModule` bundled implicitly, a `provide*` function now exposes explicitly, and you pay for
-only what you name. Topic [03](../03-the-provider-array/README.md) is that pattern in full.
+only what you name. Topic **03 · The provider array is the wiring** *(not written yet)* is
+that pattern in full.
 
 ## Gotchas
 
@@ -138,7 +139,8 @@ Cause: no `ng update` migration rewrites your bootstrap. `platformBrowserDynamic
 *deprecated* in v20 (v20.0.0 CHANGELOG, Deprecations → platform-browser: *"All entries of the
 `@angular/platform-browser-dynamic`"*), not removed, and the package is still published at
 22.1.5 — so nothing breaks and nothing tells you. Fix: run the migration mode that does it,
-covered in chunk [09](09-the-standalone-migration-schematic.md):
+covered in the migration chunk **09 · The standalone migration schematic**
+*(not written yet)*:
 
 ```bash
 ng generate @angular/core:standalone --mode=standalone-bootstrap
@@ -166,8 +168,8 @@ runtime.** Cause: `BrowserModule` is a legal `NgModule` and `imports` accepts Ng
 the compiler has no reason to object — the failure is NG5100 from its constructor when the
 module injector is created. Fix: never import `BrowserModule` anywhere in a standalone app.
 What you wanted was `CommonModule`, and what you probably wanted instead of *that* is the
-built-in control flow, which needs no import at all — chunk
-[06](06-not-a-known-element.md) has the details.
+built-in control flow, which needs no import at all — chunk **06 · `'x' is not a known
+element`** *(not written yet)* has the details.
 
 ## Interview questions
 
@@ -193,23 +195,24 @@ tutorial dates that tutorial to v19 or earlier.
 itself. `imports: [BrowserModule]` disappears — those providers are built in.
 `imports: [AppRoutingModule]` becomes `provideRouter(routes)` in the same provider array.
 `exports` has no replacement at all, because nothing needs re-exporting when every component
-names its own dependencies. Chunk [07](07-what-replaced-each-ngmodule-responsibility.md) is
-the full table.
+names its own dependencies. Chunk **07 · What replaced each `NgModule` responsibility**
+*(not written yet)* is the full table.
 
 **What breaks in a hybrid app that keeps an `AppModule` *and* calls `bootstrapApplication`?**
 Two independent environment injectors. Anything `providedIn: 'root'` is instantiated once
 per injector, so caches, stores and socket connections silently double. There is no error
 because both graphs are individually valid. The only safe hybrid is one bootstrap: keep the
 `NgModule` bootstrap and reach standalone components through `imports`, or move to
-`bootstrapApplication` and reach the legacy module through
-[`importProvidersFrom`](08-ngmodule-interop-importprovidersfrom.md).
+`bootstrapApplication` and reach the legacy module through `importProvidersFrom`, in chunk
+**08 · Interop, honestly** *(not written yet)*.
 
 **Why is "standalone component in `@NgModule.bootstrap`" a compile-time error rather than a
 runtime one?**
 Because `ngtsc` already knows both facts at build time: the `standalone` flag is in the
 component's metadata and the `bootstrap` array must be a statically analysable literal. Every
 constraint Angular *can* check in the compiler it does check there — that is the point topic
-[01](../01-compiler-with-a-framework-attached/README.md) makes about static analysability,
+[01 · A compiler with a framework attached](../01-compiler-with-a-framework-attached/README.md)
+makes about static analysability,
 and this error is a small instance of it.
 
 ---

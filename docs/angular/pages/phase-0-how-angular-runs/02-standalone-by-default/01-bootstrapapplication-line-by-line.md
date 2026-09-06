@@ -58,7 +58,7 @@ export class App {
 ```
 
 Note what is *absent*: `standalone: true`. Chunk
-[02](02-the-flag-is-gone-which-version-changed-what.md) is entirely about why.
+[03](03-standalone-by-default-which-version-changed-what.md) is entirely about why.
 
 ## The signature
 
@@ -95,8 +95,8 @@ interface ApplicationConfig {
 ```
 
 That is the entire type. Everything an app is configured with — the router, HTTP, hydration,
-change detection — arrives through that single array. Topic
-[03](../03-the-provider-array/README.md) is about what belongs in it.
+change detection — arrives through that single array. Topic **03 · The provider array is the wiring** *(not written yet)* is about what belongs
+in it.
 
 **`context`** — added for server rendering. The `.d.ts` comment:
 
@@ -262,7 +262,7 @@ Nothing technically, but the single-field shape is the point: it forces every pi
 application configuration through one uniform mechanism — dependency injection — instead of
 a growing bag of bootstrap options. That is why the ecosystem convention is a `provide*`
 function returning `EnvironmentProviders` rather than an options object, which topic
-[03](../03-the-provider-array/README.md) unpacks.
+**03 · The provider array is the wiring** *(not written yet)* unpacks.
 
 **Where does the root injector come from if there is no root module?**
 `internalCreateApplication` constructs an `EnvironmentNgModuleRefAdapter` over your provider

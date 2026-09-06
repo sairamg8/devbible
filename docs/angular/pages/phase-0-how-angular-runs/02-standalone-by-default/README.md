@@ -33,18 +33,24 @@ actually hit, the migration, and the honest boundary where `NgModule` still exis
 
 ## Chunks
 
-| # | Chunk | Covers |
-|---|---|---|
-| 1 | **[`bootstrapApplication`, line by line](01-bootstrapapplication-line-by-line.md)** | The three-argument signature, what it merges in place of `BrowserModule`, why it returns a `Promise`, and the `platformBrowserDynamic()` call it replaced |
-| 2 | **[The flag is gone — which version changed what](02-the-flag-is-gone-which-version-changed-what.md)** | 🔴 v14 introduced, v15 stabilised, **v19.0.0 flipped the default**, v20 deprecated `platform-browser-dynamic`; and the compiler flag that reads your `@angular/core` version to decide |
-| 3 | **[What `imports` actually means](03-what-imports-actually-means.md)** | The per-component template dependency list, its exact type, and the transitive `NgModule` scope it replaced |
-| 4 | **[Unused imports and the compiler diagnostics](04-unused-imports-and-the-compiler-diagnostics.md)** | NG8113 is a **warning**, not an error — how to promote it, the cleanup schematic, and NG2010/NG2011/NG2012 |
-| 5 | **[`'x' is not a known element`](05-not-a-known-element.md)** | 🔴 The single most common standalone error, symptom → cause → fix, compile-time vs runtime, and why `CommonModule` is usually the wrong fix |
-| 6 | **[What replaced each `NgModule` responsibility](06-what-replaced-each-ngmodule-responsibility.md)** | The field-by-field table: `declarations`, `imports`, `exports`, `providers`, `bootstrap`, `schemas`, `entryComponents` |
-| 7 | **[Interop, honestly — `importProvidersFrom`](07-ngmodule-interop-importprovidersfrom.md)** | The bridge for a library still shipping an `NgModule`, exactly what it costs, and lazy-loading a legacy module through `loadChildren` |
-| 8 | **[The standalone migration schematic](08-the-standalone-migration-schematic.md)** | `ng generate @angular/core:standalone`, the three modes in their required order, and the four things it cannot do |
-| 9 | **[Why standalone makes the graph splittable](09-why-standalone-makes-the-graph-splittable.md)** | Locality as the real payoff — `@defer` refuses non-standalone dependencies, and that is a consequence, not a rule |
-| 10 | **[Where `NgModule` still legitimately appears](10-where-ngmodule-still-legitimately-appears.md)** | Third-party libraries, `TestBed`'s internal `DynamicTestModule`, `createNgModule`, and the AngularJS hybrid |
+| # | pos | Chunk | Covers |
+|---|---:|---|---|
+| 1 | 1 | **[`bootstrapApplication`, line by line](01-bootstrapapplication-line-by-line.md)** | The three-argument signature, what it merges in place of `BrowserModule`, why it returns a `Promise`, NG0907 and NG0906 |
+| 2 | 2 | **[The `NgModule` bootstrap it replaced](01b-the-ngmodule-bootstrap-it-replaced.md)** | The legacy pair `ng new --standalone=false` still generates, the six-row substitution table, NG5100 and NG6009 |
+| 3 | 3 | **[Which version changed what](03-standalone-by-default-which-version-changed-what.md)** | 🔴 v14 developer preview, v15 supported, **v19.0.0 flipped the default and stripped the flag**, and the compiler code that reads your `@angular/core` version to decide |
+| 4 | 4 | **What `imports` actually means** *(not written yet)* | Planned file `04-what-imports-actually-means.md` — the per-component template dependency list, its exact type, and the transitive `NgModule` scope it replaced |
+| 5 | 5 | **Unused imports and the compiler diagnostics** *(not written yet)* | Planned file `05-unused-imports-and-the-compiler-diagnostics.md` — NG8113 is a **warning**, not an error; the cleanup schematic; NG2010/NG2011/NG2012 |
+| 6 | 6 | **`'x' is not a known element`** *(not written yet)* | Planned file `06-not-a-known-element.md` — the most common standalone error, symptom → cause → fix, compile-time vs runtime, and why `CommonModule` is usually the wrong fix |
+| 7 | 7 | **What replaced each `NgModule` responsibility** *(not written yet)* | Planned file `07-what-replaced-each-ngmodule-responsibility.md` — the field-by-field table: `declarations`, `imports`, `exports`, `providers`, `bootstrap`, `schemas` |
+| 8 | 8 | **Interop, honestly — `importProvidersFrom`** *(not written yet)* | Planned file `08-ngmodule-interop-importprovidersfrom.md` — the bridge for a library still shipping an `NgModule`, what it costs, and `loadChildren` with a legacy module |
+| 9 | 9 | **The standalone migration schematic** *(not written yet)* | Planned file `09-the-standalone-migration-schematic.md` — `ng generate @angular/core:standalone`, the three modes in their required order, and what it cannot do |
+| 10 | 10 | **Why standalone makes the graph splittable** *(not written yet)* | Planned file `10-why-standalone-makes-the-graph-splittable.md` — locality as the real payoff; `@defer` refuses non-standalone dependencies |
+| 11 | 11 | **Where `NgModule` still legitimately appears** *(not written yet)* | Planned file `11-where-ngmodule-still-legitimately-appears.md` — third-party libraries, `TestBed`'s internal `DynamicTestModule`, `createNgModule`, the AngularJS hybrid |
+
+🚧 **This topic is partially written — chunks 1–3 of 11.** Rows without a link have not been
+written; a successor starts at `04-what-imports-actually-means.md` with
+`sidebar_position: 4`, and must change chunk 3's footer `Next →` from bold text to a real
+link when it lands.
 
 ## The one question this topic exists to answer
 
@@ -59,9 +65,9 @@ else on this page is a consequence of that sentence.
 - [01 · A compiler with a framework attached](../01-compiler-with-a-framework-attached/README.md)
   is the machine this topic configures: `imports` must be statically analysable because
   `ngtsc` resolves it at build time, not at runtime.
-- [03 · The provider array is the wiring](../03-the-provider-array/README.md) picks up the
-  second half of `bootstrapApplication` — the `ApplicationConfig` object this topic passes
-  but does not unpack.
+- **03 · The provider array is the wiring** *(not written yet)* picks up the second half of
+  `bootstrapApplication` — the `ApplicationConfig` object this topic passes but does not
+  unpack.
 - **Phase 1 — Components and templates** owns selectors, inputs and content projection;
   this topic only owns how a template dependency becomes visible.
 - **Phase 6 — Dependency injection** owns injector hierarchies. Chunk 7's
@@ -80,4 +86,4 @@ the file that needs editing before you look at the stack trace.
 
 ---
 
-← Prev: [A compiler with a framework attached](../01-compiler-with-a-framework-attached/README.md) · Index: [Phase 0 — How Angular runs](../README.md) · Next → [The provider array is the wiring](../03-the-provider-array/README.md)
+← Prev: [A compiler with a framework attached](../01-compiler-with-a-framework-attached/README.md) · Index: [Phase 0 — How Angular runs](../README.md) · Next → **The provider array is the wiring** *(not written yet)*
