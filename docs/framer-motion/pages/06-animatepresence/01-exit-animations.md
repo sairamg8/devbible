@@ -40,7 +40,7 @@ A tabbed interface's content panels needed a clean, sequential transition — th
 
 ```tsx
 // mode="wait" — sequential exit-then-enter, appropriate for tab/page-style transitions
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 
 function TabContent({ activeTab }: { activeTab: string }) {
   return (

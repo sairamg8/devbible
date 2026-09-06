@@ -49,7 +49,7 @@ A slide-out settings panel needed to smoothly reverse direction if a user clicke
 
 ```tsx
 // A settings panel correctly reversible mid-animation
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 function SettingsPanel({ isOpen }: { isOpen: boolean }) {
   return (
@@ -84,7 +84,7 @@ function Modal({ isVisible }: { isVisible: boolean }) {
 
 ```tsx
 // exit — requires AnimatePresence (covered in depth in its own dedicated doc)
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 
 function Notification({ isShowing, message }: { isShowing: boolean; message: string }) {
   return (

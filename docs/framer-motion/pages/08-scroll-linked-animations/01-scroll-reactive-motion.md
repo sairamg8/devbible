@@ -54,7 +54,7 @@ A marketing page needed its hero heading to fade in once, the first time it scro
 
 ```tsx
 // whileInView — a discrete, one-time entrance trigger
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 function HeroHeading() {
   return (
@@ -71,7 +71,7 @@ function HeroHeading() {
 
 ```tsx
 // useScroll + useTransform — continuous, scroll-position-driven parallax
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 
 function ParallaxSection() {

@@ -40,7 +40,7 @@ A notification toast needed to fade in and slide up slightly when it appeared �
 
 ```tsx
 // A drop-in motion.div — identical to a plain div, plus animation capability
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 function Toast({ message }: { message: string }) {
   return (
@@ -58,7 +58,7 @@ function Toast({ message }: { message: string }) {
 
 ```tsx
 // motion(Component) — making a custom component animatable, requiring forwardRef
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { forwardRef } from 'react';
 
 const Card = forwardRef<HTMLDivElement, { title: string }>(({ title }, ref) => (

@@ -45,7 +45,7 @@ A "task completed" UI moment needed a checkmark icon to feel satisfying — anim
 
 ```tsx
 // pathLength — a self-drawing checkmark
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 function AnimatedCheckmark() {
   return (

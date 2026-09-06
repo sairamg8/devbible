@@ -46,7 +46,7 @@ A notification badge needed to draw attention with a pulse effect — scaling up
 
 ```tsx
 // Simple keyframes — evenly-spaced by default
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 function LoadingDot() {
   return (

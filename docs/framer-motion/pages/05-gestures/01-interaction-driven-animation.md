@@ -42,7 +42,7 @@ A card-swiping interface (approve/reject style) needed cards to be draggable hor
 
 ```tsx
 // Hover/tap gesture props — replacing manual event-handler boilerplate
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 function Button({ children, onClick }: { children: React.ReactNode; onClick: () => void }) {
   return (

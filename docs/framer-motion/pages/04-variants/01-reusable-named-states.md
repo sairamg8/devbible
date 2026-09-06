@@ -51,7 +51,7 @@ A dropdown navigation menu needed its individual menu items to appear in a casca
 
 ```tsx
 // A staggered navigation menu, driven entirely by ONE parent state change
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const containerVariants = {
   hidden: { opacity: 0 },

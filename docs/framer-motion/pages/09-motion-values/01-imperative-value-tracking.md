@@ -51,7 +51,7 @@ A custom cursor-follower effect needed an element to track the mouse position in
 
 ```tsx
 // useMotionValue — a cursor-follower avoiding React re-renders entirely on every mouse move
-import { motion, useMotionValue } from 'framer-motion';
+import { motion, useMotionValue } from 'motion/react';
 import { useEffect } from 'react';
 
 function CursorFollower() {
@@ -73,7 +73,7 @@ function CursorFollower() {
 
 ```tsx
 // useTransform — deriving an opacity value from a drag position, without extra re-renders
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'motion/react';
 
 function SwipeToDismissCard() {
   const x = useMotionValue(0);
@@ -89,7 +89,7 @@ function SwipeToDismissCard() {
 
 ```tsx
 // useSpring — smoothing a raw, potentially jittery value with physics
-import { useMotionValue, useSpring } from 'framer-motion';
+import { useMotionValue, useSpring } from 'motion/react';
 
 function SmoothProgressBar({ rawProgress }: { rawProgress: number }) {
   const progress = useMotionValue(rawProgress);

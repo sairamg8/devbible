@@ -51,7 +51,7 @@ A marketing site built on Next.js App Router wanted smooth exit/enter transition
 ```tsx
 // app/components/PageTransition.tsx — the ONE deliberate client boundary for page transitions
 'use client';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import { usePathname } from 'next/navigation';
 
 export function PageTransition({ children }: { children: React.ReactNode }) {
@@ -90,7 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 ```tsx
 // useReducedMotion — respecting the user's actual accessibility preference
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 
 function AnimatedHero() {
   const shouldReduceMotion = useReducedMotion();

@@ -48,7 +48,7 @@ An onboarding flow needed to highlight several UI elements in sequence — eleme
 
 ```tsx
 // useAnimate — imperative, awaitable sequencing for a precise multi-step choreography
-import { useAnimate } from 'framer-motion';
+import { useAnimate } from 'motion/react';
 
 function OnboardingSequence() {
   const [scope, animate] = useAnimate();
@@ -73,7 +73,7 @@ function OnboardingSequence() {
 
 ```tsx
 // useAnimation — triggering a one-off "shake" animation from validation logic, outside normal state flow
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation } from 'motion/react';
 
 const shakeVariants = {
   shake: { x: [0, -10, 10, -10, 10, 0], transition: { duration: 0.4 } },

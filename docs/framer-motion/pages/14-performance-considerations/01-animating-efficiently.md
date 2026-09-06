@@ -44,7 +44,7 @@ A sidebar's open/close animation animated its `left` CSS property from `-300px` 
 
 ```tsx
 // ❌ Layout-triggering animation — recalculates layout on EVERY frame
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 function SidebarBad({ isOpen }: { isOpen: boolean }) {
   return (

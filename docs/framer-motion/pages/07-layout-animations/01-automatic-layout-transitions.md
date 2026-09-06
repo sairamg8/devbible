@@ -40,7 +40,7 @@ A photo gallery needed clicking a thumbnail to feel like that exact thumbnail sm
 
 ```tsx
 // layout prop — automatic FLIP-based animation for a reorderable list
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 function SortableList({ items }: { items: Item[] }) {
   return (
