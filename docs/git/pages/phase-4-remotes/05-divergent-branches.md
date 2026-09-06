@@ -167,6 +167,61 @@ problem wearing Git's error message.
 **Cause:** several people committing directly to a shared branch
 **Fix:** a workflow problem, not a Git one. Short-lived feature branches diverge far less; `pull.ff only` at least makes each occurrence explicit
 
+## Interview questions
+
+**★ What exactly is divergence, and how do you recognise it in `git status`?**
+Both you and the remote have commits the other lacks, so neither tip is an ancestor
+of the other and no fast-forward exists. `status` says it in two numbers — *"have
+diverged, and have 2 and 2 different commits each"* — and the two numbers are the
+tell. One number ("behind by 2") is a fast-forward and needs no decision; two
+numbers means something has to reconcile them, and Git will not choose for you.
+
+**★ Why does Git refuse to guess, and is that the right call?**
+Because every default would make a consequential choice on your behalf: merging
+silently adds merge commits to everyone's history, and rebasing silently rewrites
+commits, which is unsafe the moment a branch is shared. Failing is the only option
+that does not commit you to something hard to undo, so `fatal: Need to specify how
+to reconcile divergent branches` is a feature. The residual cost is real — the
+message names three config settings rather than explaining the situation, and it
+arrives when somebody typed `pull` expecting "get latest" — which is why you answer
+it once, in advance, with `pull.ff only`.
+
+**★ What are the three ways to resolve divergence, and how do you pick?**
+Merge `origin/main` for a merge commit that rewrites nothing — the right answer on
+a shared branch and whenever you want the true record. Rebase onto `origin/main` for
+a linear history at the cost of new hashes and a forced push — fine on a branch that
+is yours alone. Or `reset --hard origin/main` to discard your commits entirely, which
+is destructive and occasionally exactly right. Look before choosing: `git log
+--oneline HEAD..'@{u}'` and its reverse show what each side actually added, and the
+answer is usually obvious once you can see the size of your own work.
+
+**★ "Ahead 12, behind 12" with the same commit subjects on both sides. What is going
+on, and why must you not merge?**
+That is not parallel work — somebody rewrote the branch upstream, so your twelve
+commits and their twelve are the same changes with different hashes. Merging them
+succeeds *cleanly*, because the content agrees, and leaves you with duplicates of
+every commit that then get pushed back. The shape is the tell: real divergence has
+different commits on each side. The repair is `git reset --hard origin/main` when you
+have nothing unique, or `git rebase --onto origin/main <old-upstream> main` when you
+do.
+
+**★ After resolving divergence, why does one route need a force-push and the other
+not?**
+Because merging *adds* a commit that contains the remote's history, so your branch
+still has the remote tip as an ancestor and the push is an ordinary fast-forward.
+Rebasing *replaces* your commits, so the remote's version is no longer contained in
+what you are pushing and Git rejects it as non-fast-forward. That asymmetry — not
+aesthetics — is the practical reason merge is the default answer on shared branches:
+it never requires anyone to force anything.
+
+**Why is frequent divergence usually not a Git problem?**
+Because it is a frequency problem created by the branching strategy. Two people
+committing directly to one shared branch diverge constantly; two people on separate
+short-lived branches almost never do. `pull.ff only` makes each occurrence explicit
+rather than silent, which is worth doing, but the underlying fix is structural.
+Most of what looks like a Git problem here is a workflow problem wearing Git's error
+message.
+
 ---
 
 ← Prev: [Upstream tracking](04-upstream-tracking.md) · Next → [Force-pushing safely](06-force-pushing-safely.md)
