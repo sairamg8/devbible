@@ -194,6 +194,68 @@ visible, it is named, it can be pushed as a backup, it survives a
 **Cause:** the default message is `WIP on <branch>`, which is identical for every stash
 **Fix:** always `git stash push -m "..."`. Add `git status --show-stash` to your routine so the pile stays visible
 
+## Interview questions
+
+**★ What is a stash, physically?**
+A commit — technically a small merge commit recording both your working tree and
+your index — parked on `refs/stash`, with older entries living in that ref's
+*reflog*. So `stash@{0}` is reflog syntax, not a queue index, and the list behaves
+as a stack: pushing adds at `stash@{0}` and shifts everything down. Because each
+entry is a real commit, a stash survives branch switches and can be applied on top
+of a different commit later. The integer shorthand works too — `git stash apply 2`
+saves fighting your shell over braces.
+
+**★ `pop` or `apply`?**
+`pop` applies and removes the entry; `apply` applies and keeps it. The documented
+subtlety is what happens on conflict: a conflicted `pop` does **not** drop the
+entry, so you end up with conflict markers *and* the stash still listed. That is
+the safe design — nothing is lost — but it means you must `git stash drop`
+manually once you have resolved, or you will apply the same changes again later.
+For anything you would be upset to lose, `apply`, confirm the result builds, then
+drop deliberately.
+
+**★ You stashed, switched branch, and the new files are still sitting there. Why?**
+Because `git stash` saves *tracked* modifications only; untracked files are left
+alone. `-u` includes untracked files, and `-a` includes ignored ones too — but
+both then remove those files from the working tree with `git clean`, so `-a` on a
+repository with `node_modules` ignored will happily stash and delete it. `-u` is
+what you usually want and `-a` needs a specific reason.
+
+**★ What is `--keep-index` for, and why is it the highest-value use of stash?**
+It stashes everything while leaving the index exactly as it is, which lets you test
+precisely what you are about to commit. Stage the change hunk by hunk with
+`git add -p`, run `git stash push --keep-index` to park everything else, run the
+tests, commit, then `git stash pop`. That closes the real hole in patch-mode
+staging: a commit assembled from selected hunks has otherwise never been tested as
+a unit, and "it worked in my tree" is not the same claim.
+
+**★ An old stash will not apply — conflicts everywhere. What is the command almost
+nobody knows?**
+`git stash branch <name> stash@{n}`. It creates a branch starting from the commit
+that was `HEAD` when the stash was made, applies the stash there — where by
+construction there is no conflict — and drops it if that succeeded. You then merge
+or rebase the branch deliberately. It is the documented answer to "my branch has
+moved too far for this stash to apply", and it turns an afternoon of conflict
+resolution into a two-second command.
+
+**Why did everything come back unstaged when half of it had been staged?**
+Because applying a stash merges the staged and unstaged halves into one pile by
+default. `git stash pop --index` attempts to restore the staging, and the manual is
+explicit that it can fail when there are conflicts, since conflicts are themselves
+stored in the index. If the staging arrangement genuinely matters, a stash is the
+wrong container: `git commit -m "wip"` followed later by `git reset --soft HEAD~1`
+preserves more and is fully recoverable.
+
+**When should you use a WIP commit instead of a stash?**
+Whenever the work will outlive the day. A stash is invisible — nothing in `status`,
+`log` or your host's UI mentions it, it does not travel with a push, a colleague
+cannot see it, and its default message `WIP on <branch>` is identical to every
+other stash you made that week. A WIP commit on a branch is visible, named,
+pushable as a backup, survives `git stash clear`, and unpicks with `reset --soft`
+whenever you want. Stash is for minutes to hours; anything longer deserves a
+branch. In the meantime, `git status --show-stash` keeps the pile from becoming
+invisible.
+
 ---
 
 ← Prev: [Commit messages](10-commit-messages.md) · Next → [Removing and moving files](12-removing-and-moving.md)
