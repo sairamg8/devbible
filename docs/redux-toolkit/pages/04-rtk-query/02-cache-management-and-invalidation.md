@@ -1,7 +1,7 @@
 ---
 title: "RTK Query Cache: Tags, Invalidation, Polling & Prefetching"
 sidebar_label: "RTK Query Cache"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # 📦 RTK Query Cache: Tags, Invalidation, Polling & Prefetching
