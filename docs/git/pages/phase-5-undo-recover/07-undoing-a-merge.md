@@ -160,6 +160,51 @@ on this page.
 **Cause:** `ORIG_HEAD` holds only the most recent operation, and something has happened since
 **Fix:** `git reflog` and reset to the entry before the merge
 
+## Interview questions
+
+**★ Three situations get called "undo the merge". What are they and which command
+does each need?**
+A merge that is conflicted and **not yet committed** is `git merge --abort`. A merge
+that is **committed but not pushed** is `git reset --hard ORIG_HEAD`, since Git sets
+`ORIG_HEAD` to your tip before starting. A merge that is **pushed** is
+`git revert -m 1 <merge>`. `git status` tells you which of the first two you are in —
+*"You have unmerged paths"* or *"All conflicts fixed but you are still merging"* means
+the merge is still in progress and has not been recorded.
+
+**★ Why does reverting a merge need `-m`, and what does `-m 2` do?**
+A merge commit has two parents, so its inverse is undefined until you say which side
+is the baseline. `-m 1` names parent 1 — the branch you were on when you merged,
+normally `main` — so it means "keep main, remove what the branch brought in". `-m 2`
+is the inverse: keep the feature branch's side and undo main's, which is almost never
+wanted and worth double-checking before running. `git log --pretty=%P -1 <merge>`
+prints the parents in order if you want to confirm rather than assume.
+
+**★ Why does reverting a merge not un-merge the branch?**
+Because it undoes the merge's **changes**, not the merge **commit** — which stays in
+history, so those commits remain ancestors of `main` and Git still considers the
+branch merged. Merge it again after fixing it and only the commits made *after the
+revert* arrive; everything from the original merge is treated as already present, the
+feature lands half-missing, and nothing errors. The documented fix is to revert the
+revert, restoring the changes, and then merge the new work on top. The cleaner
+alternative for a substantial rework is to build it on a fresh branch from current
+`main`, which sidesteps the ancestry problem entirely.
+
+**★ A merge brought in five commits and one of them is bad. What do you revert?**
+The single commit, not the merge. Reverting the merge removes all five and drags in
+the whole `-m` and ancestry problem; reverting one commit is an ordinary revert with
+none of those consequences. It is the row people skip in the decision table, and it
+is usually what "undo the merge" actually meant.
+
+**Why can Git not simply make a merge disappear?**
+Because the ancestry is the thing a merge commit exists to record, and Git will not
+falsify the graph. Removing the merge commit outright is a rewrite, with every
+shared-history consequence that carries; pretending the branch was never merged would
+make the graph a lie. So Git undoes the changes, keeps the ancestry, and leaves you
+with a merge that happened, changes that are gone, and a branch it still considers
+merged — with the double revert as the price. The cheap preventative is to look
+before merging: `git diff main...feature` and `git log main..feature` cost two
+seconds and prevent nearly every merge anyone ends up reverting.
+
 ---
 
 ← Prev: [Recovering a deleted branch](06-recovering-a-branch.md) · Next → [Undoing something already pushed](08-undoing-something-pushed.md)
