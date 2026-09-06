@@ -140,6 +140,50 @@ needing to coordinate a fix across everyone's clone, and it is cheap.
 **Cause:** it records ref movements, not file content — uncommitted work was never a commit
 **Fix:** nothing reliable. This is the reason to commit early and often
 
+## Interview questions
+
+**★ Git has no undo. What does it have instead, and what is the one question that
+picks between them?**
+Four commands that each move a different thing: `restore` moves file content in the
+working tree or index and never touches a branch; `reset` moves the branch tip and
+optionally drags the index and working tree along; `revert` moves nothing and adds a
+commit undoing an earlier one; `checkout` is the old command that did the first two.
+The question that selects among them is not mechanical — it is *has anyone else got
+these commits?* No means you may rewrite; yes means you may only add. Git cannot
+answer it, because it does not know who fetched, so the safe default when unsure is
+yes.
+
+**★ Rank Git's states by how recoverable they are.**
+Committed work is almost always recoverable, through the reflog and `ORIG_HEAD`.
+Stashed work is recoverable, and even a dropped stash may be findable with `git
+fsck`. Staged work is *sometimes* recoverable — staging writes a blob into the object
+store, so `git fsck --lost-found` can surface it even with no commit referencing it.
+Work that exists only in the working tree is not recoverable at all, because nothing
+in Git has a copy. That ladder is why "Git never loses anything" is a half-truth: it
+protects commits, and what people lose is uncommitted.
+
+**★ Why is this phase organised by "what went wrong" rather than by command?**
+Because choosing between `reset` and `revert` on mechanical grounds — which one moves
+what — gets the right answer only by accident. The commands differ in what they touch
+locally, but the consequence that matters is social: rewriting a commit somebody else
+holds creates duplicates in their clone that merge cleanly and go unnoticed. Choosing
+on "has anyone seen this?" gets it right every time, and unlike the mechanical
+question it is one you can actually answer.
+
+**★ What should you run before any destructive command?**
+`git status` to see what state you are actually in, `git diff` and `git diff --staged`
+to see exactly what you are about to lose, and `git stash` if there is any doubt —
+it produces the same clean tree as `reset --hard` and keeps the changes. That last
+substitution is the single most useful habit in this phase, because the difference
+between the two commands is entirely whether the work still exists afterwards.
+
+**Why is `revert`'s uglier history worth it?**
+Because the alternative is coordinating a fix across every clone. A revert adds a
+commit that says "undo the thing above", which reads worse than a clean rewrite and
+costs nothing to anyone else: no force-push, no divergence, no colleague pulling
+duplicates. A rewrite of shared history buys tidier output and spends other people's
+afternoons. That trade is what makes the extra commit cheap.
+
 ---
 
 ← Prev: [Phase 5 index](README.md) · Next → [`reset` in terms of the three trees](02-reset-in-depth.md)
