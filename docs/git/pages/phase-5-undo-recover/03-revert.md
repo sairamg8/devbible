@@ -159,6 +159,54 @@ tidiness budget where it is free — on branches nobody has seen, with
 **Cause:** the default is just `Revert "<original subject>"`
 **Fix:** write a body saying **why** it was reverted. That is the one piece of information the diff cannot carry
 
+## Interview questions
+
+**★ What does `git revert` actually do?**
+It computes the inverse of a commit's changes and records them as a **new** commit
+on top. Nothing is rewritten, no force-push is needed, every clone stays valid, and
+the history afterwards contains both the original and its inverse — which is the
+point, because the record of what happened, mistake included, stays true. It also
+requires a clean working tree and will refuse otherwise.
+
+**★ Why does reverting a merge need `-m`, and why is `-m 1` almost always right?**
+A merge commit has two parents, so "undo it" is ambiguous: undo relative to which
+line of history? `-m` names the parent to treat as the mainline. Parent 1 is the
+branch you were on when you merged — normally `main` — so `-m 1` means "keep main,
+remove what the feature branch brought in". `git log --pretty=%P -1 <merge>` lists
+the parents in order if you want to check rather than assume.
+
+**★ You reverted a merge, fixed the branch, merged it again, and most of the changes
+are missing. Why, and what is the fix?**
+Because reverting a merge undoes its *changes* while the merge commit itself stays in
+history — so Git still considers those commits merged, and a second merge brings in
+only what was committed after the revert. The documented fix is to **revert the
+revert**, which restores the original changes, and then merge the new work on top. It
+sounds absurd, it is correct, and it is the most confusing consequence in this area —
+worth reading twice before reverting a merge on a shared branch.
+
+**★ How do you revert several commits, and why does order matter?**
+`git revert <oldest>..<newest>` reverts a range, producing one revert commit each,
+and it applies them **newest-first** — which is the order that works, because undoing
+a later change before an earlier one avoids conflicts that the reverse order creates.
+`--no-commit` stages the inverses without committing, so several reverts can be
+combined into one commit with a message that explains the whole retreat.
+
+**★ Why is `revert` the only option on a protected `main`?**
+Because every alternative needs a force-push, and the host will refuse one. `reset`
+moves your branch, leaving the remote's commit unreachable from it — a non-fast-forward
+push. `revert` only ever adds a commit, so the push is an ordinary fast-forward that
+branch protection has no reason to reject. On a protected branch the choice is not
+between preferable options; there is one.
+
+**What does `revert` cost, and why is the trade not close?**
+Longer, uglier history: undo a commit and there are two, undo the revert and there
+are three, none of which changed anything net, and `git log` on a branch with a few
+false starts reads like an argument. The alternative is a rewrite, which produces a
+clean line and costs everyone holding the branch a silent recovery procedure with
+duplicate commits as the failure mode. So the trade is local tidiness against other
+people's time — a few extra lines against colleagues — and the tidiness budget is
+better spent on branches nobody has seen.
+
 ---
 
 ← Prev: [`reset` in terms of the three trees](02-reset-in-depth.md) · Next → [Recovery with `reflog`](04-reflog-recovery.md)
