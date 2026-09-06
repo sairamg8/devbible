@@ -182,6 +182,59 @@ make everyone else's problem, and it takes two seconds.
 **Cause:** it was committed and nothing checked
 **Fix:** **rotate the credential first.** Removing it from history afterwards does not un-copy it — see [ignoring does not untrack](../phase-1-everyday-loop/06-ignoring-does-not-untrack.md)
 
+## Interview questions
+
+**★ What does a push actually do, and what is the one rule it enforces?**
+It sends the objects the remote lacks and asks it to move a ref. The single rule is
+that the move must be a **fast-forward** — the remote's current tip has to be an
+ancestor of what you are pushing — unless you force it. That one rule is what
+prevents a push from silently deleting commits somebody else put there, and every
+rejection you meet in normal work is either that rule or the host's own policy.
+
+**★ Explain the `src:dst` refspec, and why `git push origin :old-branch` deletes a
+branch.**
+The general form of a push is `git push <remote> <source>:<destination>`; everything
+else is shorthand for it. Deleting reads naturally once you see the shape: an empty
+source means "push **nothing** to that destination", which is exactly a deletion.
+`git push origin --delete old-branch` is the modern spelling of the same thing.
+`git push origin HEAD` is the other form worth a habit — it pushes the branch you are
+actually on, with no chance of typing yesterday's branch name.
+
+**★ Why is your tag not on the remote?**
+Because `git push` sends no tags at all by default, which surprises people at
+exactly the wrong moment — release time, when the tag exists locally and nowhere
+else. `git push origin <tag>` sends one, `--tags` sends everything including local
+scratch tags, and `--follow-tags` is the balanced option: annotated tags reachable
+from the commits being pushed travel with them, and nothing else does.
+
+**★ Why should a published tag be treated as immutable?**
+Because moving or deleting one is a rewrite, and Git will not update an existing tag
+on fetch. Anyone who already fetched keeps the old value indefinitely and needs
+`git fetch --tags --force` to change it — which they will not do, because nothing
+tells them to. So a moved release tag means two people are looking at different
+commits under the same name. If a release is wrong, publish a new tag.
+
+**★ What does `--atomic` buy?**
+All-or-nothing for a multi-ref push. Normally each ref updates independently, so a
+partial failure leaves some refs moved and some not — a branch pushed without its
+release tag, for example. `--atomic` makes the whole push succeed or fail together.
+Support depends on the remote, and the major hosts have it.
+
+**★ What does pushing a branch *not* back up?**
+Your reflog, your stashes, your config and hooks, `.git/info/exclude`, and any branch
+you did not name. A push protects commits on the branch you pushed, and nothing else
+about your working state — which is worth knowing before treating "it is pushed" as a
+synonym for "it is safe". Uncommitted work, in particular, has never been anywhere
+near the remote.
+
+**Git enforces the fast-forward rule and nothing else. What fills the gap?**
+Everything outside Git's model. Push a secret, a 200 MB binary, a broken build or an
+unfinished refactor and Git will do it instantly, with no review step and no content
+check — `--dry-run` reports refs, not content. The gap is covered by pre-push hooks
+locally, protected branches and required reviews on the host, and secret scanning in
+CI. The one thing entirely inside your control is reading `git log '@{u}'..` before
+pushing: it is the exact list of what you are about to make everyone else's problem.
+
 ---
 
 ← Prev: [Force-pushing safely](06-force-pushing-safely.md) · Next → [Transports and credentials](08-transports-and-credentials.md)
