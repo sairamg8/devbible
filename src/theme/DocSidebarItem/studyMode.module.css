@@ -1,0 +1,274 @@
+/*
+ * Study Mode's marks on the sidebar tree, and the two depth findings.
+ *
+ * Shared by `DocSidebarItem/Link` and `DocSidebarItem/Category`. Both import it
+ * for its side effect only — every selector below is `:global`, because every
+ * element it styles belongs to the theme (`menu__link`, `menu__list`) or to
+ * `ThemeClassNames` (`theme-doc-sidebar-item-category-level-N`), and neither
+ * wrapper owns a DOM node of its own to hang a hashed class on.
+ *
+ * 🔴 A wrapper CANNOT pass `className` to these anchors. Both theme components
+ * build the anchor as `<Link className={clsx('menu__link', …)} … {...props}>`
+ * with the spread LAST, so a `className` in props replaces `menu__link` instead
+ * of merging with it. Everything here therefore keys off `data-*` attributes and
+ * one inline custom property, which ride the same spread harmlessly.
+ *
+ * The file keeps the `.module.css` extension for consistency with the rest of
+ * `src/`, not because anything is scoped. Fully-global selectors in a CSS module
+ * are how the theme's own `DocSidebarItem/Category/styles.module.css` reaches
+ * `.menu__link--sublist-caret`, so this is the house pattern, not a workaround.
+ *
+ * ── Which pseudo-elements are free ───────────────────────────────────────────
+ * Verified in `node_modules/infima/dist/css/default/default.css`:
+ *
+ *   .menu__link--sublist-caret::after   the caret glyph — taken, but ONLY on a
+ *                                       collapsible category with no index page
+ *   .menu__caret::before                the caret button — a sibling, not ours
+ *   .menu__link::before                 free
+ *   .menu__link::after                  free on every link, and on any category
+ *                                       that has an index page (there the caret
+ *                                       is a separate <button>)
+ *
+ * `.menu__link` is `display: flex`, so a pseudo-element is a flex item and can be
+ * placed with `order` and `margin-left: auto` rather than absolute positioning.
+ */
+
+/* ───────────────────────────────────────────────────── tier dots, on links ── */
+
+/*
+ * `column-gap` rather than a margin on the label: the label span carries a
+ * hashed CSS-module class this file cannot name, and `gap` on the flex container
+ * spaces the pseudo-element without touching it. The label sets `overflow:
+ * hidden`, which makes its automatic minimum size 0, so it shrinks for the dot
+ * instead of pushing it out of the row.
+ */
+:global(.menu__link[data-db-tier]) {
+  column-gap: 0.5rem;
+}
+
+:global(.menu__link[data-db-tier])::after {
+  content: '';
+  flex: 0 0 auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 7px;
+  height: 7px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+/*
+ * The same four weights as the `.db-tier` badges in `custom.css`, reduced to a
+ * fill and a ring: solid accent, accent ring, amber ring, grey ring. Reading down
+ * the sidebar the dots get quieter in exactly the order the tiers rank, so the
+ * ordering survives even for a reader who cannot separate the two hues — which is
+ * also why `Link/index.js` puts the tier name in the anchor's `title`.
+ */
+:global(.menu__link[data-db-tier='m'])::after {
+  background: var(--db-accent);
+  border-color: var(--db-accent);
+}
+
+:global(.menu__link[data-db-tier='u'])::after {
+  background: var(--db-accent-soft);
+  border-color: var(--db-accent-ink);
+}
+
+:global(.menu__link[data-db-tier='k'])::after {
+  background: var(--db-amber-soft);
+  border-color: var(--db-amber);
+}
+
+:global(.menu__link[data-db-tier='w'])::after {
+  background: var(--db-surface-3);
+  border-color: var(--db-ink-3);
+}
+
+/* ────────────────────────────────────────────────── already read, on links ── */
+
+:global(.menu__link[data-db-read]) {
+  position: relative;
+}
+
+/*
+ * A rail rather than a flex item: absolute positioning keeps it out of the row's
+ * layout, so a read page and an unread one line up on exactly the same left edge.
+ * A ragged margin down a 2,186-row sidebar would read as damage.
+ */
+:global(.menu__link[data-db-read])::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  width: 2px;
+  border-radius: 0 2px 2px 0;
+  background: var(--db-accent);
+}
+
+/*
+ * 🔴 The dim must never touch the current page. `menu__link--active` is an accent
+ * wash plus accent ink, and greying it would leave the reader unable to find
+ * where they are — the one thing the sidebar must always answer. Hover clears the
+ * dim too, so a read page still lights up under the cursor like any other row.
+ */
+:global(.menu__link[data-db-read]:not(.menu__link--active)) {
+  color: var(--db-ink-3);
+}
+
+:global(.menu__link[data-db-read]:not(.menu__link--active):hover) {
+  color: var(--ifm-menu-color);
+}
+
+/* ──────────────────────────────────────────── size and progress, on categories ── */
+
+:global(.menu__link[data-db-count]) {
+  position: relative;
+  column-gap: 0.5rem;
+}
+
+/*
+ * `content: attr(…)` reads the count straight off the anchor, so the number never
+ * has to travel through a custom property or a wrapper element. `order: 1` moves
+ * the pseudo-element after the label, and the label's own `flex: 1` (the theme's
+ * `categoryLinkLabel`) pushes it to the right edge.
+ *
+ * The typography is reset explicitly because a level-2 category label is mono,
+ * uppercase and letter-spaced, and a pseudo-element inherits all of it — an
+ * uppercase, 0.09em-tracked "585" is unreadable at 0.62rem.
+ */
+:global(.menu__link[data-db-count])::before {
+  content: attr(data-db-count);
+  order: 1;
+  flex: 0 0 auto;
+  font-family: var(--db-mono);
+  font-size: 0.62rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--db-ink-3);
+}
+
+/*
+ * A category with no index page renders its caret as the anchor's own `::after`,
+ * which sits at order 0 and would therefore land BEFORE the count. Push it past.
+ */
+:global(.menu__link--sublist-caret[data-db-count])::after {
+  order: 2;
+}
+
+/*
+ * Progress: a hairline along the bottom of the row, as wide as the fraction of
+ * the subtree already read. `--db-progress` is an inline custom property set by
+ * the Category wrapper; the attribute is what gates the rule, because a CSS
+ * selector cannot ask whether a custom property is set.
+ *
+ * 🔴 Skipped on `--sublist-caret` anchors — there `::after` IS the caret glyph,
+ * and painting over it would delete the only affordance saying the row opens.
+ * That costs the bar on categories with no index page, which is the rarer shape
+ * in this corpus and the one where progress matters least.
+ */
+:global(.menu__link[data-db-progress]:not(.menu__link--sublist-caret))::after {
+  content: '';
+  position: absolute;
+  left: var(--ifm-menu-link-padding-horizontal);
+  bottom: 2px;
+  height: 2px;
+  width: var(--db-progress, 0%);
+  max-width: calc(100% - 2 * var(--ifm-menu-link-padding-horizontal));
+  border-radius: 1px;
+  background: var(--db-accent);
+  opacity: 0.5;
+}
+
+/* ─────────────────────────────────────────── finding 05: depth by typography ── */
+
+/*
+ * Today every category at every depth is the same row: `custom.css` styles
+ * `.menu__list-item-collapsible .menu__link` as 0.72rem uppercase mono in
+ * `--db-ink-3`, the palest ink in the palette, and applies it to a top-level
+ * phase and a fourth-level chapter alike. Two consequences, both visible on Java:
+ * nothing on screen distinguishes a phase from a chapter, and all 17 phase labels
+ * wrap to two lines because uppercase mono at 0.1em tracking is the widest
+ * setting the palette has.
+ *
+ * Three depths, three type registers, so the level is legible before the label is
+ * read:
+ *
+ *   level 1   serif, sentence case — the display face used by every h1 and h2 on
+ *             the site. Dropping the uppercase is what unwraps the 17 phases.
+ *   level 2   mono small caps, the old treatment, darkened to `--db-ink-2` and
+ *             tightened so it clearly sits below level 1 rather than beside it.
+ *   level 3+  sans semibold, sentence case — a chapter heading, quieter than a
+ *             phase and heavier than the links under it.
+ *
+ * Each selector is three classes deep, which beats the 0,2,0 rule in `custom.css`
+ * without an `!important`. Level 3+ is written as "a category that is neither
+ * level 1 nor level 2" rather than enumerating levels, because this corpus
+ * already nests six deep and the sidebar generator will keep going.
+ */
+:global(.menu__list-item.theme-doc-sidebar-item-category-level-1:not(:first-child)) {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--db-rule);
+}
+
+:global(.theme-doc-sidebar-item-category-level-1)
+  > :global(.menu__list-item-collapsible)
+  > :global(.menu__link) {
+  font-family: var(--db-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--db-ink);
+}
+
+:global(.theme-doc-sidebar-item-category-level-2)
+  > :global(.menu__list-item-collapsible)
+  > :global(.menu__link) {
+  font-family: var(--db-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--db-ink-2);
+}
+
+:global(.theme-doc-sidebar-item-category:not(.theme-doc-sidebar-item-category-level-1):not(.theme-doc-sidebar-item-category-level-2))
+  > :global(.menu__list-item-collapsible)
+  > :global(.menu__link) {
+  font-family: var(--db-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--db-ink-2);
+}
+
+/* ─────────────────────────────────────────────── finding 07: capped indent ── */
+
+/*
+ * Nesting reaches six levels. Infima indents every nested `.menu__list` by
+ * `--ifm-menu-link-padding-horizontal` (0.75rem) and pads every link by the same
+ * amount again, so by level 6 a 300px sidebar has spent ~85px on white space and
+ * a tier dot before the label starts.
+ *
+ * Past level 3 the indent stops growing and a guide line takes over: the rule
+ * marks the nesting the indent no longer expresses, and costs 1px where the
+ * indent cost twelve. Overriding the Infima variable on the list ALSO tightens
+ * every link and caret inside it, in one declaration, because the padding is read
+ * from an inherited custom property.
+ *
+ * The selector matches the list belonging to a level-3-or-deeper category, which
+ * is the list holding level 4 and below — level 3 itself keeps its full indent.
+ */
+:global(.theme-doc-sidebar-item-category:not(.theme-doc-sidebar-item-category-level-1):not(.theme-doc-sidebar-item-category-level-2))
+  > :global(.menu__list) {
+  --ifm-menu-link-padding-horizontal: 0.45rem;
+
+  padding-left: 0;
+  margin-left: 0.4rem;
+  border-left: 1px solid var(--db-rule);
+}
