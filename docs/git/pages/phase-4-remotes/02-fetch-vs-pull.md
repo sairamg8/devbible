@@ -172,6 +172,56 @@ whenever the answer matters.
 **Cause:** it rebases your local commits regardless of whether they were published
 **Fix:** force-push only if the branch is genuinely yours; otherwise your colleagues need the recovery from the golden-rule topic. Prefer `pull.ff only` on shared branches
 
+## Interview questions
+
+**★ What is the difference between `fetch` and `pull`?**
+`fetch` downloads objects and updates your `origin/*` refs, and it touches neither
+your branch nor your working tree — which is why it is always safe to run. `pull` is
+`fetch` followed by `merge` (or `rebase`, with `pull.rebase`), so it changes your
+branch, can conflict, and can leave you mid-operation. Everything surprising about
+`pull` comes from that second half, and the fetched refs it integrates are recorded
+in `.git/FETCH_HEAD`.
+
+**★ What does `fatal: Need to specify how to reconcile divergent branches` mean?**
+That your branch and the remote have both moved, and no `pull.ff` or `pull.rebase`
+is configured, so Git refuses to guess whether you want a merge or a rebase. It is
+not an error so much as a question asked once. Answer it globally with
+`pull.ff = only`, which fast-forwards when it can — the overwhelmingly common case
+of "I have no local commits, just give me theirs" — and stops otherwise, at exactly
+the moment a decision is genuinely needed.
+
+**★ Why does `--prune` matter more than it sounds?**
+Because remote-tracking refs are never removed automatically. A branch deleted on
+the server leaves `origin/<branch>` in your clone forever, so `git branch -r` slowly
+fills with branches that do not exist, and "is this branch still alive?" becomes
+unanswerable locally. `git fetch --prune` clears them, and
+`git config --global fetch.prune true` makes it permanent. It costs nothing and
+removes a whole category of stale information.
+
+**★ What is the three-command habit that `pull` replaces, and when is it worth it?**
+`git fetch`, then `git log --oneline --graph --decorate --all -20` to see what
+arrived, then a deliberate `git merge origin/main` or `git rebase origin/main`. It
+is worth it whenever you have local commits — you get to see what you are
+integrating before it touches your working tree, which is the difference between an
+informed merge and a surprise conflict. For the common case of no local work, `pull`
+is exactly right and the ceremony buys nothing.
+
+**★ Which `pull` combination is genuinely dangerous?**
+`git pull --rebase` on a branch someone else pushes to. It rebases your local
+commits regardless of whether they were already published, so commits your colleague
+has are rewritten, your branch disagrees with the remote, and resolving it needs a
+force-push — the first step of the duplicate-commit mess. On your own feature branch
+it is fine, which is exactly what makes the habit dangerous: the same command is
+correct until the day the branch is shared.
+
+**What should you do about a dirty working tree before pulling?**
+Commit or stash. `pull` performs a merge, and the merge documentation discourages
+merging with non-trivial uncommitted changes because `--abort` may not reconstruct
+them — and `pull` refuses outright when incoming changes would overwrite a file you
+have modified. `git pull --autostash` automates the stash-and-reapply, and
+`rebase.autoStash true` makes that the default; both are reasonable, with the
+caveat that reapplying can itself conflict.
+
 ---
 
 ← Prev: [A remote is a named URL](01-a-remote-is-a-url.md) · Next → [Remote-tracking branches](03-remote-tracking-branches.md)
