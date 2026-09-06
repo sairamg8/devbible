@@ -88,8 +88,7 @@ type error in your project would appear twice with one copy pointing somewhere a
 The side effect is that the pass is **allowed to be silent** about anything it could not place. That
 is a deliberate trade in favour of never showing a nonsense location. It is worth knowing about, and
 it is worth also knowing that it is rare compared to the far more common cause of the same symptom —
-a check that is simply off, so no statement was ever generated to be wrong. That case is **14e ·
-The errors that never arrive** *(not written yet)*.
+a check that is simply off, so no statement was ever generated to be wrong. That case is **[14e · The errors that never arrive](14e-the-errors-that-never-arrive.md)**.
 
 ## The whole route, end to end
 
@@ -185,4 +184,4 @@ green build means your template is correct. It does not; it means nothing surviv
 
 ---
 
-← Prev: [14c · The type-check file](14c-the-type-check-file-and-how-errors-get-home.md) · Index: [Topic index](README.md) · Next → **14e · The errors that never arrive** *(not written yet)*
+← Prev: [14c · The type-check file](14c-the-type-check-file-and-how-errors-get-home.md) · Index: [Topic index](README.md) · Next → [14e · The errors that never arrive](14e-the-errors-that-never-arrive.md)

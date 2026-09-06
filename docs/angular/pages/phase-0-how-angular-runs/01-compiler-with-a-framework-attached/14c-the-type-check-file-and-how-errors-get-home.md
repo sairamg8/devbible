@@ -129,7 +129,7 @@ rewrite your source. So NG8900 and NG8901 are never fixed by configuration; they
 the type referenceable, or by using a different tool.
 
 The routing of the diagnostics *out* of these blocks — the return address, the codes Angular throws
-away, and the ones it silently drops — is **14d · How a diagnostic gets home** *(not written yet)*.
+away, and the ones it silently drops — is **[14d · How a diagnostic gets home](14d-how-a-diagnostic-gets-home.md)**.
 
 ## Gotchas
 
@@ -246,4 +246,4 @@ referenceable, which in practice means exporting the class.
 
 ---
 
-← Prev: [14b · How each template construct becomes TypeScript](14b-how-each-construct-is-translated.md) · Index: [Topic index](README.md) · Next → **14d · How a diagnostic gets home** *(not written yet)*
+← Prev: [14b · How each template construct becomes TypeScript](14b-how-each-construct-is-translated.md) · Index: [Topic index](README.md) · Next → [14d · How a diagnostic gets home](14d-how-a-diagnostic-gets-home.md)

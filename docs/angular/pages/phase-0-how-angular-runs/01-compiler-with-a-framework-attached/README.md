@@ -26,7 +26,7 @@ stop being a list of rules and start being consequences.
 
 ## Chunks
 
-🚧 **14 of 17 numbered chunks written, across 55 files.** Eight of the fourteen exhausted their
+🚧 **14 of 17 numbered chunks written, across 57 files.** Eight of the fourteen exhausted their
 subject past the 300-line cap and split into lettered siblings — the cap is a file size, never a
 content budget, so a chunk that ran long became five, six or seven files rather than a shorter
 page. The rows without links are planned and named; a link to a page that does not exist breaks
@@ -93,6 +93,8 @@ concluding an error is absent because it cannot happen.
 | 14c | **[The type-check file](14c-the-type-check-file-and-how-errors-get-home.md)** | One shared shim per source file, hoisting what several blocks need — and the inline fallback for any component whose type that shim cannot import (NG8900, NG8901) |
 | 14d | **[How a diagnostic gets home](14d-how-a-diagnostic-gets-home.md)** | 🔴 The source map is made of comments, because comments are the only channel that survives an unmodified `tsc` — and an unmappable diagnostic is dropped, never guessed at |
 | 14e | **[The errors that never arrive](14e-the-errors-that-never-arrive.md)** | 🔴 "Wrong template, green build" has three causes of wildly different frequency — four suppressed codes, and the much larger class where no statement was generated at all |
+| 14f | **[`strictTemplates` is on by default](14f-what-stricttemplates-actually-switches.md)** | ⚠️ The default flipped in v22.0.0 and angular.dev still says otherwise — four CHANGELOG artefacts prove it, and `typeCheckHostBindings` flipped on the same day |
+| 14g | **[What turning it off costs](14g-what-turning-strict-templates-off-costs.md)** | 🔴 `strictTemplates: false` disables `checkTemplateBodies` and extended diagnostics — the middle tier the guide describes is unreachable at v22 |
 | 15 | **Extended diagnostics** *(not written yet)* | The NG81xx warnings for code that is legal but wrong, how to promote them to errors, and the semver caveat when you do |
 | 16 | **Arriving from React, Vue or Svelte** *(not written yet)* | What "compiled" means in each of the four, what Angular buys with it and what it costs |
 | 17 | **Consequences you actually hit** *(not written yet)* | Errors in a file TypeScript never compiled, NG3003 import cycles, NG8001/NG8002, and expressions that work in the class and fail in the template |

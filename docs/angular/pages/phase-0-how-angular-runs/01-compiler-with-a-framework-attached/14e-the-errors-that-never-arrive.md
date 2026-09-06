@@ -103,7 +103,7 @@ No filter runs. No diagnostic is dropped. The check does not exist.
 `HTMLInputElement.value` is never asked, because no assignment statement is generated. The internal
 flag that would change this, `checkTypeOfDomBindings`, is hard-coded `false` — with a comment in the
 compiler's own source saying DOM binding checks *"are not quite ready yet"*, which is covered with
-the rest of the unswitchable checks in **14h · The checks with no switch** *(not written yet)*.
+the rest of the unswitchable checks in **14i · The checks with no switch** *(not written yet)*.
 
 The element and attribute *names* are still validated, but by a schema checker rather than by the
 type system. That is the mechanism behind NG8001 and NG8002 — the two template errors people meet
@@ -112,8 +112,7 @@ first, and the reason they feel different from type errors: they are.
 **Beyond DOM bindings, every strictness flag that is off is another instance of this.** A flag does
 not filter diagnostics; it changes what text gets generated. `strictNullInputTypes: false` does not
 suppress null errors — it wraps binding expressions in non-null assertions so the errors are never
-produced. That distinction is the whole subject of **14f · What `strictTemplates` actually switches**
-*(not written yet)*.
+produced. That distinction is the whole subject of **[14f · What `strictTemplates` actually switches](14f-what-stricttemplates-actually-switches.md)**.
 
 ## The order to check in
 
@@ -188,7 +187,7 @@ rename(event: Event): void {
 flags cover two different kinds of event — one for directive outputs and animation events, one for
 DOM events — and when the relevant one is off, the generated parameter is untyped and `TS7006` about
 it is suppressed. Fix: this is configuration, not a bug in your handler; see
-**14g · The event and reference flags** *(not written yet)*. Recognise the shape: an implicitly-`any`
+**14h · The event and reference flags** *(not written yet)*. Recognise the shape: an implicitly-`any`
 `$event` is the one case where a suppressed diagnostic and a disabled check meet.
 
 **★ Symptom: a linter complains about comma operators in something with `.ngtypecheck` in its path.**
@@ -201,7 +200,7 @@ applies to it.
 one is generic and the other is not. The component's own type parameters are copied onto the
 generated function only when `useContextGenericType` is on; with it off they become `any` in the
 context type, and whole families of errors stop being expressible. Fix: this is
-`strictContextGenerics`, in **14g · The event and reference flags** *(not written yet)*. The point
+`strictContextGenerics`, in **14h · The event and reference flags** *(not written yet)*. The point
 here is that the *shape of the generated function* differs — case 1 again, at the level of the
 function signature rather than a single statement.
 
@@ -267,4 +266,4 @@ guarantee, get it in the class rather than the template.
 
 ---
 
-← Prev: [14d · How a diagnostic gets home](14d-how-a-diagnostic-gets-home.md) · Index: [Topic index](README.md) · Next → **14f · What `strictTemplates` actually switches** *(not written yet)*
+← Prev: [14d · How a diagnostic gets home](14d-how-a-diagnostic-gets-home.md) · Index: [Topic index](README.md) · Next → [14f · `strictTemplates` is on by default](14f-what-stricttemplates-actually-switches.md)
