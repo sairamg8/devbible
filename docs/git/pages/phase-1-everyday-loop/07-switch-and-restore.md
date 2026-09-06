@@ -220,6 +220,70 @@ not appear to be going anywhere.
 **Cause:** `--ours` / `--theirs` / `--merge` only work restoring from the index, not with `--source`
 **Fix:** drop `--source`. Those flags exist to pick between the conflict stages the index is holding
 
+## Interview questions
+
+**★ Why did Git split `checkout` into `switch` and `restore`?**
+Because `checkout` did two unrelated jobs — move `HEAD` to another branch, and
+overwrite file content from some version — and the two were distinguished only by
+the argument. `git checkout main` and `git checkout main.py` differ by a file
+extension and do completely different things, one of them destructive and silent.
+The new commands cannot be confused: `switch` only moves between branches,
+`restore` only overwrites paths and never touches a branch pointer. `checkout` is
+not deprecated, so the practical advice is to type the new ones and be able to
+read the old one, which every pre-2019 tutorial and most colleagues still use.
+
+**★ Does `git switch` need a clean working tree?**
+No — the manual says switching branches does not require a clean index and working
+tree, so uncommitted changes come with you. What it will not do is lose them: if
+the target branch has a different version of a file you have edited, the operation
+is *aborted* rather than completed, unless you explicitly pass `--discard-changes`
+or `--merge`. That abort is the real safety improvement over `checkout`, which was
+more willing to do damage when given a path.
+
+**★ `git restore <file>` just destroyed an hour of edits. Can the reflog get them
+back?**
+No, and this is the sharp edge of the command. The reflog records where branches
+and `HEAD` have pointed, so it protects *commits*. Unstaged, uncommitted content
+was never written to the object store, so there is nothing for it to point at. Had
+the content been staged, a blob would exist and `git fsck --lost-found` might find
+it. The lesson is not to memorise a recovery command but to prefer `git stash`,
+which is the recoverable version of the same operation, and to read the word
+*discard* in the hint `git status` prints.
+
+**★ What is the difference between `git restore f`, `git restore --staged f` and
+`git restore --staged --worktree f`?**
+They differ in source and target. Bare `restore` copies the *index* over the
+working tree, discarding unstaged edits — destructive. `--staged` copies `HEAD`
+over the *index*, which unstages while leaving your working-tree edits untouched.
+Both flags together copies `HEAD` over both, wiping the path entirely. The rule
+behind it: `-W`/`-S` choose the restore *location* and default to the working
+tree, while the *source* defaults to the index unless `--staged` is given, in which
+case it defaults to `HEAD`.
+
+**★ How do you recover one file from an old commit without disturbing anything
+else?**
+`git restore --source=<commit> <path>`. The old version lands in your working tree
+as an uncommitted change, so you can read it, diff it and decide before anything is
+permanent — and nothing about `HEAD`, the branch or other files moves.
+`--source` also takes the merge-base form `<a>...<b>`, the same three-dot idea as
+`git diff`, which is how you get "the version as of where this branch diverged".
+
+**★ During a rebase, `--ours` gave you the other side's version. Is that a bug?**
+No, it is documented: during `git rebase` and `git pull --rebase`, *ours* and
+*theirs* appear swapped, because a rebase replays *your* commits on top of the
+other branch — so the branch being replayed onto is "ours" and your own commit is
+"theirs". It catches everyone once. The defence is to run `git diff` on the
+conflicted path before choosing a side rather than trusting the label, and to
+remember that these flags select conflict stages held in the index, which is why
+they cannot be combined with `--source`.
+
+**When is `git switch -C` the wrong command?**
+Almost always, unless you know the branch name is free or yours. Lowercase `-c`
+creates a branch and fails if the name exists; uppercase `-C` creates **or resets**
+an existing branch to your current commit — so a name collision silently moves
+somebody else's branch pointer. Recovery is via that branch's reflog, but the
+better habit is to use `-c` and let the failure tell you the name is taken.
+
 ---
 
 ← Prev: [Ignoring does not untrack](06-ignoring-does-not-untrack.md) · Next → [Undo before you push](08-undo-before-you-push.md)
