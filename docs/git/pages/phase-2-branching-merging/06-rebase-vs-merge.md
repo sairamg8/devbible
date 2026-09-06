@@ -147,6 +147,61 @@ moment the work becomes shared.
 **Cause:** it rebases your local commits on every pull, including ones already published to a shared branch
 **Fix:** `pull.ff only` is the safer default. If you keep `pull.rebase`, know that a branch others share is not a branch to pull-rebase
 
+## Interview questions
+
+**★ What single question settles rebase versus merge?**
+"Has anyone else got these commits?" If the branch is local, or pushed but yours
+alone, rebase freely and force-push with `--force-with-lease`. If someone else has
+committed to it or based work on it, merge — do not rewrite. For `main` or any
+shared long-lived branch, never rebase, not once. Everything else in the argument is
+preference; that line is not, because it is the only part with a consequence Git
+cannot undo for the other person.
+
+**★ Merge or rebase to update a feature branch from `main`?**
+Both are defensible. Merging `main` into your branch keeps your commits intact and
+resolves each conflict once, at the cost of merge commits accumulating in the branch
+and interleaving your work with `main`'s in the PR. Rebasing gives a branch that
+applies straight onto `main` and a review showing only your commits, at the cost of
+a force-push each time and possibly resolving the same conflicts repeatedly. The
+more useful observation is that this only matters for long-lived branches — if the
+choice feels important, the branch has lived too long, and that is the actual
+problem.
+
+**★ Why is `pull.ff only` the setting worth adopting?**
+Because `git pull` is `fetch` plus *either* merge or rebase, and the default merges
+— so a merge commit you never asked for is one keystroke away whenever your branch
+has diverged. `pull.ff only` fast-forwards when it can and **fails** when it cannot,
+which converts a silent decision into a prompt to make one. `pull.rebase true` is
+also reasonable and rebases your local commits, but it makes rewriting automatic
+rather than deliberate, and it surprises people the first time it rewrites commits
+they had already pushed to a shared branch.
+
+**★ What does "Squash and merge" actually do to your history?**
+It collapses the branch into a single new commit on `main` with **no ancestry link**
+to the branch. You get the tidiest possible `main` — one commit per feature,
+trivially revertable — and you discard the branch's internal history entirely. The
+mechanical consequence is that Git will regard the branch as unmerged forever, so
+`git branch -d` refuses and `--merged` never lists it. Squash is not a merge; it is a
+new commit that happens to contain the same tree.
+
+**★ Which history is "true", and which is "readable"?**
+A merge-based history is accurate: this work happened in parallel and came together
+here, every commit existed and was tested in that form, and no operation ever needs
+a force-push. Its cost is that `git log --graph` on a busy repository becomes a braid.
+A rebased history is readable: one thing after another, `bisect` walks a line, and a
+review shows only your changes. Its cost is that the story is fiction — those commits
+never existed in that order — and producing it is unsafe on anything shared. Both are
+legitimately valuable, which is why the argument never ends.
+
+**A colleague force-pushed a rebase of a branch your work is based on. What now?**
+Your branch is based on commits that no longer exist upstream, so it looks divergent
+and a naive merge would duplicate everything. The documented repair is
+`git rebase --onto <new-upstream> <old-upstream> <your-branch>` — replay only your
+own commits onto the new version of their branch — which is precisely what the
+manual's RECOVERING FROM UPSTREAM REBASE section covers. That a whole documentation
+section exists for this is the best evidence for the rule that produced the mess:
+do not rewrite what other people have.
+
 ---
 
 ← Prev: [`git rebase`](05-git-rebase.md) · Next → [Interactive rebase](07-interactive-rebase.md)
