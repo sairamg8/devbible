@@ -4,31 +4,77 @@ sidebar_label: "Testing Redux Logic"
 sidebar_position: 1
 ---
 
+<span className="db-tier t-understand">Understand</span>
+
+> Verified: 2026-09-06 against [Redux's official testing guide](https://redux.js.org/usage/writing-tests)
+> and the Redux Toolkit documentation for **@reduxjs/toolkit 2.12.0**.
+> Documentation-validated; **no sandbox run** — no test suite was executed to produce this page.
+> 🔴 This page was **corrected** on 2026-09-06: its previous advice inverted the official
+> recommendation on both mocking hooks and preferring isolated reducer tests.
+> Validated: 2026-09-06 · claims + output provenance · session 3a6945a3
+
 # 📦 Testing Redux Logic: Reducers, Thunks & RTK Query
 
 ## 1. Under-The-Hood Mechanics
 
-Redux's core design principle — reducers are pure functions, actions are plain objects — is what makes Redux logic exceptionally cheap to unit test compared to typical UI code: no rendering, no DOM, no mocking a framework runtime is required for the reducer/thunk layer itself.
+🔴 **Start here, because it is the opposite of what most Redux test suites do.** Redux's own testing
+guide does not recommend unit-testing reducers, actions and selectors as the default. It recommends the
+reverse:
 
-### Testing Slice Reducers Directly
-A slice's exported `reducer` is just a function `(state, action) => newState`. Calling it directly with a hand-built action object, and asserting on the returned state, requires no store, no middleware, no React at all:
+> *"Prefer writing integration tests with everything working together. For a React app using Redux,
+> render a `<Provider>` with a real store instance wrapping the components being tested. Interactions
+> with the page being tested should use real Redux logic, with API calls mocked out so app code doesn't
+> have to change, and assert that the UI is updated appropriately."*
+
+And on isolated unit tests:
+
+> *"If needed, use basic unit tests for pure functions such as particularly complex reducers or
+> selectors. However, in many cases, these are just implementation details that are covered by
+> integration tests instead."*
+
+The reasoning is that Redux is an implementation detail: *"the end-user does not know, and does not care
+whether Redux is used within the application at all."* A test asserting that `cartReducer` returned a
+particular object proves the implementation matches itself; it does not prove the cart works.
+
+### The one prohibition worth memorising
+
+> 🔴 *"Do **not** try to mock selector functions or the React-Redux hooks! Mocking imports from
+> libraries is fragile, and doesn't give you confidence that your actual app code is working."*
+
+This rules out `jest.mock('../api/apiSlice')` and mocking `useSelector` — a common shortcut for
+"unit-testing a connected component". What you get is a test that passes when the component is broken,
+because the thing you replaced is the thing that would have failed.
+
+### So what does the pyramid look like?
+
+| Level | What it does | When |
+|---|---|---|
+| **Integration (default)** | Render the component tree inside `<Provider>` with a **real** store, mock only the network | Almost always |
+| **Reducer unit test** | Call `slice.reducer(state, action)` directly | A genuinely complex reducer — discount stacking, state machines — where enumerating cases through the UI would be absurd |
+| **Thunk / RTK Query** | Dispatch against a real store with the network mocked | Logic that is about the sequence of actions, not the pixels |
+
+### Getting initial state, without the `@@INIT` trick
+`slice.getInitialState()` returns it directly. Passing a fake action type to coax a reducer into
+returning its default works, but it relies on the reducer's fall-through rather than asking it a
+question:
 
 ```typescript
-expect(cartReducer(initialState, addItem({ productId: '1', quantity: 1 }))).toEqual({
-  items: [{ productId: '1', quantity: 1 }],
-});
+const initial = cartSlice.getInitialState();          // ✅ explicit
+const initial = cartReducer(undefined, { type: '@@INIT' });   // ⚠️ works, but indirect
 ```
 
-### Testing Thunks: Mock `dispatch`/`getState`, Assert the Action Sequence
-A `createAsyncThunk` is tested by dispatching it against a **real, minimal store** (or a mock dispatch/getState pair) and asserting the sequence of `pending`/`fulfilled`/`rejected` actions — not by trying to unit-test the thunk function's internals in isolation, since its whole job is producing that action sequence via side effects.
+### Mocking the network, not the code
+Redux recommends **MSW**: *"mock async requests at the `fetch/xhr` level using tools like `msw`. By
+mocking requests at this level, none of the thunk logic has to change in a test — the thunk still tries
+to make a 'real' async request, it just gets intercepted."* Every layer under test — `fetchBaseQuery`'s
+header logic, cache keys, tag invalidation, `transformResponse` — executes exactly as it does in
+production.
 
-### Testing RTK Query: MSW vs Mocking Generated Hooks
-Two valid strategies, at different levels of the pyramid:
-- **MSW (Mock Service Worker)** intercepts the actual `fetch()` call at the network layer, so the entire real RTK Query pipeline (cache keys, tag invalidation, `fetchBaseQuery` header logic) runs for real — an integration test, higher confidence, slightly slower.
-- **Mocking the generated hooks directly** (e.g. `jest.mock('../api/apiSlice')`) isolates a component from RTK Query entirely — a pure unit test of the component's rendering logic, faster, but doesn't verify cache/tag behavior at all.
+### A fresh store per test, always
+> *"the test code should create a separate Redux store instance for every test, rather than reusing the
+> same store instance and resetting its state."*
 
-### Testing Connected Components
-A component using `useAppSelector`/`useAppDispatch` needs a real (or realistically-shaped) `<Provider store={...}>` wrapper to render at all — the standard pattern is a custom `render()` helper that wraps React Testing Library's `render` with a fresh store per test.
+That is what the `renderWithProviders` helper below is for.
 
 ---
 
@@ -61,82 +107,149 @@ describe('cartReducer', () => {
 });
 ```
 
-```typescript
-// ordersThunks.test.ts — testing a createAsyncThunk's dispatched action sequence
-import { configureStore } from '@reduxjs/toolkit';
-import { submitOrder } from './ordersThunks';
-
-describe('submitOrder thunk', () => {
-  it('dispatches pending then rejected with a typed payload on empty cart', async () => {
-    const store = configureStore({
-      reducer: { cart: () => ({ items: [] }), users: () => ({}) },
-    });
-
-    const result = await store.dispatch(submitOrder({ cartId: 'cart_1' }));
-
-    expect(result.type).toBe('orders/submit/rejected');
-    expect(result.payload).toEqual({ code: 'OUT_OF_STOCK', message: 'Cart is empty.' });
-  });
-});
-```
-
 ```tsx
-// test-utils.tsx — reusable render helper for connected components
-import { render } from '@testing-library/react';
+// test-utils.tsx — the helper Redux's own guide documents: a NEW store for every test
+import { render, type RenderOptions } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { rootReducer } from '../app/rootReducer';
-import type { RootState } from '../app/store';
+import type { RootState, AppStore } from '../app/store';
 
-export function renderWithStore(ui: React.ReactElement, preloadedState?: Partial<RootState>) {
-  const store = configureStore({ reducer: rootReducer, preloadedState });
-  return { store, ...render(<Provider store={store}>{ui}</Provider>) };
+export function setupStore(preloadedState?: Partial<RootState>) {
+  return configureStore({ reducer: rootReducer, preloadedState });
+}
+
+interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries' | 'wrapper'> {
+  preloadedState?: Partial<RootState>;
+  store?: AppStore;
+}
+
+export function renderWithProviders(
+  ui: React.ReactElement,
+  { preloadedState = {}, store = setupStore(preloadedState), ...renderOptions }: ExtendedRenderOptions = {},
+) {
+  const Wrapper = ({ children }: React.PropsWithChildren) => (
+    <Provider store={store}>{children}</Provider>
+  );
+  return { store, user: userEvent.setup(), ...render(ui, { wrapper: Wrapper, ...renderOptions }) };
 }
 ```
 
-```typescript
-// apiSlice.test.ts — MSW-backed integration test of an RTK Query endpoint
-import { setupServer } from 'msw/node';
+```tsx
+// CartPage.test.tsx — the DEFAULT shape: real store, real reducers, only the network mocked
 import { http, HttpResponse } from 'msw';
-import { apiSlice } from './apiSlice';
-import { configureStore } from '@reduxjs/toolkit';
+import { setupServer } from 'msw/node';
+import { screen } from '@testing-library/react';
+import { renderWithProviders } from './test-utils';
 
 const server = setupServer(
-  http.get('/api/posts/:id', () => HttpResponse.json({ id: '1', title: 'Hello' }))
+  http.post('/api/cart/items', () => HttpResponse.json({ items: [{ productId: 'sku_1', quantity: 1 }] })),
 );
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-it('fetches and caches a post by id', async () => {
-  const store = configureStore({
-    reducer: { [apiSlice.reducerPath]: apiSlice.reducer },
-    middleware: (gdm) => gdm().concat(apiSlice.middleware),
-  });
+it('adds an item to the cart and shows it', async () => {
+  const { user } = renderWithProviders(<CartPage />);
 
-  const result = await store.dispatch(apiSlice.endpoints.getPostById.initiate('1'));
-  expect(result.data).toEqual({ id: '1', title: 'Hello' });
+  await user.click(screen.getByRole('button', { name: /add to cart/i }));
+
+  // Asserting on what the user sees — not on store.getState()
+  expect(await screen.findByText(/1 item in your cart/i)).toBeInTheDocument();
 });
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## Gotchas
 
-### ⚠️ Pitfall 1: Testing Reducers Through `dispatch` on a Full App Store
+### Mocking `useSelector`, `useDispatch` or a generated RTK Query hook
+**Symptom.** A green suite over a broken feature. The mock returns what the test expects regardless of
+whether the real selector, endpoint or cache logic works.
+**Cause.** Replacing the library boundary removes the code under test. Redux's guide is unambiguous:
+*"Do not try to mock selector functions or the React-Redux hooks! Mocking imports from libraries is
+fragile, and doesn't give you confidence that your actual app code is working."*
+**Fix.** Render with a real store and mock the **network** instead.
 ```typescript
-// ❌ OVERKILL: pulls in the entire app's middleware stack, all slices, and RTK Query setup
-// just to test one reducer's pure logic — slow, and failures are hard to localize
-import { store } from '../../app/store';
-store.dispatch(addItem('sku_1', 1000, 1));
-expect(store.getState().cart.items).toEqual([...]);
+// ❌ WRONG: the thing you replaced is the thing that would have failed
+jest.mock('../api/apiSlice');
 
-// ✅ CORRECT: call the reducer function directly — no store needed at all
-const state = cartReducer(undefined, addItem('sku_1', 1000, 1));
+// ✅ CORRECT: real store, real hooks, intercepted at fetch
+server.use(http.get('/api/posts/:id', () => HttpResponse.json({ id: '1', title: 'Hello' })));
+renderWithProviders(<PostDetail postId="1" />);
 ```
 
-### ⚠️ Pitfall 2: Mocking `fetch` Globally Instead of Using MSW
-Hand-rolled `global.fetch = jest.fn()` mocks tend to drift from the real API's response shape over time (nobody updates the mock when the backend contract changes) and bypass `fetchBaseQuery`'s actual header/error-handling logic entirely. MSW intercepts at the network boundary, so the exact same `fetchBaseQuery` code path executes in tests as in production — a contract mismatch is far more likely to surface.
+### Reusing one store across tests
+**Symptom.** Tests pass alone and fail in a suite, or in a different order.
+**Cause.** State leaks between cases — a coupon applied in one test is still applied in the next. The
+guide asks for "a separate Redux store instance for every test, rather than reusing the same store
+instance and resetting its state", because resetting is something you can forget and constructing is not.
+**Fix.** A fresh `setupStore()` per test, which `renderWithProviders` does by default.
 
-### ⚠️ Pitfall 3: Sharing One Store Instance Across Multiple Tests
-Reusing a single `configureStore()` instance across `it()` blocks (instead of a fresh store per test) leaks state between tests — a coupon applied in test 1 can silently affect the initial conditions of test 2, producing order-dependent test flakiness. Always construct a fresh store (or use `beforeEach`) per test case.
+### Importing the app's singleton store into a test
+**Symptom.** As above, plus tests that accidentally depend on the app's real middleware, RTK Query
+listeners and persisted state.
+**Cause.** `import { store } from '../../app/store'` is the module-scope instance the whole app shares.
+**Fix.** Import the **root reducer** and build a store per test. This is the real content of the old
+"don't test through a store" advice: the problem is the *singleton*, not the store.
+```typescript
+// ❌ pulls in the entire app's middleware stack and shares state across every test
+import { store } from '../../app/store';
+store.dispatch(addItem('sku_1', 1000, 1));
+
+// ✅ a store scoped to this test — or no store at all, for a pure reducer check
+const state = cartReducer(cartSlice.getInitialState(), addItem('sku_1', 1000, 1));
+```
+
+### Asserting on `store.getState()` in a component test
+**Symptom.** A test that breaks whenever state is reshaped, even though the UI is unchanged.
+**Cause.** It asserts an implementation detail. The store shape is not the contract; the rendered output
+is.
+**Fix.** Assert on what the user sees. Keep `store.getState()` assertions for thunk and reducer tests,
+where the action sequence genuinely *is* the thing under test.
+
+### Unit-testing every reducer on principle
+**Symptom.** A large, slow-to-maintain suite that mirrors the implementation and catches nothing.
+**Cause.** Treating reducer tests as the default rather than the exception. The guide's position is that
+in many cases these "are just implementation details that are covered by integration tests instead".
+**Fix.** Reserve them for reducers whose logic is genuinely intricate — discount stacking, state machines,
+anything with many cases — where enumerating through the UI would be absurd.
+
+## Interview questions
+
+**★ What does Redux's own testing guide recommend, and why does it surprise people?**
+It recommends integration tests as the default — render the component tree inside a `<Provider>` with a
+real store, mock only the network, and assert on the UI. It surprises people because Redux's purity makes
+reducers so easy to unit-test that testing them feels obligatory. The guide's argument is that Redux is
+an implementation detail the end user never sees, so a test that asserts a reducer returned a particular
+object proves the implementation matches itself rather than that the feature works.
+
+**★ Why must you not mock `useSelector` or a generated RTK Query hook?**
+Because the mock replaces exactly the code that would have failed. Redux states it directly: mocking
+imports from libraries is fragile and gives no confidence the real app code works. A component test with
+mocked hooks passes when the selector is wrong, the endpoint is misconfigured, or the cache key is
+mismatched. Mock the network instead and let every real layer run.
+
+**★ Where do isolated reducer tests still earn their place?**
+Where the logic is genuinely intricate and the case space is large — coupon stacking with minimum-order
+thresholds and expiry, or a state machine with many transitions. Enumerating those through the UI would be
+absurdly slow and unreadable, and the reducer is a pure function, so the test is cheap and precise. That is
+the exception the guide allows, not the default it recommends.
+
+**★ Why a new store per test rather than resetting one?**
+Because resetting is a thing you can forget, and forgetting produces order-dependent failures that are
+painful to diagnose — a coupon applied in one test silently changing another's starting conditions. The
+guide asks for a separate instance per test for exactly this reason, which is why the documented
+`renderWithProviders` constructs one by default and returns it for the cases that need access.
+
+**Is testing "through a store" wrong, then?**
+No — and this is worth untangling, because the common advice conflates two different things. Importing the
+**app's singleton** store into a test is wrong: it shares state across cases and drags in the whole
+middleware stack. Building a **fresh** store per test is the recommended default. The pure-reducer call is
+the narrow optimisation for when you want one function's behaviour and nothing else.
+
+
+---
+
+← [Code splitting](../11-code-splitting/01-dynamic-reducer-injection.md) · [Topic index](../README.md) · Next → [Testing thunks & RTK Query](./01b-testing-thunks-and-rtk-query.md)
