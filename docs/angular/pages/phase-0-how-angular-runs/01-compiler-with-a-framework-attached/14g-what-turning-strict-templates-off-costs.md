@@ -106,8 +106,8 @@ flag per sprint. At no point does `strictTemplates: false` appear, because at no
 template body checking the smallest thing that unblocks you.
 
 The per-flag detail — which category of error each one produces, and which checks have no flag at
-all — is **14h · The event, reference and generics flags** *(not written yet)* and
-**14i · The checks with no switch** *(not written yet)*.
+all — is **14j · The event, reference and generics flags** *(not written yet)* and
+**14k · The checks with no switch** *(not written yet)*.
 
 ## Gotchas
 
@@ -220,4 +220,4 @@ locality model in [12](12-ivy-and-locality.md).
 
 ---
 
-← Prev: [14f · `strictTemplates` is on by default](14f-what-stricttemplates-actually-switches.md) · Index: [Topic index](README.md) · Next → **14h · The event, reference and generics flags** *(not written yet)*
+← Prev: [14f · `strictTemplates` is on by default](14f-what-stricttemplates-actually-switches.md) · Index: [Topic index](README.md) · Next → **14j · The event, reference and generics flags** *(not written yet)*

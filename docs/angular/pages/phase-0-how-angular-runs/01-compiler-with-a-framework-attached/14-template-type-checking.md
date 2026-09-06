@@ -95,7 +95,7 @@ Three details in four lines, each of which matters later:
   would need the generated function to be checked against the whole ambient environment.
 - **`typeParamsStr`** — the component's own generic parameters are copied onto the generated
   function, but only when `useContextGenericType` is set. That is the public flag
-  `strictContextGenerics` (**14h** *(not written yet)*).
+  `strictContextGenerics` (**14j** *(not written yet)*).
 - **`/*id*/`** — a comment, first thing in the emitted text. That comment is the return address,
   and [where the block lives](14c-the-type-check-file-and-how-errors-get-home.md) is about what it buys.
 
@@ -185,7 +185,7 @@ describing the handler it emits, verbatim:
 ```
 
 `document.createElement` **is** the type source for a DOM element in the TCB — which is exactly
-what `strictDomLocalRefTypes` toggles (**14h** *(not written yet)*).
+what `strictDomLocalRefTypes` toggles (**14j** *(not written yet)*).
 
 
 One statement is conspicuously missing from that list, and `ops/inputs.ts` says so in the doc
@@ -210,7 +210,7 @@ binding a `number` to it is not an error. The element and attribute *names* are 
 but by a schema checker rather than by the type system — that is NG8001 and NG8002, and it is why
 those two are the errors people meet first. The flag that would change this,
 `checkTypeOfDomBindings`, is hard-coded `false`
-(**14i** *(not written yet)*).
+(**14k** *(not written yet)*).
 
 ## Gotchas
 

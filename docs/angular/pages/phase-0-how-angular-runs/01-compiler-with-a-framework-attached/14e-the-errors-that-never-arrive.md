@@ -103,7 +103,7 @@ No filter runs. No diagnostic is dropped. The check does not exist.
 `HTMLInputElement.value` is never asked, because no assignment statement is generated. The internal
 flag that would change this, `checkTypeOfDomBindings`, is hard-coded `false` — with a comment in the
 compiler's own source saying DOM binding checks *"are not quite ready yet"*, which is covered with
-the rest of the unswitchable checks in **14i · The checks with no switch** *(not written yet)*.
+the rest of the unswitchable checks in **14k · The checks with no switch** *(not written yet)*.
 
 The element and attribute *names* are still validated, but by a schema checker rather than by the
 type system. That is the mechanism behind NG8001 and NG8002 — the two template errors people meet
@@ -187,7 +187,7 @@ rename(event: Event): void {
 flags cover two different kinds of event — one for directive outputs and animation events, one for
 DOM events — and when the relevant one is off, the generated parameter is untyped and `TS7006` about
 it is suppressed. Fix: this is configuration, not a bug in your handler; see
-**14h · The event and reference flags** *(not written yet)*. Recognise the shape: an implicitly-`any`
+**14j · The event, reference and generics flags** *(not written yet)*. Recognise the shape: an implicitly-`any`
 `$event` is the one case where a suppressed diagnostic and a disabled check meet.
 
 **★ Symptom: a linter complains about comma operators in something with `.ngtypecheck` in its path.**
@@ -200,7 +200,7 @@ applies to it.
 one is generic and the other is not. The component's own type parameters are copied onto the
 generated function only when `useContextGenericType` is on; with it off they become `any` in the
 context type, and whole families of errors stop being expressible. Fix: this is
-`strictContextGenerics`, in **14h · The event and reference flags** *(not written yet)*. The point
+`strictContextGenerics`, in **14j · The event, reference and generics flags** *(not written yet)*. The point
 here is that the *shape of the generated function* differs — case 1 again, at the level of the
 function signature rather than a single statement.
 
