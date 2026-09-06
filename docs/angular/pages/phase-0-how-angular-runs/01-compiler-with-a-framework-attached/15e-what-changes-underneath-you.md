@@ -256,4 +256,4 @@ less risky than the semver caveat alone suggests, though not risk-free.
 
 ---
 
-← Prev: [15d · Configuring it, and getting it wrong](15d-configuring-extended-diagnostics.md) · Index: [Topic index](README.md) · Next → **16 · Arriving from React, Vue or Svelte** *(not written yet)*
+← Prev: [15d · Configuring it, and getting it wrong](15d-configuring-extended-diagnostics.md) · Index: [Topic index](README.md) · Next → [16 · Arriving from React, Vue or Svelte](16-arriving-from-react-vue-or-svelte.md)

@@ -171,7 +171,7 @@ runtime guard is what catches the JIT path, where no such diagnostic ran.
 
 ## Gotchas
 
-**★ Symptom: you are reading emitted output and `dependencies` is a function rather than the array you expected.** Cause: one of the three non-`Direct` emit modes. `Closure` defers the array because a dependency is defined later in the same file; `ClosureResolved` additionally maps `resolveForwardRef` over it; `RuntimeResolved` replaces the whole thing with a call to a runtime helper. None of them is an error. Fix: nothing — but if you were reaching for `forwardRef` to work around a *cross-file* import cycle, that is a different problem with its own diagnostic, and **17 · Consequences you actually hit** *(not written yet)* owns NG3003:
+**★ Symptom: you are reading emitted output and `dependencies` is a function rather than the array you expected.** Cause: one of the three non-`Direct` emit modes. `Closure` defers the array because a dependency is defined later in the same file; `ClosureResolved` additionally maps `resolveForwardRef` over it; `RuntimeResolved` replaces the whole thing with a call to a runtime helper. None of them is an error. Fix: nothing — but if you were reaching for `forwardRef` to work around a *cross-file* import cycle, that is a different problem with its own diagnostic, and [17b · The resolution errors](17b-the-resolution-errors.md) owns NG3003:
 
 ```ts
 // src/app/tree/tree-node.ts — a same-file forward reference, which the compiler handles

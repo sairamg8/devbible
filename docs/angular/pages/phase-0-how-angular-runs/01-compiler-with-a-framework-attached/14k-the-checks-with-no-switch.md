@@ -122,8 +122,8 @@ Also in the literal, and worth naming so they do not look like strictness dials:
 - **`controlFlowPreventingContentProjection`** and **`unusedStandaloneImports`** — these take a
   *diagnostic category*, not a boolean, defaulting to `DiagnosticCategoryLabel.Warning`. They are
   extended diagnostics that happen to be configured through this object, which is why they are
-  affected by `extendedDiagnostics.defaultCategory`. That family is **15 · Extended diagnostics**
-  *(not written yet)*.
+  affected by `extendedDiagnostics.defaultCategory`. That family is
+  [15 · Extended diagnostics](15-extended-diagnostics.md).
 
 ## The escape hatches for checks you cannot turn off
 
@@ -272,4 +272,4 @@ looking for a `strict*` option to control them is a dead end.
 
 ---
 
-← Prev: [14j · The event, reference and generics flags](14j-the-event-reference-and-generics-flags.md) · Index: [Topic index](README.md) · Next → **15 · Extended diagnostics** *(not written yet)*
+← Prev: [14j · The event, reference and generics flags](14j-the-event-reference-and-generics-flags.md) · Index: [Topic index](README.md) · Next → [15 · Extended diagnostics](15-extended-diagnostics.md)

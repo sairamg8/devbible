@@ -175,7 +175,7 @@ export function prefixed(name: string): string {
 }
 ```
 
-The per-error catalogue — non-exported symbols, uninitialised `export let`, destructuring, ambient types, computed enum members, tagged templates, each as symptom → cause → fix — is **10 · Metadata errors, one by one** *(not written yet)*. This page is the vocabulary those entries are written in.
+The per-error catalogue — non-exported symbols, uninitialised `export let`, destructuring, ambient types, computed enum members, tagged templates, each as symptom → cause → fix — is [10 · Metadata errors, one by one](10-metadata-errors-one-by-one.md). This page is the vocabulary those entries are written in.
 
 ## Interview questions
 

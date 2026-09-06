@@ -66,7 +66,7 @@ discovers on landing that the step down went two floors.
 the NG81xx family that flags code which is legal but almost certainly wrong — stop appearing, which
 is why the escape hatch quietly removes warnings about `??` on a non-nullable value, unused
 standalone imports, and control flow that prevents content projection. That connection is
-**15 · Extended diagnostics** *(not written yet)*.
+[15 · Extended diagnostics](15-extended-diagnostics.md).
 
 Meanwhile one thing you might expect to go does **not**: `typeCheckHostBindings` is a separate option
 with its own default, so `host: {…}` expressions and `@HostBinding` / `@HostListener` stay checked.

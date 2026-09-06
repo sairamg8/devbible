@@ -255,7 +255,7 @@ import {DASHBOARD_SELECTOR} from './selectors';
 export class Dashboard {}
 ```
 
-The catalogue of ambient-declaration and enum cases lives in **10 · Metadata errors, one by one** *(not written yet)*; the point here is only that the *node kind* was never the problem.
+The catalogue of ambient-declaration and enum cases lives in [10 · Metadata errors, one by one](10-metadata-errors-one-by-one.md); the point here is only that the *node kind* was never the problem.
 
 **Symptom: `as const` was added to make a constants object "more static" and nothing changed.** Cause: `ts.isAsExpression` recurses straight into its operand — the cast is invisible to the evaluator. `as const` changes what TypeScript infers, not what folds. Fix: nothing to add; if it did not fold before the cast, look at the operand, not at the assertion.
 

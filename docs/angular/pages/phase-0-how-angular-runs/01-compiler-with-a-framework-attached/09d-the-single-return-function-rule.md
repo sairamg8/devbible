@@ -146,7 +146,7 @@ Collecting the corrections from [09](09-static-analysability-is-the-load-bearing
 | Nested arrays in `imports` | fine | `validateAndFlattenComponentImports` recurses ([09f](09f-imports-and-the-rule-about-lazy-loading.md)) |
 | Rest and default parameters in a macro helper | fine | the `dotDotDotToken` and `initializer` branches above |
 | Bitwise arithmetic in metadata | fine | `BINARY_OPERATORS` ([09c](09c-the-partial-evaluator-is-the-grammar.md)) |
-| Non-exported classes | mostly fine since v22.1.4 | see **10 · Metadata errors, one by one** *(not written yet)* |
+| Non-exported classes | mostly fine since v22.1.4 | see [10 · Metadata errors, one by one](10-metadata-errors-one-by-one.md) |
 
 ## Gotchas
 

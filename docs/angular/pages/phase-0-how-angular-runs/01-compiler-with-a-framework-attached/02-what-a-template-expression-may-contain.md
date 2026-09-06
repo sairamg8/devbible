@@ -37,7 +37,7 @@ angular.dev: *"Angular supports a subset of literal values from JavaScript."*
 
 Note what is *not* on the "unsupported" side: object and array literals are fully legal in a
 binding. That matters more than it looks — see the `ɵɵpureFunction` discussion in chunk
-**08 · Instructions, not a virtual DOM** *(not written yet)*, because a fresh object literal in a binding is
+[08 · Instructions, not a virtual DOM](08-instructions-not-a-virtual-dom.md), because a fresh object literal in a binding is
 allocated on every update pass unless the compiler can prove it constant.
 
 ## Globals: you get exactly two
@@ -218,7 +218,7 @@ expression* operator; the documented AOT metadata error *"Expression form not su
 names `typeof` explicitly as invalid inside a decorator argument — *"You can use `typeof`
 and bracket notation in normal application code. You just can't use those features within
 expressions that define Angular metadata."* Fix: see chunk
-**10 · Metadata errors, one by one** *(not written yet)*; the template grammar and the metadata grammar are
+[10 · Metadata errors, one by one](10-metadata-errors-one-by-one.md); the template grammar and the metadata grammar are
 not the same subset and do not have the same holes.
 
 ## Interview questions

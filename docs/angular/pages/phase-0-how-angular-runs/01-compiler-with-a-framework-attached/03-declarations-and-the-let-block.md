@@ -115,7 +115,7 @@ invalid.
 A plain `<div>` does *not* create a view, so a `@let` inside one is visible after the
 closing tag. An `@if` block does, so a `@let` inside it is not visible outside. That is a
 compiler fact leaking usefully into the language: "view" is the unit the template function
-is chopped into, and chunk **07 · The create pass and the update pass** *(not written yet)* is about those units.
+is chopped into, and chunk [07 · The create pass and the update pass](07-the-create-pass-and-the-update-pass.md) is about those units.
 
 **It is not hoisted.**
 

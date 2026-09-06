@@ -26,11 +26,10 @@ stop being a list of rules and start being consequences.
 
 ## Chunks
 
-🚧 **15 of 17 numbered chunks written, across 64 files.** Ten of the fifteen exhausted their
-subject past the 300-line cap and split into lettered siblings — the cap is a file size, never a
-content budget, so a chunk that ran long became five, six or seven files rather than a shorter
-page. The rows without links are planned and named; a link to a page that does not exist breaks
-the build, so they stay as plain text until they land.
+✅ **All 17 numbered chunks written, across 69 files and 17,800 lines.** Eleven of the seventeen
+exhausted their subject past the 300-line cap and split into lettered siblings — the cap is a file
+size, never a content budget, so a chunk that ran long became five, six or seven files rather than
+a shorter page. Every row below links to a page that exists.
 
 ⚠️ **Chunk 10 is a catalogue and is deliberately unfinished.** It carries its own coverage note
 naming every error it does *not* yet reach — `10g` (calls and enums) and `10h` (unsupported
@@ -102,8 +101,12 @@ concluding an error is absent because it cannot happen.
 | 15 | **[Extended diagnostics](15-extended-diagnostics.md)** | Warnings for code that is legal but wrong — 🔴 gated behind `strictTemplates` so on by default since v22, and promoting them to errors is a semver hazard the docs spell out |
 | 15b | **[The roster of checks](15b-the-roster-of-checks.md)** | ⚠️ 18 in the enum, 16 in the docs table — two configurable checks have no doc page, and the `NG` code is not what you write in `checks` |
 | 15c | **[The checks worth understanding](15c-the-checks-worth-understanding.md)** | Five checks are one mistake in five syntactic disguises, plus the silent ones: content projection lost to an `@if`, and a `@defer` that loads despite your condition |
-| 16 | **Arriving from React, Vue or Svelte** *(not written yet)* | What "compiled" means in each of the four, what Angular buys with it and what it costs |
-| 17 | **Consequences you actually hit** *(not written yet)* | Errors in a file TypeScript never compiled, NG3003 import cycles, NG8001/NG8002, and expressions that work in the class and fail in the template |
+| 15d | **[Configuring it, and getting it wrong](15d-configuring-extended-diagnostics.md)** | The four-step resolution order, 🔴 NG4003's asymmetry — the loud failure is the lucky one — and why NG4004/NG4005 print their own allowed list and beat the website |
+| 15e | **[What changes underneath you](15e-what-changes-underneath-you.md)** | The `ng update` migration writes two `suppress` entries on your behalf, and checks are retuned in *patches* in both directions |
+| 16 | **[Arriving from React, Vue or Svelte](16-arriving-from-react-vue-or-svelte.md)** | All four compile something — 🔴 the real axes are what the step reads, what it emits, and whether it may refuse your markup |
+| 17 | **[The filename in the error](17-the-filename-in-the-error.md)** | 🔴 Three source-mapping cases, three filenames — your `.ts`, an `.html` TypeScript never parsed, and one that does not exist on disk |
+| 17b | **[The resolution errors](17b-the-resolution-errors.md)** | NG8001/8002/8003/8023 are one question about four kinds of name, each with the runtime twin it was promoted from — and NG8023 is new in v22 |
+| 17c | **[The v22 upgrade wall](17c-the-v22-upgrade-wall.md)** | Seven changes on one build, the order to take them in, and 🔴 the two with no build-time signal at all |
 
 ## The one question this topic exists to answer
 

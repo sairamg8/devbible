@@ -111,8 +111,8 @@ Read that as four distinct jobs:
    parser and their own AST.** `product().price | currency:'GBP'` is parsed by an expression
    parser that is separate again from the HTML parser.
 4. **Template function.** The AST is lowered to a JavaScript function of imperative
-   instruction calls. That is chunks **06 · What the compiler emits: `ɵcmp`** *(not written yet)* and
-   **07 · The create pass and the update pass** *(not written yet)*.
+   instruction calls. That is chunks [06 · What the compiler emits: `ɵcmp`](06-what-the-compiler-emits.md) and
+   [07 · The create pass and the update pass](07-the-create-pass-and-the-update-pass.md).
 
 ## `templateUrl` and `template` compile identically
 
@@ -152,7 +152,7 @@ export class ProductCard {
 ```
 
 The practical difference is where errors are reported, not what is produced — see
-**17 · Consequences you actually hit** *(not written yet)*.
+[17 · The filename in the error](17-the-filename-in-the-error.md).
 
 ## The language keeps changing, on Angular's schedule
 
@@ -217,7 +217,7 @@ escape it as `&lt;` in text content, exactly as you would in HTML.
 different parsers with two different grammars. Fix: move the expression into the class and
 bind the result. This is not a workaround, it is the intended shape — see chunk
 [02](02-what-a-template-expression-may-contain.md) for the full grammar and
-**09 · Static analysability is the load-bearing constraint** *(not written yet)* for why the grammar is small on purpose.
+[09 · Static analysability is the load-bearing constraint](09-static-analysability-is-the-load-bearing-constraint.md) for why the grammar is small on purpose.
 
 ## Interview questions
 

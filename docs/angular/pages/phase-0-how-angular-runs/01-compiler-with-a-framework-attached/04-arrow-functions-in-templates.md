@@ -120,7 +120,7 @@ does nothing, because the statement's value is a function nobody calls. That is 
 is right; `(click)="() => save()"` and `(click)="(save)"` are both no-ops the diagnostic
 will flag — but only if `strictTemplates` is on, because *"`strictTemplates` must be enabled
 for any extended diagnostic to emit."* See chunk
-**15 · Extended diagnostics** *(not written yet)*.
+[15 · Extended diagnostics](15-extended-diagnostics.md).
 
 ## Gotchas
 
@@ -218,7 +218,7 @@ it in the view's data array at that slot, and returns the stored one on subseque
 It is the same design as `ɵɵpureFunction*` for object and array literals. The general
 principle — the compiler reserves a slot for anything in a template that would otherwise
 allocate per pass — is worth carrying forward into chunk
-**07 · The create pass and the update pass** *(not written yet)*, because it is how the whole instruction set is
+[07 · The create pass and the update pass](07-the-create-pass-and-the-update-pass.md), because it is how the whole instruction set is
 organised.
 
 **When is an inline arrow in a template actually the right call?**

@@ -59,8 +59,7 @@ at all.
 holding on to: every interpolated expression *is* checked, and an interpolation can never itself
 produce a type mismatch, because anything concatenates with a string. `{{ user }}` where `user` is
 an object is not a type error — it is a rendering bug that the type checker is structurally unable
-to see. That gap is filled by extended diagnostics, not by the TCB: **15 · Extended diagnostics**
-*(not written yet)*.
+to see. That gap is filled by extended diagnostics, not by the TCB: [15 · Extended diagnostics](15-extended-diagnostics.md).
 
 ## A pipe becomes a real method call on a real instance
 
