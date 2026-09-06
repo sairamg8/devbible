@@ -208,6 +208,69 @@ in one line instead of as several hundred deleted and added lines.
 **Cause:** it is an untracked nested repository, and Git guards it behind a **second** `-f`
 **Fix:** confirm it holds nothing unpushed before passing `-ff`. This guard exists because that deletion is unrecoverable
 
+## Interview questions
+
+**★ Does Git record renames?**
+No. `git mv` is exactly `mv` plus `git add` plus `git rm --cached`, and the
+resulting commit contains one path gone and another added with nothing linking
+them — tree objects hold names and blob hashes and no more. Renames are *detected*
+at diff time by content similarity, with a default threshold of 50%; an exact move
+scores `R100`. This keeps the object model tiny and means an unchanged file that
+moved is literally the same blob, costing no extra storage and leaving no rename
+metadata to go stale when history is rewritten.
+
+**★ Why does a file's history stop at a rename, and what is the fix?**
+Because `git log -- <path>` asks about a path, and that path did not exist before
+the move. `git log --follow -- <path>` re-runs rename detection at each step and
+follows the content across the move. The deeper habit is to keep the move in its
+own commit: a pure rename is 100% similar and always detected, while a rename
+tangled with a rewrite can fall below the threshold, and no flag reliably recovers
+a pairing that genuinely is not there.
+
+**★ `git clean -f` removed nothing although there are obviously untracked
+directories. Why?**
+Because `clean` does not recurse into untracked directories without `-d`. That one
+missing flag accounts for most "clean did nothing" reports. The safe sequence is
+always `git clean -nd` to read the list first, then `-fd` to act on it — and note
+that `-f` is required at all only because `clean.requireForce` defaults to on, and
+that an untracked *nested Git repository* needs `-f` twice, a deliberate guard
+because deleting somebody's unpushed clone is unrecoverable.
+
+**★ What exactly does `-x` do to `git clean`, and why is it the flag that eats your
+`.env`?**
+It disables the ignore rules, so ignored files are deleted along with other
+untracked ones. That is precisely its purpose — `git clean -fdx` is a genuinely
+useful way to get a pristine tree for reproducing a clean build — and it is also
+the single most common way people delete their own local configuration, local
+databases and caches. Nothing can recover them, because Git never had them. `-X`
+deletes *only* ignored files when that is what you meant, and `-e <pattern>`
+protects specific paths for one run.
+
+**★ What is the difference between `git clean` and `git restore`, and why do people
+reach for the wrong one?**
+`clean` only ever touches **untracked** files; `restore` only ever touches
+**tracked** ones. So `clean` cannot revert an edit and `restore` cannot remove a
+stray file. People confuse them under stress because both are spelled "make this
+go away" in English, and the consequences differ: one destroys files Git has no
+copy of, the other destroys edits Git has no copy of. Both are worth naming out
+loud before running.
+
+**Why does `git rm` refuse on a modified file, and what does `-f` really cost?**
+Because deleting a tracked file that has uncommitted edits destroys those edits,
+and Git makes you say so explicitly. `-f` overrides the check, and there is no undo
+for what it discards — the content was never committed, so the reflog has nothing.
+Commit or stash first. The same reasoning explains why `--cached` exists as a
+separate flag rather than a default: untracking and deleting are different
+intentions that happen to share a verb.
+
+**Renaming `User.js` to `user.js` appears to do nothing. What is happening?**
+The filesystem is case-insensitive — the usual situation on macOS and Windows — so
+the rename either registers as no change at all or leaves a confusing half-state.
+The reliable route is two steps through a temporary name:
+`git mv User.js temp.js && git mv temp.js user.js`. It is a real cross-platform
+bug source, because the same commit behaves differently on a Linux CI box than on
+the laptop that produced it.
+
 ---
 
 ← Prev: [`git stash`](11-git-stash.md) · Next → [Phase 1 index](README.md)
