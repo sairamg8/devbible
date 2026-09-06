@@ -1,8 +1,8 @@
 {
   "angular": {
-    "pages": 47,
+    "pages": 125,
     "phases": {
-      "phase-0-how-angular-runs": 47
+      "phase-0-how-angular-runs": 125
     }
   },
   "babel": {
@@ -373,12 +373,12 @@
     }
   },
   "redux-toolkit": {
-    "pages": 16,
+    "pages": 21,
     "phases": {
       "01-store-setup": 1,
-      "02-slices-and-actions": 2,
-      "03-async-thunks": 1,
-      "04-rtk-query": 2,
+      "02-slices-and-actions": 3,
+      "03-async-thunks": 2,
+      "04-rtk-query": 4,
       "05-selectors-and-normalization": 2,
       "06-middleware": 1,
       "07-react-redux-integration": 1,
@@ -386,7 +386,7 @@
       "09-typescript-integration": 1,
       "10-devtools-and-debugging": 1,
       "11-code-splitting": 1,
-      "12-testing": 1,
+      "12-testing": 2,
       "13-migration": 1
     }
   },
