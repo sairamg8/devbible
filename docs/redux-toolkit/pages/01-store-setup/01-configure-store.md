@@ -14,7 +14,7 @@ sidebar_position: 1
 configureStore({ reducer, middleware, devTools, preloadedState })
         │
         ├── reducer object ──► combineReducers() ──► single root reducer
-        ├── middleware ──► getDefaultMiddleware() ──► [thunk, immutableCheck, serializableCheck, ...custom]
+        ├── middleware ──► getDefaultMiddleware() ──► [actionCreatorCheck, immutableCheck, thunk, serializableCheck, ...custom]
         ├── devTools ──► composeWithDevTools() (only when Redux DevTools extension is present)
         └── preloadedState ──► hydrates the root reducer's initial state (e.g. from SSR HTML payload)
 ```
@@ -23,12 +23,21 @@ configureStore({ reducer, middleware, devTools, preloadedState })
 If `reducer` is passed as a plain object (`{ users: usersReducer, cart: cartReducer }`), RTK internally calls `combineReducers()` for you, producing the familiar `{ users: {...}, cart: {...} }` shape. If `reducer` is already a single function, it is used as the root reducer verbatim — this is how `combineSlices()` dynamic injection (see [code splitting](../11-code-splitting/01-dynamic-reducer-injection.md)) plugs in.
 
 ### Default Middleware Stack (Dev vs Prod)
-`configureStore` calls `getDefaultMiddleware()` internally unless you override it. In development this stack includes:
-1. `redux-thunk` — lets action creators return functions instead of plain objects.
-2. `immutableStateInvariantMiddleware` — deep-freezes and diff-checks state after every dispatch to catch accidental mutation.
-3. `serializableStateInvariantMiddleware` — walks every dispatched action and the resulting state tree, warning on non-serializable values (functions, Promises, class instances, `Map`/`Set`).
+`configureStore` calls `getDefaultMiddleware()` internally unless you override it. In development the returned array is, **in this exact order**:
 
-Both invariant checks are **stripped in production builds** (`process.env.NODE_ENV === 'production'`) for performance — they only run in development.
+1. `actionCreatorInvariantMiddleware` (dev only) — catches an action *creator* dispatched without being called: `dispatch(addItem)` instead of `dispatch(addItem())`. A silent no-op otherwise, because a function is a perfectly valid thing to dispatch once thunk is in the chain.
+2. `immutableStateInvariantMiddleware` (dev only) — **deeply compares** state values to detect mutations. It catches them both inside reducers during a dispatch *and* between dispatches, "such as in a component or a selector".
+3. `redux-thunk` — lets action creators return functions instead of plain objects.
+4. `serializableStateInvariantMiddleware` (dev only) — walks every dispatched action and the resulting state tree, warning on non-serializable values (functions, Promises, class instances, `Map`/`Set`).
+
+🔴 **The immutability check does not freeze anything.** It takes a copy and compares — a common
+misreading, because state in an RTK app *is* usually frozen, by Immer's own `autoFreeze` inside
+`createSlice`. Two separate mechanisms with two separate failure modes: Immer's freeze throws on the
+mutation attempt, the invariant middleware reports it after the fact on the next dispatch.
+
+In a production build the array is just `[thunk]` — all three dev-only checks are **stripped**
+(`process.env.NODE_ENV === 'production'`), because each one costs a full state traversal per
+dispatch.
 
 ---
 
@@ -94,12 +103,19 @@ const dehydratedState = JSON.stringify(serverStore.getState()).replace(/</g, '\\
 
 ### ⚠️ Pitfall 1: Overwriting the Default Middleware Instead of Extending It
 ```typescript
-// ❌ WRONG: replaces the entire default stack — loses thunk support and dev safety checks!
+// ❌ WRONG: under RTK 1.x this silently replaced the entire default stack — losing thunk support
+// and every dev safety check, with no warning. RTK 2.0 closed the footgun by removing the array
+// form: `middleware` MUST now be a callback, so on the pinned version this no longer type-checks.
 middleware: [myLoggerMiddleware],
 
 // ✅ CORRECT: always start from getDefaultMiddleware() and .concat()/.prepend()
 middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(myLoggerMiddleware),
 ```
+Worth knowing *why* the callback became mandatory rather than merely recommended: passing an array
+was the single most common way to lose the default stack by accident, and the symptom — thunks
+mysteriously not dispatching — surfaced far from the cause. RTK 2.0 moved that failure from a silent
+runtime regression to a compile-time error. The same reasoning removed the standalone
+`getDefaultMiddleware` export: the only supported way to reach it is the callback parameter.
 
 ### ⚠️ Pitfall 2: Ignoring Serializability Warnings Instead of Fixing the Root Cause
 Blanket-disabling `serializableCheck: false` silences a real signal — it usually means something non-serializable (a `File`, a `Promise`, a class instance) leaked into the store, which will break Redux DevTools persistence and time-travel. Prefer scoping `ignoredActions`/`ignoredPaths` narrowly over disabling the check entirely.

@@ -14,7 +14,10 @@ RTK is not a different state model from classic Redux — the store, `dispatch`,
 ```typescript
 // Classic Redux — manual composition
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
+// ⚠️ redux-thunk 2.x had a DEFAULT export (`import thunk from 'redux-thunk'`). 3.x — the version
+// that ships alongside RTK 2.0 — is a NAMED export. Copying the old line against current deps
+// hands `applyMiddleware` an `undefined`.
+import { thunk } from 'redux-thunk';
 
 const rootReducer = combineReducers({ cart: cartReducer, users: usersReducer });
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

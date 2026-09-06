@@ -26,7 +26,24 @@ On each call, the memoized selector:
 This is why input selectors matter as much as the result function: if an input selector itself returns a new array/object reference every call (e.g. `state => state.items.filter(...)` used as an *input* selector), memoization never triggers because that input never equals its previous value.
 
 ### Selector Composition & `createSelector` Caching Modes
-By default, RTK's `createSelector` uses a **cache size of 1** (LRU with 1 entry) — calling it with different arguments back-to-back thrashes the cache. RTK 2.x exposes `createSelector.withTypes()` and configurable memoize functions (e.g. `lruMemoize` with a larger cache size) for selectors called with many distinct arguments, such as per-item selectors in a list.
+
+🔴 **This is the one thing that changed between Reselect 4 and Reselect 5, and it inverts most of the
+selector advice written before 2024.** Reselect 4 — the version RTK 1.x shipped — defaulted to
+`lruMemoize` (then named `defaultMemoize`) with a **cache size of 1**. One selector instance called
+with two different arguments in the same render evicted its own result each time, so memoization
+did nothing.
+
+Since v5.0.0, which shipped with RTK 2.0, `createSelector` uses **`weakMapMemoize`** as the default
+for both `memoize` and `argsMemoize`, giving an effectively **unlimited** cache keyed on argument
+identity. The eviction problem is gone by default.
+
+Two things that are easy to conflate with this:
+
+- `lruMemoize` is still exported, and is still what you want when you need a *bounded* cache or
+  value comparison rather than reference identity:
+  `createSelector(inputs, resultFn, { memoize: lruMemoize, memoizeOptions: { maxSize: 10 } })`.
+- `createSelector.withTypes<RootState>()` is a **typing** helper — it pre-binds the state generic so
+  input selectors infer without annotation. It has nothing to do with caching.
 
 ---
 
@@ -66,7 +83,9 @@ export const selectVisibleProducts = createSelector(
   }
 );
 
-// Parameterized selector factory — one memoized instance PER product id, avoiding cross-item cache thrash
+// Parameterized selector factory — one instance per component. Under Reselect 5 a single shared
+// instance would memoize correctly too; the factory is what you want when you need the cache to
+// die with the component, or when you deliberately bound it with lruMemoize.
 export const makeSelectProductById = () =>
   createSelector(
     [selectAllProducts, (_state: RootState, productId: string) => productId],
@@ -90,18 +109,25 @@ function ProductCard({ productId }: { productId: string }) {
 
 ## 4. Senior Engineer Edge Cases & Pitfalls
 
-### ⚠️ Pitfall 1: Sharing One Parameterized Selector Instance Across Many Components
+### ⚠️ Pitfall 1: Reaching for a Selector Factory for a Reason That Stopped Being True
 ```typescript
-// ❌ WRONG: module-level shared instance — cache size of 1 thrashes as different
-// components call it with different productIds, defeating memoization entirely
+// ⚠️ THE OLD ADVICE — and you will still meet it in every blog post, Stack Overflow answer and
+// code review written against RTK 1.x. Under Reselect 4 this module-level shared instance thrashed:
+// a cache of 1 cannot hold results for two productIds at once, so each component evicted the last.
 export const selectProductById = createSelector(
   [selectAllProducts, (_s, id: string) => id],
   (products, id) => products.find((p) => p.id === id)
 );
 
-// ✅ CORRECT: a factory function (makeSelectProductById) instantiated per-component via useMemo,
-// so each card/row gets its own independent memoization cache.
+// ✅ On the pinned version this is FINE. weakMapMemoize keeps a result per argument identity, so one
+// shared instance serves every product id in the list without a single eviction.
 ```
+The factory + `useMemo` pattern in the example above is not wrong, and it is still the right answer
+when the cache should be discarded with the component, when you opt into `lruMemoize` for bounded
+memory, or when the selector closes over per-component state. But **"cache size of 1" is no longer
+the reason to reach for it.** Repeating that justification on RTK 2.x teaches a cargo cult — and it
+costs real code, because a factory per row in a long list is a `useMemo` and a closure per row that
+the default memoizer no longer needs.
 
 ### ⚠️ Pitfall 2: Input Selectors That Return a Fresh Reference Every Call
 ```typescript

@@ -15,10 +15,13 @@ Redux middleware sits between `dispatch(action)` and the reducer, forming a chai
 dispatch(action)
    │
    ▼
-thunk middleware ──► if action is a function, call it with (dispatch, getState) instead of forwarding
+actionCreatorInvariantMiddleware (dev only) ──► throws if an action CREATOR was dispatched uncalled
    │
    ▼
-immutableStateInvariantMiddleware (dev only) ──► deep-freezes state, throws if a reducer mutated it
+immutableStateInvariantMiddleware (dev only) ──► deeply COMPARES state, reports a detected mutation
+   │
+   ▼
+thunk middleware ──► if action is a function, call it with (dispatch, getState) instead of forwarding
    │
    ▼
 serializableStateInvariantMiddleware (dev only) ──► warns on non-serializable actions/state
@@ -29,7 +32,14 @@ your custom middleware (via .concat()/.prepend())
    ▼
 reducer
 ```
-Both invariant-check middlewares are stripped entirely in production builds — they exist purely as development-time guardrails and carry real runtime cost (deep state traversal on every dispatch), which is why disabling them for measured performance reasons should only ever happen in dev, never by shipping them to prod (they already aren't).
+All three dev-only middlewares are stripped entirely in production builds — the production array is
+just `[thunk]`. They exist purely as development-time guardrails and carry real runtime cost (a deep
+state traversal on every dispatch), which is why disabling them for measured performance reasons
+should only ever happen in dev, never by shipping them to prod (they already aren't).
+
+🔴 **Note the order, because it is not the one most people assume:** thunk is *third*, not first. The
+two checks that run ahead of it are unshifted to the front of the array precisely so they see the
+action before a thunk can turn one dispatch into several.
 
 ### `listenerMiddleware`: Reactive Side Effects Without Sagas
 `createListenerMiddleware()` provides an alternative to redux-saga/redux-observable for side-effect orchestration, using plain async/await instead of generators or Observables:
@@ -97,7 +107,8 @@ export const store = configureStore({
 
 ### ⚠️ Pitfall 1: `.concat()` Instead of `.prepend()` for `listenerMiddleware`
 ```typescript
-// ❌ SUBOPTIMAL: appended after invariant-check middleware — effects see already-frozen state
+// ❌ SUBOPTIMAL: appended, so the whole default stack — including the dev-only deep state
+// comparisons — runs before the listener ever sees the action
 middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(listenerMiddleware.middleware),
 
 // ✅ CORRECT: RTK's own docs recommend .prepend() so listener effects run as early as possible

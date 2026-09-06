@@ -134,7 +134,21 @@ if (!response.ok) return rejectWithValue({ code: 'NOT_FOUND', message: 'Not foun
 ```
 
 ### ⚠️ Pitfall 2: Ignoring `signal` — Wasted Work After Cancellation/Unmount
-If a component dispatches a thunk and unmounts before it resolves (and the thunk was cancelled via `dispatch(fetchUser.abort())` or superseded by `condition`), a `payloadCreator` that ignores `signal` still runs to completion and dispatches a `fulfilled` action into a state shape nothing reads anymore — wasted network and CPU, and potential stale-data bugs if a newer request resolves first.
+🔴 **`abort()` lives on the promise `dispatch()` returns, never on the thunk itself.**
+`fetchUser.abort()` does not exist — the action creator has `.pending`/`.fulfilled`/`.rejected`
+and nothing else. The documented shape is:
+
+```typescript
+const promise = dispatch(fetchUser(props.userId));
+return () => { promise.abort(); };   // e.g. the cleanup returned from useEffect
+```
+
+That matters beyond the typo: the handle is per-dispatch, so cancelling means keeping the promise
+from the exact call you want to stop — there is no way to reach back through the action creator and
+cancel "whatever is in flight".
+
+If a component dispatches a thunk and unmounts before it resolves (whether cancelled through that
+promise handle, or superseded by `condition`), a `payloadCreator` that ignores `signal` still runs to completion and dispatches a `fulfilled` action into a state shape nothing reads anymore — wasted network and CPU, and potential stale-data bugs if a newer request resolves first.
 
 ### ⚠️ Pitfall 3: Reading `state.users.status` As a Single Global Flag for Multiple Concurrent Requests
 A single top-level `status: 'loading'` flag cannot represent "user A is loading while user B already loaded" — race conditions between two different `arg` values will stomp each other's status. Key async state by the thunk's `arg` (as shown above with `byId[action.meta.arg]`), not by a single flat flag, whenever the same thunk can be in flight for multiple distinct inputs simultaneously.
