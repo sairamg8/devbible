@@ -163,6 +163,59 @@ thing in this phase that is genuinely a backup. Everything else — reflog, `fsc
 **Cause:** every copy was deleted
 **Fix:** the host is the last resort — GitHub and GitLab retain deleted branch tips for a period and can restore them
 
+## Interview questions
+
+**★ Why is recovering a deleted branch easy?**
+Because deleting a branch deletes a 41-byte file and nothing else. The measurement in
+Phase 0 is the whole argument: creating a branch wrote 41 bytes and **zero objects**,
+with the object count identical before and after — so the commits were never part of
+the branch, only pointed at by it. Recovery is therefore finding the tip hash and
+writing a new pointer to it: `git branch <name> <hash>`, about ten seconds once you
+know where to look.
+
+**★ Where do you look for the hash, in order?**
+First at the deletion message itself — `Deleted branch feature/pricing (was
+a1b2c3d).` contains everything you need, and reading it beats scrolling past it. Then
+`git reflog`, unfiltered, because the HEAD reflog records branch switching and its
+`checkout: moving from feature/pricing to main` entries name the branch and carry its
+hash. Then `git fsck --lost-found` if the reflog entries have expired. `git reflog
+show <branch>` is the one that usually fails, because deleting a branch deletes its
+own reflog.
+
+**★ A branch is gone. How does the recovery differ depending on where it was
+deleted?**
+If it was deleted only locally, the remote still has it: fetch and switch. If only on
+the remote, your local branch is intact and `git push -u origin <branch>` puts it
+back. If both, recover locally through the reflog or `fsck` and then push. And if
+both, with no clone that still has it, the host is the last resort — GitHub and
+GitLab retain deleted branch tips for a period and can restore them, because their
+reflog is server-side.
+
+**★ `git fetch --prune` ran and branches disappeared from your listing. What was
+lost?**
+Nothing of yours. Pruning removes **remote-tracking refs** whose branches no longer
+exist on the server; local branches and their commits are untouched. The useful
+by-product is that `git branch -vv | grep ': gone]'` then lists exactly the local
+branches whose upstream has been deleted — the honest cleanup list after a round of
+merged pull requests.
+
+**★ Why did `-d` refuse on a branch you know was merged, and was the refusal useful?**
+Because it checks **reachability**, not intent: is this branch's tip an ancestor of
+`HEAD`? A squash-merge creates a commit with no ancestry link and a rebase replaces
+the commits, so in both cases the work has landed and the branch is still unreachable.
+It also refuses when run from a branch that lacks the merge. The refusal is useful
+anyway — it catches the case where the work genuinely has not landed — and
+`git branch --merged main` is the way to answer the question properly rather than
+reaching for `-D` reflexively.
+
+**What is the only real backup in this phase?**
+A pushed branch. Everything else — the reflog, `ORIG_HEAD`, `fsck` — is a local,
+temporary net with a shelf life: unreachable reflog entries expire after 30 days by
+default, and `gc` prunes loose unreachable objects older than two weeks, with no
+warning when that window closes. A pushed branch exists in a second repository with
+its own retention, and it survives your disk. "Push branches you care about" is the
+one instruction in this area that is not a Git setting.
+
 ---
 
 ← Prev: [Rewriting your own last few commits](05-rewriting-your-own-commits.md) · Next → [Undoing a merge](07-undoing-a-merge.md)
