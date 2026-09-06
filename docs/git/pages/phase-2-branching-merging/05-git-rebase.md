@@ -200,6 +200,60 @@ commit is cheaper than the cleanup the manual devotes a section to.
 **Cause:** the wrong upstream — you needed `--onto` to exclude the commits from an intermediate branch
 **Fix:** `git rebase --onto <newbase> <upstream> <branch>`, reading it as "onto X, everything after Y, from Z"
 
+## Interview questions
+
+**★ Does rebase move commits?**
+No. It takes the *change* each commit introduced and replays it on top of a
+different base, creating a **new commit** each time — new parent, therefore new
+hash. The originals stay in the object store, unreferenced, until garbage
+collection. Every surprise about rebase follows from "new commit": the push is
+rejected as non-fast-forward, the committer dates are today, anyone else holding
+the old commits now has a divergent branch, and `git reflog` is how you get back.
+There is no way to rebase and keep hashes, because the parent is part of what a
+commit hashes.
+
+**★ What does `--onto` do, and when is it the only answer?**
+`git rebase --onto <newbase> <upstream> <branch>` replays the commits in
+`<upstream>..<branch>` onto `<newbase>` — read it as "onto X, everything after Y,
+from Z". The case it exists for is a branch built on another branch: `featureB` sits
+on `featureA`, `featureA` has been merged and squashed away, and you want only
+`featureB`'s own commits on `main`. A plain `git rebase main featureB` would try to
+replay `featureA`'s commits too, duplicating work that is already in `main` under
+different hashes.
+
+**★ What is the difference between `--skip` and `--continue`, and why is `--skip`
+dangerous?**
+`--continue` says "I resolved this one, carry on". `--skip` **discards the commit
+currently being applied** — it is not "skip this conflict". It is exactly right when
+the change is already present upstream so the replay produces nothing, and it
+silently deletes work in every other case. Read what you are about to drop with
+`git show REBASE_HEAD` first. `--abort` is the reliable escape: it restores the
+original branch, because the original commits still exist and only the pointer moves
+back.
+
+**★ Why does the same conflict appear five times in one rebase?**
+Because each commit is replayed independently against the new base, so each one
+meets the same textual disagreement in turn. `rerere` is the direct fix — it records
+your resolution and replays it automatically, and this is the single best reason to
+enable a non-default Git setting. The structural fix is to rebase more often, so
+there is less divergence to replay each time.
+
+**★ Your stacked branches ended up pointing at abandoned commits after a rebase.
+Why, and what prevents it?**
+Because a branch pointing at an intermediate commit of the branch you rebased is
+never consulted: those commits were replaced, so the pointer is simply left on the
+old, now-unreachable ones. `git rebase --update-refs` moves those pointers to the
+replayed commits as it goes, and `rebase.updateRefs true` makes it the default —
+which is reasonable, because the failure is silent and confusing. A branch already
+stranded is recovered from `git reflog`.
+
+**Why is a rebased commit weaker evidence than the commit it replaced?**
+Because it was never built or tested in that form. `D'` is your change applied to a
+base it was never written against, and in practice only the branch tip gets tested
+after a rebase — so the intermediate commits carry a claim nobody has checked. That
+quietly undermines the `bisect` argument often used to justify rebasing, and it is
+the strongest technical objection to doing it habitually rather than deliberately.
+
 ---
 
 ← Prev: [Resolving a conflict, properly](04-resolving-conflicts.md) · Next → [Rebase versus merge, decided on purpose](06-rebase-vs-merge.md)
