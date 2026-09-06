@@ -167,6 +167,65 @@ loaded in the agent — neither of which is a Git problem at all.
 **Cause:** no SSH agent in that environment
 **Fix:** use HTTPS with a keyring helper there, or configure the agent for that environment. `GIT_SSH_COMMAND="ssh -v"` shows what is being tried
 
+## Interview questions
+
+**★ SSH or HTTPS?**
+Neither is more capable — both do everything Git can do, and the choice is about how
+you authenticate and what your network permits. SSH uses a key pair whose public half
+is registered with the host and is pleasant on a machine you control and push from
+often; HTTPS uses a personal access token held by a credential helper and gets
+through the strict proxies that block port 22. Switching costs nothing, because the
+objects are already local and only the address changes: `git remote set-url origin
+…`.
+
+**★ Someone asks you to send them your SSH key. What do you send?**
+The `.pub` file — `~/.ssh/id_ed25519.pub` — and nothing else. The file without the
+`.pub` suffix is the private key and never leaves the machine. `ed25519` is the
+modern default and produces short keys, and the four commands that cover the whole
+setup are `ssh-keygen -t ed25519`, `cat` the public half to paste it, `ssh-add` to
+load it into the agent, and `ssh -T git@github.com` to confirm the host recognises
+you.
+
+**★ HTTPS keeps prompting for a password and rejecting the right one. What is
+happening?**
+The major hosts no longer accept account passwords over HTTPS: what belongs in that
+field is a personal access token, generated in the host's settings with scopes and an
+expiry. An **expired** token fails in a way that is indistinguishable from a wrong
+password, so the expiry is the first thing to check. Once it works, a credential
+helper stores it so you are not asked again.
+
+**★ What is wrong with `credential.helper store`?**
+It writes the token in plain text, unencrypted, in `~/.git-credentials` — documented
+behaviour rather than a bug. On a personal machine you control that is a defensible
+convenience; on a shared or temporary machine it is a credential with write access to
+everything you can see, sitting in a readable file. The platform helpers —
+`libsecret`, `osxkeychain`, `manager` — are keyring-backed and cost about five minutes
+to set up.
+
+**★ How do you keep work and personal Git accounts apart on one laptop?**
+With a `~/.ssh/config` host alias per account: a `Host github-work` block naming
+`HostName github.com` and its own `IdentityFile`, then remote URLs written as
+`git@github-work:org/project.git`. The host maps a key to an account, and SSH
+otherwise offers the first matching key, so aliases are what make the choice
+explicit. It is cleaner than juggling agents or remembering to swap keys.
+
+**★ What does `url.<base>.insteadOf` solve that `remote set-url` cannot?**
+URLs you do not control. `git config --global url."git@github.com:".insteadOf
+"https://github.com/"` rewrites every matching URL globally — including ones inside
+`.gitmodules` and in scripts written by other people — so a submodule that hard-codes
+HTTPS is fetched over SSH anyway. The reverse form is the standard CI trick, mapping
+SSH URLs onto an HTTPS URL carrying a token.
+
+**Why do Git's authentication errors feel so unhelpful?**
+Because Git delegates authentication entirely and forwards other tools' messages
+without translation. There is no Git account, login or permission model — it shells
+out to `ssh` or `curl` and reports what came back, which is what lets the same
+commands work against GitHub, a bare repo on a server and a directory on a USB stick.
+So `Permission denied (publickey)` is SSH's, `403` is the host's, and `could not read
+Username` is the credential helper's. `ssh -T git@<host>` tests authentication with no
+Git involved and splits the problem in half in one command; most of the time the
+answer is an expired token or a key that is not loaded in the agent.
+
 ---
 
 ← Prev: [`git push` in full](07-git-push.md) · Next → [Phase 4 index](README.md)
