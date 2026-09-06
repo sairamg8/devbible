@@ -49,7 +49,7 @@ the envelope.
 
 ## Coverage
 
-All 9 syllabus topics. **Page 07 was written on 2026-08-14 — error logging at the
+All 10 syllabus topics. **Page 07 was written on 2026-08-14 — error logging at the
 edge had no page**, which this README had no Coverage table to reveal. Same gap,
 same cause, as content negotiation in [Phase 4](../phase-4-responses/README.md).
 

@@ -53,25 +53,53 @@ const OUT = path.join(ROOT, 'src/data/page-counts.json');
 
 const CHECK = process.argv.includes('--check');
 
-/** Recursively count leaf explanation pages under `dir`. */
+/**
+ * A page is *validated* when it carries BOTH marks the page contract requires: a
+ * tier badge and a dated `> Verified:` line.
+ *
+ * 🔴 This is measured, never assumed. `summarise()` used to report the validated
+ * count as `p.verified ?? p.files` — falling back to the FILE count on any track
+ * written here, on the theory that a page written to contract always has both
+ * marks. The homepage therefore printed "526/526 validated" for JavaScript when
+ * disk held 525: `phase-0-how-javascript-runs/07-loading-scripts.md` deliberately
+ * carries no `> Verified:` line (it documents browser-host behaviour nobody ran,
+ * and says so in a banner). The page is honest; the number reporting it was not.
+ * Measured here, a page that declines to claim verification cannot be counted as
+ * having claimed it.
+ */
+function isValidated(file) {
+  let text;
+  try {
+    text = fs.readFileSync(file, 'utf8');
+  } catch {
+    return false;
+  }
+  return /db-tier t-/.test(text) && /^> Verified:/m.test(text);
+}
+
+/** Recursively count leaf explanation pages under `dir`, and how many are validated. */
 function countPages(dir) {
   let total = 0;
+  let validated = 0;
   let entries;
   try {
     entries = fs.readdirSync(dir, {withFileTypes: true});
   } catch {
-    return 0;
+    return {total: 0, validated: 0};
   }
   for (const entry of entries) {
     if (entry.name.startsWith('_')) continue;
     if (entry.isDirectory()) {
       if (entry.name === 'reviews') continue;
-      total += countPages(path.join(dir, entry.name));
+      const sub = countPages(path.join(dir, entry.name));
+      total += sub.total;
+      validated += sub.validated;
     } else if (entry.name.endsWith('.md') && entry.name !== 'README.md') {
       total += 1;
+      if (isValidated(path.join(dir, entry.name))) validated += 1;
     }
   }
-  return total;
+  return {total, validated};
 }
 
 function listDirs(dir) {
@@ -95,15 +123,21 @@ for (const track of listDirs(DOCS)) {
   // Per phase, keyed by the directory name — which is exactly the `slug` on each
   // phase in progress.js, so the two line up without a mapping table.
   const phases = {};
+  const validatedPhases = {};
   for (const slug of listDirs(pagesDir)) {
-    phases[slug] = countPages(path.join(pagesDir, slug));
+    const c = countPages(path.join(pagesDir, slug));
+    phases[slug] = c.total;
+    validatedPhases[slug] = c.validated;
   }
 
+  const track_ = countPages(pagesDir);
   counts[track] = {
     // Not `sum(phases)`: a track can hold loose pages directly under `pages/`
     // that belong to no phase directory, and they are still pages.
-    pages: countPages(pagesDir),
+    pages: track_.total,
+    validated: track_.validated,
     phases,
+    validatedPhases,
   };
 }
 
@@ -129,4 +163,7 @@ fs.writeFileSync(OUT, json);
 
 const tracks = Object.keys(counts).length;
 const total = Object.values(counts).reduce((sum, t) => sum + t.pages, 0);
-console.log(`page-counts.json — ${total} pages across ${tracks} tracks.`);
+const validated = Object.values(counts).reduce((sum, t) => sum + t.validated, 0);
+console.log(
+  `page-counts.json — ${total} pages across ${tracks} tracks, ${validated} validated.`,
+);

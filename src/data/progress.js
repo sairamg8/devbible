@@ -53,14 +53,35 @@
  *                raw import has. A phase with `verified` set is scored on that
  *                number rather than on `pages`, so an imported track starts at
  *                0% with its page count intact and climbs one validated page at
- *                a time. Re-measure it, never estimate it — for each chapter
- *                directory under `docs/<track>/pages`, count the leaf pages
- *                (README excluded) matching BOTH `db-tier t-` and a line
- *                starting `> Verified:`.
+ *                a time. Re-measure it, never estimate it: `yarn page-counts`
+ *                now writes that measurement into `validatedPhases` in
+ *                page-counts.json — for each chapter directory under
+ *                `docs/<track>/pages`, the leaf pages (README excluded) matching
+ *                BOTH `db-tier t-` and a line starting `> Verified:`. Read it out
+ *                of there rather than counting by hand, and keep this field equal
+ *                to it.
  *
  *                The plan these numbers track is
  *                `devbible/project_frontend_toolchain_currency_plan.md` in the
  *                memory store (passes F0–F3).
+ *
+ * ── The rule an imported track is scored by (settled 2026-09-06) ─────────────
+ * 🔴 **Finishing the conversion pass is not finishing the subject, and the phase
+ * list has to be able to say so.** Two tracks were claiming otherwise:
+ *
+ *   Jest & RTL read **100%** — 16 chapters, `topics: 1` each, all 16 validated —
+ *   against its own 59-topic syllabus with no page written to it. Its 16 chapters
+ *   run 2,516 lines between them; that is coverage, not 59 topics at this
+ *   project's depth bar. Fixed by making the syllabus the denominator.
+ *
+ *   Storybook had **22 live pages in 17 imported chapters this file did not list
+ *   at all**, so phases 4–10 read *planned · 0 pages* while those pages were
+ *   being served. Fixed by listing them, the way every other imported track does.
+ *
+ * So: **every directory under `docs/<track>/pages/` gets a row here**, and a
+ * track whose syllabus asks for more than its chapters deliver carries the
+ * remainder as an explicit planned row. A number nobody can contradict from disk
+ * is the one that goes wrong quietly.
  */
 
 import PAGE_COUNTS from './page-counts.json';
@@ -105,10 +126,33 @@ function phaseFiles(docsPath, slug) {
   return PAGE_COUNTS[docsPath.replace(/^\/docs\//, '')]?.phases?.[slug] ?? 0;
 }
 
+/**
+ * Pages in one phase that carry BOTH a tier badge and a dated `> Verified:`
+ * line — measured from disk by `scripts/page-counts.mjs`, never inferred.
+ *
+ * 🔴 The number this replaces was `p.verified ?? p.files`, which fell back to the
+ * FILE count on every track written here — "a page written to contract has both
+ * marks, so counting the files is the same thing". It is not the same thing. On
+ * 2026-09-06 the homepage printed **526/526 validated** for JavaScript against a
+ * disk truth of **525**: `phase-0-how-javascript-runs/07-loading-scripts.md`
+ * deliberately carries no `> Verified:` line, because it documents browser-host
+ * behaviour nobody ran, and it says so in a banner with an open `VERIFY:` marker.
+ * The page was honest and the dashboard overruled it. A page that declines to
+ * claim verification must not be counted as having claimed it.
+ */
+function phaseValidated(docsPath, slug) {
+  return PAGE_COUNTS[docsPath.replace(/^\/docs\//, '')]?.validatedPhases?.[slug] ?? 0;
+}
+
+/** Validated pages in a track, from disk. */
+function trackValidated(docsPath) {
+  return PAGE_COUNTS[docsPath.replace(/^\/docs\//, '')]?.validated ?? 0;
+}
+
 export const LANGUAGES = {
   css: {
     label: 'CSS',
-    updated: '2026-08-14 09:15',
+    updated: '2026-08-31 12:04',
     docsPath: '/docs/css',
     pagesPath: '/docs/css/pages',
     phases: [
@@ -127,7 +171,7 @@ export const LANGUAGES = {
   },
   javascript: {
     label: 'JavaScript',
-    updated: '2026-08-15 14:06',
+    updated: '2026-09-04 08:25',
     docsPath: '/docs/javascript',
     pagesPath: '/docs/javascript/pages',
     phases: [
@@ -149,12 +193,20 @@ export const LANGUAGES = {
       {n: 15, slug: 'phase-15-algorithm-patterns', name: 'Algorithmic patterns (parked at Master)', part: 'DSA & machine coding', topics: 20, pages: 5, parked: true},
       {n: 16, slug: 'phase-16-dynamic-programming', name: 'Dynamic programming (Master only — rest dropped)', part: 'DSA & machine coding', topics: 3, pages: 3},
       {n: 17, slug: 'phase-17-machine-coding', name: 'Machine coding: implement it yourself', part: 'DSA & machine coding', topics: 18, pages: 18},
-      {n: 18, slug: 'phase-18-storefront', name: 'Building the store front end', part: 'Applied storefront', topics: 10, pages: 10},
+      // 🔴 `topics` was 10 here until 2026-09-06 and the phase therefore read as
+      // FINISHED. Its syllabus section in `05-applied-storefront.md` holds **18**
+      // rows, and the topic directories on disk preserve the syllabus row index:
+      // 01–07, 11, 12, 15 exist and 08, 09, 10, 13, 14, 16, 17, 18 do not. The
+      // gaps in the numbering are the evidence — a dropped row would have been
+      // struck through in the syllabus the way real-world phase 7 does it, not
+      // silently renumbered away. Ten of eighteen written; `pagesPlanned` is what
+      // stops the other eight being credited.
+      {n: 18, slug: 'phase-18-storefront', name: 'Building the store front end', part: 'Applied storefront', topics: 18, pages: 10, pagesPlanned: 18},
     ],
   },
   typescript: {
     label: 'TypeScript',
-    updated: '2026-08-18 19:16',
+    updated: '2026-09-04 08:25',
     docsPath: '/docs/typescript',
     pagesPath: '/docs/typescript/pages',
     phases: [
@@ -393,7 +445,7 @@ export const LANGUAGES = {
   },
   storybook: {
     label: 'Storybook',
-    updated: '2026-08-14 13:35',
+    updated: '2026-09-04 08:36',
     docsPath: '/docs/storybook',
     pagesPath: '/docs/storybook/pages',
     phases: [
@@ -408,6 +460,40 @@ export const LANGUAGES = {
       {n: 8, slug: 'phase-8-visual-testing', name: 'Visual regression testing', part: 'Testing with Storybook', topics: 4, pages: 0},
       {n: 9, slug: 'phase-9-configuration', name: 'Configuration, builders and CI', part: 'Configuration and shipping', topics: 6, pages: 0},
       {n: 10, slug: 'phase-10-design-systems', name: 'Design systems and shipping', part: 'Configuration and shipping', topics: 5, pages: 0},
+      // 🔴 Added 2026-09-06. These 17 chapters — **22 live, served pages** — came
+      // in with the 2026-08-14 frontend-bible import and were never listed here.
+      // The track total was right (it is taken from disk), so nothing looked
+      // wrong; but the phase list accounted for only 22 of the 44 pages, and
+      // phases 4–10 above read *planned · 0 pages* while `08-documentation/`,
+      // `17-theming-colors-and-fonts/`, `05-interaction-testing/` and 14 more
+      // were sitting on disk being served to readers.
+      //
+      // Storybook was the ONE imported track modelled without them: every other
+      // one (vite, webpack, babel, playwright, tanstack-query…) carries its
+      // chapters with `verified: 0` and reads status `imported`. It now does too.
+      // Measured 2026-09-06: **0 of the 22 carry both marks**, against 22 of 22
+      // on the four phases written here. That is the honest split and it is why
+      // the card moves 40% → 31%: the denominator now counts work that exists.
+      //
+      // ⚠️ `verified` is re-measured, never estimated — `yarn page-counts` writes
+      // the per-chapter truth into `validatedPhases` in page-counts.json.
+      {n: 11, slug: '01-core-concepts', name: "Core concepts", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 12, slug: '02-story-anatomy', name: "Story anatomy", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 13, slug: '03-addons-ecosystem', name: "Addons ecosystem", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 14, slug: '04-controls-and-args', name: "Controls and args", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 15, slug: '05-interaction-testing', name: "Interaction testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 16, slug: '06-visual-testing', name: "Visual testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 17, slug: '07-accessibility-testing', name: "Accessibility testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 18, slug: '08-documentation', name: "Documentation", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 19, slug: '09-decorators', name: "Decorators", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 20, slug: '10-composition-and-design-systems', name: "Composition and design systems", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 21, slug: '11-testing-integration', name: "Testing integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 22, slug: '12-multi-framework-support', name: "Multi framework support", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 23, slug: '13-build-and-configuration', name: "Build and configuration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 24, slug: '14-publishing-and-deployment', name: "Publishing and deployment", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 25, slug: '15-advanced-patterns', name: "Advanced patterns", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 26, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 27, slug: '17-theming-colors-and-fonts', name: "Theming colors and fonts", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
     ],
   },
   'vite': {
@@ -538,6 +624,28 @@ export const LANGUAGES = {
       {n: 14, slug: '14-accessibility-testing', name: "Accessibility testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
       {n: 15, slug: '15-debugging-tests', name: "Debugging tests", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
       {n: 16, slug: '16-real-world-workflows-and-recipes', name: "Real world workflows and recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      // 🔴 Added 2026-09-06. Without this row the track read **100% complete** —
+      // sixteen chapters, `topics: 1` each, all sixteen validated — while
+      // `docs/jest-rtl/syllabus/` defines **12 phases and 59 topic rows** and not
+      // one page has been written to them. Two taxonomies were never reconciled:
+      // the import's 16 chapter directories, and this bible's own 12-phase plan
+      // for the same subject. The chapter list won, and it made "F2 conversion
+      // finished" print as "the subject is finished".
+      //
+      // Sixteen single pages, 2,516 lines between them, is coverage; it is not
+      // 59 topics at this project's depth bar. So the denominator is now the
+      // syllabus (59), the numerator stays the 16 converted chapters, and the
+      // remainder sits here as ONE explicit row.
+      //
+      // ⚠️ It is deliberately NOT a per-chapter mapping. Chapter 05 (snapshots)
+      // and chapter 02 (assertions) both land inside syllabus phase 02, chapters
+      // 07 and 08 both inside phase 04, and any split of those is a judgement
+      // call — baking a judgement call into a dashboard number is exactly how
+      // this track came to claim 100%. `slug` is a placeholder: a planned phase
+      // is never linked (`Progress/index.js` links only `status !== 'planned'`)
+      // and `phaseFiles` returns 0 for a directory that does not exist. When real
+      // syllabus pages land, replace this row with the phases they land in.
+      {n: 17, slug: 'syllabus-backlog', name: 'The 59-topic syllabus — no page written to it yet', part: 'Imported corpus', topics: 43, pages: 0},
     ],
   },
   'playwright': {
@@ -567,7 +675,7 @@ export const LANGUAGES = {
   },
   nextjs: {
     label: 'Next.js',
-    updated: '2026-09-05 10:15',
+    updated: '2026-09-05 17:19',
     docsPath: '/docs/nextjs',
     pagesPath: '/docs/nextjs/pages',
     phases: [
@@ -724,7 +832,7 @@ export const LANGUAGES = {
   },
   realworld: {
     label: 'Real World',
-    updated: '2026-09-02 20:45',
+    updated: '2026-09-03 07:12',
     docsPath: '/docs/real-world',
     pagesPath: '/docs/real-world/pages',
     phases: [
@@ -741,7 +849,7 @@ export const LANGUAGES = {
   },
   java: {
     label: 'Java',
-    updated: '2026-09-04 08:42',
+    updated: '2026-09-05 16:47',
     docsPath: '/docs/java',
     pagesPath: '/docs/java/pages',
     phases: [
@@ -770,7 +878,7 @@ export const LANGUAGES = {
   },
   python: {
     label: 'Python',
-    updated: '2026-09-03 19:58',
+    updated: '2026-09-04 08:38',
     docsPath: '/docs/python',
     pagesPath: '/docs/python/pages',
     phases: [
@@ -831,6 +939,7 @@ export function summarise(langKey) {
   const phases = lang.phases.map((p) => ({
     ...p,
     files: phaseFiles(lang.docsPath, p.slug),
+    validated: phaseValidated(lang.docsPath, p.slug),
   }));
   // Parked phases are out of the active queue, so they sit outside every
   // ratio here — otherwise a language whose scheduled work is finished can
@@ -867,12 +976,13 @@ export function summarise(langKey) {
     topicsDone: Math.round(topicsDone),
     pagesWritten,
     topicsCovered,
-    // Pages carrying a tier badge and a dated `> Verified:` line. On a track
-    // written here every page has them by contract, so this equals
-    // `pagesWritten`; on an imported one it is the number that moves. Falls back
-    // to the disk count, not to `pages`, so it stays in the same unit as the
-    // total it is shown against.
-    pagesValidated: phases.reduce((sum, p) => sum + (p.verified ?? p.files), 0),
+    // Pages carrying a tier badge and a dated `> Verified:` line — MEASURED from
+    // disk, in the same unit as the `pagesWritten` it is shown against. On a
+    // track written here it is usually equal to it, and where it is not, the
+    // difference is real and worth seeing. Taken on the track rather than summed
+    // per phase, for the same reason `pagesWritten` is: loose pages and
+    // non-matching chapter names would both go missing from a sum.
+    pagesValidated: trackValidated(lang.docsPath),
     percent: Math.round((topicsDone / topicsTotal) * 100),
     parkedPhases: parked.length,
     parkedTopicsLeft: parked.reduce((sum, p) => sum + (p.topics - p.pages), 0),

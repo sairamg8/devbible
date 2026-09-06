@@ -30,6 +30,7 @@ hit a real database instead of an in-memory impostor.
 | Coverage with JaCoCo — what the number means, what it can't (asserting nothing still counts), and coverage as a floor, not a target | <span className="db-tier t-know">Know</span> |
 | Property-based testing (jqwik) — generating the inputs you didn't think of | <span className="db-tier t-when">When Needed</span> |
 | Mutation testing (PIT) — testing the tests | <span className="db-tier t-when">When Needed</span> |
+| **Real-world testing scenarios** — what to mock and what to let run, the four failure modes of mocking, and the class-you-own vs vendor-client vs private-method cases | <span className="db-tier t-master">Master</span> |
 
 **Gate — deliverable:** the Phase 9/10 service covered three ways — controller
 slice with `MockMvc`, repository test on Testcontainers Postgres, pure unit

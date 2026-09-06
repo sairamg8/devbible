@@ -87,6 +87,7 @@ still easy to get wrong.
 | 404 handler — final non-error middleware that runs when nothing matched | <span className="db-tier t-know">Know</span> |
 | Process-level `uncaughtException` / `unhandledRejection` — **cross-link Node only**; not an Express re-lesson | <span className="db-tier t-know">Know</span> |
 | Error logging at the edge — what to log (method, path, status, request id) and what never to log | <span className="db-tier t-know">Know</span> |
+| **Every error that can reach the handler** — driver, network, library and programmer errors, and where each is translated before it arrives | <span className="db-tier t-master">Master</span> |
 
 **Gate — move on when:** a thrown error in an async route, a `next(err)` from
 middleware, and a malformed JSON body all produce the same error envelope and
