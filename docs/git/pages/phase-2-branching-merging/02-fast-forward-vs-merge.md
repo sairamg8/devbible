@@ -179,6 +179,61 @@ message telling you to think, rather than a merge commit you never intended.
 **Cause:** squash creates a new commit with no ancestry link, so the branch is not reachable and not "merged" in Git's sense
 **Fix:** `-D`, after confirming the change is in `main`. See [a branch is a pointer](01-a-branch-is-a-pointer.md)
 
+## Interview questions
+
+**★ What decides whether a merge fast-forwards?**
+The graph, not you. If your branch's tip is an **ancestor** of the branch you are
+merging, there is nothing to reconcile — Git slides the pointer forward, creates no
+commit, and records nothing. If both sides have commits the other lacks, neither
+tip is an ancestor of the other, so Git computes the merge base, compares both
+sides against it and writes a commit with **two parents**. Every `--ff` flag is
+about overriding what the graph would otherwise decide.
+
+**★ What does `--no-ff` buy, and what does it cost?**
+It buys the information that a branch existed. The merge commit groups the branch's
+commits visibly, `git log --graph` shows the shape, and reverting the whole feature
+becomes one `git revert -m 1` rather than five separate reverts. The cost is a
+merge commit for every branch including the one-commit typo fix, so in a busy
+repository the graph turns into a braid that is hard to read for exactly the reason
+you enabled the flag. For a fortnight of work it is worth it; for a two-commit fix
+it is bookkeeping.
+
+**★ Which merge setting is defensible in every repository, and why?**
+`pull.ff only`. It guarantees that `git pull` never silently creates a merge commit
+you did not ask for: if the branches have diverged, it fails and you decide
+between merging and rebasing deliberately. Its failure mode is a message telling
+you to think, which is the property that makes it safe to recommend without knowing
+anything about the team. Every other choice — always `--no-ff`, always fast-forward
+— is a taste question that should be settled per repository and applied
+consistently.
+
+**★ Why does the manual discourage merging with a dirty working tree?**
+Because the undo is best-effort. `git merge --abort` tries to reconstruct the
+pre-merge state, and the documentation says plainly that if there were uncommitted
+changes when the merge started — especially if they were further modified during
+it — `--abort` will in some cases be unable to reconstruct the original. A merge is
+one of the few Git operations whose undo is not guaranteed, so the rule is to
+commit or stash first, without exception. `ORIG_HEAD` still points at your previous
+tip, but that recovers *commits*, not uncommitted work.
+
+**★ How do you look at a merge before committing to it?**
+`git merge --no-commit --no-ff <branch>` performs the merge and stops with the
+result staged, so you can read it, test it, adjust it, or run `git merge --abort`.
+Before that, `git diff main...feature` shows what the branch actually adds — the
+three-dot form, measured from the merge base — and
+`git log --oneline --graph --decorate main feature` shows the shape you are about
+to change. `git merge-base main feature` prints the exact commit Git will compare
+against, if you want to check your mental model.
+
+**Why does a host's "Squash and merge" break `git branch -d`?**
+Because squashing produces a single new commit whose content matches the branch but
+whose ancestry does not include it. Git's "fully merged" test is reachability, so
+the branch tip is not an ancestor of `main` and `-d` refuses even though the change
+is unquestionably in. `-D` is the right answer once you have confirmed the content
+landed. It is worth knowing which button your team presses — merge, squash, or
+rebase-and-merge — because that choice governs your history far more than any local
+`merge.ff` setting.
+
 ---
 
 ← Prev: [A branch is a moving pointer](01-a-branch-is-a-pointer.md) · Next → [The three-way merge and the merge base](03-three-way-merge.md)
