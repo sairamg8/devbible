@@ -26,7 +26,7 @@ stop being a list of rules and start being consequences.
 
 ## Chunks
 
-✅ **All 17 numbered chunks written, across 69 files and 17,800 lines.** Eleven of the seventeen
+✅ **All 17 numbered chunks written — 69 pages plus this index, 17,807 lines, 421 ★.** Eleven of the seventeen
 exhausted their subject past the 300-line cap and split into lettered siblings — the cap is a file
 size, never a content budget, so a chunk that ran long became five, six or seven files rather than
 a shorter page. Every row below links to a page that exists.

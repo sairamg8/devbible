@@ -220,18 +220,20 @@ export const LANGUAGES = {
   },
   angular: {
     label: 'Angular',
-    updated: '2026-09-06 12:22',
+    updated: '2026-09-06 20:10',
     docsPath: '/docs/angular',
     pagesPath: '/docs/angular/pages',
     phases: [
-      // Phase 0 is mid-flight, measured against disk 2026-09-06. Its 47 files are
-      // three topics deep, not twelve: topic 02 `standalone-by-default` is
-      // content-complete and wired (32 files), while topics 01 (7 files) and 03
-      // (8 files) sit at roughly 5 of 17 chunks each and topics 04-12 are
-      // unstarted. Only a finished topic counts, so `pages: 1` — and
-      // `pagesPlanned` is what stops those 47 files reading as a finished phase
-      // and crediting all 12 topics.
-      {n: 0, slug: 'phase-0-how-angular-runs', name: 'How Angular runs', part: 'The Angular model', topics: 12, pages: 1, pagesPlanned: 12},
+      // Phase 0 is mid-flight, measured against disk 2026-09-06 (second pass).
+      // Its 135 files are three topics deep, not twelve: topic 01
+      // `compiler-with-a-framework-attached` CLOSED 2026-09-06 at 70 files /
+      // 17,807 lines / all 17 chunks, and topic 02 `standalone-by-default` is
+      // content-complete and wired (39 files). Topic 03 `the-provider-array`
+      // (25 files) is still open at roughly 8 of 17 chunks, and topics 04-12
+      // are unstarted. Only a FINISHED topic counts, so `pages: 2` — and
+      // `pagesPlanned` is what stops those 135 files reading as a finished
+      // phase and crediting all 12 topics.
+      {n: 0, slug: 'phase-0-how-angular-runs', name: 'How Angular runs', part: 'The Angular model', topics: 12, pages: 2, pagesPlanned: 12},
       {n: 1, slug: 'phase-1-components-templates', name: 'Components and templates', part: 'The Angular model', topics: 16, pages: 0},
       {n: 2, slug: 'phase-2-signals', name: 'Signals', part: 'The Angular model', topics: 15, pages: 0},
       {n: 3, slug: 'phase-3-signal-component-api', name: 'The signal component API', part: 'Components in the signal era', topics: 12, pages: 0},
