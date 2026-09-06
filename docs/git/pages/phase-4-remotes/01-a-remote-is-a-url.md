@@ -181,6 +181,57 @@ conclude anything about what someone else has done.
 **Cause:** someone force-pushed, and the standard refspec's leading `+` permits non-fast-forward updates to remote-tracking refs
 **Fix:** expected. Whether it was legitimate is [the golden rule](../phase-2-branching-merging/08-the-golden-rule.md)'s question
 
+## Interview questions
+
+**★ What is `origin`?**
+A name in your config, nothing more — a URL plus a refspec, typically
+`+refs/heads/*:refs/remotes/origin/*`, which says "file every branch from that URL
+under `refs/remotes/origin/`". Git requires the name no more than it requires any
+other; `git remote rename origin upstream` breaks nothing, and `git clone -o` picks
+a different one from the start. The leading `+` in that refspec is why
+`origin/main` can move *backwards* when somebody force-pushes without your fetch
+failing.
+
+**★ Why does `git status` tell you about the remote without touching the network?**
+Because it is not asking the remote — it is comparing against `origin/main`, a local
+ref recording where that branch was **when you last fetched**. Nothing in `status`,
+`log` or `diff` ever makes a network call. So "your branch is behind origin/main by
+3 commits" is a statement about your last fetch, and the honest reading of any
+remote-related output is that your repository's opinion of the remote is a cache.
+`git fetch` is the only everyday command that refreshes it.
+
+**★ Someone hands you a clone that uses HTTPS and you want SSH. Do you re-clone?**
+No — `git remote set-url origin git@github.com:you/project.git`. The objects are
+already local and only the address changes. That is also the shape of the answer to
+"my push asks for a password and rejects it": the major hosts no longer accept
+account passwords over HTTPS, so the field wants a personal access token, and the
+alternative is switching the URL to SSH. SSH versus HTTPS is a credentials decision,
+not a capability one — both do everything.
+
+**★ What does `--depth 1` cost you?**
+Ancestry. A shallow clone has only the last *n* commits, so anything that needs
+history fails or lies: `git log` past the cutoff, `blame`, `describe`, and
+merge-base calculations — which means merges and three-dot diffs too. It is a good
+trade in CI, where clone time matters and history does not, and `git fetch
+--unshallow` converts back when you need the rest. `--filter=blob:none` is the
+gentler variant: full history, file contents fetched on demand.
+
+**★ Why can you not commit on `origin/main`?**
+Because it is a remote-tracking ref, not a branch — a local record of where the
+remote's branch was, which Git updates on fetch and treats as read-only. Checking it
+out gives you a detached `HEAD` (or, with `--guess`, a new local branch that tracks
+it). The correct move is `git switch main`, or `git switch -c local-name
+origin/main` to start a branch from it. The distinction is the whole reason two
+names exist for what feels like one branch.
+
+**Where does `credential.helper store` put your token, and does it matter?**
+In plain text in `~/.git-credentials`, exactly as documented. On a personal machine
+you control that is a defensible convenience; on anything shared it is a
+credential sitting in a readable file. The alternatives are keyring-backed —
+`libsecret` on Linux, `osxkeychain` on macOS, `manager` on Windows — and they cost
+one config line. It is worth knowing which one you are using before you paste a
+token that grants write access to everything you can see.
+
 ---
 
 ← Prev: [Phase 4 index](README.md) · Next → [`fetch` versus `pull`](02-fetch-vs-pull.md)
