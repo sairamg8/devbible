@@ -24,7 +24,8 @@ tells you three things the message never spells out — which file to open, whet
 component is standalone, and that its second numbered suggestion branches purely on whether your tag
 contains a hyphen rather than on what actually went wrong. There are four distinct codes here, not
 one. This chunk is the anatomy of the compile-time pair; the runtime pair is chunk 06b, the five
-mistakes that produce the sentence are 06c, and the two escape hatches people reach for are 06d.**
+mistakes that produce the sentence are 06c and 06d, and the two escape hatches people reach for —
+`CommonModule` and `schemas` — are 06e to 06g.**
 
 ## Four error codes hide behind one sentence
 
@@ -162,7 +163,7 @@ first sentence and no numbered advice at all: `<input [valu]="query">` yields on
 
 🔴 **The `ng-` branch is where the `CommonModule` folklore comes from, and it ships in v22.1.5.** For
 `<ng-container *ngIf="user()">` the compiler tells you to add `CommonModule`, while Angular's own
-control-flow migration guide tells you that you no longer need it. That collision is chunk 06d's
+control-flow migration guide tells you that you no longer need it. That collision is chunk 06e's
 subject.
 
 A third method, `checkHostElementProperty`, emits the bare form with no numbered suggestions at all,

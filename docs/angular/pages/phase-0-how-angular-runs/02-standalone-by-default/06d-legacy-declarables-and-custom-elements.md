@@ -141,7 +141,7 @@ standalone-only restriction that `imports` carries, verbatim:
 a schema is the wrong tool — it suppresses the diagnostic while the element renders as an inert tag
 with none of your bindings applied. If no class exists and the tag comes from a script that registers
 a custom element, the schema is the only answer. What the two schema tokens actually do inside the
-registry, and why `CUSTOM_ELEMENTS_SCHEMA` refuses to rescue some tags, is chunk 06e.
+registry, and why `CUSTOM_ELEMENTS_SCHEMA` refuses to rescue some tags, is chunk 06f.
 
 ## Gotchas
 
@@ -256,4 +256,4 @@ edited. Raising NG2011 and poisoning the scope keeps the failure at the place th
 
 ---
 
-← Prev: [The five causes (1–3)](06c-the-five-causes.md) · Index: [Topic index](README.md) · Next → [`CommonModule` and `schemas`](06e-commonmodule-and-schemas.md)
+← Prev: [The five causes (1–3)](06c-the-five-causes.md) · Index: [Topic index](README.md) · Next → [The `CommonModule` anti-fix](06e-the-commonmodule-anti-fix.md)
