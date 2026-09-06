@@ -1,0 +1,98 @@
+/*
+ * The resume card, between the Study Mode controls and the page tree.
+ *
+ * A card rather than a third bordered row. The two control rows above it are
+ * permanent furniture; this one appears and disappears with the reader's
+ * history, and stacking a third full-width rule under them would read as a
+ * fourth piece of chrome even on the pages where it is absent. Bordered,
+ * inset and on `--db-surface-2`, it reads as content sitting in the column.
+ *
+ * Vertical budget: ~60px with a one-line title, ~78px with two. The sticky
+ * column is 100vh and the tree needs the rest, which is why the title clamps at
+ * two lines instead of wrapping to four.
+ */
+
+.card {
+  margin: 0.5rem 0.75rem 0.55rem;
+  padding: 0.4rem 0.55rem 0.45rem;
+  border: 1px solid var(--db-rule);
+  border-radius: 6px;
+  background: var(--db-surface-2);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.15rem;
+}
+
+.eyebrow {
+  font-family: var(--db-mono);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--db-ink-3);
+}
+
+/* Quiet by default: it destroys history, so it must not compete with the link
+   that is the point of the card. It earns colour only under the pointer. */
+.clear {
+  flex: none;
+  font-family: var(--db-sans);
+  font-size: 0.62rem;
+  line-height: 1.2;
+  color: var(--db-ink-3);
+  padding: 0.1rem 0.22rem;
+  border-radius: 4px;
+  transition: color 120ms ease, background-color 120ms ease;
+}
+
+.clear:hover {
+  color: var(--db-accent-ink);
+  background-color: var(--db-accent-soft);
+}
+
+.clear:focus-visible {
+  outline: 2px solid var(--db-accent);
+  outline-offset: 1px;
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  font-family: var(--db-sans);
+  font-size: 0.76rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--db-ink);
+  text-decoration: none;
+}
+
+/*
+ * Two classes deep, because Infima's `a:hover` underline scores the same as a
+ * single-class rule and the two stylesheets' order is the bundler's business,
+ * not this file's. Page titles here are navigation, not prose links.
+ */
+.card .title:hover {
+  color: var(--db-accent-ink);
+  text-decoration: none;
+}
+
+.card .title:focus-visible {
+  outline: 2px solid var(--db-accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Matches the control rows above, which tighten by the same amount. */
+@media (max-width: 996px) {
+  .card {
+    margin: 0.5rem 0.5rem 0.55rem;
+  }
+}

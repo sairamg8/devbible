@@ -1,0 +1,118 @@
+/*
+ * The tier floor row, directly under the collapse/expand-all bar.
+ *
+ * Geometry and typography come from the GLOBAL `.db-tier` badge in custom.css —
+ * the same rule that draws the badge at the top of every page — so this file
+ * only ever paints. Two consequences worth knowing before editing it:
+ *
+ *   1. Every override here is written with at least two classes (`.stop .state`),
+ *      so it beats `.db-tier` (one class) no matter which stylesheet the bundler
+ *      happens to emit first. A single-class override would win or lose by
+ *      source order, which is not something this file gets to decide.
+ *   2. `.db-tier` supplies the border, radius, mono uppercase and the 0.62rem
+ *      size. It is deliberately smaller than the 0.72rem buttons above it:
+ *      badges are the smaller type everywhere on the site, and at four across a
+ *      300px sidebar the room is real — "UNDERSTAND" is the wide one, and the
+ *      four together measure ~210px inside ~276px of usable width.
+ */
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.45rem 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--db-rule);
+}
+
+/*
+ * Each stop grows by the same amount on top of its own text width, so the row
+ * fills the sidebar without pretending four words of different lengths are the
+ * same size.
+ */
+.stop {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  cursor: pointer;
+  /* The containing block for the hidden input below, so focusing it scrolls
+     this stop into view and never some ancestor's corner. */
+  position: relative;
+}
+
+/*
+ * Hidden, still focusable, still in the accessibility tree — `display: none` or
+ * `visibility: hidden` would drop it from both and take the arrow keys with it.
+ * `pointer-events: none` so the click always lands on the label, which forwards
+ * it, rather than on a 1px target.
+ */
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chip {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: center;
+  /* .db-tier is nowrap; a stop that somehow outgrew its share would push the
+     sidebar sideways rather than clip. Clipped is the better failure. */
+  overflow: hidden;
+  transition: background-color 120ms ease, color 120ms ease,
+    border-color 120ms ease, opacity 120ms ease;
+}
+
+/* No floor set: the row is inert, so no tier reads as on or off. */
+.stop .resting {
+  background: var(--db-surface-2);
+  color: var(--db-ink-2);
+  border-color: var(--db-rule);
+}
+
+/* A floor is set and this tier is below it. */
+.stop .excluded {
+  background: transparent;
+  color: var(--db-ink-3);
+  border-color: var(--db-rule);
+  opacity: 0.75;
+}
+
+.stop:hover .resting,
+.stop:hover .excluded {
+  color: var(--db-ink);
+  border-color: var(--db-rule-strong);
+  opacity: 1;
+}
+
+.input:focus-visible + .chip {
+  outline: 2px solid var(--db-accent);
+  outline-offset: 1px;
+}
+
+/*
+ * Deliberately four classes deep. `:hover` counts as a class for specificity, so
+ * `.stop:hover .resting` above scores higher than a two-class rule would and
+ * would strip the chosen stop's tint the moment the pointer crossed it —
+ * whatever the source order. This outscores it instead of racing it.
+ *
+ * The tint is the tools bar's active tint, not a tier colour: "All" is the
+ * absence of a filter, not a fifth tier.
+ */
+.bar .stop .chip.chosen {
+  background: var(--db-accent-soft);
+  color: var(--db-accent-ink);
+  border-color: var(--db-accent-soft);
+  opacity: 1;
+}
+
+/* Matches the collapse/expand bar, which tightens by the same amount. */
+@media (max-width: 996px) {
+  .bar {
+    padding: 0.45rem 0.5rem 0.5rem;
+  }
+}
