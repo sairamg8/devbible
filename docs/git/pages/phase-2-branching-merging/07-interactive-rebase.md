@@ -221,6 +221,60 @@ expect to bisect, and never rewrite what is already shared.**
 **Cause:** they genuinely do not build in their replayed form — this is the check working
 **Fix:** `edit` the failing commit, fix it, `--continue`. It is exactly the problem the flag exists to expose
 
+## Interview questions
+
+**★ Why is the interactive-rebase todo list in the opposite order from `git log`?**
+Because Git executes it top to bottom, and it has to apply the oldest commit first.
+So the list is chronological, and `squash` and `fixup` merge **upwards**, into the
+line above — which is also why `squash` on the very first line fails: there is no
+previous commit to merge into. Start the rebase one commit earlier so there is a
+`pick` above it. Saving an **empty** list aborts the whole rebase, which is the
+documented way to change your mind.
+
+**★ What is the difference between `squash` and `fixup`, and which do you reach for?**
+Both merge the commit into the one above; `squash` opens an editor to combine the
+two messages, `fixup` discards this commit's message entirely. `fixup` is the
+workhorse, because the commits you are folding in are called "wip" and "fix typo"
+and their messages are worth nothing. The other commands worth knowing are `reword`
+for a message-only change, `edit` to stop *after* applying a commit so you can amend
+its content, `drop` to remove one — deleting the line does the same — and `exec` to
+run a command at that point.
+
+**★ What is the `--fixup` / `--autosquash` workflow, and why is it the best pairing
+in this phase?**
+When you notice that commit three of six needs a fix, you commit it immediately as
+`git commit --fixup=<hash>`, which writes the message `fixup! <that commit's title>`.
+Later, `git rebase -i --autosquash main` recognises those messages, matches them to
+their targets, **moves them into position** and pre-sets the command — the todo list
+arrives already correct and you just save it. No manual reordering, ever. Set
+`rebase.autosquash true` to make it the default. `--fixup=amend:<hash>` and
+`--fixup=reword:<hash>` handle the content-and-message and message-only variants.
+
+**★ How do you split one commit into two, after the fact?**
+Mark it `edit` in the todo list. The rebase stops with that commit applied and as
+`HEAD`, and then it is a soft reset plus two commits: `git reset HEAD^` to undo the
+commit while keeping the changes unstaged, `git add -p` to stage the first coherent
+piece, commit it, stage and commit the rest, then `git rebase --continue`. This is
+the documented procedure, and it is the cleanest repair for "I committed two things
+at once".
+
+**★ What problem does `--exec` solve, and why does it matter more than it sounds?**
+Replayed commits were never built in their new form — each one is your change
+applied to a base it was not written against — so a rebased branch can look
+bisectable while containing commits that do not compile. `git rebase -i --exec 'npm
+test' main` runs the command after every commit and stops at the first failure, so
+the history you present is one you have actually checked. A history that looks
+bisectable and is not is worse than an obviously messy one, because it fails
+silently for whoever bisects it a year later.
+
+**Everything on this page rewrites commits. What is the precondition, and what is
+the undo?**
+The precondition is that nobody else has the commits — every command here produces
+new hashes, exactly like a plain rebase, so it is safe on a private branch and not
+otherwise. The undo is also the same: `git reset --hard ORIG_HEAD`, which Git sets
+before the rebase starts, or the pre-rebase tip from `git reflog`. Both work because
+the original commits remain in the object store until garbage collection.
+
 ---
 
 ← Prev: [Rebase versus merge](06-rebase-vs-merge.md) · Next → [The rule about rewriting shared history](08-the-golden-rule.md)
