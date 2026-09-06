@@ -594,23 +594,30 @@ export const LANGUAGES = {
   'redux-toolkit': {
     label: "Redux Toolkit",
     imported: true,
-    updated: '2026-08-14 13:35',
+    updated: '2026-09-06 17:30',
     docsPath: '/docs/redux-toolkit',
     pagesPath: '/docs/redux-toolkit/pages',
+    // ✅ VALIDATED IN FULL 2026-09-06, session 3a6945a3. Every page carries both a tier
+    // badge and a dated `> Verified:` line, measured off disk (21 of 21), not estimated.
+    // The import grew 16 -> 21 pages: five chunks were SPLIT on concept boundaries when
+    // the contract pass took them over the 300-line cap, plus two genuinely new chunks
+    // (RTK Query queryFn/transforms/infinite-queries, and optimistic/manual cache updates)
+    // covering RTK 2 surface the 2026-08-14 import predated. Ten accuracy defects were
+    // corrected against primary sources — see research_redux_toolkit_track.md in the store.
     phases: [
-      {n: 1, slug: '01-store-setup', name: "Store setup", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 2, slug: '02-slices-and-actions', name: "Slices and actions", part: 'Imported corpus', topics: 2, pages: 2, verified: 0},
-      {n: 3, slug: '03-async-thunks', name: "Async thunks", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 4, slug: '04-rtk-query', name: "Rtk query", part: 'Imported corpus', topics: 2, pages: 2, verified: 0},
-      {n: 5, slug: '05-selectors-and-normalization', name: "Selectors and normalization", part: 'Imported corpus', topics: 2, pages: 2, verified: 0},
-      {n: 6, slug: '06-middleware', name: "Middleware", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 7, slug: '07-react-redux-integration', name: "React redux integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 8, slug: '08-immutability-and-immer', name: "Immutability and immer", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 9, slug: '09-typescript-integration', name: "Typescript integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 10, slug: '10-devtools-and-debugging', name: "Devtools and debugging", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 11, slug: '11-code-splitting', name: "Code splitting", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 12, slug: '12-testing', name: "Testing", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
-      {n: 13, slug: '13-migration', name: "Migration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 1, slug: '01-store-setup', name: "Store setup", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 2, slug: '02-slices-and-actions', name: "Slices and actions", part: 'Imported corpus', topics: 3, pages: 3, verified: 3},
+      {n: 3, slug: '03-async-thunks', name: "Async thunks", part: 'Imported corpus', topics: 2, pages: 2, verified: 2},
+      {n: 4, slug: '04-rtk-query', name: "RTK Query", part: 'Imported corpus', topics: 4, pages: 4, verified: 4},
+      {n: 5, slug: '05-selectors-and-normalization', name: "Selectors and normalization", part: 'Imported corpus', topics: 2, pages: 2, verified: 2},
+      {n: 6, slug: '06-middleware', name: "Middleware", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 7, slug: '07-react-redux-integration', name: "React-Redux integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 8, slug: '08-immutability-and-immer', name: "Immutability and Immer", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 9, slug: '09-typescript-integration', name: "TypeScript integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 10, slug: '10-devtools-and-debugging', name: "DevTools and debugging", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 11, slug: '11-code-splitting', name: "Code splitting", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
+      {n: 12, slug: '12-testing', name: "Testing", part: 'Imported corpus', topics: 2, pages: 2, verified: 2},
+      {n: 13, slug: '13-migration', name: "Migration", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
     ],
   },
   'tanstack-query': {

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-06 12:22",
+  "updated": "2026-09-06 17:30",
   "totals": {
     "languages": 29,
     "complete": 10,
@@ -16,12 +16,12 @@
   },
   "importedTotals": {
     "tracks": 11,
-    "untouched": 9,
+    "untouched": 8,
     "validating": 1,
-    "validated": 1,
-    "pages": 193,
-    "pagesValidated": 37,
-    "percent": 19
+    "validated": 2,
+    "pages": 198,
+    "pagesValidated": 58,
+    "percent": 29
   },
   "languages": [
     {
@@ -363,17 +363,17 @@
     {
       "key": "redux-toolkit",
       "label": "Redux Toolkit",
-      "status": "imported",
-      "percent": 0,
+      "status": "validated",
+      "percent": 100,
       "counts": "pages validated",
-      "topics": 16,
-      "completed": 0,
-      "pending": 16,
+      "topics": 21,
+      "completed": 21,
+      "pending": 0,
       "imported": true,
-      "phases": "0/13",
-      "next": "1 · Store setup",
+      "phases": "13/13",
+      "next": null,
       "docs": "/docs/redux-toolkit",
-      "updated": "2026-08-14 13:35",
+      "updated": "2026-09-06 17:30",
       "note": null
     },
     {
