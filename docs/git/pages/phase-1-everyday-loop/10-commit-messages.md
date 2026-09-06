@@ -219,6 +219,67 @@ sees it. Tidy at the point the work becomes shared, not before.
 **Cause:** the trailer must be in the trailer block — after a blank line, spelled exactly, with a real email
 **Fix:** check with `git interpret-trailers --parse`, and confirm the email matches an account on the host
 
+## Interview questions
+
+**★ What part of a commit message is a Git rule, and what part is convention?**
+The structure is a rule: the text up to the first blank line is the **title**, and
+Git uses it everywhere — `log --oneline`, `format-patch`'s Subject line,
+`shortlog`, every host's commit and PR list. The 50-character limit is a
+documented *recommendation* in `git commit`'s DISCUSSION. The 72-character body
+wrap is neither — it is community practice inherited from email workflows and from
+`git log` indenting output by four spaces. Knowing which is which matters when
+somebody quotes a linter at you as though it were Git.
+
+**★ Why imperative mood — "Fix", not "Fixed"?**
+Two reasons, neither of them taste. Git's own generated messages are imperative —
+`Merge branch 'x'`, `Revert "..."` — so an imperative subject reads consistently
+beside them. And it makes the subject complete a sentence that is actually useful:
+*"If applied, this commit will… fix rounding on invoice totals."* That test is
+also the cheapest way to catch an empty message: *"If applied, this commit will…
+update code"* is obviously worthless, in a way that "update code" sitting alone is
+not.
+
+**★ What should the body of a commit message contain?**
+Not a translation of the diff — the diff already says what changed. The body's job
+is what the diff cannot show: why the change was needed, why *this* approach, what
+was tried and rejected, non-obvious consequences, and context that lives outside
+the code such as an incident or a customer report. A one-line change with eight
+lines of body is a good commit; the ratio is not the measure. And a body is not
+compulsory: "Fix typo in README" needs nothing more, and ceremony for its own sake
+trains people to stop reading.
+
+**★ What are the four tests for whether something belongs in one commit?**
+It builds, its tests pass, it does one thing, and it can be reverted alone. The
+payoff is not tidiness: `git bisect` assumes every commit builds, so a branch of
+broken intermediates turns a binary search into reading; `git revert` on a commit
+that did three things reverts all three or none; three small commits get read
+while one large commit gets skimmed and approved; and `git log -p -- <file>` is
+only an explanation if each step had one intent. The quick heuristic is the
+title — if the subject needs an "and", the commit needs splitting.
+
+**★ Do you have to work in atomic commits to produce them?**
+No, and it is normal not to. Commit messily while thinking and tidy before anyone
+sees it: `git add -p` stages only the hunks belonging to one change, which
+produces most of the benefit on its own, and `git reset --soft` or an interactive
+rebase collapses or re-splits commits on a branch nobody else has. The constraint
+is the golden rule, not perfectionism — tidy at the point the work becomes shared,
+and leave a personal scratch repository or a to-be-squashed spike alone.
+
+**Should a team adopt Conventional Commits?**
+Only if something consumes it. It is a convention rather than a Git feature, and
+its purpose is machine-readable titles for changelog generation and automatic
+semantic-version bumps. Adopted with a release tool behind it, it pays. Adopted
+because it looks professional, it buys ceremony and produces a repository where
+half the commits say `chore:` because nobody could decide which type applied.
+
+**What single setting most improves a team's commit messages?**
+`commit.verbose = true`, which puts the staged diff in the editor below the
+message. You write the description while looking at exactly what is being
+committed, which catches both the accidental extra file and the vague subject. A
+`commit.template` skeleton helps too. Both do more than a policy document, and if
+a format genuinely matters, a `commit-msg` hook enforces it rather than asking
+people to remember.
+
 ---
 
 ← Prev: [`git log`](09-git-log.md) · Next → [`git stash`](11-git-stash.md)
