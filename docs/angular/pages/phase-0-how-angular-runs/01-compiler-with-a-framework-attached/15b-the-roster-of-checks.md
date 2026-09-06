@@ -98,7 +98,7 @@ from `error_code.ts`:
   in a forbidden context such as a property initializer or a constructor."*
 
 Neither can be configured, suppressed or demoted. Naming either in `checks` produces NG4005, per
-**15d · Configuring it, and getting it wrong** *(not written yet)*.
+[15d · Configuring it, and getting it wrong](15d-configuring-extended-diagnostics.md).
 
 ## Every check, with the compiler's own description
 

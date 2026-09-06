@@ -212,7 +212,7 @@ and keep the warnings.
 **★ Symptom: you turned off `strictTemplates` *and* had configured `extendedDiagnostics`, and now the
 build fails outright.** Cause: that combination is NG4003, a config-time error rather than a silent
 degradation — the compiler refuses a configuration that asks for diagnostics it cannot produce. Fix:
-covered in **15d · Configuring it, and getting it wrong** *(not written yet)*; the
+covered in [15d · Configuring it, and getting it wrong](15d-configuring-extended-diagnostics.md); the
 short version is that you must remove one or the other.
 
 **★ Symptom: after `ng update` to v22 your `tsconfig` contains suppressions nobody wrote.** Cause:

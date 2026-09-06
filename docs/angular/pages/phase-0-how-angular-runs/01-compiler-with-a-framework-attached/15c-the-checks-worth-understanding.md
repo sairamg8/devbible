@@ -270,4 +270,4 @@ would have been a new build failure for anyone running `defaultCategory: "error"
 
 ---
 
-← Prev: [15b · The roster of checks](15b-the-roster-of-checks.md) · Index: [Topic index](README.md) · Next → **15d · Configuring it, and getting it wrong** *(not written yet)*
+← Prev: [15b · The roster of checks](15b-the-roster-of-checks.md) · Index: [Topic index](README.md) · Next → [15d · Configuring it, and getting it wrong](15d-configuring-extended-diagnostics.md)
