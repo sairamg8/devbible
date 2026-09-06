@@ -2,23 +2,23 @@
   "generated": "2026-09-06",
   "lineCap": 300,
   "totals": {
-    "files": 6729,
-    "pages": 5902,
-    "verified": 6336,
-    "validated": 68,
-    "pendingUnits": 1037
+    "files": 6850,
+    "pages": 6020,
+    "verified": 6475,
+    "validated": 91,
+    "pendingUnits": 1025
   },
   "tracks": {
     "angular": {
-      "pages": 0,
-      "files": 3,
-      "verified": 1,
-      "converted": 0,
+      "pages": 113,
+      "files": 119,
+      "verified": 117,
+      "converted": 116,
       "validated": 0,
       "imported": false,
-      "score": 155,
+      "score": 179,
       "consoleBlocks": 0,
-      "overCap": 0,
+      "overCap": 3,
       "noInterview": 0,
       "units": [
         {
@@ -38,6 +38,31 @@
           "why": [
             "1/1 never sourced",
             "1/1 no tier badge"
+          ]
+        },
+        {
+          "unit": "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached",
+          "pages": 51,
+          "validated": 0,
+          "score": 16,
+          "why": [
+            "2/52 over the 300-line cap"
+          ]
+        },
+        {
+          "unit": "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default",
+          "pages": 38,
+          "validated": 0,
+          "score": 0,
+          "why": []
+        },
+        {
+          "unit": "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array",
+          "pages": 24,
+          "validated": 0,
+          "score": 8,
+          "why": [
+            "1/25 over the 300-line cap"
           ]
         },
         {
@@ -7852,192 +7877,121 @@
       ]
     },
     "redux-toolkit": {
-      "pages": 16,
-      "files": 18,
-      "verified": 0,
-      "converted": 0,
-      "validated": 0,
-      "imported": true,
-      "score": 1490,
+      "pages": 21,
+      "files": 23,
+      "verified": 23,
+      "converted": 23,
+      "validated": 23,
+      "imported": false,
+      "score": 0,
       "consoleBlocks": 0,
       "overCap": 0,
-      "noInterview": 16,
+      "noInterview": 0,
       "units": [
         {
           "unit": "docs/redux-toolkit",
           "pages": 0,
-          "validated": 0,
-          "score": 65,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/01-store-setup",
           "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/02-slices-and-actions",
-          "pages": 2,
-          "validated": 0,
-          "score": 170,
-          "why": [
-            "2/2 never sourced",
-            "2/2 no tier badge",
-            "2/2 no Interview questions",
-            "2/2 no Gotchas"
-          ]
+          "pages": 3,
+          "validated": 3,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/03-async-thunks",
-          "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "pages": 2,
+          "validated": 2,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/04-rtk-query",
-          "pages": 2,
-          "validated": 0,
-          "score": 170,
-          "why": [
-            "2/2 never sourced",
-            "2/2 no tier badge",
-            "2/2 no Interview questions",
-            "2/2 no Gotchas"
-          ]
+          "pages": 4,
+          "validated": 4,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/05-selectors-and-normalization",
           "pages": 2,
-          "validated": 0,
-          "score": 170,
-          "why": [
-            "2/2 never sourced",
-            "2/2 no tier badge",
-            "2/2 no Interview questions",
-            "2/2 no Gotchas"
-          ]
+          "validated": 2,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/06-middleware",
           "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/07-react-redux-integration",
           "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/08-immutability-and-immer",
           "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/09-typescript-integration",
           "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/10-devtools-and-debugging",
           "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/11-code-splitting",
           "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/12-testing",
-          "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "pages": 2,
+          "validated": 2,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages/13-migration",
           "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/redux-toolkit/pages",
           "pages": 0,
-          "validated": 0,
-          "score": 65,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         }
       ]
     },

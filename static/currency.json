@@ -1,18 +1,18 @@
 {
   "version": 1,
   "generatedFrom": "src/data/pins.js",
-  "generated": "2026-09-03",
+  "generated": "2026-09-06",
   "horizonDays": 60,
   "totals": {
-    "pins": 43,
-    "current": 18,
-    "patch": 6,
-    "minor": 5,
+    "pins": 59,
+    "current": 34,
+    "patch": 7,
+    "minor": 6,
     "major": 1,
-    "unanchored": 12,
+    "unanchored": 10,
     "unreachable": 0,
-    "inconsistent": 1,
-    "unbolded": 7,
+    "inconsistent": 0,
+    "unbolded": 0,
     "events": 1
   },
   "events": [
@@ -21,21 +21,11 @@
       "kind": "lts",
       "cycle": "26",
       "date": "2026-10-28",
-      "inDays": 55
+      "inDays": 52
     }
   ],
-  "inconsistent": [
-    "typescript"
-  ],
-  "unbolded": [
-    "docker",
-    "podman",
-    "jdk",
-    "jooq",
-    "flyway",
-    "jest",
-    "storybook"
-  ],
+  "inconsistent": [],
+  "unbolded": [],
   "unreachable": [],
   "tracks": {
     "nodejs": "minor",
@@ -44,10 +34,11 @@
     "typescript": "minor",
     "postgresql": "minor",
     "real-world": "minor",
+    "nextjs": "minor",
     "mongodb": "minor",
     "redis": "patch",
     "nginx": "patch",
-    "docker": "patch",
+    "docker": "minor",
     "python": "none",
     "java": "major",
     "git": "none",
@@ -55,11 +46,10 @@
     "react": "frozen",
     "jest-rtl": "unanchored",
     "storybook": "minor",
-    "redux-toolkit": "unanchored",
-    "tanstack-query": "unanchored",
+    "redux-toolkit": "none",
+    "tanstack-query": "none",
     "framer-motion": "unanchored",
     "angular": "patch",
-    "nextjs": "none",
     "vite": "unanchored",
     "webpack": "unanchored",
     "babel": "unanchored",
@@ -83,7 +73,7 @@
           "kind": "lts",
           "cycle": "26",
           "date": "2026-10-28",
-          "inDays": 55
+          "inDays": 52
         }
       ],
       "tracks": [
@@ -94,11 +84,11 @@
         "postgresql",
         "real-world"
       ],
-      "pages": 610,
-      "claimed": "24.19.0",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "24.19.0",
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": "Node 26 becomes LTS 2026-10-28 — 311 pages say \"Active LTS\" and that claim expires then.",
@@ -116,16 +106,15 @@
       "events": [],
       "tracks": [
         "postgresql",
-        "nodejs"
+        "nodejs",
+        "nextjs"
       ],
-      "pages": 317,
-      "claimed": "18.4",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "17.10",
-      "minority": [
-        "17.10×3"
-      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
       "error": null,
       "note": null,
       "checked": "2026-08-31"
@@ -144,14 +133,12 @@
         "mongodb",
         "nodejs"
       ],
-      "pages": 16,
-      "claimed": "8.0",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "7.5.0",
-      "minority": [
-        "8.2.12×2"
-      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
       "error": null,
       "note": null,
       "checked": "2026-08-31"
@@ -170,11 +157,11 @@
         "redis",
         "nodejs"
       ],
-      "pages": 7,
-      "claimed": "8.10.0",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "8.10.0",
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -193,7 +180,7 @@
       "tracks": [
         "nginx"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
@@ -208,19 +195,19 @@
       "source": "eol:docker-engine",
       "policy": "latest",
       "pin": "29.7.2",
-      "latest": "29.7.2",
-      "newestOverall": "29.7.2",
-      "drift": "none",
+      "latest": "29.8.0",
+      "newestOverall": "29.8.0",
+      "drift": "minor",
       "eol": false,
       "events": [],
       "tracks": [
         "docker"
       ],
-      "pages": 1,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": "1.10.0",
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -239,11 +226,11 @@
       "tracks": [
         "docker"
       ],
-      "pages": 5,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": "6.0",
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -262,14 +249,12 @@
       "tracks": [
         "python"
       ],
-      "pages": 345,
-      "claimed": "3.14.7",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "3.14",
-      "minority": [
-        "3.15×2"
-      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
       "error": null,
       "note": null,
       "checked": "2026-08-31"
@@ -287,11 +272,11 @@
       "tracks": [
         "java"
       ],
-      "pages": 7,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": "1.62.0",
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -310,10 +295,10 @@
       "tracks": [
         "git"
       ],
-      "pages": 60,
-      "claimed": "2.55.0",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
       "unbolded": null,
       "minority": null,
       "error": null,
@@ -325,8 +310,8 @@
       "source": "eol:firefox",
       "policy": "frozen",
       "pin": "153.0.3",
-      "latest": "155.0",
-      "newestOverall": "155.0",
+      "latest": "155.0.1",
+      "newestOverall": "155.0.1",
       "drift": "frozen",
       "eol": false,
       "events": [],
@@ -334,15 +319,12 @@
         "css",
         "react"
       ],
-      "pages": 56,
-      "claimed": "153.0.3",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "153.0.3",
-      "minority": [
-        "153.0×20",
-        "154.0×1"
-      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
       "error": null,
       "note": "System Firefox is 154.0.1 as of 2026-08-31 and the harness drives it fine — re-measuring is possible, it is simply a decision nobody has made.",
       "checked": "2026-08-31"
@@ -366,18 +348,43 @@
         "framer-motion",
         "real-world"
       ],
-      "pages": 303,
-      "claimed": "19.2.8",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "19.2.18",
-      "minority": [
-        "19.2×5",
-        "18.3.1×1"
-      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
       "error": null,
       "note": null,
       "checked": "2026-08-31"
+    },
+    "vitest": {
+      "label": "Vitest",
+      "source": "npm:vitest",
+      "policy": "latest",
+      "pin": "5.0.0",
+      "latest": "5.0.0",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs",
+        "jest-rtl",
+        "react",
+        "typescript",
+        "nodejs",
+        "javascript"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-09-05"
     },
     "typescript": {
       "label": "TypeScript",
@@ -393,32 +400,12 @@
         "typescript",
         "real-world"
       ],
-      "pages": 363,
-      "claimed": "5.9.3",
-      "claimedDrift": "major",
-      "claimedMatchesPin": false,
-      "unbolded": "6.0.3",
-      "minority": [
-        "7.0.2×147",
-        "5.0×12",
-        "4.0×5",
-        "4.9×3",
-        "4.7×2",
-        "4.2×2",
-        "2.1×2",
-        "4.5×2",
-        "5.4×2",
-        "2.2×2",
-        "3.7×1",
-        "5.8×1",
-        "3.4×1",
-        "4.3×1",
-        "4.4×1",
-        "2.8×1",
-        "3.1×1",
-        "4.8×1",
-        "4.1×1"
-      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
       "error": null,
       "note": null,
       "checked": "2026-08-31"
@@ -436,11 +423,11 @@
       "tracks": [
         "expressjs"
       ],
-      "pages": 63,
-      "claimed": "5.2.1",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "5.2.1",
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -459,11 +446,11 @@
       "tracks": [
         "angular"
       ],
-      "pages": 7,
-      "claimed": "22.1.4",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "22.1.4",
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -483,14 +470,12 @@
         "react",
         "nextjs"
       ],
-      "pages": 73,
-      "claimed": "16.3.4",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "16.3",
-      "minority": [
-        "16.3.1×6"
-      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
       "error": null,
       "note": null,
       "checked": "2026-09-03"
@@ -508,10 +493,10 @@
       "tracks": [
         "nodejs"
       ],
-      "pages": 6,
-      "claimed": "12.0.2",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
       "unbolded": null,
       "minority": null,
       "error": null,
@@ -523,7 +508,7 @@
       "source": "npm:undici",
       "policy": "latest",
       "pin": "8.10.0",
-      "latest": "8.10.1",
+      "latest": "8.10.2",
       "newestOverall": null,
       "drift": "patch",
       "eol": null,
@@ -531,39 +516,37 @@
       "tracks": [
         "nodejs"
       ],
-      "pages": 1,
-      "claimed": "8.10.0",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
       "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
       "checked": "2026-08-31"
     },
-    "bcrypt": {
-      "label": "bcrypt",
-      "source": "npm:bcrypt",
+    "webpush": {
+      "label": "web-push",
+      "source": "npm:web-push",
       "policy": "latest",
-      "pin": "6.0.0",
-      "latest": "6.0.0",
+      "pin": "3.6.7",
+      "latest": "3.6.7",
       "newestOverall": null,
       "drift": "none",
       "eol": null,
       "events": [],
       "tracks": [
-        "nodejs",
-        "expressjs",
-        "real-world"
+        "nextjs"
       ],
-      "pages": 3,
-      "claimed": "6.0.0",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
       "unbolded": null,
       "minority": null,
       "error": null,
-      "note": "Native addon (node-gyp-build). Versions < 5.0.0 mishandle NUL bytes and truncate at 255 chars — a real upgrade boundary, not just a version number.",
+      "note": "Server side of Web Push only. The browser half (PushManager, VAPID public key) is platform API and has no pin.",
       "checked": "2026-09-03"
     },
     "zod": {
@@ -579,17 +562,41 @@
       "tracks": [
         "nodejs",
         "expressjs",
-        "real-world"
+        "real-world",
+        "nextjs"
       ],
-      "pages": 38,
-      "claimed": "4.4.3",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "4.4.3",
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
       "checked": "2026-08-31"
+    },
+    "turbo": {
+      "label": "Turborepo",
+      "source": "npm:turbo",
+      "policy": "latest",
+      "pin": "2.10.12",
+      "latest": "2.10.12",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-09-04"
     },
     "valibot": {
       "label": "Valibot",
@@ -604,10 +611,10 @@
       "tracks": [
         "nodejs"
       ],
-      "pages": 1,
-      "claimed": "1.4.2",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
       "unbolded": null,
       "minority": null,
       "error": null,
@@ -628,10 +635,10 @@
         "typescript",
         "vite"
       ],
-      "pages": 2,
-      "claimed": "0.28.2",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
       "unbolded": null,
       "minority": null,
       "error": null,
@@ -649,7 +656,7 @@
       "eol": null,
       "events": [],
       "tracks": [],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
@@ -672,21 +679,15 @@
       "tracks": [
         "java"
       ],
-      "pages": 1561,
-      "claimed": "4.1",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "4.1.0",
-      "minority": [
-        "4.1.0×36",
-        "4.1.1×17",
-        "4.0×6",
-        "2.6×2",
-        "3.4×1"
-      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
       "error": null,
       "note": null,
-      "checked": "2026-08-31"
+      "checked": "2026-09-04"
     },
     "springFramework": {
       "label": "Spring Framework",
@@ -701,18 +702,15 @@
       "tracks": [
         "java"
       ],
-      "pages": 935,
-      "claimed": "7.0",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "7.0.8",
-      "minority": [
-        "7.0.8×23",
-        "7.0.9×10"
-      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
       "error": null,
       "note": null,
-      "checked": "2026-08-31"
+      "checked": "2026-09-04"
     },
     "mockito": {
       "label": "Mockito",
@@ -727,11 +725,11 @@
       "tracks": [
         "java"
       ],
-      "pages": 151,
-      "claimed": "5.23.0",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "5.23.0",
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -750,11 +748,11 @@
       "tracks": [
         "java"
       ],
-      "pages": 113,
-      "claimed": "6.0.3",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "6.0.3",
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": "The repo is junit-team/junit-framework — junit-team/junit5 now 301-redirects.",
@@ -773,11 +771,11 @@
       "tracks": [
         "java"
       ],
-      "pages": 87,
-      "claimed": "2.0.5",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "2.0.5",
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -788,7 +786,7 @@
       "source": "gh:jOOQ/jOOQ",
       "policy": "latest",
       "pin": "3.21",
-      "latest": "3.21.7",
+      "latest": "3.21.8",
       "newestOverall": null,
       "drift": "none",
       "eol": null,
@@ -796,11 +794,11 @@
       "tracks": [
         "java"
       ],
-      "pages": 33,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": "3.21",
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -811,7 +809,7 @@
       "source": "gh:flyway/flyway",
       "policy": "latest",
       "pin": "12",
-      "latest": "13.4.0",
+      "latest": "13.5.0",
       "newestOverall": null,
       "drift": "major",
       "eol": null,
@@ -819,11 +817,11 @@
       "tracks": [
         "java"
       ],
-      "pages": 50,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": "12.4.0",
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -842,7 +840,7 @@
       "tracks": [
         "vite"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
@@ -865,7 +863,7 @@
       "tracks": [
         "webpack"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
@@ -888,7 +886,7 @@
       "tracks": [
         "babel"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
@@ -903,7 +901,7 @@
       "source": "npm:eslint",
       "policy": "latest",
       "pin": null,
-      "latest": "10.9.1",
+      "latest": "10.10.0",
       "newestOverall": null,
       "drift": "unanchored",
       "eol": null,
@@ -911,7 +909,7 @@
       "tracks": [
         "eslint-oxlint"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
@@ -934,7 +932,7 @@
       "tracks": [
         "eslint-oxlint"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
@@ -957,11 +955,11 @@
       "tracks": [
         "jest-rtl"
       ],
-      "pages": 8,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": "29.7",
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -980,7 +978,7 @@
       "tracks": [
         "jest-rtl"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
@@ -995,7 +993,7 @@
       "source": "npm:playwright",
       "policy": "latest",
       "pin": null,
-      "latest": "1.62.1",
+      "latest": "1.63.0",
       "newestOverall": null,
       "drift": "unanchored",
       "eol": null,
@@ -1003,7 +1001,7 @@
       "tracks": [
         "playwright"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
@@ -1026,11 +1024,11 @@
       "tracks": [
         "storybook"
       ],
-      "pages": 26,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": "10.5.8",
+      "unbolded": null,
       "minority": null,
       "error": null,
       "note": null,
@@ -1040,47 +1038,49 @@
       "label": "Redux Toolkit",
       "source": "npm:@reduxjs/toolkit",
       "policy": "latest",
-      "pin": null,
+      "pin": "2.12.0",
       "latest": "2.12.0",
       "newestOverall": null,
-      "drift": "unanchored",
+      "drift": "none",
       "eol": null,
       "events": [],
       "tracks": [
-        "redux-toolkit"
+        "redux-toolkit",
+        "nextjs"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
       "unbolded": null,
       "minority": null,
       "error": null,
-      "note": null,
-      "checked": "2026-08-31"
+      "note": "react-redux 9.3.0 travels with it. RTK Query has no documented server-prefetch equivalent of HydrationBoundary; its own docs recommend client-only fetching.",
+      "checked": "2026-09-05"
     },
     "tanstack": {
       "label": "TanStack Query",
       "source": "npm:@tanstack/react-query",
       "policy": "latest",
-      "pin": null,
+      "pin": "5.102.8",
       "latest": "5.102.8",
       "newestOverall": null,
-      "drift": "unanchored",
+      "drift": "none",
       "eol": null,
       "events": [],
       "tracks": [
-        "tanstack-query"
+        "tanstack-query",
+        "nextjs"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
       "unbolded": null,
       "minority": null,
       "error": null,
-      "note": null,
-      "checked": "2026-08-31"
+      "note": "@tanstack/query-core and @tanstack/react-query-next-experimental share the version. The docs on main show queryClient.query() and environmentManager.isServer(), which read as unreleased v6 API — they are not; both ship in published 5.102.8.",
+      "checked": "2026-09-05"
     },
     "motion": {
       "label": "Motion",
@@ -1095,7 +1095,7 @@
       "tracks": [
         "framer-motion"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
@@ -1104,6 +1104,337 @@
       "error": null,
       "note": "Package renamed framer-motion → motion. 14 pages still import the old name.",
       "checked": "2026-08-31"
+    },
+    "nextauth": {
+      "label": "Auth.js (NextAuth)",
+      "source": "npm:next-auth",
+      "policy": "major",
+      "pin": "5.0.0-beta.32",
+      "latest": "4.24.15",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "v5 is still on the beta dist-tag (published 2026-07-20); npm latest is v4. The project states no date for a stable v5. @auth/core 0.41.3 travels with it and is not installed directly.",
+      "checked": "2026-09-05"
+    },
+    "bcrypt": {
+      "label": "bcrypt",
+      "source": "npm:bcrypt",
+      "policy": "latest",
+      "pin": "6.0.0",
+      "latest": "6.0.0",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs",
+        "nodejs",
+        "javascript",
+        "expressjs",
+        "real-world"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "Only the first 72 BYTES of a password are used, not the first 72 characters — a multi-byte password is truncated earlier than it looks. Native addon (node-gyp-build); versions < 5.0.0 mishandle NUL bytes and truncate at 255 chars, a real upgrade boundary rather than just a version number.",
+      "checked": "2026-09-05"
+    },
+    "prisma": {
+      "label": "Prisma",
+      "source": "npm:@prisma/client",
+      "policy": "latest",
+      "pin": "7.10.0",
+      "latest": "7.10.0",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "@auth/prisma-adapter 2.11.3 declares \"@prisma/client\": \">=2.26.0 || >=3 || >=4 || >=5 || >=6\" — the first clause is unbounded, so Prisma 7 installs with no peer warning despite the ladder stopping at 6.",
+      "checked": "2026-09-05"
+    },
+    "bullmq": {
+      "label": "BullMQ",
+      "source": "npm:bullmq",
+      "policy": "latest",
+      "pin": "6.3.4",
+      "latest": "6.3.4",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "Worker and QueueEvents create DUPLICATED Redis connections internally, so a queue costs more connections than it looks like. worker.close() \"will not timeout by itself\", so a SIGTERM handler needs its own deadline. A busy CPU can stop a worker renewing its lock, which marks the job stalled and re-runs it — the reason handlers must be idempotent.",
+      "checked": "2026-09-05"
+    },
+    "drizzleOrm": {
+      "label": "Drizzle ORM",
+      "source": "npm:drizzle-orm",
+      "policy": "latest",
+      "pin": "0.45.2",
+      "latest": "0.45.2",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "The published docs at orm.drizzle.team describe the 1.0 RELEASE CANDIDATE (drizzle-orm@rc), not this stable line — and the two differ in the relations API: the rc shows defineRelations, while 0.45.2 typings export relations() and no defineRelations at all (read from unpkg 2026-09-05). Bumping this pin to 1.0 is an API migration, not a version bump.",
+      "checked": "2026-09-05"
+    },
+    "neonServerless": {
+      "label": "Neon serverless driver",
+      "source": "npm:@neondatabase/serverless",
+      "policy": "latest",
+      "pin": "1.1.0",
+      "latest": "1.1.0",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "The HTTP driver (`neon()`) and the WebSocket driver (`Pool`/`Client`) ship in this one package and have different lifecycle rules — ch15 01e teaches one-shot HTTP queries, 01f the WebSocket pool. A version bump touches both.",
+      "checked": "2026-09-05"
+    },
+    "drizzleKit": {
+      "label": "Drizzle Kit",
+      "source": "npm:drizzle-kit",
+      "policy": "latest",
+      "pin": "0.31.10",
+      "latest": "0.31.10",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "Travels with drizzle-orm and shares its rc split (rc = 1.0.0-rc.4 for both). It has no shadow-database equivalent, so it cannot detect schema drift the way Prisma Migrate can — ch15 01i/01ia teach building that check from drizzle-kit export instead.",
+      "checked": "2026-09-05"
+    },
+    "reactHookForm": {
+      "label": "React Hook Form",
+      "source": "npm:react-hook-form",
+      "policy": "latest",
+      "pin": "7.87.0",
+      "latest": "7.87.0",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs",
+        "react",
+        "real-world"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "@hookform/resolvers 5.9.1 is the zod bridge and travels with it. RHF documentation never mentions Server Actions.",
+      "checked": "2026-09-05"
+    },
+    "jose": {
+      "label": "jose",
+      "source": "npm:jose",
+      "policy": "latest",
+      "pin": "6.2.11",
+      "latest": "6.2.12",
+      "newestOverall": null,
+      "drift": "patch",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs",
+        "real-world"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "Unsecured JWTs (alg: none) are never accepted by its verify API — the reason ch10 teaches it over jsonwebtoken 9.0.3.",
+      "checked": "2026-09-05"
+    },
+    "clerk": {
+      "label": "Clerk",
+      "source": "npm:@clerk/nextjs",
+      "policy": "latest",
+      "pin": "7.9.1",
+      "latest": "7.9.1",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-09-05"
+    },
+    "supabase": {
+      "label": "Supabase JS",
+      "source": "npm:@supabase/supabase-js",
+      "policy": "latest",
+      "pin": "2.115.0",
+      "latest": "2.115.0",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "@supabase/ssr 0.12.6 travels with it. Its own docs: never trust supabase.auth.getSession() in server code such as Proxy.",
+      "checked": "2026-09-05"
+    },
+    "nuqs": {
+      "label": "nuqs",
+      "source": "npm:nuqs",
+      "policy": "latest",
+      "pin": "2.10.1",
+      "latest": "2.10.1",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "Throttles URL writes because browsers rate-limit history calls; Safari is the strict case at 120ms (320ms on older versions). Its server loaders parse but deliberately do not validate.",
+      "checked": "2026-09-05"
+    },
+    "jotai": {
+      "label": "Jotai",
+      "source": "npm:jotai",
+      "policy": "latest",
+      "pin": "2.20.3",
+      "latest": "2.20.3",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs",
+        "react"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "A module-level default store is shared across requests on the server. atomWithHash documents a dependency on Router.events, which the App Router does not expose.",
+      "checked": "2026-09-05"
+    },
+    "zustand": {
+      "label": "Zustand",
+      "source": "npm:zustand",
+      "policy": "latest",
+      "pin": "5.0.15",
+      "latest": "5.0.15",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nextjs",
+        "react"
+      ],
+      "pages": null,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "v5 is stricter than v4 about selectors returning fresh references: a new object from a selector loops until Maximum update depth exceeded. useShallow is the documented fix.",
+      "checked": "2026-09-05"
     },
     "webVitals": {
       "label": "web-vitals",
@@ -1118,7 +1449,7 @@
       "tracks": [
         "web-vitals-performance"
       ],
-      "pages": 0,
+      "pages": null,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
