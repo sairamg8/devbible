@@ -220,6 +220,68 @@ diff never has to be untangled.
 **Cause:** Git detected binary content and will not print it
 **Fix:** expected. Ask whether the file belongs in the repository; if it does, a `.gitattributes` diff driver can summarise it
 
+## Interview questions
+
+**★ `git diff` prints nothing but you have definitely changed something. What is
+going on?**
+The change is staged. Bare `git diff` compares the working tree to the *index*, and
+once you have run `git add` those two agree, so there is nothing to print. The
+command is not wrong — it is answering a different question from the one you meant.
+`git diff --staged` shows index against `HEAD`, which is exactly what the next
+commit will contain, and `git diff HEAD` shows everything since the last commit,
+staged or not.
+
+**★ What is the difference between `git diff a b` and `git diff a...b`, and which one
+does a pull request show?**
+Two dots compares the two tips, so anything that landed on `a` since you branched
+appears as a difference — usually as if your branch had deleted it. Three dots
+compares the **merge base** of the two against `b`, which is exactly *what your
+branch changed*. A pull request shows the three-dot diff, so if a review looks
+nothing like the change you thought you made, you are almost certainly reading a
+two-dot diff locally.
+
+**★ Why can a one-line fix produce a 400-line diff, and what do you do about it?**
+Because the diff is computed, not recorded. Git stores snapshots and works out a
+description of the difference on demand, so a reformat, a line-ending change or an
+editor stripping trailing whitespace is indistinguishable from real work in the
+output. To read it now, `-w` ignores whitespace entirely. The better fix is
+upstream: keep the reformat in its own commit so the diff never has to be
+untangled by the reviewer.
+
+**★ Why does a moved function read as a large delete plus a large add?**
+Because Git does not record moves, it infers them, and rename detection works per
+*file* rather than per block — a function relocated inside a file, or across two
+files that both still exist, has nothing to match. `--color-moved` colours blocks
+that moved differently from ones that changed, which turns a large refactor into a
+readable diff, and `-M40%` lowers the similarity threshold for whole-file renames.
+Neither is a bug fix; both are ways of asking Git for a more useful story.
+
+**★ The diff has matched the wrong closing brace and reads as nonsense. Why, and
+what is the switch?**
+The default algorithm minimises the *size* of the diff, not its meaning, and code
+with many identical lines — closing braces, JSX, repeated config blocks — has many
+equally small answers to choose from. `--diff-algorithm=histogram` prefers matching
+rare lines first, which lines the change up the way a person would, and
+`git config diff.algorithm histogram` makes it the default. It costs slightly more
+time and is a reasonable default for a code repository.
+
+**How does `git diff` relate to `git status`?**
+They are one tool split in two, over the same three pairings: working tree against
+index, index against `HEAD`, and working tree against `HEAD`. `status` tells you
+*which files* differ, `diff` tells you *how*. That is why the sections of a
+`status` line up exactly with the three everyday `diff` forms, and why "read
+`status`, then `diff --staged`, then commit" is a loop rather than three unrelated
+commands.
+
+**What does `Binary files a/x and b/x differ` actually tell you?**
+That Git detected binary content and declined to print it — which is correct
+behaviour, since a diff of two PNGs would be noise. It is also a signal worth
+reading: a file Git cannot diff is a file nobody can review, so images, compiled
+assets and enormous lockfiles are being version-controlled without being
+inspectable. `.gitattributes` can point a diff driver at something that summarises
+the format, but the better question is usually whether the file belongs in the
+repository at all.
+
 ---
 
 ← Prev: [`git commit`](03-git-commit.md) · Next → [`.gitignore`](05-gitignore.md)
