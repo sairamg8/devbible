@@ -4,6 +4,15 @@ sidebar_label: "`createSlice`"
 sidebar_position: 1
 ---
 
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-09-06 against the Redux Toolkit documentation for **@reduxjs/toolkit 2.12.0** —
+> [`createSlice`](https://redux-toolkit.js.org/api/createSlice),
+> [RTK 2.0 migration](https://redux-toolkit.js.org/usage/migrating-rtk-2),
+> [Immer — returning new data](https://immerjs.github.io/immer/return).
+> Documentation-validated; **no sandbox run**.
+> Validated: 2026-09-06 · claims + output provenance · session 3a6945a3
+
 # 📦 `createSlice`: Reducers, Immer Drafts & `extraReducers`
 
 ## 1. Under-The-Hood Mechanics
@@ -138,11 +147,14 @@ export const cartReducer = cartSlice.reducer;
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## Gotchas
 
-### ⚠️ Pitfall 1: Mixing Mutation AND Return in the Same Reducer
-Immer's contract is strict: either mutate the `draft`, **or** return a brand-new value — never both in the same branch.
-
+### Mutating the draft **and** returning a value in the same branch
+**Symptom.** A runtime error from Immer the moment that reducer runs, naming a producer that returned
+a new value *and* modified its draft.
+**Cause.** `produce()` has exactly two legal modes per call: mutate the draft and return nothing, or
+return a replacement and touch nothing. Doing both leaves Immer with two conflicting answers.
+**Fix.** Pick one mode per reducer branch.
 ```typescript
 // ❌ WRONG: mutates draft AND returns a new object — Immer throws at runtime
 reducer: (state, action) => {
@@ -154,10 +166,50 @@ reducer: (state, action) => {
 reducer: (state, action) => { state.items.push(action.payload); }
 ```
 
-### ⚠️ Pitfall 2: Forgetting `extraReducers` Actions Must Come From Outside the Slice
-Reusing a slice's own action inside its own `extraReducers` builder is redundant and a sign the logic belongs in `reducers` instead — `extraReducers` exists specifically for actions this slice does not own (thunk lifecycle actions, other slices' actions).
+### The arrow-function implicit return that turns a mutation into a return
+**Symptom.** The same "returned a new value *and* modified its draft" error, from a reducer that
+visibly does nothing but mutate.
+**Cause.** A concise arrow body **returns its expression**. `state.items.push(x)` evaluates to the
+array's new `length` — a number — so Immer sees a mutation *and* a returned value. `.push`, `.pop`,
+`.unshift` and `.splice` all return something; this bites whenever someone "tidies up" a block body.
+**Fix.** Keep the braces. This is the one place where the shorter form is wrong.
+```typescript
+// ❌ WRONG: implicitly returns 3 (the new length)
+itemAdded: (state, action) => state.items.push(action.payload),
 
-### ⚠️ Pitfall 3: `prepare` Forgetting to Return `{ payload }`
+// ✅ CORRECT: block body, returns undefined
+itemAdded: (state, action) => { state.items.push(action.payload); },
+```
+
+### Meaning to reset state and returning nothing
+**Symptom.** A `reset` reducer runs, no error appears, and the state is unchanged.
+**Cause.** Immer cannot distinguish "I returned `undefined` on purpose" from "I fell off the end of a
+function that mutates" — the docs are explicit that returning `undefined` this way "is
+indistinguishable from *not* updating the draft".
+**Fix.** Return the replacement explicitly. If you genuinely need the state to *become* `undefined`,
+Immer's `nothing` token is the only way to say so.
+```typescript
+import { nothing } from 'immer';
+
+cartReset: () => initialState,          // ✅ explicit replacement
+sessionCleared: () => nothing as any,   // ✅ deliberately produces `undefined`
+```
+
+### Reaching for `extraReducers` to handle the slice's own actions
+**Symptom.** A slice's `extraReducers` builder lists cases for action creators the same slice
+generated.
+**Cause.** A misread of what the two fields are for. `reducers` owns the slice's own actions and
+generates their creators; `extraReducers` exists for actions this slice does **not** own — thunk
+lifecycle actions, another slice's actions, standalone `createAction` results.
+**Fix.** Move the case into `reducers`. If you find yourself needing both, that is usually a sign the
+action belongs to neither slice and should be a standalone `createAction`.
+
+### `prepare` that forgets the `{ payload }` wrapper
+**Symptom.** `action.payload` is `undefined` at the reducer, and the fields you carefully assembled
+are sitting on the action root instead.
+**Cause.** `prepare` must return a **Flux Standard Action body** — an object with `payload`, and
+optionally `meta` and `error`. Returning the payload's *contents* directly puts them one level too high.
+**Fix.**
 ```typescript
 // ❌ WRONG: prepare must return an object shaped { payload, meta?, error? }
 prepare: (text: string) => ({ id: nanoid(), text }),
@@ -165,3 +217,82 @@ prepare: (text: string) => ({ id: nanoid(), text }),
 // ✅ CORRECT
 prepare: (text: string) => ({ payload: { id: nanoid(), text } }),
 ```
+
+### The object form of `extraReducers`, on a version that removed it
+**Symptom.** A build error, or a TypeScript error saying `extraReducers` is not assignable to an
+object type — usually right after a dependency bump.
+**Cause.** RTK 2.0 "removed the 'object' form for both `createReducer` and
+`createSlice.extraReducers`". Every RTK 1.x tutorial, and a great deal of still-live application code,
+uses it.
+**Fix.** Mechanical conversion — each key becomes an `addCase`.
+```typescript
+// ❌ RTK 1.x, removed in 2.0
+extraReducers: { [fetchCart.fulfilled]: (state, action) => { state.items = action.payload; } }
+
+// ✅ builder callback
+extraReducers: (builder) => {
+  builder.addCase(fetchCart.fulfilled, (state, action) => { state.items = action.payload; });
+}
+```
+
+### Ordering `addCase` after `addMatcher`
+**Symptom.** A runtime error from the builder, or a matcher swallowing an action you meant a specific
+case to handle.
+**Cause.** The builder enforces an order: every `addCase` first, then every `addMatcher`, then at most
+one `addDefaultCase`. Matchers run in the order added, and **all** matching matchers run — unlike
+cases, matching is not exclusive.
+**Fix.** Keep the three groups in that order, and remember a single action can hit one `addCase` *and*
+several `addMatcher`s. That is the mechanism behind the "reset everything on logout" pattern, and the
+reason an over-broad matcher can quietly stomp a specific case's work.
+
+### A `name` that collides with another slice's action namespace
+**Symptom.** Dispatching one slice's action mutates a different slice too.
+**Cause.** Action types are just `` `${name}/${reducerKey}` ``. Two slices named `session`, or a slice
+named `session` alongside `createAction('session/ended')`, generate identical type strings, and every
+reducer listening for that string runs.
+**Fix.** Treat `name` as a globally unique namespace. See
+[`createAction` & action matchers](./02-create-action-and-matchers.md) for the deliberate version of
+this trick and its accidental twin.
+
+## Interview questions
+
+**★ What does `createSlice` actually generate, and from what?**
+From `{ name, initialState, reducers }` it derives three things: an action type string per reducer key,
+formed as `` `${name}/${key}` ``; a matching action creator for each, exposed on `slice.actions`; and a
+single reducer function that switches over those types, with every case body wrapped in Immer's
+`produce()`. `slice.reducer` is an ordinary reducer — it plugs into `combineReducers` next to
+hand-written ones, which is what makes incremental migration possible.
+
+**★ How does mutating `state` inside a reducer stay immutable?**
+It does not mutate your state — it mutates a Proxy. `createSlice` wraps each reducer body in
+`produce()`, which hands your code a draft whose reads and writes are intercepted. Immer records the
+touched paths and builds a new tree with structural sharing: changed branches get new references,
+untouched ones keep the exact objects they had. That is what makes `useSelector`'s `===` bailout work.
+
+**★ What is the difference between `reducers` and `extraReducers`?**
+Ownership. `reducers` declares the actions this slice owns, and generating their creators is part of
+the deal. `extraReducers` responds to actions defined elsewhere and generates nothing — thunk
+lifecycle actions, another slice's actions, standalone `createAction`s. The distinction is what keeps
+dependencies one-directional: `cartSlice` can react to `logout` without `authSlice` ever importing it.
+
+**★ A reducer that only calls `state.items.push(...)` throws an Immer error. Why?**
+Almost certainly a concise arrow body. `(state, action) => state.items.push(action.payload)` returns
+`push`'s value — the new length — so Immer sees the draft mutated *and* a value returned, which is the
+one combination it forbids. Adding braces fixes it. It is a good interview question precisely because
+the code looks like it only mutates.
+
+**When would you use `prepare`, and what must it return?**
+When the action's payload is not simply the argument the caller passes — generating an id, stamping a
+timestamp, reshaping several arguments into one payload. It keeps that logic out of the reducer, which
+must stay pure. It must return an FSA body: `{ payload }`, optionally with `meta` and `error`. Returning
+the payload's fields directly is the standard bug.
+
+**In what order does the `extraReducers` builder evaluate, and why does it matter?**
+All `addCase` handlers, then all `addMatcher` handlers in the order they were added, then
+`addDefaultCase`. The important asymmetry is that cases are exclusive but matchers are not — one action
+can trigger a case and several matchers. That is what makes a single `addMatcher(isAnyOf(logout))`
+reset ten slices, and also how an over-broad matcher silently undoes a specific case's work.
+
+---
+
+← [`configureStore`](../01-store-setup/01-configure-store.md) · [Topic index](../README.md) · Next → [Slice selectors & the creator callback](./01b-slice-selectors-and-creator-callback.md)

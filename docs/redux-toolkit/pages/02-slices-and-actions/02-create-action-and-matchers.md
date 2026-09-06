@@ -1,7 +1,7 @@
 ---
 title: "`createAction` & Action Matchers: Standalone Actions Outside Slices"
 sidebar_label: "`createAction` & Action Matchers"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # 📦 `createAction` & Action Matchers: Standalone Actions Outside Slices
