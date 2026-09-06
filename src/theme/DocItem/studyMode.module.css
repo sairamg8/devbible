@@ -1,0 +1,66 @@
+/**
+ * Study Mode's additions to the doc page.
+ *
+ * One module for the whole `DocItem/` folder rather than one per wrapper: only
+ * the paginator draws anything today, and a second file holding four rules would
+ * be filing for its own sake. Wrappers that stay invisible (DocItem/Layout, which
+ * only records the visit) import nothing.
+ */
+
+/**
+ * The "next unread at this tier" row.
+ *
+ * It sits under the theme paginator, whose previous/next cards are two large
+ * bordered blocks with a `docusaurus-mt-lg` gap above them. This row is
+ * deliberately the quietest thing on the page below the article: no border, no
+ * card, no background — a line of text the reader can follow when they want to
+ * and ignore when they do not. Giving it any of the paginator's weight would
+ * make the page look like it has three next buttons.
+ */
+.nextUnread {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  font-family: var(--db-sans);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/**
+ * Mono and uppercase, matching the utility labels elsewhere in the theme (the
+ * tier badges use the same treatment) so it reads as chrome rather than prose.
+ */
+.label {
+  font-family: var(--db-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--db-ink-3);
+}
+
+.link {
+  color: var(--db-accent-ink);
+  font-weight: 500;
+}
+
+/**
+ * The count of pages the floor hid on the way there. Smaller and dimmer than the
+ * target itself: it is a footnote explaining a jump, not a second destination.
+ *
+ * `margin-left: auto` only above the mobile breakpoint. On a narrow column the
+ * row wraps, and pushing this to the far right of its own wrapped line strands
+ * it in whitespace with nothing to align to.
+ */
+.skipped {
+  font-size: 0.72rem;
+  color: var(--db-ink-3);
+}
+
+@media (min-width: 997px) {
+  .skipped {
+    margin-left: auto;
+  }
+}
