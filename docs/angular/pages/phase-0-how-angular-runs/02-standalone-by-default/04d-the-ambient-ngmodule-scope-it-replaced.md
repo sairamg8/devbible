@@ -137,7 +137,7 @@ self-describing.
 | Effect of moving the file | may silently break the template | none |
 | Same class used by 30 components | one line | thirty lines |
 | A class may be declared | by exactly one NgModule | n/a — no declaration at all |
-| Unused dependency | invisible | NG8113 warning per component |
+| Unused dependency | invisible | NG8113 warning per component, for a directive or pipe named directly |
 | Providers | eager, application-wide | scoped to the importing component's injector |
 
 The honest cost is the fifth row: `imports` is more typing, and it is the same typing repeated.

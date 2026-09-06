@@ -290,4 +290,4 @@ scope is still computed and the symbol is still resolved. The bundle claim only 
 
 ---
 
-← Prev: **05b · The two cases where NG8113 is silent** *(not written yet)* · Index: [Topic index](README.md) · Next → **05d · The errors that reject an import outright** *(not written yet)*
+← Prev: [05b · The two cases where NG8113 is silent](05b-the-two-cases-where-ng8113-is-silent.md) · Index: [Topic index](README.md) · Next → [05d · The errors that reject an import](05d-the-errors-that-reject-an-import-outright.md)

@@ -115,7 +115,6 @@ needs its own separate `eagerlyUsed` / `wholeTemplateUsed` bookkeeping rather th
 
 ⚠️ This was settled by reading `v22.1.5` source along that call chain, not by running a build.
 
-
 ## Gotchas
 
 **★ Symptom: NG8113 flags a symbol that another component in the same file is visibly using.**
@@ -132,14 +131,12 @@ const LIST_IMPORTS = [RouterLink, DatePipe];
 export const LIST_IMPORTS = [RouterLink, DatePipe];
 ```
 
-
 **Symptom: a component appears only inside a `@defer` block and you expect an unused-import
 warning.** Cause: you will not get one, and that is correct — the binder records every matched
 directive in `this.directives` regardless of defer, and only the separate `eagerDirectives` list is
 gated on `!this.isInDeferBlock`. Fix: none. If that block is not producing a lazy chunk, the cause
 is elsewhere — a reference to the same symbol outside the block, a barrel import, or HMR, none of
 which NG8113 can see.
-
 
 **★ Symptom: a shared imports barrel has accumulated entries nothing uses any more, and no build
 has ever mentioned it.** Cause: the third branch of `isPotentialSharedReference` — a symbol reached
@@ -197,7 +194,6 @@ components in the same file therefore gets flagged for whichever component does 
 Angular documents the false positive in a comment and accepts it, because the blast radius is one
 file rather than the application.
 
-
 **★ Does NG8113 fire for a directive used only inside a `@defer` block?**
 No. `TemplateTypeChecker.getUsedDirectives` forwards to `R3BoundTarget.getUsedDirectives()`, which
 reads the binder's `directives` map; `trackMatchedDirectives` writes that map unconditionally and
@@ -228,4 +224,4 @@ rather than across an application.
 
 ---
 
-← Prev: **05 · Unused imports and the compiler diagnostics** *(not written yet)* · Index: [Topic index](README.md) · Next → **05c · What a stale import costs, and the tooling that removes it** *(not written yet)*
+← Prev: [05 · Unused imports and the compiler diagnostics](05-unused-imports-and-the-compiler-diagnostics.md) · Index: [Topic index](README.md) · Next → [05c · What a stale import costs, and the cleanup](05c-what-a-stale-import-costs-and-the-cleanup-schematics.md)

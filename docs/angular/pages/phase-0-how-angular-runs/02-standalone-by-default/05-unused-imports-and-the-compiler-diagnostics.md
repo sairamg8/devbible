@@ -15,7 +15,8 @@ sidebar_position: 5
 > [`imported_symbols_tracker.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/imports/src/imported_symbols_tracker.ts),
 > [`typecheck/src/checker.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/typecheck/src/checker.ts),
 > [`compiler/src/render3/view/t2_binder.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler/src/render3/view/t2_binder.ts),
-> [`diagnostics/src/util.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/diagnostics/src/util.ts).
+> [`diagnostics/src/util.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/diagnostics/src/util.ts),
+> [`diagnostics/src/error_code.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/diagnostics/src/error_code.ts).
 > Documentation-validated; **no sandbox run**.
 > Version spine: **Angular 22.1.5** · CLI / `@angular/build` / `@angular/ssr` **22.1.7** · TypeScript peer `>=6.0 <6.1`.
 
@@ -154,7 +155,7 @@ else falls out of the loop untouched. The full list:
    runs, because they are already NG2011.
 5. **A reference that might come from a shared imports array.** The heuristic that decides this is
    the one place NG8113 is occasionally *wrong* rather than merely silent — it gets its own page,
-   **05b · The two cases where NG8113 is silent** *(not written yet)*.
+   [05b · The two cases where NG8113 is silent](05b-the-two-cases-where-ng8113-is-silent.md).
 6. **A component that is already broken.** `getUsedDirectives` / `getUsedPipes` return `null` when
    the component failed to bind, with the comment *"These will be null if the component is invalid
    for some reason."* — so NG8113 goes quiet on exactly the file you are already fighting, and
@@ -295,4 +296,4 @@ does not help or hurt, because the tracker keys on the exported name.
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **05b · The two cases where NG8113 is silent** *(not written yet)*
+← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [05b · The two cases where NG8113 is silent](05b-the-two-cases-where-ng8113-is-silent.md)

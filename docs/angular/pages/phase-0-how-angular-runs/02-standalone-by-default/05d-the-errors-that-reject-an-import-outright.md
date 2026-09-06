@@ -11,7 +11,6 @@ sidebar_position: 5.3
 > [`annotations/component/src/handler.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/annotations/component/src/handler.ts),
 > [`annotations/component/src/util.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/annotations/component/src/util.ts),
 > [`scope/src/util.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/scope/src/util.ts),
-> [`typecheck/extended/checks/missing_structural_directive/index.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/typecheck/extended/checks/missing_structural_directive/index.ts) —
 > and angular.dev [Anatomy of components](https://angular.dev/guide/components/anatomy-of-components).
 > Documentation-validated; **no sandbox run**.
 > Version spine: **Angular 22.1.5** · CLI / `@angular/build` / `@angular/ssr` **22.1.7** · TypeScript peer `>=6.0 <6.1`.
@@ -286,4 +285,4 @@ downgrades or suppresses them.
 
 ---
 
-← Prev: **05c · What a stale import costs, and the cleanup** *(not written yet)* · Index: [Topic index](README.md) · Next → **06 · `'x' is not a known element`** *(not written yet)*
+← Prev: [05c · What a stale import costs, and the cleanup](05c-what-a-stale-import-costs-and-the-cleanup-schematics.md) · Index: [Topic index](README.md) · Next → **06 · `'x' is not a known element`** *(not written yet)*

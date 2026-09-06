@@ -206,10 +206,15 @@ export class OrgChildrenComponent {
 }
 ```
 
-**★ Symptom: you imported a barrel file's constant and got a directive you never asked for.**
-Cause: a nested array is flattened whole — `SHARED_UI` contributes every class in it, not the
-ones your template happens to use. Fix: nothing breaks, but the unused members each earn an
-NG8113 warning; import the classes individually when the group is large:
+**★ Symptom: you imported a barrel file's constant and got a directive you never asked for —
+and, worse, nothing warned you.** Cause: a nested array is flattened whole, so `SHARED_UI`
+contributes every class in it; and the unused-imports rule deliberately steps around exported
+shared arrays. Its own doc comment says so, verbatim from
+`unused_standalone_imports_rule.ts`: *"Determines if an import reference *might* be coming
+from a shared imports array."* — with the reasoning *"The reference might be shared if it comes
+from an exported array. If the variable is local to the file, then it likely isn't shared."*
+🔴 So an exported group constant is exactly the shape that **silences** NG8113. Fix: name the
+classes the template uses, and get the diagnostic back:
 
 ```ts
 // src/app/users/user-name.component.ts — name the two you use, not the group of three
@@ -270,13 +275,14 @@ Legal — the field's type is `(Type<any> | ReadonlyArray<any>)[]` and
 nothing about the resulting scope or the emitted output; it exists so a shared group of
 dependencies can be exported as one constant.
 
-**A teammate says "just import the shared barrel everywhere, it is only compile-time". What is
-wrong with that?**
-Two things, and neither is a bundle-size claim. First, every unused member is an NG8113
-warning, so the signal that tells you a dependency has gone stale is drowned. Second, an
-NgModule inside that barrel is emitted whether or not the template uses anything from it, and
-its providers get a standalone injector — so a "harmless" group import can quietly change
-dependency-injection behaviour.
+**★ A teammate says "just import the shared barrel everywhere, it is only compile-time". What
+is wrong with that?**
+Two things, and neither is a bundle-size claim. First, it turns the unused-import diagnostic
+off: NG8113 skips references that *might* come from an exported shared array, so the tool that
+would have told you a dependency went stale says nothing. Second, an NgModule inside that
+barrel is emitted whether or not the template uses anything from it, and its providers get a
+standalone injector — so a "harmless" group import can quietly change dependency-injection
+behaviour. The barrel is a real convenience; it is not free, and what it costs is feedback.
 
 ---
 
