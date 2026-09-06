@@ -180,6 +180,63 @@ everything.
 **Cause:** `--abort` returns the branch to its pre-rebase state entirely — including steps that succeeded
 **Fix:** `--quit` is the option that stops without undoing. Afterwards, `git reflog` still has every intermediate state
 
+## Interview questions
+
+**★ What are the three words, and what does each do?**
+`--continue` resumes after you have resolved; `--skip` drops the step currently
+being applied and moves on; `--abort` abandons the whole operation and returns the
+branch to where it started. They exist on `rebase`, `cherry-pick`, `revert` and
+`am`, with `merge` having continue and abort but no skip, and `bisect` spelling
+them differently (`git bisect skip`, `git bisect reset`). There is also `--quit` on
+rebase, cherry-pick and revert: it stops the operation while **keeping** what has
+already been applied, which is the middle option people forget exists.
+
+**★ How do you find out which operation you are inside?**
+`git status`, always — never guess. It names the state in plain words: *"You are
+currently rebasing branch 'x' on 'y'"*, *"You are currently cherry-picking commit
+<sha>"*, *"All conflicts fixed but you are still merging"*, and for an interactive
+rebase it prints progress as `Last commands done (N commands done)`. Git also
+refuses many commands while an operation is in progress and names the flags to use
+in the refusal. Reading that message is faster and safer than working around it.
+
+**★ Which `--abort` is not reliable, and why?**
+`git merge --abort`. The manual says it tries to reconstruct the pre-merge state,
+but that if there were uncommitted changes when the merge started — especially if
+they were modified during it — it will in some cases be unable to reconstruct them.
+Rebase, cherry-pick and revert `--abort` are reliable, because the original commits
+still exist and only the branch pointer moves. That asymmetry is the reason for the
+rule to commit or stash before merging; the manual itself calls merging with
+non-trivial uncommitted changes discouraged.
+
+**★ Why is `--skip` the one flag here that loses work?**
+Because it drops the *commit* being applied, not the *conflict* you are looking at.
+Its legitimate use is a change already present upstream, where replaying it would
+produce an empty commit. Its illegitimate use — "I do not want to resolve this" —
+silently discards a change, and the discarded commit is then only findable through
+the reflog. `git show REBASE_HEAD` shows exactly what you are about to drop, and it
+is worth running every single time.
+
+**★ Git refuses every command, saying an operation is in progress, and `--abort` will
+not run. What now?**
+The state lives in files at the top of `.git/`: `MERGE_HEAD`, `CHERRY_PICK_HEAD`,
+`REVERT_HEAD`, `rebase-merge/` or `rebase-apply/`, `BISECT_LOG`. Deleting them by
+hand is the last resort, not the first move, and `git status` afterwards is
+mandatory to confirm the repository agrees with you. The safer general recovery is
+the universal one: `git reflog`, find the pre-operation hash — usually `ORIG_HEAD` —
+and `git reset --hard` to it, because the commits themselves are intact whatever the
+operation state says.
+
+**Why are Git's escape hatches simultaneously excellent and hard to use?**
+Because the mechanism is strong and the interface is not. Immutable commits plus
+`ORIG_HEAD` and the reflog mean almost any half-finished operation can be unwound
+exactly — there is no equivalent of a corrupted working copy that has to be
+re-cloned. But the controls are subcommand-specific flags learned separately and
+consulted under stress, where the difference between "skip the conflict" and "skip
+the commit" is somebody's afternoon. The mitigation is behavioural and small:
+`git status` first in any confusing state, because it names the operation and often
+the exact flag, and `git reflog` plus `reset --hard` as the fallback that works when
+the specific flags do not.
+
 ---
 
 ← Prev: [`git reflog` as the safety net](09-reflog.md) · Next → [Phase 2 index](README.md)
