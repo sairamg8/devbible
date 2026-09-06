@@ -10,6 +10,7 @@
     "search:index": "node scripts/ensure-search-index.mjs --force",
     "status": "node scripts/status.mjs",
     "page-counts": "node scripts/page-counts.mjs",
+    "tier-map": "node scripts/tier-map.mjs",
     "build": "node scripts/page-counts.mjs && DOCUSAURUS_SSG_WORKER_THREAD_COUNT=4 DOCUSAURUS_SSG_WORKER_THREAD_RECYCLER_MAX_MEMORY=500000000 docusaurus build",
     "build:fast": "node scripts/page-counts.mjs && FAST_BUILD=true DOCUSAURUS_SSG_WORKER_THREAD_COUNT=4 DOCUSAURUS_SSG_WORKER_THREAD_RECYCLER_MAX_MEMORY=500000000 docusaurus build --no-minify",
     "swizzle": "docusaurus swizzle",
