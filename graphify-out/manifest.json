@@ -5256,16 +5256,16 @@
     "semantic_hash": "0f3fde58dc460184c1bddd64f2306ac1"
   },
   "docusaurus.config.js": {
-    "mtime": 1788618835.7355266,
-    "seen": 1788627017.782615,
-    "ast_hash": "743f5d81c7ca35bf57ba5ccf98674154",
-    "semantic_hash": "743f5d81c7ca35bf57ba5ccf98674154"
+    "mtime": 1788660962.4270937,
+    "seen": 1788661949.1189678,
+    "ast_hash": "f04c52d038739b95c3ca88df9a8afe1a",
+    "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1788618321.5431786,
-    "seen": 1788620324.7041678,
-    "ast_hash": "d514232f4ee43cb2a2df750c037e4697",
-    "semantic_hash": "d514232f4ee43cb2a2df750c037e4697"
+    "mtime": 1788660962.4280937,
+    "seen": 1788661949.1189709,
+    "ast_hash": "00cc8d9c48daeb46f22ff171e6e04935",
+    "semantic_hash": ""
   },
   "sandbox/css/.ffprof/ExperimentStoreData.json": {
     "mtime": 1788157969.5601683,
@@ -9906,10 +9906,10 @@
     "semantic_hash": "f9acfa885a47a0e467271c9dfc2ad11e"
   },
   "src/components/Progress/index.js": {
-    "mtime": 1788609508.2996721,
-    "seen": 1788627017.7972896,
-    "ast_hash": "c8004f014b61f1f9b141634e58172f65",
-    "semantic_hash": "c8004f014b61f1f9b141634e58172f65"
+    "mtime": 1788653174.796717,
+    "seen": 1788661949.1197932,
+    "ast_hash": "14cbe3402499dbffbb71b98264b6367d",
+    "semantic_hash": ""
   },
   "src/components/SidebarCollapseAll/index.js": {
     "mtime": 1786613629.5153143,
@@ -9924,28 +9924,28 @@
     "semantic_hash": "03c2cef8ff142e14b3e4e9e2cbe189ae"
   },
   "src/data/progress.js": {
-    "mtime": 1788618430.0138028,
-    "seen": 1788627017.7973425,
-    "ast_hash": "d1db972f633b5fafafd96848974d5e4b",
-    "semantic_hash": "d1db972f633b5fafafd96848974d5e4b"
+    "mtime": 1788653174.7982054,
+    "seen": 1788661949.1198058,
+    "ast_hash": "611bd334f1e624d43a99aad690e71130",
+    "semantic_hash": ""
   },
   "src/pages/index.js": {
-    "mtime": 1788618495.0227015,
-    "seen": 1788627017.7973435,
-    "ast_hash": "9239de5d65861edb048e7ba72f89bfb4",
-    "semantic_hash": "9239de5d65861edb048e7ba72f89bfb4"
+    "mtime": 1788653174.7992043,
+    "seen": 1788661949.1198096,
+    "ast_hash": "276e4fb6155f0495f44f39ca2be1ddbf",
+    "semantic_hash": ""
   },
   "src/theme/DocSidebar/index.js": {
-    "mtime": 1786613629.5171108,
-    "seen": 1787902473.867482,
-    "ast_hash": "63f2631c2bbc164a2a95c4cb4fc2228f",
-    "semantic_hash": "63f2631c2bbc164a2a95c4cb4fc2228f"
+    "mtime": 1788660962.4294028,
+    "seen": 1788661949.119813,
+    "ast_hash": "ee5e78f0467ed8dd79bd1e22c13c5fe3",
+    "semantic_hash": ""
   },
   "src/theme/DocSidebarItems/index.js": {
-    "mtime": 1786613629.5172248,
-    "seen": 1787902473.8674846,
-    "ast_hash": "acc752fc480fa2f86baa1241a6673178",
-    "semantic_hash": "acc752fc480fa2f86baa1241a6673178"
+    "mtime": 1788660962.4296749,
+    "seen": 1788661949.1198165,
+    "ast_hash": "ac438edd46382e0461b9a78ab2e15ec4",
+    "semantic_hash": ""
   },
   ".agents/rules/graphify.md": {
     "mtime": 1786626766.9434578,
@@ -9972,10 +9972,10 @@
     "semantic_hash": "5f063b2fd94b741aaea3b99995bc263c"
   },
   "AGENTS.md": {
-    "mtime": 1788401630.3121626,
-    "seen": 1788627017.7977147,
-    "ast_hash": "0638d4d36950db6568f18527bfb6da58",
-    "semantic_hash": "0638d4d36950db6568f18527bfb6da58"
+    "mtime": 1788659984.9702814,
+    "seen": 1788661949.1198573,
+    "ast_hash": "f986e8980fbe52b8bec743480d7de13b",
+    "semantic_hash": ""
   },
   "CLAUDE.md": {
     "mtime": 1788401635.5442135,
@@ -13656,76 +13656,76 @@
     "semantic_hash": "18f6b81ba674f87597fd997797152f38"
   },
   "docs/framer-motion/pages/01-core-concepts/01-declarative-animation-philosophy.md": {
-    "mtime": 1786706138.928146,
-    "seen": 1787902473.868804,
-    "ast_hash": "171ce16668222775c52a09ca444d3657",
-    "semantic_hash": "171ce16668222775c52a09ca444d3657"
+    "mtime": 1788661074.925665,
+    "seen": 1788661949.1204994,
+    "ast_hash": "77842092f27b609e845a5cf4f3bc3b1d",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/02-basic-animation-props/01-the-core-prop-triad.md": {
-    "mtime": 1786706138.9282749,
-    "seen": 1787902473.8688061,
-    "ast_hash": "152933a70cd668e2a13f7da0d9385f22",
-    "semantic_hash": "152933a70cd668e2a13f7da0d9385f22"
+    "mtime": 1788661939.1587312,
+    "seen": 1788661949.1205003,
+    "ast_hash": "25a94596c4284af11ff79e46c4010271",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/03-transition-types/01-timing-models.md": {
-    "mtime": 1786706138.9284499,
-    "seen": 1787902473.8688085,
-    "ast_hash": "47a8c63517505f95c2c826e308e21e8c",
-    "semantic_hash": "47a8c63517505f95c2c826e308e21e8c"
+    "mtime": 1788661889.4364364,
+    "seen": 1788661949.1205013,
+    "ast_hash": "c0ee56ad4e086a4dcbd6be77018cbc50",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/04-variants/01-reusable-named-states.md": {
-    "mtime": 1786706138.9286273,
-    "seen": 1787902473.8688104,
-    "ast_hash": "403128b0aa210c893f3a1bb6a37a4f92",
-    "semantic_hash": "403128b0aa210c893f3a1bb6a37a4f92"
+    "mtime": 1788661850.0495703,
+    "seen": 1788661949.120502,
+    "ast_hash": "b9df2356a1dd34ba89f7da9b0067ae0c",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/05-gestures/01-interaction-driven-animation.md": {
-    "mtime": 1786706138.9287972,
-    "seen": 1787902473.8688126,
-    "ast_hash": "d1b9e51542814d0cb7f0465cb3b1761f",
-    "semantic_hash": "d1b9e51542814d0cb7f0465cb3b1761f"
+    "mtime": 1788661857.0492446,
+    "seen": 1788661949.1205027,
+    "ast_hash": "acc4b59d97e3bc27b3772d9b548477d1",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/06-animatepresence/01-exit-animations.md": {
-    "mtime": 1786706138.9289668,
-    "seen": 1787902473.868815,
-    "ast_hash": "1caa290e95232d355c1c6e935342515d",
-    "semantic_hash": "1caa290e95232d355c1c6e935342515d"
+    "mtime": 1788661943.101778,
+    "seen": 1788661949.1205037,
+    "ast_hash": "dc9cd3c405d9dd0297cf827cf487bd58",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/07-layout-animations/01-automatic-layout-transitions.md": {
-    "mtime": 1786706138.9291813,
-    "seen": 1787902473.868817,
-    "ast_hash": "d71a80843c3889cf9e4cb09bfa600f79",
-    "semantic_hash": "d71a80843c3889cf9e4cb09bfa600f79"
+    "mtime": 1788661806.2419434,
+    "seen": 1788661949.1205044,
+    "ast_hash": "af991cb75b4a0de26985c03fcefc9ab8",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/08-scroll-linked-animations/01-scroll-reactive-motion.md": {
-    "mtime": 1786706138.9293604,
-    "seen": 1787902473.8688192,
-    "ast_hash": "d00e3c64635cfeaaca889c3960d9fa58",
-    "semantic_hash": "d00e3c64635cfeaaca889c3960d9fa58"
+    "mtime": 1788660962.6004038,
+    "seen": 1788661949.120505,
+    "ast_hash": "e503bb271a52a0c13b65fe7ce362264c",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/09-motion-values/01-imperative-value-tracking.md": {
-    "mtime": 1786706138.9295192,
-    "seen": 1787902473.8688211,
-    "ast_hash": "c3133b05e60c595135698f57e186fa21",
-    "semantic_hash": "c3133b05e60c595135698f57e186fa21"
+    "mtime": 1788660962.603197,
+    "seen": 1788661949.120506,
+    "ast_hash": "551c54fd127fa802efc23973d6bbe9c3",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/10-animation-controls/01-imperative-sequencing.md": {
-    "mtime": 1786706138.9296882,
-    "seen": 1787902473.868829,
-    "ast_hash": "9b80091c3979cf943850b99ee4de9187",
-    "semantic_hash": "9b80091c3979cf943850b99ee4de9187"
+    "mtime": 1788660962.6040971,
+    "seen": 1788661949.1205072,
+    "ast_hash": "5c3d7735da53484bc074afeb1715bf14",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/11-keyframes/01-multi-step-value-animation.md": {
-    "mtime": 1786706138.9298706,
-    "seen": 1787902473.8688312,
-    "ast_hash": "0662b5466d1d192a6c12e0eb06ba409e",
-    "semantic_hash": "0662b5466d1d192a6c12e0eb06ba409e"
+    "mtime": 1788660962.6027849,
+    "seen": 1788661949.120508,
+    "ast_hash": "0e3391ffade050e09a39920a8c8a8bec",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/12-svg-animations/01-vector-graphic-motion.md": {
-    "mtime": 1786706138.930041,
-    "seen": 1787902473.8688333,
-    "ast_hash": "af57269af6eb9695110b2784f305e532",
-    "semantic_hash": "af57269af6eb9695110b2784f305e532"
+    "mtime": 1788660962.6033874,
+    "seen": 1788661949.120509,
+    "ast_hash": "2980d41d12a785d8c14752a429d5e500",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/13-orchestration-and-staggering/01-choreographed-groups.md": {
     "mtime": 1786706138.9302053,
@@ -13734,16 +13734,16 @@
     "semantic_hash": "e623fc9ea2b4479b9c006cf8b4a4d39d"
   },
   "docs/framer-motion/pages/14-performance-considerations/01-animating-efficiently.md": {
-    "mtime": 1786706138.9303877,
-    "seen": 1787902473.8688369,
-    "ast_hash": "a131343f050097e2a27fa7a8cec61f79",
-    "semantic_hash": "a131343f050097e2a27fa7a8cec61f79"
+    "mtime": 1788660962.6035361,
+    "seen": 1788661949.120511,
+    "ast_hash": "4315801b9b202ad282476cd7883e120e",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/15-advanced-patterns/01-production-grade-motion-design.md": {
-    "mtime": 1786706138.930563,
-    "seen": 1787902473.8688393,
-    "ast_hash": "0e1332bd7cd95ad771ba62e4af2e2ee2",
-    "semantic_hash": "0e1332bd7cd95ad771ba62e4af2e2ee2"
+    "mtime": 1788660962.603059,
+    "seen": 1788661949.120512,
+    "ast_hash": "e4fcf5c7808f3f8237b1ed2840d74238",
+    "semantic_hash": ""
   },
   "docs/framer-motion/pages/16-real-world-workflows-and-recipes/01-diagnosing-janky-animations.md": {
     "mtime": 1786706138.9307308,
@@ -52450,5 +52450,113 @@
     "seen": 1788627017.8457155,
     "ast_hash": "e46b7ab233edb8cd38ecc9a1bb5460e3",
     "semantic_hash": "e46b7ab233edb8cd38ecc9a1bb5460e3"
+  },
+  "scripts/page-counts.mjs": {
+    "mtime": 1788653174.7950914,
+    "seen": 1788661949.1197834,
+    "ast_hash": "e254620043e9ac7bdc5ac6d8dfe8b12b",
+    "semantic_hash": ""
+  },
+  "scripts/tier-map.mjs": {
+    "mtime": 1788660962.4280937,
+    "seen": 1788661949.1197867,
+    "ast_hash": "56bcd2fb61e90699f6b68b3e66a965b2",
+    "semantic_hash": ""
+  },
+  "scripts/validate.mjs": {
+    "mtime": 1788659907.3901925,
+    "seen": 1788661949.1197896,
+    "ast_hash": "78bf8229bf445f0ca5ec5148352b6054",
+    "semantic_hash": ""
+  },
+  "src/components/StudyMode/ResumeCard/index.js": {
+    "mtime": 1788660962.4290643,
+    "seen": 1788661949.1197975,
+    "ast_hash": "9b2beda52105ccf76602911ae7291da7",
+    "semantic_hash": ""
+  },
+  "src/components/StudyMode/TierFilter/index.js": {
+    "mtime": 1788660962.4290936,
+    "seen": 1788661949.1197996,
+    "ast_hash": "4b9a493da7b15c8a21be8c93396ec359",
+    "semantic_hash": ""
+  },
+  "src/components/StudyMode/store.js": {
+    "mtime": 1788660962.4292476,
+    "seen": 1788661949.1198008,
+    "ast_hash": "7bd4cdb99c172f6baed143683e12e753",
+    "semantic_hash": ""
+  },
+  "src/components/TechPicker/index.js": {
+    "mtime": 1788653174.7967765,
+    "seen": 1788661949.1198018,
+    "ast_hash": "d6efd356046e9b86bf296ebe651f784a",
+    "semantic_hash": ""
+  },
+  "src/data/page-counts.json": {
+    "mtime": 1788659287.3877964,
+    "seen": 1788661949.119803,
+    "ast_hash": "8fd536b905ed58cc61f3f7c37d6615fb",
+    "semantic_hash": ""
+  },
+  "src/data/stack.js": {
+    "mtime": 1788653174.7982905,
+    "seen": 1788661949.119807,
+    "ast_hash": "4ba07fd62aae1c602394a0952edcb0c2",
+    "semantic_hash": ""
+  },
+  "src/data/tiers.mjs": {
+    "mtime": 1788660962.4292476,
+    "seen": 1788661949.1198082,
+    "ast_hash": "bef52e77a2d10a766b2a87f36aa6dea5",
+    "semantic_hash": ""
+  },
+  "src/theme/DocItem/Layout/index.js": {
+    "mtime": 1788660962.4294028,
+    "seen": 1788661949.1198108,
+    "ast_hash": "9e9a05534e3b8e407f9f7281f44f29c8",
+    "semantic_hash": ""
+  },
+  "src/theme/DocItem/Paginator/index.js": {
+    "mtime": 1788660962.4294028,
+    "seen": 1788661949.1198118,
+    "ast_hash": "74a3f19093250fbd343e6828c8cc9a4c",
+    "semantic_hash": ""
+  },
+  "src/theme/DocSidebarItem/Category/index.js": {
+    "mtime": 1788660962.4296749,
+    "seen": 1788661949.1198142,
+    "ast_hash": "061999cae4619a7e2654b84427f2f767",
+    "semantic_hash": ""
+  },
+  "src/theme/DocSidebarItem/Link/index.js": {
+    "mtime": 1788660962.4296749,
+    "seen": 1788661949.1198153,
+    "ast_hash": "df2806585069e3e45a89bee3d32e7bc0",
+    "semantic_hash": ""
+  },
+  "src/theme/NavbarItem/ComponentTypes.js": {
+    "mtime": 1788653174.7995193,
+    "seen": 1788661949.1198173,
+    "ast_hash": "f5515709017d7a0a50974e0ab38be45f",
+    "semantic_hash": ""
+  },
+  "static/validation.json": {
+    "mtime": 1788661227.7236059,
+    "seen": 1788661949.1198223,
+    "ast_hash": "557ecb2da07231546e5b335665151e42",
+    "semantic_hash": ""
+  },
+  ".agents/design/nav-options.html": {
+    "mtime": 1788653174.792126,
+    "seen": 1788661949.119824,
+    "ast_hash": "c09bd4b4a1f7eb379dee751526dd29f9",
+    "semantic_hash": ""
+  },
+  ".agents/references/validation-pipeline.md": {
+    "mtime": 1788659969.3510313,
+    "seen": 1788661949.1198277,
+    "ast_hash": "2cb157784c5bec93ea249d20d147660e",
+    "semantic_hash": ""
   }
 }
