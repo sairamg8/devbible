@@ -290,4 +290,4 @@ library with it belongs in a feature function.
 
 ---
 
-← Prev: [EnvironmentProviders vs Provider](03-environmentproviders-vs-provider.md) · Index: [Topic index](README.md) · Next → **05 · Change-detection providers** *(not written yet)*
+← Prev: [EnvironmentProviders vs Provider](03-environmentproviders-vs-provider.md) · Index: [Topic index](README.md) · Next → [Zoneless is the default](05-change-detection-providers.md)

@@ -25,7 +25,9 @@ convention, the catalogue, and the ways the array goes wrong.
 
 ## Chunks
 
-🚧 **4 of 17 chunks written.** The rows without links are planned and named; a link to a
+🚧 **5 of 17 planned chunks written, across 8 files.** Chunk 05 exhausted its subject and
+split into four lettered siblings, which is the 300-line cap working as designed — the cap is
+a file size, never a content budget. The rows without links are planned and named; a link to a
 page that does not exist breaks the build, so they stay as plain text until they land.
 
 | # | Chunk | Covers |
@@ -34,7 +36,11 @@ page that does not exist breaks the build, so they stay as plain text until they
 | 02 | **[Why `provide*` replaced `forRoot()`](02-why-provide-functions-replaced-forroot.md)** | 🔴 The mechanical reason: a function call is reachable to a bundler and a decorator's options bag is not. The module-by-module mapping |
 | 03 | **[`EnvironmentProviders` vs `Provider`](03-environmentproviders-vs-provider.md)** | The branded opaque type, the two error messages verbatim, where each type is accepted, and `importProvidersFrom` as a bridge with a price |
 | 04 | **[Writing your own `provide*`](04-writing-your-own-provide-function.md)** | The minimum viable one, `with*` features the way the framework builds them, `ngDevMode` validation, initialisers, and the one rule that keeps it tree-shakable |
-| 05 | **Change-detection providers** *(not written yet)* | 🔴 Zoneless is the **default** in v22 — `provideZonelessChangeDetection()` is what you no longer write; `provideZoneChangeDetection()` is the opt-*out*, and `provideCheckNoChangesConfig` is developer preview |
+| 05 | **[Zoneless is the default](05-change-detection-providers.md)** | 🔴 Zoneless is the **default** in v22, proved three ways — the CLI schematic emits no change-detection provider, the v21 changelog, and `ZONELESS_ENABLED`'s own `{factory: () => true}` |
+| 05b | **[`provideZoneChangeDetection()`, the opt-out](05b-provide-zone-change-detection-the-opt-out.md)** | The whole switch is two records overwritten in one Map; `ChangeDetectionScheduler` is deliberately *not* one of them; `NgZoneOptions` is two booleans, both defaulting to `false` |
+| 05c | **[The redundant opt-in, and NG0408](05c-the-redundant-opt-in-and-ng0408.md)** | `provideZonelessChangeDetection()` re-registers what the framework already prepended; the six APIs that schedule change detection without Zone.js; NG0914 at call time, NG0408 at bootstrap, both dev-only |
+| 05d | **[The polyfill half, and `NoopNgZone`](05d-the-polyfill-half-and-noopngzone.md)** | 🔴 `zone.js` is an **optional** peer, so `angular.json` and the provider array are two halves nothing keeps in sync — NG0908 in one direction, total silence in the other; `NoopNgZone` and NG0909 |
+| 05e | **`provideCheckNoChangesConfig`** *(not written yet)* | ⚠️ **Developer preview** and dev-mode-only — the last change-detection provider, and the one nothing in a production build ever sees |
 | 06 | **Startup and error-listener providers** *(not written yet)* | `provideAppInitializer()`, `provideEnvironmentInitializer()`, `provideBrowserGlobalErrorListeners()` — what runs before the first render and what happens to a rejection |
 | 07 | **`provideRouter()` and the route array** *(not written yet)* | What the call actually provides, why routes are a value and not a module, and the `Routes` type as the second thing bootstrap consumes |
 | 08 | **Router features, one by one** *(not written yet)* | `withComponentInputBinding`, `withViewTransitions`, `withInMemoryScrolling`, `withPreloading`, `withRouterConfig`, `withHashLocation` — what each turns on and what it costs |
