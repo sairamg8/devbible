@@ -2,11 +2,11 @@
   "generated": "2026-09-06",
   "lineCap": 300,
   "totals": {
-    "files": 6716,
-    "pages": 5889,
-    "verified": 6316,
-    "validated": 48,
-    "pendingUnits": 1044
+    "files": 6729,
+    "pages": 5902,
+    "verified": 6336,
+    "validated": 68,
+    "pendingUnits": 1037
   },
   "tracks": {
     "angular": {
@@ -1467,16 +1467,16 @@
       ]
     },
     "framer-motion": {
-      "pages": 16,
-      "files": 18,
-      "verified": 1,
-      "converted": 1,
-      "validated": 1,
+      "pages": 29,
+      "files": 31,
+      "verified": 21,
+      "converted": 21,
+      "validated": 21,
       "imported": false,
-      "score": 1405,
+      "score": 810,
       "consoleBlocks": 0,
       "overCap": 0,
-      "noInterview": 15,
+      "noInterview": 8,
       "units": [
         {
           "unit": "docs/framer-motion",
@@ -1497,87 +1497,52 @@
         },
         {
           "unit": "docs/framer-motion/pages/02-basic-animation-props",
-          "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "pages": 3,
+          "validated": 3,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/framer-motion/pages/03-transition-types",
-          "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "pages": 2,
+          "validated": 2,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/framer-motion/pages/04-variants",
           "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/framer-motion/pages/05-gestures",
-          "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "pages": 4,
+          "validated": 4,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/framer-motion/pages/06-animatepresence",
-          "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "pages": 4,
+          "validated": 4,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/framer-motion/pages/07-layout-animations",
-          "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "pages": 4,
+          "validated": 4,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/framer-motion/pages/08-scroll-linked-animations",
-          "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "pages": 2,
+          "validated": 2,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/framer-motion/pages/09-motion-values",
