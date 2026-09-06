@@ -186,6 +186,66 @@ archaeology (`bisect`, `blame`, pickaxe search) is deliberately out of scope.
 **Cause:** the branch is already merged into `main`, so it adds nothing that `main` lacks
 **Fix:** that is the answer — the emptiness *is* the information. It is also how to check a branch is safe to delete
 
+## Interview questions
+
+**★ Is `git log` a list of recent commits?**
+No — it is a walk of the commit graph backwards from a starting point, printing
+what is *reachable*. That distinction explains most surprises: a commit orphaned
+by a rebase or amend still exists in the object store but nothing points at it, so
+it is absent from `log` while `git reflog` still finds it; `log` on `main` does
+not show a feature branch's commits because you asked a different question, which
+`--all` widens; and commits appear in ancestry order rather than by date, so a
+commit dated 2030 is still a child of its 2026 parent. "The last commit" means the
+tip of this branch, not the newest by clock.
+
+**★ What is the one `git log` invocation worth memorising, and why that one?**
+`git log --oneline --graph --decorate --all`. It answers the orientation questions
+that make the *next* command dangerous: where `HEAD` is, what has diverged, which
+branch holds what, and whether the history you are about to rewrite contains
+someone else's commits. Twenty lines and two seconds before a rebase, a force-push
+or a `reset --hard` is the cheapest safety habit in Git, and it is worth an alias
+because nobody types four flags under pressure.
+
+**★ `a...b` means one thing in `git log` and another in `git diff`. What are they?**
+In `git log`, three dots is the **symmetric difference** — commits reachable from
+either side but not both. In `git diff`, three dots is the diff from the **merge
+base** to the right-hand side, which is what a pull request shows. Same
+punctuation, two tools, two meanings, and no mnemonic connects them; you have to
+know which command you are in. The two-dot form is more consistent: `main..feature`
+in `log` is "commits on `feature` that `main` lacks", which is the right thing to
+read before opening a pull request.
+
+**★ `git log main..feature` prints nothing, but the branch obviously has commits.
+What does that tell you?**
+That the branch is already merged into `main` — it adds nothing `main` does not
+already have. The emptiness *is* the information, and it is the reliable way to
+check that a branch is safe to delete, rather than reading the graph and guessing.
+The reverse form, `git log feature..main`, answers the complementary question of
+what your branch is missing.
+
+**★ Why does every commit look like it was made today after a rebase?**
+Because you are reading the committer date. Every commit carries two: the author
+date, preserved when a commit is replayed, and the committer date, updated by
+whoever replayed it. `--oneline`-style output and the default format lean on the
+one that changed. `--pretty=format:'%h %ad %s' --date=short` reads author dates
+instead, and the same distinction explains why a rebased branch can look like it
+was written out of order until you check which date is on screen.
+
+**Why write `--` before a path?**
+Because Git otherwise has to guess whether `config` is a revision or a path, and
+if both could exist it refuses with `fatal: ambiguous argument`. Writing
+`git log -- config` costs two characters and removes the entire class of error,
+including the more dangerous version where the argument resolves as the *wrong*
+one of the two and silently answers a different question.
+
+**What is the fastest way to understand unfamiliar code with Git?**
+`git log -p -- <file>`. It replays how the file got to its current state, showing
+each change together with the message explaining it — which is usually more useful
+than `blame`, because `blame` tells you who last touched a line while this tells
+you why the line arrived. It is also the strongest practical argument for small
+commits with real messages: the output is only an explanation if each step had one
+intent.
+
 ---
 
 ← Prev: [Undo before you push](08-undo-before-you-push.md) · Next → [Commit messages](10-commit-messages.md)
