@@ -161,6 +161,57 @@ working on.
 **Cause:** someone rewrote the branch upstream; your commits and theirs are the same changes with different hashes
 **Fix:** [the golden rule](../phase-2-branching-merging/08-the-golden-rule.md)'s recovery — `git reset --hard origin/<branch>` if you have nothing unique, otherwise `rebase --onto`
 
+## Interview questions
+
+**★ How does `origin/main` differ from `main`?**
+Only in who is allowed to move it. Both are files under `.git/refs/` containing a
+hash — `refs/heads/main` and `refs/remotes/origin/main` — and the namespace is the
+entire distinction. You move `main` by committing, merging or resetting; only
+`fetch`, `pull` and `push` move `origin/main`. That is why you cannot commit onto a
+remote-tracking ref, and why checking one out gives a detached `HEAD` rather than a
+branch.
+
+**★ Where do "ahead 2, behind 3" actually come from?**
+From counting commits between your branch and its upstream, entirely locally:
+ahead is what you have that `origin/main` lacks, behind is the reverse, and the
+comparison uses the remote-tracking ref as of your **last fetch**. No network call
+is involved, so a branch reporting "up to date" may be hours behind reality, and
+the wording is identical whether you fetched two seconds or two weeks ago. Reading
+`git log --oneline main..origin/main` and its reverse gives you the actual commits
+rather than the counts.
+
+**★ What does pruning remove, and what does it deliberately leave alone?**
+It removes **remote-tracking refs** whose branches no longer exist on the server,
+and it never touches local branches. That asymmetry is useful rather than annoying:
+after a round of merged pull requests, `git branch -vv | grep ': gone]'` lists
+exactly the local branches whose upstream has been deleted — the honest candidate
+list for cleanup. Without `fetch.prune true`, `git branch -r` slowly fills with
+branches deleted last year and stops being informative.
+
+**★ Why is "I deleted the branch" an ambiguous sentence?**
+Because three separate things exist: your local branch, your remote-tracking ref,
+and the branch in the remote repository. Deleting the local one leaves the remote
+untouched; pruning removes only the tracking ref; and removing the remote branch
+takes `git push origin --delete <branch>` (or the older `git push origin :<branch>`,
+which pushes "nothing" to that ref). Each is a separate operation on a separate ref,
+in a separate repository in one case.
+
+**★ `git switch feature/pricing` created a tracking branch on one machine and failed
+on another. Why?**
+The DWIM guess. With `--guess` on by default, if no local branch of that name exists
+and **exactly one** remote has it, Git creates the local branch and sets it to
+track. If two remotes carry the same branch name — the usual fork setup with
+`origin` and `upstream` — the guess is ambiguous and Git says so. The explicit form
+is `git switch -c feature/pricing origin/feature/pricing`.
+
+**Ahead 12, behind 12 on a branch you have been working on alone. What happened?**
+Someone rewrote the branch upstream. Your twelve commits and their twelve are the
+same changes with different hashes, so neither side is an ancestor of the other and
+Git counts both. If you have nothing unique locally, `git reset --hard
+origin/<branch>` is the clean repair; if you do, `git rebase --onto` replays only
+your own work onto the new upstream. It is the receiving end of the rule against
+rewriting shared history.
+
 ---
 
 ← Prev: [`fetch` versus `pull`](02-fetch-vs-pull.md) · Next → [Upstream tracking](04-upstream-tracking.md)
