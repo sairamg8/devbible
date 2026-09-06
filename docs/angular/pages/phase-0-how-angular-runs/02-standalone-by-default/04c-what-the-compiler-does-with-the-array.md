@@ -142,7 +142,7 @@ The honest, source-backed answer to *"does an unused import cost anything?"* is 
 an unused standalone directive or pipe costs you a compiler warning and a live ES import in
 your `.ts`; an unused **NgModule** additionally puts a reference to that module class in the
 emitted output. ⛔ No number goes here — nothing was built and no bundle was measured. The
-warning itself is **05 · Unused imports and the compiler diagnostics** *(not written yet)*.
+warning itself is [05 · Unused imports and the compiler diagnostics](05-unused-imports-and-the-compiler-diagnostics.md).
 
 ## Gotchas
 
@@ -227,8 +227,7 @@ export class AnalyticsService {
 **★ Symptom: you deleted markup but the directive is still imported, and the build only
 warns.** Cause: NG8113 is a warning by default, and the unused entry still costs you a live ES
 import that keeps that file in the module graph. Fix: delete the entry, or run
-`ng generate @angular/core:cleanup-unused-imports`. The full diagnostic story is **05 · Unused
-imports and the compiler diagnostics** *(not written yet)*.
+`ng generate @angular/core:cleanup-unused-imports`. The full diagnostic story is [05 · Unused imports and the compiler diagnostics](05-unused-imports-and-the-compiler-diagnostics.md).
 
 **★ Symptom: you removed the last usage of an imported NgModule from the template and the
 module is still referenced in the built output.** Cause: the `MetaKind.NgModule` branch of

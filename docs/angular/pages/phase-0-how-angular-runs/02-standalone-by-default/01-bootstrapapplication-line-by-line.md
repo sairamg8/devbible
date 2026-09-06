@@ -95,7 +95,7 @@ interface ApplicationConfig {
 ```
 
 That is the entire type. Everything an app is configured with — the router, HTTP, hydration,
-change detection — arrives through that single array. Topic **03 · The provider array is the wiring** *(not written yet)* is about what belongs
+change detection — arrives through that single array. Topic [03 · The provider array is the wiring](../03-the-provider-array/README.md) is about what belongs
 in it.
 
 **`context`** — added for server rendering. The `.d.ts` comment:
@@ -262,7 +262,7 @@ Nothing technically, but the single-field shape is the point: it forces every pi
 application configuration through one uniform mechanism — dependency injection — instead of
 a growing bag of bootstrap options. That is why the ecosystem convention is a `provide*`
 function returning `EnvironmentProviders` rather than an options object, which topic
-**03 · The provider array is the wiring** *(not written yet)* unpacks.
+[03 · The provider array is the wiring](../03-the-provider-array/README.md) unpacks.
 
 **Where does the root injector come from if there is no root module?**
 `internalCreateApplication` constructs an `EnvironmentNgModuleRefAdapter` over your provider
@@ -273,4 +273,4 @@ in a standalone app has exactly three answers — platform, environment, element
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [The NgModule bootstrap it replaced](01b-the-ngmodule-bootstrap-it-replaced.md)
+← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [The `NgModule` bootstrap it replaced](01b-the-ngmodule-bootstrap-it-replaced.md)

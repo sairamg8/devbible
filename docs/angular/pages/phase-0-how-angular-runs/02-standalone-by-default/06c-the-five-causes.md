@@ -30,7 +30,7 @@ This chunk is causes 1 to 3 — the import path itself; causes 4 and 5 are chunk
 
 angular.dev states the contract, verbatim from the components guide:
 
-> *"To use a component, [directive](guide/directives), or [pipe](guide/templates/pipes), you must add
+> *"To use a component, [directive](https://angular.dev/guide/directives), or [pipe](https://angular.dev/guide/templates/pipes), you must add
 > it to the `imports` array in the `@Component` decorator"*
 
 and the compiler enforces exactly that. The class doc of `StandaloneComponentScopeReader`, verbatim:
@@ -270,4 +270,4 @@ the compiler does.
 
 ---
 
-← Prev: [Compile time vs runtime](06b-runtime-detection.md) · Index: [Topic index](README.md) · Next → [Legacy declarables and real custom elements](06d-legacy-declarables-and-custom-elements.md)
+← Prev: [Compile time vs runtime](06b-runtime-detection.md) · Index: [Topic index](README.md) · Next → [Legacy declarables and custom elements](06d-legacy-declarables-and-custom-elements.md)

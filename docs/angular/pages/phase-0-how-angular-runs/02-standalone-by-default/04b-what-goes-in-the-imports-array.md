@@ -286,4 +286,4 @@ behaviour. The barrel is a real convenience; it is not free, and what it costs i
 
 ---
 
-← Prev: [What `imports` actually means](04-what-imports-actually-means.md) · Index: [Topic index](README.md) · Next → [What the compiler does with the array](04c-what-the-compiler-does-with-the-array.md)
+← Prev: [What `imports` actually means](04-what-imports-actually-means.md) · Index: [Topic index](README.md) · Next → [What the compiler does with it](04c-what-the-compiler-does-with-the-array.md)

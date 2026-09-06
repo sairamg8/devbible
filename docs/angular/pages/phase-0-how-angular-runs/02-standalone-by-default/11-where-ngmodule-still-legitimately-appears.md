@@ -182,7 +182,7 @@ export class InvoiceActions {
 **The difference is diagnosability, not output.** The unused-standalone-imports diagnostic can
 tell you that `MatButton` went stale the day you delete the last button; it can never tell
 you that about `MatButtonModule`, because a module whose exports are *partly* used is, to the
-compiler, used. The **unused-imports chunk** *(not written yet)* owns the rule itself. Prefer
+compiler, used. The [unused-imports chunk](05-unused-imports-and-the-compiler-diagnostics.md) owns the rule itself. Prefer
 the class import for anything you can name, and keep the module import only for a library
 whose surface you genuinely consume wholesale.
 
@@ -243,7 +243,7 @@ static ɵmod: i0.ɵɵNgModuleDeclaration<LegacyChartsModule, [typeof ChartHost],
 **★ Symptom: `imports: [CommonModule]` is added "to be safe" and NG8113 never complains.**
 Cause: `CommonModule` re-exports twenty-four symbols, so almost any template uses at least
 one — a single `| date` keeps the whole bundle looking used. Fix: import the one or two
-symbols the template actually names; the **`CommonModule` anti-fix chunk** *(not written yet)*
+symbols the template actually names; the [`CommonModule` anti-fix chunk](06e-the-commonmodule-anti-fix.md)
 argues the case in full, but the mechanical version is one line:
 
 ```ts
@@ -293,4 +293,4 @@ modules the framework builds for your tests, and the imperative and hybrid escap
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **the next topic** *(not written yet)*
+← Prev: [Incremental compilation and the scope cache](10c-incremental-compilation-and-the-scope-cache.md) · Index: [Topic index](README.md) · Next → [The provider array is the wiring](../03-the-provider-array/README.md)

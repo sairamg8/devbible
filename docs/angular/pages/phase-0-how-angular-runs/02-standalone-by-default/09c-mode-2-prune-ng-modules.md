@@ -215,7 +215,7 @@ export class ConfigurerModule {}
 source, determined from your `tsconfig.json` files. `node_modules` is not yours to rewrite. Fix: nothing
 here — that is correct behaviour. Where the library also ships standalone classes, importing those
 directly instead of the module is a manual improvement covered in
-**11 · Where `NgModule` still legitimately appears** *(not written yet)*.
+[11 · Where `NgModule` still legitimately appears](11-where-ngmodule-still-legitimately-appears.md).
 
 **Symptom: a module survived and you cannot see any of the five disqualifiers in the file.** Cause: the
 disqualifier can be inherited through the `imports` chain, which is not visible in the file itself, or
@@ -272,4 +272,4 @@ only recovery is to reset the branch and start over.
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **10 · Why standalone makes the graph splittable** *(not written yet)*
+← Prev: [Mode 1 — convert to standalone](09b-mode-1-convert-to-standalone.md) · Index: [Topic index](README.md) · Next → [Why standalone makes the graph splittable](10-why-standalone-makes-the-graph-splittable.md)

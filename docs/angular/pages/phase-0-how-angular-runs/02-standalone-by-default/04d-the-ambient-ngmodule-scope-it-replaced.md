@@ -243,4 +243,4 @@ the payoff is that a component file can be read, moved and lazily loaded on its 
 
 ---
 
-← Prev: [What the compiler does with the array](04c-what-the-compiler-does-with-the-array.md) · Index: [Topic index](README.md) · Next → **05 · Unused imports and the compiler diagnostics** *(not written yet)*
+← Prev: [What the compiler does with it](04c-what-the-compiler-does-with-the-array.md) · Index: [Topic index](README.md) · Next → [Unused imports and the compiler diagnostics](05-unused-imports-and-the-compiler-diagnostics.md)

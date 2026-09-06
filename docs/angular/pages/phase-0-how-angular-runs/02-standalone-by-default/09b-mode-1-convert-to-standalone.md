@@ -230,4 +230,4 @@ to say "the same as the default". Deleting the flag is what makes the file indis
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **10 · Why standalone makes the graph splittable** *(not written yet)*
+← Prev: [The standalone migration schematic](09-the-standalone-migration-schematic.md) · Index: [Topic index](README.md) · Next → [Mode 2 — prune NgModules](09c-mode-2-prune-ng-modules.md)

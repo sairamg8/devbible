@@ -10,13 +10,9 @@ sidebar_position: 10
 > [NgModules overview](https://angular.dev/guide/ngmodules/overview) — and `angular/angular` at tag
 > `v22.1.5`:
 > [`annotations/component/src/handler.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/annotations/component/src/handler.ts),
-> [`annotations/ng_module/src/handler.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/annotations/ng_module/src/handler.ts),
 > [`scope/src/standalone.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/scope/src/standalone.ts),
 > [`core/src/metadata/directives.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/core/src/metadata/directives.ts),
-> [`render3/component_ref.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/core/src/render3/component_ref.ts),
-> [`render3/deps_tracker/deps_tracker.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/core/src/render3/deps_tracker/deps_tracker.ts),
-> [`router/src/utils/config.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/router/src/utils/config.ts),
-> [`router/src/router_config_loader.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/router/src/router_config_loader.ts).
+> [`render3/deps_tracker/deps_tracker.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/core/src/render3/deps_tracker/deps_tracker.ts).
 > Documentation-validated; **no sandbox run**.
 > Version spine: **Angular 22.1.5** · CLI / `@angular/build` / `@angular/ssr` **22.1.7** · TypeScript peer `>=6.0 <6.1`.
 
@@ -29,9 +25,13 @@ a whole-program question into a one-file question — and rewriting an eager `im
 22 are downstream of exactly that: `@defer` emits one dynamic import per dependency of a block,
 `loadComponent` lazy-loads a single component with no module wrapped around it, and the compiler
 caches a compilation scope per component class rather than per module, so a rebuild invalidates one
-component instead of everything a module declared. This page is the mechanism and those three
-payoffs. The rule with teeth that falls out of it — `@defer` silently refuses anything that is not
-standalone — is the next chunk.**
+component instead of everything a module declared. This page is the mechanism and the first of those
+payoffs.** The route boundary is
+[10b · `loadComponent` at a route boundary](10b-loadcomponent-at-a-route-boundary.md) and the rebuild
+property is
+[10c · Incremental compilation and the scope cache](10c-incremental-compilation-and-the-scope-cache.md).
+The rule with teeth that falls out of all of it — **`@defer` silently refuses anything that is not
+standalone** *(not written yet)* — is still to be written.
 
 ## Locality is a compiler property before it is an ergonomic one
 
@@ -106,8 +106,9 @@ for (const [block, dependencies] of perBlockDeps) {
 ```
 
 A block whose dependency list came out **empty** emits `null` — no resolver function, nothing to
-load. That is the silent failure of the next chunk seen from the emit side: a `@defer` block wrapped
-around something the compiler could not make deferrable is not an error, it is an empty list.
+load. That is the silent failure of a non-deferrable `@defer` block seen from the emit side: a
+`@defer` wrapped around something the compiler could not make deferrable is not an error, it is an
+empty list.
 
 ⚠️ **`@Component.deferredImports` exists and is not yours to use.** Its doc comment in
 `packages/core/src/metadata/directives.ts` is explicit on both counts:
@@ -121,214 +122,61 @@ around something the compiler could not make deferrable is not an error, it is a
 The field is tagged `@internal // 3p-only` in the v22.1.5 typings. Write `imports` and let the
 compiler decide per symbol.
 
-## `loadComponent` — the same locality, at a route boundary
-
-Before standalone, lazy-loading a route meant lazy-loading an `NgModule`, because a component could
-not be rendered without the module that declared it. With locality, the component is a sufficient
-unit. The v22.1.5 router public API declares it as a function returning the class itself:
-
-```ts
-loadComponent?: () =>
-  | Type<unknown>
-  | Observable<Type<unknown> | DefaultExport<Type<unknown>>>
-  | Promise<Type<unknown> | DefaultExport<Type<unknown>>>;
-```
-
-which in practice is one dynamic import per route:
-
-```ts
-// app.routes.ts
-import {Routes} from '@angular/router';
-
-export const routes: Routes = [
-  {
-    path: '',
-    loadComponent: () => import('./home/home').then((m) => m.Home),
-  },
-  {
-    path: 'reports/:id',
-    loadComponent: () => import('./reports/report-detail').then((m) => m.ReportDetail),
-  },
-];
-```
-
-There is a schematic for converting eager route references, described in
-`packages/core/schematics/collection.json` verbatim as:
-
-> *"Updates route definitions to use lazy-loading of components instead of eagerly referencing them"*
-
-```bash
-ng generate @angular/core:route-lazy-loading
-```
-
-🔴 **The standalone requirement here is enforced at runtime, not at build time, and only in
-development.** `packages/router/src/utils/config.ts`:
-
-```ts
-export function assertStandalone(fullPath: string, component: Type<unknown> | undefined): void {
-  if (component && isNgModule(component)) {
-    throw new RuntimeError(
-      RuntimeErrorCode.INVALID_ROUTE_CONFIG,
-      `Invalid configuration of route '${fullPath}'. You are using 'loadComponent' with a module, ` +
-        `but it must be used with standalone components. Use 'loadChildren' instead.`,
-    );
-  } else if (component && !isStandalone(component)) {
-    throw new RuntimeError(
-      RuntimeErrorCode.INVALID_ROUTE_CONFIG,
-      `Invalid configuration of route '${fullPath}'. The component must be standalone.`,
-    );
-  }
-}
-```
-
-`RuntimeErrorCode.INVALID_ROUTE_CONFIG` is `4014` in `packages/router/src/errors.ts`, so both of
-those surface as **NG4014**. And its only call site on the lazy path, in
-`packages/router/src/router_config_loader.ts`, is guarded:
-
-```ts
-(typeof ngDevMode === 'undefined' || ngDevMode) &&
-  assertStandalone(route.path ?? '', component);
-route._loadedComponent = component;
-```
-
-Two things follow. The check runs **after** the chunk has already downloaded — it is a navigation-time
-assertion, not a build-time one — and it is compiled out of a production build. The nearest
-production-side net is the orphan-component check in `packages/core/src/render3/component_ref.ts`,
-which is itself guarded by `ngJitMode` and a `debugInfo` flag:
-
-```ts
-function verifyNotAnOrphanComponent(componentDef: ComponentDef<unknown>) {
-  // TODO(pk): create assert that verifies ngDevMode
-  if (
-    (typeof ngJitMode === 'undefined' || ngJitMode) &&
-    componentDef.debugInfo?.forbidOrphanRendering
-  ) {
-    if (depsTracker.isOrphanComponent(componentDef.type as Type<any>)) {
-      throw new RuntimeError(
-        RuntimeErrorCode.RUNTIME_DEPS_ORPHAN_COMPONENT,
-        `Orphan component found! Trying to render the component ${debugStringifyTypeForError(
-          componentDef.type,
-        )} without first loading the NgModule that declares it. It is recommended to make this component standalone in order to avoid this error. If this is not possible now, import the component's NgModule in the appropriate NgModule, or the standalone component in which you are trying to render this component. If this is a lazy import, load the NgModule lazily as well and use its module injector.`,
-      );
-    }
-  }
-}
-```
-
-`RUNTIME_DEPS_ORPHAN_COMPONENT` is `981`, so **NG0981**. ⚠️ **What an AOT production build actually
-does when a non-standalone class reaches `loadComponent` is not stated anywhere I could find, and
-nothing was run to find out.** Both guards above are development-mode guards; the honest statement is
-that the two errors you can rely on seeing are development-mode errors, and this is a reason to keep
-`ng build` and `ng serve` honest with the same routes rather than a reason to guess.
-
-## Incremental compilation: a scope you can invalidate per component
-
-The same cache line, read as a rebuild property:
-
-```ts
-private cache = new Map<ClassDeclaration, StandaloneScope | null>();
-```
-
-**The cache key is the invalidation unit.** Editing a standalone component invalidates that
-component's scope. An `NgModule` scope is keyed on the module, so touching the module invalidates the
-scope of every declaration in it.
-
-The semantic dependency graph records the same shape. In `handler.ts`, a component symbol keeps the
-exact list of directives and pipes its template used:
-
-```ts
-symbol.usedDirectives = Array.from(declarations.values())
-  .filter(isUsedDirective)
-  .map(getSemanticReference);
-symbol.usedPipes = Array.from(declarations.values())
-  .filter(isUsedPipe)
-  .map(getSemanticReference);
-```
-
-The `NgModule` side of the same graph has to track something considerably less precise, and its own
-doc comment says why — `packages/compiler-cli/src/ngtsc/annotations/ng_module/src/handler.ts`,
-verbatim:
-
-> *"`SemanticSymbol`s of the transitive imports of this NgModule which came from imported standalone
-> components. Standalone components are excluded/included in the `InjectorDef` emit output of the
-> NgModule based on whether the compiler can prove that their transitive imports may contain exported
-> providers, so a change in this set of symbols may affect the compilation output of this NgModule."*
-
-A change *anywhere* in a module's transitive standalone imports can change that module's emit. A
-standalone component has no such surface.
-
-The human-scale version of the same property: because the only route into a template scope is a class
-reference in an `imports` array, a text search is a complete answer to "who can use this?"
-
-```bash
-grep -rn 'RevenueChart' src/
-```
-
-Under module scope it was not, because the reference could be three modules away and never name the
-class at all. ⚠️ That is an argument from the two scope readers, not a documented guarantee.
-
 ## Gotchas
 
-**★ Symptom: a route with `loadComponent` throws NG4014 — *"Invalid configuration of route '…'. You
-are using 'loadComponent' with a module, but it must be used with standalone components. Use
-'loadChildren' instead."*** Cause: the dynamic import resolved to an `NgModule` class, usually because
-the barrel or the file exports both and the wrong name was picked. Fix: `loadComponent` takes the
-component; a module goes through `loadChildren`:
+**★ Symptom: a `@defer` block compiles, renders correctly, and produces no separate chunk at all.**
+Cause: the block's dependency list came out empty, so `compileDeferBlocks` stored `null` instead of a
+resolver function — there is nothing to dynamically import. That happens when the deferred content
+uses only built-in control flow and plain elements, or when its dependencies are also referenced
+eagerly elsewhere in the same template. Fix: check what is actually inside the block; a `@defer`
+around markup with no component, directive or pipe of its own has nothing to split:
 
-```ts
-// wrong
-{path: 'reports', loadComponent: () => import('./reports/reports.module').then((m) => m.ReportsModule)},
+Nothing to defer — no components, directives or pipes inside the block:
 
-// right — either load the component
-{path: 'reports', loadComponent: () => import('./reports/report-list').then((m) => m.ReportList)},
-// or keep the module and use the module-shaped API
-{path: 'legacy', loadChildren: () => import('./legacy/legacy.module').then((m) => m.LegacyModule)},
-```
-
-**★ Symptom: NG4014 — *"Invalid configuration of route '…'. The component must be standalone."* —
-appears only when someone navigates to that route, never at build time.** Cause: `assertStandalone`
-is called from `router_config_loader.ts` after the chunk resolves, and it is wrapped in a `ngDevMode`
-guard, so it is a development-time navigation assertion. Fix: delete the `standalone: false` on the
-routed component and remove it from any `declarations` array:
-
-```ts
-// report-detail.ts
-@Component({
-  selector: 'app-report-detail',
-  imports: [DatePipe],
-  template: `<h2>{{ title }}</h2><p>{{ generatedAt | date: 'medium' }}</p>`,
-})
-export class ReportDetail {
-  protected readonly title = 'Report';
-  protected readonly generatedAt = Date.now();
+```html
+@defer (on viewport) {
+  <p>{{ description }}</p>
 }
 ```
 
-**★ Symptom: `loadComponent` works in `ng serve` and the route renders an empty or unstyled component
-in production.** Cause: both guards that would have told you — NG4014 and the NG0981 orphan check —
-are development-only, so a non-standalone class silently reaches the renderer with no compilation
-scope. Fix: exercise the route in a production build before shipping, and make the class standalone
-so the question cannot arise:
+One dependency, one dynamic import:
 
-```bash
-ng build --configuration production
+```html
+@defer (on viewport) {
+  <app-revenue-chart [series]="series" />
+}
 ```
 
-**★ Symptom: a one-line change to a shared feature module triggers a rebuild that recompiles far more
-than the file you touched.** Cause: an `NgModule`-keyed compilation scope invalidates every
-declaration in the module, and the module's own emit depends on its transitive standalone imports —
-*"a change in this set of symbols may affect the compilation output of this NgModule."* Fix: there is
-no configuration for this; the fix is to remove the module and let each component carry its own
-`imports`, which is what the standalone migration schematic does mode by mode.
+**★ Symptom: a `@defer` block with several dependencies is no faster to appear than the eager version
+was.** Cause: one dynamic import is emitted *per* dependency and *"The main content of the block
+renders after all the imports resolve"* — with no guaranteed order — so the slowest request sets the
+latency for the whole block. Fix: keep a deferred block's dependency list small, and split one wide
+block into several narrow ones rather than treating `@defer` as free:
 
-**★ Symptom: you cannot answer "who uses this directive?" without running the app.** Cause: the
-directive is exported from an `NgModule` that other modules import, so no consuming file names it.
-Fix: once the consumers are standalone, every use is a class reference in an `imports` array and the
-search is exhaustive:
-
-```bash
-grep -rn --include='*.ts' 'HighlightDirective' src/
+```html
+@defer (on viewport) { <app-revenue-chart /> }
+@defer (on viewport) { <app-cohort-table /> }
 ```
+
+**★ Symptom: you found `deferredImports` in the `@Component` typings and want to use it to force a
+symbol to be deferred.** Cause: it is tagged `@internal // 3p-only` and its own doc says *"this is an
+internal-only field, use regular `@Component.imports` field instead."* Fix: put the symbol in
+`imports` and let the compiler decide per symbol — its doc also warns *"Make sure that imports which
+bring symbols used in the `deferredImports` don't contain other symbols"*, which is a constraint you
+inherit the moment you reach for the field and do not have otherwise.
+
+**★ Symptom: you cannot decide whether converting an eager `import` to a dynamic one is safe, and no
+tool will tell you.** Cause: the symbol is declared in an `NgModule`, so its visibility is the union
+of every declaration in that module and every module that imports it transitively — a whole-program
+property that is not knowable from the file you are editing. Fix: make the consumers standalone
+first. Once the only route into a template scope is a class reference in an `imports` array, the
+question is answered by reading one file.
+
+**Symptom: a barrel file re-exports a component that a `@defer` block also uses, and the chunk never
+splits.** Cause: an eager `import` anywhere in the same compilation unit keeps the symbol in the main
+graph; the deferred dynamic import is then redundant rather than exclusive. Fix: import deferred
+components from their own module path rather than through a barrel that something else already pulls
+in eagerly. ⛔ No numbers here — nothing was built and no bundle was measured.
 
 ## Interview questions
 
@@ -347,13 +195,15 @@ order for these imports."* The block's content renders after all of them resolve
 sets the latency — a reason to keep a deferred block's dependency list small rather than to treat
 `@defer` as free.
 
-**★ `loadComponent` throws NG4014 for a non-standalone component. At what moment, and does that
-protect a production build?**
-At navigation, after the chunk has downloaded, and only in development. The call site in
-`router_config_loader.ts` is `(typeof ngDevMode === 'undefined' || ngDevMode) && assertStandalone(...)`,
-so the assertion is compiled out of a production bundle. The nearest production-side net, the NG0981
-orphan check, is itself guarded by `ngJitMode` and a `debugInfo` flag. Neither is a build-time
-guarantee, and what a production AOT build does in that situation is not documented.
+**★ `computeNgModuleScope` and `StandaloneComponentScopeReader` answer the same question. What is
+the difference that matters?**
+What they are keyed on, and therefore what they have to read. `computeNgModuleScope` walks
+`def.imports`, recurses into each imported module's scope, and merges the exported directives and
+pipes into one `compilation` set shared by every declaration in the module — so its answer depends on
+the whole import chain. `StandaloneComponentScopeReader` caches
+`Map<ClassDeclaration, StandaloneScope | null>` and computes a scope from one class's own `imports`.
+The first cannot answer "who can reference this symbol?" without a whole-program walk; the second
+answers it from the file in front of you.
 
 **Why is `deferredImports` in the `@Component` typings if the guide never mentions it?**
 It is the internal mechanism the compiler uses when it decides to defer a symbol, exposed as a field
@@ -362,20 +212,19 @@ field, use regular `@Component.imports` field instead."* Its doc also describes 
 for free from `imports`: *"Angular always generates dynamic imports for such symbols and removes the
 regular/eager import."* Reaching for it buys nothing and couples you to an internal field.
 
-**What does keying the compilation-scope cache on the component class buy, beyond compiler
-performance?**
-It makes the invalidation unit a component. `private cache = new Map<ClassDeclaration, StandaloneScope | null>()`
-means one edit invalidates one scope, where a module-keyed scope invalidates every declaration the
-module holds. The same locality shows up for humans as a text search that is actually complete,
-because the only way into a template scope is a class reference in an `imports` array.
+**What happens, exactly, when a `@defer` block turns out to have no deferrable dependencies?**
+Nothing visible. `compileDeferBlocks` builds a `Map` from block to expression and writes `null` for
+any block whose dependency list is empty, so no resolver function is emitted for it — the block still
+renders, the trigger still works, and no chunk boundary is created. There is no diagnostic, which
+makes "my `@defer` did not split anything" a reading exercise rather than a debugging one: look at
+what the block actually contains.
 
 **Is "we adopted standalone" the same claim as "our bundles got smaller"?**
 No, and conflating them is the most common mistake here. Standalone makes the dependency graph
 *splittable* — it does not split anything. `@defer` and `loadComponent` are what cut a boundary, and
 both can be defeated by a barrel file, an eager reference elsewhere in the same template, or a
-dependency that is still module-declared. The two later chunks in this topic are exactly those two
-failure sets.
+dependency that is still module-declared.
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **11 · Where `NgModule` still legitimately appears** *(not written yet)*
+← Prev: [Mode 2 — prune NgModules](09c-mode-2-prune-ng-modules.md) · Index: [Topic index](README.md) · Next → [`loadComponent` at a route boundary](10b-loadcomponent-at-a-route-boundary.md)

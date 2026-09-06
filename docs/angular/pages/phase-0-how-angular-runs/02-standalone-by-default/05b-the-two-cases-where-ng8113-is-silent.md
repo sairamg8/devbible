@@ -224,4 +224,4 @@ rather than across an application.
 
 ---
 
-← Prev: [05 · Unused imports and the compiler diagnostics](05-unused-imports-and-the-compiler-diagnostics.md) · Index: [Topic index](README.md) · Next → [05c · What a stale import costs, and the cleanup](05c-what-a-stale-import-costs-and-the-cleanup-schematics.md)
+← Prev: [Unused imports and the compiler diagnostics](05-unused-imports-and-the-compiler-diagnostics.md) · Index: [Topic index](README.md) · Next → [What a stale import costs, and the cleanup](05c-what-a-stale-import-costs-and-the-cleanup-schematics.md)

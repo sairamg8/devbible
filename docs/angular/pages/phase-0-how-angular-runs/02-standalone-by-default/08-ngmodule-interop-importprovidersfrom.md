@@ -24,9 +24,9 @@ readable members — `{ ɵproviders, ɵfromNgModule }`, both fields private API.
 collected, filter it, or take half. It is legal in `ApplicationConfig.providers` and in
 `Route.providers`, and nowhere else, because those two are typed
 `Array<Provider | EnvironmentProviders>` while a component's `providers` array is not. This chunk is
-what the function is and where it may appear; **08b** *(not written yet)* is the bill,
-**08c** *(not written yet)* is the two errors it raises, and
-**08d** *(not written yet)* is the interop that is better than it.**
+what the function is and where it may appear; [08b · What it drags in](08b-what-importprovidersfrom-drags-in.md) is the bill,
+[08d · The two errors it raises](08d-the-two-errors-importprovidersfrom-raises.md) is the two errors it raises, and
+**08e · The interop shapes that beat it** *(not written yet)* is the interop that is better than it.**
 
 ## The signature, and the two brands it stamps on the result
 
@@ -58,7 +58,7 @@ Two fields, both `ɵ`-prefixed and therefore private API. `ɵproviders` is the f
 is reaching into internals and is not supported. `ɵfromNgModule: true` exists for exactly one purpose —
 it lets NG0207 print a *more specific* message when the offending value came from this function rather
 than from a generic `provide*()` call, which is
-**08c** *(not written yet)*'s subject.
+[08d · The two errors it raises](08d-the-two-errors-importprovidersfrom-raises.md)'s subject.
 
 Its doc comment is the contract, verbatim:
 
@@ -110,7 +110,7 @@ export type EnvironmentProviders = {
 root environment injector for the life of the process. The route form makes the router create a child
 `EnvironmentInjector` for that route subtree, so the providers are created on first navigation and are
 invisible everywhere else. When both work, the route form is strictly better, and
-**08d** *(not written yet)* shows the shape.
+**08e · The interop shapes that beat it** *(not written yet)* shows the shape.
 
 ## The anatomy of a `ModuleWithProviders`, in six lines
 
@@ -142,7 +142,7 @@ the most common interop mistake:
 |---|---|---|
 | A library module with no `provide*` equivalent, needed app-wide | `importProvidersFrom(LibModule)` in `ApplicationConfig.providers` | The only supported route for a class you do not control |
 | The same, but needed by one feature | `importProvidersFrom(LibModule)` in that route's `providers` | Scoped to a child `EnvironmentInjector`, created on navigation |
-| A legacy *feature* module of your own with its own routes | `loadChildren: () => import('…').then(m => m.FeatureModule)` | Stays lazy; the route's injector parents the module's (**08d** *(not written yet)*) |
+| A legacy *feature* module of your own with its own routes | `loadChildren: () => import('…').then(m => m.FeatureModule)` | Stays lazy; the route's injector parents the module's ([08c · Ordering, cycles and multi tokens](08c-ordering-cycles-and-multi-tokens.md)) |
 | A module class you must instantiate imperatively | `createNgModule(LibModule, parentInjector)` | Still `@public` in 22.1.5; `createNgModuleRef` was **removed in v22.0.0** |
 
 Nothing in that table is a template-scope mechanism. A module's *directives and pipes* reach a component
@@ -151,7 +151,7 @@ only through that component's own `imports` array — [chunk 04](04-what-imports
 
 ## Gotchas
 
-**★ Symptom: you want to keep only *some* of what a module provides and there is no API to do it.** Cause: `EnvironmentProviders` is `{ ɵbrand: 'EnvironmentProviders' }` — an opaque brand with the payload on a private `ɵproviders` field. There is no filter, no spread, no inspection. Fix: import it whole and override the token afterwards, since the last non-multi provider wins (**08b** *(not written yet)*):
+**★ Symptom: you want to keep only *some* of what a module provides and there is no API to do it.** Cause: `EnvironmentProviders` is `{ ɵbrand: 'EnvironmentProviders' }` — an opaque brand with the payload on a private `ɵproviders` field. There is no filter, no spread, no inspection. Fix: import it whole and override the token afterwards, since the last non-multi provider wins ([08c · Ordering, cycles and multi tokens](08c-ordering-cycles-and-multi-tokens.md)):
 
 ```ts
 bootstrapApplication(App, {
@@ -164,9 +164,9 @@ bootstrapApplication(App, {
 
 For a `multi: true` token such as `HTTP_INTERCEPTORS` that override does **not** work — a multi record
 accumulates rather than replaces — so there the only real fix is to stop importing the module and
-provide the pieces yourself (**08d** *(not written yet)*).
+provide the pieces yourself (**08e · The interop shapes that beat it** *(not written yet)*).
 
-**★ Symptom: `importProvidersFrom(SharedModule)` sits in `main.ts` and nobody on the team can say what it brings in.** Cause: this is the function working exactly as designed — a transitive walk with no report and an opaque result. Fix: read `SharedModule`'s own `imports` and `providers` by hand and convert them one at a time, deleting each entry from the module as you go, until the module is empty and the call can be deleted with it. There is no tooling shortcut for the reading step; the schematic in chunk **09 · The standalone migration schematic** *(not written yet)* converts what it recognises and leaves the rest.
+**★ Symptom: `importProvidersFrom(SharedModule)` sits in `main.ts` and nobody on the team can say what it brings in.** Cause: this is the function working exactly as designed — a transitive walk with no report and an opaque result. Fix: read `SharedModule`'s own `imports` and `providers` by hand and convert them one at a time, deleting each entry from the module as you go, until the module is empty and the call can be deleted with it. There is no tooling shortcut for the reading step; the schematic in chunk [09 · The standalone migration schematic](09-the-standalone-migration-schematic.md) converts what it recognises and leaves the rest.
 
 **★ Symptom: you added `importProvidersFrom(MatCardModule)` and the template still says `'mat-card' is not a known element`.** Cause: you used a provider mechanism for a template-scope problem. `importProvidersFrom` collects providers; it does not put a single directive into any component's compilation scope. Fix: import the class in the component that renders it:
 
@@ -232,4 +232,4 @@ It converts lazy features into eager ones, because everything in `ApplicationCon
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **09 · The standalone migration schematic** *(not written yet)*
+← Prev: [The fields that moved, and the ones deleted](07c-the-fields-that-moved-and-the-ones-deleted.md) · Index: [Topic index](README.md) · Next → [What it drags in](08b-what-importprovidersfrom-drags-in.md)

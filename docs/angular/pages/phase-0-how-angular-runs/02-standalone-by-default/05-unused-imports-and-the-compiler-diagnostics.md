@@ -296,4 +296,4 @@ does not help or hurt, because the tracker keys on the exported name.
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [05b · The two cases where NG8113 is silent](05b-the-two-cases-where-ng8113-is-silent.md)
+← Prev: [The ambient scope it replaced](04d-the-ambient-ngmodule-scope-it-replaced.md) · Index: [Topic index](README.md) · Next → [The two cases where NG8113 is silent](05b-the-two-cases-where-ng8113-is-silent.md)

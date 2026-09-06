@@ -268,4 +268,4 @@ into an error.
 
 ---
 
-← Prev: [`'x' is not a known element`](06-not-a-known-element.md) · Index: [Topic index](README.md) · Next → [The five causes, and the fix for each](06c-the-five-causes.md)
+← Prev: [`'x' is not a known element`](06-not-a-known-element.md) · Index: [Topic index](README.md) · Next → [The five causes (1–3)](06c-the-five-causes.md)

@@ -181,7 +181,7 @@ export const routes: Routes = [
 ];
 ```
 
-**★ Symptom: the same error, but the message says `Invalid providers from 'importProvidersFrom' present in a non-environment injector. 'importProvidersFrom' can't be used for component providers.`** Cause: same code NG0207, different branch — `importProvidersFrom` stamps `ɵfromNgModule: true` on its result so the runtime can name the specific culprit rather than saying "some environment providers". Fix is identical: it goes in `ApplicationConfig.providers` or `Route.providers`, never on a component. Chunk **08 · Interop, honestly** *(not written yet)* is that function in full.
+**★ Symptom: the same error, but the message says `Invalid providers from 'importProvidersFrom' present in a non-environment injector. 'importProvidersFrom' can't be used for component providers.`** Cause: same code NG0207, different branch — `importProvidersFrom` stamps `ɵfromNgModule: true` on its result so the runtime can name the specific culprit rather than saying "some environment providers". Fix is identical: it goes in `ApplicationConfig.providers` or `Route.providers`, never on a component. Chunk [08 · Interop, honestly](08-ngmodule-interop-importprovidersfrom.md) is that function in full.
 
 **★ Symptom: a service moved from `AppModule.providers` into one feature route's `providers` is now missing everywhere else.** Cause: `Route.providers` creates an `EnvironmentInjector` *"for this `Route` and its `children`"* — it is a subtree, not the app. A sibling route, and anything injected above it, never see it. Fix: if it is genuinely app-wide it belongs in `ApplicationConfig.providers`; route scoping is for configuration that legitimately differs per feature:
 
@@ -245,4 +245,4 @@ Because it is not executed, it is *read*. `ngtsc` evaluates the array with its p
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **08 · Interop, honestly — `importProvidersFrom`** *(not written yet)*
+← Prev: [What replaced each `NgModule` responsibility](07-what-replaced-each-ngmodule-responsibility.md) · Index: [Topic index](README.md) · Next → [The fields that moved, and the ones deleted](07c-the-fields-that-moved-and-the-ones-deleted.md)

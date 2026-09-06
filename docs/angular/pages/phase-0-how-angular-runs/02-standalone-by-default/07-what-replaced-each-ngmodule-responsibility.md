@@ -250,4 +250,4 @@ Because the failure is modelled as a *poisoned scope*, not as a per-class error.
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **08 · Interop, honestly — `importProvidersFrom`** *(not written yet)*
+← Prev: [Where `schemas` lives](06g-where-schemas-lives.md) · Index: [Topic index](README.md) · Next → [`imports` split in two, `providers` gained four homes](07b-imports-split-in-two-and-providers-gained-four-homes.md)

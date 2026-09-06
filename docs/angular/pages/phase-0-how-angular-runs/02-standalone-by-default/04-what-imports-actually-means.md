@@ -223,8 +223,7 @@ comment on the field is explicit — *"specifying it for components declared in 
 generates a compilation error"*. Fix: delete `standalone: false` and remove the class from its
 module's `declarations`; the version history behind that flag is
 [03 · Which version changed what](03-standalone-by-default-which-version-changed-what.md), and
-the diagnostic itself is **05 · Unused imports and the compiler diagnostics**
-*(not written yet)*.
+the diagnostic itself is [05 · Unused imports and the compiler diagnostics](05-unused-imports-and-the-compiler-diagnostics.md).
 
 **★ Symptom: one bad entry in `imports` and the template reports a dozen unrelated unknown
 elements.** Cause: `isPoisoned` — a non-standalone or non-Angular entry marks the whole scope
@@ -267,4 +266,4 @@ the reference is the reference.
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [What goes in the array](04b-what-goes-in-the-imports-array.md)
+← Prev: [Which version changed what](03-standalone-by-default-which-version-changed-what.md) · Index: [Topic index](README.md) · Next → [What goes in the array](04b-what-goes-in-the-imports-array.md)

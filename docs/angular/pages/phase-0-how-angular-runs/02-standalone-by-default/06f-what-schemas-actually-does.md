@@ -272,4 +272,4 @@ both are decided before any schema is consulted.
 
 ---
 
-← Prev: [The `CommonModule` anti-fix](06e-the-commonmodule-anti-fix.md) · Index: [Topic index](README.md) · Next → [Where `schemas` lives, and what it does not cover](06g-where-schemas-lives.md)
+← Prev: [The `CommonModule` anti-fix](06e-the-commonmodule-anti-fix.md) · Index: [Topic index](README.md) · Next → [Where `schemas` lives](06g-where-schemas-lives.md)

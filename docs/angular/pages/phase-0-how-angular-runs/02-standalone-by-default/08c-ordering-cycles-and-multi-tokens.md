@@ -220,7 +220,7 @@ export class ReportCacheService {
 
 **★ Symptom: a diamond — two modules both importing `HttpModuleShim` — produces one set of providers, and you assume that is a dev-mode nicety that might not hold in production.** Cause: the opposite of the cycle case. `dedup` is a plain `Set` with no `ngDevMode` guard, so deduplication by module type happens in every build. Fix: nothing to fix — but do not build a design on the *cycle* check behaving the same way, because it does not. Only the dedup is unconditional, and the two live three lines apart.
 
-**★ Symptom: a lazily loaded legacy module's `RouterModule.forChild(routes)` seems to replace the root routes rather than adding to them, or vice versa, and you cannot tell which.** Cause: `ROUTES` is registered `multi: true` by both `provideRouter` and `forChild`, so contributions **append**; what changes is which injector each contribution lands in. A `forChild` inside a module reached by `loadChildren` lands in that module's own injector, parented to the route's; the same call hoisted into `ApplicationConfig.providers` lands in the root. Fix: keep it lazy, so the scoping is explicit (**08e** *(not written yet)* has the full shape):
+**★ Symptom: a lazily loaded legacy module's `RouterModule.forChild(routes)` seems to replace the root routes rather than adding to them, or vice versa, and you cannot tell which.** Cause: `ROUTES` is registered `multi: true` by both `provideRouter` and `forChild`, so contributions **append**; what changes is which injector each contribution lands in. A `forChild` inside a module reached by `loadChildren` lands in that module's own injector, parented to the route's; the same call hoisted into `ApplicationConfig.providers` lands in the root. Fix: keep it lazy, so the scoping is explicit (**08e · The interop shapes that beat it** *(not written yet)* has the full shape):
 
 ```ts
 // src/app/app.routes.ts
@@ -256,4 +256,4 @@ Not by reordering the arguments, because the ordering rule is `ModuleWithProvide
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **09 · The standalone migration schematic** *(not written yet)*
+← Prev: [What it drags in](08b-what-importprovidersfrom-drags-in.md) · Index: [Topic index](README.md) · Next → [The two errors it raises](08d-the-two-errors-importprovidersfrom-raises.md)

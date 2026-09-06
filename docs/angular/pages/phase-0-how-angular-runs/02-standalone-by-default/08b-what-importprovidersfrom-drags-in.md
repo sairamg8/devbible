@@ -267,4 +267,4 @@ The number of `importProvidersFrom` call sites left, because nothing finer is ob
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **09 · The standalone migration schematic** *(not written yet)*
+← Prev: [Interop, honestly — `importProvidersFrom`](08-ngmodule-interop-importprovidersfrom.md) · Index: [Topic index](README.md) · Next → [Ordering, cycles and multi tokens](08c-ordering-cycles-and-multi-tokens.md)

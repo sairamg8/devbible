@@ -285,4 +285,4 @@ downgrades or suppresses them.
 
 ---
 
-← Prev: [05c · What a stale import costs, and the cleanup](05c-what-a-stale-import-costs-and-the-cleanup-schematics.md) · Index: [Topic index](README.md) · Next → **06 · `'x' is not a known element`** *(not written yet)*
+← Prev: [What a stale import costs, and the cleanup](05c-what-a-stale-import-costs-and-the-cleanup-schematics.md) · Index: [Topic index](README.md) · Next → [`'x' is not a known element`](06-not-a-known-element.md)

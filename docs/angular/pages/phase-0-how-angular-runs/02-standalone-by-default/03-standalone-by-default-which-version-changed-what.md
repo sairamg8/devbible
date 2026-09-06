@@ -107,8 +107,7 @@ standalone?: boolean;
 - **omitted** — standalone. This is what `ng generate component` produces.
 - **`standalone: false`** — the legacy-interop opt-out. The class now *must* be declared in
   exactly one `NgModule`, and specifying `imports` or `schemas` on it becomes a compile
-  error (NG2010, covered in chunk **05 · Unused imports and the compiler diagnostics**
-*(not written yet)*).
+  error (NG2010, covered in chunk [05 · Unused imports and the compiler diagnostics](05-unused-imports-and-the-compiler-diagnostics.md)).
 
 angular.dev states the reader-facing consequence directly:
 
@@ -273,4 +272,4 @@ package it lives in.
 
 ---
 
-← Prev: [The NgModule bootstrap it replaced](01b-the-ngmodule-bootstrap-it-replaced.md) · Index: [Topic index](README.md) · Next → **What `imports` actually means** *(not written yet)*
+← Prev: [The `NgModule` bootstrap it replaced](01b-the-ngmodule-bootstrap-it-replaced.md) · Index: [Topic index](README.md) · Next → [What `imports` actually means](04-what-imports-actually-means.md)

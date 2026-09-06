@@ -226,4 +226,4 @@ visible in the file that depends on it.
 
 ---
 
-← Prev: [What `schemas` actually does](06f-what-schemas-actually-does.md) · Index: [Topic index](README.md) · Next → **07 · What replaced each `NgModule` responsibility** *(not written yet)*
+← Prev: [What `schemas` actually does](06f-what-schemas-actually-does.md) · Index: [Topic index](README.md) · Next → [What replaced each `NgModule` responsibility](07-what-replaced-each-ngmodule-responsibility.md)

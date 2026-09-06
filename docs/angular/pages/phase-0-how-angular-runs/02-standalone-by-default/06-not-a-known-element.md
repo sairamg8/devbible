@@ -275,4 +275,4 @@ without being addressed individually.
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [The runtime pair, and why an AOT build never reaches it](06b-runtime-detection.md)
+← Prev: [The errors that reject an import](05d-the-errors-that-reject-an-import-outright.md) · Index: [Topic index](README.md) · Next → [Compile time vs runtime](06b-runtime-detection.md)

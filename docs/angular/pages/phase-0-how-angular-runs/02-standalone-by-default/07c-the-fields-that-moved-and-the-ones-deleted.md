@@ -75,7 +75,7 @@ makeDiagnostic(
 )
 ```
 
-The unknown-element and unknown-property errors that `schemas` suppresses — NG8001, NG8002, and their runtime counterparts — are chunk **06 · `'x' is not a known element`** *(not written yet)*.
+The unknown-element and unknown-property errors that `schemas` suppresses — NG8001, NG8002, and their runtime counterparts — are chunk [06 · `'x' is not a known element`](06-not-a-known-element.md).
 
 ## `entryComponents` → deleted, not replaced
 
@@ -252,4 +252,4 @@ Because the sign encodes something else entirely. Angular's compiler codes are n
 
 ---
 
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **08 · Interop, honestly — `importProvidersFrom`** *(not written yet)*
+← Prev: [`imports` split in two, `providers` gained four homes](07b-imports-split-in-two-and-providers-gained-four-homes.md) · Index: [Topic index](README.md) · Next → [Interop, honestly — `importProvidersFrom`](08-ngmodule-interop-importprovidersfrom.md)

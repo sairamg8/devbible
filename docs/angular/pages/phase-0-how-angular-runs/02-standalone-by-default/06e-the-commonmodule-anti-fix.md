@@ -34,7 +34,7 @@ one import restored all of them.
 **(a) Built-in control flow is template syntax with nothing to import.** angular.dev's control-flow
 migration, verbatim:
 
-> *"[Control flow syntax](guide/templates/control-flow) is available from Angular v17. The new syntax
+> *"[Control flow syntax](https://angular.dev/guide/templates/control-flow) is available from Angular v17. The new syntax
 > is baked into the template, so you don't need to import `CommonModule` anymore."*
 
 Supporting observation about the document itself: angular.dev's control-flow guide describes `@if`,
