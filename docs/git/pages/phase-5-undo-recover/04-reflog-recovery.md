@@ -175,6 +175,62 @@ is the only backup Git has, because it is the only copy that survives your disk.
 **Cause:** `reset --hard` straight from a reflog entry without inspecting it
 **Fix:** `git branch rescue <hash>` first, look, then decide. The reflog still has the state before your recovery attempt
 
+## Interview questions
+
+**★ Give the recovery procedure, and say why step three is not `reset --hard`.**
+Find the point with `git reflog`; verify it with `git show <hash>` and
+`git log --oneline <hash> -5`; rescue it non-destructively with
+`git branch rescue <hash>`; and only then decide — reset to it, or cherry-pick from
+the rescue branch. Creating a branch costs nothing and is reversible, whereas
+`reset --hard` typed while panicking is how one recoverable mistake becomes two. The
+reflog still holds the state before your recovery attempt, but only if you have not
+compounded the problem.
+
+**★ How long is an orphaned commit recoverable?**
+Weeks, not forever. Three defaults govern it: reflog entries still reachable expire
+after **90 days**, unreachable ones — exactly the entries protecting your orphaned
+commits — after **30 days**, and `gc` prunes loose unreachable objects older than
+**two weeks**. `gc` runs itself once enough loose objects accumulate, so nobody
+invokes it deliberately. The honest summary is that an orphaned commit is reliably
+recoverable for about two weeks to a month, and `gc.reflogExpireUnreachable never` is
+how you extend that in a repository where it matters.
+
+**★ What can `git fsck` recover that the reflog cannot?**
+Objects that nothing ever pointed a ref at. A **staged but never committed** file has
+a real blob in the object store, so `git fsck --lost-found` can surface it even
+though no reflog entry describes it; the same applies to commits after
+`git stash clear`, which the manual warns may be impossible to recover, and to
+anything whose reflog entry has expired but whose objects `gc` has not yet pruned. Its
+output is unlabelled hashes, so recovery means `git show`-ing candidates one by one —
+tedious by design, which is the right relationship for a last resort.
+
+**★ Which two commonly-recommended cleanup commands destroy the safety net?**
+`git gc --prune=now` and `git reflog expire --expire=now --all`. Both appear in
+"clean up your repository" advice, and both immediately delete the unreachable
+objects and reflog entries that hold your lost commits. Running either while
+something is missing turns a recoverable situation into a permanent loss, and there
+is no repair afterwards.
+
+**★ What is never recoverable, and what habit follows?**
+Working-tree edits that were never staged or committed, because no object was ever
+written; files removed by `git clean`, because they were untracked and Git never held
+them; and anything `gc` has already collected. The first is the common case, and it
+is the argument for `git stash` as a reflex instead of `reset --hard` — stash writes
+real objects, which lands the same "clean tree" outcome on the recoverable side of
+the line.
+
+**Why does the safety net create the carelessness it protects against?**
+Because it is generous, automatic and silently temporary. Every ref movement is
+logged and `reset --hard ORIG_HEAD` fixes most disasters in one command, which
+produces a belief that Git cannot lose work. But it is **local** — never cloned,
+fetched or pushed, so a colleague's reflog cannot help you and a fresh clone has
+none; it **expires** on a schedule nobody has read; and it protects **commits**
+rather than content, which is the opposite of what people actually lose. The accurate
+version is narrower: committed work is safe for weeks, and everything else is safe
+only because you have not typed `--hard` yet. Two habits follow — commit early and
+often, and push the branches you care about, since a pushed branch is the only copy
+that survives your disk.
+
 ---
 
 ← Prev: [`revert` is the undo for shared history](03-revert.md) · Next → [Rewriting your own last few commits](05-rewriting-your-own-commits.md)
