@@ -174,6 +174,57 @@ effect without betting your working tree on it.
 **Cause:** `@{2}` is two *operations* back, not two commits
 **Fix:** `git reflog` and read the descriptions; verify with `git show` before resetting
 
+## Interview questions
+
+**★ Explain `reset`'s modes as one idea rather than five.**
+One verb, one target commit, and a flag saying how far down the three trees the
+effect reaches. `--soft` stops at `HEAD`, so the commits' changes come back staged.
+`--mixed`, the default, also resets the index, so they come back unstaged. `--hard`
+reaches the working tree, so they are gone. `--merge` and `--keep` are partial
+variants that abort rather than overwrite. Once you hold that model you never need
+separate commands for uncommitting, unstaging and discarding.
+
+**★ What is the squash idiom, and why does it work?**
+`git reset --soft HEAD~5` followed by `git commit`. `HEAD` moves back five commits
+while the index still holds the final state, so everything those five commits did is
+staged and ready to be committed once with a proper message. It is the simplest
+branch cleanup in Git and needs no interactive rebase — worth knowing precisely
+because people reach for `rebase -i` for a job that one flag already does.
+
+**★ What is `--keep`, and when is it the command you actually wanted?**
+`--keep` updates the files that differ between the target and `HEAD` but **aborts**
+if any of them has local changes — so it gives you exactly what `--hard` would have
+given you, or an error, never a silent loss. Whenever you are typing `--hard` while
+slightly unsure whether the tree is clean, `--keep` is the honest choice. Its sibling
+`--merge` resets the index and keeps unstaged changes, and mostly exists to clear
+unmerged index entries after a failed operation.
+
+**★ Why does `git reset <path>` behave nothing like `git reset --hard`?**
+Because a pathspec changes what the command is. With paths, `reset` does not move
+`HEAD` at all — it resets those index entries, which the manual describes as the
+opposite of `git add <pathspec>` and equivalent to `git restore --staged`. Two things
+follow: path-form `reset` never touches your working tree, so your edits survive; and
+`git reset --hard <path>` does not exist and is rejected. To wipe one path's content,
+the command is `git restore --staged --worktree <path>`.
+
+**★ `HEAD~3` versus `HEAD@{3}` — what is the difference, and when does it bite?**
+`~3` is three commits back in ancestry; `@{3}` is where `HEAD` pointed three
+*operations* ago, read from the reflog. Immediately after a reset they can point at
+completely unrelated commits, and `@{n}` is the one that undoes operations. Resetting
+to the wrong one while trying to recover is how a single mistake becomes two, which
+is why the reflog descriptions are worth reading and `git show` is worth running
+before you move anything.
+
+**Why did Git split `restore` out of `reset`, and what does taking the split
+seriously look like?**
+Because `git reset HEAD~1` and `git reset --hard HEAD~1` differ by one word, sit next
+to each other in muscle memory, produce no confirmation, and only one of them is
+reversible for uncommitted work. `git restore` covers the file-level operations under
+a name that cannot be confused with the branch-moving one, and `git status` now
+suggests it. Taking the split seriously means **`restore` for paths, `reset` for
+commits** — which removes most of the risk and leaves `--keep` for the times you want
+`--hard`'s effect without betting your working tree on it.
+
 ---
 
 ← Prev: [The undo decision table](01-the-undo-decision-table.md) · Next → [`revert` is the undo for shared history](03-revert.md)
