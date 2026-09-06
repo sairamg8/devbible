@@ -4,6 +4,14 @@ sidebar_label: "RTK Query Cache"
 sidebar_position: 3
 ---
 
+<span className="db-tier t-understand">Understand</span>
+
+> Verified: 2026-09-06 against the Redux Toolkit documentation for **@reduxjs/toolkit 2.12.0** —
+> [cache behaviour](https://redux-toolkit.js.org/rtk-query/usage/cache-behavior),
+> [automated re-fetching](https://redux-toolkit.js.org/rtk-query/usage/automated-refetching).
+> Documentation-validated; **no sandbox run**.
+> Validated: 2026-09-06 · claims + output provenance · session 3a6945a3
+
 # 📦 RTK Query Cache: Tags, Invalidation, Polling & Prefetching
 
 ## 1. Under-The-Hood Mechanics
@@ -33,11 +41,12 @@ Beyond tag invalidation, a cached query entry re-fetches when:
 ### Prefetching
 `api.usePrefetch('getPostById')` returns a function that, when called (e.g. on link hover), pre-warms the cache for an argument **before** the component that actually needs it mounts — turning a network-bound navigation into an instant one.
 
-### Optimistic Updates: `onQueryStarted` + `updateQueryData().undo()`
-Tag invalidation refetches **after** a mutation resolves — for a mutation the UI should reflect instantly (a toggle, a role change, a like button), that round-trip delay is exactly the latency `onQueryStarted` exists to hide. Inside a mutation's `onQueryStarted(arg, { dispatch, queryFulfilled })`:
-1. Call `dispatch(api.util.updateQueryData(endpointName, cacheKeyArg, recipe))` **before** awaiting anything — this synchronously patches the cached query data (via an Immer draft, just like a reducer) and returns a `patchResult` handle.
-2. `await queryFulfilled` — a promise that resolves when the mutation's own request succeeds, rejects when it fails.
-3. On rejection, call `patchResult.undo()` inside a `catch` — this reverts **exactly** the patch that was applied, not a blind refetch, so it composes correctly even if other patches were applied to the same cache entry in the meantime.
+### Where manual cache work goes instead
+Tag invalidation refetches **after** a mutation resolves. When the UI has to reflect a change before
+that round-trip completes — a toggle, a like button, a role change — you patch the cache by hand from
+`onQueryStarted`. That, and the `upsertQueryData` route for seeding an entry outright, are the subject
+of [manual & optimistic cache updates](./02b-optimistic-and-manual-cache-updates.md).
+
 
 ---
 
@@ -78,23 +87,7 @@ export const usersApi = createApi({
     }),
     updateUserRole: builder.mutation<User, { id: string; role: User['role'] }>({
       query: ({ id, role }) => ({ url: `/users/${id}/role`, method: 'PATCH', body: { role } }),
-      // Still invalidate on success — this is the source of truth reconciliation;
-      // onQueryStarted below only covers the INSTANT before that response arrives
       invalidatesTags: (result, error, { id }) => [{ type: 'User', id }],
-      async onQueryStarted({ id, role }, { dispatch, queryFulfilled }) {
-        // Patch the LIST query's cache entry immediately, before the network request resolves
-        const patchResult = dispatch(
-          usersApi.util.updateQueryData('getUsers', { page: 1 }, (draft) => {
-            const user = draft.find((u) => u.id === id);
-            if (user) user.role = role; // Immer draft — mutate directly, no spread needed
-          })
-        );
-        try {
-          await queryFulfilled; // wait for the actual PATCH request to settle
-        } catch {
-          patchResult.undo(); // server rejected it — revert the optimistic patch exactly
-        }
-      },
     }),
     deleteUser: builder.mutation<{ success: boolean }, string>({
       query: (id) => ({ url: `/users/${id}`, method: 'DELETE' }),
@@ -133,9 +126,14 @@ function UserCountBadge() {
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## Gotchas
 
-### ⚠️ Pitfall 1: Only Invalidating the Item Tag on Create/Delete
+### Invalidating only the item tag on a create or delete
+**Symptom.** A new row does not appear in the table until a reload; a deleted one lingers.
+**Cause.** Creating and deleting change the list's **membership**, not one item's contents. An item tag
+matches no cache entry that needs to change — and on a create, the id does not even exist yet when the
+tag is computed.
+**Fix.** Invalidate the `'LIST'` tag for anything that changes membership.
 ```typescript
 // ❌ WRONG: a new user was created, but no LIST tag is invalidated — the table never shows it
 createUser: builder.mutation<User, Partial<User>>({
@@ -147,23 +145,97 @@ createUser: builder.mutation<User, Partial<User>>({
 invalidatesTags: [{ type: 'User', id: 'LIST' }],
 ```
 
-### ⚠️ Pitfall 2: `pollingInterval` Left Running on Unmounted/Background Tabs
-A `pollingInterval` keeps firing network requests for as long as at least one subscriber is mounted — including a component sitting inactive in a background browser tab. Combine with `skip` (e.g. driven by the Page Visibility API) for expensive polls, rather than assuming RTK Query pauses polling on tab blur automatically (it does not, unless `refetchOnFocus`/visibility logic is wired in separately).
+### A `providesTags` that returns nothing when the query errors
+**Symptom.** After a failed fetch, later mutations stop refreshing that query entirely.
+**Cause.** `providesTags` receives `(result, error, arg)` and `result` is `undefined` on failure. A
+callback that indexes into `result` without a guard throws or returns `[]`, so the entry ends up
+providing no tags and no invalidation can ever match it.
+**Fix.** Always handle the undefined-result branch — the `LIST` tag at minimum, as in the `getUsers`
+example above.
 
-### ⚠️ Pitfall 2.5: Forgetting to `catch` and `undo()` the Optimistic Patch
+### Expecting invalidation to refetch an entry nobody is watching
+**Symptom.** Tags are correct, the mutation fires, and the query still shows old data when you navigate
+back to it.
+**Cause.** An invalidated entry is refetched only if it currently has **active subscribers**. With none,
+it is simply marked stale.
+**Fix.** This is usually right, not a bug — but if a background entry must be warm, keep a subscription
+alive, or refetch on mount with `refetchOnMountOrArgChange`.
+
+### `pollingInterval` left running in a background tab
+**Symptom.** Network traffic and server load from tabs nobody is looking at; a battery complaint.
+**Cause.** Polling is tied to subscription, not visibility. A mounted component in a hidden tab keeps
+polling.
+**Fix.** RTK Query ships `skipPollingIfUnfocused` for exactly this, and it composes with `skip` for
+anything more specific:
 ```typescript
-// ❌ WRONG: no try/catch — if the PATCH request fails, the optimistic edit stays in the
-// cache FOREVER (until the next real refetch), showing the user a role change that never happened
-async onQueryStarted({ id, role }, { dispatch, queryFulfilled }) {
-  dispatch(usersApi.util.updateQueryData('getUsers', { page: 1 }, (draft) => {
-    const user = draft.find((u) => u.id === id);
-    if (user) user.role = role;
-  }));
-  await queryFulfilled; // if this rejects, the function just throws — patch is never undone
-}
+const { data } = useGetUsersQuery({ page: 1 }, {
+  pollingInterval: 15_000,
+  skipPollingIfUnfocused: true,
+});
+```
+⚠️ It carries the same dependency as the focus/reconnect options: `skipPollingIfUnfocused` "requires
+`setupListeners` to have been called". Set it without that call and polling continues in the background
+exactly as before, silently.
 
-// ✅ CORRECT: capture patchResult, undo() it in a catch — see the full example above
+### `refetchOnFocus` / `refetchOnReconnect` with no `setupListeners`
+**Symptom.** The options are set and nothing ever refetches.
+**Cause.** The options declare intent; the browser event listeners are installed separately. The docs
+state it outright: "this requires `setupListeners` to have been called".
+**Fix.** `setupListeners(store.dispatch)` once, at app init.
+
+### Prefetching on hover without `ifOlderThan`
+**Symptom.** A hover-heavy table issues a request per mouse movement across rows.
+**Cause.** `usePrefetch`'s returned function fetches unconditionally by default.
+**Fix.** Give it a staleness bound so a warm entry is left alone:
+```tsx
+<tr onMouseEnter={() => prefetchUser(user.id, { ifOlderThan: 30 })}>
 ```
 
-### ⚠️ Pitfall 3: Expecting `transformResponse` to Run on Every Render
-`transformResponse(response, meta, arg)` runs once per actual network fetch, not once per render/subscriber — its output is what gets cached. Putting expensive but *non-deterministic* logic there (e.g. `Date.now()`-based fields) bakes a stale timestamp into the cache for the entire `keepUnusedDataFor` window, not a fresh one per read.
+### Tag granularity that refetches the world
+**Symptom.** Editing one row refetches every list in the app.
+**Cause.** A tag type used without ids — `invalidatesTags: ['User']` — matches **every** entry
+providing that type, which is occasionally what you want and usually not.
+**Fix.** Provide both a `'LIST'` pseudo-id and per-item ids, and invalidate the narrowest thing that is
+actually stale. Reach for the bare type only when a mutation genuinely can change anything of that type.
+
+## Interview questions
+
+**★ Explain RTK Query's invalidation model.**
+It is a declarative graph rather than imperative refetch calls. Query endpoints declare the tags they
+**provide**; mutations declare the tags they **invalidate**. When a mutation resolves, RTK Query matches
+the invalidated tags against the tags provided by every cached query and refetches the ones that
+overlap — provided they still have subscribers. Nothing names another endpoint directly, which is why a
+new consumer of a tag needs no changes anywhere else.
+
+**★ Why provide both a `'LIST'` tag and per-item tags?**
+Because updates and membership changes are different events. Editing item 3 should refresh anything
+showing item 3, not every list in the app; creating or deleting an item changes which items belong in a
+list, which no per-item tag can express — and on a create, the new id does not exist when the tag is
+computed. Providing both lets an update invalidate `{ type: 'User', id }` and a create invalidate
+`{ type: 'User', id: 'LIST' }`.
+
+**★ A mutation succeeds, tags look right, and the list still does not refetch. What is left?**
+Subscribers. RTK Query refetches an invalidated entry only while something is subscribed to it; with
+none it is marked stale and refetched next time it is used. After that I would check that `providesTags`
+did not silently return `[]` on a previous error result, that the tag *types* actually match
+(`'User'` vs `'Users'` fails silently), and that both the API reducer and its middleware are installed.
+
+**What is the difference between `refetchOnMountOrArgChange: true` and a number?**
+`true` refetches whenever a new subscriber appears, regardless of cached data. A number is a staleness
+bound in seconds — refetch only if the cached entry is older than that. The number is almost always the
+better default: it keeps navigation instant while bounding how stale the screen can be.
+
+**How do you stop a poll from running in a hidden tab?**
+`skipPollingIfUnfocused: true` alongside `pollingInterval`. It is worth knowing this exists because the
+obvious assumption — that RTK Query pauses polling on blur by default — is wrong, and the naive fix
+people reach for is a hand-rolled Page Visibility listener driving `skip`.
+
+**What does `usePrefetch` change about the loading experience, and what is its cost?**
+It warms a cache entry before the component that needs it mounts, turning a network-bound navigation
+into an instant render. The cost is requests for data that may never be shown, so it wants a trigger
+that correlates with intent — hover or focus on a link — plus `ifOlderThan` so an already-warm entry is
+not refetched on every pass of the mouse.
+
+---
+
+← [`queryFn`, transforms & infinite queries](./01b-queryfn-transforms-and-infinite-queries.md) · [Topic index](../README.md) · Next → [Optimistic & manual cache updates](./02b-optimistic-and-manual-cache-updates.md)
