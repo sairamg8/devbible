@@ -6,7 +6,7 @@ sidebar_position: 14
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-06 against angular.dev — [Template type checking](https://angular.dev/tools/cli/template-typecheck) (⚠️ stale on defaults, corrected in **14c** *(not written yet)*) — and `angular/angular` at tag `v22.1.5`:
+> Verified: 2026-09-06 against angular.dev — [Template type checking](https://angular.dev/tools/cli/template-typecheck) (⚠️ stale on defaults, corrected in **14f · What `strictTemplates` actually switches** *(not written yet)*) — and `angular/angular` at tag `v22.1.5`:
 > [`packages/compiler/src/typecheck/type_check_block.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler/src/typecheck/type_check_block.ts),
 > [`packages/compiler/src/typecheck/expression.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler/src/typecheck/expression.ts),
 > [`packages/compiler/src/typecheck/ops/expression.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler/src/typecheck/ops/expression.ts),
@@ -25,7 +25,7 @@ exactly the assignments, calls and subscriptions the template implies, appends t
 synthetic file it has already inserted into your program, and lets the ordinary TypeScript checker
 produce ordinary TypeScript diagnostics about it. There is no Angular type system. There is a code
 generator, `tsc`, and a mapping step — and every strictness flag from
-**14d** *(not written yet)* onwards is nothing more than a switch
+**14f** *(not written yet)* onwards is nothing more than a switch
 that changes what text gets generated.**
 
 ## The fourth artefact
@@ -43,7 +43,7 @@ and every future TypeScript feature — for a second language, forever. Instead 
 template to the language that already has all of that** and pays a different bill: the generated
 text must be plausible TypeScript, some TypeScript errors are artefacts of the generation rather
 than bugs in your template, and every diagnostic needs a position translation to be useful. Those
-three costs are the subject of this page and **where the block lives** *(not written yet)*.
+three costs are the subject of this page and [where the block lives](14c-the-type-check-file-and-how-errors-get-home.md).
 
 ## The TCB is a string of TypeScript, built by concatenation
 
@@ -95,9 +95,9 @@ Three details in four lines, each of which matters later:
   would need the generated function to be checked against the whole ambient environment.
 - **`typeParamsStr`** — the component's own generic parameters are copied onto the generated
   function, but only when `useContextGenericType` is set. That is the public flag
-  `strictContextGenerics` (**14f** *(not written yet)*).
+  `strictContextGenerics` (**14g** *(not written yet)*).
 - **`/*id*/`** — a comment, first thing in the emitted text. That comment is the return address,
-  and **where the block lives** *(not written yet)* is about what it buys.
+  and [where the block lives](14c-the-type-check-file-and-how-errors-get-home.md) is about what it buys.
 
 Each scope in the block is wrapped, and the compiler documents why:
 
@@ -185,7 +185,7 @@ describing the handler it emits, verbatim:
 ```
 
 `document.createElement` **is** the type source for a DOM element in the TCB — which is exactly
-what `strictDomLocalRefTypes` toggles (**14e** *(not written yet)*).
+what `strictDomLocalRefTypes` toggles (**14g** *(not written yet)*).
 
 
 One statement is conspicuously missing from that list, and `ops/inputs.ts` says so in the doc
@@ -210,7 +210,7 @@ binding a `number` to it is not an error. The element and attribute *names* are 
 but by a schema checker rather than by the type system — that is NG8001 and NG8002, and it is why
 those two are the errors people meet first. The flag that would change this,
 `checkTypeOfDomBindings`, is hard-coded `false`
-(**14g** *(not written yet)*).
+(**14h** *(not written yet)*).
 
 ## Gotchas
 
@@ -220,7 +220,7 @@ binding, reference, variable and directive instance, and `tsc` checks it like an
 A 2,000-line template is a 2,000-statement function with a long chain of narrowed child scopes.
 Fix: split the component. There is no type-checking-specific tuning knob, and turning strictness
 off to buy speed costs you the entire feature — see what `strictTemplates: false` actually does in
-**14d** *(not written yet)*.
+**14f** *(not written yet)*.
 
 **★ Symptom: `(input)="rename(box.value)"` fails with "Property 'value' does not exist on type
 'HTMLDivElement'" and you are certain `box` is an input.** Cause: it is not — the reference is on
