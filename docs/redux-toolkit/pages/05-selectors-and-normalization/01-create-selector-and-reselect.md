@@ -4,6 +4,16 @@ sidebar_label: "`createSelector`: Memoized Derived State"
 sidebar_position: 1
 ---
 
+<span className="db-tier t-understand">Understand</span>
+
+> Verified: 2026-09-06 against the Reselect and Redux Toolkit documentation for
+> **@reduxjs/toolkit 2.12.0** (Reselect 5) —
+> [`createSelector`](https://reselect.js.org/api/createSelector/),
+> [`weakMapMemoize`](https://reselect.js.org/api/weakMapMemoize),
+> [RTK 2.0 migration](https://redux-toolkit.js.org/usage/migrating-rtk-2).
+> Documentation-validated; **no sandbox run**.
+> Validated: 2026-09-06 · claims + output provenance · session 3a6945a3
+
 # 📦 `createSelector`: Memoized Derived State
 
 ## 1. Under-The-Hood Mechanics
@@ -107,9 +117,16 @@ function ProductCard({ productId }: { productId: string }) {
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## Gotchas
 
-### ⚠️ Pitfall 1: Reaching for a Selector Factory for a Reason That Stopped Being True
+### Reaching for a selector factory for a reason that stopped being true
+**Symptom.** A `useMemo(makeSelectX, [])` in every row of a list, defended in review with "otherwise the
+cache thrashes".
+**Cause.** True under Reselect 4, where the default `lruMemoize` held one entry. Reselect 5 — which
+ships inside RTK 2 — defaults to `weakMapMemoize` with an effectively unlimited cache keyed on argument
+identity.
+**Fix.** Keep the factory when you want the cache to die with the component or you have deliberately
+chosen `lruMemoize`; otherwise a single shared instance is correct and cheaper.
 ```typescript
 // ⚠️ THE OLD ADVICE — and you will still meet it in every blog post, Stack Overflow answer and
 // code review written against RTK 1.x. Under Reselect 4 this module-level shared instance thrashed:
@@ -129,7 +146,13 @@ the reason to reach for it.** Repeating that justification on RTK 2.x teaches a 
 costs real code, because a factory per row in a long list is a `useMemo` and a closure per row that
 the default memoizer no longer needs.
 
-### ⚠️ Pitfall 2: Input Selectors That Return a Fresh Reference Every Call
+### An input selector that manufactures a new reference every call
+**Symptom.** The result function runs on every single dispatch; profiling shows the "memoized" selector
+is the hot path.
+**Cause.** Memoization compares each input's result to its previous result by reference. An input that
+filters, maps, sorts or builds an object literal returns something new every time, so the comparison can
+never succeed.
+**Fix.** Input selectors read raw state; derivation belongs in the result function.
 ```typescript
 // ❌ WRONG: this "input selector" itself creates a new array every call — never memoizes
 const selectActiveProducts = (state: RootState) => state.products.items.filter((p) => p.active);
@@ -140,5 +163,88 @@ createSelector([selectActiveProducts], (active) => active.length); // recomputes
 createSelector([selectAllProducts], (products) => products.filter((p) => p.active).length);
 ```
 
-### ⚠️ Pitfall 3: Wrapping `useSelector` Calls in `createSelector` Unnecessarily
-Not every derived value needs `createSelector` — a selector that returns a primitive (`state => state.cart.items.length`) is already cheap to recompute and cheap to compare via `useSelector`'s default reference-equality bailout. Reserve `createSelector` memoization for genuinely expensive derivations (filtering/sorting/aggregating collections), not for trivial reads — the memoization bookkeeping itself has a (small) cost.
+### Memoizing a value that was already cheap
+**Symptom.** A file of forty selectors, most of them one-line property reads.
+**Cause.** Treating `createSelector` as the house style for "any selector" rather than a tool for
+expensive derivation. Memoization has its own bookkeeping cost, and `useSelector` already bails out of
+re-rendering when a primitive is unchanged.
+**Fix.** Reserve it for derivations that genuinely cost something — filtering, sorting, aggregating,
+joining collections. `state => state.cart.items.length` needs nothing.
+
+### A result function that returns a new object every time it runs
+**Symptom.** The selector memoizes correctly but the component still re-renders on unrelated dispatches.
+**Cause.** Two different caches. Reselect returns its cached object when inputs are unchanged, but if an
+input *did* change for an unrelated reason the result function reruns and produces a fresh reference,
+which `useSelector`'s `===` check treats as new.
+**Fix.** Narrow the inputs so unrelated changes cannot reach the selector, or compare with `shallowEqual`
+at the `useSelector` call. Returning primitives where you can sidesteps the problem entirely.
+
+### Passing component props as a second argument without thinking about identity
+**Symptom.** A per-item selector that memoizes for ids and not for objects.
+**Cause.** `weakMapMemoize` keys on **argument identity**. A string id is stable by value; an inline
+object `{ id, includeArchived }` is a new reference every render and gets a new cache slot each time.
+**Fix.** Pass primitives as selector arguments. If you need several, either pass them as separate
+arguments or hoist the object so its identity is stable.
+
+### Assuming `createSelector.withTypes()` changes caching
+**Symptom.** Someone adds it expecting a performance change and reports that nothing happened.
+**Cause.** It is a **typing** helper — it pre-binds the state generic so input selectors infer without
+annotation. It has no runtime behaviour.
+**Fix.** For caching, pass `memoize`/`memoizeOptions` explicitly:
+`createSelector(inputs, resultFn, { memoize: lruMemoize, memoizeOptions: { maxSize: 10 } })`.
+
+### Selectors that hard-code where the slice lives
+**Symptom.** Every selector breaks when a slice is mounted somewhere else — a differently-shaped test
+store, or a host app during a migration.
+**Cause.** `state => state.cart.items` encodes the mount point at every call site.
+**Fix.** Declare selectors on the slice and let RTK rebase them — see
+[slice selectors](../02-slices-and-actions/01b-slice-selectors-and-creator-callback.md).
+
+## Interview questions
+
+**★ What does `createSelector` actually memoize, and against what?**
+Two things, at two levels. It runs each input selector, compares every input's result against its
+previous result, and reruns the result function only if at least one differs. Since Reselect 5 both the
+argument comparison (`argsMemoize`) and the result caching (`memoize`) default to `weakMapMemoize`, which
+keys on argument identity with an effectively unlimited cache. The consequence people miss is that input
+selectors matter as much as the result function: one input returning a fresh reference defeats the whole
+thing.
+
+**★ What changed in Reselect 5, and why does so much advice about selectors predate it?**
+The default memoizer. Reselect 4 used `lruMemoize` — then called `defaultMemoize` — with a cache size of
+**1**, so a single selector instance called with two different arguments evicted its own result each
+time. That single fact generated the entire "make a selector factory per component with `useMemo`" genre
+of advice. Reselect 5 defaults to `weakMapMemoize` with an unlimited cache keyed on argument identity, so
+the eviction problem the pattern existed to solve is gone.
+
+**★ When is a selector factory still the right answer?**
+Three cases. When you want the memo cache to be collected with the component rather than living as long
+as the module. When you deliberately want bounded memory and opt into `lruMemoize` with a `maxSize`. And
+when the selector closes over something per-component that is not passed as an argument. What is no
+longer a reason is cache thrash between different ids.
+
+**★ Your memoized selector recomputes on every dispatch. Where do you look first?**
+The input selectors, not the result function. Any input that filters, maps, sorts or builds an object
+literal returns a new reference each call, so the reference comparison never succeeds and the result
+function always reruns. Inputs should be raw state reads; all derivation belongs in the result function.
+
+**Does memoizing a selector stop a component re-rendering?**
+Not by itself. They are separate caches: Reselect decides whether to rerun the result function,
+`useSelector` decides whether to re-render by comparing the returned value with `===`. A selector whose
+inputs changed for an unrelated reason reruns and returns a new object, and the component re-renders even
+though the derived data is equivalent. Narrow the inputs, return primitives, or pass `shallowEqual`.
+
+**How do arguments interact with memoization?**
+They are part of the cache key, and `weakMapMemoize` keys on **identity**. Primitive arguments — a string
+id — are stable by value and cache cleanly. An inline object argument is a new reference every render and
+gets a fresh cache slot each time, which reintroduces exactly the miss rate people think they left behind
+in Reselect 4. Pass primitives, or hoist the object.
+
+**What is `createSelector.withTypes()` for?**
+Types only. It pre-binds the `RootState` generic so input selectors infer their parameter without
+per-selector annotation. It is easy to mistake for a caching option because it arrived in the same
+release as the memoizer change, but it has no runtime effect at all.
+
+---
+
+← [Optimistic & manual cache updates](../04-rtk-query/02b-optimistic-and-manual-cache-updates.md) · [Topic index](../README.md) · Next → [`createEntityAdapter`](./02-create-entity-adapter.md)
