@@ -4,6 +4,16 @@ sidebar_label: "`configureStore`"
 sidebar_position: 1
 ---
 
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-09-06 against the Redux Toolkit documentation for **@reduxjs/toolkit 2.12.0** —
+> [`configureStore`](https://redux-toolkit.js.org/api/configureStore),
+> [`getDefaultMiddleware`](https://redux-toolkit.js.org/api/getDefaultMiddleware),
+> [RTK 2.0 migration](https://redux-toolkit.js.org/usage/migrating-rtk-2).
+> Documentation-validated; **no sandbox run** — `@reduxjs/toolkit` is not installed in this
+> checkout, so every claim here is a doc quote, not a probe.
+> Validated: 2026-09-06 · claims + output provenance · session 3a6945a3
+
 # 📦 `configureStore`: Store Assembly & Default Middleware Stack
 
 ## 1. Under-The-Hood Mechanics
@@ -99,9 +109,14 @@ const dehydratedState = JSON.stringify(serverStore.getState()).replace(/</g, '\\
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## Gotchas
 
-### ⚠️ Pitfall 1: Overwriting the Default Middleware Instead of Extending It
+### Replacing the default middleware instead of extending it
+**Symptom.** Thunks stop dispatching — `dispatch(someAsyncThunk())` throws *"Actions must be plain
+objects"* — or, on RTK 2, the store simply will not type-check.
+**Cause.** Passing `middleware` as an array replaces the whole stack. Under RTK 1.x that was silent;
+the app booted and failed later, far from the cause.
+**Fix.** Always start from the callback parameter and extend it.
 ```typescript
 // ❌ WRONG: under RTK 1.x this silently replaced the entire default stack — losing thunk support
 // and every dev safety check, with no warning. RTK 2.0 closed the footgun by removing the array
@@ -112,13 +127,142 @@ middleware: [myLoggerMiddleware],
 middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(myLoggerMiddleware),
 ```
 Worth knowing *why* the callback became mandatory rather than merely recommended: passing an array
-was the single most common way to lose the default stack by accident, and the symptom — thunks
-mysteriously not dispatching — surfaced far from the cause. RTK 2.0 moved that failure from a silent
-runtime regression to a compile-time error. The same reasoning removed the standalone
-`getDefaultMiddleware` export: the only supported way to reach it is the callback parameter.
+was the single most common way to lose the default stack by accident, and the symptom surfaced far
+from the cause. RTK 2.0 moved that failure from a silent runtime regression to a compile-time error.
+The same reasoning removed the standalone `getDefaultMiddleware` export — the only supported way to
+reach it is the callback parameter.
 
-### ⚠️ Pitfall 2: Ignoring Serializability Warnings Instead of Fixing the Root Cause
-Blanket-disabling `serializableCheck: false` silences a real signal — it usually means something non-serializable (a `File`, a `Promise`, a class instance) leaked into the store, which will break Redux DevTools persistence and time-travel. Prefer scoping `ignoredActions`/`ignoredPaths` narrowly over disabling the check entirely.
+### `enhancers` has the same rule, and people miss it
+**Symptom.** You add one store enhancer and the DevTools connection or `autoBatchEnhancer` quietly
+disappears.
+**Cause.** `enhancers` is a callback too, for exactly the same reason as `middleware`. An array
+replaces the defaults rather than adding to them.
+**Fix.**
+```typescript
+// ❌ drops autoBatchEnhancer and anything else RTK installs by default
+enhancers: [myEnhancer],
 
-### ⚠️ Pitfall 3: Rebuilding the Store Object Per-Render in SSR
-Calling `configureStore()` at module scope (not inside a per-request factory function) on a Node SSR server means **all concurrent requests share one store instance**, leaking one user's cart into another user's response. Always wrap SSR store creation in a factory function (`makeStore()`) invoked fresh per request.
+// ✅ extend the defaults
+enhancers: (getDefaultEnhancers) => getDefaultEnhancers().concat(myEnhancer),
+```
+
+### Silencing the serializability warning instead of fixing its cause
+**Symptom.** A console warning names a path like `cart.pendingRequestController`, and someone adds
+`serializableCheck: false` to make it stop.
+**Cause.** The warning is almost always right: a `File`, a `Promise`, an `AbortController` or a class
+instance has leaked into the store. That breaks DevTools time-travel and any persistence layer that
+round-trips through JSON.
+**Fix.** Scope the exemption to the exact action and path, so the check keeps guarding everything else.
+```typescript
+getDefaultMiddleware({
+  serializableCheck: {
+    ignoredActions: ['cart/checkoutStarted'],
+    ignoredPaths: ['cart.pendingRequestController'],
+  },
+})
+```
+
+### Building the store at module scope on an SSR server
+**Symptom.** One user sees another user's cart. Intermittent, impossible to reproduce locally with
+one browser tab.
+**Cause.** `export const store = configureStore(...)` at module scope on Node means **every
+concurrent request shares one store instance**. The module is evaluated once per process, not once
+per request.
+**Fix.** A factory, called fresh per request — `makeStore()` in the example above. The client calls
+it once; the server calls it for every request.
+
+### "The app is slow, but only in development"
+**Symptom.** Dispatches take tens of milliseconds in dev and are instant in the production build.
+**Cause.** `immutableStateInvariant` and `serializableStateInvariant` each walk the **entire** state
+tree on every dispatch. On a large normalised store that cost is real, and it is dev-only by design.
+**Fix.** Do not reach for `false` first. Narrow the traversal, and keep the check:
+```typescript
+getDefaultMiddleware({
+  // both accept the same options — ignore the big, known-good subtrees
+  immutableCheck: { ignoredPaths: ['catalog.searchIndex'] },
+  serializableCheck: { ignoredPaths: ['catalog.searchIndex'] },
+})
+```
+🔴 **Never conclude "the invariant checks are slowing production down."** They are not in production —
+`getDefaultMiddleware()` returns `[thunk]` there.
+
+### Forgetting the RTK Query middleware
+**Symptom.** Hooks return `isLoading: true` forever, or caching, invalidation, polling and
+`refetchOnFocus` all do nothing while the initial fetch still works.
+**Cause.** `createApi` produces a reducer **and** a middleware. Adding `[api.reducerPath]: api.reducer`
+without `.concat(api.middleware)` installs the cache but not the machinery that drives it.
+**Fix.**
+```typescript
+middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),
+```
+
+### `preloadedState` keys that no reducer owns
+**Symptom.** A key you carefully serialised on the server is simply absent from `getState()` on the
+client, with a console warning about unexpected keys.
+**Cause.** `configureStore` hands `preloadedState` to `combineReducers`, which drops keys that no
+reducer claims — it cannot know what to do with them.
+**Fix.** The preloaded shape must be a subset of the reducer map's shape. If you rename a slice, the
+persisted payload from the previous deploy silently stops loading — version your persisted state and
+migrate it explicitly rather than trusting the shapes to stay aligned.
+
+## Interview questions
+
+**★ `createStore` already worked. What does `configureStore` actually buy you?**
+Three things, and none of them is new capability. It calls `combineReducers` for you when you pass a
+reducer *object*; it installs a default middleware stack instead of making you assemble
+`applyMiddleware(thunk)` by hand; and it wires the DevTools extension without the
+`__REDUX_DEVTOOLS_EXTENSION_COMPOSE__` incantation. The store it produces is an ordinary Redux store —
+same `dispatch`, same `subscribe`, same reducer contract — which is precisely why migration from
+classic Redux can be incremental rather than a rewrite.
+
+**★ What is in the default middleware stack, in what order, and what survives a production build?**
+In development, in order: `actionCreatorInvariant`, `immutableStateInvariant`, `thunk`,
+`serializableStateInvariant`. In production the array is just `[thunk]` — all three checks are
+stripped on `process.env.NODE_ENV === 'production'`. The ordering detail people get wrong is that
+thunk is **third**, not first: the two checks ahead of it are deliberately unshifted to the front so
+they observe the action before a thunk can turn one dispatch into several.
+
+**★ Does the immutability check freeze your state?**
+No, and this is the most common wrong answer. It *deeply compares* state values to detect mutations —
+the docs say it "can detect mutations in reducers during a dispatch, and also mutations that occur
+between dispatches (such as in a component or a selector)". State in an RTK app usually *is* frozen,
+but that is Immer's `autoFreeze` inside `createSlice`, a completely separate mechanism. The two have
+different failure modes: Immer's freeze throws at the moment you write, the invariant middleware
+reports after the fact on the next dispatch.
+
+**★ Someone dispatches a thunk and nothing happens. Walk me through the diagnosis.**
+Start at the middleware, not the thunk. Either the stack was replaced with an array (RTK 1.x) so
+thunk was never installed, or `{ thunk: false }` was passed to `getDefaultMiddleware`, or — if it is
+an RTK Query hook rather than a thunk — `api.middleware` was never concatenated, so the reducer is
+present but nothing drives it. Only after that would I look at `condition` short-circuiting the thunk
+before `pending`.
+
+**Why did RTK 2.0 make `middleware` a callback rather than merely documenting the array as risky?**
+Because the failure was silent and remote from its cause. An array replaced the whole stack, the app
+still booted, and the symptom appeared later as an unrelated-looking error. Making the callback
+mandatory converts a runtime regression into a compile-time error. `enhancers` changed for the same
+reason, and the standalone `getDefaultMiddleware` export was removed so there is exactly one way to
+reach it.
+
+**What is `preloadedState` for, and what is the classic way to get it wrong?**
+It hydrates the root reducer with a snapshot — typically state rendered on a server and serialised
+into the HTML — so the first client render matches the server DOM. The classic mistake is not the
+option but where you call `configureStore`: at module scope on a Node server every concurrent request
+shares one store, and one user's state leaks into another's response. Wrap it in a per-request
+factory.
+
+**What does the serializability check actually protect?**
+Two capabilities that stop working the moment a non-serializable value enters the store: DevTools
+time-travel (it must be able to snapshot and replay state) and any persistence that round-trips
+through JSON. It walks both the dispatched action and the resulting state tree. The right response to
+a warning is a narrow `ignoredActions`/`ignoredPaths` pair, not `false`.
+
+**RTK Query needs two things added to the store. What are they, and what breaks if you add only one?**
+`[api.reducerPath]: api.reducer` and `.concat(api.middleware)`. With only the reducer, the cache slice
+exists and an initial fetch can still populate it, but the middleware is what implements subscription
+reference-counting, cache lifetime, tag invalidation, polling and the focus/reconnect listeners — so
+everything that makes RTK Query worth using silently does nothing.
+
+---
+
+← [Topic index](../README.md) · Next → [`createSlice`](../02-slices-and-actions/01-create-slice.md)
