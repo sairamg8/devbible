@@ -179,6 +179,65 @@ rewriting budget on branches nobody has seen — which is what
 **Cause:** someone else's clone still had it and pushed it back — or a fork, or a CI cache, or the host's own reflog
 **Fix:** rotate the credential. That is the only step that actually resolves it; rewriting history never was
 
+## Interview questions
+
+**★ What does "shared" mean, precisely?**
+That someone else's repository contains these commits. Not that the branch is
+important, not that it is `main`. Committed locally and never pushed is not shared;
+pushed and pulled by a colleague is; pushed and cloned by CI or a bot is, in exactly
+the same mechanical sense. The honest grey area is your own pushed feature branch
+that nobody may have fetched — you cannot tell from your machine, so the workable
+convention is that your branch is yours to rewrite until it is under review, and
+after that you add commits instead of rewriting them.
+
+**★ Walk through what actually goes wrong when you rewrite shared history.**
+You rebase and force-push. Your colleague still holds the old commits, so their
+branch and the remote have diverged with neither an ancestor of the other. A default
+`pull` merges them — and it merges **cleanly**, because both sides contain the same
+changes under different hashes. Their branch now holds two copies of every rewritten
+commit, they push, and the duplicates are back on the remote. Nothing errors at any
+point, and the net effect is that your rewrite was undone by someone else's routine
+pull. That is why the manual has a section called RECOVERING FROM UPSTREAM REBASE.
+
+**★ Why `--force-with-lease` instead of `--force`?**
+`--force` overwrites the remote branch whatever is there, including a colleague's
+commit pushed thirty seconds ago. `--force-with-lease` overwrites **only if** the
+remote is still where your remote-tracking ref last saw it, and refuses otherwise —
+it converts silent destruction into an error message. There is no reason to type
+plain `--force` in normal work; alias the safe one.
+
+**★ How can `--force-with-lease` still destroy a colleague's commit?**
+Because the lease compares against your **remote-tracking ref**, and a bare
+`git fetch` updates that ref without touching your branch. So: they push, your
+editor fetches in the background, your `origin/feature` now matches the remote, the
+lease check passes, and your force-push overwrites their work. `--force-if-includes`
+closes the hole by additionally requiring that the commits you are about to
+overwrite are reachable from your own branch — that you actually integrated them
+rather than merely fetching them. Background fetching is on by default in most
+editors, so the naive lease is weaker than it looks.
+
+**★ Is `git commit --amend` a rewrite of shared history?**
+Yes, at a scale of one. Amend does not edit a commit; it creates a new one and moves
+the branch, so amending something already pushed has exactly the consequences above
+and needs a forced push. The same is true of `reset --hard` plus a push and of the
+`filter-*` family. There is no rewriting operation that escapes the rule — the list
+is simply rebase, amend, reset and filter.
+
+**★ You rewrote history to remove a secret and the secret came back. Why?**
+Because someone else's clone still had it and pushed it back — or a fork did, or a
+CI cache, or the host's own reflog kept the unreferenced commit reachable by URL.
+Rewriting only changes what *your* repository points at; it cannot un-copy what has
+already been distributed. The step that actually resolves the incident is rotating
+the credential, and it should come first, before any history surgery.
+
+**What is the always-safe alternative, and why is taking the ugly option correct?**
+`git revert`, which adds a new commit undoing an old one: history is unchanged, no
+force-push is needed, every clone stays valid, and the record — including the
+mistake — stays true. The asymmetry is what decides it. Rewriting a private branch is
+free and reversible by you alone; rewriting a shared one is expensive and reversible
+only by everyone else doing work, and its cost scales with how many people hold the
+branch, which is the one number you cannot measure from your terminal.
+
 ---
 
 ← Prev: [Interactive rebase](07-interactive-rebase.md) · Next → [`git reflog` as the safety net](09-reflog.md)
