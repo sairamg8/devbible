@@ -4,9 +4,9 @@
   "totals": {
     "files": 6716,
     "pages": 5889,
-    "verified": 6315,
-    "validated": 47,
-    "pendingUnits": 1045
+    "verified": 6316,
+    "validated": 48,
+    "pendingUnits": 1044
   },
   "tracks": {
     "angular": {
@@ -1469,14 +1469,14 @@
     "framer-motion": {
       "pages": 16,
       "files": 18,
-      "verified": 0,
-      "converted": 0,
-      "validated": 0,
-      "imported": true,
-      "score": 1490,
+      "verified": 1,
+      "converted": 1,
+      "validated": 1,
+      "imported": false,
+      "score": 1405,
       "consoleBlocks": 0,
       "overCap": 0,
-      "noInterview": 16,
+      "noInterview": 15,
       "units": [
         {
           "unit": "docs/framer-motion",
@@ -1491,14 +1491,9 @@
         {
           "unit": "docs/framer-motion/pages/01-core-concepts",
           "pages": 1,
-          "validated": 0,
-          "score": 85,
-          "why": [
-            "1/1 never sourced",
-            "1/1 no tier badge",
-            "1/1 no Interview questions",
-            "1/1 no Gotchas"
-          ]
+          "validated": 1,
+          "score": 0,
+          "why": []
         },
         {
           "unit": "docs/framer-motion/pages/02-basic-animation-props",
