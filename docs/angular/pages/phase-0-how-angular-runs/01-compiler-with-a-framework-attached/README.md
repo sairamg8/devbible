@@ -26,22 +26,28 @@ stop being a list of rules and start being consequences.
 
 ## Chunks
 
+🚧 **4 of 17 chunks written.** The rows without links are planned and named; a link to a
+page that does not exist breaks the build, so they stay as plain text until they land.
+
 | # | Chunk | Covers |
 |---|---|---|
-| 01 | **[The template is a separate language](01-the-template-is-a-separate-language.md)** | Not JSX, not JavaScript, not HTML — Angular's own tokenizer, HTML AST, template AST and template function; 🔴 the four-stage pipeline every `.html` file goes through |
-| 02 | **[What a template expression may contain](02-what-a-template-expression-may-contain.md)** | The full supported/unsupported operator tables, the two globals you get, why declarations are banned — and 🔴 the v22 change that made `?.` return `undefined` |
-| 03 | **[What the compiler emits: `ɵcmp`](03-what-the-compiler-emits.md)** | The static component definition, `ɵɵdefineComponent`, `decls` / `vars` / `dependencies`, the `ɵfac`, and what lands in the `.d.ts` |
-| 04 | **[The template function: create pass and update pass](04-create-pass-and-update-pass.md)** | `RenderFlags.Create` vs `RenderFlags.Update`, the slot/index model, `ɵɵadvance`, and why the two passes are one function |
-| 05 | **[Instructions, not a virtual DOM](05-instructions-not-a-virtual-dom.md)** | Why Angular emits imperative calls instead of building a vnode tree; the tree-shaking argument; what it costs |
-| 06 | **[Static analysability is the load-bearing constraint](06-static-analysability.md)** | 🔴 NG1001 and the object-literal rule; the partial evaluator; why a `selector` cannot be computed and `imports` must be identifiers |
-| 07 | **[Metadata errors, one by one](07-metadata-errors-in-practice.md)** | Non-exported symbols, uninitialised `export let`, destructuring, ambient types, computed enum members, tagged templates — symptom → cause → fix for each |
-| 08 | **[Why `@defer` can split a bundle no bundler could](08-why-defer-splits-a-bundle.md)** | The `dependencyResolverFn` the compiler generates, the two conditions a dependency must meet, 🔴 the barrel-file trap that silently un-splits your chunk |
-| 09 | **[Ivy and locality](09-ivy-and-locality.md)** | "The decorator is the compiler", the locality principle, separate compilation, incremental rebuilds and what locality buys the ecosystem |
-| 10 | **[Where the compiler runs: `ngtsc`](10-where-the-compiler-runs-ngtsc.md)** | `@angular/compiler-cli`, a TypeScript *transformer* rather than a separate pass, `ngc`, and 🔴 why that forces the hard TS `>=6.0 <6.1` peer pin |
-| 11 | **[Template type checking](11-template-type-checking.md)** | `strictTemplates`, the type-check block, all ten strictness flags, and the class of bugs that moves from runtime to build time |
-| 12 | **[Extended diagnostics](12-extended-diagnostics.md)** | The NG81xx warnings the compiler emits for code that is legal but wrong, how to promote them to errors, and the semver caveat when you do |
-| 13 | **[Arriving from React, Vue or Svelte](13-arriving-from-react-vue-svelte.md)** | What "compiled" means in each of the four, what Angular buys with it and what it costs |
-| 14 | **[Consequences you actually hit](14-consequences-you-actually-hit.md)** | Errors in a file TypeScript never compiled, NG3003 import cycles, NG8001/NG8002, and expressions that work in the class and fail in the template |
+| 01 | **[The template is a separate language](01-the-template-is-a-separate-language.md)** | Not JSX, not JavaScript, not HTML — Angular's own tokenizer, HTML AST, template AST and template function; 🔴 the four-stage pipeline every template goes through |
+| 02 | **[What an expression may contain](02-what-a-template-expression-may-contain.md)** | The full supported/unsupported operator tables, the two globals you get, why `new` and every bitwise operator are out |
+| 03 | **[Declarations and `@let`](03-declarations-and-the-let-block.md)** | Why declarations are banned, why `@let` is a *block* rather than an expression, and the three instructions it lowers to |
+| 04 | **[Arrow functions in templates](04-arrow-functions-in-templates.md)** | ⚠️ the one place the docs and the shipped compiler disagree — what v21.2 actually added, what it rejects, and NG8111 |
+| 05 | **Expressions, statements and safe navigation** *(not written yet)* | Binding context vs action context, why assignment is legal in one and not the other, and 🔴 the v22 change that made `?.` return `undefined` |
+| 06 | **What the compiler emits: `ɵcmp`** *(not written yet)* | The static component definition, `ɵɵdefineComponent`, `decls` / `vars` / `dependencies`, the `ɵfac`, and what lands in the `.d.ts` |
+| 07 | **The create pass and the update pass** *(not written yet)* | `RenderFlags.Create` vs `RenderFlags.Update`, the slot/index model, `ɵɵadvance`, and why the two passes are one function |
+| 08 | **Instructions, not a virtual DOM** *(not written yet)* | Why Angular emits imperative calls instead of building a vnode tree; the tree-shaking argument; what it costs |
+| 09 | **Static analysability is the load-bearing constraint** *(not written yet)* | 🔴 NG1001 and the object-literal rule; the partial evaluator; why a `selector` cannot be computed and `imports` must be identifiers |
+| 10 | **Metadata errors, one by one** *(not written yet)* | Non-exported symbols, uninitialised `export let`, destructuring, ambient types, computed enum members, tagged templates — symptom → cause → fix for each |
+| 11 | **Why `@defer` can split a bundle no bundler could** *(not written yet)* | The `dependencyResolverFn` the compiler generates, the two conditions a dependency must meet, 🔴 the barrel-file trap that silently un-splits your chunk |
+| 12 | **Ivy and locality** *(not written yet)* | "The decorator is the compiler", the locality principle, separate compilation, incremental rebuilds and what locality buys the ecosystem |
+| 13 | **Where the compiler runs: `ngtsc`** *(not written yet)* | `@angular/compiler-cli`, a TypeScript *transformer* rather than a separate pass, `ngc`, and 🔴 why that forces the hard TS `>=6.0 <6.1` peer pin |
+| 14 | **Template type checking** *(not written yet)* | `strictTemplates`, the type-check block, all ten strictness flags, and the class of bugs that moves from runtime to build time |
+| 15 | **Extended diagnostics** *(not written yet)* | The NG81xx warnings for code that is legal but wrong, how to promote them to errors, and the semver caveat when you do |
+| 16 | **Arriving from React, Vue or Svelte** *(not written yet)* | What "compiled" means in each of the four, what Angular buys with it and what it costs |
+| 17 | **Consequences you actually hit** *(not written yet)* | Errors in a file TypeScript never compiled, NG3003 import cycles, NG8001/NG8002, and expressions that work in the class and fail in the template |
 
 ## The one question this topic exists to answer
 

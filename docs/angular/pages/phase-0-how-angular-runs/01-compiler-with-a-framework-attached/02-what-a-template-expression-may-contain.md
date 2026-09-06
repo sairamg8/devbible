@@ -37,7 +37,7 @@ angular.dev: *"Angular supports a subset of literal values from JavaScript."*
 
 Note what is *not* on the "unsupported" side: object and array literals are fully legal in a
 binding. That matters more than it looks — see the `ɵɵpureFunction` discussion in chunk
-[07](07-instructions-not-a-virtual-dom.md), because a fresh object literal in a binding is
+**08 · Instructions, not a virtual DOM** *(not written yet)*, because a fresh object literal in a binding is
 allocated on every update pass unless the compiler can prove it constant.
 
 ## Globals: you get exactly two
@@ -71,7 +71,7 @@ export class ProductCard {
 
 `undefined` is in the list and `null` is a *literal* rather than a global, so both work.
 `$any` is not a real function — it is a compiler directive that switches off type checking
-for one sub-expression, covered in chunk [13](13-template-type-checking.md).
+for one sub-expression, covered in chunk **14 · Template type checking** *(not written yet)*.
 
 ## Local variables beginning with `$`
 
@@ -83,7 +83,7 @@ for one sub-expression, covered in chunk [13](13-template-type-checking.md).
 The `$` prefix is reserved by the language for exactly this. `$index`, `$count`, `$first`,
 `$last`, `$even`, `$odd` inside `@for`; `$event` in an event binding; `$any` everywhere;
 `$safeNavigationMigration` as a temporary v22 migration aid (chunk
-[04](04-expressions-statements-and-safe-navigation.md)). Do not name a component property
+[05 · Expressions, statements and safe navigation](05-expressions-statements-and-safe-navigation.md)). Do not name a component property
 `$something` and expect it to resolve cleanly — you are in the language's namespace.
 
 ## Supported operators
@@ -131,7 +131,7 @@ bug into a parse error.
 Two categories are missing from both tables above because they are not operators at all —
 **declarations** (`let`, `const`, `function`, `class`) and the arrow-function form. Those,
 and the `@let` block that replaces them, are chunk
-[03](03-declarations-let-and-arrow-functions.md).
+[03 · Declarations and `@let`](03-declarations-and-the-let-block.md).
 
 ## Gotchas
 
@@ -161,11 +161,6 @@ export class PermissionsBadge {
   protected canRead = computed(() => (this.flags() & PermissionMask.Read) !== 0);
 }
 ```
-
-**★ Symptom: `{{ user.address?.city }}` behaves differently after upgrading to v22.**
-Cause: the semantics of `?.` in Angular expressions changed in v22. Full treatment,
-including the `$safeNavigationMigration` escape hatch `ng update` inserts, is in chunk
-[04](04-expressions-statements-and-safe-navigation.md).
 
 **Symptom: an object literal in a binding causes a child `OnPush` component to re-render
 constantly.** Cause: object and array literals are legal in the grammar, and each update
@@ -223,7 +218,7 @@ expression* operator; the documented AOT metadata error *"Expression form not su
 names `typeof` explicitly as invalid inside a decorator argument — *"You can use `typeof`
 and bracket notation in normal application code. You just can't use those features within
 expressions that define Angular metadata."* Fix: see chunk
-[09](09-metadata-errors-in-practice.md); the template grammar and the metadata grammar are
+**10 · Metadata errors, one by one** *(not written yet)*; the template grammar and the metadata grammar are
 not the same subset and do not have the same holes.
 
 ## Interview questions
@@ -262,7 +257,7 @@ have a template grammar in which half the language only works in a browser. The 
 is that the template's lexical scope is deliberately the component instance plus template
 variables plus two globals — a closed, statically known set — which is what makes it
 possible to generate a type-check block for a template at all (chunk
-[13](13-template-type-checking.md)). If templates could reach ambient globals, the checker
+**14 · Template type checking** *(not written yet)*). If templates could reach ambient globals, the checker
 would have to model the entire ambient environment. Inject `DOCUMENT`, or read the value
 into a signal in the class.
 
@@ -275,7 +270,7 @@ your `.html` file, unless source maps for the template are in play. This is a la
 why the grammar is small: an expression that cannot construct, cannot assign and cannot
 declare has far fewer ways to throw, and the ones that remain (a null dereference, a bad
 method call) are exactly what the template type checker in chunk
-[13](13-template-type-checking.md) is designed to catch first.
+**14 · Template type checking** *(not written yet)* is designed to catch first.
 
 **Angular supports `instanceof` and `in` as operators but bans `new`. Is that consistent?**
 It is, once you separate *reading* from *creating*. `instanceof` and `in` interrogate a
@@ -290,10 +285,10 @@ narrowed this further: `in` on a *variable* now throws, per the release notes, w
 Because a binding produces exactly one value and Angular has to know which one. The comma
 operator is listed as unsupported for the same reason. Event *statements* are the one place
 where sequencing matters — and there Angular allows a semicolon-separated list, which is
-covered in chunk [04](04-expressions-statements-and-safe-navigation.md). The split between
+covered in chunk [05 · Expressions, statements and safe navigation](05-expressions-statements-and-safe-navigation.md). The split between
 "expression" and "statement" contexts is the single most important distinction in this
 grammar, and it is the thing most people get wrong when they first meet it.
 
 ---
 
-← Prev: [01 · The template is a separate language](01-the-template-is-a-separate-language.md) · Index: [Topic index](README.md) · Next → [03 · Declarations, `@let` and arrow functions](03-declarations-let-and-arrow-functions.md)
+← Prev: [01 · The template is a separate language](01-the-template-is-a-separate-language.md) · Index: [Topic index](README.md) · Next → [03 · Declarations and `@let`](03-declarations-and-the-let-block.md)

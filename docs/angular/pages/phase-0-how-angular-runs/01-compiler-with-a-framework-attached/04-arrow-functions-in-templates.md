@@ -62,7 +62,7 @@ The same source file carries a second detail worth knowing: when the parser ente
 function body it switches into action-parsing mode, with the comment *"Arrow function can
 contain assignments even in a binding context."* So an assignment inside an arrow body in a
 property binding is accepted where the identical assignment outside it is not. Chunk
-[05](05-expressions-statements-and-safe-navigation.md) explains what "binding context"
+**05 · Expressions, statements and safe navigation** *(not written yet)* explains what "binding context"
 versus "action context" means and why it is the most important distinction in the grammar.
 
 🔴 **None of this is permission to put logic in templates.** An arrow written inline in a
@@ -120,7 +120,7 @@ does nothing, because the statement's value is a function nobody calls. That is 
 is right; `(click)="() => save()"` and `(click)="(save)"` are both no-ops the diagnostic
 will flag — but only if `strictTemplates` is on, because *"`strictTemplates` must be enabled
 for any extended diagnostic to emit."* See chunk
-[15](15-extended-diagnostics.md).
+**15 · Extended diagnostics** *(not written yet)*.
 
 ## Gotchas
 
@@ -183,7 +183,7 @@ same assignment outside it does not.** Cause: the parser enters action-parsing m
 arrow body — the source comment is *"Arrow function can contain assignments even in a
 binding context."* Fix: none needed, but understand the asymmetry before relying on it; it
 is a parser mode, not a documented language guarantee, and chunk
-[05](05-expressions-statements-and-safe-navigation.md) explains the two modes.
+**05 · Expressions, statements and safe navigation** *(not written yet)* explains the two modes.
 
 ## Interview questions
 
@@ -218,7 +218,7 @@ it in the view's data array at that slot, and returns the stored one on subseque
 It is the same design as `ɵɵpureFunction*` for object and array literals. The general
 principle — the compiler reserves a slot for anything in a template that would otherwise
 allocate per pass — is worth carrying forward into chunk
-[07](07-create-pass-and-update-pass.md), because it is how the whole instruction set is
+**07 · The create pass and the update pass** *(not written yet)*, because it is how the whole instruction set is
 organised.
 
 **When is an inline arrow in a template actually the right call?**
@@ -242,4 +242,4 @@ identity per pass — is the consumer `OnPush`?"
 
 ---
 
-← Prev: [03 · Declarations and `@let`](03-declarations-and-the-let-block.md) · Index: [Topic index](README.md) · Next → [05 · Expressions, statements and safe navigation](05-expressions-statements-and-safe-navigation.md)
+← Prev: [03 · Declarations and `@let`](03-declarations-and-the-let-block.md) · Index: [Topic index](README.md) · Next → **05 · Expressions, statements and safe navigation** *(not written yet)*
