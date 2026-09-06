@@ -1,10 +1,19 @@
 ---
-title: "`AnimatePresence`: Exit Animations & Mode Configuration"
+title: "`AnimatePresence`: Exit Animations, Removal Detection & Keys"
 sidebar_label: "`AnimatePresence`"
 sidebar_position: 1
 ---
 
-# 🎨 `AnimatePresence`: Exit Animations & Mode Configuration
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-09-06 against the Motion docs — [AnimatePresence](https://motion.dev/docs/react-animate-presence),
+> read from a 131-page raw mirror of motion.dev. Target: **Motion 13.2.0** (`motion`, formerly
+> `framer-motion`) on **React 19.2.8** — the React version was probed on the installed package;
+> `motion` is not in this checkout's `node_modules`, so every Motion claim here is
+> documentation-verified. **No sandbox run.**
+> Validated: 2026-09-06 · claims + output provenance · session f53ba511
+
+# 🎨 `AnimatePresence`: Exit Animations, Removal Detection & Keys
 
 ## 1. Under-The-Hood Mechanics
 
@@ -19,13 +28,14 @@ React unmounts components **synchronously and immediately** — the instant a co
                 enough to play its exit animation, THEN actually removes it from the DOM
 ```
 
-### `mode`: Controlling Overlap Between Outgoing and Incoming Elements
-- **`'sync'`** (default) — exiting and entering elements animate **simultaneously**, overlapping in time.
-- **`'wait'`** — the exiting element **fully completes** its exit animation before the entering element begins its own enter animation — a strictly sequential, non-overlapping transition (common for page/tab transitions where overlap would look visually confusing).
-- **`'popLayout'`** — the exiting element is immediately removed from the **layout flow** (so surrounding elements reflow around it right away) while it continues its own visual exit animation independently, positioned absolutely — useful for list-item removal where you want surrounding items to immediately shift into the vacated space, rather than waiting for the exiting item's animation to finish first.
-
 ### Keying Children Correctly
 `AnimatePresence` detects additions/removals by tracking each child's **`key`** prop — children without a stable, unique key (or all sharing the same key) can't be correctly tracked as distinct "this one is being removed, this one is new" instances, breaking exit-animation detection entirely.
+
+`AnimatePresence` also decides *how* an outgoing and an incoming element share the screen, through
+its `mode` prop — that is the whole of
+[modes: sync, wait and popLayout](01b-modes-sync-wait-poplayout.md). What it can still tell an
+element that has already left the React tree is
+[presence state and manual removal](01c-presence-state-and-manual-removal.md).
 
 ---
 
@@ -58,37 +68,12 @@ function TabContent({ activeTab }: { activeTab: string }) {
 }
 ```
 
-```tsx
-// mode="popLayout" — a removed list item exits independently while siblings immediately reflow
-function TodoList({ todos }: { todos: Todo[] }) {
-  return (
-    <AnimatePresence mode="popLayout">
-      {todos.map((todo) => (
-        <motion.li
-          key={todo.id} // stable, unique key per item — REQUIRED for correct add/remove detection
-          layout // combines with popLayout for smooth reflow of REMAINING items
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
-        >
-          {todo.text}
-        </motion.li>
-      ))}
-    </AnimatePresence>
-  );
-}
-```
-
-```tsx
-// mode="sync" (default) — simultaneous, overlapping exit/enter, e.g. a crossfading background image
-<AnimatePresence>
-  <motion.img key={currentImageUrl} src={currentImageUrl} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} />
-</AnimatePresence>
-```
+The other two modes, and the code for each, are in
+[the modes chunk](01b-modes-sync-wait-poplayout.md).
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## Gotchas
 
 ### ⚠️ Pitfall 1: Forgetting a Stable, Unique `key` on Children Inside `AnimatePresence`
 ```tsx
@@ -117,14 +102,90 @@ function TodoList({ todos }: { todos: Todo[] }) {
 </AnimatePresence>
 ```
 
-### ⚠️ Pitfall 3: Expecting `mode="wait"` for a List, Producing an Awkward One-At-A-Time Removal Feel
-```tsx
-// ❌ MISMATCHED: mode="wait" makes ANY exit complete before ANY enter begins — applied to a
-// LIST (multiple simultaneous items), this can make simultaneous adds/removes feel oddly
-// sequential/blocked rather than the natural, independent per-item animation a list usually wants
-<AnimatePresence mode="wait">{todos.map((t) => <motion.li key={t.id}>...</motion.li>)}</AnimatePresence>
+### ⚠️ Pitfall 3: The `AnimatePresence` Is Inside the Conditional, So It Unmounts Too
+The "`exit` does nothing, no error, no warning" report — and the first thing to check, because it
+is invisible in a diff.
 
-// ✅ CORRECT: mode="popLayout" (or the default "sync") is typically more appropriate for
-// LISTS with multiple independently-animating items; reserve "wait" for singular,
-// one-thing-replaces-another transitions (tabs, pages, a single featured image)
+> *"Also make sure AnimatePresence is outside of the code that unmounts the element. If AnimatePresence itself unmounts, then it can't control exit animations!"* — [AnimatePresence → Troubleshooting](https://motion.dev/docs/react-animate-presence)
+
+```tsx
+// ❌ WRONG: when isVisible flips to false, React removes AnimatePresence in the SAME commit that
+// removes the Modal — the component whose only job is to defer that removal is removed first
+{isVisible && (
+  <AnimatePresence>
+    <Modal />
+  </AnimatePresence>
+)}
+
+// ✅ CORRECT: the conditional lives INSIDE AnimatePresence, which stays mounted across the flip
+<AnimatePresence>
+  {isVisible && <Modal key="modal" />}
+</AnimatePresence>
 ```
+
+The same rule, one level up, decides where the wrapper goes in a router: an `AnimatePresence`
+rendered *by* a page cannot animate that page out, because the router unmounts the wrapper along
+with the page. It has to sit in a layout that survives the navigation — which is exactly why the
+[page-transition pattern](../15-advanced-patterns/01-production-grade-motion-design.md) puts it in
+the root layout and keys on `pathname`.
+
+### ⚠️ Pitfall 4: A `key` That Is Unique but Not *Stable* Across Renders
+Uniqueness is only half the requirement. The troubleshooting section asks for both:
+
+> *"Ensure all immediate children get a unique key prop that remains the same for that component every render."* — [AnimatePresence → Troubleshooting](https://motion.dev/docs/react-animate-presence)
+
+```tsx
+// ❌ a fresh key on every render: unique, never stable
+<motion.div key={Math.random()} exit={{ opacity: 0 }}>{body}</motion.div>
+<motion.div key={`${item.id}-${Date.now()}`} exit={{ opacity: 0 }}>{body}</motion.div>
+<motion.div key={JSON.stringify(filters)} exit={{ opacity: 0 }}>{body}</motion.div> // rebuilt object
+
+// ✅ derived from the identity of the thing, and nothing else
+<motion.div key={item.id} exit={{ opacity: 0 }}>{body}</motion.div>
+```
+
+This one does not look like a keying bug from the outside, because it produces *too much*
+animation rather than none: the docs note that *"Changing a key prop makes React create an
+entirely new component"*, so every parent render remounts the child and `AnimatePresence` dutifully
+runs a full exit-then-enter on content that never changed.
+
+## Interview questions
+
+**★ Why is `exit` ignored unless the component sits inside `AnimatePresence`, and what is `AnimatePresence` actually watching?**
+By the time an ordinary component learns it is unmounting, React has already committed to removing
+its DOM node — there is no frame left in which to animate. `AnimatePresence` sits *above* the
+conditional and watches its own direct children: the docs say it *"works by detecting when its
+direct children are removed from the React tree"*. When a child disappears from the tree, the
+rendered output is kept alive, `exit` runs, and only then does the node go. It recognises three
+triggers — a child mounting/unmounting, a child's `key` changing, and children being added to or
+removed from a list. Nearly every broken exit animation is one of those three events not being
+visible to it: no key, an unstable key, or the wrapper unmounting alongside the child.
+
+**★ Everyone says "never use the array index as a key". When does it genuinely break `AnimatePresence`, and when is it harmless?**
+The docs give the precise reason: *"providing index as a key is bad because if the items reorder then
+the index will not be matched to the item"*. So the failure needs a change in position — a removal
+from anywhere but the end, an insert, a sort. Index 2 was Buy Milk and is now Walk Dog, so
+`AnimatePresence` sees "child 2 is still here, its content changed" instead of "child 2 left"; the
+exit never runs and the enter never runs, while the last item in the list vanishes without animating
+because it is the index that stopped existing. A list that only ever appends and never reorders will
+not expose it, which is exactly why it survives review and then breaks the day someone adds a delete
+button.
+
+**★ What does changing a `key` do, and why is that the idiomatic slideshow?**
+*"Changing a key prop makes React create an entirely new component."* From `AnimatePresence`'s point
+of view, one child left and a different child arrived — which is the exit/enter pair a slideshow
+wants, without any `isVisible` state to manage. Keying a single `motion.img` on `image.src` is the
+whole implementation. It is also why an unstable key is destructive: the same mechanism that gives
+you a slideshow for free gives you a remount on every parent render if the key is recomputed.
+
+**★ Where does `AnimatePresence` belong in an app with route transitions, and why is that not negotiable?**
+In a layout that outlives the navigation — never inside the page being navigated away from. If the
+router unmounts the subtree containing `AnimatePresence`, the wrapper goes at the same moment as its
+child and there is nothing left to hold the exiting page in the DOM: *"If AnimatePresence itself
+unmounts, then it can't control exit animations!"* In practice that means one wrapper in the root
+layout, `mode="wait"` because exactly one page is on screen at a time, and `key={pathname}` so a
+navigation reads as a key change.
+
+---
+
+← [Interaction-driven animation](../05-gestures/01-interaction-driven-animation.md) · [Explanations index](../README.md) · Next → [Modes: sync, wait and popLayout](01b-modes-sync-wait-poplayout.md)
