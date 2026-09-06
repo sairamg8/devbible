@@ -214,7 +214,7 @@ const itemRef = useRef(null);
 const { scrollYProgress } = useScroll({ container: containerRef, target: itemRef });
 ```
 
-🔴 **`target` never changes which element's scrolling is being watched.** If your section lives inside an `overflow: scroll` div and you pass only `target`, Motion measures that element against the *window*, which is not scrolling — pass `container` as well when the scroller is not the window.
+🔴 **`target` never changes which element's scrolling is being watched.** If your section lives inside an `overflow: scroll` div and you pass only `target`, Motion measures that element against the *window*, which is not scrolling — the full offset grammar and the rest of the measurement model are in [01b](01b-how-usescroll-measures.md).
 
 ---
 
@@ -280,4 +280,4 @@ They describe different relationships. `useInView` wraps an IntersectionObserver
 
 ---
 
-← [Shared layout coordination](../07-layout-animations/01c-shared-layout-coordination.md) · [Explanations](../README.md) · Next → [Imperative value tracking](../09-motion-values/01-imperative-value-tracking.md)
+← [Shared layout coordination](../07-layout-animations/01c-shared-layout-coordination.md) · [Explanations](../README.md) · Next → [How `useScroll` measures](01b-how-usescroll-measures.md)
