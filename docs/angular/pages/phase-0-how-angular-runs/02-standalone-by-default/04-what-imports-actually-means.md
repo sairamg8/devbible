@@ -164,6 +164,11 @@ is not inherited; the parent's `imports` array has no effect on the child's temp
 it to the child's own array — every component that *writes the tag* imports the class:
 
 ```ts
+// src/app/users/user-card.component.ts
+import {Component, input} from '@angular/core';
+import {AvatarComponent} from '../shared/avatar.component';
+import type {User} from './user';
+
 @Component({
   selector: 'app-user-card',
   imports: [AvatarComponent],
@@ -180,6 +185,14 @@ nothing.** Cause: `dependencies` is seeded with `new Set([clazzMeta])` and `seen
 self-import; recursion already works:
 
 ```ts
+// src/app/org/org-node.component.ts
+import {Component, input} from '@angular/core';
+
+export interface OrgUnit {
+  name: string;
+  children: OrgUnit[];
+}
+
 @Component({
   selector: 'app-org-node',
   imports: [],

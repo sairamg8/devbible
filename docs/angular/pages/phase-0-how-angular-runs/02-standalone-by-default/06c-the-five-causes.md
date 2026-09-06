@@ -1,6 +1,6 @@
 ---
-title: "Five distinct mistakes produce the identical `not a known element` sentence, they have a strict cheapest-first order to check them in, and exactly one of them is fixed by a schema"
-sidebar_label: "06c · The five causes"
+title: "Five distinct mistakes produce the identical `not a known element` sentence, and the first three — a missing import, a mismatched selector, and a class nothing can reach — are free to rule out before you touch anything"
+sidebar_label: "06c · The five causes (1–3)"
 sidebar_position: 6.2
 ---
 
@@ -12,18 +12,19 @@ sidebar_position: 6.2
 > [`compiler-cli/src/ngtsc/scope/src/standalone.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/scope/src/standalone.ts),
 > [`compiler-cli/src/ngtsc/scope/src/util.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/scope/src/util.ts),
 > [`compiler/src/schema/dom_element_schema_registry.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler/src/schema/dom_element_schema_registry.ts),
-> [`compiler-cli/src/ngtsc/annotations/component/src/util.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/annotations/component/src/util.ts).
+> [`compiler-cli/src/ngtsc/annotations/component/src/handler.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/annotations/component/src/handler.ts).
 > Documentation-validated; **no sandbox run**.
 > Version spine: **Angular 22.1.5** · CLI / `@angular/build` / `@angular/ssr` **22.1.7** · TypeScript peer `>=6.0 <6.1`.
 
-**The message is the same in all five cases, so the message cannot tell you which one you have —
+**The message is identical in all five cases, so the message cannot tell you which one you have —
 you have to check, and the order matters because four of the five are free to rule out and the fifth
-requires a decision you cannot undo cheaply. The rule underneath all of them is one sentence: a
-standalone component's template may reference itself, whatever its own `imports` array names, and
-whatever those imported `NgModule`s export. Nothing else. Not what the parent imports, not what a
-module elsewhere in the app imports. `StandaloneComponentScopeReader` seeds the scope with
-`new Set([clazzMeta])` and adds only what the array resolves to, which is why the failing file is
-always the one whose template contains the tag and never the one that defines the component.**
+permanently widens what the compiler will accept in that template. The rule underneath all of them is
+one sentence: a standalone component's template may reference itself, whatever its own `imports`
+array names, and whatever those imported `NgModule`s export. Nothing else. Not what the parent
+imports, not what a module elsewhere in the app imports. `StandaloneComponentScopeReader` seeds the
+scope with `new Set([clazzMeta])` and adds only what the array resolves to, which is why the failing
+file is always the one whose template contains the tag and never the one that defines the component.
+This chunk is causes 1 to 3 — the import path itself; causes 4 and 5 are chunk 06d.**
 
 ## The scope rule the five causes all violate
 
@@ -37,8 +38,15 @@ and the compiler enforces exactly that. The class doc of `StandaloneComponentSco
 > *"Computes scopes for standalone components based on their `imports`, expanding imported NgModule
 > scopes where necessary."*
 
-**Work the five in this order.** Steps 1 to 4 cost a glance at a file; step 5 permanently widens what
-the compiler will accept in that component's template.
+**Work the five in this order.** Steps 1 to 4 cost a glance at a file; step 5 is a decision.
+
+| # | Cause | What it actually costs to check |
+|---|---|---|
+| 1 | The import is missing | open the failing component, read its `imports` |
+| 2 | The selector does not match the tag | open the child, read its `selector` |
+| 3 | The class is not exported — from its file, or from its `NgModule` | read one `export` keyword or one `exports` array |
+| 4 | It is a legacy `standalone: false` declarable | you already know: the error is NG2011, not NG8001 (chunk 06d) |
+| 5 | It is a genuine custom element | a judgement call, and the only one a schema fixes (chunk 06d) |
 
 ## 1. The import is simply missing
 
@@ -71,8 +79,9 @@ export class TeamPage {}
 
 ⚠️ **Importing it into the grandparent does nothing.** `NgModule` scope was transitive and ambient —
 one import anywhere in the chain made a directive usable by every class the module declared.
-`imports` is neither transitive nor ambient. Every component that *writes the tag* needs its own entry,
-and that repetition is the price of the locality that makes `@defer` and incremental builds work.
+`imports` is neither transitive nor ambient. Every component that *writes the tag* needs its own
+entry, and that repetition is the price of the locality that makes `@defer` and incremental builds
+work.
 
 ## 2. The import is there but the selector is misspelled
 
@@ -100,8 +109,7 @@ export class TeamPage {}
 calls `toLowerCase()` — but the *message* prints your original text, and its hyphen test runs on your
 original text. So `<AppUserCard />` reports as `'AppUserCard' is not a known element` **with the
 `NO_ERRORS_SCHEMA` suggestion**, because the unmodified string contains no hyphen. The suggestion has
-nothing to do with the actual mistake, which is that Angular element selectors are matched against
-lower-cased tag names and your component's selector is `app-user-card`.
+nothing to do with the actual mistake, which is that your component's selector is `app-user-card`.
 
 ## 3. The class is not exported
 
@@ -117,7 +125,7 @@ Component imports must be standalone components, directives, pipes, or must be N
 ```
 
 ```ts
-// the fix: import from the file that declares it, and make sure it says `export`
+// the fix: import from the file that declares it, and make sure that file says `export`
 import { UserCard } from './user-card';
 ```
 
@@ -137,77 +145,6 @@ importing the NgModule instead.
 })
 export class LegacyUiModule {}
 ```
-
-## 4. It is a legacy `standalone: false` declarable
-
-You do not get NG8001 when you try to import it — you get **NG2011** at compile time. The message is
-adaptive, built by `makeNotStandaloneDiagnostic`, and its base form is:
-
-```
-The component 'LegacyBadge' appears in 'imports', but is not standalone and cannot be imported
-directly. It must be imported via an NgModule.
-```
-
-Two fixes. Preferred — delete the flag and give the class its own `imports`:
-
-```ts
-import { Component, input } from '@angular/core';
-import { DatePipe } from '@angular/common';
-
-@Component({
-  selector: 'legacy-badge',
-  imports: [DatePipe],
-  template: `<span class="badge">{{ issued() | date }}</span>`,
-})
-export class LegacyBadge {
-  readonly issued = input.required<Date>();
-}
-```
-
-Or, when you cannot edit it, import the module that exports it:
-
-```ts
-@Component({
-  selector: 'app-team-page',
-  imports: [LegacyUiModule],
-  template: `<legacy-badge [issued]="today" />`,
-})
-export class TeamPage {
-  readonly today = new Date();
-}
-```
-
-⚠️ Angular's own TODO admits the hint is incomplete, verbatim: *"TODO(alxhub): the above case handles
-directives/pipes in NgModules that are declared in the current compilation, but not those imported
-from .d.ts dependencies."* For a third-party library shipped as `.d.ts` you get the bare sentence with
-no related information, and you have to find the module yourself.
-
-Note also that after raising NG2011 the compiler poisons the scope, with this comment on the sibling
-case: *"Poison the component so that we don't spam further template type-checking errors that result
-from misconfigured imports."* That is why one bad import produces one error rather than fifty.
-
-## 5. It is a genuine custom element
-
-Only now is a schema the right answer. In v22 `schemas` is a `@Component` field, not a module field:
-
-```ts
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import './vendor/stripe-card-element';
-
-@Component({
-  selector: 'app-checkout',
-  imports: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  template: `<stripe-card-element [publishableKey]="key" />`,
-})
-export class Checkout {
-  readonly key = 'pk_live_placeholder';
-}
-```
-
-🔴 The registry only consults `CUSTOM_ELEMENTS_SCHEMA` for tags whose normalised name contains a
-hyphen, so this is not a general "make the error go away" switch — what it does and refuses to do is
-chunk 06d's subject.
 
 ## Gotchas
 
@@ -234,27 +171,11 @@ Cause: `imports` is per component and non-transitive; the habit is left over fro
 compilation scope was shared by every class in `declarations`. Fix: add the import to the component
 whose template literally contains the tag, in that file. There is no way to grant a scope downward.
 
-**★ Symptom: NG2011 with no hint about which `NgModule` to import.** Cause: the related information is
-only computed for modules in the current compilation; the source's own TODO says `.d.ts` dependencies
-are not covered. Fix: read the library's public entry point for the module that exports the component
-and import that module by name:
-
-```ts
-import { MatButtonModule } from '@angular/material/button';
-
-@Component({
-  selector: 'app-toolbar',
-  imports: [MatButtonModule],
-  template: `<button mat-flat-button type="button">Save</button>`,
-})
-export class Toolbar {}
-```
-
 **★ Symptom: the entry in `imports` is `undefined` and the error is NG2012, not NG8001.** Cause: a
 barrel-file re-export cycle, or a missing `export` keyword, left a hole in the array; the tag then
 fails separately as an unknown element. Fix: import the class from the file that declares it rather
-than through the barrel, and confirm the class carries `export`. If two components genuinely reference
-each other, break the cycle with `forwardRef`, which the compiler resolves specifically for this array:
+than through the barrel. If two components genuinely reference each other, break the cycle with
+`forwardRef`, which the compiler resolves specifically for this array via `createForwardRefResolver`:
 
 ```ts
 import { Component, forwardRef } from '@angular/core';
@@ -270,15 +191,15 @@ export class TreeBranch {}
 
 **★ Symptom: a recursive component reports itself as not a known element.** Cause: something else — a
 component is *always* in its own scope. The scope reader seeds with
-`new Set<DirectiveMeta | PipeMeta | NgModuleMeta>([clazzMeta])`, and `seen` already contains the class,
-so importing itself is a no-op rather than a fix. Fix: check the selector spelling instead; a
+`new Set<DirectiveMeta | PipeMeta | NgModuleMeta>([clazzMeta])`, and `seen` already contains the
+class, so importing itself is a no-op rather than a fix. Fix: check the selector spelling instead; a
 self-referencing template that fails has a typo, not a missing import.
 
 **★ Symptom: the fix worked in one component and the identical tag still fails three files away.**
-Cause: you fixed one scope. Every component that writes the tag needs its own entry, and there are as
+Cause: you fixed one scope. Every component that writes the tag needs its own entry, so there are as
 many failures as there are templates. Fix: search the workspace for the tag rather than for the error,
 and add the import to each host. A shared **exported** `const` array keeps that from becoming
-repetitive, and `imports` flattens nested arrays:
+repetitive, and `imports` flattens nested arrays to any depth:
 
 ```ts
 export const SHARED_UI = [UserCard, AppTooltip] as const;
@@ -291,10 +212,16 @@ export const SHARED_UI = [UserCard, AppTooltip] as const;
 export class TeamPage {}
 ```
 
+**★ Symptom: the array entry is computed and the build fails before any template error appears.**
+Cause: `imports` is read by `ngtsc`'s static evaluator at build time, not executed at runtime, so a
+value that comes from a function call or a computed key cannot be resolved. Fix: name classes
+directly, or put them in a statically resolvable exported `const`; only `forwardRef` and
+`ModuleWithProviders` have dedicated resolvers.
+
 **★ Symptom: you imported the right `NgModule` and the component is still unknown.** Cause: the module
 declares it but does not export it, so `ngModuleScope.exported.dependencies` never contains it. Fix:
 add it to that module's `exports`; if the module is third-party, look for a different entry point —
-libraries commonly ship one module per feature precisely so that each one exports what it declares.
+libraries commonly ship one module per feature precisely so each one exports what it declares.
 
 ## Interview questions
 
@@ -305,23 +232,7 @@ any imported `NgModule` exports; the tag failed to match anything in that set. T
 perfectly well — nobody in the parent's scope had a selector for it. This is the single most useful
 sentence for debugging the error, and it is the sentence that stops people editing the child.
 
-**★ You import a component and get NG2011 instead of NG8001. What have you learned?**
-That the class exists, is reachable, is a real declarable — and carries `standalone: false`. NG8001
-means nothing matched the tag; NG2011 means the thing in your array is a directive, component or pipe
-that belongs to an `NgModule` and cannot be imported directly. It is a strictly more informative
-failure, and if the declaring module is in the same compilation the diagnostic even names it and says
-whether it is exported. The compiler then poisons the scope deliberately, so you get one error rather
-than a cascade of template type-check failures.
-
-**★ Which of the five causes is `CUSTOM_ELEMENTS_SCHEMA` the correct fix for, and how do you know
-before you try it?**
-Only the fifth: a genuine custom element that no Angular component defines. You know before trying
-because you can answer "which class would match this tag?" — if there is a class, a schema is the
-wrong tool and will merely suppress the error while the element renders as an inert tag. If there is
-no class, and the tag comes from a script that registers a custom element, the schema is the only
-answer. The hyphen in the tag is a necessary condition, not a sufficient one.
-
-**Your `imports` array contains the right class and the tag still fails. What are the two remaining
+**★ Your `imports` array contains the right class and the tag still fails. What are the two remaining
 possibilities?**
 The selector does not match what you wrote — including a case mismatch, since element matching happens
 against a lower-cased tag name — or the class is not an element-selector directive at all, for example
@@ -336,15 +247,27 @@ declares is invisible to you. The `exports` array is the module's public surface
 piece of `NgModule` semantics a standalone application still has to understand in order to consume a
 library.
 
-**Why is the repetition of `imports` across many components considered a feature rather than a
-regression?**
-Because it is what makes a component's dependencies decidable from one file. Ambient module scope
-meant "which component uses this directive?" was a whole-graph question and no bundler could split on
-it. A local, statically analysable array turns it into a one-file question, which is exactly what
-`@defer` needs to move a dependency into a separate chunk and what incremental compilation needs to
-know which files to rebuild. The verbosity buys locality, and locality is the point of the whole
-topic.
+**★ Why is the repetition of `imports` across many components a feature rather than a regression?**
+Because it makes a component's dependencies decidable from one file. Ambient module scope meant "which
+component uses this directive?" was a whole-graph question, and no bundler could split on it. A local,
+statically analysable array turns it into a one-file question — exactly what `@defer` needs to move a
+dependency into a separate chunk, and what incremental compilation needs in order to know which files
+to rebuild. The verbosity buys locality, and locality is the point of the whole topic.
+
+**Why can a component reference itself without importing itself?**
+Because `StandaloneComponentScopeReader` initialises the dependency set with the component's own
+metadata before it looks at `imports` at all, and adds the class to `seen` at the same time. A
+self-import is therefore skipped by the dedupe check rather than rejected. It also means a recursive
+template — a tree node rendering child nodes — needs no special handling, and that an error on such a
+template is never about the import.
+
+**What kinds of value can `imports` hold, and why does that matter for debugging?**
+Class references and arbitrarily nested arrays of them, resolved statically by the compiler, with
+special handling for `forwardRef` and `ModuleWithProviders`. It matters because it tells you the
+failure is always a build-time resolution failure: nothing in that array is evaluated when your app
+runs, so no amount of runtime logging will tell you what went into it. You read the `.ts` file the way
+the compiler does.
 
 ---
 
-← Prev: [Compile time vs runtime](06b-runtime-detection.md) · Index: [Topic index](README.md) · Next → [`CommonModule` and `schemas`](06d-commonmodule-and-schemas.md)
+← Prev: [Compile time vs runtime](06b-runtime-detection.md) · Index: [Topic index](README.md) · Next → [Legacy declarables and real custom elements](06d-legacy-declarables-and-custom-elements.md)

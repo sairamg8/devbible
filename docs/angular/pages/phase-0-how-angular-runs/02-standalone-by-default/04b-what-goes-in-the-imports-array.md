@@ -122,8 +122,11 @@ the compiler emits per class, not per group.
 angular.dev states the top-level rule in one line, verbatim from
 [Anatomy of components](https://angular.dev/guide/components/anatomy-of-components):
 
-> *"To use a component, [directive](guide/directives), or [pipe](guide/templates/pipes), you
-> must add it to the `imports` array in the `@Component` decorator"*
+> *"To use a component, directive, or pipe, you must add it to the `imports` array in the
+> `@Component` decorator"*
+
+(The words are verbatim; the source markdown links *directive* and *pipe* to angular.dev's own
+guides, and only that link markup has been dropped here.)
 
 > *"By default, Angular components are _standalone_, meaning that you can directly add them to
 > the `imports` array of other components. Components created with an earlier version of
@@ -209,8 +212,19 @@ ones your template happens to use. Fix: nothing breaks, but the unused members e
 NG8113 warning; import the classes individually when the group is large:
 
 ```ts
-// instead of imports: [SHARED_UI]
-imports: [AvatarComponent, InitialsPipe],
+// src/app/users/user-name.component.ts — name the two you use, not the group of three
+import {Component, input} from '@angular/core';
+import {AvatarComponent} from '../shared/avatar.component';
+import {InitialsPipe} from '../shared/initials.pipe';
+
+@Component({
+  selector: 'app-user-name',
+  imports: [AvatarComponent, InitialsPipe],
+  template: `<app-avatar [label]="fullName() | initials" />`,
+})
+export class UserNameComponent {
+  readonly fullName = input.required<string>();
+}
 ```
 
 **★ Symptom: `imports: [SomeService]` or `imports: [SOME_TOKEN]` is rejected.** Cause: the
@@ -219,6 +233,11 @@ NgModules and nothing else, so anything else poisons the scope. Fix: services go
 `providers` — on the component for a per-instance service, or in the application config:
 
 ```ts
+// src/app/users/user-card.component.ts
+import {Component, inject} from '@angular/core';
+import {AvatarComponent} from '../shared/avatar.component';
+import {UserCardStore} from './user-card.store';
+
 @Component({
   selector: 'app-user-card',
   imports: [AvatarComponent],

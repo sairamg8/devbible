@@ -192,6 +192,30 @@ practice: `strictTemplates` defaults to `true` in v22 — the getter is
 `return this.options.strictTemplates !== false;` — so you would have to opt out on purpose to find
 out.
 
+## The neighbouring codes, so you can tell them apart
+
+| Code | Enum member | What it means (verbatim enum doc, or the message) |
+|---|---|---|
+| NG2013 | `HOST_DIRECTIVE_INVALID` | *"Raised when the compiler wasn't able to resolve the metadata of a host directive."* |
+| NG2014 | `HOST_DIRECTIVE_NOT_STANDALONE` | `Host directive Foo must be standalone` |
+| NG2015 | `HOST_DIRECTIVE_COMPONENT` | `Host directive Foo cannot be a component` |
+| NG2022 | `COMPONENT_UNKNOWN_DEFERRED_IMPORT` | `Component deferred imports must be standalone components, directives or pipes.` |
+| NG2023 | `NON_STANDALONE_NOT_ALLOWED` | *"Raised when a `standalone: false` component is declared but `strictStandalone` is set."* — see [chunk 03](03-standalone-by-default-which-version-changed-what.md) |
+| NG2024 | `MISSING_NAMED_TEMPLATE_DEPENDENCY` | *"Raised when a named template dependency isn't defined in the component's source file."* |
+| NG2025 | `INCORRECT_NAMED_TEMPLATE_DEPENDENCY_TYPE` | *"Raised if an incorrect type is used for a named template dependency."* |
+| NG8012 | `DEFERRED_PIPE_USED_EAGERLY` | a `deferredImports` pipe used outside a `@defer` block |
+| NG8013 | `DEFERRED_DIRECTIVE_USED_EAGERLY` | a `deferredImports` directive used outside a `@defer` block |
+| NG8014 | `DEFERRED_DEPENDENCY_IMPORTED_EAGERLY` | a symbol present in both `deferredImports` and `imports` |
+| NG8116 | `MISSING_STRUCTURAL_DIRECTIVE` | *"A structural directive is used in a template, but the directive is not imported."* |
+
+⚠️ The three deferred codes reference `deferredImports`, which is marked `@internal // 3p-only` in
+the v22.1.5 typings. It is real and it has diagnostics, but it is not a field application authors
+write — use `@defer` in the template and let the compiler decide.
+
+NG8113 and NG8116 are mirror images of each other: one says you imported something you do not use,
+the other says you used something you did not import. NG8116 is assembled by `formatExtendedError`,
+so unlike NG8113 it *does* carry a trailing `Find more at …/NG8116` link.
+
 ## Gotchas
 
 **★ Symptom: you know a file has dead imports and NG8113 says nothing about it.** Cause: one of

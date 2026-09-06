@@ -168,12 +168,26 @@ a conditional, a spread of a computed value. Fix: make it a plain exported const
 identifiers:
 
 ```ts
-// ❌ ngtsc cannot evaluate this
-// imports: buildImports({withRouter: true}),
+// src/app/users/user-card.component.ts
+import {Component, input} from '@angular/core';
+import {RouterLink} from '@angular/router';
+import {AvatarComponent} from '../shared/avatar.component';
+import type {User} from './user';
 
-// ✅ statically analysable
+// ❌ `imports: buildImports({withRouter: true})` — ngtsc cannot evaluate a call.
+// ✅ a plain exported constant of identifiers, which it can.
 export const USER_CARD_IMPORTS = [AvatarComponent, RouterLink] as const;
-// then, in the decorator: imports: [USER_CARD_IMPORTS]
+
+@Component({
+  selector: 'app-user-card',
+  imports: [USER_CARD_IMPORTS],
+  template: `
+    <a [routerLink]="['/users', user().id]"><app-avatar [label]="user().fullName" /></a>
+  `,
+})
+export class UserCardComponent {
+  readonly user = input.required<User>();
+}
 ```
 
 **★ Symptom: a service you expected to be a singleton has two instances, and both components

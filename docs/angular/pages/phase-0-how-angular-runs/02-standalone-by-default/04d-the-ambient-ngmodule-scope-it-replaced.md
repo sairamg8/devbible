@@ -197,7 +197,7 @@ dumping ground. Fix: there is no `SharedModule` in the standalone model — expo
 themselves, and let each component import the two or three it uses:
 
 ```ts
-// src/app/shared/ui.ts
+// src/app/shared/index.ts — a re-export, not a scope; each consumer still imports what it uses
 export {AvatarComponent} from './avatar.component';
 export {HighlightDirective} from './highlight.directive';
 export {InitialsPipe} from './initials.pipe';
