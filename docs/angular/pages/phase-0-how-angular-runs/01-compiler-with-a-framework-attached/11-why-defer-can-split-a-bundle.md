@@ -6,7 +6,7 @@ sidebar_position: 11
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-06 against angular.dev — [Deferred loading with `@defer`](https://angular.dev/guide/templates/defer) — and `angular/angular` at tag `v22.1.5`: [`packages/compiler/src/render3/view/compiler.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler/src/render3/view/compiler.ts), [`packages/core/src/defer/interfaces.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/core/src/defer/interfaces.ts), [`packages/core/src/defer/instructions.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/core/src/defer/instructions.ts).
+> Verified: 2026-09-06 against angular.dev — [Deferred loading with `@defer`](https://angular.dev/guide/templates/defer) — and `angular/angular` at tag `v22.1.5`: [`packages/compiler/src/render3/view/compiler.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler/src/render3/view/compiler.ts), [`packages/core/src/defer/interfaces.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/core/src/defer/interfaces.ts), [`packages/core/src/defer/instructions.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/core/src/defer/instructions.ts), [`packages/compiler-cli/src/ngtsc/annotations/component/src/handler.ts`](https://github.com/angular/angular/blob/v22.1.5/packages/compiler-cli/src/ngtsc/annotations/component/src/handler.ts).
 > Documentation-validated; **no sandbox run**.
 > Version spine: **Angular 22.1.5** · CLI / `@angular/build` / `@angular/ssr` **22.1.7** · TypeScript peer `>=6.0 <6.1`.
 
@@ -21,11 +21,10 @@ those classes are reachable *only* from inside a `@defer` block. So it deletes t
 and emits `import('./heavy-chart')` in its place, wrapped in a function it hands to the runtime.
 The chunk boundary is not something the bundler discovered. It is something the compiler told it.**
 
-This chunk is about that hand-off: the exact function the compiler generates, the type the runtime
-expects back, and why the same mechanism means a heavy `@placeholder` costs you every byte you
-thought you had deferred. The conditions a dependency must satisfy to earn the dynamic import —
-and the barrel-file trap that silently revokes it — are the subject of
-**11b** *(not written yet)*.
+This chunk is about that hand-off: the exact function the compiler generates, the two shapes it
+can be emitted in, and the type the runtime expects back. The conditions a dependency must
+satisfy to earn the dynamic import — and the barrel-file trap that silently revokes it — are the
+subject of [11b · The nine conditions and the barrel trap](11b-the-nine-conditions-and-the-barrel-trap.md).
 
 ## The information a bundler does not have
 
@@ -62,7 +61,7 @@ three while a bundler holds none of them:
    JavaScript; a JavaScript parser sees a backtick string containing an at-sign.
 3. **`HeavyChart` is referenced nowhere else in the file.** Only after (1) and (2) does this
    third fact become interesting, and it is the one that most often fails silently — see
-   **11b** *(not written yet)*.
+   [11b](11b-the-nine-conditions-and-the-barrel-trap.md).
 
 The guide states the outcome plainly:
 
@@ -82,8 +81,7 @@ block; it is one per dependency, all inside one generated function.
 ## The function the compiler generates
 
 `packages/compiler/src/render3/view/compiler.ts` at `v22.1.5`, `compileDeferResolverFunction` —
-the `PerBlock` branch verbatim. (The `else` branch below it, for `PerComponent` mode, has the same
-shape with no `isDeferrable` check; both are covered in **11b** *(not written yet)*.)
+the `PerBlock` branch verbatim:
 
 ```ts
 export function compileDeferResolverFunction(
@@ -145,6 +143,34 @@ narrows the resolved module namespace object down to the one export the runtime 
 runtime never has to guess a symbol name. `isDefaultImport` picks `m.default` instead — Angular
 supports `export default class HeavyChart` and stores that flag through to emit.
 
+## Two emit modes: one resolver per block, or one per component
+
+`compileDeferResolverFunction` is guarded by `if (meta.mode === DeferBlockDepsEmitMode.PerBlock)`,
+which means there is a second mode. In `PerComponent` mode the resolver is not emitted inline
+beside the `ɵɵdefer` call at all; `compileComponentFromMetadata` hoists it into the constant pool
+as a named `const`, verbatim:
+
+```ts
+let allDeferrableDepsFn: o.ReadVarExpr | null = null;
+if (
+  meta.defer.mode === DeferBlockDepsEmitMode.PerComponent &&
+  meta.defer.dependenciesFn !== null
+) {
+  const fnName = `${templateTypeName}_DeferFn`;
+  constantPool.statements.push(
+    new o.DeclareVarStmt(fnName, meta.defer.dependenciesFn, undefined, o.StmtModifier.Final),
+  );
+  allDeferrableDepsFn = o.variable(fnName);
+}
+```
+
+So in `PerComponent` mode every `@defer` block in the component shares one hoisted
+`MyComponent_DeferFn` const; in `PerBlock` mode each block carries its own inline arrow.
+`handler.ts` at `v22.1.5` selects `PerComponent` when `@Component.deferredImports` is in play
+(and in local-compilation mode), and `PerBlock` otherwise. This matters when you are reading
+emitted output: an absent inline arrow next to `ɵɵdefer` is not a missing resolver, it is a
+variable reference to one declared above.
+
 ## The failure mode is in the `else` branch
 
 The `else` in `compileDeferResolverFunction` is the single most useful thing on this page:
@@ -170,7 +196,8 @@ dynamic imports of the dependencies that did qualify:
 The block still renders. The triggers still fire. Everything works, and `TinyBadge` — plus its
 transitive dependency graph — sits in the eager bundle. There is no build-time signal at all. This
 is why "my `@defer` isn't producing a chunk" is a *bundle-inspection* question rather than an
-error-message question, and why **11b** *(not written yet)* exists.
+error-message question, and why
+[11b](11b-the-nine-conditions-and-the-barrel-trap.md) exists.
 
 ## The runtime contract admits the failure in its type
 
@@ -190,53 +217,6 @@ before rendering the primary block, and some are classes that are simply already
 not bolt a fallback on after the fact; the possibility of a non-deferred dependency is part of the
 designed contract, which is precisely why it is silent.
 
-## Triggers decide *when*, not *whether*
-
-The bundling story is settled at compile time; triggers are a runtime concern. A `@defer` block
-with `on immediate` still gets a `dependencyResolverFn` full of dynamic imports and still produces
-a separate chunk — it just requests that chunk as soon as the surrounding view renders. That is a
-genuinely useful configuration: it takes a large component out of the initial chunk without
-delaying it behind an interaction. Prefetch triggers (`prefetch on idle`, `prefetch on hover`) run
-the same resolver earlier and store the result; they change scheduling, not emission.
-
-⚠️ Angular's documentation states the per-dependency dynamic import as a property of the block, not
-of the trigger, and I could find no sentence in the guide that makes an exception for any trigger.
-The claim above therefore follows from the emit path rather than from an explicit doc sentence —
-treat it as a reading of `compileDeferResolverFunction`, which never inspects the trigger.
-
-## Why `@placeholder`, `@loading` and `@error` ship eagerly
-
-This surprises people, and the reason is structural rather than a policy decision. The `ɵɵdefer`
-instruction takes the sub-blocks as *template slot indices*:
-
-> *"@param primaryTmplIndex Index of the template with the primary block content."*
-> *"@param loadingTmplIndex Index of the template with the loading block content."*
-> *"@param placeholderTmplIndex Index of the template with the placeholder block content."*
-> *"@param errorTmplIndex Index of the template with the error block content."*
-
-Only `primaryTmplIndex` has a `dependencyResolverFn` beside it. The other three are ordinary
-embedded templates living in the component's own `decls` range — the slot model of
-**07 · The create pass and the update pass** *(not written yet)* — so their dependencies are
-compiled exactly like any other template dependency in the file. The guide says the same thing
-from the outside:
-
-> *"Keep in mind the dependencies of the placeholder block are eagerly loaded."*
-
-and repeats it for `@loading` and `@error`. The practical consequence is blunt: **a placeholder
-built from your design-system components can cancel the entire benefit of the block it decorates.**
-
-```html
-@defer (on viewport) {
-  <heavy-chart [series]="series" />
-} @placeholder {
-  <div class="chart-skeleton" aria-hidden="true"></div>
-}
-```
-
-Plain markup and a CSS class cost nothing. `<ds-card><ds-spinner /></ds-card>` drags `DsCard` and
-`DsSpinner` — and whatever they import — into the eager bundle, and does it silently, because
-eager loading of a placeholder is correct behaviour rather than a mistake.
-
 ## Gotchas
 
 **★ Symptom: the `@defer` block works perfectly, the app runs, and the component is still in the
@@ -252,23 +232,8 @@ ng build --configuration production --stats-json
 npx esbuild-visualizer --metadata dist/stats.json --open
 ```
 
-Then work through the nine conditions in **11b** *(not written yet)*.
-
-**★ Symptom: you deferred a heavy chart, the chunk splits correctly, and the initial bundle barely
-shrinks.** Cause: the `@placeholder` (or `@loading`, or `@error`) is built from components, and
-those are compiled as ordinary eager template dependencies of the host component. Fix: make the
-non-primary blocks plain markup, and if you need a real skeleton component, defer *it* too or
-accept the cost knowingly:
-
-```html
-@defer (on viewport) {
-  <heavy-chart [series]="series" />
-} @loading (after 100ms; minimum 300ms) {
-  <div class="skeleton skeleton--chart"></div>
-} @error {
-  <p role="alert">The chart could not be loaded.</p>
-}
-```
+Then work through the nine conditions in
+[11b](11b-the-nine-conditions-and-the-barrel-trap.md).
 
 **★ Symptom: the deferred component uses `export default` and you assume that cannot work with the
 generated resolver.** Cause: the assumption, not the code — `compileDeferResolverFunction` carries
@@ -281,26 +246,13 @@ diagnosing a failed split:
 export class HeavyChart {}
 ```
 
-**Symptom: two `@defer` blocks in the same component both load the same dependency and you expect
-two network requests.** Cause: expecting the resolver to own the fetch. It does not — it returns
-`import(...)`, and the module registry deduplicates; a second `import()` of an already-resolved
-specifier yields the same module. Fix: none needed. This also means splitting one big block into
-two smaller ones with different triggers does not multiply the download cost of shared
-dependencies.
-
-**Symptom: a dependency that is only ever used inside `@defer` blocks still appears in the main
-bundle, and moving it to its own file did not help.** Cause: it is not a component, directive or
-pipe. The resolver function is built from *template* dependencies; a service, a token, a type
-guard or a plain function imported by the component class is a normal TypeScript import and
-`@defer` has no opinion about it. Fix: for a service, let the injector do the splitting —
-`inject()` inside the deferred component rather than the host, so the service module is reached
-only through the deferred chunk.
-
-**Symptom: `@defer` is used inside a component that is itself lazy-loaded by the router, and you
-cannot tell which chunk anything landed in.** Cause: two independent splitting mechanisms are
-stacked. The route boundary produces one chunk; the `@defer` resolver produces another *inside*
-it. Fix: nothing is wrong — but read the chunk graph rather than the chunk list, because the
-deferred chunk's parent is the route chunk, not the entry point.
+**Symptom: you open the emitted output looking for the arrow function next to `ɵɵdefer` and there
+is a bare identifier there instead.** Cause: `PerComponent` emit mode, which
+`compileComponentFromMetadata` hoists into the constant pool as
+`` `${templateTypeName}_DeferFn` ``. The resolver exists; it is declared above the component
+definition and referenced by name. Fix: search the emitted file for `_DeferFn` rather than for
+`import(`. If you did not expect `PerComponent` mode, check whether the component uses
+`@Component.deferredImports` — that is what selects it.
 
 ## Interview questions
 
@@ -322,22 +274,6 @@ runtime has to accept an array where some entries are already-resolved classes a
 promises. That union is the type-level admission that "this `@defer` block did not actually defer
 everything" is a supported, non-error state, which is exactly why the failure is silent.
 
-**★ A colleague puts the app's standard loading spinner component into `@placeholder` and reports
-that deferring saved nothing. What happened?**
-The four sub-blocks of a `@defer` block are ordinary embedded templates identified by slot index in
-the `ɵɵdefer` call; only the primary block gets a `dependencyResolverFn`. So the placeholder's
-components are compiled as eager template dependencies of the host, exactly as if they were used
-outside the block, and the documentation says so explicitly. If the spinner pulls in a design-system
-module, that module is now in the initial bundle. The fix is plain markup in the non-primary
-blocks.
-
-**Does `@defer (on immediate)` produce a separate chunk, and if so, why would anyone use it?**
-Yes — the emission of the resolver function is independent of the trigger; `compileDeferResolverFunction`
-never inspects it. `on immediate` requests the chunk as soon as the surrounding view renders, so it
-removes the component from the initial bundle without adding an interaction delay. It is the right
-tool for something large that is definitely needed but not needed *first* — you trade a second
-request for a smaller critical path.
-
 **Why does the compiler emit `import('./a').then((m) => m.MyCmp)` rather than just `import('./a')`?**
 Because the runtime needs the class, not the module namespace object, and it must not have to guess
 which export to take. The `.then` callback is generated from the recorded symbol name — or
@@ -346,13 +282,16 @@ same element type, `Promise<DependencyType>`. It also keeps the specifier a plai
 which is the form bundlers recognise as a split point; anything more dynamic would defeat the
 purpose.
 
-**Why is deferring a service different from deferring a component?**
-`@defer` operates on *template* dependencies. The resolver function is built from the components,
-directives and pipes the deferred template matched, so a service the host component injects is a
-normal TypeScript import and stays eager no matter what the template says. Code-splitting a service
-is done by moving the `inject()` call into a component that is itself deferred or lazy-routed, so
-that the only path to the service's module runs through a dynamic import.
+**What is the difference between `PerBlock` and `PerComponent` emit mode, and what selects
+between them?**
+`PerBlock` emits one resolver arrow inline for each `@defer` block. `PerComponent` emits one
+resolver for the whole component, hoisted into the constant pool as a `const` named
+`` `${templateTypeName}_DeferFn` `` and referenced from every block. `handler.ts` at `v22.1.5`
+picks `PerComponent` when `@Component.deferredImports` is used and in local-compilation mode, and
+`PerBlock` otherwise. The observable difference is in the emitted output, not in behaviour: one
+shared resolver means the component's blocks all resolve against the same dependency array, which
+is why `deferredImports` is a component-level declaration rather than a block-level one.
 
 ---
 
-← Prev: [10 · Metadata errors, one by one](README.md) · Index: [Topic index](README.md) · Next → **11b · The nine conditions and the barrel trap** *(not written yet)*
+← Prev: **10 · Metadata errors, one by one** *(not written yet)* · Index: [Topic index](README.md) · Next → [11b · The nine conditions and the barrel trap](11b-the-nine-conditions-and-the-barrel-trap.md)
