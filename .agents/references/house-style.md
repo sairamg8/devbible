@@ -254,12 +254,34 @@ that exist **right now** (`ls` first); anything not yet written is bold text plu
 · Next → **`None` and the "no result" contract** *(not written yet)*
 ```
 
+🔴 **Why this is a hard rule, not a preference: `onBrokenLinks: 'throw'`.** One bad
+link fails `build`, and `deploy` is then **skipped, not failed** — a single X, a live site
+still serving the last good version, and every other track in this shared checkout blocked
+from publishing. Two hours of red on 2026-09-06.
+
+🔴 **A quoted href is the OTHER class, and it has the OPPOSITE fix.** Upstream docs
+write site-relative links, so a faithful `> *"To use a [directive](guide/directives)…"*`
+resolves against **our** URL and 404s. Make it absolute (`https://angular.dev/guide/directives`)
+— never de-link it, and never repoint a quoted `#anchor` at a local heading.
+
+| Class | ✅ Fix | ⛔ Wrong fix |
+|---|---|---|
+| our own chunk, not written yet | de-link to bold + *(not written yet)* | make it absolute |
+| href copied from quoted upstream docs | make it absolute to the upstream origin | de-link it |
+
+**Gate both with one command, per file:**
+
+```bash
+yarn linkcheck <dir>      # exits 1, names the class and the fix; slug-aware
+```
+
 ---
 
 ## Checklist before reporting
 
 ```bash
 wc -l <dir>/*.md                              # nothing over 300
+yarn linkcheck <dir>                          # 🔴 0 problems, or the deploy goes red
 grep -c '^\*\*★' <dir>/*.md                   # compare against the BEFORE count
 grep -L '^<span className="db-tier' <dir>/*.md   # every page has a tier badge
 grep -L '^> Verified:' <dir>/*.md                # every page has provenance

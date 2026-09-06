@@ -61,6 +61,40 @@ claims against primary sources **without a sandbox**
 (`.agents/references/verification.md`). 🔴 The two skills never merge: currency sweeps
 versions corpus-wide, `devbible-topic` validates content for one **named** topic.
 
+## 🔴 HARD RULE — a broken link fails the DEPLOY, not just the build
+
+`docusaurus.config.js` line 72 is **`onBrokenLinks: 'throw'`**. ONE unresolvable link
+anywhere in `docs/` fails the `build` job, and **`deploy` is then *skipped*, not failed**.
+
+🔴 **This is invisible.** The workflow shows a single X, not two. The live site keeps
+serving the last good version, so nothing looks wrong. And **this checkout is shared** — one
+lane's dangling link silently blocks **every other track's** publish. It stayed red for two
+hours on 2026-09-06 before anyone looked.
+
+🔴 **So: run this before you report a file done. Per file, not per topic.**
+
+```bash
+yarn linkcheck                  # whole corpus
+yarn linkcheck docs/angular     # one track, or pass any topic directory
+```
+
+It exits 1 and names the class and the fix. It is slug-aware (Docusaurus strips `NN-`
+prefixes, so `04-allowlists/` serves at `allowlists/`) — a naive filesystem check reports
+122 false positives here and is why the old link checker was ignored.
+
+### The two classes look IDENTICAL in a build log and have OPPOSITE fixes
+
+| Class | What it is | ✅ Fix | ⛔ The wrong fix |
+|---|---|---|---|
+| **1 — dangling forward ref** | a link to **our own** chunk, not written yet | **de-link** to `**bold**` + `*(not written yet)*`, re-link when it lands | making it absolute — points at nothing |
+| **2 — inherited href** | a link copied **verbatim out of upstream docs**, carrying the source site's relative path | make the href **absolute** (`https://angular.dev/guide/directives`) | de-linking — silently drops a real citation |
+
+🔴 **Inside a `> *"…"*` quote block, every `](…)` and every bare `#anchor` belongs to the
+site being quoted — never to us.** Never repoint a quoted anchor at a local heading. Class 2
+recurs precisely because a quote is the one place a writer is *trying* not to alter the text.
+
+Full incident history: `…/claude/devbible/feedback_verify_in_ci_not_locally.md`.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
