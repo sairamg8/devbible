@@ -19,7 +19,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "currency": "node scripts/currency.mjs"
+    "currency": "node scripts/currency.mjs",
+    "validate": "node scripts/validate.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",

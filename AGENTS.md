@@ -66,6 +66,22 @@ cheapest sufficient tier. Its extra reference is
 corpus; `devbible-topic` validates content for **one named topic**. A bare *"check for
 update"* means the version sweep, never a corpus-wide content re-read.
 
+## Validating what is already written
+
+To work the backlog of unchecked pages — *"validate the corpus"*, *"which pages have not
+been checked"*, *"what should I validate next"*:
+
+```bash
+yarn validate            # state, from disk
+yarn validate --queue    # the next units, risk-ordered
+```
+
+🔴 **Read `.agents/references/validation-pipeline.md` and follow it.** It is the loop —
+queue, per-unit brief, the `> Validated:` stamp, the per-unit banking cadence, and the
+`--guard` check that catches a pass which rewrote instead of checked. The *judgement*
+still comes from `devbible-topic` Job 4 and `verification.md`; the pipeline only makes it
+resumable. **Progress is `grep -c '^> Validated:'`, not a number in a document.**
+
 **Explanation cadence:** each topic page must be visible in the UI as written
 (dev server + `src/data/progress.js` bump). After a **complete phase**, run
 `yarn build` once and fix all errors in that pass — not a full build after every
