@@ -222,6 +222,76 @@ you will inevitably need thirty seconds later.
 **Cause:** the message was empty — Git aborts rather than creating a commit with no message
 **Fix:** intended behaviour. It is the reliable way to back out of a commit you started by accident
 
+## Interview questions
+
+**★ What does `git commit` actually turn into a commit — your changed files, or something else?**
+The index, and only the index. `commit` writes a tree from the staging area, so
+a file you edited but never staged is simply not in the snapshot, no matter what
+your working tree looks like when you run it. Every "my change isn't in the
+commit" is that one sentence. The practical defence is `commit.verbose = true`,
+which puts the staged diff in the editor underneath the message, so the thing
+being committed is on screen while you describe it.
+
+**★ What does `git commit -a` not do?**
+It does not stage untracked files. The manual's wording is that it stages files
+that have been *modified and deleted*, but *new files you have not told Git about
+are not affected*. That makes `-am` a two-thirds shortcut with a specific failure
+mode: you add a new module, edit three existing files, commit with `-am`, and the
+commit is missing the new file. Everything passes locally because the file is on
+your disk, and the build breaks for everyone else. Reading `git status` before
+reaching for `-a` is the whole fix.
+
+**★ Does `--amend` edit the previous commit?**
+No — nothing in Git edits a commit. `--amend` builds a new commit and moves the
+branch to it, roughly `git reset --soft HEAD^` followed by a fresh `commit`.
+Everything else follows from that: the hash changes, because the tree, message or
+timestamp differ; the parents do not, so the branch's shape is unchanged and even
+a merge commit can be amended; the author and author date are preserved while the
+committer becomes you, now; and the old commit still exists, unreferenced, until
+garbage collection removes it.
+
+**★ You ran `git commit -m "fix" src/invoice.js` and your carefully staged work is
+not in the commit. What happened?**
+Naming paths on the command line switches Git into `--only` mode. It commits the
+**working-tree** contents of the paths you named and disregards anything staged for
+other paths — and your index is left staged afterwards, which is why the work looks
+lost but is not. Use `-i` to include the staged content alongside the named paths,
+or commit the index normally and then commit the path separately.
+
+**★ Your push is rejected as non-fast-forward right after an amend. Why, and what
+are the two options?**
+Because the amend replaced the branch tip with a new commit, so your branch no
+longer contains the commit the remote has — from the remote's point of view your
+history diverged. If nobody has pulled it, `git push --force-with-lease` is the
+correct repair, because it refuses if the remote moved since you last saw it. If
+anyone has pulled it, do not rewrite: commit the correction on top and let the
+mistake stand in history, which is cheaper than every collaborator resolving a
+divergence they did not cause.
+
+**When do a commit's author and committer differ, and how does Git decide who you
+are?**
+They differ whenever a commit is moved or rewritten — `--amend`, `rebase`,
+`cherry-pick` — where the author stays whoever wrote the change and the committer
+becomes whoever replayed it. Identity resolves in order: the `GIT_AUTHOR_*` and
+`GIT_COMMITTER_*` environment variables, then `author.*` / `committer.*` config,
+then `user.name` and `user.email` (the normal case), then `EMAIL`, and finally a
+guess from the system username and mail hostname. That last fallback is why an
+unconfigured machine produces commits attributed to a container hostname instead
+of failing loudly.
+
+**When is `--no-verify` defensible?**
+When the hook is broken or the situation is a genuine emergency — not when the
+hook is slow. Hooks are the last check before a bad commit exists, and skipping
+them because someone's linter takes twelve seconds means fixing that linter never
+becomes anyone's problem. CI will still run either way, so `--no-verify` usually
+buys a few seconds locally and spends them again in a red pipeline.
+
+**Why does closing the editor without writing a message abort the commit?**
+Because Git refuses to create a commit with an empty message, and that refusal is
+deliberately useful: it is the standard way to change your mind after starting a
+commit by accident. Nothing is created, nothing is staged differently, and the
+index is exactly as you left it.
+
 ---
 
 ← Prev: [`git add` in full](02-git-add/README.md) · Next → [`git diff`](04-git-diff.md)
