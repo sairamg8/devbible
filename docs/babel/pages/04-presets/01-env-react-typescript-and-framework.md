@@ -1,10 +1,8 @@
 ---
-title: "Babel Presets: env, React, TypeScript & Framework Bundles"
+title: "`@babel/preset-env`: targets, polyfills, and the Babel 8 boundary"
 sidebar_label: "Babel Presets"
 sidebar_position: 1
 ---
-
-<span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-09-06 against the Babel documentation at babeljs.io for **Babel 8.0.1** — npm
 > `latest` for `@babel/core`, read from `npm view @babel/core dist-tags` on 2026-09-06 —
@@ -17,9 +15,12 @@ sidebar_position: 1
 > Documentation-validated, **no sandbox run**.
 > Validated: 2026-09-06 · claims + output provenance · session 4e8d4393
 
-# 🎁 Babel Presets: env, React, TypeScript & Framework Bundles
+# 🎁 `@babel/preset-env`: targets, polyfills, and the Babel 8 boundary
 
-Covers syllabus **§4.1 preset-env**, **§4.2 preset-react**, **§4.3 preset-typescript**, and **§4.4 Framework-Bundled Presets**.
+Covers syllabus **§4.1 preset-env**. The language and framework presets — **§4.2 preset-react**,
+**§4.3 preset-typescript** and **§4.4 Framework-Bundled Presets** — are
+[01b](01b-react-typescript-and-framework-presets.md); the worked configuration below uses all
+four, because a real `babel.config.js` does.
 
 ## 1. Concept & Under-the-Hood Mechanics
 
@@ -42,58 +43,6 @@ Selects transforms/polyfills from **targets**:
 core-js 3"* rather than accepting a bare `3`. Everything above still describes Babel 7 — which is
 what most repos are on, including this checkout at 7.29.7 — but a Babel 8 upgrade turns those two
 keys into a config error, not a silent no-op.
-
-### 4.2 @babel/preset-react
-
-| Runtime | Emit |
-| --- | --- |
-| `classic` | `React.createElement` — needs `React` in scope. **The preset's own default under Babel 7** (probed: `runtime = "classic"` in the installed `@babel/preset-react` 7.29.7), where `automatic` is not applied unless you set it. |
-| `automatic` (recommended for React 17+) | `jsx`/`jsxs` from `react/jsx-runtime`. Frameworks (Next.js, Vite's React plugin, CRA-successors) set this for you. 🔴 **Under Babel 8 this is the default** — the option *"defaults to `automatic`"*. |
-
-🔴 **This default flipped, and it is the single most confusing thing about this preset.** Babel 8
-lists the change as *"Use the new JSX implementation by default"*, with the migration note: *"If
-you are using a modern version of React or Preact, it should work without any configuration
-changes. Otherwise, you can pass the `runtime: "classic"` option"*
-([Babel 8 breaking changes](https://babeljs.io/docs/v8-migration)). So on Babel 7 a bare
-`@babel/preset-react` emits `React.createElement` and needs `React` in scope; on Babel 8 the same
-config emits imports from `react/jsx-runtime` and does not. Writing `runtime` explicitly is how you
-stop caring which major you are on.
-
-`development: true` uses `jsx-dev-runtime` for better component stacks. ⚠️ Do not hand-wire it:
-the current docs say `development` *"defaults to `true` if Babel's `envName` id `"development"`,
-and `false` otherwise"* (grammar as published), and `envName` is
-`BABEL_ENV || NODE_ENV || "development"` — so the preset already tracks the environment for you.
-
-### 4.3 @babel/preset-typescript
-
-**Type-stripping only**—no type checking, and the docs are blunt about what that costs:
-
-> *"This plugin does not add the ability to type-check the JavaScript passed to it."* … *"Since
-> Babel does not type-check, code which is syntactically correct, but would fail the TypeScript
-> type-checking may successfully get transformed, and often in unexpected or invalid ways."*
-> — [@babel/plugin-transform-typescript](https://babeljs.io/docs/babel-plugin-transform-typescript)
-
-Align with TS:
-
-- Prefer `isolatedModules` / `verbatimModuleSyntax` on the TS side, because Babel compiles one file
-  at a time and *"The build process will always behave as though `isolatedModules` is turned on"*.
-  Turning the same flag on in `tsconfig.json` makes `tsc` report the constructs that depend on
-  cross-file knowledge — ambient declarations, re-exporting a type without `export type` — instead
-  of letting Babel emit something plausible and wrong.
-- ⚠️ **`const enum` is not one of the things Babel refuses to emit.** The preset ships an
-  `optimizeConstEnums` option (default `false`); with it on, *"Babel will inline enum values rather
-  than using the usual `enum` output"* and exported const enums become plain object literals,
-  *"avoiding cross-file dependency requirements"*. Left off, a `const enum` compiles like a regular
-  enum. The real caveat is the *cross-file* case, which no single-file compiler can do — not the
-  syntax itself.
-
-### 4.4 Framework-Bundled Presets
-
-- **`next/babel`** — Next.js's bundled preset, shipped inside the `next` package itself (not a separately published `babel-preset-next` package). Reference it as `presets: ['next/babel']` in a custom `babel.config.js`/`.babelrc` when on the Babel path.  
-- **`metro-react-native-babel-preset`** (name evolves—check RN version) — React Native entry  
-- Always **read the framework default** before adding a custom `babel.config.js` (adding one may disable faster compilers)
-
----
 
 ## 2. Real-World Engineering Scenario
 
@@ -165,16 +114,91 @@ referencing the browserslist key inside package.json."*
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## Gotchas
 
-### ⚠️ preset-typescript “succeeds” with type errors
-Always run `tsc --noEmit` separately—see [interop](../09-linter-and-type-checker-interop/01-babel-eslint-parser-and-tsc.md).
+**★ Setting `targets` silently switches your browserslist config off.** *"By default,
+`@babel/preset-env` uses browserslist config sources unless either the `targets` or
+`ignoreBrowserslistConfig` options are set."* Symptom: a carefully maintained `.browserslistrc`
+that no longer affects the output, usually after someone added `targets: { node: 'current' }` to
+fix a test run. Fix: pick one source of truth. If both must exist, know that the option wins and
+say so in a comment.
 
-### ⚠️ classic JSX runtime + React 17+ automatic assumptions
-Missing React imports or double runtimes.
+**★ Upgrading to Babel 8 changes your output even if your config never mentioned `targets`.**
+*"Babel 7 defaults to `targets: ">= 0%"` (all browsers), while Babel 8 defaults to
+`targets: "defaults"`"*. A config that relied on the implicit default was compiling for
+effectively everything and now compiles for browserslist's `defaults` query — smaller output, and
+a different answer to "does this still run on that old device". Fix: set `targets` (or a
+browserslist config) explicitly before the upgrade so the change is a decision rather than a
+side effect.
 
-### ⚠️ polyfills in library code with useBuiltIns: usage
-Can pollute consumer globals—libraries often use `useBuiltIns: false` and document peer polyfills.
+**★ `useBuiltIns` and preset-env's `corejs` are gone in Babel 8.** The option reference marks
+`useBuiltIns` *"(removed in Babel 8)"*, and the migration guide says to remove it *"along with
+`@babel/plugin-transform-runtime`'s `corejs`"* in favour of `babel-plugin-polyfill-corejs3`.
+Symptom: a config that has worked for years fails validation immediately after the upgrade. Fix:
+move polyfill injection to the polyfill plugin, configured from its own documentation.
 
-### ⚠️ Adding babel.config.js to Next without reading SWC docs
-May silently leave the fast path—measure compile times.
+**★ `corejs: 3` is no longer specific enough on Babel 8.** *"The `corejs` option must specify the
+minor version of core-js 3."* The reason is the one this page's scenario already describes: the
+injected polyfills have to match the `core-js` you actually installed, and a bare major lets those
+drift apart. Symptom of the drift on Babel 7: `Cannot find module 'core-js/modules/…'` style
+resolution failures, or duplicate polyfills inflating the bundle.
+
+**★ `modules: "auto"` is the default, so writing `modules: false` may be undoing something
+useful.** Under `"auto"` the preset asks the caller whether ES modules survive downstream; a
+bundler says yes and gets ESM, a CommonJS test runner says no and gets CJS — from one config.
+Hardcoding `false` removes that, which is fine for a bundler-only pipeline and is exactly what
+breaks the test run with an unexpected `import` token.
+
+**★ Polyfilling a library with `useBuiltIns: 'usage'` pollutes your consumers' globals.** The
+injected `core-js` modules patch built-ins process-wide, which is the application's decision to
+make, not the library's. Fix: libraries ship with `useBuiltIns: false` (or the pure/`runtime`
+polyfill route) and document the environments they assume.
+
+**★ `include` and `exclude` are the escape hatch for when the target data is wrong.** Both take
+arrays of plugin names or RegExps and force individual plugins on or off regardless of what
+`targets` computed. The case they exist for is an engine that claims a feature and ships it
+broken, or a transform you want to skip for size. Fix: name the plugin exactly — the example
+config's `exclude: ['transform-typeof-symbol']` is a real plugin name, and a misspelt one is not
+an error, it is a silently ignored line.
+
+## Interview questions
+
+**★ How does `@babel/preset-env` decide which transforms to apply?**
+From `targets`, resolved either from the `targets` option or from a browserslist config — and it is
+one or the other: *"By default, `@babel/preset-env` uses browserslist config sources unless either
+the `targets` or `ignoreBrowserslistConfig` options are set."* It maps each target to the set of
+features that environment lacks, and enables the corresponding transform plugins. `include` and
+`exclude` then force individual plugins on or off when the data disagrees with reality — a known
+engine bug, or a transform you want to skip for size.
+
+**★ `useBuiltIns: 'usage'` versus `'entry'` versus `false` — how do you choose?**
+`false` (the default) injects nothing: your code must already run in the targets, or you polyfill
+by hand. `'entry'` replaces a single `core-js` import at your entry point with exactly the
+polyfills your target matrix needs — predictable, and it includes things reached only through
+dependencies. `'usage'` inspects each file and injects only the polyfills for features it can see
+being used — smaller, but "can see" is the catch: a feature reached dynamically, or used inside a
+dependency you do not compile, is not seen. Applications choose between `entry` and `usage`;
+libraries generally choose `false`, because injecting global polyfills is the application's
+decision. And on Babel 8 the whole option is gone — the job moves to
+`babel-plugin-polyfill-corejs3`.
+
+**★ Someone adds `targets: { node: 'current' }` to fix a test run and the production bundle grows.
+What happened?**
+The `targets` option turned browserslist off. The project's `.browserslistrc` had been narrowing
+the browser matrix; with `targets` set, that file is no longer consulted at all, so preset-env is
+now compiling for a different environment than the team thinks. Fix is either an `env.test` block
+that carries the Node target only for the test run, or moving everything into browserslist and
+never setting `targets`.
+
+**★ Your `.browserslistrc` and a `targets` option disagree. Which wins, and how would you find
+out without reading this page?**
+`targets` wins, and browserslist is not consulted at all — the documented rule is that preset-env
+*"uses browserslist config sources unless either the `targets` or `ignoreBrowserslistConfig`
+options are set."* The way to find out empirically is to change the browserslist query to
+something absurd and see whether the output moves; if it does not, something has switched it off.
+The way to prevent the question is to pick one source of truth per repository and write a comment
+in the other place saying which.
+
+---
+
+← [Track index](../../README.md) · Next → [Preset-react, preset-typescript and the framework bundles](01b-react-typescript-and-framework-presets.md)
