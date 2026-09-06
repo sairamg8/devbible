@@ -111,8 +111,8 @@ Read that as four distinct jobs:
    parser and their own AST.** `product().price | currency:'GBP'` is parsed by an expression
    parser that is separate again from the HTML parser.
 4. **Template function.** The AST is lowered to a JavaScript function of imperative
-   instruction calls. That is chunks [03](03-what-the-compiler-emits.md) and
-   [04](04-create-pass-and-update-pass.md).
+   instruction calls. That is chunks [04](04-what-the-compiler-emits.md) and
+   [05](05-create-pass-and-update-pass.md).
 
 ## `templateUrl` and `template` compile identically
 
@@ -152,7 +152,7 @@ export class ProductCard {
 ```
 
 The practical difference is where errors are reported, not what is produced — see
-[14 · Consequences you actually hit](14-consequences-you-actually-hit.md).
+[15 · Consequences you actually hit](15-consequences-you-actually-hit.md).
 
 ## The language keeps changing, on Angular's schedule
 
@@ -199,7 +199,7 @@ component the template is in a file TypeScript does not include; in an inline co
 is a string literal. Only `ngtsc` reads it. Fix: run the Angular Language Service (it is the
 compiler's checker exposed to the editor, not a second implementation) and do not treat a
 green TypeScript check as a green build. Chunk
-[10](10-where-the-compiler-runs-ngtsc.md) explains why they are two different programs.
+[11](11-where-the-compiler-runs-ngtsc.md) explains why they are two different programs.
 
 **Symptom: a template renders `@if (isAdmin) {` as literal text in the browser.** Cause: the
 file was served as static HTML, or the block is inside something Angular does not compile —
@@ -217,7 +217,7 @@ escape it as `&lt;` in text content, exactly as you would in HTML.
 different parsers with two different grammars. Fix: move the expression into the class and
 bind the result. This is not a workaround, it is the intended shape — see chunk
 [02](02-what-a-template-expression-may-contain.md) for the full grammar and
-[06](06-static-analysability.md) for why the grammar is small on purpose.
+[07](07-static-analysability.md) for why the grammar is small on purpose.
 
 ## Interview questions
 
@@ -239,7 +239,7 @@ An inline `template:` is a template-literal expression whose *contents* TypeScri
 reason to inspect. Template checking is a separate feature implemented by
 `@angular/compiler-cli`, which builds a synthetic TypeScript file representing the template
 and asks the TypeScript type checker about *that* — see chunk
-[11](11-template-type-checking.md). This is why "it compiles in the IDE" and "it builds" are
+[12](12-template-type-checking.md). This is why "it compiles in the IDE" and "it builds" are
 different statements in Angular in a way they are not in React.
 
 **Where in the pipeline does an expression like `user.name | titlecase` actually get
