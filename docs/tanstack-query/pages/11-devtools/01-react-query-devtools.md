@@ -97,3 +97,7 @@ queryClient.invalidateQueries({ queryKey: ['order'] }); // guessed — but the R
 
 ### ⚠️ Pitfall 3: Manually Editing Cache Data in DevTools and Forgetting It's Not Persistent Truth
 Manually editing a query's cached data directly in the devtools panel is a genuinely useful way to test how a component reacts to different data shapes — but it's a **temporary, local override**, not something that persists across a refetch or reflects real server state. Forgetting this can lead to confusing moments where a manually-edited value "disappears" the next time that query naturally refetches, which is expected behavior, not a bug.
+
+---
+
+← [Suspense Integration](../10-suspense-integration/01-suspense-driven-fetching.md) · [Topic index](../README.md) · Next → [Query Cancellation](../12-query-cancellation/01-abortsignal-integration.md)

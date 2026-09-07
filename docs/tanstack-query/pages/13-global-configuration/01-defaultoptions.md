@@ -208,3 +208,7 @@ Yes, via `setDefaultOptions` — but *"Previously defined default options will b
 
 **★ Why does the SSR client need configuring separately?**
 Because it is a different client. *"Server: always make a new query client"* — one per request, so no user's cache can leak into another's HTML — and that new instance starts from the library's defaults, not from your browser configuration. If it has no `staleTime`, everything you dehydrate arrives at the browser already stale, and the client refetches it on mount, which undoes the point of prefetching while still looking correct on screen.
+
+---
+
+← [Query Cancellation](../12-query-cancellation/01-abortsignal-integration.md) · [Topic index](../README.md) · Next → [Optimistic Updates Patterns](../14-optimistic-updates-patterns/01-advanced-rollback-strategies.md)

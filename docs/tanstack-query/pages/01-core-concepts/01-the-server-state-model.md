@@ -246,3 +246,7 @@ cache-coherence concern that a client-state container has no reason to have. The
 follows: anything the server owns goes in the query cache, anything the user is currently doing but
 has not sent anywhere (a half-filled form, a selected tab, a sort order) stays in component or client
 state.
+
+---
+
+[Topic index](../README.md) · Next → [`useQuery` Deep Dive](../02-usequery-deep-dive/01-core-options.md)

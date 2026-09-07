@@ -271,3 +271,7 @@ and until then it is memory and payload for nothing. Hover-prefetch works becaus
 intent and navigation is a second or two. Prefetching an entire nav tree on load spends bandwidth and
 server capacity on paths most users never take, and on the server it also inflates every dehydrated
 payload.
+
+---
+
+← [Dependent & Parallel Queries](../08-dependent-and-parallel-queries/01-query-composition.md) · [Topic index](../README.md) · Next → [Suspense Integration](../10-suspense-integration/01-suspense-driven-fetching.md)

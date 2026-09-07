@@ -244,3 +244,7 @@ Runs both, concurrently — *"all mutations run in parallel"* — and does not d
 
 **★ Where does the rollback value actually live between `onMutate` and `onError`?**
 In the mutation instance, not in the cache and not in your component. `onMutate` returns it, the library holds it for the life of that mutation, and hands it to `onSuccess`, `onError` and `onSettled` as `onMutateResult`. That is why the pattern survives a re-render, and why the value must be a snapshot rather than a reference into the cache — the cache is going to change underneath it, which is the whole point of the optimistic write.
+
+---
+
+← [Caching & Invalidation](../04-caching-and-invalidation/01-cache-management-apis.md) · [Topic index](../README.md) · Next → [Background Refetching](../06-background-refetching/01-automatic-freshness.md)

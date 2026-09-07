@@ -284,3 +284,7 @@ the domain (a metrics rollup recomputed hourly is valid for minutes; a chat thre
 seconds) and set `staleTime` to it. Only if the data is genuinely never worth refreshing on focus do
 you reach for `refetchOnWindowFocus: false`, and you should prefer `staleTime` because it also
 suppresses the redundant refetch on remount and reconnect, which the focus flag does not.
+
+---
+
+← [Core Concepts](../01-core-concepts/01-the-server-state-model.md) · [Topic index](../README.md) · Next → [Query States](../03-query-states/01-status-flags.md)

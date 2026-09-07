@@ -292,3 +292,7 @@ invalidation is you telling the library you *know* it changed, because you just 
 invalidation deferred to `staleTime`, a mutation followed by an invalidation would silently do nothing
 on any query with a generous freshness window — which is precisely the queries you most want to
 correct.
+
+---
+
+← [Query States](../03-query-states/01-status-flags.md) · [Topic index](../README.md) · Next → [`useMutation`](../05-usemutation/01-mutation-lifecycle.md)

@@ -120,3 +120,7 @@ function useCheckoutSummary() {
 
 ### ⚠️ Pitfall 3: Mixing `useSuspenseQuery` and Regular `useQuery` for the Same Query Key Inconsistently
 Using `useSuspenseQuery` for a given query key in one component and regular `useQuery` for the SAME key elsewhere works functionally (they share the same cache), but produces an inconsistent mental model across the codebase about how loading/error states for that data are actually handled — pick one approach per query/feature area deliberately, rather than mixing arbitrarily based on which component happened to be written first.
+
+---
+
+← [Prefetching & SSR](../09-prefetching-and-ssr/01-server-rendered-data-flow.md) · [Topic index](../README.md) · Next → [DevTools](../11-devtools/01-react-query-devtools.md)

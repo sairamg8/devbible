@@ -142,3 +142,7 @@ jest.mock('../api/fetchProduct'); // bypasses the REAL fetch call entirely
 // code execute fully, only mocking the final network RESPONSE
 server.use(http.get('/api/products/:id', () => HttpResponse.json(mockProduct)));
 ```
+
+---
+
+← [Optimistic Updates Patterns](../14-optimistic-updates-patterns/01-advanced-rollback-strategies.md) · [Topic index](../README.md) · Next → [Migration Recipe](../16-migration-recipes/01-rtk-query-to-tanstack-query.md)

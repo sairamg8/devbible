@@ -142,3 +142,7 @@ useMutation({
 // ✅ CORRECT: explicit generics catch this typo at COMPILE time, not as a silent runtime rollback failure
 useMutation<void, Error, string, { previousComments: Comment[] }>({ /* ... */ });
 ```
+
+---
+
+← [Global Configuration](../13-global-configuration/01-defaultoptions.md) · [Topic index](../README.md) · Next → [Testing TanStack Query](../15-testing-tanstack-query/01-isolated-and-integration-testing.md)

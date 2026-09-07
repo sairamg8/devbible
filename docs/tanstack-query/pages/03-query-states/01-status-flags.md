@@ -236,3 +236,7 @@ When the query is not enabled — or is paused — at the moment of render. Both
 `'pending'` and `data` is `undefined`. The safe shapes are to narrow positively on `isSuccess` before
 touching `data`, or to return early on whatever precondition set `enabled` to false, so the query's
 own states are only consulted once the query is actually allowed to run.
+
+---
+
+← [`useQuery` Deep Dive](../02-usequery-deep-dive/01-core-options.md) · [Topic index](../README.md) · Next → [Caching & Invalidation](../04-caching-and-invalidation/01-cache-management-apis.md)

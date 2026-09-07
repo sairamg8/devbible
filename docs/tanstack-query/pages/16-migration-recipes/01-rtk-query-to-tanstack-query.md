@@ -151,3 +151,7 @@ Unlike RTK Query (whose cache is automatically part of whatever `configureStore`
 
 ### ⚠️ Pitfall 4: Keeping the Whole Redux Store "Just in Case" After Migrating All Server State
 Once every `createApi` endpoint is migrated, audit what's actually LEFT in the Redux store — per the scenario above, it's often almost entirely what RTK Query itself was managing, with only a small slice of genuine client-only UI state remaining. That remainder is frequently simple enough for `useState`/Context/a lightweight store, and keeping Redux configured (store setup, Provider, middleware, the `react-redux` dependency) purely out of inertia for a handful of booleans is unnecessary ongoing complexity the migration was actually an opportunity to remove.
+
+---
+
+← [Testing TanStack Query](../15-testing-tanstack-query/01-isolated-and-integration-testing.md) · [Topic index](../README.md)

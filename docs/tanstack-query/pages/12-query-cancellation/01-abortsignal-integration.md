@@ -229,3 +229,7 @@ Be careful, because a cancellation arrives as a rejection there. A blanket `catc
 
 **★ Does aborting actually reduce backend load?**
 Sometimes, and it is worth being honest about which parts are guaranteed. The client stops waiting and the cache write does not happen — those are certain. Whether the server stops working depends on it observing the disconnect: a handler still writing a response usually will, a query already running in the database usually will not, and anything already queued for asynchronous processing will not. Threading `signal` is still right, because the client-side guarantees alone justify it; promising a proportional drop in server cost does not.
+
+---
+
+← [DevTools](../11-devtools/01-react-query-devtools.md) · [Topic index](../README.md) · Next → [Global Configuration](../13-global-configuration/01-defaultoptions.md)
