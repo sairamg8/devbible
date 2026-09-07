@@ -17,7 +17,7 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Topics | State |
 |---|---|---|
-| 0 · [The DSA interview and the practice system](./phase-0-the-interview-and-practice/README.md) | 14 | 🚧 **10 of 14** — 11 files on disk |
+| 0 · [The DSA interview and the practice system](./phase-0-the-interview-and-practice/README.md) | 14 | 🚧 **11 of 14** — 12 files on disk |
 | 1 · Complexity analysis | 11 | Planned |
 | 2 · Recursion, maths and bits | 13 | Planned |
 | 3 · Arrays, hashing and prefix sums | 16 | Planned |

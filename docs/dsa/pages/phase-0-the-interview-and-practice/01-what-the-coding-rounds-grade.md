@@ -118,7 +118,7 @@ a map of seen values makes it linear; I'll write the map version"), **narrate ea
 goes in**, **say the invariant**, and **announce the test** ("let me trace `[3, 3]` with target
 6 — that's the self-pairing case"). Silence while typing is acceptable in short stretches if the
 plan was stated; six silent minutes followed by a wall of code is graded as unreadable even when
-the code is right. **11 · Communication mechanics** *(not written yet)* has the phrases.
+the code is right. [11 · Communication mechanics](11-communication-mechanics.md) has the phrases.
 
 ## The hint is a graded line
 

@@ -186,4 +186,4 @@ train patterns rather than behaviour.
 
 ---
 
-← Prev: [09 · The ladders](09-the-ladders.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **Communication mechanics** *(not written yet)*
+← Prev: [09 · The ladders](09-the-ladders.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [11 · Communication mechanics](11-communication-mechanics.md)
