@@ -120,7 +120,7 @@ internals appear before the cart, the CDN or the callback exist, and the intervi
 the shape of the system or trace a journey across it. The other failure is never zooming: a
 container diagram with no deep dive is breadth with nothing under it. The sequence — container
 diagram, numbered flows, narration, *then* one component-level zoom — is what the rubric
-rewards, and [09 · Choosing the deep dives](09-choosing-the-deep-dives.md) *(not written yet)*
+rewards, and **09 · Choosing the deep dives** *(not written yet)*
 is how the box is chosen.
 
 ## What stays off this diagram
@@ -131,10 +131,10 @@ is how the box is chosen.
 - **Every microservice the product might one day have** — the boxes are the ones the journeys
   need; a service with no flow number on it is decoration.
 - **Infrastructure detail** — regions, zones, pod counts — unless a requirement (residency,
-  availability) put them there; the [scaling walk](12-the-scaling-walk.md) *(not written yet)*
+  availability) put them there; the **scaling walk** *(not written yet)*
   adds them when a number forces them.
 - **Monitoring, CI, secrets** — real, and belonging to a later part of the conversation
-  ([14 · Evolution and operations](14-evolution-and-operations.md) *(not written yet)*).
+  (**14 · Evolution and operations** *(not written yet)*).
 
 ## Gotchas
 
