@@ -280,4 +280,4 @@ per order is a decision about lost orders, not about a large monthly number.
 
 ---
 
-← Prev: [12 · The scaling walk](12-the-scaling-walk.md) · Index: [Phase 1 — The method](README.md) · Next → **Evolution and operations** *(not written yet)*
+← Prev: [12 · The scaling walk](12-the-scaling-walk.md) · Index: [Phase 1 — The method](README.md) · Next → [14 · Evolution and operations](14-evolution-and-operations.md)
