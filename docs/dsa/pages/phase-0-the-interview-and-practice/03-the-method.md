@@ -249,4 +249,4 @@ checked.
 
 ---
 
-← Prev: [02 · The 45-minute shape](02-the-45-minute-shape.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **Language choice and runtime traps** *(not written yet)*
+← Prev: [02 · The 45-minute shape](02-the-45-minute-shape.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [04 · Language choice and traps](04-language-choice-and-runtime-traps.md)
