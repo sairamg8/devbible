@@ -42,8 +42,8 @@ retry made the outage worse — all fall out of that trace.
 | **Connection pooling and keep-alive** — between services and to the database; pool sizing from concurrency, the herd of new connections after a restart | <span className="db-tier t-understand">Understand</span> |
 | **The path in the storefront** — a catalogue request and a checkout request traced through the same edge, taking different caching, authentication and rate-limit decisions at each hop | <span className="db-tier t-understand">Understand</span> |
 | **Service mesh** — sidecars, mutual TLS, retries and timeouts as infrastructure, traffic splitting; when a mesh earns its cost and when it is bureaucracy with latency | <span className="db-tier t-know">Know</span> |
-| **Gateway patterns** — backend-for-frontend, aggregation, a GraphQL layer at the edge; detailed in [Part 6](06-api-design-and-contracts.md) | <span className="db-tier t-know">Know</span> |
-| **Abuse at the edge** — volumetric vs application-layer attacks, WAF rules, bot detection, challenge pages; what the CDN absorbs and what still reaches you; detailed in [Part 9](09-security-and-compliance.md) | <span className="db-tier t-know">Know</span> |
+| **Gateway patterns** — backend-for-frontend, aggregation, a GraphQL layer at the edge; detailed in **Part 6** *(not written yet)* | <span className="db-tier t-know">Know</span> |
+| **Abuse at the edge** — volumetric vs application-layer attacks, WAF rules, bot detection, challenge pages; what the CDN absorbs and what still reaches you; detailed in **Part 9** *(not written yet)* | <span className="db-tier t-know">Know</span> |
 
 **Gate — move on when:** you can draw the storefront's request path from a phone to
 PostgreSQL, name what each hop adds in latency order-of-magnitude, place rate limiting and

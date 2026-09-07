@@ -71,7 +71,7 @@ workloads, and keep the whole estate in sync — while knowing what each move co
 | **The storefront's data estate** — primary and replicas, Redis, the search index, object storage, the warehouse; every arrow labelled with its sync mechanism and its lag | <span className="db-tier t-understand">Understand</span> |
 | **Time-series and metrics stores** — append-only writes, downsampling, retention; why metrics do not belong in the orders database | <span className="db-tier t-know">Know</span> |
 | **Data lakes, warehouses and the lakehouse idea** — columnar files and open table formats, where the clickstream goes, and who reads it | <span className="db-tier t-know">Know</span> |
-| **Global data** — residency, multi-region reads, geo-partitioning so a region's data stays in its region; the compliance angle continues in [Part 9](09-security-and-compliance.md) | <span className="db-tier t-know">Know</span> |
+| **Global data** — residency, multi-region reads, geo-partitioning so a region's data stays in its region; the compliance angle continues in **Part 9** *(not written yet)* | <span className="db-tier t-know">Know</span> |
 
 **Gate — deliverable:** the storefront's sharding plan on one page: the shard key with the
 hotspot analysis, the query that no longer works and its replacement, the resharding

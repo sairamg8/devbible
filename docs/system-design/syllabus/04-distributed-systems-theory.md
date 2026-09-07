@@ -38,7 +38,7 @@ a concept you should be able to explain with a failure story attached.
 | **Happens-before and ordering** — causal order vs total order, why a total order needs a coordinator or a single partition, ordering keys as a partial order you can afford | <span className="db-tier t-understand">Understand</span> |
 | **Consensus, the problem** — agreeing on one value despite crashes, what impossibility results actually forbid, and why leader election, configuration and locks all reduce to it | <span className="db-tier t-understand">Understand</span> |
 | **Failure detection** — heartbeats, timeouts, phi-accrual detectors; the slow node that is indistinguishable from the dead one; gray failures | <span className="db-tier t-understand">Understand</span> |
-| **CRDTs and conflict resolution** — last-writer-wins and what it silently drops, merge functions, counters and sets that converge; the basis of collaborative editing in [Part 12](12-the-hld-catalogue.md) | <span className="db-tier t-understand">Understand</span> |
+| **CRDTs and conflict resolution** — last-writer-wins and what it silently drops, merge functions, counters and sets that converge; the basis of collaborative editing in **Part 12** *(not written yet)* | <span className="db-tier t-understand">Understand</span> |
 | **Paxos and ZAB** — the ideas, why Raft won on understandability, where ZooKeeper still runs | <span className="db-tier t-know">Know</span> |
 | **Gossip protocols** — membership and failure information spreading without a coordinator; epidemic broadcast in Cassandra-style clusters | <span className="db-tier t-know">Know</span> |
 | **Byzantine vs crash faults** — why almost nothing you build tolerates lying nodes, and the few places where it matters | <span className="db-tier t-know">Know</span> |
@@ -73,7 +73,7 @@ step three fails.
 | **Geospatial indexing** — geohash, quadtrees, hierarchical cells; nearby search and the cell-boundary problem; the spatial extension of a relational database as the boring answer | <span className="db-tier t-understand">Understand</span> |
 | **Distributed scheduling** — leader-elected cron, a job store, at-least-once execution with idempotent jobs, missed-run policies; drift-safe jobs in Node's background-work phase | <span className="db-tier t-understand">Understand</span> |
 | **Leader election in practice** — Kubernetes leases, ephemeral nodes in etcd or ZooKeeper, database advisory locks; the split-brain drill you run before trusting any of them | <span className="db-tier t-understand">Understand</span> |
-| **Change data capture as a primitive** — reading the database's log, feeding caches, search and the warehouse without dual writes; detailed in [Part 5](05-event-streaming-and-async.md) | <span className="db-tier t-understand">Understand</span> |
+| **Change data capture as a primitive** — reading the database's log, feeding caches, search and the warehouse without dual writes; detailed in **Part 5** *(not written yet)* | <span className="db-tier t-understand">Understand</span> |
 | **Durable execution and workflow engines** — code as the workflow, replay from history, timers that survive restarts; when it replaces a hand-written saga and what it costs to operate | <span className="db-tier t-know">Know</span> |
 | **Three-phase commit** — what it tried to fix in 2PC and why it did not survive real networks | <span className="db-tier t-know">Know</span> |
 
