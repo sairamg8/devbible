@@ -792,13 +792,13 @@
     }
   },
   "system-design": {
-    "pages": 4,
-    "validated": 4,
+    "pages": 5,
+    "validated": 5,
     "phases": {
-      "phase-0-the-interview": 4
+      "phase-0-the-interview": 5
     },
     "validatedPhases": {
-      "phase-0-the-interview": 4
+      "phase-0-the-interview": 5
     }
   },
   "tanstack-query": {

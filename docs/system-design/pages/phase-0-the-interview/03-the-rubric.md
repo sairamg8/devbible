@@ -244,4 +244,4 @@ filled late is graded as filled; a line discovered blank in the feedback is not.
 
 ---
 
-← Prev: [02 · The three design rounds](02-the-three-design-rounds.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **The vocabulary contract** *(not written yet)*
+← Prev: [02 · The three design rounds](02-the-three-design-rounds.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [04 · The vocabulary contract](04-the-vocabulary-contract.md)
