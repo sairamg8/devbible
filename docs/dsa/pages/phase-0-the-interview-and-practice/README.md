@@ -18,7 +18,7 @@ it. This phase is the method; the language-level implementations live in the
 and [Java's collections phase](../../../java/pages/phase-3-generics-collections/README.md), and
 this track links to them rather than re-teaching them.
 
-🚧 **8 of 14 topics written.**
+🚧 **9 of 14 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -31,7 +31,7 @@ this track links to them rather than re-teaching them.
 | 06 | **[Spaced repetition and the mistake log](./06-spaced-repetition-and-the-mistake-log.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 07 | **[The "when stuck" protocol](./07-the-when-stuck-protocol.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 08 | **[Testing your own code live](./08-testing-your-own-code-live.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
-| 09 | The ladders | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
+| 09 | **[The ladders](./09-the-ladders.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 10 | Mock interviews | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 11 | Communication mechanics | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 12 | Java's collections for interviews | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |

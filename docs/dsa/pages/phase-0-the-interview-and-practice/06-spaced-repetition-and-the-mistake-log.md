@@ -126,7 +126,7 @@ A session that uses both parts, in about an hour:
    attempted. Log; schedule its day-3 repeat.
 3. **Two minutes on the log** — read today's entries, write the NEXT for each.
 
-Weekly: the KIND count, and the next week's focus. The **ladders** *(not written yet)* supply the problems in pattern order; this page supplies the cadence.
+Weekly: the KIND count, and the next week's focus. The [ladders](09-the-ladders.md) supply the problems in pattern order; this page supplies the cadence.
 
 ## Gotchas
 

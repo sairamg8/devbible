@@ -199,4 +199,4 @@ loop.
 
 ---
 
-← Prev: [07 · The when-stuck protocol](07-the-when-stuck-protocol.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **The ladders** *(not written yet)*
+← Prev: [07 · The when-stuck protocol](07-the-when-stuck-protocol.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [09 · The ladders](09-the-ladders.md)
