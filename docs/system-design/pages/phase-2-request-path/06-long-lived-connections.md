@@ -297,4 +297,4 @@ drained carefully, while the stateless services behind it deploy as often as the
 
 ---
 
-← Prev: [05 · CDNs](05-cdns.md) · Index: [Phase 2 — The request path](README.md) · Next → **Rate limiting** *(not written yet)*
+← Prev: [05 · CDNs](05-cdns.md) · Index: [Phase 2 — The request path](README.md) · Next → [07 · Rate limiting](07-rate-limiting.md)

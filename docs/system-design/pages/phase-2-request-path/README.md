@@ -20,7 +20,7 @@ the handshakes, the CDN edge, the balancer, the gateway, the long-lived connecti
 limiter, the timeout and the retry, the connection pool — each with its latency, its failure mode
 and the decision it forces on the bible's [PERN storefront](../../../real-world/README.md).
 
-🚧 **6 of 18 topics written.**
+🚧 **7 of 18 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -30,7 +30,7 @@ and the decision it forces on the bible's [PERN storefront](../../../real-world/
 | 04 | **[Stateless services, and where the state went](./04-stateless-services-and-where-the-state-went.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 05 | **[CDNs](./05-cdns.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 06 | **[Long-lived connections](./06-long-lived-connections.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
-| 07 | Rate limiting | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 07 | **[Rate limiting](./07-rate-limiting.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 08 | Timeouts, retries and budgets along the path | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 09 | DNS as a component | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 10 | TLS termination and where it lives | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
