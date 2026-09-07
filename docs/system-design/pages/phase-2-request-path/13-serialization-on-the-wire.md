@@ -245,4 +245,4 @@ it is why the gateway's compression rule excludes image types.
 
 ---
 
-← Prev: [12 · Service discovery](12-service-discovery.md) · Index: [Phase 2 — The request path](README.md) · Next → **Connection pooling and keep-alive** *(not written yet)*
+← Prev: [12 · Service discovery](12-service-discovery.md) · Index: [Phase 2 — The request path](README.md) · Next → [14 · Connection pooling and keep-alive](14-connection-pooling-and-keep-alive.md)
