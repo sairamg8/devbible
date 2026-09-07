@@ -247,4 +247,4 @@ origin does not yet have, and cache the 404.
 
 ---
 
-← Prev: [04 · Stateless services, and where the state went](04-stateless-services-and-where-the-state-went.md) · Index: [Phase 2 — The request path](README.md) · Next → **Long-lived connections** *(not written yet)*
+← Prev: [04 · Stateless services, and where the state went](04-stateless-services-and-where-the-state-went.md) · Index: [Phase 2 — The request path](README.md) · Next → [06 · Long-lived connections](06-long-lived-connections.md)
