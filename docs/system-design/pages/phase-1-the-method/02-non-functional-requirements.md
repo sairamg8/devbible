@@ -99,7 +99,7 @@ because it cannot be built with the team and the budget the interviewer has in m
 
 Durability decides which writes are synchronous to replicated storage and which can be
 acknowledged from memory. Retention decides the growth rate — the storage estimate in
-**03 · Back-of-the-envelope estimation** *(not written yet)*
+[03 · Back-of-the-envelope estimation](03-back-of-the-envelope-estimation.md)
 is retention times write rate times record size — and the archival tier. The two together are
 most of the storage part of the diagram before it is drawn: orders durable and retained for
 years go to the replicated primary with an archive; carts, short-lived and recoverable, go to a
@@ -214,4 +214,4 @@ not expected.
 
 ---
 
-← Prev: [01 · Functional requirements](01-functional-requirements.md) · Index: [Phase 1 — The method](README.md) · Next → **Back-of-the-envelope estimation** *(not written yet)*
+← Prev: [01 · Functional requirements](01-functional-requirements.md) · Index: [Phase 1 — The method](README.md) · Next → [03 · Estimation](03-back-of-the-envelope-estimation.md)

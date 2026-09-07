@@ -19,13 +19,13 @@ the trade-off sentence, the failure walk, the scaling walk, cost, evolution, and
 [Phase 0](../phase-0-the-interview/README.md) said what is graded; this phase is how to produce
 it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 
-🚧 **2 of 18 topics written.**
+🚧 **3 of 18 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
 | 01 | **[Functional requirements](./01-functional-requirements.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 02 | **[Non-functional requirements](./02-non-functional-requirements.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
-| 03 | Back-of-the-envelope estimation | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 03 | **[Back-of-the-envelope estimation](./03-back-of-the-envelope-estimation.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 04 | Traffic shapes | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 05 | The API sketch | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 06 | The data model from the access patterns | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
