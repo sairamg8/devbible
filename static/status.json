@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-07 16:55",
+  "updated": "2026-09-07 17:02",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -10,9 +10,9 @@
     "parked": 2,
     "blocked": 1,
     "topics": 3955,
-    "completed": 2499,
-    "pending": 1456,
-    "percent": 63
+    "completed": 2517,
+    "pending": 1438,
+    "percent": 64
   },
   "importedTotals": {
     "tracks": 11,
@@ -476,16 +476,16 @@
       "key": "system-design",
       "label": "System Design",
       "status": "in-progress",
-      "percent": 7,
+      "percent": 10,
       "counts": "syllabus topics explained",
       "topics": 472,
-      "completed": 31,
-      "pending": 441,
+      "completed": 49,
+      "pending": 423,
       "imported": false,
-      "phases": "2/24",
-      "next": "2 · The request path: DNS to gateway",
+      "phases": "3/24",
+      "next": "3 · Caching everywhere",
       "docs": "/docs/system-design",
-      "updated": "2026-09-07 16:25",
+      "updated": "2026-09-07 17:02",
       "note": null
     },
     {
