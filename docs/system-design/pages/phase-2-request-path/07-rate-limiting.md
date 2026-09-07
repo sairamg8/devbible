@@ -281,4 +281,4 @@ bucket's parameters come from the provider's documentation, not from our estimat
 
 ---
 
-← Prev: [06 · Long-lived connections](06-long-lived-connections.md) · Index: [Phase 2 — The request path](README.md) · Next → **Timeouts, retries and budgets along the path** *(not written yet)*
+← Prev: [06 · Long-lived connections](06-long-lived-connections.md) · Index: [Phase 2 — The request path](README.md) · Next → [08 · Timeouts, retries and budgets](08-timeouts-retries-and-budgets.md)
