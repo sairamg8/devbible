@@ -24,7 +24,7 @@ to measure instead of analyse, and how to answer "can we do better?" with a reas
 [Phase 0](../phase-0-the-interview-and-practice/README.md) was the method; this is the first
 thing the method needs.
 
-🚧 **9 of 11 topics written (13 files: topics 02, 03, 04 and 06 are each split into two).**
+🚧 **10 of 11 topics written (14 files: topics 02, 03, 04 and 06 are each split into two).**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -41,7 +41,7 @@ thing the method needs.
 | 07 | **[Complexity of the built-ins](./07-complexity-of-the-built-ins.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 08 | **[Recurrences and the master theorem](./08-recurrences-and-the-master-theorem.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 09 | **[Best, average and worst](./09-best-average-and-worst.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
-| 10 | Benchmarking vs analysis | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
+| 10 | **[Benchmarking vs analysis](./10-benchmarking-vs-analysis.md)** | <span className="db-tier t-know">Know</span> | ✅ written |
 | 11 | Proving optimality | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
 
 ## Phase gate

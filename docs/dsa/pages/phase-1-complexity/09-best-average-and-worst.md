@@ -251,4 +251,4 @@ mergesort — TimSort — with n log n worst case by construction and a stabilit
 
 ---
 
-← Prev: [08 · Recurrences and the master theorem](08-recurrences-and-the-master-theorem.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → **Benchmarking vs analysis** *(not written yet)*
+← Prev: [08 · Recurrences and the master theorem](08-recurrences-and-the-master-theorem.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [10 · Benchmarking vs analysis](10-benchmarking-vs-analysis.md)
