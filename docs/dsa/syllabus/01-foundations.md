@@ -101,4 +101,4 @@ of a set enumerated by bitmask — each with its complexity stated.
 
 ---
 
-{/* NAV */}
+← Index: [DSA](../README.md) · Next → [Part 2 — Arrays, strings and hashing](02-arrays-strings-and-hashing.md)

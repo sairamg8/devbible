@@ -113,4 +113,4 @@ comment before any code.
 
 ---
 
-{/* NAV */}
+← [Part 5 — Graphs](05-graphs.md) · [Index](../README.md) · Next → [Part 7 — Design-flavoured problems and applied algorithms](07-design-flavoured-and-applied.md)

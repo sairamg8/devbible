@@ -95,4 +95,4 @@ intended solution and when it is over-engineering.
 
 ---
 
-{/* NAV */}
+← [Part 3 — Linear structures and binary search](03-linear-structures-and-binary-search.md) · [Index](../README.md) · Next → [Part 5 — Graphs](05-graphs.md)

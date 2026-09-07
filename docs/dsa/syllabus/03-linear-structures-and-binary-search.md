@@ -94,4 +94,4 @@ invariant written as a comment above the loop.
 
 ---
 
-{/* NAV */}
+← [Part 2 — Arrays, strings and hashing](02-arrays-strings-and-hashing.md) · [Index](../README.md) · Next → [Part 4 — Trees, heaps and tries](04-trees-heaps-and-tries.md)

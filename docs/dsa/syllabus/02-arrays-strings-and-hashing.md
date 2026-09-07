@@ -100,4 +100,4 @@ string build in a loop is quadratic and what fixes it in each language.
 
 ---
 
-{/* NAV */}
+← [Part 1 — Foundations](01-foundations.md) · [Index](../README.md) · Next → [Part 3 — Linear structures and binary search](03-linear-structures-and-binary-search.md)

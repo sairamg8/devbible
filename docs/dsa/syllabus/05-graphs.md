@@ -75,4 +75,4 @@ table reproduced on a blank page.
 
 ---
 
-{/* NAV */}
+← [Part 4 — Trees, heaps and tries](04-trees-heaps-and-tries.md) · [Index](../README.md) · Next → [Part 6 — Backtracking, greedy and dynamic programming](06-backtracking-greedy-and-dp.md)

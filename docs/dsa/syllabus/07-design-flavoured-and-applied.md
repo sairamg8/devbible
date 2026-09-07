@@ -80,4 +80,4 @@ use, not the paragraph a student would.
 
 ---
 
-{/* NAV */}
+← [Part 6 — Backtracking, greedy and dynamic programming](06-backtracking-greedy-and-dp.md) · [Index](../README.md) · Next → [Part 8 — The ladder and the plan](08-the-ladder-and-the-plan.md)

@@ -28,7 +28,7 @@ the payment ledger — are its features at a hundred times the scale.
 | Reader | Backend in **Node.js and Java (Spring Boot)**, frontend in **React / Next.js**; PostgreSQL first, MongoDB as the MERN mirror |
 | Target | The senior and staff band: HLD + LLD rounds at product companies, plus the platform ownership those roles expect |
 | Runtime pins | The bible's targets — Node's current Active LTS, Java 25, the PostgreSQL major used by the PostgreSQL track — are inherited, never restated here |
-| Companion | **DSA** (its own track, `docs/dsa/`, syllabus in progress — linked once its overview exists) covers the coding rounds of the same loop; the two tracks share Part 13's plan |
+| Companion | [DSA](../dsa/README.md) covers the coding rounds of the same loop; the two tracks share Part 13's plan |
 
 | The mechanics live in | This track adds |
 |---|---|
@@ -107,7 +107,7 @@ Parts are sequential and the order is load-bearing:
 3. **Parts 6–10 in any order** once 2–5 are done — API design, the platform, reliability,
    security and AI systems are independent deep dives.
 4. **Part 11 (LLD) can run in parallel** with everything from Part 2 onward; it shares more
-   with the DSA track than with HLD.
+   with the [DSA track](../dsa/README.md) than with HLD.
 5. **Parts 12 and 13 last** — the catalogue is practice, and the loop is what the practice
    is for.
 

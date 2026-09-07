@@ -225,6 +225,10 @@ export const LAYERS = [
     note: 'What the senior loop tests',
     items: [
       {
+        key: 'dsa',
+        desc: 'The coding rounds: patterns, complexity, the problem ladder pattern by pattern, design-flavoured problems, in TypeScript first and Java second — syllabus written, pages not started',
+      },
+      {
         key: 'system-design',
         desc: 'HLD and LLD, distributed theory, Kafka, Kubernetes and IaC, reliability, security, AI systems, and the catalogue of 53 classic designs — syllabus written, pages not started',
       },
