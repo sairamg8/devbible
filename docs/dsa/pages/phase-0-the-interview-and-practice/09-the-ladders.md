@@ -162,4 +162,4 @@ pattern, and the phase order is what to climb regardless of the tag.
 
 ---
 
-← Prev: [08 · Testing your code live](08-testing-your-own-code-live.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **Mock interviews** *(not written yet)*
+← Prev: [08 · Testing your code live](08-testing-your-own-code-live.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [10 · Mock interviews](10-mock-interviews.md)
