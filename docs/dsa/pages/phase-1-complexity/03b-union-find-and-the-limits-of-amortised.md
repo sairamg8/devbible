@@ -132,4 +132,4 @@ full, halve at a quarter.
 
 ---
 
-← Prev: [03 · Amortised analysis](03-amortised-analysis.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → **Space and the recursion stack** *(not written yet)*
+← Prev: [03 · Amortised analysis](03-amortised-analysis.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [04 · Space and the recursion stack](04-space-and-the-recursion-stack.md)
