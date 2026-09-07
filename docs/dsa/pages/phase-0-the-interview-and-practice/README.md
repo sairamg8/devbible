@@ -18,7 +18,7 @@ it. This phase is the method; the language-level implementations live in the
 and [Java's collections phase](../../../java/pages/phase-3-generics-collections/README.md), and
 this track links to them rather than re-teaching them.
 
-🚧 **12 of 14 topics written.**
+✅ **Phase complete — 14 of 14 written (15 files: topic 04 is split into 04 and 04b).**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -35,8 +35,8 @@ this track links to them rather than re-teaching them.
 | 10 | **[Mock interviews](./10-mock-interviews.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 11 | **[Communication mechanics](./11-communication-mechanics.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 12 | **[Java's collections for interviews](./12-javas-collections-for-interviews.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
-| 13 | How this track relates to the JavaScript track | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
-| 14 | Competitive programming vs interviews | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
+| 13 | **[How this track relates to the JavaScript track](./13-how-this-track-relates-to-javascript.md)** | <span className="db-tier t-know">Know</span> | ✅ written |
+| 14 | **[Competitive programming vs interviews](./14-competitive-programming-vs-interviews.md)** | <span className="db-tier t-know">Know</span> | ✅ written |
 
 ## Phase gate
 

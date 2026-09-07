@@ -275,4 +275,4 @@ list explicitly.
 
 ---
 
-← Prev: [11 · Communication mechanics](11-communication-mechanics.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **How this track relates to the JavaScript track** *(not written yet)*
+← Prev: [11 · Communication mechanics](11-communication-mechanics.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [13 · This track and the JS track](13-how-this-track-relates-to-javascript.md)

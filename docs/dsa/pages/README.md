@@ -7,7 +7,7 @@ sidebar_position: 0
 Status board for the DSA explanation pages — one page per syllabus topic, with the pattern,
 worked solutions in TypeScript and Java, gotchas and interview questions.
 
-**Phase 0 is in progress** — pages started 2026-09-07 by session `9602e64d`, phase by phase in
+**Phase 0 is complete; phase 1 is next** — pages started 2026-09-07 by session `9602e64d`, phase by phase in
 reading order, one topic at a time, alternating with the System Design track. The
 [syllabus](../README.md) is complete (301 topics, 21 phases, 8 parts, written 2026-09-07 by session `ebd67cf9`).
 
@@ -17,7 +17,7 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Topics | State |
 |---|---|---|
-| 0 · [The DSA interview and the practice system](./phase-0-the-interview-and-practice/README.md) | 14 | 🚧 **12 of 14** — 13 files on disk |
+| 0 · [The DSA interview and the practice system](./phase-0-the-interview-and-practice/README.md) | 14 | ✅ **14 of 14** — complete 2026-09-07, 15 files |
 | 1 · Complexity analysis | 11 | Planned |
 | 2 · Recursion, maths and bits | 13 | Planned |
 | 3 · Arrays, hashing and prefix sums | 16 | Planned |
