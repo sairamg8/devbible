@@ -123,4 +123,4 @@ the rollback path and the migration step marked.
 
 ---
 
-{/* NAV */}
+← [Part 6 — API design and contracts](06-api-design-and-contracts.md) · [Index](../README.md) · Next → [Part 8 — Reliability and observability](08-reliability-and-observability.md)

@@ -81,4 +81,4 @@ name the deep dive you would choose and why.
 
 ---
 
-{/* NAV */}
+← Index: [System Design](../README.md) · Next → [Part 2 — The network path and caching](02-the-network-path-and-caching.md)

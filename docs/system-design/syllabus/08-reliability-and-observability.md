@@ -80,4 +80,4 @@ signal costs to keep.
 
 ---
 
-{/* NAV */}
+← [Part 7 — Cloud, Kubernetes and infrastructure as code](07-cloud-kubernetes-and-iac.md) · [Index](../README.md) · Next → [Part 9 — Security and compliance at scale](09-security-and-compliance.md)

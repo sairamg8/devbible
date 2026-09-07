@@ -83,4 +83,4 @@ a cost named for every choice, and describe the contract test that guards each b
 
 ---
 
-{/* NAV */}
+← [Part 5 — Event streaming and async](05-event-streaming-and-async.md) · [Index](../README.md) · Next → [Part 7 — Cloud, Kubernetes and infrastructure as code](07-cloud-kubernetes-and-iac.md)

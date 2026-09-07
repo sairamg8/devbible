@@ -98,4 +98,4 @@ working code with one test — and explain what you would add if given another h
 
 ---
 
-{/* NAV */}
+← [Part 10 — AI systems design](10-ai-systems-design.md) · [Index](../README.md) · Next → [Part 12 — The HLD problem catalogue](12-the-hld-catalogue.md)

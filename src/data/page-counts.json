@@ -1,22 +1,22 @@
 {
   "angular": {
-    "pages": 131,
-    "validated": 131,
+    "pages": 147,
+    "validated": 147,
     "phases": {
-      "phase-0-how-angular-runs": 131
+      "phase-0-how-angular-runs": 147
     },
     "validatedPhases": {
-      "phase-0-how-angular-runs": 131
+      "phase-0-how-angular-runs": 147
     }
   },
   "babel": {
-    "pages": 16,
-    "validated": 0,
+    "pages": 17,
+    "validated": 3,
     "phases": {
       "01-why-babel-and-the-compiler-landscape": 1,
       "02-core-compilation-pipeline": 1,
       "03-configuration-system": 1,
-      "04-presets": 1,
+      "04-presets": 2,
       "05-plugin-ecosystem": 1,
       "06-authoring-custom-plugins": 1,
       "07-typescript-and-jsx-handling": 1,
@@ -31,9 +31,9 @@
       "16-real-world-workflows-and-recipes": 1
     },
     "validatedPhases": {
-      "01-why-babel-and-the-compiler-landscape": 0,
-      "02-core-compilation-pipeline": 0,
-      "03-configuration-system": 0,
+      "01-why-babel-and-the-compiler-landscape": 1,
+      "02-core-compilation-pipeline": 1,
+      "03-configuration-system": 1,
       "04-presets": 0,
       "05-plugin-ecosystem": 0,
       "06-authoring-custom-plugins": 0,
@@ -112,6 +112,12 @@
       "phase-8-compose": 22,
       "phase-9-mern-pern-stack": 25
     }
+  },
+  "dsa": {
+    "pages": 0,
+    "validated": 0,
+    "phases": {},
+    "validatedPhases": {}
   },
   "eslint-oxlint": {
     "pages": 21,
@@ -539,7 +545,7 @@
   },
   "playwright": {
     "pages": 16,
-    "validated": 0,
+    "validated": 6,
     "phases": {
       "01-core-architecture": 1,
       "02-test-runner": 1,
@@ -559,12 +565,12 @@
       "16-real-world-workflows-and-recipes": 1
     },
     "validatedPhases": {
-      "01-core-architecture": 0,
-      "02-test-runner": 0,
-      "03-locators": 0,
-      "04-actions-and-interactions": 0,
-      "05-auto-waiting-and-assertions": 0,
-      "06-navigation-and-network": 0,
+      "01-core-architecture": 1,
+      "02-test-runner": 1,
+      "03-locators": 1,
+      "04-actions-and-interactions": 1,
+      "05-auto-waiting-and-assertions": 1,
+      "06-navigation-and-network": 1,
       "07-authentication-and-state": 0,
       "08-fixtures-and-test-isolation": 0,
       "09-visual-and-screenshot-testing": 0,
@@ -785,9 +791,15 @@
       "phase-3-decorators": 5
     }
   },
+  "system-design": {
+    "pages": 0,
+    "validated": 0,
+    "phases": {},
+    "validatedPhases": {}
+  },
   "tanstack-query": {
     "pages": 16,
-    "validated": 0,
+    "validated": 5,
     "phases": {
       "01-core-concepts": 1,
       "02-usequery-deep-dive": 1,
@@ -807,15 +819,15 @@
       "16-migration-recipes": 1
     },
     "validatedPhases": {
-      "01-core-concepts": 0,
-      "02-usequery-deep-dive": 0,
-      "03-query-states": 0,
-      "04-caching-and-invalidation": 0,
+      "01-core-concepts": 1,
+      "02-usequery-deep-dive": 1,
+      "03-query-states": 1,
+      "04-caching-and-invalidation": 1,
       "05-usemutation": 0,
       "06-background-refetching": 0,
       "07-pagination-and-infinite-queries": 0,
       "08-dependent-and-parallel-queries": 0,
-      "09-prefetching-and-ssr": 0,
+      "09-prefetching-and-ssr": 1,
       "10-suspense-integration": 0,
       "11-devtools": 0,
       "12-query-cancellation": 0,
@@ -855,7 +867,7 @@
   },
   "vite": {
     "pages": 16,
-    "validated": 0,
+    "validated": 6,
     "phases": {
       "01-core-architecture": 1,
       "02-cli-and-scaffolding": 1,
@@ -875,12 +887,12 @@
       "16-migration-recipes": 1
     },
     "validatedPhases": {
-      "01-core-architecture": 0,
-      "02-cli-and-scaffolding": 0,
-      "03-configuration": 0,
-      "04-dev-server-mechanics": 0,
-      "05-build-system-rollup": 0,
-      "06-asset-handling": 0,
+      "01-core-architecture": 1,
+      "02-cli-and-scaffolding": 1,
+      "03-configuration": 1,
+      "04-dev-server-mechanics": 1,
+      "05-build-system-rollup": 1,
+      "06-asset-handling": 1,
       "07-env-variables-and-modes": 0,
       "08-plugin-system": 0,
       "09-css-handling": 0,

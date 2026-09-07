@@ -84,4 +84,4 @@ the flash-sale SKU handled explicitly.
 
 ---
 
-{/* NAV */}
+← [Part 1 — The interview and the method](01-the-interview-and-the-method.md) · [Index](../README.md) · Next → [Part 3 — Storage and data](03-storage-and-data.md)

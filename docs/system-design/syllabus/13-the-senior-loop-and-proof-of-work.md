@@ -42,4 +42,4 @@ calendar with the first four weeks already done.
 
 ---
 
-{/* NAV */}
+← [Part 12 — The HLD problem catalogue](12-the-hld-catalogue.md) · [Index](../README.md)

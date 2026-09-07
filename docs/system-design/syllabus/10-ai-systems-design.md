@@ -56,4 +56,4 @@ conversation with the arithmetic shown.
 
 ---
 
-{/* NAV */}
+← [Part 9 — Security and compliance at scale](09-security-and-compliance.md) · [Index](../README.md) · Next → [Part 11 — Low-level design and the machine-coding round](11-low-level-design.md)

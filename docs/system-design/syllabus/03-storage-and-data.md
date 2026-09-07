@@ -79,4 +79,4 @@ procedure, and the sync path from the primary to search and analytics with each 
 
 ---
 
-{/* NAV */}
+← [Part 2 — The network path and caching](02-the-network-path-and-caching.md) · [Index](../README.md) · Next → [Part 4 — Distributed systems theory](04-distributed-systems-theory.md)

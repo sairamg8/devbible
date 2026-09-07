@@ -216,18 +216,18 @@ export const LAYERS = [
   },
   {
     /**
-     * Outside the committed eleven in instructions.md §2 — visible so the map is
-     * honest about what exists beyond the brief, styled so nobody mistakes it for
-     * scheduled work. These have no `key` because they have no pages: they are
-     * homepage-only, and the rail skips them.
+     * The senior loop: what product-company interviews and staff-level ownership
+     * test beyond any one technology. Added 2026-09-07. This layer replaced the
+     * parked "Beyond the core stack" list (GraphQL, tRPC, Kubernetes) — all three
+     * are now phases inside System Design rather than cards of their own.
      */
-    name: 'Beyond the core stack',
-    note: 'Not committed — parked for later',
-    parked: true,
+    name: 'Architecture and interviews',
+    note: 'What the senior loop tests',
     items: [
-      {name: 'GraphQL', desc: 'Schema design, resolvers, N+1 and DataLoader'},
-      {name: 'tRPC', desc: 'End-to-end typed RPC for TypeScript stacks'},
-      {name: 'Kubernetes', desc: 'Pods, services, probes, scaling, rollouts'},
+      {
+        key: 'system-design',
+        desc: 'HLD and LLD, distributed theory, Kafka, Kubernetes and IaC, reliability, security, AI systems, and the catalogue of 53 classic designs — syllabus written, pages not started',
+      },
     ],
   },
 ];

@@ -83,4 +83,4 @@ happens if the payment provider times out after charging".
 
 ---
 
-{/* NAV */}
+← [Part 3 — Storage and data](03-storage-and-data.md) · [Index](../README.md) · Next → [Part 5 — Event streaming and async](05-event-streaming-and-async.md)

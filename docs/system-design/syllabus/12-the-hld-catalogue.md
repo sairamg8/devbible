@@ -96,4 +96,4 @@ numbers estimated for a burst that is a hundred times normal traffic.
 
 ---
 
-{/* NAV */}
+← [Part 11 — Low-level design and the machine-coding round](11-low-level-design.md) · [Index](../README.md) · Next → [Part 13 — The senior loop and proof of work](13-the-senior-loop-and-proof-of-work.md)

@@ -58,4 +58,4 @@ card data goes, and the answer to "a signing key leaked at 3 a.m., what do you d
 
 ---
 
-{/* NAV */}
+← [Part 8 — Reliability and observability](08-reliability-and-observability.md) · [Index](../README.md) · Next → [Part 10 — AI systems design](10-ai-systems-design.md)

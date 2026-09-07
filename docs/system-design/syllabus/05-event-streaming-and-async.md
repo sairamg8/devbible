@@ -87,4 +87,4 @@ inventory consumer crashes mid-batch".
 
 ---
 
-{/* NAV */}
+← [Part 4 — Distributed systems theory](04-distributed-systems-theory.md) · [Index](../README.md) · Next → [Part 6 — API design and contracts](06-api-design-and-contracts.md)
