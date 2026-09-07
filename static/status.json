@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-07 19:05",
+  "updated": "2026-09-07 20:40",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -16,12 +16,12 @@
   },
   "importedTotals": {
     "tracks": 11,
-    "untouched": 8,
-    "validating": 2,
+    "untouched": 7,
+    "validating": 3,
     "validated": 1,
     "pages": 241,
-    "pagesValidated": 58,
-    "percent": 24
+    "pagesValidated": 65,
+    "percent": 27
   },
   "languages": [
     {
@@ -251,17 +251,17 @@
     {
       "key": "vite",
       "label": "Vite",
-      "status": "imported",
-      "percent": 0,
+      "status": "validating",
+      "percent": 44,
       "counts": "pages validated",
       "topics": 16,
-      "completed": 0,
-      "pending": 16,
+      "completed": 7,
+      "pending": 9,
       "imported": true,
-      "phases": "0/16",
-      "next": "1 · Core architecture",
+      "phases": "7/16",
+      "next": "8 · Plugin system",
       "docs": "/docs/vite",
-      "updated": "2026-08-14 13:35",
+      "updated": "2026-09-07 20:40",
       "note": null
     },
     {

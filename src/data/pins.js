@@ -247,9 +247,33 @@ export const PINS = {
   // 🔴 `pin: null` is deliberate and is a FINDING, not a gap in this file. These
   // tracks were imported on 2026-08-14 and name no version anywhere, so no page
   // can be checked against anything. See project_frontend_toolchain_currency_plan.
-  vite:       {label: 'Vite',            source: 'npm:vite',                    policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['vite'],                  names: ['vite']},
-  webpack:    {label: 'Webpack',         source: 'npm:webpack',                 policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['webpack'],               names: ['webpack']},
-  babel:      {label: 'Babel',           source: 'npm:@babel/core',             policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['babel'],                 names: ['babel']},
+  vite:       {label: 'Vite',            source: 'npm:vite',                    policy: 'latest', pin: '8.2.2',   checked: '2026-09-07', tracks: ['vite'],    names: ['vite'],
+    // Pinned 2026-09-07 (was `null` — the track had no version anchor at all).
+    // 🔴 vite@8.2.2's `dependencies` are postcss, rolldown ~1.2.4, picomatch,
+    // tinyglobby, lightningcss. Rollup is NOT a dependency and esbuild is only an
+    // optional peer — that manifest, not a blog post, is the evidence that v8
+    // unified on Rolldown. engines.node is ^20.19.0 || >=22.12.0.
+  },
+  rolldown:   {label: 'Rolldown',        source: 'npm:rolldown',                policy: 'latest', pin: '1.2.7',   checked: '2026-09-07', tracks: ['vite'],    names: ['rolldown'],
+    // Added 2026-09-07. Vite 8 ships it as a hard dependency, and 7 pages name it
+    // with nothing watching the version. Vite's own range is ~1.2.4.
+  },
+  webpack:    {label: 'Webpack',         source: 'npm:webpack',                 policy: 'latest', pin: '5.110.3', checked: '2026-09-07', tracks: ['webpack'], names: ['webpack'],
+    // Pinned 2026-09-07 (was `null`). 5.110.3 shipped 2026-09-01 — webpack is
+    // actively maintained, not abandoned. ⚠️ npm's `next` dist-tag reads
+    // 5.0.0-rc.6, which is a stale tag, NOT a newer line. Do not treat it as drift.
+  },
+  rspack:     {label: 'Rspack',          source: 'npm:@rspack/core',            policy: 'latest', pin: '2.2.2',   checked: '2026-09-07', tracks: ['webpack'], names: ['rspack'],
+    // Added 2026-09-07. 🔴 Rspack has ZERO mentions across the whole corpus and is
+    // the drop-in successor for a webpack-shaped config — the gap the webpack
+    // track's framing depends on. Pinned ahead of the pages so it is watched.
+  },
+  babel:      {label: 'Babel',           source: 'npm:@babel/core',             policy: 'latest', pin: '8.0.1',   checked: '2026-09-07', tracks: ['babel'],   names: ['babel'],
+    // Pinned 2026-09-07 (was `null`). Babel 8 is stable (8.0.1, 2026-06-17).
+    // Babel is out of the build hot path — Vite 8 uses Oxc, Next uses SWC — but is
+    // still the only route for codemods, the React Compiler (which ships AS a Babel
+    // plugin), proposal-stage syntax and coverage instrumentation.
+  },
   eslint:     {label: 'ESLint',          source: 'npm:eslint',                  policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['eslint-oxlint'],         names: ['eslint']},
   oxlint:     {label: 'Oxlint',          source: 'npm:oxlint',                  policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['eslint-oxlint'],         names: ['oxlint']},
   jest:       {label: 'Jest',            source: 'npm:jest',                    policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['jest-rtl'],              names: ['jest']},

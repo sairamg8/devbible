@@ -4,38 +4,37 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-:::caution Imported corpus — not yet validated
+:::caution Validation in progress — 7 of 16 topics done
 
-These pages were **moved in from the separate `frontend-bible` repo as-is**, on
-2026-08-14. They are complete, readable and were written to a four-section
-standard: *Under-The-Hood Mechanics → Real-World Scenario → Production-Grade Code
-→ Senior Edge Cases*.
+These pages were **moved in from the separate `frontend-bible` repo as-is** on
+2026-08-14, written to a four-section standard: *Under-The-Hood Mechanics →
+Real-World Scenario → Production-Grade Code → Senior Edge Cases*.
 
-They do **not yet** meet this bible's page contract. Still outstanding:
+**Topics 01–07 have been re-validated against the Vite 8 documentation** and now
+carry a tier badge, a `> Verified:` line, a `> Validated:` stamp, `## Gotchas`
+and `## Interview questions`. Target: **Vite 8.2.2 · Node.js 20.19+ / 22.12+**.
 
-- **no `> Verified:` line** — nothing here has been re-checked against current
-  documentation, and some of it targets older major versions
-- **no tier badge** — every topic still needs a Master / Understand / Know / When
-  Needed judgement
-- **no Interview questions section**
-- a few cross-technology references were **de-linked** during the move because
-  their targets are not part of this import
+🔴 **Vite 8 unified on Rolldown.** `vite@8.2.2` depends on `rolldown` and *not*
+on Rollup; esbuild is only an optional peer. Anything you read elsewhere about
+"esbuild in dev, Rollup in prod" describes Vite 7 and earlier.
 
-Treat the content as a strong draft, not as verified reference.
+**Topics 08–16 are still the unvalidated import.** They have no `> Verified:`
+line, no tier badge and no Interview questions section, and some of them target
+older major versions. Treat those as a strong draft, not as verified reference.
 
 :::
 
-**16 topics** across 16 sections.
+**16 topics** across 16 sections. ✅ = re-validated against the Vite 8 docs.
 
 | # | Section | Topics |
 |---|---|---|
-| 01 | [Core architecture](pages/01-core-architecture/01-dual-engine-model.md) | 1 |
-| 02 | [Cli and scaffolding](pages/02-cli-and-scaffolding/01-commands-and-templates.md) | 1 |
-| 03 | [Configuration](pages/03-configuration/01-vite-config-file.md) | 1 |
-| 04 | [Dev server mechanics](pages/04-dev-server-mechanics/01-native-esm-and-hmr.md) | 1 |
-| 05 | [Build system rollup](pages/05-build-system-rollup/01-build-options.md) | 1 |
-| 06 | [Asset handling](pages/06-asset-handling/01-static-asset-imports.md) | 1 |
-| 07 | [Env variables and modes](pages/07-env-variables-and-modes/01-environment-system.md) | 1 |
+| 01 | [Core architecture](pages/01-core-architecture/01-dual-engine-model.md) ✅ | 1 |
+| 02 | [Cli and scaffolding](pages/02-cli-and-scaffolding/01-commands-and-templates.md) ✅ | 1 |
+| 03 | [Configuration](pages/03-configuration/01-vite-config-file.md) ✅ | 1 |
+| 04 | [Dev server mechanics](pages/04-dev-server-mechanics/01-native-esm-and-hmr.md) ✅ | 1 |
+| 05 | [Build system rollup](pages/05-build-system-rollup/01-build-options.md) ✅ | 1 |
+| 06 | [Asset handling](pages/06-asset-handling/01-static-asset-imports.md) ✅ | 1 |
+| 07 | [Env variables and modes](pages/07-env-variables-and-modes/01-environment-system.md) ✅ | 18 |
 | 08 | [Plugin system](pages/08-plugin-system/01-plugin-api.md) | 1 |
 | 09 | [Css handling](pages/09-css-handling/01-styling-pipeline.md) | 1 |
 | 10 | [Ssr support](pages/10-ssr-support/01-server-side-rendering-primitives.md) | 1 |
