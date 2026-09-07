@@ -4,21 +4,23 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-:::caution Validation in progress — 7 of 16 topics done
+:::caution Validation in progress — 8 of 16 imported topics done
 
 These pages were **moved in from the separate `frontend-bible` repo as-is** on
 2026-08-14, written to a four-section standard: *Under-The-Hood Mechanics →
 Real-World Scenario → Production-Grade Code → Senior Edge Cases*.
 
-**Topics 01–07 have been re-validated against the Vite 8 documentation** and now
+**Topics 01–08 have been re-validated against the Vite 8 documentation** and now
 carry a tier badge, a `> Verified:` line, a `> Validated:` stamp, `## Gotchas`
 and `## Interview questions`. Target: **Vite 8.2.2 · Node.js 20.19+ / 22.12+**.
 
 🔴 **Vite 8 unified on Rolldown.** `vite@8.2.2` depends on `rolldown` and *not*
 on Rollup; esbuild is only an optional peer. Anything you read elsewhere about
-"esbuild in dev, Rollup in prod" describes Vite 7 and earlier.
+"esbuild in dev, Rollup in prod" describes Vite 7 and earlier — and the **plugin
+API** changed with it: the docs now open with *"Vite plugins extends Rolldown's
+plugin interface"*, where through v7 that sentence named Rollup.
 
-**Topics 08–16 are still the unvalidated import.** They have no `> Verified:`
+**Topics 09–16 are still the unvalidated import.** They have no `> Verified:`
 line, no tier badge and no Interview questions section, and some of them target
 older major versions. Treat those as a strong draft, not as verified reference.
 
@@ -40,7 +42,7 @@ and what else does a 2026 frontend project have to choose. Every version in it w
 | 05 | [Build system rollup](pages/05-build-system-rollup/01-build-options.md) ✅ | 1 |
 | 06 | [Asset handling](pages/06-asset-handling/01-static-asset-imports.md) ✅ | 1 |
 | 07 | [Env variables and modes](pages/07-env-variables-and-modes/01-environment-system.md) ✅ | 18 |
-| 08 | [Plugin system](pages/08-plugin-system/01-plugin-api.md) | 1 |
+| 08 | [Plugin system](pages/08-plugin-system/01-plugin-api.md) ✅ | 42 |
 | 09 | [Css handling](pages/09-css-handling/01-styling-pipeline.md) | 1 |
 | 10 | [Ssr support](pages/10-ssr-support/01-server-side-rendering-primitives.md) | 1 |
 | 11 | [Optimization and performance](pages/11-optimization-and-performance/01-build-time-performance.md) | 1 |
