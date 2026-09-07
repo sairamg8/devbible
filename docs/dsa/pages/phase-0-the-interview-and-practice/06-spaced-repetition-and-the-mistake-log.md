@@ -196,4 +196,4 @@ a candidate can raise it indefinitely without changing the kinds of mistakes the
 
 ---
 
-← Prev: [05 · Reading the constraints](05-reading-the-constraints.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **The "when stuck" protocol** *(not written yet)*
+← Prev: [05 · Reading the constraints](05-reading-the-constraints.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [07 · The when-stuck protocol](07-the-when-stuck-protocol.md)
