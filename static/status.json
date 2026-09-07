@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-07 16:25",
+  "updated": "2026-09-07 16:33",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -10,8 +10,8 @@
     "parked": 2,
     "blocked": 1,
     "topics": 3955,
-    "completed": 2488,
-    "pending": 1467,
+    "completed": 2499,
+    "pending": 1456,
     "percent": 63
   },
   "importedTotals": {
@@ -460,16 +460,16 @@
       "key": "dsa",
       "label": "DSA",
       "status": "in-progress",
-      "percent": 5,
+      "percent": 8,
       "counts": "syllabus topics explained",
       "topics": 301,
-      "completed": 14,
-      "pending": 287,
+      "completed": 25,
+      "pending": 276,
       "imported": false,
-      "phases": "1/21",
-      "next": "1 · Complexity analysis",
+      "phases": "2/21",
+      "next": "2 · Recursion, maths and bits",
       "docs": "/docs/dsa",
-      "updated": "2026-09-07 08:24",
+      "updated": "2026-09-07 16:33",
       "note": null
     },
     {
