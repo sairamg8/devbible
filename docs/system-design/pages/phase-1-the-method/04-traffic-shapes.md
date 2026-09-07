@@ -223,4 +223,4 @@ retry load bounded.
 
 ---
 
-← Prev: [03 · Estimation](03-back-of-the-envelope-estimation.md) · Index: [Phase 1 — The method](README.md) · Next → **The API sketch** *(not written yet)*
+← Prev: [03 · Estimation](03-back-of-the-envelope-estimation.md) · Index: [Phase 1 — The method](README.md) · Next → [05 · The API sketch](05-the-api-sketch.md)
