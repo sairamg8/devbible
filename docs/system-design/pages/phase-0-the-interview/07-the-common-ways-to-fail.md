@@ -229,4 +229,4 @@ split" is a senior sentence; "just a monolith" is not.
 
 ---
 
-← Prev: [06 · Reading the question](06-reading-the-question.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **Why a reasoned wrong answer beats a memorised right one** *(not written yet)*
+← Prev: [06 · Reading the question](06-reading-the-question.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [08 · Reasoned beats memorised](08-reasoned-wrong-beats-memorised-right.md)
