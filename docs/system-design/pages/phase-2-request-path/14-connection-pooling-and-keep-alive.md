@@ -263,4 +263,4 @@ together — makes topology changes take effect and spreads reconnection over ti
 
 ---
 
-← Prev: [13 · Serialization on the wire](13-serialization-on-the-wire.md) · Index: [Phase 2 — The request path](README.md) · Next → **The path in the storefront** *(not written yet)*
+← Prev: [13 · Serialization on the wire](13-serialization-on-the-wire.md) · Index: [Phase 2 — The request path](README.md) · Next → [15 · The path in the storefront](15-the-path-in-the-storefront.md)

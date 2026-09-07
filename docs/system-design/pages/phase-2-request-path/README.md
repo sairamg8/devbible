@@ -20,7 +20,7 @@ the handshakes, the CDN edge, the balancer, the gateway, the long-lived connecti
 limiter, the timeout and the retry, the connection pool — each with its latency, its failure mode
 and the decision it forces on the bible's [PERN storefront](../../../real-world/README.md).
 
-🚧 **14 of 18 topics written.**
+🚧 **15 of 18 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -38,7 +38,7 @@ and the decision it forces on the bible's [PERN storefront](../../../real-world/
 | 12 | **[Service discovery](./12-service-discovery.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 13 | **[Serialization on the wire](./13-serialization-on-the-wire.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 14 | **[Connection pooling and keep-alive](./14-connection-pooling-and-keep-alive.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
-| 15 | The path in the storefront | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
+| 15 | **[The path in the storefront](./15-the-path-in-the-storefront.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 16 | Service mesh | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
 | 17 | Gateway patterns | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
 | 18 | Abuse at the edge | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
