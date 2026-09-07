@@ -40,7 +40,7 @@ it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 | 14 | **[Evolution and operations](./14-evolution-and-operations.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 15 | **[Time management in 45 minutes](./15-time-management.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 16 | **[Estimation worked examples](./16-estimation-worked-examples.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
-| 17 | The same method in writing | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
+| 17 | **[The same method in writing](./17-the-same-method-in-writing.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 18 | Diagrams that scale with the conversation | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
 
 ## Phase gate

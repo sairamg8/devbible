@@ -256,4 +256,4 @@ each one with the sentence that says which box the number chose.
 
 ---
 
-← Prev: [15 · Time management in 45 minutes](15-time-management.md) · Index: [Phase 1 — The method](README.md) · Next → **The same method in writing** *(not written yet)*
+← Prev: [15 · Time management in 45 minutes](15-time-management.md) · Index: [Phase 1 — The method](README.md) · Next → [17 · The same method in writing](17-the-same-method-in-writing.md)
