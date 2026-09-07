@@ -182,4 +182,4 @@ board into a resource count, and it is the arithmetic behind committing before t
 
 ---
 
-← Prev: [11 · Bottlenecks and single points of failure](11-bottlenecks-and-single-points-of-failure.md) · Index: [Phase 1 — The method](README.md) · Next → **The scaling walk** *(not written yet)*
+← Prev: [11 · Bottlenecks and single points of failure](11-bottlenecks-and-single-points-of-failure.md) · Index: [Phase 1 — The method](README.md) · Next → [12 · The scaling walk](12-the-scaling-walk.md)

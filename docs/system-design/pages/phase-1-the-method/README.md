@@ -35,7 +35,7 @@ it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 | 10 | **[Trade-offs in one sentence](./10-trade-offs-in-one-sentence.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 11 | **[Bottlenecks and single points of failure](./11-bottlenecks-and-single-points-of-failure.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 11b | **[The load walk and the price of redundancy](./11b-the-load-walk-and-the-price-of-redundancy.md)** | <span className="db-tier t-master">Master</span> | ✅ written — 11 and 11b are one topic in two files |
-| 12 | The scaling walk | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
+| 12 | **[The scaling walk](./12-the-scaling-walk.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 13 | Designing for cost | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 14 | Evolution and operations | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 15 | Time management in 45 minutes | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
