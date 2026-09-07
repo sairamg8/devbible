@@ -19,7 +19,7 @@ the trade-off sentence, the failure walk, the scaling walk, cost, evolution, and
 [Phase 0](../phase-0-the-interview/README.md) said what is graded; this phase is how to produce
 it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 
-🚧 **11 of 18 topics written (12 files: topic 11 is split into 11 and 11b).**
+✅ **Phase complete — 18 of 18 written (19 files: topic 11 is split into 11 and 11b).**
 
 | # | Page | Tier | State |
 |---|---|---|---|
