@@ -242,4 +242,4 @@ magnitude, and the ratio to the next rung is what decides the design."
 
 ---
 
-← Prev: [04 · The vocabulary contract](04-the-vocabulary-contract.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **Reading the question** *(not written yet)*
+← Prev: [04 · The vocabulary contract](04-the-vocabulary-contract.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [06 · Reading the question](06-reading-the-question.md)
