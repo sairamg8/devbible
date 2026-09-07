@@ -190,4 +190,4 @@ into one journey hides the asynchrony until the design cannot express it.
 
 ---
 
-← Index: [Phase 1 — The method](README.md) · Next → **Non-functional requirements** *(not written yet)*
+← Index: [Phase 1 — The method](README.md) · Next → [02 · Non-functional requirements](02-non-functional-requirements.md)
