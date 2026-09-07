@@ -274,4 +274,4 @@ payload.
 
 ---
 
-← [Dependent & Parallel Queries](../08-dependent-and-parallel-queries/01-query-composition.md) · [Topic index](../README.md) · Next → [Suspense Integration](../10-suspense-integration/01-suspense-driven-fetching.md)
+← [`placeholderData` in a chain](../08-dependent-and-parallel-queries/01g-placeholderdata-in-a-chain.md) · [Topic index](../README.md) · Next → [Suspense Integration](../10-suspense-integration/01-suspense-driven-fetching.md)

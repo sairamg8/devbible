@@ -43,8 +43,17 @@ links on to its continuation.
 | Chunk | Belongs to |
 |---|---|
 | [01b · Refetch render cost](./06-background-refetching/01b-refetch-render-cost.md) | under **Background Refetching** |
+| [01c · Polling](./06-background-refetching/01c-polling-and-refetch-interval.md) | under **Background Refetching** |
+| [01d · Network mode & offline](./06-background-refetching/01d-network-mode-and-offline.md) | under **Background Refetching** |
 | [01b · useInfiniteQuery](./07-pagination-and-infinite-queries/01b-infinite-queries.md) | under **Pagination & Infinite Queries** |
-| [01c · Infinite cache & refetch](./07-pagination-and-infinite-queries/01c-infinite-cache-refetch-and-manual-updates.md) | under **Pagination & Infinite Queries** |
+| [01c · Rendering & concurrency](./07-pagination-and-infinite-queries/01c-rendering-and-concurrency.md) | under **Pagination & Infinite Queries** |
+| [01d · Infinite cache & refetch](./07-pagination-and-infinite-queries/01d-infinite-cache-refetch-and-manual-updates.md) | under **Pagination & Infinite Queries** |
+| [Parallel Queries & `useQueries`](./08-dependent-and-parallel-queries/01b-parallel-queries-and-usequeries.md) | under **Dependent & Parallel Queries** |
+| [Combining `useQueries` Results](./08-dependent-and-parallel-queries/01c-combining-usequeries-results.md) | under **Dependent & Parallel Queries** |
+| [What Composition Costs](./08-dependent-and-parallel-queries/01d-what-query-composition-costs.md) | under **Dependent & Parallel Queries** |
+| [The Gate in Full · `skipToken`](./08-dependent-and-parallel-queries/01e-the-gate-in-full-skiptoken-and-placeholder-chains.md) | under **Dependent & Parallel Queries** |
+| [01f · initialData in a chain](./08-dependent-and-parallel-queries/01f-placeholder-and-initial-data-in-a-chain.md) | under **Dependent & Parallel Queries** |
+| [01g · placeholderData in a chain](./08-dependent-and-parallel-queries/01g-placeholderdata-in-a-chain.md) | under **Dependent & Parallel Queries** |
 
 ---
 
