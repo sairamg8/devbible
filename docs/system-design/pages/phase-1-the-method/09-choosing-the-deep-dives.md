@@ -69,7 +69,7 @@ Ten minutes, on one box, in this shape:
    about pending orders older than N minutes.
 4. **Put two alternatives on the board** with the failure each invites — "decrement on
    checkout versus reserve-then-confirm; a Redis counter versus the primary's row" — and
-   choose, with the cost said (**10 · Trade-offs in one sentence** *(not written yet)*).
+   choose, with the cost said ([10 · Trade-offs in one sentence](10-trade-offs-in-one-sentence.md)).
 5. **Walk the failures inside the box**: a crash between the decrement and the order insert;
    the provider timing out; the callback arriving twice; the expiry job running late.
 6. **Name the residual** — the failure the design accepts: "a crash between commit and the
@@ -171,4 +171,4 @@ is decided and shallow dives give them nowhere to go.
 
 ---
 
-← Prev: [08 · Read path and write path](08-read-path-and-write-path.md) · Index: [Phase 1 — The method](README.md) · Next → **Trade-offs in one sentence** *(not written yet)*
+← Prev: [08 · Read path and write path](08-read-path-and-write-path.md) · Index: [Phase 1 — The method](README.md) · Next → [10 · Trade-offs in one sentence](10-trade-offs-in-one-sentence.md)

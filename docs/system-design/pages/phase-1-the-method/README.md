@@ -19,7 +19,7 @@ the trade-off sentence, the failure walk, the scaling walk, cost, evolution, and
 [Phase 0](../phase-0-the-interview/README.md) said what is graded; this phase is how to produce
 it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 
-🚧 **9 of 18 topics written.**
+🚧 **10 of 18 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -32,7 +32,7 @@ it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 | 07 | **[The high-level diagram](./07-the-high-level-diagram.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 08 | **[Read path and write path, separately](./08-read-path-and-write-path.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 09 | **[Choosing the deep dives](./09-choosing-the-deep-dives.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
-| 10 | Trade-offs in one sentence | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 10 | **[Trade-offs in one sentence](./10-trade-offs-in-one-sentence.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 11 | Bottlenecks and single points of failure | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 12 | The scaling walk | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 13 | Designing for cost | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
