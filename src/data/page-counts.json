@@ -118,11 +118,13 @@
     "validated": 30,
     "phases": {
       "phase-0-the-interview-and-practice": 15,
-      "phase-1-complexity": 15
+      "phase-1-complexity": 15,
+      "phase-2-recursion-maths-bits": 0
     },
     "validatedPhases": {
       "phase-0-the-interview-and-practice": 15,
-      "phase-1-complexity": 15
+      "phase-1-complexity": 15,
+      "phase-2-recursion-maths-bits": 0
     }
   },
   "eslint-oxlint": {
@@ -798,17 +800,17 @@
     }
   },
   "system-design": {
-    "pages": 48,
-    "validated": 48,
+    "pages": 66,
+    "validated": 66,
     "phases": {
       "phase-0-the-interview": 14,
       "phase-1-the-method": 19,
-      "phase-2-request-path": 15
+      "phase-2-request-path": 33
     },
     "validatedPhases": {
       "phase-0-the-interview": 14,
       "phase-1-the-method": 19,
-      "phase-2-request-path": 15
+      "phase-2-request-path": 33
     }
   },
   "tanstack-query": {

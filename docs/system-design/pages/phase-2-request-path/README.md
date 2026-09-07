@@ -20,7 +20,7 @@ the handshakes, the CDN edge, the balancer, the gateway, the long-lived connecti
 limiter, the timeout and the retry, the connection pool — each with its latency, its failure mode
 and the decision it forces on the bible's [PERN storefront](../../../real-world/README.md).
 
-🚧 **15 of 18 topics written.**
+✅ **Phase complete — 18 of 18 written (34 files: topics 01–15 plus 16, 17 and 18 each split across several files).**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -39,9 +39,24 @@ and the decision it forces on the bible's [PERN storefront](../../../real-world/
 | 13 | **[Serialization on the wire](./13-serialization-on-the-wire.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 14 | **[Connection pooling and keep-alive](./14-connection-pooling-and-keep-alive.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 15 | **[The path in the storefront](./15-the-path-in-the-storefront.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
-| 16 | Service mesh | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
-| 17 | Gateway patterns | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
-| 18 | Abuse at the edge | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
+| 16 | **[Service mesh](./16-service-mesh.md)** | <span className="db-tier t-know">Know</span> | ✅ written |
+| 16b | **[Mesh mTLS and workload identity](./16b-mesh-mtls-and-workload-identity.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 16c | **[Mesh retries, timeouts, breakers](./16c-mesh-retries-timeouts-and-circuit-breaking.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 16d | **[Mesh splitting and canaries](./16d-mesh-traffic-splitting-and-canaries.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 16e | **[What a mesh costs](./16e-what-a-service-mesh-costs.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 16f | **[North-south and east-west](./16f-north-south-and-east-west.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 16g | **[When a mesh earns its cost](./16g-when-a-mesh-earns-its-cost.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 17 | **[Gateway patterns](./17-gateway-patterns.md)** | <span className="db-tier t-know">Know</span> | ✅ written |
+| 17b | **[Aggregation and partial failure](./17b-aggregation-and-partial-failure.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 17c | **[The fan-out N+1](./17c-the-fan-out-n-plus-1.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 17d | **[Routing versus orchestration](./17d-routing-versus-orchestration.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 17e | **[GraphQL at the edge](./17e-graphql-at-the-edge.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 17f | **[Graph authorisation, cost and federation](./17f-graphql-authorisation-cost-and-federation.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 18 | **[Abuse at the edge](./18-abuse-at-the-edge.md)** | <span className="db-tier t-know">Know</span> | ✅ written |
+| 18b | **[The WAF and its false positives](./18b-the-waf-and-its-false-positives.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 18c | **[Bots, challenges and the ladder](./18c-bots-challenges-and-the-ladder.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 18d | **[Abuse that is business logic](./18d-abuse-that-is-business-logic.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
+| 18e | **[Degrading instead of falling over](./18e-degrading-instead-of-falling-over.md)** | <span className="db-tier t-know">Know</span> | ✅ written — one topic in several files |
 
 ## Phase gate
 

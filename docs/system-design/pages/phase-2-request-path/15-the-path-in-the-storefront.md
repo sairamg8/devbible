@@ -241,4 +241,4 @@ latency is added to the row's lock time and to the buyer's wait at the same mome
 
 ---
 
-← Prev: [14 · Connection pooling and keep-alive](14-connection-pooling-and-keep-alive.md) · Index: [Phase 2 — The request path](README.md) · Next → **Service mesh** *(not written yet)*
+← Prev: [14 · Connection pooling and keep-alive](14-connection-pooling-and-keep-alive.md) · Index: [Phase 2 — The request path](README.md) · Next → [16 · Service mesh](16-service-mesh.md)
