@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-07 20:40",
+  "updated": "2026-09-07 21:58",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -20,7 +20,7 @@
     "validating": 4,
     "validated": 1,
     "pages": 243,
-    "pagesValidated": 67,
+    "pagesValidated": 68,
     "percent": 28
   },
   "languages": [
@@ -252,16 +252,16 @@
       "key": "vite",
       "label": "Vite",
       "status": "validating",
-      "percent": 47,
+      "percent": 53,
       "counts": "pages validated",
       "topics": 17,
-      "completed": 8,
-      "pending": 9,
+      "completed": 9,
+      "pending": 8,
       "imported": true,
-      "phases": "8/17",
-      "next": "8 · Plugin system",
+      "phases": "9/17",
+      "next": "9 · Css handling",
       "docs": "/docs/vite",
-      "updated": "2026-09-07 20:40",
+      "updated": "2026-09-07 21:58",
       "note": null
     },
     {

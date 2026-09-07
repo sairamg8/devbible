@@ -882,8 +882,8 @@
     }
   },
   "vite": {
-    "pages": 39,
-    "validated": 30,
+    "pages": 80,
+    "validated": 72,
     "phases": {
       "01-core-architecture": 1,
       "02-cli-and-scaffolding": 1,
@@ -892,7 +892,7 @@
       "05-build-system-rollup": 1,
       "06-asset-handling": 1,
       "07-env-variables-and-modes": 18,
-      "08-plugin-system": 1,
+      "08-plugin-system": 42,
       "09-css-handling": 1,
       "10-ssr-support": 1,
       "11-optimization-and-performance": 1,
@@ -911,7 +911,7 @@
       "05-build-system-rollup": 1,
       "06-asset-handling": 1,
       "07-env-variables-and-modes": 18,
-      "08-plugin-system": 0,
+      "08-plugin-system": 42,
       "09-css-handling": 0,
       "10-ssr-support": 0,
       "11-optimization-and-performance": 0,

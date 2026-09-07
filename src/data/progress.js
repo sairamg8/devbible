@@ -502,7 +502,7 @@ export const LANGUAGES = {
   'vite': {
     label: "Vite",
     imported: true,
-    updated: '2026-09-07 20:40',
+    updated: '2026-09-07 21:58',
     docsPath: '/docs/vite',
     pagesPath: '/docs/vite/pages',
     phases: [
@@ -513,7 +513,7 @@ export const LANGUAGES = {
       {n: 5, slug: '05-build-system-rollup', name: "Build system rollup", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
       {n: 6, slug: '06-asset-handling', name: "Asset handling", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
       {n: 7, slug: '07-env-variables-and-modes', name: "Env variables and modes", part: 'Imported corpus', topics: 1, pages: 18, verified: 18},
-      {n: 8, slug: '08-plugin-system', name: "Plugin system", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 8, slug: '08-plugin-system', name: "Plugin system", part: 'Imported corpus', topics: 1, pages: 42, verified: 42},
       {n: 9, slug: '09-css-handling', name: "Css handling", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
       {n: 10, slug: '10-ssr-support', name: "Ssr support", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
       {n: 11, slug: '11-optimization-and-performance', name: "Optimization and performance", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
