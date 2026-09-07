@@ -52,7 +52,7 @@ you generated yourself, before coding, and then traced after:
   list.
 
 The interviewer's list is the same one, and the grade is whether yours was on the board first.
-**08 · Testing your own code live** *(not written yet)* is the mechanics.
+[08 · Testing your own code live](08-testing-your-own-code-live.md) is the mechanics.
 
 ## Complexity is graded on the statement, then the defence
 
@@ -127,7 +127,7 @@ Interviewers hint on purpose, and the response is graded. A hint taken immediate
 pointer that must move" — is strong evidence: it shows you can be redirected and reason from the
 new information. A hint ignored, or acknowledged and then abandoned for the original path, is
 graded as the opposite. The failure is common because a hint feels like a judgement; it is not.
-An interviewer who hints is investing in the round, and the **when-stuck protocol** *(not written yet)* is built around asking for one before the silence grows.
+An interviewer who hints is investing in the round, and the [when-stuck protocol](07-the-when-stuck-protocol.md) is built around asking for one before the silence grows.
 
 ## The senior twist: the constraints change
 

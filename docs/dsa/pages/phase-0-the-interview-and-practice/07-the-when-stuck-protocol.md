@@ -216,4 +216,4 @@ interviewer can point. Staring at the middle of the loop in silence is the failu
 
 ---
 
-← Prev: [06 · Spaced repetition and the log](06-spaced-repetition-and-the-mistake-log.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **Testing your own code live** *(not written yet)*
+← Prev: [06 · Spaced repetition and the log](06-spaced-repetition-and-the-mistake-log.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [08 · Testing your code live](08-testing-your-own-code-live.md)
