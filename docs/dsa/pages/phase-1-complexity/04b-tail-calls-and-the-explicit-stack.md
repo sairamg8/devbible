@@ -137,7 +137,7 @@ of entries where the call stack holds thousands. Not a tail-recursive rewrite: V
 implement proper tail calls and the JVM never had them, so the depth is identical. In Java, a
 larger thread stack is a hedge the javadoc calls platform dependent, not a fix.
 
-**Why doesn't a tail-recursive rewrite fix a stack overflow in Node or Java?**
+**★ Why doesn't a tail-recursive rewrite fix a stack overflow in Node or Java?**
 Because neither runtime eliminates tail calls. ES2015 specified proper tail calls — a call in
 return position reusing the frame — and V8 does not implement them; the JVM has no tail-call
 elimination in the bytecode or the JIT. The rewrite produces one frame per call exactly as
