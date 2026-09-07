@@ -19,7 +19,7 @@ the trade-off sentence, the failure walk, the scaling walk, cost, evolution, and
 [Phase 0](../phase-0-the-interview/README.md) said what is graded; this phase is how to produce
 it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 
-🚧 **6 of 18 topics written.**
+🚧 **7 of 18 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -29,7 +29,7 @@ it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 | 04 | **[Traffic shapes](./04-traffic-shapes.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 05 | **[The API sketch](./05-the-api-sketch.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 06 | **[The data model from the access patterns](./06-the-data-model-from-access-patterns.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
-| 07 | The high-level diagram | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 07 | **[The high-level diagram](./07-the-high-level-diagram.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 08 | Read path and write path, separately | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 09 | Choosing the deep dives | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 10 | Trade-offs in one sentence | <span className="db-tier t-master">Master</span> | ⬜ not written yet |

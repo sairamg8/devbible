@@ -232,4 +232,4 @@ Neither shape is the default; the frequency column decides and the decision is s
 
 ---
 
-← Prev: [05 · The API sketch](05-the-api-sketch.md) · Index: [Phase 1 — The method](README.md) · Next → **The high-level diagram** *(not written yet)*
+← Prev: [05 · The API sketch](05-the-api-sketch.md) · Index: [Phase 1 — The method](README.md) · Next → [07 · The high-level diagram](07-the-high-level-diagram.md)
