@@ -231,4 +231,4 @@ it alone is the fix.
 
 ---
 
-← Prev: [09 · Communication mechanics](09-communication-mechanics.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **Whiteboard and remote tooling** *(not written yet)*
+← Prev: [09 · Communication mechanics](09-communication-mechanics.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [11 · Whiteboard and remote tooling](11-whiteboard-and-remote-tooling.md)

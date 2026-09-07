@@ -124,7 +124,7 @@ On a shared board or a screen share, the mechanics change slightly:
   second — I've written it next to the gateway."
 - **Confirm the board is visible** in the first minute, and again if the interviewer goes quiet.
 - **Keep a text pane** for requirements and numbers; text survives a laggy board better than
-  handwriting. **11 · Whiteboard and remote tooling** *(not written yet)* covers the setup.
+  handwriting. [11 · Whiteboard and remote tooling](11-whiteboard-and-remote-tooling.md) covers the setup.
 
 ## Gotchas
 

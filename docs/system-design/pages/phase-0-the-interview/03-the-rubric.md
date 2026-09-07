@@ -139,7 +139,7 @@ Line 7  When did I last summarise?                             minute ___
 
 This is illustrative, not a company's form. Its value is that a "no" on any line at minute 30 is
 still fixable; discovering the blank in the feedback is not. The practice method that uses it is
-in **How to practise** *(not written yet)*.
+in [10 · How to practise](10-how-to-practise.md).
 
 ## Gotchas
 
