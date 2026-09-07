@@ -248,4 +248,4 @@ fail-open or fail-closed made deliberately.
 
 ---
 
-← Prev: [01 · From the tap to the first byte](01-from-the-tap-to-the-first-byte.md) · Index: [Phase 2 — The request path](README.md) · Next → **Reverse proxies and API gateways** *(not written yet)*
+← Prev: [01 · From the tap to the first byte](01-from-the-tap-to-the-first-byte.md) · Index: [Phase 2 — The request path](README.md) · Next → [03 · Reverse proxies and API gateways](03-reverse-proxies-and-api-gateways.md)
