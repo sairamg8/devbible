@@ -6,7 +6,7 @@ sidebar_position: 5
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-07 against the Vite documentation — [Plugin API](https://vite.dev/guide/api-plugin), [Migration from v7](https://vite.dev/guide/migration). Vite plugins use the Rollup plugin interface, which Rolldown mirrors — that compatibility is why Vite's plugin ecosystem survived the v8 engine swap. **No sandbox run, no timings.** Target: **Vite 8.2.2 · webpack 5.110.3**.
+> Verified: 2026-09-07 against the Vite documentation — [Plugin API](https://vite.dev/guide/api-plugin), [Migration from v7](https://vite.dev/guide/migration). 🔴 On Vite 8 the docs say *"Vite plugins extends **Rolldown's** plugin interface"* — through v7 that sentence named Rollup. Rolldown mirrors Rollup's plugin API, which is why the ecosystem survived the engine swap and why most Rollup plugins still work. **No sandbox run, no timings.** Target: **Vite 8.2.2 · webpack 5.110.3**.
 > Validated: 2026-09-07 · claims + output provenance · session 84f95c0c
 
 # ⚡ Loaders Become Plugins
@@ -23,7 +23,7 @@ slower than it sounds and is where migration schedules go wrong.
 ### Two interfaces that barely rhyme
 
 ```
-webpack loader                       Vite / Rollup plugin
+webpack loader                       Vite / Rolldown plugin
 ──────────────                       ────────────────────
 a function: source → source          an object with named hooks
 selected by a `test` regex           receives EVERY module id; filters itself
@@ -60,14 +60,18 @@ transform(code, id) {
 
 ### Where the plugin interface came from, and why that matters
 
-Vite plugins are **Rollup plugins**, and Rolldown deliberately mirrors the Rollup plugin interface.
-That is the reason the Vite 8 engine swap — *"Vite 8 uses Rolldown and Oxc based tools instead of
-esbuild and Rollup"* — did not detonate the plugin ecosystem: the compatibility surface that
-survived the rewrite was the **interface**, not the implementation.
+🔴 **On Vite 8 the base is Rolldown's plugin interface, not Rollup's.** The docs are explicit:
+*"Vite plugins extends **Rolldown's** plugin interface with a few extra Vite-specific options"* —
+and through Vite 7 that same sentence named Rollup.
+
+Rolldown deliberately mirrors Rollup's plugin API, which is why the engine swap — *"Vite 8 uses
+Rolldown and Oxc based tools instead of esbuild and Rollup"* — did not detonate the plugin
+ecosystem: the compatibility surface that survived the rewrite was the **interface**, not the
+implementation. Most Rollup plugins still work, subject to three documented criteria.
 
 The practical consequence for a migration is that your search space is larger than it looks. A
-plugin written for Rollup, with no Vite in its name, frequently works — and the Rollup ecosystem is
-older and deeper than Vite's.
+plugin written for Rollup or Rolldown, with no Vite in its name, frequently works — and those
+ecosystems are older and deeper than Vite's.
 
 ### Estimating loader work honestly
 
@@ -204,7 +208,7 @@ the symptom is a transform applied to already-transformed output.
 
 ### ⚠️ Pitfall 5 — Searching only for "vite plugin"
 
-Vite plugins *are* Rollup plugins. The Rollup ecosystem is older and deeper, and a plugin with no
+Vite's plugin interface extends Rolldown's, which mirrors Rollup's. Those ecosystems are older and deeper, and a plugin with no
 Vite in its name frequently works unchanged.
 
 ### ⚠️ Pitfall 6 — Forgetting `handleHotUpdate`
@@ -216,7 +220,7 @@ full reload, which reads as "Vite's HMR is bad" rather than as a missing hook.
 
 ## Gotchas
 
-**★ Symptom: a custom webpack loader has no Vite equivalent and the migration stalls.** Cause: Vite plugins use the Rollup plugin interface, so the loader is reimplemented rather than adapted. Fix: search for an existing plugin first — including Rollup plugins — and budget days for establishing that it fits.
+**★ Symptom: a custom webpack loader has no Vite equivalent and the migration stalls.** Cause: Vite plugins extend Rolldown's plugin interface (which mirrors Rollup's), so the loader is reimplemented rather than adapted. Fix: search for an existing plugin first — including Rolldown and Rollup plugins — and budget days for establishing that it fits.
 
 **★ Symptom: a hand-written Vite plugin transforms every file, including ones it should ignore.** Cause: webpack's `test` regex did the filtering; a `transform` hook does not. Fix: filter on `id` yourself and `return null` for anything that is not yours.
 
@@ -232,7 +236,7 @@ transform(code, id) { if (!id.endsWith('.graphql')) return null; /* … */ }
 
 **★ Symptom: the plugin works in dev and its output is missing from the build.** Cause: a hook that only runs in one of the two pipelines, or an `apply: 'serve'` left from a template. Fix: check `apply`; a plugin restricted to `serve` or `build` is doing exactly what it was told.
 
-**★ Symptom: no "vite plugin" exists for a file type and the team plans to write one.** Cause: searching the wrong ecosystem. Fix: search Rollup plugins too — Vite plugins are Rollup plugins, and that ecosystem is older and larger. This is the highest-value thirty minutes in a loader migration.
+**★ Symptom: no "vite plugin" exists for a file type and the team plans to write one.** Cause: searching the wrong ecosystem. Fix: search Rolldown and Rollup plugins too — Vite's interface extends Rolldown's, which mirrors Rollup's, and those ecosystems are older and larger. This is the highest-value thirty minutes in a loader migration.
 
 **★ Symptom: a plugin's transform is skipped for files inside `node_modules`.** Cause: dependency pre-bundling handles those on a different path, so a plugin expecting to see every module does not. Fix: check `optimizeDeps.exclude` for the package, and be explicit about whether the plugin is meant to touch dependencies at all — most are not.
 
@@ -254,7 +258,7 @@ they are expected to return — a loader's `this.callback` carried a source map 
 
 **★ You have four days and a `.graphql` loader to replace. How do you spend them?**
 Not writing a plugin. Searching first — including the Rollup ecosystem, since Vite plugins *are*
-Rollup plugins — and then spending the bulk of the time on the question that actually decides it:
+Rolldown and Rollup plugins — and then spending the bulk of the time on the question that decides it:
 does the existing plugin produce the same output for *our* inputs, including the edge syntax the old
 loader supported by accident and that some file relies on. That verification is the work, and it is
 why "find a plugin" is a bad estimate: finding takes an hour and being confident takes days. If
@@ -263,7 +267,7 @@ id filtering, the `null` pass-through, a real source map, and `handleHotUpdate`.
 
 **★ Why did Vite's plugin ecosystem survive the Rolldown swap?**
 Because the compatibility surface that was preserved is the **interface**, not the implementation.
-Vite plugins are Rollup plugins, and Rolldown deliberately mirrors the Rollup plugin API — so
+On Vite 8, plugins extend *Rolldown's* interface, and Rolldown deliberately mirrors Rollup's — so
 *"Vite 8 uses Rolldown and Oxc based tools instead of esbuild and Rollup"* was an engine change
 rather than an ecosystem reset. It is a genuinely instructive piece of design: a project replaced its
 core in a different language and shipped it as a list of renamed options, because the thing everyone
