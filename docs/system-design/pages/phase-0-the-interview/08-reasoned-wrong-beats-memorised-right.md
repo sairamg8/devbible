@@ -229,4 +229,4 @@ exercises every place a re-derivation can start.
 
 ---
 
-← Prev: [07 · The common ways to fail](07-the-common-ways-to-fail.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **Communication mechanics** *(not written yet)*
+← Prev: [07 · The common ways to fail](07-the-common-ways-to-fail.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [09 · Communication mechanics](09-communication-mechanics.md)
