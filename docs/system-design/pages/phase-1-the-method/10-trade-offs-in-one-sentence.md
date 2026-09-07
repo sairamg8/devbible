@@ -205,4 +205,4 @@ presented as a snapshot and one presented as a set of decisions with triggers.
 
 ---
 
-← Prev: [09 · Choosing the deep dives](09-choosing-the-deep-dives.md) · Index: [Phase 1 — The method](README.md) · Next → **Bottlenecks and single points of failure** *(not written yet)*
+← Prev: [09 · Choosing the deep dives](09-choosing-the-deep-dives.md) · Index: [Phase 1 — The method](README.md) · Next → [11 · Bottlenecks and single points of failure](11-bottlenecks-and-single-points-of-failure.md)

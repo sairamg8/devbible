@@ -19,7 +19,7 @@ the trade-off sentence, the failure walk, the scaling walk, cost, evolution, and
 [Phase 0](../phase-0-the-interview/README.md) said what is graded; this phase is how to produce
 it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 
-🚧 **10 of 18 topics written.**
+🚧 **11 of 18 topics written (12 files: topic 11 is split into 11 and 11b).**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -33,7 +33,8 @@ it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 | 08 | **[Read path and write path, separately](./08-read-path-and-write-path.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 09 | **[Choosing the deep dives](./09-choosing-the-deep-dives.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 10 | **[Trade-offs in one sentence](./10-trade-offs-in-one-sentence.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
-| 11 | Bottlenecks and single points of failure | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 11 | **[Bottlenecks and single points of failure](./11-bottlenecks-and-single-points-of-failure.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
+| 11b | **[The load walk and the price of redundancy](./11b-the-load-walk-and-the-price-of-redundancy.md)** | <span className="db-tier t-master">Master</span> | ✅ written — 11 and 11b are one topic in two files |
 | 12 | The scaling walk | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 13 | Designing for cost | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 14 | Evolution and operations | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |

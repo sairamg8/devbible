@@ -18,7 +18,7 @@ import Progress from '@site/src/components/Progress';
 | Phase | Topics | State |
 |---|---|---|
 | 0 · [What system design interviews test](./phase-0-the-interview/README.md) | 13 | ✅ **13 of 13** — complete 2026-09-07, 14 files |
-| 1 · [The method: requirements to deep dives](./phase-1-the-method/README.md) | 18 | 🚧 **10 of 18** — 10 files on disk |
+| 1 · [The method: requirements to deep dives](./phase-1-the-method/README.md) | 18 | 🚧 **11 of 18** — 12 files on disk |
 | 2 · The request path: DNS to gateway | 18 | Planned |
 | 3 · Caching everywhere | 16 | Planned |
 | 4 · Storage engines, transactions and replication | 17 | Planned |
