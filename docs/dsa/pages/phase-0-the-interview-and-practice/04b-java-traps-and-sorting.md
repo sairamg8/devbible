@@ -119,4 +119,4 @@ by type — and relies on the earlier order surviving.
 
 ---
 
-← Prev: [04 · Language choice and traps](04-language-choice-and-runtime-traps.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **Reading the constraints** *(not written yet)*
+← Prev: [04 · Language choice and traps](04-language-choice-and-runtime-traps.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [05 · Reading the constraints](05-reading-the-constraints.md)

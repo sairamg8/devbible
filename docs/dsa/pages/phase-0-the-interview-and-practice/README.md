@@ -18,7 +18,7 @@ it. This phase is the method; the language-level implementations live in the
 and [Java's collections phase](../../../java/pages/phase-3-generics-collections/README.md), and
 this track links to them rather than re-teaching them.
 
-🚧 **4 of 14 topics written.**
+🚧 **5 of 14 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -27,7 +27,7 @@ this track links to them rather than re-teaching them.
 | 03 | **[The method: understand, match, plan, implement, review, evaluate](./03-the-method.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 04 | **[Language choice and runtime traps](./04-language-choice-and-runtime-traps.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 04b | **[Java traps and sorting](./04b-java-traps-and-sorting.md)** | <span className="db-tier t-master">Master</span> | ✅ written — 04 and 04b are one topic in two files |
-| 05 | Reading the constraints | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 05 | **[Reading the constraints](./05-reading-the-constraints.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 06 | Spaced repetition and the mistake log | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 07 | The "when stuck" protocol | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 08 | Testing your own code live | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
