@@ -293,4 +293,4 @@ become failures.
 
 ---
 
-← Prev: [03 · The rubric](03-the-rubric.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **The latency ladder** *(not written yet)*
+← Prev: [03 · The rubric](03-the-rubric.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [05 · The latency ladder](05-the-latency-ladder.md)

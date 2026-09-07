@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-07 07:44",
+  "updated": "2026-09-07 07:47",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -485,7 +485,7 @@
       "phases": "1/24",
       "next": "1 · The method: requirements to deep dives",
       "docs": "/docs/system-design",
-      "updated": "2026-09-07 07:44",
+      "updated": "2026-09-07 07:47",
       "note": null
     },
     {
