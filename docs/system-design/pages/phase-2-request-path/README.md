@@ -20,12 +20,12 @@ the handshakes, the CDN edge, the balancer, the gateway, the long-lived connecti
 limiter, the timeout and the retry, the connection pool — each with its latency, its failure mode
 and the decision it forces on the bible's [PERN storefront](../../../real-world/README.md).
 
-🚧 **1 of 18 topics written.**
+🚧 **2 of 18 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
 | 01 | **[From the tap to the first byte](./01-from-the-tap-to-the-first-byte.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
-| 02 | Load balancing, layer 4 vs layer 7 | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 02 | **[Load balancing, layer 4 vs layer 7](./02-load-balancing-layer-4-vs-layer-7.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 03 | Reverse proxies and API gateways | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 04 | Stateless services, and where the state went | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 05 | CDNs | <span className="db-tier t-master">Master</span> | ⬜ not written yet |

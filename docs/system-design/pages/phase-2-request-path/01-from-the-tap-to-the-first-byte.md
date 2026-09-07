@@ -258,4 +258,4 @@ the ocean from the write.
 
 ---
 
-← Index: [Phase 2 — The request path](README.md) · Next → **Load balancing, layer 4 vs layer 7** *(not written yet)*
+← Index: [Phase 2 — The request path](README.md) · Next → [02 · Load balancing, layer 4 vs layer 7](02-load-balancing-layer-4-vs-layer-7.md)
