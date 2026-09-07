@@ -188,4 +188,4 @@ requirements should not.
 
 ---
 
-← Prev: [10 · How to practise](10-how-to-practise.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **Primary sources behind the folklore** *(not written yet)*
+← Prev: [10 · How to practise](10-how-to-practise.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [12 · Primary sources](12-primary-sources.md)
