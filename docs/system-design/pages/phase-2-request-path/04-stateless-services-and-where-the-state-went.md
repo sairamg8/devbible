@@ -251,4 +251,4 @@ process and fails the moment there are two replicas.
 
 ---
 
-← Prev: [03 · Reverse proxies and API gateways](03-reverse-proxies-and-api-gateways.md) · Index: [Phase 2 — The request path](README.md) · Next → **CDNs** *(not written yet)*
+← Prev: [03 · Reverse proxies and API gateways](03-reverse-proxies-and-api-gateways.md) · Index: [Phase 2 — The request path](README.md) · Next → [05 · CDNs](05-cdns.md)
