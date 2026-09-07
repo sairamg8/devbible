@@ -102,7 +102,7 @@ heap holds the k most frequent values seen so far. O(n log k) time, O(n) space f
 brute force — sort the distinct values by count, O(n log n) — is the baseline.
 
 **Implement.** JavaScript has no built-in heap, which is itself a thing to say aloud
-(**04 · Language choice and runtime traps** *(not written yet)*); in an interview the bucket version is often the better TypeScript choice precisely because
+([04 · Language choice and runtime traps](04-language-choice-and-runtime-traps.md)); in an interview the bucket version is often the better TypeScript choice precisely because
 it needs no heap:
 
 ```ts
