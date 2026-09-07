@@ -253,4 +253,4 @@ load on the authoritative servers; it is not agility, it is churn.
 
 ---
 
-← Prev: [08 · Timeouts, retries and budgets](08-timeouts-retries-and-budgets.md) · Index: [Phase 2 — The request path](README.md) · Next → **TLS termination and where it lives** *(not written yet)*
+← Prev: [08 · Timeouts, retries and budgets](08-timeouts-retries-and-budgets.md) · Index: [Phase 2 — The request path](README.md) · Next → [10 · TLS termination and where it lives](10-tls-termination-and-where-it-lives.md)
