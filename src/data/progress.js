@@ -272,19 +272,22 @@ export const LANGUAGES = {
   },
   angular: {
     label: 'Angular',
-    updated: '2026-09-06 20:10',
+    updated: '2026-09-07 19:05',
     docsPath: '/docs/angular',
     pagesPath: '/docs/angular/pages',
     phases: [
-      // Phase 0 is mid-flight, measured against disk 2026-09-06 (second pass).
-      // Its 135 files are three topics deep, not twelve: topic 01
-      // `compiler-with-a-framework-attached` CLOSED 2026-09-06 at 70 files /
+      // Phase 0 is mid-flight, measured against disk 2026-09-07 (third pass).
+      // Its 147 pages are three topics deep, not twelve: topic 01
+      // `compiler-with-a-framework-attached` CLOSED 2026-09-06 at 69 pages /
       // 17,807 lines / all 17 chunks, and topic 02 `standalone-by-default` is
-      // content-complete and wired (39 files). Topic 03 `the-provider-array`
-      // (25 files) is still open at roughly 8 of 17 chunks, and topics 04-12
-      // are unstarted. Only a FINISHED topic counts, so `pages: 2` — and
-      // `pagesPlanned` is what stops those 135 files reading as a finished
+      // content-complete and wired (38 pages). Topic 03 `the-provider-array`
+      // (40 pages) is still open at 12 of 17 chunks, and topics 04-12 are
+      // unstarted. Only a FINISHED topic counts, so `pages: 2` — and
+      // `pagesPlanned` is what stops those 147 pages reading as a finished
       // phase and crediting all 12 topics.
+      // 🔴 Counts here are PAGES (README.md excluded), which is what
+      // page-counts.json measures; earlier revisions of this comment counted
+      // files including each topic's README and so read one higher per topic.
       {n: 0, slug: 'phase-0-how-angular-runs', name: 'How Angular runs', part: 'The Angular model', topics: 12, pages: 2, pagesPlanned: 12},
       {n: 1, slug: 'phase-1-components-templates', name: 'Components and templates', part: 'The Angular model', topics: 16, pages: 0},
       {n: 2, slug: 'phase-2-signals', name: 'Signals', part: 'The Angular model', topics: 15, pages: 0},

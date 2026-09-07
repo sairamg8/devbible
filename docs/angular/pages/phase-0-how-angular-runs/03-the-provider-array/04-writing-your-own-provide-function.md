@@ -192,7 +192,7 @@ base `provide*` call. Angular's router does the latter:
 collection walk flattens nested arrays and wrappers alike.
 
 🔴 **Choose the initializer deliberately.** `provideEnvironmentInitializer` is **not awaited**;
-`provideAppInitializer` is. **Chunk 06** *(not written yet)* is the full
+`provideAppInitializer` is. **[Chunk 06](06-startup-and-error-listener-providers.md)** is the full
 comparison.
 
 ## Making it tree-shakable — the one rule

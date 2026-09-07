@@ -180,4 +180,4 @@ declared `useExisting`. Same de-duplication mechanism, two different problems of
 
 ---
 
-← Prev: [Requests made via parent](10f-requests-made-via-parent.md) · Index: [Topic index](README.md) · Next → **11 · Hydration, animations and the rest** *(not written yet)*
+← Prev: [Requests made via parent](10f-requests-made-via-parent.md) · Index: [Topic index](README.md) · Next → [11 · Hydration, animations and the rest](11-hydration-animations-and-the-rest.md)

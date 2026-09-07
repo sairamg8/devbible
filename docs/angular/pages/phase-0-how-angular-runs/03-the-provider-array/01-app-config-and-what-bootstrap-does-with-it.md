@@ -170,7 +170,7 @@ resolved. Where the two overlap, the pages here say so and stop.
 ## The bootstrap sequence, in the order it happens
 
 `bootstrap()` in `packages/core/src/platform/bootstrap.ts` runs this order, which matters as soon
-as you use **`provideAppInitializer`** *(not written yet)*:
+as you use **[`provideAppInitializer`](06-startup-and-error-listener-providers.md)**:
 
 1. `envInjector.get(NgZone)` and `ngZone.run(...)` — everything below runs inside whatever zone
    implementation the providers resolved to (a `NoopNgZone` in a zoneless app).
@@ -221,7 +221,7 @@ returns a `Promise<ApplicationRef>` and a bootstrap failure *rejects it* rather 
 synchronously. Without the `.catch`, an unhandled rejection can be swallowed by a framework wrapper
 or by a test harness. Fix: keep the generated `.catch((err) => console.error(err))`, and in v22 add
 `provideBrowserGlobalErrorListeners()` so post-bootstrap `unhandledrejection` and `error` events
-reach the `ErrorHandler` too (**chunk 06** *(not written yet)*).
+reach the `ErrorHandler` too (**[chunk 06g](06g-error-handler-and-ng0402.md)**).
 
 **★ Symptom: a service you provided in `app.config.ts` is constructed twice.** Cause: not the
 config — you also listed it in a component's `providers`, or in a route's `providers`, which

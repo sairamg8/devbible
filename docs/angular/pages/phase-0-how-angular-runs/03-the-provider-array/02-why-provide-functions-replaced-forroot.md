@@ -120,7 +120,7 @@ export interface HttpFeature<KindT extends HttpFeatureKind> {
 | `HttpClientModule` | `provideHttpClient(...features)` | **deprecated** |
 | `HttpClientXsrfModule.withOptions()` | `withXsrfConfiguration({ ... })` | **deprecated** |
 | `HttpClientJsonpModule` | `withJsonpSupport()` | **deprecated** (and so is the feature) |
-| `BrowserAnimationsModule` | `provideAnimationsAsync()` | both superseded — **chunk 11** *(not written yet)* |
+| `BrowserAnimationsModule` | `provideAnimationsAsync()` | both superseded — [chunk 11f](11f-animations-are-deprecated.md) |
 | `BrowserModule` | nothing; `bootstrapApplication` provides it | not needed in a standalone app |
 | `StoreModule.forRoot(reducers)` (NgRx) | `provideStore(reducers)` | NgRx 22.0.0 ships both |
 

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-07 18:02",
+  "updated": "2026-09-07 19:05",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -117,7 +117,7 @@
       "phases": "0/16",
       "next": "0 · How Angular runs",
       "docs": "/docs/angular",
-      "updated": "2026-09-06 20:10",
+      "updated": "2026-09-07 19:05",
       "note": null
     },
     {

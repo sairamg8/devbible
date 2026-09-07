@@ -25,10 +25,10 @@ convention, the catalogue, and the ways the array goes wrong.
 
 ## Chunks
 
-🚧 **11 of 17 planned chunks written, across 39 files.** Seven of the eleven exhausted their
+🚧 **12 of 17 planned chunks written, across 47 files.** Eight of the twelve exhausted their
 subject and split into lettered siblings, which is the 300-line cap working as designed — the cap
 is a file size, never a content budget, so chunk 05 became eight files, chunk 06 seven, chunk 08
-seven, chunk 10 seven and chunk 09 five, rather than any of them being shortened. The rows without links are planned and named; a link to a
+seven, chunk 10 seven, chunk 11 seven and chunk 09 five, rather than any of them being shortened. The rows without links are planned and named; a link to a
 page that does not exist breaks the build, so they stay as plain text until they land.
 
 | # | Chunk | Covers |
@@ -73,7 +73,13 @@ page that does not exist breaks the build, so they stay as plain text until they
 | 10e | **[XSRF protection](10e-xsrf-protection.md)** | `withXsrfConfiguration({})` contributes **zero providers** and still throws when paired with `withNoXsrfProtection()`, because the check reads `ɵkind` and never looks at what it provided — and `withNoXsrfProtection()` flips a flag rather than removing the interceptor |
 | 10f | **[Requests made via parent](10f-requests-made-via-parent.md)** | Every `provideHttpClient()` builds an **independent** `HttpClient` whose interceptors are invisible to every other one; this is the single feature that reconnects them |
 | 10g | **[JSONP, and the deprecated end](10g-jsonp-and-the-deprecated-end.md)** | ⚠️ `withJsonpSupport()` deprecated in 22.1 for a security reason stated in its own tag — angular.dev still documents it neutrally, and 🔴 the source wins |
-| 11 | **Hydration, animations and the rest** *(not written yet)* | `provideClientHydration()` + `withEventReplay`; ⚠️ `withIncrementalHydration` and `provideAnimationsAsync` are both deprecated in v22 — what replaced them |
+| 11 | **[Hydration, animations and the rest](11-hydration-animations-and-the-rest.md)** | 🔴 `provideClientHydration()` is a switch you turn **down** — four subsystems come on before it reads an argument, and its provider set genuinely differs between dev and production |
+| 11b | **[The feature inventory](11b-the-feature-inventory.md)** | Only `withI18nSupport()` is a plain opt-in; the other five are a default, two opt-outs, a configurator and one deprecated re-statement — and the JSDoc list has already stopped describing them accurately |
+| 11c | **[Incremental hydration and event replay](11c-incremental-hydration-and-event-replay.md)** | 🔴 Default since 22.0, and `ɵwithIncrementalHydration()`'s provider array **starts with `withEventReplay()`** — so that argument is redundant unless you also opted out. angular.dev's hydration guide still leads with it |
+| 11d | **[The HTTP transfer cache](11d-the-http-transfer-cache.md)** | On by default; options **replace** the default rather than layering on it; and it is switched off by mutating a `{isActive: true}` object at first stability — so its whole life is the hydration window |
+| 11e | **[The contradiction checks](11e-the-contradiction-checks.md)** | Two checks, one code `NG5001` (from **platform-browser**'s 5000-5500 range, not core's 100-999) — and both inside `if (ngDevMode)`, so the config that throws in `ng serve` ships silently |
+| 11f | **[Animations are deprecated](11f-animations-are-deprecated.md)** | ⚠️ All three providers deprecated with **no replacement provider** — `provideAnimationsAsync` names v23 — while angular.dev's guide opens with the deprecation and later tells you to add it |
+| 11g | **[The standalone core providers](11g-the-standalone-core-providers.md)** | `provideStabilityDebugging()` is documented as **not** removed from production bundles; `provideNgReflectAttributes()` is *not* tagged deprecated even though its attributes are; plus the idle-service override and one `@experimental` |
 | 12 | **What does *not* belong in the array** *(not written yet)* | 🔴 The "everything ends up in `app.config.ts`" anti-pattern: component-scoped services, per-route lifetime, feature config, and `useValue` blobs that should be a typed `InjectionToken` |
 | 13 | **Order dependence** *(not written yet)* | Where order matters and where it genuinely does not; last-wins for the same token; the cases people assume are ordered and are not |
 | 14 | **`providedIn: 'root'` vs listing in the array** *(not written yet)* | When you need the array at all, what `'root'` buys, and the tree-shaking difference between the two |
