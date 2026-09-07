@@ -7,9 +7,9 @@ sidebar_position: 0
 Status board for the System Design explanation pages — one page per syllabus topic, with the
 worked design, its trade-offs, gotchas and interview questions.
 
-**Nothing is written yet.** The [syllabus](../README.md) is complete (472 topics,
-24 phases, 13 parts, written 2026-09-07 by session `ebd67cf9`); pages start once it is
-approved, phase by phase in reading order.
+**Phase 0 is in progress** — pages started 2026-09-07 by session `9602e64d`, phase by phase in
+reading order, one topic at a time. The [syllabus](../README.md) is complete (472 topics, 24 phases,
+13 parts, written 2026-09-07 by session `ebd67cf9`).
 
 import Progress from '@site/src/components/Progress';
 
@@ -17,7 +17,7 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Topics | State |
 |---|---|---|
-| 0 · What system design interviews test | 13 | Planned |
+| 0 · [What system design interviews test](./phase-0-the-interview/README.md) | 13 | 🚧 **1 of 13** — topic 01 in two files |
 | 1 · The method: requirements to deep dives | 18 | Planned |
 | 2 · The request path: DNS to gateway | 18 | Planned |
 | 3 · Caching everywhere | 16 | Planned |

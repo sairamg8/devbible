@@ -1,27 +1,27 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-06 17:30",
+  "updated": "2026-09-07 07:35",
   "totals": {
-    "languages": 29,
-    "complete": 10,
-    "inProgress": 5,
-    "notStarted": 0,
+    "languages": 31,
+    "complete": 9,
+    "inProgress": 7,
+    "notStarted": 1,
     "parked": 2,
     "blocked": 1,
-    "topics": 3157,
-    "completed": 2442,
-    "pending": 715,
-    "percent": 77
+    "topics": 3955,
+    "completed": 2456,
+    "pending": 1499,
+    "percent": 62
   },
   "importedTotals": {
     "tracks": 11,
     "untouched": 8,
-    "validating": 1,
-    "validated": 2,
-    "pages": 198,
+    "validating": 2,
+    "validated": 1,
+    "pages": 241,
     "pagesValidated": 58,
-    "percent": 29
+    "percent": 24
   },
   "languages": [
     {
@@ -37,23 +37,23 @@
       "phases": "11/11",
       "next": null,
       "docs": "/docs/css",
-      "updated": "2026-08-14 09:15",
+      "updated": "2026-08-31 12:04",
       "note": null
     },
     {
       "key": "javascript",
       "label": "JavaScript",
-      "status": "complete",
-      "percent": 100,
+      "status": "in-progress",
+      "percent": 97,
       "counts": "syllabus topics explained",
-      "topics": 269,
+      "topics": 277,
       "completed": 269,
-      "pending": 0,
+      "pending": 8,
       "imported": false,
-      "phases": "16/16",
-      "next": null,
+      "phases": "15/16",
+      "next": "18 · Building the store front end",
       "docs": "/docs/javascript",
-      "updated": "2026-08-15 14:06",
+      "updated": "2026-09-04 08:25",
       "note": "Phases 13-15 (DSA) parked at Master tier, outside the percentage."
     },
     {
@@ -69,7 +69,7 @@
       "phases": "10/10",
       "next": null,
       "docs": "/docs/typescript",
-      "updated": "2026-08-18 19:16",
+      "updated": "2026-09-04 08:25",
       "note": null
     },
     {
@@ -108,16 +108,16 @@
       "key": "angular",
       "label": "Angular",
       "status": "in-progress",
-      "percent": 0,
+      "percent": 1,
       "counts": "syllabus topics explained",
       "topics": 211,
-      "completed": 1,
-      "pending": 210,
+      "completed": 2,
+      "pending": 209,
       "imported": false,
       "phases": "0/16",
       "next": "0 · How Angular runs",
       "docs": "/docs/angular",
-      "updated": "2026-09-06 12:22",
+      "updated": "2026-09-06 20:10",
       "note": null
     },
     {
@@ -236,16 +236,16 @@
       "key": "storybook",
       "label": "Storybook",
       "status": "in-progress",
-      "percent": 40,
+      "percent": 31,
       "counts": "syllabus topics explained",
-      "topics": 58,
+      "topics": 75,
       "completed": 23,
-      "pending": 35,
+      "pending": 52,
       "imported": false,
-      "phases": "4/11",
+      "phases": "4/28",
       "next": "4 · Documentation",
       "docs": "/docs/storybook",
-      "updated": "2026-08-14 13:35",
+      "updated": "2026-09-04 08:36",
       "note": "No live lock."
     },
     {
@@ -315,15 +315,15 @@
     {
       "key": "jest-rtl",
       "label": "Jest & RTL",
-      "status": "validated",
-      "percent": 100,
+      "status": "validating",
+      "percent": 27,
       "counts": "pages validated",
-      "topics": 16,
+      "topics": 59,
       "completed": 16,
-      "pending": 0,
+      "pending": 43,
       "imported": true,
-      "phases": "16/16",
-      "next": null,
+      "phases": "16/17",
+      "next": "17 · The 59-topic syllabus — no page written to it yet",
       "docs": "/docs/jest-rtl",
       "updated": "2026-08-19 20:59",
       "note": null
@@ -357,7 +357,7 @@
       "phases": "20/20",
       "next": null,
       "docs": "/docs/nextjs",
-      "updated": "2026-09-05 10:15",
+      "updated": "2026-09-05 17:19",
       "note": null
     },
     {
@@ -453,8 +453,40 @@
       "phases": "8/9",
       "next": "8 · The MongoDB mirror",
       "docs": "/docs/real-world",
-      "updated": "2026-09-02 20:45",
+      "updated": "2026-09-03 07:12",
       "note": "Phase 6 part-written, unclaimed."
+    },
+    {
+      "key": "dsa",
+      "label": "DSA",
+      "status": "not-started",
+      "percent": 0,
+      "counts": "syllabus topics explained",
+      "topics": 301,
+      "completed": 0,
+      "pending": 301,
+      "imported": false,
+      "phases": "0/21",
+      "next": "0 · The DSA interview and the practice system",
+      "docs": "/docs/dsa",
+      "updated": "2026-09-07 07:21",
+      "note": null
+    },
+    {
+      "key": "system-design",
+      "label": "System Design",
+      "status": "in-progress",
+      "percent": 3,
+      "counts": "syllabus topics explained",
+      "topics": 472,
+      "completed": 13,
+      "pending": 459,
+      "imported": false,
+      "phases": "1/24",
+      "next": "1 · The method: requirements to deep dives",
+      "docs": "/docs/system-design",
+      "updated": "2026-09-07 07:35",
+      "note": null
     },
     {
       "key": "java",
@@ -469,7 +501,7 @@
       "phases": "12/17",
       "next": "12 · The JVM in production",
       "docs": "/docs/java",
-      "updated": "2026-09-04 08:42",
+      "updated": "2026-09-05 16:47",
       "note": "Active — one session at a time. Cursor: devbible/CURSOR-JAVA.md. Runs to completion before Python."
     },
     {
@@ -485,7 +517,7 @@
       "phases": "1/14",
       "next": "1 · Language core",
       "docs": "/docs/python",
-      "updated": "2026-09-03 19:58",
+      "updated": "2026-09-04 08:38",
       "note": "Blocked behind Java. Resume at phase 1, 02-numbers/04-bool-is-an-int.md."
     }
   ]
