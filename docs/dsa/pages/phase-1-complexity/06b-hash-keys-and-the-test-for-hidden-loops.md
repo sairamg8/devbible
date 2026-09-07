@@ -92,4 +92,4 @@ with the loop is a nested loop in disguise; the replacement is in the same row �
 
 ---
 
-← Prev: [06 · Hidden costs](06-hidden-costs.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → **Complexity of the built-ins** *(not written yet)*
+← Prev: [06 · Hidden costs](06-hidden-costs.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [07 · Complexity of the built-ins](07-complexity-of-the-built-ins.md)

@@ -24,7 +24,7 @@ to measure instead of analyse, and how to answer "can we do better?" with a reas
 [Phase 0](../phase-0-the-interview-and-practice/README.md) was the method; this is the first
 thing the method needs.
 
-🚧 **6 of 11 topics written (10 files: topics 02, 03, 04 and 06 are each split into two).**
+🚧 **7 of 11 topics written (11 files: topics 02, 03, 04 and 06 are each split into two).**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -38,7 +38,7 @@ thing the method needs.
 | 05 | **[The common classes and what the limits imply](./05-the-common-classes-and-what-the-limits-imply.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 06 | **[Hidden costs](./06-hidden-costs.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 06b | **[Hash keys, and the test for hidden loops](./06b-hash-keys-and-the-test-for-hidden-loops.md)** | <span className="db-tier t-master">Master</span> | ✅ written — 06 and 06b are one topic in two files |
-| 07 | Complexity of the built-ins | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 07 | **[Complexity of the built-ins](./07-complexity-of-the-built-ins.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 08 | Recurrences and the master theorem | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 09 | Best, average and worst | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 10 | Benchmarking vs analysis | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
