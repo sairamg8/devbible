@@ -275,4 +275,4 @@ You can make it fetch — the guide shows the shape for cursorless APIs, derivin
 
 ---
 
-← [Background Refetching](../06-background-refetching/01-automatic-freshness.md) · [Topic index](../README.md) · Next → [`useInfiniteQuery`](./01b-infinite-queries.md)
+← [Network mode & offline](../06-background-refetching/01d-network-mode-and-offline.md) · [Topic index](../README.md) · Next → [`useInfiniteQuery`](./01b-infinite-queries.md)
