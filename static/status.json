@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-07 16:50",
+  "updated": "2026-09-07 16:52",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -469,7 +469,7 @@
       "phases": "2/21",
       "next": "2 · Recursion, maths and bits",
       "docs": "/docs/dsa",
-      "updated": "2026-09-07 16:50",
+      "updated": "2026-09-07 16:52",
       "note": null
     },
     {

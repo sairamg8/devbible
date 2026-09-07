@@ -237,4 +237,4 @@ state instead.
 
 ---
 
-← Prev: [07 · Complexity of the built-ins](07-complexity-of-the-built-ins.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → **Best, average and worst** *(not written yet)*
+← Prev: [07 · Complexity of the built-ins](07-complexity-of-the-built-ins.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [09 · Best, average and worst](09-best-average-and-worst.md)
