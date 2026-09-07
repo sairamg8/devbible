@@ -195,4 +195,4 @@ leaves the interviewer wondering whether you noticed the bound at all.
 
 ---
 
-← Prev: [04b · Java traps and sorting](04b-java-traps-and-sorting.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **Spaced repetition and the mistake log** *(not written yet)*
+← Prev: [04b · Java traps and sorting](04b-java-traps-and-sorting.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [06 · Spaced repetition and the log](06-spaced-repetition-and-the-mistake-log.md)
