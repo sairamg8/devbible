@@ -24,12 +24,13 @@ to measure instead of analyse, and how to answer "can we do better?" with a reas
 [Phase 0](../phase-0-the-interview-and-practice/README.md) was the method; this is the first
 thing the method needs.
 
-🚧 **1 of 11 topics written.**
+🚧 **2 of 11 topics written (3 files: topic 02 is split into 02 and 02b).**
 
 | # | Page | Tier | State |
 |---|---|---|---|
 | 01 | **[Big-O, Theta and Omega](./01-big-o-theta-and-omega.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
-| 02 | Reading complexity off code | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 02 | **[Reading complexity off code](./02-reading-complexity-off-code.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
+| 02b | **[Recursion as a tree](./02b-recursion-as-a-tree.md)** | <span className="db-tier t-master">Master</span> | ✅ written — 02 and 02b are one topic in two files |
 | 03 | Amortised analysis | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 04 | Space and the recursion stack | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 05 | The common classes and what the limits imply | <span className="db-tier t-master">Master</span> | ⬜ not written yet |

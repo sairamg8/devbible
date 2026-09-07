@@ -114,15 +114,15 @@
     }
   },
   "dsa": {
-    "pages": 16,
-    "validated": 16,
+    "pages": 18,
+    "validated": 18,
     "phases": {
       "phase-0-the-interview-and-practice": 15,
-      "phase-1-complexity": 1
+      "phase-1-complexity": 3
     },
     "validatedPhases": {
       "phase-0-the-interview-and-practice": 15,
-      "phase-1-complexity": 1
+      "phase-1-complexity": 3
     }
   },
   "eslint-oxlint": {

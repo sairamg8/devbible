@@ -18,7 +18,7 @@ import Progress from '@site/src/components/Progress';
 | Phase | Topics | State |
 |---|---|---|
 | 0 · [The DSA interview and the practice system](./phase-0-the-interview-and-practice/README.md) | 14 | ✅ **14 of 14** — complete 2026-09-07, 15 files |
-| 1 · [Complexity analysis](./phase-1-complexity/README.md) | 11 | 🚧 **1 of 11** — 1 files on disk |
+| 1 · [Complexity analysis](./phase-1-complexity/README.md) | 11 | 🚧 **2 of 11** — 3 files on disk |
 | 2 · Recursion, maths and bits | 13 | Planned |
 | 3 · Arrays, hashing and prefix sums | 16 | Planned |
 | 4 · Two pointers and sliding window | 13 | Planned |

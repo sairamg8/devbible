@@ -294,4 +294,4 @@ that could still be improved.
 
 ---
 
-← Index: [Phase 1 — Complexity analysis](README.md) · Next → **Reading complexity off code** *(not written yet)*
+← Index: [Phase 1 — Complexity analysis](README.md) · Next → [02 · Reading complexity off code](02-reading-complexity-off-code.md)
