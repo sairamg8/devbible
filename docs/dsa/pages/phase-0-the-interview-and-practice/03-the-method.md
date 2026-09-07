@@ -158,8 +158,8 @@ public final class TopKFrequent {
 }
 ```
 
-**Review.** Trace `[1,1,1,2,2,3]`, k=2: counts {1:3, 2:2, 3:1}; buckets[3]=[1], [2]=[2],
-[1]=[3]; walking from the top: 1, then 2 — result `[1,2]`, stops at k. Edge: k = 3 → `[1,2,3]`.
+**Review.** Trace `[1,1,1,2,2,3]`, k=2: counts `{1:3, 2:2, 3:1}`; `buckets[3]=[1]`, `[2]=[2]`,
+`[1]=[3]`; walking from the top: 1, then 2 — result `[1,2]`, stops at k. Edge: k = 3 → `[1,2,3]`.
 Single element `[7]`, k=1 → `[7]`.
 
 **Evaluate.** "Bucket version O(n) time and space; heap version O(n log k). Follow-up I'd
