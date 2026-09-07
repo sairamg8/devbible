@@ -106,4 +106,4 @@ for what was a Θ(n) algorithm. Pass indices — `lo`, `hi` — into the same ar
 
 ---
 
-← Prev: [02 · Reading complexity off code](02-reading-complexity-off-code.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → **Amortised analysis** *(not written yet)*
+← Prev: [02 · Reading complexity off code](02-reading-complexity-off-code.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [03 · Amortised analysis](03-amortised-analysis.md)

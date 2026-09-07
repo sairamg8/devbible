@@ -24,14 +24,15 @@ to measure instead of analyse, and how to answer "can we do better?" with a reas
 [Phase 0](../phase-0-the-interview-and-practice/README.md) was the method; this is the first
 thing the method needs.
 
-🚧 **2 of 11 topics written (3 files: topic 02 is split into 02 and 02b).**
+🚧 **3 of 11 topics written (5 files: topics 02 and 03 are each split into two).**
 
 | # | Page | Tier | State |
 |---|---|---|---|
 | 01 | **[Big-O, Theta and Omega](./01-big-o-theta-and-omega.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 02 | **[Reading complexity off code](./02-reading-complexity-off-code.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 02b | **[Recursion as a tree](./02b-recursion-as-a-tree.md)** | <span className="db-tier t-master">Master</span> | ✅ written — 02 and 02b are one topic in two files |
-| 03 | Amortised analysis | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 03 | **[Amortised analysis](./03-amortised-analysis.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
+| 03b | **[Union-find, and the limits of amortised](./03b-union-find-and-the-limits-of-amortised.md)** | <span className="db-tier t-master">Master</span> | ✅ written — 03 and 03b are one topic in two files |
 | 04 | Space and the recursion stack | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 05 | The common classes and what the limits imply | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 06 | Hidden costs | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
