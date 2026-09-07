@@ -187,4 +187,4 @@ redirects are fine. Specificity is the evidence that the design was reasoned rat
 
 ---
 
-← Prev: [01 · Design at each level](01-what-design-means-at-each-level.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **The three rounds that carry the word "design"** *(not written yet)*
+← Prev: [01 · Design at each level](01-what-design-means-at-each-level.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [02 · The three design rounds](02-the-three-design-rounds.md)
