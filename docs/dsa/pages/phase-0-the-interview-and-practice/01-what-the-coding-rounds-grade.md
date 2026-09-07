@@ -233,4 +233,4 @@ the next pages build.
 
 ---
 
-← Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **The 45-minute shape** *(not written yet)*
+← Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [02 · The 45-minute shape](02-the-45-minute-shape.md)
