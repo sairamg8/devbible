@@ -1,17 +1,17 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-07 08:00",
+  "updated": "2026-09-07 08:04",
   "totals": {
     "languages": 31,
     "complete": 9,
-    "inProgress": 7,
-    "notStarted": 1,
+    "inProgress": 8,
+    "notStarted": 0,
     "parked": 2,
     "blocked": 1,
     "topics": 3955,
-    "completed": 2456,
-    "pending": 1499,
+    "completed": 2470,
+    "pending": 1485,
     "percent": 62
   },
   "importedTotals": {
@@ -459,17 +459,17 @@
     {
       "key": "dsa",
       "label": "DSA",
-      "status": "not-started",
-      "percent": 0,
+      "status": "in-progress",
+      "percent": 5,
       "counts": "syllabus topics explained",
       "topics": 301,
-      "completed": 0,
-      "pending": 301,
+      "completed": 14,
+      "pending": 287,
       "imported": false,
-      "phases": "0/21",
-      "next": "0 · The DSA interview and the practice system",
+      "phases": "1/21",
+      "next": "1 · Complexity analysis",
       "docs": "/docs/dsa",
-      "updated": "2026-09-07 07:21",
+      "updated": "2026-09-07 08:04",
       "note": null
     },
     {
