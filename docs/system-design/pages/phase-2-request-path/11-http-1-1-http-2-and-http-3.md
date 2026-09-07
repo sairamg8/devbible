@@ -246,4 +246,4 @@ misunderstood which layer moved.
 
 ---
 
-← Prev: [10 · TLS termination and where it lives](10-tls-termination-and-where-it-lives.md) · Index: [Phase 2 — The request path](README.md) · Next → **Service discovery** *(not written yet)*
+← Prev: [10 · TLS termination and where it lives](10-tls-termination-and-where-it-lives.md) · Index: [Phase 2 — The request path](README.md) · Next → [12 · Service discovery](12-service-discovery.md)
