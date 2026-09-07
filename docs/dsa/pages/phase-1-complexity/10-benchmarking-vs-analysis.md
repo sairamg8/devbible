@@ -222,4 +222,4 @@ than the array's linear shift. The JDK's own documentation recommends `ArrayDequ
 
 ---
 
-← Prev: [09 · Best, average and worst](09-best-average-and-worst.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → **Proving optimality** *(not written yet)*
+← Prev: [09 · Best, average and worst](09-best-average-and-worst.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [11 · Proving optimality](11-proving-optimality.md)
