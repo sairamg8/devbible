@@ -114,13 +114,13 @@
     }
   },
   "dsa": {
-    "pages": 2,
-    "validated": 2,
+    "pages": 3,
+    "validated": 3,
     "phases": {
-      "phase-0-the-interview-and-practice": 2
+      "phase-0-the-interview-and-practice": 3
     },
     "validatedPhases": {
-      "phase-0-the-interview-and-practice": 2
+      "phase-0-the-interview-and-practice": 3
     }
   },
   "eslint-oxlint": {

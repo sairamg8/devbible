@@ -246,4 +246,4 @@ evidence of judgement the round produces and it costs a minute at any length.
 
 ---
 
-← Prev: [01 · What the rounds grade](01-what-the-coding-rounds-grade.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **The method: understand, match, plan, implement, review, evaluate** *(not written yet)*
+← Prev: [01 · What the rounds grade](01-what-the-coding-rounds-grade.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [03 · The method](03-the-method.md)
