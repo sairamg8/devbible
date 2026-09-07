@@ -238,4 +238,4 @@ truth to keep consistent and a second thing to fail.
 
 ---
 
-← Prev: [11 · HTTP/1.1, HTTP/2 and HTTP/3](11-http-1-1-http-2-and-http-3.md) · Index: [Phase 2 — The request path](README.md) · Next → **Serialization on the wire** *(not written yet)*
+← Prev: [11 · HTTP/1.1, HTTP/2 and HTTP/3](11-http-1-1-http-2-and-http-3.md) · Index: [Phase 2 — The request path](README.md) · Next → [13 · Serialization on the wire](13-serialization-on-the-wire.md)
