@@ -243,4 +243,4 @@ for naming the paper the mechanism came from.
 
 ---
 
-← Prev: [11 · Whiteboard and remote tooling](11-whiteboard-and-remote-tooling.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **How this track relates to the rest of the bible** *(not written yet)*
+← Prev: [11 · Whiteboard and remote tooling](11-whiteboard-and-remote-tooling.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [13 · How this track relates](13-how-this-track-relates.md)

@@ -15,7 +15,7 @@ asked.** That is also what a senior engineer is paid for at work, so this phase 
 rubric clearly enough to hit it on purpose. Everything later in the track is a building block; this
 phase is how the building blocks get graded.
 
-🚧 **12 of 13 topics written.**
+✅ **Phase complete — 13 of 13 written (14 files: topic 01 is split into 01 and 01b).**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -32,7 +32,7 @@ phase is how the building blocks get graded.
 | 10 | **[How to practise](./10-how-to-practise.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 11 | **[Whiteboard and remote tooling](./11-whiteboard-and-remote-tooling.md)** | <span className="db-tier t-know">Know</span> | ✅ written |
 | 12 | **[Primary sources behind the folklore](./12-primary-sources.md)** | <span className="db-tier t-know">Know</span> | ✅ written |
-| 13 | How this track relates to the rest of the bible | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
+| 13 | **[How this track relates to the rest of the bible](./13-how-this-track-relates.md)** | <span className="db-tier t-know">Know</span> | ✅ written |
 
 ## Phase gate
 
