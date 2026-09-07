@@ -228,4 +228,4 @@ picks the budget.
 
 ---
 
-← Prev: [14 · Evolution and operations](14-evolution-and-operations.md) · Index: [Phase 1 — The method](README.md) · Next → **Estimation worked examples** *(not written yet)*
+← Prev: [14 · Evolution and operations](14-evolution-and-operations.md) · Index: [Phase 1 — The method](README.md) · Next → [16 · Estimation worked examples](16-estimation-worked-examples.md)
