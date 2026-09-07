@@ -879,14 +879,14 @@ export const LANGUAGES = {
   },
   'system-design': {
     label: 'System Design',
-    updated: '2026-09-07 17:18',
+    updated: '2026-09-07 17:19',
     docsPath: '/docs/system-design',
     pagesPath: '/docs/system-design/pages',
     // Syllabus complete 2026-09-07 (session ebd67cf9) — 472 topics, 24 phases, 13 parts. Pages started 2026-09-07 (session 9602e64d): phase 0 in progress.
     phases: [
       {n: 0, slug: 'phase-0-the-interview', name: "What system design interviews test", part: "The method", topics: 13, pages: 13},
       {n: 1, slug: 'phase-1-the-method', name: "The method: requirements to deep dives", part: "The method", topics: 18, pages: 18},
-      {n: 2, slug: 'phase-2-request-path', name: "The request path: DNS to gateway", part: "Network path & caching", topics: 18, pages: 10},
+      {n: 2, slug: 'phase-2-request-path', name: "The request path: DNS to gateway", part: "Network path & caching", topics: 18, pages: 11},
       {n: 3, slug: 'phase-3-caching', name: "Caching everywhere", part: "Network path & caching", topics: 16, pages: 0},
       {n: 4, slug: 'phase-4-storage-engines', name: "Storage engines, transactions and replication", part: "Storage & data", topics: 17, pages: 0},
       {n: 5, slug: 'phase-5-sharding-and-data-estate', name: "Partitioning, sharding and the data estate", part: "Storage & data", topics: 17, pages: 0},

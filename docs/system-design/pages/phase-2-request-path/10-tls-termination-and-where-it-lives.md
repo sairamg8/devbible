@@ -248,4 +248,4 @@ route, and termination moves to the origin.
 
 ---
 
-← Prev: [09 · DNS as a component](09-dns-as-a-component.md) · Index: [Phase 2 — The request path](README.md) · Next → **HTTP/1.1, HTTP/2 and HTTP/3** *(not written yet)*
+← Prev: [09 · DNS as a component](09-dns-as-a-component.md) · Index: [Phase 2 — The request path](README.md) · Next → [11 · HTTP/1.1, HTTP/2 and HTTP/3](11-http-1-1-http-2-and-http-3.md)
