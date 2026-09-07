@@ -12,7 +12,7 @@ as the scheduler most product companies run, and infrastructure as code with a d
 pipeline that can rebuild everything from a repository. The container mechanics are in the
 [Docker track](../../docker/README.md) — its production and delivery phases
 ([10](../../docker/pages/phase-10-production/README.md),
-[12](../../docker/pages/phase-12-delivery-ci/README.md)) — and Node's
+[12](../../docker/pages/phase-12-delivery-and-ci/README.md)) — and Node's
 [deployment phase](../../nodejs/pages/phase-11-deployment/README.md); this part is what
 sits above the container.
 
@@ -103,7 +103,7 @@ healthy.
 | **State** — remote backends with locking, state per environment, secrets that end up in state, importing what already exists, the corrupted state file and its recovery | <span className="db-tier t-master">Master</span> |
 | **Drift and reconciliation** — detecting manual changes, the plan that wants to destroy production, lifecycle rules that prevent it | <span className="db-tier t-master">Master</span> |
 | **Secrets in infrastructure code** — never in plain text in state or repositories; the secrets manager as the source and the code as the reference | <span className="db-tier t-master">Master</span> |
-| **CI/CD pipelines** — build, test, scan, package, deploy; pipeline as code, caching and parallelism, required checks; continues Docker's [delivery phase](../../docker/pages/phase-12-delivery-ci/README.md) | <span className="db-tier t-master">Master</span> |
+| **CI/CD pipelines** — build, test, scan, package, deploy; pipeline as code, caching and parallelism, required checks; continues Docker's [delivery phase](../../docker/pages/phase-12-delivery-and-ci/README.md) | <span className="db-tier t-master">Master</span> |
 | **Deployment strategies** — immutable artifacts, rolling, blue-green, canary; database migrations inside the pipeline using expand-and-contract from [Part 3](03-storage-and-data.md) | <span className="db-tier t-master">Master</span> |
 | **Modules and structure** — reusable modules, a root module per environment, versioned modules; the monolithic configuration that takes forty minutes to plan | <span className="db-tier t-understand">Understand</span> |
 | **Workspaces and environments** — separating dev, staging and production, promotion between them, variables per environment | <span className="db-tier t-understand">Understand</span> |
