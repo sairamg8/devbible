@@ -237,4 +237,4 @@ routing, and the failure walk's "the balancer stops routing to the dead one" act
 
 ---
 
-← Prev: [13 · Designing for cost](13-designing-for-cost.md) · Index: [Phase 1 — The method](README.md) · Next → **Time management in 45 minutes** *(not written yet)*
+← Prev: [13 · Designing for cost](13-designing-for-cost.md) · Index: [Phase 1 — The method](README.md) · Next → [15 · Time management in 45 minutes](15-time-management.md)

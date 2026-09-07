@@ -38,7 +38,7 @@ it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 | 12 | **[The scaling walk](./12-the-scaling-walk.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 13 | **[Designing for cost](./13-designing-for-cost.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 14 | **[Evolution and operations](./14-evolution-and-operations.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
-| 15 | Time management in 45 minutes | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
+| 15 | **[Time management in 45 minutes](./15-time-management.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 16 | Estimation worked examples | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 17 | The same method in writing | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 18 | Diagrams that scale with the conversation | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
