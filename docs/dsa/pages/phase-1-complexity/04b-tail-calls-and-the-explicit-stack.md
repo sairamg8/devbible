@@ -152,4 +152,4 @@ need this because the node is processed on the first pop.
 
 ---
 
-← Prev: [04 · Space and the recursion stack](04-space-and-the-recursion-stack.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → **The common classes and what the limits imply** *(not written yet)*
+← Prev: [04 · Space and the recursion stack](04-space-and-the-recursion-stack.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [05 · The common classes and the limits](05-the-common-classes-and-what-the-limits-imply.md)

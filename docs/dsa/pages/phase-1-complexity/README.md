@@ -24,7 +24,7 @@ to measure instead of analyse, and how to answer "can we do better?" with a reas
 [Phase 0](../phase-0-the-interview-and-practice/README.md) was the method; this is the first
 thing the method needs.
 
-🚧 **4 of 11 topics written (7 files: topics 02, 03 and 04 are each split into two).**
+🚧 **5 of 11 topics written (8 files: topics 02, 03 and 04 are each split into two).**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -35,7 +35,7 @@ thing the method needs.
 | 03b | **[Union-find, and the limits of amortised](./03b-union-find-and-the-limits-of-amortised.md)** | <span className="db-tier t-master">Master</span> | ✅ written — 03 and 03b are one topic in two files |
 | 04 | **[Space and the recursion stack](./04-space-and-the-recursion-stack.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 04b | **[Tail calls, and the explicit stack](./04b-tail-calls-and-the-explicit-stack.md)** | <span className="db-tier t-master">Master</span> | ✅ written — 04 and 04b are one topic in two files |
-| 05 | The common classes and what the limits imply | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 05 | **[The common classes and what the limits imply](./05-the-common-classes-and-what-the-limits-imply.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 06 | Hidden costs | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 07 | Complexity of the built-ins | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 08 | Recurrences and the master theorem | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
