@@ -69,7 +69,7 @@ order of magnitude — rather than a precise number that implies a precision nob
 
 The peak factor is the assumption most often forgotten. Average load designs nothing; the sale
 day, the match start, the ticket window are what the design is for. State the average, then the
-peak, then design for the peak — or say you will shed above it (**04 · Traffic shapes** *(not written yet)*).
+peak, then design for the peak — or say you will shed above it ([04 · Traffic shapes](04-traffic-shapes.md)).
 
 ## The arithmetic in code
 
@@ -208,4 +208,4 @@ interviewer can redirect, and the clause shows you know which digits are load-be
 
 ---
 
-← Prev: [02 · Non-functional requirements](02-non-functional-requirements.md) · Index: [Phase 1 — The method](README.md) · Next → **Traffic shapes** *(not written yet)*
+← Prev: [02 · Non-functional requirements](02-non-functional-requirements.md) · Index: [Phase 1 — The method](README.md) · Next → [04 · Traffic shapes](04-traffic-shapes.md)
