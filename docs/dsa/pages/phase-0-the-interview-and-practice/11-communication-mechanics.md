@@ -162,4 +162,4 @@ the hint in the same breath.
 
 ---
 
-← Prev: [10 · Mock interviews](10-mock-interviews.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → **Java's collections for interviews** *(not written yet)*
+← Prev: [10 · Mock interviews](10-mock-interviews.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [12 · Java's collections](12-javas-collections-for-interviews.md)

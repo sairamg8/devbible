@@ -18,7 +18,7 @@ it. This phase is the method; the language-level implementations live in the
 and [Java's collections phase](../../../java/pages/phase-3-generics-collections/README.md), and
 this track links to them rather than re-teaching them.
 
-🚧 **11 of 14 topics written.**
+🚧 **12 of 14 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -34,7 +34,7 @@ this track links to them rather than re-teaching them.
 | 09 | **[The ladders](./09-the-ladders.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 10 | **[Mock interviews](./10-mock-interviews.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 11 | **[Communication mechanics](./11-communication-mechanics.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
-| 12 | Java's collections for interviews | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
+| 12 | **[Java's collections for interviews](./12-javas-collections-for-interviews.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 13 | How this track relates to the JavaScript track | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
 | 14 | Competitive programming vs interviews | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
 
