@@ -207,4 +207,4 @@ shape the journeys need, sparse enough that one box can be opened.
 
 ---
 
-← Prev: [06 · The data model](06-the-data-model-from-access-patterns.md) · Index: [Phase 1 — The method](README.md) · Next → **Read path and write path, separately** *(not written yet)*
+← Prev: [06 · The data model](06-the-data-model-from-access-patterns.md) · Index: [Phase 1 — The method](README.md) · Next → [08 · Read path and write path](08-read-path-and-write-path.md)

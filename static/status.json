@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-07 08:36",
+  "updated": "2026-09-07 08:38",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -485,7 +485,7 @@
       "phases": "2/24",
       "next": "2 · The request path: DNS to gateway",
       "docs": "/docs/system-design",
-      "updated": "2026-09-07 08:36",
+      "updated": "2026-09-07 08:38",
       "note": null
     },
     {
