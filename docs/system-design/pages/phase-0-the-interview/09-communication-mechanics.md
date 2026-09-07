@@ -208,4 +208,4 @@ interrupted by a redirect has done its job.
 
 ---
 
-← Prev: [08 · Reasoned beats memorised](08-reasoned-wrong-beats-memorised-right.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **How to practise** *(not written yet)*
+← Prev: [08 · Reasoned beats memorised](08-reasoned-wrong-beats-memorised-right.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [10 · How to practise](10-how-to-practise.md)

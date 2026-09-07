@@ -15,7 +15,7 @@ asked.** That is also what a senior engineer is paid for at work, so this phase 
 rubric clearly enough to hit it on purpose. Everything later in the track is a building block; this
 phase is how the building blocks get graded.
 
-🚧 **9 of 13 topics written.**
+🚧 **10 of 13 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -29,7 +29,7 @@ phase is how the building blocks get graded.
 | 07 | **[The common ways to fail](./07-the-common-ways-to-fail.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 08 | **[Why a reasoned wrong answer beats a memorised right one](./08-reasoned-wrong-beats-memorised-right.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 09 | **[Communication mechanics](./09-communication-mechanics.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
-| 10 | How to practise | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
+| 10 | **[How to practise](./10-how-to-practise.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 11 | Whiteboard and remote tooling | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
 | 12 | Primary sources behind the folklore | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
 | 13 | How this track relates to the rest of the bible | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
