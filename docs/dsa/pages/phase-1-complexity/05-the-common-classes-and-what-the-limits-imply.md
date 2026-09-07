@@ -278,4 +278,4 @@ even once is too slow — and in JavaScript it is also a reminder that the value
 
 ---
 
-← Prev: [04b · Tail calls, and the explicit stack](04b-tail-calls-and-the-explicit-stack.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → **Hidden costs** *(not written yet)*
+← Prev: [04b · Tail calls, and the explicit stack](04b-tail-calls-and-the-explicit-stack.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [06 · Hidden costs](06-hidden-costs.md)
