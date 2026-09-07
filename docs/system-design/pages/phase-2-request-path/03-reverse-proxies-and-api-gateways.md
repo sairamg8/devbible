@@ -248,4 +248,4 @@ replicas can die and be replaced without losing it.
 
 ---
 
-← Prev: [02 · Load balancing, layer 4 vs layer 7](02-load-balancing-layer-4-vs-layer-7.md) · Index: [Phase 2 — The request path](README.md) · Next → **Stateless services, and where the state went** *(not written yet)*
+← Prev: [02 · Load balancing, layer 4 vs layer 7](02-load-balancing-layer-4-vs-layer-7.md) · Index: [Phase 2 — The request path](README.md) · Next → [04 · Stateless services, and where the state went](04-stateless-services-and-where-the-state-went.md)
