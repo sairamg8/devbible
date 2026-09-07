@@ -259,4 +259,4 @@ concatenation, sliced strings — as unguaranteed, so the safe code uses `join` 
 
 ---
 
-← Prev: [06b · Hash keys, and the test for hidden loops](06b-hash-keys-and-the-test-for-hidden-loops.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → **Recurrences and the master theorem** *(not written yet)*
+← Prev: [06b · Hash keys, and the test for hidden loops](06b-hash-keys-and-the-test-for-hidden-loops.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [08 · Recurrences and the master theorem](08-recurrences-and-the-master-theorem.md)
