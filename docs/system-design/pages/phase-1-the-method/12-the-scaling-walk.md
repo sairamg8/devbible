@@ -255,4 +255,4 @@ hundred times, partitioning orders by time is the first real sharding step.
 
 ---
 
-← Prev: [11b · The load walk and the price of redundancy](11b-the-load-walk-and-the-price-of-redundancy.md) · Index: [Phase 1 — The method](README.md) · Next → **Designing for cost** *(not written yet)*
+← Prev: [11b · The load walk and the price of redundancy](11b-the-load-walk-and-the-price-of-redundancy.md) · Index: [Phase 1 — The method](README.md) · Next → [13 · Designing for cost](13-designing-for-cost.md)
