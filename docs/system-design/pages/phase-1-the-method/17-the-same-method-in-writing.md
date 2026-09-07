@@ -270,4 +270,4 @@ step back are the other tells; a description has none of them.
 
 ---
 
-← Prev: [16 · Estimation worked examples](16-estimation-worked-examples.md) · Index: [Phase 1 — The method](README.md) · Next → **Diagrams that scale with the conversation** *(not written yet)*
+← Prev: [16 · Estimation worked examples](16-estimation-worked-examples.md) · Index: [Phase 1 — The method](README.md) · Next → [18 · Diagrams that scale with the conversation](18-diagrams-that-scale.md)

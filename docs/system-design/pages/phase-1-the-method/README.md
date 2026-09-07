@@ -41,7 +41,7 @@ it, in order, on the bible's [PERN storefront](../../../real-world/README.md).
 | 15 | **[Time management in 45 minutes](./15-time-management.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 16 | **[Estimation worked examples](./16-estimation-worked-examples.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 17 | **[The same method in writing](./17-the-same-method-in-writing.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
-| 18 | Diagrams that scale with the conversation | <span className="db-tier t-know">Know</span> | ⬜ not written yet |
+| 18 | **[Diagrams that scale with the conversation](./18-diagrams-that-scale.md)** | <span className="db-tier t-know">Know</span> | ✅ written |
 
 ## Phase gate
 
