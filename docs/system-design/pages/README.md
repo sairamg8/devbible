@@ -19,7 +19,7 @@ import Progress from '@site/src/components/Progress';
 |---|---|---|
 | 0 · [What system design interviews test](./phase-0-the-interview/README.md) | 13 | ✅ **13 of 13** — complete 2026-09-07, 14 files |
 | 1 · [The method: requirements to deep dives](./phase-1-the-method/README.md) | 18 | ✅ **18 of 18** — complete 2026-09-07, 19 files |
-| 2 · [The request path: DNS to gateway](./phase-2-request-path/README.md) | 18 | 🚧 **8 of 18** — 8 files on disk |
+| 2 · [The request path: DNS to gateway](./phase-2-request-path/README.md) | 18 | 🚧 **9 of 18** — 9 files on disk |
 | 3 · Caching everywhere | 16 | Planned |
 | 4 · Storage engines, transactions and replication | 17 | Planned |
 | 5 · Partitioning, sharding and the data estate | 17 | Planned |

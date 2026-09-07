@@ -293,4 +293,4 @@ per checkout, which is the sale-day outage.
 
 ---
 
-← Prev: [07 · Rate limiting](07-rate-limiting.md) · Index: [Phase 2 — The request path](README.md) · Next → **DNS as a component** *(not written yet)*
+← Prev: [07 · Rate limiting](07-rate-limiting.md) · Index: [Phase 2 — The request path](README.md) · Next → [09 · DNS as a component](09-dns-as-a-component.md)
