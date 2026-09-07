@@ -796,13 +796,15 @@
     }
   },
   "system-design": {
-    "pages": 14,
-    "validated": 14,
+    "pages": 15,
+    "validated": 15,
     "phases": {
-      "phase-0-the-interview": 14
+      "phase-0-the-interview": 14,
+      "phase-1-the-method": 1
     },
     "validatedPhases": {
-      "phase-0-the-interview": 14
+      "phase-0-the-interview": 14,
+      "phase-1-the-method": 1
     }
   },
   "tanstack-query": {

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-07 08:24",
+  "updated": "2026-09-07 08:27",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -10,9 +10,9 @@
     "parked": 2,
     "blocked": 1,
     "topics": 3955,
-    "completed": 2470,
-    "pending": 1485,
-    "percent": 62
+    "completed": 2488,
+    "pending": 1467,
+    "percent": 63
   },
   "importedTotals": {
     "tracks": 11,
@@ -476,16 +476,16 @@
       "key": "system-design",
       "label": "System Design",
       "status": "in-progress",
-      "percent": 3,
+      "percent": 7,
       "counts": "syllabus topics explained",
       "topics": 472,
-      "completed": 13,
-      "pending": 459,
+      "completed": 31,
+      "pending": 441,
       "imported": false,
-      "phases": "1/24",
-      "next": "1 · The method: requirements to deep dives",
+      "phases": "2/24",
+      "next": "2 · The request path: DNS to gateway",
       "docs": "/docs/system-design",
-      "updated": "2026-09-07 08:00",
+      "updated": "2026-09-07 08:27",
       "note": null
     },
     {
