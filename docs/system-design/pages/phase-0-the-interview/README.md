@@ -15,14 +15,14 @@ asked.** That is also what a senior engineer is paid for at work, so this phase 
 rubric clearly enough to hit it on purpose. Everything later in the track is a building block; this
 phase is how the building blocks get graded.
 
-🚧 **2 of 13 topics written.**
+🚧 **3 of 13 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
 | 01 | **[What "design" means at each level](./01-what-design-means-at-each-level.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 01b | **[Staff, and reading the room](./01b-staff-and-reading-the-room.md)** | <span className="db-tier t-master">Master</span> | ✅ written — 01 and 01b are one topic in two files |
 | 02 | **[The three rounds that carry the word "design"](./02-the-three-design-rounds.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
-| 03 | The rubric interviewers actually hold | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
+| 03 | **[The rubric interviewers actually hold](./03-the-rubric.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 04 | The vocabulary contract | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 05 | The latency ladder | <span className="db-tier t-master">Master</span> | ⬜ not written yet |
 | 06 | Reading the question | <span className="db-tier t-master">Master</span> | ⬜ not written yet |

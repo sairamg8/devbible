@@ -286,4 +286,4 @@ failing test.
 
 ---
 
-← Prev: [01b · Staff, and reading the room](01b-staff-and-reading-the-room.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **The rubric interviewers actually hold** *(not written yet)*
+← Prev: [01b · Staff, and reading the room](01b-staff-and-reading-the-room.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [03 · The rubric](03-the-rubric.md)
