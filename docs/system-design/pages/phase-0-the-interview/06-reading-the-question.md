@@ -231,4 +231,4 @@ reading's job is to produce the requirements line and the numbers; once it has, 
 
 ---
 
-← Prev: [05 · The latency ladder](05-the-latency-ladder.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → **The common ways to fail** *(not written yet)*
+← Prev: [05 · The latency ladder](05-the-latency-ladder.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [07 · The common ways to fail](07-the-common-ways-to-fail.md)

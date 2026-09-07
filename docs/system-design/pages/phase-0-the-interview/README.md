@@ -15,7 +15,7 @@ asked.** That is also what a senior engineer is paid for at work, so this phase 
 rubric clearly enough to hit it on purpose. Everything later in the track is a building block; this
 phase is how the building blocks get graded.
 
-🚧 **6 of 13 topics written.**
+🚧 **7 of 13 topics written.**
 
 | # | Page | Tier | State |
 |---|---|---|---|
@@ -26,7 +26,7 @@ phase is how the building blocks get graded.
 | 04 | **[The vocabulary contract](./04-the-vocabulary-contract.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 05 | **[The latency ladder](./05-the-latency-ladder.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
 | 06 | **[Reading the question](./06-reading-the-question.md)** | <span className="db-tier t-master">Master</span> | ✅ written |
-| 07 | The common ways to fail | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
+| 07 | **[The common ways to fail](./07-the-common-ways-to-fail.md)** | <span className="db-tier t-understand">Understand</span> | ✅ written |
 | 08 | Why a reasoned wrong answer beats a memorised right one | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 09 | Communication mechanics | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
 | 10 | How to practise | <span className="db-tier t-understand">Understand</span> | ⬜ not written yet |
