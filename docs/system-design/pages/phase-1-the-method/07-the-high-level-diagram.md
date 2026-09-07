@@ -120,7 +120,7 @@ internals appear before the cart, the CDN or the callback exist, and the intervi
 the shape of the system or trace a journey across it. The other failure is never zooming: a
 container diagram with no deep dive is breadth with nothing under it. The sequence — container
 diagram, numbered flows, narration, *then* one component-level zoom — is what the rubric
-rewards, and **09 · Choosing the deep dives** *(not written yet)*
+rewards, and [09 · Choosing the deep dives](09-choosing-the-deep-dives.md)
 is how the box is chosen.
 
 ## What stays off this diagram

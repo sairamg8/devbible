@@ -250,4 +250,4 @@ otherwise a bug on the confirmation page.
 
 ---
 
-← Prev: [07 · The high-level diagram](07-the-high-level-diagram.md) · Index: [Phase 1 — The method](README.md) · Next → **Choosing the deep dives** *(not written yet)*
+← Prev: [07 · The high-level diagram](07-the-high-level-diagram.md) · Index: [Phase 1 — The method](README.md) · Next → [09 · Choosing the deep dives](09-choosing-the-deep-dives.md)
