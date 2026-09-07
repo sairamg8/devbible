@@ -260,4 +260,4 @@ writers. Each is a minute in the sketch that would have saved ten minutes later.
 
 ---
 
-← Prev: [04 · Traffic shapes](04-traffic-shapes.md) · Index: [Phase 1 — The method](README.md) · Next → **The data model from the access patterns** *(not written yet)*
+← Prev: [04 · Traffic shapes](04-traffic-shapes.md) · Index: [Phase 1 — The method](README.md) · Next → [06 · The data model](06-the-data-model-from-access-patterns.md)
