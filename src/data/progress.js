@@ -522,6 +522,7 @@ export const LANGUAGES = {
       {n: 14, slug: '14-testing-integration', name: "Testing integration", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
       {n: 15, slug: '15-deployment-considerations', name: "Deployment considerations", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
       {n: 16, slug: '16-migration-recipes', name: "Migration recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 17, slug: '17-the-2026-toolchain-landscape', name: "The 2026 toolchain landscape", part: 'Written for this bible', topics: 1, pages: 6, verified: 6},
     ],
   },
   'webpack': {
@@ -756,6 +757,7 @@ export const LANGUAGES = {
       {n: 14, slug: '14-optimistic-updates-patterns', name: "Optimistic updates patterns", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
       {n: 15, slug: '15-testing-tanstack-query', name: "Testing tanstack query", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
       {n: 16, slug: '16-migration-recipes', name: "Migration recipes", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 17, slug: '17-the-2026-toolchain-landscape', name: "The 2026 toolchain landscape", part: 'Written for this bible', topics: 1, pages: 6, verified: 6},
     ],
   },
   'framer-motion': {

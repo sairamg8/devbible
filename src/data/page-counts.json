@@ -882,8 +882,8 @@
     }
   },
   "vite": {
-    "pages": 33,
-    "validated": 24,
+    "pages": 39,
+    "validated": 30,
     "phases": {
       "01-core-architecture": 1,
       "02-cli-and-scaffolding": 1,
@@ -900,7 +900,8 @@
       "13-worker-and-wasm-support": 1,
       "14-testing-integration": 1,
       "15-deployment-considerations": 1,
-      "16-migration-recipes": 1
+      "16-migration-recipes": 1,
+      "17-the-2026-toolchain-landscape": 6
     },
     "validatedPhases": {
       "01-core-architecture": 1,
@@ -918,7 +919,8 @@
       "13-worker-and-wasm-support": 0,
       "14-testing-integration": 0,
       "15-deployment-considerations": 0,
-      "16-migration-recipes": 0
+      "16-migration-recipes": 0,
+      "17-the-2026-toolchain-landscape": 6
     }
   },
   "web-vitals-performance": {

@@ -24,7 +24,12 @@ older major versions. Treat those as a strong draft, not as verified reference.
 
 :::
 
-**16 topics** across 16 sections. ✅ = re-validated against the Vite 8 docs.
+**17 topics.** ✅ = re-validated against the Vite 8 docs · 🆕 = written new, not imported.
+
+🆕 **Topic 17 answers the questions the rest of the track cannot**, because they are about the
+tools *around* Vite: is webpack still relevant, is Babel, what can webpack do that Vite cannot,
+and what else does a 2026 frontend project have to choose. Every version in it was fetched from
+`registry.npmjs.org` on 2026-09-07.
 
 | # | Section | Topics |
 |---|---|---|
@@ -44,6 +49,7 @@ older major versions. Treat those as a strong draft, not as verified reference.
 | 14 | [Testing integration](pages/14-testing-integration/01-vitest-relationship.md) | 1 |
 | 15 | [Deployment considerations](pages/15-deployment-considerations/01-shipping-the-build.md) | 1 |
 | 16 | [Migration recipes](pages/16-migration-recipes/01-cra-to-vite-migration.md) | 1 |
+| 17 | [The 2026 toolchain landscape](pages/17-the-2026-toolchain-landscape/01-the-2026-bundler-landscape.md) ✅ 🆕 | 6 |
 
 import Progress from '@site/src/components/Progress';
 
