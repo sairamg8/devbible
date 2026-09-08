@@ -68,7 +68,7 @@ function useToggleTodo() {
 }
 ```
 
-**Scope the id to the cache key you write, not to the mutation.** `scope: { id: 'todos' }` on every mutation that writes `['todos']` — the toggle, the delete, the rename — is the invariant that makes the snapshot valid, because it guarantees no other scoped mutation's optimistic write is in the cache when you take it. Scoping by entity id (`scope: { id: `todo-${todo.id}` }`) does *not* fix this: two different todos still both write the one list key, which is the exact interleaving above.
+**Scope the id to the cache key you write, not to the mutation.** `scope: { id: 'todos' }` on every mutation that writes `['todos']` — the toggle, the delete, the rename — is the invariant that makes the snapshot valid, because it guarantees no other scoped mutation's optimistic write is in the cache when you take it. Scoping by entity id (``scope: { id: `todo-${todo.id}` }``) does *not* fix this: two different todos still both write the one list key, which is the exact interleaving above.
 
 🔴 **What serialisation costs you is the point of optimistic updates.** Serial mutations means the second `mutationFn` does not start until the first has fully settled, invalidation included if you return that promise. Ten rapid toggles become ten sequential round-trips. The *UI* still updates instantly for each — `onMutate` for a queued mutation runs when its turn comes, not on click. ⚠️ **The documentation states the mutations run in serial; it does not state at what point a queued mutation's `onMutate` fires relative to the previous one's settling.** I could not confirm it, so do not build a "the optimistic write is still instant" claim on it — measure it in your app before promising a product manager anything.
 

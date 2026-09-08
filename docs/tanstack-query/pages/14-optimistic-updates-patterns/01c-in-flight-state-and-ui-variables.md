@@ -141,7 +141,7 @@ Concretely, go back to the cache when:
 
 **★ The provisional row and the real row coexist for one refetch.** The mutation succeeds, `isPending` goes false, the row rendered from `variables` disappears — and the real row only arrives when the invalidation refetch resolves. Return the invalidation promise from `onSettled` and the mutation stays pending across that gap, so the provisional row survives until the real one exists. Omit the return and there is a visible frame with neither.
 
-**★ A pending row rendered from `variables` needs a React `key` that will not collide with a real id.** The server has not assigned one. Prefixing (`key={\`pending-${i}\`}`) is enough for an append-only list; for anything reorderable, generate the id client-side in the component and pass it in `variables`, so the same identity carries through the mutation and matches the server row afterwards.
+**★ A pending row rendered from `variables` needs a React `key` that will not collide with a real id.** The server has not assigned one. Prefixing (``key={`pending-${i}`}``) is enough for an append-only list; for anything reorderable, generate the id client-side in the component and pass it in `variables`, so the same identity carries through the mutation and matches the server row afterwards.
 
 **★ Unmounting the component holding the mutation removes the optimistic UI but not the mutation.** The write continues — that is why the docs warn that call-site callbacks *"won't run if your component unmounts before the mutation finishes"* — but nothing is rendering `variables` any more, so the user's pending change appears to have been discarded. `useMutationState` at a stable level of the tree is the fix; the mutation state lives in the client, not the component.
 

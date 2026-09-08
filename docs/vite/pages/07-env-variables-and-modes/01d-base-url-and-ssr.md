@@ -22,7 +22,7 @@ compile-time facts about how the bundle was produced.
 
 ### `BASE_URL` mirrors config, it does not detect deployment
 
-> *"`import.meta.env.BASE_URL`: {string} the base url the app is being served from. This is determined by the `base` config option."* — [Env Variables and Modes](https://vite.dev/guide/env-and-mode)
+> *"`import.meta.env.BASE_URL`: `{string}` the base url the app is being served from. This is determined by the `base` config option."* — [Env Variables and Modes](https://vite.dev/guide/env-and-mode)
 
 Read the second sentence as the definition and the first as a description of the intent. `BASE_URL`
 is a **copy of your `base` option**, substituted into the bundle at build time. It does not read a
@@ -42,7 +42,7 @@ It also always ends with a trailing slash, which is where the second-most-common
 
 ### `SSR` is a per-graph flag
 
-> *"`import.meta.env.SSR`: {boolean} whether the app is running in the server."*
+> *"`import.meta.env.SSR`: `{boolean}` whether the app is running in the server."*
 
 The word doing the work is *"running"* — but the value is fixed at build time, so what it really
 records is **which graph this module was built into.** Vite builds an SSR bundle and a client
