@@ -45,10 +45,30 @@ jobs:
           set -o pipefail
           yarn build 2>&1 | tee build.log
 
-      # onBrokenLinks is 'warn', so dead links never fail the build on their
-      # own. Surface them in the job summary. There are known pre-existing
-      # ones, so this reports rather than blocks — flip to `exit 1` once the
-      # count is zero to keep it that way.
+      # 🔴 There are TWO link settings and they behave in OPPOSITE ways. This
+      # comment claimed both were 'warn' until 2026-09-08; they have not been
+      # since 2026-09-05, which is exactly the sort of thing you read while
+      # debugging a red deploy and believe.
+      #
+      #   docusaurus.config.js:72  onBrokenLinks: 'throw'
+      #     A broken ROUTE link fails the Build step above outright. This
+      #     reporting step is NOT what catches those — by the time it runs the
+      #     build is already red.
+      #
+      #   docusaurus.config.js:75  onBrokenMarkdownLinks: 'warn'
+      #     A broken MARKDOWN link only warns. This step is the ONLY place
+      #     those ever surface, which is why it exists and why it is
+      #     `if: always()`.
+      #
+      # So the count below is the markdown-link class, plus whatever the build
+      # printed before throwing. `exit 1` here would gate the warn-only class
+      # once it reaches zero; the throwing class already gates itself.
+      #
+      # 🔴 Why any of this matters: when Build fails, `deploy` is SKIPPED, not
+      # failed. The workflow shows ONE X, not two, and the live site keeps
+      # serving the last good version — so a red deploy looks like no deploy.
+      # This checkout is shared, so one lane's dangling link blocks every other
+      # lane's publish. Run `yarn linkcheck` before reporting a file done.
       - name: Report broken links
         if: always()
         shell: bash
