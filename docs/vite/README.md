@@ -49,8 +49,8 @@ and what else does a 2026 frontend project have to choose. Every version in it w
 | 12 | [Path resolution and aliases](pages/12-path-resolution-and-aliases/01-resolve-options.md) ✅ | 15 |
 | 13 | [Worker and wasm support](pages/13-worker-and-wasm-support/01-advanced-runtime-targets.md) ✅ | 5 |
 | 14 | [Testing integration](pages/14-testing-integration/01-vitest-relationship.md) ✅ | 10 |
-| 15 | [Deployment considerations](pages/15-deployment-considerations/01-shipping-the-build.md) | 1 |
-| 16 | [Migration recipes](pages/16-migration-recipes/01-cra-to-vite-migration.md) | 1 |
+| 15 | [Deployment considerations](pages/15-deployment-considerations/01-shipping-the-build.md) ✅ | 15 |
+| 16 | [Migration recipes](pages/16-migration-recipes/01-cra-to-vite-migration.md) ✅ | 15 |
 | 17 | [The 2026 toolchain landscape](pages/17-the-2026-toolchain-landscape/01-the-2026-bundler-landscape.md) ✅ 🆕 | 6 |
 
 import Progress from '@site/src/components/Progress';
