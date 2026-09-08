@@ -5262,9 +5262,9 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1788660962.4280937,
-    "seen": 1788661949.1189709,
-    "ast_hash": "00cc8d9c48daeb46f22ff171e6e04935",
+    "mtime": 1788699821.9475946,
+    "seen": 1788798023.2410529,
+    "ast_hash": "10435fb861de5bdbd2751bc10a0dee9b",
     "semantic_hash": ""
   },
   "sandbox/css/.ffprof/ExperimentStoreData.json": {
@@ -9900,10 +9900,10 @@
     "semantic_hash": "61ea76d1f3de507e99732ae61dddca7e"
   },
   "sidebars.js": {
-    "mtime": 1788399802.3842816,
-    "seen": 1788581691.4701772,
-    "ast_hash": "f9acfa885a47a0e467271c9dfc2ad11e",
-    "semantic_hash": "f9acfa885a47a0e467271c9dfc2ad11e"
+    "mtime": 1788745869.276349,
+    "seen": 1788798023.2419178,
+    "ast_hash": "472ae9d6a2c10c1106d072cca3863429",
+    "semantic_hash": ""
   },
   "src/components/Progress/index.js": {
     "mtime": 1788653174.796717,
@@ -9924,9 +9924,9 @@
     "semantic_hash": "03c2cef8ff142e14b3e4e9e2cbe189ae"
   },
   "src/data/progress.js": {
-    "mtime": 1788653174.7982054,
-    "seen": 1788661949.1198058,
-    "ast_hash": "611bd334f1e624d43a99aad690e71130",
+    "mtime": 1788794675.3527136,
+    "seen": 1788798023.2419293,
+    "ast_hash": "c0b2ea81d1000360f54dda91a64751d5",
     "semantic_hash": ""
   },
   "src/pages/index.js": {
@@ -9978,16 +9978,16 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1788401635.5442135,
-    "seen": 1788627017.7977164,
-    "ast_hash": "c53f666bf84f0fc628becdc26c9e0870",
-    "semantic_hash": "c53f666bf84f0fc628becdc26c9e0870"
+    "mtime": 1788683974.8428571,
+    "seen": 1788798023.2419875,
+    "ast_hash": "62d7ae573529a3e5e836756dbdbf2426",
+    "semantic_hash": ""
   },
   "docs/README.md": {
-    "mtime": 1788445728.1198325,
-    "seen": 1788627017.7977192,
-    "ast_hash": "42c511bcf313a069e092e6082b0c94d8",
-    "semantic_hash": "42c511bcf313a069e092e6082b0c94d8"
+    "mtime": 1788784390.985588,
+    "seen": 1788798023.2419908,
+    "ast_hash": "8b7f3faa3acf6bf014136ab3b071f94b",
+    "semantic_hash": ""
   },
   "docs/babel/README.md": {
     "mtime": 1786706138.9201813,
@@ -9996,28 +9996,28 @@
     "semantic_hash": "f7308defd536269439c22f0de162178f"
   },
   "docs/babel/pages/01-why-babel-and-the-compiler-landscape/01-what-babel-is-and-when-it-matters.md": {
-    "mtime": 1786706138.9211934,
-    "seen": 1787902473.8675084,
-    "ast_hash": "d7bab67d8d4fa84c85519acd6b5a6243",
-    "semantic_hash": "d7bab67d8d4fa84c85519acd6b5a6243"
+    "mtime": 1788711382.9467168,
+    "seen": 1788798023.2421663,
+    "ast_hash": "d9b2c0563b74a945ab49dd3c36b64228",
+    "semantic_hash": ""
   },
   "docs/babel/pages/02-core-compilation-pipeline/01-parse-transform-generate-and-api.md": {
-    "mtime": 1786706138.9213216,
-    "seen": 1787902473.8675108,
-    "ast_hash": "8b3f744a22a56b5003b02f1207ef7fca",
-    "semantic_hash": "8b3f744a22a56b5003b02f1207ef7fca"
+    "mtime": 1788711450.6141055,
+    "seen": 1788798023.2421672,
+    "ast_hash": "4d51b9b74a0c66cd1ea1778a8f4192de",
+    "semantic_hash": ""
   },
   "docs/babel/pages/03-configuration-system/01-config-files-root-env-overrides.md": {
-    "mtime": 1786706138.9214866,
-    "seen": 1787902473.8675132,
-    "ast_hash": "af3496d1d82f0d83c814ad67bb0b5ae7",
-    "semantic_hash": "af3496d1d82f0d83c814ad67bb0b5ae7"
+    "mtime": 1788711526.8104844,
+    "seen": 1788798023.2421684,
+    "ast_hash": "42dcd3cd34abb1b6547f3b1623f10a69",
+    "semantic_hash": ""
   },
   "docs/babel/pages/04-presets/01-env-react-typescript-and-framework.md": {
-    "mtime": 1786706138.9216635,
-    "seen": 1787902473.8675153,
-    "ast_hash": "163f62aaaff96a11104d64faf9f7455b",
-    "semantic_hash": "163f62aaaff96a11104d64faf9f7455b"
+    "mtime": 1788711780.1969197,
+    "seen": 1788798023.2421691,
+    "ast_hash": "127c7c62c44e0d07edddd8349f1ea23f",
+    "semantic_hash": ""
   },
   "docs/babel/pages/05-plugin-ecosystem/01-syntax-transform-stage-macros.md": {
     "mtime": 1786706138.9218247,
@@ -13188,10 +13188,10 @@
     "semantic_hash": "0378b128720d8851341016c197fb74da"
   },
   "docs/expressjs/pages/phase-5-errors/README.md": {
-    "mtime": 1786709294.1287534,
-    "seen": 1787902473.868648,
-    "ast_hash": "12a3f033ddc9bdc0f981627499ccbbf3",
-    "semantic_hash": "12a3f033ddc9bdc0f981627499ccbbf3"
+    "mtime": 1788709779.7568376,
+    "seen": 1788798023.242853,
+    "ast_hash": "620833e8d62d83e4f90a1f7b803b3594",
+    "semantic_hash": ""
   },
   "docs/expressjs/pages/phase-6-rest-surface/01-rest-resources/01-nouns-collections-items.md": {
     "mtime": 1786707628.7409084,
@@ -13632,10 +13632,10 @@
     "semantic_hash": "853a59640ad6f5a5ef7acb4ee2a62a62"
   },
   "docs/expressjs/syllabus/02-http-surface.md": {
-    "mtime": 1786414026.6942983,
-    "seen": 1787902473.868796,
-    "ast_hash": "16d29fe0f8fef65884bd420d27a5de47",
-    "semantic_hash": "16d29fe0f8fef65884bd420d27a5de47"
+    "mtime": 1788709779.7511847,
+    "seen": 1788798023.2429981,
+    "ast_hash": "6970ec15c61c98999e431fad8d21fb59",
+    "semantic_hash": ""
   },
   "docs/expressjs/syllabus/03-api-product.md": {
     "mtime": 1786414245.4358675,
@@ -13662,15 +13662,15 @@
     "semantic_hash": ""
   },
   "docs/framer-motion/pages/02-basic-animation-props/01-the-core-prop-triad.md": {
-    "mtime": 1788661939.1587312,
-    "seen": 1788661949.1205003,
-    "ast_hash": "25a94596c4284af11ff79e46c4010271",
+    "mtime": 1788662102.7160692,
+    "seen": 1788798023.2430074,
+    "ast_hash": "84bb5664a7a17cfe65f64d521b507fc8",
     "semantic_hash": ""
   },
   "docs/framer-motion/pages/03-transition-types/01-timing-models.md": {
-    "mtime": 1788661889.4364364,
-    "seen": 1788661949.1205013,
-    "ast_hash": "c0ee56ad4e086a4dcbd6be77018cbc50",
+    "mtime": 1788661993.738987,
+    "seen": 1788798023.2430136,
+    "ast_hash": "11d471cdf071f886264128dc443f3a66",
     "semantic_hash": ""
   },
   "docs/framer-motion/pages/04-variants/01-reusable-named-states.md": {
@@ -13680,15 +13680,15 @@
     "semantic_hash": ""
   },
   "docs/framer-motion/pages/05-gestures/01-interaction-driven-animation.md": {
-    "mtime": 1788661857.0492446,
-    "seen": 1788661949.1205027,
-    "ast_hash": "acc4b59d97e3bc27b3772d9b548477d1",
+    "mtime": 1788662342.9428484,
+    "seen": 1788798023.2430189,
+    "ast_hash": "07cf51618c6f09f7cd218b0abbba2d0b",
     "semantic_hash": ""
   },
   "docs/framer-motion/pages/06-animatepresence/01-exit-animations.md": {
-    "mtime": 1788661943.101778,
-    "seen": 1788661949.1205037,
-    "ast_hash": "dc9cd3c405d9dd0297cf827cf487bd58",
+    "mtime": 1788662184.2950263,
+    "seen": 1788798023.2430263,
+    "ast_hash": "b38b970b50ce42a8a9ec5d759d06d395",
     "semantic_hash": ""
   },
   "docs/framer-motion/pages/07-layout-animations/01-automatic-layout-transitions.md": {
@@ -13698,9 +13698,9 @@
     "semantic_hash": ""
   },
   "docs/framer-motion/pages/08-scroll-linked-animations/01-scroll-reactive-motion.md": {
-    "mtime": 1788660962.6004038,
-    "seen": 1788661949.120505,
-    "ast_hash": "e503bb271a52a0c13b65fe7ce362264c",
+    "mtime": 1788662549.2593215,
+    "seen": 1788798023.2430403,
+    "ast_hash": "8cf483879a8608512e08461664c6f376",
     "semantic_hash": ""
   },
   "docs/framer-motion/pages/09-motion-values/01-imperative-value-tracking.md": {
@@ -14016,64 +14016,64 @@
     "semantic_hash": "29f492241880a4d727d3e1e30e69c843"
   },
   "docs/git/pages/phase-1-everyday-loop/03-git-commit.md": {
-    "mtime": 1786708814.9637606,
-    "seen": 1787902473.8689268,
-    "ast_hash": "7d53ce534026653cbce57c70c2090abb",
-    "semantic_hash": "7d53ce534026653cbce57c70c2090abb"
+    "mtime": 1788709786.3184302,
+    "seen": 1788798023.2431056,
+    "ast_hash": "17e4e0259cf1ff6d354abf7dd3f9bb8b",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-1-everyday-loop/04-git-diff.md": {
-    "mtime": 1786708976.077722,
-    "seen": 1787902473.8689284,
-    "ast_hash": "7a2e2a23f5fe83c7b7150d86b5be0bc9",
-    "semantic_hash": "7a2e2a23f5fe83c7b7150d86b5be0bc9"
+    "mtime": 1788709825.2825828,
+    "seen": 1788798023.2431068,
+    "ast_hash": "edb0a6f57450bb149eb284c8fac1c8ea",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-1-everyday-loop/05-gitignore.md": {
-    "mtime": 1786708976.0781176,
-    "seen": 1787902473.8689306,
-    "ast_hash": "b2b77dc5af0a62d838793fa9775c76a2",
-    "semantic_hash": "b2b77dc5af0a62d838793fa9775c76a2"
+    "mtime": 1788709866.4016235,
+    "seen": 1788798023.2431076,
+    "ast_hash": "eb9334b04903b7b38890f980165cf785",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-1-everyday-loop/06-ignoring-does-not-untrack.md": {
-    "mtime": 1786709552.9569848,
-    "seen": 1787902473.8689332,
-    "ast_hash": "f70b5637753d3eca1d040a06c93786f5",
-    "semantic_hash": "f70b5637753d3eca1d040a06c93786f5"
+    "mtime": 1788709866.4169412,
+    "seen": 1788798023.2431083,
+    "ast_hash": "1d41f4c2a528dbb97644dbdda516bc75",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-1-everyday-loop/07-switch-and-restore.md": {
-    "mtime": 1786709480.843846,
-    "seen": 1787902473.8689349,
-    "ast_hash": "c0e3c34e8506840f4ee110ec84b4a609",
-    "semantic_hash": "c0e3c34e8506840f4ee110ec84b4a609"
+    "mtime": 1788709923.1840515,
+    "seen": 1788798023.2431095,
+    "ast_hash": "4bf46b8c8cf55074ff62e0d1d5276d20",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-1-everyday-loop/08-undo-before-you-push.md": {
-    "mtime": 1786709863.8641994,
-    "seen": 1787902473.868937,
-    "ast_hash": "08efc54d424408d902d3d5455ebcc79b",
-    "semantic_hash": "08efc54d424408d902d3d5455ebcc79b"
+    "mtime": 1788709923.1993237,
+    "seen": 1788798023.2431104,
+    "ast_hash": "ed0af86896e9b54be91ed799827e4d95",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-1-everyday-loop/09-git-log.md": {
-    "mtime": 1786709863.8648937,
-    "seen": 1787902473.8689387,
-    "ast_hash": "ecf2895435499b6eddb7cf8d513ee785",
-    "semantic_hash": "ecf2895435499b6eddb7cf8d513ee785"
+    "mtime": 1788709972.0205076,
+    "seen": 1788798023.2431111,
+    "ast_hash": "789aae6ae19dc5c5392499c04f7f435d",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-1-everyday-loop/10-commit-messages.md": {
-    "mtime": 1786709863.8645756,
-    "seen": 1787902473.8689408,
-    "ast_hash": "a6c4352140916af648b5c0f612f268a4",
-    "semantic_hash": "a6c4352140916af648b5c0f612f268a4"
+    "mtime": 1788709972.0329099,
+    "seen": 1788798023.2431118,
+    "ast_hash": "1c0d593ecd9af0f415a048d695089036",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-1-everyday-loop/11-git-stash.md": {
-    "mtime": 1786709789.107182,
-    "seen": 1787902473.8689425,
-    "ast_hash": "37330cbde6822eb3a4027fe1ce820f14",
-    "semantic_hash": "37330cbde6822eb3a4027fe1ce820f14"
+    "mtime": 1788710018.2017365,
+    "seen": 1788798023.243113,
+    "ast_hash": "e59e08b4219b42a4885eb3b9008a1854",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-1-everyday-loop/12-removing-and-moving.md": {
-    "mtime": 1786709848.1674378,
-    "seen": 1787902473.8689444,
-    "ast_hash": "bdb9031e30f86b46395a7f1471b208cb",
-    "semantic_hash": "bdb9031e30f86b46395a7f1471b208cb"
+    "mtime": 1788710018.2139437,
+    "seen": 1788798023.2431138,
+    "ast_hash": "ae45da36bf21976c3b57f3cdfd5a900e",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-1-everyday-loop/README.md": {
     "mtime": 1786709883.8159971,
@@ -14082,64 +14082,64 @@
     "semantic_hash": "e301af5ea9dff9eb01c0feb09a1460e1"
   },
   "docs/git/pages/phase-2-branching-merging/01-a-branch-is-a-pointer.md": {
-    "mtime": 1786709949.3898764,
-    "seen": 1787902473.8689482,
-    "ast_hash": "7511973e545eaa120c684e6ea4b021ab",
-    "semantic_hash": "7511973e545eaa120c684e6ea4b021ab"
+    "mtime": 1788710063.7241094,
+    "seen": 1788798023.2431157,
+    "ast_hash": "7a873b569db1349d59e6b86efc92a843",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-2-branching-merging/02-fast-forward-vs-merge.md": {
-    "mtime": 1786710002.625107,
-    "seen": 1787902473.8689504,
-    "ast_hash": "50eea557613e0084355a60be6f6ec4e5",
-    "semantic_hash": "50eea557613e0084355a60be6f6ec4e5"
+    "mtime": 1788710063.7382593,
+    "seen": 1788798023.2431166,
+    "ast_hash": "d96ddea0e4c49c48cabc556335df444b",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-2-branching-merging/03-three-way-merge.md": {
-    "mtime": 1786710047.6983025,
-    "seen": 1787902473.8689518,
-    "ast_hash": "e2f8f77fee4f0793501bc05ce949ea73",
-    "semantic_hash": "e2f8f77fee4f0793501bc05ce949ea73"
+    "mtime": 1788710109.2898583,
+    "seen": 1788798023.2431173,
+    "ast_hash": "a222df9341197dea415804c9a708bb18",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-2-branching-merging/04-resolving-conflicts.md": {
-    "mtime": 1786710100.0555294,
-    "seen": 1787902473.8689537,
-    "ast_hash": "dd343902322ba1e7b255158a06cbdb56",
-    "semantic_hash": "dd343902322ba1e7b255158a06cbdb56"
+    "mtime": 1788710109.3026662,
+    "seen": 1788798023.243118,
+    "ast_hash": "1e53ecf4ce310fc11eddb2dfacdd10d3",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-2-branching-merging/05-git-rebase.md": {
-    "mtime": 1786710159.1547854,
-    "seen": 1787902473.8689554,
-    "ast_hash": "e123244922311bc642fff62d3b5a5280",
-    "semantic_hash": "e123244922311bc642fff62d3b5a5280"
+    "mtime": 1788710148.8724933,
+    "seen": 1788798023.243119,
+    "ast_hash": "a38364b38a24f089c172ceba577ab340",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-2-branching-merging/06-rebase-vs-merge.md": {
-    "mtime": 1786710201.516969,
-    "seen": 1787902473.868964,
-    "ast_hash": "1fca6f08d2000eaa5687e1ab9c2e6e73",
-    "semantic_hash": "1fca6f08d2000eaa5687e1ab9c2e6e73"
+    "mtime": 1788710148.886722,
+    "seen": 1788798023.243121,
+    "ast_hash": "a6209ca5a17b59bcb6b8d74a55101509",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-2-branching-merging/07-interactive-rebase.md": {
-    "mtime": 1786710268.210258,
-    "seen": 1787902473.8689663,
-    "ast_hash": "664d55d4d603f88c1e87f04647d27a9d",
-    "semantic_hash": "664d55d4d603f88c1e87f04647d27a9d"
+    "mtime": 1788710189.7314448,
+    "seen": 1788798023.2431219,
+    "ast_hash": "42bf40a5cb24ec409d32dd1f989a89c4",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-2-branching-merging/08-the-golden-rule.md": {
-    "mtime": 1786710312.57445,
-    "seen": 1787902473.8689685,
-    "ast_hash": "7ac7e1501e99566c97684cb2f765f8a1",
-    "semantic_hash": "7ac7e1501e99566c97684cb2f765f8a1"
+    "mtime": 1788710189.7430222,
+    "seen": 1788798023.2431233,
+    "ast_hash": "08273a027987c3600d3a8d26f322e6d5",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-2-branching-merging/09-reflog.md": {
-    "mtime": 1786710368.391692,
-    "seen": 1787902473.8689702,
-    "ast_hash": "e5b61e904e6d0fcdb2a82edb94dfdf70",
-    "semantic_hash": "e5b61e904e6d0fcdb2a82edb94dfdf70"
+    "mtime": 1788710231.520062,
+    "seen": 1788798023.243124,
+    "ast_hash": "f42a02fccbf3265469b49ef683daf9f2",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-2-branching-merging/10-aborting-cleanly.md": {
-    "mtime": 1786710410.6410918,
-    "seen": 1787902473.868972,
-    "ast_hash": "0ca5bd0df0bed5feb5ac314ba7273ee4",
-    "semantic_hash": "0ca5bd0df0bed5feb5ac314ba7273ee4"
+    "mtime": 1788710547.4683588,
+    "seen": 1788798023.2431247,
+    "ast_hash": "d34e7327fac36b078a447b3bd38e3b41",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-2-branching-merging/README.md": {
     "mtime": 1786710441.105007,
@@ -14148,52 +14148,52 @@
     "semantic_hash": "a5c54dcc296c18c9bb3eb7d712be7847"
   },
   "docs/git/pages/phase-4-remotes/01-a-remote-is-a-url.md": {
-    "mtime": 1786710524.6083643,
-    "seen": 1787902473.8689756,
-    "ast_hash": "44c21ea7f1a150cc59279e96769c6f0d",
-    "semantic_hash": "44c21ea7f1a150cc59279e96769c6f0d"
+    "mtime": 1788710282.0144882,
+    "seen": 1788798023.2431266,
+    "ast_hash": "151d917ae3fe56ac6f72584e5db900ac",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-4-remotes/02-fetch-vs-pull.md": {
-    "mtime": 1786710564.8400936,
-    "seen": 1787902473.8689773,
-    "ast_hash": "2e99c959ab48140a84cef0593cd1d03f",
-    "semantic_hash": "2e99c959ab48140a84cef0593cd1d03f"
+    "mtime": 1788710282.0314016,
+    "seen": 1788798023.243128,
+    "ast_hash": "63125f2a0d0f03517b26d14e75f0485a",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-4-remotes/03-remote-tracking-branches.md": {
-    "mtime": 1786710603.3626978,
-    "seen": 1787902473.8689797,
-    "ast_hash": "bae9318499ced40cfba4587607017f52",
-    "semantic_hash": "bae9318499ced40cfba4587607017f52"
+    "mtime": 1788710319.7598648,
+    "seen": 1788798023.243129,
+    "ast_hash": "aeaecf5e77cfa30ca33d9373502e7b46",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-4-remotes/04-upstream-tracking.md": {
-    "mtime": 1786710641.0948575,
-    "seen": 1787902473.8689816,
-    "ast_hash": "05c7dfbf90e8b747a45d62c4738d2969",
-    "semantic_hash": "05c7dfbf90e8b747a45d62c4738d2969"
+    "mtime": 1788710319.771886,
+    "seen": 1788798023.2431312,
+    "ast_hash": "0cffe3424de66b72f9805e7b593ab44f",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-4-remotes/05-divergent-branches.md": {
-    "mtime": 1786710691.8260722,
-    "seen": 1787902473.8689833,
-    "ast_hash": "6eebebe5fd38c5d5aebd0bc5d1a096fb",
-    "semantic_hash": "6eebebe5fd38c5d5aebd0bc5d1a096fb"
+    "mtime": 1788710360.0502615,
+    "seen": 1788798023.2431326,
+    "ast_hash": "af7996689de50673957ec12ee97c2ab5",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-4-remotes/06-force-pushing-safely.md": {
-    "mtime": 1786710732.3721695,
-    "seen": 1787902473.8689854,
-    "ast_hash": "37fadaf3e62f13289a9d4bcc93e93de4",
-    "semantic_hash": "37fadaf3e62f13289a9d4bcc93e93de4"
+    "mtime": 1788710360.0611506,
+    "seen": 1788798023.2431338,
+    "ast_hash": "4e15e94c18d64256e557ff9d98e54870",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-4-remotes/07-git-push.md": {
-    "mtime": 1786710774.1041155,
-    "seen": 1787902473.8689878,
-    "ast_hash": "5730f62f22d8715c2d0349bcbf728125",
-    "semantic_hash": "5730f62f22d8715c2d0349bcbf728125"
+    "mtime": 1788710401.4422786,
+    "seen": 1788798023.2431345,
+    "ast_hash": "23a3a812b28a8434d71ea98a4a28aabf",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-4-remotes/08-transports-and-credentials.md": {
-    "mtime": 1786710814.7618601,
-    "seen": 1787902473.8689897,
-    "ast_hash": "87c08b0b4ce1a5374896c0908f7dff08",
-    "semantic_hash": "87c08b0b4ce1a5374896c0908f7dff08"
+    "mtime": 1788710401.4537492,
+    "seen": 1788798023.2431352,
+    "ast_hash": "dca8e006db9105fac82d525d0c244ffa",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-4-remotes/README.md": {
     "mtime": 1786710844.153717,
@@ -14202,52 +14202,52 @@
     "semantic_hash": "582cb90a8d396cc012de06c225ecf21a"
   },
   "docs/git/pages/phase-5-undo-recover/01-the-undo-decision-table.md": {
-    "mtime": 1786710922.6660492,
-    "seen": 1787902473.8689935,
-    "ast_hash": "a7793f7dffdea76c0f85e785ca88cd54",
-    "semantic_hash": "a7793f7dffdea76c0f85e785ca88cd54"
+    "mtime": 1788710437.8112981,
+    "seen": 1788798023.2431371,
+    "ast_hash": "093fb81a3136b39ae5416f31515e79fc",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-5-undo-recover/02-reset-in-depth.md": {
-    "mtime": 1786710961.2192125,
-    "seen": 1787902473.8689957,
-    "ast_hash": "d87012204ff9795994aa9fc8575b7b20",
-    "semantic_hash": "d87012204ff9795994aa9fc8575b7b20"
+    "mtime": 1788710437.8265162,
+    "seen": 1788798023.243138,
+    "ast_hash": "ae345be0cb442f8e371ec5df0485e258",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-5-undo-recover/03-revert.md": {
-    "mtime": 1786710997.0240104,
-    "seen": 1787902473.8689976,
-    "ast_hash": "fd9fe8fc502c177b1f9bb0873b143b1a",
-    "semantic_hash": "fd9fe8fc502c177b1f9bb0873b143b1a"
+    "mtime": 1788710476.5685835,
+    "seen": 1788798023.243139,
+    "ast_hash": "7a6f8ddb317af422b6ba012d5564247d",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-5-undo-recover/04-reflog-recovery.md": {
-    "mtime": 1786711050.5705907,
-    "seen": 1787902473.8689995,
-    "ast_hash": "b29a31244983485d9e9ac7be42277e60",
-    "semantic_hash": "b29a31244983485d9e9ac7be42277e60"
+    "mtime": 1788710476.5855265,
+    "seen": 1788798023.2431405,
+    "ast_hash": "a5c3d7703496e4618400a59763d95528",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-5-undo-recover/05-rewriting-your-own-commits.md": {
-    "mtime": 1786711088.8837528,
-    "seen": 1787902473.8690012,
-    "ast_hash": "816062b2a3f6d9f560781e3041f015bc",
-    "semantic_hash": "816062b2a3f6d9f560781e3041f015bc"
+    "mtime": 1788710515.1485052,
+    "seen": 1788798023.2431412,
+    "ast_hash": "63ee2e831d42a317573996bb58885b93",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-5-undo-recover/06-recovering-a-branch.md": {
-    "mtime": 1786711127.1868951,
-    "seen": 1787902473.8690033,
-    "ast_hash": "e086174c24c5853b13e2017936a8a970",
-    "semantic_hash": "e086174c24c5853b13e2017936a8a970"
+    "mtime": 1788710515.161293,
+    "seen": 1788798023.2431421,
+    "ast_hash": "12185608a0b95c8f128a1ea47542ee84",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-5-undo-recover/07-undoing-a-merge.md": {
-    "mtime": 1786711163.7979965,
-    "seen": 1787902473.869005,
-    "ast_hash": "600c2d8cd59b8d4728c297a6db5c8c8f",
-    "semantic_hash": "600c2d8cd59b8d4728c297a6db5c8c8f"
+    "mtime": 1788710601.138821,
+    "seen": 1788798023.2431428,
+    "ast_hash": "9885612d8cc2f9ed0f39f31f3cc228ec",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-5-undo-recover/08-undoing-something-pushed.md": {
-    "mtime": 1786711259.1024733,
-    "seen": 1787902473.8690069,
-    "ast_hash": "050012af90a480cb8fce31de151f504a",
-    "semantic_hash": "050012af90a480cb8fce31de151f504a"
+    "mtime": 1788710601.151237,
+    "seen": 1788798023.2431448,
+    "ast_hash": "c809b311fe5608a222bef6ec3ca3fefc",
+    "semantic_hash": ""
   },
   "docs/git/pages/phase-5-undo-recover/README.md": {
     "mtime": 1786711287.343593,
@@ -15810,10 +15810,10 @@
     "semantic_hash": "e96bfab8cdf8d394a60e9f16d58899ab"
   },
   "docs/java/syllabus/04-production.md": {
-    "mtime": 1786982173.1334014,
-    "seen": 1787902474.1749146,
-    "ast_hash": "786c6d7eabf6f204a92ff4d5c8c0a8e7",
-    "semantic_hash": "786c6d7eabf6f204a92ff4d5c8c0a8e7"
+    "mtime": 1788709779.754136,
+    "seen": 1788798023.2462764,
+    "ast_hash": "2778351088dbd6b68f90a3ba5650257a",
+    "semantic_hash": ""
   },
   "docs/java/syllabus/05-distributed.md": {
     "mtime": 1786982129.372159,
@@ -22590,40 +22590,40 @@
     "semantic_hash": "7505bd59e4419fdc8ab4815ecf5d03db"
   },
   "docs/playwright/pages/01-core-architecture/01-browser-automation-model.md": {
-    "mtime": 1786706138.9378264,
-    "seen": 1787902474.1785424,
-    "ast_hash": "763d3de73c01967c201d14e9ca60336f",
-    "semantic_hash": "763d3de73c01967c201d14e9ca60336f"
+    "mtime": 1788711180.557206,
+    "seen": 1788798023.2501674,
+    "ast_hash": "ba38f3ac8b06e5ed03cc76caaacca63c",
+    "semantic_hash": ""
   },
   "docs/playwright/pages/02-test-runner/01-playwright-test-fixtures.md": {
-    "mtime": 1786706138.9379814,
-    "seen": 1787902474.1785452,
-    "ast_hash": "ee21deebe653bf34b66064db48730902",
-    "semantic_hash": "ee21deebe653bf34b66064db48730902"
+    "mtime": 1788711251.8471663,
+    "seen": 1788798023.2501702,
+    "ast_hash": "0bc708c41574badd7930f425a6de1a69",
+    "semantic_hash": ""
   },
   "docs/playwright/pages/03-locators/01-locator-api.md": {
-    "mtime": 1786706138.9381814,
-    "seen": 1787902474.1785483,
-    "ast_hash": "bce6014c85e0597f9e2fbb736d45d86c",
-    "semantic_hash": "bce6014c85e0597f9e2fbb736d45d86c"
+    "mtime": 1788711329.8037872,
+    "seen": 1788798023.2501712,
+    "ast_hash": "d1145940ca2679fffea11f52f8005740",
+    "semantic_hash": ""
   },
   "docs/playwright/pages/04-actions-and-interactions/01-interaction-primitives.md": {
-    "mtime": 1786706138.9383574,
-    "seen": 1787902474.1785512,
-    "ast_hash": "98cd77be3555854484c227052cd6180b",
-    "semantic_hash": "98cd77be3555854484c227052cd6180b"
+    "mtime": 1788711406.7861335,
+    "seen": 1788798023.2501726,
+    "ast_hash": "134eba6f1c898ef683b3cce67df97ec1",
+    "semantic_hash": ""
   },
   "docs/playwright/pages/05-auto-waiting-and-assertions/01-web-first-assertions.md": {
-    "mtime": 1786706138.938512,
-    "seen": 1787902474.1785545,
-    "ast_hash": "a56116a9cf4dbf385035917644e050a3",
-    "semantic_hash": "a56116a9cf4dbf385035917644e050a3"
+    "mtime": 1788711484.4100745,
+    "seen": 1788798023.2501733,
+    "ast_hash": "c1007cec3810c7588292ca23f30fa8e0",
+    "semantic_hash": ""
   },
   "docs/playwright/pages/06-navigation-and-network/01-navigation-and-interception.md": {
-    "mtime": 1786706138.9386659,
-    "seen": 1787902474.1785576,
-    "ast_hash": "c8e888e62d8f4f1b968d4a77e7e26165",
-    "semantic_hash": "c8e888e62d8f4f1b968d4a77e7e26165"
+    "mtime": 1788711582.196202,
+    "seen": 1788798023.2501745,
+    "ast_hash": "b3bfb8b02c396cac8f3b863e43f759d0",
+    "semantic_hash": ""
   },
   "docs/playwright/pages/07-authentication-and-state/01-session-reuse.md": {
     "mtime": 1786706138.938838,
@@ -27648,112 +27648,112 @@
     "semantic_hash": "3b00daaebbcacdb0eac919332dbf6e5e"
   },
   "docs/redux-toolkit/README.md": {
-    "mtime": 1786706138.9408653,
-    "seen": 1787902474.1813366,
-    "ast_hash": "ae5b76a4c9190ce3576a52283f6ac68b",
-    "semantic_hash": "ae5b76a4c9190ce3576a52283f6ac68b"
+    "mtime": 1788696660.6421998,
+    "seen": 1788798023.2517953,
+    "ast_hash": "60527a4bd6904824aba5da782a4b289a",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/01-store-setup/01-configure-store.md": {
-    "mtime": 1786706138.9411814,
-    "seen": 1787902474.1813388,
-    "ast_hash": "dbb047b55da16f399b8d704004152862",
-    "semantic_hash": "dbb047b55da16f399b8d704004152862"
+    "mtime": 1788695379.1130896,
+    "seen": 1788798023.2517962,
+    "ast_hash": "62562bee88c86cc1f0c2299e272e1e32",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/02-slices-and-actions/01-create-slice.md": {
-    "mtime": 1786706138.9411814,
-    "seen": 1787902474.1813414,
-    "ast_hash": "356fe1275dc457b98caa308af2a4f1b6",
-    "semantic_hash": "356fe1275dc457b98caa308af2a4f1b6"
+    "mtime": 1788695520.7361069,
+    "seen": 1788798023.251797,
+    "ast_hash": "44da62ece9a868a47a87aed99e6ae7c0",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/02-slices-and-actions/02-create-action-and-matchers.md": {
-    "mtime": 1786706138.9414275,
-    "seen": 1787902474.181344,
-    "ast_hash": "ef8e2d5bfaf8fb6d3b09ae2038da327c",
-    "semantic_hash": "ef8e2d5bfaf8fb6d3b09ae2038da327c"
+    "mtime": 1788695593.3689501,
+    "seen": 1788798023.2517996,
+    "ast_hash": "7995a8190566c865357a9135303ce7f7",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/03-async-thunks/01-create-async-thunk.md": {
-    "mtime": 1786706138.9414275,
-    "seen": 1787902474.181347,
-    "ast_hash": "8d19c4af861f1458e7ba48f1482646ef",
-    "semantic_hash": "8d19c4af861f1458e7ba48f1482646ef"
+    "mtime": 1788695724.0014508,
+    "seen": 1788798023.2518003,
+    "ast_hash": "3bd3c4c60a6c163af3ac5cb699c39da8",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/04-rtk-query/01-api-slice-and-endpoints.md": {
-    "mtime": 1786706138.9416814,
-    "seen": 1787902474.1813495,
-    "ast_hash": "d1c732ce8121c7cf39d958aa24cda011",
-    "semantic_hash": "d1c732ce8121c7cf39d958aa24cda011"
+    "mtime": 1788695808.3894126,
+    "seen": 1788798023.2518027,
+    "ast_hash": "6ded1f9bdccf0074b067164bdf92d55c",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/04-rtk-query/02-cache-management-and-invalidation.md": {
-    "mtime": 1786706138.9418564,
-    "seen": 1787902474.1813521,
-    "ast_hash": "d0c8065d838846d683d16fb6ea70315d",
-    "semantic_hash": "d0c8065d838846d683d16fb6ea70315d"
+    "mtime": 1788696020.9386215,
+    "seen": 1788798023.2518046,
+    "ast_hash": "b572f3ecc932fbd3632b975052c4070b",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/05-selectors-and-normalization/01-create-selector-and-reselect.md": {
-    "mtime": 1786706138.9418564,
-    "seen": 1787902474.181355,
-    "ast_hash": "88ac6932f7feee71a677bdd36b83ecc0",
-    "semantic_hash": "88ac6932f7feee71a677bdd36b83ecc0"
+    "mtime": 1788696070.6132379,
+    "seen": 1788798023.251807,
+    "ast_hash": "eeb1dbced17643c671f8b045e476c3b8",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/05-selectors-and-normalization/02-create-entity-adapter.md": {
-    "mtime": 1786706138.9421237,
-    "seen": 1787902474.1813576,
-    "ast_hash": "f5546fcca91a3ab779693244ce072cb6",
-    "semantic_hash": "f5546fcca91a3ab779693244ce072cb6"
+    "mtime": 1788696122.857153,
+    "seen": 1788798023.2518082,
+    "ast_hash": "5f9056e26d6c5038d695396ce7c6b5f6",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/06-middleware/01-default-middleware-and-listener-middleware.md": {
-    "mtime": 1786706138.9421813,
-    "seen": 1787902474.1813598,
-    "ast_hash": "665841e3f576b272017f65405ce8d830",
-    "semantic_hash": "665841e3f576b272017f65405ce8d830"
+    "mtime": 1788696174.3520617,
+    "seen": 1788798023.2518094,
+    "ast_hash": "33b50c3e6e2aab400d16200e18cb0ac1",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/07-react-redux-integration/01-hooks-api.md": {
-    "mtime": 1786706138.9423892,
-    "seen": 1787902474.1813624,
-    "ast_hash": "8e788232bb444ec0b3b199ba2b2e3128",
-    "semantic_hash": "8e788232bb444ec0b3b199ba2b2e3128"
+    "mtime": 1788696227.6697283,
+    "seen": 1788798023.2518103,
+    "ast_hash": "d993b828802456d845745adffeec8975",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/08-immutability-and-immer/01-immer-internals.md": {
-    "mtime": 1786706138.9425547,
-    "seen": 1787902474.1813653,
-    "ast_hash": "3e7df0d56420db86ce6e6ffe45511d64",
-    "semantic_hash": "3e7df0d56420db86ce6e6ffe45511d64"
+    "mtime": 1788696343.5700357,
+    "seen": 1788798023.251811,
+    "ast_hash": "edcab50fc7cb1696921a9cfb01b12197",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/09-typescript-integration/01-type-inference-patterns.md": {
-    "mtime": 1786706138.9427297,
-    "seen": 1787902474.1813679,
-    "ast_hash": "f48137bd6d54aa15f0f01a475c1898a0",
-    "semantic_hash": "f48137bd6d54aa15f0f01a475c1898a0"
+    "mtime": 1788696281.4959424,
+    "seen": 1788798023.2518117,
+    "ast_hash": "12324ffb5c8cef4260c49df96cf067dd",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/10-devtools-and-debugging/01-redux-devtools.md": {
-    "mtime": 1786706138.9428952,
-    "seen": 1787902474.1813703,
-    "ast_hash": "1cadce7df4db8ca41fd714309cda88ab",
-    "semantic_hash": "1cadce7df4db8ca41fd714309cda88ab"
+    "mtime": 1788696421.993852,
+    "seen": 1788798023.2518127,
+    "ast_hash": "d3a16a673772a48453d6e37dc427e272",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/11-code-splitting/01-dynamic-reducer-injection.md": {
-    "mtime": 1786706138.9430575,
-    "seen": 1787902474.1813734,
-    "ast_hash": "141b1541a107c191f43012dbf82d8e50",
-    "semantic_hash": "141b1541a107c191f43012dbf82d8e50"
+    "mtime": 1788696421.9940896,
+    "seen": 1788798023.251814,
+    "ast_hash": "f4bee0bb736561b76f8c68d6e58b7aa4",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/12-testing/01-testing-redux-logic.md": {
-    "mtime": 1786706138.9431813,
-    "seen": 1787902474.1813757,
-    "ast_hash": "11d8568afa1511fec2d1a7d7628ff640",
-    "semantic_hash": "11d8568afa1511fec2d1a7d7628ff640"
+    "mtime": 1788696543.870109,
+    "seen": 1788798023.2518148,
+    "ast_hash": "0dc8cb2faac8bfa48798fa1fe9638c65",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/13-migration/01-from-classic-redux.md": {
-    "mtime": 1786706138.943413,
-    "seen": 1787902474.1813784,
-    "ast_hash": "19ace38d399292019181126c72035389",
-    "semantic_hash": "19ace38d399292019181126c72035389"
+    "mtime": 1788696599.2814038,
+    "seen": 1788798023.251817,
+    "ast_hash": "46864697ed51d992c918cdff921d8f4f",
+    "semantic_hash": ""
   },
   "docs/redux-toolkit/pages/README.md": {
-    "mtime": 1786706138.9435835,
-    "seen": 1787902474.1813812,
-    "ast_hash": "be3c7199d7c7fc52ee53ce151f77ff74",
-    "semantic_hash": "be3c7199d7c7fc52ee53ce151f77ff74"
+    "mtime": 1788696660.6451998,
+    "seen": 1788798023.251818,
+    "ast_hash": "5e8a86219bb08d1df275aa3861ef6988",
+    "semantic_hash": ""
   },
   "docs/reviews/postgresql/2026-08-13-cross-phase-correctness.md": {
     "mtime": 1786594418.7148578,
@@ -28104,106 +28104,106 @@
     "semantic_hash": "6fcedc64954558a047e67b988b7831da"
   },
   "docs/tanstack-query/pages/01-core-concepts/01-the-server-state-model.md": {
-    "mtime": 1786706138.952016,
-    "seen": 1787902474.181535,
-    "ast_hash": "152917d3ccc1d28cfa131a8c07bb510b",
-    "semantic_hash": "152917d3ccc1d28cfa131a8c07bb510b"
+    "mtime": 1788789612.6409407,
+    "seen": 1788798023.251955,
+    "ast_hash": "b64014aacaf167cc557e147214c5215e",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/02-usequery-deep-dive/01-core-options.md": {
-    "mtime": 1786706138.9521813,
-    "seen": 1787902474.1815376,
-    "ast_hash": "b5c5fa83c128131c4bbd4fe40b422750",
-    "semantic_hash": "b5c5fa83c128131c4bbd4fe40b422750"
+    "mtime": 1788789612.6415117,
+    "seen": 1788798023.2519562,
+    "ast_hash": "59ffe69bbe6b6b35fd5e174edcdc4ada",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/03-query-states/01-status-flags.md": {
-    "mtime": 1786706138.952354,
-    "seen": 1787902474.1815398,
-    "ast_hash": "4652576cade4087b6effc8bab194bd0d",
-    "semantic_hash": "4652576cade4087b6effc8bab194bd0d"
+    "mtime": 1788789612.641851,
+    "seen": 1788798023.2519572,
+    "ast_hash": "07f9dc3e6f1860c427c426a6326be9bb",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/04-caching-and-invalidation/01-cache-management-apis.md": {
-    "mtime": 1786706138.9525535,
-    "seen": 1787902474.1815422,
-    "ast_hash": "e1c4ddeea3735992b66db6d078deb07e",
-    "semantic_hash": "e1c4ddeea3735992b66db6d078deb07e"
+    "mtime": 1788789612.6423125,
+    "seen": 1788798023.2519581,
+    "ast_hash": "8f15d075d293d30bf9b86a2854e662b5",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/05-usemutation/01-mutation-lifecycle.md": {
-    "mtime": 1786706138.9527204,
-    "seen": 1787902474.1815445,
-    "ast_hash": "ccb2f960ee1e3328175a4ae4ebd71ac1",
-    "semantic_hash": "ccb2f960ee1e3328175a4ae4ebd71ac1"
+    "mtime": 1788789612.642646,
+    "seen": 1788798023.2519593,
+    "ast_hash": "59cf46efee59077697c850f1a989df24",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/06-background-refetching/01-automatic-freshness.md": {
-    "mtime": 1786706138.9528956,
-    "seen": 1787902474.181547,
-    "ast_hash": "59055da2b4116753d47e21d4bbd1e220",
-    "semantic_hash": "59055da2b4116753d47e21d4bbd1e220"
+    "mtime": 1788790076.4032772,
+    "seen": 1788798023.2519603,
+    "ast_hash": "01b51ee38c78c30680ef3031c7365da1",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/07-pagination-and-infinite-queries/01-paged-data-patterns.md": {
-    "mtime": 1786706138.9530697,
-    "seen": 1787902474.1815495,
-    "ast_hash": "e1c16a5f19a953862745c8df51b7ffe8",
-    "semantic_hash": "e1c16a5f19a953862745c8df51b7ffe8"
+    "mtime": 1788790076.4052978,
+    "seen": 1788798023.2519643,
+    "ast_hash": "494295826d2c395a1cc801ddc4985b40",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/08-dependent-and-parallel-queries/01-query-composition.md": {
-    "mtime": 1786706138.9531815,
-    "seen": 1787902474.1815524,
-    "ast_hash": "de0d9adc52f346f6844160290a7eef91",
-    "semantic_hash": "de0d9adc52f346f6844160290a7eef91"
+    "mtime": 1788790534.4805076,
+    "seen": 1788798023.2519689,
+    "ast_hash": "c18c7b6061a2a54af56f712435f1b64e",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/09-prefetching-and-ssr/01-server-rendered-data-flow.md": {
-    "mtime": 1786706138.9534132,
-    "seen": 1787902474.181555,
-    "ast_hash": "80ca962fe5a394b902c2b12c20a3e61e",
-    "semantic_hash": "80ca962fe5a394b902c2b12c20a3e61e"
+    "mtime": 1788790534.4854503,
+    "seen": 1788798023.2519808,
+    "ast_hash": "cc94f310c920ca14652e34e91972a361",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/10-suspense-integration/01-suspense-driven-fetching.md": {
-    "mtime": 1786706138.9535897,
-    "seen": 1787902474.1815572,
-    "ast_hash": "da311d7cb2884b3bcaad792e1a68df18",
-    "semantic_hash": "da311d7cb2884b3bcaad792e1a68df18"
+    "mtime": 1788789612.6431408,
+    "seen": 1788798023.2519817,
+    "ast_hash": "3202c56ce66af7aa8d36e3fa586deb51",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/11-devtools/01-react-query-devtools.md": {
-    "mtime": 1786706138.9537592,
-    "seen": 1787902474.1815598,
-    "ast_hash": "70e52a65590faf81a891258bf855b690",
-    "semantic_hash": "70e52a65590faf81a891258bf855b690"
+    "mtime": 1788789612.6432993,
+    "seen": 1788798023.2519827,
+    "ast_hash": "51d00c94798a87ded034e400d9370c3f",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/12-query-cancellation/01-abortsignal-integration.md": {
-    "mtime": 1786706138.9541814,
-    "seen": 1787902474.1815622,
-    "ast_hash": "d52035ceeb640fb08cc47b8d575ff9b6",
-    "semantic_hash": "d52035ceeb640fb08cc47b8d575ff9b6"
+    "mtime": 1788789612.6435862,
+    "seen": 1788798023.2519836,
+    "ast_hash": "d10da445841b3ca012a790d662e38c5b",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/13-global-configuration/01-defaultoptions.md": {
-    "mtime": 1786706138.954402,
-    "seen": 1787902474.181565,
-    "ast_hash": "5570b06d7e34de97b8e6ca7c656ade40",
-    "semantic_hash": "5570b06d7e34de97b8e6ca7c656ade40"
+    "mtime": 1788789612.6438746,
+    "seen": 1788798023.2519844,
+    "ast_hash": "c7c21a3fbb7a3d6ed62419145bebea80",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/14-optimistic-updates-patterns/01-advanced-rollback-strategies.md": {
-    "mtime": 1786706138.9546444,
-    "seen": 1787902474.181568,
-    "ast_hash": "ccfd8111beb0f21a09a5ecdf5064271d",
-    "semantic_hash": "ccfd8111beb0f21a09a5ecdf5064271d"
+    "mtime": 1788789612.644052,
+    "seen": 1788798023.2519853,
+    "ast_hash": "37c0bb73da1c030a84a1cc7aece74491",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/15-testing-tanstack-query/01-isolated-and-integration-testing.md": {
-    "mtime": 1786706138.9548457,
-    "seen": 1787902474.1815708,
-    "ast_hash": "71fc60f18863fc778c8cf075289b243c",
-    "semantic_hash": "71fc60f18863fc778c8cf075289b243c"
+    "mtime": 1788789612.644233,
+    "seen": 1788798023.2519865,
+    "ast_hash": "9ecdd540bbc07adb22082bdf08bccf6f",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/16-migration-recipes/01-rtk-query-to-tanstack-query.md": {
-    "mtime": 1786706138.9551814,
-    "seen": 1787902474.1815732,
-    "ast_hash": "06ded50a262cdae463d516a7bdd2f848",
-    "semantic_hash": "06ded50a262cdae463d516a7bdd2f848"
+    "mtime": 1788789612.6444082,
+    "seen": 1788798023.2519872,
+    "ast_hash": "e180b8284c11dfdb71a9b1e1449d9f3e",
+    "semantic_hash": ""
   },
   "docs/tanstack-query/pages/README.md": {
-    "mtime": 1786706138.95534,
-    "seen": 1787902474.1815758,
-    "ast_hash": "1643829973ebf1b18cdfb6cb15a16ec1",
-    "semantic_hash": "1643829973ebf1b18cdfb6cb15a16ec1"
+    "mtime": 1788790549.9206307,
+    "seen": 1788798023.2519882,
+    "ast_hash": "2bad4d5dca397bee26ed5d3e4f2e56cd",
+    "semantic_hash": ""
   },
   "docs/typescript/README.md": {
     "mtime": 1786626766.9721792,
@@ -30750,58 +30750,58 @@
     "semantic_hash": "da567c3d772f382171b7f20a7fced275"
   },
   "docs/vite/README.md": {
-    "mtime": 1786706138.95534,
-    "seen": 1787902474.1828456,
-    "ast_hash": "18a8be1b8f255af121b32e6d87b49c94",
-    "semantic_hash": "18a8be1b8f255af121b32e6d87b49c94"
+    "mtime": 1788794675.3509543,
+    "seen": 1788798023.2524278,
+    "ast_hash": "77b8585fab1423018e412021edb27636",
+    "semantic_hash": ""
   },
   "docs/vite/pages/01-core-architecture/01-dual-engine-model.md": {
-    "mtime": 1786706138.9556556,
-    "seen": 1787902474.1828485,
-    "ast_hash": "0fe28e7bd8d84c7dade1ab613869b1f0",
-    "semantic_hash": "0fe28e7bd8d84c7dade1ab613869b1f0"
+    "mtime": 1788711665.269596,
+    "seen": 1788798023.2524288,
+    "ast_hash": "71853f5f4e514f86510f66897b8da534",
+    "semantic_hash": ""
   },
   "docs/vite/pages/02-cli-and-scaffolding/01-commands-and-templates.md": {
-    "mtime": 1786706138.9557807,
-    "seen": 1787902474.1828513,
-    "ast_hash": "ab2a6e3444c31a446662d8eb5ca92eea",
-    "semantic_hash": "ab2a6e3444c31a446662d8eb5ca92eea"
+    "mtime": 1788711665.2700224,
+    "seen": 1788798023.2524295,
+    "ast_hash": "e8bbd55d177721ba5e8256e2ff74078a",
+    "semantic_hash": ""
   },
   "docs/vite/pages/03-configuration/01-vite-config-file.md": {
-    "mtime": 1786706138.9559498,
-    "seen": 1787902474.182855,
-    "ast_hash": "d039d5c34ea53d63efa2e2d3c5980254",
-    "semantic_hash": "d039d5c34ea53d63efa2e2d3c5980254"
+    "mtime": 1788711665.2703965,
+    "seen": 1788798023.2524307,
+    "ast_hash": "152e5aa18d0213f4b893e1d714ca4133",
+    "semantic_hash": ""
   },
   "docs/vite/pages/04-dev-server-mechanics/01-native-esm-and-hmr.md": {
-    "mtime": 1786706138.9561815,
-    "seen": 1787902474.182858,
-    "ast_hash": "cd9d7225ff605a186baedef69100433b",
-    "semantic_hash": "cd9d7225ff605a186baedef69100433b"
+    "mtime": 1788711665.2708611,
+    "seen": 1788798023.2524316,
+    "ast_hash": "169b9b658ce1b6eb57d350c39557b252",
+    "semantic_hash": ""
   },
   "docs/vite/pages/05-build-system-rollup/01-build-options.md": {
-    "mtime": 1786706138.9561815,
-    "seen": 1787902474.182861,
-    "ast_hash": "43f16c02c832c63884ea95d6f2caa40d",
-    "semantic_hash": "43f16c02c832c63884ea95d6f2caa40d"
+    "mtime": 1788711665.2713249,
+    "seen": 1788798023.2524326,
+    "ast_hash": "1bab880a068767e25209f3ac8e7cfb0e",
+    "semantic_hash": ""
   },
   "docs/vite/pages/06-asset-handling/01-static-asset-imports.md": {
-    "mtime": 1786706138.956498,
-    "seen": 1787902474.1828637,
-    "ast_hash": "434d74e0d12106ccb28d306753588451",
-    "semantic_hash": "434d74e0d12106ccb28d306753588451"
+    "mtime": 1788711665.27174,
+    "seen": 1788798023.2524338,
+    "ast_hash": "6f9c31507991e7835771881ce53e3bee",
+    "semantic_hash": ""
   },
   "docs/vite/pages/07-env-variables-and-modes/01-environment-system.md": {
-    "mtime": 1786706138.9566944,
-    "seen": 1787902474.182866,
-    "ast_hash": "6d864fea31047c8841559fcd06f07905",
-    "semantic_hash": "6d864fea31047c8841559fcd06f07905"
+    "mtime": 1788793810.6315823,
+    "seen": 1788798023.2524345,
+    "ast_hash": "96149ae4db0ab7e3b59d7ace878a47bb",
+    "semantic_hash": ""
   },
   "docs/vite/pages/08-plugin-system/01-plugin-api.md": {
-    "mtime": 1786706138.9568732,
-    "seen": 1787902474.1828692,
-    "ast_hash": "4b0760647a709318deb534528c23bf5b",
-    "semantic_hash": "4b0760647a709318deb534528c23bf5b"
+    "mtime": 1788797884.323341,
+    "seen": 1788798023.252452,
+    "ast_hash": "6ef6c8ee9f35401ad79a3320e3efb31f",
+    "semantic_hash": ""
   },
   "docs/vite/pages/09-css-handling/01-styling-pipeline.md": {
     "mtime": 1786706138.9570622,
@@ -30852,10 +30852,10 @@
     "semantic_hash": "c758d37f2e16d53f74716c52afcb8252"
   },
   "docs/vite/pages/README.md": {
-    "mtime": 1786706138.9585602,
-    "seen": 1787902474.1828961,
-    "ast_hash": "add17860cc0005cf15ef6122589925f3",
-    "semantic_hash": "add17860cc0005cf15ef6122589925f3"
+    "mtime": 1788794675.351201,
+    "seen": 1788798023.2524934,
+    "ast_hash": "5c78dd27229c05606186ecce992372c0",
+    "semantic_hash": ""
   },
   "docs/web-vitals-performance/README.md": {
     "mtime": 1786706138.9585602,
@@ -38760,28 +38760,28 @@
     "semantic_hash": "8a2f7e46dbec047dde03d374674f1272"
   },
   "scripts/status.mjs": {
-    "mtime": 1788609664.7141888,
-    "seen": 1788627017.797257,
-    "ast_hash": "23b78b7dbcc925c832494d5f0f93c8bf",
-    "semantic_hash": "23b78b7dbcc925c832494d5f0f93c8bf"
+    "mtime": 1788691238.3110042,
+    "seen": 1788798023.2419128,
+    "ast_hash": "fe9ab9a71a9779e165f5148573507beb",
+    "semantic_hash": ""
   },
   "src/data/pins.js": {
-    "mtime": 1788600262.3046844,
-    "seen": 1788627017.7973413,
-    "ast_hash": "96bb7b86831443856338462587a91717",
-    "semantic_hash": "96bb7b86831443856338462587a91717"
+    "mtime": 1788793874.3525674,
+    "seen": 1788798023.241928,
+    "ast_hash": "e6f124de5d891b93463d6c383876b1f9",
+    "semantic_hash": ""
   },
   "static/currency.json": {
-    "mtime": 1788620756.5024557,
-    "seen": 1788626308.649036,
-    "ast_hash": "14a9cb974b6c6f2baed40de9a18bc21c",
-    "semantic_hash": "14a9cb974b6c6f2baed40de9a18bc21c"
+    "mtime": 1788784390.8815877,
+    "seen": 1788798023.2419431,
+    "ast_hash": "4e64487b8a7c97b6d50dc1ef878a2701",
+    "semantic_hash": ""
   },
   "static/status.json": {
-    "mtime": 1788618060.2691844,
-    "seen": 1788627017.7974029,
-    "ast_hash": "41b6536a933c679ec1541b5f39f33217",
-    "semantic_hash": "41b6536a933c679ec1541b5f39f33217"
+    "mtime": 1788794676.9483554,
+    "seen": 1788798023.2419446,
+    "ast_hash": "a1aa4bff447b683727db736b32e8457b",
+    "semantic_hash": ""
   },
   "docs/angular/README.md": {
     "mtime": 1788154217.607692,
@@ -38796,10 +38796,10 @@
     "semantic_hash": "d3e7ecf5d6737c7abf60fc47f47026d3"
   },
   "docs/angular/pages/phase-0-how-angular-runs/README.md": {
-    "mtime": 1788158785.96145,
-    "seen": 1788162849.3453126,
-    "ast_hash": "2b7e1c254a4cbb11adaee1f8ef7ccbb7",
-    "semantic_hash": "2b7e1c254a4cbb11adaee1f8ef7ccbb7"
+    "mtime": 1788691188.5294495,
+    "seen": 1788798023.2421567,
+    "ast_hash": "c68ea720a0245d8f59cabd648f1bfd16",
+    "semantic_hash": ""
   },
   "docs/angular/syllabus/01-the-angular-model.md": {
     "mtime": 1788154217.6091912,
@@ -44214,10 +44214,10 @@
     "semantic_hash": "ad232b85e867559332d7ee0a6b0c2d36"
   },
   ".agents/references/house-style.md": {
-    "mtime": 1788490691.8044276,
-    "seen": 1788627017.7974067,
-    "ast_hash": "c38ba222b588d4d833319b2a7a0e2f51",
-    "semantic_hash": "c38ba222b588d4d833319b2a7a0e2f51"
+    "mtime": 1788683989.7365077,
+    "seen": 1788798023.241949,
+    "ast_hash": "833d8d5cd2cc488f25aa1c45bd727cb4",
+    "semantic_hash": ""
   },
   ".agents/references/verification.md": {
     "mtime": 1788401531.4122338,
@@ -52452,9 +52452,9 @@
     "semantic_hash": "e46b7ab233edb8cd38ecc9a1bb5460e3"
   },
   "scripts/page-counts.mjs": {
-    "mtime": 1788653174.7950914,
-    "seen": 1788661949.1197834,
-    "ast_hash": "e254620043e9ac7bdc5ac6d8dfe8b12b",
+    "mtime": 1788709585.9272091,
+    "seen": 1788798023.2419114,
+    "ast_hash": "b3622d9e4ebdab3c6abe57ae00b9774e",
     "semantic_hash": ""
   },
   "scripts/tier-map.mjs": {
@@ -52494,15 +52494,15 @@
     "semantic_hash": ""
   },
   "src/data/page-counts.json": {
-    "mtime": 1788659287.3877964,
-    "seen": 1788661949.119803,
-    "ast_hash": "8fd536b905ed58cc61f3f7c37d6615fb",
+    "mtime": 1788794676.851355,
+    "seen": 1788798023.241927,
+    "ast_hash": "769aaee49d8452eeb13a3a0fd8650b3d",
     "semantic_hash": ""
   },
   "src/data/stack.js": {
-    "mtime": 1788653174.7982905,
-    "seen": 1788661949.119807,
-    "ast_hash": "4ba07fd62aae1c602394a0952edcb0c2",
+    "mtime": 1788745869.2761366,
+    "seen": 1788798023.2419302,
+    "ast_hash": "ce5a3a094448f023011f50e070e0b836",
     "semantic_hash": ""
   },
   "src/data/tiers.mjs": {
@@ -52542,9 +52542,9 @@
     "semantic_hash": ""
   },
   "static/validation.json": {
-    "mtime": 1788661227.7236059,
-    "seen": 1788661949.1198223,
-    "ast_hash": "557ecb2da07231546e5b335665151e42",
+    "mtime": 1788698197.90334,
+    "seen": 1788798023.2419455,
+    "ast_hash": "f11ebf0c2b627183831646a01f448677",
     "semantic_hash": ""
   },
   ".agents/design/nav-options.html": {
@@ -52557,6 +52557,2316 @@
     "mtime": 1788659969.3510313,
     "seen": 1788661949.1198277,
     "ast_hash": "2cb157784c5bec93ea249d20d147660e",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/_category_.json": {
+    "mtime": 1788671439.3748412,
+    "seen": 1788798023.2399194,
+    "ast_hash": "ccf6eb334c046abbf8098d799dbee4dc",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/_category_.json": {
+    "mtime": 1788671439.3748412,
+    "seen": 1788798023.2399225,
+    "ast_hash": "32954366470961af4183f62b1a35a4d5",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/_category_.json": {
+    "mtime": 1788671439.3748412,
+    "seen": 1788798023.2399242,
+    "ast_hash": "4323232d399e9aff021e43e82028f1b5",
+    "semantic_hash": ""
+  },
+  "docs/dsa/_category_.json": {
+    "mtime": 1788714217.0356586,
+    "seen": 1788798023.2400343,
+    "ast_hash": "ae7cfb6169b46089e1c630139a4e6ec2",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/_category_.json": {
+    "mtime": 1788714217.0356586,
+    "seen": 1788798023.2400355,
+    "ast_hash": "13435e3f8ee74c2060f5f6dc9a8edc26",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/_category_.json": {
+    "mtime": 1788748307.9246016,
+    "seen": 1788798023.2400367,
+    "ast_hash": "773d30f2c7518285a073197d0c1e22e6",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/_category_.json": {
+    "mtime": 1788778861.736736,
+    "seen": 1788798023.2400382,
+    "ast_hash": "87f46c7e6b7091438e4c439324b7dfdb",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-2-recursion-maths-bits/_category_.json": {
+    "mtime": 1788784390.946588,
+    "seen": 1788798023.2400398,
+    "ast_hash": "496960156b8d85b4596089679f1bfee1",
+    "semantic_hash": ""
+  },
+  "docs/dsa/syllabus/_category_.json": {
+    "mtime": 1788714217.0356586,
+    "seen": 1788798023.2400413,
+    "ast_hash": "24ee514f944879757d4bdc401774ebe0",
+    "semantic_hash": ""
+  },
+  "docs/system-design/_category_.json": {
+    "mtime": 1788714217.0356586,
+    "seen": 1788798023.240905,
+    "ast_hash": "66513f355e9bdef98d2f9504c07f23c2",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/_category_.json": {
+    "mtime": 1788714217.0356586,
+    "seen": 1788798023.240906,
+    "ast_hash": "13435e3f8ee74c2060f5f6dc9a8edc26",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/_category_.json": {
+    "mtime": 1788746446.2668436,
+    "seen": 1788798023.2409072,
+    "ast_hash": "4f67c1e9e509487259bafd28c5b7a023",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/_category_.json": {
+    "mtime": 1788749817.1766813,
+    "seen": 1788798023.240909,
+    "ast_hash": "7ff1ad9c9bfb2747bacd01fbffeba7a6",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/_category_.json": {
+    "mtime": 1788780610.5053809,
+    "seen": 1788798023.2409098,
+    "ast_hash": "6736149f7724c0550c6a8e5d60b6fdb2",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/_category_.json": {
+    "mtime": 1788714217.0356586,
+    "seen": 1788798023.240911,
+    "ast_hash": "24ee514f944879757d4bdc401774ebe0",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/17-the-2026-toolchain-landscape/_category_.json": {
+    "mtime": 1788794141.8740249,
+    "seen": 1788798023.2410176,
+    "ast_hash": "ca9d308f2ece986be6c6d44b34d1c759",
+    "semantic_hash": ""
+  },
+  "scripts/linkcheck.mjs": {
+    "mtime": 1788683915.9156668,
+    "seen": 1788798023.2419076,
+    "ast_hash": "139d1a2aea7cd3f57c0d83b51bc97beb",
+    "semantic_hash": ""
+  },
+  "scripts/mdxcheck.mjs": {
+    "mtime": 1788699816.824462,
+    "seen": 1788798023.2419097,
+    "ast_hash": "3a98e10daeabf5fa43698ac88346e8b4",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/01-the-template-is-a-separate-language.md": {
+    "mtime": 1788709023.0771742,
+    "seen": 1788798023.2419956,
+    "ast_hash": "d4a41e7b3f6db403e29c622c390f23ad",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/02-what-a-template-expression-may-contain.md": {
+    "mtime": 1788709023.0813925,
+    "seen": 1788798023.2419968,
+    "ast_hash": "b9d4a82898f371f0bc43d1e04674b190",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/03-declarations-and-the-let-block.md": {
+    "mtime": 1788709023.0834525,
+    "seen": 1788798023.2419977,
+    "ast_hash": "9cc88e278686d5af7ca1df189a508e53",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/04-arrow-functions-in-templates.md": {
+    "mtime": 1788709023.0830812,
+    "seen": 1788798023.242004,
+    "ast_hash": "e60d58fa58071313a0246da1444fbfe5",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/05-expressions-statements-and-safe-navigation.md": {
+    "mtime": 1788699616.9340875,
+    "seen": 1788798023.2420056,
+    "ast_hash": "c7265a9459271602567af7bea337f9a3",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/06-what-the-compiler-emits.md": {
+    "mtime": 1788699631.9910038,
+    "seen": 1788798023.242007,
+    "ast_hash": "6d48dd25c59fecaac7671caacc319441",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/06b-inside-definecomponent.md": {
+    "mtime": 1788699616.9341924,
+    "seen": 1788798023.242008,
+    "ast_hash": "46f34286fc8a68d4087d5ea57e0af585",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/06c-decls-vars-consts-and-dependencies.md": {
+    "mtime": 1788709023.0786278,
+    "seen": 1788798023.2420092,
+    "ast_hash": "f8604e243f9aad540357aedc352a4a4b",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/06d-the-factory-and-the-d-ts-declaration.md": {
+    "mtime": 1788699616.9344313,
+    "seen": 1788798023.24201,
+    "ast_hash": "84bcdc7604fe6aae0d7c21ce16b10528",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/07-the-create-pass-and-the-update-pass.md": {
+    "mtime": 1788699616.9354546,
+    "seen": 1788798023.242011,
+    "ast_hash": "7dd539dc5f85eb2654cc1730724fffd6",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/07b-the-view-is-an-array-decls-and-vars.md": {
+    "mtime": 1788699616.9349515,
+    "seen": 1788798023.2420123,
+    "ast_hash": "019aa685b632c008b2174eddf0827f2d",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/07c-how-instructions-address-the-array.md": {
+    "mtime": 1788699616.9350994,
+    "seen": 1788798023.2420135,
+    "ast_hash": "ab7da0e63efb6b888fa795158d09bca8",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/07d-advance-is-relative-and-forward-only.md": {
+    "mtime": 1788699616.9352221,
+    "seen": 1788798023.2420142,
+    "ast_hash": "9bfcd909b07c7eeaa6c8f49041373bc4",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/07e-what-actually-performs-the-diff.md": {
+    "mtime": 1788699616.9353335,
+    "seen": 1788798023.242015,
+    "ast_hash": "ab40b9a806e660a40e2a5344e933b751",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/08-instructions-not-a-virtual-dom.md": {
+    "mtime": 1788699616.9362488,
+    "seen": 1788798023.242016,
+    "ast_hash": "c2589a6cb3beb694b9cfefd44c0137b9",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/08b-the-selector-problem-and-reference-inversion.md": {
+    "mtime": 1788699616.935578,
+    "seen": 1788798023.2420168,
+    "ast_hash": "cd879296397e32e7e2d3a5dcffab744e",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/08c-the-instruction-set-is-a-la-carte.md": {
+    "mtime": 1788699616.9357114,
+    "seen": 1788798023.242018,
+    "ast_hash": "dc2c179405c8a0e316de1ccd2f97b372",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/08d-what-the-fixed-shape-costs.md": {
+    "mtime": 1788699616.9358406,
+    "seen": 1788798023.2420187,
+    "ast_hash": "1d4d81b0a13acfebd3f6b130bdeb0b6e",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/08e-only-compiled-classes-are-renderable.md": {
+    "mtime": 1788699616.9359758,
+    "seen": 1788798023.24202,
+    "ast_hash": "39d2bbd245d55fba59c021dc1fe5efe3",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/08f-the-cost-of-generated-code.md": {
+    "mtime": 1788699616.9361145,
+    "seen": 1788798023.2420208,
+    "ast_hash": "16bea1ba0d97c6617f23c016d543bad9",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/09-static-analysability-is-the-load-bearing-constraint.md": {
+    "mtime": 1788699616.9371583,
+    "seen": 1788798023.242022,
+    "ast_hash": "e3d184d8a9d8b1829f2d13c4b1814706",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/09b-gate-two-what-is-evaluated-and-what-is-relayed.md": {
+    "mtime": 1788699616.9363608,
+    "seen": 1788798023.2420232,
+    "ast_hash": "6d230b550ef94bd49a78aeb3b2bbc784",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/09c-the-partial-evaluator-is-the-grammar.md": {
+    "mtime": 1788709023.079241,
+    "seen": 1788798023.242024,
+    "ast_hash": "cb8e644636eac9aeee7c888918db5e3d",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/09d-the-single-return-function-rule.md": {
+    "mtime": 1788709023.0841045,
+    "seen": 1788798023.242025,
+    "ast_hash": "658581c46d8ca0a34b48d03bf52d41d7",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/09e-selector-must-reduce-to-a-string.md": {
+    "mtime": 1788699616.9367547,
+    "seen": 1788798023.2420256,
+    "ast_hash": "8e8453afbfc8eabb519f826061d20fe7",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/09f-imports-and-the-rule-about-lazy-loading.md": {
+    "mtime": 1788699616.9368765,
+    "seen": 1788798023.2420266,
+    "ast_hash": "05663b3eae8aca5bd18c302c37c1cb29",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/09g-reading-a-metadata-failure.md": {
+    "mtime": 1788709023.0796368,
+    "seen": 1788798023.2420275,
+    "ast_hash": "fd12f9419c7d522801449f4f2ee487a9",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/10-metadata-errors-one-by-one.md": {
+    "mtime": 1788699616.9379618,
+    "seen": 1788798023.2420287,
+    "ast_hash": "1049d47300eb056586cde15ab8aec52c",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/10b-the-decorator-argument-itself.md": {
+    "mtime": 1788699616.9373026,
+    "seen": 1788798023.2420297,
+    "ast_hash": "d59c21cd150fb4a395b33a74b2de2b8b",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/10c-symbols-the-compiler-cannot-resolve.md": {
+    "mtime": 1788699616.937439,
+    "seen": 1788798023.2420309,
+    "ast_hash": "bea86e22f277fc5996d17d38d490dc6c",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/10d-import-cycles-and-local-compilation.md": {
+    "mtime": 1788699616.9375806,
+    "seen": 1788798023.2420316,
+    "ast_hash": "04d931ab3698323a2eb55f96c92f26e7",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/10e-values-that-resolve-but-do-not-fold.md": {
+    "mtime": 1788699616.9377177,
+    "seen": 1788798023.2420332,
+    "ast_hash": "9815b4eb94e0d4aaa00f530901acc4a2",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/10f-destructuring-in-metadata.md": {
+    "mtime": 1788699616.9378326,
+    "seen": 1788798023.2420342,
+    "ast_hash": "ff0abb73182edbdd941f2d721413a54f",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/11-why-defer-can-split-a-bundle.md": {
+    "mtime": 1788699616.9385166,
+    "seen": 1788798023.2420352,
+    "ast_hash": "646d4b72ca38b1bc7338de944c510058",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/11b-the-nine-conditions-and-the-barrel-trap.md": {
+    "mtime": 1788699616.938126,
+    "seen": 1788798023.2420363,
+    "ast_hash": "66b162ea4c424ec57cd9947d36cdc987",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/11c-diagnosing-a-defer-that-did-not-split.md": {
+    "mtime": 1788699616.9382565,
+    "seen": 1788798023.242037,
+    "ast_hash": "d8200ad5444d212a0aa391beee2b727d",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/11d-what-defer-never-defers.md": {
+    "mtime": 1788699616.9383895,
+    "seen": 1788798023.2420378,
+    "ast_hash": "d418c631456b90f9689b87b6b00fa09d",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/12-ivy-and-locality.md": {
+    "mtime": 1788699616.9394758,
+    "seen": 1788798023.2420385,
+    "ast_hash": "db3bd7e0fda041d9303f568cbd6b2f61",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/12b-inheritance-and-the-undecorated-base.md": {
+    "mtime": 1788699616.9386435,
+    "seen": 1788798023.2420394,
+    "ast_hash": "c80e6a6dacedc568361bd47ed294a742",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/12c-what-inheritance-never-carries.md": {
+    "mtime": 1788699616.9387681,
+    "seen": 1788798023.242041,
+    "ast_hash": "7b76f3b364edb71f04f33641d908fd40",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/12d-where-locality-breaks.md": {
+    "mtime": 1788699631.9908168,
+    "seen": 1788798023.2420418,
+    "ast_hash": "3d1153dd427a79a5561edf7dccb336a0",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/12e-what-locality-costs.md": {
+    "mtime": 1788699616.9390757,
+    "seen": 1788798023.2420425,
+    "ast_hash": "3e88927f536abef7e9f380269e0a9ba9",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/12f-partial-compilation-and-the-linker.md": {
+    "mtime": 1788699616.9392126,
+    "seen": 1788798023.2420437,
+    "ast_hash": "809a99e2ca0d3aa18ae84207125ae704",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/12g-version-skew-is-a-coded-concern.md": {
+    "mtime": 1788699616.9393482,
+    "seen": 1788798023.2420444,
+    "ast_hash": "2f39759b16f5a37de18e29adbe713ef0",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/13-where-the-compiler-runs-ngtsc.md": {
+    "mtime": 1788699616.9401798,
+    "seen": 1788798023.2420454,
+    "ast_hash": "b364df460f18bfa49629986bdb606995",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/13b-ngc-is-tsc-and-the-typescript-pin.md": {
+    "mtime": 1788699616.939631,
+    "seen": 1788798023.2420464,
+    "ast_hash": "a0fb6c95841dfe99892af56836c0e68f",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/13c-the-ng-error-code-is-a-typescript-code.md": {
+    "mtime": 1788709023.0811918,
+    "seen": 1788798023.2420473,
+    "ast_hash": "2ee5a8321b5ae6eebc004f887b3a3f7e",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/13d-compilation-mode-and-the-local-portability-trap.md": {
+    "mtime": 1788699616.9399087,
+    "seen": 1788798023.2420483,
+    "ast_hash": "5575f75d3cf647b8fe2bf87a7adccf04",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/13e-the-option-surface-and-config-time-diagnostics.md": {
+    "mtime": 1788709023.0843203,
+    "seen": 1788798023.2420492,
+    "ast_hash": "3b0b0f014c185a7d107c6b295c518993",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/14-template-type-checking.md": {
+    "mtime": 1788701074.2507465,
+    "seen": 1788798023.24205,
+    "ast_hash": "6af2b4788c3f8f917d7fc310c2b56f66",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/14b-how-each-construct-is-translated.md": {
+    "mtime": 1788709023.079059,
+    "seen": 1788798023.2420511,
+    "ast_hash": "9cb359ae677a5077a68cf3f770d43a74",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/14c-the-type-check-file-and-how-errors-get-home.md": {
+    "mtime": 1788701074.2493093,
+    "seen": 1788798023.242052,
+    "ast_hash": "ae806eab7639039a137564f0ff3f9e84",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/14d-how-a-diagnostic-gets-home.md": {
+    "mtime": 1788701074.2494462,
+    "seen": 1788798023.2420528,
+    "ast_hash": "b7cf015c621b4938ad1986fd9d4ae772",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/14e-the-errors-that-never-arrive.md": {
+    "mtime": 1788701074.2495546,
+    "seen": 1788798023.2420533,
+    "ast_hash": "baf60adf8d62891956cf438154c2c2ce",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/14f-what-stricttemplates-actually-switches.md": {
+    "mtime": 1788701074.249925,
+    "seen": 1788798023.2420545,
+    "ast_hash": "5f13174d5ed4d45d005aad18cbeaee00",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/14g-what-turning-strict-templates-off-costs.md": {
+    "mtime": 1788709023.0854254,
+    "seen": 1788798023.2420552,
+    "ast_hash": "972c889ee9de9b3eb3e845ae9bdf3da6",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/14h-the-input-side-flags.md": {
+    "mtime": 1788701074.250227,
+    "seen": 1788798023.242056,
+    "ast_hash": "b151e8bbc5d254c85122b9c92d422ec8",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/14i-attributes-literals-and-safe-navigation.md": {
+    "mtime": 1788701074.2525997,
+    "seen": 1788798023.2420566,
+    "ast_hash": "ed596bcfac676723b572377abbec4bbb",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/14j-the-event-reference-and-generics-flags.md": {
+    "mtime": 1788701074.2539248,
+    "seen": 1788798023.2420573,
+    "ast_hash": "13028d9b324841a01db4ade3fd5655b1",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/14k-the-checks-with-no-switch.md": {
+    "mtime": 1788709032.0925913,
+    "seen": 1788798023.242058,
+    "ast_hash": "1c3717949f04d3959cd1445d9ed70ce5",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/15-extended-diagnostics.md": {
+    "mtime": 1788708609.4266965,
+    "seen": 1788798023.2420588,
+    "ast_hash": "bd9382bc771527b409ff23379a95fc0e",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/15b-the-roster-of-checks.md": {
+    "mtime": 1788708609.4267921,
+    "seen": 1788798023.2420595,
+    "ast_hash": "6aa5e446c0c518f1d378d096df662671",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/15c-the-checks-worth-understanding.md": {
+    "mtime": 1788708609.426538,
+    "seen": 1788798023.2420607,
+    "ast_hash": "442b025490f778445279095a006fe9ac",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/15d-configuring-extended-diagnostics.md": {
+    "mtime": 1788708524.7135906,
+    "seen": 1788798023.2420614,
+    "ast_hash": "f4781b0d4f3bf913616ea59dc199bc0d",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/15e-what-changes-underneath-you.md": {
+    "mtime": 1788709023.0803232,
+    "seen": 1788798023.242062,
+    "ast_hash": "90eb932189f281414e318bcb72f8b4ba",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/16-arriving-from-react-vue-or-svelte.md": {
+    "mtime": 1788709032.0928504,
+    "seen": 1788798023.242063,
+    "ast_hash": "f4b1db239b8e780d9c791d1e45e8c22a",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/17-the-filename-in-the-error.md": {
+    "mtime": 1788709023.0804546,
+    "seen": 1788798023.2420638,
+    "ast_hash": "5824790444db586198cc4e9368fb00eb",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/17b-the-resolution-errors.md": {
+    "mtime": 1788709023.085145,
+    "seen": 1788798023.242065,
+    "ast_hash": "d7afd26923d55dbb5e5a2baf7299e556",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/17c-the-v22-upgrade-wall.md": {
+    "mtime": 1788708993.5688422,
+    "seen": 1788798023.2420654,
+    "ast_hash": "4923d187c7d704a10863328571554ec2",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/01-compiler-with-a-framework-attached/README.md": {
+    "mtime": 1788709106.714204,
+    "seen": 1788798023.2420664,
+    "ast_hash": "0f377ea7410f5e79bad3c40272c917b0",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/01-bootstrapapplication-line-by-line.md": {
+    "mtime": 1788676197.0771105,
+    "seen": 1788798023.242067,
+    "ast_hash": "2e578a97df4044d3b9d0513bd700f860",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/01b-the-ngmodule-bootstrap-it-replaced.md": {
+    "mtime": 1788676169.6847856,
+    "seen": 1788798023.242068,
+    "ast_hash": "d53b716935416dd030e87a109c3c0eb6",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/03-standalone-by-default-which-version-changed-what.md": {
+    "mtime": 1788676169.6850958,
+    "seen": 1788798023.2420688,
+    "ast_hash": "84ba96378751f76ea5a69119370833bc",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/04-what-imports-actually-means.md": {
+    "mtime": 1788676169.6852334,
+    "seen": 1788798023.2420695,
+    "ast_hash": "8e4f71ac3a2d4fcc5a2896b73d5de3dd",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/04b-what-goes-in-the-imports-array.md": {
+    "mtime": 1788676117.773599,
+    "seen": 1788798023.2420702,
+    "ast_hash": "b7f9cd93009c53f8397d75023711c199",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/04c-what-the-compiler-does-with-the-array.md": {
+    "mtime": 1788676169.685342,
+    "seen": 1788798023.2420714,
+    "ast_hash": "e4e24ce1250bebcd3c2255a2f3f59ce7",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/04d-the-ambient-ngmodule-scope-it-replaced.md": {
+    "mtime": 1788676117.773749,
+    "seen": 1788798023.2420726,
+    "ast_hash": "2c5259689d3db9fe10df54b114c9b3d2",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/05-unused-imports-and-the-compiler-diagnostics.md": {
+    "mtime": 1788676117.7738874,
+    "seen": 1788798023.2420735,
+    "ast_hash": "b1b1d1fefb61a08429ac2baf23bea2da",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/05b-the-two-cases-where-ng8113-is-silent.md": {
+    "mtime": 1788676117.7739854,
+    "seen": 1788798023.2420747,
+    "ast_hash": "0e75ae95331b215387346c8fb4562dce",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/05c-what-a-stale-import-costs-and-the-cleanup-schematics.md": {
+    "mtime": 1788676117.7740936,
+    "seen": 1788798023.2420757,
+    "ast_hash": "ea4a1ec20f36a31053ce3ada7e15700a",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/05d-the-errors-that-reject-an-import-outright.md": {
+    "mtime": 1788676117.7745764,
+    "seen": 1788798023.2420764,
+    "ast_hash": "a700a9ac01868d0145cc4b463b391bfa",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/06-not-a-known-element.md": {
+    "mtime": 1788676117.7746797,
+    "seen": 1788798023.242077,
+    "ast_hash": "21c11489e9a0fb1232a2337252b9663e",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/06b-runtime-detection.md": {
+    "mtime": 1788676117.774781,
+    "seen": 1788798023.242078,
+    "ast_hash": "e41afd5f4f64efb95bdbeb29974f7a25",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/06c-the-five-causes.md": {
+    "mtime": 1788676117.7748792,
+    "seen": 1788798023.242079,
+    "ast_hash": "8632b5e12c148e24301fabc9c256c494",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/06d-legacy-declarables-and-custom-elements.md": {
+    "mtime": 1788674620.1501532,
+    "seen": 1788798023.2420805,
+    "ast_hash": "e5da254cb39403060d1ce20f4887d0dd",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/06e-the-commonmodule-anti-fix.md": {
+    "mtime": 1788675900.2589183,
+    "seen": 1788798023.2420816,
+    "ast_hash": "d9bab7b9e6b8dff4b5c0ddf15dc18f76",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/06f-what-schemas-actually-does.md": {
+    "mtime": 1788676117.7751024,
+    "seen": 1788798023.2420824,
+    "ast_hash": "f13803235ec823d538d974b596c7bd50",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/06g-where-schemas-lives.md": {
+    "mtime": 1788676117.7751966,
+    "seen": 1788798023.2420833,
+    "ast_hash": "4b57a6cd2a40b22454053dd3cb28c2f4",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/07-what-replaced-each-ngmodule-responsibility.md": {
+    "mtime": 1788676117.7753878,
+    "seen": 1788798023.2420843,
+    "ast_hash": "15183d9ec3d5b18fa3f17a0db21d4fa0",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/07b-imports-split-in-two-and-providers-gained-four-homes.md": {
+    "mtime": 1788676169.6854603,
+    "seen": 1788798023.2420855,
+    "ast_hash": "cc7d38700096d11f5f86bd3f37a8c11d",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/07c-the-fields-that-moved-and-the-ones-deleted.md": {
+    "mtime": 1788676169.6855395,
+    "seen": 1788798023.2420862,
+    "ast_hash": "b2a10f682a2b39f2ad4c6ef949af9109",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/08-ngmodule-interop-importprovidersfrom.md": {
+    "mtime": 1788693761.3255177,
+    "seen": 1788798023.2420866,
+    "ast_hash": "08aed70f586e3bb769b2d2c606be0fd0",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/08b-what-importprovidersfrom-drags-in.md": {
+    "mtime": 1788676117.7758772,
+    "seen": 1788798023.242088,
+    "ast_hash": "be00a1a4262afb685ac328ac3206aafb",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/08c-ordering-cycles-and-multi-tokens.md": {
+    "mtime": 1788693761.3256788,
+    "seen": 1788798023.242089,
+    "ast_hash": "0620fd2d01c15567d25a61adb27530f6",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/08d-the-two-errors-importprovidersfrom-raises.md": {
+    "mtime": 1788693761.3258305,
+    "seen": 1788798023.2420897,
+    "ast_hash": "09b28c9343ac3fdad474a78835c2c1be",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/08e-the-interop-shapes-that-beat-it.md": {
+    "mtime": 1788693044.6515162,
+    "seen": 1788798023.2420924,
+    "ast_hash": "64084b0b2e59d66223cee20c0be97c68",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/08f-the-multi-bucket-worked-end-to-end.md": {
+    "mtime": 1788693078.5230699,
+    "seen": 1788798023.2420936,
+    "ast_hash": "d71af178870247e766ec80f749b1b8d8",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/08g-narrowing-the-injector-and-the-lifetime.md": {
+    "mtime": 1788692074.6232996,
+    "seen": 1788798023.2420943,
+    "ast_hash": "d69dbdf79d6030b40e9af7d5b5d3c835",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/08h-narrowing-the-lifetime-keeping-the-module-lazy.md": {
+    "mtime": 1788693044.6518097,
+    "seen": 1788798023.242095,
+    "ast_hash": "ffc7333e26abc5e3683c7eca3ccaf419",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/08i-what-a-library-should-ship-instead.md": {
+    "mtime": 1788693044.651917,
+    "seen": 1788798023.2420962,
+    "ast_hash": "1df9b127307704770aca6f4491ee01bf",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/08j-when-the-bridge-is-the-honest-answer.md": {
+    "mtime": 1788692398.1924598,
+    "seen": 1788798023.2420971,
+    "ast_hash": "d57e76beff034b6551a7264ffe8f8be1",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/09-the-standalone-migration-schematic.md": {
+    "mtime": 1788693761.325937,
+    "seen": 1788798023.2420979,
+    "ast_hash": "f32968838b6dbe7bfc08a8b307f7bfcd",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/09b-mode-1-convert-to-standalone.md": {
+    "mtime": 1788676117.7764049,
+    "seen": 1788798023.242099,
+    "ast_hash": "68fe050cf8a8dc2b1e83213a169f9f80",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/09c-mode-2-prune-ng-modules.md": {
+    "mtime": 1788676169.6866503,
+    "seen": 1788798023.2420998,
+    "ast_hash": "7b5a466a900239c5002cf87e4f19d994",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/10-why-standalone-makes-the-graph-splittable.md": {
+    "mtime": 1788676117.7766159,
+    "seen": 1788798023.2421007,
+    "ast_hash": "a08f063cb53fc10597b1c403eaac3641",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/10b-loadcomponent-at-a-route-boundary.md": {
+    "mtime": 1788676014.1522346,
+    "seen": 1788798023.2421017,
+    "ast_hash": "349746ebb00ebe1ad7364ef8f0eb6406",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/10c-incremental-compilation-and-the-scope-cache.md": {
+    "mtime": 1788676071.7954998,
+    "seen": 1788798023.2421026,
+    "ast_hash": "2cd8fea683049cd51ec3f66648a1a0af",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/11-where-ngmodule-still-legitimately-appears.md": {
+    "mtime": 1788676169.686903,
+    "seen": 1788798023.242104,
+    "ast_hash": "bed75ee9bf85514fd7b094ef980d5934",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/02-standalone-by-default/README.md": {
+    "mtime": 1788693780.9279814,
+    "seen": 1788798023.2421052,
+    "ast_hash": "756f575aa54b3d2de222c0df017c32f4",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/01-app-config-and-what-bootstrap-does-with-it.md": {
+    "mtime": 1788786140.0616257,
+    "seen": 1788798023.2421064,
+    "ast_hash": "805f3dc41f3bf747187cc82a7f893a4f",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/02-why-provide-functions-replaced-forroot.md": {
+    "mtime": 1788786140.0605202,
+    "seen": 1788798023.2421074,
+    "ast_hash": "878bd390efb45b22c75ad4d0455f3d39",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/03-environmentproviders-vs-provider.md": {
+    "mtime": 1788786140.061111,
+    "seen": 1788798023.2421086,
+    "ast_hash": "32c75f824484ebf37331b1c9c2d5484b",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/04-writing-your-own-provide-function.md": {
+    "mtime": 1788786140.0608165,
+    "seen": 1788798023.2421095,
+    "ast_hash": "ed6267a684e141d82a5b0728bebb83c3",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/05-change-detection-providers.md": {
+    "mtime": 1788693419.3131819,
+    "seen": 1788798023.2421105,
+    "ast_hash": "259ec03feb6917a642e6a8d342bb73d4",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/05b-provide-zone-change-detection-the-opt-out.md": {
+    "mtime": 1788693419.3130941,
+    "seen": 1788798023.2421117,
+    "ast_hash": "ad925fe3f0b6ffe1fb49377ac877c793",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/05c-the-redundant-opt-in-and-ng0408.md": {
+    "mtime": 1788693419.3132672,
+    "seen": 1788798023.2421129,
+    "ast_hash": "4bd5b35673c24a1fedd3f6d7d42ff0e4",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/05d-the-polyfill-half-and-noopngzone.md": {
+    "mtime": 1788713448.3132865,
+    "seen": 1788798023.2421138,
+    "ast_hash": "f340690a64367f74489b025cedc33511",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/05e-provide-check-no-changes-config.md": {
+    "mtime": 1788712538.8942866,
+    "seen": 1788798023.2421148,
+    "ast_hash": "e655cd6e1e6d4e30ad8df0cb85d51b66",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/05f-check-no-changes-in-production-and-developer-preview.md": {
+    "mtime": 1788713015.490618,
+    "seen": 1788798023.2421157,
+    "ast_hash": "1f38427a030ffc85bcc49063a31827fc",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/05g-the-check-no-changes-interval.md": {
+    "mtime": 1788712700.1098888,
+    "seen": 1788798023.242117,
+    "ast_hash": "415373fa4a6e648b4b7012559e6b13ab",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/05h-hunting-a-stale-binding-in-zoneless.md": {
+    "mtime": 1788713025.1440773,
+    "seen": 1788798023.242118,
+    "ast_hash": "5235625216f727bde017bd64ee1a6c7d",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/06-startup-and-error-listener-providers.md": {
+    "mtime": 1788713422.473125,
+    "seen": 1788798023.2421193,
+    "ast_hash": "42b3a115b4942200a89348b9bdfced33",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/06b-initializer-ordering-and-failure.md": {
+    "mtime": 1788693419.3134506,
+    "seen": 1788798023.2421205,
+    "ast_hash": "c050aaaf524a541405eb81c481d215cc",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/06c-when-a-startup-initializer-fails.md": {
+    "mtime": 1788693470.6205146,
+    "seen": 1788798023.2421212,
+    "ast_hash": "1f72dc101e754f410b24a679feb38b8e",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/06d-environment-initializers.md": {
+    "mtime": 1788693450.2523634,
+    "seen": 1788798023.2421222,
+    "ast_hash": "3e2291732b93c224ebda7625f2dbe059",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/06e-platform-initializers.md": {
+    "mtime": 1788693419.3145294,
+    "seen": 1788798023.2421234,
+    "ast_hash": "c7f987c256f50b51bf01ee0c7c7ec815",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/06f-provide-browser-global-error-listeners.md": {
+    "mtime": 1788693419.314608,
+    "seen": 1788798023.2421243,
+    "ast_hash": "63f16c2cb599c12e99178e05613ddd87",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/06g-error-handler-and-ng0402.md": {
+    "mtime": 1788693419.3147006,
+    "seen": 1788798023.242125,
+    "ast_hash": "4127fba4a62997ca987ea8903d45a027",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/07-provide-router-and-the-route-array.md": {
+    "mtime": 1788693419.3149736,
+    "seen": 1788798023.2421257,
+    "ast_hash": "7c3e7eb6c6bbdb17911895fba90f0c07",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/07b-the-bootstrap-listener-and-initial-navigation.md": {
+    "mtime": 1788693450.2525225,
+    "seen": 1788798023.2421277,
+    "ast_hash": "e18e6de6907b8ee62ea8a440266e37c8",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/08-router-features-one-by-one.md": {
+    "mtime": 1788693470.6229813,
+    "seen": 1788798023.2421286,
+    "ast_hash": "8b4badbcdf3ca3eae17c3b2f58947e4f",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/08b-with-router-config-and-hash-location.md": {
+    "mtime": 1788693419.3150594,
+    "seen": 1788798023.2421303,
+    "ast_hash": "d414b83f41980abc7c8eb67f0f304076",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/08c-with-component-input-binding.md": {
+    "mtime": 1788693562.8370895,
+    "seen": 1788798023.2421312,
+    "ast_hash": "17460180f605ac5ba30dc6586c1476ff",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/08d-view-transitions-and-scrolling.md": {
+    "mtime": 1788693542.5101392,
+    "seen": 1788798023.2421322,
+    "ast_hash": "9973c35b9275fdd33e28bb0bfac831ca",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/08e-preloading-and-navigation-errors.md": {
+    "mtime": 1788693470.621738,
+    "seen": 1788798023.2421336,
+    "ast_hash": "46e39f0cad851e1c50436dada057bc4a",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/08f-initial-navigation.md": {
+    "mtime": 1788693419.3154871,
+    "seen": 1788798023.242135,
+    "ast_hash": "1e403ca5e767cc1821e15d777cb4948b",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/08g-tracing-and-the-experimental-end.md": {
+    "mtime": 1788713422.4734645,
+    "seen": 1788798023.2421358,
+    "ast_hash": "b9a6f23a7cb0bf3ddd9ebfb32a84c267",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/09-provide-http-client-and-the-backend.md": {
+    "mtime": 1788713448.31475,
+    "seen": 1788798023.2421367,
+    "ast_hash": "810e4ce5fa2237d79d150fca01674d74",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/09b-inside-provide-http-client.md": {
+    "mtime": 1788713448.3151872,
+    "seen": 1788798023.242138,
+    "ast_hash": "6a942c5e83b21e080b61f2d680df0686",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/09c-the-fetch-default-and-withfetch.md": {
+    "mtime": 1788712778.0001764,
+    "seen": 1788798023.2421389,
+    "ast_hash": "dd3e17886130db1add694ccf321bf302",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/09d-withxhr-on-the-server-and-httpclientmodule.md": {
+    "mtime": 1788712720.6152706,
+    "seen": 1788798023.2421398,
+    "ast_hash": "e55f7ee9e98cca80c0029729aa79e7d3",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/09e-httpclientmodule-end-of-the-road.md": {
+    "mtime": 1788713422.473734,
+    "seen": 1788798023.242141,
+    "ast_hash": "2c8d638fd75cc9cba8edf83c0d51686b",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/10-http-features.md": {
+    "mtime": 1788713448.3159795,
+    "seen": 1788798023.2421417,
+    "ast_hash": "f4b3ba1aa0e3980341dea5eb5e1bebde",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/10b-choosing-interceptor-positions.md": {
+    "mtime": 1788712770.118152,
+    "seen": 1788798023.2421427,
+    "ast_hash": "3b8c6b0db7b993fbc4812dde19accf62",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/10c-the-interceptor-chain-internals.md": {
+    "mtime": 1788712847.7064433,
+    "seen": 1788798023.242144,
+    "ast_hash": "0e8d8d988b373132f9f81664cef8c117",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/10d-the-two-interceptor-systems.md": {
+    "mtime": 1788713325.0691118,
+    "seen": 1788798023.2421448,
+    "ast_hash": "77532c173b20e10040d78f92604570db",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/10e-xsrf-protection.md": {
+    "mtime": 1788713448.3154585,
+    "seen": 1788798023.2421458,
+    "ast_hash": "01491cd605d43d4a7b98e8fe6fc7d8bc",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/10f-requests-made-via-parent.md": {
+    "mtime": 1788713448.3157406,
+    "seen": 1788798023.2421467,
+    "ast_hash": "843f21dfce294711daa4ad800a371ee5",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/10g-jsonp-and-the-deprecated-end.md": {
+    "mtime": 1788786140.0601323,
+    "seen": 1788798023.242148,
+    "ast_hash": "7323a22b013f5fcd8dd0452878926911",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/11-hydration-animations-and-the-rest.md": {
+    "mtime": 1788786128.3359623,
+    "seen": 1788798023.2421486,
+    "ast_hash": "5c9c2b89a25c96528d2833aa3881a363",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/11b-the-feature-inventory.md": {
+    "mtime": 1788786114.3332243,
+    "seen": 1788798023.2421496,
+    "ast_hash": "8632774683f66c3debadb22255bc4b5e",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/11c-incremental-hydration-and-event-replay.md": {
+    "mtime": 1788785778.6626189,
+    "seen": 1788798023.2421505,
+    "ast_hash": "dd9b4b8d4bb2fe11fd4a7faef0a001af",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/11d-the-http-transfer-cache.md": {
+    "mtime": 1788785842.0548887,
+    "seen": 1788798023.242152,
+    "ast_hash": "1a6b6e39e7444d8dcc49f53e21abcd6a",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/11e-the-contradiction-checks.md": {
+    "mtime": 1788785939.2796662,
+    "seen": 1788798023.2421527,
+    "ast_hash": "b78ebbcaf8f0b66a575355b1ef9c8d63",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/11f-animations-are-deprecated.md": {
+    "mtime": 1788785995.497542,
+    "seen": 1788798023.2421536,
+    "ast_hash": "6a0bfa3b5dd6b35cee80cac004ac810c",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/11g-the-standalone-core-providers.md": {
+    "mtime": 1788786067.0378466,
+    "seen": 1788798023.2421548,
+    "ast_hash": "b72503579a42e81f911b8d8f8e27bcc5",
+    "semantic_hash": ""
+  },
+  "docs/angular/pages/phase-0-how-angular-runs/03-the-provider-array/README.md": {
+    "mtime": 1788786179.5864484,
+    "seen": 1788798023.2421556,
+    "ast_hash": "2a21fa4f48f4cb372a2bf7e9d5f9725f",
+    "semantic_hash": ""
+  },
+  "docs/babel/pages/04-presets/01b-react-typescript-and-framework-presets.md": {
+    "mtime": 1788711780.197055,
+    "seen": 1788798023.2421703,
+    "ast_hash": "9a7151e160e8d25207bd76aa755b19ec",
+    "semantic_hash": ""
+  },
+  "docs/dsa/README.md": {
+    "mtime": 1788745869.273286,
+    "seen": 1788798023.2426398,
+    "ast_hash": "b8050b579fc3c3e2e36e20419f4bda90",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/README.md": {
+    "mtime": 1788780326.692101,
+    "seen": 1788798023.2426414,
+    "ast_hash": "795bae9cc9199a4e616b437989d641d6",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/01-what-the-coding-rounds-grade.md": {
+    "mtime": 1788749416.2117147,
+    "seen": 1788798023.2426426,
+    "ast_hash": "3e019d81fe7313de6725c11f5aa7a71f",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/02-the-45-minute-shape.md": {
+    "mtime": 1788748629.7184687,
+    "seen": 1788798023.242644,
+    "ast_hash": "43075d8dec8810caa88acfe24222e1a6",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/03-the-method.md": {
+    "mtime": 1788749723.3674755,
+    "seen": 1788798023.2426455,
+    "ast_hash": "ad3b87f64804aad327566578076665d9",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/04-language-choice-and-runtime-traps.md": {
+    "mtime": 1788748804.2912338,
+    "seen": 1788798023.2426465,
+    "ast_hash": "6f13b933baf18563e06fcd559f69f265",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/04b-java-traps-and-sorting.md": {
+    "mtime": 1788748909.371228,
+    "seen": 1788798023.2426474,
+    "ast_hash": "596f1836926520093ad608711508101b",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/05-reading-the-constraints.md": {
+    "mtime": 1788749020.1985624,
+    "seen": 1788798023.2426484,
+    "ast_hash": "bf8003745f12a00387ef91539d4b3b69",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/06-spaced-repetition-and-the-mistake-log.md": {
+    "mtime": 1788749265.6706939,
+    "seen": 1788798023.2426493,
+    "ast_hash": "64ed9a418b8df43023ea2d682df6a035",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/07-the-when-stuck-protocol.md": {
+    "mtime": 1788749189.533665,
+    "seen": 1788798023.2426505,
+    "ast_hash": "12e7a1cb261c2c2f11f44760bef2fb30",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/08-testing-your-own-code-live.md": {
+    "mtime": 1788749265.7320473,
+    "seen": 1788798023.242652,
+    "ast_hash": "5e0e0efdd07ee983e416b0beb4eb1a79",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/09-the-ladders.md": {
+    "mtime": 1788749338.1125996,
+    "seen": 1788798023.242653,
+    "ast_hash": "c91d49c5789b7b647d4c86d475ed73b6",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/10-mock-interviews.md": {
+    "mtime": 1788749416.2732275,
+    "seen": 1788798023.2426543,
+    "ast_hash": "2c5d31518c40f06af4db5d296e66fb17",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/11-communication-mechanics.md": {
+    "mtime": 1788749536.1100216,
+    "seen": 1788798023.2426553,
+    "ast_hash": "c8b9670a832e31fbbbb776c4781086ed",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/12-javas-collections-for-interviews.md": {
+    "mtime": 1788749688.0174992,
+    "seen": 1788798023.242656,
+    "ast_hash": "dcd8534fde59e5c021638dc624ef4d3a",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/13-how-this-track-relates-to-javascript.md": {
+    "mtime": 1788749688.0913327,
+    "seen": 1788798023.242657,
+    "ast_hash": "3a6b4ceb34e0876d6d4d58483eadfce5",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/14-competitive-programming-vs-interviews.md": {
+    "mtime": 1788749623.0711668,
+    "seen": 1788798023.2426581,
+    "ast_hash": "1cf80904938cc121ff77e45066be9453",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-0-the-interview-and-practice/README.md": {
+    "mtime": 1788749688.144815,
+    "seen": 1788798023.242659,
+    "ast_hash": "65c06491f276ae8a26492cb994b5042c",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/01-big-o-theta-and-omega.md": {
+    "mtime": 1788779170.82012,
+    "seen": 1788798023.24266,
+    "ast_hash": "93380b21c8580e3ca96dac1b0a657f5e",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/02-reading-complexity-off-code.md": {
+    "mtime": 1788779168.0964396,
+    "seen": 1788798023.2426608,
+    "ast_hash": "14e50e52f3115e71bc1944f875062f30",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/02b-recursion-as-a-tree.md": {
+    "mtime": 1788779339.8178842,
+    "seen": 1788798023.242662,
+    "ast_hash": "baacf9b52f95b263e62622fa614ea91f",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/03-amortised-analysis.md": {
+    "mtime": 1788779337.0237572,
+    "seen": 1788798023.2426631,
+    "ast_hash": "067e3c16b4e1276e3f81deff259e6df8",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/03b-union-find-and-the-limits-of-amortised.md": {
+    "mtime": 1788779530.3707922,
+    "seen": 1788798023.2426639,
+    "ast_hash": "017ec03652e3f0e757fb437367bb5595",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/04-space-and-the-recursion-stack.md": {
+    "mtime": 1788779527.5527709,
+    "seen": 1788798023.2426648,
+    "ast_hash": "7f35d2a65d8048c76d885e56fb7f2fbb",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/04b-tail-calls-and-the-explicit-stack.md": {
+    "mtime": 1788779695.819885,
+    "seen": 1788798023.2426658,
+    "ast_hash": "1117377e8eb2c33a5578080275ad527d",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/05-the-common-classes-and-what-the-limits-imply.md": {
+    "mtime": 1788779840.6569088,
+    "seen": 1788798023.242667,
+    "ast_hash": "289d5c47bb10610c1fe43391ba19b6cb",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/06-hidden-costs.md": {
+    "mtime": 1788779837.6935117,
+    "seen": 1788798023.2426677,
+    "ast_hash": "27fbb37db994ea48f74e3f93c2b37722",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/06b-hash-keys-and-the-test-for-hidden-loops.md": {
+    "mtime": 1788779944.9884386,
+    "seen": 1788798023.2426689,
+    "ast_hash": "417446efa5503dccb496edac3569b4e8",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/07-complexity-of-the-built-ins.md": {
+    "mtime": 1788780046.0948253,
+    "seen": 1788798023.2426696,
+    "ast_hash": "208934eeaed38462879e39b49c6529a1",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/08-recurrences-and-the-master-theorem.md": {
+    "mtime": 1788780140.4796617,
+    "seen": 1788798023.2426708,
+    "ast_hash": "5d222b2569310206257923ce88a5588e",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/09-best-average-and-worst.md": {
+    "mtime": 1788780229.84816,
+    "seen": 1788798023.2426717,
+    "ast_hash": "f7167b8bcafbdc05de94d594c18e92e6",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/10-benchmarking-vs-analysis.md": {
+    "mtime": 1788780326.6319592,
+    "seen": 1788798023.2426724,
+    "ast_hash": "16765f563a77bbe68d51c308e15b8fda",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/11-proving-optimality.md": {
+    "mtime": 1788780323.527485,
+    "seen": 1788798023.2426732,
+    "ast_hash": "f65f7a42915767e35dc7a1e4a91daf12",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-1-complexity/README.md": {
+    "mtime": 1788780326.6914945,
+    "seen": 1788798023.2426739,
+    "ast_hash": "b84a3dfe5ec4511965614a25bf84c222",
+    "semantic_hash": ""
+  },
+  "docs/dsa/pages/phase-2-recursion-maths-bits/README.md": {
+    "mtime": 1788784390.946588,
+    "seen": 1788798023.2426748,
+    "ast_hash": "51fa0bae4d065e86467182dfeaa0c1d7",
+    "semantic_hash": ""
+  },
+  "docs/dsa/syllabus/01-foundations.md": {
+    "mtime": 1788745869.2712905,
+    "seen": 1788798023.2426758,
+    "ast_hash": "1c4dc8ff333a907125bb82b99fbbd4cb",
+    "semantic_hash": ""
+  },
+  "docs/dsa/syllabus/02-arrays-strings-and-hashing.md": {
+    "mtime": 1788745869.2715962,
+    "seen": 1788798023.2426765,
+    "ast_hash": "042897c4176479f7f1d5c0870c092e53",
+    "semantic_hash": ""
+  },
+  "docs/dsa/syllabus/03-linear-structures-and-binary-search.md": {
+    "mtime": 1788745869.2718017,
+    "seen": 1788798023.2426772,
+    "ast_hash": "9ba5289387045419ca50aec78592828d",
+    "semantic_hash": ""
+  },
+  "docs/dsa/syllabus/04-trees-heaps-and-tries.md": {
+    "mtime": 1788745869.2719839,
+    "seen": 1788798023.2426786,
+    "ast_hash": "105acbece097cbe11a58569e85979af8",
+    "semantic_hash": ""
+  },
+  "docs/dsa/syllabus/05-graphs.md": {
+    "mtime": 1788745869.272202,
+    "seen": 1788798023.2426796,
+    "ast_hash": "85ad9ced6452a1eab93398737d3914de",
+    "semantic_hash": ""
+  },
+  "docs/dsa/syllabus/06-backtracking-greedy-and-dp.md": {
+    "mtime": 1788745869.2724333,
+    "seen": 1788798023.2426803,
+    "ast_hash": "5d2531f8f1146db8d764fe1e57bf0f66",
+    "semantic_hash": ""
+  },
+  "docs/dsa/syllabus/07-design-flavoured-and-applied.md": {
+    "mtime": 1788745869.2727191,
+    "seen": 1788798023.242681,
+    "ast_hash": "79ae797e43e8f547a0142ccbcc453d89",
+    "semantic_hash": ""
+  },
+  "docs/dsa/syllabus/08-the-ladder-and-the-plan.md": {
+    "mtime": 1788745869.272918,
+    "seen": 1788798023.2426822,
+    "ast_hash": "3a777dd1b14646497f05c12a56fb4126",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/02-basic-animation-props/01b-exit-and-animatepresence.md": {
+    "mtime": 1788662008.6640635,
+    "seen": 1788798023.2430093,
+    "ast_hash": "c371b129e9e0d7471d1ad4c5af45b598",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/02-basic-animation-props/01c-transition-resolution-and-per-value-overrides.md": {
+    "mtime": 1788662097.8068066,
+    "seen": 1788798023.2430112,
+    "ast_hash": "7c377d844e4cf5904c7e42d1d2d25288",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/03-transition-types/01b-inertia-and-drag-release.md": {
+    "mtime": 1788661966.9688962,
+    "seen": 1788798023.243015,
+    "ast_hash": "3ef84ca806155f00c57211704ec94194",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/05-gestures/01b-gesture-accessibility-and-propagation.md": {
+    "mtime": 1788662375.124298,
+    "seen": 1788798023.24302,
+    "ast_hash": "1be298457045b82bacc82f0752bd9a8f",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/05-gestures/01c-drag-constraints-and-momentum.md": {
+    "mtime": 1788662343.0219998,
+    "seen": 1788798023.2430224,
+    "ast_hash": "901879e4cb570f65425704152b2588e5",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/05-gestures/01d-drag-in-the-real-dom.md": {
+    "mtime": 1788662275.5071306,
+    "seen": 1788798023.2430243,
+    "ast_hash": "608a302e3b17819931d23f926a811611",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/06-animatepresence/01b-modes-sync-wait-poplayout.md": {
+    "mtime": 1788662224.6154852,
+    "seen": 1788798023.243028,
+    "ast_hash": "30dc69d3c95a9df03c3193c9471b1543",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/06-animatepresence/01c-presence-state-and-manual-removal.md": {
+    "mtime": 1788662098.5812628,
+    "seen": 1788798023.2430298,
+    "ast_hash": "2ca3ea29529e0bf433fea596334d69b5",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/06-animatepresence/01d-nesting-propagation-and-one-shot-props.md": {
+    "mtime": 1788662089.6369715,
+    "seen": 1788798023.2430317,
+    "ast_hash": "a984b0bb7952bcb3d0f0561c784632ba",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/07-layout-animations/01b-when-layout-animations-fail-silently.md": {
+    "mtime": 1788661891.832897,
+    "seen": 1788798023.2430358,
+    "ast_hash": "44c09d11373fc6061ecc52ea5f623fcd",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/07-layout-animations/01c-shared-layout-coordination.md": {
+    "mtime": 1788661987.20657,
+    "seen": 1788798023.2430375,
+    "ast_hash": "efe812e8f5e21ba5ac615eb595991c87",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/07-layout-animations/01d-scroll-fixed-and-anchored-containers.md": {
+    "mtime": 1788662124.160474,
+    "seen": 1788798023.2430387,
+    "ast_hash": "a908c9cdd69354a6832e3cdf09ed5167",
+    "semantic_hash": ""
+  },
+  "docs/framer-motion/pages/08-scroll-linked-animations/01b-how-usescroll-measures.md": {
+    "mtime": 1788662483.6767485,
+    "seen": 1788798023.243042,
+    "ast_hash": "1e6be5250545605eaed09e54a1886108",
+    "semantic_hash": ""
+  },
+  "docs/redux-toolkit/pages/02-slices-and-actions/01b-slice-selectors-and-creator-callback.md": {
+    "mtime": 1788695520.736221,
+    "seen": 1788798023.2517986,
+    "ast_hash": "fa389af025476031f03f4cce5ac5c76b",
+    "semantic_hash": ""
+  },
+  "docs/redux-toolkit/pages/03-async-thunks/01b-cancellation-races-and-limits.md": {
+    "mtime": 1788695724.0015874,
+    "seen": 1788798023.2518013,
+    "ast_hash": "50775cf28e74631eaa03812837fa54a5",
+    "semantic_hash": ""
+  },
+  "docs/redux-toolkit/pages/04-rtk-query/01b-queryfn-transforms-and-infinite-queries.md": {
+    "mtime": 1788695876.0705285,
+    "seen": 1788798023.2518036,
+    "ast_hash": "6ceb4155eb63206751eb0e5923ad47a4",
+    "semantic_hash": ""
+  },
+  "docs/redux-toolkit/pages/04-rtk-query/02b-optimistic-and-manual-cache-updates.md": {
+    "mtime": 1788696020.9411662,
+    "seen": 1788798023.2518058,
+    "ast_hash": "12907ade9a05195c0301c81b0dd110c8",
+    "semantic_hash": ""
+  },
+  "docs/redux-toolkit/pages/12-testing/01b-testing-thunks-and-rtk-query.md": {
+    "mtime": 1788696543.8702188,
+    "seen": 1788798023.2518158,
+    "ast_hash": "7080326f306a078730fba7a658d93560",
+    "semantic_hash": ""
+  },
+  "docs/system-design/README.md": {
+    "mtime": 1788745869.2766068,
+    "seen": 1788798023.2518764,
+    "ast_hash": "eb14ee4d45dbd143b1c6282d89c13e3b",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/README.md": {
+    "mtime": 1788784390.985588,
+    "seen": 1788798023.2518773,
+    "ast_hash": "9b782ebcd8650847d6d1d6e233c1bff2",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/01-what-design-means-at-each-level.md": {
+    "mtime": 1788746616.1751652,
+    "seen": 1788798023.251879,
+    "ast_hash": "8ca3b3e01c5608677520489e9397ea7a",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/01b-staff-and-reading-the-room.md": {
+    "mtime": 1788747015.047882,
+    "seen": 1788798023.25188,
+    "ast_hash": "8bb0e346ba0215d30da80020f37c4d53",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/02-the-three-design-rounds.md": {
+    "mtime": 1788747144.6916933,
+    "seen": 1788798023.2518806,
+    "ast_hash": "2213f78ef82334b8457acbeb2c5e11e0",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/03-the-rubric.md": {
+    "mtime": 1788748005.3795319,
+    "seen": 1788798023.2518814,
+    "ast_hash": "576e17c1559f6147d2fc9aeaf8908088",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/04-the-vocabulary-contract.md": {
+    "mtime": 1788747420.8857129,
+    "seen": 1788798023.2518823,
+    "ast_hash": "205580538a8f4a2a7b408f8c029fbeff",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/05-the-latency-ladder.md": {
+    "mtime": 1788747523.9787493,
+    "seen": 1788798023.251883,
+    "ast_hash": "afb6437a20968bc307608e1de48e322e",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/06-reading-the-question.md": {
+    "mtime": 1788747624.201114,
+    "seen": 1788798023.2518837,
+    "ast_hash": "b83cab310e043be8b9a972b1885c0420",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/07-the-common-ways-to-fail.md": {
+    "mtime": 1788747723.7263494,
+    "seen": 1788798023.2518845,
+    "ast_hash": "d28c88c4871c3a4d321d5905646a9ecf",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/08-reasoned-wrong-beats-memorised-right.md": {
+    "mtime": 1788747818.8109322,
+    "seen": 1788798023.2518857,
+    "ast_hash": "453d859774f41e4f93f0837cf05f7dde",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/09-communication-mechanics.md": {
+    "mtime": 1788748005.33655,
+    "seen": 1788798023.2518866,
+    "ast_hash": "47af8ac939997b10eeb256fd33f9b5e4",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/10-how-to-practise.md": {
+    "mtime": 1788748005.4523127,
+    "seen": 1788798023.251887,
+    "ast_hash": "311870b07a4682770ad0e172dd861eed",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/11-whiteboard-and-remote-tooling.md": {
+    "mtime": 1788748094.3287687,
+    "seen": 1788798023.2518878,
+    "ast_hash": "de702144b1e02332f6af6f872777caa6",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/12-primary-sources.md": {
+    "mtime": 1788748216.2574384,
+    "seen": 1788798023.2518888,
+    "ast_hash": "18d5ed4d35167925376f2fdf01a7ba03",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/13-how-this-track-relates.md": {
+    "mtime": 1788748159.2359414,
+    "seen": 1788798023.2518897,
+    "ast_hash": "2df1affda8cfd19091ed48fb664d920a",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-0-the-interview/README.md": {
+    "mtime": 1788748216.3239927,
+    "seen": 1788798023.2518904,
+    "ast_hash": "c4ab1525c6b93eb240242d21cd35fa57",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/01-functional-requirements.md": {
+    "mtime": 1788749933.1444592,
+    "seen": 1788798023.2518911,
+    "ast_hash": "7f73b945914e669702d9d988befdd279",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/02-non-functional-requirements.md": {
+    "mtime": 1788750020.4748664,
+    "seen": 1788798023.2518919,
+    "ast_hash": "52b96dc46fa6c4c45babfd83cee91702",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/03-back-of-the-envelope-estimation.md": {
+    "mtime": 1788750111.8818958,
+    "seen": 1788798023.2518928,
+    "ast_hash": "b07598cd2067417bac0429289c84cad2",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/04-traffic-shapes.md": {
+    "mtime": 1788750204.5894122,
+    "seen": 1788798023.2518938,
+    "ast_hash": "708717d6855c82c2acd41ef01c46ef2b",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/05-the-api-sketch.md": {
+    "mtime": 1788750298.2204592,
+    "seen": 1788798023.2518945,
+    "ast_hash": "555835271f4612ffc9c196c8fd8ec60f",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/06-the-data-model-from-access-patterns.md": {
+    "mtime": 1788750393.0205784,
+    "seen": 1788798023.251896,
+    "ast_hash": "426f38a1f96e125b886e68c4b1c9a652",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/07-the-high-level-diagram.md": {
+    "mtime": 1788750582.1429086,
+    "seen": 1788798023.2518969,
+    "ast_hash": "2ef99c8d1a74971f4c1bcb43d3404e3e",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/08-read-path-and-write-path.md": {
+    "mtime": 1788750582.2081473,
+    "seen": 1788798023.2518978,
+    "ast_hash": "2081354f1926a88d9bbdfef378867832",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/09-choosing-the-deep-dives.md": {
+    "mtime": 1788750665.9145775,
+    "seen": 1788798023.2518997,
+    "ast_hash": "0a565d654a448ccc9ca2d9c58156de6b",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/10-trade-offs-in-one-sentence.md": {
+    "mtime": 1788777271.8706875,
+    "seen": 1788798023.2519004,
+    "ast_hash": "10a82c5bdfc1a0c010b2f51107e6ba93",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/11-bottlenecks-and-single-points-of-failure.md": {
+    "mtime": 1788777256.941535,
+    "seen": 1788798023.2519011,
+    "ast_hash": "0509cbc57b78428ee6cb8e461932cab0",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/11b-the-load-walk-and-the-price-of-redundancy.md": {
+    "mtime": 1788777658.1777163,
+    "seen": 1788798023.2519019,
+    "ast_hash": "a79f2b5ff528081c6c8808ce67ad17c2",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/12-the-scaling-walk.md": {
+    "mtime": 1788777826.7670655,
+    "seen": 1788798023.2519028,
+    "ast_hash": "0ade1ddfeb28aebc3d4bb83bd067e7ec",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/13-designing-for-cost.md": {
+    "mtime": 1788777954.5043066,
+    "seen": 1788798023.2519035,
+    "ast_hash": "fcab18af560a3545f38edca5dcb8b7d1",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/14-evolution-and-operations.md": {
+    "mtime": 1788778073.6513064,
+    "seen": 1788798023.2519042,
+    "ast_hash": "b132c4af9cc75a18d724758ed8d75275",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/15-time-management.md": {
+    "mtime": 1788778233.2343397,
+    "seen": 1788798023.2519052,
+    "ast_hash": "6aea1639a5b63d8a87c274dd65692a18",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/16-estimation-worked-examples.md": {
+    "mtime": 1788778371.7012477,
+    "seen": 1788798023.2519062,
+    "ast_hash": "c986d72897c2087a04f1aee2e2779fb8",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/17-the-same-method-in-writing.md": {
+    "mtime": 1788778530.2115352,
+    "seen": 1788798023.2519073,
+    "ast_hash": "ba0d69fc95a54b63ab9b8044b8a20931",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/18-diagrams-that-scale.md": {
+    "mtime": 1788778526.8346617,
+    "seen": 1788798023.251908,
+    "ast_hash": "7bc2bc509176e8a86487e9f873631cf4",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-1-the-method/README.md": {
+    "mtime": 1788778586.61825,
+    "seen": 1788798023.2519088,
+    "ast_hash": "5d2befdac0a7097fe0f455fbc63a800d",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/01-from-the-tap-to-the-first-byte.md": {
+    "mtime": 1788780838.1342757,
+    "seen": 1788798023.25191,
+    "ast_hash": "5f424c6f717b8f27778c86e10161bf77",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/02-load-balancing-layer-4-vs-layer-7.md": {
+    "mtime": 1788780941.1797955,
+    "seen": 1788798023.251911,
+    "ast_hash": "b82944f14a59592621d7ecdf20b41d6c",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/03-reverse-proxies-and-api-gateways.md": {
+    "mtime": 1788781043.7605999,
+    "seen": 1788798023.2519114,
+    "ast_hash": "0f6011d8c1e1e078fca9c56e07ed0380",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/04-stateless-services-and-where-the-state-went.md": {
+    "mtime": 1788781146.9285562,
+    "seen": 1788798023.2519124,
+    "ast_hash": "69d28e386dba249138fc267e6629ca39",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/05-cdns.md": {
+    "mtime": 1788781260.0361881,
+    "seen": 1788798023.2519133,
+    "ast_hash": "48fdd3e01c9a4f1191bc0938bcadbbf8",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/06-long-lived-connections.md": {
+    "mtime": 1788781373.839782,
+    "seen": 1788798023.2519138,
+    "ast_hash": "87b794b19999fce3be68aea211c20f9f",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/07-rate-limiting.md": {
+    "mtime": 1788781490.0090337,
+    "seen": 1788798023.2519152,
+    "ast_hash": "ea51c50e59156f3141deff45195e8af6",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/08-timeouts-retries-and-budgets.md": {
+    "mtime": 1788781589.3062937,
+    "seen": 1788798023.2519162,
+    "ast_hash": "4f224adbe69d0c5bc7d1229fc696cd28",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/09-dns-as-a-component.md": {
+    "mtime": 1788781687.6324885,
+    "seen": 1788798023.2519171,
+    "ast_hash": "da581afd3fa3089c8c3ea219272bfd2b",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/10-tls-termination-and-where-it-lives.md": {
+    "mtime": 1788781789.4343941,
+    "seen": 1788798023.2519178,
+    "ast_hash": "07f4c0d1758caf95e2a413de69a5d755",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/11-http-1-1-http-2-and-http-3.md": {
+    "mtime": 1788781888.8558977,
+    "seen": 1788798023.2519186,
+    "ast_hash": "229466735b1b085e565b0776c89605b2",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/12-service-discovery.md": {
+    "mtime": 1788781997.316702,
+    "seen": 1788798023.251919,
+    "ast_hash": "aecb26dd20c5e5be8759fcd52774bb69",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/13-serialization-on-the-wire.md": {
+    "mtime": 1788782100.5935557,
+    "seen": 1788798023.25192,
+    "ast_hash": "55e0f92685ad42add33c49bfae157804",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/14-connection-pooling-and-keep-alive.md": {
+    "mtime": 1788782221.8648014,
+    "seen": 1788798023.2519212,
+    "ast_hash": "93c710790fb875ce4bf72c3910884487",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/15-the-path-in-the-storefront.md": {
+    "mtime": 1788784390.985588,
+    "seen": 1788798023.251922,
+    "ast_hash": "95acb7f6ae2c0d50ca9db415f4fbf5d9",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/16-service-mesh.md": {
+    "mtime": 1788784390.985588,
+    "seen": 1788798023.251923,
+    "ast_hash": "76be192a1ee2fe3cf737d0e4fd27d971",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/16b-mesh-mtls-and-workload-identity.md": {
+    "mtime": 1788784390.985588,
+    "seen": 1788798023.251924,
+    "ast_hash": "8fc4a3529cb80e0c18cc38fe8f460968",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/16c-mesh-retries-timeouts-and-circuit-breaking.md": {
+    "mtime": 1788784390.985588,
+    "seen": 1788798023.2519248,
+    "ast_hash": "cb789699d22d843fcf60d1b24d2f0251",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/16d-mesh-traffic-splitting-and-canaries.md": {
+    "mtime": 1788784390.985588,
+    "seen": 1788798023.2519257,
+    "ast_hash": "3b91eaeadbfaa45f4b20f075a0cf6615",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/16e-what-a-service-mesh-costs.md": {
+    "mtime": 1788784390.986588,
+    "seen": 1788798023.2519264,
+    "ast_hash": "8a74e70cd251fe6ab66d0d68c03c00a8",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/16f-north-south-and-east-west.md": {
+    "mtime": 1788784390.986588,
+    "seen": 1788798023.2519276,
+    "ast_hash": "5cba6721aac9a34e9bc1143e4e2feadf",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/16g-when-a-mesh-earns-its-cost.md": {
+    "mtime": 1788784390.986588,
+    "seen": 1788798023.2519283,
+    "ast_hash": "d18ca05ab731e972ca99d31a56193fa6",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/17-gateway-patterns.md": {
+    "mtime": 1788784390.986588,
+    "seen": 1788798023.251929,
+    "ast_hash": "608504595abe0418a78acfd72d0e73f3",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/17b-aggregation-and-partial-failure.md": {
+    "mtime": 1788784390.986588,
+    "seen": 1788798023.2519307,
+    "ast_hash": "73cba6a9c45ad9335ff8f93abead3598",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/17c-the-fan-out-n-plus-1.md": {
+    "mtime": 1788784390.986588,
+    "seen": 1788798023.251932,
+    "ast_hash": "b794cf6ea04565232722df47bc1e2cf2",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/17d-routing-versus-orchestration.md": {
+    "mtime": 1788784390.986588,
+    "seen": 1788798023.2519326,
+    "ast_hash": "0b22a35f50e1550a5130e43193a1527f",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/17e-graphql-at-the-edge.md": {
+    "mtime": 1788784390.986588,
+    "seen": 1788798023.2519333,
+    "ast_hash": "70a02e610833e0955116b969b159cb8c",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/17f-graphql-authorisation-cost-and-federation.md": {
+    "mtime": 1788784390.986588,
+    "seen": 1788798023.2519345,
+    "ast_hash": "dc02c6edc9ca803f91c2b8353960e302",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/18-abuse-at-the-edge.md": {
+    "mtime": 1788784390.986588,
+    "seen": 1788798023.2519352,
+    "ast_hash": "9e1e3b999b5c39ac4caa3577765b4f13",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/18b-the-waf-and-its-false-positives.md": {
+    "mtime": 1788784390.9875882,
+    "seen": 1788798023.251936,
+    "ast_hash": "53bb65a48c2727d2392a407724eb94b3",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/18c-bots-challenges-and-the-ladder.md": {
+    "mtime": 1788784390.9875882,
+    "seen": 1788798023.2519367,
+    "ast_hash": "81d1a1d9c468acf5f29f7df4b12f207c",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/18d-abuse-that-is-business-logic.md": {
+    "mtime": 1788784390.9875882,
+    "seen": 1788798023.2519379,
+    "ast_hash": "5f85af7d40f853e1ee7eb55cff2f3f3e",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/18e-degrading-instead-of-falling-over.md": {
+    "mtime": 1788784390.9875882,
+    "seen": 1788798023.2519388,
+    "ast_hash": "d4cba9a0caffd6bce83ca8da62fba275",
+    "semantic_hash": ""
+  },
+  "docs/system-design/pages/phase-2-request-path/README.md": {
+    "mtime": 1788784390.9875882,
+    "seen": 1788798023.2519395,
+    "ast_hash": "4c7bb827cd4361102ee40e37a082e37d",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/01-the-interview-and-the-method.md": {
+    "mtime": 1788745083.997271,
+    "seen": 1788798023.2519403,
+    "ast_hash": "296272c102a110592fc409a37953e4fc",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/02-the-network-path-and-caching.md": {
+    "mtime": 1788745083.9975364,
+    "seen": 1788798023.2519414,
+    "ast_hash": "baf439751831d3dbb20fe5602388663f",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/03-storage-and-data.md": {
+    "mtime": 1788745083.9977267,
+    "seen": 1788798023.2519429,
+    "ast_hash": "a1815c79c62fb3c9253d6dd0d0f57d14",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/04-distributed-systems-theory.md": {
+    "mtime": 1788745083.9978945,
+    "seen": 1788798023.2519436,
+    "ast_hash": "9c8a74d160e8424476fac91279ec0d81",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/05-event-streaming-and-async.md": {
+    "mtime": 1788745083.998077,
+    "seen": 1788798023.2519445,
+    "ast_hash": "7f7100e4dde7caaf0b96092d7e84b4bf",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/06-api-design-and-contracts.md": {
+    "mtime": 1788745083.9982467,
+    "seen": 1788798023.2519455,
+    "ast_hash": "21f8906aa29b813c83ecb5f5211c0bff",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/07-cloud-kubernetes-and-iac.md": {
+    "mtime": 1788745083.99845,
+    "seen": 1788798023.2519467,
+    "ast_hash": "acc65611af051888ea5309a2d1681024",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/08-reliability-and-observability.md": {
+    "mtime": 1788745083.9986157,
+    "seen": 1788798023.2519474,
+    "ast_hash": "f4bc78e89d42646c07af7891180314e3",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/09-security-and-compliance.md": {
+    "mtime": 1788745083.9987783,
+    "seen": 1788798023.2519484,
+    "ast_hash": "ca2c020f95cadeb2578ebf0f6715c8be",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/10-ai-systems-design.md": {
+    "mtime": 1788745083.9989274,
+    "seen": 1788798023.2519493,
+    "ast_hash": "45e78ea6afcbd707c3f93b01a2f2b7c7",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/11-low-level-design.md": {
+    "mtime": 1788745083.9991407,
+    "seen": 1788798023.2519503,
+    "ast_hash": "5ef8d108b45e05086100d0796b5adc45",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/12-the-hld-catalogue.md": {
+    "mtime": 1788745083.999317,
+    "seen": 1788798023.2519512,
+    "ast_hash": "32d60f0a0f001003c88727b3b5f175bc",
+    "semantic_hash": ""
+  },
+  "docs/system-design/syllabus/13-the-senior-loop-and-proof-of-work.md": {
+    "mtime": 1788745083.9994714,
+    "seen": 1788798023.2519522,
+    "ast_hash": "917e6a7eb040e6c0c5d7e000ea5210e1",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/06-background-refetching/01b-refetch-render-cost.md": {
+    "mtime": 1788790076.403847,
+    "seen": 1788798023.2519612,
+    "ast_hash": "22a63dc2e9c3dfd7b73a79acb010046b",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/06-background-refetching/01c-polling-and-refetch-interval.md": {
+    "mtime": 1788790076.4042876,
+    "seen": 1788798023.2519624,
+    "ast_hash": "b053702541ab65d3e0bc5cc95d31995a",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/06-background-refetching/01d-network-mode-and-offline.md": {
+    "mtime": 1788790076.404744,
+    "seen": 1788798023.2519634,
+    "ast_hash": "450c9101ab2f3c98de72128715d1c5d6",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/07-pagination-and-infinite-queries/01b-infinite-queries.md": {
+    "mtime": 1788789953.9883168,
+    "seen": 1788798023.2519658,
+    "ast_hash": "a4e8a73261af9d6f9d4007838535f50f",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/07-pagination-and-infinite-queries/01c-rendering-and-concurrency.md": {
+    "mtime": 1788789980.4419014,
+    "seen": 1788798023.2519667,
+    "ast_hash": "558d17dbe76082828b410a0927808b76",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/07-pagination-and-infinite-queries/01d-infinite-cache-refetch-and-manual-updates.md": {
+    "mtime": 1788789953.9874284,
+    "seen": 1788798023.2519677,
+    "ast_hash": "166c8b0b1f200e47a111e7352462d2ac",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/08-dependent-and-parallel-queries/01b-parallel-queries-and-usequeries.md": {
+    "mtime": 1788790534.4815834,
+    "seen": 1788798023.2519755,
+    "ast_hash": "deac21214a79582de15c4f420ac692d2",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/08-dependent-and-parallel-queries/01c-combining-usequeries-results.md": {
+    "mtime": 1788790534.4824605,
+    "seen": 1788798023.2519763,
+    "ast_hash": "121958dbf2929629f977de288682c652",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/08-dependent-and-parallel-queries/01d-what-query-composition-costs.md": {
+    "mtime": 1788790534.4832373,
+    "seen": 1788798023.2519772,
+    "ast_hash": "eabb01352ffbaaa8328b8c1cf9b1d8b5",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/08-dependent-and-parallel-queries/01e-the-gate-in-full-skiptoken-and-placeholder-chains.md": {
+    "mtime": 1788790534.4838855,
+    "seen": 1788798023.251978,
+    "ast_hash": "546535d64a6ab4073fc5f6a861bf1cdd",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/08-dependent-and-parallel-queries/01f-placeholder-and-initial-data-in-a-chain.md": {
+    "mtime": 1788790534.4844441,
+    "seen": 1788798023.251979,
+    "ast_hash": "8f53b4e1862a5064cfba3e1f081e6555",
+    "semantic_hash": ""
+  },
+  "docs/tanstack-query/pages/08-dependent-and-parallel-queries/01g-placeholderdata-in-a-chain.md": {
+    "mtime": 1788790549.8587284,
+    "seen": 1788798023.2519798,
+    "ast_hash": "7f323b6aa710adf0e65f70c8f5e52d3f",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/01a-build-time-vs-runtime-config.md": {
+    "mtime": 1788793810.6331172,
+    "seen": 1788798023.2524354,
+    "ast_hash": "2c589f85badf65455cce26e43832fe49",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/01b-the-vite-prefix-and-secrets.md": {
+    "mtime": 1788792318.9727268,
+    "seen": 1788798023.2524362,
+    "ast_hash": "00024308157d98ffea859b2b965fc016",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/01c-built-in-constants-and-typing.md": {
+    "mtime": 1788792464.414256,
+    "seen": 1788798023.2524369,
+    "ast_hash": "c5c4da434d296c9d1080cbd2ce997e75",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/01d-base-url-and-ssr.md": {
+    "mtime": 1788792560.4129894,
+    "seen": 1788798023.2524378,
+    "ast_hash": "bf0e4c4ace8a91d2c3cc0d21f485da01",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/01e-modes-and-node-env.md": {
+    "mtime": 1788792653.891069,
+    "seen": 1788798023.2524393,
+    "ast_hash": "0123a5a7777b2d91aefc1acde6f54c7d",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/01f-modes-in-ci-and-containers.md": {
+    "mtime": 1788792734.5918376,
+    "seen": 1788798023.2524402,
+    "ast_hash": "7d5bf380142f31ab02b7fea2c0899e61",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/01g-dotenv-expansion.md": {
+    "mtime": 1788792839.2964623,
+    "seen": 1788798023.2524414,
+    "ast_hash": "bd097eebe8504c3d0b7fbd827a2ad622",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/01h-env-composition-and-interop.md": {
+    "mtime": 1788792950.112193,
+    "seen": 1788798023.2524421,
+    "ast_hash": "b5620121a95b112c85ff7ffbab93b6f0",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/01i-sharing-env-across-tools.md": {
+    "mtime": 1788793018.2610912,
+    "seen": 1788798023.2524428,
+    "ast_hash": "2fbd6eea156fc690ee6e7be53778de9a",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/02-config-time-env-and-define.md": {
+    "mtime": 1788793125.565269,
+    "seen": 1788798023.2524438,
+    "ast_hash": "b31f10a44de9d76a4996ff7e1a5165b5",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/02a-conditional-config-and-the-loader.md": {
+    "mtime": 1788793220.5508614,
+    "seen": 1788798023.252445,
+    "ast_hash": "138dac55a8ee0bda7e91cbecd3632886",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/02b-the-config-loader.md": {
+    "mtime": 1788793294.8553133,
+    "seen": 1788798023.2524457,
+    "ast_hash": "8ba644f846b4f7a98e1fb06eb743adc9",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/02c-define-and-html-replacement.md": {
+    "mtime": 1788793422.0374289,
+    "seen": 1788798023.252447,
+    "ast_hash": "440e6f92c85e48312b831e4b17bc2647",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/02d-html-constant-replacement.md": {
+    "mtime": 1788793497.2962077,
+    "seen": 1788798023.2524483,
+    "ast_hash": "b78882e51b75dd31a574ef1c982eb465",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/02e-typing-import-meta-env.md": {
+    "mtime": 1788793603.2326846,
+    "seen": 1788798023.252449,
+    "ast_hash": "b3ed37ed5c9308b83ced789c92bc768b",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/02f-types-that-lie-about-runtime.md": {
+    "mtime": 1788793699.172864,
+    "seen": 1788798023.25245,
+    "ast_hash": "337854a3944b95d96dc8225e6b3829eb",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/07-env-variables-and-modes/02g-the-validation-boundary.md": {
+    "mtime": 1788793780.549451,
+    "seen": 1788798023.2524507,
+    "ast_hash": "cf56fabb7c03649e1608613a3b4a64e4",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01a-plugin-conventions.md": {
+    "mtime": 1788797884.324009,
+    "seen": 1788798023.2524529,
+    "ast_hash": "830887f77b44eebb8f726557dfc91e52",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01b-the-hook-set.md": {
+    "mtime": 1788797884.323623,
+    "seen": 1788798023.2524538,
+    "ast_hash": "2b9cfc5362d29c83e4384a7c4d886935",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01c-per-environment-hooks.md": {
+    "mtime": 1788797884.3238106,
+    "seen": 1788798023.252455,
+    "ast_hash": "30c139a62c2378860927a475f521797b",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01d-config-and-configresolved.md": {
+    "mtime": 1788797719.289257,
+    "seen": 1788798023.2524557,
+    "ast_hash": "e177c44b83a66f2966c73bd3f0474697",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01e-configresolved.md": {
+    "mtime": 1788797719.289667,
+    "seen": 1788798023.2524564,
+    "ast_hash": "fc0ae53532b47ced4177eaf633e4ea08",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01f-hook-kinds-and-ordering-guarantees.md": {
+    "mtime": 1788797884.3232505,
+    "seen": 1788798023.2524576,
+    "ast_hash": "b1d829365411502abb450da6396158c9",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01g-accidental-serialisation.md": {
+    "mtime": 1788797884.3227131,
+    "seen": 1788798023.2524586,
+    "ast_hash": "fcb5d2628dc2879482161d14f991412d",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01h-eliminating-cross-plugin-coupling.md": {
+    "mtime": 1788797719.2906709,
+    "seen": 1788798023.2524593,
+    "ast_hash": "1cd1f9da69f8d1ad260a170c36d368b2",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01i-server-hooks.md": {
+    "mtime": 1788797884.3216443,
+    "seen": 1788798023.25246,
+    "ast_hash": "cd68740c3f8805139f78bdda0d893917",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01j-storing-the-server.md": {
+    "mtime": 1788797719.2916799,
+    "seen": 1788798023.252461,
+    "ast_hash": "68dd258d68c0bf40cd0a541edada9d55",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01k-the-guard-is-not-the-fix.md": {
+    "mtime": 1788797719.2919998,
+    "seen": 1788798023.2524626,
+    "ast_hash": "4e7152621e06e2ccb7d23603ad5d5d32",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01l-transform-index-html.md": {
+    "mtime": 1788797719.2925858,
+    "seen": 1788798023.2524633,
+    "ast_hash": "148726547f33d4e6c67afb6d900083fa",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01m-html-tag-descriptors.md": {
+    "mtime": 1788797719.2929513,
+    "seen": 1788798023.2524643,
+    "ast_hash": "57bcc1d0635fe183daadbe835ca71a79",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01n-html-children-and-composition.md": {
+    "mtime": 1788797856.8274775,
+    "seen": 1788798023.2524652,
+    "ast_hash": "1abdcb9b038f9faa5f84fc3728926faa",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01na-html-injection-composition.md": {
+    "mtime": 1788797849.7555635,
+    "seen": 1788798023.2524662,
+    "ast_hash": "d127101640f52ae0482cae6fabe5eaa9",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01nb-html-plugin-composition.md": {
+    "mtime": 1788797849.7574763,
+    "seen": 1788798023.252467,
+    "ast_hash": "f398d293a359c3d4c43c3dcf9be24837",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01nc-html-hook-execution-contract.md": {
+    "mtime": 1788797849.7605083,
+    "seen": 1788798023.252468,
+    "ast_hash": "fd7dd310f65318ce762866dc9db5828a",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01nd-html-transform-context.md": {
+    "mtime": 1788797817.5933025,
+    "seen": 1788798023.2524693,
+    "ast_hash": "d46ee0c9188da95821e4aff3cd33bfd2",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01p-plugin-ordering-and-enforce.md": {
+    "mtime": 1788797773.2216983,
+    "seen": 1788798023.2524703,
+    "ast_hash": "e0d9589985ff61e2743e45f4ce256954",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01pa-enforce-vs-hook-order.md": {
+    "mtime": 1788797254.2510731,
+    "seen": 1788798023.2524712,
+    "ast_hash": "bf1747db80225009b77a92288907b34c",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01pb-augmenting-plugins-you-do-not-own.md": {
+    "mtime": 1788797357.10211,
+    "seen": 1788798023.2524722,
+    "ast_hash": "e36ca2cc9979f9cf8f1b868ac6d99ba9",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01q-conditional-application.md": {
+    "mtime": 1788797773.222108,
+    "seen": 1788798023.252473,
+    "ast_hash": "0b7a38bae1e802c5f64885fe1d127237",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01qa-four-ways-to-make-a-plugin-conditional.md": {
+    "mtime": 1788797612.1374288,
+    "seen": 1788798023.252474,
+    "ast_hash": "83350df145e85d5d5baab9fcea446977",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01r-hook-filters.md": {
+    "mtime": 1788797329.5296152,
+    "seen": 1788798023.252475,
+    "ast_hash": "2fc7076c04111798519a0fe6eb67e4ed",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01ra-filter-utilities-and-ids.md": {
+    "mtime": 1788797323.6304994,
+    "seen": 1788798023.252476,
+    "ast_hash": "4c9429ce8c23ea50dea03f82cf3f7ce0",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01s-virtual-modules.md": {
+    "mtime": 1788797526.5895784,
+    "seen": 1788798023.2524765,
+    "ast_hash": "4226e83790966cdae3d767875b9a3130",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01sa-shipping-a-virtual-module.md": {
+    "mtime": 1788797602.9144814,
+    "seen": 1788798023.2524772,
+    "ast_hash": "297a0857013d7778bd09650fced106df",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01t-rolldown-compatibility-and-paths.md": {
+    "mtime": 1788797719.2933383,
+    "seen": 1788798023.2524781,
+    "ast_hash": "5ec394302f987325d639d7a702a0b3d4",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/08-plugin-system/01u-path-normalization-and-filters.md": {
+    "mtime": 1788797719.2935858,
+    "seen": 1788798023.2524793,
+    "ast_hash": "9dbd1d652b438322627c3426760ee7e5",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/17-the-2026-toolchain-landscape/01-the-2026-bundler-landscape.md": {
+    "mtime": 1788794160.3696556,
+    "seen": 1788798023.2524884,
+    "ast_hash": "5b3915dcfdf080253c31c597bcd171c5",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/17-the-2026-toolchain-landscape/01a-choosing-a-bundler.md": {
+    "mtime": 1788794238.564446,
+    "seen": 1788798023.2524893,
+    "ast_hash": "468d022c91ae67804ca9d527023742d0",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/17-the-2026-toolchain-landscape/02-webpack-to-vite-parity.md": {
+    "mtime": 1788794358.2154002,
+    "seen": 1788798023.25249,
+    "ast_hash": "cf7a9ce39cabaa6c34677e56f320763d",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/17-the-2026-toolchain-landscape/02a-the-four-that-do-not-transfer.md": {
+    "mtime": 1788794461.884597,
+    "seen": 1788798023.252491,
+    "ast_hash": "a8fc89a83e34195f8779a8dde54250fc",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/17-the-2026-toolchain-landscape/02b-loaders-become-plugins.md": {
+    "mtime": 1788796814.9488373,
+    "seen": 1788798023.2524917,
+    "ast_hash": "9bef91fd772bfad0dca102ca5a520ddd",
+    "semantic_hash": ""
+  },
+  "docs/vite/pages/17-the-2026-toolchain-landscape/03-the-adjacent-toolchain.md": {
+    "mtime": 1788794652.975251,
+    "seen": 1788798023.2524924,
+    "ast_hash": "6cbc71e3e8c4f2f38cf980b51cc9a26e",
     "semantic_hash": ""
   }
 }

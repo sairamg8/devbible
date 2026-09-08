@@ -1,23 +1,23 @@
-# Graph Report - devbible  (2026-09-06)
+# Graph Report - devbible  (2026-09-07)
 
 ## Corpus Check
-- 8708 files · ~11,607,228 words
+- 9093 files · ~12,498,462 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 56019 nodes · 79573 edges · 2153 communities (1393 shown, 667 thin omitted)
+- 59382 nodes · 84404 edges · 2209 communities (1458 shown, 666 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 734 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5a1c76b5`
+- Built from commit: `564f32cb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- 08-the-n-plus-1-problem/README.md
+- 09-entity-graph.md
 - 06-jpa-hibernate-model/README.md
-- 09-spring-data-jpa/README.md
+- 07b-query-by-example.md
 - phase-4-build-strategy/README.md
 - 10-lazy-loading/README.md
 - 15-podman-compose.md
@@ -34,10 +34,10 @@
 - 01-junit-5/README.md
 - phase-3-generics/README.md
 - 11-exceptions/README.md
-- 05-async-testing-and-act/README.md
+- 14-flaky-tests-and-ci.md
 - 15-webflux-reactive/README.md
 - 07-what-does-not-carry-across.md
-- 13-websocket/01-connecting.md
+- 02-base64.md
 - phase-10-server-components/README.md
 - 13-testing-and-developer-experience/01-explanation.md
 - 03-jdbc-transactions/README.md
@@ -57,25 +57,25 @@
 - 12-immutable-design/README.md
 - 04-data-fetching-in-the-app-router/01-explanation.md
 - 12-eafp-vs-lbyl/README.md
-- 08-test-data-patterns/README.md
+- 14b-time-and-determinism.md
 - 06-comparisons/README.md
 - phase-6-rest-surface/README.md
-- 03c-the-format-spec-mini-language.md
+- 03-strings/README.md
 - 06-ssg-isr-and-ssr-strategy/01-explanation.md
 - 04-the-dashboard/README.md
 - phase-4-classes-declarations/README.md
 - 06-jfr-and-profiling/README.md
 - phase-18-storefront/README.md
 - 21-what-belongs-in-a-transaction.md
-- 01-why-a-long-list-freezes.md
-- 06-sanitising-html/README.md
+- 01-the-forced-reflow.md
+- 01-what-can-hold-focus.md
 - phase-10-events/README.md
 - 10-the-three-cache-directives/README.md
 - 11-flyway-migrations/README.md
 - 01-memory-layout/README.md
 - 11-spring-security/README.md
 - 13-actuator/README.md
-- 21-structuredclone.md
+- 02-tokens-and-samesite.md
 - 01-jdbc/README.md
 - javascript/pages/README.md
 - 01c-appendix-a-glossary-the-a-to-z.md
@@ -86,46 +86,46 @@
 - 02-building-in-ci.md
 - patterns/README.md
 - phase-2-classes-objects/README.md
-- phase-2-components/README.md
+- 12-render-props/README.md
 - phase-6-performance/README.md
 - 05-indexes-and-explain/README.md
 - 07-error-handling-loading-states-and-resilience/01-explanation.md
 - phase-3-dockerfile/README.md
 - 12-graceful-shutdown/README.md
 - phase-3-generics-collections/README.md
-- 03-target-lib-and-types.md
+- 02-augmenting-processenv.md
 - phase-9-forms-actions/README.md
-- 10-extensions.md
+- phase-1-the-method/README.md
 - phase-1-running-containers/README.md
 - 03-aliasing.md
-- phase-9-spring-boot/README.md
+- 12-outbound-http/README.md
 - 08-validation/README.md
 - 03-error-contract/README.md
 - phase-4-objects-and-classes/README.md
 - 05-thread-dumps/README.md
 - 04-background-jobs-and-message-queues-for-async-workloads.md
 - 10-forms-authentication-and-security-hardening/01-explanation.md
-- 06-headless-components/README.md
-- 04-spring-transactional/README.md
+- 04-the-costs-and-limits.md
+- phase-2-request-path/README.md
 - 15-databases-apis-and-full-stack-patterns/01-explanation.md
 - 01b-the-three-kinds-of-pool.md
 - Phase 8 — Security
-- phase-10-data-access/README.md
+- 08-test-data-patterns/README.md
 - 08-imports/README.md
 - 10-packaging-for-deploy/README.md
-- 07-the-checkout-endpoint.md
+- 03-the-order-document.md
 - 04-custom-exceptions-translation.md
 - Phase 9 — CRUD patterns for a real API
 - 09-user.md
 - phase-7-networking/README.md
-- 03-dependency-injection/README.md
+- phase-9-spring-boot/README.md
 - phase-3-functions/README.md
-- 01-what-is-safe-to-retry.md
-- phase-7-io-time-stdlib/README.md
+- 14-testing-javascript/README.md
+- 08-records/README.md
 - phase-4-lambdas-streams/README.md
-- 02-building-a-router.md
+- 02-managing-focus.md
 - 06-running-code/README.md
-- 09-marked-rollback-only.md
+- 04-spring-transactional/README.md
 - 06-argument-captors.md
 - Phase 2 — Async and the event loop
 - phase-8-validation-authz/README.md
@@ -140,17 +140,17 @@
 - 09-jacoco/README.md
 - 05-truthiness/README.md
 - 02-platform-vs-virtual-threads/README.md
-- Phase 4 — Effects and synchronization
-- 02-hybrid-api-design-route-handlers-and-server-actions-side-by.md
+- phase-5-refs-context-reducers/README.md
+- 06-project-milestone-sprintdesk-on-drizzle-neon-with-pooling.md
 - 09-name-main/README.md
-- 01-singletons-and-strict.md
+- 02-cause-chains-and-boundaries.md
 - 05-dark-mode/README.md
 - phase-17-machine-coding/README.md
-- CREATE INDEX CONCURRENTLY
+- Why an index is not being used
 - 08-knowing-when-to-stop/README.md
 - 03-authorization-code-pkce/README.md
 - phase-7-async/README.md
-- 02-rejections-that-vanish.md
+- 12-timers/01-the-api.md
 - 04d-remote-patterns-is-a-security-control.md
 - Phase 11 — Transactions, MVCC and concurrency
 - 02-the-automatic-minimum-size/README.md
@@ -161,57 +161,57 @@
 - 03-what-middleware-must-not-do.md
 - 11-publishing-a-typed-package/README.md
 - 01-stacking-contexts.md
-- 03-what-express-delegates.md
-- 09-arrays.md
+- 06-timeouts-and-secrets.md
+- java/pages/phase-1-language-core/README.md
 - 02-custom-errors.md
 - 18-advanced-ecosystem-topics/01-explanation.md
-- 01-strict-flag-by-flag/README.md
+- 02-a-promise-the-compiler-cannot-keep.md
 - phase-5-grid/README.md
 - 14-the-caught-exception.md
 - Phase 10 Observability and performance
 - 02-the-validation-boundary.md
 - Phase 5 Networking HTTP and processes
 - PostgreSQL explanation pages
-- 04-outbox-relay-and-email.md
+- 07-money-and-time.md
 - 06-typing-the-custom-hooks/README.md
 - 01-window-and-document.md
 - 02-architecture-and-data-model.md
 - 01-module-and-moduleresolution/README.md
 - Phase 1 Selectors overview
 - 04-rate-limiting.md
-- 16-building-a-crud-api-with-postgres/01-explanation.md
+- 13b-milestone-the-overlap-seams.md
 - Phase 10 — Indexes and the query planner
 - 06-global-augmentation.md
-- 15-fetch-size-and-streaming.md
+- phase-0-the-interview-and-practice/README.md
 - 07-assignment-and-aliasing/README.md
-- 08-records/README.md
-- search_path
+- 09-sealed-adts.md
+- CREATE INDEX CONCURRENTLY
 - Phase 4 — CRUD and DML
 - 05-virtual-environments/README.md
 - 08-shallow-copy.md
 - 01-what-problem-it-solves.md
-- 13d-milestone-acceptance-and-hand-off.md
-- 09d-serialization-failures-and-the-retry-loop.md
+- 16-building-a-crud-api-with-postgres/01-explanation.md
+- 12b-the-database-is-the-thing-under-test.md
 - 03d-optional-mutators.md
 - 08-spring-security-resource-server/README.md
-- 10-methods.md
+- 11-nested-classes.md
 - LATERAL
 - 03-what-it-does-not-protect.md
 - 03-server-components-vs-client-components/01-explanation.md
-- 04-serviceconnection.md
+- 07-testcontainers/README.md
 - 07-openid-connect/README.md
-- 11-performance-optimization-turbopack/01-explanation.md
-- 09-spring-data-jpa/12-the-checklist.md
+- 04b-compiler-evolution-and-the-next-default.md
+- 09-spring-data-jpa/README.md
 - 03-the-metrics.md
 - 13-project-references/README.md
 - phase-10-scss/README.md
 - 02-usedebounce-and-search.md
-- 09-server-side-prepared-statements.md
+- 01-compiler-with-a-framework-attached/README.md
 - 01b-the-tool-and-its-versions.md
 - 05-auto-configuration/README.md
-- 12-testing-the-api.md
-- 06-money-and-dates/README.md
-- 03-construction-copies-views.md
+- 07e-etag-if-match-and-412.md
+- 03-where-it-breaks.md
+- 02-standalone-by-default/README.md
 - 05-caching-ppr-and-cache-components/01-explanation.md
 - 04-lib-target-ambient/README.md
 - 10-skiplibcheck/README.md
@@ -221,69 +221,69 @@
 - 12-seo-metadata-and-accessibility/01-explanation.md
 - 13c-milestone-what-it-costs-the-database.md
 - 02-the-four-leaks.md
-- 05-create.md
+- 12-testing-the-api.md
 - 01-the-product-grid/README.md
 - 01-validate-at-boundary/README.md
 - 01-controller-service-repository/README.md
 - 10-the-request-pipeline/README.md
 - phase-11-network-storage/README.md
-- 01-one-test-many-cases.md
+- phase-1-complexity/README.md
 - 04-formatting-and-why-a-library.md
-- 04c-is-true-and-the-type-system.md
+- 05-the-latency-ladder.md
 - 02-the-data-layer.md
 - 02-clamp-min-max.md
-- 07-testcontainers/README.md
-- 07b-validate-not-update.md
+- 01c-what-h2-gets-wrong.md
+- The procedure, option A
 - 10-decimal-for-money.md
 - 29-anticorruption-layer.md
 - 04.2 · Callbacks, holes and async
 - 01-introduction-to-next-js/01-explanation.md
 - Phase 11 — Deployment and operations
-- Transactional DDL
-- Password storage
+- pool.connect and release
+- 12e-what-locality-costs.md
 - phase-5-built-in-library/README.md
 - 06-163-preview-instant-navigations-stream-cache-block-and-parti.md
 - Phase 7 — Background work and resilience
 - css/README.md
-- 01b-what-the-fix-is-not.md
-- 01-formdata.md
-- 03-fields-columns-access.md
+- 14-template-type-checking.md
+- 11c-caches-workers-and-orm.md
+- vite/README.md
 - 12-sharing-types-across-a-monorepo/README.md
 - 05-the-three-tokens/README.md
-- 14-the-2026-cve-record-eleven-vulnerabilities-and-what-each-one-teaches.md
-- 17-set.md
-- 02-cause-chains-and-boundaries.md
+- 01-purity-and-idempotence.md
+- 21-structuredclone.md
+- 03-unhandled-rejections.md
 - 04-accessibility-semantic-html-aria-safe-hydration-keyboard-fir.md
 - Phase 9 — Testing
-- phase-1-everyday-loop/README.md
+- 03-git-commit.md
 - 12-real-world-scenarios/README.md
 - 05c-the-training-run.md
 - 06-jwt-anatomy-and-validation/README.md
 - jest-rtl/README.md
-- 03-architecture-decision-trees-rendering-strategy.md
-- 06-project-milestone-sprintdesk-design-system-pass.md
+- 19-capstone-decision-trees-and-outlook/01-explanation.md
+- 09-styling-and-ui/01-explanation.md
 - 05j-designing-the-failure-channel/README.md
 - 02-mount-order-is-the-content.md
 - 12-real-world-scenarios/12-the-checklist.md
 - 08-state-management-in-an-rsc-world/01-explanation.md
-- 02-the-int-str-conversion-limit.md
-- 07-testcontainers/10-the-checklist.md
-- 01-locale-and-negotiation.md
+- 12d-strings-and-binary-formats.md
+- 11-accessibility-from-javascript/README.md
+- 02-building-a-router.md
 - 03-setup-lifecycle.md
 - Phase 2 — Data types and the relational model
-- 📦 Redux DevTools: Time-Travel, Action Replay & Trace Mode
+- Gotchas
 - phase-6-modules-build/README.md
-- 05-exclude-extract-and-distributivity.md
-- 07-comparing-floats.md
-- 02-routing-and-navigation/01-explanation.md
-- 06-instrumentationts-for-opentelemetry-and-application-monitori.md
-- 19-event-loop-browser-vs-node/README.md
-- 03b-the-caching-tree.md
+- 04-response-schemas-and-mappers.md
+- 07e-tolerance-in-tests.md
+- 01b-layout-and-the-root-layout.md
+- 07c-instrumenting-what-you-changed.md
+- 01-choosing-a-deferral.md
+- 05-cdns.md
 - 08-typing-an-untyped-dependency/README.md
 - Phase 0 How CSS runs
 - 03-405-and-method-semantics.md
 - 05c-composing-arbitraries.md
-- 02-uploading-and-submitting.md
+- 13-where-the-compiler-runs-ngtsc.md
 - 06-arrays.md
 - 03k-nuqs-typed-search-params-as-a-library.md
 - 06-project-milestone-sprintdesk-public-pages-fully-indexed.md
@@ -294,109 +294,109 @@
 - 02-client-side-security/01-the-trust-boundary.md
 - 01g-react-cache-connection-and-non-fetch-memoization.md
 - Phase 12 — Beyond plain tables
-- 01e-line-joining-and-semicolons.md
+- 01-syntax-and-indentation/README.md
 - phase-0-platform-jvm/README.md
-- What "to the console" costs you
-- 03-composition-checked-exceptions.md
-- 01-reading-a-shape-you-did-not-define.md
+- 07-the-checkout-endpoint.md
+- 09d-serialization-failures-and-the-retry-loop.md
+- 07-disabling-and-conditions.md
 - 02-match-first.md
-- 06-project-milestone-sprintdesk-on-drizzle-neon-with-pooling.md
-- 10c-tenant-isolation-in-the-data-access-layer.md
+- 05h-a-shared-cache-across-instances.md
+- 10d-tenancy-and-caching.md
 - 05-the-singleton-pattern.md
 - 06-operating-it.md
 - 25-verifying-the-boundary.md
 - 02c-the-language-tells-you.md
 - 02-service-boundaries/README.md
-- 12-parallel-execution.md
-- 04-named-and-internal.md
+- 02-rejections-that-vanish.md
+- 02-cycles-and-debugging.md
 - 05-isolatedmodules/README.md
 - docs/README.md
-- 03-transitive-and-mediation/README.md
-- 05-when-you-do-not-need-oauth2.md
+- phase-8-build-dependencies/README.md
 - 02-the-four-roles/README.md
-- 14-client-side-data-fetching-and-when-it-is-still-correct.md
+- 03-client-authentication.md
+- 04b-what-survives-and-the-force-static-trap.md
 - 04d-internals-coupling-and-the-plugin-decision.md
-- 12-adapter-output-types-what-a-build-actually-is.md
+- 16-opennext-the-community-adapter-that-became-the-standard.md
 - 02-the-gil/README.md
 - 05b-constraining-generation.md
 - 03-g1.md
 - phase-16-dynamic-programming/README.md
-- 02-boundary-validation-react-hook-form-zod-schemas-shared-acros.md
+- 02c-field-errors-in-a-shape-the-form-can-render.md
 - 05-the-interpreter-loop.md
 - 07-everything-is-an-object/README.md
 - 06d-where-negative-zero-comes-from.md
-- 01-tuple-assignment.md
-- phase-4-remotes/README.md
-- 05a3-the-cost-of-sharing.md
+- 03-try-with-resources/README.md
+- 07-git-push.md
+- Transactional DDL
 - 13-entity-services.md
-- 05-coverage.md
+- 01-where-config-lives.md
 - 03-dynamic-routes-slug-catch-all-optional-catch-all.md
 - 11-root-params.md
 - 01-server-actions-for-mutations-with-useactionstate-and-useopti.md
 - 01-the-bson-types.md
-- 04-explain.md
-- 04-nodejs-runtime-vs-edge-runtime-capabilities-cold-starts-choo.md
+- phase-5-query-operators/README.md
+- Gotchas
 - phase-0-runtime/README.md
-- 05-catalog-endpoints.md
-- phase-5-undo-recover/README.md
-- 12-projections-and-dtos.md
+- 04-the-catalog-query.md
+- 05-rewriting-your-own-commits.md
+- 12b-projecting-a-collection.md
 - 02-how-it-works.md
 - 09-distributed-tracing/README.md
-- 07-the-proxyts-layer-successor-to-middlewarets-request-intercep.md
+- 02-routing-and-navigation/01-explanation.md
 - 04-navigation-mechanics-link-userouter-redirect-notfound.md
 - 05-tanstack-query-rtk-query-in-app-router-when-a-client-cache-s.md
-- 20d-what-a-test-must-assert.md
-- 02-numbers/README.md
+- 01-the-template-is-a-separate-language.md
+- 14-math-vs-the-operators.md
 - 01-the-three-sections.md
 - 05-verification.md
 - 17-pubsub-and-signals/README.md
 - 08-floor-division-and-modulo.md
-- 10i-special-values-and-stdlib-interop.md
+- 03-debounce-throttle/README.md
 - 03-path-aliases/README.md
 - 04-choosing.md
-- 02-pathspecs.md
-- 08b-batches-and-bulk-writes.md
+- 03-patch-mode.md
+- 03-standalone-by-default-which-version-changed-what.md
 - 03b-robotsts-and-the-crawl-directives.md
-- 02-encode-and-decode.md
+- 04-bytes-and-encoding/README.md
 - phase-2-functions/README.md
-- phase-8-build-dependencies/README.md
+- 07-rate-limiting.md
 - 01-test-structure.md
 - 04-client-state-tools-compared-react-context-zustand-jotai.md
 - css/harness.mjs
-- 05-shell-safety.md
+- 04-explain.md
 - 01-the-model.md
-- 08-the-n-plus-1-problem/19-the-checklist.md
+- 06-count-do-not-read.md
 - 04-thresholds.md
 - 03c-diagnosing-stale-and-unexpectedly-dynamic-routes.md
 - Syllabus review — accuracy and fullstack fit
-- 02d-property-paths-and-ambiguity.md
+- 10d-the-two-interceptor-systems.md
 - 04-resolving-conflicts.md
-- 01-the-map-and-the-four-axes.md
+- 12-freeze-and-seal/README.md
 - 01-provider-wrapping.md
 - 02-find-and-the-query-document.md
 - Phase 6 — Data access
 - 03-release-model/README.md
 - 12c-silent-loss-and-boundaries.md
-- PostgreSQL syllabus
+- 03-choosing-the-type.md
 - 12-mocks-vs-fakes.md
 - 22-the-ten-forces.md
 - 01e-streaming-metadata-and-html-limited-bots.md
 - withTransaction helper
 - Phase 1 The type vocabulary
 - Git ref
-- 07-direct-and-mapped-buffers.md
+- 04b-the-direct-memory-doubling.md
 - Canonical Express skeleton
-- 01-source-to-bytecode.md
+- 15-extended-diagnostics.md
 - 11-mutation-testing/README.md
 - nginx/README.md
 - 03-the-six-counters.md
 - 04b-equivalent-mutants.md
-- 14-the-checklist.md
+- 06-mdc.md
 - 06-invariants-are-the-criterion.md
-- 10 · Map vs a plain object
-- typescript/pages/README.md
-- 09c-what-the-lock-does-not-cover.md
-- 15-read-only.md
+- phase-14-data-structures/README.md
+- Type stripping
+- 05-the-status-enum-four-ways.md
+- 11f-animations-are-deprecated.md
 - 04b-the-fluent-api.md
 - 14-benchmarking-with-jmh/11-the-checklist.md
 - 10-combinators/README.md
@@ -404,24 +404,24 @@
 - 06c-the-repl-as-a-tool.md
 - 01-what-storybook-is.md
 - Docusaurus
-- 06-nan-inf-and-signed-zero.md
+- 02-numbers/README.md
 - 07-async-scheduled-and-eventual.md
 - 10-json-contracts-and-approval-tests.md
-- 07-logging-done-right/README.md
+- 08b-masking-and-the-audit-trail.md
 - 01-three-tokens-three-roles.md
 - 19-change-history-as-evidence.md
-- == versus ===
-- 04-operators-overflow/README.md
+- Phase 0 How JavaScript runs
+- 02-type-erasure.md
 - delete operator
-- 02-not-freezing-the-page.md
+- 02-cleanup.md
 - 10t2-the-foreground-floor-and-draining-without-background-sync.md
 - 08-rewrite-and-return.md
 - 1. Under-The-Hood Mechanics
-- 10b-checklist-data-and-shape.md
+- 09-usestate-vs-usereducer.md
 - 02-the-four-collectors.md
 - 09b-finding-it-in-the-code.md
 - phase-15-algorithm-patterns/README.md
-- 12-network-resilience-and-useoffline.md
+- 11b-auth-interrupts-throw.md
 - 10j-caching-next-asset-classes-in-a-service-worker.md
 - playwright/README.md
 - pages/index.js
@@ -433,53 +433,53 @@
 - 14-openapi-springdoc/README.md
 - 10e-detecting-install-state.md
 - 09e2-how-deep-a-graph-should-go.md
-- 11c-caches-workers-and-orm.md
-- 10b-what-a-list-costs.md
+- 06-mutable-default-argument.md
+- 04-outbox-relay-and-email.md
 - 03b-the-honest-counterargument.md
-- 01-the-format.md
+- 04-designing-for-it.md
 - 08-retry-backoff/README.md
 - Array and call spread
-- 05-core-web-vitals-tuning-lcp-inp-cls-auditing-workflows.md
+- 11-performance-optimization-turbopack/01-explanation.md
 - 08-the-golden-rule.md
 - 02b-the-version-collision.md
-- 02-derived-queries.md
-- 01-the-average-that-lied.md
+- 08-custom-implementations.md
+- 04b-cardinality.md
 - 42-the-cost-of-changing-a-boundary.md
 - Strict mode
 - Temporal dead zone
 - 02-making-it-production-worthy.md
 - 02-single-document-atomicity.md
-- 09-styling-and-ui/01-explanation.md
+- 01-using-the-built-ins.md
 - 16-typing-non-code-imports/README.md
 - angular/README.md
 - 08-metrics-with-micrometer/README.md
 - 01-the-request-that-vanished.md
-- 07-what-the-caller-inherits.md
+- 05c-request-reply.md
 - 02-getting-it-right.md
 - call apply bind
-- 02-inheritance.md
+- 01-how-include-works.md
 - Phase 1 — psql, mastered
 - 11-fraction.md
-- 10-match-pattern-matching/README.md
+- 04-bool-is-an-int.md
 - redis/README.md
 - Phase 0 — How Git stores things
-- 13-jooq/README.md
-- 02-traces-spans-and-context.md
+- 08-the-n-plus-1-problem/README.md
+- 12-graceful-shutdown/10-the-checklist.md
 - 01-the-benchmark-that-measured-nothing.md
-- 05-function-arguments.md
+- 06b-composing-validators.md
 - 12b-why-the-layering-comes-back.md
-- 03e-hard-and-soft-dependencies.md
+- phase-12-jvm-production/README.md
 - 03b-url-as-state-and-the-static-shell.md
-- phase-0-process-model/README.md
+- 05-reload-and-upgrade.md
 - CommonJS
 - Git 2.55.0 environment probe
 - git/README.md
-- 11-module-system.md
+- 02-making-an-error-recognisable.md
 - 12-caching/09-the-checklist.md
-- 02-exactness-any-and-choosing-a-tool.md
-- 05b-when-the-code-cache-fills.md
+- 08-suppression-directives/README.md
+- 04c-the-classloader-leak.md
 - 05-structured-json.md
-- java/pages/phase-1-language-core/README.md
+- 01-immutability-pool-equality.md
 - 07.1 · How a method loses this
 - Run-to-completion
 - mongodb/README.md
@@ -492,27 +492,27 @@
 - 01-caching-is-a-decision.md
 - 13b-crud-is-not-a-capability.md
 - java/README.md
-- 03-server-action-error-contracts-returning-typed-errors-vs.md
+- Gotchas
 - 01-waiting-for-updates.md
 - 10b-refresh-against-the-alternatives.md
-- 01-micro-frontends-and-multi-zone-architectures-for-decoupled-t.md
+- 03e-non-root-and-filesystem.md
 - 09-annotations-at-runtime/README.md
 - State is a snapshot
 - 3. Production-Grade Examples
 - ex3-this.mjs
-- 04-methodsource.md
+- phase-13-complexity/README.md
 - 12-the-cost.md
 - 05-spring-boot-aot.md
 - 04c-secrets-and-the-snapshot.md
-- 04b-client-authentication.md
+- 03-the-authorization-code.md
 - 09b-the-bill-in-full.md
 - 23-the-monolith-already-told-you.md
-- 05-the-five-interaction-styles.md
-- Phase 0 How JavaScript runs
-- 03-composition-patterns-server-to-client-boundaries.md
+- 06c-the-read-that-could-have-been-a-copy.md
+- 09-lru-cache/README.md
+- 05-unused-imports-and-the-compiler-diagnostics.md
 - 08-modules.md
-- 06-map/01-the-mechanism.md
-- phase-2-server-and-location/README.md
+- phase-1-configuration-language/README.md
+- 01-choosing-the-server.md
 - Phase 1 — JSX and what a component returns
 - react/README.md
 - 3. Production-Grade Customization Reference
@@ -520,76 +520,76 @@
 - 01-what-a-decorator-is.md
 - 15-isolateddeclarations/README.md
 - 02-choosing-a-basis.md
-- 04-git-diff.md
-- phase-2-branching-merging/README.md
-- 08c-parameterized-classes.md
+- 11-git-stash.md
+- 05-git-rebase.md
+- 06-startup-and-error-listener-providers.md
 - 11-where-it-does-not-pay.md
-- 04d-the-three-places-the-gate-cannot-hold.md
+- 08g-tracing-and-the-experimental-end.md
 - 05b-wiring-json-in-spring-boot.md
 - 06-building-one.md
 - 07-forks-and-warmup.md
 - 04-client-credentials/README.md
 - 11-spring-modulith-what-it-is.md
-- 11-javac-flags/README.md
-- 18-threads-and-async.md
+- 02-supply-chain-and-toolchains.md
+- 03-the-provider-array/README.md
 - 01-a11y-assertions.md
 - 04-variables.md
-- 05-assertthrows.md
+- 02-reading-a-bound.md
 - 02-identity-and-id.md
-- 14-rendertostaticmarkup.md
+- phase-11-ssr-hydration/README.md
 - 06-shrinking.md
-- 04b-cardinality.md
-- 08-percentiles.md
+- 07-timing-your-own-code.md
+- 08b-histograms-and-buckets.md
 - 12b-detectviolations-and-adoption.md
 - ?? default-value idiom
-- 05-loadingtsx-vs-inline-suspense-skeleton-strategy-and-layout-s.md
+- Gotchas
 - 07g-milestone-the-drag-layer.md
-- 08-prerendering/02-calling-them.md
+- 03-the-caveats.md
 - 05d-verifying-too-much.md
-- 22-the-checklist.md
+- 06g-error-handler-and-ng0402.md
 - phase-1-story-format/README.md
 - 07-authoring-d-ts-files/README.md
 - ex14-validation.mjs
 - ignore flag
 - docker/README.md
 - 05b-serialization-is-the-hard-part.md
-- Rendering happens last
+- framer-motion/pages/README.md
 - phase-8-modules-errors/README.md
-- 03-csvsource.md
-- 08k-fallback-conversion.md
-- 03-the-junit-integration.md
+- phase-2-branching-merging/README.md
+- 07-buildpacks.md
+- 01-the-toprimitive-protocol.md
 - 06b-virtual-thread-stacks.md
 - 05b-custom-spans-and-annotations.md
 - 01-the-fat-jar.md
 - 01-encoded-not-encrypted.md
 - 14-conway-and-the-org-chart.md
 - 03-availability-multiplication.md
-- 04-the-latency-budget.md
-- 07-versioning-updates-cve/README.md
-- 10-content-security-policy-nonces-and-the-dynamic-rendering-tax.md
-- 01-turbopack-in-dev-and-production-fast-refresh.md
-- 01-snapshot-mechanics.md
+- 03c-chains-fan-out-and-composition.md
+- 06-map/01-the-mechanism.md
+- 02-the-message-boundary.md
+- 06f-provide-browser-global-error-listeners.md
+- 🎭 Visual & Screenshot Testing: `toHaveScreenshot()` & Baseline Management
 - 01-query-variants-and-priority.md
 - 02b-parallel-routes-and-named-slots.md
 - 06b-instant-insights-and-the-fix-cards.md
 - PostgreSQL role
-- Gotchas
+- 1. Under-The-Hood Mechanics
 - 03-positional-only-and-keyword-only.md
 - python/README.md
-- 02-slots-and-children.md
+- phase-2-components/README.md
 - 3. Production-Grade Examples
 - phase-2-args-and-controls/README.md
 - currency.mjs
-- 02-reset-in-depth.md
+- 03-revert.md
 - 07d-the-invalidation-you-forgot.md
-- 06-mdc.md
+- 06b-mdc-and-thread-pools.md
 - 09-what-a-microbenchmark-cannot-tell-you.md
-- 11-authorization-code-injection.md
+- 13-the-mix-up-attack.md
 - 01-the-question-behind-the-question.md
 - 06-deploy-coordination.md
 - 11e-explicit-allowed-dependencies.md
 - 38-merging-two-services.md
-- 09-annotation-processing/README.md
+- 04-writing-your-own-provide-function.md
 - 03c-answers.md
 - 05b-the-native-view-transitions-api.md
 - 02-help-inspect-getdoc-and-doctest.md
@@ -598,21 +598,21 @@
 - 01-args-as-the-source-of-truth.md
 - ex7-scope.mjs
 - What You Must Do When Invoked
-- 17-timeouts.md
-- 03-parameterized-tests/README.md
+- 08-what-never-to-log.md
+- 01-big-o/README.md
 - 05-red-and-use.md
 - 03-monolith-first-the-actual-argument.md
 - validate.mjs
-- Relational comparison algorithm
-- 09-round-and-bankers-rounding.md
+- 12-conversions-and-precision-loss.md
+- 09c-double-rounding-and-policy.md
 - 04-hydrateroot.md
-- phase-11-ssr-hydration/README.md
+- 04-git-diff.md
 - ex17-secrets.mjs
 - 03b-writing-the-key-yourself.md
 - 09b-the-store-and-the-invalidation.md
-- 03-collections-boundaries-persistence.md
+- 01-what-the-browser-is-doing.md
 - 09-exporting-to-prometheus.md
-- 03c-chains-fan-out-and-composition.md
+- 02c-the-five-things-coupling-means.md
 - 05g-choosing-a-coupling-shape.md
 - structuredClone
 - 04g-redirect-and-permanentredirect.md
@@ -629,15 +629,15 @@
 - devbible-currency
 - 04-null-and-sync.md
 - 06-hibernate-second-level.md
-- 08l-explicit-conversion.md
+- 03-parameterized-tests/README.md
 - 01-the-case-you-did-not-think-of.md
 - 03c-attributes-and-defaults.md
-- 04-lifecycle-callbacks.md
+- 16-new-create-instanceof/README.md
 - 33-shared-kernel.md
 - 13c-the-numeric-tower.md
 - StudyMode/store.js
-- javascript/README.md
-- 03-bson.md
+- dsa/README.md
+- 04-document-collection-database.md
 - 10d-installability-and-the-install-prompt.md
 - 02-tail-call-optimization-and-iteration.md
 - ▶️ Interactions Panel: `play` Functions, Step Debugger & Behavioral Tests
@@ -645,44 +645,44 @@
 - ex5-call-apply-bind.mjs
 - 01-why-items-refuse-to-shrink.md
 - 🏛️ Team & Collaboration Practices: Governance, Review Conventions & ADRs
-- 09-testing-hooks.md
-- 03-parameterized-tests/10-the-checklist.md
-- 08c-slos-and-the-bucket-budget.md
-- 02-supply-chain-and-toolchains.md
-- 02-filters-and-the-container.md
+- 12c-what-inheritance-never-carries.md
+- 03-environmentproviders-vs-provider.md
+- 08-percentiles.md
+- 06-mapping-onto-your-stack.md
+- 02-what-it-buys-threads-keys-records.md
 - Temp plus fsync plus rename
 - 01b-tabs-spaces-and-taberror.md
 - 04-closure-memory-retention-and-inspection.md
-- JSX is a function call
+- 02-sliding-window/README.md
 - Extra setup+cleanup cycle
-- real-world/README.md
+- 02-handlers-and-lifecycle.md
 - ⚡ Actions Panel: Callback Logging, Spies & Event Verification
 - ex2-parameters.mjs
 - 21.3 Day-to-Day Recipes
-- 04d-what-repair-actually-does.md
-- 01-why-schema-is-code.md
+- The ten columns
+- 07-undoing-a-merge.md
 - 12-caching/README.md
 - 05a-before-the-first-run.md
-- 10-safepoints.md
+- 05-queue-and-deque/README.md
 - Optional chaining ?.
 - 06.3 · Private elements
-- 02-the-asymmetry.md
+- 02-inheritance.md
 - undici Agent dispatcher
 - 02-the-named-lambda-smell-and-pep8.md
 - 02-metadata-preservation-with-functools-wraps.md
 - 02-bound-methods-and-the-reality-of-self.md
 - 01-csr-ssr-ssg-streaming-rsc.md
 - 15-stylesheets-and-precedence.md
-- 01-the-six-apis.md
+- 03-binary-search/01-the-template.md
 - ex1-declarations.mjs
 - 4. Senior Engineer Edge Cases & Pitfalls
-- The categories, and what each one actually needs
-- 03d-where-the-arithmetic-lies.md
-- 02-nextjs-vs-alternatives-remix-react-router-v7-astro-tanstack.md
+- 03-problem-solving-method/01-the-loop.md
+- 07-what-the-caller-inherits.md
+- 09-exceptions-in-logs.md
 - 01-render-and-screen.md
 - 01-the-configure-call.md
-- 02-master-and-workers.md
-- 06-testing-the-config.md
+- phase-0-process-model/README.md
+- 01-what-a-policy-breaks.md
 - Event loop phases
 - Semantic versioning
 - p8-security/package.json
@@ -692,72 +692,72 @@
 - 07-invalidation.md
 - 01c-who-pays-for-them.md
 - 12-verifying-the-arrangement.md
-- 02-quarkus.md
-- 08-the-plugins-every-build-has.md
+- 16-the-alternatives/README.md
+- 06-bfs/README.md
 - BEFORE vs AFTER triggers
-- 14-flaky-tests-and-ci.md
+- 02-what-freeze-cannot-reach.md
 - 10-glob-imports-with-import-meta-glob.md
 - node_modules walk
 - The scenarios
-- 02-the-else-clause.md
+- 01-the-for-statement.md
 - 03b-consecutive-stubbing.md
 - 4. Senior Engineer Edge Cases & Pitfalls
-- 01-singleton-and-statelessness.md
-- 02-valuesource.md
+- 4. Senior Engineer Edge Cases & Pitfalls
+- 05d-the-errors-that-reject-an-import-outright.md
 - 01-what-a-log-line-is-for.md
-- 11-cost-and-overhead.md
-- 07-runtime-characteristics.md
-- 10-artifact-repositories/README.md
-- 09 · JSON.parse and JSON.stringify
+- 04c-meterfilter.md
+- 07c-getting-throughput-back.md
+- 01c-shared-layout-coordination.md
+- 10 · Map vs a plain object
 - sort compareFn contract
-- 01-the-three-streams.md
-- 10-wrappers-and-providers.md
+- 02-making-it-usable.md
+- ⚡ Where Mode Actually Gets Decided: CI Jobs, `vite preview` and Container Images
 - Gotchas
 - 3. Production-Grade Examples
 - Project Instructions
 - ex15-validation-followups.mjs
-- 01b-the-repository-hierarchy.md
-- 08b-aggregation.md
-- 04c-meterfilter.md
+- 4. Senior Engineer Edge Cases & Pitfalls
+- 4. Senior Engineer Edge Cases & Pitfalls
+- 4. Senior Engineer Edge Cases & Pitfalls
 - 02-the-three-kinds.md
 - 03b-project-setup.md
 - 01-the-layer-oauth2-was-missing.md
 - 09-the-organizational-costs.md
 - 02-bounded-context.md
-- 04f-tail-latency-under-fan-out.md
-- 03-boms-and-platforms.md
-- ToPrimitive coercion
+- 4. Senior Engineer Edge Cases & Pitfalls
+- ⚡ Filter Utilities & the Ids You Match
+- ⚡ Virtual Modules
 - 01-testing-setup-from-zero.md
 - 02d-the-opengraph-image-and-twitter-image-file-conventions.md
-- 03-aborting-errors-caveats.md
-- 03c-csvfilesource.md
+- 06-streaming-ssr.md
+- 4. Senior Engineer Edge Cases & Pitfalls
 - compilerOptions
-- p7-background-work/package.json
-- 03-write-once-run-anywhere.md
+- ex5-sync-vs-bg.mjs
+- 4. Senior Engineer Edge Cases & Pitfalls
 - 03d-the-key-that-never-repeats.md
 - 02c3-wiring-it-into-the-build.md
-- 06-what-boot-gives-you-free.md
+- 4. Senior Engineer Edge Cases & Pitfalls
 - 08-cost-and-overhead.md
-- 05d-request-reply-over-messaging.md
-- Object.create(null) dictionary
-- 07-project-milestone-sprintdesk-performance-audit.md
+- Gotchas
+- Three-tier property enumeration order
+- ref as a prop (React 19)
 - Commit phase
-- Mutation testing
-- 16-async-scripts.md
-- 20-promise-withresolvers.md
+- ex14-property/package.json
+- 🔄 What a Background Refetch Costs: Flags, Structural Sharing & Tracked Properties
+- 🔄 Polling: `refetchInterval`, Hidden Tabs & Per-Observer Timers
 - 01-component-story-format.md
 - ex51-secrets.mjs
 - ex11-deser-redirect-massassign.mjs
 - ts-p1/package.json
 - Authoring contract — what a page must be
-- 01-what-to-test/README.md
-- 07b-observation-api.md
+- 11-roles-as-the-query-surface.md
+- 08-metrics-with-micrometer/12-the-checklist.md
 - 02-what-crac-is.md
-- 05c-request-reply.md
+- 🔄 `networkMode`: What a Refetch Does When the Network Is Gone
 - phase-14-correctness/README.md
-- 01-where-config-lives.md
-- 01-handling-asynchrony.md
-- 01-guiding-principle.md
+- 02-why-expect-error-wins.md
+- 4. Senior Engineer Edge Cases & Pitfalls
+- ⚡ HTML Tag Descriptors
 - Transform stream
 - Window frames
 - Gotchas
@@ -765,24 +765,24 @@
 - PostgreSQL cross-phase correctness review
 - 3. Production-Grade End-to-End Setup
 - 04-the-story-context.md
-- dependencies
+- react-p1/package.json
 - scripts
 - ex6-time.mjs
 - 1. Concept & Under-the-Hood Mechanics
-- 01-webpack-vite-jest-rollup.md
+- 1. Concept & Under-the-Hood Mechanics
 - 4. Senior Engineer Edge Cases & Pitfalls
 - 4. Senior Engineer Edge Cases & Pitfalls
 - Express.js syllabus
-- 12-snapshot-tests.md
+- 4. Senior Engineer Edge Cases & Pitfalls
 - 01-the-weak-collections.md
-- Time to readiness
+- 4. Senior Engineer Edge Cases & Pitfalls
 - GROUPING SETS
 - pg.Pool
 - as const
-- dependencies
-- dependencies
-- 1. Concept & Under-the-Hood Mechanics
-- babel/README.md
+- react-p0/package.json
+- ex16-lint/package.json
+- 📋 Babel Configuration: Files, Root, env & overrides
+- 📦 Why Babel & the Compiler Landscape (2026)
 - 1. Concept & Under-the-Hood Mechanics
 - 4. Senior Engineer Edge Cases & Pitfalls
 - 4. Senior Engineer Edge Cases & Pitfalls
@@ -794,9 +794,9 @@
 - 4. Senior Engineer Edge Cases & Pitfalls
 - 4. Senior Engineer Edge Cases & Pitfalls
 - 1. The Decision Framework
-- 08-metrics-with-micrometer/12-the-checklist.md
-- 07d-the-diagnostic-toolbox.md
-- 04c-timeouts-in-spring.md
+- ⚡ `enforce` vs Hook `order` vs Hook Kind
+- 07b-no-jit-no-jfr-no-jstack.md
+- 04c2-the-client-you-actually-get.md
 - 06d-synchronous-out-of-habit.md
 - 04g-choosing-a-client-state-tool.md
 - Gotchas
@@ -804,20 +804,20 @@
 - PostgreSqlContainer
 - pool.query
 - 01c-identity-and-boundaries.md
-- 12-flushsync.md
+- ⚡ Augmenting Plugins You Do Not Own
+- Gotchas
+- Gotchas
 - 1. Under-The-Hood Mechanics
-- 1. Under-The-Hood Mechanics
-- 1. Under-The-Hood Mechanics
-- ex5-sync-vs-bg.mjs
+- ⚡ Conditional Application (`apply`)
 - ex2-vulns.mjs
 - ex56-vs-sqlite.mjs
 - devbible-topic
-- 01-the-shape-and-numberformat.md
+- Phase 1 — Values, types and coercion
 - 02-what-earns-a-test.md
 - 4. Senior Engineer Edge Cases & Pitfalls
 - 4. Senior Engineer Edge Cases & Pitfalls
 - 4. Senior Engineer Edge Cases & Pitfalls
-- 01-syntax-and-indentation/README.md
+- 4. Senior Engineer Edge Cases & Pitfalls
 - 4. Senior Engineer Edge Cases & Pitfalls
 - 4. Senior Engineer Edge Cases & Pitfalls
 - 4. Senior Engineer Edge Cases & Pitfalls
@@ -833,18 +833,18 @@
 - You cannot choose Effect dependencies
 - 25c-can-the-module-boot-alone.md
 - Class lexical declaration and TDZ
-- 📦 Migrating From Classic Redux to RTK
+- Gotchas
 - SplitLines framing Transform
 - http.createServer
 - Soft delete as UPDATE
 - DDL as ordinary query
 - 03-decorators-taking-arguments-and-factories.md
 - 02-hydration-mismatches.md
-- 📦 Immer Internals: Proxy Drafts & The Mutate-Or-Return Rule
+- Gotchas
 - 📖 Core Concepts: Component-Driven Development & CSF3
-- readonly
-- ⚡ Env Variables & Modes: `.env` Files, the `VITE_` Prefix & `import.meta.env`
-- vite/README.md
+- strict defaults to true in TypeScript 7
+- ⚡ The Vite Environment System: `import.meta.env` Is a Compile-Time Substitution, Not a Runtime Object
+- ⚡ CSS Handling: Modules, PostCSS, Preprocessors & Lightning CSS
 - ⚡ SSR Support: Middleware Mode, `ssrLoadModule()` & SSR Manifests
 - 🚀 Core Web Vitals: LCP, INP & CLS Fundamentals
 - 🚀 LCP Optimization: Preloading, Render-Blocking Elimination & TTFB
@@ -853,7 +853,7 @@
 - ⚙️ Multi-Config & Environment: Composition, `--env`, and Multi-Compiler Builds
 - Prompt — devbible, next pending Java task
 - stryker.config.json
-- css/package.json
+- 1. Under-The-Hood Mechanics
 - express5-check/package.json
 - express-phase0/package.json
 - ex22-permission-model.mjs
@@ -870,14 +870,14 @@
 - Application settings (app.set / app.get)
 - 🎨 Basic Animation Props: `initial`, `animate`, `exit` & `transition`
 - Gotchas
-- 🎨 Gestures: `whileHover`/`whileTap`/`whileFocus`, `drag` & Constraints
 - Gotchas
-- 05c-projections-and-generated-mappers.md
+- 🎨 `AnimatePresence`: Exit Animations, Removal Detection & Keys
+- 13b-ngc-is-tsc-and-the-typescript-pin.md
 - 🎨 Scroll-Linked Animations: `useScroll`, `whileInView` & Parallax
 - 🎨 Animation Controls: `useAnimate()`/`useAnimation()` & Chained Sequences
 - 🎨 SVG Animations: `pathLength`, Stroke Drawing & Path Morphing
 - 🎨 Advanced Patterns: Shared Layout Transitions, Next.js Integration & Reduced Motion
-- 🏛️ Component Architecture: Compound Components, Headless UI & Composition Over Configuration
+- 02-why-provide-functions-replaced-forroot.md
 - 🏛️ Data Layer & API Architecture: BFF, Client Abstraction & Generated Types
 - 🏛️ Routing & Navigation Architecture: Nested Layouts, Code Splitting & Auth Gates
 - 🏛️ Monorepo & Multi-App Strategy: When to Monorepo, Tooling & Build Caching
@@ -886,11 +886,11 @@
 - 🏛️ CI/CD Pipeline Design: Stage Ordering, Preview Deployments & Progressive Rollout
 - 10-property-based/README.md
 - JDWP — the debugger that exists, with the word "experimental" attached
-- 01-the-problem-reactive-solved.md
+- Gotchas
 - 04-route-handler-error-responses-and-consistent-api-error-envel.md
 - Gotchas
-- 01-what-if-does.md
-- 05-request-phases.md
+- The sequence
+- 04-named-and-internal.md
 - Buffer extends Uint8Array
 - 🎭 Test Runner: `@playwright/test`, Built-In Fixtures & the Projects Matrix
 - 🎭 Actions & Interactions: Core Methods & Low-Level Keyboard/Mouse APIs
@@ -902,32 +902,32 @@
 - jsonb_agg is slower than grouping in JS
 - SELECT ... FOR UPDATE
 - 03-singledispatch-and-reduce.md
-- 03-the-server-renderers.md
-- 📦 `createSlice`: Reducers, Immer Drafts & `extraReducers`
-- 📦 Middleware Stack & `listenerMiddleware`
-- 📦 React-Redux Hooks: `useSelector`, `useDispatch` & Typed Wrappers
+- 04-promise-combinators/02-race-and-any.md
+- Gotchas
+- Gotchas
+- Gotchas
 - 📖 Story Anatomy: Meta, Named Exports, `args`, `argTypes` & `render`
 - 📖 Decorators: Global, Story-Level & Composition Order
 - 📖 Composition & Design Systems: Design Tokens, Variant Matrices & Storybook Composition
 - 📖 Multi-Framework Support: Framework-Agnostic CSF & Builder Options
 - 📖 Build & Configuration: `.storybook/main.js` Deep Dive
 - 📖 Advanced Patterns: Living Style Guide, PR-Based Visual Review & Outside-In Development
-- tanstack-query/README.md
+- tanstack-query/pages/README.md
 - 🔄 `useQuery` Deep Dive: `queryKey`, `staleTime` vs `gcTime`, `enabled` & `select`
-- 🔄 Background Refetching: Window Focus, Reconnect & Polling Intervals
+- 1. Under-The-Hood Mechanics
 - 🔄 Dependent & Parallel Queries: `enabled` Chaining & `useQueries()`
-- 🔄 Prefetching & SSR: `prefetchQuery()`, `dehydrate()`/`HydrationBoundary` & Next.js Integration
+- 🔄 Prefetching & SSR: `queryClient.query()`, `dehydrate()`/`HydrationBoundary` & Next.js Integration
 - 🔄 Suspense Integration: `useSuspenseQuery` & `throwOnError`
 - 🔄 DevTools: Live Cache Inspection & Manual Cache Manipulation
-- 🔄 Query Cancellation: Automatic Unmount Cancellation & Manual `signal` Usage
+- 🔄 Query Cancellation: `AbortSignal`, What Is Automatic & What Is Not
 - Discriminated union
-- 01-the-five-generics.md
+- Object.create(null) dictionary
 - ⚡ Configuration: `vite.config.ts`, `defineConfig()` & Conditional Config
-- ⚡ Dev Server Mechanics: Native ESM Serving, HMR & Dependency Pre-Bundling
-- The ten things a fake database stops checking
+- ⚙️ `webpack-dev-server` & Hot Module Replacement
+- Gotchas
 - ⚡ Asset Handling: Static Imports, `public/` & Special Import Suffixes
 - ⚡ Worker & WASM Support: Native Web Worker Bundling & WebAssembly Imports
-- ⚡ Deployment Considerations: `base`, `vite preview` & Cache Header Strategy
+- 01-shipping-the-build.md
 - 🚀 Legacy & Supporting Metrics + Lab Measurement Tools
 - 🚀 Real User Monitoring: The `web-vitals` Library & Reliable Beaconing
 - 🚀 Caching Strategies & Production RUM Tooling
@@ -947,15 +947,15 @@
 - ex37-cte-subquery.mjs
 - ex37g-grouping-sets-cost.mjs
 - Devbible Site Logo SVG
-- 01c-whitespace-and-tooling.md
+- 🔄 One cache entry, every page: refetching, bounding and hand-editing an infinite query
 - 10-interactive-and-tty.md
-- 03-choosing-and-shaping.md
+- 01-status-as-contract.md
 - verification-claude-pages.md
 - 🎨 Core Concepts: Declarative Animation & `motion` Components
 - 🎨 Variants: Reusable Named States, Orchestration & Propagation
-- framer-motion/README.md
+- 🎨 Layout Animations: The `layout` Prop & `layoutId` Shared Transitions
 - 🎨 Performance Considerations: GPU-Accelerated Properties & `will-change`
-- 01d-statements-vs-expressions.md
+- ⚡ One `.env`, Two Dialects
 - 🏛️ Testing Strategy: The Real-World Pyramid & Contract Testing
 - 📦 `createAsyncThunk`: Async Lifecycle, `thunkAPI` & Cancellation
 - The nine questions
@@ -968,27 +968,27 @@
 - 🎭 API Testing: `APIRequestContext` & Combining API Setup With UI Verification
 - percentile_cont
 - Gotchas
-- 06-streaming-ssr.md
+- ⚡ How Vite Loads `vite.config.ts`
 - Verification — how to be accurate without a sandbox
-- 📦 `configureStore`: Store Assembly & Default Middleware Stack
-- 📦 `createAction` & Action Matchers: Standalone Actions Outside Slices
-- 📦 RTK Query: `createApi`, Query & Mutation Endpoints
-- 📦 Code Splitting: `combineSlices` & `injectEndpoints`
+- Gotchas
+- Gotchas
+- Gotchas
+- Gotchas
 - 📖 Addons Ecosystem: `addon-essentials` — Controls, Actions, Viewport & Backgrounds
 - 📖 Testing Integration: `@storybook/test-runner`, Stories as the Single Source of Truth
 - 📖 Publishing & Deployment: `build-storybook`, Static Hosting & Chromatic Publish
-- Gotchas
+- ⚡ `define` Is a Textual Substitution, Not a Value Injection
 - The table
 - 🔄 `useMutation`: Lifecycle Callbacks, Optimistic Updates & `mutate` vs `mutateAsync`
 - 🔄 Pagination & Infinite Queries: `useInfiniteQuery` & `keepPreviousData`
-- 01-the-algorithm-and-the-72-byte-trap.md
-- Gotchas
+- 02-using-it-safely-in-node.md
+- ⚡ Typing `import.meta.env`: the Augmentation That Silently Stops Working
 - 🔄 Testing TanStack Query: Fresh Clients, Disabled Retries & MSW Integration
-- 📦 `createSelector`: Memoized Derived State
+- Gotchas
 - Function types
 - ⚡ Vite Core Architecture: The Dual-Engine Model
 - ⚡ CLI & Project Scaffolding: `create vite` & Core Commands
-- 📦 TypeScript Integration: `RootState`, `AppDispatch` & Typed Thunks
+- Gotchas
 - 🚀 Loading & Rendering Performance: Delivery Optimization & Runtime Efficiency
 - ⚡ Path Resolution & Aliases: `resolve.alias`, `extensions` & `dedupe`
 - page-counts.mjs
@@ -1005,16 +1005,16 @@
 - infer.ts
 - SidebarCollapseAll/store.js
 - graphify reference: extra exports and benchmark
-- phase-12-jvm-production/README.md
+- system-design/README.md
 - Gotchas
 - Gotchas
 - 07-what-this-phase-taught.md
 - The eight questions
-- 02c-the-version-you-are-actually-running.md
-- 03e-rate-aggregation-and-the-step-registry.md
+- ⚡ The `config` Hook
+- ⚡ Nested Descriptors & `{ html, tags }`
 - 05-the-live-list-memory.md
 - 02-why-the-jvm-defeats-naive-timing.md
-- Gotchas
+- ⚙️ Babel Core Pipeline: Parse → Transform → Generate & Programmatic API
 - Exponentiation ** right-associative
 - snipperts-progress.md
 - Chunks
@@ -1031,13 +1031,13 @@
 - Gotchas
 - 4. Senior Engineer Edge Cases & Pitfalls
 - CJS ↔ ESM interop
-- ⚙️ Module Resolution: The `resolve` Object
+- Gotchas
 - ⚙️ Loaders In-Depth: Transpilation & Style Pipelines
 - ⚙️ Plugins In-Depth: The Essential Build-Extension Toolkit
 - ⚙️ Source Maps: The `devtool` Speed/Quality/Production Tradeoff
 - 4. Senior Engineer Edge Cases & Pitfalls
 - ex12-runners/package.json
-- development
+- Gotchas
 - ex1-version-facts.sh
 - js-p0/package.json
 - ex2-skiplocked.mjs
@@ -1059,8 +1059,8 @@
 - The questions, in order
 - Phase 0 — How React runs
 - The test: seven questions, any one of which is decisive
-- 08-testing-forms-and-actions.md
-- 03b-csv-text-blocks.md
+- 04c-evaluating-a-preview-feature.md
+- Gotchas
 - 02-hooks.md
 - The ordered sequence
 - Topic 10 · Packaging for deploy — chunk plan
@@ -1087,26 +1087,26 @@
 - Gotchas
 - Edge 2 — the state belongs to the component
 - Chunks
-- The attributes, as controls rather than as a table
+- Gotchas
 - Gotchas
 - Gotchas
 - Backpressure
 - stream.pipeline
-- 01f-comments-and-encoding.md
-- 01g-syntax-errors-and-messages.md
+- 🔀 Parallel Queries & `useQueries()`: Dynamic Fan-Out and the Rules of Hooks
+- ⏱️ What Query Composition Costs: Serial Waterfalls, Client-Side Fan-Out, and Where the Join Belongs
 - DISTINCT ON
 - Subqueries
 - Gotchas
 - Gotchas
-- 01h-soft-keywords-and-the-repl.md
-- Gotchas
-- Gotchas
-- Gotchas
-- Gotchas
+- 🔄 Global Configuration: `QueryClient` Defaults & Per-Query Overrides
+- 02-color-mix.md
+- 07b-isclose-edge-cases.md
+- ⚡ `BASE_URL` Mirrors Your Config and `SSR` Is Not an Access Control
+- ⚡ Why `vite.config.ts` Cannot Read Its Own `.env`
 - Gotchas
 - 02-file-structure-and-the-glob.md
 - ex21-headers.mjs
-- ex3-bullmq.mjs
+- ⚡ HTML `%VAR%` Replacement
 - ex23-webcrypto.mjs
 - ex9-csrf.mjs
 - hard.mjs
@@ -1119,24 +1119,25 @@
 - ex39-tx-request.mjs
 - ex52-backup-restore.sh
 - ex53-hba-tls.sh
-- ex8-bulk-and-seed.mjs
+- pg-api/package.json
 - gen-phases.mjs
 - gen-phases-c.mjs
 - nonerasable.ts
 - structural.ts
 - res.cookie
 - Topic 08 · The N+1 problem — chunk plan
-- The type helpers, one at a time
-- 03-the-cases-worth-writing.md
+- What works, with no session, forever
+- ⚡ Types That Lie About Runtime
 - The procedure
 - The chunks
-- 10b2-what-it-costs-you.md
+- 07-logging-done-right/README.md
+- redux-toolkit/pages/README.md
 - Gotchas
 - Gotchas
 - ts-p2/package.json
 - Chunks
-- The types
-- split("") splits UTF-16 code units
+- ⚡ Accidental Serialisation
+- ⚡ `transformIndexHtml`
 - 05-fullstack-deployment-production.md
 - Readable stream
 - for await of Readable
@@ -1150,9 +1151,9 @@
 - Gotchas
 - Gotchas
 - Gotchas
-- Map and Set stringify as {}
+- ⚡ HTML `children` & Composition
 - Gotchas
-- 04-bool-is-an-int.md
+- ⚡ HTML Plugin Composition
 - tier-map.mjs
 - ex10-migrations.mjs
 - package.json
@@ -1176,12 +1177,12 @@
 - graphify knowledge graph
 - graphify reference: query, path, explain
 - ex5-totp.mjs
-- Gotchas
+- ⚡ Hook Filters
 - Plan — repair & depth pass A (chunks 01–09b + new 20d)
 - Topic 06 · The JPA/Hibernate model — chunk plan
 - Category/index.js
-- Family 1 — state that outlives a test
-- 11-execution-order.md
+- ⚡ What Transfers From webpack to Vite
+- The filesystem
 - Topic 01 · JUnit 5 — chunk plan
 - The three messages, from the 7.4 source
 - Collapsing a long history: the procedure
@@ -1202,12 +1203,12 @@
 - Spread vs rest
 - The procedure
 - The diagnostic order
-- sort mutates and returns the same array
+- ⚡ Three Capabilities With No Vite Equivalent
 - Gotchas
-- 11-auth-interrupts-forbidden-and-unauthorized.md
+- Gotchas
 - Gotchas
 - 10l-web-push-the-subscription-flow.md
-- The audit: five destinations, five answers
+- 11d-what-defer-never-defers.md
 - Gotchas
 - base64 vs base64url
 - Buffer.allocUnsafe
@@ -1227,10 +1228,10 @@
 - ex11-misc-operators.mjs
 - ex3-control-flow.mjs
 - ex2-lag.mjs
-- ex10-ssrf-guard.mjs
+- Gotchas
 - ex12-redos.mjs
 - ex19-crypto.mjs
-- ex8-ssrf.mjs
+- 10-multi-tenant-applications.md
 - ex37f-frame-extras.mjs
 - ex40-api-concurrency.mjs
 - ex42-testing-rollback.mjs
@@ -1246,16 +1247,16 @@
 - res.sendFile
 - Inbound webhooks
 - module.register
-- Three ways to switch it on
+- 16-eager-is-not-a-fix.md
 - Topic 09 · Spring Data JPA — chunk plan
 - Topic 10 · Lazy-loading pitfalls — chunk plan
-- The four homes, and the one question that separates them
+- 🎭 Locators: `getByRole`, Semantic Queries & Strictness Mode
 - Topic 11 · Migrations with Flyway — chunk plan
 - Topic 12 · Caching — chunk plan
 - Topic 13 · jOOQ — chunk plan
 - Topic 14 · Spring Data for MongoDB and Redis — chunk plan
-- The four honest options, in order
-- The shape of the problem
+- 01b-staff-and-reading-the-room.md
+- 🧮 Reading a `useQueries` Result Array: `combine`, Aggregation and the Fan-Out Cost
 - 07-strictness.md
 - Topic 04 · Mockito — chunk plan
 - Topic 05 · The test pyramid in Spring — chunk plan
@@ -1266,7 +1267,7 @@
 - Topic 10 · Property-based testing — chunk plan
 - Topic 11 · Mutation testing — chunk plan
 - The chunks
-- exports map
+- 🚧 The Gate in Full: What a Disabled Query Ignores, `skipToken`, and Whether Children Follow
 - Topic 12 · Real-world testing scenarios — chunk plan
 - Topic 01 · Memory layout — chunk plan
 - Topic 02 · GC in practice — chunk plan
@@ -1290,11 +1291,11 @@
 - Topic 10 · Correlation across services — chunk plan
 - Topic 12 · The distributed monolith — chunk plan
 - Infinity and -Infinity
-- Gotchas
-- Gotchas
+- ⚡ Dev Server Mechanics: Native ESM Serving, HMR & Dependency Pre-Bundling
+- ⚡ Build System: `rolldownOptions`, Chunk Splitting & Library Mode
 - Gotchas
 - The validation pipeline — how an unchecked page becomes a checked one
-- The four, and what each one requires of your class
+- ⚡ Mode and `NODE_ENV` Are Two Independent Axes
 - The ladder: deterministic first, bounded second, timed never
 - 02-data-rendering-resilience.md
 - 04-advanced-architecture-performance.md
@@ -1305,7 +1306,7 @@
 - DDL is an ownership right
 - pg_dump REPEATABLE READ snapshot
 - Variables are textual substitution
-- Date.toJSON ISO string
+- ⚡ Conditional Config: `command`, `mode`, and Two Flags That Are Not Booleans
 - Four caveats that only make sense once you see the graph
 - The four cases where the answer is no
 - storybook/pages/README.md
@@ -1324,10 +1325,10 @@
 - Child
 - ex5c-write-bind.mjs
 - ex1-outbox.mjs
-- ex4-shutdown.mjs
+- ⚡ `configResolved`
 - ex7-overlap.mjs
 - ex7-xss.mjs
-- sum.mjs
+- ⚡ `configureServer` and `configurePreviewServer`
 - p9-testing/package.json
 - ex14-crud.mjs
 - ex15-pagination.mjs
@@ -1347,16 +1348,15 @@
 - graphify reference: incremental update and cluster-only
 - router.param
 - Headers already sent
-- The two functions, and what each one says
-- A rename, done properly
-- The four containment strategies
-- 1 · The bullet that carries the most weight
+- ⚡ Plugin Ordering & `enforce`
+- 4. Senior Engineer Edge Cases & Pitfalls
+- 02-a-worked-run.md
 - Automatic semicolon insertion
 - String.prototype.replace
 - Destructured parameter = {}
-- Module resolution
-- Gotchas
-- Gotchas
+- 10-forks.md
+- 📦 Cancellation, Races & The Limits of `createAsyncThunk`
+- 🔄 Core Concepts: The Server-State Model, `QueryClient` & Why Server State Is Different
 - nextjs/syllabus/01-foundations.md
 - 03-state-styling-ux.md
 - npm day to day
@@ -1379,7 +1379,7 @@
 - ex3-diag.mjs
 - ex4-throughput.mjs
 - app.mjs
-- supertest.test.mjs
+- ex10-api/package.json
 - probe.mjs
 - ex7-coverage/discount.mjs
 - render.test.mjs
@@ -1389,15 +1389,15 @@
 - ex18-delete.mjs
 - ex20-driver.mjs
 - ex21-types-prepared.mjs
-- ex22-notify-cursor-pgjs.mjs
-- ex31-psql-basics.sh
+- 🔄 Caching & Invalidation: `invalidateQueries()`, `refetchQueries()` & Direct Cache Access
+- 🎭 `initialData` in a Composition Chain: a Cache Write That Claims to Be Fresh
 - ex36b-agg-plans.mjs
 - ex38-repository.mjs
 - ex3-advisory-fix.mjs
 - ex4-soft-delete.mjs
 - ex5-filter-sort.mjs
 - ex6-collation.mjs
-- ex9-bulk-at-scale.mjs
+- ⚡ What Static Replacement Costs You: Dynamic Keys, One-Artefact Promotion & Auditing a Bundle
 - Glean client ID (react-p0)
 - mod1.ts
 - mod10.ts
@@ -1778,10 +1778,11 @@
 - ex8-comparison.mjs
 - ex7-pipe.mjs
 - ex7b-lock.mjs
-- worker.mjs
+- ⚡ The Five Built-In Constants, and Why Your Variables Are Always Strings
+- ex20-rate-limiting.mjs
 - ex24-encryption-keys.mjs
 - ex6-cmdinj.mjs
-- prop.test.mjs
+- ⚡ Which Hooks Run in Dev and Which Do Not
 - src/discount.mjs
 - vat.mjs
 - ex1-ddl-from-node.mjs
@@ -1833,7 +1834,7 @@
 - Factory with defaults and overrides
 - 100% coverage is actively harmful
 - Four ways a load test lies
-- Paginator/index.js
+- clsx
 - generate_series
 - Plain REFRESH AccessExclusiveLock
 - SCRAM-SHA-256 verifier
@@ -1857,6 +1858,7 @@
 - useLayoutEffect blocks paint
 - A declaration is a promise, not a check
 - Construct signature
+- ⚡ SSR Support: Middleware Mode, `ssrLoadModule()` & SSR Manifests
 - phase-0-express-basics_01-what-express-is_md__1.mjs
 - phase-0-express-basics_05-application-settings_md__1.mjs
 - phase-0-express-basics_05-application-settings_md__2.mjs
@@ -1866,8 +1868,8 @@
 - ex1-types.mjs
 - ex2-equality.mjs
 - ex7-optional-parens.mjs
-- `connectionTimeout` — how long a thread waits
-- Three places, in increasing order of strength
+- 🎁 The language and framework presets
+- Gotchas
 - ex4-reports.mjs
 - portclash/package.json
 - ex11-di/package.json
@@ -1906,6 +1908,7 @@
 - circular.ts
 - ex1-narrowing-basics.sh
 - ex2-guards-and-loss.sh
+- 🎭 Advanced Patterns: Page Object Model, Custom Matchers & Test Tagging
 - Yarn node-modules linker
 - Async handler rejections forward to next
 - Removed Express 4 APIs
@@ -1999,9 +2002,9 @@
 - I/O workers
 - Non-transactional sequence gaps
 - pg bigint as string
-- The three modes
+- Anti join
 - Polling and Awaitility
-- JSON.stringify is silently lossy
+- Updater function
 - tsvector tsquery and @@
 - shared_preload_libraries for pg_stat_statements
 - CREATE MATERIALIZED VIEW WITH NO DATA
@@ -2065,40 +2068,101 @@
 - useEffectEvent is stable in React 19.2
 - Effects run children before parents
 - React 19 and 19.2 changes
+- 📦 Slice Selectors & The `reducers` Creator Callback
+- check-links.py
+- 🔄 Query States: `status` vs `fetchStatus` & the Loading Flag Family
+- 🔄 `useInfiniteQuery` in v5: the two required options and the stop signal that changed
 - discovery probe
-- The three shapes
-- Gotchas
-- Decision 1 — the session strategy, and the only question that settles it
-- Step 2 — `getCurrentUser()`, which returns a DTO and not a row
+- ⚡ The `VITE_` Prefix Is an Exposure Gate, Not a Vault
+- ⚡ Storing the Dev Server
+- ⚡ Testing Integration: Vitest's Shared Config & Transform Pipeline
+- 01b-how-usescroll-measures.md
+- 🎨 Keyframes: Array Syntax & The `times` Array
 - Vite SPA starter
-- Promise.all array destructuring
-- TechPicker/index.js
+- 4. Senior Engineer Edge Cases & Pitfalls
+- 05-syntax-details.md
 - Link/index.js
 - stack.js
+- --max-old-space-size
+- 🎭 Debugging Tools: Trace Viewer, Inspector, Codegen & UI Mode
+- 🔄 Infinite lists at runtime: one fetch, two flags, and a `data` that is not an array
+- 🔄 Optimistic Updates Patterns: List vs Single-Item Rollback & Race Conditions
+- 4. Senior Engineer Edge Cases & Pitfalls
+- ⚡ `dotenv-expand`: Why a `$` in Your Password Truncates It
+- ⚡ `sequential` vs `parallel`
+- 1. Under-The-Hood Mechanics
+- ⚡ Rolldown Plugin Compatibility
+- 🎨 Orchestration & Staggering: Parent-Child Timing & Custom Per-Child Stagger
+- 01-what-the-notation-says.md
+- 5. Interview Questions & Deep Dives
+- package.json essentials
+- 4. Senior Engineer Edge Cases & Pitfalls
+- linkcheck.mjs
+- mdxcheck.mjs
+- Gotchas
+- Gotchas
+- Gotchas
+- 10f-allocating-a-total-without-losing-a-cent.md
+- Class lifecycle to hook mapping
+- Four documented fetching-in-Effect downsides
+- 🎁 `@babel/preset-env`: targets, polyfills, and the Babel 8 boundary
+- 🎨 Presence State: Frozen Props and Manual Removal
+- 02b-the-predicate-keywords.md
+- 14-the-checklist.md
+- Gotchas
+- Gotchas
+- Gotchas
+- Gotchas
+- The handler, complete
+- The card representation
+- The five things multi-instance changes
+- Gotchas
+- Gotchas
+- The custom assertion class
+- 1 · What the survey found
+- 03-advanced-integration.md
+- Gotchas
+- Gotchas
+- 🎭 `placeholderData` in a Composition Chain: a Render-Time Guess That Moves the Status
+- dependencies
+- The four things this changes
+- The patches, and what each one costs
+- The four things that genuinely belong
+- Gotchas
+- 5. Interview Questions & Deep Dives
+- 01-jest-runner.md
+- The five modifiers
+- Gotchas
+- What the prop actually is
+- Ports and the network
+- The three properties that are invisible from the tag
+- The options
+- COPY text vs csv format
+- pipeline not pipe for COPY
 
 ## God Nodes (most connected - your core abstractions)
-1. `Phase 8 — Security` - 42 edges
+1. `Phase 8 — Security` - 43 edges
 2. `Phase 5 Networking HTTP and processes` - 34 edges
 3. `Phase 6 — Data access` - 34 edges
 4. `Phase 9 — Testing` - 32 edges
 5. `Phase 10 — Indexes and the query planner` - 31 edges
 6. `Phase 11 — Transactions, MVCC and concurrency` - 30 edges
-7. `Phase 2 — Async and the event loop` - 28 edges
-8. `Phase 7 — Background work and resilience` - 28 edges
-9. `Phase 13 — Security, operations and production` - 27 edges
-10. `10 · Map vs a plain object` - 27 edges
+7. `Phase 7 — Background work and resilience` - 30 edges
+8. `Phase 2 — Async and the event loop` - 28 edges
+9. `Phase 10 Observability and performance` - 27 edges
+10. `Phase 13 — Security, operations and production` - 27 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `API testing` --references--> `supertest`  [EXTRACTED]
-  docs/nodejs/pages/phase-9-testing/05-api-testing.md → sandbox/p9-testing/ex10-api/package.json
-- `COPY text vs csv format` --references--> `pg-copy-streams`  [EXTRACTED]
-  docs/postgresql/pages/phase-8-schema-from-node/09-copy-streams.md → sandbox/pg-api/package.json
-- `pipeline not pipe for COPY` --references--> `pg-copy-streams`  [EXTRACTED]
-  docs/postgresql/pages/phase-8-schema-from-node/09-copy-streams.md → sandbox/pg-api/package.json
-- `UNLOGGED all-text staging table` --rationale_for--> `pg-copy-streams`  [EXTRACTED]
-  docs/postgresql/pages/phase-8-schema-from-node/09-copy-streams.md → sandbox/pg-api/package.json
 - `WHEN NOT MATCHED BY SOURCE` --semantically_similar_to--> `LEFT JOIN IS NULL anti-join`  [INFERRED] [semantically similar]
   reviews/fable/03-accuracy-findings.md → docs/postgresql/pages/phase-5-joins/02-left-join/01-null-extension.md
+- `WHEN NOT MATCHED BY SOURCE` --semantically_similar_to--> `EXCEPT`  [INFERRED] [semantically similar]
+  reviews/fable/03-accuracy-findings.md → docs/postgresql/pages/phase-5-joins/11-set-ops.md
+- `Run before you write` --semantically_similar_to--> `Never invent a number or console output`  [INFERRED] [semantically similar]
+  sandbox/README.md → drafts/GROK-PROMPT.md
+- `Outbox relay` --semantically_similar_to--> `FOR UPDATE SKIP LOCKED`  [INFERRED] [semantically similar]
+  docs/nodejs/pages/phase-7-background-work/06-transactional-outbox.md → docs/postgresql/pages/phase-11-mvcc/08-skip-locked.md
+- `MongoDB operator injection` --semantically_similar_to--> `Shell injection`  [INFERRED] [semantically similar]
+  docs/nodejs/pages/phase-6-data-access/02-parameterized-queries.md → docs/nodejs/pages/phase-5-http-processes/20-shell-injection.md
 
 ## Import Cycles
 - None detected.
@@ -2106,7 +2170,6 @@
 ## Hyperedges (group relationships)
 - **At-least-once jobs: claim, stall, idempotency, outbox, DLQ** — docs_nodejs_pages_phase_7_background_work_02_job_queues_queue_properties, docs_nodejs_pages_phase_7_background_work_04_retries_and_stalled_jobs_stalled_vs_failed, docs_nodejs_pages_phase_7_background_work_05_job_idempotency_domain_derived_key, docs_nodejs_pages_phase_7_background_work_06_transactional_outbox_outbox_table, docs_nodejs_pages_phase_7_background_work_07_dead_letter_queues_poison_message [EXTRACTED 1.00]
 - **What await does: evaluate, suspend, return, one tick, microtask** — docs_javascript_pages_phase_7_async_07_async_await_02_where_it_suspends_await_evaluates_immediately, docs_javascript_pages_phase_7_async_07_async_await_02_where_it_suspends_await_suspends_and_returns, docs_javascript_pages_phase_7_async_07_async_await_02_where_it_suspends_one_tick_minimum, docs_javascript_pages_phase_7_async_07_async_await_02_where_it_suspends_continuation_is_microtask, docs_javascript_pages_phase_7_async_07_async_await_02_where_it_suspends_sync_until_first_await [EXTRACTED 1.00]
-- **Bulk load paths from Node** — docs_postgresql_pages_phase_8_schema_from_node_04_bulk_insert_unnest, docs_postgresql_pages_phase_8_schema_from_node_04_bulk_insert_copy_from_stdin, pg_copy_streams, docs_postgresql_pages_phase_8_schema_from_node_09_copy_streams_staging_table, docs_postgresql_pages_phase_8_schema_from_node_04_bulk_insert_autocommit_wal [EXTRACTED 1.00]
 - **Canonical empty-safe child collection** — docs_postgresql_pages_phase_6_aggregation_05_json_agg_readme_jsonb_agg, docs_postgresql_pages_phase_6_aggregation_05_json_agg_03_the_empty_array_trap_left_join_null_row, docs_postgresql_pages_phase_6_aggregation_05_json_agg_03_the_empty_array_trap_filter_empty_group_null, docs_postgresql_pages_phase_6_aggregation_05_json_agg_03_the_empty_array_trap_child_collection_idiom [EXTRACTED 1.00]
 - **Where a class member lives** — docs_javascript_pages_phase_4_objects_and_classes_06_class_readme_member_destinations, docs_javascript_pages_phase_4_objects_and_classes_06_class_02_static_and_accessors_static_members, docs_javascript_pages_phase_4_objects_and_classes_06_class_02_static_and_accessors_class_accessors, docs_javascript_pages_phase_4_objects_and_classes_06_class_03_private_elements_private_elements [EXTRACTED 1.00]
 - **ToPrimitive ToNumber and overloaded plus** — docs_javascript_pages_phase_1_values_and_coercion_08_type_coercion_toprimitive, docs_javascript_pages_phase_1_values_and_coercion_08_type_coercion_tonumber, docs_javascript_pages_phase_1_values_and_coercion_08_type_coercion_plus_concatenation, docs_javascript_pages_phase_0_how_javascript_runs_12_reading_the_spec_toprimitive [EXTRACTED 1.00]
@@ -2212,7 +2275,6 @@
 - **Replica consumer failures: stale reads and recovery conflicts** — docs_postgresql_pages_phase_13_ops_08_replication_01_lag_and_read_your_writes_read_your_writes, docs_postgresql_pages_phase_13_ops_08_replication_01_lag_and_read_your_writes_replay_lag, docs_postgresql_pages_phase_13_ops_08_replication_02_conflicts_and_routing_recovery_conflict, docs_postgresql_pages_phase_13_ops_08_replication_02_conflicts_and_routing_hot_standby_feedback, docs_postgresql_pages_phase_13_ops_08_replication_02_conflicts_and_routing_read_routing [EXTRACTED 1.00]
 - **RLS identity, policies, and owner bypass** — docs_postgresql_pages_phase_13_ops_14_rls_01_policies_using_vs_with_check, docs_postgresql_pages_phase_13_ops_14_rls_01_policies_force_row_level_security, docs_postgresql_pages_phase_13_ops_14_rls_02_carrying_the_identity_set_local_identity, docs_postgresql_pages_phase_13_ops_14_rls_03_performance_and_practice_testing_rls [EXTRACTED 1.00]
 - **Safe scripted psql migration flags** — docs_postgresql_pages_phase_1_psql_06_scripting_on_error_stop, docs_postgresql_pages_phase_1_psql_06_scripting_single_transaction, docs_postgresql_pages_phase_1_psql_06_scripting_no_psqlrc, docs_postgresql_pages_phase_1_psql_06_scripting_exit_codes [EXTRACTED 1.00]
-- **Session-scoped work needs one checked-out client** — docs_nodejs_pages_phase_6_data_access_04_postgresql_from_node_pool_vs_client, docs_postgresql_pages_phase_11_mvcc_02_begin_commit_withtransaction, docs_nodejs_pages_phase_6_data_access_04_postgresql_from_node_listen_notify, pg_cursor, docs_nodejs_pages_phase_6_data_access_11_migrations_pg_advisory_lock, docs_nodejs_pages_phase_7_background_work_08_scheduled_jobs_advisory_lock_schedule [EXTRACTED 1.00]
 - **HTML script loading forms and the module waterfall** — docs_javascript_pages_phase_0_how_javascript_runs_07_loading_scripts_script_defer, docs_javascript_pages_phase_0_how_javascript_runs_07_loading_scripts_script_async, docs_javascript_pages_phase_0_how_javascript_runs_07_loading_scripts_script_type_module, docs_javascript_pages_phase_0_how_javascript_runs_07_loading_scripts_module_request_waterfall [EXTRACTED 1.00]
 - **Specialist index types that answer questions a B-tree cannot** — docs_postgresql_pages_phase_10_indexes_15_gist_brin_hash_brin, docs_postgresql_pages_phase_10_indexes_15_gist_brin_hash_hash_index, docs_postgresql_pages_phase_10_indexes_15_gist_brin_hash_gist, docs_postgresql_pages_phase_10_indexes_15_gist_brin_hash_specialist_vs_btree [EXTRACTED 1.00]
 - **SQL clause evaluation pipeline** — docs_postgresql_pages_phase_6_aggregation_01_group_by_04_ordinals_and_distinct_evaluation_order, docs_postgresql_pages_phase_6_aggregation_03_having_01_groups_vs_rows_where_vs_having, docs_postgresql_pages_phase_6_aggregation_03_having_01_groups_vs_rows_having_no_aliases, docs_postgresql_pages_phase_6_aggregation_03_having_02_what_having_costs_window_in_having_42p20, docs_postgresql_pages_phase_6_aggregation_01_group_by_04_ordinals_and_distinct_42703_vs_42803 [EXTRACTED 1.00]
@@ -2259,19 +2321,19 @@
 - **Flat Cactus Visual System** — static_img_logo_color_palette, static_img_logo_flat_vector_style, static_img_logo_cactus_body, static_img_logo_lined_notepad [INFERRED 0.85]
 - **Docusaurus Powered by React Branding** — static_img_docusaurus_social_card_docusaurus, static_img_undraw_docusaurus_react_react, static_img_undraw_docusaurus_react_powered_by_react, static_img_undraw_docusaurus_react_docusaurus_keytar [INFERRED 0.85]
 
-## Communities (2153 total, 667 thin omitted)
+## Communities (2209 total, 666 thin omitted)
 
-### Community 0 - "08-the-n-plus-1-problem/README.md"
+### Community 0 - "09-entity-graph.md"
 Cohesion: 0.01
-Nodes (283): Gotchas, Interview questions, The arithmetic is the point, The code, What actually runs, Gotchas, Interview questions, Say it generally (+275 more)
+Nodes (169): Gotchas, Interview questions, It holds a connection the whole time, It scales with the data, not with the traffic, Round trips do not compose the way computation does, The transaction is long, and long transactions have their own costs, They are serialised, and that is the whole cost, Gotchas (+161 more)
 
 ### Community 1 - "06-jpa-hibernate-model/README.md"
 Cohesion: 0.01
-Nodes (241): An entity is that same class, plus a promise, Gotchas, Interview questions, "Managed" is the word for being watched, Start with a class nobody is watching, The promise runs in both directions, What an entity is *not*, Gotchas (+233 more)
+Nodes (311): An entity is that same class, plus a promise, Gotchas, Interview questions, "Managed" is the word for being watched, Start with a class nobody is watching, The promise runs in both directions, What an entity is *not*, Gotchas (+303 more)
 
-### Community 2 - "09-spring-data-jpa/README.md"
-Cohesion: 0.02
-Nodes (110): `Future` and `CompletableFuture`, Gotchas, Interview questions, `Stream<T>` is a cursor, with the obligations of one, `T` versus `Optional<T>`, The collection types never return `null`, The types that matter for JPA, The types that require a parameter (+102 more)
+### Community 2 - "07b-query-by-example.md"
+Cohesion: 0.05
+Nodes (38): Gotchas, Interview questions, Picking the right one, The 3.0 break, and why it is easy to walk into, The interfaces, in order, What is deliberately *not* in the hierarchy, What `JpaRepository` extends, Copying signatures (+30 more)
 
 ### Community 3 - "phase-4-build-strategy/README.md"
 Cohesion: 0.01
@@ -2279,7 +2341,7 @@ Nodes (291): 🔴 `ARG` is not a secret mechanism, Gotchas, Interview questions,
 
 ### Community 4 - "10-lazy-loading/README.md"
 Cohesion: 0.01
-Nodes (249): 1 · Serialisation throws `LazyInitializationException`, 2 · A repository call outside any transaction, 3 · The controller navigates the entity, 4 · A template dots through an association, 5 · Exception handlers, audit logging and interceptors touching entities, 6 · Security expressions evaluated after the method returns, 7 · Async controller returns and streaming responses, What breaks, and what to do about each (+241 more)
+Nodes (232): Gotchas, Interview questions, Two rules about proxies you must not skip, Gotchas, Interview questions, The one line that creates the exception, The proxy is not the only shape, Three layers, not one (+224 more)
 
 ### Community 5 - "15-podman-compose.md"
 Cohesion: 0.01
@@ -2287,11 +2349,11 @@ Nodes (232): Gotchas, `inspect` — how it was configured, Interview questions, 
 
 ### Community 6 - "02-gc-in-practice/README.md"
 Cohesion: 0.01
-Nodes (209): Gotchas, Interview questions, Latency: `-XX:MaxGCPauseMillis` is a hint with a range, not a contract, The three axes, and the JVM's own words for them, Throughput: `-XX:GCTimeRatio`, and the two different defaults, Where the rest of the argument is, `gc+cpu` is the tag that proves it, Gotchas (+201 more)
+Nodes (225): Gotchas, Interview questions, Latency: `-XX:MaxGCPauseMillis` is a hint with a range, not a contract, The three axes, and the JVM's own words for them, Throughput: `-XX:GCTimeRatio`, and the two different defaults, Where the rest of the argument is, `gc+cpu` is the tag that proves it, Gotchas (+217 more)
 
 ### Community 7 - "07-relationships-fetch/README.md"
 Cohesion: 0.01
-Nodes (188): Gotchas, Interview questions, What `@Lob` really selects, Gotchas, Interview questions, The database side is smaller than you think, The object side is bigger than the database side, The provider has to pick a winner, and it picks in advance (+180 more)
+Nodes (215): Gotchas, Interview questions, What `@Lob` really selects, Gotchas, Interview questions, The database side is smaller than you think, The object side is bigger than the database side, The provider has to pick a winner, and it picks in advance (+207 more)
 
 ### Community 8 - "06-mockmvc/README.md"
 Cohesion: 0.01
@@ -2307,51 +2369,51 @@ Nodes (84): Constructor parameters, for `final` fields, Gotchas, Interview quest
 
 ### Community 11 - "04-the-fixes-in-order.md"
 Cohesion: 0.01
-Nodes (158): Budget 1 · Instantiation — depth 100, or five million, Budget 2 · Comparison — a budget that shrinks as your project grows, Budget 3 · Union size — 100,000, and an extrapolation, Gotchas, Interview questions, The part that explains a real class of bug, The three, side by side, Gotchas (+150 more)
+Nodes (200): Budget 1 · Instantiation — depth 100, or five million, Budget 2 · Comparison — a budget that shrinks as your project grows, Budget 3 · Union size — 100,000, and an extrapolation, Gotchas, Interview questions, The part that explains a real class of bug, The three, side by side, Gotchas (+192 more)
 
 ### Community 12 - "02-connection-pooling/README.md"
 Cohesion: 0.01
-Nodes (200): Gotchas, Interview questions, So try-with-resources is still exactly right, Spring Boot picks HikariCP for you, The same thing without Spring, The specification says this out loud, What HikariCP's `close()` actually does, Gotchas (+192 more)
+Nodes (210): Gotchas, Interview questions, So try-with-resources is still exactly right, Spring Boot picks HikariCP for you, The same thing without Spring, The specification says this out loud, What HikariCP's `close()` actually does, Gotchas (+202 more)
 
 ### Community 13 - "12j-the-review-checklist.md"
 Cohesion: 0.01
-Nodes (198): Gotchas, Interview questions, The four shapes that push you to SQL, Two different things are called "mapping", When the answer is not shaped like an entity, Gotchas, Interview questions, Three APIs, one idea (+190 more)
+Nodes (199): Gotchas, Interview questions, The four shapes that push you to SQL, Two different things are called "mapping", When the answer is not shaped like an entity, Gotchas, Interview questions, Three APIs, one idea (+191 more)
 
 ### Community 14 - "phase-7-custom-hooks/README.md"
-Cohesion: 0.01
-Nodes (199): Gotchas, Improving coverage, Interview questions, 🔴 It compiles rule-breaking code anyway, Making bail-outs visible or fatal, What bailing out looks like, What it must be able to prove, Event handlers are not a grey area (+191 more)
+Cohesion: 0.02
+Nodes (143): Event handlers are not a grey area, Gotchas, Interview questions, Rule 1 — only call Hooks at the top level, Rule 2 — only call Hooks from React functions, The full disallowed list, The two rules React attaches to this one, What enforces this (+135 more)
 
 ### Community 15 - "phase-9-mern-pern-stack/README.md"
 Cohesion: 0.01
 Nodes (204): Cross-check the phase's other traps, Gotchas, Interview questions, Making it a real backup, Podman's shortcut, Restoring into a fresh volume, The idiom: a throwaway container with two mounts, Why this is not a database backup (+196 more)
 
 ### Community 16 - "01-junit-5/README.md"
-Cohesion: 0.02
-Nodes (136): Gotchas, Interview questions, The four lifecycle annotations, and the static rule, Visibility, return types and the shape of a test class, What one test method actually costs, What still happens when a test is disabled, A taxonomy that survives contact with a team, Gotchas (+128 more)
+Cohesion: 0.01
+Nodes (334): Behaviour changes you can actually observe, Gotchas, Interview questions, New things worth knowing about, One version number, Removals that hit real projects, The baseline, What did *not* change (+326 more)
 
 ### Community 17 - "phase-3-generics/README.md"
 Cohesion: 0.01
-Nodes (202): A type parameter is a variable in the type language, Constraints, in one line ahead of the next page, Gotchas, Interview questions, Multiple type parameters relate their arguments, The problem, before the solution, What you can do with an unconstrained `T` — almost nothing, Where the parameter may appear (+194 more)
+Nodes (204): A type parameter is a variable in the type language, Constraints, in one line ahead of the next page, Gotchas, Interview questions, Multiple type parameters relate their arguments, The problem, before the solution, What you can do with an unconstrained `T` — almost nothing, Where the parameter may appear (+196 more)
 
 ### Community 18 - "11-exceptions/README.md"
 Cohesion: 0.01
 Nodes (196): An exception in the `except` *header*, Gotchas, Handlers cover the whole call tree, not the visible lines, How a handler is chosen, Interview questions, Nested `try` statements and the inner handler winning, The canonical four-clause example, The exception is reachable without `as` (+188 more)
 
-### Community 19 - "05-async-testing-and-act/README.md"
-Cohesion: 0.10
-Nodes (19): Gotchas, Interview questions, One event is not a click, The bugs only `user-event` can catch, The checks are the point, The v14 ceremony: `setup()`, and `await`, What the sequences actually look like, Fake timers — the one that breaks whole suites (+11 more)
+### Community 19 - "14-flaky-tests-and-ci.md"
+Cohesion: 0.04
+Nodes (45): Gotchas, Interview questions, One event is not a click, The bugs only `user-event` can catch, The checks are the point, The v14 ceremony: `setup()`, and `await`, What the sequences actually look like, Fake timers — the one that breaks whole suites (+37 more)
 
 ### Community 20 - "15-webflux-reactive/README.md"
 Cohesion: 0.01
-Nodes (175): Interview questions, The answer nobody liked: async servlets, The arithmetic that used to force the choice, The two answers, and why one of them won, A `ThreadLocal` that grew a memory problem, Assuming a blocking call inside a reactive pipeline is merely slow, Enabling virtual threads and losing your rate limit, Expecting virtual threads to speed up a CPU-bound endpoint (+167 more)
+Nodes (159): Gotchas, Interview questions, Overriding `service` and wondering why `doGet` stopped running, State on a servlet or a singleton bean, The interface everything sits on, The `javax` → `jakarta` rename is not cosmetic, The `javax.servlet` jar that is still on the classpath, The lifecycle, and why it produces a threading rule (+151 more)
 
 ### Community 21 - "07-what-does-not-carry-across.md"
 Cohesion: 0.01
-Nodes (188): Gotchas, Interview questions, The annotation that is *not* the one you are used to, The interface really is the same, The versions, and the release-train trap, What actually carries across — the parts that live in Spring Data Commons, Where the properties live, and why MongoDB's moved, Collation and read preference belong on the method (+180 more)
+Nodes (180): Gotchas, Interview questions, The annotation that is *not* the one you are used to, The interface really is the same, The versions, and the release-train trap, What actually carries across — the parts that live in Spring Data Commons, Where the properties live, and why MongoDB's moved, Collation and read preference belong on the method (+172 more)
 
-### Community 22 - "13-websocket/01-connecting.md"
+### Community 22 - "02-base64.md"
 Cohesion: 0.02
-Nodes (91): Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects, Cleaning up, Constructing one *is* connecting, Gotchas, Interview questions (+83 more)
+Nodes (102): `arrayBuffer()` and `bytes()` — binary, `blob()` — files and images, Choosing, in one rule, Errors these methods throw, `formData()`, Gotchas, Interview questions, `json()`, and why wrappers use `text()` instead (+94 more)
 
 ### Community 23 - "phase-10-server-components/README.md"
 Cohesion: 0.01
@@ -2367,19 +2429,19 @@ Nodes (180): Autocommit is the default, and the default is a decision, Changing 
 
 ### Community 26 - "02-assertj/README.md"
 Cohesion: 0.01
-Nodes (166): Gotchas, Interview questions, It also edits its own stack trace out of the way, It hands the failure to opentest4j so the IDE can show a diff, The mechanism: a template, a representation, and a failure factory, The one misuse the whole design cannot prevent, The three ways to say the same thing, and what each can print, The two printing limits that silently truncate a message (+158 more)
+Nodes (186): Gotchas, Interview questions, It also edits its own stack trace out of the way, It hands the failure to opentest4j so the IDE can show a diff, The mechanism: a template, a representation, and a failure factory, The one misuse the whole design cannot prevent, The three ways to say the same thing, and what each can print, The two printing limits that silently truncate a message (+178 more)
 
 ### Community 27 - "phase-12-tooling/README.md"
 Cohesion: 0.01
-Nodes (193): tsc emit-on-error default, TypeScript is a checker, not a runtime, Erasure and surviving syntax, The three ways to run TypeScript, Strip-only mode and erasableSyntaxOnly, strict and the flags it turns on, exclude only removes roots, tsconfig.json anatomy (+185 more)
+Nodes (229): tsc emit-on-error default, TypeScript is a checker, not a runtime, Erasure and surviving syntax, The three ways to run TypeScript, Strip-only mode and erasableSyntaxOnly, strict and the flags it turns on, exclude only removes roots, tsconfig.json anatomy (+221 more)
 
 ### Community 28 - "05-the-test-pyramid/README.md"
 Cohesion: 0.01
-Nodes (171): Gotchas, Interview questions, The four levels, stated in Spring terms, The honest version of the pyramid, The inverted pyramid, and how a team gets there, The shape, and where it came from, What this topic owns, and what it hands off, Why the base has to be wide: the level-0 test starts no context at all (+163 more)
+Nodes (178): Gotchas, Interview questions, The four levels, stated in Spring terms, The honest version of the pyramid, The inverted pyramid, and how a team gets there, The shape, and where it came from, What this topic owns, and what it hands off, Why the base has to be wide: the level-0 test starts no context at all (+170 more)
 
 ### Community 29 - "10-satisfies/README.md"
-Cohesion: 0.01
-Nodes (202): Gotchas, Interview questions, `satisfies` is the one that checks, 🔴 The compiler has no opinion about `!`, The rule this gives you, 🔴 The three, ranked by how much the compiler checks, What `as` actually gets you, and where its floor is, 1 · Standing in for a guard the compiler would have done for free (+194 more)
+Cohesion: 0.02
+Nodes (148): Classic ts.* API moved, Upgrade path 5.9 to 6.0 to 7.0, in operator narrowing, k in obj narrows obj never k, Optional properties break in narrowing, The in operator, Prefer a discriminant for designed types, in walks the prototype chain (+140 more)
 
 ### Community 30 - "phase-11-podman-in-depth/README.md"
 Cohesion: 0.02
@@ -2387,35 +2449,35 @@ Nodes (168): Gotchas, Interview questions, No daemon means the state is on disk,
 
 ### Community 31 - "04-out-of-memory-error/README.md"
 Cohesion: 0.01
-Nodes (176): Four places your code catches it without meaning to, Gotchas, Interview questions, The stack trace names the victim, not the culprit, The three sentences in the javadoc that decide how you treat it, Turning it back into a visible failure, Whether you can recover depends on which message it was, Gotchas (+168 more)
+Nodes (168): Four places your code catches it without meaning to, Gotchas, Interview questions, The stack trace names the victim, not the culprit, The three sentences in the javadoc that decide how you treat it, Turning it back into a visible failure, Whether you can recover depends on which message it was, Gotchas (+160 more)
 
 ### Community 32 - "07-the-typed-api-client/README.md"
 Cohesion: 0.03
-Nodes (74): Gotchas, Interview questions, The declaration, and the one annotation, The error shape, in the shared package, What the two generics leave unchecked, Gotchas, Interview questions, The declarations, and the `any` in the middle of them (+66 more)
+Nodes (75): Gotchas, Interview questions, So what type does the client build a request against?, The declaration, and what it forces, The two types of one real schema, Gotchas, Interview questions, The consumer (+67 more)
 
 ### Community 33 - "03-the-suppression-tiers.md"
-Cohesion: 0.01
-Nodes (169): Assignment or argument?, Gotchas, Interview questions, Missing-property errors say which, 🔴 Overload errors, and why they are the worst, The shape, Three techniques that make errors readable, Two errors that mean something structural (+161 more)
+Cohesion: 0.02
+Nodes (133): Assignment or argument?, Gotchas, Interview questions, Missing-property errors say which, 🔴 Overload errors, and why they are the worst, The shape, Three techniques that make errors readable, Two errors that mean something structural (+125 more)
 
 ### Community 34 - "phase-10-strictness/README.md"
-Cohesion: 0.02
-Nodes (152): Adopting it, Gotchas, Interview questions, The four honest fixes, The honest objections, What it changes, What it does *not* change, Why it finds real bugs (+144 more)
+Cohesion: 0.01
+Nodes (226): Gotchas, Interview questions, `strict` is a meta-flag over nine options, The default is `true`, and that changes how you read a config, Three of the nine are not about types at all, Why "just turn it all on" is the right default *and* not always possible, Adopting it on a codebase that has not, Definite assignment is a different `!` (+218 more)
 
 ### Community 35 - "09-error-handling/README.md"
 Cohesion: 0.01
-Nodes (167): Declaring versions on handlers, Gotchas, Interview questions, Turning it on, Gotchas, Interview questions, The `ERROR` dispatch is a second request, and that matters, The one-sentence goal (+159 more)
+Nodes (163): Gotchas, Interview questions, The `ERROR` dispatch is a second request, and that matters, The one-sentence goal, The trade-off, What happens today, with no error handling at all, Why per-endpoint error JSON is the thing to delete, Choosing between the three mechanisms (+155 more)
 
 ### Community 36 - "phase-12-browser-platform/README.md"
 Cohesion: 0.01
-Nodes (182): Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects, A note on wrappers, Gotchas, Interview questions, `OffscreenCanvas`: the rendering exception (+174 more)
+Nodes (159): Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects, Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects (+151 more)
 
 ### Community 37 - "phase-8-concurrent-suspense/README.md"
 Cohesion: 0.02
-Nodes (153): Gotchas, Interruptible, Interview questions, Non-blocking, 🔴 The action must be synchronous, The API, both halves, Two properties that define a transition, What it does *not* do (+145 more)
+Nodes (138): Gotchas, Interruptible, Interview questions, Non-blocking, 🔴 The action must be synchronous, The API, both halves, Two properties that define a transition, What it does *not* do (+130 more)
 
 ### Community 38 - "07-rest-controllers/README.md"
 Cohesion: 0.02
-Nodes (101): Gotchas, Interview questions, Mapping: the shortcut annotations and the class-level prefix, The path a request takes, as far as a controller author needs it, The two annotations, and what the composition actually does, URI patterns: `PathPattern`, not `AntPathMatcher`, Choosing between 404, 405, 415 and 406, `consumes` narrows by `Content-Type` (+93 more)
+Nodes (82): Gotchas, Interview questions, Mapping: the shortcut annotations and the class-level prefix, The path a request takes, as far as a controller author needs it, The two annotations, and what the composition actually does, URI patterns: `PathPattern`, not `AntPathMatcher`, Choosing between 404, 405, 415 and 406, `consumes` narrows by `Content-Type` (+74 more)
 
 ### Community 39 - "12-immutable-design/README.md"
 Cohesion: 0.02
@@ -2426,32 +2488,32 @@ Cohesion: 0.02
 Nodes (155): `generateStaticParams()` — build-time paths, Gotchas, Interview questions, `next.revalidate` — three values, not two, `next.tags` — with hard limits, `options.cache` — and why the default is not `no-store`, Parallel versus sequential — the waterfall you did not mean to write, Request memoization — a different layer, with different rules (+147 more)
 
 ### Community 41 - "12-eafp-vs-lbyl/README.md"
-Cohesion: 0.01
-Nodes (189): Gotchas, Interview questions, The reframe: three questions, no style opinions, The same operation, written both ways, What the glossary actually says, Gotchas, Interview questions, What "style" hides — a worked misreading (+181 more)
-
-### Community 42 - "08-test-data-patterns/README.md"
 Cohesion: 0.02
-Nodes (96): Charset, Gotchas, Interview questions, Iteration order of hash-based collections, Locale, The clock, Time zones, Unseeded randomness (+88 more)
+Nodes (150): Gotchas, Interview questions, The reframe: three questions, no style opinions, The same operation, written both ways, What the glossary actually says, Gotchas, Interview questions, What "style" hides — a worked misreading (+142 more)
+
+### Community 42 - "14b-time-and-determinism.md"
+Cohesion: 0.02
+Nodes (100): Charset, Gotchas, Interview questions, Iteration order of hash-based collections, Locale, The clock, Time zones, Unseeded randomness (+92 more)
 
 ### Community 43 - "06-comparisons/README.md"
 Cohesion: 0.01
 Nodes (154): Comparisons yield booleans — *usually*, Gotchas, Interview questions, Precedence: all six are equal, and all six are low, The operator table, What `object` gives you for free, Comparison is a runtime dispatch, not a compile-time type check, Gotchas (+146 more)
 
 ### Community 44 - "phase-6-rest-surface/README.md"
-Cohesion: 0.03
-Nodes (86): Gotchas, How deep should a URL nest?, Ids: what goes in the path, Interview questions, Plural, singular, and the small decisions, The four shapes, Trade-off, Choosing between an action and a sub-resource (+78 more)
+Cohesion: 0.02
+Nodes (101): Gotchas, How deep should a URL nest?, Ids: what goes in the path, Interview questions, Plural, singular, and the small decisions, The four shapes, Trade-off, Choosing between an action and a sub-resource (+93 more)
 
-### Community 45 - "03c-the-format-spec-mini-language.md"
-Cohesion: 0.03
-Nodes (70): Case, Chained `replace` for HTML escaping, Classification, Gotchas, Interview questions, `isdigit()` guarding `int()`, `lower()` for caseless comparison, Padding and alignment (+62 more)
+### Community 45 - "03-strings/README.md"
+Cohesion: 0.02
+Nodes (103): A str is a sequence of code points, An empty needle passes every membership test, Comparison is by code point, and that is not alphabetical order, Gotchas, Interview questions, `len()` is not what the user is counting, Sequence operations, Slicing hides an index bug (+95 more)
 
 ### Community 46 - "06-ssg-isr-and-ssr-strategy/01-explanation.md"
-Cohesion: 0.01
-Nodes (148): A non-async export under a file-level directive, `connection()` is banned in every cache scope, Enabling them, Gotchas, Interview questions, Reaching for `use cache: private` because `cookies()` threw, The comparison that actually decides it, The decision tree (+140 more)
+Cohesion: 0.02
+Nodes (150): A short-lived cache nested inside one with no explicit lifetime, Caching does not have to be all-or-nothing within a module, Gotchas, Interview questions, Nesting: whether the inner lifetime escapes depends on the outer one, Omitting `cacheLife` and inheriting numbers you did not choose, The `default` profile's actual numbers, The short-lived nesting case is a build error, not a silent inheritance (+142 more)
 
 ### Community 47 - "04-the-dashboard/README.md"
 Cohesion: 0.02
-Nodes (149): Gotchas, Interview questions, Revenue by day — aggregation plus a spine, Status counts — one pass with `filter`, The performance posture, The problem, Top products and share-of-category — window functions, Using it in the app (+141 more)
+Nodes (137): Gotchas, Interview questions, Revenue by day — aggregation plus a spine, Status counts — one pass with `filter`, The performance posture, The problem, Top products and share-of-category — window functions, Using it in the app (+129 more)
 
 ### Community 48 - "phase-4-classes-declarations/README.md"
 Cohesion: 0.01
@@ -2463,59 +2525,59 @@ Nodes (146): Gotchas, Interview questions, The incident, Two resources, two prof
 
 ### Community 50 - "phase-18-storefront/README.md"
 Cohesion: 0.02
-Nodes (109): Cancelling deliberately, Combining the caller's signal with the wrapper's timeout, Distinguishing the three failures, Gotchas, Interview questions, The timeout is one line, Version 4 — timeout and cancellation wired in, `allSettled` — never rejects (+101 more)
+Nodes (137): Cancelling deliberately, Combining the caller's signal with the wrapper's timeout, Distinguishing the three failures, Gotchas, Interview questions, The timeout is one line, Version 4 — timeout and cancellation wired in, 1. What is retryable? (+129 more)
 
 ### Community 51 - "21-what-belongs-in-a-transaction.md"
-Cohesion: 0.04
-Nodes (54): Gotchas, Interview questions, The 6.1 note, and the reactive asymmetry, The four phases, The rule that surprises everyone, The shape, The trade-off, What the listener runs in (+46 more)
-
-### Community 52 - "01-why-a-long-list-freezes.md"
-Cohesion: 0.01
-Nodes (168): Breakpoints belong to `matchMedia`, Cleanup, Gotchas, Interview questions, Pick the signal that matches the question, `resize`: the window event versus `ResizeObserver`, `scroll`, in one paragraph, The entry properties (+160 more)
-
-### Community 53 - "06-sanitising-html/README.md"
 Cohesion: 0.02
-Nodes (88): Chunks, Phase gate, The three sentences to keep, Where this connects, `closest` — the up-walk, done properly, Containment: `contains` and `compareDocumentPosition`, Going down: the selector is matched against the document, Gotchas (+80 more)
+Nodes (127): Gotchas, Interview questions, Spring Data's default, which you have been using without noticing, The one exception: `PROPAGATION_SUPPORTS`, The silent-ignore rule, The trade-off, What a persistence context normally does at commit, What `readOnly = true` changes (+119 more)
+
+### Community 52 - "01-the-forced-reflow.md"
+Cohesion: 0.02
+Nodes (122): Breakpoints belong to `matchMedia`, Cleanup, Gotchas, Interview questions, Pick the signal that matches the question, `resize`: the window event versus `ResizeObserver`, `scroll`, in one paragraph, The entry properties (+114 more)
+
+### Community 53 - "01-what-can-hold-focus.md"
+Cohesion: 0.02
+Nodes (89): `beforeinput` — the cancelable one, Focus events on forms, Gotchas, `input` versus `change` — the one people get wrong, Interview questions, Keeping keyboard shortcuts out of forms, `submit`, and the two ways to trigger it, Debouncing without losing the last keystroke (+81 more)
 
 ### Community 54 - "phase-10-events/README.md"
-Cohesion: 0.01
-Nodes (156): Bubbling is the default, Gotchas, Interview questions, `stopPropagation`, `target` versus `currentTarget`, The path, Chunks, Phase gate (+148 more)
+Cohesion: 0.02
+Nodes (117): Bubbling is the default, Gotchas, Interview questions, `stopPropagation`, `target` versus `currentTarget`, The path, Chunks, Phase gate (+109 more)
 
 ### Community 55 - "10-the-three-cache-directives/README.md"
 Cohesion: 0.02
-Nodes (116): Calling a passed-in Server Action inside the cached body, Gotchas, Interleaving: slots pass through without joining the key, Interview questions, Introspecting a slot inside a cached component, Passing a `URL` and getting a serialization error, Serialization: arguments and return values use different systems, Assuming a shared cache is a per-user cache (+108 more)
+Nodes (119): A non-async export under a file-level directive, `connection()` is banned in every cache scope, Enabling them, Gotchas, Interview questions, Reaching for `use cache: private` because `cookies()` threw, The comparison that actually decides it, The decision tree (+111 more)
 
 ### Community 56 - "11-flyway-migrations/README.md"
-Cohesion: 0.02
-Nodes (135): Gotchas, `group` moves the boundary outwards, Interview questions, The one failure Flyway will tolerate, The three ways a migration ends up non-transactional, The two paths, from the source, What a `success = false` row does next, When PostgreSQL cannot be in a transaction, and who decides (+127 more)
+Cohesion: 0.01
+Nodes (316): Gotchas, Interview questions, Liquibase, in two sentences, The diff nobody reviewed, Three properties, and everything else is detail, What Flyway is, What "schema is code" actually commits you to, Where migrations run from (+308 more)
 
 ### Community 57 - "01-memory-layout/README.md"
 Cohesion: 0.02
-Nodes (142): Gotchas, Interview questions, The regions HotSpot actually has, The specification names six areas, and `-Xmx` covers one of them, What this framing buys you, What `-Xmx` actually promises, Gotchas, Interview questions (+134 more)
+Nodes (134): Gotchas, Interview questions, The regions HotSpot actually has, The specification names six areas, and `-Xmx` covers one of them, What this framing buys you, What `-Xmx` actually promises, Gotchas, Interview questions (+126 more)
 
 ### Community 58 - "11-spring-security/README.md"
-Cohesion: 0.01
-Nodes (166): Gotchas, Interview questions, The role, stated precisely, The two artifacts, and why one of them is not optional, The two beans you will actually override, What Boot auto-configures, exactly, Where phase 9 stops and this topic starts, Gotchas (+158 more)
+Cohesion: 0.02
+Nodes (142): 1. `DelegatingFilterProxy` — the bridge into Spring, 2. `FilterChainProxy` — the bean it delegates to, 3. `SecurityFilterChain` — one per "kind of request", Gotchas, Interview questions, Matching is not limited to URLs, The three objects, outermost first, What this buys, and what it costs (+134 more)
 
 ### Community 59 - "13-actuator/README.md"
 Cohesion: 0.02
-Nodes (134): An endpoint is a bean with annotated methods, Gotchas, Interview questions, The dependency, What that separation buys you, When one technology needs something the other does not, Gate 1 — does the endpoint exist?, Gate 2 — what access does the endpoint permit? (+126 more)
+Nodes (129): An endpoint is a bean with annotated methods, Gotchas, Interview questions, The dependency, What that separation buys you, When one technology needs something the other does not, Gate 1 — does the endpoint exist?, Gate 2 — what access does the endpoint permit? (+121 more)
 
-### Community 60 - "21-structuredclone.md"
+### Community 60 - "02-tokens-and-samesite.md"
 Cohesion: 0.02
-Nodes (106): `CookieStore` — the modern API, 🔴 Deleting, and why it fails, `Domain` — omitting it is *narrower*, not wider, Encode the value, Gotchas, `HttpOnly` — you cannot set it from JavaScript, Interview questions, `Path` — the default is the trap (+98 more)
+Nodes (81): `CookieStore` — the modern API, 🔴 Deleting, and why it fails, `Domain` — omitting it is *narrower*, not wider, Encode the value, Gotchas, `HttpOnly` — you cannot set it from JavaScript, Interview questions, `Path` — the default is the trap (+73 more)
 
 ### Community 61 - "01-jdbc/README.md"
-Cohesion: 0.02
-Nodes (118): `DataSource`, `ConnectionPoolDataSource` and the two `close()` meanings, Gotchas, Interview questions, JNDI, and why you can mostly forget it, pgJDBC ships a pool. Do not use it., The trade-off, The two ways to get a `Connection`, What `DriverManager` actually costs you (+110 more)
+Cohesion: 0.01
+Nodes (329): Driver registration: why `Class.forName` is dead and still everywhere, Everything you touch is an interface, Gotchas, Interview questions, The four driver types, and why only one still exists, The two packages, and why there are two, What a JDBC version actually buys you, `DataSource`, `ConnectionPoolDataSource` and the two `close()` meanings (+321 more)
 
 ### Community 62 - "javascript/pages/README.md"
-Cohesion: 0.03
-Nodes (81): 🔒 Chunk claims, 🔒 FOUR CHUNKS — `docs/javascript/` is split between four sessions (2026-08-15), 🔴🔴 How a session is started NOW — **give the phase, say continue** (2026-08-15), How these pages are verified, Phases, 🔴 The critical rule — a line cap is a FILE-SIZE rule, never a content budget, The older form — `pick javascript A`, still understood, Working order — 🔴 Master-first is FINISHED; the tiers are the work (+73 more)
+Cohesion: 0.02
+Nodes (127): 🔒 Chunk claims, 🔒 FOUR CHUNKS — `docs/javascript/` is split between four sessions (2026-08-15), 🔴🔴 How a session is started NOW — **give the phase, say continue** (2026-08-15), How these pages are verified, Phases, 🔴 The critical rule — a line cap is a FILE-SIZE rule, never a content budget, The older form — `pick javascript A`, still understood, Working order — 🔴 Master-first is FINISHED; the tiers are the work (+119 more)
 
 ### Community 63 - "01c-appendix-a-glossary-the-a-to-z.md"
 Cohesion: 0.02
-Nodes (140): 1 · Partial Prerendering (PPR), 2 · RSC — React Server Components, and the RSC Payload, 3 · Cache Components, Gotchas, How to read the definitions, Interview questions, Mistaken for: **Memoization**, Mistaken for: **Server Actions** (+132 more)
+Nodes (126): 1 · Partial Prerendering (PPR), 2 · RSC — React Server Components, and the RSC Payload, 3 · Cache Components, Gotchas, How to read the definitions, Interview questions, Mistaken for: **Memoization**, Mistaken for: **Server Actions** (+118 more)
 
 ### Community 64 - "phase-2-images-and-registries/README.md"
 Cohesion: 0.02
@@ -2523,15 +2585,15 @@ Nodes (133): Case and character rules, Gotchas, How the registry is recognised, 
 
 ### Community 65 - "04-iteration-protocols/README.md"
 Cohesion: 0.01
-Nodes (192): What each loop iterates, Control flow and choosing a loop, 02 · for…of vs for…in vs forEach, Two operations, one syntax, Where spread earns its place, 03 · Spread with iterables, Do not modify a collection while iterating it, Getting it wrong — the three `TypeError`s, in order (+184 more)
+Nodes (175): Object.groupBy / Map.groupBy, 05.2 · When not to use reduce, Better-named methods than reduce, What each loop iterates, Control flow and choosing a loop, 02 · for…of vs for…in vs forEach, Two operations, one syntax, Where spread earns its place (+167 more)
 
 ### Community 66 - "17-deployment-scaling-and-observability/01-explanation.md"
-Cohesion: 0.02
-Nodes (140): 1 · The artifact ships somewhere you do not operate, 2 · Content changes only when the repository changes, 3 · Air-gapped or certification-constrained deployment, 4 · The organisational constraint, stated honestly, Edge distribution, concretely, Four cases where export is the right answer, Functional fidelity vs performance fidelity — the distinction to argue with, Gotchas (+132 more)
+Cohesion: 0.01
+Nodes (146): 1 · The artifact ships somewhere you do not operate, 2 · Content changes only when the repository changes, 3 · Air-gapped or certification-constrained deployment, 4 · The organisational constraint, stated honestly, Edge distribution, concretely, Four cases where export is the right answer, Functional fidelity vs performance fidelity — the distinction to argue with, Gotchas (+138 more)
 
 ### Community 67 - "phase-5-type-level/README.md"
 Cohesion: 0.02
-Nodes (161): `-?` also removes `undefined`, and that is not obvious, `+` and `-`, Gotchas, Interview questions, The four one-liners worth knowing by heart, What "homomorphic" means, and why the word matters, Writing a modifier, Building the standard utilities from an empty file (+153 more)
+Nodes (139): `-?` also removes `undefined`, and that is not obvious, `+` and `-`, Gotchas, Interview questions, The four one-liners worth knowing by heart, What "homomorphic" means, and why the word matters, Writing a modifier, Building the standard utilities from an empty file (+131 more)
 
 ### Community 68 - "02-building-in-ci.md"
 Cohesion: 0.02
@@ -2539,15 +2601,15 @@ Nodes (127): Compose's part in this, Gotchas, Interview questions, Podman, Rollb
 
 ### Community 69 - "patterns/README.md"
 Cohesion: 0.02
-Nodes (124): Context is the channel, Gotchas, Interview questions, The problem it solves, Gotchas, Interview questions, The guard that throws, What `useMemo` is actually protecting (+116 more)
+Nodes (87): Patterns this reference says no to, Start here — the problem you actually have, Supporting techniques, The one distinction that matters most, The ten, Where this connects, Fix one: flatten it (cosmetic, and that is fine), Fix two: have fewer providers at the root (the real one) (+79 more)
 
 ### Community 70 - "phase-2-classes-objects/README.md"
 Cohesion: 0.02
-Nodes (117): Class initialization comes first — once, lazily, Field shadowing — one name, two fields, Gotchas, Instance initialization — the sequence to memorize, Instance initializer blocks, precisely, Interview questions, The parts, and what each is for, Constructor chaining with `this(...)` (+109 more)
+Nodes (119): Class initialization comes first — once, lazily, Field shadowing — one name, two fields, Gotchas, Instance initialization — the sequence to memorize, Instance initializer blocks, precisely, Interview questions, The parts, and what each is for, Constructor chaining with `this(...)` (+111 more)
 
-### Community 71 - "phase-2-components/README.md"
+### Community 71 - "12-render-props/README.md"
 Cohesion: 0.02
-Nodes (122): Gotchas, Interview questions, The retraction, The split, What replaced it, Why it made sense in 2015, specifically, Gotchas, Interview questions (+114 more)
+Nodes (122): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Building a Container/Presentational Split "By Convention" Post-Hooks, ⚠️ Anti-Pattern 2: Reaching for Compound Components for a Simple, Rarely-Varied Component, ⚠️ Anti-Pattern 3: Configuration-Prop Explosion Left Unaddressed Until It's Genuinely Unmanageable, Atomic Design: A Mental Model, Rarely Literal Folders (+114 more)
 
 ### Community 72 - "phase-6-performance/README.md"
 Cohesion: 0.02
@@ -2555,35 +2617,35 @@ Nodes (127): Gotchas, Interview questions, Is the re-render even the problem?, T
 
 ### Community 73 - "05-indexes-and-explain/README.md"
 Cohesion: 0.02
-Nodes (125): Gotchas, Interview questions, Proving it — the phase gate, The derivations that teach the most, The method, The migration, The problem, Equality, Sort, Range (+117 more)
+Nodes (117): Gotchas, Interview questions, Proving it — the phase gate, The derivations that teach the most, The method, The migration, The problem, Equality, Sort, Range (+109 more)
 
 ### Community 74 - "07-error-handling-loading-states-and-resilience/01-explanation.md"
-Cohesion: 0.02
-Nodes (99): Chunks, Phase gate, Where this connects, Assuming `error.tsx` is a general `try`/`catch` for the segment, Deciding the category per call site instead of per failure, Gotchas, Interview questions, The decision procedure (+91 more)
+Cohesion: 0.01
+Nodes (173): Chunks, Phase gate, Where this connects, Assuming `error.tsx` is a general `try`/`catch` for the segment, Deciding the category per call site instead of per failure, Gotchas, Interview questions, The decision procedure (+165 more)
 
 ### Community 75 - "phase-3-dockerfile/README.md"
 Cohesion: 0.02
 Nodes (126): Choosing the grace period, Gotchas, Interview questions, PID 1 has no default handlers, Podman, Shell form wraps you in `/bin/sh -c`, The sequence, The signal is configurable, the kill is not (+118 more)
 
 ### Community 76 - "12-graceful-shutdown/README.md"
-Cohesion: 0.02
-Nodes (125): Five independent causes, one symptom, Gotchas, Interview questions, The good news about Spring Boot 4.1, The shape of the failure, What "graceful" actually has to mean, Why nobody attributes it to shutdown, Gotchas (+117 more)
+Cohesion: 0.03
+Nodes (93): Five independent causes, one symptom, Gotchas, Interview questions, The good news about Spring Boot 4.1, The shape of the failure, What "graceful" actually has to mean, Why nobody attributes it to shutdown, A working configuration (+85 more)
 
 ### Community 77 - "phase-3-generics-collections/README.md"
 Cohesion: 0.02
-Nodes (114): Gotchas, Interview questions, One marker, one seam worth knowing, Program to the interface, Reading a JDK signature against the map, The map itself, Why `Map` is not a `Collection`, Access order, and the 10-line LRU cache (+106 more)
+Nodes (134): Gotchas, Interview questions, One marker, one seam worth knowing, Program to the interface, Reading a JDK signature against the map, The map itself, Why `Map` is not a `Collection`, Gotchas (+126 more)
 
-### Community 78 - "03-target-lib-and-types.md"
-Cohesion: 0.02
-Nodes (90): Gotchas, Interview questions, `strict` is a meta-flag over nine options, The default is `true`, and that changes how you read a config, Three of the nine are not about types at all, Why "just turn it all on" is the right default *and* not always possible, Adopting it on a codebase that has not, Definite assignment is a different `!` (+82 more)
+### Community 78 - "02-augmenting-processenv.md"
+Cohesion: 0.06
+Nodes (29): 1. Assigning a non-string coerces it — and that is deprecated, 2. Windows is case-insensitive, 3. Worker threads get a *copy*, 4. Modifications do not escape the process, 5. The empty string is present and falsy, Five runtime behaviours that break the mental model, Gotchas, Interview questions (+21 more)
 
 ### Community 79 - "phase-9-forms-actions/README.md"
 Cohesion: 0.02
 Nodes (124): Checkboxes take `checked`, not `value`, Controlled or not: the honest trade, Gotchas, Interview questions, The caveats that decide architecture, 🔴 The Pitfall, 🔴 `undefined` is what flips an input to uncontrolled, What controlled means (+116 more)
 
-### Community 80 - "10-extensions.md"
+### Community 80 - "phase-1-the-method/README.md"
 Cohesion: 0.02
-Nodes (87): Behaviour changes you can actually observe, Gotchas, Interview questions, New things worth knowing about, One version number, Removals that hit real projects, The baseline, What did *not* change (+79 more)
+Nodes (150): Phase gate, Where this connects, Actors, and what each one implies, Choosing which five, Gotchas, Interview questions, The out-of-scope list is not an apology, The three parts (+142 more)
 
 ### Community 81 - "phase-1-running-containers/README.md"
 Cohesion: 0.02
@@ -2591,23 +2653,23 @@ Nodes (120): cgroups — what it may use, Gotchas, Interview questions, Namespac
 
 ### Community 82 - "03-aliasing.md"
 Cohesion: 0.02
-Nodes (83): A getter that lets callers edit your internals, A "snapshot" that keeps changing, Aliases you did not write down, An immutable "fix" that only moved the problem, `d.setdefault(k, expensive())` evaluates the default every time, Gotchas, Interview questions, Nesting: a shallow copy stops one level down (+75 more)
+Nodes (115): A getter that lets callers edit your internals, A "snapshot" that keeps changing, Aliases you did not write down, An immutable "fix" that only moved the problem, `d.setdefault(k, expensive())` evaluates the default every time, Gotchas, Interview questions, Nesting: a shallow copy stops one level down (+107 more)
 
-### Community 83 - "phase-9-spring-boot/README.md"
+### Community 83 - "12-outbound-http/README.md"
 Cohesion: 0.02
-Nodes (116): Phase gate, Where this connects, Gotchas, Interview questions, `RestTemplate` is deprecated — say it plainly, The four options, as the reference lists them, `WebClient` is no longer the answer to "I need concurrency", Gotchas (+108 more)
+Nodes (114): Phase gate, Where this connects, Gotchas, Interview questions, `RestTemplate` is deprecated — say it plainly, The four options, as the reference lists them, `WebClient` is no longer the answer to "I need concurrency", Gotchas (+106 more)
 
 ### Community 84 - "08-validation/README.md"
 Cohesion: 0.02
-Nodes (119): Bounded input is a security property, not a nicety, Gotchas, Interview questions, The DTO carries constraints; the domain type carries invariants, The trade-off, Three different things are called "invalid", What validation is not, Gotchas (+111 more)
+Nodes (142): `Errors` and `BindingResult` must come immediately after, Gotchas, Interview questions, Multipart: `@RequestPart` and `MultipartFile`, `@RequestBody` — the only resolver that reads the entity body, 🔴 The fallback rule, and why it is dangerous, The trade-off: convention that `javac` cannot check, `UriComponentsBuilder` — not an input (+134 more)
 
 ### Community 85 - "03-error-contract/README.md"
 Cohesion: 0.02
-Nodes (129): Arity is the whole detection mechanism, Gotchas, Handlers chain, and that is the useful pattern, Interview questions, It is reachable only from below, Router-level handlers, Gotchas, Interview questions (+121 more)
+Nodes (122): Arity is the whole detection mechanism, Gotchas, Handlers chain, and that is the useful pattern, Interview questions, It is reachable only from below, Router-level handlers, Gotchas, Interview questions (+114 more)
 
 ### Community 86 - "phase-4-objects-and-classes/README.md"
 Cohesion: 0.01
-Nodes (218): Gotchas, Interview questions, The bug it exists to catch, The corners, The genuinely modern use: an abstract base class, The `instanceof` guard — the ES5 way, The `new.target` guard — direct and honest, The two guards, and why the older one is worse (+210 more)
+Nodes (173): Gotchas, Interview questions, The bug it exists to catch, The corners, The genuinely modern use: an abstract base class, The `instanceof` guard — the ES5 way, The `new.target` guard — direct and honest, The two guards, and why the older one is worse (+165 more)
 
 ### Community 87 - "05-thread-dumps/README.md"
 Cohesion: 0.02
@@ -2618,48 +2680,48 @@ Cohesion: 0.02
 Nodes (128): Chunks, Gotchas, Interview questions, Phase gate, The lifetime problem, stated precisely, The shape of the fix, The user-visible symptom, Where "somewhere else" can live (+120 more)
 
 ### Community 89 - "10-forms-authentication-and-security-hardening/01-explanation.md"
-Cohesion: 0.03
-Nodes (98): Gotchas, Interview questions, The build order, The version reality you are adopting, stated plainly, What SprintDesk is when this milestone starts, Gotchas, Interview questions, The config module (+90 more)
+Cohesion: 0.02
+Nodes (104): Decision 1 — the session strategy, and the only question that settles it, Gotchas, Interview questions, The build order, The question, The version reality you are adopting, stated plainly, What SprintDesk chooses, and what it costs, What SprintDesk is when this milestone starts (+96 more)
 
-### Community 90 - "06-headless-components/README.md"
-Cohesion: 0.03
-Nodes (74): Controlled and uncontrolled parents, Dot notation or named exports, Gotchas, How a part learns which one it is, Interview questions, Option 1 — the caller passes it, Option 2 — parts register themselves, Option 3 — read the DOM when you need it (+66 more)
+### Community 90 - "04-the-costs-and-limits.md"
+Cohesion: 0.02
+Nodes (119): Context is the channel, Gotchas, Interview questions, The problem it solves, Gotchas, Interview questions, The guard that throws, What `useMemo` is actually protecting (+111 more)
 
-### Community 91 - "04-spring-transactional/README.md"
-Cohesion: 0.03
-Nodes (79): Declarative and programmatic are two different tools, Gotchas, Interview questions, Nothing happens without the infrastructure switched on, The shape of the thing, What "around it" means, Why declarative is still the default choice, CGLIB proxy — a runtime subclass (+71 more)
+### Community 91 - "phase-2-request-path/README.md"
+Cohesion: 0.02
+Nodes (146): Gotchas, Interview questions, Saying the path in the round, The hops, in order, The hops that can answer without the rest, The path with numbers: the storefront from Europe, The round trips that can be removed, Where the failures are (+138 more)
 
 ### Community 92 - "15-databases-apis-and-full-stack-patterns/01-explanation.md"
 Cohesion: 0.02
-Nodes (117): Phase gate, The five facts the chapter is really built on, Two version findings, current as of 2026-09-05, What this chapter deliberately does not own, What this chapter owns, by topic, Gotchas, Interview questions, The cost nobody prices at design time: an idle connection is a running function (+109 more)
+Nodes (120): Phase gate, The five facts the chapter is really built on, Two version findings, current as of 2026-09-05, What this chapter deliberately does not own, What this chapter owns, by topic, Gotchas, Interview questions, The cost nobody prices at design time: an idle connection is a running function (+112 more)
 
 ### Community 93 - "01b-the-three-kinds-of-pool.md"
 Cohesion: 0.02
 Nodes (108): Fluid / warm compute changes the sums, but only in one direction, Gotchas, Interview questions, Sizing `max`, and why the answer is usually "leave it alone", The arithmetic that takes production down, The three escapes, named now and taken apart later, What a connection actually is, What a driver pool does, and the assumption underneath it (+100 more)
 
 ### Community 94 - "Phase 8 — Security"
-Cohesion: 0.04
-Nodes (98): DNS rebinding, Literal IPs bypass custom lookup, Unvalidated fetch redirects, SSRF, Parse, connect-time, and redirect re-check, WHATWG URL IP normalisation, Block __proto__, constructor, prototype, --disable-proto and freeze (+90 more)
-
-### Community 95 - "phase-10-data-access/README.md"
 Cohesion: 0.02
-Nodes (95): Phase gate, Where this connects, Gotchas, How a path is resolved — four different meanings for one string, Interview questions, The default script nobody remembers exists, Three ways to say what to run, and the ordering rule between them, What actually runs the script (+87 more)
+Nodes (171): argon2id, bcrypt, Password storage, Rehash at login, Per-password salt, scrypt, A password hash must be slow, libuv thread-pool login capacity (+163 more)
+
+### Community 95 - "08-test-data-patterns/README.md"
+Cohesion: 0.01
+Nodes (163): Gotchas, Interview questions, The block, The four costs, which are different problems, Where this connects, Why `@BeforeEach` makes it worse than a helper method would, Fix that is not a fix 1 · A comment, Fix that is not a fix 2 · More `@BeforeEach` methods, or a base class (+155 more)
 
 ### Community 96 - "08-imports/README.md"
 Cohesion: 0.02
 Nodes (110): A module is an object; import is assignment plus a side effect, Gotchas, Interview questions, Submodules are bound onto the parent package, `sys.modules` is the cache, and it is a plain writable dict, Gotchas, `importlib.reload` and why it disappoints, Interview questions (+102 more)
 
 ### Community 97 - "10-packaging-for-deploy/README.md"
-Cohesion: 0.02
-Nodes (111): Gotchas, Interview questions, `layers.idx` — an index, not a repackaging, The four layers and why each is separate, The problem, stated by the documentation, Gotchas, Interview questions, The `tools` jar mode (+103 more)
+Cohesion: 0.04
+Nodes (63): Gotchas, Interview questions, `layers.idx` — an index, not a repackaging, The four layers and why each is separate, The problem, stated by the documentation, Gotchas, Interview questions, Line by line (+55 more)
 
-### Community 98 - "07-the-checkout-endpoint.md"
-Cohesion: 0.02
-Nodes (134): Gotchas, Interview questions, The failure map, endpoint edition, The implementation, The problem, The sequencing decision, Gotchas, Interview questions (+126 more)
+### Community 98 - "03-the-order-document.md"
+Cohesion: 0.03
+Nodes (87): Gotchas, Interview questions, The map, The one shape you should hold in your head, The rule that decides every row, What "the same data model" means here, Gotchas, How big is any of this? (+79 more)
 
 ### Community 99 - "04-custom-exceptions-translation.md"
 Cohesion: 0.02
-Nodes (106): Gotchas, Interview questions, No destructors — and what replaced the substitute, The phases, Weak and soft references, honestly, `clone` and `Cloneable`: broken by design, `getClass`: exact runtime type, and the proxy surprise, Gotchas (+98 more)
+Nodes (108): Capture: effectively final, and why, Every syntax form, Gotchas, How lambdas compile — enough to read a stack trace, Interview questions, Target typing — the part that explains the error messages, `this` — the sharpest difference from anonymous classes, `@FunctionalInterface` — a promise, not a requirement (+100 more)
 
 ### Community 100 - "Phase 9 — CRUD patterns for a real API"
 Cohesion: 0.02
@@ -2673,37 +2735,37 @@ Nodes (109): Adjusting the set, Gotchas, Interview questions, `--privileged` is 
 Cohesion: 0.02
 Nodes (109): Gotchas, Inspecting what you actually have, Interview questions, Podman, The four differences that matter, The two bridges, What the documentation says to do, Why Compose seems to have none of these problems (+101 more)
 
-### Community 103 - "03-dependency-injection/README.md"
-Cohesion: 0.02
-Nodes (140): Assuming the inversion means "no `new` anywhere", Doing work in a constructor that the container calls, Field injection, and why reviewers reject it, Gotchas, Interview questions, The inversion itself, The problem it solves, stated without jargon, Where the inversion stops being worth it (+132 more)
+### Community 103 - "phase-9-spring-boot/README.md"
+Cohesion: 0.01
+Nodes (185): Assuming the inversion means "no `new` anywhere", Doing work in a constructor that the container calls, Field injection, and why reviewers reject it, Gotchas, Interview questions, The inversion itself, The problem it solves, stated without jargon, Where the inversion stops being worth it (+177 more)
 
 ### Community 104 - "phase-3-functions/README.md"
 Cohesion: 0.02
-Nodes (133): Closures created together share one scope, Gotchas, Interview questions, The counter factory, The stale-closure bug, What a closure actually keeps alive, Where it does leak, Chunks (+125 more)
+Nodes (130): Closures created together share one scope, Gotchas, Interview questions, The counter factory, The stale-closure bug, What a closure actually keeps alive, Where it does leak, Chunks (+122 more)
 
-### Community 105 - "01-what-is-safe-to-retry.md"
-Cohesion: 0.03
-Nodes (61): Gotchas, Interview questions, Question 1 · Transient or permanent, Question 2 · Is repeating it safe?, `Retry-After` outranks your backoff, Timeouts come before retries, Where retries belong: one layer, not every layer, 1 · Cancel the previous request (+53 more)
+### Community 105 - "14-testing-javascript/README.md"
+Cohesion: 0.05
+Nodes (41): 1 · Cancel the previous request, 2 · Ignore a response that no longer matches, 3 · A sequence number, for actions with no key, Debouncing narrows the window; it does not close it, Gotchas, Interview questions, Loading and error state race too, Three defences, and how they differ (+33 more)
 
-### Community 106 - "phase-7-io-time-stdlib/README.md"
-Cohesion: 0.01
-Nodes (141): Gotchas, `Instant` — a point on the timeline, Interview questions, The choosing table, The `Local` family — "local" means *no zone at all*, Why `Date` and `Calendar` are read-only legacy, `ZonedDateTime` vs `OffsetDateTime` — rules vs a frozen offset, `Duration` — seconds, exactly (+133 more)
+### Community 106 - "08-records/README.md"
+Cohesion: 0.02
+Nodes (136): Phase gate contribution, Why this is a Master topic, Gotchas, `Instant` — a point on the timeline, Interview questions, The choosing table, The `Local` family — "local" means *no zone at all*, Why `Date` and `Calendar` are read-only legacy (+128 more)
 
 ### Community 107 - "phase-4-lambdas-streams/README.md"
 Cohesion: 0.02
 Nodes (104): Elements flow one at a time — vertical, not horizontal, Gotchas, Interview questions, Short-circuiting — pulling only what's needed, The `peek` surprise, precisely, The three stages, Encounter order — and paying for it, Gotchas (+96 more)
 
-### Community 108 - "02-building-a-router.md"
+### Community 108 - "02-managing-focus.md"
 Cohesion: 0.02
-Nodes (101): Gotchas, `history.length` and the traps around it, Interview questions, `popstate`: what it does and does not fire for, Scroll restoration, The four calls, The state object: small, cloneable, and persisted, `afterNavigate`: the part that is usually missing (+93 more)
+Nodes (83): Custom widgets: the keyboard contract, Gotchas, Interview questions, Moment 1 · A client-side route change, Moment 2 · Content that arrives later, Moment 3 · Modals, menus and anything on top, Moment 4 · Removing something that has focus, 🔴 The rule everything else hangs off (+75 more)
 
 ### Community 109 - "06-running-code/README.md"
 Cohesion: 0.02
 Nodes (107): Gotchas, Interview questions, Seeing it for yourself, The one column that causes the trouble, The spec column, briefly, The table, Turning the front entry off, And `sys.path.insert(0, ...)` is worse (+99 more)
 
-### Community 110 - "09-marked-rollback-only.md"
-Cohesion: 0.03
-Nodes (84): Gotchas, Interview questions, The interface, The trade-off, `TransactionDefinition` — what your annotation becomes, `DataSourceTransactionManager`, from its own javadoc, Gotchas, Interview questions (+76 more)
+### Community 110 - "04-spring-transactional/README.md"
+Cohesion: 0.01
+Nodes (261): Declarative and programmatic are two different tools, Gotchas, Interview questions, Nothing happens without the infrastructure switched on, The shape of the thing, What "around it" means, Why declarative is still the default choice, CGLIB proxy — a runtime subclass (+253 more)
 
 ### Community 111 - "06-argument-captors.md"
 Cohesion: 0.03
@@ -2711,27 +2773,27 @@ Nodes (66): Gotchas, Interview questions, 🔴 Rule 1: all arguments or none, �
 
 ### Community 112 - "Phase 2 — Async and the event loop"
 Cohesion: 0.03
-Nodes (122): hasSubscribers, TracingChannel, ESM — the standard module system, ESM import extension is required, Imports are hoisted and run first, ESM live read-only bindings, Named versus default exports, ESM top-level await (+114 more)
+Nodes (115): hasSubscribers, TracingChannel, ESM — the standard module system, ESM import extension is required, Imports are hoisted and run first, ESM live read-only bindings, Named versus default exports, ESM top-level await (+107 more)
 
 ### Community 113 - "phase-8-validation-authz/README.md"
 Cohesion: 0.02
-Nodes (110): Gotchas, Interview questions, Keep test secrets out of production reach, Mint a real credential — do not bypass the middleware, Test the deny paths, or you have tested nothing, Trade-off, Gotchas, Interview questions (+102 more)
+Nodes (103): Gotchas, Interview questions, Keep test secrets out of production reach, Mint a real credential — do not bypass the middleware, Test the deny paths, or you have tested nothing, Trade-off, Fail closed, and say the right thing, Gotchas (+95 more)
 
 ### Community 114 - "01-the-environment-and-precedence.md"
 Cohesion: 0.02
 Nodes (105): Gotchas, Interview questions, `RandomValuePropertySource`, briefly, The config-data sub-order, The documented order, The model, The trade-off, Why it is ordered that way (+97 more)
 
 ### Community 115 - "14-agent-driven-development/01-explanation.md"
-Cohesion: 0.03
-Nodes (89): Chunks, Phase gate, 🔴 What this chapter corrects, Where this connects, 1 · The concrete version of "not the Next.js you know", 2 · Why the fix had to live in the framework, 3 · The three-part investment, 4 · Autocomplete and workflow agents need different things (+81 more)
+Cohesion: 0.02
+Nodes (122): Chunks, Phase gate, 🔴 What this chapter corrects, Where this connects, 1 · The concrete version of "not the Next.js you know", 2 · Why the fix had to live in the framework, 3 · The three-part investment, 4 · Autocomplete and workflow agents need different things (+114 more)
 
 ### Community 116 - "phase-9-dom/README.md"
 Cohesion: 0.02
-Nodes (97): ECMAScript and TC39, The hosts you write for, Chunks, Phase gate, The three sentences to keep, Where this connects, Gotchas, Interview questions (+89 more)
+Nodes (135): ECMAScript and TC39, The hosts you write for, Chunks, Phase gate, The three sentences to keep, Where this connects, Gotchas, Interview questions (+127 more)
 
 ### Community 117 - "GROUP BY and aggregates"
 Cohesion: 0.03
-Nodes (127): = ANY($1::int[]) for IN lists, EXISTS must be correlated, Parallel Hash Semi Join, JOIN plus DISTINCT costs 2.5x, LATERAL LIMIT 1 when columns are needed, Semi join, Anti join, Anti join needs the child FK index more (+119 more)
+Nodes (132): = ANY($1::int[]) for IN lists, EXISTS must be correlated, JOIN plus DISTINCT costs 2.5x, LATERAL LIMIT 1 when columns are needed, Semi join, Aggregate return types, avg(x) is sum(x)/count(x), bigint and numeric arrive as strings (+124 more)
 
 ### Community 118 - "10-python-vs-node/README.md"
 Cohesion: 0.02
@@ -2746,72 +2808,72 @@ Cohesion: 0.02
 Nodes (101): Gotchas, Interview questions, The evidence that exists, The three shapes of the loop, and what each means, The wrong turn, What actually happens, in order, Gotchas, Interview questions (+93 more)
 
 ### Community 121 - "01-sprintdesk-retrospective-the-finished-multi-tenant-saas-revi.md"
-Cohesion: 0.03
-Nodes (72): Phase gate, The chunks, The four topics, Where this connects, Gotchas, How to run this on an application that is not SprintDesk, Interview questions, The review instrument, and why you cannot use it as published (+64 more)
+Cohesion: 0.02
+Nodes (119): Gotchas, Interview questions, Requirements, Review trigger, The forcing axis: what is in the cache key, The mixed-directive picture, The three tiers on one page, Walkthrough 3 — the SprintDesk application (+111 more)
 
 ### Community 122 - "09-jacoco/README.md"
 Cohesion: 0.02
 Nodes (99): "Executed" versus "tested" — the distinction, stated properly, Gotchas, Interview questions, So what is it good for?, The one thing the number genuinely proves, The test that covers everything and tests nothing, Where this connects, Why it can't tell: what JaCoCo actually observes (+91 more)
 
 ### Community 123 - "05-truthiness/README.md"
-Cohesion: 0.03
-Nodes (78): A checklist for a new class, Defining both, on purpose, Gotchas, Interview questions, Or write `__len__` and get truthiness for free, The `__bool__` you should not write, Writing `__bool__` for your own class, Gotchas (+70 more)
+Cohesion: 0.02
+Nodes (113): A test stays green after the return type changes, A tri-state flag collapses to two states, Gotchas, Interview questions, The three checks, When `is True` is the right answer, `x == True` accepts `1.0` and `Decimal(1)`, A `-> bool` function returns `None` (+105 more)
 
 ### Community 124 - "02-platform-vs-virtual-threads/README.md"
 Cohesion: 0.02
 Nodes (111): Creating and starting, Daemon threads and JVM exit, Gotchas, Interview questions, `join` — waiting for a thread to finish, The API you should ignore, The six states, When a thread dies by exception (+103 more)
 
-### Community 125 - "Phase 4 — Effects and synchronization"
-Cohesion: 0.03
-Nodes (114): componentDidMount is the wrong model, Effect timing relative to paint is not guaranteed, react.dev Synchronizing with Effects, react.dev useEffect, react.dev You Might Not Need an Effect, What an effect is for, Three dependency-array forms, useEffect anatomy (+106 more)
-
-### Community 126 - "02-hybrid-api-design-route-handlers-and-server-actions-side-by.md"
+### Community 125 - "phase-5-refs-context-reducers/README.md"
 Cohesion: 0.02
-Nodes (97): Chunks, Gotchas, Interview questions, Phase gate, Side by side, The decision rule, in one line, The sentence the whole topic rests on, Where this connects (+89 more)
+Nodes (140): componentDidMount is the wrong model, Effect timing relative to paint is not guaranteed, Effects only run on the client, react.dev Synchronizing with Effects, react.dev useEffect, react.dev You Might Not Need an Effect, What an effect is for, cleanup(old) then setup(new) (+132 more)
+
+### Community 126 - "06-project-milestone-sprintdesk-on-drizzle-neon-with-pooling.md"
+Cohesion: 0.02
+Nodes (111): Chunks, Gotchas, Interview questions, Phase gate, Side by side, The decision rule, in one line, The sentence the whole topic rests on, Where this connects (+103 more)
 
 ### Community 127 - "09-name-main/README.md"
 Cohesion: 0.02
 Nodes (99): Assuming `__name__` is the filename, `exit()` and `quit()` in a script, Gotchas, Interview questions, `logging.getLogger(__name__)` in the entry-point module, `__name__` is writable, and that is not a feature, Reassigning `__name__` to force the guard, The guard indented inside a function (+91 more)
 
-### Community 128 - "01-singletons-and-strict.md"
+### Community 128 - "02-cause-chains-and-boundaries.md"
 Cohesion: 0.02
-Nodes (100): Default exports, Gotchas, Interview questions, Live bindings — the part that is not obvious, Named exports, Namespace imports, Re-exporting, The specifier must be a string literal (+92 more)
+Nodes (98): Default exports, Gotchas, Interview questions, Live bindings — the part that is not obvious, Named exports, Namespace imports, Re-exporting, The specifier must be a string literal (+90 more)
 
 ### Community 129 - "05-dark-mode/README.md"
 Cohesion: 0.02
-Nodes (108): Chroma is not saturation, and it has no fixed maximum, Gotchas, Interview questions, The problem with HSL, The related notations, Trade-off, What OkLCh changes, Wider gamuts, safely (+100 more)
+Nodes (111): `color-scheme` is not optional, Dark mode is not just inversion, Gotchas, Interview questions, `light-dark()`, Semantic tokens, not inverted colours, The explicit override must beat the system, The flash, and why it needs script (+103 more)
 
 ### Community 130 - "phase-17-machine-coding/README.md"
-Cohesion: 0.01
-Nodes (136): `filter` and `forEach` — the same skeleton, Gotchas, Interview questions, `map`, Mutation during iteration, `reduce` — the one with the real edge case, The contract, from the specification's own description, `flat` — the recursive one (+128 more)
+Cohesion: 0.02
+Nodes (91): `filter` and `forEach` — the same skeleton, Gotchas, Interview questions, `map`, Mutation during iteration, `reduce` — the one with the real edge case, The contract, from the specification's own description, `flat` — the recursive one (+83 more)
 
-### Community 131 - "CREATE INDEX CONCURRENTLY"
+### Community 131 - "Why an index is not being used"
 Cohesion: 0.03
-Nodes (94): idx_scan, PostgreSQL index, PRIMARY KEY is a unique index, What an index is, Index write cost, B-tree, B-tree indexes, Prefix LIKE on a B-tree (+86 more)
+Nodes (78): idx_scan, PostgreSQL index, PRIMARY KEY is a unique index, What an index is, Index write cost, B-tree, B-tree indexes, Prefix LIKE on a B-tree (+70 more)
 
 ### Community 132 - "08-knowing-when-to-stop/README.md"
 Cohesion: 0.02
-Nodes (116): Gotchas, Interview questions, Only a `type` can do this, Reading the parts, The identity mapping, and why it matters, The one thing to understand first, The syntax, and where it comes from, You can iterate any union, not just `keyof` (+108 more)
+Nodes (96): Gotchas, Interview questions, Only a `type` can do this, Reading the parts, The identity mapping, and why it matters, The one thing to understand first, The syntax, and where it comes from, You can iterate any union, not just `keyof` (+88 more)
 
 ### Community 133 - "03-authorization-code-pkce/README.md"
 Cohesion: 0.02
 Nodes (92): Gotchas, Interview questions, So the flow publishes a reference, not a credential, The design in one sentence you can defend in a review, The gap the four controls leave, and what fills it, What a redirect URL is actually exposed to, "Why not just use a session cookie for everything?", `client_id` — public by definition (+84 more)
 
 ### Community 134 - "phase-7-async/README.md"
-Cohesion: 0.02
-Nodes (95): Choosing the limit, Error policy is a decision, not a default, Gotchas, Interview questions, Ordering: three different orders, and they are not the same, The four details that make it correct, Why not just chunk the array?, Cancellation (+87 more)
-
-### Community 135 - "02-rejections-that-vanish.md"
 Cohesion: 0.03
-Nodes (68): 1. The floating promise, 2. The missing `return` in a chain, 3. The missing `await`, 4. `forEach` with an async callback, 5. The `catch` that swallows, 6. `.then(onOk, onErr)` where `onOk` throws, 7. `finally` at the end of a chain, 8. A `catch` attached too late (+60 more)
+Nodes (78): Chunks, Phase gate, The three sentences to keep, Where this connects, Deriving the rest of the API, Gotchas, Interview questions, Part four: the callback list (+70 more)
+
+### Community 135 - "12-timers/01-the-api.md"
+Cohesion: 0.04
+Nodes (51): Gotchas, Interview questions, The same anti-pattern in `async` clothing, When `new Promise` is correct, Why it is harmful, not just verbose, A string as the first argument is `eval`, Arguments after the delay are passed to the callback, Clearing is teardown, and teardown is not optional (+43 more)
 
 ### Community 136 - "04d-remote-patterns-is-a-security-control.md"
-Cohesion: 0.05
-Nodes (39): Browser reality, Case 1 — a static import: the build does it, Case 2 — a remote or dynamic URL: nobody does it, Gotchas, Interview questions, The size budget nobody sets, The three placeholder modes, The two placeholders that are not blurs (+31 more)
+Cohesion: 0.03
+Nodes (64): Browser reality, Case 1 — a static import: the build does it, Case 2 — a remote or dynamic URL: nobody does it, Gotchas, Interview questions, The size budget nobody sets, The three placeholder modes, The two placeholders that are not blurs (+56 more)
 
 ### Community 137 - "Phase 11 — Transactions, MVCC and concurrency"
 Cohesion: 0.03
-Nodes (110): Invalid _ccnew index leftover, Index bloat, pgstatindex leaf_fragmentation, REINDEX CONCURRENTLY, VACUUM does not shrink indexes, FK-without-index audit query, ON DELETE CASCADE needs child FK index, Referencing-side FK index (+102 more)
+Nodes (119): Index bloat and REINDEX, Invalid _ccnew index leftover, Index bloat, pgstatindex leaf_fragmentation, REINDEX CONCURRENTLY, VACUUM does not shrink indexes, FK-without-index audit query, ON DELETE CASCADE needs child FK index (+111 more)
 
 ### Community 138 - "02-the-automatic-minimum-size/README.md"
 Cohesion: 0.02
@@ -2823,47 +2885,47 @@ Nodes (86): Gotchas, Interview questions, The error, and what pip is actually sa
 
 ### Community 140 - "Node.js — Syllabus"
 Cohesion: 0.03
-Nodes (85): Keep data shapes stable, await suspends the function, not the thread, Engine versus host, fetch does not reject on 404 or 500, Phase 11 — Network, storage and data transfer, C++ bindings, The event loop is the program, libuv (+77 more)
+Nodes (83): await suspends the function, not the thread, fetch does not reject on 404 or 500, Phase 11 — Network, storage and data transfer, C++ bindings, The event loop is the program, libuv, Node.js is a runtime, not a language, Node standard library (+75 more)
 
 ### Community 141 - "09-sequential-vs-parallel/README.md"
 Cohesion: 0.04
-Nodes (50): Gotchas, In Node: a different name, and a harder default, In the browser: two events, Interview questions, Registering a listener changes the default, Suppressing the console output, What a listener should actually do, `forEach` — nothing is awaited (+42 more)
+Nodes (43): `forEach` — nothing is awaited, Gotchas, Interview questions, `map` without `Promise.all` — an array of promises, Spotting it: the dependency test, The loop is the expensive version, Two loop shapes that do not do what they look like, What it costs, and what it does not (+35 more)
 
 ### Community 142 - "09-comprehensions/README.md"
-Cohesion: 0.01
-Nodes (149): Gotchas, Interview questions, Precedence: looser than everything, The name-collision `SyntaxError`, The scoping rule: a comprehension's walrus leaks, on purpose, Where it is disallowed, A default shared by two functions, `def f(ts=datetime.now())` timestamps everything with the import time (+141 more)
+Cohesion: 0.02
+Nodes (108): A later clause can use an earlier target, Gotchas, Interview questions, Multiple `for` clauses are a Cartesian product, Multiple `if` clauses are `and`, with a caveat, Three clauses is the line, Where the `if` goes decides what it filters, A branch in the value is often a function (+100 more)
 
 ### Community 143 - "03-what-middleware-must-not-do.md"
-Cohesion: 0.03
-Nodes (85): Arity is the entire detection mechanism, Gotchas, Interview questions, The two functions, in full, Two details worth carrying, What Express 5 catches, and what it cannot, Arity is part of the contract, not a convention, Gotchas (+77 more)
+Cohesion: 0.02
+Nodes (91): Arity is the entire detection mechanism, Gotchas, Interview questions, The two functions, in full, Two details worth carrying, What Express 5 catches, and what it cannot, Gotchas, Interview questions (+83 more)
 
 ### Community 144 - "11-publishing-a-typed-package/README.md"
 Cohesion: 0.03
 Nodes (89): Gotchas, Interview questions, Masquerading as CJS, Masquerading as ESM, The third case, which is not a masquerade, The two failures, named, What follows from the rule, Why one file, and not "one API" (+81 more)
 
 ### Community 145 - "01-stacking-contexts.md"
-Cohesion: 0.03
-Nodes (80): Diagnosing it, Gotchas, Interview questions, `isolation: isolate`, Painting order within a context, The `z-index: auto` distinction, Trade-off, What creates one (+72 more)
-
-### Community 146 - "03-what-express-delegates.md"
-Cohesion: 0.03
-Nodes (80): Gotchas, Interview questions, The dispatcher you write if you do not use a framework, What Express supplies, exactly, What `node:http` actually gives you, Why the pipeline model — and not decorators or a controller registry, `express()` returns a function, not an object, Gotchas (+72 more)
-
-### Community 147 - "09-arrays.md"
 Cohesion: 0.02
-Nodes (87): `byte` and `short`: storage types, not arithmetic types, Choosing the integer type — the working rules, Gotchas, Interview questions, Literals — the fine print that bites, The full table, Gotchas, Identity, `hashCode` and the header (+79 more)
+Nodes (87): Diagnosing it, Gotchas, Interview questions, `isolation: isolate`, Painting order within a context, The `z-index: auto` distinction, Trade-off, What creates one (+79 more)
+
+### Community 146 - "06-timeouts-and-secrets.md"
+Cohesion: 0.04
+Nodes (50): Gotchas, Interview questions, The dispatcher you write if you do not use a framework, What Express supplies, exactly, What `node:http` actually gives you, Why the pipeline model — and not decorators or a controller registry, `express()` returns a function, not an object, Gotchas (+42 more)
+
+### Community 147 - "java/pages/phase-1-language-core/README.md"
+Cohesion: 0.02
+Nodes (136): `byte` and `short`: storage types, not arithmetic types, Choosing the integer type — the working rules, Gotchas, Interview questions, Literals — the fine print that bites, The full table, Gotchas, Identity, `hashCode` and the header (+128 more)
 
 ### Community 148 - "02-custom-errors.md"
 Cohesion: 0.03
-Nodes (68): Catching at the right level, Distinguishing failures, `finally` behaves normally here, Gotchas, Interview questions, It does not catch a call you forgot to `await`, It does not catch errors in callbacks you pass elsewhere, `return` inside `try` is the subtle case (+60 more)
+Nodes (61): Catching at the right level, Distinguishing failures, `finally` behaves normally here, Gotchas, Interview questions, It does not catch a call you forgot to `await`, It does not catch errors in callbacks you pass elsewhere, `return` inside `try` is the subtle case (+53 more)
 
 ### Community 149 - "18-advanced-ecosystem-topics/01-explanation.md"
-Cohesion: 0.04
-Nodes (49): Chunks, Phase gate, What this chapter is not, Where this connects, Coexistence is a designed property, and it is what makes incremental migration possible, Gotchas, Interview questions, The guide's own preamble is stale, and you should not follow it (+41 more)
-
-### Community 150 - "01-strict-flag-by-flag/README.md"
 Cohesion: 0.03
-Nodes (88): Phase gate, Where this connects, Gotchas, Interview questions, 🔴 The cost, in the project's own words, The distinction that organises the whole topic, The four presets, and which one you actually want, 🔴 The one misconfiguration that dominates: wide `include` globs (+80 more)
+Nodes (85): Chunks, Phase gate, What this chapter is not, Where this connects, `assetPrefix` and `basePath` solve different problems and are not interchangeable, Gotchas, Interview questions, Multi-zones is not Module Federation, and the distinction is architectural (+77 more)
+
+### Community 150 - "02-a-promise-the-compiler-cannot-keep.md"
+Cohesion: 0.05
+Nodes (35): `checkThenables: false` is a deliberately narrow default, Gotchas, 🔴 `ignoreVoid: true` is why you see `void` in front of calls, Interview questions, The bug, The options, and the one convention that matters, The three fixes, in order, The two allowlists (+27 more)
 
 ### Community 151 - "phase-5-grid/README.md"
 Cohesion: 0.02
@@ -2874,28 +2936,28 @@ Cohesion: 0.04
 Nodes (56): Gotchas, Interview questions, The trade-off, The two-line difference that changes the outcome, Two things this page is not about, What the reference actually says, Where the rule comes from, and why it is not stupid, Four attributes, in two pairs (+48 more)
 
 ### Community 153 - "Phase 10 Observability and performance"
-Cohesion: 0.06
-Nodes (57): Event loop lag, Idle p50 is the sampling resolution, Lag is not downstream I/O wait, Lag max vs p99, monitorEventLoopDelay histogram, Errors signal, Four golden signals, Latency signal (+49 more)
+Cohesion: 0.04
+Nodes (71): Event loop lag, Idle p50 is the sampling resolution, Lag is not downstream I/O wait, Lag max vs p99, monitorEventLoopDelay histogram, acceptingTraffic flag, Health checks — liveness vs readiness, Liveness probe (+63 more)
 
 ### Community 154 - "02-the-validation-boundary.md"
 Cohesion: 0.02
-Nodes (141): Gotchas, Interview questions, The factory, The layout, The problem, The rules the shape enforces, Gotchas, Interview questions (+133 more)
+Nodes (112): Gotchas, Interview questions, The factory, The layout, The problem, The rules the shape enforces, Gotchas, Interview questions (+104 more)
 
 ### Community 155 - "Phase 5 Networking HTTP and processes"
-Cohesion: 0.04
-Nodes (96): os.availableParallelism, os reports host not cgroup, process vs os memory and CPU, node:http — the server, Request bodies are streams, HTTP in practice, Cookies, fetch (+88 more)
+Cohesion: 0.03
+Nodes (103): Log and continue is wrong, unhandledRejection and uncaughtException, rejectionHandled, uncaughtException, unhandledRejection, os.availableParallelism, os reports host not cgroup, process vs os memory and CPU (+95 more)
 
 ### Community 156 - "PostgreSQL explanation pages"
-Cohesion: 0.03
-Nodes (89): What PostgreSQL is, Backend process, Node connection pool, max_connections, pg_stat_activity, PgBouncer, Process-per-connection model, Cluster (+81 more)
-
-### Community 157 - "04-outbox-relay-and-email.md"
 Cohesion: 0.02
-Nodes (100): Gotchas, Interview questions, The design choices, The implementation, The problem, Using it in the app, Gotchas, Interview questions (+92 more)
+Nodes (96): What PostgreSQL is, Backend process, Node connection pool, max_connections, pg_stat_activity, PgBouncer, Process-per-connection model, Cluster (+88 more)
+
+### Community 157 - "07-money-and-time.md"
+Cohesion: 0.03
+Nodes (62): Gotchas, Interview questions, The design choices, The implementation, The problem, Using it in the app, Gotchas, Interview questions (+54 more)
 
 ### Community 158 - "06-typing-the-custom-hooks/README.md"
-Cohesion: 0.02
-Nodes (125): Gotchas, Interview questions, The constraints that carry the spec, The DDL, The problem, Using it in the app, Adding a status is a migration with a rule attached, Four artifacts, one declaration, one test (+117 more)
+Cohesion: 0.03
+Nodes (86): Gotchas, Interview questions, The component narrows, and cannot forget, The literal translation, and why it is the bug, The union, Gotchas, `idle` is not decoration — it is the state the JavaScript faked, Interview questions (+78 more)
 
 ### Community 159 - "01-window-and-document.md"
 Cohesion: 0.03
@@ -2915,11 +2977,11 @@ Nodes (92): Composite, Layout reflow, Paint, The rendering pipeline, Style recal
 
 ### Community 163 - "04-rate-limiting.md"
 Cohesion: 0.04
-Nodes (47): Gotchas, Interview questions, The header is a list, and `req.ips` is how you read it, The number, and which direction it counts, The values, from narrowest to widest, What the setting actually decides, Where the setting belongs, Do not key security controls on the address alone (+39 more)
+Nodes (53): Gotchas, Interview questions, Loading a resource once per request, Testing a router in isolation, The mount list is the design document, Two levels, and a parent router per version, Gotchas, Interview questions (+45 more)
 
-### Community 164 - "16-building-a-crud-api-with-postgres/01-explanation.md"
-Cohesion: 0.02
-Nodes (143): Chunks, Phase gate, What it deliberately does not own, Where this connects, Why this is a separate chapter from 15, Both handlers, one Data Access Layer, Gotchas, Idempotency is the difference that reaches the network (+135 more)
+### Community 164 - "13b-milestone-the-overlap-seams.md"
+Cohesion: 0.03
+Nodes (72): Gotchas, Interview questions, The `boardId` case, which is not a patch at all, The schema that can tell them apart, The SET map that only contains what was sent, Three instructions, not two, What JavaScript loses on the way in, What zod 4.4.3 actually produces (+64 more)
 
 ### Community 165 - "Phase 10 — Indexes and the query planner"
 Cohesion: 0.04
@@ -2929,45 +2991,45 @@ Nodes (109): Phase 10 — Indexes and the query planner, Phase 10 gate: read EXP
 Cohesion: 0.05
 Nodes (44): From merging to augmenting, Interfaces are open, The merge rules, precisely, 🔴 The type half and the runtime half are separate, Why an interface and not a type alias, Augmenting your own code, Global augmentation is the same feature, `req.user`, worked against the real types (+36 more)
 
-### Community 167 - "15-fetch-size-and-streaming.md"
+### Community 167 - "phase-0-the-interview-and-practice/README.md"
 Cohesion: 0.02
-Nodes (95): Driver registration: why `Class.forName` is dead and still everywhere, Everything you touch is an interface, Gotchas, Interview questions, The four driver types, and why only one still exists, The two packages, and why there are two, What a JDBC version actually buys you, Columns are numbered from 1, and labels are not free (+87 more)
+Nodes (112): Code quality is read by a reviewer, Communication is what makes the rest visible, Complexity is graded on the statement, then the defence, Correctness is graded on the edges, Gotchas, Interview questions, The five lines, The hint is a graded line (+104 more)
 
 ### Community 168 - "07-assignment-and-aliasing/README.md"
+Cohesion: 0.03
+Nodes (76): The chunks, The one paragraph the whole topic expands, Where this connects, A `dict` or `set` raises, A `list` does not raise — it silently skips, `break` and `continue`, Gotchas, Interview questions (+68 more)
+
+### Community 169 - "09-sealed-adts.md"
 Cohesion: 0.02
-Nodes (103): A str is a sequence of code points, An empty needle passes every membership test, Comparison is by code point, and that is not alphabetical order, Gotchas, Interview questions, `len()` is not what the user is counting, Sequence operations, Slicing hides an index bug (+95 more)
+Nodes (92): Arrow labels: the form that cannot fall through, Exhaustiveness — the point of the whole feature, Gotchas, Interview questions, Statement vs expression — choosing deliberately, `case null` — the rule and the escape, Gotchas, Interview questions (+84 more)
 
-### Community 169 - "08-records/README.md"
-Cohesion: 0.03
-Nodes (68): Gotchas, Interview questions, The five rules of `equals`, The `hashCode` contract, `==` vs `equals`, restated once, What the defaults mean, Why the pairing exists: what `HashMap` actually does, `BigDecimal`: the field that lies in both directions (+60 more)
-
-### Community 170 - "search_path"
-Cohesion: 0.03
-Nodes (86): Qualify names in migrations, Identifier case folding, psql name patterns, GENERATED ALWAYS AS IDENTITY, CREATE TABLE, Liberal constraints conservative types, now() is transaction start time, Schema-qualify DDL in migrations (+78 more)
+### Community 170 - "CREATE INDEX CONCURRENTLY"
+Cohesion: 0.02
+Nodes (108): Qualify names in migrations, Identifier case folding, Partial UNIQUE index, CREATE INDEX CONCURRENTLY, indisvalid, CREATE INDEX ShareLock, SQLSTATE 25001, Transactional DDL holds locks until commit (+100 more)
 
 ### Community 171 - "Phase 4 — CRUD and DML"
 Cohesion: 0.04
-Nodes (103): Expression indexes, SELECT alias visibility, The SELECT shape, WHERE predicates, LIMIT and OFFSET, Unique ORDER BY tiebreaker, INSERT, RETURNING (+95 more)
+Nodes (107): Keyset pagination, Expression indexes, SELECT alias visibility, The SELECT shape, IS DISTINCT FROM, Three-valued logic in WHERE, WHERE predicates, LIMIT and OFFSET (+99 more)
 
 ### Community 172 - "05-virtual-environments/README.md"
 Cohesion: 0.03
 Nodes (80): Gotchas, Interview questions, `pyvenv.cfg`, the entire mechanism, The disposability doctrine, straight from the docs, The interpreter in `bin/` is usually not a binary, The tree, What "isolated" actually means, Diagnosing "which environment am I in?" (+72 more)
 
 ### Community 173 - "08-shallow-copy.md"
-Cohesion: 0.02
-Nodes (82): `a = b = []` when you wanted two accumulators, A type annotation read as a guarantee, Annotated assignment binds exactly the same way, Assignment expressions bind too, Assignment never copies — not once, not ever, Chained assignment: one object, many names, left to right, Gotchas, "I copied it" — with `=` (+74 more)
+Cohesion: 0.03
+Nodes (71): `a = b = []` when you wanted two accumulators, A type annotation read as a guarantee, Annotated assignment binds exactly the same way, Assignment expressions bind too, Assignment never copies — not once, not ever, Chained assignment: one object, many names, left to right, Gotchas, "I copied it" — with `=` (+63 more)
 
 ### Community 174 - "01-what-problem-it-solves.md"
-Cohesion: 0.03
-Nodes (80): Gotchas, Interview questions, The advantages, quoted rather than measured, 🔴 The boundary: three technologies, three different problems, What the tool is, in the documentation's own words, What you are actually deciding, Where the win is real, and where it is not, Consequences you will meet, all from the same sentence (+72 more)
+Cohesion: 0.04
+Nodes (60): Gotchas, Interview questions, The advantages, quoted rather than measured, 🔴 The boundary: three technologies, three different problems, What the tool is, in the documentation's own words, What you are actually deciding, Where the win is real, and where it is not, Consequences you will meet, all from the same sentence (+52 more)
 
-### Community 175 - "13d-milestone-acceptance-and-hand-off.md"
+### Community 175 - "16-building-a-crud-api-with-postgres/01-explanation.md"
+Cohesion: 0.01
+Nodes (199): Chunks, Phase gate, What it deliberately does not own, Where this connects, Why this is a separate chapter from 15, Gotchas, Interview questions, The resource this chapter builds (+191 more)
+
+### Community 176 - "12b-the-database-is-the-thing-under-test.md"
 Cohesion: 0.02
-Nodes (104): Gotchas, Interview questions, Never from application startup, The ledger is the only thing that knows, The pipeline, The runner gets `DIRECT_URL`, and this is not a preference, The runner itself, The three commands, and which of them a deploy is allowed to run (+96 more)
-
-### Community 176 - "09d-serialization-failures-and-the-retry-loop.md"
-Cohesion: 0.03
-Nodes (74): Gotchas, Interview questions, Observability, The codes, The loop, Using it, 🔴 What must never go inside the retried function, When retrying is wrong (+66 more)
+Nodes (85): 10 · `RETURNING` and the affected-row count, 1 · Constraints, which are this API's first validation layer, 2 · The SQLSTATE code, and the constraint name on it, 3 · Ordering — and `position` is a `double precision`, 4 · Cascades, 5 · Isolation, locking and the whole of topic 09, 6 · `timestamptz` and server-side time, 7 · Enum rejection (+77 more)
 
 ### Community 177 - "03d-optional-mutators.md"
 Cohesion: 0.03
@@ -2975,43 +3037,43 @@ Nodes (67): `CONDITIONALS_BOUNDARY` — the off-by-one detector, Gotchas, Interv
 
 ### Community 178 - "08-spring-security-resource-server/README.md"
 Cohesion: 0.03
-Nodes (80): Gotchas, Interview questions, `issuer-uri` alone versus `issuer-uri` plus `jwk-set-uri`, Job one: the discovery probe (RFC 8414 and OIDC Discovery), Job two: the `iss` claim assertion, The check that stops a metadata swap, The failure that looks like a signature problem and is not, The one-line configuration, and what it commits you to (+72 more)
+Nodes (75): Gotchas, Interview questions, The role, stated precisely, The two artifacts, and why one of them is not optional, The two beans you will actually override, What Boot auto-configures, exactly, Where phase 9 stops and this topic starts, Gotchas (+67 more)
 
-### Community 179 - "10-methods.md"
-Cohesion: 0.03
-Nodes (66): From `java -jar` to your first line, Gotchas, Interpret first, compile what's hot, Interview questions, Lazy loading: classes arrive at first use, Verification: the JVM does not trust bytecode, What "managed runtime" buys you, When does the process actually exit? (+58 more)
+### Community 179 - "11-nested-classes.md"
+Cohesion: 0.05
+Nodes (42): Allocation is cheap — the generational bargain, Gotchas, Interview questions, Liveness is reachability, nothing else, The retention patterns — leaks in a GC'd language, What GC costs, and what it never does, Gotchas, Interview questions (+34 more)
 
 ### Community 180 - "LATERAL"
-Cohesion: 0.04
-Nodes (99): Indexing foreign key columns, One row per matching pair, INNER JOIN matching pairs, JOIN is INNER JOIN, Nested Loop Hash Join Merge Join, NOT NULL FK makes child-to-parent count knowable, Fan-out and aggregates, count(DISTINCT) rescues counts only (+91 more)
+Cohesion: 0.05
+Nodes (89): Indexing foreign key columns, One row per matching pair, INNER JOIN matching pairs, JOIN is INNER JOIN, Nested Loop Hash Join Merge Join, NOT NULL FK makes child-to-parent count knowable, Fan-out and aggregates, count(DISTINCT) rescues counts only (+81 more)
 
 ### Community 181 - "03-what-it-does-not-protect.md"
-Cohesion: 0.04
-Nodes (59): Express built-in middleware, Third-party middleware checklist, csurf archived, Express 5 API reference, Express middleware resources list, Built-in and third-party middleware, Middleware supply-chain surface, 🔴 Compression takes path 2, always (+51 more)
+Cohesion: 0.02
+Nodes (102): Gotchas, Interview questions, Minimal map, Stage by stage, with what can go wrong, The map, Where to hook, and what each hook can still do, Express built-in middleware, Third-party middleware checklist (+94 more)
 
 ### Community 182 - "03-server-components-vs-client-components/01-explanation.md"
-Cohesion: 0.03
-Nodes (79): And the exception that makes composition work, Environment poisoning, and the failure that is worse than an error, Gotchas, Interview questions, The default, stated plainly, 🔴 The rule everyone gets wrong, Third-party components that predate the boundary, What actually crosses the wire (+71 more)
+Cohesion: 0.02
+Nodes (88): And the exception that makes composition work, Environment poisoning, and the failure that is worse than an error, Gotchas, Interview questions, The default, stated plainly, 🔴 The rule everyone gets wrong, Third-party components that predate the boundary, What actually crosses the wire (+80 more)
 
-### Community 183 - "04-serviceconnection.md"
-Cohesion: 0.03
-Nodes (75): Gotchas, Interview questions, The annotation, in full, The line you stop writing, What it actually registers, Where the rest of this lives, 🔴 A `@Bean` method is matched on its return type, not on its image, An existing bean silently wins (+67 more)
+### Community 183 - "07-testcontainers/README.md"
+Cohesion: 0.01
+Nodes (228): "But H2 has a PostgreSQL mode", Gotchas, Interview questions, It fails in both directions, and the false green is the expensive one, Nobody types "use H2". Boot swaps it in, Testcontainers' own documentation makes the same argument, and does not overclaim, 🔴🔴 And the one that is not in a bullet: the self-type generic is gone, Gotchas and pitfalls (+220 more)
 
 ### Community 184 - "07-openid-connect/README.md"
 Cohesion: 0.03
 Nodes (74): `display` — the parameter you will probably never send, Gotchas, `id_token_hint` and `login_hint` — two hints that are not the same kind of thing, Interview questions, `max_age` and `acr_values` — the two step-up levers, `prompt` — the parameter with two opposite uses, Where the enforcement actually lives, Gotchas (+66 more)
 
-### Community 185 - "11-performance-optimization-turbopack/01-explanation.md"
+### Community 185 - "04b-compiler-evolution-and-the-next-default.md"
 Cohesion: 0.03
-Nodes (70): Chunks, Phase gate, 🔴 What this chapter could not confirm, and says so, Where this connects, A migration order that surfaces the silent problems first, Everything else, with its status read literally, Gotchas, Interview questions (+62 more)
+Nodes (65): Gotchas, Interview questions, It is the default, and the version history says when, Root layout creation, The dev loop: Fast Refresh, and what it does not do, The escape hatch, and the platforms that force it, What it is, in the docs' own words, Where this goes next (+57 more)
 
-### Community 186 - "09-spring-data-jpa/12-the-checklist.md"
-Cohesion: 0.03
-Nodes (87): Gotchas, Interview questions, The count query, and why it is hard, Two things that simply are not available, What the query introspection is for, Gotchas, Interview questions, The four rules from the specification (+79 more)
+### Community 186 - "09-spring-data-jpa/README.md"
+Cohesion: 0.01
+Nodes (242): Everything is resolved at bootstrap, not at call time, Gotchas, Interview questions, The composition order, written out, The declaration is the whole thing, What the container actually builds, When the verification happens, `getReferenceById` (+234 more)
 
 ### Community 187 - "03-the-metrics.md"
 Cohesion: 0.04
-Nodes (55): `beforeunload`: only for unsaved changes, Gotchas, Interview questions, `pagehide` and `pageshow` — the bfcache pair, Sending data at the end, The events, in the order they can happen, The pattern that covers everything, Format specifiers (+47 more)
+Nodes (45): `beforeunload`: only for unsaved changes, Gotchas, Interview questions, `pagehide` and `pageshow` — the bfcache pair, Sending data at the end, The events, in the order they can happen, The pattern that covers everything, Coverage — how much of the bundle is dead (+37 more)
 
 ### Community 188 - "13-project-references/README.md"
 Cohesion: 0.03
@@ -3025,9 +3087,9 @@ Nodes (76): Gotchas, In a bundler, Interview questions, Partials and the `_` con
 Cohesion: 0.03
 Nodes (80): Animating to `auto` does not work, Gotchas, Interview questions, `scale()` is not the same as changing width, The pipeline decides the cost, The substitutions, Trade-off, `will-change`, and why it is not a free win (+72 more)
 
-### Community 191 - "09-server-side-prepared-statements.md"
-Cohesion: 0.03
-Nodes (74): Gotchas, Interview questions, The fix, and the mechanism, The vulnerable code, and what an attacker sends, What people reach for instead, and why each is wrong, Where the defence genuinely stops, Gotchas, Interview questions (+66 more)
+### Community 191 - "01-compiler-with-a-framework-attached/README.md"
+Cohesion: 0.02
+Nodes (108): Gotchas, Interview questions, The canonical before/after — and four things wrong with it, The emission order, from the compiler that writes it, Three artefacts, one class, Two emission quirks with visible consequences, Gotchas, Interview questions (+100 more)
 
 ### Community 192 - "01b-the-tool-and-its-versions.md"
 Cohesion: 0.05
@@ -3035,23 +3097,23 @@ Nodes (41): Gotchas, Interview questions, The arcmutate seam, The five artifacts
 
 ### Community 193 - "05-auto-configuration/README.md"
 Cohesion: 0.03
-Nodes (75): Gotchas, Interview questions, 🔴 Spring Boot 4 renamed the starters, and the internet has not caught up, The empty jar, The escape hatch for a gradual migration, The naming convention, and why it is load-bearing, The trade-off, Where the versions come from — two different mechanisms (+67 more)
+Nodes (69): Gotchas, Interview questions, 🔴 Spring Boot 4 renamed the starters, and the internet has not caught up, The empty jar, The escape hatch for a gradual migration, The naming convention, and why it is load-bearing, The trade-off, Where the versions come from — two different mechanisms (+61 more)
 
-### Community 194 - "12-testing-the-api.md"
+### Community 194 - "07e-etag-if-match-and-412.md"
+Cohesion: 0.04
+Nodes (47): Expiry is part of the contract, not a cleanup job, Gotchas, Interview questions, Scope the key to a boundary the caller has already passed, The fingerprint, and the rule the key column cannot express, When the key column is enough, and when it is not, Why the key record and the row must commit together, 🔴 409 versus 412 — the rule, quoted (+39 more)
+
+### Community 195 - "03-where-it-breaks.md"
+Cohesion: 0.15
+Nodes (11): Always pass `timeZone`. Never rely on the default., `formatRange` is the delivery window, Gotchas, Interview questions, `RelativeTimeFormat` for order history, and its one rule, The problem, Gotchas, Interview questions (+3 more)
+
+### Community 196 - "02-standalone-by-default/README.md"
 Cohesion: 0.02
-Nodes (93): Gotchas, Interview questions, The resource this chapter builds, The six routes, Two doors, one room, What a contract is, precisely, Why a contract written after the handlers is a description, Why the answer is both, not a choice (+85 more)
-
-### Community 195 - "06-money-and-dates/README.md"
-Cohesion: 0.03
-Nodes (79): Gotchas, If the switch happens, Interview questions, The problem, The threshold, stated as signals, What the hand-rolled layer does not have, Gotchas, Interview questions (+71 more)
-
-### Community 196 - "03-construction-copies-views.md"
-Cohesion: 0.09
-Nodes (20): Gotchas, Growth: unspecified on purpose, 1.5× in practice, Interview questions, Semantics worth stating once, The mental model, What each operation really costs, Gotchas, Interview questions (+12 more)
+Nodes (101): 🔴 angular.dev names the wrong runtime code for NG8002, Gotchas, Interview questions, One field decides which check runs, The default is a log, not a throw, The runtime message is not the compile-time message, 1. The import is simply missing, 2. The import is there but the selector is misspelled (+93 more)
 
 ### Community 197 - "05-caching-ppr-and-cache-components/01-explanation.md"
-Cohesion: 0.02
-Nodes (94): Chunks, ⚠️ On the four-layer model, Phase gate, The five facts most likely to catch you, Where this connects, Gotchas, Interview questions, It is one flag standing in for three (+86 more)
+Cohesion: 0.03
+Nodes (73): Chunks, ⚠️ On the four-layer model, Phase gate, The five facts most likely to catch you, Where this connects, Gotchas, Interview questions, It is one flag standing in for three (+65 more)
 
 ### Community 198 - "04-lib-target-ambient/README.md"
 Cohesion: 0.03
@@ -3067,35 +3129,35 @@ Nodes (72): Acceptance criteria you can check by reading the tree, Gotchas, Inte
 
 ### Community 201 - "04-defense-in-depth-proxyts-as-a-coarse-filter.md"
 Cohesion: 0.03
-Nodes (74): A session is a bearer credential, and bearer means what it says, `cookies()` in Next.js: async, readable everywhere, writable in two places, Gotchas, Interview questions, The payoff: one roundtrip, not two, Why you cannot set a cookie while rendering, Gotchas, Interview questions (+66 more)
+Nodes (82): A session is a bearer credential, and bearer means what it says, `cookies()` in Next.js: async, readable everywhere, writable in two places, `Domain` — omit it, Gotchas, `__Host-` — the strongest thing on the list, and it costs one string, `HttpOnly` — closes the XSS exfiltration path, Interview questions, `Max-Age` vs `Expires` — pick `Expires` if you have a server-side expiry to mirror (+74 more)
 
 ### Community 202 - "01-maven-core/README.md"
-Cohesion: 0.04
-Nodes (55): `classifier` — the fifth coordinate, GAV: the identity, Gotchas, Interview questions, `packaging` — the coordinate that changes the build, The honest cost of the model, Versions, `SNAPSHOT` and reproducibility, What a POM actually is (+47 more)
+Cohesion: 0.02
+Nodes (112): `classifier` — the fifth coordinate, GAV: the identity, Gotchas, Interview questions, `packaging` — the coordinate that changes the build, The honest cost of the model, Versions, `SNAPSHOT` and reproducibility, What a POM actually is (+104 more)
 
 ### Community 203 - "12-seo-metadata-and-accessibility/01-explanation.md"
 Cohesion: 0.04
 Nodes (65): Phase gate, 🔴 What this chapter corrects, Where this connects, Interview questions, `manifest.ts` is a cached route by default, The manifest is a route, not a file you copy into `public/`, The two installability requirements, and only two, Interview questions (+57 more)
 
 ### Community 204 - "13c-milestone-what-it-costs-the-database.md"
-Cohesion: 0.02
-Nodes (106): `body: string | null` — null and absent are not the same thing, Evolution: what you may change without breaking a client, Gotchas, `id` is opaque, Interview questions, `position` is a number, not an index, `status` is a closed set that may grow, The card representation (+98 more)
+Cohesion: 0.03
+Nodes (63): 404 or 410 for a soft-deleted card?, Gotchas, Interview questions, The `Date` that is a string by the time the client sees it, The projection belongs to the DAL, and the handler does not touch it, The soft-delete predicate, and how to stop forgetting it, Two endpoints, two failure models, Escaping `LIKE` metacharacters, which parameterisation does not do (+55 more)
 
 ### Community 205 - "02-the-four-leaks.md"
 Cohesion: 0.03
 Nodes (63): Closures retain their scope, Gotchas, Interview questions, The weak collections, `WeakRef` and `FinalizationRegistry`, What this buys, and what it costs, 1. Detached DOM nodes, 2. Forgotten listeners (+55 more)
 
-### Community 206 - "05-create.md"
+### Community 206 - "12-testing-the-api.md"
 Cohesion: 0.03
-Nodes (75): A correlation id that is logged but not returned, A different error shape on every endpoint, A wrapper that swallows the framework's control-flow throws, Choosing the status code honestly, Gotchas, Interview questions, Returning 200 with `{ "error": ... }` because "the client checks the body", The raw exception message returned to a public caller (+67 more)
+Nodes (68): 201, `Location`, and what goes in the body, Gotchas, Interview questions, The DAL side, and where `RETURNING` earns its place, The route file, and the line it draws, What POST actually means, per the specification, What the handler must not do, 1 · `z.object()` strips unknown keys, silently (+60 more)
 
 ### Community 207 - "01-the-product-grid/README.md"
 Cohesion: 0.03
 Nodes (68): Gotchas, Interview questions, `min(16rem, 100%)` — the guard that prevents a horizontal scrollbar, `minmax(<floor>, 1fr)`, `repeat(auto-fill, …)`, The approach worth rejecting first, The declaration that ships, Where the grid sits on the page (+60 more)
 
 ### Community 208 - "01-validate-at-boundary/README.md"
-Cohesion: 0.02
-Nodes (118): Four behaviours that follow from the source, Gotchas, Interview questions, Params vs query for identity, The basic shape, Where they come from, 🔴 `extended` enables an option qs itself warns against, Gotchas (+110 more)
+Cohesion: 0.03
+Nodes (82): Four behaviours that follow from the source, Gotchas, Interview questions, Params vs query for identity, The basic shape, Where they come from, 🔴 `extended` enables an option qs itself warns against, Gotchas (+74 more)
 
 ### Community 209 - "01-controller-service-repository/README.md"
 Cohesion: 0.03
@@ -3103,95 +3165,95 @@ Nodes (67): Gotchas, Interview questions, "Not found" in three steps, Responsibi
 
 ### Community 210 - "10-the-request-pipeline/README.md"
 Cohesion: 0.03
-Nodes (75): A proxy that breaks `equals`, `hashCode` or a `getClass()` check, Expecting `@Transactional` to work when a bean calls its own method, Gotchas, Injecting an interface when Spring built a JDK proxy — or the reverse, Interview questions, The rule that explains all of it, `@Transactional` on a `final` or `private` method, Which proxy, and why it matters (+67 more)
+Nodes (79): Gotchas, Inside step 4: mapping, then adapting, Interview questions, The stack, drawn once, The unwinding, which is where most surprises live, What `DispatcherServlet` does, in the documented order, Where your own code sits, Correlation IDs: the canonical filter, and why it must be one (+71 more)
 
 ### Community 211 - "phase-11-network-storage/README.md"
 Cohesion: 0.01
-Nodes (160): Check `response.ok`, Gotchas, Interview questions, The body can be read once, The defaults, What *does* reject, Chunks, Phase gate (+152 more)
+Nodes (165): Check `response.ok`, Gotchas, Interview questions, The body can be read once, The defaults, What *does* reject, Chunks, Phase gate (+157 more)
 
-### Community 212 - "01-one-test-many-cases.md"
-Cohesion: 0.18
-Nodes (10): Arguments do not reach lifecycle methods, Getting the dependency, Gotchas, Interview questions, The loop you were about to write, The parameter list has a fixed order, The two hard requirements, What the engine actually does (+2 more)
+### Community 212 - "phase-1-complexity/README.md"
+Cohesion: 0.02
+Nodes (101): Dropping constants and lower terms — and when not to, Gotchas, Interview questions, Reading a bound off code, not off a name, Saying it in the round, Several variables, and what n is, The three bounds, in the round's terms, Time and space, both, every time (+93 more)
 
 ### Community 213 - "04-formatting-and-why-a-library.md"
 Cohesion: 0.03
 Nodes (68): `Date.now()` and `Date.UTC()` — the two statics, Gotchas, Interview questions, `Invalid Date` — a failure that never throws, One number, and a calendar projected onto it, Out-of-range components roll over — they never throw, The four ways to make one, 🔴 Trap one — the month is zero-indexed and nothing else is (+60 more)
 
-### Community 214 - "04c-is-true-and-the-type-system.md"
-Cohesion: 0.06
-Nodes (34): A test stays green after the return type changes, A tri-state flag collapses to two states, Gotchas, Interview questions, The three checks, When `is True` is the right answer, `x == True` accepts `1.0` and `Decimal(1)`, A `-> bool` function returns `None` (+26 more)
+### Community 214 - "05-the-latency-ladder.md"
+Cohesion: 0.03
+Nodes (82): A worked round, scored, Gotchas, How the lines weight at each level, Interview questions, Producing the evidence on purpose, The measures the rubric expects you to use, The seven lines, and what evidence looks like, Availability vs durability (+74 more)
 
 ### Community 215 - "02-the-data-layer.md"
-Cohesion: 0.04
-Nodes (50): Bulk insert via unnest, Migrations from Node, Part 3 — Node + raw pg, Phase 8 — Schema and data from Node, Gotchas, Interview questions, The design choices, The implementation (+42 more)
+Cohesion: 0.02
+Nodes (94): Bulk insert via unnest, Migrations from Node, Part 3 — Node + raw pg, Phase 7 — The pg driver, Phase 8 — Schema and data from Node, Pool vs Client, Gotchas, Interview questions (+86 more)
 
 ### Community 216 - "02-clamp-min-max.md"
 Cohesion: 0.03
-Nodes (66): Gotchas, Interview questions, Invalid at computed-value time, Naming that survives, Scoping: the value lives on the element, not in a namespace, Setting a value from outside CSS, The fallback is a second argument, not a default, The shape of the API (+58 more)
+Nodes (73): Gotchas, Interview questions, Invalid at computed-value time, Naming that survives, Scoping: the value lives on the element, not in a namespace, Setting a value from outside CSS, The fallback is a second argument, not a default, The shape of the API (+65 more)
 
-### Community 217 - "07-testcontainers/README.md"
-Cohesion: 0.04
-Nodes (58): Gotchas, Interview questions, The corollary nobody quotes, The one question that decides it, The trap in the middle: the "portable SQL" compromise, What H2 is genuinely still good for, Where this connects, First: exactly what `MODE=PostgreSQL` buys you (+50 more)
-
-### Community 218 - "07b-validate-not-update.md"
+### Community 217 - "01c-what-h2-gets-wrong.md"
 Cohesion: 0.03
-Nodes (73): Applied and resolved — the pair agrees, Applied but not resolved — a row with no file, Gotchas, `info`, and how to narrow it, Interview questions, Reading it directly, which is often faster, Resolved but not applied — a file with no row, The four categories, and then the nineteen (+65 more)
+Nodes (68): Gotchas, Interview questions, The corollary nobody quotes, The one question that decides it, The trap in the middle: the "portable SQL" compromise, What H2 is genuinely still good for, Where this connects, First: exactly what `MODE=PostgreSQL` buys you (+60 more)
+
+### Community 218 - "The procedure, option A"
+Cohesion: 0.33
+Nodes (6): 1. Capture the schema as SQL, with no data, 2. Prove `V1` builds an empty database, 3. Baseline every existing database at `1`, 4. Turn validation on and leave it on, 5. Write down the baseline version, The procedure, option A
 
 ### Community 219 - "10-decimal-for-money.md"
 Cohesion: 0.03
-Nodes (59): Constructing one, From a float: almost never, and here is exactly why, Gotchas, Interview questions, The disqualification, The model: sign, coefficient, exponent, What `Decimal` guarantees — and what it does not, Gotchas (+51 more)
+Nodes (84): Constructing one, From a float: almost never, and here is exactly why, Gotchas, Interview questions, The disqualification, The model: sign, coefficient, exponent, What `Decimal` guarantees — and what it does not, Gotchas (+76 more)
 
 ### Community 220 - "29-anticorruption-layer.md"
 Cohesion: 0.03
 Nodes (65): Gotchas, Interview questions, Runnable Java implementation of an ACL, The architectural payoff, The danger of semantic pollution, The three components of an ACL, What the pattern actually says, Gotchas (+57 more)
 
 ### Community 221 - "04.2 · Callbacks, holes and async"
-Cohesion: 0.05
-Nodes (71): thisArg on iteration methods, call / apply / thisArg for one call, Array constructor arity trap, Array.from, Array.from mapFn, Array.of, {length: n} range idiom, 01.1 · Making arrays (+63 more)
+Cohesion: 0.06
+Nodes (62): Array constructor arity trap, Array.from, Array.from mapFn, Array.of, {length: n} range idiom, 01.1 · Making arrays, Four ways to create holes, Methods that skip holes (+54 more)
 
 ### Community 222 - "01-introduction-to-next-js/01-explanation.md"
-Cohesion: 0.04
-Nodes (49): A worked orientation: the smallest complete application, Gotchas, How this chapter is laid out, Interview questions, The one idea underneath all of it: server-first, The running example, The version reality, stated once, What a meta-framework actually decides (+41 more)
+Cohesion: 0.03
+Nodes (66): A version-history trap that predates most tutorials, Gotchas, Interview questions, Migrating: the part worth knowing before you start, "The App Router is the standard" — what that actually means, The comparison table, read correctly, The limitation, stated precisely, What the App Router changed (+58 more)
 
 ### Community 223 - "Phase 11 — Deployment and operations"
 Cohesion: 0.03
-Nodes (103): Health checks — liveness vs readiness, Startup probe, Startup time, .env local only, Env validation at boot, No default secrets, NODE_ENV is not a feature flag, 12-factor config (+95 more)
+Nodes (100): .env local only, Env validation at boot, No default secrets, NODE_ENV is not a feature flag, 12-factor config, Boot sequence, .dockerignore, Dockerizing Node (+92 more)
 
-### Community 224 - "Transactional DDL"
-Cohesion: 0.02
-Nodes (130): closeAllConnections, closeIdleConnections, Shutdown drain order, Readiness versus liveness during shutdown, server.close, MySQL implicit commit on DDL, query_wait_timeout, psql exit codes (+122 more)
-
-### Community 225 - "Password storage"
+### Community 224 - "pool.connect and release"
 Cohesion: 0.04
-Nodes (81): argon2id, bcrypt, Password storage, Rehash at login, Per-password salt, scrypt, A password hash must be slow, libuv thread-pool login capacity (+73 more)
+Nodes (61): closeAllConnections, closeIdleConnections, Shutdown drain order, Readiness versus liveness during shutdown, server.close, query_wait_timeout, Identity consumed before conflict, Conflict target needs a unique index (+53 more)
+
+### Community 225 - "12e-what-locality-costs.md"
+Cohesion: 0.03
+Nodes (75): Gate 1 — the argument must be an object literal, Gotchas, Interview questions, The constraint, stated exactly, `unwrapExpression` — what still counts as a literal, Why the compiler cannot just run it, Gotchas, Interview questions (+67 more)
 
 ### Community 226 - "phase-5-built-in-library/README.md"
 Cohesion: 0.02
-Nodes (130): `at(index)` — the reason `arr[-1]` never worked, Choosing, in one line each, Gotchas, Interview questions, `slice(start, end)` — a shallow copy of a range, `splice(start, deleteCount, ...items)` — remove, insert, or both, Strings: `slice` is the one to use, The loop bug this topic exists to prevent (+122 more)
+Nodes (113): `at(index)` — the reason `arr[-1]` never worked, Choosing, in one line each, Gotchas, Interview questions, `slice(start, end)` — a shallow copy of a range, `splice(start, deleteCount, ...items)` — remove, insert, or both, Strings: `slice` is the one to use, The loop bug this topic exists to prevent (+105 more)
 
 ### Community 227 - "06-163-preview-instant-navigations-stream-cache-block-and-parti.md"
 Cohesion: 0.03
-Nodes (70): Gotchas, "Instant Navigations" is a brand, not an API, Interview questions, Partial Prefetching is not Partial Prerendering, Stream, Cache, Block — a remediation taxonomy, not an option set, The status, resolved, What is stable, what is under `experimental`, and what the docs will not say, Where the rest of it is taught (+62 more)
+Nodes (63): Gotchas, "Instant Navigations" is a brand, not an API, Interview questions, Partial Prefetching is not Partial Prerendering, Stream, Cache, Block — a remediation taxonomy, not an option set, The status, resolved, What is stable, what is under `experimental`, and what the docs will not say, Where the rest of it is taught (+55 more)
 
 ### Community 228 - "Phase 7 — Background work and resilience"
-Cohesion: 0.06
-Nodes (71): Chunked Promise.all vs worker pool, Picking a concurrency limit, mapLimit worker pool, LISTEN / NOTIFY, No HTTP inside a transaction, 202 Accepted for queued work, res.json then doSlowThing is not a queue, Sync vs background (+63 more)
+Cohesion: 0.07
+Nodes (63): Chunked Promise.all vs worker pool, Picking a concurrency limit, mapLimit worker pool, No HTTP inside a transaction, Sync vs background, Job queues from Node, Split queues by latency expectation, Worker processes (+55 more)
 
 ### Community 229 - "css/README.md"
 Cohesion: 0.04
-Nodes (71): What the cascade compares, Author cascade ladder, CSS Cascading and Inheritance Level 5, Important reverses origin order, Element-attached styles, Origin and importance, Cascade six criteria, Declaring layers and fixing their order (+63 more)
+Nodes (72): What the cascade compares, Author cascade ladder, CSS Cascading and Inheritance Level 5, Important reverses origin order, Element-attached styles, Origin and importance, Cascade six criteria, Declaring layers and fixing their order (+64 more)
 
-### Community 230 - "01b-what-the-fix-is-not.md"
+### Community 230 - "14-template-type-checking.md"
 Cohesion: 0.03
-Nodes (76): Gotchas, Interview questions, The block, The four costs, which are different problems, Where this connects, Why `@BeforeEach` makes it worse than a helper method would, Fix that is not a fix 1 · A comment, Fix that is not a fix 2 · More `@BeforeEach` methods, or a base class (+68 more)
+Nodes (72): Gotchas, Interview questions, The fourth artefact, The TCB is a string of TypeScript, built by concatenation, What the body contains: one statement per thing the template does, A pipe becomes a real method call on a real instance, An interpolation becomes a string concatenation, `@defer (when …)` is deliberately put in a condition position (+64 more)
 
-### Community 231 - "01-formdata.md"
+### Community 231 - "11c-caches-workers-and-orm.md"
 Cohesion: 0.03
-Nodes (73): `beforeinput` — the cancelable one, Focus events on forms, Gotchas, `input` versus `change` — the one people get wrong, Interview questions, Keeping keyboard shortcuts out of forms, `submit`, and the two ways to trigger it, Debouncing without losing the last keystroke (+65 more)
+Nodes (72): A copy that skipped `__init__` and is missing derived state, A `__deepcopy__` that returns `self` on something that should be copied, `copy.replace()` — the 3.13 addition worth adopting, Copying an object holding a `weakref`, `dataclasses.replace` and an `init=False` field, `__deepcopy__` that forgets to pass the memo, `__deepcopy__` that recurses forever, Enum members and other singletons (+64 more)
 
-### Community 232 - "03-fields-columns-access.md"
-Cohesion: 0.03
-Nodes (67): Gotchas, Interview questions, Rule 1 · a no-argument constructor, because the runtime has to build one blind, Rule 2 · non-final, because lazy loading is implemented by subclassing, Rule 3 · an identifier, because the persistence context is keyed by it, Rule 4 · top-level or *static* inner, The spec's list, verbatim, Where the annotations go decides the access type (+59 more)
+### Community 232 - "vite/README.md"
+Cohesion: 0.06
+Nodes (18): 1. Under-The-Hood Mechanics, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Composition, the Prefix Filter's Position, and Sharing One `.env` With Other Tools, Gotchas, Interview questions, ⚠️ Pitfall 1 — Composing a public value out of a private one, ⚠️ Pitfall 2 — Expecting the prefix filter to protect a composed value (+10 more)
 
 ### Community 233 - "12-sharing-types-across-a-monorepo/README.md"
 Cohesion: 0.04
@@ -3201,17 +3263,17 @@ Nodes (55): But the *emit* still points at the built declarations, Gotchas, Inte
 Cohesion: 0.04
 Nodes (59): Gotchas, Interview questions, Reading from a non-standard header, Spring's resolver, and its defaults, The definition, The one transport that matters, What the rest of RFC 6750 is about, A redaction rule you can actually enforce (+51 more)
 
-### Community 235 - "14-the-2026-cve-record-eleven-vulnerabilities-and-what-each-one-teaches.md"
-Cohesion: 0.05
-Nodes (37): Gotchas, Interview questions, React2Shell: the advisory, verbatim, The four things that outlive the patch, What actually crosses the boundary, What an attacker can call, Constrain return values, Gotchas (+29 more)
+### Community 235 - "01-purity-and-idempotence.md"
+Cohesion: 0.03
+Nodes (66): Gotchas, Improving coverage, Interview questions, 🔴 It compiles rule-breaking code anyway, Making bail-outs visible or fatal, What bailing out looks like, What it must be able to prove, Gotchas (+58 more)
 
-### Community 236 - "17-set.md"
-Cohesion: 0.05
-Nodes (35): `copyWithin` — you will read it, not write it, `fill` — and the shared-reference trap, `flat` — one level by default, `flatMap` — map, then flatten one level, Gotchas, `includes` vs `indexOf`: the two cases where they disagree, Interview questions, The three equality algorithms, in one table (+27 more)
+### Community 236 - "21-structuredclone.md"
+Cohesion: 0.03
+Nodes (63): `Collator` — sorting human text, Gotchas, Interview questions, `ListFormat` — "a, b and c", `PluralRules` — the one everybody gets wrong, `Segmenter` — counting characters correctly, The two options that matter, Availability (+55 more)
 
-### Community 237 - "02-cause-chains-and-boundaries.md"
-Cohesion: 0.04
-Nodes (45): Gotchas, Interview questions, The Page Visibility API, Visibility, `IntersectionObserver` and `scrollend` together, What the browser does to a hidden page, What to do on `hidden`, Build the chain at each layer that adds meaning, Errors do not survive most boundaries intact (+37 more)
+### Community 237 - "03-unhandled-rejections.md"
+Cohesion: 0.06
+Nodes (29): Gotchas, In Node: a different name, and a harder default, In the browser: two events, Interview questions, Registering a listener changes the default, Suppressing the console output, What a listener should actually do, Do not report the same failure five times (+21 more)
 
 ### Community 238 - "04-accessibility-semantic-html-aria-safe-hydration-keyboard-fir.md"
 Cohesion: 0.04
@@ -3219,19 +3281,19 @@ Nodes (59): Element-level choices live in the next chunk, Gotchas, Headings are 
 
 ### Community 239 - "Phase 9 — Testing"
 Cohesion: 0.05
-Nodes (66): node --test file discovery, node:test runner, node:test — the built-in runner, Test process isolation, node:test concurrency, node:assert/strict, deepStrictEqual rules, node:assert — strict mode and deep equality (+58 more)
+Nodes (69): node --test file discovery, node:test runner, node:test — the built-in runner, Test process isolation, node:test concurrency, node:assert/strict, deepStrictEqual rules, node:assert — strict mode and deep equality (+61 more)
 
-### Community 240 - "phase-1-everyday-loop/README.md"
-Cohesion: 0.04
-Nodes (59): `e` — editing the hunk by hand, Gotchas, Hunk size is a setting, Interview questions, The keys, The mind-bending part, The other interactive subcommands, Trade-off (+51 more)
+### Community 240 - "03-git-commit.md"
+Cohesion: 0.05
+Nodes (41): `-a`: the flag with a hole in it, `--amend`: a new commit, always, Author versus committer, Committing specific paths, Gotchas, Interview questions, The flags worth knowing about, The message (+33 more)
 
 ### Community 241 - "12-real-world-scenarios/README.md"
 Cohesion: 0.02
 Nodes (107): Binding the mock server — the API, verified, Gotchas, Interview questions, Route A · No Spring context at all, Route B · The Boot slice, `@RestClientTest`, The client under test, The two levels, stated once, Where this connects (+99 more)
 
 ### Community 242 - "05c-the-training-run.md"
-Cohesion: 0.04
-Nodes (58): Gotchas, Interview questions, The same skeleton, two more instructions, When the cache stops being valid, Which one, and the version gate, Why the training run is a `RUN` and not part of the entrypoint, Gotchas, Interview questions (+50 more)
+Cohesion: 0.05
+Nodes (45): Gotchas, Interview questions, The same skeleton, two more instructions, When the cache stops being valid, Which one, and the version gate, Why the training run is a `RUN` and not part of the entrypoint, Gotchas, Interview questions (+37 more)
 
 ### Community 243 - "06-jwt-anatomy-and-validation/README.md"
 Cohesion: 0.04
@@ -3239,23 +3301,23 @@ Nodes (57): `alg` values are case-sensitive strings, not an enum on the wire, Go
 
 ### Community 244 - "jest-rtl/README.md"
 Cohesion: 0.03
-Nodes (57): How to read this section, The seam that causes the most bugs, The three config surfaces, Versions this section is written against, What this section deliberately does not cover, Where this connects, Which runner, and when, Why that third row is the one that trips people (+49 more)
+Nodes (71): How to read this section, The seam that causes the most bugs, The three config surfaces, Versions this section is written against, What this section deliberately does not cover, Where this connects, Which runner, and when, Why that third row is the one that trips people (+63 more)
 
-### Community 245 - "03-architecture-decision-trees-rendering-strategy.md"
-Cohesion: 0.02
-Nodes (94): 🔴 A `<Suspense>` boundary does not make anything dynamic, Gotchas, Interview questions, One page, all three behaviours, Predictable and unpredictable values, The four rules that decide what lands in the shell, 🔴 The inversion: `cookies()` no longer costs you the route, What it produces (+86 more)
-
-### Community 246 - "06-project-milestone-sprintdesk-design-system-pass.md"
+### Community 245 - "19-capstone-decision-trees-and-outlook/01-explanation.md"
 Cohesion: 0.04
-Nodes (47): `afterInteractive` — the default, and where it actually goes, `beforeInteractive` — the only strategy the server renders, Choosing, in one table, Gotchas, Interview questions, `lazyOnload` — idle time, after everything else, Once per document load, and a locale switch is not a document load, The four values, verbatim (+39 more)
+Nodes (58): 🔴 A `<Suspense>` boundary does not make anything dynamic, Gotchas, Interview questions, One page, all three behaviours, Predictable and unpredictable values, The four rules that decide what lands in the shell, 🔴 The inversion: `cookies()` no longer costs you the route, What it produces (+50 more)
+
+### Community 246 - "09-styling-and-ui/01-explanation.md"
+Cohesion: 0.01
+Nodes (163): External package stylesheets are global CSS wearing a package name, Gotchas, Interview questions, The mechanism: a rename, plus a JavaScript object, What a global stylesheet gives you that a module cannot, Where a global stylesheet may be imported — and why the constraint is phrased as a warning, not a ban, Where the rest of this argument lives, Chunks (+155 more)
 
 ### Community 247 - "05j-designing-the-failure-channel/README.md"
-Cohesion: 0.04
-Nodes (53): Can EAFP aggregate? Yes — with `ExceptionGroup`, Gotchas, Interview questions, The guard exists to carry data, so give it data, The two kinds of `if`, When the exception cannot tell you what you need, A signature is half a contract, Gotchas (+45 more)
+Cohesion: 0.02
+Nodes (92): Databases: the constraint is the only real check, Gotchas, Interview questions, Queues and other "is it ready" checks, Where the race test says LBYL is fine, Gotchas, Interview questions, The decision, in three questions (+84 more)
 
 ### Community 248 - "02-mount-order-is-the-content.md"
 Cohesion: 0.04
-Nodes (54): An app that never listens is still an app, Config is a dependency, not an ambient fact, Dependencies in, not imports, Gotchas, Interview questions, The rule: no side effects in the factory, The shape, What "two independent apps" buys (+46 more)
+Nodes (58): An app that never listens is still an app, Config is a dependency, not an ambient fact, Dependencies in, not imports, Gotchas, Interview questions, The rule: no side effects in the factory, The shape, What "two independent apps" buys (+50 more)
 
 ### Community 249 - "12-real-world-scenarios/12-the-checklist.md"
 Cohesion: 0.02
@@ -3265,17 +3327,17 @@ Nodes (131): Gotchas, Interview questions, Never mock a value — and how to mak
 Cohesion: 0.04
 Nodes (53): Gotchas, Interview questions, The decision procedure, The fifth category: state nobody in React owns, The fourth category: cookie and session state, The procedure applied to one screen, Elements cross, so composition beats prop-drilling, Gotchas (+45 more)
 
-### Community 251 - "02-the-int-str-conversion-limit.md"
-Cohesion: 0.04
-Nodes (49): A `repr` that fails inside a debugger or a test framework, Gotchas, `int(user_input)` on an unbounded field, Interview questions, JSON encoding a huge integer, Squaring a legal value produces an unprintable one, The limit bites on output, The mechanism (+41 more)
+### Community 251 - "12d-strings-and-binary-formats.md"
+Cohesion: 0.07
+Nodes (27): A context manager that "scopes" the limit under asyncio, A dependency raises the limit for your whole process, A policy that actually holds, Avoiding it instead — the exemptions are the design, Gotchas, Interview questions, Lowering the limit: the warning the docs give, `pip install` fails with a `SyntaxError` after hardening a container (+19 more)
 
-### Community 252 - "07-testcontainers/10-the-checklist.md"
+### Community 252 - "11-accessibility-from-javascript/README.md"
 Cohesion: 0.03
-Nodes (75): "But H2 has a PostgreSQL mode", Gotchas, Interview questions, It fails in both directions, and the false green is the expensive one, Nobody types "use H2". Boot swaps it in, Testcontainers' own documentation makes the same argument, and does not overclaim, 🔴🔴 And the one that is not in a bullet: the self-type generic is gone, Gotchas and pitfalls (+67 more)
+Nodes (63): Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects, Cleaning up, Coming back: the scroll restoration problem, Gotchas, Infinite scroll is an accessibility and UX decision (+55 more)
 
-### Community 253 - "01-locale-and-negotiation.md"
-Cohesion: 0.10
-Nodes (19): Gotchas, Interview questions, 🔴 Negotiation: never use `navigator.language` as your locale, The other half of a locale: the time zone, What the browser tells you, Where the decision belongs, Formatted output belongs in the markup, not only in the pixels, Gotchas (+11 more)
+### Community 253 - "02-building-a-router.md"
+Cohesion: 0.03
+Nodes (68): Gotchas, Interview questions, Invalid input throws — and that is a feature, Parsing one, Relative resolution, in one place, What `URL` is not, Where it comes for free, Building a query without a URL (+60 more)
 
 ### Community 254 - "03-setup-lifecycle.md"
 Cohesion: 0.04
@@ -3283,39 +3345,39 @@ Nodes (54): A `setupTests.ts` that is in the right order, Debugging "my setup di
 
 ### Community 255 - "Phase 2 — Data types and the relational model"
 Cohesion: 0.04
-Nodes (65): pg returns bigint as a string, bigint for surrogate primary keys, PostgreSQL integer types, Integer cents in bigint, Money never in float, pg returns numeric as a string, numeric rounds half away from zero, numeric vs float (+57 more)
+Nodes (62): bigint for surrogate primary keys, PostgreSQL integer types, Integer cents in bigint, Money never in float, pg returns numeric as a string, numeric rounds half away from zero, numeric vs float, char(n) padding semantics (+54 more)
 
-### Community 256 - "📦 Redux DevTools: Time-Travel, Action Replay & Trace Mode"
-Cohesion: 0.17
-Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Action Diffing, ⚠️ Pitfall 1: Shipping `devTools: true` (or Leaving It Unset) to Production, ⚠️ Pitfall 2: High-Frequency Actions Bloating the DevTools Log, ⚠️ Pitfall 3: Relying on Time-Travel With Non-Serializable or Impure State (+3 more)
+### Community 256 - "Gotchas"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A `trace` limit left uncapped, Action Diffing, Expecting the extension to show RTK Query cache internals usefully, Gotchas, High-frequency actions drowning the log (+7 more)
 
 ### Community 257 - "phase-6-modules-build/README.md"
 Cohesion: 0.04
 Nodes (55): Consuming an `export =`, `export as namespace` — the UMD global, `export default` — for a real ES module, `export =` — for CommonJS `module.exports = x`, Gotchas, Interview questions, Named exports — the ordinary case, The one that is not an export form (+47 more)
 
-### Community 258 - "05-exclude-extract-and-distributivity.md"
+### Community 258 - "04-response-schemas-and-mappers.md"
 Cohesion: 0.03
-Nodes (66): Branded ids: making two `number`s refuse to mix, Composition: derive schemas, do not re-declare them, Gotchas, Interview questions, Gotchas, Interview questions, `Parameters` and `Awaited`, The declaration, and the `any` at the end of it (+58 more)
+Nodes (62): Gotchas, Interview questions, `res.json` checks nothing by default, The excess-property hole you will hit within a week, The mapper, typed, Why `satisfies` is the wrong tool here, and where it is right, Gotchas, Interview questions (+54 more)
 
-### Community 259 - "07-comparing-floats.md"
+### Community 259 - "07e-tolerance-in-tests.md"
+Cohesion: 0.07
+Nodes (25): A threshold with a tolerance bolted on, Gotchas, Hand-rolled epsilons, and why they are usually wrong, Interview questions, NaN silently taking the wrong branch of a threshold, Ordering is not equality, `sys.float_info.epsilon` used as a general tolerance, The decision, in one table (+17 more)
+
+### Community 260 - "01b-layout-and-the-root-layout.md"
 Cohesion: 0.04
-Nodes (53): Gotchas, Interview questions, `math.fma()` — one rounding for a multiply-add, `math.fsum()` — exact, with a single rounding, `math.sumprod()` — dot products without the intermediate damage, `sum()` — improved in 3.12, and free, Where the grid bites in ordinary application code, A negative tolerance raises rather than inverting (+45 more)
+Nodes (53): Folders are segments; files are roles, Gotchas, Interview questions, `page.tsx` — the leaf, The composition order — memorise this list, not the diagrams, Which file gets which props, A layout cannot pass data to its children, Gotchas (+45 more)
 
-### Community 260 - "02-routing-and-navigation/01-explanation.md"
+### Community 261 - "07c-instrumenting-what-you-changed.md"
 Cohesion: 0.04
-Nodes (57): Chunks, Phase gate, 🔴 What this chapter could not confirm, and says so, Where this connects, Folders are segments; files are roles, Gotchas, Interview questions, `page.tsx` — the leaf (+49 more)
+Nodes (44): `generateMetadata` is a per-route cost you can attribute, Gotchas, Interview questions, `resolve segment modules` is module cost, seen from the server, `start response` is a time-to-first-byte probe, The arithmetic, without inventing numbers, The `fetch` span is the one that scales with your data layer, The `fetch` spans are a waterfall diagram (+36 more)
 
-### Community 261 - "06-instrumentationts-for-opentelemetry-and-application-monitori.md"
-Cohesion: 0.04
-Nodes (50): Gotchas, `instrumentation-client.js` — the pre-hydration slot, Interview questions, The Google Analytics shape, and its three traps, The transport, verbatim, What the receiving endpoint has to store, Why a beacon and not a `fetch`, Gotchas (+42 more)
-
-### Community 262 - "19-event-loop-browser-vs-node/README.md"
+### Community 262 - "01-choosing-a-deferral.md"
 Cohesion: 0.03
-Nodes (66): Microtask drain until empty, MDN Using microtasks in JavaScript, Microtask, Microtask starvation, Rendering between tasks, requestAnimationFrame, Task (macrotask), length === 1 microtask batching (+58 more)
+Nodes (66): MDN Using microtasks in JavaScript, 1 · A timer is a task, so microtasks always win, 2 · The nesting clamp: 4 ms after five levels, 3 · Throttling: the tab you are not looking at, 4 · A busy main thread simply does not check the clock, Gotchas, Interview questions, So when *is* `setTimeout(fn, 0)` the right tool? (+58 more)
 
-### Community 263 - "03b-the-caching-tree.md"
+### Community 263 - "05-cdns.md"
 Cohesion: 0.03
-Nodes (66): A short-lived cache nested inside one with no explicit lifetime, Caching does not have to be all-or-nothing within a module, Gotchas, Interview questions, Nesting: whether the inner lifetime escapes depends on the outer one, Omitting `cacheLife` and inheriting numbers you did not choose, The `default` profile's actual numbers, The short-lived nesting case is a build error, not a silent inheritance (+58 more)
+Nodes (66): Gotchas, Interview questions, Sessions: the store or the cookie, The premise: the process is disposable, The sticky-session escape hatch, and why it is debt, The storefront's service, audited, The test, and the five places state hides, Uploads: never through the disk (+58 more)
 
 ### Community 264 - "08-typing-an-untyped-dependency/README.md"
 Cohesion: 0.03
@@ -3326,20 +3388,20 @@ Cohesion: 0.06
 Nodes (59): Cascade, CSSOM, CSS is resolved not executed, Parse-time value normalisation, Shorthand expansion, What CSS is, @import request serialisation, Inline style attribute (+51 more)
 
 ### Community 266 - "03-405-and-method-semantics.md"
-Cohesion: 0.04
-Nodes (50): `app.all` and `route.all` are not the same thing, Gotchas, Interview questions, The verbs, Trade-off, Where the helpers come from, Gotchas, HEAD: served by your GET handler, until it isn't (+42 more)
+Cohesion: 0.03
+Nodes (69): Gotchas, Interview questions, Prove it, The graph, Who owns what, Why `app.listen` is the wrong default in real code, Consequences you can now derive, Gotchas (+61 more)
 
 ### Community 267 - "05c-composing-arbitraries.md"
 Cohesion: 0.05
 Nodes (46): Gotchas, Interview questions, The `Arbitraries` entry points worth memorising, The defaults nobody chooses, and what they do to your properties, Where this connects, Builders: when the aggregate has optional parts, Gotchas, Interview questions (+38 more)
 
-### Community 268 - "02-uploading-and-submitting.md"
-Cohesion: 0.02
-Nodes (96): `accept`, `multiple`, `capture` — hints, not rules, Drag and drop, Gotchas, Interview questions, Paste, 🔴 Selecting the same file twice fires nothing, The input, Validating on the client (+88 more)
+### Community 268 - "13-where-the-compiler-runs-ngtsc.md"
+Cohesion: 0.03
+Nodes (64): Gotchas, Interview questions, The reason → cause map, The shape: a headline, a chain sentence, and a trace, The three chain sentences, and what each one means, The trace: ten breadcrumbs, not nine, What the rest of the catalogue covers, Which numbers in this catalogue are confirmed, and which are not (+56 more)
 
 ### Community 269 - "06-arrays.md"
 Cohesion: 0.04
-Nodes (48): 🔴 An array field is not a join table, Empty, missing, and null, Gotchas, Indexing: multikey, automatically, Interview questions, Querying an array matches *any* element, Updating elements, Gotchas (+40 more)
+Nodes (52): 🔴 An array field is not a join table, Empty, missing, and null, Gotchas, Indexing: multikey, automatically, Interview questions, Querying an array matches *any* element, Updating elements, Gotchas (+44 more)
 
 ### Community 270 - "03k-nuqs-typed-search-params-as-a-library.md"
 Cohesion: 0.04
@@ -3354,7 +3416,7 @@ Cohesion: 0.05
 Nodes (46): Gotchas, Interview questions, The first problem: side effects, The second problem: the compiler cannot always decide, What elision does *not* remove, What elision is, Why it exists, and why it is usually right, Gotchas (+38 more)
 
 ### Community 273 - "react-p1/harness.mjs"
-Cohesion: 0.06
+Cohesion: 0.05
 Nodes (37): a, b, require, noise, noise, noise, require, FORWARD (+29 more)
 
 ### Community 274 - "react-p0/harness.mjs"
@@ -3367,7 +3429,7 @@ Nodes (51): Arrays carry a third word, Gotchas, Interview questions, The class w
 
 ### Community 276 - "02-client-side-security/01-the-trust-boundary.md"
 Cohesion: 0.03
-Nodes (60): Gotchas, Hidden UI is not access control, Interview questions, Secrets, The honest list, The one sentence the whole topic rests on, Validation, What CORS does and does not protect (+52 more)
+Nodes (67): Gotchas, Hidden UI is not access control, Interview questions, Secrets, The honest list, The one sentence the whole topic rests on, Validation, What CORS does and does not protect (+59 more)
 
 ### Community 277 - "01g-react-cache-connection-and-non-fetch-memoization.md"
 Cohesion: 0.04
@@ -3377,41 +3439,41 @@ Nodes (52): Gotchas, Interview questions, Opting one call out, The four places i
 Cohesion: 0.02
 Nodes (118): GIN for jsonb, arrays and full text; pg_trgm for LIKE, Array elements, Comparisons need text, and then a cast, Gotchas, Interview questions, The accessors, The null trap, Trade-off (+110 more)
 
-### Community 279 - "01e-line-joining-and-semicolons.md"
-Cohesion: 0.17
-Nodes (11): A backslash cannot carry a comment, and cannot split a token, A backslash inside a string is not a line continuation, A trailing comma plus a missing operator makes a tuple, not an error, An unclosed bracket reports the error at the wrong line — or the right one, `assert` with a parenthesised message never fails, Explicit line joining with a backslash, Gotchas, Implicit line joining, and why it is the default (+3 more)
+### Community 279 - "01-syntax-and-indentation/README.md"
+Cohesion: 0.04
+Nodes (53): A bare expression statement that you meant as a mutation does nothing, A walrus in a comprehension leaks into the enclosing scope, Assignment is a statement, and what that forbids, Chained assignment binds one object to every target, Gotchas, Interview questions, Simple, compound, and what a "statement list" is, Statements cannot be arguments, so `del` and `pass` cannot be passed anywhere (+45 more)
 
 ### Community 280 - "phase-0-platform-jvm/README.md"
+Cohesion: 0.02
+Nodes (92): Gotchas, Interview questions, `--release`, not `-source`/`-target`, The class file: anatomy and the version stamp, What bytecode is, What comes out: one class file per type, What `javac` deliberately does not do, From `java -jar` to your first line (+84 more)
+
+### Community 281 - "07-the-checkout-endpoint.md"
 Cohesion: 0.04
-Nodes (45): Phase gate contribution, Why this is the Master topic of Phase 0, Gotchas, Interview questions, `JAVA_HOME` and what points where, OpenJDK and the distributions, The three layers, Which one is in your Docker image (+37 more)
+Nodes (60): Gotchas, Interview questions, The failure map, endpoint edition, The implementation, The problem, The sequencing decision, Gotchas, Interview questions (+52 more)
 
-### Community 281 - "What "to the console" costs you"
-Cohesion: 0.29
-Nodes (7): It writes to stdout on a thread that is serving requests, No appender, No format, No log level, No MDC, so no correlation, No runtime control, What "to the console" costs you
+### Community 282 - "09d-serialization-failures-and-the-retry-loop.md"
+Cohesion: 0.03
+Nodes (61): 1 · A server-side read-modify-write that SQL cannot express in one statement, 2 · A queue claim, where the lock is the point, 3 · An invariant across rows that a single statement cannot check, Bounding the wait — `NOWAIT` and `lock_timeout`, Gotchas, Interview questions, Optimistic or pessimistic — the decision, stated plainly, The four costs of holding it across a request (+53 more)
 
-### Community 282 - "03-composition-checked-exceptions.md"
+### Community 283 - "07-disabling-and-conditions.md"
 Cohesion: 0.04
-Nodes (50): Capture: effectively final, and why, Every syntax form, Gotchas, How lambdas compile — enough to read a stack trace, Interview questions, Target typing — the part that explains the error messages, `this` — the sharpest difference from anonymous classes, `@FunctionalInterface` — a promise, not a requirement (+42 more)
-
-### Community 283 - "01-reading-a-shape-you-did-not-define.md"
-Cohesion: 0.11
-Nodes (16): Gotchas, Interview questions, JSON cannot carry `undefined`, Nested destructuring defaults have the same hole, twice, `??`, not `||`, The decision under the fix: is `null` "absent" or is it a value?, Destructuring defaults fire on `undefined` only, Gotchas (+8 more)
+Nodes (57): Gotchas, Interview questions, The artifacts, and which one you actually declare, The three parts, and what each is for, What you write in a Boot 4.1 project, Where Spring plugs in, Why the split causes the "0 tests run" failure, 🔴 Your directory says "JUnit 5". Boot 4.1 resolves Jupiter 6. (+49 more)
 
 ### Community 284 - "02-match-first.md"
 Cohesion: 0.04
 Nodes (51): Gotchas, Interview questions, Repeating a stage is normal — and three stages that cannot repeat, The mental model: a stream of documents through a list of stages, The server rewrites what you wrote, The three limits that decide whether a pipeline survives production, What you actually write, Where the pipeline runs (+43 more)
 
-### Community 285 - "06-project-milestone-sprintdesk-on-drizzle-neon-with-pooling.md"
-Cohesion: 0.03
-Nodes (65): Chunks, Phase gate, The reframing, in one paragraph, Where this connects, Gotchas, Interview questions, Proxy: the case that was decided separately, What the documentation does **not** say (+57 more)
-
-### Community 286 - "10c-tenant-isolation-in-the-data-access-layer.md"
+### Community 285 - "05h-a-shared-cache-across-instances.md"
 Cohesion: 0.04
-Nodes (53): 1 · Path segment — `sprintdesk.com/acme/board`, 2 · Subdomain — `acme.sprintdesk.com/board`, 3 · Custom domain — `tasks.acme.com`, 4 · Header or session only — `sprintdesk.com/board` plus `x-tenant` or a cookie, Cookies do not respect your tenancy model, Gotchas, Identification: four mechanisms, ranked by what the framework can do with them, Interview questions (+45 more)
+Nodes (51): Chunks, Phase gate, The reframing, in one paragraph, Where this connects, Gotchas, Interview questions, Proxy: the case that was decided separately, What the documentation does **not** say (+43 more)
+
+### Community 286 - "10d-tenancy-and-caching.md"
+Cohesion: 0.06
+Nodes (30): A tag longer than 256 characters, A user not seeing their own change, Case-mismatched tags, Expecting the call itself to refresh pages, Gotchas, Reaching for `updateTag` in a Route Handler, Using `{ expire: 0 }` where `max` belongs, Writing `revalidateTag('posts')` with no profile (+22 more)
 
 ### Community 287 - "05-the-singleton-pattern.md"
-Cohesion: 0.05
-Nodes (44): Gotchas, Interview questions, `start()` and `stop()` are guarded on `containerId` — which is why inheritance does not save you, The abstract base class, The arithmetic, argued from that lifecycle rather than from a stopwatch, The pattern itself, What the extension actually does with your field, Where this goes next (+36 more)
+Cohesion: 0.04
+Nodes (52): Gotchas, Interview questions, `start()` and `stop()` are guarded on `containerId` — which is why inheritance does not save you, The abstract base class, The arithmetic, argued from that lifecycle rather than from a stopwatch, The pattern itself, What the extension actually does with your field, Where this goes next (+44 more)
 
 ### Community 288 - "06-operating-it.md"
 Cohesion: 0.05
@@ -3429,45 +3491,45 @@ Nodes (51): Gotchas, How to run this as a two-hour exercise, Interview questions
 Cohesion: 0.04
 Nodes (49): Gotchas, Interview questions, What version skew actually does at runtime, 1. On a package via `package-info.java`, 2. On individual classes or interfaces, Beyond the default module API, Choosing what a slice is *for*, Consuming a named interface (+41 more)
 
-### Community 292 - "12-parallel-execution.md"
+### Community 292 - "02-rejections-that-vanish.md"
 Cohesion: 0.04
-Nodes (53): Class ordering under parallelism is a hint, not a guarantee, Classes versus methods: the four combinations, `@Execution`, per class and per method, Gotchas, Interview questions, 🔴 JUnit 6: a typo in these parameters now fails the build, ⚠️ Output capture is separate, The two classes of exception the default does not reach (+45 more)
+Nodes (52): 1. The floating promise, 2. The missing `return` in a chain, 3. The missing `await`, 4. `forEach` with an async callback, 5. The `catch` that swallows, 6. `.then(onOk, onErr)` where `onOk` throws, 7. `finally` at the end of a chain, 8. A `catch` attached too late (+44 more)
 
-### Community 293 - "04-named-and-internal.md"
-Cohesion: 0.04
-Nodes (49): `auth_request` — the same idea for authorisation decisions, Gotchas, `internal` — reachable only from inside, Interview questions, Named locations — `@name`, Nested locations, The phase difference, and why it matters, Trade-off (+41 more)
+### Community 293 - "02-cycles-and-debugging.md"
+Cohesion: 0.06
+Nodes (30): 1. A `try_files` fallback to a file that is not there, 2. A rewrite whose output still matches its own pattern, 3. An `error_page` that errors the same way, Gotchas, Interview questions, Making it visible, The SPA fallback, correctly, The ten-redirect limit (+22 more)
 
 ### Community 294 - "05-isolatedmodules/README.md"
 Cohesion: 0.04
 Nodes (50): Gotchas, Interview questions, That is the whole design, The line that shows the problem, `tsc` forces the flag on when it transpiles, Two ways to turn TypeScript into JavaScript, What the flag does *not* do, Why you want it even on a pure `tsc` build (+42 more)
 
 ### Community 295 - "docs/README.md"
-Cohesion: 0.05
-Nodes (22): How this track is shaped, Known defects carried over from the source, Progress, 🔴 Read this before you trust a page, Still open, Then brought to house style, What was done, 2026-09-03, Coverage (+14 more)
+Cohesion: 0.06
+Nodes (15): Coverage, Imported from the frontend-bible corpus (2026-08-14), Priority tiers, 🔴 The critical rule — do not violate this, What "Verified" means, 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example (+7 more)
 
-### Community 296 - "03-transitive-and-mediation/README.md"
-Cohesion: 0.04
-Nodes (47): Gotchas, Interview questions, Ordering: first match wins, Resources ride the same path, The `-jar` trap, What it is and how it's set, Where the IDE diverges from the server, Gotchas (+39 more)
+### Community 296 - "phase-8-build-dependencies/README.md"
+Cohesion: 0.01
+Nodes (169): Gotchas, Interview questions, Ordering: first match wins, Resources ride the same path, The `-jar` trap, What it is and how it's set, Where the IDE diverges from the server, Gotchas (+161 more)
 
-### Community 297 - "05-when-you-do-not-need-oauth2.md"
+### Community 297 - "02-the-four-roles/README.md"
 Cohesion: 0.04
-Nodes (48): Gotchas, Interview questions, Reading each one as a requirement, The abstract flow, in the specification's own six steps, The five failures, verbatim from §1, The world before: the client impersonates you, Attempt 1 — "the token came back, so the user logged in", Attempt 2 — "call the provider's `/me` endpoint with the token" (+40 more)
+Nodes (52): Gotchas, Interview questions, Reading each one as a requirement, The abstract flow, in the specification's own six steps, The five failures, verbatim from §1, The world before: the client impersonates you, Attempt 1 — "the token came back, so the user logged in", Attempt 2 — "call the provider's `/me` endpoint with the token" (+44 more)
 
-### Community 298 - "02-the-four-roles/README.md"
-Cohesion: 0.04
-Nodes (49): Gotchas, Interview questions, Reading §2.3 carefully, The BFF: turning a public client into a confidential one, The decision, as a question you can actually answer, The mistakes this classification catches, The three profiles, verbatim in substance, The two definitions (+41 more)
+### Community 298 - "03-client-authentication.md"
+Cohesion: 0.06
+Nodes (28): Gotchas, Interview questions, Reading §2.3 carefully, The BFF: turning a public client into a confidential one, The decision, as a question you can actually answer, The mistakes this classification catches, The three profiles, verbatim in substance, The two definitions (+20 more)
 
-### Community 299 - "14-client-side-data-fetching-and-when-it-is-still-correct.md"
+### Community 299 - "04b-what-survives-and-the-force-static-trap.md"
 Cohesion: 0.04
-Nodes (40): A decision procedure, Choosing an invalidation call, Coordinating mutations, Gotchas, Interview questions, The default is no library, The three patterns, Three caches, once Cache Components is on (+32 more)
+Nodes (47): A decision procedure, Choosing an invalidation call, Coordinating mutations, Gotchas, Interview questions, The default is no library, The three patterns, Three caches, once Cache Components is on (+39 more)
 
 ### Community 300 - "04d-internals-coupling-and-the-plugin-decision.md"
 Cohesion: 0.04
 Nodes (49): Before you write one: check whether you need one, Gotchas, Interview questions, The interface, Where the adapter stops, Why this API exists, in the words of the people who needed it, Wiring an adapter in — two mechanisms, two audiences, `buildId` is not `deploymentId` (+41 more)
 
-### Community 301 - "12-adapter-output-types-what-a-build-actually-is.md"
-Cohesion: 0.05
-Nodes (39): `config.allowQuery` is the cache key, and its absence is not "no query params", Gotchas, `groupId` is a revalidation unit, not a cosmetic grouping, Interview questions, `MIDDLEWARE` — one output, and it is not always middleware, `PRERENDER` — the richest type, and the one worth reading twice, `STATIC_FILE` — the smallest type, and the one with a trapdoor, The classification triple (+31 more)
+### Community 301 - "16-opennext-the-community-adapter-that-became-the-standard.md"
+Cohesion: 0.06
+Nodes (31): Edge entrypoints, and why not to build for them, Gotchas, Interview questions, Step 1 — seed the cache at build time, Step 2 — the three-header handshake at request time, Step 3 — keep the cache current with `onCacheEntryV2`, The Node.js entrypoint interface, The PPR resume protocol (+23 more)
 
 ### Community 302 - "02-the-gil/README.md"
 Cohesion: 0.05
@@ -3482,12 +3544,12 @@ Cohesion: 0.04
 Nodes (48): G1 changes the picture without changing the model, Gotchas, Interview questions, The default shape, and the flags that set it, The four spaces, in the tuning guide's own words, Where the rest of the heap story lives, Why *two* survivor spaces, Gotchas (+40 more)
 
 ### Community 305 - "phase-16-dynamic-programming/README.md"
-Cohesion: 0.03
-Nodes (67): Condition 1 — overlapping subproblems, Condition 2 — optimal substructure, Gotchas, Interview questions, Recognising DP from a problem statement, Stating the complexity, The two directions, A checklist for naming the state (+59 more)
+Cohesion: 0.05
+Nodes (38): Condition 1 — overlapping subproblems, Condition 2 — optimal substructure, Gotchas, Interview questions, Recognising DP from a problem statement, Stating the complexity, The two directions, Chunks (+30 more)
 
-### Community 306 - "02-boundary-validation-react-hook-form-zod-schemas-shared-acros.md"
+### Community 306 - "02c-field-errors-in-a-shape-the-form-can-render.md"
 Cohesion: 0.07
-Nodes (26): Gotchas, Interview questions, One module, two importers, The client copy validates nothing, What a schema cannot decide, Where each check belongs, A complete boundary adapter, Gotchas (+18 more)
+Nodes (27): A complete boundary adapter, Gotchas, Interview questions, The conversions a form actually needs, ⚠ The framework's own example is zod 3, What actually arrives, `z.coerce` and its three sharp edges, Do not return the `ZodError` (+19 more)
 
 ### Community 307 - "05-the-interpreter-loop.md"
 Cohesion: 0.04
@@ -3501,25 +3563,25 @@ Nodes (45): Copying, named here and settled later, Gotchas, Immutable objects ma
 Cohesion: 0.04
 Nodes (48): `Decimal` carries its own signed zero, and shows it, Gotchas, Hashing collapses them, so containers hold exactly one, Interview questions, `math.copysign` is the test, and it is the only documented one, `str()` is not a test either, The C trick that does not port, There are two zeros, and every comparison sees one (+40 more)
 
-### Community 310 - "01-tuple-assignment.md"
+### Community 310 - "03-try-with-resources/README.md"
+Cohesion: 0.04
+Nodes (48): Gotchas, Interview questions, No destructors — and what replaced the substitute, The phases, Weak and soft references, honestly, `clone` and `Cloneable`: broken by design, `getClass`: exact runtime type, and the proxy surprise, Gotchas (+40 more)
+
+### Community 311 - "07-git-push.md"
+Cohesion: 0.04
+Nodes (47): Gotchas, Interview questions, `push.default`, Setting it, The fork setup, Trade-off, `@{u}` and `@{push}`, What it is (+39 more)
+
+### Community 312 - "Transactional DDL"
 Cohesion: 0.05
-Nodes (34): `enumerate`, Gotchas, Interview questions, `strict=True` — use it, `zip`, and the truncation it does not mention, `zip_longest` when the lengths legitimately differ, `batched`: fixed-size chunks, 3.12+, Gotchas (+26 more)
-
-### Community 311 - "phase-4-remotes/README.md"
-Cohesion: 0.04
-Nodes (47): Gotchas, `push.default`, Setting it, The fork setup, Trade-off, `@{u}` and `@{push}`, What it is, Where the counts come from (+39 more)
-
-### Community 312 - "05a3-the-cost-of-sharing.md"
-Cohesion: 0.04
-Nodes (47): `@BeforeAll` runs after the container is already up, Gotchas, Interview questions, 🔴 static versus instance — the whole mechanic, in one predicate, The maintained test that proves both at once, What each one costs, Where the extension reads each kind of field, Which one you actually want (+39 more)
+Nodes (57): Atomic migrations, Transactional DDL, DROP CASCADE, DROP RESTRICT default, DROP CASCADE vs ON DELETE CASCADE, Extended query protocol, withTransaction helper, Empty params array is not parameterized (+49 more)
 
 ### Community 313 - "13-entity-services.md"
 Cohesion: 0.04
 Nodes (46): "Anti-pattern" is a precise claim here, not an insult, Gotchas, Interview questions, The example, in Java, The mechanism, in one sentence, The number that makes operational coupling concrete, The two couplings Nygard names, Gotchas (+38 more)
 
-### Community 314 - "05-coverage.md"
+### Community 314 - "01-where-config-lives.md"
 Cohesion: 0.04
-Nodes (47): Discovery — which files are tests, Environments — what globals exist, Gotchas, Interview questions, `jsdom` is not bundled — install it, Narrowing on the CLI, not in the config, Per-file override with a docblock, `testEnvironmentOptions` — the two that matter (+39 more)
+Nodes (53): Gotchas, Interview questions, `jest.config.ts` needs its own transpilation, Jest's `extends` — shallow, and it replaces, Jest — where it looks, in order, One project, several environments, Paths in Vitest are relative to the config file's directory, `rootDir` and `<rootDir>` — the part everyone gets wrong (+45 more)
 
 ### Community 315 - "03-dynamic-routes-slug-catch-all-optional-catch-all.md"
 Cohesion: 0.04
@@ -3527,67 +3589,67 @@ Nodes (46): Gotchas, Interview questions, 🔴 `params` is a Promise, and in 16 
 
 ### Community 316 - "11-root-params.md"
 Cohesion: 0.04
-Nodes (47): Gotchas, Interview questions, Locale identifiers are a standard, not a convention, Set `html lang` in the root layout, Sub-path or domain, 🔴 The built-in i18n routing is Pages Router only, The `[lang]` segment, The three pieces you now own (+39 more)
+Nodes (56): Gotchas, Interview questions, Locale identifiers are a standard, not a convention, Set `html lang` in the root layout, Sub-path or domain, 🔴 The built-in i18n routing is Pages Router only, The `[lang]` segment, The three pieces you now own (+48 more)
 
 ### Community 317 - "01-server-actions-for-mutations-with-useactionstate-and-useopti.md"
-Cohesion: 0.04
-Nodes (47): An action that captures a secret in its closure, Gotchas, Interview questions, Passing the whole entity from the client and validating it with zod, Raising `bodySizeLimit` to make an upload work, Returning the ORM entity so the client can "use the rest later", The admin-only action that is not admin-only, What the framework guarantees, and what it does not (+39 more)
+Cohesion: 0.02
+Nodes (101): An action that captures a secret in its closure, Gotchas, Interview questions, Passing the whole entity from the client and validating it with zod, Raising `bodySizeLimit` to make an upload work, Returning the ORM entity so the client can "use the rest later", The admin-only action that is not admin-only, What the framework guarantees, and what it does not (+93 more)
 
 ### Community 318 - "01-the-bson-types.md"
 Cohesion: 0.05
 Nodes (45): Finding the mess you already have, Gotchas, Interview questions, Null, missing, and the difference that matters, Rule 1 — the value carries the type, Rule 2 — comparison is bracketed by type, The types, Choosing what goes in it (+37 more)
 
-### Community 319 - "04-explain.md"
-Cohesion: 0.04
-Nodes (53): Explaining other operations, Gotchas, Interview questions, Reading the output — four numbers, Reading the plan — the stages, The three verbosities, The two-minute diagnosis, Why *that* index? — `rejectedPlans` (+45 more)
+### Community 319 - "phase-5-query-operators/README.md"
+Cohesion: 0.05
+Nodes (45): Gotchas, `$in` is the workhorse, Interview questions, `$ne` and `$nin` match missing fields, Null, missing, and the recommended alternative, Sorting a mixed field, Type bracketing, restated because it matters, AND is implicit — until it cannot be (+37 more)
 
-### Community 320 - "04-nodejs-runtime-vs-edge-runtime-capabilities-cold-starts-choo.md"
-Cohesion: 0.07
-Nodes (25): Gotchas, Interview questions, It is a warning, not an error, The forcing function you will actually hit first, The migration is a deletion, What is deprecated, precisely, What the documentation refuses to tell you, Gotchas (+17 more)
+### Community 320 - "Gotchas"
+Cohesion: 0.33
+Nodes (6): Assuming a faster renderer fixes streaming, Benchmarking it on an idle server, Deferring the upgrade because "there is nothing in it for us", Expecting it in the Edge runtime, Gotchas, Reading 22% as a page-speed improvement
 
 ### Community 321 - "phase-0-runtime/README.md"
 Cohesion: 0.04
 Nodes (44): 3.14 adds the "already loaded" case, Gotchas, Interview questions, Measuring it: `-X importtime`, Reading it honestly, The two halves of startup, Where the cost usually is, Why anyone cares (+36 more)
 
-### Community 322 - "05-catalog-endpoints.md"
-Cohesion: 0.04
-Nodes (45): Gotchas, Interview questions, The design choices, The implementation, The problem, Using it in the app, Gotchas, Interview questions (+37 more)
+### Community 322 - "04-the-catalog-query.md"
+Cohesion: 0.05
+Nodes (41): Gotchas, Interview questions, The design choices, The implementation, The problem, Using it in the app, Gotchas, Interview questions (+33 more)
 
-### Community 323 - "phase-5-undo-recover/README.md"
-Cohesion: 0.04
-Nodes (45): Gotchas, The clock, The four recoveries, The procedure, Trade-off, What is never recoverable, When the reflog is not enough, Amend, precisely (+37 more)
+### Community 323 - "05-rewriting-your-own-commits.md"
+Cohesion: 0.05
+Nodes (36): 41 bytes, measured, Creating, switching, listing, Deleting, and the check that `-d` performs, Detached HEAD, Gotchas, Interview questions, Naming, Renaming (+28 more)
 
-### Community 324 - "12-projections-and-dtos.md"
+### Community 324 - "12b-projecting-a-collection.md"
 Cohesion: 0.03
-Nodes (63): Gotchas, Interview questions, So do you want the padding setting?, The last partial batch, The two shapes, What this retires, Why the statement shape matters at all, Gotchas (+55 more)
+Nodes (63): Gotchas, Interview questions, `@OrderBy` — ordering at the database, `@OrderColumn` — ordering as data, So which one do you actually pick?, The order you had was an accident, The positional call sites, Gotchas (+55 more)
 
 ### Community 325 - "02-how-it-works.md"
 Cohesion: 0.04
 Nodes (50): Decision 1 · It mutates bytecode, not source, Decision 2 · A coverage pass first, per test, Decision 3 · Mutants are inserted into a running JVM, Decision 4 · Test selection and ordering, Gotchas, Interview questions, Where this connects, Configuring it: the list is replaced, not extended (+42 more)
 
 ### Community 326 - "09-distributed-tracing/README.md"
-Cohesion: 0.05
-Nodes (45): Gotchas, How the two mechanisms compose on one request, Interview questions, Mechanism 1 · in-process, and why it is a `ThreadLocal`, Mechanism 2 · over the wire, and the two verbs, Spring Boot's opt-ins, by name, The definition, and what it hides, Gotchas (+37 more)
+Cohesion: 0.03
+Nodes (70): Attributes, Events, Gotchas, Interview questions, Links, Span, Span context — the only part that travels, Status (+62 more)
 
-### Community 327 - "07-the-proxyts-layer-successor-to-middlewarets-request-intercep.md"
+### Community 327 - "02-routing-and-navigation/01-explanation.md"
 Cohesion: 0.05
-Nodes (40): Gotchas, If you genuinely still need `edge`, Interview questions, 🔴 The constraint that actually replaced it, 🔴 The runtime correction, Where proxy sits in the request pipeline, Where the rest of proxy is taught, Gotchas (+32 more)
+Nodes (44): Chunks, Phase gate, 🔴 What this chapter could not confirm, and says so, Where this connects, Gotchas, If you genuinely still need `edge`, Interview questions, 🔴 The constraint that actually replaced it (+36 more)
 
 ### Community 328 - "04-navigation-mechanics-link-userouter-redirect-notfound.md"
 Cohesion: 0.05
-Nodes (38): Gotchas, `href`, in both forms, Interview questions, Marking the active link, Prefetching through a rewriting proxy, `replace` versus `push`, The prop surface, The recommendation is in the reference, not in a blog post (+30 more)
+Nodes (44): Gotchas, `href`, in both forms, Interview questions, Marking the active link, Prefetching through a rewriting proxy, `replace` versus `push`, The prop surface, The recommendation is in the reference, not in a blog post (+36 more)
 
 ### Community 329 - "05-tanstack-query-rtk-query-in-app-router-when-a-client-cache-s.md"
 Cohesion: 0.04
 Nodes (45): 1 · Interval polling, 2 · Refetch on window focus and on reconnect, 3 · Socket-fed data read through the same key, 4 · Infinite lists that survive navigation away and back, 5 · Mutation queues, retry and offline, 6 · One keyed entry shared across routes without a round trip, Gotchas, Interview questions (+37 more)
 
-### Community 330 - "20d-what-a-test-must-assert.md"
+### Community 330 - "01-the-template-is-a-separate-language.md"
 Cohesion: 0.04
-Nodes (51): 1 · Make the failure loud in a test, 2 · Catch it at build time, Gotchas, Interview questions, The trade-off, Why both, and in that order, Claim one: assert on the database, not on the persistence context, Gotchas (+43 more)
+Nodes (46): Gotchas, Interview questions, `templateUrl` and `template` compile identically, The four stages every template goes through, The language keeps changing, on Angular's schedule, The syntax that is not HTML, The syntax that is not JavaScript either, Globals: you get exactly two (+38 more)
 
-### Community 331 - "02-numbers/README.md"
-Cohesion: 0.05
-Nodes (40): Detecting the special values, Gotchas, Hashing: NaN as a dict key, Interview questions, Membership: `in` tests identity first, Sorting, `min` and `max`, `cmath.isclose(z, 0)` is always `False`, `cmath.isinf` and `cmath.isfinite` are not opposites (+32 more)
+### Community 331 - "14-math-vs-the-operators.md"
+Cohesion: 0.04
+Nodes (44): A `repr` that fails inside a debugger or a test framework, Gotchas, `int(user_input)` on an unbounded field, Interview questions, JSON encoding a huge integer, Squaring a legal value produces an unprintable one, The limit bites on output, The mechanism (+36 more)
 
 ### Community 332 - "01-the-three-sections.md"
 Cohesion: 0.04
@@ -3598,16 +3660,16 @@ Cohesion: 0.04
 Nodes (48): `assertArg`, the alternative to verifying arguments loosely, Counting modes, `description` — a custom failure message, Gotchas, Interview questions, `only()`, State versus interaction, The basic form (+40 more)
 
 ### Community 334 - "17-pubsub-and-signals/README.md"
-Cohesion: 0.03
-Nodes (66): `emit` iterates a **copy**, `emit` returns a boolean, Gotchas, Interview questions, Listeners run synchronously, in order, `Map` of `Set`, not an object of arrays, `once` removes before it calls, The `'error'` convention (+58 more)
+Cohesion: 0.04
+Nodes (44): 1 · `Object.is` before anything else, 2 · Dependencies are re-collected on every run, 3 · `current` is a stack, not a variable, 4 · `finally`, always, 5 · Iterate a copy of the subscriber set, Gotchas, Interview questions, The five lines that are load-bearing (+36 more)
 
 ### Community 335 - "08-floor-division-and-modulo.md"
-Cohesion: 0.05
-Nodes (43): Gotchas, Interview questions, The invariant that forces it, The rule, stated exactly, What every other language does — and why this bites on ports, What floored semantics actually buys you, Ceiling division, done correctly, Floor has the same trap (+35 more)
+Cohesion: 0.04
+Nodes (51): Gotchas, Interview questions, The invariant that forces it, The rule, stated exactly, What every other language does — and why this bites on ports, What floored semantics actually buys you, Ceiling division, done correctly, Floor has the same trap (+43 more)
 
-### Community 336 - "10i-special-values-and-stdlib-interop.md"
-Cohesion: 0.06
-Nodes (32): `%` and `//` do not mean what they mean for `int`, `Decimal` is not in the numeric tower, Gotchas, Interview questions, `math` gives back floats, `max`, `min` and the `NaN` carve-out, `NaN` comparisons follow IEEE 854, not the decimal specification, The special values, and the predicates that detect them (+24 more)
+### Community 336 - "03-debounce-throttle/README.md"
+Cohesion: 0.04
+Nodes (46): Adding the features, Gotchas, Interview questions, The five-line version, The return value problem, The two traps, Both edges, Both share the same lifecycle problems (+38 more)
 
 ### Community 337 - "03-path-aliases/README.md"
 Cohesion: 0.05
@@ -3617,29 +3679,29 @@ Nodes (44): Gotchas, Interview questions, The other direction — `paths` as a w
 Cohesion: 0.05
 Nodes (38): And the declarations follow the same families, Gotchas, Interview questions, The complete list, The unambiguous extensions are self-documenting, What each one emits, Why `.mts` and `.cts` exist at all, Declarations and implementations are separate sets (+30 more)
 
-### Community 339 - "02-pathspecs.md"
-Cohesion: 0.07
-Nodes (25): `--dry-run`: ask before you stage, Errors, and choosing not to stop, `git add .` versus `git add -A`, Gotchas, Interview questions, The four ways to say which files, The mechanism, in one paragraph, Trade-off (+17 more)
+### Community 339 - "03-patch-mode.md"
+Cohesion: 0.06
+Nodes (34): `--dry-run`: ask before you stage, Errors, and choosing not to stop, `git add .` versus `git add -A`, Gotchas, Interview questions, The four ways to say which files, The mechanism, in one paragraph, Trade-off (+26 more)
 
-### Community 340 - "08b-batches-and-bulk-writes.md"
+### Community 340 - "03-standalone-by-default-which-version-changed-what.md"
 Cohesion: 0.05
-Nodes (42): Gotchas, Inside a transaction, every count is `EXECUTE_FAILED` — and that is correct, Interview questions, The message is a summary; the error is on the chain, The return array says three different things, The spec leaves it open; PostgreSQL closes it, Gotchas, Interview questions (+34 more)
+Nodes (44): Gotchas, Interview questions, The file the CLI generates, The signature, What the function actually does, Against the call it replaced, Gotchas, Interview questions (+36 more)
 
 ### Community 341 - "03b-robotsts-and-the-crawl-directives.md"
 Cohesion: 0.04
 Nodes (51): Debugging the insight, Gotchas, Interview questions, Status codes on the not-found route, The routes no marker can rescue, The whole file-based family, and why it outranks your code, Why a file goes dynamic without any dynamic code, Gotchas (+43 more)
 
-### Community 342 - "02-encode-and-decode.md"
-Cohesion: 0.04
-Nodes (54): A non-ASCII character in a bytes literal, `b"x" == "x"` is silently False, Bytes literals, `bytes(n)` where `b"n"` was meant, Forgetting `base64` returns `bytes`, Gotchas, Indexing a `bytes` gives an `int`, Interview questions (+46 more)
+### Community 342 - "04-bytes-and-encoding/README.md"
+Cohesion: 0.03
+Nodes (56): A non-ASCII character in a bytes literal, `b"x" == "x"` is silently False, Bytes literals, `bytes(n)` where `b"n"` was meant, Forgetting `base64` returns `bytes`, Gotchas, Indexing a `bytes` gives an `int`, Interview questions (+48 more)
 
 ### Community 343 - "phase-2-functions/README.md"
 Cohesion: 0.06
 Nodes (38): Chunks, Phase gate, Where this connects, Chunks, Phase gate, Where this connects, Chunks, Phase gate (+30 more)
 
-### Community 344 - "phase-8-build-dependencies/README.md"
+### Community 344 - "07-rate-limiting.md"
 Cohesion: 0.05
-Nodes (41): Configuration avoidance, Gotchas, Inputs, outputs, and why the graph is more than an order, Interview questions, Lifecycle vs task graph, The three stages, and the two that matter, What this model costs you, Anatomy of a `build.gradle.kts` (+33 more)
+Nodes (45): Gotchas, Interview questions, The 429 contract, The distributed counter, The five algorithms, The key: what you are protecting against, The storefront's limits, Where to enforce it, and why "more than one place" (+37 more)
 
 ### Community 345 - "01-test-structure.md"
 Cohesion: 0.04
@@ -3650,44 +3712,44 @@ Cohesion: 0.05
 Nodes (42): Gotchas, Interview questions, Passing server data into Context, Render providers as deep as you can, The `children` slot is the whole trick, 🔴 The RSC constraint: a provider is a Client Component, What Context is for, What Context is not for (+34 more)
 
 ### Community 347 - "css/harness.mjs"
-Cohesion: 0.09
-Nodes (26): baseline(), FEATURE_COUNT, table(), WEB_FEATURES_VERSION, consoleMessages, PROBES, diff, results (+18 more)
+Cohesion: 0.07
+Nodes (35): web-features, baseline(), FEATURE_COUNT, table(), WEB_FEATURES_VERSION, consoleMessages, PROBES, diff (+27 more)
 
-### Community 348 - "05-shell-safety.md"
-Cohesion: 0.06
-Nodes (33): Connecting with `mongosh`, Gotchas, Interview questions, Local development: run a replica set, The anatomy, The options worth knowing, The two forms, Gotchas (+25 more)
+### Community 348 - "04-explain.md"
+Cohesion: 0.05
+Nodes (41): Connecting with `mongosh`, Gotchas, Interview questions, Local development: run a replica set, The anatomy, The options worth knowing, The two forms, Gotchas (+33 more)
 
 ### Community 349 - "01-the-model.md"
-Cohesion: 0.04
-Nodes (50): Abort is cooperative, and that is a real limitation, Do not treat an abort as a failure, Gotchas, Interview questions, Reading the signal: three ways, for three situations, `reason` — what an aborted operation rejects with, `signal.aborted` — the guard before you start, `signal` is accepted far beyond `fetch` (+42 more)
+Cohesion: 0.05
+Nodes (36): Abort is cooperative, and that is a real limitation, Do not treat an abort as a failure, Gotchas, Interview questions, Reading the signal: three ways, for three situations, `reason` — what an aborted operation rejects with, `signal.aborted` — the guard before you start, `signal` is accepted far beyond `fetch` (+28 more)
 
-### Community 350 - "08-the-n-plus-1-problem/19-the-checklist.md"
-Cohesion: 0.04
-Nodes (49): Gotchas, Interview questions, Runtime enhancement, and why it is not your route, The deprecations, read correctly, The failure mode: your mapping is ignored, Turning it on: Gradle, Turning it on: Maven, What the enhancer actually enables (+41 more)
+### Community 350 - "06-count-do-not-read.md"
+Cohesion: 0.02
+Nodes (117): Gotchas, Interview questions, Shape 1 · The lazy collection in a loop, Shape 2 · The eager `@ManyToOne` on a list result, Shape 3 · The mapper that walks the graph, Why the default is EAGER at all, Gotchas, Interview questions (+109 more)
 
 ### Community 351 - "04-thresholds.md"
 Cohesion: 0.04
 Nodes (54): Does Spring Boot manage the version?, Gotchas, Interview questions, `report` needs the classes and the sources, Skipping it without deleting it, The defaults, stated once so you can stop guessing, The minimum that works, What each goal is for (+46 more)
 
 ### Community 352 - "03c-diagnosing-stale-and-unexpectedly-dynamic-routes.md"
-Cohesion: 0.03
-Nodes (58): Gotchas, Interview questions, Reading what the build actually decided, `<Suspense>` is where you declare the shell to stop, The default is prerendering; dynamic is something that happens to it, The exact list of things that read the request, 🔴 The positional rule: the same `fetch` is static or dynamic depending on what ran before it, Two rendering models ship in the same release (+50 more)
+Cohesion: 0.02
+Nodes (90): Gotchas, Interview questions, Reading what the build actually decided, `<Suspense>` is where you declare the shell to stop, The default is prerendering; dynamic is something that happens to it, The exact list of things that read the request, 🔴 The positional rule: the same `fetch` is static or dynamic depending on what ran before it, Two rendering models ship in the same release (+82 more)
 
 ### Community 353 - "Syllabus review — accuracy and fullstack fit"
-Cohesion: 0.07
-Nodes (50): Five money modelling rules, numeric rounds 2.5 away from zero, Part 1 Foundations (proposed), Part 1 Foundations (live syllabus), 300-line page cap, Never invent a number or console output, Authoring prompt for explanation pages, progress.js UI bump (+42 more)
+Cohesion: 0.08
+Nodes (45): 300-line page cap, Never invent a number or console output, Authoring prompt for explanation pages, progress.js UI bump, Two-pass review, VERIFY measurement marker, Audit and history tables, boolean-dates granularity merge (+37 more)
 
-### Community 354 - "02d-property-paths-and-ambiguity.md"
-Cohesion: 0.04
-Nodes (47): A traversal is a join, and by default an inner one, Direct match wins, and that is the whole ambiguity rule, Gotchas, Interview questions, Reserved methods: `findById` ignores all of this, The token is resolved, not looked up, The underscore makes the split explicit, When your property names do contain an underscore (+39 more)
+### Community 354 - "10d-the-two-interceptor-systems.md"
+Cohesion: 0.05
+Nodes (41): Execution — `reduceRight`, and the comment that states the rule, Gotchas, Interview questions, Registration — one `multi` provider per function, in array order, Responses unwind through the same nest, outward, Trace the fold rather than trusting the shorthand, A three-interceptor chain, and what each position buys, Gotchas (+33 more)
 
 ### Community 355 - "04-resolving-conflicts.md"
-Cohesion: 0.10
-Nodes (18): Checking your resolution, Gotchas, Merge tools, Not just merges, Reading the markers, `rerere` — resolve once, reuse, Taking one side wholesale, The procedure (+10 more)
+Cohesion: 0.06
+Nodes (30): A real merge: two parents, Checking what a merge will do, first, Fast-forward: no merge at all, Forcing the choice, Gotchas, Interview questions, Merging with a dirty working tree, The message, and `--no-commit` (+22 more)
 
-### Community 356 - "01-the-map-and-the-four-axes.md"
+### Community 356 - "12-freeze-and-seal/README.md"
 Cohesion: 0.04
-Nodes (57): for...in vs Object.keys, Integer-index enumeration order, Object.keys throws on null and undefined, Object.entries, Object.keys, Object.values, Own enumerable string-keyed, 08.1 · What they include and what they skip (+49 more)
+Nodes (60): for...in vs Object.keys, Integer-index enumeration order, Object.keys throws on null and undefined, Object.entries, Object.keys, Object.values, Own enumerable string-keyed, 08.1 · What they include and what they skip (+52 more)
 
 ### Community 357 - "01-provider-wrapping.md"
 Cohesion: 0.05
@@ -3709,9 +3771,9 @@ Nodes (38): Gotchas, Interview questions, Micro releases have their own release 
 Cohesion: 0.07
 Nodes (28): A float sneaking into a `Fraction` pipeline, Converting at a boundary, deliberately, `Decimal(0.1)` used for money, Decimal → float and Fraction → float both round, Decimal → Fraction is exact; Fraction → Decimal is not, Expecting `Decimal + float` to work because the comparison does, float → Decimal is exact, and that is the problem, float → Fraction is exact in the same way (+20 more)
 
-### Community 362 - "PostgreSQL syllabus"
-Cohesion: 0.04
-Nodes (45): PostgreSQL syllabus, General-purpose, Gotchas, Highly specialized, Interview questions, "The data types are the product" — why that phrasing, The inventory — what the types actually are, The one sentence to keep (+37 more)
+### Community 362 - "03-choosing-the-type.md"
+Cohesion: 0.05
+Nodes (40): General-purpose, Gotchas, Highly specialized, Interview questions, "The data types are the product" — why that phrasing, The inventory — what the types actually are, The one sentence to keep, Trade-off (+32 more)
 
 ### Community 363 - "12-mocks-vs-fakes.md"
 Cohesion: 0.04
@@ -3726,36 +3788,36 @@ Cohesion: 0.05
 Nodes (38): Evaluation order and the shallow merge, Gotchas, Interview questions, Where metadata may be declared, and where it may not, Which export to reach for, 🔴 Do not copy the reference's own `userScalable` example, Gotchas, Interview questions (+30 more)
 
 ### Community 366 - "withTransaction helper"
-Cohesion: 0.05
-Nodes (43): pg Pool vs Client, MongoClient is the pool, 25P02 and SAVEPOINT, Mongo session.withTransaction, pool.query BEGIN bug, One tool owns schema and pool, Migration system four parts, pg_advisory_lock (+35 more)
+Cohesion: 0.08
+Nodes (26): LISTEN / NOTIFY, pg Pool vs Client, MongoClient is the pool, 25P02 and SAVEPOINT, Mongo session.withTransaction, pool.query BEGIN bug, One tool owns schema and pool, Migration system four parts (+18 more)
 
 ### Community 367 - "Phase 1 The type vocabulary"
 Cohesion: 0.08
-Nodes (37): strictNullChecks, Type inference, noUncheckedIndexedAccess, Literal widening let vs const, Array type T[], Excess property checks, Index signature and Record, Object types (+29 more)
+Nodes (38): strictNullChecks, Annotate inputs infer outputs, Type inference, noUncheckedIndexedAccess, Literal widening let vs const, Excess property checks, Index signature and Record, Object types (+30 more)
 
 ### Community 368 - "Git ref"
 Cohesion: 0.05
 Nodes (43): Branch is a moving ref, Branching is a 41-byte file write, Detached HEAD, Git ref, HEAD, packed-refs, reftable backend, Symbolic ref (+35 more)
 
-### Community 369 - "07-direct-and-mapped-buffers.md"
+### Community 369 - "04b-the-direct-memory-doubling.md"
 Cohesion: 0.05
-Nodes (39): Gotchas, Interview questions, The five flags, The sentence that limits the first three, The two flags that are not in the man page, What to configure, in order of value, `-XX:HeapDumpPath` and the second outage, Gotchas (+31 more)
+Nodes (37): Gotchas, Interview questions, The `Cleaner`, and why there is no `free()`, The supported way to free native memory deterministically, Fact 1: closing the channel does not unmap, Fact 2: the mapping is released only by garbage collection, Fact 3: `-XX:MaxDirectMemorySize` does not apply, Fact 4: 2 GB, per mapping (+29 more)
 
 ### Community 370 - "Canonical Express skeleton"
 Cohesion: 0.25
 Nodes (8): Canonical Express skeleton, Error middleware last, Express FAQ 404 guidance, 404 handler, First and last middleware slots, Body parsers early, Express 5 async error forwarding, Four-argument error middleware
 
-### Community 371 - "01-source-to-bytecode.md"
-Cohesion: 0.10
-Nodes (18): Gotchas, Interview questions, `--release`, not `-source`/`-target`, The class file: anatomy and the version stamp, What bytecode is, What comes out: one class file per type, What `javac` deliberately does not do, Gotchas (+10 more)
+### Community 371 - "15-extended-diagnostics.md"
+Cohesion: 0.05
+Nodes (41): 🔴 angular.dev's option list is stale, and here is the authority instead, Gotchas, Interview questions, The compiler validates its configuration before it compiles, Two blocks, one file, two owners, Why `emitDeclarationOnly` is rejected rather than accommodated, Configuration, Gotchas (+33 more)
 
 ### Community 372 - "11-mutation-testing/README.md"
 Cohesion: 0.03
 Nodes (75): Gotchas, Interview questions, Picking up where coverage stopped, The vocabulary, stated once, What the number is a property of, Where this connects, Gotchas, Interview questions (+67 more)
 
 ### Community 373 - "nginx/README.md"
-Cohesion: 0.05
-Nodes (36): What each phase covers, Explanations, Parts, Prerequisites, Reading order, Sources, Tier distribution, Tier legend (+28 more)
+Cohesion: 0.06
+Nodes (29): Explanations, Parts, Prerequisites, Reading order, Sources, Tier distribution, Tier legend, Version facts (+21 more)
 
 ### Community 374 - "03-the-six-counters.md"
 Cohesion: 0.07
@@ -3765,41 +3827,41 @@ Nodes (28): Branches (C1), Classes, Cyclomatic complexity, Gotchas, Instructions
 Cohesion: 0.06
 Nodes (34): Constructors are not covered either, Gotchas, Interview questions, 🔴 The `void` boundary is arbitrary, and it lands in the wrong place, `VOID_METHOD_CALLS` — the side-effect detector, When `verify()` is right, and when it is still a smell, Where this connects, Gotchas (+26 more)
 
-### Community 376 - "14-the-checklist.md"
-Cohesion: 0.06
-Nodes (36): A minimum house schema, Adopt a convention rather than inventing one, Field explosion is a real outage, not a tidiness concern, Gotchas, Interview questions, Namespace your own fields, because the namespace is shared, Renaming: the operation with no safe version, Types are part of the name (+28 more)
+### Community 376 - "06-mdc.md"
+Cohesion: 0.08
+Nodes (24): 1.5.x is legacy and Boot is still on it, Gotchas, Interview questions, The `<if>` element and CVE-2026-13006, The `logback-access` question, The other 2026 fixes worth knowing, What each Boot version actually pins, What to actually do (+16 more)
 
 ### Community 377 - "06-invariants-are-the-criterion.md"
 Cohesion: 0.05
 Nodes (37): Gotchas, In Java: the invariant lives inside the aggregate, and that is what makes it enforceable, Interview questions, The concrete cost of cutting an invariant, The definition, in the words of the source, The rule of thumb has a status, and Vernon says so, What an invariant looks like in an order system, Why this criterion outranks the others (+29 more)
 
-### Community 378 - "10 · Map vs a plain object"
-Cohesion: 0.01
-Nodes (159): Best, average and worst case, Dropping constants and lower-order terms, Gotchas, Interview questions, Space complexity is a separate answer, The definition, in the form you will use, The notations that are not O, What Big-O cannot tell you (+151 more)
+### Community 378 - "phase-14-data-structures/README.md"
+Cohesion: 0.06
+Nodes (33): Gotchas, Interview questions, The table, The two representations, Why `push` is amortised O(1), Why `shift` is O(n), and what to do instead, Array-likes are not arrays, Every copy here is shallow (+25 more)
 
-### Community 379 - "typescript/pages/README.md"
-Cohesion: 0.05
-Nodes (41): Erasable vs non-erasable syntax, ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX, ERR_UNSUPPORTED_NODE_MODULES_TYPE_STRIPPING, Node is not a type checker, tsc --noEmit, Type stripping, require(esm) stable in v24.15.0, tsc --noEmit CI gate (+33 more)
+### Community 379 - "Type stripping"
+Cohesion: 0.18
+Nodes (11): dependencies vs devDependencies vs peerDependencies, Commit the lockfile, Lockfile integrity hash, package-lock.json, npm ci, npm ci --omit=dev, ERR_UNSUPPORTED_NODE_MODULES_TYPE_STRIPPING, Node is not a type checker (+3 more)
 
-### Community 381 - "09c-what-the-lock-does-not-cover.md"
-Cohesion: 0.04
-Nodes (44): Gotchas, Interview questions, Java migrations and callbacks are just beans, The dependency, and the module people forget, The ordering guarantee, which is the actual feature, What the auto-configuration creates, Where the migrations live, Which `DataSource` Flyway uses (+36 more)
+### Community 381 - "05-the-status-enum-four-ways.md"
+Cohesion: 0.06
+Nodes (38): Gotchas, Interview questions, The constraints that carry the spec, The DDL, The problem, Using it in the app, Adding a status is a migration with a rule attached, Four artifacts, one declaration, one test (+30 more)
 
-### Community 382 - "15-read-only.md"
-Cohesion: 0.04
-Nodes (47): Detection 1 · ask the runtime, not the code, Detection 2 · ask whether the bean is proxied at all, Detection 3 · enable the interceptor's own logging, Gotchas, Interview questions, The trade-off, Which one to reach for, Gotchas (+39 more)
+### Community 382 - "11f-animations-are-deprecated.md"
+Cohesion: 0.06
+Nodes (37): Gotchas, Interview questions, What the function does before it looks at your arguments, Gotchas, Interview questions, Its own JSDoc list, and the two things it does not say, The six features, and which are real choices, Gotchas (+29 more)
 
 ### Community 383 - "04b-the-fluent-api.md"
-Cohesion: 0.05
-Nodes (36): Absence is silent, and that is deliberate, Getting a logger, Gotchas, How the two find each other, Interview questions, Levels are resolved by the backend, not the facade, Logback is not "a backend behind SLF4J" — it *is* SLF4J, The split, and why it exists (+28 more)
+Cohesion: 0.07
+Nodes (27): Absence is silent, and that is deliberate, Getting a logger, Gotchas, How the two find each other, Interview questions, Levels are resolved by the backend, not the facade, Logback is not "a backend behind SLF4J" — it *is* SLF4J, The split, and why it exists (+19 more)
 
 ### Community 384 - "14-benchmarking-with-jmh/11-the-checklist.md"
 Cohesion: 0.06
 Nodes (34): Choosing, in one paragraph, Gotchas, Interview questions, The workload with no steady state, Fixtures: `@Setup` and `@TearDown`, Gotchas, Interview questions, The benchmark class is itself a state object (+26 more)
 
 ### Community 385 - "10-combinators/README.md"
-Cohesion: 0.06
-Nodes (35): `all` is the "related tasks" combinator, Empty iterables, Gotchas, Interview questions, MDN's own framing of the choice, `Promise.all` — one failure kills the aggregate, `Promise.allSettled` — failure is a result, The `allSettled` trap: a silent failure (+27 more)
+Cohesion: 0.07
+Nodes (29): `all` is the "related tasks" combinator, Empty iterables, Gotchas, Interview questions, MDN's own framing of the choice, `Promise.all` — one failure kills the aggregate, `Promise.allSettled` — failure is a result, The `allSettled` trap: a silent failure (+21 more)
 
 ### Community 386 - "06-useoptimistic-and-useactionstate-as-framework-native-alterna.md"
 Cohesion: 0.05
@@ -3817,9 +3879,9 @@ Nodes (34): Gotchas, Interview questions, The mental shift: bottom-up, not top-d
 Cohesion: 0.09
 Nodes (40): Docusaurus Social Card, Blue Teal Green Brand Palette, Build Optimized Websites, Content-First Authoring, Docusaurus Dinosaur Mascot, Docusaurus, Focus on Your Content, Green Keyword Highlight (+32 more)
 
-### Community 390 - "06-nan-inf-and-signed-zero.md"
+### Community 390 - "02-numbers/README.md"
 Cohesion: 0.04
-Nodes (48): A `-0` integer literal that does not exist, A literal that is silently an identifier, `float("nan")` accepted from user input, Gotchas, `int(s)` used where `int(s, 0)` was meant, `int(user_input)` accepting non-ASCII digits, Interview questions, Underscores: PEP 515, and where they are illegal (+40 more)
+Nodes (52): Floating-point literals, and where `1e6` bites, Imaginary literals, Integer literals, Interview questions, Interview questions, Underscores: PEP 515, and where they are illegal, What the constructors accept that the parser does not, Gotchas (+44 more)
 
 ### Community 391 - "07-async-scheduled-and-eventual.md"
 Cohesion: 0.03
@@ -3829,9 +3891,9 @@ Nodes (67): Gotchas, Interview questions, What a 429 actually says, Where this c
 Cohesion: 0.06
 Nodes (33): Gotchas, Interview questions, The analogy, and where it stops, Where the slice's edge actually falls, Where this connects, Gotchas, Interview questions, The three assertions, and the one people skip (+25 more)
 
-### Community 393 - "07-logging-done-right/README.md"
-Cohesion: 0.06
-Nodes (33): Gotchas, Interview questions, The decision, What it costs, What the encoder has that Boot's built-in support does not, Wiring it, if you choose it, Gotchas, Interview questions (+25 more)
+### Community 393 - "08b-masking-and-the-audit-trail.md"
+Cohesion: 0.08
+Nodes (24): Gotchas, Interview questions, The decision, What it costs, What the encoder has that Boot's built-in support does not, Wiring it, if you choose it, Gotchas, Interview questions (+16 more)
 
 ### Community 394 - "01-three-tokens-three-roles.md"
 Cohesion: 0.05
@@ -3841,37 +3903,37 @@ Nodes (35): Gotchas, Interview questions, The specification's own definitions, T
 Cohesion: 0.05
 Nodes (35): Gotchas, Interview questions, 🔴 Renames and moves silently destroy this analysis, The commands, The number that matters is a ratio, not a count, What to do with each finding, What you are measuring, When to use it, and when it lies (+27 more)
 
-### Community 396 - "== versus ==="
-Cohesion: 0.09
-Nodes (27): Array.isArray, JavaScript eight types, Primitive versus object, typeof null === object, Primitives copied objects shared, Structural sharing, Four equality algorithms, null == undefined only (+19 more)
+### Community 396 - "Phase 0 How JavaScript runs"
+Cohesion: 0.03
+Nodes (89): fetch is a host API, globalThis, JavaScript host, navigator exists in Node 21+, Capability detection, Four fullstack hosts, Shared web-platform surface, Module request waterfall (+81 more)
 
-### Community 397 - "04-operators-overflow/README.md"
-Cohesion: 0.04
-Nodes (44): Gotchas, Integer division and remainder, Interview questions, Overflow: silent, specified, wrapping, Saying "no wrapping" in code, When wrapping is what you want, Boxed comparison is not numeric comparison, Constant expressions: the compiler's special cases (+36 more)
+### Community 397 - "02-type-erasure.md"
+Cohesion: 0.06
+Nodes (37): Gotchas, Interview questions, The diamond `<>`, The problem generics solve, The vocabulary, What you get for it, Gotchas, Interview questions (+29 more)
 
 ### Community 398 - "delete operator"
-Cohesion: 0.10
-Nodes (22): Computed property names, Conditional key spread idiom, Duplicate keys last wins, __proto__ colon form prototype setter, hasOwnProperty, in for behaviour, hasOwn for data, in operator, Object.hasOwn (+14 more)
+Cohesion: 0.20
+Nodes (11): Computed property names, Conditional key spread idiom, Duplicate keys last wins, delete operator, Rest destructuring instead of delete, V8 HiddenClass and dictionary mode, Property shadowing, Shared mutable prototype state (+3 more)
 
-### Community 399 - "02-not-freezing-the-page.md"
-Cohesion: 0.06
-Nodes (31): Both child collections are live, Gotchas, Interview questions, `parentNode` and `parentElement` differ in exactly one place, When a manual walk is actually right, Why the `Node` family bites: whitespace is a node, 1 · Do not build what nobody will look at, 2 · Break the work into chunks and yield (+23 more)
+### Community 399 - "02-cleanup.md"
+Cohesion: 0.02
+Nodes (80): Compatibility mouse events, Gotchas, Interview questions, `pointercancel` — the one with no mouse equivalent, The events, The properties that mouse events never had, `touch-action` decides who wins the gesture, When to reach for pointer events (+72 more)
 
 ### Community 400 - "10t2-the-foreground-floor-and-draining-without-background-sync.md"
 Cohesion: 0.08
 Nodes (22): Gotchas, Interview questions, The outbox: what a queued mutation record must hold, Where `experimental.useOffline` stops, Why the store is IndexedDB and not `localStorage`, Claiming: one transaction, or two drains send the same record, Enqueue: where the idempotency key is born, Gotchas (+14 more)
 
 ### Community 401 - "08-rewrite-and-return.md"
-Cohesion: 0.05
-Nodes (35): 1. Drop noise from the access log — Phase 10, 2. Never cache a logged-in user's response — Phase 6, 3. Long-lived caching for hashed assets only — Phase 3, 4. Choose a backend by path — Phase 8, 5. WebSocket upgrade — Phase 4, Chaining maps, Five patterns worth stealing, Gotchas (+27 more)
+Cohesion: 0.06
+Nodes (33): Breakage 1 — `add_header` silently drops the inherited set, Breakage 2 — two `if` blocks do not combine, Breakage 3 — `if` with a content-phase directive, Gotchas, Interview questions, The conditions it accepts, The documentation, read carefully, The two things that are safe (+25 more)
 
 ### Community 402 - "1. Under-The-Hood Mechanics"
-Cohesion: 0.03
-Nodes (69): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: One Rendering Strategy for the Entire App, Regardless of Per-Route Needs, ⚠️ Anti-Pattern 2: Adopting Micro-Frontends Without an Actual Multi-Team Independent-Deploy Need, ⚠️ Anti-Pattern 3: Invalidating One Cache Layer and Assuming the Whole Chain Is Now Fresh, Caching Layers: Knowing Which One Actually Needs Invalidating (+61 more)
+Cohesion: 0.05
+Nodes (34): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Eager vs Lazy Remote Loading, `exposes`: What a Remote Offers, ⚙️ Module Federation Fundamentals: Containers, `remotes` & `exposes`, ⚠️ Pitfall 1: Relative `publicPath` on a Remote (+26 more)
 
-### Community 403 - "10b-checklist-data-and-shape.md"
-Cohesion: 0.07
-Nodes (32): Case (a) — the boolean that selects which branch of the *test* runs, Case (b) — the `expected` column that is really "and this one throws", Gotchas, Interview questions, Where this continues, Why the report is the thing you are trading away, Case (c) — rows whose names have to explain *why* they differ, Case (d) — the table that is half `null` (+24 more)
+### Community 403 - "09-usestate-vs-usereducer.md"
+Cohesion: 0.06
+Nodes (34): Against controlled props, Gotchas, Interview questions, The problem, The shape, The three things a caller can do, Why the third argument is the whole pattern, Changing an action later (+26 more)
 
 ### Community 404 - "02-the-four-collectors.md"
 Cohesion: 0.06
@@ -3882,28 +3944,28 @@ Cohesion: 0.06
 Nodes (34): Gotchas, Interview questions, Step 1 — the crude pass, Step 2 — the accurate pass, as a test, Step 3 — turn each accepted case into an allow-list, Step 4 — enforce the module boundary too, not just the transaction, Step 5 — the other signals worth grepping for once, Gotchas (+26 more)
 
 ### Community 406 - "phase-15-algorithm-patterns/README.md"
-Cohesion: 0.02
-Nodes (89): Gotchas, Interview questions, Palindromes and the string cases, The rest of the family, The template, Three-sum — the pattern nested once, Two-sum on a sorted array, Deduplicating a sorted array in place (+81 more)
+Cohesion: 0.05
+Nodes (38): Gotchas, Interview questions, Palindromes and the string cases, The rest of the family, The template, Three-sum — the pattern nested once, Two-sum on a sorted array, Deduplicating a sorted array in place (+30 more)
 
-### Community 407 - "12-network-resilience-and-useoffline.md"
-Cohesion: 0.08
-Nodes (24): A generic `catch` that eats all five sentinels, Auditing for the presence of a check rather than its reachability, Calling one in the root layout, Consequence 1 — do not write `return unauthorized()`, Consequence 2 — `try/catch` suppresses the interrupt, Consequence 3 — it must be called in the render path, Consequence 4 — neither works in the root layout, Gotchas (+16 more)
+### Community 407 - "11b-auth-interrupts-throw.md"
+Cohesion: 0.14
+Nodes (13): A generic `catch` that eats all five sentinels, Auditing for the presence of a check rather than its reachability, Calling one in the root layout, Consequence 1 — do not write `return unauthorized()`, Consequence 2 — `try/catch` suppresses the interrupt, Consequence 3 — it must be called in the render path, Consequence 4 — neither works in the root layout, Gotchas (+5 more)
 
 ### Community 408 - "10j-caching-next-asset-classes-in-a-service-worker.md"
 Cohesion: 0.09
 Nodes (21): A frozen-looking link during a pending action, A pending button with no explanation, Assuming the action is queued durably, Gotchas, Interview questions, Keeping the try/catch around the action, Shipping it to production, Testing (+13 more)
 
 ### Community 409 - "playwright/README.md"
-Cohesion: 0.06
-Nodes (29): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `codegen`: Generating a Starting Point, Not a Finished Test, 🎭 Debugging Tools: Trace Viewer, Inspector, Codegen & UI Mode, ⚠️ Pitfall 1: Committing Raw `codegen` Output Without Refinement, ⚠️ Pitfall 2: Capturing Traces on Every Run, Not Just Failures (+21 more)
+Cohesion: 0.17
+Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Diagnostic Sequence, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Diagnosing a Test That's Flaky in CI But Passes Locally, ⚠️ Pitfall 1: Reaching for `retries` as the Fix Instead of the Band-Aid, ⚠️ Pitfall 2: "Fixing" Flakiness by Adding More `waitForTimeout` Calls, ⚠️ Pitfall 3: Assuming "Passes Locally 50/50 Runs" Proves It's Not the Test's Fault (+1 more)
 
 ### Community 410 - "pages/index.js"
 Cohesion: 0.28
 Nodes (7): Card(), FILTERS, Home(), LAYERS, STATUS_LABEL, statusOf(), VERIFIED_THROUGH
 
 ### Community 411 - "01-what-a-test-is-for.md"
-Cohesion: 0.06
-Nodes (33): A test is a claim, and the name is where the claim lives, Container and test: what the report is actually a tree of, Gotchas, Interview questions, One reason to fail, The one rule that governs pass and fail, Three phases, and the blank line that separates them, Verifying behaviour, not implementation (+25 more)
+Cohesion: 0.05
+Nodes (39): A test is a claim, and the name is where the claim lives, Container and test: what the report is actually a tree of, Gotchas, Interview questions, One reason to fail, The one rule that governs pass and fail, Three phases, and the blank line that separates them, Verifying behaviour, not implementation (+31 more)
 
 ### Community 412 - "10-never-mock-the-class-under-test.md"
 Cohesion: 0.03
@@ -3918,8 +3980,8 @@ Cohesion: 0.06
 Nodes (33): 1. Independent release cadence between teams, 2. A genuinely different technology stack, 3. Hard security or regulatory isolation, 4. Data residency and jurisdictional separation, 5. Independent failure and blast-radius isolation, 6. Independent resource shape and scaling by characteristic, 7. A build and pipeline that stays fast as the codebase and team grow, Gotchas (+25 more)
 
 ### Community 415 - "07-optional/README.md"
-Cohesion: 0.08
-Nodes (25): `get()` and its honest replacement, Gotchas, Interview questions, The identity warning, The positions `Optional` should not occupy, What returning `Optional` actually buys, Where `Optional`s come from, Acting: `ifPresent` and `ifPresentOrElse` (+17 more)
+Cohesion: 0.06
+Nodes (32): Fail at the boundary: `Objects.requireNonNull`, Gotchas, Interview questions, `Map.get` and the null-hostile collections, Never return null when "nothing" has a shape, Nullness annotations and JSpecify, The framing that keeps it honest, `get()` and its honest replacement (+24 more)
 
 ### Community 416 - "14-openapi-springdoc/README.md"
 Cohesion: 0.04
@@ -3933,61 +3995,61 @@ Nodes (8): `getInstalledRelatedApps()` — the one API that answers "is it alrea
 Cohesion: 0.04
 Nodes (46): Applying it to a query — `setEntityGraph`, Applying it to a query — the hint, Applying it to `find()`, Building one programmatically, Gotchas, Interview questions, The two ways to obtain a *named* graph, and why they differ, Gotchas (+38 more)
 
-### Community 419 - "11c-caches-workers-and-orm.md"
+### Community 419 - "06-mutable-default-argument.md"
 Cohesion: 0.02
-Nodes (92): A 2-D grid where every row is the same row, `buf *= 2` used to "double the buffer", `copy.copy(grid)` "fixes" a shared-row grid, `defaultdict(list)` vs `defaultdict([])`, Diagnosing it, `dict.fromkeys` has the identical trap, `dict.fromkeys(keys, [])` used to initialise buckets, Gotchas (+84 more)
+Nodes (77): A default shared by two functions, `def f(ts=datetime.now())` timestamps everything with the import time, `__defaults__` "reset" as a fix, `f()` returns more each time it is called, Gotchas, Interview questions, The gate question, The reference states it and shows the fix (+69 more)
 
-### Community 420 - "10b-what-a-list-costs.md"
-Cohesion: 0.04
-Nodes (44): Choosing, as a decision list, Gotchas, Interview questions, `List` and `Collection` — permitted, and the guide has softened, `Map` — a keyed view of the same rows, `Set` — the default choice, `SortedSet` — sorting in Java, not ordering in SQL, The classification rules, as documented (+36 more)
+### Community 420 - "04-outbox-relay-and-email.md"
+Cohesion: 0.06
+Nodes (33): Gotchas, Interview questions, The design choices, The implementation, The problem, Using it in the app, What to notice, Delivery state (+25 more)
 
 ### Community 421 - "03b-the-honest-counterargument.md"
 Cohesion: 0.06
 Nodes (32): Gotchas, Interview questions, Newman's position, and Tilkov's disagreement with it, The claim, The point where both sides agree, and it is the important one, The Simon Brown inversion, and why it cuts both ways, What Tilkov says microservices are actually for, When starting distributed is the right call (+24 more)
 
-### Community 422 - "01-the-format.md"
+### Community 422 - "04-designing-for-it.md"
 Cohesion: 0.06
-Nodes (31): Gotchas, Interview questions, `java -jar` ignores `-cp`. All of it., `MANIFEST.MF` — the attributes that carry weight, `META-INF/services/` — how `ServiceLoader` finds anything, Multi-release jars, The layout, When the format is not the answer (+23 more)
+Nodes (34): And to arrays of literals, Gotchas, Interview questions, It applies to nested literals too, The behaviour, first, The two diagnostics, and the one worth noticing, What it is *not*, Why the extra rule exists (+26 more)
 
 ### Community 423 - "08-retry-backoff/README.md"
 Cohesion: 0.04
 Nodes (54): Background tabs: the throttling that breaks polling, Cancelling, and the id pool, Gotchas, Interview questions, `setInterval` has two failure modes, and both are silent, The honest list of what replaces a timer, The nesting clamp — where `setTimeout(fn, 0)` stops being 0, The one-sentence model (+46 more)
 
 ### Community 424 - "Array and call spread"
-Cohesion: 0.20
-Nodes (12): Map is directly iterable, for...in, for...of, Never for...in on an array, Plain objects are not iterable, Symbol.iterator, Iterating while modifying, Array and call spread (+4 more)
+Cohesion: 0.06
+Nodes (37): Default sort is UTF-16 string order, String.prototype.at, Intl.Segmenter, Array.prototype.join, split("") splits UTF-16 code units, empty string split is [""], Date.toJSON ISO string, Map and Set stringify as {} (+29 more)
 
-### Community 425 - "05-core-web-vitals-tuning-lcp-inp-cls-auditing-workflows.md"
-Cohesion: 0.04
-Nodes (55): 1 · The module graph, with import chains, 2 · The field, not the lab, 3 · The two config levers the docs name, Attributing a regression to a boundary decision, Gotchas, Interview questions, The worked example the documentation gives, What to actually look at (+47 more)
+### Community 425 - "11-performance-optimization-turbopack/01-explanation.md"
+Cohesion: 0.02
+Nodes (109): 1 · The module graph, with import chains, 2 · The field, not the lab, 3 · The two config levers the docs name, Attributing a regression to a boundary decision, Gotchas, Interview questions, The worked example the documentation gives, What to actually look at (+101 more)
 
 ### Community 426 - "08-the-golden-rule.md"
-Cohesion: 0.06
-Nodes (31): Amend counts too, `--force-with-lease`, not `--force`, Gotchas, The alternative that is always safe, The hole in the lease, and `--force-if-includes`, Trade-off, What actually goes wrong, What "shared" means precisely (+23 more)
+Cohesion: 0.05
+Nodes (35): Amend counts too, `--force-with-lease`, not `--force`, Gotchas, Interview questions, The alternative that is always safe, The hole in the lease, and `--force-if-includes`, Trade-off, What actually goes wrong (+27 more)
 
 ### Community 427 - "02b-the-version-collision.md"
 Cohesion: 0.07
 Nodes (30): Gotchas, Interview questions, What "a separate engine" means, mechanically, What follows from this, Where this connects, Gotchas, Interview questions, What I could verify, and what I could not (+22 more)
 
-### Community 428 - "02-derived-queries.md"
-Cohesion: 0.04
-Nodes (44): Everything is resolved at bootstrap, not at call time, Gotchas, Interview questions, The composition order, written out, The declaration is the whole thing, What the container actually builds, When the verification happens, Gotchas (+36 more)
+### Community 428 - "08-custom-implementations.md"
+Cohesion: 0.08
+Nodes (24): Composition, and what a fragment may override, Gotchas, Interview questions, The implementation is an ordinary bean, The naming rule, The pattern that is now deprecated, The three pieces, When a fragment is the right answer (+16 more)
 
-### Community 429 - "01-the-average-that-lied.md"
-Cohesion: 0.06
-Nodes (31): Gotchas, Interview questions, The failure this topic is designed to prevent, The mean is the wrong aggregation for latency, and the SRE book says why, Three signals, and this topic owns exactly one, What to collect instead, in the SRE book's own words, Where the rest of this topic goes, Why "aggregate on purpose" is a design constraint, not a slogan (+23 more)
+### Community 429 - "04b-cardinality.md"
+Cohesion: 0.05
+Nodes (40): Gotchas, Interview questions, The failure this topic is designed to prevent, The mean is the wrong aggregation for latency, and the SRE book says why, Three signals, and this topic owns exactly one, What to collect instead, in the SRE book's own words, Where the rest of this topic goes, Why "aggregate on purpose" is a design constraint, not a slogan (+32 more)
 
 ### Community 430 - "42-the-cost-of-changing-a-boundary.md"
 Cohesion: 0.05
 Nodes (34): 1. Data migration and parity verification, 2. Consumer contract churn, 3. Observability, alerting, and telemetry rewiring, 4. Infrastructure, deployment pipelines, and security, 5. Conway's Law and team organizational friction, 6. The operational dual-run tax, Gotchas, Interview questions (+26 more)
 
 ### Community 431 - "Strict mode"
-Cohesion: 0.07
-Nodes (33): JavaScript engine, The engine, the runtime and the spec, fetch is a host API, globalThis, JavaScript host, JavaScriptCore, navigator exists in Node 21+, ECMA-262 spec (+25 more)
+Cohesion: 0.09
+Nodes (26): JavaScript engine, The engine, the runtime and the spec, JavaScriptCore, ECMA-262 spec, SpiderMonkey, V8, Hoisting, Parse, compile, execute (+18 more)
 
 ### Community 432 - "Temporal dead zone"
-Cohesion: 0.08
-Nodes (32): Temporal dead zone, Object literal is not a scope, Closure captures the variable not the value, IIFE loop-variable capture, let per-iteration binding, setTimeout is not the loop-bug cause, var-in-a-loop bug, Direct eval (+24 more)
+Cohesion: 0.07
+Nodes (35): Temporal dead zone, Object literal is not a scope, Closure captures the variable not the value, IIFE loop-variable capture, let per-iteration binding, setTimeout is not the loop-bug cause, var-in-a-loop bug, Direct eval (+27 more)
 
 ### Community 433 - "02-making-it-production-worthy.md"
 Cohesion: 0.12
@@ -3995,11 +4057,11 @@ Nodes (15): Collecting it, when you do want everything, Gotchas, Interview quest
 
 ### Community 434 - "02-single-document-atomicity.md"
 Cohesion: 0.06
-Nodes (32): Gotchas, Interview questions, Schema validation exists, and is off by default, "Schemaless" is wrong, and actively harmful, The three levels, The trade, stated plainly, Trade-off, Where this leaves you (+24 more)
+Nodes (31): Gotchas, Interview questions, Schema validation exists, and is off by default, "Schemaless" is wrong, and actively harmful, The three levels, The trade, stated plainly, Trade-off, Where this leaves you (+23 more)
 
-### Community 435 - "09-styling-and-ui/01-explanation.md"
-Cohesion: 0.04
-Nodes (46): External package stylesheets are global CSS wearing a package name, Gotchas, Interview questions, The mechanism: a rename, plus a JavaScript object, What a global stylesheet gives you that a module cannot, Where a global stylesheet may be imported — and why the constraint is phrased as a warning, not a ban, Where the rest of this argument lives, Chunks (+38 more)
+### Community 435 - "01-using-the-built-ins.md"
+Cohesion: 0.06
+Nodes (32): Gotchas, Interview questions, `Map` over `Object`, by default, `Set` for membership, always, Start with the question, not the shape, The table, `WeakMap`, and the one thing it is for, Gotchas (+24 more)
 
 ### Community 436 - "16-typing-non-code-imports/README.md"
 Cohesion: 0.07
@@ -4010,28 +4072,28 @@ Cohesion: 0.06
 Nodes (25): Phase gate, Where this connects, How to read this, Scope — what this syllabus owns, The 16 phases, The six parts, Tier distribution, Version facts (+17 more)
 
 ### Community 438 - "08-metrics-with-micrometer/README.md"
-Cohesion: 0.07
-Nodes (29): `Counter`, `Gauge`, Gotchas, Interview questions, The catalogue, The two rules, verbatim, `Timer`, Gotchas (+21 more)
+Cohesion: 0.05
+Nodes (37): `Counter`, `Gauge`, Gotchas, Interview questions, The catalogue, The two rules, verbatim, `Timer`, Gotchas (+29 more)
 
 ### Community 439 - "01-the-request-that-vanished.md"
 Cohesion: 0.06
 Nodes (31): Gotchas, Interview questions, The honest cost, stated up front, The mechanism, in one paragraph, What the other two signals structurally cannot do, What the reassembled trace answers that nothing else does, Why the ID cannot just be a header you add yourself, 1. `AlwaysOn` and `AlwaysOff` (+23 more)
 
-### Community 440 - "07-what-the-caller-inherits.md"
-Cohesion: 0.06
-Nodes (30): Gotchas, Interview questions, Obligation 5 is the one nobody expects, The obligations do not disappear when you go asynchronous — they change, The rule that follows, The six, What a fully-specified hop looks like, Why they all land on the caller (+22 more)
+### Community 440 - "05c-request-reply.md"
+Cohesion: 0.07
+Nodes (28): Gotchas, Interview questions, Reading it as a design constraint, The arithmetic, so you can do it for your own fan-out, The paper's own example, verbatim, What the paper offers as remedies, and which ones transfer, Why this bites microservices specifically, Gotchas (+20 more)
 
 ### Community 441 - "02-getting-it-right.md"
-Cohesion: 0.06
-Nodes (30): Detect once, at the boundary, Gotchas, Interview questions, The failure modes that make naive checks wrong, The four shapes of a check, What not to detect on, Deciding what to enhance with: Baseline, Gotchas (+22 more)
+Cohesion: 0.05
+Nodes (38): Checking your work, `forced-colors`: stop fighting the user, Gotchas, Interview questions, Other signals a script should respect, `prefers-reduced-motion` in scripted animation, The four preferences worth reading, Theming without a flash (+30 more)
 
 ### Community 442 - "call apply bind"
 Cohesion: 0.08
 Nodes (34): Default this binding, Explicit this binding, Four this binding rules, Implicit this binding, Module top-level this, new this binding, this precedence, Arrow callback this fix (+26 more)
 
-### Community 443 - "02-inheritance.md"
-Cohesion: 0.06
-Nodes (30): 1. Repeat the inherited ones, 2. Put them in an include and include it everywhere, 3. Set them at the highest level that is true, 4. `add_header_inherit merge` — new in 1.29.3, Gotchas, Interview questions, Reading it in a real config, The other half of `add_header`: it skips most responses (+22 more)
+### Community 443 - "01-how-include-works.md"
+Cohesion: 0.05
+Nodes (36): Gotchas, Interview questions, `-t` — does this configuration work?, `-T` — what configuration is *actually* in effect?, The whole command line, Trade-off, `-V` — what can this binary do?, Where the paths come from (+28 more)
 
 ### Community 444 - "Phase 1 — psql, mastered"
 Cohesion: 0.09
@@ -4041,49 +4103,49 @@ Nodes (34): Identity vs serial sequence grant, Column grants are additive, View 
 Cohesion: 0.06
 Nodes (29): Arithmetic is exact, and that is the point, Exact division is what `/` already does, Expecting the denominator you constructed with, `Fraction ** 0.5` comes back a float, Fraction(1.1) is not Fraction(11, 10), `Fraction(1.1)` returns an enormous pair of integers, `Fraction + Decimal` raises, Gotchas (+21 more)
 
-### Community 446 - "10-match-pattern-matching/README.md"
-Cohesion: 0.07
-Nodes (29): Gotchas, Interview questions, The shape of the statement, Where it earns its place, Binding rules that follow from all this, Gotchas, Interview questions, Irrefutable patterns must come last (+21 more)
+### Community 446 - "04-bool-is-an-int.md"
+Cohesion: 0.05
+Nodes (42): `a == 1 & b == 1` does not mean what it looks like, A `DeprecationWarning` on `~flag`, `&` and `|` evaluate both sides, Bitwise operators: when the result stays a `bool`, `f"{flag:>8}"` prints `1` instead of `True`, Formatting: the repr is the only thing that differs, Gotchas, Interview questions (+34 more)
 
 ### Community 447 - "redis/README.md"
-Cohesion: 0.08
-Nodes (23): What each phase will cover, Explanations, Parts, Prerequisites, Reading order, Sources, Tier distribution, Tier legend (+15 more)
+Cohesion: 0.07
+Nodes (27): Coverage, Phase gate, The sentence everything follows from, Where this connects, What each phase will cover, Explanations, Parts, Prerequisites (+19 more)
 
 ### Community 448 - "Phase 0 — How Git stores things"
 Cohesion: 0.11
 Nodes (32): What Git actually is, A commit is a snapshot not a diff, The four object types, The three trees, The index is a real file, Refs and HEAD, The commit graph is a DAG, Config layers and precedence (+24 more)
 
-### Community 449 - "13-jooq/README.md"
+### Community 449 - "08-the-n-plus-1-problem/README.md"
 Cohesion: 0.01
-Nodes (231): Gotchas, Interview questions, The one thing a string-based API can never do, Three parts, and only one of them is a library you call, What a query looks like, What it does *not* catch, What the compiler now catches, Choosing an edition, honestly (+223 more)
+Nodes (230): Gotchas, Interview questions, Pagination and fan-out do not mix, The cost nobody costs: the parent columns, repeated, Gotchas, Interview questions, The one thing a string-based API can never do, Three parts, and only one of them is a library you call (+222 more)
 
-### Community 450 - "02-traces-spans-and-context.md"
+### Community 450 - "12-graceful-shutdown/10-the-checklist.md"
 Cohesion: 0.06
-Nodes (30): Attributes, Events, Gotchas, Interview questions, Links, Span, Span context — the only part that travels, Status (+22 more)
+Nodes (32): Gotchas, Interview questions, Local, Docker and Kubernetes — the same signal, three delivery paths, `SIGKILL` — the one you cannot handle, `SIGTERM` — the polite one, The other signals worth knowing, What the JVM does with it, Gotchas (+24 more)
 
 ### Community 451 - "01-the-benchmark-that-measured-nothing.md"
 Cohesion: 0.07
 Nodes (29): Gotchas, Interview questions, Reason 1 · Nothing reads the result, so there may be no result, Reason 2 · The input is a literal, so the answer is a literal, Reason 3 · The loop is the thing being optimised, not the body, Reason 4 · One JVM, one run, one profile, The benchmark everyone writes, What the number actually was (+21 more)
 
-### Community 452 - "05-function-arguments.md"
-Cohesion: 0.04
-Nodes (44): A function `+=`s a list parameter and the caller's data grows, `a[i] += f(x)` where `f` mutates `a`, `Counter.total += 1` but `Counter.total` stays 0, `d = d | other` where `d |= other` was needed (or vice versa), Gotchas, Interview questions, `list.__iadd__` accepts any iterable; `list.__add__` does not, `+=` on a name in an enclosing scope (+36 more)
+### Community 452 - "06b-composing-validators.md"
+Cohesion: 0.06
+Nodes (32): Choosing the set, Gotchas, Interview questions, Trusted algorithms, Where the default comes from, 1. Declaring a `JwtDecoder` bean the eager way, 2. The Nimbus key-selector recipe, 3. A health check or warm-up that decodes a token at startup (+24 more)
 
 ### Community 453 - "12b-why-the-layering-comes-back.md"
 Cohesion: 0.06
 Nodes (29): Conway's own conclusion, which is not the law, Gotchas, Interview questions, Proving it to an organisation that disagrees, The plan when the org change is not available, Why teams keep choosing it anyway: Conway, not ignorance, Gotchas, Interview questions (+21 more)
 
-### Community 454 - "03e-hard-and-soft-dependencies.md"
-Cohesion: 0.06
-Nodes (29): Gotchas, Interview questions, Kubernetes will happily convert soft into hard for you, The arithmetic, restated, The definition, and why it is not about the code, The warning: fallbacks are not free, and can make things worse, Three ways to soften a dependency, in order of preference, Writing it down: the dependency's own row (+21 more)
+### Community 454 - "phase-12-jvm-production/README.md"
+Cohesion: 0.05
+Nodes (35): Phase gate, Where this connects, Gotchas, Interview questions, Kubernetes will happily convert soft into hard for you, The arithmetic, restated, The definition, and why it is not about the code, The warning: fallbacks are not free, and can make things worse (+27 more)
 
 ### Community 455 - "03b-url-as-state-and-the-static-shell.md"
 Cohesion: 0.06
 Nodes (29): Client navigations are validated separately from direct visits, Gotchas, Interview questions, Layouts do not get `searchParams`, and this is deliberate, `Suspense` is a seam, not a switch, The mechanism: what a static shell is and what excludes you from it, Where you await is the whole game, Choosing the cache key (+21 more)
 
-### Community 456 - "phase-0-process-model/README.md"
-Cohesion: 0.06
-Nodes (29): Connection processing methods, Gotchas, Interview questions, The arithmetic, and why it lies, The real ceiling is file descriptors, The tuning knobs you will be told to set, and whether to, The two numbers, Trade-off (+21 more)
+### Community 456 - "05-reload-and-upgrade.md"
+Cohesion: 0.11
+Nodes (17): Finding the master, Gotchas, Interview questions, Log rotation and `USR1`, Prefer the service manager, The four words, The full signal table, Trade-off (+9 more)
 
 ### Community 457 - "CommonJS"
 Cohesion: 0.18
@@ -4094,40 +4156,40 @@ Cohesion: 0.08
 Nodes (32): SHA-1 and SHA-256 do not interoperate, filter-repo and LFS absent, Blob header plus content hash, Divergent pull requires reconcile, Empty blob hash e69de29, Empty author identity failure, Git 2.55.0 environment probe, git restore (+24 more)
 
 ### Community 459 - "git/README.md"
-Cohesion: 0.07
-Nodes (27): Phases — ✅ ALL 52 TOPICS COMPLETE, Progress, The sandbox, Two things that are absent on this machine, Example policy, Explanations, Open questions — recorded, not silently decided, Parts (+19 more)
+Cohesion: 0.08
+Nodes (23): Example policy, Explanations, Open questions — recorded, not silently decided, Parts, Prerequisites, Progress, Scope — what this syllabus owns, Tier distribution (+15 more)
 
-### Community 460 - "11-module-system.md"
+### Community 460 - "02-making-an-error-recognisable.md"
 Cohesion: 0.07
-Nodes (27): Gotchas, Interview questions, The half that didn't: application adoption, The half that worked: the JDK itself, What a module is, Where JPMS reaches you anyway, `${...}` belongs to two systems, Gotchas (+19 more)
+Nodes (28): 1. `Error.isError()` — the realm-safe standard answer, 2. `util.types.isNativeError()` — the Node-specific equivalent, 3. Structural checks — the fallback, and its honest cost, Gotchas, Interview questions, Match on `code`, and mean it, Never widen it back, The three guards, in order of robustness (+20 more)
 
 ### Community 461 - "12-caching/09-the-checklist.md"
 Cohesion: 0.07
 Nodes (27): Gotchas, Interview questions, The three TTL controls are not interchangeable, TTL is not invalidation, TTL per cache, `clear()` is `KEYS` by default, `evict` may be deferred; `evictIfPresent` may not be, Gotchas (+19 more)
 
-### Community 462 - "02-exactness-any-and-choosing-a-tool.md"
-Cohesion: 0.05
-Nodes (37): Gotchas, Interview questions, The two directions, and only one of them is load-bearing, `@ts-expect-error` as an assertion, Where they earn their place, 🔴 Which means: a type test outside the program is not a test, 🔴 `any` defeats the naive version of both, Choosing a tool (+29 more)
+### Community 462 - "08-suppression-directives/README.md"
+Cohesion: 0.02
+Nodes (89): Phase gate, Where this connects, Phase gate, Where this connects, Gotchas, Interview questions, `satisfies` is the one that checks, 🔴 The compiler has no opinion about `!` (+81 more)
 
-### Community 463 - "05b-when-the-code-cache-fills.md"
-Cohesion: 0.13
-Nodes (13): Gotchas, Interview questions, "Once compilation is off it never comes back" is false, Sweeping is GC-driven now, and the man page has not caught up, The flag the message names is a trap, The message names the heap, not the cache, Fixing it, Gotchas (+5 more)
+### Community 463 - "04c-the-classloader-leak.md"
+Cohesion: 0.06
+Nodes (28): Elastic metaspace, and the flag that outlived its JEP, Gotchas, Interview questions, ⚠️ `UseCompressedClassPointers` is deprecated in JDK 25 and obsolete in 26, What to actually set, `-XX:CompressedClassSpaceSize` — 1 GB, and not in the man page, `-XX:MaxMetaspaceSize` — unlimited by default, `-XX:MetaspaceSize` — a GC trigger, not a reservation (+20 more)
 
 ### Community 464 - "05-structured-json.md"
-Cohesion: 0.07
-Nodes (28): Gotchas, Interview questions, One event, one object, The argument, in four parts, The readability objection, and the actual answer, What a pattern layout is actually doing, What the ECS formatter emits, read from its source, Where the boundary with metrics is (+20 more)
+Cohesion: 0.08
+Nodes (22): Gotchas, Interview questions, One event, one object, The argument, in four parts, The readability objection, and the actual answer, What a pattern layout is actually doing, What the ECS formatter emits, read from its source, Where the boundary with metrics is (+14 more)
 
-### Community 465 - "java/pages/phase-1-language-core/README.md"
-Cohesion: 0.02
-Nodes (85): Constant folding — why `"a" + "b" == "ab"`, Gotchas, Interview questions, The string pool, `==` vs `equals` — the bug that passes its tests, Why immutability, actually, `format` and `formatted`, Gotchas (+77 more)
+### Community 465 - "01-immutability-pool-equality.md"
+Cohesion: 0.07
+Nodes (27): Constant folding — why `"a" + "b" == "ab"`, Gotchas, Interview questions, The string pool, `==` vs `equals` — the bug that passes its tests, Why immutability, actually, `format` and `formatted`, Gotchas (+19 more)
 
 ### Community 466 - "07.1 · How a method loses this"
-Cohesion: 0.11
-Nodes (29): arguments object, Arity is never enforced, Destructured parameters, Non-simple parameter list, Rest parameters, Positional plus options-object signature, Sloppy-mode arguments aliasing, Chunks (+21 more)
+Cohesion: 0.10
+Nodes (31): arguments object, Arity is never enforced, Destructured parameters, Non-simple parameter list, Rest parameters, Positional plus options-object signature, Sloppy-mode arguments aliasing, Chunks (+23 more)
 
 ### Community 467 - "Run-to-completion"
-Cohesion: 0.05
-Nodes (54): await does not block the thread, Concurrency vs parallelism, MDN JavaScript execution model, Never-blocking exceptions, Run-to-completion, Single-threaded JavaScript, Worker as separate agent, Call stack (+46 more)
+Cohesion: 0.04
+Nodes (63): await does not block the thread, Concurrency vs parallelism, MDN JavaScript execution model, Never-blocking exceptions, Run-to-completion, Single-threaded JavaScript, Worker as separate agent, Call stack (+55 more)
 
 ### Community 468 - "mongodb/README.md"
 Cohesion: 0.07
@@ -4142,12 +4204,12 @@ Cohesion: 0.08
 Nodes (32): console.log can block the event loop, Log levels, Minimum log schema, Structured logging, Logs, traces, and metrics, pino child loggers, Do not pretty-print in production, pino (+24 more)
 
 ### Community 471 - "Phase 4 — Filesystem, paths, and URLs"
-Cohesion: 0.08
-Nodes (39): The three flavors, join vs resolve is a security boundary, node:path, path.join, path.resolve, Root plus separator containment check, Decode user paths once before validating, Store files under generated IDs (+31 more)
+Cohesion: 0.10
+Nodes (31): The three flavors, join vs resolve is a security boundary, node:path, path.join, path.resolve, Root plus separator containment check, Decode user paths once before validating, Store files under generated IDs (+23 more)
 
 ### Community 472 - "Point-in-time recovery"
-Cohesion: 0.04
-Nodes (47): Expand and contract, Migrations as a gated deploy step, lock_timeout, ACCESS EXCLUSIVE, DDL lock queue convoy, lock_timeout on migrations, Metadata-only vs table-rewrite DDL, ADD CONSTRAINT NOT VALID then VALIDATE (+39 more)
+Cohesion: 0.05
+Nodes (40): Expand and contract, Migrations as a gated deploy step, Dead tuples vs autovacuum pace, VACUUM silent skip without MAINTAIN, Defensible production alert set, Disk space and WAL fill, Oldest transaction age as leading indicator, log_lock_waits (+32 more)
 
 ### Community 473 - "Fiber"
 Cohesion: 0.18
@@ -4169,29 +4231,29 @@ Nodes (28): Concurrency: the second thing full replacement destroys, Gotchas, In
 Cohesion: 0.07
 Nodes (25): Explanations, Parts, Prerequisites, Reading order, Sources, Tier distribution, Tier legend, Version facts (+17 more)
 
-### Community 478 - "03-server-action-error-contracts-returning-typed-errors-vs.md"
-Cohesion: 0.05
-Nodes (36): Expected errors are return values, Gotchas, Interview questions, Returning a database record straight out of the action, Swallowing a database outage in a result object, Throwing a validation error to get the boundary to show a message, What throwing an expected error actually costs, Gotchas (+28 more)
+### Community 478 - "Gotchas"
+Cohesion: 0.40
+Nodes (5): A `try`/`catch` in the action that swallows the redirect, Gotchas, `revalidatePath` written after `redirect`, `revalidateTag` used where `updateTag` was meant, The action succeeds and the list does not update
 
 ### Community 479 - "01-waiting-for-updates.md"
 Cohesion: 0.06
-Nodes (29): 1. Under-The-Hood Mechanics, ★ 1. Why does `userEvent` recommend calling `userEvent.setup()` before rendering the component?, 2. Real-World Engineering Scenario, ★ 2. What happens under the hood when `user.type(input, 'Hello')` executes vs `fireEvent.change()`?, 3. Production-Grade Code Example, 3. When is `fireEvent` still legitimate to use instead of `userEvent`?, 4. Gotchas & Senior Pitfalls, 4. How does `user.keyboard()` handle special keys and key combinations? (+21 more)
+Nodes (29): 1. Under-The-Hood Mechanics, ★ 1. Why does `test('name', () => { fetchUser().then(res => expect(res).toBeDefined()); })` cause false passes?, 2. Real-World Engineering Scenario, ★ 2. What is the role of `expect.hasAssertions()` and `expect.assertions(N)`?, 3. Production-Grade Code Example, 3. What is the execution difference between macrotasks (`setTimeout`) and microtasks (`Promise.resolve`) in Jest?, 4. Gotchas & Senior Pitfalls, 4. What happens if you mix `async () => {}` syntax with the `done` callback argument? (+21 more)
 
 ### Community 480 - "10b-refresh-against-the-alternatives.md"
 Cohesion: 0.07
 Nodes (27): "Cached by the framework" is three timers, not one state, Client state is defined by lifetime and ownership, not by which component renders it, Gotchas, Interview questions, Server state is not "the data in your database", The mirror test, The table everyone copies, and the axis it picks, 🔴 Edge 1 — the optimistic value expires onto whatever the server last sent (+19 more)
 
-### Community 481 - "01-micro-frontends-and-multi-zone-architectures-for-decoupled-t.md"
-Cohesion: 0.05
-Nodes (36): `assetPrefix` and `basePath` solve different problems and are not interchangeable, Gotchas, Interview questions, Multi-zones is not Module Federation, and the distinction is architectural, The anatomy of a zone: an ordinary app plus one config line, The other half of `assetPrefix`: it is primarily a CDN option, What the documentation actually claims, verbatim, Why a zone needs `assetPrefix` at all — the failure it prevents (+28 more)
+### Community 481 - "03e-non-root-and-filesystem.md"
+Cohesion: 0.07
+Nodes (27): Gotchas, Interview questions, The `tools` jar mode, What you actually run afterwards, Why this maps onto the image cache, Everything the JVM writes, and where it writes it by default, Gotchas, Interview questions (+19 more)
 
 ### Community 482 - "09-annotations-at-runtime/README.md"
 Cohesion: 0.07
 Nodes (27): 1. `Format.VALUE` (Format 1), 2. `Format.VALUE_WITH_FAKE_GLOBALS` (Format 2), 3. `Format.FORWARDREF` (Format 3), 4. `Format.STRING` (Format 4), Backward compatibility with `__annotations__`, Gotchas, Interview questions, Removing `from __future__ import annotations` changes runtime semantics (+19 more)
 
 ### Community 483 - "State is a snapshot"
-Cohesion: 0.09
-Nodes (32): Effect model vs lifecycle moments, Class lifecycle to hook mapping, UNSAFE_ class lifecycles, Mental substitution of snapshot values, State is a snapshot, Stale closure, Updaters must be pure, Three cases where updater form is required (+24 more)
+Cohesion: 0.22
+Nodes (15): Mental substitution of snapshot values, State is a snapshot, Stale closure, Local mutation exception, Shallow spread trap, Two mutation failures, ES2023 copying array methods, Immer (+7 more)
 
 ### Community 484 - "3. Production-Grade Examples"
 Cohesion: 0.06
@@ -4201,25 +4263,25 @@ Nodes (31): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3.1
 Cohesion: 0.07
 Nodes (19): a, b, bound, boundToExplicit, bp, collector, counter, madeWithNew (+11 more)
 
-### Community 486 - "04-methodsource.md"
-Cohesion: 0.10
-Nodes (19): Gotchas, Interview questions, Naming the factory, The shape, The `static` requirement and its one escape, Gotchas, Interview questions, Repeatable, and one 6.0 note (+11 more)
+### Community 486 - "phase-13-complexity/README.md"
+Cohesion: 0.07
+Nodes (26): Format specifiers, Gotchas, Interview questions, Logging in production, The methods worth knowing, and what each is for, The trap in logging objects, Chunks, Phase gate (+18 more)
 
 ### Community 487 - "12-the-cost.md"
 Cohesion: 0.07
 Nodes (26): `@BeforeTry` on a field, which is the feature nobody knows about, Gotchas, `@Group` and `@PerProperty`, Interview questions, The six annotations, and the two levels they attach to, The tree, Where this connects, Gotchas (+18 more)
 
 ### Community 488 - "05-spring-boot-aot.md"
-Cohesion: 0.07
-Nodes (27): Gotchas, Interview questions, Restriction 1 — the profile is baked in and self-activating, Restriction 2 — `@ConditionalOnProperty` stops responding, Restriction 3 — the classpath is fixed, Restriction 4 — programmatic registration that AOT cannot see, The documented restrictions, in full, The one sentence everything follows from (+19 more)
+Cohesion: 0.06
+Nodes (32): Bean *definitions*, not bean *instances*, Gotchas, Interview questions, What comes next, What it is, What the generated code looks like, An honest note on scope, Gotchas (+24 more)
 
 ### Community 489 - "04c-secrets-and-the-snapshot.md"
 Cohesion: 0.07
 Nodes (26): Configuration and environment, Gotchas, Identity moves, Interview questions, Randomness and identifiers, Time is the big one, Consequences for where an image may live, Design responses (+18 more)
 
-### Community 490 - "04b-client-authentication.md"
-Cohesion: 0.13
-Nodes (13): Gotchas, Interview questions, The five checks the server performs, The request, The response, What the client must do with the response, Gotchas, Interview questions (+5 more)
+### Community 490 - "03-the-authorization-code.md"
+Cohesion: 0.07
+Nodes (26): Codes are opaque — including to you, Gotchas, Interview questions, The four properties, quoted, What the response looks like, What the server stores alongside it, Where the code physically goes, Gotchas (+18 more)
 
 ### Community 491 - "09b-the-bill-in-full.md"
 Cohesion: 0.07
@@ -4229,33 +4291,33 @@ Nodes (26): Gotchas, Interview questions, The part that is a product decision, n
 Cohesion: 0.07
 Nodes (27): Gotchas, Interview questions, Proposal A — extract reservations, Proposal B — split by warehouse region, The gate, The gate first, The important part of that decision, The nine remaining forces (+19 more)
 
-### Community 493 - "05-the-five-interaction-styles.md"
-Cohesion: 0.07
-Nodes (26): A note on the vocabulary people actually use, Gotchas, Interview questions, RPI is one cell of the grid, and its page says so, The five, verbatim, The grid, The single question that classifies any interaction, Where each style is implemented, and who owns it here (+18 more)
+### Community 493 - "06c-the-read-that-could-have-been-a-copy.md"
+Cohesion: 0.11
+Nodes (16): Fowler's definition, verbatim, Gotchas, Interview questions, The control that makes it safe: reconciliation, The price, itemised honestly, What a state-carrying event looks like, What leaves the equation, Where the line sits against API composition (+8 more)
 
-### Community 494 - "Phase 0 How JavaScript runs"
-Cohesion: 0.10
-Nodes (25): Module request waterfall, nomodule two-bundle pattern, script async, script defer, script type=module, Console API beyond log, DevTools lazy object expansion, node --inspect-brk (+17 more)
-
-### Community 495 - "03-composition-patterns-server-to-client-boundaries.md"
+### Community 494 - "09-lru-cache/README.md"
 Cohesion: 0.07
-Nodes (27): Gotchas, Interview questions, Pattern 1 — children as a slot, Pattern 2 — named slots, for more than one region, Pattern 3 — the provider, which looks like an exception and is not, Pattern 4 — interleaving, which is the pattern people believe is impossible, The rule, restated as a decision, The serializable-props rule, concretely (+19 more)
+Nodes (27): Gotchas, Interview questions, The linked-list version, for when the question wants it, The three decisions the code makes, The twenty-line version, Which to write, Why it is O(1), Before writing one at all (+19 more)
+
+### Community 495 - "05-unused-imports-and-the-compiler-diagnostics.md"
+Cohesion: 0.07
+Nodes (25): Gotchas, How the scope is actually computed, Interview questions, The declaration, and the three things it already tells you, An imported NgModule gives you its `exports`, never its `declarations`, Gotchas, Interview questions, The five kinds of entry, in one worked example (+17 more)
 
 ### Community 496 - "08-modules.md"
-Cohesion: 0.07
-Nodes (27): Dynamic: loaded at run time, Everything is a module, Gotchas, Interview questions, Static: compiled in at build time, Third-party modules, Trade-off, "Unknown directive" — the decision tree (+19 more)
+Cohesion: 0.11
+Nodes (16): Dynamic: loaded at run time, Everything is a module, Gotchas, Interview questions, Static: compiled in at build time, Third-party modules, Trade-off, "Unknown directive" — the decision tree (+8 more)
 
-### Community 497 - "06-map/01-the-mechanism.md"
+### Community 497 - "phase-1-configuration-language/README.md"
 Cohesion: 0.07
 Nodes (27): Gotchas, Interview questions, The `Context:` line is the specification, The context tree, Trade-off, Two kinds of directive, `upstream` and `map` are not inside `server`, Where directives actually take effect (+19 more)
 
-### Community 498 - "phase-2-server-and-location/README.md"
-Cohesion: 0.07
-Nodes (26): A worked example, Gotchas, Interview questions, `listen` forms worth knowing, Nothing here looks at the path, Regex server names, and their captures, Sizing the hash, Stage 1 — the socket (+18 more)
+### Community 498 - "01-choosing-the-server.md"
+Cohesion: 0.09
+Nodes (21): A worked example, Gotchas, Interview questions, `listen` forms worth knowing, Nothing here looks at the path, Regex server names, and their captures, Sizing the hash, Stage 1 — the socket (+13 more)
 
 ### Community 499 - "Phase 1 — JSX and what a component returns"
-Cohesion: 0.02
-Nodes (118): JSX automatic runtime, $$typeof / react.transitional.element, key is not a prop, React element, React keys, ref is an ordinary prop, React.createElement, JSX is a function call (+110 more)
+Cohesion: 0.03
+Nodes (111): JSX automatic runtime, $$typeof / react.transitional.element, key is not a prop, React element, React keys, ref is an ordinary prop, React.createElement, JSX is a function call (+103 more)
 
 ### Community 500 - "react/README.md"
 Cohesion: 0.17
@@ -4281,25 +4343,25 @@ Nodes (26): Gotchas, Interview questions, Read the category, not just the descri
 Cohesion: 0.07
 Nodes (26): Always use the shorthand, `flex: none` versus `flex: 0 0 auto`, Gotchas, Interview questions, The expansion table, The four you actually need, Trade-off, Why `flex: 1` and `width` conflict (+18 more)
 
-### Community 506 - "04-git-diff.md"
-Cohesion: 0.04
-Nodes (53): Binary files and generated output, Comparing commits and branches, Diffing things that are not commits, Gotchas, Limiting the diff, Reading a unified diff, The options that make diffs readable, The three you use every day (+45 more)
+### Community 506 - "11-git-stash.md"
+Cohesion: 0.05
+Nodes (39): Gotchas, Interview questions, Stopping tracking: `git rm --cached`, The part `rm --cached` does not fix, The right shape for configuration, The rule, and why it works that way, The two flags that look like the answer and are not, Trade-off (+31 more)
 
-### Community 507 - "phase-2-branching-merging/README.md"
-Cohesion: 0.04
-Nodes (48): 41 bytes, measured, Creating, switching, listing, Deleting, and the check that `-d` performs, Detached HEAD, Gotchas, Naming, Renaming, Trade-off (+40 more)
+### Community 507 - "05-git-rebase.md"
+Cohesion: 0.06
+Nodes (29): Gotchas, Interview questions, `--onto`, in the one situation it is needed, The same conflict, several times, Trade-off, Undoing a rebase, `--update-refs`, for stacked branches, What it does (+21 more)
 
-### Community 508 - "08c-parameterized-classes.md"
+### Community 508 - "06-startup-and-error-listener-providers.md"
 Cohesion: 0.08
-Nodes (25): Gotchas, Interview questions, It is a class template, with the consequences that implies, 🔴 Package and status, checked against the javadoc, The shape, What it costs, Gotchas, Interview questions (+17 more)
+Nodes (25): Gotchas, Interview questions, `provideAppInitializer` — four lines against a deprecated token, `runInitializers()`, verbatim — the twenty lines this chunk exists for, The three, side by side, Array position is start order, and that is all it is, Gotchas, Interview questions (+17 more)
 
 ### Community 509 - "11-where-it-does-not-pay.md"
 Cohesion: 0.07
 Nodes (26): 1 · Parsers, serialisers and anything with a round trip, 2 · Money, 3 · Dates, times and anything with a zone, 4 · Encoding, escaping and injection boundaries, Gotchas, Interview questions, The test: can you finish the sentence?, 5 · Comparators and ordering (+18 more)
 
-### Community 510 - "04d-the-three-places-the-gate-cannot-hold.md"
-Cohesion: 0.06
-Nodes (31): CSRF: an Origin check, not a token, Gotchas, Idempotency: the framework promises nothing, Interview questions, Rate limiting is yours, Sequential dispatch is not a rate limit, The 1MB cap and the bytes you did not count, Where this is also covered (+23 more)
+### Community 510 - "08g-tracing-and-the-experimental-end.md"
+Cohesion: 0.08
+Nodes (25): Every `ExtraOptions` field, and the `with*` it became, Gotchas, Interview questions, 🔴 `provideRouter` validates nothing, and that is deliberate, The complete inventory at v22.1.5, The record is three lines, Gotchas, Interview questions (+17 more)
 
 ### Community 511 - "05b-wiring-json-in-spring-boot.md"
 Cohesion: 0.07
@@ -4321,45 +4383,45 @@ Nodes (25): Caching is not optional, Gotchas, Interview questions, 🔴 No refre
 Cohesion: 0.07
 Nodes (26): Gotchas, Interview questions, Reading your own org chart as an architecture diagram, The consequence for the split decision, The failure mode: an architecture at odds with the communication structure, The law, in Conway's own words, The reason it holds: communication paths grow quadratically, Where this leaves Spring Modulith (+18 more)
 
-### Community 516 - "11-javac-flags/README.md"
-Cohesion: 0.08
-Nodes (24): `--enable-preview` — and why it never ships, Gotchas, How the build tools spell it, Interview questions, The failure `-source`/`-target` produces, concretely, What each option actually controls, `-g`: how readable your production stack trace is, Gotchas (+16 more)
+### Community 516 - "02-supply-chain-and-toolchains.md"
+Cohesion: 0.03
+Nodes (54): Generating and upgrading one, Gotchas, Gradle's files, Interview questions, Maven's files, The Maven distribution types, and why `only-script` matters, The three pieces, What this means for CI (+46 more)
 
-### Community 517 - "18-threads-and-async.md"
-Cohesion: 0.06
-Nodes (29): A JTA aside, Four PostgreSQL settings, and what each one actually kills, Gotchas, Interview questions, The trade-off, What the connection pool contributes, and what it does not, Which to reach for, `@Async` and `@Transactional` together (+21 more)
+### Community 517 - "03-the-provider-array/README.md"
+Cohesion: 0.08
+Nodes (24): Gotchas, `HttpClient` is root-provided, and the whole stack under it is too, Interview questions, So what does the call still buy?, Gotchas, `HttpFeatureKind` is a plain enum, and that is not nothing, Interview questions, Six things readable directly out of that body (+16 more)
 
 ### Community 518 - "01-a11y-assertions.md"
 Cohesion: 0.07
 Nodes (27): ★ 1. How does `jest-axe` work under the hood, and what are its limitations?, 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, ★ 2. What is the difference between `toHaveAttribute('aria-label', 'x')` and `toHaveAccessibleName('x')`?, 3. How should SVG icons inside buttons be configured for accessibility?, 3. Production-Grade Code Example, 4. Gotchas & Senior Pitfalls, 4. What are `aria-live` regions and how do you test them in RTL? (+19 more)
 
 ### Community 519 - "04-variables.md"
-Cohesion: 0.07
-Nodes (25): Evaluated when used, not when declared, Gotchas, `$host` is not `$http_host`, and the difference is security, Interview questions, `set`, and why it is not a variable assignment, The ones you will actually use, The pattern families, The three URI variables (+17 more)
+Cohesion: 0.10
+Nodes (18): Evaluated when used, not when declared, Gotchas, `$host` is not `$http_host`, and the difference is security, Interview questions, `set`, and why it is not a variable assignment, The ones you will actually use, The pattern families, The three URI variables (+10 more)
 
-### Community 520 - "05-assertthrows.md"
-Cohesion: 0.06
-Nodes (29): `assertDoesNotThrow` — and when it earns its place, Asserting on the cause, `assertThrows` — the type or any subtype, `assertThrowsExactly` — this type and no other, `Executable` and `ThrowingSupplier`, Gotchas, Interview questions, The three shapes that are wrong (+21 more)
+### Community 520 - "02-reading-a-bound.md"
+Cohesion: 0.07
+Nodes (26): Gotchas, Interview questions, Recursion: count the calls, The costs JavaScript hides, The mechanical rules, Two JavaScript-specific surprises, Worked example, Gotchas (+18 more)
 
 ### Community 521 - "02-identity-and-id.md"
 Cohesion: 0.07
 Nodes (26): A cache returns the wrong entry for `True` and `1`, A dictionary silently loses an entry, A hand-rolled `type(x)` dispatch table misses subclasses entirely, A `match` statement's `bool` arm never runs, A range check passes for a boolean, A validator accepts `True` where it wanted a number, Gotchas, Interview questions (+18 more)
 
-### Community 522 - "14-rendertostaticmarkup.md"
-Cohesion: 0.07
-Nodes (25): Gotchas, Interview questions, `onCaughtError` — the boundary worked, `onRecoverableError` — React fixed it, and you still want to know, `onUncaughtError` — nothing caught it, The default, and what overriding it means, What each one receives, Why these exist at all (+17 more)
+### Community 522 - "phase-11-ssr-hydration/README.md"
+Cohesion: 0.06
+Nodes (30): Gotchas, Interview questions, `onCaughtError` — the boundary worked, `onRecoverableError` — React fixed it, and you still want to know, `onUncaughtError` — nothing caught it, The default, and what overriding it means, What each one receives, Why these exist at all (+22 more)
 
 ### Community 523 - "06-shrinking.md"
 Cohesion: 0.07
 Nodes (31): Gotchas, Interview questions, Reading the failure report, Where this connects, Gotchas, Integrated shrinking — the thing jqwik does differently, Interview questions, There is often no single smallest example (+23 more)
 
-### Community 524 - "04b-cardinality.md"
-Cohesion: 0.07
-Nodes (25): Gotchas, How you find out, in rough order of how much it has already cost, Interview questions, Micrometer names the sneaky case, The catalogue of unbounded tags, The multiplication, The version-string trap, in full, What you can and cannot undo (+17 more)
+### Community 524 - "07-timing-your-own-code.md"
+Cohesion: 0.11
+Nodes (16): Choosing, Form 1 · `record` around a block, Form 2 · `Timer.Sample`, and why it is the interesting one, Form 3 · `wrap`, and the queue-time question, Gotchas, Interview questions, The annotation family, When the operation outlives a scrape (+8 more)
 
-### Community 525 - "08-percentiles.md"
-Cohesion: 0.07
-Nodes (25): Do not configure them in a library, Do not enable both, Gotchas, Interview questions, The SRE book reaches the same conclusion from the other end, The two options, and the sentence that decides between them, What each option looks like, What the `max` statistic is, and is not (+17 more)
+### Community 525 - "08b-histograms-and-buckets.md"
+Cohesion: 0.11
+Nodes (16): Classic versus native, Gotchas, Interview questions, The budget, The number, from the documentation, Three levers, one page, What a bucket series actually is, What this does not include (+8 more)
 
 ### Community 526 - "12b-detectviolations-and-adoption.md"
 Cohesion: 0.07
@@ -4369,25 +4431,25 @@ Nodes (25): Excluding packages from the analysis, Gotchas, Interview questions, 
 Cohesion: 0.09
 Nodes (23): Destructuring assignment parentheses, Logical assignment skips the write, Nullish assignment ??=, JSX {count && <X/>} zero trap, ?? default-value idiom, Logical operators return operands, Short-circuit evaluation, ?. short-circuits the entire chain (+15 more)
 
-### Community 528 - "05-loadingtsx-vs-inline-suspense-skeleton-strategy-and-layout-s.md"
-Cohesion: 0.07
-Nodes (25): A mid-stream redirect that non-JS clients never follow, Adding `loading.tsx` silently turns every 404 on the route into a 200, An expensive existence check that doubles every request, Gotchas, Interview questions, Redirects degrade the same way, Setting `Cache-Control` for the 404 case from inside the page, The 404 UI is right and the status is 200 (+17 more)
+### Community 528 - "Gotchas"
+Cohesion: 0.29
+Nodes (7): A mid-stream redirect that non-JS clients never follow, Adding `loading.tsx` silently turns every 404 on the route into a 200, An expensive existence check that doubles every request, Gotchas, Setting `Cache-Control` for the 404 case from inside the page, The 404 UI is right and the status is 200, Treating a soft-404 report as a bug in the 404 page
 
 ### Community 529 - "07g-milestone-the-drag-layer.md"
 Cohesion: 0.07
 Nodes (25): Capture, and cancellation, Gotchas, Interview questions, The CSS that is part of the gesture, The four decisions in that file, The gesture, Why pointer events, and not the alternatives, Gotchas (+17 more)
 
-### Community 530 - "08-prerendering/02-calling-them.md"
-Cohesion: 0.07
-Nodes (25): `bootstrapScripts` is the real architectural switch, Consuming the prelude, Gotchas, `identifierPrefix` has to match on both sides, Interview questions, `namespaceURI` is for documents that are not HTML, The options, The root component renders the whole document (+17 more)
+### Community 530 - "03-the-caveats.md"
+Cohesion: 0.18
+Nodes (10): Bootstrap options belong to the build, Gotchas, `identifierPrefix` belongs to the build, Interview questions, `nonce` is the one you have to think about, `resumeAndPrerender`'s own two, 🔴 The caveat that decides whether any of this is worth doing, The three restrictions, and the single reason behind them (+2 more)
 
 ### Community 531 - "05d-verifying-too-much.md"
 Cohesion: 0.06
 Nodes (29): `calls(n)` — the in-order counter, Gotchas, `InOrder`, single mock and several, `inOrder.verifyNoMoreInteractions()` is not `Mockito.verifyNoMoreInteractions()`, Interview questions, 🔴 It is greedy, and the javadoc says so in one line, Static mocks participate in ordering, When ordering is worth asserting, and when it is not (+21 more)
 
-### Community 532 - "22-the-checklist.md"
-Cohesion: 0.06
-Nodes (29): Gotchas, Interview questions, Spring Data's default, which you have been using without noticing, The one exception: `PROPAGATION_SUPPORTS`, The silent-ignore rule, The trade-off, What a persistence context normally does at commit, What `readOnly = true` changes (+21 more)
+### Community 532 - "06g-error-handler-and-ng0402.md"
+Cohesion: 0.08
+Nodes (23): Four callable shapes, and one of them will not compile, Gotchas, Interview questions, The hole: an unmarked `OnPush` view is refreshed once and verified never, Gotchas, Interview questions, The body: one token in development, an empty array in production, The stability tags disagree with each other, and the JSDoc wins (+15 more)
 
 ### Community 533 - "phase-1-story-format/README.md"
 Cohesion: 0.08
@@ -4402,8 +4464,8 @@ Cohesion: 0.07
 Nodes (25): bad, badInput, big, body, dst, Nested, num, out (+17 more)
 
 ### Community 536 - "ignore flag"
-Cohesion: 0.06
-Nodes (32): Effects only run on the client, Setup function cannot be async, cleanup(old) then setup(new), One effect per concern, setup → cleanup → setup must match setup once, Idempotent setup needs no cleanup, Application init belongs at module level, typeof window guard around module init (+24 more)
+Cohesion: 0.20
+Nodes (10): Setup function cannot be async, One effect per concern, Clear stale data before the next fetch, useData fixes ergonomics only, ignore flag, Responses may arrive out of order, One synchronization process per Effect, Move 8 — split into several Effects (+2 more)
 
 ### Community 537 - "docker/README.md"
 Cohesion: 0.08
@@ -4413,29 +4475,29 @@ Nodes (22): Explanations, Parts, Prerequisites, Reading order, Sources, Tier dis
 Cohesion: 0.08
 Nodes (23): 1 · Everything cached must be `Serializable`, transitively, 2 · The class that changed shape, 3 · Deserializing bytes you did not write, Gotchas, Interview questions, Records and enums are not ordinary serializable objects, The default is not accidental, it is explicit, Gotchas (+15 more)
 
-### Community 539 - "Rendering happens last"
-Cohesion: 0.40
-Nodes (5): 1 · SQL injection is structurally impossible for values, 2 · Predicates are values, so dynamic filtering stops being string surgery, 3 · The same tree renders for a different dialect, 4 · A query is an inspectable value, Rendering happens last
+### Community 539 - "framer-motion/pages/README.md"
+Cohesion: 0.17
+Nodes (7): Gotchas, Interview questions, ⚠️ Pitfall 1: Expecting `exit` to Work Without `<AnimatePresence>`, The four clauses, Why `exit` needs a partner at all, Gotchas, Interview questions
 
 ### Community 540 - "phase-8-modules-errors/README.md"
-Cohesion: 0.07
-Nodes (26): Bare names and import maps, Getting the module into the page, Gotchas, Interview questions, `.mjs` or `.js`, The specifier, Top-level `await`, Two loading failures that are not code failures (+18 more)
+Cohesion: 0.03
+Nodes (62): Bare names and import maps, Getting the module into the page, Gotchas, Interview questions, `.mjs` or `.js`, The specifier, Top-level `await`, Two loading failures that are not code failures (+54 more)
 
-### Community 541 - "03-csvsource.md"
-Cohesion: 0.07
-Nodes (28): Display names in JUnit 6, Gotchas, Interview questions, `null` and primitives, The idiom, The three, What `@EmptySource` gives each type, Why this matters more than it looks (+20 more)
+### Community 541 - "phase-2-branching-merging/README.md"
+Cohesion: 0.09
+Nodes (23): Coverage, Gate — move on when, What changed on 2026-08-14, Where this phase connects, Coverage, Gate — move on when, The four settings this phase argues for, What was cut on 2026-08-14 (+15 more)
 
-### Community 542 - "08k-fallback-conversion.md"
-Cohesion: 0.29
-Nodes (6): Gotchas, Interview questions, The rule, The tie-breaking rules are the whole story, Used deliberately, it is the cleanest thing here, What it is not
-
-### Community 543 - "03-the-junit-integration.md"
+### Community 542 - "07-buildpacks.md"
 Cohesion: 0.07
-Nodes (29): And a second, richer hook: `TestLifecycleAware`, `@Container` is an empty marker — and a legal meta-annotation, Gotchas, Interview questions, It is a separate artifact, and you do not get it with core, It is not a "container" extension — it is a `Startable` extension, `@Testcontainers` is one line of `@ExtendWith` plus two switches, Every message this module can throw at you (+21 more)
+Nodes (25): Gotchas, Interview questions, It needs a Docker daemon, Layering is preserved, and so is your customisation, The goals, The Java version is taken from your build, The parameters worth knowing exist, The reproducibility trade (+17 more)
+
+### Community 543 - "01-the-toprimitive-protocol.md"
+Cohesion: 0.08
+Nodes (24): Arrays are objects with stringified indices, Dot versus bracket, Dynamic keys and the prototype, Gotchas, Interview questions, Keys are stringified — and that is where collisions come from, Reading what might not be there, Symbols are the exception (+16 more)
 
 ### Community 544 - "06b-virtual-thread-stacks.md"
-Cohesion: 0.05
-Nodes (35): Gotchas, Seeing a stack that is an object, The failure mode changes, and so does the flag that fixes it, The G1 humongous stack chunk limitation, The one sentence that explains the whole chunk, `Thread.Builder.OfVirtual` has no `stackSize`, and that is the API telling you, Virtual thread stacks are not GC roots, Gotchas (+27 more)
+Cohesion: 0.08
+Nodes (23): Gotchas, Seeing a stack that is an object, The failure mode changes, and so does the flag that fixes it, The G1 humongous stack chunk limitation, The one sentence that explains the whole chunk, `Thread.Builder.OfVirtual` has no `stackSize`, and that is the API telling you, Virtual thread stacks are not GC roots, Gotchas (+15 more)
 
 ### Community 545 - "05b-custom-spans-and-annotations.md"
 Cohesion: 0.07
@@ -4454,32 +4516,32 @@ Cohesion: 0.07
 Nodes (23): Gotchas, Interview questions, Reading the communication structure, not the org chart, The inverse Conway manoeuvre, and its limits, What Conway actually claimed, What the law does not say, When the org chart is the wrong map, Gotchas (+15 more)
 
 ### Community 549 - "03-availability-multiplication.md"
+Cohesion: 0.06
+Nodes (31): Coupling is the name for that property, Fowler said it as arithmetic, Gotchas, Interview questions, The one interaction that deserves the most attention, The question the code does not ask, What "async" is actually buying, and what it is not, Where each of the four costs lands (+23 more)
+
+### Community 550 - "03c-chains-fan-out-and-composition.md"
+Cohesion: 0.05
+Nodes (40): Gotchas, Interview questions, The shape this page implements, A service you call twice is one term, not two, API composition is the fan-out with a name, Availability: identical, Depth is worse than breadth, for reasons other than availability, Gotchas (+32 more)
+
+### Community 551 - "06-map/01-the-mechanism.md"
 Cohesion: 0.08
-Nodes (24): Coupling is the name for that property, Fowler said it as arithmetic, Gotchas, Interview questions, The one interaction that deserves the most attention, The question the code does not ask, What "async" is actually buying, and what it is not, Where each of the four costs lands (+16 more)
+Nodes (24): `default`, Gotchas, `hostnames`, `include`, Interview questions, Regex keys and captures, The search order, The shape (+16 more)
 
-### Community 550 - "04-the-latency-budget.md"
+### Community 552 - "02-the-message-boundary.md"
 Cohesion: 0.08
-Nodes (24): Gotchas, How to allocate a budget, concretely, Interview questions, Latency and availability are the same decision seen twice, The budget is a property of the operation, not of any service, The number you must not pick, The SRE book's framing, verbatim, What happens when there is no budget (+16 more)
+Nodes (23): A note on wrappers, Gotchas, Interview questions, `OffscreenCanvas`: the rendering exception, Ports, and a channel that is not the page, `SharedArrayBuffer`: genuinely shared memory, The cost is real and proportional to size, Transferables: move it instead of copying it (+15 more)
 
-### Community 551 - "07-versioning-updates-cve/README.md"
-Cohesion: 0.08
-Nodes (23): Binary compatibility is not source compatibility, Deprecation is the signal that upgrading is coming, Gotchas, Interview questions, SNAPSHOT versions and reproducibility, The versions plugins, What semver promises, and what libraries do, Why "upgrade everything" is not a strategy (+15 more)
+### Community 553 - "06f-provide-browser-global-error-listeners.md"
+Cohesion: 0.09
+Nodes (21): Gotchas, Interview questions, `NoopNgZone` is stable forever, and that is observable, The failure in the other direction is *no* failure, The failure when the provider says zone and the polyfill says none, Where the machine lives, `zone.js` is an *optional* peer, and that reaches into two files, `done`, `donePromise`, and `NG0405` (+13 more)
 
-### Community 552 - "10-content-security-policy-nonces-and-the-dynamic-rendering-tax.md"
-Cohesion: 0.07
-Nodes (27): Gotchas, Interview questions, Serving what you accepted, The filename is not a path, The size check that fires first, What the schema can check, What the schema cannot check, Development needs `'unsafe-eval'`, production does not (+19 more)
-
-### Community 553 - "01-turbopack-in-dev-and-production-fast-refresh.md"
-Cohesion: 0.07
-Nodes (26): Gotchas, Interview questions, It is the default, and the version history says when, Root layout creation, The dev loop: Fast Refresh, and what it does not do, The escape hatch, and the platforms that force it, What it is, in the docs' own words, Where this goes next (+18 more)
-
-### Community 554 - "01-snapshot-mechanics.md"
-Cohesion: 0.07
-Nodes (25): 1. Under-The-Hood Mechanics, ★ 1. Why is snapshot testing component DOM trees considered an anti-pattern in modern React testing?, ★ 2. How do Property Matchers work in `toMatchSnapshot()`?, 2. Real-World Engineering Scenario, 3. How does `toMatchInlineSnapshot` modify the test source file during execution?, 3. Production-Grade Code Example, 4. Gotchas & Senior Pitfalls, 4. What is the difference between custom matchers (`expect.extend`) and snapshot serializers (`expect.addSnapshotSerializer`)? (+17 more)
+### Community 554 - "🎭 Visual & Screenshot Testing: `toHaveScreenshot()` & Baseline Management"
+Cohesion: 0.18
+Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Zero Tolerance (`maxDiffPixelRatio: 0`) Causing Constant False Failures, ⚠️ Pitfall 2: Not Masking Genuinely Dynamic Content, Causing Every Run to "Fail", ⚠️ Pitfall 3: Generating Baselines on a Different OS/Environment Than CI Runs Them, Threshold & `maxDiffPixels` Tuning: Absorbing Legitimate Rendering Variance (+2 more)
 
 ### Community 555 - "01-query-variants-and-priority.md"
-Cohesion: 0.07
-Nodes (25): 1. Under-The-Hood Mechanics, ★ 1. What are the key differences between `getBy*`, `queryBy*`, and `findBy*`?, 2. Real-World Engineering Scenario, ★ 2. Why is `getByRole` preferred over `getByText` and `getByTestId`?, 3. How does the `within()` utility work in React Testing Library?, 3. Production-Grade Code Example, 4. Gotchas & Senior Pitfalls, 4. What is the difference between `{ exact: false }` and RegExp matching in queries? (+17 more)
+Cohesion: 0.13
+Nodes (14): 1. Under-The-Hood Mechanics, ★ 1. What are the key differences between `getBy*`, `queryBy*`, and `findBy*`?, 2. Real-World Engineering Scenario, ★ 2. Why is `getByRole` preferred over `getByText` and `getByTestId`?, 3. How does the `within()` utility work in React Testing Library?, 3. Production-Grade Code Example, 4. Gotchas & Senior Pitfalls, 4. What is the difference between `{ exact: false }` and RegExp matching in queries? (+6 more)
 
 ### Community 556 - "02b-parallel-routes-and-named-slots.md"
 Cohesion: 0.07
@@ -4493,9 +4555,9 @@ Nodes (24): Diagnosing from a build instead of the overlay, Gotchas, Interview q
 Cohesion: 0.12
 Nodes (16): INHERIT and SET ROLE, pg_authid cluster-wide roles, PostgreSQL role, Separate owner and app roles, Ownership outranks privileges, Least privilege model, Roles are not in pg_dump, pg_restore continues after errors (+8 more)
 
-### Community 559 - "Gotchas"
-Cohesion: 0.22
-Nodes (9): `approx`'s absolute floor masking a near-zero bug, `assertNotAlmostEqual` on a type with an approximate `__eq__`, Gotchas, One tolerance constant shared across the suite, `places` and `delta` supplied together, `places` read as significant digits, `pytest.approx` on the wrong side, The default `places=7` at large magnitudes (+1 more)
+### Community 559 - "1. Under-The-Hood Mechanics"
+Cohesion: 0.08
+Nodes (23): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: One Rendering Strategy for the Entire App, Regardless of Per-Route Needs, ⚠️ Anti-Pattern 2: Adopting Micro-Frontends Without an Actual Multi-Team Independent-Deploy Need, ⚠️ Anti-Pattern 3: Invalidating One Cache Layer and Assuming the Whole Chain Is Now Fresh, Caching Layers: Knowing Which One Actually Needs Invalidating (+15 more)
 
 ### Community 560 - "03-positional-only-and-keyword-only.md"
 Cohesion: 0.07
@@ -4505,9 +4567,9 @@ Nodes (25): Combining `/` and `*` without variadics, Default argument placement 
 Cohesion: 0.08
 Nodes (22): Explanations, Parts, Prerequisites, Reading order, Sources, Tier distribution, Tier legend, Version facts (+14 more)
 
-### Community 562 - "02-slots-and-children.md"
-Cohesion: 0.02
-Nodes (97): Against controlled props, Gotchas, Interview questions, The problem, The shape, The three things a caller can do, Why the third argument is the whole pattern, Changing an action later (+89 more)
+### Community 562 - "phase-2-components/README.md"
+Cohesion: 0.05
+Nodes (47): value attribute vs value property, File inputs are always uncontrolled, React onChange is the DOM input event, Controlled and uncontrolled, Store the raw string, convert at the edge, Controlled vs uncontrolled, File input FileList and clear, Read a form with FormData (+39 more)
 
 ### Community 563 - "3. Production-Grade Examples"
 Cohesion: 0.07
@@ -4521,25 +4583,25 @@ Nodes (23): 🔴 `argTypesRegex` is no longer the recommendation, Arguments are 
 Cohesion: 0.09
 Nodes (24): argv, at(), CHECK, cmp(), daysUntil(), DOCS, drift(), events (+16 more)
 
-### Community 566 - "02-reset-in-depth.md"
-Cohesion: 0.12
-Nodes (15): Before any destructive command, Gotchas, The four commands, one sentence each, The one question, The safety ladder, The table, Trade-off, Gotchas (+7 more)
+### Community 566 - "03-revert.md"
+Cohesion: 0.07
+Nodes (26): Before any destructive command, Gotchas, Interview questions, The four commands, one sentence each, The one question, The safety ladder, The table, Trade-off (+18 more)
 
 ### Community 567 - "07d-the-invalidation-you-forgot.md"
 Cohesion: 0.08
 Nodes (23): `allEntries = true`, `beforeInvocation`, `@CacheConfig` — shared defaults, and nothing else, `@CacheEvict` — removing one entry, or all of them, `@CachePut` — the write-through path, `@Caching` — several operations on one method, Gotchas, Interview questions (+15 more)
 
-### Community 568 - "06-mdc.md"
+### Community 568 - "06b-mdc-and-thread-pools.md"
 Cohesion: 0.08
-Nodes (23): Gotchas, Interview questions, `putCloseable` is the only form you should be writing by hand, Reading it back out, The API, which is four methods, The MDC is not only for logging, Two Logback-specific consequences, What belongs in MDC, and what does not (+15 more)
+Nodes (22): Detecting an existing leak, Gotchas, Inheritance: two statements in one manual that appear to disagree, Interview questions, The correct hand-off, written once, The fixes, in order of preference, The variant that is worse: partial leakage, Why it happens and why it is invisible (+14 more)
 
 ### Community 569 - "09-what-a-microbenchmark-cannot-tell-you.md"
 Cohesion: 0.08
 Nodes (23): Gotchas, Interview questions, `-prof cl` — classloading, `-prof comp` — is the JIT still busy?, `-prof gc` — the most valuable flag in JMH, `-prof stack` — is the code even running?, The framing, from the sample, Use profilers with several forks (+15 more)
 
-### Community 570 - "11-authorization-code-injection.md"
-Cohesion: 0.05
-Nodes (36): Gotchas, Interview questions, The access-token variant, The attack, The normative wording, stated exactly, Why PKCE stops it, Why the OIDC `nonce` also stops it, §7.1 — Private-use URI scheme (+28 more)
+### Community 570 - "13-the-mix-up-attack.md"
+Cohesion: 0.08
+Nodes (23): §7.1 — Private-use URI scheme, §7.2 — Claimed `https` scheme URI, §7.3 — Loopback interface redirection, Gotchas, Interview questions, Java's place in this, The exposure of each, The three options (+15 more)
 
 ### Community 571 - "01-the-question-behind-the-question.md"
 Cohesion: 0.08
@@ -4557,9 +4619,9 @@ Nodes (23): Declaring one, Gotchas, Interview questions, Programmatic detection,
 Cohesion: 0.08
 Nodes (24): Gotchas, Interview questions, Managing class name collisions, Overcoming the psychological barrier, Step 1: In-process module creation, Step 2: Traffic proxying, Step 3: Replace remote calls with local method invocations, Step 4: Database consolidation (+16 more)
 
-### Community 575 - "09-annotation-processing/README.md"
-Cohesion: 0.08
-Nodes (22): Generate, do not modify, Gotchas, Interview questions, Maven: `annotationProcessorPaths`, not the compile classpath, Rounds — why generated code can generate more code, Turning it on and off — and the JDK 23 change, What a processor is, mechanically, When not to write one (+14 more)
+### Community 575 - "04-writing-your-own-provide-function.md"
+Cohesion: 0.09
+Nodes (20): Adding features, the way the framework does, Gotchas, Initialisers inside your own provider, Interview questions, Making it tree-shakable — the one rule, `ngDevMode` and the validation you get for free, The minimum viable `provideX()`, Gotchas (+12 more)
 
 ### Community 576 - "03c-answers.md"
 Cohesion: 0.08
@@ -4593,17 +4655,17 @@ Nodes (16): level1(), level2(), level3(), arr, callsIt(), definedHere(), fail(),
 Cohesion: 0.08
 Nodes (24): For /graphify add and --watch, For /graphify query, For the commit hook and native CLAUDE.md integration, For --update and --cluster-only, /graphify, Honesty Rules, Interpreter guard for subcommands, Part A - Structural extraction for code files (+16 more)
 
-### Community 584 - "17-timeouts.md"
-Cohesion: 0.08
-Nodes (23): Gotchas, Interview questions, Making it fail instead, The rule that turns a declaration into decoration, The trade-off, What the enum is, Where the level comes from when you do not declare one, and what the pool does, Gotchas (+15 more)
+### Community 584 - "08-what-never-to-log.md"
+Cohesion: 0.09
+Nodes (21): Gotchas, How it actually gets there, Interview questions, Structured logging changes the shape of the risk, The list, What to log instead, Why "we will grep it out later" fails, Gotchas (+13 more)
 
-### Community 585 - "03-parameterized-tests/README.md"
-Cohesion: 0.20
-Nodes (8): Constructor injection, Gotchas, Interview questions, The two routes, Which style wins — the detected switch, The six things this topic is really about, What changed in JUnit 6 — the pages that say so, Where this connects
+### Community 585 - "01-big-o/README.md"
+Cohesion: 0.09
+Nodes (20): Chunks, Phase gate, The three sentences to keep, Where this connects, Bracket matching — the canonical problem, Gotchas, Interview questions, The implementation, for completeness (+12 more)
 
 ### Community 586 - "05-red-and-use.md"
-Cohesion: 0.08
-Nodes (22): Gotchas, Interview questions, RED, in a Spring Boot service, costs you nothing, RED: the golden signals minus the hard one, The four golden signals, USE: the same discipline pointed at resources, What USE looks like on a JVM, Gotchas (+14 more)
+Cohesion: 0.06
+Nodes (29): Gotchas, Interview questions, RED, in a Spring Boot service, costs you nothing, RED: the golden signals minus the hard one, The four golden signals, USE: the same discipline pointed at resources, What USE looks like on a JVM, Gotchas (+21 more)
 
 ### Community 587 - "03-monolith-first-the-actual-argument.md"
 Cohesion: 0.08
@@ -4613,21 +4675,21 @@ Nodes (22): Argument one: YAGNI, Argument two-and-a-half: the prerequisites need
 Cohesion: 0.12
 Nodes (23): argv, collect(), daysSince(), DOCS, drift(), guard(), LEDGER, lpad() (+15 more)
 
-### Community 589 - "Relational comparison algorithm"
-Cohesion: 0.15
-Nodes (13): Signed zero -0, Object.is (SameValue), SameValueZero, Strict equality ===, Dates compare but do not equal, Intl.Collator / localeCompare, Lexicographic string comparison, Object relational comparison is silent (+5 more)
+### Community 589 - "12-conversions-and-precision-loss.md"
+Cohesion: 0.08
+Nodes (22): An integral `Fraction` formats as a bare integer, Formatting, Formatting used to carry precision, Gotchas, Interview questions, `round(f)` and `round(f, 0)` return different types, Rounding a Fraction, Zero-fill in a format spec (+14 more)
 
-### Community 590 - "09-round-and-bankers-rounding.md"
-Cohesion: 0.06
-Nodes (28): Gotchas, Interview questions, `round()` on a `complex` does not exist, `__round__`: the protocol underneath, The definition, exactly as written, The float surprise the docs warn about, When rounding *is* the right comparison tool, Why ties go to even (+20 more)
+### Community 590 - "09c-double-rounding-and-policy.md"
+Cohesion: 0.14
+Nodes (12): `complex` and the types that opt out, `Decimal`: two functions wearing one name, `Fraction`: exact, and always ties to even, Gotchas, `int`: rounding to a negative number of digits, Interview questions, Double rounding: the cent that goes missing, Gotchas (+4 more)
 
 ### Community 591 - "04-hydrateroot.md"
-Cohesion: 0.08
-Nodes (22): `createRoot` vs `hydrateRoot`, Gotchas, Hydration and Suspense, Interview questions, The caveats worth acting on, The four options, What it returns, What it reuses and what it does not (+14 more)
+Cohesion: 0.07
+Nodes (26): `createRoot` vs `hydrateRoot`, Gotchas, Hydration and Suspense, Interview questions, The caveats worth acting on, The four options, What it returns, What it reuses and what it does not (+18 more)
 
-### Community 592 - "phase-11-ssr-hydration/README.md"
-Cohesion: 0.11
-Nodes (19): Where this connects, Why this is three files, Where this connects, Why this is three files, Gotchas, Interview questions, 🔴 The four exceptions, The problem it replaces (+11 more)
+### Community 592 - "04-git-diff.md"
+Cohesion: 0.09
+Nodes (21): Binary files and generated output, Comparing commits and branches, Diffing things that are not commits, Gotchas, Interview questions, Limiting the diff, Reading a unified diff, The options that make diffs readable (+13 more)
 
 ### Community 593 - "ex17-secrets.mjs"
 Cohesion: 0.08
@@ -4641,21 +4703,21 @@ Nodes (22): A custom `KeyGenerator`, Gotchas, Interview questions, `key` and `ke
 Cohesion: 0.09
 Nodes (21): Gotchas, Interview questions, JSON does not remove the problem, it changes its shape, The class names changed in 4.0, The validator is not optional, Three things that changed with the rename, not just the name, Four extension points, ordered by how much they take away, Gotchas (+13 more)
 
-### Community 596 - "03-collections-boundaries-persistence.md"
+### Community 596 - "01-what-the-browser-is-doing.md"
 Cohesion: 0.09
-Nodes (21): Gotchas, Interview questions, `name()`, `ordinal()`, `toString()` — three different jobs, Restrictions, and why they exist, The singleton guarantee, and what it buys, What the compiler generates, Enums implementing interfaces — the strategy table, Fields and constructors (+13 more)
+Nodes (20): An origin is scheme + host + port, Gotchas, Interview questions, `mode` and opaque responses, The fixes that actually exist, The request is still sent, What you get instead of the response, Gotchas (+12 more)
 
 ### Community 597 - "09-exporting-to-prometheus.md"
-Cohesion: 0.09
-Nodes (21): Exemplars, in one line, Gotchas, Interview questions, The endpoint you will actually use while debugging, The gap: processes too short-lived to scrape, The model, The other backends, and the trap they set, What the registry actually does (+13 more)
+Cohesion: 0.11
+Nodes (16): Composite and global registries, Gotchas, Interview questions, `MeterRegistry` is the whole API surface, Naming: lowercase, dot-separated, translated at the edge, The facade, in Micrometer's own words, The version facts, settled, Exemplars, in one line (+8 more)
 
-### Community 598 - "03c-chains-fan-out-and-composition.md"
-Cohesion: 0.09
-Nodes (21): 1 · Location coupling, 2 · Format coupling, 3 · Semantic coupling, 4 · Temporal coupling, 5 · Capacity coupling, Fowler's line, and which coupling it is about, Gotchas, Interview questions (+13 more)
+### Community 598 - "02c-the-five-things-coupling-means.md"
+Cohesion: 0.11
+Nodes (17): Gotchas, In-process async is not a durable handoff, Interview questions, The definition, and the test, Three couplings that get confused with it, What durability buys, exactly, Why a broker does not automatically remove it, 1 · Location coupling (+9 more)
 
 ### Community 599 - "05g-choosing-a-coupling-shape.md"
-Cohesion: 0.09
-Nodes (21): Gotchas, Interview questions, The in-process trap, restated because it is common, What the sender actually gives up, When it is the right shape, When it is the wrong shape, and the tell, Where the boundary of the sender's responsibility sits, Gotchas (+13 more)
+Cohesion: 0.04
+Nodes (44): A note on the vocabulary people actually use, Gotchas, Interview questions, RPI is one cell of the grid, and its page says so, The five, verbatim, The grid, The single question that classifies any interaction, Where each style is implemented, and who owns it here (+36 more)
 
 ### Community 600 - "structuredClone"
 Cohesion: 0.13
@@ -4666,8 +4728,8 @@ Cohesion: 0.08
 Nodes (21): Gotchas, Interview questions, It throws, and that is the whole design, `push` versus `replace`, and the default that flips, `redirect` versus `permanentRedirect`, The five mechanisms, side by side, Where you may call it, Why 307 and 308, not 302 and 301 (+13 more)
 
 ### Community 602 - "05-prefetching-fundamentals-and-the-native-view-transitions-api.md"
-Cohesion: 0.09
-Nodes (21): Client-only, on purpose, Gotchas, Interview questions, 🔴 `usePathname` and the Suspense boundary, 🔴 `useSearchParams` and the Suspense boundary, What each returns, Gotchas, Hydration mismatch behind rewrites (+13 more)
+Cohesion: 0.06
+Nodes (28): Client-only, on purpose, Gotchas, Interview questions, 🔴 `usePathname` and the Suspense boundary, 🔴 `useSearchParams` and the Suspense boundary, What each returns, Gotchas, Hydration mismatch behind rewrites (+20 more)
 
 ### Community 603 - "02-return-values-and-the-none-contract.md"
 Cohesion: 0.08
@@ -4717,9 +4779,9 @@ Nodes (20): `@Cacheable` — the read path, Gotchas, Interview questions, Turnin
 Cohesion: 0.09
 Nodes (20): Gotchas, Hibernate's own position, first, Interview questions, Turning it on takes three separate opt-ins, Two caches, and the first one is not optional, What it caches, What it does not cache, Gotchas (+12 more)
 
-### Community 615 - "08l-explicit-conversion.md"
-Cohesion: 0.06
-Nodes (34): Conversion and aggregation on a field, Gotchas, Interview questions, Mutability is the price, The rules, verbatim, `UNSET_INDEX` and the aggregator rule, Declaration: top-level, or `static` nested, Gotchas (+26 more)
+### Community 615 - "03-parameterized-tests/README.md"
+Cohesion: 0.01
+Nodes (250): Arguments do not reach lifecycle methods, Getting the dependency, Gotchas, Interview questions, The loop you were about to write, The parameter list has a fixed order, The two hard requirements, What the engine actually does (+242 more)
 
 ### Community 616 - "01-the-case-you-did-not-think-of.md"
 Cohesion: 0.15
@@ -4729,29 +4791,29 @@ Nodes (11): Before you write one line of this: read chunk 02 first, Gotchas, The
 Cohesion: 0.09
 Nodes (20): Gotchas, Interview questions, Tags and names are jqwik's own annotations, What it writes into your working directory, Where jqwik reads its configuration, Where this connects, `generation = AUTO` does something clever, and it changes what a green build means, Gotchas (+12 more)
 
-### Community 618 - "04-lifecycle-callbacks.md"
+### Community 618 - "16-new-create-instanceof/README.md"
 Cohesion: 0.09
-Nodes (20): Gotchas, Interview questions, `TARGET_CLASS` versus `INTERFACES`, The trade-off, The web scopes, and the same problem again, But `@PostConstruct` is still too early for some things, Destroy-method inference — the one that happens without you, Gotchas (+12 more)
+Nodes (20): Gotchas, Interview questions, `Object.create` by hand, The second argument is descriptors, not values, The two lines people skip, Two words that are not the same thing, What `myNew` cannot do — and it is not a detail, What `new` actually does (+12 more)
 
 ### Community 619 - "33-shared-kernel.md"
 Cohesion: 0.09
 Nodes (20): Gotchas, Interview questions, The Maven shape that makes the boundary visible, The mechanism, The test, The three things people put in the jar, ranked by damage, What to do instead: duplicate the shape, share nothing else, Gotchas (+12 more)
 
 ### Community 620 - "13c-the-numeric-tower.md"
-Cohesion: 0.09
-Nodes (21): `//` and `%` raise on a complex, `complex('1 + 2j')` raises `ValueError`, `complex("nan")` succeeds where you wanted a number, `complex(z, 3)` warns on 3.14, Gotchas, Interview questions, Mixed-type arithmetic: which operand gets widened, `sorted()` raises on a list that is usually real (+13 more)
+Cohesion: 0.07
+Nodes (27): `//` and `%` raise on a complex, `complex('1 + 2j')` raises `ValueError`, `complex("nan")` succeeds where you wanted a number, `complex(z, 3)` warns on 3.14, Gotchas, Interview questions, Mixed-type arithmetic: which operand gets widened, `sorted()` raises on a list that is usually real (+19 more)
 
 ### Community 621 - "StudyMode/store.js"
 Cohesion: 0.23
 Nodes (18): ResumeCard(), samePage(), clearProgress(), commit(), EMPTY, getServerSnapshot(), getSnapshot(), hydrate() (+10 more)
 
-### Community 622 - "javascript/README.md"
-Cohesion: 0.06
-Nodes (33): Example policy, Explanations, Parts, Prerequisites, Reading order, Scope — what this owns, and what it hands off, Tier distribution, Tier legend (+25 more)
+### Community 622 - "dsa/README.md"
+Cohesion: 0.04
+Nodes (58): Explanations, Parts, Prerequisites, Reading order, Sources, Tier distribution, Tier legend, Where this sits, as of September 2026 (+50 more)
 
-### Community 623 - "03-bson.md"
+### Community 623 - "04-document-collection-database.md"
 Cohesion: 0.09
-Nodes (20): 1. Real types, 2. Field order is preserved, 3. Length prefixes, Gotchas, Interview questions, `ObjectId` is not random, Reading BSON outside MongoDB, The 16 MiB limit (+12 more)
+Nodes (21): Databases: namespace and security boundary, Dropping is not deleting, Everything is created implicitly, Gotchas, How many collections?, `_id` — the one rule a collection does enforce, Interview questions, The three levels (+13 more)
 
 ### Community 624 - "10d-installability-and-the-install-prompt.md"
 Cohesion: 0.06
@@ -4781,49 +4843,49 @@ Nodes (20): Gotchas, In a column: the same rule, the other axis, Interview quest
 Cohesion: 0.09
 Nodes (20): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ADRs: Preventing Decisions From Being Silently Re-Litigated, ⚠️ Anti-Pattern 1: No Ownership Model for Shared Design System Components, ⚠️ Anti-Pattern 2: Undocumented, Reviewer-Dependent PR Standards, ⚠️ Anti-Pattern 3: Making Non-Obvious Architectural Decisions Without Recording Why (+12 more)
 
-### Community 631 - "09-testing-hooks.md"
+### Community 631 - "12c-what-inheritance-never-carries.md"
 Cohesion: 0.10
-Nodes (18): A component has exactly two users, False negative — red when nothing is broken, False positive — green when something is broken, Gotchas, Interview questions, The definition, The drill that settles any argument, The one honest exception (+10 more)
+Nodes (18): A mixin factory produces a class no compiler ever saw, A template is generated per class, from that class's own metadata, Gotchas, Interview questions, Lifecycle hooks are ordinary methods, with ordinary override semantics, 🔴 What the sources read for this topic do not settle, Gotchas, Interview questions (+10 more)
 
-### Community 632 - "03-parameterized-tests/10-the-checklist.md"
-Cohesion: 0.07
-Nodes (26): Gotchas, Interview questions, It is a `MessageFormat` pattern, with everything that implies, `-parameters`, or your report says `arg0`, The placeholders, What you get if you set nothing, Writing your own pattern, `argumentSet()` — a name for the whole row (+18 more)
-
-### Community 633 - "08c-slos-and-the-bucket-budget.md"
+### Community 632 - "03-environmentproviders-vs-provider.md"
 Cohesion: 0.10
-Nodes (19): Choosing boundaries, Gotchas, In Spring Boot, for the meter you already have, Interview questions, Three words that get used interchangeably and should not be, What an SLO boundary is, Which requests count, Why not just read it off the percentile (+11 more)
+Nodes (19): Gotchas, Interview questions, The bootstrap sequence, in the order it happens, The interface has one property. That is the whole type., The two files, verbatim from the v22 schematic, What `bootstrapApplication` actually does, What "root provider" means when there is no `AppModule`, Gotchas (+11 more)
 
-### Community 634 - "02-supply-chain-and-toolchains.md"
-Cohesion: 0.10
-Nodes (19): Generating and upgrading one, Gotchas, Gradle's files, Interview questions, Maven's files, The Maven distribution types, and why `only-script` matters, The three pieces, What this means for CI (+11 more)
-
-### Community 635 - "02-filters-and-the-container.md"
+### Community 633 - "08-percentiles.md"
 Cohesion: 0.05
-Nodes (40): Gotchas, Interview questions, Overriding `service` and wondering why `doGet` stopped running, State on a servlet or a singleton bean, The interface everything sits on, The `javax` → `jakarta` rename is not cosmetic, The `javax.servlet` jar that is still on the classpath, The lifecycle, and why it produces a threading rule (+32 more)
+Nodes (35): Do not configure them in a library, Do not enable both, Gotchas, Interview questions, The SRE book reaches the same conclusion from the other end, The two options, and the sentence that decides between them, What each option looks like, What the `max` statistic is, and is not (+27 more)
+
+### Community 634 - "06-mapping-onto-your-stack.md"
+Cohesion: 0.10
+Nodes (19): `client_id`: public by specification, Dynamic registration — RFC 7591, Everything registration actually decides, Gotchas, Interview questions, Preview deployments, the genuinely hard case, Registering the same client several times, The redirect URI is where the code is delivered (+11 more)
+
+### Community 635 - "02-what-it-buys-threads-keys-records.md"
+Cohesion: 0.10
+Nodes (18): Don't leak `this` during construction, Gotchas, Interview questions, Part 4 in full: defensive copies, in and out, The recipe, all five parts, Free sharing and caching, Free thread-safety, Gotchas (+10 more)
 
 ### Community 636 - "Temp plus fsync plus rename"
 Cohesion: 0.10
 Nodes (22): Hidden sync I/O, fs.createReadStream, HTTP range request via createReadStream, Inclusive start/end byte range, stat then writeHead then pipeline, fs.access is still TOCTOU, existsSync, TOCTOU race (+14 more)
 
 ### Community 637 - "01b-tabs-spaces-and-taberror.md"
-Cohesion: 0.18
-Nodes (10): A fully tab-indented file is legal, and converting it half-way is what breaks it, A tab inside a bracketed continuation is not an error, A tab inside a string literal is content, not structure, Gotchas, Interview questions, Python 3 removed the escape hatch, `TabError` in a file you did not touch, after a merge, The mechanism: two tab sizes, two stacks (+2 more)
+Cohesion: 0.09
+Nodes (20): A fully tab-indented file is legal, and converting it half-way is what breaks it, A tab inside a bracketed continuation is not an error, A tab inside a string literal is content, not structure, Gotchas, Interview questions, Python 3 removed the escape hatch, `TabError` in a file you did not touch, after a merge, The mechanism: two tab sizes, two stacks (+12 more)
 
 ### Community 638 - "04-closure-memory-retention-and-inspection.md"
 Cohesion: 0.09
 Nodes (20): Accidental argument override with default capture, Anatomy of a closure: how CPython uses cell objects, Gotchas, Interview questions, Late-binding in list comprehensions, Solution 1: Default argument capture (the standard idiom), Solution 2: Factory function (dedicated activation frame), Solution 3: `functools.partial` (+12 more)
 
-### Community 639 - "JSX is a function call"
+### Community 639 - "02-sliding-window/README.md"
 Cohesion: 0.10
-Nodes (18): Deciding, in one table, `findBy` — the default wait, Gotchas, Interview questions, The four `waitFor` anti-patterns, Three tools, three questions, `waitFor` — and the rule that explains its misuse, `waitForElementToBeRemoved` — for disappearance (+10 more)
+Nodes (18): Fixed-size windows, Gotchas, Interview questions, Longest substring without repeating characters, Minimum window substring — the shrinking variant, Recognising it, The template, Counting windows rather than measuring one (+10 more)
 
 ### Community 640 - "Extra setup+cleanup cycle"
 Cohesion: 0.09
 Nodes (22): Effects versus events, Synchronize with an external system, ref.current is not tracked, Ref guard anti-fix, Analytics POST needs no cleanup, Buying a product is not an Effect, Remount principle, Double render versus extra effect cycle (+14 more)
 
-### Community 641 - "real-world/README.md"
-Cohesion: 0.11
-Nodes (17): Gotchas, Interview questions, The property that pays for itself, Three places you can cut, What a `fetch` stub cannot catch, What a module mock cannot catch, What network interception gives you, When a module mock is still right (+9 more)
+### Community 641 - "02-handlers-and-lifecycle.md"
+Cohesion: 0.12
+Nodes (15): Gotchas, Interview questions, The property that pays for itself, Three places you can cut, What a `fetch` stub cannot catch, What a module mock cannot catch, What network interception gives you, When a module mock is still right (+7 more)
 
 ### Community 642 - "⚡ Actions Panel: Callback Logging, Spies & Event Verification"
 Cohesion: 0.09
@@ -4837,13 +4899,13 @@ Nodes (3): calls, NOTE: printed with util.inspect, not JSON.stringify — the la
 Cohesion: 0.10
 Nodes (21): 1. Concept & Under-the-Hood Mechanics, 21.1 Bootstrap Recipes, 21.2 Migration Recipes, 21.3 Day-to-Day Recipes, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, A) Greenfield Vite + React + TS — Oxlint-only (+13 more)
 
-### Community 645 - "04d-what-repair-actually-does.md"
-Cohesion: 0.04
-Nodes (47): A worked directory, Gotchas, Interview questions, The four prefixes, The grammar, The rest of the name is not free-form, Versions: what is a valid one, and how they sort, What the description is actually for (+39 more)
+### Community 645 - "The ten columns"
+Cohesion: 0.22
+Nodes (9): `checksum` — nullable, integer, CRC32, `description` — cosmetic for `V`, load-bearing for `R`, `execution_time` — milliseconds, and narrower than you think, `installed_by` and `installed_on` — the audit half, `installed_rank` — the only column that records what happened, `script` — the string `validate` compares, and a portability trap, The ten columns, `type` — a small closed set, and some of it is synthetic (+1 more)
 
-### Community 646 - "01-why-schema-is-code.md"
-Cohesion: 0.09
-Nodes (20): Gotchas, Interview questions, Liquibase, in two sentences, The diff nobody reviewed, Three properties, and everything else is detail, What Flyway is, What "schema is code" actually commits you to, Where migrations run from (+12 more)
+### Community 646 - "07-undoing-a-merge.md"
+Cohesion: 0.10
+Nodes (18): Choosing between them, in advance, Committed but not pushed: `reset --hard ORIG_HEAD`, Gotchas, In progress: `--abort`, Interview questions, Pushed: `revert -m 1`, The fix, The trap: reverting a merge does not un-merge it (+10 more)
 
 ### Community 647 - "12-caching/README.md"
 Cohesion: 0.10
@@ -4853,9 +4915,9 @@ Nodes (17): Evicting, when refresh is not enough, Gotchas, Interview questions, 
 Cohesion: 0.11
 Nodes (17): Gotchas, Interview questions, Property 1 · Lines require debug information, Property 2 · Line counts are not additive, So should you report lines at all?, The weakness the definition admits, What this means in practice, When debug info goes missing (+9 more)
 
-### Community 649 - "10-safepoints.md"
+### Community 649 - "05-queue-and-deque/README.md"
 Cohesion: 0.11
-Nodes (16): Getting there is cooperative, and that is the whole problem, Gotchas, Interview questions, Safepoints without any collection at all, The pause you measure and the pause the user gets, Why safepoints have to exist, Gotchas, Interview questions (+8 more)
+Nodes (17): Approach 1 — a head index (the practical answer), Approach 2 — a ring buffer (fixed capacity), Approach 3 — a linked list (unbounded, no copies), Choosing, Gotchas, Interview questions, Why `[].shift()` disqualifies the array, BFS — where queues actually earn their keep (+9 more)
 
 ### Community 650 - "Optional chaining ?."
 Cohesion: 0.11
@@ -4865,13 +4927,13 @@ Nodes (19): No integer division, Remainder % not modulo, True modulo idiom, ?.()
 Cohesion: 0.20
 Nodes (18): Accessor infinite-recursion trap, Class getters and setters, 06.2 · Static members and accessors, Polymorphic static factory, Static fields evaluated at class evaluation, Static initialization blocks, static members, this in a static method (+10 more)
 
-### Community 652 - "02-the-asymmetry.md"
-Cohesion: 0.10
-Nodes (19): `~` and `~*` — regexes, Bare prefix — the workhorse, Gotchas, Interview questions, `^~` — "prefix wins, do not check regexes", The algorithm, The documented worked example, `=` — the fastest possible match (+11 more)
+### Community 652 - "02-inheritance.md"
+Cohesion: 0.09
+Nodes (21): 1. Repeat the inherited ones, 2. Put them in an include and include it everywhere, 3. Set them at the highest level that is true, 4. `add_header_inherit merge` — new in 1.29.3, Gotchas, Interview questions, Reading it in a real config, The other half of `add_header`: it skips most responses (+13 more)
 
 ### Community 653 - "undici Agent dispatcher"
-Cohesion: 0.10
-Nodes (21): Sync fs blocks the event loop, Sync fs only at startup, CLI, workers, crash handlers, fs callback, sync, and promise flavors, Drain or destroy unread bodies, Safe vs idempotent methods, TypeError fetch failed cause, fetch does not throw on 4xx or 5xx, Response body is single-use (+13 more)
+Cohesion: 0.06
+Nodes (28): Sync fs blocks the event loop, Sync fs only at startup, CLI, workers, crash handlers, fs callback, sync, and promise flavors, Drain or destroy unread bodies, Safe vs idempotent methods, TypeError fetch failed cause, fetch does not throw on 4xx or 5xx, Response body is single-use (+20 more)
 
 ### Community 654 - "02-the-named-lambda-smell-and-pep8.md"
 Cohesion: 0.10
@@ -4886,72 +4948,72 @@ Cohesion: 0.10
 Nodes (19): Architectural comparison: Closures vs Callable Classes, Concurrency race conditions on shared callable instances, Confusing class instantiation with instance invocation, Gotchas, Interview questions, Real-world pattern: Stateful rate limiter, The `__call__` protocol desugared, The class-lookup rule for special methods (+11 more)
 
 ### Community 657 - "01-csr-ssr-ssg-streaming-rsc.md"
-Cohesion: 0.10
-Nodes (19): CSR — client-side rendering, Gotchas, Interview questions, RSC — React Server Components, SSG — static site generation, SSR — server-side rendering, Streaming SSR, The five, on one axis each (+11 more)
+Cohesion: 0.17
+Nodes (11): CSR — client-side rendering, Gotchas, Interview questions, RSC — React Server Components, SSG — static site generation, SSR — server-side rendering, Streaming SSR, The five, on one axis each (+3 more)
 
 ### Community 658 - "15-stylesheets-and-precedence.md"
-Cohesion: 0.10
-Nodes (19): De-duplication, Gotchas, Interview questions, `<link>` — the one with de-duplication and real caveats, `<meta>` — exactly one of four props, Only one at a time, The `itemProp` fork, stated twice, 🔴 The two caveats (+11 more)
+Cohesion: 0.04
+Nodes (55): Gotchas, Interview questions, 🔴 The four exceptions, The problem it replaces, What "hoist" actually means here, Why this belongs in the SSR phase, De-duplication, Gotchas (+47 more)
 
-### Community 659 - "01-the-six-apis.md"
-Cohesion: 0.10
-Nodes (19): Gotchas, Interview questions, `precedence`, and where it sits, Rung 3 — `preload`, you know the URL, Rung 4 — `preinit`, you know the URL *and* you want it live, Rungs 1 and 2 — you only know the host, The ladder, The module pair (+11 more)
+### Community 659 - "03-binary-search/01-the-template.md"
+Cohesion: 0.11
+Nodes (17): Gotchas, Interview questions, Rotated and unsorted-ish arrays, The preconditions, which are the real content, The template: half-open `[lo, hi)`, The three functions you actually need, Why it is hard to write, Floating-point ranges (+9 more)
 
 ### Community 661 - "4. Senior Engineer Edge Cases & Pitfalls"
 Cohesion: 0.10
 Nodes (20): 16.1 Setup Recipes, 16.2 Debugging Recipes, 16.3 Migration Recipes, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Audit whether Babel is still needed (+12 more)
 
-### Community 662 - "The categories, and what each one actually needs"
-Cohesion: 0.12
-Nodes (16): 10 · A shared Spring context, 11 · Testcontainers containers, 12 · `ThreadLocal`-bound state, 13 · Extension instance fields, 14 · Mutable static test fixtures, 15 · Environment variables and the working directory, 1 · `static` mutable fields, 2 · `@TestInstance(PER_CLASS)` instance fields (+8 more)
-
-### Community 663 - "03d-where-the-arithmetic-lies.md"
+### Community 662 - "03-problem-solving-method/01-the-loop.md"
 Cohesion: 0.10
-Nodes (18): 1 · Shared infrastructure makes failures positively correlated, 2 · A shared database is one failure domain wearing several service names, 3 · Cascading failure makes the model qualitatively wrong, not just numerically, 4 · Partial failure is not binary, and neither is "available", 5 · Requests are not uniformly distributed over dependencies, 6 · Correlated *recovery* is a thing too, Gotchas, How to state it so it survives scrutiny (+10 more)
+Nodes (18): A checklist for naming the state, Gotchas, Interview questions, Three state-design mistakes, What a state is, When one dimension is not enough, Worked: coin change, Worked: house robber (+10 more)
 
-### Community 664 - "02-nextjs-vs-alternatives-remix-react-router-v7-astro-tanstack.md"
+### Community 663 - "07-what-the-caller-inherits.md"
+Cohesion: 0.06
+Nodes (33): 1 · Shared infrastructure makes failures positively correlated, 2 · A shared database is one failure domain wearing several service names, 3 · Cascading failure makes the model qualitatively wrong, not just numerically, 4 · Partial failure is not binary, and neither is "available", 5 · Requests are not uniformly distributed over dependencies, 6 · Correlated *recovery* is a thing too, Gotchas, How to state it so it survives scrutiny (+25 more)
+
+### Community 664 - "09-exceptions-in-logs.md"
 Cohesion: 0.11
-Nodes (17): A version-history trap that predates most tutorials, Gotchas, Interview questions, Migrating: the part worth knowing before you start, "The App Router is the standard" — what that actually means, The comparison table, read correctly, The limitation, stated precisely, What the App Router changed (+9 more)
+Nodes (17): Gotchas, Interview questions, The escaping rules, which you will hit exactly once, The message is a template, and that has downstream value, The throwable is not a placeholder argument, The varargs cliff, and why it exists, What concatenation actually costs, What still gets evaluated (+9 more)
 
 ### Community 665 - "01-render-and-screen.md"
-Cohesion: 0.11
-Nodes (17): `act` — the version you should import, Cleanup is automatic, and why that matters, Custom render — the pattern the docs prescribe, Gotchas, Interview questions, The options worth knowing, What `render` does, What `render` returns, and what to use (+9 more)
+Cohesion: 0.06
+Nodes (37): Four details in there worth naming, Gotchas, Interview questions, Regression tests: the one test that is always worth writing, The four states, and the one everybody writes, The shape of the file, What a feature's suite looks like when it is done, Where this connects (+29 more)
 
 ### Community 666 - "01-the-configure-call.md"
-Cohesion: 0.10
-Nodes (18): 🔴 Fake timers and `user-event` deadlock, Gotchas, Interview questions, `resetModules` and `automock`, The three flags, and why they are not the same, Timers, What each one costs you, What to actually set (+10 more)
+Cohesion: 0.07
+Nodes (26): 🔴 Fake timers and `user-event` deadlock, Gotchas, Interview questions, `resetModules` and `automock`, The three flags, and why they are not the same, Timers, What each one costs you, What to actually set (+18 more)
 
-### Community 667 - "02-master-and-workers.md"
-Cohesion: 0.10
-Nodes (18): Apache, and why the comparison still gets made, Gotchas, Interview questions, The five things it is, The one-sentence version, Trade-off, What a minimal real config looks like, What nginx is not (+10 more)
+### Community 667 - "phase-0-process-model/README.md"
+Cohesion: 0.06
+Nodes (30): Apache, and why the comparison still gets made, Gotchas, Interview questions, The five things it is, The one-sentence version, Trade-off, What a minimal real config looks like, What nginx is not (+22 more)
 
-### Community 668 - "06-testing-the-config.md"
-Cohesion: 0.10
-Nodes (18): Gotchas, Interview questions, `-t` — does this configuration work?, `-T` — what configuration is *actually* in effect?, The whole command line, Trade-off, `-V` — what can this binary do?, Where the paths come from (+10 more)
+### Community 668 - "01-what-a-policy-breaks.md"
+Cohesion: 0.11
+Nodes (17): `default-src` is a fallback, not a default, Deploying without breaking the site, Gotchas, Interview questions, The directives, grouped by what they guard, The keywords, and the two to avoid, Watching violations from JavaScript, What a policy blocks that JavaScript notices (+9 more)
 
 ### Community 669 - "Event loop phases"
 Cohesion: 0.11
 Nodes (20): cluster module vs platform replicas, Autoscale on lag and saturation, Horizontal replicas, node:cluster on one machine, Connection pool multiplication, Vertical vs horizontal scaling, Serverless connection storm, Module-scope connection reuse (+12 more)
 
 ### Community 670 - "Semantic versioning"
-Cohesion: 0.07
-Nodes (28): Conventional commits, False patch, semantic-release automation, Node core SemVer compatibility culture, MODULE_TYPELESS_PACKAGE_JSON, Nearest package.json type field, Avoid postinstall scripts, dependencies vs devDependencies vs peerDependencies (+20 more)
+Cohesion: 0.15
+Nodes (13): Conventional commits, False patch, semantic-release automation, Node core SemVer compatibility culture, Caret vs tilde ranges, package.json overrides, Semantic versioning, save-exact (+5 more)
 
 ### Community 671 - "p8-security/package.json"
-Cohesion: 0.10
-Nodes (19): helmet, redis, dependencies, helmet, redis, undici, valibot, zod (+11 more)
+Cohesion: 0.17
+Nodes (11): undici, valibot, description, zod, keywords, main, name, scripts (+3 more)
 
 ### Community 672 - "dependencies"
-Cohesion: 0.10
-Nodes (21): claude-mem, clsx, @docusaurus/core, @docusaurus/faster, @docusaurus/preset-classic, @easyops-cn/docusaurus-search-local, @mdx-js/react, dependencies (+13 more)
+Cohesion: 0.18
+Nodes (11): dependencies, claude-mem, clsx, @docusaurus/core, @docusaurus/faster, @docusaurus/preset-classic, @easyops-cn/docusaurus-search-local, @mdx-js/react (+3 more)
 
 ### Community 673 - "expressjs/pages/README.md"
 Cohesion: 0.14
 Nodes (18): What each phase covers, Proposed Part 1 Foundations, Proposed Part 2 HTTP surface, Proposed Part 3 API product, Proposed Part 4 Edge and ops, Express proposed syllabus inventory, Concept to Node middleware to Express, Express.js syllabus consolidated review (+10 more)
 
 ### Community 674 - "09-reflog.md"
-Cohesion: 0.11
-Nodes (17): Gotchas, The four disasters, and their fixes, The limits — worth knowing before you rely on it, The recovery procedure, The `@{...}` syntax, Trade-off, What each entry tells you, What it records (+9 more)
+Cohesion: 0.10
+Nodes (19): Gotchas, Interview questions, The four disasters, and their fixes, The limits — worth knowing before you rely on it, The recovery procedure, The `@{...}` syntax, Trade-off, What each entry tells you (+11 more)
 
 ### Community 675 - "07-invalidation.md"
 Cohesion: 0.11
@@ -4965,21 +5027,21 @@ Nodes (17): Gotchas, Interview questions, Payer 1 — operations, on day one, Pa
 Cohesion: 0.11
 Nodes (17): Cognitive load is the constraint that sets team size and service count, Gotchas, Interview questions, The arithmetic, The interaction modes tell you which boundaries are ready, The ownership constraint, The two-team shop, worked through, Gotchas (+9 more)
 
-### Community 678 - "02-quarkus.md"
-Cohesion: 0.11
-Nodes (17): Augmentation, and the three phases, Configuration that is frozen into the artifact, Dev mode, and why it is genuinely different, Gotchas, Interview questions, Native image is the default target, not a mode, Quarkus versions, as of writing, The DI model is CDI, not Spring's (+9 more)
+### Community 678 - "16-the-alternatives/README.md"
+Cohesion: 0.02
+Nodes (77): Assuming a benchmark settles it, Be fair: what WebFlux still genuinely wins, Enabling virtual threads and keeping the reactive code, Expecting the migration to be one property, Gotchas, Interview questions, The clearest evidence is Reactor's own, The comparison, stated honestly (+69 more)
 
-### Community 679 - "08-the-plugins-every-build-has.md"
+### Community 679 - "06-bfs/README.md"
 Cohesion: 0.11
-Nodes (16): compiler — the one that is misconfigured most often, Gotchas, Interview questions, jar and shade — one artifact or one artifact containing everything, resources — the quiet one that corrupts files, surefire and failsafe — the same job, split by failure timing, The core eight, by phase, The honest trade: plugin configuration is untyped (+8 more)
+Nodes (16): Bidirectional BFS, Gotchas, Interview questions, Level-order — when the level number matters, Multi-source BFS, Shortest path, and returning it, The template, Flood fill and connected components (+8 more)
 
 ### Community 680 - "BEFORE vs AFTER triggers"
 Cohesion: 0.11
 Nodes (18): Trigger firing order is alphabetical, BEFORE vs AFTER triggers, BEFORE RETURN NULL cancels the row, FOR EACH ROW vs FOR EACH STATEMENT, Trigger transition tables, Trigger WHEN clause, RAISE EXCEPTION USING ERRCODE, Trigger functions must be plpgsql (+10 more)
 
-### Community 681 - "14-flaky-tests-and-ci.md"
+### Community 681 - "02-what-freeze-cannot-reach.md"
 Cohesion: 0.11
-Nodes (16): `getByRole` in depth, Gotchas, Interview questions, Roles you will use constantly, Scoping with `within`, Tier 1, in order, Tier 2 — semantic, Tier 3 — test ids, and when they are right (+8 more)
+Nodes (17): A setter still runs on a frozen object, Arrays — locked, but they fail two different ways, Every copy comes out unfrozen, Gotchas, Interview questions, `Map`, `Set`, `Date`, `WeakMap` — freeze does nothing at all, `#private` fields survive a freeze, What is still protected, and is easy to forget (+9 more)
 
 ### Community 682 - "10-glob-imports-with-import-meta-glob.md"
 Cohesion: 0.11
@@ -4993,9 +5055,9 @@ Nodes (8): Hoisting makes undeclared dependencies work, node_modules walk, Corep
 Cohesion: 0.10
 Nodes (19): 10. A team of two shipping an MVP with a browser UI, 11. Migrating a Django monolith that is "too slow", 12. A data pipeline whose consumers are analysts, 1. A CRUD API over Postgres for an internal tool, 2. A service that scores a scikit-learn model per request, 3. Server-side rendering for a React application, 4. A CLI that engineers install and run hundreds of times a day, 5. A WebSocket service holding 50,000 concurrent connections (+11 more)
 
-### Community 685 - "02-the-else-clause.md"
-Cohesion: 0.07
-Nodes (25): Gotchas, Interview questions, The pattern it exists for, The `try`/`else` parallel, What the reference actually says, When not to use it, Why it reads wrong, 1. Extract a function and `return` (+17 more)
+### Community 685 - "01-the-for-statement.md"
+Cohesion: 0.03
+Nodes (64): Gotchas, Interview questions, Style, The shape it exists for, The truthiness trap it inherits, Where it genuinely helps, and where it does not, Gotchas, Interview questions (+56 more)
 
 ### Community 686 - "03b-consecutive-stubbing.md"
 Cohesion: 0.12
@@ -5005,49 +5067,49 @@ Nodes (15): Gotchas, Interview questions, The sequence does not run out, 🔴 Th
 Cohesion: 0.11
 Nodes (19): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 4. Senior Engineer Edge Cases & Pitfalls, End-to-end customization map, Env variable model, 🛠️ Manager UI, Builder Hooks (`viteFinal` / `webpackFinal`), Env & CI, Manager vs preview (again), ⚠️ Pitfall 10: Assuming `manager.ts` hot reloads reliably (+11 more)
 
-### Community 688 - "01-singleton-and-statelessness.md"
-Cohesion: 0.12
-Nodes (15): Gotchas, Interview questions, "Singleton" does not mean the Gang of Four singleton, The rule, stated so it can be applied in review, The six scopes, and how rarely you leave the first, The trade-off, What "shared across every request" actually means, Where per-request state actually goes (+7 more)
+### Community 688 - "4. Senior Engineer Edge Cases & Pitfalls"
+Cohesion: 0.11
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1 — Bundling six migrations into one "modernisation", ⚠️ Pitfall 2 — Assuming the bundler is the bottleneck (+9 more)
 
-### Community 689 - "02-valuesource.md"
+### Community 689 - "05d-the-errors-that-reject-an-import-outright.md"
 Cohesion: 0.12
-Nodes (14): Display names in JUnit 6, Gotchas, Interview questions, It is repeatable, and that is how you mix sources, The shape, The ten attributes, The two conversions that make it bigger than it looks, What it cannot do, and what to use instead (+6 more)
+Nodes (14): 🔴 A symbol used only inside `@defer` is *not* unused, Gotchas, Interview questions, The shared-imports heuristic, read off the code, Gotchas, Interview questions, Promoting it, and the one way to do it that is safe, The cleanup schematic (+6 more)
 
 ### Community 690 - "01-what-a-log-line-is-for.md"
-Cohesion: 0.11
-Nodes (16): Gotchas, Interview questions, Logs, metrics and traces are not interchangeable, The log is a product with a bill, The test that catches most bad log lines, The three commitments this topic argues for, The three readers, and only one of them matters, What that reader actually needs from a line (+8 more)
+Cohesion: 0.20
+Nodes (9): Gotchas, Interview questions, Logs, metrics and traces are not interchangeable, The log is a product with a bill, The test that catches most bad log lines, The three commitments this topic argues for, The three readers, and only one of them matters, What that reader actually needs from a line (+1 more)
 
-### Community 691 - "11-cost-and-overhead.md"
-Cohesion: 0.11
-Nodes (16): Boot 4 has two properties, and they are not aliases, Gotchas, Interview questions, Low and high cardinality: the routing rule that lets one call site feed two signals, The ordering requirement, and how it fails, The pod name argument, What they are for, When properties are not enough: the customizer (+8 more)
+### Community 691 - "04c-meterfilter.md"
+Cohesion: 0.07
+Nodes (29): Apply a filter to only some meters, Deny and accept, Gotchas, Interview questions, The third function, in one paragraph, Three functions, and they are genuinely separate, Transform, Where Spring Boot puts them (+21 more)
 
-### Community 692 - "07-runtime-characteristics.md"
-Cohesion: 0.11
-Nodes (16): ⚠️ A licence can change at a patch boundary, Gotchas, Interview questions, The licence, quoted, The two products, Version numbering changed in September 2025 — and again in mid-2026, Which one to build with, Compressed references (+8 more)
+### Community 692 - "07c-getting-throughput-back.md"
+Cohesion: 0.08
+Nodes (24): ⚠️ A licence can change at a patch boundary, Gotchas, Interview questions, The licence, quoted, The two products, Version numbering changed in September 2025 — and again in mid-2026, Which one to build with, Compressed references (+16 more)
 
-### Community 693 - "10-artifact-repositories/README.md"
+### Community 693 - "01c-shared-layout-coordination.md"
 Cohesion: 0.12
-Nodes (15): Gotchas, Interview questions, Maven Central: the default, and permanent, Remote repositories, and why plugins have their own list, Snapshots behave differently on purpose, The honest downside of caching everything locally, The local repository is a cache, and `rm -rf ~/.m2` is a superstition, Dependency confusion — and Java's honest version of it (+7 more)
+Nodes (16): A bare `transition` also governs everything else on the element, Animating back to where it came from needs `AnimatePresence`, Gotchas, Interview questions, `layoutId` is a global namespace, and that is the second job of `LayoutGroup`, ⚠️ Pitfall 1: Two Sibling Components That Push Each Other Around, Only One of Which Animates, ⚠️ Pitfall 2: The Same `layoutId` Reused by a Component Rendered Twice, ⚠️ Pitfall 3: Tuning the Transition on the Element You Are Animating *From* (+8 more)
 
-### Community 694 - "09 · JSON.parse and JSON.stringify"
+### Community 694 - "10 · Map vs a plain object"
 Cohesion: 0.03
-Nodes (57): Gotchas, Interview questions, The one-liner people reach for, and why it is wrong, The version worth writing, What this version still does not do, Why each block is there, Choosing, Gotchas (+49 more)
+Nodes (71): Gotchas, Interview questions, The one-liner people reach for, and why it is wrong, The version worth writing, What this version still does not do, Why each block is there, Choosing, Gotchas (+63 more)
 
 ### Community 695 - "sort compareFn contract"
-Cohesion: 0.20
-Nodes (10): sort compareFn contract, Decorate–sort–undecorate, Fisher–Yates shuffle, Well-formed comparator requirements, Intl.Collator, String.prototype.localeCompare, Multi-key || comparator chain, ES2019 sort stability (+2 more)
+Cohesion: 0.13
+Nodes (17): sort compareFn contract, Decorate–sort–undecorate, Fisher–Yates shuffle, Well-formed comparator requirements, Intl.Collator, String.prototype.localeCompare, Multi-key || comparator chain, ES2019 sort stability (+9 more)
 
-### Community 696 - "01-the-three-streams.md"
-Cohesion: 0.05
-Nodes (35): `arrayBuffer()` and `bytes()` — binary, `blob()` — files and images, Choosing, in one rule, Errors these methods throw, `formData()`, Gotchas, Interview questions, `json()`, and why wrappers use `text()` instead (+27 more)
-
-### Community 697 - "10-wrappers-and-providers.md"
+### Community 696 - "02-making-it-usable.md"
 Cohesion: 0.12
-Nodes (15): Gotchas, Interview questions, Per-test options without losing that property, Query clients and stores, The pattern, The router, What not to put in the wrapper, Form fields are the most common failure (+7 more)
+Nodes (15): Choosing the limit, Error policy is a decision, not a default, Gotchas, Interview questions, Ordering: three different orders, and they are not the same, The four details that make it correct, Why not just chunk the array?, Cancellation (+7 more)
+
+### Community 697 - "⚡ Where Mode Actually Gets Decided: CI Jobs, `vite preview` and Container Images"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, A mode with no file is silent, not an error, Containers set `NODE_ENV` for reasons that have nothing to do with you, Gotchas, Interview questions (+8 more)
 
 ### Community 698 - "Gotchas"
-Cohesion: 0.10
-Nodes (18): A dark-system user is stuck in dark after clearing the setting, A white canvas still flashes on a dark-system phone, Gotchas, The flash returned after a CSS refactor, The page is blank in a browser with site data blocked, The theme flips after the page renders, The toggle label says the wrong thing for a moment, `'unsafe-inline'` was added to make the script work (+10 more)
+Cohesion: 0.20
+Nodes (10): A returning tab shows the old theme, Every button looks hovered for a moment after toggling, Gotchas, Hydration throws on a server-rendered page, Navigating back makes other tabs change theme, The button announces nothing useful, The suppression class has no effect, The theme value is briefly wrong on mount (+2 more)
 
 ### Community 700 - "3. Production-Grade Examples"
 Cohesion: 0.11
@@ -5061,17 +5123,17 @@ Nodes (17): 10. Working process, 11. Current state, 1. Goal, 2. Tech stack in sc
 Cohesion: 0.11
 Nodes (15): Capped, cases, D, Loose, many, obj, one, Patch (+7 more)
 
-### Community 703 - "01b-the-repository-hierarchy.md"
+### Community 703 - "4. Senior Engineer Edge Cases & Pitfalls"
 Cohesion: 0.12
-Nodes (14): Gotchas, Interview questions, Picking the right one, The 3.0 break, and why it is easy to walk into, The interfaces, in order, What is deliberately *not* in the hierarchy, What `JpaRepository` extends, Copying signatures (+6 more)
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Earning the type, Gotchas, Interview questions, ⚠️ Pitfall 1 — Reaching for `!` to silence `string | undefined` (+9 more)
 
-### Community 704 - "08b-aggregation.md"
-Cohesion: 0.08
-Nodes (22): Gotchas, Interview questions, Providers can be injected, Repeatable, like the rest, The interface, 🔴 The signature changed — this is the JUnit 6 trap, What `ParameterDeclarations` gives you, Worked example: the cartesian product nobody ships (+14 more)
-
-### Community 705 - "04c-meterfilter.md"
+### Community 704 - "4. Senior Engineer Edge Cases & Pitfalls"
 Cohesion: 0.12
-Nodes (15): Apply a filter to only some meters, Deny and accept, Gotchas, Interview questions, The third function, in one paragraph, Three functions, and they are genuinely separate, Transform, Where Spring Boot puts them (+7 more)
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Before you write one, Configuration: falsy entries and presets, Gotchas, Interview questions (+9 more)
+
+### Community 705 - "4. Senior Engineer Edge Cases & Pitfalls"
+Cohesion: 0.12
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ A preset is not automatically a fix, ⚡ Eliminating Cross-Plugin Coupling, Gotchas, Interview questions (+9 more)
 
 ### Community 706 - "02-the-three-kinds.md"
 Cohesion: 0.12
@@ -5093,17 +5155,17 @@ Nodes (15): Fowler's prerequisites are the mitigation, and they are not free, Go
 Cohesion: 0.12
 Nodes (15): A model is not a schema, Contexts are not always the same size, Gotchas, Interview questions, The boundary is drawn by language, and language is drawn by people, The claim Evans is actually making, Ubiquitous language, stated as an engineering constraint, What it looks like in Java (+7 more)
 
-### Community 711 - "04f-tail-latency-under-fan-out.md"
+### Community 711 - "4. Senior Engineer Edge Cases & Pitfalls"
 Cohesion: 0.12
-Nodes (15): Gotchas, Interview questions, Reading it as a design constraint, The arithmetic, so you can do it for your own fan-out, The paper's own example, verbatim, What the paper offers as remedies, and which ones transfer, Why this bites microservices specifically, Gotchas (+7 more)
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1 — Adding `if (server)` and calling it fixed, ⚠️ Pitfall 2 — A dev-only plugin without `apply: 'serve'` (+9 more)
 
-### Community 712 - "03-boms-and-platforms.md"
+### Community 712 - "⚡ Filter Utilities & the Ids You Match"
 Cohesion: 0.12
-Nodes (15): 1. `<exclusions>` — delete an edge, 2. A direct declaration — exploit depth, 3. `<dependencyManagement>` — override mediation itself, `dependency:tree` — the first command, always, Gotchas, Interview questions, Three ways to override, ranked by blast radius, Version ranges, and why nobody uses them (+7 more)
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `createFilter` — a different layer, not an alternative, `exactRegex` and `prefixRegex`, ⚡ Filter Utilities & the Ids You Match, Gotchas (+9 more)
 
-### Community 713 - "ToPrimitive coercion"
-Cohesion: 0.11
-Nodes (22): Abstract operations, Array sort default string compare, Date Symbol.toPrimitive default-as-string, ECMA-262 living standard, ToPrimitive, Numbers are IEEE-754 doubles, Money as integer minor units, toFixed is not a rounding function (+14 more)
+### Community 713 - "⚡ Virtual Modules"
+Cohesion: 0.12
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1 — Filtering `load` on the unresolved id, ⚠️ Pitfall 2 — Omitting the `\0` prefix entirely (+9 more)
 
 ### Community 714 - "01-testing-setup-from-zero.md"
 Cohesion: 0.12
@@ -5113,25 +5175,25 @@ Nodes (16): 1. Under-The-Hood Mechanics, ★ 1. What is the execution sequence w
 Cohesion: 0.12
 Nodes (15): Choosing between the three ways to set an OG image, `generateImageMetadata` — several images from one file, Gotchas, Interview questions, `params`, and the 16.0 change, The code form is a Route Handler, The static form, and the one build failure, Two forms, one filename (+7 more)
 
-### Community 716 - "03-aborting-errors-caveats.md"
-Cohesion: 0.12
-Nodes (15): Gotchas, Interview questions, The defining property: it waits for all data, The signature, What counts as "all data", Where they sit, Errors, Gotchas (+7 more)
+### Community 716 - "06-streaming-ssr.md"
+Cohesion: 0.04
+Nodes (57): Aborting, Gotchas, Interview questions, Node — callbacks, `onError` is not optional in practice, 🔴 `renderToString` cannot stream Suspense, The shape of each API, The three (+49 more)
 
-### Community 717 - "03c-csvfilesource.md"
+### Community 717 - "4. Senior Engineer Edge Cases & Pitfalls"
 Cohesion: 0.12
-Nodes (14): Everything else is the `@CsvSource` parser, Four defaults that differ from `@CsvSource`, Gotchas, Interview questions, The two ways in, Two header mechanisms that are not the same thing, What JUnit 6.0 changed, When the move is right, and when it is a mistake (+6 more)
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `createFilter`, for user-facing scope, Gotchas, Interview questions, 🔴 Normalize the value you built, not the id (+9 more)
 
 ### Community 718 - "compilerOptions"
 Cohesion: 0.12
 Nodes (16): compilerOptions, declaration, declarationMap, exactOptionalPropertyTypes, isolatedModules, jsx, module, moduleDetection (+8 more)
 
-### Community 719 - "p7-background-work/package.json"
-Cohesion: 0.12
-Nodes (15): bullmq, ioredis, dependencies, bullmq, ioredis, pg, description, pg (+7 more)
+### Community 719 - "ex5-sync-vs-bg.mjs"
+Cohesion: 0.05
+Nodes (35): bullmq, ioredis, connection, dlq, done, q, stamps, started (+27 more)
 
-### Community 720 - "03-write-once-run-anywhere.md"
-Cohesion: 0.08
-Nodes (21): Gotchas, Interview questions, One spec, several implementations, The discipline that keeps WORA true, The JVM is a language platform, not a Java platform, Where WORA leaks, Why it actually works, Contexts, honestly (+13 more)
+### Community 720 - "4. Senior Engineer Edge Cases & Pitfalls"
+Cohesion: 0.12
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Choosing a Bundler: Match the Change to the Complaint, Gotchas, Interview questions, ⚠️ Pitfall 1 — Treating Vite as webpack's migration path (+9 more)
 
 ### Community 721 - "03d-the-key-that-never-repeats.md"
 Cohesion: 0.12
@@ -5141,41 +5203,41 @@ Nodes (15): A cache that never hits is not a slow cache, A `Clock`, an `Instant`
 Cohesion: 0.12
 Nodes (14): Gotchas, Interview questions, jqwik-spring is not available on this stack, Using jqwik as a generator library, without its engine, What I could not settle: is there an alternative library?, Where this connects, Cause 1 — the class name, and it is nearly always this one, Cause 2 — an engine filter that does not name jqwik (+6 more)
 
-### Community 723 - "06-what-boot-gives-you-free.md"
+### Community 723 - "4. Senior Engineer Edge Cases & Pitfalls"
 Cohesion: 0.12
-Nodes (14): Composite and global registries, Gotchas, Interview questions, `MeterRegistry` is the whole API surface, Naming: lowercase, dot-separated, translated at the edge, The facade, in Micrometer's own words, The version facts, settled, Adding your own alongside them (+6 more)
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Estimating loader work honestly, Gotchas, Interview questions, ⚡ Loaders Become Plugins (+9 more)
 
 ### Community 724 - "08-cost-and-overhead.md"
 Cohesion: 0.12
 Nodes (15): 1. Drop health checks and infrastructure polling, 2. Strip unbounded attributes and payload dumps, 3. Eliminate sub-millisecond child spans, 4. Enable OTLP compression, Gotchas, Interview questions, Network egress bill exceeds compute bill, Pod OOMKilled caused by unbounded span buffering (+7 more)
 
-### Community 725 - "05d-request-reply-over-messaging.md"
+### Community 725 - "Gotchas"
 Cohesion: 0.12
-Nodes (14): Gotchas, In-process async is not a durable handoff, Interview questions, The definition, and the test, Three couplings that get confused with it, What durability buys, exactly, Why a broker does not automatically remove it, Gotchas (+6 more)
+Nodes (15): Curved motion: `arc()` on `transition.layout.path`, Fixed containers: `layoutRoot`, Gotchas, Interview questions, Parent-relative projection, and `layoutAnchor`, ⚠️ Pitfall 1: A Reorder Inside a Scrolled Panel Animates From the Wrong Place, ⚠️ Pitfall 2: Assuming One `layoutScroll` at the Root Covers Nested Scrollers, ⚠️ Pitfall 3: A `position: fixed` Toolbar Whose Children Drift as the Page Scrolls (+7 more)
 
-### Community 726 - "Object.create(null) dictionary"
+### Community 726 - "Three-tier property enumeration order"
+Cohesion: 0.17
+Nodes (12): Method shorthand is not a function property, Enumeration method comparison, Integer-index keys, Three-tier property enumeration order, __proto__ colon form prototype setter, Object literals, class is the same lookup machinery, What new actually does (+4 more)
+
+### Community 727 - "ref as a prop (React 19)"
 Cohesion: 0.12
-Nodes (16): Method shorthand is not a function property, Enumeration method comparison, Integer-index keys, Keys are string or symbol only, Map for identity and ordered keys, Three-tier property enumeration order, JSON __proto__ is an ordinary key, Object.create(null) dictionary (+8 more)
-
-### Community 727 - "07-project-milestone-sprintdesk-performance-audit.md"
-Cohesion: 0.07
-Nodes (27): Act 1 acceptance checklist, Act 1 — produce a bundle map you can keep, Finding 1 — a rendering library shipped to the client to produce static output, Finding 2 — a barrel import from an icon or utility package, Finding 3 — a genuinely client-only widget loaded eagerly, Gotchas, Interview questions, Reading the map (+19 more)
+Nodes (16): Spread precedence is later keys win, Spread the set, not a domain object, Ref cleanup functions, findDOMNode removed, forwardRef is deprecated, not removed, ref as a prop (React 19), React v19 blog — ref as a prop, ref is an ordinary prop in React 19 (+8 more)
 
 ### Community 728 - "Commit phase"
 Cohesion: 0.22
 Nodes (10): Commit phase, useEffect, useLayoutEffect, useEffectEvent, getSnapshotBeforeUpdate, Dependencies should match the code, Eight legitimate dependency-removal moves, Illegitimate dependency fixes (+2 more)
 
-### Community 729 - "Mutation testing"
-Cohesion: 0.12
-Nodes (15): Determinism beats faker, Coverage records execution not assertions, --experimental-test-coverage, Uncovered lines column, Mutation testing cost, Round-trip, idempotence, invariant, oracle, Mutation testing, Property-based testing (+7 more)
+### Community 729 - "ex14-property/package.json"
+Cohesion: 0.22
+Nodes (7): fast-check, dependencies, fast-check, name, private, type, slugify()
 
-### Community 730 - "16-async-scripts.md"
+### Community 730 - "🔄 What a Background Refetch Costs: Flags, Structural Sharing & Tracked Properties"
 Cohesion: 0.12
-Nodes (14): De-duplication, Gotchas, Interview questions, The props that turn it off, The two caveats, Where this sits in server rendering, Why `async={true}` is required, Gotchas (+6 more)
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1: Assuming Background Refetches Show a Loading Spinner, ⚠️ Pitfall 2: Object Rest Destructuring Silently Disabling Render Optimisation (+8 more)
 
-### Community 731 - "20-promise-withresolvers.md"
+### Community 731 - "🔄 Polling: `refetchInterval`, Hidden Tabs & Per-Observer Timers"
 Cohesion: 0.12
-Nodes (14): Availability, Gotchas, Interview questions, Rejecting before anyone is listening is fine, The pattern it replaces, The three hazards, When it is the right tool — and when it is the anti-pattern, Deliberately thenable: the lazy builder (+6 more)
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔴 A hidden tab does not stop the timer — it makes each tick a no-op, Gotchas, Interview questions, ⚠️ Pitfall 1: Fixed-Interval Polling That Never Stops, Wasting Resources Indefinitely (+8 more)
 
 ### Community 732 - "01-component-story-format.md"
 Cohesion: 0.12
@@ -5197,37 +5259,37 @@ Nodes (7): description, devDependencies, typescript, typescript, name, private, 
 Cohesion: 0.14
 Nodes (14): A file already inside a chunked topic outgrows the cap, A single file outgrows the cap, Authoring contract — what a page must be, Before reporting, Either way, Page skeleton, 🔴 Prove a split is a split, not a trim, 🔴 Rule 1 — 300 lines is a FILE-SIZE cap, never a content budget (+6 more)
 
-### Community 737 - "01-what-to-test/README.md"
-Cohesion: 0.13
-Nodes (13): Where this connects, Why this is three files, `findBy` — the async one, and why it beats the alternatives, `getBy` — the default, Gotchas, Interview questions, Manual queries, and where the docs draw the line, `queryBy` — for proving a thing is absent (+5 more)
+### Community 737 - "11-roles-as-the-query-surface.md"
+Cohesion: 0.07
+Nodes (25): `findBy` — the async one, and why it beats the alternatives, `getBy` — the default, Gotchas, Interview questions, Manual queries, and where the docs draw the line, `queryBy` — for proving a thing is absent, `TextMatch` — how strings are actually compared, The `All` variants (+17 more)
 
-### Community 738 - "07b-observation-api.md"
-Cohesion: 0.13
-Nodes (13): Both failure modes, and how to spot each one, Gotchas, Interview questions, The client side has no such protection, The instrumentation only exists if you used the builder, Why the fix is a code change and not a filter, Gotchas, Interview questions (+5 more)
+### Community 738 - "08-metrics-with-micrometer/12-the-checklist.md"
+Cohesion: 0.06
+Nodes (32): Both failure modes, and how to spot each one, Gotchas, Interview questions, The client side has no such protection, The instrumentation only exists if you used the builder, Why the fix is a code change and not a filter, Gotchas, Interview questions (+24 more)
 
 ### Community 739 - "02-what-crac-is.md"
 Cohesion: 0.13
 Nodes (13): Gotchas, Interview questions, The four families of answer, The honest first question, The two costs, separated, Where cold start became a production problem, Gotchas, Interview questions (+5 more)
 
-### Community 740 - "05c-request-reply.md"
-Cohesion: 0.13
-Nodes (13): Availability is per operation, and so is the SLO, Budget, not target, Gotchas, Interview questions, Inverting it: what the dependencies would have to be, The dependency-budget conversation, Where the budget should be spent instead, Gotchas (+5 more)
+### Community 740 - "🔄 `networkMode`: What a Refetch Does When the Network Is Gone"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, How "online" is decided, and why it is not trustworthy, Interview questions, 🔄 `networkMode`: What a Refetch Does When the Network Is Gone (+8 more)
 
 ### Community 741 - "phase-14-correctness/README.md"
-Cohesion: 0.13
-Nodes (13): Where this connects, Why this is two files, Both need a DOM, ESM, which is where the time goes, Gotchas, Interview questions, The API differences you will actually notice, The one decision that matters (+5 more)
+Cohesion: 0.05
+Nodes (43): Where this connects, Why this is two files, Both need a DOM, ESM, which is where the time goes, Gotchas, Interview questions, The API differences you will actually notice, The one decision that matters (+35 more)
 
-### Community 742 - "01-where-config-lives.md"
-Cohesion: 0.13
-Nodes (14): Gotchas, Interview questions, `jest.config.ts` needs its own transpilation, Jest's `extends` — shallow, and it replaces, Jest — where it looks, in order, One project, several environments, Paths in Vitest are relative to the config file's directory, `rootDir` and `<rootDir>` — the part everyone gets wrong (+6 more)
+### Community 742 - "02-why-expect-error-wins.md"
+Cohesion: 0.12
+Nodes (14): Gotchas, Interview questions, `@ts-expect-error` and `TS2578`, `@ts-ignore`, `@ts-nocheck`, What each one does, Where they do not work, Always write a description (+6 more)
 
-### Community 743 - "01-handling-asynchrony.md"
-Cohesion: 0.13
-Nodes (14): 1. Under-The-Hood Mechanics, ★ 1. Why does `test('name', () => { fetchUser().then(res => expect(res).toBeDefined()); })` cause false passes?, 2. Real-World Engineering Scenario, ★ 2. What is the role of `expect.hasAssertions()` and `expect.assertions(N)`?, 3. Production-Grade Code Example, 3. What is the execution difference between macrotasks (`setTimeout`) and microtasks (`Promise.resolve`) in Jest?, 4. Gotchas & Senior Pitfalls, 4. What happens if you mix `async () => {}` syntax with the `done` callback argument? (+6 more)
+### Community 743 - "4. Senior Engineer Edge Cases & Pitfalls"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Every Rolldown hook is per-environment, Gotchas, 🔴 `importer` is not always the importer, Interview questions (+8 more)
 
-### Community 744 - "01-guiding-principle.md"
-Cohesion: 0.13
-Nodes (14): 1. Under-The-Hood Mechanics, ★ 1. What is the fundamental guiding principle of React Testing Library, and why does it reject shallow rendering?, 2. Real-World Engineering Scenario, ★ 2. Why does RTL recommend using `screen` over destructuring queries from `render()`?, 3. How does testing accessible roles (`getByRole`) improve both test quality and application accessibility?, 3. Production-Grade Code Example, 4. Gotchas & Senior Pitfalls, 4. What constitutes an "implementation detail" in a React component test? (+6 more)
+### Community 744 - "⚡ HTML Tag Descriptors"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, ⚡ HTML Tag Descriptors, Interview questions, ⚠️ Pitfall 1 — String replacement instead of tag descriptors (+8 more)
 
 ### Community 745 - "Transform stream"
 Cohesion: 0.15
@@ -5246,8 +5308,8 @@ Cohesion: 0.15
 Nodes (17): react-dom renderer, react package, react / react-dom version-match rule, What React is, createRoot, hydrateRoot, One root per container, ReactDOM.render removed (+9 more)
 
 ### Community 749 - "PostgreSQL cross-phase correctness review"
-Cohesion: 0.14
-Nodes (15): Session advisory lock pool leak, 81 pages clustered 169–269 lines, Merge join needs equality, Item 14 re-split queue, PostgreSQL cross-phase correctness review, SET cannot take bind parameters, XID wraparound warning threshold, Clustering tell (+7 more)
+Cohesion: 0.09
+Nodes (24): Erasable vs non-erasable syntax, ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX, Session advisory lock pool leak, 81 pages clustered 169–269 lines, Merge join needs equality, Item 14 re-split queue, PostgreSQL cross-phase correctness review, SET cannot take bind parameters (+16 more)
 
 ### Community 750 - "3. Production-Grade End-to-End Setup"
 Cohesion: 0.13
@@ -5257,13 +5319,13 @@ Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. 
 Cohesion: 0.13
 Nodes (13): Gotchas, Interview questions, Parameterising a decorator properly, Reading context in `render`, `viewMode` — the one that surprises people, What is on it, Which one should a decorator read?, `beforeEach` — setup with cleanup (+5 more)
 
-### Community 752 - "dependencies"
+### Community 752 - "react-p1/package.json"
 Cohesion: 0.10
 Nodes (19): dependencies, @babel/core, babel-plugin-react-compiler, @babel/preset-react, esbuild, puppeteer-core, react, react-dom (+11 more)
 
 ### Community 753 - "scripts"
-Cohesion: 0.11
-Nodes (18): scripts, build, build:fast, clear, currency, deploy, docusaurus, page-counts (+10 more)
+Cohesion: 0.10
+Nodes (20): scripts, build, build:fast, clear, currency, deploy, docusaurus, linkcheck (+12 more)
 
 ### Community 754 - "ex6-time.mjs"
 Cohesion: 0.13
@@ -5273,8 +5335,8 @@ Nodes (10): ac, all, Budget, paidAt, plus7ms, slow, start, t (+2 more)
 Cohesion: 0.14
 Nodes (13): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 5.1 Syntax vs Transform Plugins, 5.2 Stage-X / TC39 Proposals, 5.3 Common Ecosystem Plugins, 5.4 Macros (`babel-plugin-macros`) (+5 more)
 
-### Community 756 - "01-webpack-vite-jest-rollup.md"
-Cohesion: 0.14
+### Community 756 - "1. Concept & Under-the-Hood Mechanics"
+Cohesion: 0.15
 Nodes (13): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 8.1 Webpack (`babel-loader`), 8.2 Vite (`@vitejs/plugin-react` Babel path), 8.3 Jest (`babel-jest`), 8.4 Rollup/Rolldown (`@rollup/plugin-babel`) (+5 more)
 
 ### Community 757 - "4. Senior Engineer Edge Cases & Pitfalls"
@@ -5289,17 +5351,17 @@ Nodes (14): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Sce
 Cohesion: 0.18
 Nodes (14): Express 5.x documentation, Named splat /*splat, Express 5 path-to-regexp rewrite, Express 5.2.1 current line, Raw node:http, Illegal paths throw at registration, Express 5 path migration map, Named splat params are arrays (+6 more)
 
-### Community 760 - "12-snapshot-tests.md"
+### Community 760 - "4. Senior Engineer Edge Cases & Pitfalls"
 Cohesion: 0.12
-Nodes (14): Gotchas, Interview questions, Rules that make them tolerable, The decision, in one line, The mechanics, Where they genuinely earn their place, Why most snapshot tests are worthless, Gotchas (+6 more)
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, `originalUrl` is evidence about the execution model, ⚠️ Pitfall 1 — Assuming the hook runs (+8 more)
 
 ### Community 761 - "01-the-weak-collections.md"
-Cohesion: 0.08
-Nodes (24): 1 · Metadata on objects you do not own, 2 · Memoising by object identity, 3 · Private state, historically, 4 · Associating a library's data with a user's object, Gotchas, Interview questions, Keys must be objects, `Map` or `WeakMap`? (+16 more)
+Cohesion: 0.09
+Nodes (20): 1 · Metadata on objects you do not own, 2 · Memoising by object identity, 3 · Private state, historically, 4 · Associating a library's data with a user's object, Gotchas, Interview questions, Keys must be objects, `Map` or `WeakMap`? (+12 more)
 
-### Community 762 - "Time to readiness"
-Cohesion: 0.13
-Nodes (15): acceptingTraffic flag, Liveness probe, Readiness drain on SIGTERM, Readiness probe, module.enableCompileCache, Lazy imports, Time to readiness, Parallel independent connects (+7 more)
+### Community 762 - "4. Senior Engineer Edge Cases & Pitfalls"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1 — Branching on `NODE_ENV` instead of the context, ⚠️ Pitfall 2 — Reading `ctx.bundle` without a guard (+8 more)
 
 ### Community 763 - "GROUPING SETS"
 Cohesion: 0.15
@@ -5310,24 +5372,24 @@ Cohesion: 0.15
 Nodes (14): Lazy pool connection, One pool per process, pg.Pool, pool.on('error'), LISTEN needs a dedicated Client, pg.Client, pool.connect(), waitingCount (+6 more)
 
 ### Community 765 - "as const"
-Cohesion: 0.17
-Nodes (15): as const, as const is not as T, Derived union from as const list, Literal type, satisfies vs as const, Hook return as const tuple, Tuple type, Union common-members rule (+7 more)
+Cohesion: 0.12
+Nodes (22): TypeScript Playground, Erasure as the foundation fact, as const, as const is not as T, Derived union from as const list, Literal type, satisfies vs as const, Array type T[] (+14 more)
 
-### Community 766 - "dependencies"
+### Community 766 - "react-p0/package.json"
 Cohesion: 0.10
 Nodes (19): dependencies, @babel/core, babel-plugin-react-compiler, @babel/preset-react, esbuild, puppeteer-core, react, react-dom (+11 more)
 
-### Community 767 - "dependencies"
-Cohesion: 0.15
+### Community 767 - "ex16-lint/package.json"
+Cohesion: 0.14
 Nodes (12): @biomejs/biome, eslint, @eslint/js, prettier, dependencies, @biomejs/biome, eslint, @eslint/js (+4 more)
 
-### Community 768 - "1. Concept & Under-the-Hood Mechanics"
-Cohesion: 0.15
-Nodes (13): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3.1 Config File Forms, 3.2 Config Resolution & Root (Monorepos), 3.3 env-based Config, 3.4 overrides, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls (+5 more)
+### Community 768 - "📋 Babel Configuration: Files, Root, env & overrides"
+Cohesion: 0.13
+Nodes (15): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3.1 Config File Forms, 3.2 Config Resolution & Root (Monorepos), 3.3 env-based Config, 3.4 overrides, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls (+7 more)
 
-### Community 769 - "babel/README.md"
-Cohesion: 0.04
-Nodes (48): 1.1 What Babel Does, 1.2 Babel vs SWC vs esbuild vs tsc, 1.3 Where Babel Still Matters in 2026, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Assuming tsc emit replaces preset-react/preset-env (+40 more)
+### Community 769 - "📦 Why Babel & the Compiler Landscape (2026)"
+Cohesion: 0.14
+Nodes (14): 1.1 What Babel Does, 1.2 Babel vs SWC vs esbuild vs tsc, 1.3 Where Babel Still Matters in 2026, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Assuming tsc emit replaces preset-react/preset-env (+6 more)
 
 ### Community 770 - "1. Concept & Under-the-Hood Mechanics"
 Cohesion: 0.15
@@ -5373,17 +5435,17 @@ Nodes (12): 19.1 ESLint Legacy → Flat Config, 19.2 ESLint → Oxlint, 19.3 Dua
 Cohesion: 0.15
 Nodes (12): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Choosing CSS-in-JS for a New Project Without Weighing Its Runtime Cost, ⚠️ Anti-Pattern 2: Hardcoding Design Values Instead of Referencing Tokens, ⚠️ Anti-Pattern 3: Mixing Multiple Styling Approaches Within One Codebase Without a Clear Boundary, Color Strategy for Modern Fullstack Applications (+4 more)
 
-### Community 781 - "08-metrics-with-micrometer/12-the-checklist.md"
-Cohesion: 0.15
-Nodes (12): Gotchas, Interview questions, Step 0 — Write down the question you will be asked at 03:00, Step 1 — Find out what you already have before writing a line, Step 2 — Install common tags, before anything registers a meter, Step 3 — Bound the cardinality before the first deploy, Step 4 — Decide the histogram budget, per meter name, once, Step 5 — Only now, instrument your own code (+4 more)
+### Community 781 - "⚡ `enforce` vs Hook `order` vs Hook Kind"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ `enforce` vs Hook `order` vs Hook Kind, Exactly one Vite-specific hook documents an `order`, Gotchas, Interview questions (+8 more)
 
-### Community 782 - "07d-the-diagnostic-toolbox.md"
-Cohesion: 0.15
-Nodes (12): Gotchas, Heap dumps: five routes, one prerequisite, Interview questions, Native memory tracking, and how much less it is than HotSpot's, Route 1 — VisualVM, and the flag people forget, Route 2 — on `OutOfMemoryError`, and the filename you will grep for, Route 3 — 🔴 `-XX:+DumpHeapAndExit` dumps the image heap, which is a *build* artefact, Route 4 — `SIGUSR1`, and the one build shape where it disappears (+4 more)
+### Community 782 - "07b-no-jit-no-jfr-no-jstack.md"
+Cohesion: 0.07
+Nodes (28): Gotchas, Interview questions, Path one: the image heap, Path three: the seeded generator, Path two: embedded resources, The countermeasures, in order, 🔴 The documented option that reads it back out, First: there is no JIT, and what that costs you diagnostically (+20 more)
 
-### Community 783 - "04c-timeouts-in-spring.md"
-Cohesion: 0.15
-Nodes (11): Gotchas, Interview questions, `RestTemplate`: deprecated, not removed, Setting it in Java, when configuration is not enough, Which library, and why your classpath decides, Which object: the builder is auto-configured, the static factory is not, Gotchas, Interview questions (+3 more)
+### Community 783 - "04c2-the-client-you-actually-get.md"
+Cohesion: 0.29
+Nodes (6): Gotchas, Interview questions, `RestTemplate`: deprecated, not removed, Setting it in Java, when configuration is not enough, Which library, and why your classpath decides, Which object: the builder is auto-configured, the static factory is not
 
 ### Community 784 - "06d-synchronous-out-of-habit.md"
 Cohesion: 0.15
@@ -5413,25 +5475,25 @@ Nodes (13): Bulk insert speed ladder, 65535 parameter ceiling, unnest N rows thr
 Cohesion: 0.05
 Nodes (35): A "safe" integer range copied from another language, Gotchas, Interview questions, `/` is never integer division, `sys.maxsize` is not the maximum integer, `sys.maxsize` used as "the biggest int", Ten million integers in a list, The rule, from the reference (+27 more)
 
-### Community 791 - "12-flushsync.md"
-Cohesion: 0.15
-Nodes (12): 1. It costs performance, 2. 🔴 It can show your Suspense fallbacks, 3. It can run pending Effects, 4. It can flush work you did not ask about, Gotchas, Interview questions, The four caveats, and why each one bites, The Pitfall, quoted in full (+4 more)
+### Community 791 - "⚡ Augmenting Plugins You Do Not Own"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Augmenting Plugins You Do Not Own, Do not make consumers spread *your* plugin, Gotchas, Interview questions (+8 more)
 
-### Community 792 - "1. Under-The-Hood Mechanics"
-Cohesion: 0.15
-Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Lifecycle & Refetch Triggers, Optimistic Updates: `onQueryStarted` + `updateQueryData().undo()`, ⚠️ Pitfall 1: Only Invalidating the Item Tag on Create/Delete, ⚠️ Pitfall 2.5: Forgetting to `catch` and `undo()` the Optimistic Patch (+5 more)
+### Community 792 - "Gotchas"
+Cohesion: 0.12
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A `providesTags` that returns nothing when the query errors, Expecting invalidation to refetch an entry nobody is watching, Gotchas, Interview questions, Invalidating only the item tag on a create or delete (+9 more)
 
-### Community 793 - "1. Under-The-Hood Mechanics"
-Cohesion: 0.15
-Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `createEntityAdapter`: Normalized State & Generated CRUD, Generated CRUD Reducer Methods, Generated Selectors, ⚠️ Pitfall 1: Assuming `addOne` Overwrites an Existing Entity (+4 more)
+### Community 793 - "Gotchas"
+Cohesion: 0.11
+Nodes (19): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, Calling `getSelectors()` with no argument and using it against `RootState`, 📦 `createEntityAdapter`: Normalized State & Generated CRUD, Expecting `addOne` to update an entity that already exists, Expecting `sortComparer` to sort data that arrived another way, Generated CRUD Reducer Methods (+11 more)
 
 ### Community 794 - "1. Under-The-Hood Mechanics"
-Cohesion: 0.15
-Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Testing Reducers Through `dispatch` on a Full App Store, ⚠️ Pitfall 2: Mocking `fetch` Globally Instead of Using MSW, ⚠️ Pitfall 3: Sharing One Store Instance Across Multiple Tests, Testing Connected Components (+4 more)
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A fresh store per test, always, Asserting on `store.getState()` in a component test, Getting initial state, without the `@@INIT` trick, Gotchas, Importing the app's singleton store into a test (+8 more)
 
-### Community 795 - "ex5-sync-vs-bg.mjs"
-Cohesion: 0.18
-Nodes (8): connection, noJ, q, resize(), server, t2, w, yesJ
+### Community 795 - "⚡ Conditional Application (`apply`)"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `command` is `'serve' | 'build'`, and there is no `'dev'`, ⚡ Conditional Application (`apply`), Gotchas, Interview questions (+8 more)
 
 ### Community 796 - "ex2-vulns.mjs"
 Cohesion: 0.17
@@ -5445,13 +5507,13 @@ Nodes (8): bWait, CONC_DB, db, db2, db3, pool, sqBig, started
 Cohesion: 0.18
 Nodes (11): Before reporting, 🔴 Before you touch a page: check the lane, Commit cadence, devbible-topic, Entry points, Job 1 — write or extend a topic, Job 2 — pull in the surrounding libraries, Job 3 — verify, never assume (+3 more)
 
-### Community 799 - "01-the-shape-and-numberformat.md"
-Cohesion: 0.14
-Nodes (13): 🔴 Build the formatter once, Compact notation and sign display, Currency, Digits, and the two systems that must not be mixed, `formatToParts` — when the options cannot express the layout, Gotchas, Interview questions, `NumberFormat` — the styles (+5 more)
+### Community 799 - "Phase 1 — Values, types and coercion"
+Cohesion: 0.03
+Nodes (68): Signed zero -0, Object.is (SameValue), SameValueZero, Strict equality ===, Literal rounding above MAX_SAFE_INTEGER, Literal bases are notation only, Phase 1 — Values, types and coercion, Phase 1 gate (+60 more)
 
 ### Community 800 - "02-what-earns-a-test.md"
-Cohesion: 0.14
-Nodes (13): By component shape, Custom hooks, Data-fetching — the four states, Gotchas, Interactive — state that the user drives, Interview questions, Presentational — props in, markup out, Pure functions and reducers (+5 more)
+Cohesion: 0.08
+Nodes (23): A component has exactly two users, False negative — red when nothing is broken, False positive — green when something is broken, Gotchas, Interview questions, The definition, The drill that settles any argument, The one honest exception (+15 more)
 
 ### Community 801 - "4. Senior Engineer Edge Cases & Pitfalls"
 Cohesion: 0.17
@@ -5465,9 +5527,9 @@ Nodes (11): 12.1 Shared Root Config, 12.2 Cross-Package Compilation, 1. Concept 
 Cohesion: 0.17
 Nodes (11): 13.1 @babel/cli, 13.2 Codemods (jscodeshift et al.), 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🧰 @babel/cli & Codemods on Babel’s Parser, ⚠️ CLI build without typecheck (+3 more)
 
-### Community 804 - "01-syntax-and-indentation/README.md"
-Cohesion: 0.17
-Nodes (11): A dedent to "somewhere in between" is an error, not a new block, Clause, header, suite: the shape every block shares, Consistent-but-weird indentation compiles fine, Gotchas, `INDENT` after a header is required, and its absence has its own message, Interview questions, Physical lines, logical lines, and the one token that separates statements, The chunks (+3 more)
+### Community 804 - "4. Senior Engineer Edge Cases & Pitfalls"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, No file means no watcher mapping, ⚠️ Pitfall 1 — Assuming a virtual module participates in HMR for free (+8 more)
 
 ### Community 805 - "4. Senior Engineer Edge Cases & Pitfalls"
 Cohesion: 0.17
@@ -5529,9 +5591,9 @@ Nodes (10): Gotchas, Interview questions, The two shapes, When the answer is "it
 Cohesion: 0.16
 Nodes (14): Annex B sloppy-mode block functions, Block-level function declaration, Prefer const-assigned function expressions in blocks, Strict-mode block functions, Circular ESM import TDZ, Const-like inner class binding, Class lexical declaration and TDZ, CommonJS circular require (+6 more)
 
-### Community 820 - "📦 Migrating From Classic Redux to RTK"
-Cohesion: 0.17
-Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `configureStore` Replaces Hand-Assembled `createStore`, Interop With Existing `redux-saga`/`redux-observable` Middleware, 📦 Migrating From Classic Redux to RTK, Migrating Switch-Statement Reducers to `createSlice` (+3 more)
+### Community 820 - "Gotchas"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, Assuming a hand-written reducer must be converted before the store can be, Big-bang migration, `configureStore` Replaces Hand-Assembled `createStore`, Gotchas, Interop With Existing `redux-saga`/`redux-observable` Middleware (+8 more)
 
 ### Community 821 - "SplitLines framing Transform"
 Cohesion: 0.20
@@ -5554,28 +5616,28 @@ Cohesion: 0.17
 Nodes (11): Accidental state sharing across wrapped functions, Breakdown of responsibilities, Decorating functions and instance methods, Definition-time validation in factories, Desugaring decorators with arguments, Forgetting parentheses on a non-dual-mode decorator, Gotchas, How dual-mode works (+3 more)
 
 ### Community 826 - "02-hydration-mismatches.md"
-Cohesion: 0.17
-Nodes (11): 1. Whitespace around the root, 2. `typeof window !== 'undefined'` in render, 3. Browser-only APIs during render, 4. Different data on each side, Fixing each, Gotchas, Interview questions, The contract (+3 more)
+Cohesion: 0.07
+Nodes (26): 1. Whitespace around the root, 2. `typeof window !== 'undefined'` in render, 3. Browser-only APIs during render, 4. Different data on each side, Fixing each, Gotchas, Interview questions, The contract (+18 more)
 
-### Community 827 - "📦 Immer Internals: Proxy Drafts & The Mutate-Or-Return Rule"
-Cohesion: 0.17
-Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 Immer Internals: Proxy Drafts & The Mutate-Or-Return Rule, ⚠️ Pitfall 1: Mutating State Outside an Immer-Wrapped Reducer, ⚠️ Pitfall 2: Returning AND Mutating in the Same Reducer Branch, ⚠️ Pitfall 3: Assuming Immer Drafts Work With Class Instances or Non-Plain Objects (+3 more)
+### Community 827 - "Gotchas"
+Cohesion: 0.12
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A class instance in the store, A concise arrow body that returns the mutation's result, Assuming a `Map` or `Set` in state is a good idea because Immer supports it, Expecting structural sharing to survive a spread, Gotchas (+9 more)
 
 ### Community 828 - "📖 Core Concepts: Component-Driven Development & CSF3"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, A "Story": One Reproducible Render of One Component State, Component Story Format 3 (CSF3): The Modern, Object-Based Convention, 📖 Core Concepts: Component-Driven Development & CSF3, ⚠️ Pitfall 1: Building Components That Secretly Depend on Ambient App Context (+3 more)
 
-### Community 829 - "readonly"
+### Community 829 - "strict defaults to true in TypeScript 7"
+Cohesion: 0.25
+Nodes (9): strict defaults to true in TypeScript 7, Editor vs CI disagreements, Pin the TypeScript compiler, checkJs project-wide, JSDoc type annotations, JSDoc checking vs converting to .ts, // @ts-check, Phase 0 How TypeScript runs (+1 more)
+
+### Community 830 - "⚡ The Vite Environment System: `import.meta.env` Is a Compile-Time Substitution, Not a Runtime Object"
 Cohesion: 0.15
-Nodes (15): const fixes the binding not the value, const by default, Object.freeze, checkJs project-wide, JSDoc type annotations, JSDoc checking vs converting to .ts, TypeScript Playground, // @ts-check (+7 more)
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1 — A shell variable silently outranking your file, ⚠️ Pitfall 2 — Editing `.env` with the dev server running (+5 more)
 
-### Community 830 - "⚡ Env Variables & Modes: `.env` Files, the `VITE_` Prefix & `import.meta.env`"
+### Community 831 - "⚡ CSS Handling: Modules, PostCSS, Preprocessors & Lightning CSS"
 Cohesion: 0.17
-Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Env Variables & Modes: `.env` Files, the `VITE_` Prefix & `import.meta.env`, `import.meta.env`: Built-In Values Plus Custom Ones, Mode vs `NODE_ENV`: A Genuinely Different Axis, ⚠️ Pitfall 1: Assuming an Unprefixed Env Var Will Be Available Client-Side (+3 more)
-
-### Community 831 - "vite/README.md"
-Cohesion: 0.03
-Nodes (53): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `build.lib`: A Fundamentally Different Output Shape, ⚡ Build System: Rollup Options, `manualChunks` & Library Mode, `build.target`: esbuild's Role Inside the Rollup Pipeline, `manualChunks`: Deliberate Chunk Splitting Strategy (+45 more)
+Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ CSS Handling: Modules, PostCSS, Preprocessors & Lightning CSS, CSS Modules: Automatic Scoping via Naming Convention, Lightning CSS: An Alternative, Rust-Based Transformer, ⚠️ Pitfall 1: Expecting a Plain `.css` Import to Be Automatically Scoped (+3 more)
 
 ### Community 832 - "⚡ SSR Support: Middleware Mode, `ssrLoadModule()` & SSR Manifests"
 Cohesion: 0.18
@@ -5606,12 +5668,12 @@ Cohesion: 0.17
 Nodes (11): After topic 09, Boundaries — link, do not re-teach, Cadence and scope, Prompt — devbible, next pending Java task, Read these first, in this order, and follow them, Report when you finish each file, 🔴🔴 The filename trap — this will cost you an hour if you miss it, The task (+3 more)
 
 ### Community 839 - "stryker.config.json"
-Cohesion: 0.17
-Nodes (11): clear-text, src/*.mjs, commandRunner, command, concurrency, coverageAnalysis, mutate, packageManager (+3 more)
-
-### Community 840 - "css/package.json"
 Cohesion: 0.20
-Nodes (9): dependencies, puppeteer-core, web-features, description, puppeteer-core, name, private, type (+1 more)
+Nodes (9): commandRunner, command, concurrency, coverageAnalysis, mutate, packageManager, reporters, $schema (+1 more)
+
+### Community 840 - "1. Under-The-Hood Mechanics"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1 — "webpack is dead", ⚠️ Pitfall 3 — Repeating the "esbuild in dev, Rollup in prod" description, ⚠️ Pitfall 4 — Reading webpack's `next` dist-tag as a new major (+8 more)
 
 ### Community 841 - "express5-check/package.json"
 Cohesion: 0.17
@@ -5631,7 +5693,7 @@ Nodes (11): dependencies, pg, description, pg, keywords, main, name, scripts (+3
 
 ### Community 845 - "ts-p0/package.json"
 Cohesion: 0.17
-Nodes (11): description, devDependencies, esbuild, typescript, typescript5, esbuild, typescript, name (+3 more)
+Nodes (11): typescript5, description, devDependencies, esbuild, typescript, typescript5, esbuild, typescript (+3 more)
 
 ### Community 846 - "ensure-search-index.mjs"
 Cohesion: 0.17
@@ -5670,28 +5732,28 @@ Cohesion: 0.20
 Nodes (11): Application settings (app.set / app.get), etag default weak, strict and case-sensitive routing unset, x-powered-by, Host-based routing, query parser default simple, Body parsers and size limits, Spoofed X-Forwarded-For (+3 more)
 
 ### Community 855 - "🎨 Basic Animation Props: `initial`, `animate`, `exit` & `transition`"
-Cohesion: 0.17
-Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Basic Animation Props: `initial`, `animate`, `exit` & `transition`, Gotchas, `initial` vs `animate`: Not Just "Before and After" — A Live Diff on Re-Render, Interview questions (+4 more)
+Cohesion: 0.22
+Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Basic Animation Props: `initial`, `animate`, `exit` & `transition`, Gotchas, `initial` vs `animate`: Not Just "Before and After" — A Live Diff on Re-Render, Interview questions (+1 more)
 
 ### Community 856 - "Gotchas"
-Cohesion: 0.09
-Nodes (22): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, Gotchas, Interview questions, ⚠️ Pitfall 10: Assuming a Component Transition Merges With the `MotionConfig` Default, ⚠️ Pitfall 11: Tuning Inertia Boundaries With `power` and `timeConstant`, ⚠️ Pitfall 12: Trusting the Listed Spring Defaults in Isolation (+14 more)
+Cohesion: 0.11
+Nodes (18): 1. Under-The-Hood Mechanics, 2. Production-Grade Code Example, Gotchas, Interview questions, ⚠️ Pitfall 10: Trusting the Listed Spring Defaults in Isolation, ⚠️ Pitfall 1: Believing `duration` Is Ignored on a `spring`, ⚠️ Pitfall 2: Over-Bouncy Spring Settings on Content Users Read/Interact With Precisely, ⚠️ Pitfall 3: "Spring Is the Default", Applied to `opacity` (+10 more)
 
-### Community 857 - "🎨 Gestures: `whileHover`/`whileTap`/`whileFocus`, `drag` & Constraints"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `dragConstraints`/`dragElastic`: Bounded, Resistant Dragging, 🎨 Gestures: `whileHover`/`whileTap`/`whileFocus`, `drag` & Constraints, ⚠️ Pitfall 1: Forgetting `whileFocus` for Keyboard-Only Accessibility, ⚠️ Pitfall 2: Enabling `drag` Without `dragConstraints`, Letting Elements Drag Anywhere Indefinitely (+2 more)
+### Community 857 - "Gotchas"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. What each gesture actually fires, 3. Production-Grade Code Example, ★ Gesture props on a custom component are silent no-ops until a ref reaches the DOM, ★ Gestures do not work on SVG filter primitives, 🎨 Gestures: `whileHover`/`whileTap`/`whileFocus`, Gotchas, Interview questions (+6 more)
 
-### Community 858 - "Gotchas"
-Cohesion: 0.12
-Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 🎨 `AnimatePresence`: Exit Animations & Mode Configuration, Gotchas, Interview questions, Keying Children Correctly, `mode`: Controlling Overlap Between Outgoing and Incoming Elements (+8 more)
-
-### Community 859 - "05c-projections-and-generated-mappers.md"
+### Community 858 - "🎨 `AnimatePresence`: Exit Animations, Removal Detection & Keys"
 Cohesion: 0.18
-Nodes (10): Class-based (DTO) projections — a value, Dynamic projections, Generated and reflective mappers, Gotchas, Interface projections — a proxy over a target, Interview questions, Nested interface projections defer too, 🔴 Open projections are a different object (+2 more)
+Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 🎨 `AnimatePresence`: Exit Animations, Removal Detection & Keys, Gotchas, Interview questions, Keying Children Correctly, ⚠️ Pitfall 1: Forgetting a Stable, Unique `key` on Children Inside `AnimatePresence` (+3 more)
+
+### Community 859 - "13b-ngc-is-tsc-and-the-typescript-pin.md"
+Cohesion: 0.13
+Nodes (13): Gotchas, Interview questions, `ngc`, and what it is for, The escape hatch, and why it is not one, The version check, in full, Where enforcement actually lives, Why the window is one minor wide, argued rather than asserted, Gotchas (+5 more)
 
 ### Community 860 - "🎨 Scroll-Linked Animations: `useScroll`, `whileInView` & Parallax"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Using `whileInView` for an Effect That Should Continuously Track Scroll Position, ⚠️ Pitfall 2: Forgetting `viewport={{ once: true }}` for an Entrance Animation That Shouldn't Replay, ⚠️ Pitfall 3: Attaching `useScroll` Without a `target`, Tracking the Wrong Scroll Container, 🎨 Scroll-Linked Animations: `useScroll`, `whileInView` & Parallax (+2 more)
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1: Using `whileInView` for an Effect That Should Continuously Track Scroll Position, ⚠️ Pitfall 2: Forgetting `viewport={{ once: true }}` for an Entrance Animation That Shouldn't Replay (+4 more)
 
 ### Community 861 - "🎨 Animation Controls: `useAnimate()`/`useAnimation()` & Chained Sequences"
 Cohesion: 0.18
@@ -5702,12 +5764,12 @@ Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Morphing Between Path Shapes: A Real Caveat, ⚠️ Pitfall 1: Attempting to Morph Between Structurally Mismatched Paths, ⚠️ Pitfall 2: Forgetting `fill: 'none'` When Using `pathLength` for a Stroke-Drawing Effect, ⚠️ Pitfall 3: Assuming `pathLength` Animates at a Perceptually Uniform Speed Across Complex Paths (+2 more)
 
 ### Community 863 - "🎨 Advanced Patterns: Shared Layout Transitions, Next.js Integration & Reduced Motion"
-Cohesion: 0.20
+Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Advanced Patterns: Shared Layout Transitions, Next.js Integration & Reduced Motion, Next.js Integration: A Deliberate Client Boundary, ⚠️ Pitfall 1: Marking Entire Pages `'use client'` Just to Enable a Page Transition, ⚠️ Pitfall 2: Ignoring `useReducedMotion()` Entirely, Providing No Accommodation (+2 more)
 
-### Community 864 - "🏛️ Component Architecture: Compound Components, Headless UI & Composition Over Configuration"
-Cohesion: 0.18
-Nodes (10): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Building a Container/Presentational Split "By Convention" Post-Hooks, ⚠️ Anti-Pattern 2: Reaching for Compound Components for a Simple, Rarely-Varied Component, ⚠️ Anti-Pattern 3: Configuration-Prop Explosion Left Unaddressed Until It's Genuinely Unmanageable, Atomic Design: A Mental Model, Rarely Literal Folders (+2 more)
+### Community 864 - "02-why-provide-functions-replaced-forroot.md"
+Cohesion: 0.13
+Nodes (13): Gotchas, Interview questions, The convention, stated precisely, The mapping, module by module, The mechanical reason the pattern had to go, What `forRoot()` was, and why it existed at all, Why this is not just tree-shaking, Gotchas (+5 more)
 
 ### Community 865 - "🏛️ Data Layer & API Architecture: BFF, Client Abstraction & Generated Types"
 Cohesion: 0.18
@@ -5738,12 +5800,12 @@ Cohesion: 0.18
 Nodes (10): Generators, Getting it running, The chunks, The four things this topic is really about, The verdict, Three things that shape the whole topic, Two things the documentation could not settle — flagged in-page, not invented, When it fails (+2 more)
 
 ### Community 872 - "JDWP — the debugger that exists, with the word "experimental" attached"
-Cohesion: 0.16
-Nodes (11): Building a debuggable image, and what it actually produces, JDWP — the debugger that exists, with the word "experimental" attached, jitdump, and why you almost certainly do not need it, Launching and connecting, `perf` — the profiler that works, and the two flags that make it readable, Recording and rendering, So when is JDWP worth it?, The architecture, because it explains every limitation (+3 more)
+Cohesion: 0.29
+Nodes (7): Building a debuggable image, and what it actually produces, JDWP — the debugger that exists, with the word "experimental" attached, Launching and connecting, So when is JDWP worth it?, The architecture, because it explains every limitation, The limitations, in full, The one-time setup
 
-### Community 873 - "01-the-problem-reactive-solved.md"
-Cohesion: 0.18
-Nodes (10): Assuming the event loop makes concurrency safe, Believing you get backpressure by importing Reactor, Gotchas, Interview questions, Reading "reactive" as "faster", The event-loop answer, The shape of the original problem, The trade-off (+2 more)
+### Community 873 - "Gotchas"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 🔴 ★ Constraints are elastic by default — `dragElastic` does not *enable* the rubber band, 🎨 Drag, constraints and momentum, ★ `drag="x"` and `dragDirectionLock` are not the same decision, `dragConstraints`/`dragElastic`: Bounded, Resistant Dragging, ★ Dragging from a handle needs `dragControls` **and** `dragListener={false}` (+7 more)
 
 ### Community 874 - "04-route-handler-error-responses-and-consistent-api-error-envel.md"
 Cohesion: 0.18
@@ -5753,32 +5815,32 @@ Nodes (10): A 400 for an outage, so the sender stops retrying, Assuming a `GET` 
 Cohesion: 0.18
 Nodes (11): A zombie service worker on `localhost:3000` from a different project, Assuming you need HTTPS on your own machine, Changing the port midway through a test session, Clearing site data and leaving the registration behind, Drawing persistence conclusions from an Incognito window, Expecting `next start --experimental-https` to work, Gotchas, Shipping a `--experimental-https` certificate to production (+3 more)
 
-### Community 876 - "01-what-if-does.md"
-Cohesion: 0.18
-Nodes (10): Breakage 1 — `add_header` silently drops the inherited set, Breakage 2 — two `if` blocks do not combine, Breakage 3 — `if` with a content-phase directive, Gotchas, Interview questions, The conditions it accepts, The documentation, read carefully, The two things that are safe (+2 more)
+### Community 876 - "The sequence"
+Cohesion: 0.12
+Nodes (15): 1 · Actually call remove, 2 · Tie it to a lifecycle the framework already manages, 3 · Return a handle instead of relying on symmetry, 4 · Hold the listener weakly — with a caveat, Four fixes, in increasing order of robustness, 1 · Is it an `OutOfMemoryError` at all?, 2 · Read the word after the colon, 3 · Find the *first* error, not the latest (+7 more)
 
-### Community 877 - "05-request-phases.md"
-Cohesion: 0.18
-Nodes (10): 1. `set` before `proxy_pass` does not do what it looks like, 2. `realip` fixes `$remote_addr` for everything downstream, 3. 🔴 `add_header` disappears on a 500, Gotchas, Interview questions, The order that matters to you, Trade-off, What runs after the response (+2 more)
+### Community 877 - "04-named-and-internal.md"
+Cohesion: 0.06
+Nodes (32): Gotchas, Interview questions, The algorithm, The documented worked example, Trade-off, Phase gate for this topic, Where this connects, `auth_request` — the same idea for authorisation decisions (+24 more)
 
 ### Community 878 - "Buffer extends Uint8Array"
 Cohesion: 0.18
 Nodes (11): Buffer extends Uint8Array, Buffer.from copy vs view overloads, Prefer Uint8Array outside Node, Buffer.slice shares memory, DataView endianness API, Endianness, fetch Response.body, Web stream locking and tee (+3 more)
 
 ### Community 879 - "🎭 Test Runner: `@playwright/test`, Built-In Fixtures & the Projects Matrix"
-Cohesion: 0.18
-Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Built-In Fixtures, ⚠️ Pitfall 1: Repeating Setup Logic Inline Instead of Extracting a Custom Fixture, ⚠️ Pitfall 2: Forgetting Fixture Cleanup Code Must Go AFTER `use()`, ⚠️ Pitfall 3: Using a Worker-Scoped Fixture Where Test-Scoped Isolation Was Actually Needed (+3 more)
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Built-In Fixtures, Gotchas, Interview questions, ⚠️ Pitfall 1: Repeating Setup Logic Inline Instead of Extracting a Custom Fixture (+5 more)
 
 ### Community 880 - "🎭 Actions & Interactions: Core Methods & Low-Level Keyboard/Mouse APIs"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Actions & Interactions: Core Methods & Low-Level Keyboard/Mouse APIs, `dragTo()` and `setInputFiles()`: Purpose-Built for Otherwise-Awkward Interactions, `fill()` vs `pressSequentially()`: A Genuine Behavioral Difference, ⚠️ Pitfall 1: Using `fill()` for Content That Needs Real Keystroke-Driven Behavior (+2 more)
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Actions & Interactions: Core Methods & Low-Level Keyboard/Mouse APIs, `dragTo()` and `setInputFiles()`: Purpose-Built for Otherwise-Awkward Interactions, `fill()` vs `pressSequentially()`: A Genuine Behavioral Difference, Gotchas (+5 more)
 
 ### Community 881 - "🎭 Navigation & Network: `page.goto()`, `page.route()` & HAR Replay"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, HAR Replay: Deterministic, Recorded Network Traffic, 🎭 Navigation & Network: `page.goto()`, `page.route()` & HAR Replay, `page.route()`: Intercepting at the Browser's Network Layer, ⚠️ Pitfall 1: Forgetting `page.route()` Must Be Set Up BEFORE the Navigation That Triggers the Request (+2 more)
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, HAR Replay: Deterministic, Recorded Network Traffic, Interview questions, 🎭 Navigation & Network: `page.goto()`, `page.route()` & HAR Replay (+5 more)
 
 ### Community 882 - "🎭 Authentication & State: `storageState` & Global Setup Projects"
-Cohesion: 0.18
+Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Authentication & State: `storageState` & Global Setup Projects, Per-Role Authentication Files, ⚠️ Pitfall 1: A Stale `storageState` File Persisting Across CI Runs, ⚠️ Pitfall 2: Committing `storageState` Files (Containing Real Session Tokens) to Version Control (+2 more)
 
 ### Community 883 - "🎭 Parallelism & Sharding: Workers, `describe.serial()` & CI Sharding"
@@ -5805,21 +5867,21 @@ Nodes (11): Lost update across requests, Retry only recomputable operations, row
 Cohesion: 0.18
 Nodes (10): Class methods with `functools.singledispatchmethod`, Cumulative folding with `functools.reduce`, Generic functions with `functools.singledispatch`, Gotchas, Idiomatic use: Deep dictionary traversal, Inheritance and the Method Resolution Order (MRO), Interview questions, Keyword arguments bypass singledispatch (+2 more)
 
-### Community 889 - "03-the-server-renderers.md"
-Cohesion: 0.18
-Nodes (10): Aborting, Gotchas, Interview questions, Node — callbacks, `onError` is not optional in practice, 🔴 `renderToString` cannot stream Suspense, The shape of each API, The three (+2 more)
+### Community 889 - "04-promise-combinators/02-race-and-any.md"
+Cohesion: 0.13
+Nodes (13): `allSettled` — never rejects, Gotchas, Interview questions, The behaviour that matters in production, The implementation, What the specification requires, `any` — first to fulfil, Gotchas (+5 more)
 
-### Community 890 - "📦 `createSlice`: Reducers, Immer Drafts & `extraReducers`"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `createSlice`: Reducers, Immer Drafts & `extraReducers`, `extraReducers`: Responding to Foreign Actions, ⚠️ Pitfall 1: Mixing Mutation AND Return in the Same Reducer, ⚠️ Pitfall 2: Forgetting `extraReducers` Actions Must Come From Outside the Slice (+2 more)
+### Community 890 - "Gotchas"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A `name` that collides with another slice's action namespace, 📦 `createSlice`: Reducers, Immer Drafts & `extraReducers`, `extraReducers`: Responding to Foreign Actions, Gotchas, Interview questions (+8 more)
 
-### Community 891 - "📦 Middleware Stack & `listenerMiddleware`"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `listenerMiddleware`: Reactive Side Effects Without Sagas, 📦 Middleware Stack & `listenerMiddleware`, ⚠️ Pitfall 1: `.concat()` Instead of `.prepend()` for `listenerMiddleware`, ⚠️ Pitfall 2: Forgetting `cancelActiveListeners()` in Debounce Patterns (+2 more)
+### Community 891 - "Gotchas"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, Adding a middleware for a code-split feature at store construction, Assuming `next` and `dispatch` are interchangeable inside middleware, `.concat()` where `.prepend()` was wanted for a listener, `createDynamicMiddleware` — adding middleware after the store exists, Debouncing without `cancelActiveListeners()` (+8 more)
 
-### Community 892 - "📦 React-Redux Hooks: `useSelector`, `useDispatch` & Typed Wrappers"
-Cohesion: 0.18
-Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Returning a New Object Literal Without `shallowEqual`, ⚠️ Pitfall 2: Calling `useStore()` Where `useSelector()` Was Needed, ⚠️ Pitfall 3: Skipping the Typed Hooks Wrapper in a Growing Codebase, 📦 React-Redux Hooks: `useSelector`, `useDispatch` & Typed Wrappers (+3 more)
+### Community 892 - "Gotchas"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A selector that throws while data is loading, Gotchas, Importing the plain hooks in feature code, Interview questions, Putting `dispatch` in a dependency array and worrying about it (+8 more)
 
 ### Community 893 - "📖 Story Anatomy: Meta, Named Exports, `args`, `argTypes` & `render`"
 Cohesion: 0.18
@@ -5845,68 +5907,64 @@ Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. 
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📖 Advanced Patterns: Living Style Guide, PR-Based Visual Review & Outside-In Development, ⚠️ Pitfall 1: Treating Component-Driven Development as "Storybook Adoption" Alone, Without the Workflow Shift, ⚠️ Pitfall 2: Making Visual/Interaction Checks Required Gates Without a Clear Review Ownership Process, ⚠️ Pitfall 3: Writing Stories That Don't Reflect Genuinely Realistic Data/Edge Cases (+2 more)
 
-### Community 899 - "tanstack-query/README.md"
-Cohesion: 0.03
-Nodes (58): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Core Concepts: The Server-State Model, `QueryClient` & Why Server State Is Different, ⚠️ Pitfall 1: Treating Server State Like Client State, Reinventing What TanStack Query Already Solves, ⚠️ Pitfall 2: Creating Multiple `QueryClient` Instances Accidentally, ⚠️ Pitfall 3: Assuming Cached Server Data Is Always Current (+50 more)
-
 ### Community 900 - "🔄 `useQuery` Deep Dive: `queryKey`, `staleTime` vs `gcTime`, `enabled` & `select`"
-Cohesion: 0.18
-Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Confusing `staleTime` and `gcTime` as the Same Concept, ⚠️ Pitfall 2: Using an Unserializable or Unstable `queryKey`, ⚠️ Pitfall 3: Forgetting `enabled: false` Still Returns a Query Object, Just Without Fetching, `queryKey`: Hierarchical, Serializable Cache Identity (+3 more)
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1: Confusing `staleTime` and `gcTime` as the Same Concept, ⚠️ Pitfall 2: Using an Unserializable or Unstable `queryKey` (+5 more)
 
-### Community 901 - "🔄 Background Refetching: Window Focus, Reconnect & Polling Intervals"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Background Refetching: Window Focus, Reconnect & Polling Intervals, Conditional `refetchInterval`: Polling That Stops Itself, ⚠️ Pitfall 1: Fixed-Interval Polling That Never Stops, Wasting Resources Indefinitely, ⚠️ Pitfall 2: Leaving `refetchOnWindowFocus: true` for Data That Should Never Change Mid-Session (+2 more)
+### Community 901 - "1. Under-The-Hood Mechanics"
+Cohesion: 0.12
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, A background refetch is invisible by design, 🔄 Background Refetching: Window Focus, Reconnect & the Staleness Gate, Gotchas, Interview questions (+9 more)
 
 ### Community 902 - "🔄 Dependent & Parallel Queries: `enabled` Chaining & `useQueries()`"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Dependent & Parallel Queries: `enabled` Chaining & `useQueries()`, Dependent Queries: A Genuine, Necessary Waterfall, ⚠️ Pitfall 1: Creating an Unnecessary Waterfall for Genuinely Independent Data, ⚠️ Pitfall 2: Calling `useQuery` in a Loop Instead of `useQueries()` (+2 more)
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Dependent & Parallel Queries: `enabled` Chaining & `useQueries()`, Dependent Queries: A Genuine, Necessary Waterfall, `enabled` also accepts a callback, Gotchas (+6 more)
 
-### Community 903 - "🔄 Prefetching & SSR: `prefetchQuery()`, `dehydrate()`/`HydrationBoundary` & Next.js Integration"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `dehydrate()`/`HydrationBoundary`: Bridging Server and Client Caches, Next.js Integration: Prefetching in Server Components, Hydrating in Client Hooks, ⚠️ Pitfall 1: Mismatched `queryKey` Between Server Prefetch and Client `useQuery`, ⚠️ Pitfall 2: Creating a Single, Shared `QueryClient` for SSR Across Multiple Requests (+2 more)
+### Community 903 - "🔄 Prefetching & SSR: `queryClient.query()`, `dehydrate()`/`HydrationBoundary` & Next.js Integration"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `dehydrate()`/`HydrationBoundary`: Bridging Server and Client Caches, Gotchas, Interview questions, Next.js Integration: Prefetching in Server Components, Hydrating in Client Hooks (+5 more)
 
 ### Community 904 - "🔄 Suspense Integration: `useSuspenseQuery` & `throwOnError`"
-Cohesion: 0.18
+Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Nesting Multiple Fine-Grained Suspense Boundaries Where One Coarser Boundary Was More Appropriate, ⚠️ Pitfall 2: Forgetting an Error Boundary Alongside a Suspense Boundary, ⚠️ Pitfall 3: Mixing `useSuspenseQuery` and Regular `useQuery` for the Same Query Key Inconsistently, 🔄 Suspense Integration: `useSuspenseQuery` & `throwOnError` (+2 more)
 
 ### Community 905 - "🔄 DevTools: Live Cache Inspection & Manual Cache Manipulation"
-Cohesion: 0.18
+Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 DevTools: Live Cache Inspection & Manual Cache Manipulation, Manually Triggering Invalidation for Debugging Invalidation Logic, ⚠️ Pitfall 1: Accidentally Shipping DevTools to Production, ⚠️ Pitfall 2: Debugging by Guessing Query Key Structure Instead of Reading It From DevTools (+2 more)
 
-### Community 906 - "🔄 Query Cancellation: Automatic Unmount Cancellation & Manual `signal` Usage"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Automatic Cancellation on Query Key Change: Avoiding a Race Condition, ⚠️ Pitfall 1: Forgetting to Pass `signal` Into the Actual Network Call, ⚠️ Pitfall 2: Treating an `AbortError` as a Genuine Application Error, ⚠️ Pitfall 3: Manually Managing Cancellation Elsewhere, Duplicating What TanStack Query Already Provides (+2 more)
+### Community 906 - "🔄 Query Cancellation: `AbortSignal`, What Is Automatic & What Is Not"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, 🔴 Ignoring `signal` is not merely wasteful — the result still lands in the cache, Interview questions, Manual cancellation, and the part that matters for optimistic updates (+6 more)
 
 ### Community 907 - "Discriminated union"
 Cohesion: 0.24
 Nodes (11): assertNever exhaustiveness, Discriminated union, never, extends vs intersection on conflict, Intersection conflicting members become never, Intersection distributes over union, Intersection types, Equality narrowing (+3 more)
 
-### Community 908 - "01-the-five-generics.md"
-Cohesion: 0.18
-Nodes (10): 🔴 `ErrorRequestHandler` hands you `any`, Gotchas, Interview questions, `req.body` is `any`, `req.params` is not `string`, `req.query` is a recursive union, `RequestHandler` — the alternative spelling, `res.locals` is `Record<string, any>` (+2 more)
+### Community 908 - "Object.create(null) dictionary"
+Cohesion: 0.13
+Nodes (15): Keys are string or symbol only, Map for identity and ordered keys, JSON __proto__ is an ordinary key, Object.create(null) dictionary, Prototype pollution, hasOwnProperty, in for behaviour, hasOwn for data, in operator (+7 more)
 
 ### Community 909 - "⚡ Configuration: `vite.config.ts`, `defineConfig()` & Conditional Config"
-Cohesion: 0.18
-Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Conditional Config: The Function Form, ⚡ Configuration: `vite.config.ts`, `defineConfig()` & Conditional Config, `defineConfig()`: Type Safety, Not Runtime Behavior, ⚠️ Pitfall 1: Forgetting `base` Must Match the Actual Deployment Sub-Path (+3 more)
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Conditional Config: The Function Form, ⚡ Configuration: `vite.config.ts`, `defineConfig()` & Conditional Config, `defineConfig()`: Type Safety, Not Runtime Behavior, Gotchas (+5 more)
 
-### Community 910 - "⚡ Dev Server Mechanics: Native ESM Serving, HMR & Dependency Pre-Bundling"
-Cohesion: 0.08
-Nodes (22): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Dev Server Mechanics: Native ESM Serving, HMR & Dependency Pre-Bundling, Module Graph Invalidation on File Change, `optimizeDeps`: When Pre-Bundling Re-Triggers, ⚠️ Pitfall 1: Assuming HMR "Just Works" for Every Kind of Module Without a Boundary (+14 more)
+### Community 910 - "⚙️ `webpack-dev-server` & Hot Module Replacement"
+Cohesion: 0.17
+Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `devServer.proxy`, `historyApiFallback`, HMR vs Live Reload — a Real Distinction, ⚠️ Pitfall 1: Assuming HMR "Just Works" Without Any `module.hot.accept()` Boundary (+3 more)
 
-### Community 911 - "The ten things a fake database stops checking"
-Cohesion: 0.18
-Nodes (11): 10 · `RETURNING` and the affected-row count, 1 · Constraints, which are this API's first validation layer, 2 · The SQLSTATE code, and the constraint name on it, 3 · Ordering — and `position` is a `double precision`, 4 · Cascades, 5 · Isolation, locking and the whole of topic 09, 6 · `timestamptz` and server-side time, 7 · Enum rejection (+3 more)
+### Community 911 - "Gotchas"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, `await`-ing something before applying the patch, Dropping `invalidatesTags` because the optimistic patch "already did it", Gotchas, Interview questions, No `try`/`catch`, so the patch is never undone (+7 more)
 
 ### Community 912 - "⚡ Asset Handling: Static Imports, `public/` & Special Import Suffixes"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Asset Handling: Static Imports, `public/` & Special Import Suffixes, `import.meta.glob()`: Batch-Importing Many Modules at Once, ⚠️ Pitfall 1: Putting Source-Referenced Assets in `public/` Instead of Importing Them, ⚠️ Pitfall 2: Using Eager `import.meta.glob` Where Lazy Would Avoid an Unnecessarily Large Bundle (+2 more)
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Asset Handling: Static Imports, `public/` & Special Import Suffixes, Gotchas, `import.meta.glob()`: Batch-Importing Many Modules at Once, Interview questions (+4 more)
 
 ### Community 913 - "⚡ Worker & WASM Support: Native Web Worker Bundling & WebAssembly Imports"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Forgetting Workers Can't Access the DOM or Main-Thread Variables, ⚠️ Pitfall 2: Treating WASM Instantiation as Synchronous, ⚠️ Pitfall 3: Using `format: 'iife'` Workers Unnecessarily, Losing Module Syntax, WASM's `?init` Suffix: Explicit, Async Instantiation (+2 more)
 
-### Community 914 - "⚡ Deployment Considerations: `base`, `vite preview` & Cache Header Strategy"
-Cohesion: 0.18
+### Community 914 - "01-shipping-the-build.md"
+Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `base`: Must Exactly Match the Deployment Sub-Path, ⚡ Deployment Considerations: `base`, `vite preview` & Cache Header Strategy, Long-Term Cache Header Strategy, ⚠️ Pitfall 1: Forgetting `base` for a Sub-Path Deployment (+3 more)
 
 ### Community 915 - "🚀 Legacy & Supporting Metrics + Lab Measurement Tools"
@@ -5954,8 +6012,8 @@ Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚙️ Advanced Tooling: Writing Custom Loaders & Plugins, Custom Loaders: The `this` Loader Context, Custom Plugins: `compiler` vs `compilation`, and Tapable Hook Timing, ⚠️ Pitfall 1: Using `compiler.hooks` When `compilation.hooks` Was Needed (or Vice Versa) (+2 more)
 
 ### Community 926 - "devDependencies"
-Cohesion: 0.18
-Nodes (11): @docusaurus/module-type-aliases, @docusaurus/plugin-content-docs, @docusaurus/theme-common, @docusaurus/types, devDependencies, @docusaurus/module-type-aliases, @docusaurus/plugin-content-docs, @docusaurus/theme-common (+3 more)
+Cohesion: 0.33
+Nodes (6): devDependencies, @docusaurus/module-type-aliases, @docusaurus/plugin-content-docs, @docusaurus/theme-common, @docusaurus/types, @types/react
 
 ### Community 927 - "ex2-object-model.sh"
 Cohesion: 0.20
@@ -5985,17 +6043,17 @@ Nodes (9): buffersOf(), nsets(), planOf(), pool, q(), sep, sepTotal, shape() (+1
 Cohesion: 0.33
 Nodes (11): Devbible Site Logo SVG, Devbible Site Brand Mark, Green Cactus Body, Cactus Character Face, Cactus Green and Notepad Yellow Palette, CSS-Tricks Cactus Mascot, Flat Evenodd Vector Illustration, Yellow Lined Notepad Overlay (+3 more)
 
-### Community 934 - "01c-whitespace-and-tooling.md"
-Cohesion: 0.18
-Nodes (10): Adding a formatter to an old repository buries the real history, Aligning with tabs aligns nothing, An editor "fixing" indentation on save makes the file worse, Away from the start of a line, whitespace is separation only, Formfeed, the character nobody types on purpose, `git diff -w` hides the cause of the error, Gotchas, Interview questions (+2 more)
+### Community 934 - "🔄 One cache entry, every page: refetching, bounding and hand-editing an infinite query"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Hand-editing the cache: `{ pages, pageParams }` must survive intact, Interview questions, `maxPages` — the option that replaced `refetchPage` (+7 more)
 
 ### Community 935 - "10-interactive-and-tty.md"
 Cohesion: 0.20
 Nodes (9): Gotchas, `-i` alone: pipe input in, Interview questions, `-it`: an actual interactive session, Podman, `-t` alone: pretend there is a terminal, The two flags, What a TTY actually changes (+1 more)
 
-### Community 936 - "03-choosing-and-shaping.md"
-Cohesion: 0.02
-Nodes (85): Gotchas, Interview questions, Reading the wrong half, The Express half: twelve getters, none cached, The middleware half: nothing is free, The Node half: raw, cheap, and yours to distrust, The prototype chain, `fresh` and `stale` (+77 more)
+### Community 936 - "01-status-as-contract.md"
+Cohesion: 0.03
+Nodes (76): `fresh` and `stale`, Gotchas, `host`, `hostname`, `subdomains`, Interview questions, `ip` and `ips`, `protocol` and `secure`, The twelve, and what each one reads, `xhr` (+68 more)
 
 ### Community 937 - "verification-claude-pages.md"
 Cohesion: 0.20
@@ -6009,25 +6067,25 @@ Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. 
 Cohesion: 0.15
 Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, Orchestration: `delayChildren` (and `stagger`) on a Parent, ⚠️ Pitfall 1: Cutting a Child Out of Propagation (+5 more)
 
-### Community 940 - "framer-motion/README.md"
-Cohesion: 0.05
-Nodes (40): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, Gotchas, How Motion detects a layout change — and what the detection costs, Interview questions, 🎨 Layout Animations: The `layout` Prop & `layoutId` Shared Transitions, `layout="position"` / `layout="size"`: Restricting Scope (+32 more)
+### Community 940 - "🎨 Layout Animations: The `layout` Prop & `layoutId` Shared Transitions"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, Gotchas, How Motion detects a layout change — and what the detection costs, Interview questions, 🎨 Layout Animations: The `layout` Prop & `layoutId` Shared Transitions, `layout="position"` / `layout="size"`: Restricting Scope (+5 more)
 
 ### Community 941 - "🎨 Performance Considerations: GPU-Accelerated Properties & `will-change`"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Performance Considerations: GPU-Accelerated Properties & `will-change`, ⚠️ Pitfall 1: Animating `width`/`height`/`top`/`left` "Because It's More Intuitive," Ignoring the Performance Cost, ⚠️ Pitfall 2: Applying `will-change` Broadly, Across Many Simultaneously-Animating Elements, ⚠️ Pitfall 3: Assuming Every Property Motion Exposes Is Equally Cheap to Animate (+2 more)
 
-### Community 942 - "01d-statements-vs-expressions.md"
-Cohesion: 0.18
-Nodes (10): A bare expression statement that you meant as a mutation does nothing, A walrus in a comprehension leaks into the enclosing scope, Assignment is a statement, and what that forbids, Chained assignment binds one object to every target, Gotchas, Interview questions, Simple, compound, and what a "statement list" is, Statements cannot be arguments, so `del` and `pass` cannot be passed anywhere (+2 more)
+### Community 942 - "⚡ One `.env`, Two Dialects"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚡ One `.env`, Two Dialects, ⚠️ Pitfall 1 — Reverse-order expansion that only works in Vite (+7 more)
 
 ### Community 943 - "🏛️ Testing Strategy: The Real-World Pyramid & Contract Testing"
 Cohesion: 0.20
 Nodes (10): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: An Inverted Pyramid — Heavy E2E, Sparse Unit/Component Coverage, ⚠️ Anti-Pattern 2: Treating "More E2E Tests" as Inherently Higher Confidence, ⚠️ Anti-Pattern 3: No Contract Testing, Relying Solely on "It Compiled" as API-Correctness Evidence, Contract Testing: Verifying the Frontend's Assumptions Stay True (+2 more)
 
 ### Community 944 - "📦 `createAsyncThunk`: Async Lifecycle, `thunkAPI` & Cancellation"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `createAsyncThunk`: Async Lifecycle, `thunkAPI` & Cancellation, ⚠️ Pitfall 1: Throwing Instead of `rejectWithValue` When Typed Errors Are Needed, ⚠️ Pitfall 2: Ignoring `signal` — Wasted Work After Cancellation/Unmount, ⚠️ Pitfall 3: Reading `state.users.status` As a Single Global Flag for Multiple Concurrent Requests (+2 more)
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A `condition` that silently strands the UI, 📦 `createAsyncThunk`: Async Lifecycle, `thunkAPI` & Cancellation, Gotchas, Interview questions, One global `status` flag for a thunk that runs per-id (+5 more)
 
 ### Community 945 - "The nine questions"
 Cohesion: 0.20
@@ -6046,12 +6104,12 @@ Cohesion: 0.20
 Nodes (10): brotli default quality 11, Compress in nginx or CDN, zlib on libuv thread pool, Zip bomb maxOutputLength, zlib Transform streams, fs error codes, node:fs/promises, rename atomicity (+2 more)
 
 ### Community 949 - "🎭 Core Architecture: Browser/Context/Page Hierarchy & Out-of-Process Drivers"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Core Architecture: Browser/Context/Page Hierarchy & Out-of-Process Drivers, Multi-Browser Engine Support From One API, Out-of-Process Drivers: Why This Design Is Fast and Reliable, ⚠️ Pitfall 1: Reusing a `BrowserContext` Across Tests to "Save Time" (+2 more)
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Core Architecture: Browser/Context/Page Hierarchy & Out-of-Process Drivers, Gotchas, Interview questions, Multi-Browser Engine Support From One API (+4 more)
 
 ### Community 950 - "🎭 Auto-Waiting & Assertions: Web-First Assertions, Actionability & Soft Assertions"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Auto-Waiting & Assertions: Web-First Assertions, Actionability & Soft Assertions, ⚠️ Pitfall 1: Adding Manual `waitForTimeout()` Delays "Just in Case", ⚠️ Pitfall 2: Using Regular `expect()` When Checking Several Independent, Unrelated Conditions, ⚠️ Pitfall 3: Assuming Actionability Checks Substitute for Explicit Assertions About State (+2 more)
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Auto-Waiting & Assertions: Web-First Assertions, Actionability & Soft Assertions, Gotchas, Interview questions, ⚠️ Pitfall 1: Adding Manual `waitForTimeout()` Delays "Just in Case" (+5 more)
 
 ### Community 951 - "🎭 Fixtures & Test Isolation: Scoping, Automatic Fixtures & Fresh Contexts"
 Cohesion: 0.20
@@ -6069,29 +6127,29 @@ Nodes (10): percentile_cont array form, Percentiles do not compose, percentile_c
 Cohesion: 0.20
 Nodes (10): A decorator registry is missing half its entries, A "singleton" appears twice in logs or metrics, An exception escapes a handler that names it, `Enum` members compare unequal to themselves, Everything logs twice, `functools.cache` on an expensive call is hit twice as often, Gotchas, `isinstance` fails on an object of the obviously correct class (+2 more)
 
-### Community 955 - "06-streaming-ssr.md"
-Cohesion: 0.20
-Nodes (9): Aborting, Boundary placement is the design, Errors outside the shell degrade, they do not fail, Gotchas, Interview questions, `onShellReady` vs `onAllReady`, The shell, The status-code trade-off (+1 more)
+### Community 955 - "⚡ How Vite Loads `vite.config.ts`"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, ⚡ How Vite Loads `vite.config.ts`, Interview questions, ⚠️ Pitfall 1 — Breakpoints landing in a file you did not write (+7 more)
 
 ### Community 956 - "Verification — how to be accurate without a sandbox"
 Cohesion: 0.20
 Nodes (10): Efficiency rule 1 — research once per topic, not once per page, Output blocks specifically, Record the tier — it is what makes a later pass cheap, Supporting files the user provides, T1 — the cheap probes that are not a sandbox, The evidence ladder — use the lowest tier that settles the claim, 🔴 The installed-version trap — measured in this repo on 2026-09-03, The severity ladder, when re-validating an existing page (+2 more)
 
-### Community 957 - "📦 `configureStore`: Store Assembly & Default Middleware Stack"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `configureStore`: Store Assembly & Default Middleware Stack, Default Middleware Stack (Dev vs Prod), ⚠️ Pitfall 1: Overwriting the Default Middleware Instead of Extending It, ⚠️ Pitfall 2: Ignoring Serializability Warnings Instead of Fixing the Root Cause (+2 more)
+### Community 957 - "Gotchas"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, Building the store at module scope on an SSR server, 📦 `configureStore`: Store Assembly & Default Middleware Stack, Default Middleware Stack (Dev vs Prod), `enhancers` has the same rule, and people miss it, Forgetting the RTK Query middleware (+7 more)
 
-### Community 958 - "📦 `createAction` & Action Matchers: Standalone Actions Outside Slices"
-Cohesion: 0.20
-Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `createAction` & Action Matchers: Standalone Actions Outside Slices, Matcher Utilities: `isAnyOf` / `isAllOf`, ⚠️ Pitfall 1: Colliding Action Type Strings, ⚠️ Pitfall 2: Using `action.type === 'string literal'` Instead of `.match()` (+1 more)
+### Community 958 - "Gotchas"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A bare `isPending()` matcher in an app that also uses RTK Query, A standalone action colliding with a slice's generated type, Comparing `action.type` to a string literal, 📦 `createAction` & Action Matchers: Standalone Actions Outside Slices, Expecting `createAction`'s creator to carry a payload type it was never given (+5 more)
 
-### Community 959 - "📦 RTK Query: `createApi`, Query & Mutation Endpoints"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: One `createApi` Instance Per Feature (Should Be One Per App), ⚠️ Pitfall 2: Forgetting `query` Object Form for Non-GET Requests, ⚠️ Pitfall 3: Reading Stale `data` Immediately After a Mutation Resolves, Query vs Mutation Endpoints (+2 more)
+### Community 959 - "Gotchas"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A new object or array literal as the query argument, Assuming the cache entry dies the moment the component unmounts, Expecting a mutation to refresh other queries on its own, Forgetting `setupListeners` and wondering why focus refetching is dead, Gotchas (+7 more)
 
-### Community 960 - "📦 Code Splitting: `combineSlices` & `injectEndpoints`"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 Code Splitting: `combineSlices` & `injectEndpoints`, `combineSlices()`, `injectEndpoints()` for RTK Query, ⚠️ Pitfall 1: Reading Injected Slice State Before It's Injected (+2 more)
+### Community 960 - "Gotchas"
+Cohesion: 0.12
+Nodes (16): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A second `createApi` instead of `injectEndpoints`, Assuming injected state is cleaned up when the feature unmounts, Calling `inject` on the store, 📦 Code Splitting: `combineSlices` & `injectEndpoints`, `combineSlices()` (+8 more)
 
 ### Community 961 - "📖 Addons Ecosystem: `addon-essentials` — Controls, Actions, Viewport & Backgrounds"
 Cohesion: 0.20
@@ -6105,65 +6163,65 @@ Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. 
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Chromatic Publish: Per-Commit, Per-PR Storybook URLs, ⚠️ Pitfall 1: Deploying a Static Storybook Without Any Access Control for an Internal-Only Design System, ⚠️ Pitfall 2: Forgetting `--exit-zero-on-changes` for Chromatic in a Non-Blocking CI Setup, ⚠️ Pitfall 3: Not Cache-Busting Between Static Deployments, Serving a Stale Storybook Build (+2 more)
 
-### Community 964 - "Gotchas"
-Cohesion: 0.20
-Nodes (10): A parallel route slot's mandatory `default.js` was generated blindly, An image-related regression with no diff to point at, `cacheComponents: true` swapped in for the removed experimental flags, `--debug-build-paths` was expected to speed up the type check too, Every `revalidateTag` got the same second argument, Gotchas, `serverRuntimeConfig` values were replaced with build-time environment reads, The agent migrated a PPR app that the guide told it to leave alone (+2 more)
+### Community 964 - "⚡ `define` Is a Textual Substitution, Not a Value Injection"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `define` as the documented escape from `envPrefix`, ⚡ `define` Is a Textual Substitution, Not a Value Injection, Gotchas, Interview questions (+7 more)
 
 ### Community 965 - "The table"
 Cohesion: 0.20
 Nodes (10): `boardId: uuid().notNull().references(boards.id, { onDelete: 'cascade' })`, `body: text()` — nullable, on purpose, `createdAt` / `updatedAt: timestamp({ withTimezone: true })`, `deletedAt: timestamp({ withTimezone: true })` — nullable, and the index it implies, `id: uuid().primaryKey().defaultRandom()`, `position: doublePrecision().notNull()`, `status: cardStatus().notNull().default('todo')`, The table (+2 more)
 
 ### Community 966 - "🔄 `useMutation`: Lifecycle Callbacks, Optimistic Updates & `mutate` vs `mutateAsync`"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `mutate()` vs `mutateAsync()`: Fire-and-Forget vs Awaitable, ⚠️ Pitfall 1: Forgetting to Cancel In-Flight Queries Before an Optimistic Update, ⚠️ Pitfall 2: Using `mutate()` When the Calling Code Needs to Await the Result, ⚠️ Pitfall 3: Forgetting `onError`'s Rollback, Leaving the Cache Permanently Wrong After a Failure (+2 more)
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, `mutate()` vs `mutateAsync()`: Fire-and-Forget vs Awaitable, ⚠️ Pitfall 1: Forgetting to Cancel In-Flight Queries Before an Optimistic Update (+6 more)
 
 ### Community 967 - "🔄 Pagination & Infinite Queries: `useInfiniteQuery` & `keepPreviousData`"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `getNextPageParam`: Deriving the Next Request From the Last Response, `keepPreviousData`: Eliminating Loading Flicker Between Pages, 🔄 Pagination & Infinite Queries: `useInfiniteQuery` & `keepPreviousData`, ⚠️ Pitfall 1: Forgetting `getNextPageParam` Must Return `undefined` to Stop Pagination (+2 more)
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `getNextPageParam`: Deriving the Next Request From the Last Response, Gotchas, Interview questions, `keepPreviousData`: Eliminating Loading Flicker Between Pages (+7 more)
 
-### Community 968 - "01-the-algorithm-and-the-72-byte-trap.md"
-Cohesion: 0.20
-Nodes (9): `$2a$` vs `$2b$`, Anatomy of the output, Gotchas, Interview questions, 🔴 The 72-byte truncation, The three ways out, and their costs, The version boundary at 5.0.0, Why it is a security bug and not a curiosity (+1 more)
+### Community 968 - "02-using-it-safely-in-node.md"
+Cohesion: 0.11
+Nodes (16): `$2a$` vs `$2b$`, Anatomy of the output, Gotchas, Interview questions, 🔴 The 72-byte truncation, The three ways out, and their costs, The version boundary at 5.0.0, Why it is a security bug and not a curiosity (+8 more)
 
-### Community 969 - "Gotchas"
-Cohesion: 0.20
-Nodes (10): A colour read from a custom property will not parse, Autofilled fields are unreadable, Checkboxes stay platform blue, Gotchas, High-contrast mode loses the tile boundaries, Placeholder text fails contrast despite a compliant token, Selected text is unreadable, The autofill fix broke and nobody noticed for a month (+2 more)
+### Community 969 - "⚡ Typing `import.meta.env`: the Augmentation That Silently Stops Working"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, `lib`, for non-DOM environments, ⚠️ Pitfall 1 — A top-level `import` in `vite-env.d.ts` (+7 more)
 
 ### Community 970 - "🔄 Testing TanStack Query: Fresh Clients, Disabled Retries & MSW Integration"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Sharing One `QueryClient` Instance Across Multiple Tests, ⚠️ Pitfall 2: Forgetting `retry: false` in the Test Client, Producing Needlessly Slow Tests, ⚠️ Pitfall 3: Mocking `queryFn` Directly Instead of Intercepting at the Network Layer, `retry: false`: Failing Fast Instead of Waiting Through Backoff (+2 more)
 
-### Community 971 - "📦 `createSelector`: Memoized Derived State"
-Cohesion: 0.20
-Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `createSelector`: Memoized Derived State, ⚠️ Pitfall 1: Sharing One Parameterized Selector Instance Across Many Components, ⚠️ Pitfall 2: Input Selectors That Return a Fresh Reference Every Call, ⚠️ Pitfall 3: Wrapping `useSelector` Calls in `createSelector` Unnecessarily (+1 more)
+### Community 971 - "Gotchas"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A result function that returns a new object every time it runs, An input selector that manufactures a new reference every call, Assuming `createSelector.withTypes()` changes caching, 📦 `createSelector`: Memoized Derived State, Gotchas (+6 more)
 
 ### Community 972 - "Function types"
-Cohesion: 0.22
-Nodes (10): Annotate inputs infer outputs, void, Contextual typing, Default makes parameter optional, Fewer parameters assignability, Function types, Function overloads, Function parameter contravariance (+2 more)
+Cohesion: 0.29
+Nodes (8): void, Default makes parameter optional, Fewer parameters assignability, Function types, Function overloads, Function parameter contravariance, Call signature, Hybrid type
 
 ### Community 973 - "⚡ Vite Core Architecture: The Dual-Engine Model"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, esbuild Pre-Bundling: Solving Two Problems at Once, ⚠️ Pitfall 1: Assuming Dev and Production Builds Use Identical Transform Behavior, ⚠️ Pitfall 2: A Dependency Missing From `optimizeDeps.include`, Causing Constant Re-Bundling, ⚠️ Pitfall 3: Expecting Native ESM Dev Serving to Work Identically in Every Browser (+2 more)
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Dependency Pre-Bundling: Solving Two Problems at Once, Gotchas, Interview questions, ⚠️ Pitfall 1: Assuming Dev and Production Builds Use Identical Transform Behavior (+4 more)
 
 ### Community 974 - "⚡ CLI & Project Scaffolding: `create vite` & Core Commands"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ CLI & Project Scaffolding: `create vite` & Core Commands, `npm create vite@latest`: Template-Based Scaffolding, Not a Framework Opinion, ⚠️ Pitfall 1: Treating the Dev Server as a Reliable Production Preview, ⚠️ Pitfall 2: Manually Running `vite optimize` Habitually "Just in Case" (+2 more)
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ CLI & Project Scaffolding: `create vite` & Core Commands, Gotchas, Interview questions, `npm create vite@latest`: Template-Based Scaffolding, Not a Framework Opinion (+4 more)
 
-### Community 975 - "📦 TypeScript Integration: `RootState`, `AppDispatch` & Typed Thunks"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `PayloadAction<T>`, ⚠️ Pitfall 1: Hand-Writing `RootState` Instead of Deriving It, ⚠️ Pitfall 2: Using Plain `Dispatch` Instead of `AppDispatch` for Thunks, ⚠️ Pitfall 3: Forgetting `rejectValue` in the Generic Config (+2 more)
+### Community 975 - "Gotchas"
+Cohesion: 0.12
+Nodes (17): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A circular import between the store and a slice, A plain array for `middleware` when not starting from the defaults, Gotchas, Hand-writing `RootState` instead of deriving it, Interview questions (+9 more)
 
 ### Community 976 - "🚀 Loading & Rendering Performance: Delivery Optimization & Runtime Efficiency"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Delivery Optimization, 🚀 Loading & Rendering Performance: Delivery Optimization & Runtime Efficiency, ⚠️ Pitfall 1: Prefetching Everything "Just in Case", ⚠️ Pitfall 2: Virtualizing a List That's Already Small (+2 more)
 
 ### Community 977 - "⚡ Path Resolution & Aliases: `resolve.alias`, `extensions` & `dedupe`"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `alias`: Must Be Mirrored in `tsconfig.json`'s `paths`, `dedupe`: Solving the "Two Copies of React" Problem, ⚡ Path Resolution & Aliases: `resolve.alias`, `extensions` & `dedupe`, ⚠️ Pitfall 1: Configuring `resolve.alias` Without Mirroring It in `tsconfig.json` (+2 more)
+Cohesion: 0.06
+Nodes (31): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `alias`: Must Be Mirrored in `tsconfig.json`'s `paths`, `dedupe`: Solving the "Two Copies of React" Problem, ⚡ Path Resolution & Aliases: `resolve.alias`, `extensions` & `dedupe`, ⚠️ Pitfall 1: Configuring `resolve.alias` Without Mirroring It in `tsconfig.json` (+23 more)
 
 ### Community 978 - "page-counts.mjs"
-Cohesion: 0.20
-Nodes (7): track(), CHECK, counts, DOCS, OUT, ROOT, total
+Cohesion: 0.18
+Nodes (10): track(), CHECK, countPages(), counts, DOCS, isValidated(), OUT, ROOT (+2 more)
 
 ### Community 979 - "4. Senior Engineer Edge Cases & Pitfalls"
 Cohesion: 0.20
@@ -6217,9 +6275,9 @@ Nodes (7): SidebarCollapseAll(), getServerSnapshot(), getSnapshot(), listeners, 
 Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
-### Community 992 - "phase-12-jvm-production/README.md"
-Cohesion: 0.25
-Nodes (6): Phase gate, Where this connects, Phase gate, Where this connects, Phase gate, Where this connects
+### Community 992 - "system-design/README.md"
+Cohesion: 0.03
+Nodes (67): Phase 17 — Design-flavoured problems and concurrency, Phase 18 — The algorithms behind the systems you run, Phase 19 — The problem ladder, pattern by pattern, Phase 20 — Interview formats, the plan and the last two weeks, Phase gate, Where this connects, How this track is shaped, Known defects carried over from the source (+59 more)
 
 ### Community 993 - "Gotchas"
 Cohesion: 0.22
@@ -6237,13 +6295,13 @@ Nodes (8): 1 · The level is a decision, and it is the expensive one, 2 · Isola
 Cohesion: 0.22
 Nodes (9): 1 · Is CPU idle or pinned?, 2 · Did the JVM report a deadlock?, 3 · What is the distribution?, 4 · Are the same threads in the same frames across all three dumps?, 5 · What are the stuck threads waiting for?, 6 · If threads are blocked, who holds the lock?, 7 · Follow the exhaustion inward, 8 · If nothing looks thread-shaped, leave (+1 more)
 
-### Community 997 - "02c-the-version-you-are-actually-running.md"
-Cohesion: 0.22
-Nodes (8): 1.5.x is legacy and Boot is still on it, Gotchas, Interview questions, The `<if>` element and CVE-2026-13006, The `logback-access` question, The other 2026 fixes worth knowing, What each Boot version actually pins, What to actually do
+### Community 997 - "⚡ The `config` Hook"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `config` — change it, before it is settled, Gotchas, Interview questions, ⚠️ Pitfall 1 — Adding plugins from `config` (+7 more)
 
-### Community 998 - "03e-rate-aggregation-and-the-step-registry.md"
-Cohesion: 0.22
-Nodes (8): Client-side: the step value, and the reset that is not a reset, Gotchas, Interview questions, Order of operations: rate first, then sum, Server-side: the backend does the differentiation, The worked arithmetic, quoted, Two shapes that are neither counter nor gauge, What is explicitly not a rate
+### Community 998 - "⚡ Nested Descriptors & `{ html, tags }`"
+Cohesion: 0.13
+Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Choosing between the three shapes, Gotchas, Interview questions, ⚡ Nested Descriptors & `{ html, tags }` (+7 more)
 
 ### Community 999 - "05-the-live-list-memory.md"
 Cohesion: 0.22
@@ -6253,9 +6311,9 @@ Nodes (8): Gotchas, Interview questions, The gap between initial and maximum, Th
 Cohesion: 0.22
 Nodes (8): Five execution levels, not two, Gotchas, Interview questions, OSR — the loop gets compiled while it is still running, Profile-guided speculation, and the deoptimisation cliff, The flags people reach for, and what they actually do, What a harness has to do about all this, What decides when you move up
 
-### Community 1001 - "Gotchas"
-Cohesion: 0.22
-Nodes (9): Gotchas, Nothing was linting for the whole migration, The agent made the checks pass by editing the checks, The agent's summary was read as a verification report, The `instant()` test passes on a route that is no longer instant, The managed `AGENTS.md` block keeps reappearing in the diff, The session was verified once, at the end, The test was written after the refactor (+1 more)
+### Community 1001 - "⚙️ Babel Core Pipeline: Parse → Transform → Generate & Programmatic API"
+Cohesion: 0.14
+Nodes (14): 1. Concept & Under-the-Hood Mechanics, 2.1 Parse → Transform → Generate, 2.2 @babel/core Programmatic API, 2.3 AST Fundamentals & Paths, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚙️ Babel Core Pipeline: Parse → Transform → Generate & Programmatic API (+6 more)
 
 ### Community 1002 - "Exponentiation ** right-associative"
 Cohesion: 0.22
@@ -6318,12 +6376,12 @@ Cohesion: 0.22
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Setup Sequence, 4. Senior Engineer Edge Cases & Pitfalls, 📖 Bootstrapping Storybook Into an Existing App With Providers Already Wired In, ⚠️ Pitfall 1: Sharing ONE Store/QueryClient Instance Across Every Story, ⚠️ Pitfall 2: Using `BrowserRouter` Instead of `MemoryRouter` in Storybook, ⚠️ Pitfall 3: Forgetting the Global Stylesheet Import, Getting "It Works But Looks Wrong" (+1 more)
 
 ### Community 1017 - "CJS ↔ ESM interop"
-Cohesion: 0.25
-Nodes (9): require is synchronous, CJS ↔ ESM interop, cjs-module-lexer named exports, ERR_REQUIRE_ASYNC_MODULE, __esModule marker, JSON import attribute, require() of an ES module, Ship ESM only by default (+1 more)
+Cohesion: 0.17
+Nodes (15): require is synchronous, CJS ↔ ESM interop, cjs-module-lexer named exports, ERR_REQUIRE_ASYNC_MODULE, __esModule marker, JSON import attribute, require() of an ES module, main vs exports (+7 more)
 
-### Community 1018 - "⚙️ Module Resolution: The `resolve` Object"
-Cohesion: 0.20
-Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Key Options, ⚙️ Module Resolution: The `resolve` Object, ⚠️ Pitfall 1: An Overly Long `extensions` List Slowing Every Build, ⚠️ Pitfall 2: `mainFields` Order Silently Disabling Tree Shaking (+1 more)
+### Community 1018 - "Gotchas"
+Cohesion: 0.14
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, Gotchas, Interview questions, ⚠️ Pitfall 1: Passing `type` to `dragTransition`, ⚠️ Pitfall 2: Tuning Inertia Boundaries With `power` and `timeConstant`, ⚠️ Pitfall 3: Passing `velocity` as an Inertia Option (+5 more)
 
 ### Community 1019 - "⚙️ Loaders In-Depth: Transpilation & Style Pipelines"
 Cohesion: 0.22
@@ -6342,12 +6400,12 @@ Cohesion: 0.22
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Diagnostic Sequence, 4. Senior Engineer Edge Cases & Pitfalls, ⚙️ Diagnosing and Shrinking a Bloated Production Bundle, End-to-End, ⚠️ Pitfall 1: Fixing the First Big Box Without Checking If It's Legitimate, ⚠️ Pitfall 2: Fixing `sideEffects` Globally Instead of Per-Package, ⚠️ Pitfall 3: Declaring Victory From the Uncompressed Treemap Number (+1 more)
 
 ### Community 1023 - "ex12-runners/package.json"
-Cohesion: 0.22
-Nodes (8): jest, dependencies, jest, vitest, name, private, type, vitest
+Cohesion: 0.18
+Nodes (9): jest, vitest, dependencies, jest, vitest, name, private, type (+1 more)
 
-### Community 1024 - "development"
-Cohesion: 0.22
-Nodes (9): browserslist, development, production, >0.5%, last 3 chrome version, last 3 firefox version, last 5 safari version, not dead (+1 more)
+### Community 1024 - "Gotchas"
+Cohesion: 0.14
+Nodes (13): Gotchas, Interview questions, ⚠️ Pitfall 10: `reducedMotion: "user"` Turns Layout Animations Off Entirely, ⚠️ Pitfall 1: The Element Is `display: inline`, So Nothing Ever Animates, ⚠️ Pitfall 2: The Component Never Re-Rendered, So Motion Never Measured, ⚠️ Pitfall 3: Trying to Layout-Animate an SVG, ⚠️ Pitfall 4: Driving the Layout Change From `animate` Instead of `style`/`className`, ⚠️ Pitfall 5: Content Looks Stretched or Squashed Mid-Animation (+5 more)
 
 ### Community 1025 - "ex1-version-facts.sh"
 Cohesion: 0.25
@@ -6370,8 +6428,8 @@ Cohesion: 0.28
 Nodes (7): append(), canonical(), chain, dir, event, KEY, verify()
 
 ### Community 1031 - "ex13-testcontainers/package.json"
-Cohesion: 0.22
-Nodes (8): dependencies, pg, @testcontainers/postgresql, pg, name, private, type, @testcontainers/postgresql
+Cohesion: 0.20
+Nodes (8): @testcontainers/postgresql, dependencies, pg, @testcontainers/postgresql, pg, name, private, type
 
 ### Community 1032 - "provider-verify.test.mjs"
 Cohesion: 0.33
@@ -6433,13 +6491,13 @@ Nodes (9): The element, Render, reconcile, commit, Reconcile phase, Reconciliati
 Cohesion: 0.25
 Nodes (8): 1 · Does it need code you cannot write in SQL?, 2 · Does it call anything over a network?, 3 · Is its duration unbounded, or merely unknown?, 4 · Does anyone need to watch it, pause it, slow it down or stop it?, 5 · Might it need to be retried differently, or run again later?, 6 · Is it irreversible in a way that matters?, 7 · Is it a one-off correction rather than part of the schema's history?, The test: seven questions, any one of which is decisive
 
-### Community 1047 - "08-testing-forms-and-actions.md"
-Cohesion: 0.22
-Nodes (8): Filling fields, by control type, Gotchas, Interview questions, Submitting, Testing React 19 Actions, The shape of a form test, The states worth asserting, What not to test
+### Community 1047 - "04c-evaluating-a-preview-feature.md"
+Cohesion: 0.14
+Nodes (13): 1 · What does it cost if it ships exactly as it is?, 2 · How many files name the API?, 3 · What does reversal cost — and is it symmetric?, 4 · Is it a one-way door?, Gotchas, Interview questions, Reading a deprecation without inventing a deadline, Reading the status honestly — the evidence, in order of strength (+5 more)
 
-### Community 1048 - "03b-csv-text-blocks.md"
-Cohesion: 0.25
-Nodes (7): Comments — the thing the array form cannot do, Gotchas, Header names in the report, Interview questions, Same cases, readable, The `{arguments}` caveat, and its 6.0 resolution, Three whitespace rules
+### Community 1048 - "Gotchas"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, Expecting `transformResponse` to run with `queryFn`, `getNextPageParam` that never returns `undefined`, Gotchas, Infinite queries, Interview questions, Non-deterministic work inside `transformResponse` (+6 more)
 
 ### Community 1049 - "02-hooks.md"
 Cohesion: 0.22
@@ -6545,9 +6603,9 @@ Nodes (8): 1 · Draft text that must survive navigation, 2 · Interactive state 
 Cohesion: 0.25
 Nodes (8): 01 · Server Actions as an untrusted entry point, 02 · Boundary validation, 03 · Authentication patterns, 04 · Defence in depth, 05 · RSC serialization hardening, 06 · Project milestone — SprintDesk gets an identity, Chunks, Hardening the delivered application
 
-### Community 1075 - "The attributes, as controls rather than as a table"
-Cohesion: 0.25
-Nodes (8): `Domain` — omit it, `__Host-` — the strongest thing on the list, and it costs one string, `HttpOnly` — closes the XSS exfiltration path, `Max-Age` vs `Expires` — pick `Expires` if you have a server-side expiry to mirror, `Path` — scope, and a weak one, `SameSite` — the CSRF control, and the one that breaks OAuth, `Secure` — refuses to travel in cleartext, The attributes, as controls rather than as a table
+### Community 1075 - "Gotchas"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, A cache that survives between tests, A thunk's contract is its action sequence, An RTK Query endpoint can be driven without React, Asserting on the number of dispatched actions, Calling the payload creator directly instead of dispatching (+6 more)
 
 ### Community 1076 - "Gotchas"
 Cohesion: 0.25
@@ -6565,13 +6623,13 @@ Nodes (8): drain event, Fan-out without per-client backpressure, writableLength,
 Cohesion: 0.29
 Nodes (7): pipeline AbortSignal, Never .pipe() in a server, stream.pipeline, Cleanup on close not end, Stream events end finish close, _destroy resource cleanup, stream.finished
 
-### Community 1080 - "01f-comments-and-encoding.md"
-Cohesion: 0.25
-Nodes (7): A BOM plus a non-UTF-8 declaration is a compile error, A `#` inside a string is not a comment, and a `#` inside an f-string field is a syntax error, `# -*- coding: utf-8 -*-` on the wrong line does nothing, silently, Comments, and the lines that produce no token at all, Gotchas, Interview questions, The encoding declaration, and why you no longer write one
+### Community 1080 - "🔀 Parallel Queries & `useQueries()`: Dynamic Fan-Out and the Rules of Hooks"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, A dynamic list that is itself dependent, Gotchas, Interview questions, Manual parallel queries need no ceremony at all (+6 more)
 
-### Community 1081 - "01g-syntax-errors-and-messages.md"
-Cohesion: 0.25
-Nodes (7): 3.14's improved error messages, A file that compiles is not a file that runs, Catching `SyntaxError` hides `IndentationError` and `TabError`, Gotchas, Interview questions, `SyntaxError` → `IndentationError` → `TabError`, The reported line is the line the parser gave up on, not always the line you got wrong
+### Community 1081 - "⏱️ What Query Composition Costs: Serial Waterfalls, Client-Side Fan-Out, and Where the Join Belongs"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Fan-out has the opposite shape, and no built-in brake, Gotchas, Interview questions, ⚠️ Pitfall 1: Prefetching a Link Whose Parameter Does Not Exist Yet (+6 more)
 
 ### Community 1082 - "DISTINCT ON"
 Cohesion: 0.25
@@ -6589,25 +6647,25 @@ Nodes (8): `argparse.parse_args()` at module level, Assuming an installed consol
 Cohesion: 0.25
 Nodes (8): A frozen executable spawns copies of itself, A module-level import that is expensive, in a program with many workers, Assuming `__name__ != "__main__"` means "imported", Everything works in a script and fails in the REPL or a notebook, Gotchas, Module-level `argparse` in a `multiprocessing` program, Relying on `__main__` being the same object in parent and child, The guard is present but the worker still re-runs your setup
 
-### Community 1086 - "01h-soft-keywords-and-the-repl.md"
-Cohesion: 0.25
-Nodes (7): Assigning to `type` shadows the builtin for the rest of the scope, `_` at the prompt is not `_` in a file, Gotchas, Interview questions, `match` as a variable name and `match` as a statement in the same file, Soft keywords: reserved only where the grammar needs them, The REPL is compiled differently from a file
+### Community 1086 - "🔄 Global Configuration: `QueryClient` Defaults & Per-Query Overrides"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Changing defaults after the client exists, 🔄 Global Configuration: `QueryClient` Defaults & Per-Query Overrides, Gotchas, Interview questions (+6 more)
 
-### Community 1087 - "Gotchas"
-Cohesion: 0.25
-Nodes (8): A component rule names a primitive, A new token themed in dark only, Gotchas, Product images stop matching the surface, Six status badges, three of which look identical in dark mode, `--surface-sunken` vanishes in dark mode, The accent looks fine in light and washes out in dark, The unfilled star uses `--border`
+### Community 1087 - "02-color-mix.md"
+Cohesion: 0.05
+Nodes (41): Chroma is not saturation, and it has no fixed maximum, Gotchas, Interview questions, The problem with HSL, The related notations, Trade-off, What OkLCh changes, Wider gamuts, safely (+33 more)
 
-### Community 1088 - "Gotchas"
-Cohesion: 0.25
-Nodes (8): A float tolerance on a `Decimal`, A NaN turns a data bug into a tolerance failure, `cmath.isclose` on components of very different scale, `Decimal(0.05)` as a tolerance, Deduplicating with a tolerance, Gotchas, `isclose(inf, inf)` is `True` and that is not always what you want, `isclose` used as `__eq__`
+### Community 1088 - "07b-isclose-edge-cases.md"
+Cohesion: 0.13
+Nodes (14): A float tolerance on a `Decimal`, A NaN turns a data bug into a tolerance failure, `cmath.isclose` on components of very different scale, Complex numbers: cmath.isclose, `Decimal(0.05)` as a tolerance, Decimal and Fraction do not need a tolerance function, Deduplicating with a tolerance, Gotchas (+6 more)
 
-### Community 1089 - "Gotchas"
-Cohesion: 0.25
-Nodes (8): A seam appears around every product, Every product tile is a glowing rectangle, Gotchas, Product colours are wrong in dark mode, Review photos look wrong against one theme or the other, The brand name disappeared from screen readers, The cut-out modifier is applied to the wrong products, The logo is wrong for exactly one group of users
+### Community 1089 - "⚡ `BASE_URL` Mirrors Your Config and `SSR` Is Not an Access Control"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `BASE_URL` mirrors config, it does not detect deployment, ⚡ `BASE_URL` Mirrors Your Config and `SSR` Is Not an Access Control, Gotchas, Interview questions (+6 more)
 
-### Community 1090 - "Gotchas"
-Cohesion: 0.25
-Nodes (8): Gotchas, Mobile browser chrome disagrees with the page, Selecting "Auto" does nothing in other tabs, The address bar colour drifts from the page, The chart redraws on OS changes but not on clicks, The system state stops following the OS, The theme is applied during a React render, Two tabs flip back and forth
+### Community 1090 - "⚡ Why `vite.config.ts` Cannot Read Its Own `.env`"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, `loadEnv` — for when a value must influence the config itself, `NODE_ENV` is the exception (+6 more)
 
 ### Community 1091 - "Gotchas"
 Cohesion: 0.25
@@ -6617,9 +6675,9 @@ Nodes (8): A back navigation propagates like a click, `forced-colors` rules were
 Cohesion: 0.25
 Nodes (7): Colocation, Diagnosing "my story is not there", Gotchas, Interview questions, The object form, when you need it, The `stories` glob, What is a story, from the module's point of view
 
-### Community 1095 - "ex3-bullmq.mjs"
-Cohesion: 0.25
-Nodes (7): connection, dlq, done, q, stamps, started, w
+### Community 1095 - "⚡ HTML `%VAR%` Replacement"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, ⚡ HTML `%VAR%` Replacement, Interview questions, It is substitution, and nothing more (+6 more)
 
 ### Community 1096 - "ex23-webcrypto.mjs"
 Cohesion: 0.25
@@ -6665,9 +6723,9 @@ Nodes (7): line(), PGHOST, PGPASSWORD, PGPORT, PGUSER, ex52-backup-restore.sh sc
 Cohesion: 0.46
 Nodes (7): attempt(), line(), PGPASSWORD, psqlc(), reload(), sethba(), ex53-hba-tls.sh script
 
-### Community 1108 - "ex8-bulk-and-seed.mjs"
-Cohesion: 0.39
-Nodes (6): count(), pool, q(), reset(), rows, time()
+### Community 1108 - "pg-api/package.json"
+Cohesion: 0.07
+Nodes (27): pg-copy-streams, pg-cursor, postgres, pool, count(), pool, q(), reset() (+19 more)
 
 ### Community 1109 - "gen-phases.mjs"
 Cohesion: 0.29
@@ -6693,13 +6751,13 @@ Nodes (7): httpOnly cookie flag, res.cookie, SameSite cookie flag, Secure cookie
 Cohesion: 0.29
 Nodes (6): Part 3 — The fixes, Part 4 — What is not a fix, Part 5 — Prevention, Parts 1 and 2 — the problem, and seeing it — ✅ COMPLETE, 🔴 RESUME HERE (session stopped 2026-08-25 by user order), Topic 08 · The N+1 problem — chunk plan
 
-### Community 1115 - "The type helpers, one at a time"
-Cohesion: 0.29
-Nodes (7): `getClass()` — free, and answers a question you did not ask, `Hibernate.getClass(Object)` — **a fetch**, `Hibernate.initialize(Object)` — a fetch, and it throws the other exception, `Hibernate.isInitialized(Object)` — free, and asymmetric, `Hibernate.unproxy(Object)` and `unproxy(Object, Class)` — **fetches, and they say so**, `instanceof` — free, and frequently wrong, The type helpers, one at a time
+### Community 1115 - "What works, with no session, forever"
+Cohesion: 0.09
+Nodes (19): Fix 1 · flush before adding — real, and rarely usable, Fix 2 · a natural key or business key — what Hibernate recommends, Fix 3 · a constant `hashCode`, when there is no natural key, The three fixes, in the order you will consider them, `getClass()` — free, and answers a question you did not ask, `Hibernate.getClass(Object)` — **a fetch**, `Hibernate.initialize(Object)` — a fetch, and it throws the other exception, `Hibernate.isInitialized(Object)` — free, and asymmetric (+11 more)
 
-### Community 1116 - "03-the-cases-worth-writing.md"
-Cohesion: 0.25
-Nodes (7): Four details in there worth naming, Gotchas, Interview questions, Regression tests: the one test that is always worth writing, The four states, and the one everybody writes, The shape of the file, What a feature's suite looks like when it is done
+### Community 1116 - "⚡ Types That Lie About Runtime"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `define` declarations have the same gap, doubled, Gotchas, Interview questions, ⚠️ Pitfall 1 — Believing the declared type (+6 more)
 
 ### Community 1117 - "The procedure"
 Cohesion: 0.29
@@ -6709,9 +6767,13 @@ Nodes (7): 0 · Measure before touching anything, 1 · Check whether the build f
 Cohesion: 0.29
 Nodes (7): A collaborator you own, A third-party SDK, a controller, and security, An outbound HTTP API, Async, scheduled and message-driven, Caching, idempotency, contracts and legacy, The chunks, The decision underneath everything
 
-### Community 1119 - "10b2-what-it-costs-you.md"
-Cohesion: 0.29
-Nodes (6): Caller data disappears, Configuring it deliberately, Gotchas, Interview questions, Shutdown, The memory the queue holds
+### Community 1119 - "07-logging-done-right/README.md"
+Cohesion: 0.12
+Nodes (14): Depth, volume and the log, Exceptions as control flow, Gotchas, Interview questions, The fast-throw optimisation, and why traces disappear, Where the cost is, Caller data disappears, Configuring it deliberately (+6 more)
+
+### Community 1120 - "redux-toolkit/pages/README.md"
+Cohesion: 0.18
+Nodes (5): Chunks, Where this connects, Chunks, Phase gate, Where this connects
 
 ### Community 1121 - "Gotchas"
 Cohesion: 0.29
@@ -6729,13 +6791,13 @@ Nodes (7): description, devDependencies, typescript, typescript, name, private, 
 Cohesion: 0.29
 Nodes (7): Accessibility — seven pages, and the chapter previously had none, Auditing and the milestone, Chunks, Crawlers and internationalisation, Metadata — the API end to end, Progressive Web Apps — 31 to 58, Social previews and structured data
 
-### Community 1125 - "The types"
-Cohesion: 0.29
-Nodes (7): Arrays, `ENUM`, `INTERVAL`, `jsonb`, and the operator family that comes with it, The types, `timestamp with time zone` — the one that silently changes your data, `UUID` — the most common false red in the catalogue
+### Community 1125 - "⚡ Accidental Serialisation"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Accidental Serialisation, Gotchas, Interview questions, ⚠️ Pitfall 1 — Assuming synchronous means ordered (+6 more)
 
-### Community 1126 - "split("") splits UTF-16 code units"
-Cohesion: 0.29
-Nodes (7): Default sort is UTF-16 string order, Four sort rules, String.prototype.at, Intl.Segmenter, Array.prototype.join, split("") splits UTF-16 code units, empty string split is [""]
+### Community 1126 - "⚡ `transformIndexHtml`"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, 🔴 `order` decides whether Vite processes what you inject, ⚠️ Pitfall 1 — Injecting a module with the default `order` (+6 more)
 
 ### Community 1127 - "05-fullstack-deployment-production.md"
 Cohesion: 0.29
@@ -6789,29 +6851,29 @@ Nodes (7): Assuming free-threading is free, Attributing a database problem to th
 Cohesion: 0.29
 Nodes (7): Assuming an alternative runtime tracks the latest CPython, Code that relies on refcounting for cleanup, Expecting PyPy to speed up a web service, Gotchas, Migrating to Bun or Deno on a compatibility claim, Reading a project's own benchmark as a prediction about your service, Treating GraalPy's native-extension support as production-ready
 
-### Community 1140 - "Map and Set stringify as {}"
-Cohesion: 0.33
-Nodes (7): Map and Set stringify as {}, Object accidental inherited keys, Map.groupBy vs Object.groupBy, Map does not serialise, Use Map when keys are data, Object spread, Later spreads win
+### Community 1140 - "⚡ HTML `children` & Composition"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, ⚡ HTML `children` & Composition, Interview questions, One field, two entirely different types (+6 more)
 
 ### Community 1141 - "Gotchas"
 Cohesion: 0.29
 Nodes (7): A build-time error after enabling Cache Components, blamed on the migration, A `loading.tsx` added to fix it, A shared layout that fetches "just one small thing", `await cookies()` at the top of the root layout, Gotchas, Passing an already-awaited value and expecting a boundary to help, The skeleton file exists and never renders
 
-### Community 1142 - "04-bool-is-an-int.md"
-Cohesion: 0.09
-Nodes (20): `a == 1 & b == 1` does not mean what it looks like, A `DeprecationWarning` on `~flag`, `&` and `|` evaluate both sides, Bitwise operators: when the result stays a `bool`, `f"{flag:>8}"` prints `1` instead of `True`, Formatting: the repr is the only thing that differs, Gotchas, Interview questions (+12 more)
+### Community 1142 - "⚡ HTML Plugin Composition"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, ⚡ HTML Plugin Composition, Interview questions, `order` and `injectTo` are two different axes (+6 more)
 
 ### Community 1143 - "tier-map.mjs"
-Cohesion: 0.12
-Nodes (17): config, dirname, searchContexts, buildTierMap(), CODE_BY_SLUG, decorateItem(), decorateSidebarItems(), isTieredPage() (+9 more)
+Cohesion: 0.11
+Nodes (18): config, dirname, searchContexts, prism-react-renderer, buildTierMap(), CODE_BY_SLUG, decorateItem(), decorateSidebarItems() (+10 more)
 
 ### Community 1144 - "ex10-migrations.mjs"
-Cohesion: 0.33
+Cohesion: 0.40
 Nodes (3): pool, q(), reset()
 
 ### Community 1145 - "package.json"
-Cohesion: 0.29
-Nodes (6): engines, node, name, packageManager, private, version
+Cohesion: 0.09
+Nodes (22): browserslist, development, production, engines, node, react, react-dom, name (+14 more)
 
 ### Community 1146 - "express-verify/package.json"
 Cohesion: 0.29
@@ -6823,7 +6885,7 @@ Nodes (3): data, r, t0
 
 ### Community 1148 - "ex15-mutation/package.json"
 Cohesion: 0.29
-Nodes (6): dependencies, @stryker-mutator/core, name, private, type, @stryker-mutator/core
+Nodes (6): @stryker-mutator/core, dependencies, @stryker-mutator/core, name, private, type
 
 ### Community 1149 - "ex17-contract/package.json"
 Cohesion: 0.29
@@ -6885,9 +6947,9 @@ Nodes (5): For /graphify explain, For /graphify path, graphify reference: query,
 Cohesion: 0.40
 Nodes (5): RFC-6238, hotp(), s1, s256, totp()
 
-### Community 1166 - "Gotchas"
-Cohesion: 0.29
-Nodes (7): A number was added to something already in the top layer, A toast dismisses the dialog underneath it, Gotchas, The mega-menu is clipped after an unrelated header change, The overlay works until it is rendered without the portal, The stacking scale has grown a fourth value, Two overlays are open and the wrong one is on top
+### Community 1166 - "⚡ Hook Filters"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Contrast with the legacy guard, Gotchas, ⚡ Hook Filters, Interview questions (+6 more)
 
 ### Community 1167 - "Plan — repair & depth pass A (chunks 01–09b + new 20d)"
 Cohesion: 0.33
@@ -6901,21 +6963,21 @@ Nodes (5): Boundary (fixed, do not cross), Chunks, The repointing map (exact, on
 Cohesion: 0.48
 Nodes (6): collect(), countAtOrAbove(), describe(), DOC_IDS, DocSidebarItemCategoryWrapper(), subtreeDocIds()
 
-### Community 1170 - "Family 1 — state that outlives a test"
-Cohesion: 0.33
-Nodes (6): Container and database state, Family 1 — state that outlives a test, JVM reuse and forking, Leaked state between tests, Order dependence, Shared `static` mutable state
+### Community 1170 - "⚡ What Transfers From webpack to Vite"
+Cohesion: 0.14
+Nodes (14): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Needs a plugin, or a rethink, ⚠️ Pitfall 1 — Estimating by config line count (+6 more)
 
-### Community 1171 - "11-execution-order.md"
-Cohesion: 0.02
-Nodes (103): Changing the default globally, and why not to, Gotchas, Inheritance and the default, Interview questions, 🔴 It disables parallel execution for that class, The four things it enables, What it does, When it is genuinely the right call (+95 more)
+### Community 1171 - "The filesystem"
+Cohesion: 0.33
+Nodes (6): Case sensitivity and separators, Directory listing order is unspecified, Fixed paths, Line endings, The filesystem, `user.dir` is not a constant
 
 ### Community 1172 - "Topic 01 · JUnit 5 — chunk plan"
 Cohesion: 0.33
 Nodes (5): Boundary, Chunks (a PLAN, not a budget — Master tier, split at 301 lines), 🔴 SALVAGE STATE — 2026-08-27, after the fork was killed mid-topic, Topic 01 · JUnit 5 — chunk plan, Verify, do not assume
 
 ### Community 1173 - "The three messages, from the 7.4 source"
-Cohesion: 0.33
-Nodes (6): `[com.acme.Customer#4711]`, `Could not initialize proxy`, `- no session`, `- the owning session is disconnected`, `- the owning session was closed`, The three messages, from the 7.4 source
+Cohesion: 0.18
+Nodes (10): `[com.acme.Customer#4711]`, `Could not initialize proxy`, `- no session`, `- the owning session is disconnected`, `- the owning session was closed`, The three messages, from the 7.4 source, A1 · The test shares a transaction with the code under test, A2 · A single long-lived `EntityManager` (+2 more)
 
 ### Community 1174 - "Collapsing a long history: the procedure"
 Cohesion: 0.33
@@ -6989,17 +7051,17 @@ Nodes (6): 1 · Is it unbounded? → reference, 2 · Is it queried on its own? �
 Cohesion: 0.33
 Nodes (6): Step 1 · Does `target/jacoco.exec` exist and have size?, Step 2 · Open the report's Sessions page, Step 3 · Check the exclusion configuration, Step 4 · Ask where the code runs, Step 5 · Only now, is it untested?, The diagnostic order
 
-### Community 1192 - "sort mutates and returns the same array"
-Cohesion: 0.47
-Nodes (6): sort mutates and returns the same array, ES2023 non-mutating array family, Array.prototype.reverse, Array.prototype.toSorted, Spread is a shallow copy, Immutable updates with spread
+### Community 1192 - "⚡ Three Capabilities With No Vite Equivalent"
+Cohesion: 0.14
+Nodes (14): 1. `splitChunks` → nothing equivalent, and Vite 8 narrowed the landing zone, 1. Under-The-Hood Mechanics, 2. `ProvidePlugin` → no direct equivalent, 2. Real-World Engineering Scenario, 3. Node built-ins in browser code → parity, not a regression, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas (+6 more)
 
 ### Community 1193 - "Gotchas"
 Cohesion: 0.33
 Nodes (6): Adding `app/error.tsx` and calling the root covered, An `error.tsx` beside the layout that throws, Concluding that boundaries never catch layouts, Gotchas, Putting the fetch in a layout to "share" it, then wondering why failure is global, `template.tsx` forgotten entirely
 
-### Community 1194 - "11-auth-interrupts-forbidden-and-unauthorized.md"
-Cohesion: 0.07
-Nodes (26): Calling it on an error you constructed yourself, Cleanup written after `unstable_rethrow`, Gotchas, Interview questions, `unstable_rethrow` — the escape hatch, and its exact contract, Using it as the house pattern for every `catch`, A reload offered for an error a reload cannot fix, A single "not allowed" branch for three outcomes (+18 more)
+### Community 1194 - "Gotchas"
+Cohesion: 0.33
+Nodes (6): Assuming this is an edge case under Cache Components, Expecting a real 401 from a check inside `<Suspense>`, Gotchas, Guarding the page but not the action, Shipping them to production, Using `forbidden()` for an unauthenticated request
 
 ### Community 1195 - "Gotchas"
 Cohesion: 0.33
@@ -7009,9 +7071,9 @@ Nodes (6): An unbounded image cache, `caches.match()` used where you meant one c
 Cohesion: 0.06
 Nodes (34): Gotchas, Interview questions, Passing the `PushSubscription` object straight to a Server Action, Rotating VAPID keys and expecting existing subscriptions to keep working, `subscribe()` called from a `useEffect` on mount, Subscribing, and the two rules that make it reject, `userVisibleOnly` omitted, `VAPID_PRIVATE_KEY` renamed to `NEXT_PUBLIC_VAPID_PRIVATE_KEY` (+26 more)
 
-### Community 1197 - "The audit: five destinations, five answers"
-Cohesion: 0.33
-Nodes (6): Content behind `cookies()` or `headers()`, Reads URL data, Real-time content, Static or already cached, The audit: five destinations, five answers, Uncached content you wanted ahead of the click
+### Community 1197 - "11d-what-defer-never-defers.md"
+Cohesion: 0.15
+Nodes (11): Gotchas, Interview questions, Step 1 — rule out HMR, because it turns the feature off entirely, Step 2 — make the compiler talk, with `deferredImports`, Step 3 — only now, look at the bundler, Two subtleties that decide whether a reference counts as eager, Gotchas, Interview questions (+3 more)
 
 ### Community 1198 - "Gotchas"
 Cohesion: 0.33
@@ -7046,8 +7108,8 @@ Cohesion: 0.33
 Nodes (6): An `await` on something that is not actually async yields nothing, `dns.lookup` starving on four threads, Gotchas, `Promise.all` is not a concurrency limit, `readFileSync` at module scope is fine; in a handler it is not, `UV_THREADPOOL_SIZE` set too late does nothing
 
 ### Community 1206 - "node: prefix"
-Cohesion: 0.40
-Nodes (6): module.builtinModules, Prefixed imports as bundler signal, Core modules resolve before node_modules, node: prefix, Prefix-only built-ins, module.isBuiltin
+Cohesion: 0.20
+Nodes (11): module.builtinModules, Prefixed imports as bundler signal, Core modules resolve before node_modules, node: prefix, Prefix-only built-ins, CJS vs ESM resolution, Module resolution, require.resolve (+3 more)
 
 ### Community 1207 - "The consequences you will actually hit"
 Cohesion: 0.33
@@ -7089,9 +7151,9 @@ Nodes (4): arr, base, child, out
 Cohesion: 0.33
 Nodes (4): h, h2, t0, t2
 
-### Community 1218 - "ex10-ssrf-guard.mjs"
-Cohesion: 0.40
-Nodes (4): guardedLookup(), isPrivate(), redirector, srv
+### Community 1218 - "Gotchas"
+Cohesion: 0.15
+Nodes (13): 1. The keyboard path Motion already wired for you, 2. Propagation — the two fixes, for two different children, 3. Reduced Motion is a switch on your gesture vocabulary, ★ A `motion.div` with a tap prop lands in the tab order, ★ `e.stopPropagation()` in a Motion gesture handler cannot stop the parent, 🎨 Gesture accessibility and propagation, Gotchas, ★ Hand-rolling `onKeyDown` beside `whileTap` double-fires the action (+5 more)
 
 ### Community 1219 - "ex12-redos.mjs"
 Cohesion: 0.33
@@ -7101,9 +7163,9 @@ Nodes (4): iv, shapes, t, t0
 Cohesion: 0.33
 Nodes (3): b64, data, hmac
 
-### Community 1221 - "ex8-ssrf.mjs"
-Cohesion: 0.40
-Nodes (4): guarded, isPrivate(), redirector, srv
+### Community 1221 - "10-multi-tenant-applications.md"
+Cohesion: 0.15
+Nodes (12): 1 · Path segment — `sprintdesk.com/acme/board`, 2 · Subdomain — `acme.sprintdesk.com/board`, 3 · Custom domain — `tasks.acme.com`, 4 · Header or session only — `sprintdesk.com/board` plus `x-tenant` or a cookie, Cookies do not respect your tenancy model, Gotchas, Identification: four mechanisms, ranked by what the framework can do with them, Interview questions (+4 more)
 
 ### Community 1222 - "ex37f-frame-extras.mjs"
 Cohesion: 0.47
@@ -7134,16 +7196,16 @@ Cohesion: 0.33
 Nodes (4): JsonValue, menu, MenuItem, payload
 
 ### Community 1231 - "progress.js"
-Cohesion: 0.43
-Nodes (7): LANGUAGES, lastUpdated(), phaseFiles(), phaseStatus(), recentlyUpdated(), summarise(), trackFiles()
+Cohesion: 0.36
+Nodes (9): LANGUAGES, lastUpdated(), phaseFiles(), phaseStatus(), phaseValidated(), recentlyUpdated(), summarise(), trackFiles() (+1 more)
 
 ### Community 1232 - "Grok project rules"
 Cohesion: 0.40
 Nodes (5): Explanation cadence, Grok memory store, Grok project rules, Never-delete rule, Single-agent default
 
 ### Community 1233 - "devbible"
-Cohesion: 0.40
-Nodes (4): devbible, graphify, Memory, This project
+Cohesion: 0.29
+Nodes (6): devbible, graphify, 🔴 HARD RULE — a broken link fails the DEPLOY, not just the build, Memory, The two classes look IDENTICAL in a build log and have OPPOSITE fixes, This project
 
 ### Community 1234 - "res.sendFile"
 Cohesion: 0.40
@@ -7157,9 +7219,9 @@ Nodes (5): Webhook event id dedupe, express.raw on webhook path, HMAC with crypt
 Cohesion: 0.33
 Nodes (6): createRequire, Subpath imports (#internal), enableCompileCache, Loader hooks run on a separate thread, module.register(), node:module API
 
-### Community 1237 - "Three ways to switch it on"
-Cohesion: 0.40
-Nodes (5): And, if you use Hibernate's generated repositories, As a `FindOption` — the one that is actually safe, From the generated metamodel, On the session, by name, Three ways to switch it on
+### Community 1237 - "16-eager-is-not-a-fix.md"
+Cohesion: 0.02
+Nodes (78): Gotchas, Interview questions, The arithmetic is the point, The code, What actually runs, Gotchas, Interview questions, Say it generally (+70 more)
 
 ### Community 1238 - "Topic 09 · Spring Data JPA — chunk plan"
 Cohesion: 0.40
@@ -7169,9 +7231,9 @@ Nodes (4): Boundary (fixed, do not cross), Chunks (a PLAN, not a budget — spli
 Cohesion: 0.40
 Nodes (4): Boundary (fixed, do not cross) — 🔴 READ THIS FIRST, 08 OVERLAPS HARD, Chunks (a PLAN, not a budget — split at 301 lines, rule 1), Topic 10 · Lazy-loading pitfalls — chunk plan, Traps to verify, not assume
 
-### Community 1240 - "The four homes, and the one question that separates them"
-Cohesion: 0.40
-Nodes (5): 1 · A hand-run script, 2 · An `ApplicationRunner` in the deployable — and why this one is a trap, 3 · A one-shot pod from the same image, 4 · Spring Batch, The four homes, and the one question that separates them
+### Community 1240 - "🎭 Locators: `getByRole`, Semantic Queries & Strictness Mode"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Chaining & Filtering, Gotchas, Interview questions, 🎭 Locators: `getByRole`, Semantic Queries & Strictness Mode (+5 more)
 
 ### Community 1241 - "Topic 11 · Migrations with Flyway — chunk plan"
 Cohesion: 0.40
@@ -7189,13 +7251,13 @@ Nodes (4): Boundary, Chunks (a PLAN, not a budget — split at 301 lines, rule 1
 Cohesion: 0.40
 Nodes (4): Boundary, Chunks (a PLAN, not a budget — split at 301 lines, rule 1), Topic 14 · Spring Data for MongoDB and Redis — chunk plan, Traps to verify, not assume
 
-### Community 1245 - "The four honest options, in order"
-Cohesion: 0.40
-Nodes (5): 1 · Fix it, 2 · Make it deterministic even if you cannot fix the cause, 3 · Quarantine — with an owner and a date, 4 · Delete it, The four honest options, in order
+### Community 1245 - "01b-staff-and-reading-the-room.md"
+Cohesion: 0.15
+Nodes (11): Gotchas, Interview questions, The three answers, side by side, What "choose" means at senior, What "correctly" means at SDE-2, Gotchas, Interview questions, Reading which level the room expects (+3 more)
 
-### Community 1246 - "The shape of the problem"
-Cohesion: 0.40
-Nodes (5): `shuffle` destroys the report's identity, The expectation is computed, so a row can pass for the wrong reason, The filter can silently empty the table, The row count is a property of the environment, The shape of the problem
+### Community 1246 - "🧮 Reading a `useQueries` Result Array: `combine`, Aggregation and the Fan-Out Cost"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `combine`: one value out of many results, Gotchas, Interview questions, ⚠️ Pitfall 1: An Inline `combine` That Cancels Its Own Memoisation (+5 more)
 
 ### Community 1247 - "07-strictness.md"
 Cohesion: 0.04
@@ -7237,9 +7299,9 @@ Nodes (4): Boundary, Chunks (a PLAN, not a budget), Topic 11 · Mutation testing
 Cohesion: 0.40
 Nodes (5): Reading the output, The chunks, The operators, Why, and how it works, Wiring and the verdict
 
-### Community 1257 - "exports map"
-Cohesion: 0.40
-Nodes (6): main vs exports, Conditional exports, Dual package hazard, ERR_PACKAGE_PATH_NOT_EXPORTED, exports map, Subpath exports
+### Community 1257 - "🚧 The Gate in Full: What a Disabled Query Ignores, `skipToken`, and Whether Children Follow"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1: Invalidating a Query That Cannot Hear You, ⚠️ Pitfall 2: `skipToken` Where You Needed a Manual Trigger (+5 more)
 
 ### Community 1258 - "Topic 12 · Real-world testing scenarios — chunk plan"
 Cohesion: 0.40
@@ -7333,13 +7395,13 @@ Nodes (4): Boundary, Chunks (a PLAN, not a budget), Topic 12 · The distributed 
 Cohesion: 0.40
 Nodes (5): Infinity and -Infinity, Math.max empty identity, Number.isFinite validation, Math.max(...arr) argument cap, NaN poisons every relational
 
-### Community 1281 - "Gotchas"
-Cohesion: 0.40
-Nodes (5): A long-running action that blocks every later click, A "retry" button that makes the wait longer each time, Gotchas, `Promise.all` over several actions to speed a bulk operation up, Reporting a queued action as a timeout
+### Community 1281 - "⚡ Dev Server Mechanics: Native ESM Serving, HMR & Dependency Pre-Bundling"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Dev Server Mechanics: Native ESM Serving, HMR & Dependency Pre-Bundling, Gotchas, Interview questions, Module Graph Invalidation on File Change (+5 more)
 
-### Community 1282 - "Gotchas"
-Cohesion: 0.33
-Nodes (6): A token defined only inside the dark block, Dark mode is correct until the OS theme changes, `data-theme` on `<body>`, background from `<html>`, Gotchas, The page flashes the wrong theme on every load, The toggle works one way and not the other
+### Community 1282 - "⚡ Build System: `rolldownOptions`, Chunk Splitting & Library Mode"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `build.lib`: A Fundamentally Different Output Shape, ⚡ Build System: `rolldownOptions`, Chunk Splitting & Library Mode, `build.target`: Per-File Transpilation Inside the Bundle Pipeline, Chunk Splitting: Deliberate Grouping for Long-Term Caching (+5 more)
 
 ### Community 1284 - "Gotchas"
 Cohesion: 0.40
@@ -7349,9 +7411,9 @@ Nodes (5): `event.waitUntil` omitted in `install` or `activate`, Gotchas, Old ca
 Cohesion: 0.40
 Nodes (5): Ordering — why the queue puts what it puts first, Running several at once, Scope — what this pipeline never does, The division of labour — and yes, the checking itself is the AI's job, The validation pipeline — how an unchecked page becomes a checked one
 
-### Community 1286 - "The four, and what each one requires of your class"
-Cohesion: 0.40
-Nodes (5): `BeanPropertyRowMapper` — the classic, `DataClassRowMapper` — records and other constructor-shaped classes, `SimplePropertyRowMapper` — the one `JdbcClient` uses, `SingleColumnRowMapper` — for a result with one column, The four, and what each one requires of your class
+### Community 1286 - "⚡ Mode and `NODE_ENV` Are Two Independent Axes"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚡ Mode and `NODE_ENV` Are Two Independent Axes, `MODE` is free-form; `NODE_ENV` is not (+5 more)
 
 ### Community 1287 - "The ladder: deterministic first, bounded second, timed never"
 Cohesion: 0.40
@@ -7393,9 +7455,9 @@ Nodes (5): pg_dump ACCESS SHARE lock, pg_dump REPEATABLE READ snapshot, Physical
 Cohesion: 0.50
 Nodes (5): \gset, Bare :var is injectable, Variables are textual substitution, Three interpolation forms, Unset variable left as text
 
-### Community 1297 - "Date.toJSON ISO string"
-Cohesion: 0.40
-Nodes (5): Date.toJSON ISO string, toJSON hook, Reviver is innermost-first, Reviving Date from JSON, Reviver must return value
+### Community 1297 - "⚡ Conditional Config: `command`, `mode`, and Two Flags That Are Not Booleans"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Async config, ⚡ Conditional Config: `command`, `mode`, and Two Flags That Are Not Booleans, Config intellisense, without `defineConfig`, Gotchas (+5 more)
 
 ### Community 1298 - "Four caveats that only make sense once you see the graph"
 Cohesion: 0.40
@@ -7457,13 +7519,17 @@ Nodes (3): { a, ...others }, copy, orig
 Cohesion: 0.40
 Nodes (4): a, b, checks, empty
 
-### Community 1317 - "ex4-shutdown.mjs"
-Cohesion: 0.40
-Nodes (3): child2, connection, q
+### Community 1317 - "⚡ `configResolved`"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ `configResolved`, Gotchas, Interview questions, It is Global, not per-environment, ⚠️ Pitfall 1 — Declaring the captured variable in the wrong scope (+5 more)
 
 ### Community 1319 - "ex7-xss.mjs"
 Cohesion: 0.40
 Nodes (4): safe, sep, srv, user
+
+### Community 1320 - "⚡ `configureServer` and `configurePreviewServer`"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `configurePreviewServer`, `configureServer`, ⚡ `configureServer` and `configurePreviewServer`, Gotchas, Interview questions (+5 more)
 
 ### Community 1321 - "p9-testing/package.json"
 Cohesion: 0.40
@@ -7517,21 +7583,17 @@ Nodes (4): app.param, param callback runs once per cycle, router.param, express.
 Cohesion: 0.50
 Nodes (4): Cannot set headers after they are sent, Headers already sent, res.headersSent guard, Set headers before first stream byte
 
-### Community 1340 - "The two functions, and what each one says"
-Cohesion: 0.40
-Nodes (5): The two functions, and what each one says, Three reasons SprintDesk hides instead, What `forbidden()` is, What SprintDesk actually ships, given the flag, Where `forbidden()` *is* the right call
+### Community 1340 - "⚡ Plugin Ordering & `enforce`"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, A preset turns one array entry into several plugins, Gotchas, Interview questions, ⚠️ Pitfall 1 — Reordering the array to fix ordering (+5 more)
 
-### Community 1341 - "A rename, done properly"
-Cohesion: 0.50
-Nodes (4): A rename, done properly, Deploy 1 — expand, Deploy 2 — migrate, Deploy 3 — contract
+### Community 1342 - "4. Senior Engineer Edge Cases & Pitfalls"
+Cohesion: 0.17
+Nodes (11): 14.1 Runtime Registration, 14.2 ESM/CJS for Backend Packages, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Dual package hazard (Node “exports” misconfiguration), ⚠️ Ignoring .mjs/.cjs extension rules under "type": "module" (+3 more)
 
-### Community 1342 - "The four containment strategies"
-Cohesion: 0.40
-Nodes (5): 1 · A convention. (Weakest — it is not a mechanism), 2 · One base query in the Data Access Layer, 3 · A view, so the live set has its own name, 4 · Row-level security, the only version that cannot be bypassed, The four containment strategies
-
-### Community 1343 - "1 · The bullet that carries the most weight"
-Cohesion: 0.40
-Nodes (5): 1 · The bullet that carries the most weight, Clause 1 · "Verify authentication and authorization inside each action", Clause 2 · "Do not rely on Proxy or layout or page level checks alone", Clause 3 · "Move database access to a `server-only` Data Access Layer", Clause 4 · "Consider rate limiting for expensive operations" — 🔴 SprintDesk's open finding
+### Community 1343 - "02-a-worked-run.md"
+Cohesion: 0.17
+Nodes (11): 1. Clarify, 2. Examples, 3. Brute force, 4. Optimise, 5. Code, 6. Test, 7. Complexity, Gotchas (+3 more)
 
 ### Community 1344 - "Automatic semicolon insertion"
 Cohesion: 0.50
@@ -7545,17 +7607,17 @@ Nodes (4): Replacement $ patterns, Never build a regex from user input, String.p
 Cohesion: 0.50
 Nodes (4): Destructuring null or undefined throws, Destructured parameter = {}, Destructuring and fn.length, Options object as named arguments
 
-### Community 1347 - "Module resolution"
-Cohesion: 0.40
-Nodes (5): CJS vs ESM resolution, Module resolution, require.resolve, Three kinds of specifier, Import the .ts extension
+### Community 1347 - "10-forks.md"
+Cohesion: 0.17
+Nodes (11): Angie, freenginx, Gotchas, How to decide, Interview questions, OpenResty, Tengine, The four you will hear about (+3 more)
 
-### Community 1348 - "Gotchas"
-Cohesion: 0.50
-Nodes (4): A failure map written after the boundaries, An `error.tsx` in every folder, and the same blast radius as before, Auth interrupts routed through the boundary, Gotchas
+### Community 1348 - "📦 Cancellation, Races & The Limits of `createAsyncThunk`"
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, `abort()` is on the promise, not on the thunk, Assuming the last `fulfilled` to arrive is the one you want, 📦 Cancellation, Races & The Limits of `createAsyncThunk`, Gotchas, Ignoring `signal` after a cancellation (+4 more)
 
-### Community 1349 - "Gotchas"
-Cohesion: 0.50
-Nodes (4): A boundary at the root of the app group, A column fallback that shifts the board, Gotchas, The markdown renderer throwing into the column boundary
+### Community 1349 - "🔄 Core Concepts: The Server-State Model, `QueryClient` & Why Server State Is Different"
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Core Concepts: The Server-State Model, `QueryClient` & Why Server State Is Different, Gotchas, Interview questions, ⚠️ Pitfall 1: Treating Server State Like Client State, Reinventing What TanStack Query Already Solves (+4 more)
 
 ### Community 1350 - "nextjs/syllabus/01-foundations.md"
 Cohesion: 0.50
@@ -7629,9 +7691,17 @@ Nodes (3): seen, srv, tc
 Cohesion: 0.50
 Nodes (3): P, s, salt
 
-### Community 1383 - "ex31-psql-basics.sh"
-Cohesion: 0.67
-Nodes (3): line(), PGPASSWORD, ex31-psql-basics.sh script
+### Community 1372 - "ex10-api/package.json"
+Cohesion: 0.20
+Nodes (8): supertest, makeApp(), dependencies, express, supertest, express, type, app
+
+### Community 1382 - "🔄 Caching & Invalidation: `invalidateQueries()`, `refetchQueries()` & Direct Cache Access"
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Caching & Invalidation: `invalidateQueries()`, `refetchQueries()` & Direct Cache Access, Gotchas, Hierarchical Keys Enabling Partial-Match Invalidation, Interview questions (+4 more)
+
+### Community 1383 - "🎭 `initialData` in a Composition Chain: a Cache Write That Claims to Be Fresh"
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, 🎭 `initialData` in a Composition Chain: a Cache Write That Claims to Be Fresh, `initialData` is persisted, and the guide says not to guess with it, `initialData` is treated as fresh, which is the second half of the trap (+4 more)
 
 ### Community 1384 - "ex36b-agg-plans.mjs"
 Cohesion: 0.67
@@ -7645,9 +7715,9 @@ Nodes (3): errors, pool, t0
 Cohesion: 0.67
 Nodes (3): pool, q(), show()
 
-### Community 1390 - "ex9-bulk-at-scale.mjs"
-Cohesion: 0.67
-Nodes (3): pool, q(), reset()
+### Community 1390 - "⚡ What Static Replacement Costs You: Dynamic Keys, One-Artefact Promotion & Auditing a Bundle"
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1 — Dynamic property access, ⚠️ Pitfall 2 — Wrapping `import.meta.env` in a helper "for cleanliness" (+4 more)
 
 ### Community 1391 - "Glean client ID (react-p0)"
 Cohesion: 0.67
@@ -7777,6 +7847,14 @@ Nodes (3): Symmetrical cleanup, removeEventListener needs the same handler refer
 Cohesion: 0.67
 Nodes (3): An effect chain cannot be replayed, Chains are often stored derived state, Snapshot trap when collapsing a chain
 
+### Community 1773 - "⚡ The Five Built-In Constants, and Why Your Variables Are Always Strings"
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1 — Comparing a string to a boolean, ⚠️ Pitfall 2 — `Number()` on a missing variable (+4 more)
+
+### Community 1777 - "⚡ Which Hooks Run in Dev and Which Do Not"
+Cohesion: 0.17
+Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1 — Testing a build-only plugin against the dev server, ⚠️ Pitfall 2 — Moving logic to `transform` because "that one works in dev" (+4 more)
+
 ### Community 1783 - "devbible-pg container"
 Cohesion: 0.67
 Nodes (3): devbible-pg container, postgres:18-alpine, PostgreSQL Phase 0 measurements
@@ -7785,73 +7863,317 @@ Nodes (3): devbible-pg container, postgres:18-alpine, PostgreSQL Phase 0 measure
 Cohesion: 0.53
 Nodes (5): categoryHasSurvivor(), DocSidebarItemsWrapper(), isRootLevel(), pruneToFloor(), StudyModeSidebarItems()
 
-### Community 1831 - "Paginator/index.js"
-Cohesion: 0.70
-Nodes (4): DocItemPaginatorWrapper(), findNextUnread(), flatten(), isCurrent()
+### Community 1831 - "clsx"
+Cohesion: 0.24
+Nodes (6): clsx, GROUPS, DocItemPaginatorWrapper(), findNextUnread(), flatten(), isCurrent()
 
-### Community 1873 - "`connectionTimeout` — how long a thread waits"
-Cohesion: 0.50
-Nodes (4): 30 seconds is almost always wrong for a request path, But it must exceed the time to *make* a connection, `connectionTimeout` — how long a thread waits, It is not a query timeout
+### Community 1855 - "⚡ SSR Support: Middleware Mode, `ssrLoadModule()` & SSR Manifests"
+Cohesion: 0.17
+Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Forgetting `ssrFixStacktrace()`, Getting Useless Production-Mapped Stack Traces During Dev, ⚠️ Pitfall 2: Using `ssrLoadModule()` in Production, Not Just Development, ⚠️ Pitfall 3: Forgetting the SSR Manifest Only Reflects the LAST Production Build, `server.middlewareMode`: Vite as a Library, Not a Standalone Server (+3 more)
 
-### Community 1874 - "Three places, in increasing order of strength"
-Cohesion: 0.50
-Nodes (4): `ALTER ROLE ... SET`, `connectionInitSql`, The pgjdbc `options` property, Three places, in increasing order of strength
+### Community 1873 - "🎁 The language and framework presets"
+Cohesion: 0.18
+Nodes (11): 4.2 @babel/preset-react, 4.3 @babel/preset-typescript, 4.4 Framework-Bundled Presets, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Adding babel.config.js to Next without reading SWC docs, ⚠️ classic JSX runtime + React 17+ automatic assumptions, Gotchas, Interview questions (+3 more)
 
-### Community 2019 - "The three modes"
-Cohesion: 0.50
-Nodes (4): `INFERRED`, `SAME_THREAD`, `SEPARATE_THREAD`, The three modes
+### Community 1874 - "Gotchas"
+Cohesion: 0.18
+Nodes (11): Exit runs through the whole exiting subtree, Gotchas, Interview questions, Nesting — an inner `AnimatePresence` does not know its parent is leaving, 🎨 Nesting, Propagation and the One-Shot Props, ⚠️ Pitfall 1: A Nested `AnimatePresence` Swallows Its Children's Exits, ⚠️ Pitfall 2: The Whole Page Animates In on First Paint, ⚠️ Pitfall 3: Mixing `exit` and `layout` Without `LayoutGroup` (+3 more)
+
+### Community 1925 - "🎭 Advanced Patterns: Page Object Model, Custom Matchers & Test Tagging"
+Cohesion: 0.18
+Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Advanced Patterns: Page Object Model, Custom Matchers & Test Tagging, Page Object Model: Encapsulation Against Locator Churn, ⚠️ Pitfall 1: Page Objects Containing Assertions Instead of Just Actions/Locators, ⚠️ Pitfall 2: Inconsistent or Undocumented Tag Conventions (+2 more)
+
+### Community 2019 - "Anti join"
+Cohesion: 0.18
+Nodes (11): Parallel Hash Semi Join, Anti join, Anti join needs the child FK index more, EXCEPT is not an anti join, Hash Anti Join, LEFT JOIN … WHERE pk IS NULL, NOT IN NULL trap, Row constructor comparison (+3 more)
 
 ### Community 2020 - "Polling and Awaitility"
 Cohesion: 0.50
 Nodes (4): Keep the `@Timeout` as well, Polling and Awaitility, 🔴 `Thread.sleep` racing a real condition, What Awaitility does instead
 
-### Community 2021 - "JSON.stringify is silently lossy"
-Cohesion: 0.50
-Nodes (4): stringify is not deep equality, undefined omitted in objects, nulled in arrays, JSON.stringify is silently lossy, Destructuring defaults apply to undefined only
+### Community 2021 - "Updater function"
+Cohesion: 0.22
+Nodes (11): Updaters must be pure, Three cases where updater form is required, Updater function, await is a batch boundary, flushSync, Half-finished renders, The update queue, Value replaces, updater transforms (+3 more)
 
-### Community 2142 - "The three shapes"
-Cohesion: 0.50
-Nodes (4): 1 · Embed the children, 2 · Embed an array of ids, 3 · Reference from the child, The three shapes
+### Community 2085 - "📦 Slice Selectors & The `reducers` Creator Callback"
+Cohesion: 0.18
+Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, Assuming `slice.selectors` finds the slice wherever it is mounted, `create.asyncThunk` on a plain `createSlice` import, Gotchas, Interview questions, Reaching for the creator callback expecting it to replace `extraReducers` (+3 more)
 
-### Community 2143 - "Gotchas"
-Cohesion: 0.50
-Nodes (4): A multi-select drag that issues one action per card, A rejected move that reverts silently, Gotchas, `revalidateTag` on the board
+### Community 2101 - "🔄 Query States: `status` vs `fetchStatus` & the Loading Flag Family"
+Cohesion: 0.18
+Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1: Using `isFetching` Where `isLoading` Was Actually Needed, ⚠️ Pitfall 2: Assuming `status: 'success'` Means "Definitely Fresh, Just-Fetched Data" (+3 more)
 
-### Community 2144 - "Decision 1 — the session strategy, and the only question that settles it"
-Cohesion: 0.50
-Nodes (4): Decision 1 — the session strategy, and the only question that settles it, The question, What SprintDesk chooses, and what it costs, When JWT is the right answer instead
+### Community 2102 - "🔄 `useInfiniteQuery` in v5: the two required options and the stop signal that changed"
+Cohesion: 0.18
+Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `getNextPageParam` is now required too, Gotchas, Interview questions, ⚠️ Pitfall 1: The v4 Default-Parameter Idiom (+3 more)
 
-### Community 2145 - "Step 2 — `getCurrentUser()`, which returns a DTO and not a row"
-Cohesion: 0.50
-Nodes (4): Step 2 — `getCurrentUser()`, which returns a DTO and not a row, The nullable variant and the throwing variant, Why a class, Why `select` is written out
+### Community 2141 - "⚡ The `VITE_` Prefix Is an Exposure Gate, Not a Vault"
+Cohesion: 0.18
+Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Changing the prefix — and the one value it refuses, Gotchas, Interview questions, ⚠️ Pitfall 1 — Believing the prefix protects the value (+3 more)
+
+### Community 2142 - "⚡ Storing the Dev Server"
+Cohesion: 0.18
+Nodes (11): 1. Under-The-Hood Mechanics, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1 — Using the stored server without a guard, ⚠️ Pitfall 2 — Reaching for the server when you wanted the config, ⚡ Storing the Dev Server (+3 more)
+
+### Community 2143 - "⚡ Testing Integration: Vitest's Shared Config & Transform Pipeline"
+Cohesion: 0.18
+Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Maintaining a Separate Test Config File "Just in Case," Reintroducing Drift, ⚠️ Pitfall 2: Assuming a Vite-Specific Plugin's Dev-Only Behavior (`apply: 'serve'`) Applies to Tests Correctly, ⚠️ Pitfall 3: Forgetting Test Environment (`jsdom`/`node`) Is a Vitest-Specific Concern, Not Something Vite Itself Configures, Shared Plugin Ecosystem (+2 more)
+
+### Community 2144 - "01b-how-usescroll-measures.md"
+Cohesion: 0.20
+Nodes (9): Gotchas, Interview questions, Pinning: use the browser's own mechanism, Reduced motion: parallax is named specifically, The four options, and what each one decides, The GPU path is conditional, and the condition is the property you animate, The offset grammar, What silently stops it updating (+1 more)
+
+### Community 2145 - "🎨 Keyframes: Array Syntax & The `times` Array"
+Cohesion: 0.20
+Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Keyframes: Array Syntax & The `times` Array, ⚠️ Pitfall 1: Assuming Keyframes Are Evenly Spaced by Default When Precise Pacing Is Needed, ⚠️ Pitfall 2: Mismatched Array Lengths Between the Animated Value and `times`, ⚠️ Pitfall 3: Using Keyframes for What's Actually a Simple Two-State Toggle (+1 more)
 
 ### Community 2146 - "Vite SPA starter"
 Cohesion: 0.50
 Nodes (4): process.env.NODE_ENV selects the React build, Create React App sunset, Framework vs Vite SPA, Vite SPA starter
 
-### Community 2147 - "Promise.all array destructuring"
-Cohesion: 0.67
-Nodes (3): Array vs object destructuring, Promise.all array destructuring, for...of await vs Promise.all map
+### Community 2147 - "4. Senior Engineer Edge Cases & Pitfalls"
+Cohesion: 0.20
+Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Diagnostic Sequence, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Diagnosing Janky, Dropped-Frame Animations in Production, ⚠️ Pitfall 1: Fixing Category A When the Real Problem Is Category B, ⚠️ Pitfall 2: Testing Only on a Fast Development Machine, ⚠️ Pitfall 3: Assuming `will-change`'s Automatic Application Fixes Category B (+1 more)
+
+### Community 2148 - "05-syntax-details.md"
+Cohesion: 0.20
+Nodes (9): Comments, Gotchas, Interview questions, Quoting, Size suffixes, The stray semicolon, Time suffixes, Trade-off (+1 more)
+
+### Community 2153 - "--max-old-space-size"
+Cohesion: 0.20
+Nodes (10): heapUsed, RSS resident set, v8.getHeapStatistics, Rising heapUsed under stable load, cgroup OOM vs V8 heap OOM, heap_size_limit vs flag value, V8 heap limit vs cgroup RSS, --max-old-space-size (+2 more)
+
+### Community 2154 - "🎭 Debugging Tools: Trace Viewer, Inspector, Codegen & UI Mode"
+Cohesion: 0.20
+Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `codegen`: Generating a Starting Point, Not a Finished Test, 🎭 Debugging Tools: Trace Viewer, Inspector, Codegen & UI Mode, ⚠️ Pitfall 1: Committing Raw `codegen` Output Without Refinement, ⚠️ Pitfall 2: Capturing Traces on Every Run, Not Just Failures (+2 more)
+
+### Community 2155 - "🔄 Infinite lists at runtime: one fetch, two flags, and a `data` that is not an array"
+Cohesion: 0.20
+Nodes (10): 1. Under-The-Hood Mechanics, 2. Senior Engineer Edge Cases & Pitfalls, Gotchas, `hasNextPage` and `isFetchingNextPage` vs `isFetching`, 🔄 Infinite lists at runtime: one fetch, two flags, and a `data` that is not an array, Interview questions, 🔴 One entry, one fetch at a time, ⚠️ Pitfall 2: Guarding the Sentinel on `isFetchingNextPage` Instead of `isFetching` (+2 more)
+
+### Community 2156 - "🔄 Optimistic Updates Patterns: List vs Single-Item Rollback & Race Conditions"
+Cohesion: 0.20
+Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Optimistic Updates Patterns: List vs Single-Item Rollback & Race Conditions, ⚠️ Pitfall 1: Restoring Only a Partial Patch Instead of the Full Snapshot on Rollback, ⚠️ Pitfall 2: Skipping `cancelQueries()`, Reintroducing the Background-Refetch Race, ⚠️ Pitfall 3: Leaving the Mutation's Generic Type Parameters Untyped, Losing Rollback Type Safety (+2 more)
+
+### Community 2157 - "4. Senior Engineer Edge Cases & Pitfalls"
+Cohesion: 0.20
+Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Migration Sequence, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Migration Recipe: RTK Query → TanStack Query, ⚠️ Pitfall 1: Assuming `providesTags`' `'LIST'` Pseudo-Tag Needs a Direct Equivalent, ⚠️ Pitfall 2: Forgetting `mutationFn` Doesn't Auto-Parse JSON or Throw on Non-2xx, ⚠️ Pitfall 3: Migrating Endpoint-by-Endpoint Without Deciding Where the QueryClient Lives (+1 more)
+
+### Community 2158 - "⚡ `dotenv-expand`: Why a `$` in Your Password Truncates It"
+Cohesion: 0.20
+Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ `dotenv-expand`: Why a `$` in Your Password Truncates It, Gotchas, Interview questions, ⚠️ Pitfall 1 — A `$` in a generated credential (+2 more)
+
+### Community 2159 - "⚡ `sequential` vs `parallel`"
+Cohesion: 0.20
+Nodes (10): 1. Under-The-Hood Mechanics, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Hook kind is not plugin ordering, Interview questions, ⚠️ Pitfall 2 — Expecting `enforce` to fix a `parallel` race, ⚡ `sequential` vs `parallel` (+2 more)
+
+### Community 2160 - "1. Under-The-Hood Mechanics"
+Cohesion: 0.18
+Nodes (10): 1. Under-The-Hood Mechanics, 3 — the falsy entry, 4 — placement instead of a property, 4. Senior Engineer Edge Cases & Pitfalls, `apply` and `enforce` are orthogonal, ⚠️ Pitfall 1 — A falsy entry that is `undefined` on CI, ⚠️ Pitfall 2 — Moving a plugin to `build.rolldownOptions.plugins` to "fix" a dev error, ⚠️ Pitfall 3 — Combining a guard with `apply` (+2 more)
+
+### Community 2161 - "⚡ Rolldown Plugin Compatibility"
+Cohesion: 0.20
+Nodes (10): 1. Under-The-Hood Mechanics, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Gotchas, Interview questions, ⚠️ Pitfall 1 — Assuming a Rollup plugin will "just work", ⚠️ Pitfall 2 — Treating a build-only plugin's dev silence as a bug, ⚡ Rolldown Plugin Compatibility (+2 more)
+
+### Community 2162 - "🎨 Orchestration & Staggering: Parent-Child Timing & Custom Per-Child Stagger"
+Cohesion: 0.22
+Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `custom` Prop: Per-Child Data-Driven Stagger, 🎨 Orchestration & Staggering: Parent-Child Timing & Custom Per-Child Stagger, ⚠️ Pitfall 1: Assuming `staggerChildren` Can Express Non-Sequential Stagger Patterns, ⚠️ Pitfall 2: Forgetting a Variant Defined as a Function Needs the `custom` Prop Actually Set (+1 more)
+
+### Community 2163 - "01-what-the-notation-says.md"
+Cohesion: 0.22
+Nodes (8): Best, average and worst case, Dropping constants and lower-order terms, Gotchas, Interview questions, Space complexity is a separate answer, The definition, in the form you will use, The notations that are not O, What Big-O cannot tell you
+
+### Community 2164 - "5. Interview Questions & Deep Dives"
+Cohesion: 0.19
+Nodes (9): ★ 1. What is the execution difference between `setupFiles` and `setupFilesAfterEnv`?, ★ 2. Why does `@swc/jest` run significantly faster than `ts-jest`?, 3. How does `identity-obj-proxy` mock CSS Modules in Jest?, 4. Gotchas & Senior Pitfalls, 4. What is the difference between Istanbul and V8 coverage providers in Jest?, 5. Interview Questions & Deep Dives, Symptom: Suite runs slowly due to unnecessary jsdom initialization on pure backend utility tests, Symptom: `SyntaxError: Cannot use import statement outside a module` on a `node_modules` package (+1 more)
+
+### Community 2165 - "package.json essentials"
+Cohesion: 0.22
+Nodes (9): MODULE_TYPELESS_PACKAGE_JSON, Nearest package.json type field, Avoid postinstall scripts, engines as a floor, files allowlist, node --run, package.json essentials, package.json type field (+1 more)
+
+### Community 2166 - "4. Senior Engineer Edge Cases & Pitfalls"
+Cohesion: 0.19
+Nodes (9): 1. Under-The-Hood Mechanics, 4. Senior Engineer Edge Cases & Pitfalls, A plugin is an object; the factory is a convention, Configuration: falsy entries and presets, ⚠️ Pitfall 1 — Believing the plugin API is Rollup's, ⚠️ Pitfall 2 — Omitting `name`, ⚠️ Pitfall 3 — Exporting a plugin object instead of a factory, ⚠️ Pitfall 4 — Reasoning about order from the plugins array alone (+1 more)
+
+### Community 2167 - "linkcheck.mjs"
+Cohesion: 0.28
+Nodes (7): files, problems, resolves(), ROOT, strip(), targets, walk()
+
+### Community 2168 - "mdxcheck.mjs"
+Cohesion: 0.28
+Nodes (6): excluded(), files, problems, ROOT, targets, walk()
+
+### Community 2169 - "Gotchas"
+Cohesion: 0.25
+Nodes (8): ★ A drag and a click on the same element are not distinguishable by wishing, ★ A dragged `<img>` shows the browser's ghost image, 🎨 Drag in the real DOM, Gotchas, ★ Inside a CSS-transformed parent, the element travels the wrong distance, Interview questions, ★ On touch, the browser's scroll wins unless you set `touch-action`, ★ That fix does **not** repair layout animations in the same scaled parent
+
+### Community 2170 - "Gotchas"
+Cohesion: 0.25
+Nodes (8): 🎨 `AnimatePresence` Modes: `sync`, `wait` and `popLayout`, Gotchas, Interview questions, `mode`: Controlling Overlap Between Outgoing and Incoming Elements, ⚠️ Pitfall 1: Using `mode="wait"` for a List — It Is Documented as Single-Child Only, ⚠️ Pitfall 2: `popLayout` Inside a `position: static` Parent, ⚠️ Pitfall 3: In `popLayout`, a Custom Component Child Still Needs `forwardRef` — on React 19 Too, ⚠️ Pitfall 4: Blaming `mode="sync"` for a Layout Collision It Explicitly Does Not Handle
+
+### Community 2171 - "Gotchas"
+Cohesion: 0.25
+Nodes (8): Assuming `private` means "safe", and skipping authorization, Expecting content to reach the App Shell at a 60-second `stale`, Expecting the cache to survive a reload, Gotchas, Reading `connection()` inside it, Setting `stale` below 30 seconds and wondering why prefetching stopped, Trying to configure a cache handler for it, Using it as the general fix for `next-request-in-use-cache`
+
+### Community 2172 - "10f-allocating-a-total-without-losing-a-cent.md"
+Cohesion: 0.25
+Nodes (7): Allocating by decimal weights, Gotchas, Interview questions, Negative totals work, and must be tested, Testing an allocation, The algorithm: minor units, floor, distribute the remainder, Why per-share rounding cannot work
+
+### Community 2173 - "Class lifecycle to hook mapping"
+Cohesion: 0.25
+Nodes (8): Effect model vs lifecycle moments, Class lifecycle to hook mapping, UNSAFE_ class lifecycles, React Compiler auto-memoization, useMemo for expensive derivation, Unchanged children element identity, memo, Four things that stop render descent
+
+### Community 2174 - "Four documented fetching-in-Effect downsides"
+Cohesion: 0.25
+Nodes (8): Lift the state up instead of copying, Notifying the parent from an Effect runs too late, Pass data down, do not push it up, Fetching on mount is the weak strategy, Four documented fetching-in-Effect downsides, Framework fetching or a client cache, Network waterfall, Race guards are not a cache
+
+### Community 2175 - "🎁 `@babel/preset-env`: targets, polyfills, and the Babel 8 boundary"
+Cohesion: 0.29
+Nodes (7): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4.1 @babel/preset-env, 🎁 `@babel/preset-env`: targets, polyfills, and the Babel 8 boundary, Gotchas, Interview questions
+
+### Community 2176 - "🎨 Presence State: Frozen Props and Manual Removal"
+Cohesion: 0.29
+Nodes (7): Gotchas, Interview questions, Manual removal — `usePresence` and `safeToRemove`, ⚠️ Pitfall 1: Trying to Change an Exit Animation With Props on the Way Out, ⚠️ Pitfall 2: `usePresence` Without a Guaranteed `safeToRemove`, 🎨 Presence State: Frozen Props and Manual Removal, The exiting component is outside the tree — `custom` is how data still reaches it
+
+### Community 2177 - "02b-the-predicate-keywords.md"
+Cohesion: 0.29
+Nodes (6): Gotchas, How many arguments each keyword eats, Interview questions, The `null` argument changes the operator, The store-neutral keywords, What each keyword becomes, in JPA
+
+### Community 2178 - "14-the-checklist.md"
+Cohesion: 0.29
+Nodes (6): Checklist A — the log line in a review, Checklist B — the service's configuration, Gotchas, Interview questions, The five failures that produce most incidents, The topic in one paragraph
+
+### Community 2179 - "Gotchas"
+Cohesion: 0.29
+Nodes (7): Adding `await` to the wrong side of the boundary, Assuming a green build means no cached scope reads request data, Auditing arguments and concluding the cached function is clean, Confusing the timeout with the direct-read error, Gotchas, Reading a build hang as a slow build, Using a shared `Map` to deduplicate across cached and uncached code
+
+### Community 2180 - "Gotchas"
+Cohesion: 0.29
+Nodes (7): A `loading.tsx` that quietly changed the route's status codes, A skeleton that needs to know what it is loading, Adding `loading.tsx` makes the whole page skeleton where it used to stream in parts, Both a `loading.tsx` and an inline boundary around the same content, Expecting a `loading.tsx` to cover the segment's own layout, Gotchas, Reaching for `loading.tsx` to fix a blocking-prerender build error
+
+### Community 2181 - "Gotchas"
+Cohesion: 0.29
+Nodes (7): A retry budget assumed to be global, A retry loop that turns a 400 into three 400s, A timeout longer than the request budget, An auto-retried payment, Backoff without jitter, Gotchas, Retrying inside a Server Action to hide a slow dependency
+
+### Community 2182 - "Gotchas"
+Cohesion: 0.29
+Nodes (7): Destructuring `reset` instead of `retry`, Expecting a plain React boundary to retry server work, Forgetting `<html>` and `<body>` in `global-error.js`, Gotchas, Omitting `'use client'` from the boundary, One boundary at the top of the app, Writing the `catchError` fallback as a normal one-argument component
+
+### Community 2183 - "The handler, complete"
+Cohesion: 0.29
+Nodes (7): 1 · Authorize before the stream, not inside it, 2 · Flush something immediately, 3 · The heartbeat is not optional, 4 · `cleanup` is captured by reference, and idempotent, 5 · `request.signal` is how you learn the client left, 6 · `cancel()` closes the loop, The handler, complete
+
+### Community 2184 - "The card representation"
+Cohesion: 0.29
+Nodes (7): `body: string | null` — null and absent are not the same thing, `id` is opaque, `position` is a number, not an index, `status` is a closed set that may grow, The card representation, Timestamps are strings, UTC, with an offset, `version` is the concurrency token
+
+### Community 2185 - "The five things multi-instance changes"
+Cohesion: 0.29
+Nodes (7): 1 · The Server Function encryption key, 2 · The deployment identifier, 3 · A shared cache, 4 · Tag coordination, 5 · Streaming, end to end, And one more: graceful shutdown for `after()`, The five things multi-instance changes
+
+### Community 2186 - "Gotchas"
+Cohesion: 0.29
+Nodes (7): A `-0` integer literal that does not exist, A literal that is silently an identifier, `float("nan")` accepted from user input, Gotchas, `int(s)` used where `int(s, 0)` was meant, `int(user_input)` accepting non-ASCII digits, Underscores that lie about the grouping
+
+### Community 2187 - "Gotchas"
+Cohesion: 0.29
+Nodes (7): A negative tolerance raises rather than inverting, Chained comparisons that use different scales, Gotchas, `isclose(x, 0)` never fires, `rel_tol` read as "decimal places", The tolerance was copied, not chosen, Using `isclose` on values that should be exact
+
+### Community 2188 - "The custom assertion class"
+Cohesion: 0.33
+Nodes (6): `AbstractAssert<SELF, ACTUAL>` and the self type, `actual` is `protected` on purpose, `failWithMessage` versus `failure`, `isNotNull()` first, every time, `super(actual, OrderAssert.class)`, The custom assertion class
+
+### Community 2189 - "1 · What the survey found"
+Cohesion: 0.33
+Nodes (6): 1 · What the survey found, Existing config coverage in this technology is one page, Folder convention across the repo today, The model being asked for, The stub that started this, There is no Vitest folder to move
+
+### Community 2190 - "03-advanced-integration.md"
+Cohesion: 0.33
+Nodes (5): Phase 07 — Custom Render & State Provider Isolation, Phase 08 — Network Mocking with Mock Service Worker (MSW v2), Phase 09 — Mocking 3rd-Party & External Libraries (Recipe Catalog), Phase 10 — Custom Hooks, React 19 Patterns & Accessibility, Where this connects
+
+### Community 2191 - "Gotchas"
+Cohesion: 0.33
+Nodes (6): A correlation id that is logged but not returned, A different error shape on every endpoint, A wrapper that swallows the framework's control-flow throws, Gotchas, Returning 200 with `{ "error": ... }` because "the client checks the body", The raw exception message returned to a public caller
+
+### Community 2192 - "Gotchas"
+Cohesion: 0.33
+Nodes (6): `0o` forgotten when porting a file mode, `1 + 2j` treated as a literal, `1e6` where an `int` was meant, A zero-padded number pasted into source, `float` used for a millisecond or byte count, Gotchas
+
+### Community 2193 - "🎭 `placeholderData` in a Composition Chain: a Render-Time Guess That Moves the Status"
+Cohesion: 0.33
+Nodes (6): 1. Under-The-Hood Mechanics, Gotchas, Interview questions, 🎭 `placeholderData` in a Composition Chain: a Render-Time Guess That Moves the Status, `placeholderData` is a render-time value, and it moves the status, The function form, and why a chain is where it bites
+
+### Community 2194 - "dependencies"
+Cohesion: 0.33
+Nodes (6): dependencies, helmet, redis, undici, valibot, zod
+
+### Community 2195 - "The four things this changes"
+Cohesion: 0.40
+Nodes (5): 1 · `getClass()` does not return your class, 2 · `instanceof` and casts are unreliable for polymorphic associations, 3 · `equals` must be written for proxies, 4 · The debugger lies, in both directions, The four things this changes
+
+### Community 2196 - "The patches, and what each one costs"
+Cohesion: 0.40
+Nodes (5): A Hibernate-aware Jackson module, `@JsonIdentityInfo`, `@JsonIgnore` on the child's back-reference, `@JsonManagedReference` / `@JsonBackReference`, The patches, and what each one costs
+
+### Community 2197 - "The four things that genuinely belong"
+Cohesion: 0.40
+Nodes (5): Functions and stored procedures, Grants and other declarative permissions, Reference data that the application does not own, The four things that genuinely belong, Views
+
+### Community 2198 - "Gotchas"
+Cohesion: 0.40
+Nodes (5): Baggage exists in context but never appears in log lines, Cardinality explosion from copying baggage into Micrometer meters, Downstream reverse proxy returns HTTP 431 Request Header Fields Too Large, Gotchas, Secret and token leakage over third-party HTTP calls
+
+### Community 2199 - "5. Interview Questions & Deep Dives"
+Cohesion: 0.40
+Nodes (5): ★ 1. Why is snapshot testing component DOM trees considered an anti-pattern in modern React testing?, ★ 2. How do Property Matchers work in `toMatchSnapshot()`?, 3. How does `toMatchInlineSnapshot` modify the test source file during execution?, 4. What is the difference between custom matchers (`expect.extend`) and snapshot serializers (`expect.addSnapshotSerializer`)?, 5. Interview Questions & Deep Dives
+
+### Community 2200 - "01-jest-runner.md"
+Cohesion: 0.40
+Nodes (4): Phase 01 — Test Structure & Execution Lifecycle, Phase 02 — Assertions, Matchers & Snapshots, Phase 03 — Mocking & Deterministic Isolation, Where this connects
+
+### Community 2201 - "The five modifiers"
+Cohesion: 0.40
+Nodes (5): `~` and `~*` — regexes, Bare prefix — the workhorse, `^~` — "prefix wins, do not check regexes", `=` — the fastest possible match, The five modifiers
+
+### Community 2202 - "Gotchas"
+Cohesion: 0.40
+Nodes (5): A tolerance hides a one-bit regression, Asserting on `repr`, Gotchas, Reordering an accumulation and keeping the exact assertion, `x == x` used without a comment
+
+### Community 2203 - "What the prop actually is"
+Cohesion: 0.50
+Nodes (4): Per-Property Transition Overrides, ⚠️ Pitfall 3: Using One Global `transition` When Properties Genuinely Need Different Timing, The four places a transition can be declared, What the prop actually is
+
+### Community 2204 - "Ports and the network"
+Cohesion: 0.50
+Nodes (4): 🔴 Fixed ports, Ports and the network, The find-a-port anti-pattern, The rest of the network
+
+### Community 2205 - "The three properties that are invisible from the tag"
+Cohesion: 0.50
+Nodes (4): 1 · The Java image ships a JRE — and `:debug` ships a JDK, 2 · The `ENTRYPOINT` is fixed, and it is `java -jar`, 3 · Shell-form instructions silently do not work, The three properties that are invisible from the tag
+
+### Community 2206 - "The options"
+Cohesion: 0.50
+Nodes (4): `bootstrapScripts` is the real architectural switch, `identifierPrefix` has to match on both sides, `namespaceURI` is for documents that are not HTML, The options
 
 ## Knowledge Gaps
-- **42512 isolated node(s):** `dirname`, `searchContexts`, `config`, `name`, `version` (+42507 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 43871 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **667 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **45314 isolated node(s):** `dirname`, `searchContexts`, `config`, `name`, `version` (+45309 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 46671 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **666 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `PostgreSQL syllabus` connect `PostgreSQL syllabus` to `02-architecture-and-data-model.md`, `Phase 9 — CRUD patterns for a real API`, `Phase 10 — Indexes and the query planner`, `docs/README.md`, `phase-9-mern-pern-stack/README.md`, `phase-1-running-containers/README.md`, `02-single-document-atomicity.md`, `mongodb/README.md`, `02-the-data-layer.md`, `PostgreSQL explanation pages`, `04-outbox-relay-and-email.md`, `06-typing-the-custom-hooks/README.md`, `phase-10-data-access/README.md`?**
-  _High betweenness centrality (0.207) - this node is a cross-community bridge._
-- **Why does `Node.js — Syllabus` connect `Node.js — Syllabus` to `phase-12-jvm-production/README.md`, `docs/README.md`, `05-the-five-interaction-styles.md`, `javascript/README.md`, `phase-9-mern-pern-stack/README.md`, `phase-1-running-containers/README.md`, `11-spring-security/README.md`, `04-outbox-relay-and-email.md`, `javascript/pages/README.md`?**
-  _High betweenness centrality (0.056) - this node is a cross-community bridge._
-- **Why does `PostgreSQL explanation pages` connect `PostgreSQL explanation pages` to `Phase 10 — Indexes and the query planner`, `docs/README.md`, `Phase 11 — Transactions, MVCC and concurrency`, `Phase 8 Schema and data from Node`, `Phase 4 — CRUD and DML`, `phase-6-rest-surface/README.md`, `PostgreSQL syllabus`, `01-validate-at-boundary/README.md`, `LATERAL`, `GROUP BY and aggregates`, `Phase 12 — Beyond plain tables`, `Phase 1 — psql, mastered`, `Phase 2 — Data types and the relational model`?**
-  _High betweenness centrality (0.053) - this node is a cross-community bridge._
+- **Why does `PostgreSQL syllabus` connect `system-design/README.md` to `02-architecture-and-data-model.md`, `Phase 9 — CRUD patterns for a real API`, `Phase 10 — Indexes and the query planner`, `docs/README.md`, `03-choosing-the-type.md`, `02-connection-pooling/README.md`, `dsa/README.md`, `phase-9-mern-pern-stack/README.md`, `phase-1-the-method/README.md`, `phase-1-running-containers/README.md`, `02-single-document-atomicity.md`, `mongodb/README.md`, `07-money-and-time.md`, `02-the-data-layer.md`, `PostgreSQL explanation pages`, `05-the-status-enum-four-ways.md`, `redis/README.md`?**
+  _High betweenness centrality (0.191) - this node is a cross-community bridge._
+- **Why does `PostgreSQL explanation pages` connect `PostgreSQL explanation pages` to `system-design/README.md`, `Phase 10 — Indexes and the query planner`, `docs/README.md`, `Phase 11 — Transactions, MVCC and concurrency`, `Phase 8 Schema and data from Node`, `Phase 4 — CRUD and DML`, `phase-6-rest-surface/README.md`, `01-validate-at-boundary/README.md`, `LATERAL`, `GROUP BY and aggregates`, `Phase 12 — Beyond plain tables`, `Phase 1 — psql, mastered`, `Phase 2 — Data types and the relational model`?**
+  _High betweenness centrality (0.052) - this node is a cross-community bridge._
+- **Why does `Node.js — Syllabus` connect `Node.js — Syllabus` to `system-design/README.md`, `04-outbox-relay-and-email.md`, `phase-12-jvm-production/README.md`, `docs/README.md`, `02-the-four-roles/README.md`, `dsa/README.md`, `phase-9-mern-pern-stack/README.md`, `phase-1-the-method/README.md`, `phase-1-running-containers/README.md`, `02-mount-order-is-the-content.md`?**
+  _High betweenness centrality (0.045) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `Phase 9 — Testing` (e.g. with `Linting as cheapest testing layer` and `Phase 6 — Data access`) actually correct?**
   _`Phase 9 — Testing` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `dirname`, `searchContexts`, `config` to the rest of the system?**
-  _42512 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `08-the-n-plus-1-problem/README.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.009724596391263059 - nodes in this community are weakly interconnected._
+  _45314 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `09-entity-graph.md` be split into smaller, more focused modules?**
+  _Cohesion score 0.014725130890052356 - nodes in this community are weakly interconnected._
 - **Should `06-jpa-hibernate-model/README.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.010477267830209006 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.008080092711820757 - nodes in this community are weakly interconnected._
