@@ -41,6 +41,26 @@ jobs:
       # pipefail matters: without it the exit status would come from tee.
       - name: Build
         shell: bash
+        # 🔴 Why the heap is raised: on 2026-09-08 three runs in a row died as
+        # `exit code 143` — SIGTERM, ~3m40s-4m45s into a build that takes 10-13
+        # minutes when it passes, with NO Docusaurus output after "Creating an
+        # optimized production build...". A broken link cannot do that: it
+        # prints an error and fails. A killed process is what that looks like,
+        # and the corpus had just crossed 6,419 pages / ~1.4M lines.
+        #
+        # ⚠️ Honest caveat: 143 is SIGTERM, not the OOM killer's SIGKILL (137),
+        # and V8's own heap exhaustion aborts with 134 and a "JS heap out of
+        # memory" banner. So memory pressure is the leading explanation, not a
+        # proven one. If 143 returns WITH this set, the cause is elsewhere —
+        # do not just raise the number again.
+        #
+        # 4096 -> 8192 applies to the MAIN thread, which is the one that grows.
+        # The 4 SSG workers `yarn build` spawns are already bounded by
+        # DOCUSAURUS_SSG_WORKER_THREAD_RECYCLER_MAX_MEMORY=500000000 in
+        # package.json, so worst case is ~8GB + ~2GB on a 16GB runner. Raising
+        # this past ~10GB starts trading an OOM for swap-thrash.
+        env:
+          NODE_OPTIONS: --max-old-space-size=8192
         run: |
           set -o pipefail
           yarn build 2>&1 | tee build.log
