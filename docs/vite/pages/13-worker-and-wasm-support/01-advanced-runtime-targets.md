@@ -112,4 +112,4 @@ Dev mode does; the production build might not. In dev, Vite serves the worker as
 
 ---
 
-← [01 · resolve.alias fundamentals](../12-path-resolution-and-aliases/01-resolve-options.md) · [Vite overview](../../README.md) · Next → [01a · Worker build configuration](01a-worker-build-configuration.md)
+← [01m · Debugging resolution](../12-path-resolution-and-aliases/01m-debugging-bare-specifier-resolution.md) · [Vite overview](../../README.md) · Next → [01a · Worker build configuration](01a-worker-build-configuration.md)

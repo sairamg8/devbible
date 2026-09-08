@@ -243,4 +243,4 @@ No, it is the correct default and the reasoning is worth being able to state. Mi
 
 ---
 
-← [01g · Preloading and cache granularity](01g-preloading-and-cache-granularity.md) · [Vite overview](../../README.md) · Next → [Path Resolution & Aliases](../12-path-resolution-and-aliases/01-resolve-options.md)
+← [01g · Preloading and cache granularity](01g-preloading-and-cache-granularity.md) · [Vite overview](../../README.md) · Next → [01 · resolve.alias fundamentals](../12-path-resolution-and-aliases/01-resolve-options.md)
