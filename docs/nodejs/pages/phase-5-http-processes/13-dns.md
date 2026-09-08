@@ -6,7 +6,7 @@ sidebar_position: 13
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`dns.lookup` and `dns.resolve` sound like the same thing and are not.
 `lookup` calls the operating system's resolver on a libuv thread pool thread;

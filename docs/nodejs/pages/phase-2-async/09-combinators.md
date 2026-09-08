@@ -6,7 +6,7 @@ sidebar_position: 9
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Four ways to wait for several promises. Picking the wrong one is how a single
 slow dependency takes down a page that should have degraded gracefully.**

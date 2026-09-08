@@ -6,7 +6,7 @@ sidebar_position: 11
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Every Readable is an async iterable. `for await...of` gives you backpressure,
 `try`/`catch` error handling and automatic cleanup, in ordinary loop syntax —

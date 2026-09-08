@@ -6,7 +6,7 @@ sidebar_position: 6
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). Everything here is
+> Verified: 2026-08 on **Node 24.19.0** (LTS). Everything here is
 > available in Node 24.
 
 **The handful of names that are always there: `process`, `globalThis`, `Buffer`,

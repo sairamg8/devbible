@@ -6,7 +6,7 @@ sidebar_position: 2
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **There is no `req.body`. `req` is a readable stream that arrives in chunks over
 the network, and an unbounded read of it is a denial-of-service vector you wrote

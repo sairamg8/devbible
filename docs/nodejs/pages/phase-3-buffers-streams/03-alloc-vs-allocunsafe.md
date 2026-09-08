@@ -6,7 +6,7 @@ sidebar_position: 3
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`Buffer.allocUnsafe` hands you memory that was in use a moment ago, contents
 intact. It is roughly 20× faster than `Buffer.alloc` and it will leak other

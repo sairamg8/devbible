@@ -6,7 +6,7 @@ sidebar_position: 20
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`exec` hands your string to `/bin/sh`. Any user-controlled character in that
 string is code. Quoting is not a defence, escaping is not a defence — the fix is

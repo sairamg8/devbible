@@ -4,7 +4,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target runtime: Node 24 — the Active LTS as of August 2026.**
+> **Target runtime: Node 24 (LTS) — supported to 30 April 2028.**
 > Every example was executed on **Node 24.19.0** against real servers:
 > **Redis 8.10.0** and **PostgreSQL 17.10**, with `bullmq` 6.0.10, `ioredis` 6.0.0
 > and `pg` 8.23.0.

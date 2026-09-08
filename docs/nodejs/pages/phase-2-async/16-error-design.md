@@ -6,7 +6,7 @@ sidebar_position: 16
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Errors are an API. Design them so callers can branch on them programmatically,
 not by matching on message strings.**

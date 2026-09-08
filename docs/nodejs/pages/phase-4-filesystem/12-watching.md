@@ -6,7 +6,7 @@ sidebar_position: 12
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`fs.watch` is fast and inconsistent; `fs.watchFile` is consistent and
 expensive. Neither is reliable enough to build on directly, which is why

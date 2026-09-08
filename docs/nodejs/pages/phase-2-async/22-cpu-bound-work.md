@@ -6,7 +6,7 @@ sidebar_position: 22
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). Timings are from one machine —
+> Verified: 2026-08 on **Node 24.19.0** (LTS). Timings are from one machine —
 > the *shape* reproduces everywhere, the exact milliseconds will not.
 
 **Everything in this phase assumed your code yields. CPU-bound work does not — it

@@ -4,7 +4,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target runtime: Node 24 — the Active LTS as of August 2026.**
+> **Target runtime: Node 24 (LTS) — supported to 30 April 2028.**
 > Measured on **Node 24.19.0** where noted (`napi` **10**, `uvwasi` **0.0.23**, `vm`
 > breakout demo). Optional phase — reach for it when the problem demands it.
 

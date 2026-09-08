@@ -6,7 +6,7 @@ sidebar_position: 15
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`ReadableStream`, `WritableStream` and `TransformStream` are the WHATWG
 standard, available as globals in Node since v18. You meet them whether you want

@@ -6,7 +6,7 @@ sidebar_position: 3
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). 72 built-in modules, four of
+> Verified: 2026-08 on **Node 24.19.0** (LTS). 72 built-in modules, four of
 > which are reachable **only** through the prefix.
 
 **Write `node:fs`, never `fs`. It is one habit, it costs four characters, and it

@@ -6,7 +6,7 @@ sidebar_position: 15
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). Unhandled rejections have
+> Verified: 2026-08 on **Node 24.19.0** (LTS). Unhandled rejections have
 > been fatal by default since **Node 15**.
 
 **The two process-level events that fire when an error escapes everything. Both are

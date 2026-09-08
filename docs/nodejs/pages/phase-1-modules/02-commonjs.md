@@ -6,7 +6,7 @@ sidebar_position: 2
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). CommonJS is not deprecated
+> Verified: 2026-08 on **Node 24.19.0** (LTS). CommonJS is not deprecated
 > and is not going away — most of npm is still published this way.
 
 **Node's original module system: synchronous, dynamic, and cached by resolved

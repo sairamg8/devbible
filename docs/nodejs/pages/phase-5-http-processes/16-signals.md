@@ -6,7 +6,7 @@ sidebar_position: 16
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS), Linux.
+> Verified: 2026-08 on **Node 24.19.0** (LTS), Linux.
 
 **A signal is the operating system asking your process to do something. Every
 deploy, every scale-down and every `docker stop` starts with `SIGTERM`, and what

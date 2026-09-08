@@ -6,7 +6,7 @@ sidebar_position: 13
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Permissions are POSIX octal bits, `umask` silently removes some of them from
 every file you create, and symlinks are the reason a path that passed validation

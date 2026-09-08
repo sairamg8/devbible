@@ -6,7 +6,7 @@ sidebar_position: 12
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **An async call nobody awaited. It runs, it fails, and either nothing happens or
 the whole process dies — both outcomes are worse than an ordinary error.**

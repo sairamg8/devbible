@@ -6,7 +6,7 @@ sidebar_position: 12
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **A Readable is either paused (you pull) or flowing (it pushes). Attaching a
 `'data'` handler flips it to flowing permanently — and any chunk emitted before

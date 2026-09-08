@@ -6,7 +6,7 @@ sidebar_position: 4
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Any filesystem path built from user input is a security boundary. `../` in a
 filename, an absolute path, a URL-encoded separator or a symlink each turns a

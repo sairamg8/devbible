@@ -6,7 +6,7 @@ sidebar_position: 4
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Node has no cookie API. A request carries one `Cookie` header holding every
 cookie; a response sets them one `Set-Cookie` line at a time. The attributes —

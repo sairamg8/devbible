@@ -6,7 +6,7 @@ sidebar_position: 19
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Four functions that look interchangeable and are not. `spawn` streams,
 `exec` runs a shell and buffers, `execFile` skips the shell, `fork` starts another

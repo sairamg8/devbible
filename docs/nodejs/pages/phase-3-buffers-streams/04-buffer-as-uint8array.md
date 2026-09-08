@@ -6,7 +6,7 @@ sidebar_position: 4
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`Buffer extends Uint8Array`. Every TypedArray method works on it, every Web
 API that takes a `Uint8Array` takes a Buffer — and the two disagree about

@@ -6,7 +6,7 @@ sidebar_position: 8
 
 <span className="db-tier t-when">When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **These are Node's built-in black boxes for hard problems — V8/node trace categories when you need low-level timing, and diagnostic reports when a process is dying.**
 

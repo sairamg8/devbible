@@ -6,7 +6,7 @@ sidebar_position: 25
 
 <span className="db-tier t-when">Learn When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS), 8-core Linux host.
+> Verified: 2026-08 on **Node 24.19.0** (LTS), 8-core Linux host.
 
 **`SharedArrayBuffer` is the one piece of memory two threads can touch at the same
 time. It removes copying — and hands you every data race that JavaScript has spent

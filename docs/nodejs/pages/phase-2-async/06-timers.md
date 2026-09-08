@@ -6,7 +6,7 @@ sidebar_position: 6
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`setTimeout`, `setInterval`, and the two things that actually matter about them:
 the delay is a floor, and a live timer keeps your process alive.**

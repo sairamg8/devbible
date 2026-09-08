@@ -6,7 +6,7 @@ sidebar_position: 12
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). Type stripping is enabled by
+> Verified: 2026-08 on **Node 24.19.0** (LTS). Type stripping is enabled by
 > default since **v23.6.0** and is **Stability 2 – Stable as of v24.12.0**, so it
 > is stable on the target runtime — no flag, no warning.
 

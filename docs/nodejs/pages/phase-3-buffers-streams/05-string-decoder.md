@@ -6,7 +6,7 @@ sidebar_position: 5
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Calling `chunk.toString()` on each chunk of a stream corrupts every multi-byte
 character that lands on a chunk boundary. `StringDecoder` holds the incomplete

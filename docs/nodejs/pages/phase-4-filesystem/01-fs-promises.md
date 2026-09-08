@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`node:fs/promises` is the default filesystem API. Every operation returns a
 promise, errors are ordinary exceptions with a `code`, and nothing blocks the

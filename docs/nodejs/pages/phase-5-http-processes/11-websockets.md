@@ -6,7 +6,7 @@ sidebar_position: 11
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS), `ws` 8.21.3.
+> Verified: 2026-08 on **Node 24.19.0** (LTS), `ws` 8.21.3.
 
 **Node ships a WebSocket *client* and no WebSocket *server*. The global
 `WebSocket` was unflagged in v22.0.0 and stopped being experimental in v22.4.0;

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **A `Buffer` is a fixed-length chunk of raw bytes living outside the V8 heap. It
 is what every byte that crosses your process boundary — file, socket, hash,

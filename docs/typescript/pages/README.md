@@ -53,7 +53,7 @@ topic that is not written yet, write it as bold plain text with
 
 :::
 
-> Verified: 2026-08 on **TypeScript 7.0.2** and **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **TypeScript 7.0.2** and **Node 24.19.0** (LTS).
 
 One page per topic from the [syllabus](../syllabus/01-type-system.md) — code,
 gotchas written symptom → cause → fix, and interview questions with answers.

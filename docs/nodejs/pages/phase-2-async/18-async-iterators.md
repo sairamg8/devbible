@@ -6,7 +6,7 @@ sidebar_position: 18
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`for await...of` — the loop for sequences that arrive over time. It is how you
 read a stream, consume a paginated API or process events without holding the whole

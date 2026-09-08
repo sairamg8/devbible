@@ -6,7 +6,7 @@ sidebar_position: 7
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Three states, one transition, and one rule about `.then` that causes more bugs
 than the rest of the API combined: if you do not return it, it is not chained.**

@@ -6,7 +6,7 @@ sidebar_position: 18
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Three small modules remove most of the ceremony around streams:
 `stream/promises` (await a pipeline), `stream/consumers` (collect one), and

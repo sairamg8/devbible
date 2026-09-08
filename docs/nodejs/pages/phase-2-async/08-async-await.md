@@ -6,7 +6,7 @@ sidebar_position: 8
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Promises with the plumbing hidden. The one thing to internalise: `await` yields
 to the microtask queue, not to the event loop.**

@@ -6,7 +6,7 @@ sidebar_position: 10
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). Every timing below is a real
+> Verified: 2026-08 on **Node 24.19.0** (LTS). Every timing below is a real
 > measurement from the script shown.
 
 **The most common performance bug in Node applications, and the easiest to fix.

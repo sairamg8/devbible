@@ -6,7 +6,7 @@ sidebar_position: 9
 
 <span className="db-tier t-understand">Understand</span> · mTLS is <span className="db-tier t-when">When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS), OpenSSL-generated certs.
+> Verified: 2026-08 on **Node 24.19.0** (LTS), OpenSSL-generated certs.
 
 **In production Node almost never terminates TLS — Nginx, an ALB or the ingress
 does. What you do need is the client side: why a certificate fails to verify, how

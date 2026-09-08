@@ -6,7 +6,7 @@ sidebar_position: 4
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). `require()` of an ES module
+> Verified: 2026-08 on **Node 24.19.0** (LTS). `require()` of an ES module
 > was added in v22.0.0 / v20.17.0, unflagged in **v23.0.0 / v22.12.0 / v20.19.0**,
 > and **shed its experimental label in v24.15.0** — so it is fully stable on the
 > target runtime. Advice written before 2025 says this is impossible; it is not.

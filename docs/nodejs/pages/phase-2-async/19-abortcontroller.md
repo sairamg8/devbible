@@ -6,7 +6,7 @@ sidebar_position: 19
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Promises cannot be cancelled. `AbortController` is the standard way to say "stop"
 to work already in flight — and it is now accepted by almost every async API in

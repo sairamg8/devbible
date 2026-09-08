@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). ESM is the default for new
+> Verified: 2026-08 on **Node 24.19.0** (LTS). ESM is the default for new
 > code. Write this unless something forces you not to.
 
 **One file, one module, explicit inputs and outputs — resolved before any of your

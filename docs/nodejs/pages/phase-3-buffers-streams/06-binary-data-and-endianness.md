@@ -6,7 +6,7 @@ sidebar_position: 6
 
 <span className="db-tier t-when">When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Reading a number out of bytes requires agreeing on byte order. Get it wrong and
 `0x1234` reads back as `0x3412` — a valid number, no error, wrong answer.**

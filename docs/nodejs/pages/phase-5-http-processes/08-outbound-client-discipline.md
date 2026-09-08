@@ -6,7 +6,7 @@ sidebar_position: 8
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Every platform calls a payment provider, an email service and an SMS gateway.
 None of them are always up. The discipline is the same for all three: one shared

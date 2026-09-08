@@ -6,7 +6,7 @@ sidebar_position: 13
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **The convention Node was built on, and the two functions that bridge it to
 promises. You will not write callbacks, but you will wrap them.**

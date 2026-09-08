@@ -6,7 +6,7 @@ sidebar_position: 19
 
 <span className="db-tier t-when">Learn When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **The high water mark is how much a stream buffers before applying backpressure.
 The default is right almost always. Learn this page when a profiler says syscall

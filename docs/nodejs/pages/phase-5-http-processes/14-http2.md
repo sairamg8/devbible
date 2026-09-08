@@ -6,7 +6,7 @@ sidebar_position: 14
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **HTTP/2 replaces one-request-per-connection with many concurrent streams over a
 single TLS connection. In a typical deployment Nginx or an ALB terminates it and

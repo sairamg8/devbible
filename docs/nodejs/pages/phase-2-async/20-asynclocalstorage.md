@@ -6,7 +6,7 @@ sidebar_position: 20
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). Stable since **Node 16**.
+> Verified: 2026-08 on **Node 24.19.0** (LTS). Stable since **Node 16**.
 
 **Per-request context that follows your code through `await` without being passed
 as an argument. It is how request IDs reach your logger without every function

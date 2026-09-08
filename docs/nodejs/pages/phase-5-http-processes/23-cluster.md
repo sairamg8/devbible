@@ -6,7 +6,7 @@ sidebar_position: 23
 
 <span className="db-tier t-understand">Understand</span> · sticky sessions are <span className="db-tier t-when">When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS), 8-core Linux host.
+> Verified: 2026-08 on **Node 24.19.0** (LTS), 8-core Linux host.
 
 **One Node process uses one core. `cluster` forks a worker per core, all sharing
 one listening port, so a machine with eight cores can serve roughly eight times

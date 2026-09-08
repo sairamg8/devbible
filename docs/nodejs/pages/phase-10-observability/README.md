@@ -4,7 +4,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target runtime: Node 24 — the Active LTS as of August 2026.**
+> **Target runtime: Node 24 (LTS) — supported to 30 April 2028.**
 > Built-in APIs on these pages were executed on **Node 24.19.0**. Package-backed
 > tools (`pino`, OpenTelemetry exporters, `prom-client`, `autocannon`, `clinic`/`0x`)
 > keep open VERIFY markers until a version is pinned and remeasured.

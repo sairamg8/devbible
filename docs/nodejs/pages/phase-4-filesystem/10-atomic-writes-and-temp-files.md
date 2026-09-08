@@ -6,7 +6,7 @@ sidebar_position: 10
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`writeFile` is not atomic. A crash, a full disk or a concurrent reader
 mid-write leaves a truncated file that looks valid. Write to a temp file in the

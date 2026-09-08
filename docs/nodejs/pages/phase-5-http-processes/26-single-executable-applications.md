@@ -6,7 +6,7 @@ sidebar_position: 26
 
 <span className="db-tier t-when">Learn When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS), Linux x64. SEA is
+> Verified: 2026-08 on **Node 24.19.0** (LTS), Linux x64. SEA is
 > **Stability 1.1 — Active development**; the workflow below is stable enough to
 > use and the API may still move.
 

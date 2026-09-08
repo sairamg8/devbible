@@ -6,7 +6,7 @@ sidebar_position: 9
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`open()` returns a `FileHandle` that owns an OS file descriptor. Descriptors
 are a per-process limit, and one leaked handle per request takes the whole server

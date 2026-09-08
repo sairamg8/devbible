@@ -6,7 +6,7 @@ sidebar_position: 18
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **These two handlers exist so you can log a fatal error before dying. They do not
 exist so you can keep running. Log, stop accepting work, exit non-zero — and let

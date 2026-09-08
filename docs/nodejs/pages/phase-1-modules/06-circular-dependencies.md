@@ -6,7 +6,7 @@ sidebar_position: 6
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **A requires B, B requires A. Both module systems resolve it without hanging —
 CommonJS by handing over a half-built object, ESM by throwing. Neither outcome is

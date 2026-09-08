@@ -4,7 +4,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target runtime: Node 24 — the Active LTS as of August 2026.**
+> **Target runtime: Node 24 (LTS) — supported to 30 April 2028.**
 > Every example on these pages was executed on **Node 24.19.0** with **npm
 > 12.0.2**, and every API used is available there.
 

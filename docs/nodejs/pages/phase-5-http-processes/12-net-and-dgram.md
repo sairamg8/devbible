@@ -6,7 +6,7 @@ sidebar_position: 12
 
 <span className="db-tier t-know">Know</span> · custom binary protocols are <span className="db-tier t-when">When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`node:net` is TCP, `node:dgram` is UDP, and HTTP is built on the first of them.
 You will rarely write either directly — but the one idea here, that TCP has no

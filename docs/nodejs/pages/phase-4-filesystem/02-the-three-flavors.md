@@ -6,7 +6,7 @@ sidebar_position: 2
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Every `fs` operation exists three times: callback, sync, and promise. The
 promise form is the default; the sync form is acceptable *at startup only*; the

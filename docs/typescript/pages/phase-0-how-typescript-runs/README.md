@@ -4,7 +4,7 @@ sidebar_label: "Phase 0 · How TypeScript runs"
 sidebar_position: 0
 ---
 
-> Verified: 2026-08 on **TypeScript 7.0.2** and **Node 24.19.0** (Active LTS),
+> Verified: 2026-08 on **TypeScript 7.0.2** and **Node 24.19.0** (LTS),
 > with **5.9.3** installed alongside for comparison. Every console block in this
 > phase was produced by a script in `sandbox/ts-p0/`.
 

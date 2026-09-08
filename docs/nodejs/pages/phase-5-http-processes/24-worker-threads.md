@@ -6,7 +6,7 @@ sidebar_position: 24
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS), 8-core Linux host.
+> Verified: 2026-08 on **Node 24.19.0** (LTS), 8-core Linux host.
 
 **Real OS threads, each with its own V8 isolate and event loop, inside one
 process. They exist for one reason: CPU-bound JavaScript that would otherwise

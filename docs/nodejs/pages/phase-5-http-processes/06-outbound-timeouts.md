@@ -6,7 +6,7 @@ sidebar_position: 6
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **A `fetch` with no timeout has no upper bound. Not a long one — none. That is the
 single most common way one slow dependency takes down a service that does not

@@ -6,7 +6,7 @@ sidebar_position: 8
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`exports` defines your package's public surface and makes everything else
 unreachable. `imports` gives your own files private aliases. Both live in

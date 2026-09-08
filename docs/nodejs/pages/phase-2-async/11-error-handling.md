@@ -6,7 +6,7 @@ sidebar_position: 11
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`try`/`catch` works with `await` exactly as it does with synchronous code — with
 one boundary that catches everyone, and one placement rule that decides whether

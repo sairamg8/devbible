@@ -6,7 +6,7 @@ sidebar_position: 8
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Readable, Writable, Duplex, Transform. Everything in Node I/O is one of these
 four, and knowing which one you are holding tells you what you are allowed to

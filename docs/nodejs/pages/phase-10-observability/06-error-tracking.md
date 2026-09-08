@@ -6,7 +6,7 @@ sidebar_position: 6
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Logs tell you an error happened; an error tracker groups the same crash across thousands of events, shows the release that introduced it, and pages you when the rate changes.**
 

@@ -6,7 +6,7 @@ sidebar_position: 10
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **A response does not have to be built before it is sent. Omit `Content-Length`
 and Node switches to chunked transfer encoding, so the first byte reaches the

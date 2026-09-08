@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **TypeScript 7.0.2** and **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **TypeScript 7.0.2** and **Node 24.19.0** (LTS).
 > Every console block below was produced by `sandbox/ts-p0/ex9-node-runs-ts.sh`
 > and `ex3-emit-despite-errors.sh`.
 

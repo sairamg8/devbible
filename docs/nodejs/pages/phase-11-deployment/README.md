@@ -4,7 +4,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target runtime: Node 24 — the Active LTS as of August 2026.**
+> **Target runtime: Node 24 (LTS) — supported to 30 April 2028.**
 > Patterns here assume Node runs in containers or VMs with an orchestrator or
 > systemd. Pin image tags and CI Node versions to **24.x** in real pipelines.
 

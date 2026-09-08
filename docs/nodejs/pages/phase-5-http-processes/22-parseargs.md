@@ -6,7 +6,7 @@ sidebar_position: 22
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). Stable since v20.
+> Verified: 2026-08 on **Node 24.19.0** (LTS). Stable since v20.
 
 **Zero-dependency CLI option parsing over `process.argv`. It covers long and short
 flags, `=` syntax, repeated options, defaults and positionals. Reach for

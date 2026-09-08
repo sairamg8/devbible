@@ -6,7 +6,7 @@ sidebar_position: 14
 
 <span className="db-tier t-when">Learn When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **A virtual filesystem is an object that implements the `fs` interface without
 touching a disk. You need one for two reasons: testing filesystem code without

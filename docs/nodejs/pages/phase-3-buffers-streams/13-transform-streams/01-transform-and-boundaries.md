@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Chapter 1 of [Transform streams](README.md).** The two methods that make a
 Transform, and the one problem that makes writing them harder than it looks:

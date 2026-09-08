@@ -6,7 +6,7 @@ sidebar_position: 7
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`node:diagnostics_channel` is a zero-dependency pub/sub bus inside the process — libraries publish named events; your observability glue subscribes without monkey-patching private APIs.**
 

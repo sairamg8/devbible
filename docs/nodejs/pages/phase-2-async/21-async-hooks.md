@@ -6,7 +6,7 @@ sidebar_position: 21
 
 <span className="db-tier t-when">When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). `async_hooks` is
+> Verified: 2026-08 on **Node 24.19.0** (LTS). `async_hooks` is
 > **Stability 1 – Experimental** and has been for years; `AsyncResource` and
 > `AsyncLocalStorage` are the stable parts.
 

@@ -6,7 +6,7 @@ sidebar_position: 4
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Logs are a liability as well as an asset — every field you write is stored, replicated, and often visible to more people than the production database.**
 

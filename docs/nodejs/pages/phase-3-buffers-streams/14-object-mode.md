@@ -6,7 +6,7 @@ sidebar_position: 14
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Object mode lets a stream carry arbitrary JavaScript values instead of bytes,
 and changes the high water mark from a byte count to an item count. It is what

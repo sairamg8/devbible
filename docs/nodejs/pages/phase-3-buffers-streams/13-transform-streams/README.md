@@ -8,7 +8,7 @@ sidebar_position: 0
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **A Transform is the reusable middle of a pipeline. Writing one is two methods —
 `_transform` and `_flush` — and the whole difficulty is that chunk boundaries do

@@ -6,7 +6,7 @@ sidebar_position: 16
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`node:zlib` gives you gzip, deflate and brotli as Transform streams, so
 compression drops into a pipeline with no buffering. The decision that matters is

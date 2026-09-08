@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`http.createServer` hands you two streams and nothing else. `req` is a readable
 stream of the request; `res` is a writable stream of the response. Every framework

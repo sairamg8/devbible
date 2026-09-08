@@ -6,7 +6,7 @@ sidebar_position: 14
 
 <span className="db-tier t-when">Learn When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). Customization hooks are still
+> Verified: 2026-08 on **Node 24.19.0** (LTS). Customization hooks are still
 > experimental; `enableCompileCache()` is not.
 
 **The programmable side of the module system. You will go years without needing

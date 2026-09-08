@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS), `pg` 8.23.0 against **PostgreSQL 17.10**.
+> Verified: 2026-08 on **Node 24.19.0** (LTS), `pg` 8.23.0 against **PostgreSQL 17.10**.
 
 **A database connection is a TCP socket, a server-side process and an
 authentication handshake. Opening one per request is the single most expensive

@@ -6,7 +6,7 @@ sidebar_position: 5
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`fetch` is global and stable. It is undici, bundled into Node, exposing the same
 `Request` / `Response` / `Headers` / `FormData` objects the browser has. It is the

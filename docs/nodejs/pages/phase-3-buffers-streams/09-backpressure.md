@@ -6,7 +6,7 @@ sidebar_position: 9
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`write()` returns `false` to tell you the destination is full. Ignoring it does
 not slow anything down — it moves the data into an unbounded in-memory queue, and

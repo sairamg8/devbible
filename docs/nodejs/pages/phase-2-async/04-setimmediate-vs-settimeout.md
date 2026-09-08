@@ -6,7 +6,7 @@ sidebar_position: 4
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). The main-module result below
+> Verified: 2026-08 on **Node 24.19.0** (LTS). The main-module result below
 > is from ten consecutive runs.
 
 **Nondeterministic from the main module. Guaranteed inside an I/O callback. This

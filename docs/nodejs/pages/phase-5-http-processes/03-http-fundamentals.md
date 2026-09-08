@@ -6,7 +6,7 @@ sidebar_position: 3
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Methods, status codes, headers, content negotiation and CORS — the parts of the
 protocol you argue about in code review, and the parts Node enforces for you

@@ -4,7 +4,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target runtime: Node 24 — the Active LTS as of August 2026.**
+> **Target runtime: Node 24 (LTS) — supported to 30 April 2028.**
 > Every example was executed on **Node 24.19.0**, 8 cores. Third-party versions:
 > `supertest` 7.2.2 · `express` 5.2.1 · `vitest` 4.1.10 · `jest` 30.4.2 ·
 > `testcontainers` 12.1.0 · `pg` 8.23.0 · `fast-check` 4.9.0 ·

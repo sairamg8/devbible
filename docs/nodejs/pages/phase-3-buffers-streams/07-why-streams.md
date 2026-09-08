@@ -6,7 +6,7 @@ sidebar_position: 7
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **A stream processes data in chunks so memory stays constant no matter how much
 data there is. Without one, your peak memory is the size of the largest thing a

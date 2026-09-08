@@ -6,7 +6,7 @@ sidebar_position: 17
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Six shapes that keep appearing in real code. Each one works often enough to
 survive review, and each one is either strictly worse than the plain version or

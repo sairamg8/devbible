@@ -6,7 +6,7 @@ sidebar_position: 7
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Opening a TCP connection costs a round trip; a TLS one costs two or three. An
 HTTP client that does not reuse connections pays that on every call. This is the

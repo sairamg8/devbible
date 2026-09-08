@@ -6,7 +6,7 @@ sidebar_position: 2
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Chapter 2 of [Transform streams](README.md).** What arrives at `_transform` and
 in what type, how to do async work without scrambling order, and when not to write

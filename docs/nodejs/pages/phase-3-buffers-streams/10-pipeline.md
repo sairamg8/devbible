@@ -6,7 +6,7 @@ sidebar_position: 10
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`.pipe()` does not forward errors and does not clean up. One failure mid-chain
 leaves every other stream open, leaking file descriptors and sockets — or crashes

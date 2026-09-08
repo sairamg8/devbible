@@ -6,7 +6,7 @@ sidebar_position: 14
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`Promise.all` over 10,000 items is a self-inflicted outage. It is a waiting
 primitive, not a limiter — the limit has to come from you.**

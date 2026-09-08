@@ -6,7 +6,7 @@ sidebar_position: 15
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`process` is the boundary between your code and the operating system: the
 arguments it was started with, the environment it inherited, the streams it writes

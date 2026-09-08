@@ -6,7 +6,7 @@ sidebar_position: 8
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). Every flag on this page is
+> Verified: 2026-08 on **Node 24.19.0** (LTS). Every flag on this page is
 > stable in Node 24 — `--env-file` and `--env-file-if-exists` shed their
 > experimental label in **v24.10.0**, so make sure you are on 24.10 or later.
 

@@ -6,7 +6,7 @@ sidebar_position: 21
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **`fork` starts another Node process with a message channel already wired up.
 `child.send()` and `process.send()` move JSON across it. It is how `cluster`

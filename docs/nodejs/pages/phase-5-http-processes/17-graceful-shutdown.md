@@ -6,7 +6,7 @@ sidebar_position: 17
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Stop accepting new work, finish what is in flight, close the pools, exit zero.
 This is the thing that makes deploys stop dropping requests — and the naive

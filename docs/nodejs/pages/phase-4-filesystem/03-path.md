@@ -6,7 +6,7 @@ sidebar_position: 3
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS).
+> Verified: 2026-08 on **Node 24.19.0** (LTS).
 
 **Never build a path with `+` or template strings. `node:path` normalises
 separators, collapses `..`, and behaves correctly on both POSIX and Windows —

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (Active LTS). Every ordering on this page
+> Verified: 2026-08 on **Node 24.19.0** (LTS). Every ordering on this page
 > was produced by running the script shown.
 
 **One thread, six phases, running in a fixed order, forever. Almost every "why did
