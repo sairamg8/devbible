@@ -52,7 +52,11 @@ export const PINS = {
     pin: '24.19.0', checked: '2026-08-31',
     tracks: ['nodejs', 'expressjs', 'javascript', 'typescript', 'postgresql', 'real-world'],
     names: ['node', 'node.js'],
-    note: 'Node 26 becomes LTS 2026-10-28 — 311 pages say "Active LTS" and that claim expires then.',
+    // B1 closed 2026-09-08: the corpus no longer states anything 2026-10-28 falsifies.
+    // 140 pages moved from "Node 24 (Active LTS)" to "Node 24 (LTS)" — true to 2028-04-30.
+    // 🔴 The PIN still flips that day: policy 'lts' starts calling cycle 24 drift, and the
+    // target moves to 26. That is a pin edit, not another page sweep.
+    note: 'Node 26 becomes Active LTS 2026-10-28. Pages are already de-expired (B1); on that day bump cycle/pin to 26.',
   },
   postgresql: {
     label: 'PostgreSQL', source: 'eol:postgresql', policy: 'major', cycle: '18',
