@@ -109,7 +109,7 @@ This fires when `vite.config.js` (or a plugin it imports) is itself loaded as Co
 plain Node — before Vite's own resolution pipeline exists to do anything — and that CJS code
 tries to `require()` a package that ships ESM only:
 
-> *"In Node.js <=22, ESM files cannot be loaded by `require` by default."*
+> *"In Node.js `<=22`, ESM files cannot be loaded by `require` by default."*
 
 The fix is at the config file's own module format, not at the dependency:
 
