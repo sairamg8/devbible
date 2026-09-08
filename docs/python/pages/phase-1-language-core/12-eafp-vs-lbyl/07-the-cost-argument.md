@@ -1,7 +1,7 @@
 ---
 title: "Python publishes exactly two cost figures for exception handling, both from What's New in 3.11, and neither compares a try against an if — so the only honest place to start is the mechanism, which moved the cost onto the raising path rather than removing it"
 sidebar_label: "07 · The cost argument"
-sidebar_position: 154
+sidebar_position: 157
 ---
 
 <span className="db-tier t-understand">Understand</span>

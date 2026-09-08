@@ -1,5 +1,5 @@
 ---
-title: "else narrows what the handlers own, never what cleanup covers — finally runs over every clause, has no width knob, and no ordinary exit from a try skips it, which is why only cleanup that cannot fail belongs in one"
+title: "else narrows what the handlers own, never what cleanup covers — finally runs over try, except and else alike, carries none of else's three conditions, and no ordinary exit from a try suite skips it"
 sidebar_label: "06h · Where `finally` sits"
 sidebar_position: 148
 ---
@@ -8,23 +8,22 @@ sidebar_position: 148
 
 > Verified: 2026-09 against the Python 3.14 Language Reference —
 > [The `try` statement](https://docs.python.org/3.14/reference/compound_stmts.html#the-try-statement)
-> (clause execution order, the saved-exception rule, the "on the way out" rule) and
-> [The `with` statement](https://docs.python.org/3.14/reference/compound_stmts.html#the-with-statement)
-> (the seven execution steps, the `__exit__` return-value rule, the `__enter__` guarantee,
-> multi-item nesting) — plus
-> [`sys.exception`](https://docs.python.org/3.14/library/sys.html#sys.exception) and
-> [The `raise` statement](https://docs.python.org/3.14/reference/simple_stmts.html#the-raise-statement).
+> (the clause execution order, the `else` condition, the saved-exception rule, the "on the
+> way out" rule, the `try1_stmt` grammar, the last-`return`-wins rule) and
+> [The `break` statement](https://docs.python.org/3.14/reference/simple_stmts.html#the-break-statement).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
 **[06g](06g-width-at-a-boundary.md) gave you two structural repairs — hoist the leap, put
 the consumer in `else`. Both operate on what the *handlers* own. Neither touches `finally`,
-which the reference defines as running over `try`, `except` and `else` alike: `finally` has
-no width knob, and no ordinary exit from a `try` suite skips it. That is the whole reason
-only cleanup that cannot fail belongs in one. The `with` statement is the sanctioned
-alternative because it binds cleanup to an *object* rather than to a statement — and it
-carries a trap of its own, because an `__exit__` that returns a true value suppresses every
-exception in the block. The `finally` that *jumps* is [06k](06k-the-jump-that-discards.md);
-the `finally` that *raises* is [06i](06i-when-cleanup-raises-and-the-grammar-refuses.md).**
+which the reference defines as running over `try`, `except` and `else` alike. That is not a
+detail: `else` carries three explicit conditions and `finally` carries none, so every
+narrowing move you make in the handlers leaves the cleanup's exposure exactly where it was.
+This page is the mechanics — when each clause runs, and what skips which. What that leaves
+you free to *put* in a `finally` is [06n](06n-what-belongs-in-a-finally.md); the sanctioned
+alternative that binds cleanup to an object is
+[06o](06o-with-is-the-sanctioned-form.md). The `finally` that *jumps* is
+[06k](06k-the-jump-that-discards.md); the `finally` that *raises* is
+[06i](06i-when-cleanup-raises-and-the-grammar-refuses.md).**
 
 ## The order the clauses actually run in
 
@@ -72,8 +71,51 @@ else:
         return json.load(fp)
 ```
 
-That is the same shape the `os.access` entry uses, and now you can see the third reason for
-it. The reference adds the rule for leaving the suite early:
+That is the same shape the `os.access` entry uses, and the whole argument for it is
+[06o](06o-with-is-the-sanctioned-form.md).
+
+## `else` can be skipped. `finally` cannot.
+
+The two clauses look symmetrical in the grammar and are not symmetrical at all in execution.
+`else` carries three conditions; `finally` carries none:
+
+> *"The optional `else` clause is executed if the control flow leaves the `try` suite, no
+> exception was raised, and no `return`, `continue`, or `break` statement was executed.
+> Exceptions in the `else` clause are not handled by the preceding `except` clauses."*
+
+Three ways to skip `else`, then — an exception, or a `return`, `continue` or `break` out of
+the `try` suite. None of them skips `finally`:
+
+```python
+def load(path, cache):
+    try:
+        hit = cache[path]
+        if hit is not None:
+            return hit               # skips `else` entirely
+    except KeyError:
+        return None
+    else:
+        hit = _read(path)            # only reached on the fall-off-the-end path
+        cache[path] = hit
+        return hit
+    finally:
+        metrics.increment("load.attempted")   # runs on all three paths
+```
+
+That asymmetry is the practical content of the rule. Anything you move into `else` gains a
+condition; anything you leave in `finally` does not. If a piece of cleanup is only correct on
+some of those paths, `finally` is the wrong clause for it, and no amount of restructuring the
+handlers will make it the right one.
+
+The grammar reinforces the same division. `try1_stmt` requires **one or more** `except`
+clauses before an optional `else` and an optional `finally`, so `try` / `finally` with no
+`except` at all is legal and is the pure-cleanup shape — a statement with no handlers and
+therefore nothing to narrow. `try` / `else` with no `except` is a `SyntaxError`, which is
+[06l](06l-the-else-you-cannot-write.md)'s subject.
+
+## No ordinary exit skips it
+
+The reference adds the rule for leaving the suite early:
 
 > *"When a `return`, `break` or `continue` statement is executed in the `try` suite of a
 > `try`…`finally` statement, the `finally` clause is also executed 'on the way out.'"*
@@ -84,117 +126,16 @@ and the `break` statement's own entry says the same thing from the other side:
 > `finally` clause is executed before really leaving the loop."*
 
 So there is no ordinary exit from a `try` that skips `finally` — not a `return`, not an
-exception, not a `break`. Everything the suite does is covered, which is precisely why the
-only thing that belongs in a `finally` is cleanup that cannot fail. (The genuine cases where
-`finally` does not run at all are about the process or the frame ceasing to exist rather
-than about the statement:
+exception, not a `break`, and not a `return` from inside an `except` clause either, since
+that clause is part of what the reference calls the `try` clause being executed. Everything
+the statement does is covered. (The genuine cases where `finally` does not run at all are
+about the process or the frame ceasing to exist rather than about the statement:
 [03g · When `finally` does not run](../11-exceptions/03g-when-finally-does-not-run.md).)
 
-## `with` is the sanctioned form — and carries the same trap
-
-A `try` / `finally` written to close one thing is a context manager spelled out longhand,
-and the reference's seven execution steps for `with` say so. Step 7 is the one that matters:
-
-> *"The context manager's `__exit__()` method is invoked. If an exception caused the suite
-> to be exited, its type, value, and traceback are passed as arguments to `__exit__()`.
-> Otherwise, three `None` arguments are supplied."*
-
-> *"If the suite was exited due to an exception, and the return value from the `__exit__()`
-> method was false, the exception is reraised. If the return value was true, the exception
-> is suppressed, and execution continues with the statement following the `with`
-> statement."*
-
-🔴 **"If the return value was true, the exception is suppressed."** That is the same defect
-as a `return` in `finally`, wearing different clothes — and it is easier to write by
-accident, because `__exit__` is a method and methods return things. A cleanup method whose
-last line is `return self._close()` suppresses every exception in the block the moment
-`_close()` happens to return something truthy:
-
-```python
-class Session:
-    def __enter__(self):
-        return self
-
-    def __exit__(self, exc_type, exc, tb):
-        return self._close()          # 🔴 if _close() returns anything truthy, every
-                                      #    exception in the with-block is suppressed
-```
-
-The correct shape returns nothing at all, so the exception is reraised:
-
-```python
-class Session:
-    def __enter__(self):
-        return self
-
-    def __exit__(self, exc_type, exc, tb):
-        self._close()                 # falsy (None) return: the exception propagates
-```
-
-Suppression is a real feature — it is how `contextlib.suppress` works — but it must be
-*intended*, and it must name what it suppresses. See
-[03d · Context managers as cleanup](../11-exceptions/03d-context-managers-as-cleanup.md)
-and [11 · suppress and the explicit ignore](../11-exceptions/11-suppress-and-the-explicit-ignore.md).
-
-### The guarantee is conditional on `__enter__` succeeding
-
-The reference states the promise precisely, and the precision is the point:
-
-> *"The `with` statement guarantees that if the `__enter__()` method returns without an
-> error, then `__exit__()` will always be called. Thus, if an error occurs during the
-> assignment to the target list, it will be treated the same as an error occurring within
-> the suite would be."*
-
-**If `__enter__` itself raises, `__exit__` is never called** — the numbered steps invoke
-`__enter__` at step 4 and `__exit__` at step 7, and a raise at step 4 means steps 5 to 7 do
-not happen. So a context manager that acquires two things in `__enter__` and fails on the
-second has leaked the first, and no amount of `with` will clean it up:
-
-```python
-class Transaction:
-    def __enter__(self):
-        self.conn = pool.acquire()
-        self.cur = self.conn.cursor()   # 🔴 if this raises, __exit__ never runs
-        return self.cur                 #    and self.conn is leaked forever
-```
-
-`__enter__` must therefore be its own transaction — clean up after itself on the way out:
-
-```python
-class Transaction:
-    def __enter__(self):
-        self.conn = pool.acquire()
-        try:
-            self.cur = self.conn.cursor()
-        except Exception:
-            self.conn.release()         # __exit__ will not run; this is the only chance
-            raise
-        return self.cur
-
-    def __exit__(self, exc_type, exc, tb):
-        self.cur.close()
-        self.conn.release()
-```
-
-### Multiple items nest, and nesting decides cleanup order
-
-> *"With more than one item, the context managers are processed as if multiple `with`
-> statements were nested"* — so `with A() as a, B() as b:` is *"semantically equivalent to"*
-> `with A() as a:` containing `with B() as b:`.
-
-Two consequences worth holding. Cleanup runs **inside-out**: `B.__exit__` before
-`A.__exit__`, which is what you want when B was acquired from A. And a failure in `B()`'s
-construction happens *inside* A's `with`, so `A.__exit__` does run — unlike the
-single-manager `__enter__` case above. The parenthesised multi-line form is the same
-statement:
-
-```python
-with (
-    pool.acquire() as conn,
-    conn.cursor() as cur,          # constructed inside conn's with; conn is cleaned up
-):
-    cur.execute(query)
-```
+The one thing that *does* change the outcome is a jump out of the `finally` clause itself.
+The reference is blunt about it — *"If the `finally` clause executes a `return`, `break` or
+`continue` statement, the saved exception is discarded"* — and 3.14 emits a `SyntaxWarning`
+for it. That shape has its own page: [06k](06k-the-jump-that-discards.md).
 
 ## Gotchas
 
@@ -213,58 +154,61 @@ else:
         return json.load(fp)
 ```
 
-**★ Symptom: a `with` block swallows every exception and the context manager looks
-innocent.** Cause: `__exit__` returned a true value, and the reference is explicit that
-*"if the return value was true, the exception is suppressed"*. A method that ends
-`return self._close()` inherits whatever `_close()` returns. Fix: make `__exit__` return
-`None` unless suppression is the deliberate, documented intent.
+**★ Symptom: the `else` block never ran, but the `finally` did — and the cache was never
+populated.** Cause: a `return` inside the `try` suite. The reference makes `else` conditional
+on *"no `return`, `continue`, or `break` statement was executed"*, and makes `finally`
+conditional on nothing at all. Fix: do not put the early exit in the `try` suite if `else`
+has to run; keep the `try` to the leap and decide afterwards.
 
 ```python
-def __exit__(self, exc_type, exc, tb):
-    self._close()                 # not `return self._close()`
-```
-
-**★ Symptom: connections leak only when the database is slow, and the pool eventually
-starves.** Cause: `__enter__` acquired the connection and then raised while opening a
-cursor. The guarantee is conditional — *"if the `__enter__()` method returns without an
-error, then `__exit__()` will always be called"* — so `__exit__` never ran and the
-connection was never released. Fix: guard the second acquisition inside `__enter__` and
-release on the way out, because nothing downstream will.
-
-```python
-def __enter__(self):
-    self.conn = pool.acquire()
-    try:
-        self.cur = self.conn.cursor()
-    except Exception:
-        self.conn.release()
-        raise
-    return self.cur
-```
-
-**Symptom: cleanup ran in the wrong order and closed a connection before its cursor.**
-Cause: the two managers were on separate statements, or acquired in the wrong sequence — in
-one `with` they are *"processed as if multiple `with` statements were nested"*, so the last
-one acquired is the first one released. Fix: acquire in dependency order in a single `with`
-and let the nesting do it.
-
-```python
-with pool.acquire() as conn, conn.cursor() as cur:
-    cur.execute(query)            # cur.__exit__ runs first, then conn.__exit__
-```
-
-**Symptom: a `finally` was added to "make sure the file closes" and the function started
-raising `NameError` on the error path.** Cause: the same unbound-name problem, arrived at
-from the other direction — `finally` is attached to the statement, and the statement runs
-its cleanup whether or not the acquisition happened. Fix: if the cleanup belongs to an
-object, it belongs in a `with`; keep `finally` for cleanup that is nobody's `__exit__`.
-
-```python
-span = tracer.start_span("query")   # not an object with cleanup semantics of its own
 try:
-    return conn.execute(query)
+    hit = cache[path]
+except KeyError:
+    hit = None
+else:
+    if hit is None:
+        hit = _read(path)
+        cache[path] = hit
+return hit                        # the exit is now outside the statement entirely
+```
+
+**Symptom: the `finally` fired on a path the `except` clause had already handled and returned
+from, and the metric double-counts.** Cause: a `return` in an `except` clause is still an
+exit from the statement, and `finally` runs *"on the way out"* of every one of them. The
+handler recovering successfully does not make it a path the cleanup skips. Fix: if the
+cleanup is only correct for the success path, it is not cleanup — put it in `else`, which is
+the only clause that runs solely on success.
+
+```python
+try:
+    row = fetch(key)
+except KeyError:
+    return None                   # `finally` still runs here
+else:
+    metrics.increment("fetch.hit")  # success-only work belongs in `else`
+    return row
 finally:
-    span.end()                      # safe: `span` is bound before the try
+    conn.release()                # correct on every path, which is why it is here
+```
+
+**Symptom: a `continue` inside a loop's `try` skipped the bookkeeping in `else` but still ran
+the `finally`, and the two counters disagree.** Cause: the same three conditions, reached
+from the loop side — `continue` is one of the statements that skips `else`, and the `break`
+entry's rule that cleanup runs *"before really leaving the loop"* applies to `continue`
+equally. Fix: count in the clause whose run condition matches what you are counting.
+
+```python
+for key in keys:
+    try:
+        row = fetch(key)
+        if row is None:
+            continue              # skips `else`, still runs `finally`
+    except KeyError:
+        continue
+    else:
+        hits += 1                 # counts only genuine successes
+    finally:
+        attempts += 1             # counts every iteration, which is what it is for
 ```
 
 ## Interview questions
@@ -280,72 +224,54 @@ it still reaches the caller, having been cleaned up after. That is precisely the
 result. The one shape that *does* undo the narrowing is a jump out of `finally`, which is
 [06k](06k-the-jump-that-discards.md).
 
-**★ When do you reach for `try` / `finally` and when for `with`?**
-`with` whenever the cleanup belongs to an object, which is almost always. The reference's
-step 7 shows why: `__exit__` is invoked with the exception details and the exception is
-reraised unless `__exit__` returns true, so the cleanup is bound to the object's lifetime
-rather than to the statement's shape. That fixes the unbound-name failure for free — a `with`
-cannot run cleanup for an object that was never constructed, whereas a `finally` runs on the
-`except` path where the name may not exist. Keep `try` / `finally` for cleanup that is not an
-object's responsibility: ending a span, decrementing a gauge, restoring a global you changed.
-
-**★ If `__enter__` raises halfway through acquiring two resources, does `__exit__` run?**
-No, and this is the one place the `with` statement's guarantee is narrower than people
-assume. The reference words it exactly: *"The `with` statement guarantees that if the
-`__enter__()` method returns without an error, then `__exit__()` will always be called."*
-The conditional is load-bearing — `__enter__` is step 4 of seven and `__exit__` is step 7,
-so a raise at step 4 skips it. A context manager that acquires more than one thing must
-therefore unwind its own partial state before re-raising, exactly as if it were a
-transaction. The alternative is to acquire one thing per manager and let multi-item nesting
-handle the rest, since a failure constructing the second manager happens *inside* the
-first's `with` and does trigger its `__exit__`.
-
-**How is an `__exit__` that returns true the same defect as a `return` in `finally`, and how
-is it different?** Same in effect: both make cleanup swallow an exception it never named, and
-neither reads as a handler. Different in two ways that matter. First, `__exit__`'s
-suppression is a documented, intended feature — *"if the return value was true, the exception
-is suppressed"* — which is exactly how `contextlib.suppress` is built, whereas a jump out of
-`finally` is a shape the language is actively trying to withdraw. Second, `__exit__`'s
-version is easier to write by accident, because it is a method: `return self._close()`
-quietly inherits whatever `_close()` returns. The review rule is the same either way — the
-suppression must be intended and must name what it suppresses.
+**★ `else` and `finally` both run after the `try` suite. What is the difference in when they
+run?**
+`else` is conditional on three things and `finally` on none. The reference: the `else` clause
+runs *"if the control flow leaves the `try` suite, no exception was raised, and no `return`,
+`continue`, or `break` statement was executed"*. So an exception skips it, and so does any
+early exit from the suite. `finally` has no such conditions — the same `return` that skips
+`else` runs `finally` *"on the way out"*. The practical reading is that `else` is the
+success-only continuation of the `try` and `finally` is the unconditional epilogue of the
+whole statement, which is why success-only work goes in `else` and only unfailable cleanup
+goes in `finally`.
 
 **Is there any exit from a `try` suite that skips its `finally`?**
 Not by ordinary control flow. The reference is explicit that a `return`, `break` or
 `continue` in the suite runs the `finally` *"on the way out"*, and the `break` statement's
 own entry repeats it: *"When `break` passes control out of a `try` statement with a
 `finally` clause, that `finally` clause is executed before really leaving the loop."* An
-exception runs it on the way past. The cases where a `finally` genuinely does not run are
-all about the process or the frame ceasing to exist rather than about the statement, and
-they are [03g · When `finally` does not run](../11-exceptions/03g-when-finally-does-not-run.md)'s
-subject. For the purposes of narrowing, treat `finally` as unconditional — that is what
-makes "only cleanup that cannot fail belongs in it" a rule rather than advice.
+exception runs it on the way past, and a `return` from inside an `except` clause runs it too.
+The cases where a `finally` genuinely does not run are all about the process or the frame
+ceasing to exist rather than about the statement, and they are
+[03g · When `finally` does not run](../11-exceptions/03g-when-finally-does-not-run.md)'s
+subject. For the purposes of narrowing, treat `finally` as unconditional — that is what makes
+"only cleanup that cannot fail belongs in it" a rule rather than advice.
 
-**In `with A() as a, B() as b:`, which `__exit__` runs first, and why does it matter?**
-`B`'s. The reference says multi-item managers are *"processed as if multiple `with`
-statements were nested"*, so the form is equivalent to `with A()` containing `with B()`, and
-an inner block's cleanup completes before the outer block's. It matters whenever the second
-resource was derived from the first — a cursor from a connection, a file from a temporary
-directory — because releasing the outer one first would invalidate the inner one mid-close.
-It also means a failure while *constructing* `B()` is a failure inside `A`'s block, so
-`A.__exit__` does run; that is the difference between splitting acquisitions across managers
-and cramming them both into one `__enter__`.
+**A `return` in the `try` suite of a `try` / `else` / `finally`. What runs, and in what
+order?**
+The return expression is evaluated in the `try` suite, `else` is skipped because a `return`
+was executed, `finally` runs *"on the way out"*, and then the function returns the value that
+was already computed — unless the `finally` itself executes a `return`, in which case the
+reference's rule that *"the return value of a function is determined by the last `return`
+statement executed"* makes the `finally`'s value win and the saved exception, if any, is
+discarded. That second half is exactly what PEP 765 is withdrawing and what
+[06k](06k-the-jump-that-discards.md) covers. The part worth remembering here is the first
+half: computing the value is part of the `try` suite, so an exception while *computing* the
+return value is caught by the statement's own handlers, while an exception raised by the
+caller's use of that value is not.
 
-**06f said "the traceback knows; the clause does not." Does a `finally` clause know which
-exception it is about to re-raise?** The documentation does not settle this, and I would not
-assert it either way. The saved exception is not bound to a name — there is no `finally … as
-exc` — and the two functions that would tell you are documented in terms of handlers, not
-cleanup: `sys.exception()` *"when called while an exception handler is executing (such as an
-`except` or `except*` clause), returns the exception instance that was caught by this
-handler"*, and `exc_info()` is defined in terms of the same "currently handled" exception.
-Neither entry mentions `finally`. There is adjacent evidence pointing the other way — the
-`raise` statement's description of implicit chaining says an exception *"may be handled when
-an `except` or `finally` clause, or a `with` statement, is used"* — but that sentence is
-about what sets `__context__`, not about what `sys.exception()` returns, so it does not
-settle the question either. The design conclusion does not depend on resolving it: if the
-cleanup needs to know what failed, that is an `except` clause, not a `finally` clause, and
-writing it as one also gives you a name to log and a class to re-raise.
+**Why does `try` / `finally` with no `except` clause exist at all, if `finally` cannot
+handle anything?**
+Because handling and cleaning up are different jobs and the grammar keeps them separable.
+`try1_stmt` requires at least one `except` before an `else`, but `try2_stmt` — the
+`finally`-only form — has no handler requirement, so a statement can promise cleanup without
+claiming to recover from anything. That is the honest shape for the very common case where
+you must release something and have no idea how to fix a failure: the exception is saved,
+cleanup runs, and it is re-raised unchanged, reaching a caller that does know. Writing
+`except Exception: raise` around it to get the same effect would be strictly worse — it
+creates a handler frame that a reader has to prove is transparent, and the width arguments in
+06c through 06g all apply to it.
 
 ---
 
-← Prev: [Width at a boundary](06g-width-at-a-boundary.md) · Index: [EAFP vs LBYL](README.md) · Next → [The jump that discards](06k-the-jump-that-discards.md)
+← Prev: [Width at a boundary](06g-width-at-a-boundary.md) · Index: [EAFP vs LBYL](README.md) · Next → [What belongs in a `finally`](06n-what-belongs-in-a-finally.md)

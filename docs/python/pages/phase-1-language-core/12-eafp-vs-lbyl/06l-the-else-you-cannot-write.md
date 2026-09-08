@@ -1,7 +1,7 @@
 ---
 title: "The grammar refuses the narrowing tool you might reach for — there is no else without an except, no mixing of except and except*, and the else you can always write is the one on a loop, which means the opposite of what you want"
 sidebar_label: "06l · The `else` you cannot write"
-sidebar_position: 151
+sidebar_position: 154
 ---
 
 <span className="db-tier t-understand">Understand</span>
