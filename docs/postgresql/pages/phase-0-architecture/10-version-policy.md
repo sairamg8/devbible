@@ -65,7 +65,7 @@ majors — rare for a single product database.
 | | |
 |---|---|
 | **Target major** | **18** (measured on **18.4**) |
-| **Node** | **24** Active LTS + `pg` |
+| **Node** | **24** (LTS) + `pg` |
 | **Older notes** | Node Phase 6 pages measured on **17.10** — re-check before citing version-sensitive behavior |
 
 ## What major 18 is for (orientation, not a changelog)

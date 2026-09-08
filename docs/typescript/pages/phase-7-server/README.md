@@ -9,7 +9,7 @@ sidebar_position: 7
 > **Node.js API docs** (*Modules: TypeScript*, *Command-line API*), the
 > **Express 5 documentation**, and the **DefinitelyTyped** sources for
 > `@types/node`, `@types/express` and `@types/pg`. Targets **TypeScript 7.0.2**
-> and **Node 24.19.0** (Active LTS).
+> and **Node 24.19.0** (LTS).
 > **No sandbox, no console blocks** — nothing on these pages was run, so nothing
 > here is presented as a transcript. Where a claim depends on a version
 > boundary, the version is named.

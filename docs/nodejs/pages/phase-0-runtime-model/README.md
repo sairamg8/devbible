@@ -6,8 +6,8 @@ sidebar_position: 0
 
 > **Target runtime: Node 24 (LTS) — supported to 30 April 2028.**
 > Every example on these pages was executed on **Node 24.19.0**, and every API
-> used is available there. Node 26 is Current and becomes LTS in October 2026;
-> until then it is what you read about, not what you build on.
+> used is available there. Node 26 reaches Active LTS on **28 October 2026**;
+> the target here follows the LTS line, never the newest number.
 
 The mental model everything else hangs off. Every "Node is weird" complaint —
 why one slow route breaks the whole server, why `__dirname` is missing, why a

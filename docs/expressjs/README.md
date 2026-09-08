@@ -20,7 +20,7 @@ honest home.
 | | |
 |---|---|
 | Target Express | **5.x** (this inventory verified on **5.2.1**) |
-| Target Node | **24** Active LTS — same rule as the Node syllabus |
+| Target Node | **24** (LTS) — same rule as the Node syllabus |
 | Do not start before | Node **Phase 5** (`node:http`). Express is a thin layer over it |
 | Prefer also having | Node Phase 8 before Express Phases 8–9 (auth/security *concepts*) |
 

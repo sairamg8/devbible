@@ -64,7 +64,7 @@ get_type_hints(create_user)     # {'name': <class 'str'>, 'age': <class 'int'>, 
 **Node.** Type stripping — replacing TypeScript syntax with whitespace, no type checking,
 no source maps needed — was added in **v22.6.0**, enabled by default in **v23.6.0 and
 v22.18.0**, and became stable in **v25.2.0 and v24.12.0**. `--experimental-transform-types`
-was removed in **v26.0.0**. So `node app.ts` simply works on a current LTS.
+was removed in **v26.0.0**. So `node app.ts` simply works on Node 24 and newer.
 
 The catch is that stripping is not compiling, and it rejects any syntax that would need
 code generation:

@@ -13,7 +13,7 @@ sidebar_position: 1
 > [`worker_threads`](https://nodejs.org/api/worker_threads.html) and
 > [TypeScript support](https://nodejs.org/api/typescript.html) docs, and the
 > [libuv threadpool](https://docs.libuv.org/en/v1.x/threadpool.html) reference.
-> Targets: **Python 3.14.7** · **Node.js 24 "Krypton" (Active LTS)** and **26 (Current)**.
+> Targets: **Python 3.14.7** · **Node.js 24 "Krypton" (LTS)** and **26**.
 
 **"Which is faster, Python or Node" is the wrong question, and every honest answer to it
 is the same answer: for a backend that spends its life waiting on a database and an HTTP
@@ -117,8 +117,8 @@ makes Python look worse than it is. Fix the baseline first:
 | | Python | Node.js |
 |---|---|---|
 | Release cadence | one feature release each October | one major every six months (April / October) |
-| Current | **3.14** (3.14.7) | **26**, Current since May 2026 |
-| Recommended for production | 3.13 or 3.14 | **24 "Krypton"**, Active LTS |
+| Newest line | **3.14** (3.14.7) | **26**, shipped May 2026 |
+| Recommended for production | 3.13 or 3.14 | **24 "Krypton"** (LTS) |
 | Support window | 5 years per release | 30 months for an LTS line |
 | Even/odd rule | none | even majors become LTS; **odd majors never do** |
 
@@ -133,9 +133,9 @@ Two facts on that table do the most damage when they are missing:
    story as "you need a build step" is out of date — with the important caveat that
    stripping is not compiling, which [chunk 4](04-typing.md) is about.
 
-Also note the odd/even trap on the Node side: **v25 is already end-of-life** and v26 is a
-Current release, not an LTS one. Picking a Node major for a production service means
-picking an even number, which is a constraint Python simply does not have.
+Also note the odd/even trap on the Node side: **v25 is already end-of-life** and v26 does
+not reach Active LTS until **28 October 2026**. Picking a Node major for a production
+service means picking an even number, which is a constraint Python simply does not have.
 
 ## The comparison this topic will not make
 

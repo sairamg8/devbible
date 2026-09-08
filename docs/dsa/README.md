@@ -29,7 +29,7 @@ Part 8's plan here.
 |---|---|
 | Reader | Backend in **Node.js and Java**, frontend in **React**; interviews in TypeScript by default, Java where the loop expects it |
 | Target | Two coding rounds at product companies, the design-flavoured coding round at senior level, and the machine-coding round shared with the System Design track |
-| Runtime pins | Inherited from the bible: Node's current Active LTS and Java 25 — never restated in a row |
+| Runtime pins | Inherited from the bible: Node's LTS target and Java 25 — never restated in a row |
 | Not this reader | Python is in the bible but not this reader's interview language; no rows are written around it |
 
 | The mechanics live in | This track adds |

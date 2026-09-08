@@ -38,7 +38,7 @@ the Node process holding the pool*.
 |---|---|
 | Target server | **PostgreSQL 18.4** |
 | Local client | `psql` **18.4** |
-| Driver | **`pg`** (node-postgres) on **Node 24** Active LTS |
+| Driver | **`pg`** (node-postgres) on **Node 24** (LTS) |
 | Container | Podman `postgres:18-alpine`, port **55432** |
 | Note | Existing Node Phase 6/7 pages were measured on **PostgreSQL 17.10**. Re-check version-sensitive cross-links before treating them as authoritative on 18. |
 

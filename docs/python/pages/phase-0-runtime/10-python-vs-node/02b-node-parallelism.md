@@ -11,7 +11,7 @@ sidebar_position: 3
 > [`cluster`](https://nodejs.org/api/cluster.html),
 > [`child_process`](https://nodejs.org/api/child_process.html) and
 > [`os`](https://nodejs.org/api/os.html) documentation.
-> Target: **Node.js 24 "Krypton" (Active LTS)**.
+> Target: **Node.js 24 "Krypton" (LTS)**.
 
 **Node's answer to "my work does not fit on one thread" comes in exactly two shapes, and
 they are chosen by what has to cross the boundary. `worker_threads` gives you real OS

@@ -6,7 +6,7 @@ sidebar_position: 5
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08. Practice rules for fullstack Node; runtime **Node 24** Active LTS
+> Verified: 2026-08. Practice rules for fullstack Node; runtime **Node 24** (LTS)
 > in all environments unless a matrix test says otherwise.
 
 **The fewer differences between dev, staging, and production, the fewer "works on my
@@ -17,7 +17,7 @@ not about copying production secrets onto laptops.**
 
 | Dimension | Parity rule |
 |---|---|
-| **Node major** | Same Active LTS line (24.x) in CI, staging, prod |
+| **Node major** | The same LTS line (24.x) in CI, staging, prod |
 | **Lockfile** | One lockfile; install with immutability in CI/prod |
 | **Config shape** | Same variable *names*; different *values* |
 | **Backing services** | Staging has real Postgres/Redis (or close), not only mocks |
@@ -91,7 +91,7 @@ You will not see SQL, transaction, or pool behaviour that only the real engine s
 Everyone installs the same tree; CI rejects drift with immutable installs.
 
 **Where does Node 24 fit?**
-Run the same Active LTS everywhere you care about production behaviour.
+Run the same LTS line everywhere you care about production behaviour.
 
 ---
 

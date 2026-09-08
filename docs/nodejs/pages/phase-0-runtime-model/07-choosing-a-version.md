@@ -25,22 +25,27 @@ Every major version walks the same path:
 
 Total supported life: **30 months** from first release.
 
-## Where things stand — August 2026
+## Where things stand
 
-| Version | Released | Status now | Security support ends |
+Dates, not adjectives — a table that says "current" is wrong within months.
+
+| Version | Released | Lifecycle dates | Security support ends |
 |---|---|---|---|
-| **26** | 5 May 2026 | **Current** — becomes Active LTS in October 2026 | 30 Apr 2029 |
-| **24** | 6 May 2025 | **Active LTS** ← use this in production today | 30 Apr 2028 |
-| **22** | 24 Apr 2024 | Maintenance LTS | 30 Apr 2027 |
-| **20** | 18 Apr 2023 | **End of life** (April 2026) — upgrade now | — |
+| **26** | 5 May 2026 | Current from release; **Active LTS from 28 Oct 2026** | 30 Apr 2029 |
+| **24** | 6 May 2025 | Active LTS from 28 Oct 2025; Maintenance LTS from 28 Oct 2026 | 30 Apr 2028 |
+| **22** | 24 Apr 2024 | Maintenance LTS for the rest of its support window | 30 Apr 2027 |
+| **20** | 18 Apr 2023 | **End of life** since April 2026 — upgrade off it | — |
 
-Practical reading: **build on Node 24 today, test against 26**, and plan the move
-to 26 shortly after it goes LTS in October 2026.
+Read the table against the calendar: the line to build on is the one whose
+**Active LTS** date has passed and whose support end has not. Through most of
+2026 that is **Node 24**; from **28 October 2026** it is **Node 26**, and 24
+stays supported — on security and critical fixes only — to **30 April 2028**.
 
-This bible targets **Node 24** throughout for exactly that reason. Every example
-is run on it, and no API is used that Node 24 lacks. When 26 becomes the Active
-LTS in October 2026, the target moves with it — the rule is "whatever is Active
-LTS", not "whatever is newest".
+This bible targets **Node 24 (LTS)** throughout for exactly that reason, and 24
+carries support to 30 Apr 2028. Every example is run on it, and no API is used
+that Node 24 lacks. The target follows the rule and not the number — "whatever
+line is Active LTS", never "whatever is newest" — so it moves to 26 after that
+line's **28 October 2026** promotion.
 
 ## The odd/even rule is ending
 

@@ -5,7 +5,7 @@ sidebar_position: 0
 ---
 
 > Verified: 2026-08 against **TypeScript 7.0.2** (`npm view typescript version`) on
-> **Node 24.19.0** Active LTS. Every version fact in the table below came from a
+> **Node 24.19.0** (LTS). Every version fact in the table below came from a
 > command run on this machine, not from memory.
 
 The complete topic inventory for TypeScript, tiered for **mastery in fullstack
@@ -57,7 +57,7 @@ All measured on this machine, 2026-08-13:
 | What TS 7 is | The **native (Go) compiler**. `typescript@7.0.2` ships platform binaries as optional deps (`@typescript/typescript-linux-x64`, …); the package is 3.6 MB installed |
 | The classic `ts.*` API **moved** | `require('typescript')` in 7.0.2 exports exactly **two** keys — `version` and `versionMajorMinor` — so `ts.createProgram` is `undefined`. It was not deleted: the package exports `typescript/unstable/sync`, `/async` and a 409-export `/ast` surface. Anything built on the old root API (ts-morph, custom transformers, type-aware lint plugins) must be ported before you upgrade |
 | Previous line | **`typescript@5.9.3`** is the last 5.x; **6.0** is the JS-based deprecation bridge (`beta` tag), 7.0 is the rewrite |
-| Runtime | **Node 24.19.0**, the Active LTS — the same target as the Node syllabus |
+| Runtime | **Node 24.19.0** (LTS) — the same target as the Node syllabus |
 | Running `.ts` in Node 24 | **Works with no flag.** `node demo.ts` executed and printed output |
 | …but strip-only mode is real | A file containing `enum E { A }` fails with `SyntaxError [ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX]: TypeScript enum is not supported in strip-only mode`. This is why `erasableSyntaxOnly` exists, and it is Phase 0 material, not a footnote |
 | Flags confirmed present in 7.0.2 | `--erasableSyntaxOnly`, `--verbatimModuleSyntax`, `--isolatedDeclarations`, `--noUncheckedIndexedAccess`, `--exactOptionalPropertyTypes` |

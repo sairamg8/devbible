@@ -14,12 +14,12 @@ application development**. 13 phases, split into 4 parts to stay under the
 
 | | |
 |---|---|
-| Current release | **Node.js 26** (26.7.0) — shipped **5 May 2026** |
-| Active LTS | **Node.js 24** — maintained through 30 Apr 2028 |
-| Node 26 → LTS | October 2026, supported through 30 Apr 2029 |
+| Newest major line | **Node.js 26** (26.7.0) — shipped **5 May 2026** |
+| LTS line this bible targets | **Node.js 24** — Active LTS from 28 Oct 2025, Maintenance LTS from 28 Oct 2026, maintained through 30 Apr 2028 |
+| Node 26 → Active LTS | **28 October 2026**, supported through 30 Apr 2029 |
 | Release model | Changes with **v27**: one major per year, every release LTS |
 | v27 dates | Alpha opens **Oct 2026**; **27.0.0 ships April 2027**, LTS Oct 2027, EOL April 2030 |
-| Build on today | **Node 24 LTS** in production · **Node 26** to learn what's next |
+| What this bible builds on | **Node 24 (LTS)** in production · **Node 26** to learn what's next |
 
 The odd/even "unstable vs stable" rule is the most outdated Node advice still in
 circulation. It ends with v27: **one major each April, LTS each October.** Note

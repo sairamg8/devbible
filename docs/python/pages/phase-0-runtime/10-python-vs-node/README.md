@@ -19,7 +19,7 @@ sidebar_position: 10
 > [PEP 649](https://peps.python.org/pep-0649/), and the published claims of
 > [PyPy](https://pypy.org/), [GraalPy](https://github.com/oracle/graalpython),
 > [Deno](https://docs.deno.com/runtime/) and [Bun](https://bun.com/docs).
-> Targets: **Python 3.14.7** · **Node.js 24 "Krypton" (Active LTS)** and **26 (Current)**.
+> Targets: **Python 3.14.7** · **Node.js 24 "Krypton" (LTS)** and **26**.
 
 **"Which is faster" is the wrong question and every honest answer to it is the same: for a
 backend that spends its life waiting on a database and an upstream service, neither one is

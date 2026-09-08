@@ -6,7 +6,7 @@ sidebar_position: 3
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 against common Node image practice on **Node 24** Active LTS tags.
+> Verified: 2026-08 against common Node image practice on **Node 24** (LTS) tags.
 > Pin digest/tags in your registry; do not invent a tag that was not pulled here.
 
 **A good Node image is small, runs as non-root, caches dependencies separately from app

@@ -11,7 +11,7 @@ sidebar_position: 2
 > the [`fs`](https://nodejs.org/api/fs.html) and [`dns`](https://nodejs.org/api/dns.html)
 > documentation, and the
 > [libuv threadpool](https://docs.libuv.org/en/v1.x/threadpool.html) reference.
-> Target: **Node.js 24 "Krypton" (Active LTS)**.
+> Target: **Node.js 24 "Krypton" (LTS)**.
 
 **Node's whole design is one thread running your JavaScript, with the operating system's
 own event notification underneath it, and a small fixed thread pool — four threads by

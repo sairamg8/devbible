@@ -6,7 +6,7 @@ sidebar_position: 8
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08. Pipeline shape for Node 24 Active LTS; exact CI YAML varies by
+> Verified: 2026-08. Pipeline shape for Node 24 (LTS); exact CI YAML varies by
 > vendor (GitHub Actions, GitLab CI, etc.).
 
 **CI proves the lockfile installs, tests pass on the Node version you run in

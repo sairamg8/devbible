@@ -74,7 +74,7 @@ Concepts for each finished phase are in the memory store at
 
 > **Target: React 19.2.8 / react-dom 19.2.8**, the `latest` dist-tag as of
 > August 2026. Browser experiments run in **Firefox 153.0**; Node work on
-> **Node 24.19.0** (Active LTS).
+> **Node 24.19.0** (LTS).
 
 The explanations behind the [syllabus](../README.md) — one page per topic or
 tight group, each with runnable code, gotchas written symptom → cause → fix, and
