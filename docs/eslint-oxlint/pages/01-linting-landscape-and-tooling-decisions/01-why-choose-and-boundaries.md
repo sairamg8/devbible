@@ -4,6 +4,16 @@ sidebar_label: "Linting Landscape"
 sidebar_position: 1
 ---
 
+<span className="db-tier t-understand">Understand</span>
+
+> Verified: 2026-09-08 against the Oxlint documentation —
+> [Linter](https://oxc.rs/docs/guide/usage/linter.html),
+> [Migrate from ESLint](https://oxc.rs/docs/guide/usage/linter/migrate-from-eslint) —
+> [`eslint-plugin-oxlint`](https://github.com/oxc-project/eslint-plugin-oxlint), and the
+> ESLint blog, [*Deprecation of formatting rules*](https://eslint.org/blog/2023/10/deprecating-formatting-rules/).
+> Documentation-validated; **no sandbox run, no timings**.
+> Validated: 2026-09-08 · claims + output provenance · session 8b9ca9ad
+
 # 🔍 Linting Landscape: Why Lint, Choosing Tools & Format Boundaries
 
 Covers syllabus **§1.1 Why Lint at All**, **§1.2 Choosing a Linter**, and **§1.3 Lint vs Format Boundary**.
@@ -44,7 +54,7 @@ As of **2026**, the practical decision space for JS/TS frontend/fullstack repos:
 | **Biome (or all-in-one)** | Team wants one binary for format+lint and accepts its rule set | Weaker escape hatch for odd ESLint plugins than Oxlint’s dual-run story |
 | **Vite+ / unified toolchain** | Team standardizes on Oxc-family tools (Oxlint + Oxfmt, etc.) as a productized stack | Couples lint choice to broader toolchain adoption |
 
-Oxlint’s own docs frame it as: prefer Oxlint as the dedicated linter; stay ESLint-only for unsupported edge-case plugin behavior; use dual-run while migrating large repos. Speed claims are typically **order-of-magnitude** (often cited ~50–100× vs ESLint on large trees)—always measure on *your* tree and rule set; absolute numbers vary with type-aware mode, JS plugins, and disk cache.
+Oxlint’s own docs frame it as: prefer Oxlint as the dedicated linter; stay ESLint-only for unsupported edge-case plugin behavior; use dual-run while migrating large repos. The speed claim is Oxlint's own and it is specific — *"Our benchmarks show Oxlint is 50 to 100 times faster than ESLint"* — but it is **their** benchmark, not yours: always measure on *your* tree and rule set, because the number moves with type-aware mode, JS plugins and disk cache.
 
 ### 1.3 Lint vs Format Boundary
 
@@ -52,7 +62,7 @@ Oxlint’s own docs frame it as: prefer Oxlint as the dedicated linter; stay ESL
 
 **Linters** own *correctness and API policy*: unused bindings, hooks rules, security patterns, import boundaries. When both rewrite style, you get thrashing: Prettier formats a line, ESLint `--fix` restyles it, next save undoes it.
 
-Historical ESLint “layout” rules largely moved to **`@stylistic/eslint-plugin`** or were dropped in favor of formatters. The durable pattern:
+Historical ESLint “layout” rules were deprecated in October 2023 and moved out to **`@stylistic/eslint-plugin-js`** and **`@stylistic/eslint-plugin-ts`** (eslint.style). ESLint's own recommendation in that post is a dedicated formatter — it names **Prettier** and **dprint**. The durable pattern:
 
 1. One formatter is source of truth for style.
 2. `eslint-config-prettier` (or equivalent) turns off ESLint rules that conflict.
@@ -128,7 +138,7 @@ export default [
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## Gotchas
 
 ### ⚠️ Treating lint as a substitute for tests or types
 Lint finds *patterns*. It will not prove checkout totals or race-free concurrent edits. Type-aware lint narrows the gap for async misuse; it still is not a full program proof.
@@ -147,3 +157,26 @@ A type-aware ESLint projectService on a huge monorepo can make save lag. Scope t
 
 ### ⚠️ No written decision for dual-run
 Without a rule-ownership matrix, two tools report the same issue at different severities. Document owners (see [coexistence](../18-coexistence-eslint-and-oxlint/01-dual-run-overlap-and-retirement.md)).
+
+---
+
+## Interview questions
+
+**★ You are asked to make lint faster on a 4,000-file TypeScript monorepo. Why is "switch to Oxlint" not automatically the answer?**
+Because the question is really about *rule inventory*, not speed. Oxlint's own docs are explicit that you should *"stay on ESLint if a specific missing behavior still blocks migration"* — a local custom plugin, a security rule with no native port, a plugin the JS Plugins system does not host. The honest answer inventories the rules the repo actually depends on, then picks: Oxlint-only if the inventory is covered, dual-run if most rules are common but a few are irreplaceable, ESLint-only if the blockers are load-bearing. Answering with a benchmark number and no inventory is the mistake this whole topic exists to prevent.
+
+**★ In a dual-run setup, what stops the two linters reporting the same problem twice, and where does it go in the config?**
+`eslint-plugin-oxlint` — its own description is *"Turn off all rules already supported by oxlint"*. It ships presets both by plugin (`flat/react`, `flat/typescript`, `flat/import`, `flat/jsx-a11y`, …) and by Oxlint category (`flat/correctness`, `flat/pedantic`, `flat/style`, `flat/restriction`, `flat/suspicious`). In flat config it goes **last** in the exported array, for the same reason `eslint-config-prettier` does: a config that turns rules *off* only wins if nothing after it turns them back on.
+
+**★ Why does the recommended order run Oxlint first and ESLint second, rather than in parallel or the other way round?**
+Oxlint's migration guide puts it as *"run Oxlint first to catch errors early, then fall back to ESLint only if needed."* The fast tool fails the build in seconds on the errors it can see, so the slow tool never runs for the majority of bad pushes. Reversing the order pays ESLint's full cost before learning anything, and running them in parallel pays it always. The gain is not the linting — it is the developer waiting.
+
+**★ ESLint deprecated its formatting rules. What exactly happened to them, and what is the practical config consequence?**
+They were deprecated in October 2023 and moved to `@stylistic/eslint-plugin-js` and `@stylistic/eslint-plugin-ts` at eslint.style; ESLint's own post recommends a dedicated formatter instead, naming Prettier and dprint. Practically: pick one formatter as the sole style authority, add `eslint-config-prettier` last so no ESLint rule fights it, and keep lint autofix for semantic fixes. The failure mode this closes is thrashing — the formatter writes a line, `eslint --fix` rewrites it, the next save undoes that.
+
+**★ A team proposes `eslint-plugin-prettier` so there is "one command". What is wrong with it?**
+It runs Prettier *inside* ESLint, so every formatting difference becomes a lint error with a fix, and the file is parsed and reprinted through two pipelines instead of one. It is slower, and worse, it destroys the ownership boundary this topic is built on: with it, "who owns style" has no answer, and every formatting question becomes a lint-severity question. Prefer Prettier (or Oxfmt) as a separate step plus `eslint-config-prettier`.
+
+**★ When is an all-in-one tool like Biome the right call over Oxlint + ESLint?**
+When the plugin inventory is small. All-in-one tools win by collapsing format and lint into one binary and one config, and that trade is good exactly when you are not relying on the long tail of the ESLint plugin ecosystem. The moment the inventory contains a custom AST rule or an unported security plugin, the dual-run story — where ESLint stays as the escape hatch — is the stronger position.
+
