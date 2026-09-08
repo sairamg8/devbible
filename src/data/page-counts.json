@@ -882,8 +882,8 @@
     }
   },
   "vite": {
-    "pages": 135,
-    "validated": 133,
+    "pages": 163,
+    "validated": 163,
     "phases": {
       "01-core-architecture": 1,
       "02-cli-and-scaffolding": 1,
@@ -899,8 +899,8 @@
       "12-path-resolution-and-aliases": 15,
       "13-worker-and-wasm-support": 5,
       "14-testing-integration": 10,
-      "15-deployment-considerations": 1,
-      "16-migration-recipes": 1,
+      "15-deployment-considerations": 15,
+      "16-migration-recipes": 15,
       "17-the-2026-toolchain-landscape": 6
     },
     "validatedPhases": {
@@ -918,8 +918,8 @@
       "12-path-resolution-and-aliases": 15,
       "13-worker-and-wasm-support": 5,
       "14-testing-integration": 10,
-      "15-deployment-considerations": 0,
-      "16-migration-recipes": 0,
+      "15-deployment-considerations": 15,
+      "16-migration-recipes": 15,
       "17-the-2026-toolchain-landscape": 6
     }
   },
