@@ -165,4 +165,4 @@ gateway in front of it either; that's a separate, infrastructure-side check.
 
 ---
 
-{/* FOOTER */}
+← [CORS, cookies and websockets](02a-cors-cookies-and-websockets-through-the-proxy.md) · [Vite overview](../../README.md) · Next → [Websockets, configure and dev-only scope](02b-websockets-configure-and-the-proxys-dev-only-scope.md)

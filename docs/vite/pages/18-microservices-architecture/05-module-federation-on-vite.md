@@ -212,4 +212,4 @@ cross-app changes has to route through a rebuild or a full reload rather than in
 
 ---
 
-{/* FOOTER */}
+← [Shared packages & deploy decision](04b-shared-packages-and-the-deploy-decision.md) · [Vite overview](../../README.md) · Next → [Shared deps and singletons](05a-shared-dependencies-and-singleton-breakage.md)

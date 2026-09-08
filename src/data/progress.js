@@ -502,7 +502,7 @@ export const LANGUAGES = {
   'vite': {
     label: "Vite",
     imported: true,
-    updated: '2026-09-07 22:50',
+    updated: '2026-09-08 21:00',
     docsPath: '/docs/vite',
     pagesPath: '/docs/vite/pages',
     phases: [
@@ -523,6 +523,7 @@ export const LANGUAGES = {
       {n: 15, slug: '15-deployment-considerations', name: "Deployment considerations", part: 'Imported corpus', topics: 1, pages: 15, verified: 15},
       {n: 16, slug: '16-migration-recipes', name: "Migration recipes", part: 'Imported corpus', topics: 1, pages: 15, verified: 15},
       {n: 17, slug: '17-the-2026-toolchain-landscape', name: "The 2026 toolchain landscape", part: 'Written for this bible', topics: 1, pages: 6, verified: 6},
+      {n: 18, slug: '18-microservices-architecture', name: "Microservices architecture", part: 'Written for this bible', topics: 1, pages: 24, verified: 24},
     ],
   },
   'webpack': {

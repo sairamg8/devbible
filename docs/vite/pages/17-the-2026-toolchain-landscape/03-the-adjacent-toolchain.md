@@ -281,4 +281,4 @@ rather than as the standard.
 
 ---
 
-← [Loaders → Plugins](02b-loaders-become-plugins.md) · [Vite overview](../../README.md) · Next → [Env System & `.env` Files](../07-env-variables-and-modes/01-environment-system.md) · **end of the Vite track**
+← [Loaders → Plugins](02b-loaders-become-plugins.md) · [Vite overview](../../README.md) · Next → [What microservices mean to a build](../18-microservices-architecture/01-what-microservices-mean-to-a-vite-build.md)

@@ -80,8 +80,9 @@ origins exist. The moment the app is deployed as static files with no dev server
 it, that forwarding disappears, and if nothing replaced it in production, the fan-out and its
 preflight tax reappear in full. This is the single most common way a team discovers the cost
 late: it was real the whole time, just hidden by the tool they were developing with. The
-proxy-mechanics chunk that covers `changeOrigin`, `rewrite`, and the security caveats around
-proxied websockets is **not written yet**.
+proxy mechanics — `changeOrigin`, `rewrite`, and the security caveats around proxied
+websockets — are covered in [02 · The dev proxy across services](02-the-dev-proxy-against-many-services.md)
+and [02a2 · Websocket origin checks](02a2-websocket-origin-checks-and-the-preview-verification-recipe.md).
 
 `server.cors` is the mirror image — Vite's own dev server, not a backend, deciding whether to
 answer cross-origin requests *made to it*:
@@ -250,4 +251,4 @@ diagnose than a single auth flow failing outright.
 
 ---
 
-{/* FOOTER */}
+← [What microservices mean to a build](01-what-microservices-mean-to-a-vite-build.md) · [Vite overview](../../README.md) · Next → [The dev proxy across services](02-the-dev-proxy-against-many-services.md)

@@ -186,4 +186,4 @@ compatible on the strength of the integration doc alone; check the installed plu
 
 ---
 
-{/* FOOTER */}
+← [Shared dep versioning gap](05a2-shared-dependency-versioning-and-the-optimizedeps-gap.md) · [Vite overview](../../README.md) · Next → [Version skew and the manifest](05c-version-skew-and-the-remote-manifest.md)

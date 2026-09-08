@@ -47,7 +47,7 @@ export default {
 In production this proxy does not exist — Vite ships static files, and the routing job moves
 to whatever serves them (nginx, a gateway, a CDN edge function). The dev-only nature of
 `server.proxy` is the single most consequential fact in this shape, and it gets its own chunk:
-**"The dev proxy is not your production routing"** *(not written yet)*.
+[The dev proxy across services](02-the-dev-proxy-against-many-services.md).
 
 ### 2. One frontend split into independently deployed pieces
 
@@ -122,26 +122,63 @@ parallel redesign is solving a problem Vite does not have.
 
 ## What this topic covers, chunk by chunk
 
-This page is the map; the chunks below fill it in — each is named here as **bold text**
-because the file does not exist yet:
+This page is the map. The chunks below fill it in, grouped by the three shapes above.
 
-- **The BFF and browser fan-out** — [01a](01a-the-bff-and-the-browser-fan-out.md), written.
-- **The dev proxy is not your production routing** *(not written yet)* — `server.proxy`
-  mechanics, `changeOrigin`, `rewrite`, websockets, and why none of it ships.
-- **CORS, credentials and the preflight tax** *(not written yet)* — `server.cors`, and what
-  happens to auth tokens across N origins in production once there is no proxy to hide behind.
-- **`base`, `server.origin` and where a remote thinks it lives** *(not written yet)* — the
-  absolute-URL requirement for anything served from its own origin.
-- **The Environment API for multi-target builds** *(not written yet)* — `environments`,
-  `consumer`, and its release-candidate stability status.
-- **Module Federation on Vite** *(not written yet)* — `@module-federation/vite`, the
-  `build.target` requirement, and the stale-plugin trap (cross-referenced, not re-argued,
-  from [Migrating Module Federation off webpack](../16-migration-recipes/01n-module-federation-migration.md)).
-- **Shared dependencies and version skew** *(not written yet)* — what "shared" means across
-  independently deployed bundles and what is and is not documented about how it interacts
-  with Vite's own pre-bundling.
-- **Monorepo config sharing** *(not written yet)* — composing a base config across many
-  independently deployed frontends.
+**Shape 1 — many backend services, one frontend**
+
+- [01a · The BFF and browser fan-out](01a-the-bff-and-the-browser-fan-out.md) — what N origins
+  cost the browser, and why no bundler option fixes it.
+- [02 · The dev proxy across services](02-the-dev-proxy-against-many-services.md) —
+  `server.proxy` mechanics, `changeOrigin`, `rewrite`, RegExp keys, and why none of it ships.
+- [02a · CORS, cookies and websockets](02a-cors-cookies-and-websockets-through-the-proxy.md) —
+  what happens to preflights and auth tokens once there is no proxy to hide behind.
+- [02a2 · Websocket origin checks and the preview recipe](02a2-websocket-origin-checks-and-the-preview-verification-recipe.md)
+  — 🔴 Vite does not check websocket origins before proxying, and how to prove a build before it ships.
+- [02b · Websockets, `configure` and the dev-only scope](02b-websockets-configure-and-the-proxys-dev-only-scope.md)
+  — the escape hatch, and the production replacement the proxy is standing in for.
+- [03 · Service URLs are baked in](03-service-urls-are-baked-in-at-build-time.md) — 🔴
+  `import.meta.env` is replaced at build time, so one artefact cannot be promoted across
+  environments.
+- [03b · Runtime configuration](03b-runtime-configuration-and-the-fix.md) — the fix, in code,
+  and the rule for what to bake and what to inject.
+
+**Shape 2 — one frontend split into independently deployed pieces**
+
+- [05 · Module Federation on Vite](05-module-federation-on-vite.md) —
+  `@module-federation/vite`, the `build.target` requirement, and the two documented
+  limitations. The stale-plugin trap is cross-referenced, not re-argued, from
+  [Migrating Module Federation off webpack](../16-migration-recipes/01n-module-federation-migration.md).
+- [05a · Shared deps and singletons](05a-shared-dependencies-and-singleton-breakage.md) — why
+  two copies of a framework is a correctness bug, not a size regression.
+- [05a2 · Shared dependency versioning](05a2-shared-dependency-versioning-and-the-optimizedeps-gap.md)
+  — and what is *not* documented about how `shared` meets Vite's own pre-bundling.
+- [05b · Worked example and the version spine](05b-worked-example-and-the-version-spine.md).
+- [05c · Version skew and the manifest](05c-version-skew-and-the-remote-manifest.md) — the
+  mutable `remoteEntry.js` in the caching hot path.
+- [05d · `exposes`, SRI and observability](05d-exposes-sri-and-build-observability.md) — a
+  runtime boundary with no compile-time check across repos.
+- [06 · Import maps and the alternatives](06-import-maps-and-the-other-answers.md) and
+  [06b · Composition alternatives](06b-composition-alternatives-and-the-decision.md) — the
+  three lighter answers, two of them browser-native.
+- [07 · `base` and asset URLs](07-base-and-asset-urls-across-origins.md) and
+  [07b · `server.origin`, manifest and the router basename](07b-server-origin-manifest-and-the-router-basename.md)
+  — the absolute-URL requirement for anything served from its own origin.
+
+**Shape 3 — many independent frontends in one repo**
+
+- [04 · One repo, many Vite apps](04-one-repo-many-vite-apps.md) — workspaces, a shared config
+  factory, per-app `envDir`.
+- [04b · Shared packages and the deploy decision](04b-shared-packages-and-the-deploy-decision.md)
+  — and the test for which shape you actually have.
+- [08 · The Environment API](08-the-environment-api-and-many-build-targets.md) and
+  [08b · Many deployables is not microservices](08b-many-deployables-is-not-microservices.md)
+  — `environments`, `consumer`, and its release-candidate stability status.
+
+**The closing argument**
+
+- [09 · When not to split](09-when-not-to-split-the-frontend.md) and
+  [09b · The decision framework](09b-the-decision-framework.md) — 🔴 read these before adopting
+  anything in shape 2.
 
 For the webpack-side equivalent of the federation material, see
 [Architecture patterns and topologies](../../../webpack/pages/11-module-federation/04-architecture-patterns-and-topologies.md).
@@ -228,4 +265,4 @@ in review rather than letting a proposal imply changes that would not actually h
 
 ---
 
-{/* FOOTER */}
+← [The Adjacent Toolchain](../17-the-2026-toolchain-landscape/03-the-adjacent-toolchain.md) · [Vite overview](../../README.md) · Next → [The BFF and browser fan-out](01a-the-bff-and-the-browser-fan-out.md)

@@ -141,4 +141,4 @@ worth ruling out first.
 
 ---
 
-{/* FOOTER */}
+← [Shared deps and singletons](05a-shared-dependencies-and-singleton-breakage.md) · [Vite overview](../../README.md) · Next → [Worked example and version spine](05b-worked-example-and-the-version-spine.md)

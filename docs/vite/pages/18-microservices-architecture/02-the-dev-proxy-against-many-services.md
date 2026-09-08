@@ -218,4 +218,4 @@ relying on that ordering surviving a Vite upgrade.
 
 ---
 
-{/* FOOTER */}
+← [The BFF and browser fan-out](01a-the-bff-and-the-browser-fan-out.md) · [Vite overview](../../README.md) · Next → [CORS, cookies and websockets](02a-cors-cookies-and-websockets-through-the-proxy.md)

@@ -232,4 +232,4 @@ all rather than one.
 
 ---
 
-{/* FOOTER */}
+← [Runtime configuration](03b-runtime-configuration-and-the-fix.md) · [Vite overview](../../README.md) · Next → [Shared packages & deploy decision](04b-shared-packages-and-the-deploy-decision.md)

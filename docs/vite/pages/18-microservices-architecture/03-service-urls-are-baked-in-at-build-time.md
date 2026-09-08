@@ -285,4 +285,4 @@ will actually ship. Runtime configuration removes this gap by making "the same b
 
 ---
 
-{/* FOOTER */}
+← [Websockets, configure and dev-only scope](02b-websockets-configure-and-the-proxys-dev-only-scope.md) · [Vite overview](../../README.md) · Next → [Runtime configuration](03b-runtime-configuration-and-the-fix.md)

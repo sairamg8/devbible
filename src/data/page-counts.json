@@ -805,12 +805,14 @@
     "phases": {
       "phase-0-the-interview": 14,
       "phase-1-the-method": 19,
-      "phase-2-request-path": 33
+      "phase-2-request-path": 33,
+      "phase-3-caching": 0
     },
     "validatedPhases": {
       "phase-0-the-interview": 14,
       "phase-1-the-method": 19,
-      "phase-2-request-path": 33
+      "phase-2-request-path": 33,
+      "phase-3-caching": 0
     }
   },
   "tanstack-query": {
@@ -882,8 +884,8 @@
     }
   },
   "vite": {
-    "pages": 163,
-    "validated": 163,
+    "pages": 187,
+    "validated": 187,
     "phases": {
       "01-core-architecture": 1,
       "02-cli-and-scaffolding": 1,
@@ -902,7 +904,7 @@
       "15-deployment-considerations": 15,
       "16-migration-recipes": 15,
       "17-the-2026-toolchain-landscape": 6,
-      "18-microservices-architecture": 0
+      "18-microservices-architecture": 24
     },
     "validatedPhases": {
       "01-core-architecture": 1,
@@ -922,7 +924,7 @@
       "15-deployment-considerations": 15,
       "16-migration-recipes": 15,
       "17-the-2026-toolchain-landscape": 6,
-      "18-microservices-architecture": 0
+      "18-microservices-architecture": 24
     }
   },
   "web-vitals-performance": {

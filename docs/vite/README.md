@@ -4,7 +4,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-:::caution Validation in progress — 11 of 16 imported topics done
+:::caution Imported topics validated — 16 of 16
 
 These pages were **moved in from the separate `frontend-bible` repo as-is** on
 2026-08-14, written to a four-section standard: *Under-The-Hood Mechanics →
@@ -20,18 +20,29 @@ on Rollup; esbuild is only an optional peer. Anything you read elsewhere about
 API** changed with it: the docs now open with *"Vite plugins extends Rolldown's
 plugin interface"*, where through v7 that sentence named Rollup.
 
-**Topics 12–16 are still the unvalidated import.** They have no `> Verified:`
-line, no tier badge and no Interview questions section, and some of them target
-older major versions. Treat those as a strong draft, not as verified reference.
+**Topics 12–16 have since been re-validated too** — every page on the track now
+carries a tier badge, a `> Verified:` line and a `> Validated:` stamp. Topics 17
+and 18 were written here rather than imported.
 
 :::
 
-**17 topics.** ✅ = re-validated against the Vite 8 docs · 🆕 = written new, not imported.
+**18 topics.** ✅ = re-validated against the Vite 8 docs · 🆕 = written new, not imported.
 
 🆕 **Topic 17 answers the questions the rest of the track cannot**, because they are about the
 tools *around* Vite: is webpack still relevant, is Babel, what can webpack do that Vite cannot,
 and what else does a 2026 frontend project have to choose. Every version in it was fetched from
 `registry.npmjs.org` on 2026-09-07.
+
+🆕 **Topic 18 is the architecture topic, and it is deliberately honest about its own limits.**
+Vite emits a frontend artefact and hands it to a CDN, so "microservices" reaches the build in
+three shapes only — many backend services behind one frontend, one frontend split into
+independently deployed pieces, and many independent frontends in one repo. Each chunk says which
+Vite config surface the shape actually touches and where the responsibility leaves Vite entirely.
+🔴 Five claims the primary sources do **not** settle are written on the pages as explicitly
+undocumented rather than guessed: the supported Vite range for `@module-federation/vite`, how
+`shared` singleton resolution meets `optimizeDeps` pre-bundling, whether the Environment API can
+host a federation remote, `server.proxy` match ordering, and `Set-Cookie` rewriting through the
+dev proxy.
 
 | # | Section | Topics |
 |---|---|---|
@@ -52,6 +63,7 @@ and what else does a 2026 frontend project have to choose. Every version in it w
 | 15 | [Deployment considerations](pages/15-deployment-considerations/01-shipping-the-build.md) ✅ | 15 |
 | 16 | [Migration recipes](pages/16-migration-recipes/01-cra-to-vite-migration.md) ✅ | 15 |
 | 17 | [The 2026 toolchain landscape](pages/17-the-2026-toolchain-landscape/01-the-2026-bundler-landscape.md) ✅ 🆕 | 6 |
+| 18 | [Microservices architecture](pages/18-microservices-architecture/01-what-microservices-mean-to-a-vite-build.md) ✅ 🆕 | 24 |
 
 import Progress from '@site/src/components/Progress';
 

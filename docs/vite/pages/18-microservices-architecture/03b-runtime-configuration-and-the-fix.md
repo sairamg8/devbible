@@ -263,4 +263,4 @@ non-root `base`; deriving the fetch path from `BASE_URL` keeps the two in sync a
 
 ---
 
-{/* FOOTER */}
+← [Service URLs are baked in](03-service-urls-are-baked-in-at-build-time.md) · [Vite overview](../../README.md) · Next → [One repo, many Vite apps](04-one-repo-many-vite-apps.md)

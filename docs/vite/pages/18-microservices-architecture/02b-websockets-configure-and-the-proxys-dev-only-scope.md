@@ -219,4 +219,4 @@ it either; that verification is a separate, infrastructure-side check.
 
 ---
 
-{/* FOOTER */}
+← [Websocket origin checks & the preview recipe](02a2-websocket-origin-checks-and-the-preview-verification-recipe.md) · [Vite overview](../../README.md) · Next → [Service URLs are baked in](03-service-urls-are-baked-in-at-build-time.md)

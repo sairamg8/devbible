@@ -204,4 +204,4 @@ need to release independently — a hotfix to one without touching or redeployin
 
 ---
 
-{/* FOOTER */}
+← [One repo, many Vite apps](04-one-repo-many-vite-apps.md) · [Vite overview](../../README.md) · Next → [Module Federation on Vite](05-module-federation-on-vite.md)

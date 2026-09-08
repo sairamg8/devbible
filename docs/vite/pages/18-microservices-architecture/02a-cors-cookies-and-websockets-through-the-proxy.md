@@ -214,4 +214,4 @@ time a service moves to a new subdomain.
 
 ---
 
-{/* FOOTER */}
+← [The dev proxy across services](02-the-dev-proxy-against-many-services.md) · [Vite overview](../../README.md) · Next → [Websocket origin checks & the preview recipe](02a2-websocket-origin-checks-and-the-preview-verification-recipe.md)

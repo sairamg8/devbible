@@ -233,4 +233,4 @@ place.
 
 ---
 
-{/* FOOTER */}
+← [Module Federation on Vite](05-module-federation-on-vite.md) · [Vite overview](../../README.md) · Next → [Shared dep versioning gap](05a2-shared-dependency-versioning-and-the-optimizedeps-gap.md)
