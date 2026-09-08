@@ -882,8 +882,8 @@
     }
   },
   "vite": {
-    "pages": 108,
-    "validated": 103,
+    "pages": 123,
+    "validated": 121,
     "phases": {
       "01-core-architecture": 1,
       "02-cli-and-scaffolding": 1,
@@ -896,9 +896,9 @@
       "09-css-handling": 10,
       "10-ssr-support": 11,
       "11-optimization-and-performance": 10,
-      "12-path-resolution-and-aliases": 1,
-      "13-worker-and-wasm-support": 1,
-      "14-testing-integration": 1,
+      "12-path-resolution-and-aliases": 9,
+      "13-worker-and-wasm-support": 5,
+      "14-testing-integration": 4,
       "15-deployment-considerations": 1,
       "16-migration-recipes": 1,
       "17-the-2026-toolchain-landscape": 6
@@ -915,9 +915,9 @@
       "09-css-handling": 10,
       "10-ssr-support": 11,
       "11-optimization-and-performance": 10,
-      "12-path-resolution-and-aliases": 0,
-      "13-worker-and-wasm-support": 0,
-      "14-testing-integration": 0,
+      "12-path-resolution-and-aliases": 9,
+      "13-worker-and-wasm-support": 5,
+      "14-testing-integration": 4,
       "15-deployment-considerations": 0,
       "16-migration-recipes": 0,
       "17-the-2026-toolchain-landscape": 6
