@@ -8,8 +8,19 @@ sidebar_position: 1
 
 > Verified: 2026-09-06 against the TanStack Query docs — [Important Defaults](https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults), [Query Keys](https://tanstack.com/query/latest/docs/framework/react/guides/query-keys), [Queries](https://tanstack.com/query/latest/docs/framework/react/guides/queries), [Migrating to v5](https://tanstack.com/query/latest/docs/framework/react/guides/migrating-to-v5), [`QueryClient`](https://tanstack.com/query/latest/docs/reference/QueryClient). Documentation-validated, **no sandbox run, no timings**. Target: **@tanstack/react-query 5.102.8**.
 > Validated: 2026-09-06 · claims + output provenance · session 4e8d4393
+> Re-validated: 2026-09-08 · the `select` re-run frequency left open on 2026-09-06 is now **settled** against [Render Optimizations](https://tanstack.com/query/latest/docs/framework/react/guides/render-optimizations) — see **`01f`** *(not written yet)* · session bc194850
 
 # 🔄 `useQuery` Deep Dive: `queryKey`, `staleTime` vs `gcTime`, `enabled` & `select`
+
+**This is the entry page of a seven-chunk topic on the `useQuery` option surface.** It covers the
+four options that decide *identity and lifetime* — `queryKey`, `staleTime`, `gcTime` and the
+existence of `enabled`. The rest of the surface has its own chunks, because each of them fails in
+its own way: the gate in [`01b`](./01b-enabled-and-skiptoken.md), the freshness and refetch
+triggers in [`01c`](./01c-staletime-and-the-refetchon-family.md), failure handling in
+[`01d`](./01d-retry-retrydelay-and-throwonerror.md), seeding in
+**`01e`** *(not written yet)*, projection in **`01f`** *(not written yet)*, and
+sharing an option object between a hook and a prefetch in
+**`01g`** *(not written yet)*.
 
 ## 1. Under-The-Hood Mechanics
 
@@ -34,7 +45,7 @@ useQuery({
 Array-based keys support **partial matching** for cache operations — `invalidateQueries({ queryKey: ['todos'] })` invalidates every query whose key starts with `'todos'`, regardless of what filter/pagination parameters follow it in the array. This hierarchical structure is what makes broad ("invalidate everything todo-related") vs narrow ("invalidate only this specific filtered view") invalidation both possible from the same key structure.
 
 ### `select`: Transforming Without Mutating the Cache
-`select` derives a transformed view of the cached data **without** altering what's actually stored in the cache — useful when different components need different projections of the same underlying cached data (one needs the full list, another needs just a count) without each maintaining its own separate cache entry. ⚠️ **How often `select` re-runs is not stated on any documentation page checked for this validation pass** — treat it as potentially running on every render of every consumer, keep it pure and cheap, and never put a fetch, a `Date.now()`, or anything order-dependent inside it.
+`select` derives a transformed view of the cached data **without** altering what's actually stored in the cache — useful when different components need different projections of the same underlying cached data (one needs the full list, another needs just a count) without each maintaining its own separate cache entry. **How often it re-runs was left open by the 2026-09-06 pass and is settled now**: Render Optimizations states *"The `select` function will only re-run if: the `select` function itself changed referentially [or] `data` changed"*, and *"This means that an inlined `select` function, as shown above, will run on every render."* An inline arrow is a new reference every render, so the memoisation you reached for `select` to get is exactly the thing an inline `select` throws away. The full mechanism, its cost and its five failure modes are **`01f`** *(not written yet)*; keep it pure and cheap regardless.
 
 ---
 
@@ -149,6 +160,11 @@ if (status === 'pending') return <Spinner />;
 
 ## Gotchas
 
+**★ `select` gives you a projection, not a second cache entry.** Two hooks on the same key with
+different `select` functions still share one entry and one network request; the transform runs on the
+way out. The corollary is the constraint: `select` must be a pure function of `data`, because the
+library may call it whenever it likes and the result is not stored anywhere you can inspect.
+
 **★ `staleTime` and `gcTime` are two clocks measuring two different things, and only one of them
 answers "why does this keep refetching".** `staleTime` is about *freshness* — how long the library
 will serve the cached value without going back to the network. `gcTime` is about *existence* — how
@@ -201,23 +217,19 @@ of what identifies the entry. Two hooks with the same key and different fetchers
 cache entry, and which fetcher populated it is decided by whichever mounted first. This is not
 detectable by TypeScript and produces a bug that only appears in the mount order of one route.
 
-**★ `enabled: false` does not mean "no query" — it means a query in `pending` that will never
-resolve.** The hook still returns a full result object, `status` is `'pending'`, and `data` is
-`undefined` indefinitely. What tells the two apart is `fetchStatus`: a disabled query is `'idle'`, a
-genuinely loading one is `'fetching'`. That is why `isLoading` — defined in v5 as *"`isPending &&
-isFetching`"* — is the flag to gate a spinner on, and `isPending` is not.
-
-**★ `select` gives you a projection, not a second cache entry.** Two hooks on the same key with
-different `select` functions still share one entry and one network request; the transform runs on the
-way out. The corollary is the constraint: `select` must be a pure function of `data`, because the
-library may call it whenever it likes and the result is not stored anywhere you can inspect.
-
-**★ Setting `enabled` from a value that starts `undefined` gives you a spinner with nothing behind
-it.** `enabled: !!userId` is correct, but a component that renders a spinner on `isPending` will spin
-forever while `userId` is still resolving. Gate the render on the precondition first, and only then
-on the query's own state.
+*(Three more gotchas that used to live here have moved to the chunks they belong to: the two on
+`enabled` are in [`01b`](./01b-enabled-and-skiptoken.md), the one on `select` as a projection is in
+**`01f`** *(not written yet)*.)*
 
 ## Interview questions
+
+**★ Two components need the same list — one renders it filtered, the other renders only its length.
+How many cache entries, how many requests, and how do you write it?**
+One entry and one request, provided both use the same `queryKey`. Give each hook its own `select` —
+one returning `data.filter(...)`, the other returning `data.length` — and the transform happens per
+consumer while the cached array stays untouched. The mistake to avoid is giving the count its own key
+like `['todos', 'count']`, which buys a second entry, a second request and two things that can now
+disagree with each other.
 
 **★ Explain `staleTime` and `gcTime` to someone who thinks both mean "how long data is cached".**
 They are not two settings for the same thing; they answer different questions about different phases
@@ -253,21 +265,6 @@ another, and nothing anywhere throws. The rule in the docs — the key must be *
 `JSON.stringify`, and unique to the query's data"* — is doing two jobs in one sentence, and this is
 the failure of the second half.
 
-**★ A query has `enabled: false`. What does each flag read, and which one should gate the spinner?**
-`status` is `'pending'` and `isPending` is `true`, because there is no data. `fetchStatus` is
-`'idle'` and `isFetching` is `false`, because nothing is running. `isLoading`, which v5 defines as
-`isPending && isFetching`, is therefore `false` — and that is the flag you want, because it is the
-only one that distinguishes "no data and working on it" from "no data and not even trying". Gating a
-full-page spinner on `isPending` gives you a spinner that never stops on any disabled query.
-
-**★ Two components need the same list — one renders it filtered, the other renders only its length.
-How many cache entries, how many requests, and how do you write it?**
-One entry and one request, provided both use the same `queryKey`. Give each hook its own `select` —
-one returning `data.filter(...)`, the other returning `data.length` — and the transform happens per
-consumer while the cached array stays untouched. The mistake to avoid is giving the count its own key
-like `['todos', 'count']`, which buys a second entry, a second request and two things that can now
-disagree with each other.
-
 **★ When would you set `staleTime: Infinity`, and what still expires?**
 For data that genuinely cannot change for the lifetime of the session — a currency list, a country
 list, a feature-flag snapshot taken at login, an immutable versioned document. What still expires is
@@ -285,6 +282,10 @@ seconds) and set `staleTime` to it. Only if the data is genuinely never worth re
 you reach for `refetchOnWindowFocus: false`, and you should prefer `staleTime` because it also
 suppresses the redundant refetch on remount and reconnect, which the focus flag does not.
 
+*(Two more questions have moved: the `enabled: false` flag-reading question is in
+[`01b`](./01b-enabled-and-skiptoken.md), the two-consumers-one-key question is in
+**`01f`** *(not written yet)*.)*
+
 ---
 
-← [Core Concepts](../01-core-concepts/01-the-server-state-model.md) · [Topic index](../README.md) · Next → [Query States](../03-query-states/01-status-flags.md)
+← [Core Concepts](../01-core-concepts/01-the-server-state-model.md) · [Topic index](../README.md) · Next → [`enabled` & `skipToken`](./01b-enabled-and-skiptoken.md)
