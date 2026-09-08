@@ -11,6 +11,8 @@ sidebar_position: 0
 | 01 | **[CREATE TABLE](01-create-table.md)** | <span className="db-tier t-master">Master</span> | Shape you will not regret |
 | 02 | **[Primary keys](02-primary-keys.md)** | <span className="db-tier t-master">Master</span> | IDENTITY over serial |
 | 03 | **[Foreign keys](03-foreign-keys.md)** | <span className="db-tier t-master">Master</span> | ON DELETE actions |
+| 03b | **[REFERENCES vs FOREIGN KEY](03b-references-and-foreign-key.md)** | <span className="db-tier t-master">Master</span> | One constraint, two spellings |
+| 03c | **[MATCH and column subsets](03c-match-and-column-subsets.md)** | <span className="db-tier t-master">Master</span> | The NULL hole in composite keys |
 | 04 | **[NOT NULL DEFAULT UNIQUE CHECK](04-constraints.md)** | <span className="db-tier t-master">Master</span> | Invariants in the schema |
 | 05 | **[ALTER TABLE](05-alter-table.md)** | <span className="db-tier t-master">Master</span> | Instant vs rewrite |
 | 06 | **[Modeling relationships](06-relationships.md)** | <span className="db-tier t-master">Master</span> | 1-1, 1-N, N-N |

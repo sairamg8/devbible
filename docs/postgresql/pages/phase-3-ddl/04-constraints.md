@@ -236,4 +236,4 @@ justified decision rather than the default.
 
 ---
 
-← [Foreign keys](03-foreign-keys.md) · Next → [`ALTER TABLE`](05-alter-table.md)
+← [`MATCH` and column subsets](03c-match-and-column-subsets.md) · Next → [`ALTER TABLE`](05-alter-table.md)

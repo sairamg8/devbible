@@ -23,6 +23,12 @@ CREATE TABLE fk_child (
 );
 ```
 
+`REFERENCES` on the column is the *column-constraint* spelling;
+`FOREIGN KEY (parent_id) REFERENCES fk_parent (id)` writes the same constraint as a
+*table constraint*. Which spellings are available to you is decided by the number of
+columns in the key, not by the actions below — see
+[`REFERENCES` vs `FOREIGN KEY`](03b-references-and-foreign-key.md).
+
 Delete the parent of an existing child:
 
 ```console
@@ -223,4 +229,4 @@ natural and mutable, which is an argument for a surrogate key instead.
 
 ---
 
-← [Primary keys](02-primary-keys.md) · Next → [`NOT NULL`, `DEFAULT`, `UNIQUE`, `CHECK`](04-constraints.md)
+← [Primary keys](02-primary-keys.md) · Next → [`REFERENCES` vs `FOREIGN KEY`](03b-references-and-foreign-key.md)
