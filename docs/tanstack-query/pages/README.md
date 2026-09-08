@@ -42,6 +42,16 @@ links on to its continuation.
 
 | Chunk | Belongs to |
 |---|---|
+| [01b · `enabled` & `skipToken`](./02-usequery-deep-dive/01b-enabled-and-skiptoken.md) | under **`useQuery` Deep Dive** |
+| [01c · `staleTime` & `refetchOn*`](./02-usequery-deep-dive/01c-staletime-and-the-refetchon-family.md) | under **`useQuery` Deep Dive** |
+| [01d · `retry` & `throwOnError`](./02-usequery-deep-dive/01d-retry-retrydelay-and-throwonerror.md) | under **`useQuery` Deep Dive** |
+| [01b · Query filters: the key axis](./04-caching-and-invalidation/01b-query-filters-the-matching-surface.md) | under **Caching & Invalidation** |
+| [01c · Filtering by state](./04-caching-and-invalidation/01c-filtering-by-state-type-stale-predicate.md) | under **Caching & Invalidation** |
+| [01d · Invalidate vs refetch vs reset vs remove](./04-caching-and-invalidation/01d-invalidate-refetch-reset-remove.md) | under **Caching & Invalidation** |
+| [01e · Direct cache access](./04-caching-and-invalidation/01e-direct-cache-access.md) | under **Caching & Invalidation** |
+| [01f · staleTime vs gcTime](./04-caching-and-invalidation/01f-staletime-vs-gctime.md) | under **Caching & Invalidation** |
+| [01j · Auditing for the rotation](./16-migration-recipes/01j-auditing-a-codebase-for-the-rotation.md) | under **Migration Recipe** |
+| [01p · Prefetch timing & `staleTime`](./16-migration-recipes/01p-prefetch-scheduling-and-staletime.md) | under **Migration Recipe** |
 | [01b · Refetch render cost](./06-background-refetching/01b-refetch-render-cost.md) | under **Background Refetching** |
 | [01c · Polling](./06-background-refetching/01c-polling-and-refetch-interval.md) | under **Background Refetching** |
 | [01d · Network mode & offline](./06-background-refetching/01d-network-mode-and-offline.md) | under **Background Refetching** |

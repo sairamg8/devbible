@@ -814,13 +814,13 @@
     }
   },
   "tanstack-query": {
-    "pages": 49,
-    "validated": 49,
+    "pages": 59,
+    "validated": 59,
     "phases": {
       "01-core-concepts": 1,
-      "02-usequery-deep-dive": 1,
+      "02-usequery-deep-dive": 4,
       "03-query-states": 1,
-      "04-caching-and-invalidation": 1,
+      "04-caching-and-invalidation": 6,
       "05-usemutation": 1,
       "06-background-refetching": 4,
       "07-pagination-and-infinite-queries": 4,
@@ -832,13 +832,13 @@
       "13-global-configuration": 1,
       "14-optimistic-updates-patterns": 4,
       "15-testing-tanstack-query": 4,
-      "16-migration-recipes": 8
+      "16-migration-recipes": 10
     },
     "validatedPhases": {
       "01-core-concepts": 1,
-      "02-usequery-deep-dive": 1,
+      "02-usequery-deep-dive": 4,
       "03-query-states": 1,
-      "04-caching-and-invalidation": 1,
+      "04-caching-and-invalidation": 6,
       "05-usemutation": 1,
       "06-background-refetching": 4,
       "07-pagination-and-infinite-queries": 4,
@@ -850,7 +850,7 @@
       "13-global-configuration": 1,
       "14-optimistic-updates-patterns": 4,
       "15-testing-tanstack-query": 4,
-      "16-migration-recipes": 8
+      "16-migration-recipes": 10
     }
   },
   "typescript": {
