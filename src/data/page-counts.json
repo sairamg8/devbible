@@ -814,8 +814,8 @@
     }
   },
   "tanstack-query": {
-    "pages": 45,
-    "validated": 45,
+    "pages": 49,
+    "validated": 49,
     "phases": {
       "01-core-concepts": 1,
       "02-usequery-deep-dive": 1,
@@ -832,7 +832,7 @@
       "13-global-configuration": 1,
       "14-optimistic-updates-patterns": 4,
       "15-testing-tanstack-query": 4,
-      "16-migration-recipes": 4
+      "16-migration-recipes": 8
     },
     "validatedPhases": {
       "01-core-concepts": 1,
@@ -850,7 +850,7 @@
       "13-global-configuration": 1,
       "14-optimistic-updates-patterns": 4,
       "15-testing-tanstack-query": 4,
-      "16-migration-recipes": 4
+      "16-migration-recipes": 8
     }
   },
   "typescript": {

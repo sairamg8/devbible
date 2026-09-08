@@ -737,7 +737,7 @@ export const LANGUAGES = {
   'tanstack-query': {
     label: "TanStack Query",
     imported: true,
-    updated: '2026-09-08 15:04',
+    updated: '2026-09-08 21:40',
     docsPath: '/docs/tanstack-query',
     pagesPath: '/docs/tanstack-query/pages',
     phases: [
@@ -756,7 +756,7 @@ export const LANGUAGES = {
       {n: 13, slug: '13-global-configuration', name: "Global configuration", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
       {n: 14, slug: '14-optimistic-updates-patterns', name: "Optimistic updates patterns", part: 'Imported corpus', topics: 1, pages: 4, verified: 4},
       {n: 15, slug: '15-testing-tanstack-query', name: "Testing tanstack query", part: 'Imported corpus', topics: 1, pages: 4, verified: 4},
-      {n: 16, slug: '16-migration-recipes', name: "Migration recipes", part: 'Imported corpus', topics: 1, pages: 4, verified: 4},
+      {n: 16, slug: '16-migration-recipes', name: "Migration recipes", part: 'Imported corpus', topics: 1, pages: 8, verified: 8},
       {n: 17, slug: '17-the-2026-toolchain-landscape', name: "The 2026 toolchain landscape", part: 'Written for this bible', topics: 1, pages: 6, verified: 6},
     ],
   },
