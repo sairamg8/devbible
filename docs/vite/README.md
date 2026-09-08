@@ -46,7 +46,7 @@ and what else does a 2026 frontend project have to choose. Every version in it w
 | 09 | [Css handling](pages/09-css-handling/01-styling-pipeline.md) ✅ | 10 |
 | 10 | [Ssr support](pages/10-ssr-support/01-server-side-rendering-primitives.md) ✅ | 11 |
 | 11 | [Optimization and performance](pages/11-optimization-and-performance/01-build-time-performance.md) ✅ | 10 |
-| 12 | [Path resolution and aliases](pages/12-path-resolution-and-aliases/01-resolve-options.md) | 1 |
+| 12 | [Path resolution and aliases](pages/12-path-resolution-and-aliases/01-resolve-options.md) ✅ | 15 |
 | 13 | [Worker and wasm support](pages/13-worker-and-wasm-support/01-advanced-runtime-targets.md) ✅ | 5 |
 | 14 | [Testing integration](pages/14-testing-integration/01-vitest-relationship.md) ✅ | 10 |
 | 15 | [Deployment considerations](pages/15-deployment-considerations/01-shipping-the-build.md) | 1 |

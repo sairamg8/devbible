@@ -20,7 +20,7 @@
     "validating": 4,
     "validated": 1,
     "pages": 243,
-    "pagesValidated": 73,
+    "pagesValidated": 74,
     "percent": 30
   },
   "languages": [
@@ -252,14 +252,14 @@
       "key": "vite",
       "label": "Vite",
       "status": "validating",
-      "percent": 82,
+      "percent": 88,
       "counts": "pages validated",
       "topics": 17,
-      "completed": 14,
-      "pending": 3,
+      "completed": 15,
+      "pending": 2,
       "imported": true,
-      "phases": "14/17",
-      "next": "12 · Path resolution and aliases",
+      "phases": "15/17",
+      "next": "15 · Deployment considerations",
       "docs": "/docs/vite",
       "updated": "2026-09-07 22:50",
       "note": null

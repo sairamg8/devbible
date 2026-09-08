@@ -517,7 +517,7 @@ export const LANGUAGES = {
       {n: 9, slug: '09-css-handling', name: "Css handling", part: 'Imported corpus', topics: 1, pages: 10, verified: 10},
       {n: 10, slug: '10-ssr-support', name: "Ssr support", part: 'Imported corpus', topics: 1, pages: 11, verified: 11},
       {n: 11, slug: '11-optimization-and-performance', name: "Optimization and performance", part: 'Imported corpus', topics: 1, pages: 10, verified: 10},
-      {n: 12, slug: '12-path-resolution-and-aliases', name: "Path resolution and aliases", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
+      {n: 12, slug: '12-path-resolution-and-aliases', name: "Path resolution and aliases", part: 'Imported corpus', topics: 1, pages: 15, verified: 15},
       {n: 13, slug: '13-worker-and-wasm-support', name: "Worker and wasm support", part: 'Imported corpus', topics: 1, pages: 5, verified: 5},
       {n: 14, slug: '14-testing-integration', name: "Testing integration", part: 'Imported corpus', topics: 1, pages: 10, verified: 10},
       {n: 15, slug: '15-deployment-considerations', name: "Deployment considerations", part: 'Imported corpus', topics: 1, pages: 1, verified: 0},
