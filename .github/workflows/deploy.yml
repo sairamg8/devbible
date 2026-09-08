@@ -54,13 +54,20 @@ jobs:
         # proven one. If 143 returns WITH this set, the cause is elsewhere —
         # do not just raise the number again.
         #
-        # 4096 -> 8192 applies to the MAIN thread, which is the one that grows.
-        # The 4 SSG workers `yarn build` spawns are already bounded by
-        # DOCUSAURUS_SSG_WORKER_THREAD_RECYCLER_MAX_MEMORY=500000000 in
-        # package.json, so worst case is ~8GB + ~2GB on a 16GB runner. Raising
-        # this past ~10GB starts trading an OOM for swap-thrash.
+        # The knob is right for THIS phase: the log dies right after "Creating
+        # an optimized production build...", which is the BUNDLING phase in the
+        # main process. The SSG worker pool is a different ceiling with
+        # different knobs (DOCUSAURUS_SSG_WORKER_THREAD_*, already set in
+        # package.json at 4 threads x 500MB) and the heap does nothing for it.
+        #
+        # 🔴 The value is 4096 and NOT 8192, on purpose. Node's default here is
+        # ~2.2GB, not 4GB — measured, `v8.getHeapStatistics().heap_size_limit`
+        # on a 14GB box — so 4096 is a real change, not a no-op. 8192 was tried
+        # on 2026-09-05 and the bundler grew to 9.8GB RSS: a heap cap is
+        # permission to grow, not a target. With the SSG pool capped the whole
+        # build should peak ~6-7GB, well inside a 16GB runner.
         env:
-          NODE_OPTIONS: --max-old-space-size=8192
+          NODE_OPTIONS: --max-old-space-size=4096
         run: |
           set -o pipefail
           yarn build 2>&1 | tee build.log
