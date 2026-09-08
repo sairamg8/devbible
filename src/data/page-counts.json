@@ -814,8 +814,8 @@
     }
   },
   "tanstack-query": {
-    "pages": 31,
-    "validated": 27,
+    "pages": 45,
+    "validated": 45,
     "phases": {
       "01-core-concepts": 1,
       "02-usequery-deep-dive": 1,
@@ -827,12 +827,12 @@
       "08-dependent-and-parallel-queries": 7,
       "09-prefetching-and-ssr": 1,
       "10-suspense-integration": 4,
-      "11-devtools": 1,
+      "11-devtools": 6,
       "12-query-cancellation": 1,
       "13-global-configuration": 1,
-      "14-optimistic-updates-patterns": 1,
-      "15-testing-tanstack-query": 1,
-      "16-migration-recipes": 1
+      "14-optimistic-updates-patterns": 4,
+      "15-testing-tanstack-query": 4,
+      "16-migration-recipes": 4
     },
     "validatedPhases": {
       "01-core-concepts": 1,
@@ -845,12 +845,12 @@
       "08-dependent-and-parallel-queries": 7,
       "09-prefetching-and-ssr": 1,
       "10-suspense-integration": 4,
-      "11-devtools": 0,
+      "11-devtools": 6,
       "12-query-cancellation": 1,
       "13-global-configuration": 1,
-      "14-optimistic-updates-patterns": 0,
-      "15-testing-tanstack-query": 0,
-      "16-migration-recipes": 0
+      "14-optimistic-updates-patterns": 4,
+      "15-testing-tanstack-query": 4,
+      "16-migration-recipes": 4
     }
   },
   "typescript": {

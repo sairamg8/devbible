@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-08 14:01",
+  "updated": "2026-09-08 15:04",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -17,11 +17,11 @@
   "importedTotals": {
     "tracks": 11,
     "untouched": 6,
-    "validating": 3,
-    "validated": 2,
+    "validating": 2,
+    "validated": 3,
     "pages": 243,
-    "pagesValidated": 88,
-    "percent": 36
+    "pagesValidated": 92,
+    "percent": 38
   },
   "languages": [
     {
@@ -379,17 +379,17 @@
     {
       "key": "tanstack-query",
       "label": "TanStack Query",
-      "status": "validating",
-      "percent": 76,
+      "status": "validated",
+      "percent": 100,
       "counts": "pages validated",
       "topics": 17,
-      "completed": 13,
-      "pending": 4,
+      "completed": 17,
+      "pending": 0,
       "imported": true,
-      "phases": "13/17",
-      "next": "11 · Devtools",
+      "phases": "17/17",
+      "next": null,
       "docs": "/docs/tanstack-query",
-      "updated": "2026-09-08 14:01",
+      "updated": "2026-09-08 15:04",
       "note": null
     },
     {
