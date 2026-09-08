@@ -211,4 +211,4 @@ Vite 8 migration is a list of renamed options rather than an ecosystem reset.
 
 ---
 
-← [Migration Recipes](../16-migration-recipes/01-cra-to-vite-migration.md) · [Vite overview](../../README.md) · Next → [Choosing a Bundler](01a-choosing-a-bundler.md)
+← [01n · Module Federation](../16-migration-recipes/01n-module-federation-migration.md) · [Vite overview](../../README.md) · Next → [Choosing a Bundler](01a-choosing-a-bundler.md)
