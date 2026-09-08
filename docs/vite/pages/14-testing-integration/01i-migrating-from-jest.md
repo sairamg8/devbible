@@ -141,4 +141,4 @@ Because the two tools solve the aliasing problem at structurally different layer
 
 ---
 
-← [01h · CI, pool, and reporters](01h-ci-execution-and-reporters.md) · [Vite overview](../../README.md) · Next → [Deployment Considerations](../15-deployment-considerations/01-shipping-the-build.md)
+← [01h · CI, pool, and reporters](01h-ci-execution-and-reporters.md) · [Vite overview](../../README.md) · Next → [01 · base and the deploy path](../15-deployment-considerations/01-shipping-the-build.md)
