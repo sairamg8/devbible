@@ -22,7 +22,7 @@ sidebar_position: 1
 | Codemod | none possible; the models differ | yes, official, for the signature change only |
 | Blast radius | the whole data layer, plus the Redux store | every component that reads `isLoading` |
 | How you know you are done | the `createApi` file is deleted | you cannot know from the code; you have to check behaviour |
-| The characteristic failure | two caches holding the same resource — see **`01e`** *(not written yet)* | a spinner that stopped rendering — see **`01h`** *(not written yet)* |
+| The characteristic failure | two caches holding the same resource — see [`01e`](./01e-running-both-caches-at-once.md) | a spinner that stopped rendering — see [`01h`](./01h-the-status-rename-and-the-isloading-trap.md) |
 
 🔴 **The last row is the whole point of this topic.** A translation fails loudly. An audit fails silently.
 
@@ -33,7 +33,7 @@ Every change in a migration falls into one of two buckets, and they need complet
 - **Mechanical** — the old name and the new name mean the same thing. `cacheTime` → `gcTime`. A codemod, or `sed`, is correct here, and a review that reads "renamed, no behaviour change" is an honest review.
 - **Semantic** — the code still compiles and now behaves differently. `isLoading` survives the upgrade untouched and means something narrower than it used to. No tool can find these, because there is nothing wrong with the syntax.
 
-The classification for the entire v4 → v5 surface is in **`01f`** *(not written yet)*. The rest of this page is the RTK Query translation, because that is what the original version of this page covered and it is still the harder *design* problem — just not the more dangerous one.
+The classification for the entire v4 → v5 surface is in [`01f`](./01f-v4-to-v5-mechanical-versus-semantic.md). The rest of this page is the RTK Query translation, because that is what the original version of this page covered and it is still the harder *design* problem — just not the more dangerous one.
 
 ## 3. RTK Query and TanStack Query solve the same problem with different cache identity
 

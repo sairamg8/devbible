@@ -228,4 +228,4 @@ Both, usually, and for different keys. If the server returns the updated entity,
 
 ---
 
-← [Endpoints → `queryOptions`](./01c-rtk-query-endpoints-to-query-options.md) · [Topic index](../README.md) · Next → **Running both caches at once** *(not written yet)*
+← [Endpoints → `queryOptions`](./01c-rtk-query-endpoints-to-query-options.md) · [Topic index](../README.md) · Next → [Running both caches at once](./01e-running-both-caches-at-once.md)

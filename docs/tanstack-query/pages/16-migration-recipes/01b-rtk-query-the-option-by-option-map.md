@@ -28,7 +28,7 @@ sidebar_position: 2
 | `pollingInterval: 15000` | `refetchInterval: 15000` | ✅ |
 | `skipPollingIfUnfocused: true` | `refetchIntervalInBackground` — **the inverse option** | 🔴 inverted *name* |
 | `skip: true` | `enabled: false`, or `skipToken` | ✅ — see [`01e` of topic 08](../08-dependent-and-parallel-queries/01e-the-gate-in-full-skiptoken-and-placeholder-chains.md) |
-| `api.usePrefetch('endpoint')` | `queryClient.query({ queryKey, queryFn })` | 🔴 **throws** — see **`01n`** *(not written yet)* |
+| `api.usePrefetch('endpoint')` | `queryClient.query({ queryKey, queryFn })` | 🔴 **throws** — see [`01n`](./01n-prefetchquery-to-queryclient-query.md) |
 | `transformResponse` | transform inside `queryFn` (cached) or `select` (not cached) | 🔴 two different things |
 | `selectFromResult` | `select` | ✅ |
 | `onQueryStarted` + `queryFulfilled` | `onMutate` / `onError` / `onSettled` | see [`01d`](./01d-rtk-query-mutations-and-rollback.md) |
@@ -77,7 +77,7 @@ The status vocabulary itself is worth internalising once, because it is the thin
 
 > *"The status gives information about the data: Do we have any or not? The fetchStatus gives information about the queryFn: Is it running or not?"*
 
-[Query States](../03-query-states/01-status-flags.md) is the full treatment. The v4 → v5 half of this same trap — the *upgrade* rather than the port — is **`01h`** *(not written yet)*.
+[Query States](../03-query-states/01-status-flags.md) is the full treatment. The v4 → v5 half of this same trap — the *upgrade* rather than the port — is [`01h`](./01h-the-status-rename-and-the-isloading-trap.md).
 
 ## 3. The four defaults that produce the traffic
 
