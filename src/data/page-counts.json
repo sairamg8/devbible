@@ -814,13 +814,13 @@
     }
   },
   "tanstack-query": {
-    "pages": 59,
-    "validated": 59,
+    "pages": 68,
+    "validated": 68,
     "phases": {
       "01-core-concepts": 1,
-      "02-usequery-deep-dive": 4,
+      "02-usequery-deep-dive": 9,
       "03-query-states": 1,
-      "04-caching-and-invalidation": 6,
+      "04-caching-and-invalidation": 10,
       "05-usemutation": 1,
       "06-background-refetching": 4,
       "07-pagination-and-infinite-queries": 4,
@@ -836,9 +836,9 @@
     },
     "validatedPhases": {
       "01-core-concepts": 1,
-      "02-usequery-deep-dive": 4,
+      "02-usequery-deep-dive": 9,
       "03-query-states": 1,
-      "04-caching-and-invalidation": 6,
+      "04-caching-and-invalidation": 10,
       "05-usemutation": 1,
       "06-background-refetching": 4,
       "07-pagination-and-infinite-queries": 4,

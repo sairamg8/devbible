@@ -52,6 +52,15 @@ links on to its continuation.
 | [01f · staleTime vs gcTime](./04-caching-and-invalidation/01f-staletime-vs-gctime.md) | under **Caching & Invalidation** |
 | [01j · Auditing for the rotation](./16-migration-recipes/01j-auditing-a-codebase-for-the-rotation.md) | under **Migration Recipe** |
 | [01p · Prefetch timing & `staleTime`](./16-migration-recipes/01p-prefetch-scheduling-and-staletime.md) | under **Migration Recipe** |
+| [01e · initialData vs placeholderData](./02-usequery-deep-dive/01e-initialdata-vs-placeholderdata.md) | under **`useQuery` Deep Dive** |
+| [01e2 · Seeding, hydration & suspense](./02-usequery-deep-dive/01e2-seeding-hydration-and-suspense.md) | under **`useQuery` Deep Dive** |
+| [01f · `select`](./02-usequery-deep-dive/01f-select.md) | under **`useQuery` Deep Dive** |
+| [01g · queryOptions factories](./02-usequery-deep-dive/01g-queryoptions-factories-and-type-inference.md) | under **`useQuery` Deep Dive** |
+| [01g2 · Parameterised factories](./02-usequery-deep-dive/01g2-parameterised-factories-and-composition.md) | under **`useQuery` Deep Dive** |
+| [01g · Structural sharing](./04-caching-and-invalidation/01g-structural-sharing.md) | under **Caching & Invalidation** |
+| [01g2 · The structuralSharing option](./04-caching-and-invalidation/01g2-structuralsharing-option-and-interactions.md) | under **Caching & Invalidation** |
+| [01h · Query key factories](./04-caching-and-invalidation/01h-query-key-factories.md) | under **Caching & Invalidation** |
+| [01h2 · What belongs in a key](./04-caching-and-invalidation/01h2-what-belongs-in-a-query-key.md) | under **Caching & Invalidation** |
 | [01b · Refetch render cost](./06-background-refetching/01b-refetch-render-cost.md) | under **Background Refetching** |
 | [01c · Polling](./06-background-refetching/01c-polling-and-refetch-interval.md) | under **Background Refetching** |
 | [01d · Network mode & offline](./06-background-refetching/01d-network-mode-and-offline.md) | under **Background Refetching** |

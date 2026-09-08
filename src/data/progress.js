@@ -737,14 +737,14 @@ export const LANGUAGES = {
   'tanstack-query': {
     label: "TanStack Query",
     imported: true,
-    updated: '2026-09-08 17:30',
+    updated: '2026-09-08 17:50',
     docsPath: '/docs/tanstack-query',
     pagesPath: '/docs/tanstack-query/pages',
     phases: [
       {n: 1, slug: '01-core-concepts', name: "Core concepts", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
-      {n: 2, slug: '02-usequery-deep-dive', name: "Usequery deep dive", part: 'Imported corpus', topics: 1, pages: 4, verified: 4},
+      {n: 2, slug: '02-usequery-deep-dive', name: "Usequery deep dive", part: 'Imported corpus', topics: 1, pages: 9, verified: 9},
       {n: 3, slug: '03-query-states', name: "Query states", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
-      {n: 4, slug: '04-caching-and-invalidation', name: "Caching and invalidation", part: 'Imported corpus', topics: 1, pages: 6, verified: 6},
+      {n: 4, slug: '04-caching-and-invalidation', name: "Caching and invalidation", part: 'Imported corpus', topics: 1, pages: 10, verified: 10},
       {n: 5, slug: '05-usemutation', name: "Usemutation", part: 'Imported corpus', topics: 1, pages: 1, verified: 1},
       {n: 6, slug: '06-background-refetching', name: "Background refetching", part: 'Imported corpus', topics: 1, pages: 4, verified: 4},
       {n: 7, slug: '07-pagination-and-infinite-queries', name: "Pagination and infinite queries", part: 'Imported corpus', topics: 1, pages: 4, verified: 4},
