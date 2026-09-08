@@ -1,7 +1,7 @@
 ---
 title: "A global find-and-replace of prefetchQuery to query compiles cleanly, passes review, and converts a category of harmless cache warm-ups into unhandled rejections — because your forty prefetch call sites are four different call sites wearing the same method name"
 sidebar_label: "01n · Prefetch → `query()`"
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -11,7 +11,7 @@ sidebar_position: 8
 
 # 🔁 One Rename, Four Ports
 
-**`prefetchQuery` and `ensureQueryData` are deprecated in favour of `queryClient.query()`, and the two methods differ in exactly one way that matters: the old one swallowed failures and the new one throws.** That makes the rename mechanical in *syntax* and semantic in *behaviour* — the worst combination, because `sed -i 's/prefetchQuery/query/g'` produces a diff that compiles, type-checks, passes review in thirty seconds, and changes what happens on every unhappy path in the codebase. This page is not another explanation of what `query()` does; [topic 09](../09-prefetching-and-ssr/01-server-rendered-data-flow.md), [topic 10](../10-suspense-integration/01d-fetch-on-render-and-streaming.md) and [topic 07](../07-pagination-and-infinite-queries/01-paged-data-patterns.md) already cover the mechanism. **This is the worklist.** You have forty call sites; they sort into four classes; each class has a different correct port, and one of them is an outage.
+**`prefetchQuery` and `ensureQueryData` are deprecated in favour of `queryClient.query()`, and the two methods differ in exactly one way that matters: the old one swallowed failures and the new one throws.** That makes the rename mechanical in *syntax* and semantic in *behaviour* — the worst combination, because `sed -i 's/prefetchQuery/query/g'` produces a diff that compiles, type-checks, passes review in thirty seconds, and changes what happens on every unhappy path in the codebase. This page is not another explanation of what `query()` does; [topic 09](../09-prefetching-and-ssr/01-server-rendered-data-flow.md), [topic 10](../10-suspense-integration/01d-fetch-on-render-and-streaming.md) and [topic 07](../07-pagination-and-infinite-queries/01-paged-data-patterns.md) already cover the mechanism. **This is the worklist.** You have forty call sites; they sort into four classes; each class has a different correct port, and one of them is an outage. Three of them are below. The fourth — the infinite variant, which needs two options no rename supplies — opens [`01p`](./01p-prefetch-scheduling-and-staletime.md), because its problem is not the throw at all.
 
 ## 1. The deprecation, and why it is not on the migration guide
 
@@ -40,21 +40,38 @@ One question sorts a call site into its class:
 | *Nobody — it is fire-and-forget* | **(a)** speculative warm-up | explicit, commented `.catch` |
 | *A `Promise.all` that renders a page* | **(b)** SSR / route loader | `allSettled` or per-key catch |
 | *The caller, which wants the data* | **(c)** `ensureQueryData` for its value | `try`/`catch` at the call site |
-| *any of the above, but infinite* | **(d)** `prefetchInfiniteQuery` | `infiniteQuery` + `pages` + `initialPageParam` |
+| *any of the above, but infinite* | **(d)** `prefetchInfiniteQuery` → [`01p` §1](./01p-prefetch-scheduling-and-staletime.md) | `infiniteQuery` + `pages` + `initialPageParam` |
 
-Finding them:
+Finding them. Match on the **method names alone**, never on `queryClient.` — half a codebase reaches the client through `qc`, `props.queryClient`, or a helper that closes over it:
 
 ```bash
-# Every deprecated prefetch/fetch entry point, with file and line, as a worklist
-grep -rnE --include='*.ts' --include='*.tsx' \
-  '(prefetch|ensure|fetch)(Query|InfiniteQuery|QueryData|InfiniteQueryData)\b' src/ \
+# 1 — the worklist. Every deprecated entry point, with file and line.
+grep -rnE \
+  --include='*.ts' --include='*.tsx' \
+  '\b(prefetchQuery|fetchQuery|prefetchInfiniteQuery|fetchInfiniteQuery|ensureQueryData|ensureInfiniteQueryData)\b' \
+  src/ \
   | tee prefetch-audit.txt
 
-grep -v 'await\|\.catch\|\.then' prefetch-audit.txt        # class (a) candidates
-grep -rn -B4 'prefetchQuery\|ensureQueryData' src/ | grep 'Promise.all'   # class (b)
+# 2 — class (a) candidates: nothing on the line handles the promise.
+grep -v 'await'    prefetch-audit.txt \
+  | grep -v '\.catch' \
+  | grep -v '\.then'
+
+# 3 — class (b) candidates: a Promise.all within four lines above the call.
+grep -rn -B4 \
+  --include='*.ts' --include='*.tsx' \
+  '\b(prefetchQuery|ensureQueryData)\b' \
+  src/ \
+  | grep 'Promise\.all'
+
+# 4 — class (d): the infinite variants, which need two options no rename supplies.
+grep -rnE \
+  --include='*.ts' --include='*.tsx' \
+  '\b(prefetchInfiniteQuery|fetchInfiniteQuery|ensureInfiniteQueryData)\b' \
+  src/
 ```
 
-⚠️ **`grep` finds the call, not the class.** The last two commands are candidate filters, not answers; a prefetch three lines below a `Promise.all([` is still inside it. Read every hit.
+⚠️ **`grep` finds the call, not the class.** Commands 2–4 are candidate filters, not answers; a prefetch three lines below a `Promise.all([` is still inside it, and a prefetch wrapped in a helper is classified by the helper's *callers*, not by the helper. Read every hit in command 1's output. Check `prefetch-audit.txt` into the branch — it is the checklist you tick off, and it is the thing a reviewer asks to see.
 
 ## 3. Class (a) — the speculative warm-up
 
@@ -62,9 +79,24 @@ grep -rn -B4 'prefetchQuery\|ensureQueryData' src/ | grep 'Promise.all'   # clas
 
 ```tsx
 // ⛔ WRONG PORT — the find-and-replace output. Compiles. Type-checks. Rejects into the void.
-onMouseEnter={() => {
-  queryClient.query({ queryKey: ['product', productId], queryFn: () => fetchProduct(productId) });
-}}
+import { useQueryClient } from '@tanstack/react-query';
+
+function ProductLink({ productId }: { productId: string }) {
+  const queryClient = useQueryClient();
+  return (
+    <Link
+      to={`/products/${productId}`}
+      onMouseEnter={() => {
+        queryClient.query({
+          queryKey: ['product', productId],
+          queryFn: () => fetchProduct(productId),
+        });
+      }}
+    >
+      View
+    </Link>
+  );
+}
 ```
 
 Under `prefetchQuery` a hover over a link to a 404ing product was silent. Under `query()` it is a **floating rejected promise**: a `window.onunhandledrejection` event, a red overlay in the Vite/Next dev server, and — because a user sweeps the mouse across a list — a burst of identical events in Sentry from a code path that has no user-visible consequence at all.
@@ -80,7 +112,10 @@ function ProductLink({ productId }: { productId: string }) {
       to={`/products/${productId}`}
       onMouseEnter={() => {
         queryClient
-          .query({ queryKey: ['product', productId], queryFn: () => fetchProduct(productId) })
+          .query({
+            queryKey: ['product', productId],
+            queryFn: () => fetchProduct(productId),
+          })
           // Speculative warm-up. If it fails, the page's own useQuery will fetch and
           // surface the error there. Swallowing is intentional: query() throws where
           // prefetchQuery did not.
@@ -100,12 +135,20 @@ function ProductLink({ productId }: { productId: string }) {
 A route loader or Server Component warming several keys at once:
 
 ```tsx
-// ⛔ WRONG PORT — this is the one that 500s the page. (Inside a loader; see the fix below.)
-await Promise.all([
-  queryClient.query({ queryKey: ['user', params.id], queryFn: () => fetchUser(params.id) }),
-  queryClient.query({ queryKey: ['orders', params.id], queryFn: () => fetchOrders(params.id) }),
-  queryClient.query({ queryKey: ['recommendations'], queryFn: fetchRecommendations }),
-]);
+// ⛔ WRONG PORT — this is the one that 500s the page.
+import { QueryClient, dehydrate } from '@tanstack/react-query';
+
+export async function loader({ params }: { params: { id: string } }) {
+  const queryClient = new QueryClient();
+
+  await Promise.all([
+    queryClient.query({ queryKey: ['user', params.id], queryFn: () => fetchUser(params.id) }),
+    queryClient.query({ queryKey: ['orders', params.id], queryFn: () => fetchOrders(params.id) }),
+    queryClient.query({ queryKey: ['recommendations'], queryFn: fetchRecommendations }),
+  ]);
+
+  return { dehydratedState: dehydrate(queryClient) };
+}
 ```
 
 **Before the rename**, `prefetchQuery` swallowed. A flaky recommendations service left `['recommendations']` unresolved in the dehydrated cache, the page rendered with the other two keys hydrated, and the client's `useQuery` fetched recommendations itself — a degraded widget, not an incident.
@@ -116,30 +159,52 @@ await Promise.all([
 
 ```tsx
 // ✅ RIGHT PORT — allSettled preserves the old resilience explicitly.
-const results = await Promise.allSettled([
-  queryClient.query({ queryKey: ['user', params.id], queryFn: () => fetchUser(params.id) }),
-  queryClient.query({ queryKey: ['orders', params.id], queryFn: () => fetchOrders(params.id) }),
-  queryClient.query({ queryKey: ['recommendations'], queryFn: fetchRecommendations }),
-]);
-// The rename is now the moment you get to CHOOSE, per key, instead of inheriting a swallow.
-for (const r of results) {
-  if (r.status === 'rejected') logger.warn({ err: r.reason }, 'prefetch failed; client will refetch');
+import { QueryClient, dehydrate } from '@tanstack/react-query';
+
+export async function loader({ params }: { params: { id: string } }) {
+  const queryClient = new QueryClient();
+
+  const results = await Promise.allSettled([
+    queryClient.query({ queryKey: ['user', params.id], queryFn: () => fetchUser(params.id) }),
+    queryClient.query({ queryKey: ['orders', params.id], queryFn: () => fetchOrders(params.id) }),
+    queryClient.query({ queryKey: ['recommendations'], queryFn: fetchRecommendations }),
+  ]);
+
+  // The rename is now the moment you get to CHOOSE, per key, instead of inheriting a swallow.
+  for (const r of results) {
+    if (r.status === 'rejected') {
+      logger.warn({ err: r.reason }, 'prefetch failed; client will refetch');
+    }
+  }
+
+  return { dehydratedState: dehydrate(queryClient) };
 }
-return { dehydratedState: dehydrate(queryClient) };
 ```
 
 **The better version distinguishes critical from optional keys**, which `prefetchQuery` never let you do:
 
 ```tsx
 // ✅ BEST PORT — the user is the page; recommendations are a nice-to-have.
-const [user] = await Promise.all([
-  queryClient.query({ queryKey: ['user', params.id], queryFn: () => fetchUser(params.id) }),
-]); // no catch: if the user 404s, this route legitimately has no page to render
+import { QueryClient, dehydrate } from '@tanstack/react-query';
 
-await Promise.allSettled([
-  queryClient.query({ queryKey: ['orders', params.id], queryFn: () => fetchOrders(params.id) }),
-  queryClient.query({ queryKey: ['recommendations'], queryFn: fetchRecommendations }),
-]);
+export async function loader({ params }: { params: { id: string } }) {
+  const queryClient = new QueryClient();
+
+  // No catch: if the user 404s, this route legitimately has no page to render,
+  // and throwing here is what hands the request to the route's error boundary.
+  await queryClient.query({
+    queryKey: ['user', params.id],
+    queryFn: () => fetchUser(params.id),
+  });
+
+  // Best effort. A failure here is a missing widget, not a missing page.
+  await Promise.allSettled([
+    queryClient.query({ queryKey: ['orders', params.id], queryFn: () => fetchOrders(params.id) }),
+    queryClient.query({ queryKey: ['recommendations'], queryFn: fetchRecommendations }),
+  ]);
+
+  return { dehydratedState: dehydrate(queryClient) };
+}
 ```
 
 That is the honest upside of the deprecation: `prefetchQuery` gave every key the same failure policy — swallow — whether or not the page could render without it.
@@ -150,84 +215,41 @@ That is the honest upside of the deprecation: `prefetchQuery` gave every key the
 
 ```ts
 // ⛔ BEFORE — the failure surfaces as a TypeError somewhere else entirely.
-const settings = await queryClient.ensureQueryData({ queryKey: ['settings'], queryFn: fetchSettings });
-applyTheme(settings.theme);   // settings is undefined on failure → "Cannot read properties of undefined"
+async function bootstrapTheme(queryClient: QueryClient) {
+  const settings = await queryClient.ensureQueryData({
+    queryKey: ['settings'],
+    queryFn: fetchSettings,
+  });
+  applyTheme(settings.theme);   // settings is undefined on failure →
+                                // "Cannot read properties of undefined (reading 'theme')"
+}
+```
 
+```ts
 // ✅ AFTER — the error arrives where the decision is.
-try {
-  const settings = await queryClient.query({ queryKey: ['settings'], queryFn: fetchSettings });
-  applyTheme(settings.theme);
-} catch (err) {
-  logger.warn({ err }, 'settings unavailable; using defaults');
-  applyTheme(DEFAULT_THEME);
+async function bootstrapTheme(queryClient: QueryClient) {
+  try {
+    const settings = await queryClient.query({
+      queryKey: ['settings'],
+      queryFn: fetchSettings,
+    });
+    applyTheme(settings.theme);
+  } catch (err) {
+    logger.warn({ err }, 'settings unavailable; using defaults');
+    applyTheme(DEFAULT_THEME);
+  }
 }
 ```
 
 ⚠️ **Not settled by any source I have, and I am not going to guess:** whether `queryClient.query()` reuses a fresh cache entry under `staleTime` the way `ensureQueryData` did, or always initiates a fetch. `ensureQueryData`'s documented contract was "return the cached value if present, otherwise fetch"; the `query()` description quoted above says only that it *"can be used to fetch and cache a query"* and settles nothing about cache-hit behaviour. **This is load-bearing for exactly this class** — if `query()` always fetches, an `ensureQueryData` call inside a hot path becomes a request per call. **Verify against the installed build before porting class (c) at scale**, and until then treat every class-(c) site as a possible new network call.
 
-## 6. Class (d) — `prefetchInfiniteQuery`
-
-```ts
-// ✅ v5 shape. Two traps live in this one call.
-await queryClient
-  .infiniteQuery({
-    queryKey: ['feed', filter],
-    queryFn: ({ pageParam }) => fetchFeed({ cursor: pageParam, filter }),
-    initialPageParam: null,                       // trap 1: now REQUIRED
-    getNextPageParam: (lastPage) => lastPage.nextCursor ?? undefined,
-    pages: 3,                                     // trap 2: without this you get ONE page
-  })
-  .catch(() => {});
-```
-
-> *"By default, only the first page gets prefetched."*
-
-So a straight rename of `prefetchInfiniteQuery` → `infiniteQuery` warms one page where the old call may have warmed several, and `initialPageParam` is now mandatory — in JavaScript its absence means your `queryFn` is called with `pageParam: undefined`. Both traps and the sequential cost of `pages: n` are covered in [topic 07](../07-pagination-and-infinite-queries/01d-infinite-cache-refetch-and-manual-updates.md); do not re-derive them, but do check every site.
-
-## 7. The RTK Query angle: `usePrefetch` is always class (a)
-
-`api.usePrefetch('endpoint')` returns a function that **returns nothing** — RTK Query's prefetch is fire-and-forget by construction, and there is no promise for a caller to reject. [`01b`](./01b-rtk-query-the-option-by-option-map.md)'s mapping table sends it to `queryClient.query({ queryKey, queryFn })`, and that row is only correct with the catch attached:
-
-```ts
-// RTK Query                                    // TanStack Query — the ONLY faithful port
-const prefetchUser = api.usePrefetch('getUser'); const qc = useQueryClient();
-prefetchUser(userId);                           // qc.query({ queryKey: ['user', userId],
-                                                //            queryFn: () => fetchUser(userId) })
-                                                //   .catch(() => {});   // ← not optional
-```
-
-🔴 **A literal port of `usePrefetch` to a bare `query()` is the fastest way to manufacture this bug**, and it is worse during an RTK migration than during a v5 upgrade: there is no deprecated method in the diff to grep for afterwards, because the new call sites were *born* wrong. Every `usePrefetch` in the source repo is a class-(a) site by definition — port them as a batch, with the catch, and review the batch as one commit.
-
-## 8. Urgency: not now, but not never
-
-Both methods still work in **5.102.8**. They are deprecated, not removed. So:
-
-- **Do it on your own schedule**, as its own reviewable diff, while nothing else is on fire. A rename whose entire risk is *error handling* is the last thing you want landing inside a major-version upgrade where every other bug is also new.
-- **The honest counter-argument:** deprecated calls left in place accumulate. *"those methods will be removed in the next major version"* — at that point the change is forced, it is bundled with everything else in that major, and the four-class triage happens under time pressure instead of over an afternoon. Doing it early converts a future rushed change into a present deliberate one.
-- **A useful middle:** ban new uses today (lint rule or review convention), port the existing ones by class over a few PRs.
-
-## 9. The `staleTime: 0` interaction — the prefetch that bought nothing
-
-[`01b`](./01b-rtk-query-the-option-by-option-map.md) names this in one line; here is the mechanism. A cache entry's freshness is judged against `staleTime`, which defaults to `0` — meaning data is stale the instant it lands. A prefetch writes the entry; the component mounts a moment later; a stale query refetches when a new instance mounts. **So the key is in cache, the render still shows a loading state, and you paid for two requests instead of one.**
-
-The prefetch did not fail. It expired.
-
-```tsx
-// The prefetch and the consumer must AGREE on staleTime, or the prefetch is decorative.
-const PRODUCT_STALE_TIME = 60_000;
-const opts = { queryKey: ['product', id], queryFn: () => fetchProduct(id), staleTime: PRODUCT_STALE_TIME };
-
-queryClient.query(opts).catch(() => {});   // on hover
-useQuery(opts);                            // in the component that mounts moments later
-```
-
-⚠️ Whether `staleTime` on the `query()` call itself is honoured identically to the way `prefetchQuery` honoured it is part of the unverified gap in §5. The *reliable* half of the fix is the consumer's `staleTime` — or a `staleTime` in the client's `defaultOptions` ([topic 13](../13-global-configuration/01-defaultoptions.md)) — because that is what decides whether the mount refetches.
+That same gap limits how much a `staleTime` on the prefetch call itself can be trusted, which is why [`01p` §4](./01p-prefetch-scheduling-and-staletime.md) puts the reliable half of the `staleTime` fix on the *consumer* rather than on the prefetch.
 
 ## Gotchas
 
 **★ Symptom: after the rename, `Uncaught (in promise)` errors appear in the console in bursts while a user moves the mouse down a list.** Cause: class-(a) hover prefetches. `query()` *"will either resolve with the data or throw with an error"*, so every warm-up of a key whose request fails is now a floating rejection, and a mouse sweep fires many. Fix: `.catch(() => {})` with a comment saying why, on every fire-and-forget prefetch.
 
-**★ 🔴 Symptom: a route that renders fine in dev starts returning 500s in production whenever one non-critical upstream is degraded.** Cause: several `query()` calls in a `Promise.all` inside an SSR loader. `Promise.all` rejects on the first rejection and the render throws — where `prefetchQuery` left the key unresolved and the page rendered. Fix: `Promise.allSettled`, or split the array into "the page cannot render without this" (plain `Promise.all`, no catch) and "best effort" (`allSettled`). §4 shows both.
+**★ 🔴 Symptom: a route that renders fine in dev starts returning 500s in production whenever one non-critical upstream is degraded.** Cause: several `query()` calls in a `Promise.all` inside an SSR loader. `Promise.all` rejects on the first rejection and the render throws — where `prefetchQuery` left the key unresolved and the page rendered. Fix: `Promise.allSettled`, or split the array into "the page cannot render without this" (plain `await`, no catch) and "best effort" (`allSettled`). §4 shows both.
 
 **★ Symptom: the same route now fails on transient errors that used to ride through.** Cause: two independent v5 changes compounding — *"`retry` now defaults to `0` instead of `3`"* on the server, **and** the prefetch method now throwing. The first removes the retries that hid the blip; the second turns the resulting failure into a thrown one. Fix: fix the throw with `allSettled`, and set `retry` explicitly on the server client if you were genuinely relying on retries.
 
@@ -235,23 +257,13 @@ useQuery(opts);                            // in the component that mounts momen
 
 **★ Symptom: a reviewer deletes your `.catch(() => {})` in a follow-up PR as "swallowing errors".** Cause: an empty catch is a legitimate smell everywhere else in a codebase, and the reason it is correct here is invisible from the diff. Fix: a comment on the catch stating that this is a speculative prefetch and that `query()` throws where `prefetchQuery` did not. Uncommented, it will be removed and the bug will come back.
 
-**★ Symptom: the codemod/`sed` diff is a hundred lines of pure rename and gets approved in seconds.** Cause: that is exactly what a mechanical-looking, semantically-loaded diff looks like — the same trap [`01f`](./01f-v4-to-v5-mechanical-versus-semantic.md) records for the official v5 codemod. Fix: never land this as one commit. One commit per class, with each commit's message naming the class and the failure policy it chose.
+**★ Symptom: the audit turns up eight call sites and the app has forty.** Cause: the greps in §2 matched `queryClient.prefetchQuery` but the codebase reaches the client through an alias (`qc`, `props.queryClient`) or, worse, through a wrapper — `prefetchProduct(id)` in a `lib/prefetch.ts` that nobody's grep pattern mentions. Fix: match on the **method names alone**, as command 1 does; then grep for each wrapper's own name to find its callers, because a wrapper is classified by its callers and one wrapper can have sites in three different classes.
 
-**★ Symptom: an infinite list is warm for one page after porting `prefetchInfiniteQuery`, where it used to be warm for three.** Cause: *"By default, only the first page gets prefetched."* The `pages` option is not implied by anything in the old call. Fix: pass `pages: n` explicitly, and expect `n` sequential requests, since each page's param comes from the previous response.
+**★ Symptom: a call site you filed as class (a) turns out to be class (b) in production.** Cause: the `Promise.all` is in a different file. A helper `warmDashboard(queryClient)` that itself contains bare prefetches looks fire-and-forget in isolation, but its caller does `await Promise.all([warmDashboard(qc), warmSidebar(qc)])` — so the helper's rejections propagate into a render path. Fix: classify **from the outermost caller inwards**, and give each helper an explicit failure policy in its own body rather than leaving it to whoever awaits it.
 
-**★ Symptom: `queryFn` is called with `pageParam: undefined` after the infinite-query port, and the API returns page one forever.** Cause: `initialPageParam` is required in v5 and its absence is silent in JavaScript. Fix: pass it explicitly — `initialPageParam: null` or `initialPageParam: 1`, matching what your cursor scheme's first request actually sends.
-
-**★ Symptom: you prefetch a key on hover and the component still shows a spinner when the user clicks through.** Cause: `staleTime: 0` — the entry was stale before the component mounted, and a stale query refetches on mount. Fix: give the key a real `staleTime` on the consuming `useQuery` (or in `defaultOptions`), not only on the prefetch. §9.
-
-**★ Symptom: memory and cache-entry count grow on a page with aggressive hover prefetching.** Cause: a prefetched key that no hook ever observes is still a cache entry. It parks until `gcTime` collects it — *"If the query is not utilized by a query hook within the default `gcTime`, the query will be garbage collected. If the default `gcTime` has not been configured, it defaults to 5 minutes."* Fix: prefetch on intent (hover, focus, viewport), not on render of every row; consider a shorter `gcTime` for speculative keys.
-
-**★ Symptom: a prefetch fires on every re-render.** Cause: the port moved the call from an event handler into a `useEffect` — or into the component body — during the rewrite. `prefetchQuery`'s silence made this cheap to get wrong; `query()` makes it loud, which is the only good news in the gotcha. Fix: keep speculative prefetches in event handlers. If a prefetch genuinely belongs in an effect, its dependency array must be the query key's inputs and nothing else.
-
-**★ Symptom: `queryClient.query` is not a function.** Cause: the installed version predates the `query()`/`infiniteQuery()` methods — they are the v5-line replacements, not v4 API. Fix: check the installed version before the rename (`node -p "require('@tanstack/react-query/package.json').version"`); this page pins **5.102.8**.
+**★ Symptom: after porting class (c), a genuine 404 renders the default state instead of a not-found page.** Cause: the `try`/`catch` you added is doing exactly what the old `undefined` did, only tidier — it turns *every* failure into the fallback, including the ones that should change the route. Fix: branch inside the catch on the error, not around it: rethrow (or `throw notFound()`) for a 404, fall back to defaults for a timeout or a 5xx. The improvement in class (c) is that you now *have* the error object; discarding it wastes the whole point of the deprecation.
 
 **★ Symptom: a test that asserted "prefetch failure does not break the page" now fails after the rename.** Cause: that test was asserting the *old* swallow, and it is doing its job — it caught the semantic change. Fix: do not delete it. Change it to assert the new deliberate policy: that a failing speculative prefetch is caught, and that a failing loader prefetch is handled by `allSettled`. Harness setup is in [topic 15](../15-testing-tanstack-query/01-isolated-and-integration-testing.md).
-
-**★ Symptom: a prefetch keeps running after the user navigates away.** Cause: nothing about the rename changes this — a prefetch is a request like any other, and cancellation needs the `signal` passed through to `fetch`. Fix: accept and forward the `signal` in the `queryFn`, per [topic 12](../12-query-cancellation/01-abortsignal-integration.md). Worth doing at the same time, because you are already editing every prefetch call site.
 
 ## Interview questions
 
@@ -267,27 +279,18 @@ An SSR loader warming several keys in `Promise.all`. With `prefetchQuery`, a fai
 **★ Why is an empty `.catch(() => {})` the *correct* code here when it is a smell nearly everywhere else?**
 Because it is not new error suppression — it is the restoration of a semantic the previous API provided implicitly. A speculative prefetch has no user-visible success and should have no user-visible failure: the component that eventually mounts will fetch the key itself and surface any error in the place a user can act on. The docs' own examples import a `noop` purely to attach to a prefetch. What makes it defensible in review is the comment; without one, the next reader sees an empty catch and deletes it.
 
-**★ How does `api.usePrefetch` map onto TanStack Query, and why is the obvious port wrong?**
-`usePrefetch` returns a function that returns nothing — RTK Query's prefetch is fire-and-forget by construction, so there is no promise a caller could ever handle. The mapping is to `queryClient.query({ queryKey, queryFn })`, but only with a `.catch` attached; a bare `query()` gives the call a rejection channel that the original never had and nobody downstream is written to handle. It is worse than the v5 rename case because there is no deprecated identifier left in the codebase to audit afterwards — the new sites were born wrong.
+**★ Your grep finds eight call sites and you are certain there are more. Where are the others?**
+Behind aliases and behind wrappers. A pattern anchored on `queryClient.` misses `qc.prefetchQuery(...)`, `props.queryClient.ensureQueryData(...)` and every destructured form, so match on the method names alone. Wrappers are worse than misses: a `lib/prefetch.ts` helper contains one prefetch and forty callers, and those callers are not all in the same class — some fire it on hover, one awaits it inside a loader's `Promise.all`. The right unit of triage is the outermost caller, so you find the wrappers first, then grep for each wrapper's own name, and give the wrapper an explicit failure policy in its own body so its class stops depending on who called it.
 
 **★ Is there anything about this deprecation that is an improvement rather than a tax?**
-Two things. First, `prefetchQuery` applied one failure policy — swallow — to every key regardless of whether the page could render without it; `query()` forces you to choose per key, which is how you discover that your "prefetch everything in a `Promise.all`" loader never distinguished critical data from decoration. Second, the `ensureQueryData` class gets strictly better: the error arrives at the call site in a `catch` rather than as `undefined` propagating into a property access several lines later.
+Two things. First, `prefetchQuery` applied one failure policy — swallow — to every key regardless of whether the page could render without it; `query()` forces you to choose per key, which is how you discover that your "prefetch everything in a `Promise.all`" loader never distinguished critical data from decoration. Second, the `ensureQueryData` class gets strictly better: the error arrives at the call site in a `catch` rather than as `undefined` propagating into a property access several lines later — provided you then branch on the error rather than flattening every failure into one fallback.
 
 **★ What is genuinely unsettled about `queryClient.query()` and why does it matter for the port?**
 Its cache-hit behaviour. `ensureQueryData` documented a "return the cached value, otherwise fetch" contract; the current `query()` description says only that it *"can be used to fetch and cache a query"* and does not state whether a fresh entry under `staleTime` short-circuits the fetch. I could not confirm it from the docs available — the `QueryClient` reference URL was not resolving on re-check. It matters because if `query()` always fetches, every `ensureQueryData` in a hot path becomes a request per call after a mechanical port. The honest position is to verify against the installed build before porting that class at scale, and to say so rather than guess.
 
-**★ Should you do this rename during a v4 → v5 upgrade?**
-No — do it as its own change, on your own schedule. Both methods still work in 5.102.8; they are deprecated, not removed. A change whose whole risk surface is error handling is exactly what you do not want buried in an upgrade where every other bug is also new and attribution is already hard. The counter-argument is real though: *"those methods will be removed in the next major version"*, and leaving them accumulates a forced change that will then arrive bundled with everything else in that major, done under time pressure. Ban new uses now, port the existing ones by class over a few PRs.
-
 **★ Why does this deprecation not appear on the v4 → v5 migration guide, and what follows from that?**
-It landed inside the v5 line rather than at the version boundary, so it is documented on the prefetching guide instead. What follows is that no amount of diligence with the migration guide will surface it: a team can complete a textbook upgrade and still have forty deprecated call sites. It is also invisible to the codemod, which targets the positional-to-object signature change. The only thing that finds it is a grep for the four method names — which is why it earns its own row in [`01f`](./01f-v4-to-v5-mechanical-versus-semantic.md)'s audit table.
-
-**Why can a prefetch succeed and still buy you nothing?**
-Because freshness, not presence, decides whether a mount refetches. `staleTime` defaults to `0`, so a prefetched entry is stale the moment it is written; when the component mounts a second later, the query is stale, and a stale query refetches on mount. The key is in the cache, the spinner still shows, and you made two requests instead of one. The fix is a non-zero `staleTime` on the *consumer* — or in the client's `defaultOptions` — not merely on the prefetch call.
-
-**Where does a prefetch belong: an event handler or an effect?**
-An event handler, in almost every case. Prefetching is a bet on intent — hover, focus, a viewport intersection, a route transition beginning — and intent is an event. Putting it in a `useEffect` means it re-runs whenever the dependencies churn, and a prefetch fired on every render is the sort of thing `prefetchQuery`'s silence let you ship without noticing. The exception is a route-level prefetch tied to route params, where the "event" genuinely is the parameter changing.
+It landed inside the v5 line rather than at the version boundary, so it is documented on the prefetching guide instead. What follows is that no amount of diligence with the migration guide will surface it: a team can complete a textbook upgrade and still have forty deprecated call sites. It is also invisible to the codemod, which targets the positional-to-object signature change. The only thing that finds it is a grep for the six method names — which is why it earns its own row in [`01f`](./01f-v4-to-v5-mechanical-versus-semantic.md)'s audit table.
 
 ---
 
-← [The status rename](./01h-the-status-rename-and-the-isloading-trap.md) · [Topic index](../README.md) · *End of the TanStack Query track*
+← [Auditing a codebase for the rotation](./01j-auditing-a-codebase-for-the-rotation.md) · [Topic index](../README.md) · Next → [Prefetch timing & `staleTime`](./01p-prefetch-scheduling-and-staletime.md)
