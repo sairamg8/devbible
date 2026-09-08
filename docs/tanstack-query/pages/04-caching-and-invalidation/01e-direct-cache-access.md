@@ -97,7 +97,7 @@ The same rule applies one level down. `old.map(t => { t.done = true; return t; }
 will not re-render. Copy at every level you change: `{ ...t, done: true }`.
 
 This also interacts with structural sharing, covered in
-**01g** *(not written yet)* — the library's own deep-equality pass is what keeps unchanged
+[`01g`](./01g-structural-sharing.md) — the library's own deep-equality pass is what keeps unchanged
 sub-trees referentially stable, and hand-mutation defeats the assumption it rests on.
 
 ## 4. `getQueryData` gives you a live reference, not a snapshot
@@ -180,7 +180,7 @@ before the first `setQueryData`, as the example above does.
 the key you wrote to is not the key the hook reads. `['todos','list']` and `['todos','list',{}]` are
 different queries; so are `['todo', id]` and `['todos','detail', id]`; so are a string `id` and a
 number `id`, because the key is hashed. Fix: import the key from the same factory the hook uses —
-this is the single strongest argument for **key factories** *(not written yet)* — and, while
+this is the single strongest argument for [key factories](./01h-query-key-factories.md) — and, while
 debugging, `getQueryData` the key first: `undefined` on a screen that is clearly showing data proves
 the mismatch in one line.
 

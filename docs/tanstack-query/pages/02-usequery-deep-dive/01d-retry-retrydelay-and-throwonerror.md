@@ -171,4 +171,4 @@ Sequentially, and only in one direction. `retry` decides how many times the `que
 
 ---
 
-← [`staleTime` & `refetchOn*`](./01c-staletime-and-the-refetchon-family.md) · [Topic index](../README.md) · Next → **`initialData` vs `placeholderData`** *(not written yet)*
+← [`staleTime` & `refetchOn*`](./01c-staletime-and-the-refetchon-family.md) · [Topic index](../README.md) · Next → [`initialData` vs `placeholderData`](./01e-initialdata-vs-placeholderdata.md)

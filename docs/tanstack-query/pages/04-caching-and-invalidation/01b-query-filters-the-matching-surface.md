@@ -51,7 +51,7 @@ Inside the key, the two halves of the equality rule are asymmetric and the docs 
 So `{ status: 'done', page: 2 }` and `{ page: 2, status: 'done' }` are the same query — keys are
 *"hashed deterministically!"* — but `['todos', 'list']` and `['list', 'todos']` are two unrelated
 queries that no single prefix can reach together. Segment order is a schema decision, which is why
-**key factories** *(not written yet)* exist.
+[key factories](./01h-query-key-factories.md) exist.
 
 The serialisation rule bounds what may appear in a key at all:
 

@@ -120,7 +120,7 @@ There is no parent/child link in the cache — only two entries, one of whose ke
 - **`gcTime` still runs.** The gate stops fetching, not garbage collection. A disabled query with cached data is still an entry with observers; when the last observer unmounts, the normal five-minute clock starts.
 - **`staleTime` is still evaluated** — it just has no automatic trigger left to act on. Flip `enabled` back to `true` and the query refetches on that render only if it is stale; a fresh entry stays put with no request.
 - **`refetchInterval` does not run.** Polling is background refetching, and *"The query will not automatically refetch in the background."*
-- **`initialData` is still written to the cache**, gate or no gate — it is a cache write, not a fetch. That is why `initialData: []` on a gated query is a way to write *"this customer has no invoices"* into the cache under a key you have not fetched. See **`01e`** *(not written yet)*.
+- **`initialData` is still written to the cache**, gate or no gate — it is a cache write, not a fetch. That is why `initialData: []` on a gated query is a way to write *"this customer has no invoices"* into the cache under a key you have not fetched. See [`01e`](./01e-initialdata-vs-placeholderdata.md).
 - **`enabled` is not available at all under suspense.** *"On the flip side, you therefore can't conditionally enable / disable the Query."* A conditional `useSuspenseQuery` is a conditional hook, and there is no option that changes that — see [suspense](../10-suspense-integration/01b-what-suspense-mode-removes.md).
 
 ## Gotchas

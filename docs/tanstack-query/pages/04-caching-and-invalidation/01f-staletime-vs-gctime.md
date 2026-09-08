@@ -234,4 +234,4 @@ the zero default.
 
 ---
 
-← [Direct cache access](./01e-direct-cache-access.md) · [Topic index](../README.md) · Next → **Structural sharing** *(not written yet)*
+← [Direct cache access](./01e-direct-cache-access.md) · [Topic index](../README.md) · Next → [Structural sharing](./01g-structural-sharing.md)

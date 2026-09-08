@@ -143,7 +143,7 @@ With the default `staleTime: 0`, data you rendered on the server is stale before
 
 **★ Symptom: a query with `staleTime` set still refetches every time a mutation runs.** Cause: the mutation's `onSettled` invalidates the key, and invalidation ignores `staleTime` by design — *"If the query is currently being rendered via `useQuery` or related hooks, it will also be refetched in the background"*. Fix: this is usually correct; if the invalidation is too broad, narrow the key it targets rather than raising `staleTime`, because raising `staleTime` cannot stop it anyway.
 
-**★ Symptom: `staleTime` set on one component had no effect, because another component set a shorter one.** Cause: one cache entry, many observers, each with its own options. The entry refetches when *any* observer's rules say it should, so the shortest `staleTime` among the observers effectively wins. Fix: never configure the same key in two places. Put the options in one custom hook (or one `queryOptions()` factory — **`01g`** *(not written yet)*) and import it everywhere.
+**★ Symptom: `staleTime` set on one component had no effect, because another component set a shorter one.** Cause: one cache entry, many observers, each with its own options. The entry refetches when *any* observer's rules say it should, so the shortest `staleTime` among the observers effectively wins. Fix: never configure the same key in two places. Put the options in one custom hook (or one `queryOptions()` factory — [`01g`](./01g-queryoptions-factories-and-type-inference.md)) and import it everywhere.
 
 ## Interview questions
 
