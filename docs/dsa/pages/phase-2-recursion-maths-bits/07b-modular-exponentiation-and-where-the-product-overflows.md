@@ -190,5 +190,6 @@ the inverse and the documented exception condition is exactly the condition unde
 exists. There is no primitive-typed equivalent in the JDK, so for `long` arithmetic you write the
 loop.
 
+---
 
-{/* FOOTER */}
+← Prev: [07 · Binary exponentiation](07-fast-exponentiation-and-the-modular-inverse.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [07c · An exact modular multiply in JS](07c-an-exact-modular-multiply-in-javascript.md)

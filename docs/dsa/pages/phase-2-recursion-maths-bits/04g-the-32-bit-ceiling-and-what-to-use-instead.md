@@ -272,4 +272,6 @@ keep the set as rows rather than as bits, which is what a relational database is
 string and parse it into a `BigInt`. What does not work is reading it as a number and masking it,
 which is the shape most people write first.
 
-{/* FOOTER */}
+---
+
+← Prev: [04f · Submasks, and the 3^n count](04f-submasks-and-the-3-to-the-n-count.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [05 · Integer limits and overflow](05-integer-limits-and-overflow.md)

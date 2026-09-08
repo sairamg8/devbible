@@ -252,4 +252,6 @@ reason, which is the same trick as the division comparison here: keep the bounda
 arithmetic. It also underlies exact perfect-square tests, which show up in Pythagorean-triple and
 Diophantine problems.
 
-{/* FOOTER */}
+---
+
+← Prev: [11d · Integer pow](11d-integer-pow.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [11f · Roman numerals](11f-roman-numerals.md)

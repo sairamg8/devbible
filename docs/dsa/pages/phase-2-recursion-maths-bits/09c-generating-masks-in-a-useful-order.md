@@ -247,4 +247,6 @@ unreachable cell holding `Integer.MAX_VALUE` plus any positive cost wraps to a l
 then beats every legitimate answer in a minimisation and produces a confidently wrong result. The
 `continue` is a guard against arithmetic on a value that was never meant to be arithmetic.
 
-{/* FOOTER */}
+---
+
+← Prev: [09b · Precedence and the 32-bit bound](09b-precedence-and-the-32-bit-loop-bound.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [09d · Fixed-size subsets and Gray code](09d-fixed-size-subsets-and-gray-code.md)

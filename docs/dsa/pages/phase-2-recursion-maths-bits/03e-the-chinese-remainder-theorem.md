@@ -268,4 +268,6 @@ rule is the same one as for `%` versus `Math.floorMod` on primitives, and the re
 people more often in `BigInteger` is that both methods exist, are adjacent in the javadoc, and read
 as synonyms.
 
-{/* FOOTER */}
+---
+
+← Prev: [03d · Extended Euclid and Bézout](03d-the-extended-euclidean-algorithm-and-bezout.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03f · Primality by trial division](03f-primality-by-trial-division.md)

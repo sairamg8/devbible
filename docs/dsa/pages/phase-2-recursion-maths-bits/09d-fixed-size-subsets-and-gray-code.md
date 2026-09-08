@@ -256,4 +256,6 @@ bijection because the greedy choice at each step is forced. That turns a `2^n` a
 though: each access now runs a `Θ(n)` rank computation, and for `k` near `n/2` the saving mostly
 evaporates because `C(n, n/2)` is already a substantial fraction of `2^n`.
 
-{/* FOOTER */}
+---
+
+← Prev: [09c · Generating masks in a useful order](09c-generating-masks-in-a-useful-order.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [09e · DP over masks: shape and cost](09e-dp-over-masks-the-shape-and-the-cost.md)

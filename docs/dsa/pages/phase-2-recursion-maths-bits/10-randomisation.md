@@ -215,4 +215,6 @@ Fisher–Yates achieves it. The interesting corollary is the one in
 [10b](10b-fisher-yates-in-practice.md): a generator whose entire state is 64 bits cannot supply
 `log2(n!)` bits for `n` past about 20, no matter how many times you call it.
 
-{/* FOOTER */}
+---
+
+← Prev: [09i · Where n stops fitting](09i-where-n-stops-fitting.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10b · Fisher–Yates in practice](10b-fisher-yates-in-practice.md)

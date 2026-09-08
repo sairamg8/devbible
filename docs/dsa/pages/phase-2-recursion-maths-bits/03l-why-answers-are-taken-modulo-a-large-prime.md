@@ -1,7 +1,7 @@
 ---
 title: "Counting answers outgrow a 64-bit integer somewhere around twenty-one factorial, so problems ask for the answer modulo a fixed number — and the modulus is chosen prime because that is what makes every non-zero residue invertible, and chosen near a billion because that is what keeps the product of two residues inside a signed 64-bit integer"
 sidebar_label: "03l · Why modulo a large prime"
-sidebar_position: 3.11
+sidebar_position: 3.96
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -228,4 +228,6 @@ prime powers to be pairwise coprime, as they are by construction. Or avoid divis
 Pascal's-triangle recurrence for binomial coefficients uses only addition, so it works modulo
 anything at all, at `Θ(n²)` time and `Θ(n)` space if you keep one row.
 
-{/* FOOTER */}
+---
+
+← Prev: [03k · The remainder trap](03k-the-remainder-trap-in-indices-hashes-and-shards.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [04 · Bit manipulation](04-bit-manipulation.md)

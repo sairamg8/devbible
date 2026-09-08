@@ -276,4 +276,6 @@ distances, overlap — are unaffected, and parity-based point-in-polygon is unaf
 counts crossings rather than reading signs. The defence is to convert into a single coordinate
 convention at the input boundary and do every geometric computation in that one space.
 
-{/* FOOTER */}
+---
+
+← Prev: [13j · Max points on a line](13j-max-points-on-a-line.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next phase → [Part 2 of the syllabus — arrays, strings and hashing](../../syllabus/02-arrays-strings-and-hashing.md)

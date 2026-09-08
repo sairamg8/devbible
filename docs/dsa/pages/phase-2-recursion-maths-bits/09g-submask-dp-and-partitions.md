@@ -210,4 +210,6 @@ warehouse and fit a box, colouring a small conflict graph with the fewest colour
 feasibility is stated over a *group*, not accumulated per item — and that is also exactly the
 condition that stops the `Θ(2^n · n)` reformulation from applying.
 
-{/* FOOTER */}
+---
+
+← Prev: [09f · dp[mask][last] and the tour](09f-dp-over-masks-with-a-last-element.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [09h · Sum over subsets and Möbius](09h-sum-over-subsets-and-the-mobius-inverse.md)

@@ -63,7 +63,7 @@ must have:
 That last sentence is the citation to reach for whenever a comparator is improvised. It is also why
 `arr.sort(() => Math.random() - 0.5)` is not a shuffle: the comparator is neither stable in MDN's
 sense (the same pair gives different results) nor transitive, so the specification puts the result
-outside what is defined. That argument belongs to **10 · Randomisation** *(not written yet)*; the
+outside what is defined. That argument belongs to [10 · Randomisation](10c-the-random-comparator-shuffle.md); the
 citation is here because it is the same sentence.
 
 ## Two-key ordering, two ways
@@ -141,7 +141,7 @@ build a compound comparator so ties cannot occur.
 violates MDN's *stable* property (the same pair does not compare the same way twice) and
 transitivity, so the result is explicitly outside defined behaviour — it is not a uniform
 permutation and reasoning about it as one is unfounded. Fix: Fisher–Yates. The full argument is
-**10 · Randomisation** *(not written yet)*; the citation is the paragraph above.
+[10 · Randomisation](10c-the-random-comparator-shuffle.md); the citation is the paragraph above.
 
 **Symptom: a comparator that consults a `Map` or an object that the sorting loop also updates.**
 Cause: purity violated. Fix: precompute the sort key for every element, sort on the precomputed
@@ -206,7 +206,7 @@ satisfies neither, and MDN says explicitly that a comparator failing any of the 
 leaves the program's behaviour not well-defined. So the resulting permutation is not merely biased
 in some quantifiable way — it is whatever the engine's algorithm happens to produce given
 inconsistent answers, which differs between engines and between input sizes. The correct tool is
-Fisher–Yates, which is **10 · Randomisation** *(not written yet)*.
+Fisher–Yates, which is [10 · Randomisation](10c-the-random-comparator-shuffle.md).
 
 **How would you sort objects by a key you compute expensively?**
 Decorate, sort, undecorate: compute the key once per element into a parallel array or a wrapper
@@ -216,4 +216,6 @@ key computations from Θ(n log n) (once per comparison) to Θ(n). It is also the
 comparator over a `Map` lookup safe, since the lookup happens before the sort rather than inside
 the comparator.
 
-{/* FOOTER */}
+---
+
+← Prev: [02c · Merge sort](02c-merge-sort.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02e · Counting inversions](02e-counting-inversions.md)

@@ -261,4 +261,6 @@ lower hulls in balanced search trees ordered by `x` and splice out the deleted r
 time. Unless the question is specifically about that, the practical answer is to rebuild in batches,
 or to keep the points sorted so each rebuild is the linear scan without the sort.
 
-{/* FOOTER */}
+---
+
+← Prev: [13h · Closest pair of points](13h-closest-pair-of-points.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [13j · Max points on a line](13j-max-points-on-a-line.md)

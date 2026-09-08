@@ -123,7 +123,7 @@ result for a positive mask, while `%` is a **remainder** that keeps the sign of 
 `x & 7` is a legitimate substitution for `x % 8` in a hash-bucket index only if you have already
 guaranteed `x >= 0` — and a hash code in Java is an `int` that can perfectly well be negative.
 The general signed-modulus fix, `((x % m) + m) % m` and `Math.floorMod`, belongs to
-**Mathematical foundations** *(not written yet)*; what belongs here is the narrower rule: **mask
+[Mathematical foundations](03j-modular-arithmetic-and-the-remainder-trap.md); what belongs here is the narrower rule: **mask
 for modulus only against a power of two and only on a value you know is non-negative.**
 
 ## A storefront mask that is a real column
@@ -253,4 +253,6 @@ wanted at bit 40 lands somewhere in the low half instead. `1L << 40` makes the l
 `long`, the shift a 64-bit shift and the count reduced modulo 64. It is worth checking every `1 <<`
 in a codebase that has `long` masks; the compiler is happy with both.
 
-{/* FOOTER */}
+---
+
+← Prev: [04 · Bit manipulation](04-bit-manipulation.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [04c · Clearing and isolating the lowest bit](04c-clearing-and-isolating-the-lowest-bit.md)

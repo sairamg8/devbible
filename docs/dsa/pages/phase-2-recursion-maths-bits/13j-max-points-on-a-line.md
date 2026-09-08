@@ -279,4 +279,6 @@ than count points, the key must be the line itself rather than the direction: th
 canonical direction, which is why the canonical-sign step matters even though this particular
 problem does not need it.
 
-{/* FOOTER */}
+---
+
+← Prev: [13i · Convex hull and the sweep line](13i-convex-hull-and-the-sweep-line.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [13k · Geometry in backend work](13k-geometry-in-backend-work.md)

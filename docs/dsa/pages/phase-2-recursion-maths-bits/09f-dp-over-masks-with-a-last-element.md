@@ -222,4 +222,6 @@ the reduction is about keeping the value in range rather than about precision �
 multiplies, at which point the product exceeds `2^53` and a `number` stops being exact with no error
 at all.
 
-{/* FOOTER */}
+---
+
+← Prev: [09e · DP over masks: shape and cost](09e-dp-over-masks-the-shape-and-the-cost.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [09g · Submask DP and partitions](09g-submask-dp-and-partitions.md)

@@ -255,4 +255,6 @@ version dominates in practice. It is worth knowing precisely because the reasoni
 asymptotic superiority is not a decision, it is one input to a decision.
 [02g](02g-median-of-medians-and-duplicate-heavy-input.md) has the algorithm.
 
-{/* FOOTER */}
+---
+
+← Prev: [10f · Seeding and reproducibility](10f-seeding-and-reproducibility.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10h · Reservoir sampling](10h-reservoir-sampling.md)

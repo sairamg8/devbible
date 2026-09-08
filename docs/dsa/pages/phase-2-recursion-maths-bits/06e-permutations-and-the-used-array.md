@@ -168,7 +168,7 @@ export function kthPermutation(items: number[], k: number, fact: number[]): numb
 }
 ```
 
-The factorials overflow fast — see **Integer limits and overflow** *(not written yet)* — so the
+The factorials overflow fast — see [Integer limits and overflow](05-integer-limits-and-overflow.md) — so the
 practical constraint is that `n` is small whenever this is asked, which is consistent with `n!`
 being the index space. The counting side of the same object is
 [08 · Combinatorics for counting problems](08-combinatorics-for-counting-problems.md).
@@ -270,4 +270,6 @@ the second one can never be selected — the enumeration silently produces the p
 answer. Marking by index keeps equal elements distinct, and the duplicate-handling rule is then
 imposed deliberately, on sibling positions, rather than accidentally, by the data structure.
 
-{/* FOOTER */}
+---
+
+← Prev: [06d · Subsets and combinations](06d-subsets-and-combinations.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06f · Duplicates in subsets and combinations](06f-duplicates-in-subsets-and-combinations.md)

@@ -282,4 +282,6 @@ difference of products is exactly the cross product of the edge with the query p
 predicate, no division, exact for integer input, and no possibility of a `NaN` reaching the
 comparison.
 
-{/* FOOTER */}
+---
+
+← Prev: [13d · Shoelace area and convexity](13d-shoelace-area-and-convexity.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [13f · Floating point and the epsilon decision](13f-floating-point-and-the-epsilon-decision.md)

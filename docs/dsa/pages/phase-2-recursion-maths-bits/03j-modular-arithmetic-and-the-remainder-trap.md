@@ -161,4 +161,6 @@ decision: a match is a candidate that still has to be verified, or an accepted c
 that you should be able to state. Treating congruence as equality is how hash-based string matching
 produces wrong answers on adversarial input.
 
-{/* FOOTER */}
+---
+
+← Prev: [03i · Divisor functions and the totient](03i-divisor-functions-and-the-totient.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03k · The remainder trap](03k-the-remainder-trap-in-indices-hashes-and-shards.md)

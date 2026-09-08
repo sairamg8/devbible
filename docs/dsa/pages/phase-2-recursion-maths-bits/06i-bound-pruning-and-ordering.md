@@ -259,4 +259,6 @@ searching. Branch and bound earns its place when the state that matters *is* the
 the state space is too large to tabulate. That boundary is
 [Part 6](../../syllabus/06-backtracking-greedy-and-dp.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [06h · Feasibility pruning](06h-feasibility-pruning.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06j · N-Queens and symmetry](06j-n-queens-and-symmetry.md)

@@ -239,4 +239,6 @@ the bug: the parser produces a Number and the rounding happens before any of the
 ([05](05-integer-limits-and-overflow.md)). A string also keeps the client from doing arithmetic on
 an id by accident, which is a feature — identifiers are opaque, and typing them as strings says so.
 
-{/* FOOTER */}
+---
+
+← Prev: [05 · Integer limits and overflow](05-integer-limits-and-overflow.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [05c · Java's int, and the checked arithmetic](05c-javas-int-and-the-checked-arithmetic.md)

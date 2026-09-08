@@ -100,7 +100,7 @@ public static int[] subarrayDivisibleByK(int[] nums, int k) {
 
 The `% k + k) % k` (or `Math.floorMod`) is not decoration — `%` in both languages is a remainder that
 takes the sign of the left operand, so a negative running sum lands on a negative residue and the map
-misses the match. The full treatment of that is **Mathematical foundations** *(not written yet)*; the
+misses the match. The full treatment of that is [Mathematical foundations](03-mathematical-foundations.md); the
 one-line fix belongs here because this is where it bites.
 
 ### Some hash bucket is full
@@ -237,4 +237,6 @@ each case the partition has to be exhaustive — every item in exactly one box �
 the item count exceeds it. Finding that partition is the step worth practising; the conclusion writes
 itself once it exists.
 
-{/* FOOTER */}
+---
+
+← Prev: [08f · Closed form, or DP?](08f-closed-form-or-dp.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [09 · Bitmask enumeration](09-bitmask-enumeration.md)

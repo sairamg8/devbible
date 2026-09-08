@@ -248,4 +248,6 @@ the branch is entered and abandoned, which costs a push, a frame and a pop per s
 On a multiset with high multiplicities that is a large constant factor on top of an already
 exponential search. Pruning order in general is [06h](06h-feasibility-pruning.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [06f · Duplicates in subsets and combinations](06f-duplicates-in-subsets-and-combinations.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06h · Feasibility pruning](06h-feasibility-pruning.md)

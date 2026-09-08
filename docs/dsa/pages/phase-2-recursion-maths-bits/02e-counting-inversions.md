@@ -138,8 +138,8 @@ of pairs, n(n−1)/2, which for a reversed array of 10⁵ elements is about 5 ×
 `Integer.MAX_VALUE`, which the JDK documents as 2³¹−1. An `int` accumulator wraps silently and
 returns a negative count with no error. This is the single most common wrong answer to this problem
 in Java, and it only shows up on the largest test. TypeScript's `number` holds it exactly, since
-5 × 10⁹ is far below `Number.MAX_SAFE_INTEGER` — the general integer-precision story is **05 ·
-Integer limits and overflow** *(not written yet)*.
+5 × 10⁹ is far below `Number.MAX_SAFE_INTEGER` — the general integer-precision story is [05 ·
+Integer limits and overflow](05-integer-limits-and-overflow.md).
 
 ## What else the same trick counts
 
@@ -281,4 +281,6 @@ recomputing search relevance can quantify the disruption to the previous result 
 inversions between old and new positions. The Θ(n²) version is fine for a page of results and not
 for a catalogue, which is exactly the situation where knowing the Θ(n log n) version pays.
 
-{/* FOOTER */}
+---
+
+← Prev: [02d · Stability and the comparator contract](02d-stability-and-the-comparator-contract.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02f · Quickselect](02f-quickselect.md)

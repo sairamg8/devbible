@@ -114,17 +114,17 @@
     }
   },
   "dsa": {
-    "pages": 30,
-    "validated": 30,
+    "pages": 141,
+    "validated": 141,
     "phases": {
       "phase-0-the-interview-and-practice": 15,
       "phase-1-complexity": 15,
-      "phase-2-recursion-maths-bits": 0
+      "phase-2-recursion-maths-bits": 111
     },
     "validatedPhases": {
       "phase-0-the-interview-and-practice": 15,
       "phase-1-complexity": 15,
-      "phase-2-recursion-maths-bits": 0
+      "phase-2-recursion-maths-bits": 111
     }
   },
   "eslint-oxlint": {
@@ -901,7 +901,8 @@
       "14-testing-integration": 10,
       "15-deployment-considerations": 15,
       "16-migration-recipes": 15,
-      "17-the-2026-toolchain-landscape": 6
+      "17-the-2026-toolchain-landscape": 6,
+      "18-microservices-architecture": 0
     },
     "validatedPhases": {
       "01-core-architecture": 1,
@@ -920,7 +921,8 @@
       "14-testing-integration": 10,
       "15-deployment-considerations": 15,
       "16-migration-recipes": 15,
-      "17-the-2026-toolchain-landscape": 6
+      "17-the-2026-toolchain-landscape": 6,
+      "18-microservices-architecture": 0
     }
   },
   "web-vitals-performance": {

@@ -198,4 +198,6 @@ MDN's own guidance reflects that: *"Only use a BigInt value when values greater 
 reasonably expected."* If a number matters for a decision, measure it in your own runtime; do not
 carry one from a page like this.
 
-{/* FOOTER */}
+---
+
+← Prev: [07b · Modular exponentiation and overflow](07b-modular-exponentiation-and-where-the-product-overflows.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [07d · The modular inverse](07d-the-modular-inverse.md)

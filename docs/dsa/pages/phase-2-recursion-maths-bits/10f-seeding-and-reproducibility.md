@@ -265,4 +265,6 @@ deliberate, documented input rather than a leftover. Everything else — tokens,
 jitter — wants an unseeded generator, and a fixed seed in that code is a bug that presents as
 "suspiciously repetitive behaviour" rather than as an error.
 
-{/* FOOTER */}
+---
+
+← Prev: [10j · The secure APIs, in both languages](10j-the-secure-apis-in-both-languages.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10g · The randomised pivot](10g-the-randomised-pivot.md)

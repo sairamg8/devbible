@@ -218,4 +218,6 @@ is `x.flags ^ ((1 << n) - 1)`. That is one transform plus one lookup per item �
 against a quadratic pairwise scan. Remember to handle `x` pairing with itself and the double count of
 ordered pairs, which is where this answer usually goes wrong rather than in the transform.
 
-{/* FOOTER */}
+---
+
+← Prev: [09g · Submask DP and partitions](09g-submask-dp-and-partitions.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [09i · Where n stops fitting](09i-where-n-stops-fitting.md)

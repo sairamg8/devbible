@@ -1,7 +1,7 @@
 ---
 title: "% is a remainder and not a modulus in both TypeScript and Java, so it returns a negative number whenever its left operand is negative — which turns a correct modular algorithm into a negative answer, a negative shard index and an out-of-bounds circular buffer read, and Java documents the divergence in the javadoc of the method that exists to fix it"
 sidebar_label: "03k · The remainder trap"
-sidebar_position: 3.10
+sidebar_position: 3.95
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -274,4 +274,6 @@ an operation. `BigInteger` is the one case where the fix is a method name: `mod`
 inherits the sign rule. So in `BigInteger` the answer is "call `mod`, never `remainder`", and in
 `BigInt` the answer is the same idiom you would have written for a `number`.
 
-{/* FOOTER */}
+---
+
+← Prev: [03j · Modular arithmetic as a ring](03j-modular-arithmetic-and-the-remainder-trap.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03l · Why modulo a large prime](03l-why-answers-are-taken-modulo-a-large-prime.md)

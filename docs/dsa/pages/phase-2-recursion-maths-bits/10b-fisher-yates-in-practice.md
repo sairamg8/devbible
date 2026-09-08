@@ -260,4 +260,6 @@ auditor cannot verify unpredictability after the fact, so real systems publish a
 before the shuffle and reveal the seed afterwards. That is a protocol question rather than an
 algorithm question, and recognising the boundary is the answer.
 
-{/* FOOTER */}
+---
+
+← Prev: [10 · Randomisation](10-randomisation.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10c · The random comparator shuffle](10c-the-random-comparator-shuffle.md)

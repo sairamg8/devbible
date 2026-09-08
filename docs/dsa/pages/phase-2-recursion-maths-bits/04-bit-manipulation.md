@@ -264,4 +264,6 @@ work is `BigInt`, where MDN documents that there is no truncation at all and neg
 as if they have infinitely many leading one bits — but BigInt and Number cannot be mixed in a
 single bitwise expression without a `TypeError`.
 
-{/* FOOTER */}
+---
+
+← Prev: [03l · Why modulo a large prime](03l-why-answers-are-taken-modulo-a-large-prime.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [04b · Single-bit idioms and masks](04b-the-single-bit-idioms-and-masks.md)

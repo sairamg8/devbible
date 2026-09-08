@@ -854,14 +854,14 @@ export const LANGUAGES = {
   },
   dsa: {
     label: 'DSA',
-    updated: '2026-09-07 16:55',
+    updated: '2026-09-08 19:25',
     docsPath: '/docs/dsa',
     pagesPath: '/docs/dsa/pages',
-    // Syllabus complete 2026-09-07 (session ebd67cf9) — 301 topics, 21 phases, 8 parts. No pages yet.
+    // Syllabus complete 2026-09-07 (session ebd67cf9) — 301 topics, 21 phases, 8 parts. Pages: phases 0-2 complete.
     phases: [
       {n: 0, slug: 'phase-0-the-interview-and-practice', name: "The DSA interview and the practice system", part: "Foundations", topics: 14, pages: 14},
       {n: 1, slug: 'phase-1-complexity', name: "Complexity analysis", part: "Foundations", topics: 11, pages: 11},
-      {n: 2, slug: 'phase-2-recursion-maths-bits', name: "Recursion, maths and bits", part: "Foundations", topics: 13, pages: 0},
+      {n: 2, slug: 'phase-2-recursion-maths-bits', name: "Recursion, maths and bits", part: "Foundations", topics: 13, pages: 13},
       {n: 3, slug: 'phase-3-arrays-hashing-prefix', name: "Arrays, hashing and prefix sums", part: "Arrays, strings & hashing", topics: 16, pages: 0},
       {n: 4, slug: 'phase-4-two-pointers-sliding-window', name: "Two pointers and sliding window", part: "Arrays, strings & hashing", topics: 13, pages: 0},
       {n: 5, slug: 'phase-5-strings', name: "Strings", part: "Arrays, strings & hashing", topics: 13, pages: 0},

@@ -293,4 +293,6 @@ can state that the case analysis is disjoint and exhaustive and bound the bounda
 both the correctness proof and the recurrence, which is the whole of what the interviewer is
 checking.
 
-{/* FOOTER */}
+---
+
+← Prev: [02g · Median of medians, and duplicates](02g-median-of-medians-and-duplicate-heavy-input.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02i · Binary search as degenerate D&C](02i-binary-search-as-degenerate-divide-and-conquer.md)

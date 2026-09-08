@@ -258,4 +258,6 @@ empty must return the universe exactly. A negative result is almost always the s
 union form and the complement form differ by one in the exponent, and mixing them produces a value
 that is wrong by roughly twice the union.
 
-{/* FOOTER */}
+---
+
+← Prev: [08d · Catalan numbers](08d-catalan-numbers.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [08f · Closed form, or DP?](08f-closed-form-or-dp.md)

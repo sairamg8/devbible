@@ -122,8 +122,8 @@ most common recurrence error.
 
 **★ Symptom: `mid` computed as `Math.floor((lo + hi) / 2)` in Java and the search misbehaves on huge
 arrays.** Cause: `lo + hi` overflows `int` before the division. Fix: `lo + (hi - lo) / 2`. It is an
-overflow bug rather than a divide-and-conquer bug and is developed on **05 · Integer limits and
-overflow** *(not written yet)*; use the safe form here as a habit.
+overflow bug rather than a divide-and-conquer bug and is developed on [05 · Integer limits and
+overflow](05-integer-limits-and-overflow.md); use the safe form here as a habit.
 
 **★ Symptom: a recursion that splits into n − 1 and 1 and is described as divide and conquer.**
 Cause: the split is not proportional. Fix: the recurrence is T(n) = T(n − 1) + f(n), which the
@@ -197,4 +197,6 @@ is the real answer; quicksort's nothing, which is why its space is just the stac
 algorithm's presorted arrays. Answering "Θ(log n)" for merge sort is the standard mistake, and it
 comes from counting only the recursion.
 
-{/* FOOTER */}
+---
+
+← Prev: [01h · Choosing, and reading the overflow](01h-choosing-recursion-and-reading-the-overflow.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02b · Base cases, induction, and when to reach for it](02b-base-cases-induction-and-when-to-reach-for-it.md)

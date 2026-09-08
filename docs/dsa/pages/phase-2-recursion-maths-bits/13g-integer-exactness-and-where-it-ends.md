@@ -284,4 +284,6 @@ effective bound becomes the polygon's extent rather than its distance from the o
 `long`; with an extent of 10⁹ it is `2 × 10²³` and needs `BigInteger`. The mistake is checking the
 per-term bound and forgetting that `n` terms accumulate.
 
-{/* FOOTER */}
+---
+
+← Prev: [13f · Floating point and the epsilon decision](13f-floating-point-and-the-epsilon-decision.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [13h · Closest pair of points](13h-closest-pair-of-points.md)

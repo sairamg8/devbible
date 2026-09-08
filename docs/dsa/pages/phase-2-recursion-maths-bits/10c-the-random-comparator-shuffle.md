@@ -285,4 +285,6 @@ is the same four lines as for four million. The only defensible version of their
 the consequences of a biased order are negligible for their feature, which is a product decision and
 should be stated as one rather than dressed up as a technical claim.
 
-{/* FOOTER */}
+---
+
+← Prev: [10b · Fisher–Yates in practice](10b-fisher-yates-in-practice.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10d · Uniform integers and modulo bias](10d-uniform-integers-and-modulo-bias.md)

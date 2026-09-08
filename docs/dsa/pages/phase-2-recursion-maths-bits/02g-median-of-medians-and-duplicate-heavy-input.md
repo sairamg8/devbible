@@ -193,4 +193,6 @@ adversarial argument, and it is also why a randomised solution is not reproducib
 you inject the pivot chooser yourself. The hash-collision analogue is the same story with hash
 functions, and it is why platform hash maps randomise their seeds.
 
-{/* FOOTER */}
+---
+
+← Prev: [02f · Quickselect](02f-quickselect.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02h · Solve halves, combine — without sorting](02h-solve-halves-combine-when-it-is-not-sorting.md)

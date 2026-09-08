@@ -212,4 +212,6 @@ power of two, which is why hash tables choose power-of-two capacities — is tot
 `int` maps into range, including the minimum, because the AND discards the sign bit rather than
 negating it.
 
-{/* FOOTER */}
+---
+
+← Prev: [04b · Single-bit idioms and masks](04b-the-single-bit-idioms-and-masks.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [04d · Counting set bits, and the platform methods](04d-counting-set-bits-and-the-platform-methods.md)

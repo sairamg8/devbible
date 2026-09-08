@@ -238,4 +238,6 @@ the same thing with one lookup instead of two. In Java the equivalent is assigni
 a boxed `Long` or `Boolean` and comparing against `null`, never unboxing before the null check —
 which would throw a `NullPointerException` on the first miss.
 
-{/* FOOTER */}
+---
+
+← Prev: [01d · Tail position and mutual recursion](01d-tail-position-and-mutual-recursion.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [01f · Converting to an explicit stack](01f-converting-recursion-to-an-explicit-stack.md)

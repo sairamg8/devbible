@@ -145,8 +145,8 @@ Two choices of `M`, and they are the two halves of this topic:
 - **An explicit prime near 10^9.** Every multiply produces an intermediate near 10^18, which needs
   Java's `long` and TypeScript's `BigInt` — the second of
   [05d](05d-the-three-silent-overflows.md)'s three overflows, exactly. Precomputing `B^(k-1)` avoids
-  needing a modular inverse to remove the leading term; the inverse route belongs to **Fast
-  exponentiation and the modular inverse** *(not written yet)*.
+  needing a modular inverse to remove the leading term; the inverse route belongs to [Fast
+  exponentiation and the modular inverse](07-fast-exponentiation-and-the-modular-inverse.md).
 - **2^64, by letting a Java `long` wrap.** No `%` at all — the hardware does the reduction. This is
   the fastest formulation and it is deliberate overflow in its purest form. ⚠️ It is also the easiest
   to attack: because the modulus is fixed and public, an adversary who knows the base can construct
@@ -156,7 +156,7 @@ Two choices of `M`, and they are the two halves of this topic:
 
 The `+ M` in the removal step is not about overflow; it is because `%` is a *remainder* and returns
 a negative value for a negative left operand, in both languages. That subject — `Math.floorMod` and
-`((x % m) + m) % m` — belongs to **Mathematical foundations** *(not written yet)*.
+`((x % m) + m) % m` — belongs to [Mathematical foundations](03-mathematical-foundations.md).
 
 ## Gotchas
 
@@ -230,4 +230,6 @@ whatever your implementation does, and nothing outside the JVM reproduces it. A 
 digest with a written specification and enough output bits that collisions are not a design
 consideration.
 
-{/* FOOTER */}
+---
+
+← Prev: [05d · The three silent overflows](05d-the-three-silent-overflows.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [05f · The cross-language trap](05f-the-cross-language-trap.md)

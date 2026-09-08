@@ -16,7 +16,7 @@ sidebar_position: 5.3
 > [`Number.MAX_SAFE_INTEGER`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER).
 > Every midpoint and product bound below is **arithmetic derived on the page**. ⚠️ `Math.floorDiv`
 > is named for the negative-range case; the modular-arithmetic subject in general belongs to
-> **Mathematical foundations** *(not written yet)*. **No sandbox run.** Version spine: **JDK 25 ·
+> [Mathematical foundations](03-mathematical-foundations.md). **No sandbox run.** Version spine: **JDK 25 ·
 > MDN as fetched 2026-09-07**.
 
 **Overflow is not usually found by auditing every arithmetic expression; it is found by knowing the
@@ -124,9 +124,9 @@ export const mulmod = (a: bigint, b: bigint): bigint => ((a % MOD) * (b % MOD)) 
 🔴 **Reduce before multiplying, not only after.** `(a * b) % MOD` where `a` and `b` have not
 themselves been reduced can overflow even in `long`, because the operands may be arbitrarily large;
 `((a % MOD) * (b % MOD)) % MOD` bounds both factors first. Using this multiply inside fast
-exponentiation belongs to **Fast exponentiation and the modular inverse** *(not written yet)*; the
+exponentiation belongs to [Fast exponentiation and the modular inverse](07-fast-exponentiation-and-the-modular-inverse.md); the
 subtraction case, where `%` yields a negative residue and needs `((x % m) + m) % m` or
-`Math.floorMod`, belongs to **Mathematical foundations** *(not written yet)*.
+`Math.floorMod`, belongs to [Mathematical foundations](03-mathematical-foundations.md).
 
 ## 3 — The sum accumulated in the element type
 
@@ -270,4 +270,6 @@ running *"using `int` arithmetic"*. That is
 deliberate overflow is acceptable exactly when the value's *meaning* is "a number modulo 2^32" —
 never when it is a count, a total, an index or an identifier.
 
-{/* FOOTER */}
+---
+
+← Prev: [05c · Java's int, and the checked arithmetic](05c-javas-int-and-the-checked-arithmetic.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [05e · Overflow on purpose](05e-overflow-on-purpose.md)

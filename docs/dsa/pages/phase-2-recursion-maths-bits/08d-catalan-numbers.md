@@ -86,7 +86,7 @@ where the two counts are unequal; the division form is the one to compute with, 
 The growth is `4ⁿ / (n^{3/2}√π)` asymptotically — dominated by the `4ⁿ`, so a Catalan count outruns a
 64-bit integer at a modest `n` and outruns a JavaScript safe integer sooner. That is why these
 problems arrive with a modulus attached; the machinery is
-**Fast exponentiation and the modular inverse** *(not written yet)*, and note that the `/(n+1)`
+[Fast exponentiation and the modular inverse](07-fast-exponentiation-and-the-modular-inverse.md), and note that the `/(n+1)`
 becomes a modular inverse there, while the DP below needs no division at all.
 
 ## Computing them
@@ -229,4 +229,6 @@ depended on the paths being unconstrained. The DP is also the better choice unde
 only adds and multiplies while the closed form needs a division and therefore an inverse. The closed
 form wins when you need one value, `n` is large, and there are no extra constraints.
 
-{/* FOOTER */}
+---
+
+← Prev: [08c · Stars and bars, multisets](08c-stars-and-bars-and-multisets.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [08e · Inclusion–exclusion, derangements](08e-inclusion-exclusion-and-derangements.md)

@@ -20,7 +20,7 @@ way and both of its properties become obvious — that it never produces a non-s
 never skips one. The second half of the subject is the cost, which is `3^n` over all masks and is
 usually the number that decides whether the technique is admissible at all. Using submasks as the
 *state* of a dynamic program is a different subject and belongs to
-**Bitmask enumeration** *(not written yet)*; what is here is the idiom, its boundary case, and its
+[Bitmask enumeration](09-bitmask-enumeration.md); what is here is the idiom, its boundary case, and its
 arithmetic.
 [04g](04g-the-32-bit-ceiling-and-what-to-use-instead.md) is the language decision that follows once
 `n` passes 31.
@@ -205,4 +205,6 @@ empty set has exactly one subset, itself. It is worth checking that case explici
 DP's base case, because "one iteration" is easy to mistake for "no iterations" when reading the
 code, and a base case that expects zero iterations for an empty mask will double-count.
 
-{/* FOOTER */}
+---
+
+← Prev: [04e · XOR, and the problems it solves](04e-xor-and-the-problems-it-solves.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [04g · The 32-bit ceiling, and what to use instead](04g-the-32-bit-ceiling-and-what-to-use-instead.md)

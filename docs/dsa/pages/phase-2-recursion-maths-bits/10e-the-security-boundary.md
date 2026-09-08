@@ -27,7 +27,8 @@ predictable, because those are different design goals, and a fast generator has 
 the first at the explicit expense of the second. This page draws the line, quotes both platforms,
 and then walks the values in a typical PERN storefront to say which side of the line each one sits
 on — because the interesting cases are not "session token: obviously secure" but the ones where it
-depends on what the value is used for.
+depends on what the value is used for. The APIs themselves, once a value is on the secure side, are
+[10j](10j-the-secure-apis-in-both-languages.md).
 
 ## The two warnings, verbatim
 
@@ -129,61 +130,6 @@ Walk the actual values, because the classification is not obvious for half of th
   brute-forced, so the defence is rate limiting plus enough entropy, and generating them from a
   fast generator undermines both.
 
-## The APIs, in both languages
-
-```ts
-// A URL-safe token. 32 bytes = 256 bits of entropy.
-function token(bytes = 32): string {
-  const buf = new Uint8Array(bytes);
-  crypto.getRandomValues(buf);
-  return btoa(String.fromCharCode(...buf))
-    .replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-}
-
-const id = crypto.randomUUID();   // a v4 UUID, for when you want an id rather than a secret
-```
-
-`getRandomValues` accepts integer typed arrays only and MDN documents the ceiling —
-*"`QuotaExceededError` - Thrown if the `byteLength` of `typedArray` exceeds 65,536"* — which is
-generous for a token and a real limit if you try to fill a pool.
-
-⚠️ `crypto.randomUUID()` produces a 128-bit value of which some bits are fixed by the UUID version
-and variant, so it is **not** 128 bits of entropy. It is an excellent identifier and an adequate
-secret for many purposes; if you need a stated number of bits, generate the bytes yourself.
-
-```java
-// Long-lived, high-value secrets.
-SecureRandom strong = SecureRandom.getInstanceStrong();
-
-// General security-relevant randomness.
-SecureRandom rnd = new SecureRandom();
-byte[] buf = new byte[32];
-rnd.nextBytes(buf);
-String token = Base64.getUrlEncoder().withoutPadding().encodeToString(buf);
-```
-
-The javadoc's own guidance on `getInstanceStrong`:
-
-> *"Returns a `SecureRandom` object that was selected by using the algorithms/providers specified in
-> the `securerandom.strongAlgorithms` `Security` property. Some situations require strong random
-> values, such as when creating high-value/long-lived secrets like RSA public/private keys."*
-
-⚠️ Whether `getInstanceStrong` can block waiting for system entropy depends on the configured
-provider and the platform's entropy source. **The javadoc fetched for this page does not say so, and
-this page therefore does not claim it** — but it is the question to ask before calling it on a
-request path, and the reason `new SecureRandom()` is the usual choice for per-request tokens.
-
-One more quoted subtlety, because it inverts the `java.util.Random` habit:
-
-> *"The seed supplements, rather than replaces, the existing seed. Thus, repeated calls are
-> guaranteed never to reduce randomness."* — `SecureRandom.setSeed`
-
-`new Random(42)` **replaces** the seed and makes the sequence reproducible;
-`secureRandom.setSeed(42)` does not, and cannot be used to make a `SecureRandom` deterministic. That
-is a deliberate design difference and it is the reason a seeded-for-testing pattern
-([10f](10f-seeding-and-reproducibility.md)) has to inject a different generator rather than seed the
-secure one.
-
 ## Gotchas
 
 **★ Symptom: password reset tokens generated with `Math.random().toString(36).slice(2)`.** Cause: the
@@ -211,11 +157,6 @@ for *contention*, and its javadoc carries the identical warning — *"Instances 
 are not cryptographically secure."* The security fix is `SecureRandom`; the contention fix is
 `ThreadLocalRandom`; they are orthogonal.
 
-**★ Symptom: `ThreadLocalRandom.current().setSeed(…)` throws.** Cause: it is documented not to be
-supported — *"Throws `UnsupportedOperationException`. Setting seeds in this generator is not
-supported."* Fix: for reproducible tests, inject a `Random` (or a `RandomGenerator`) rather than
-reaching for the thread-local one; see [10f](10f-seeding-and-reproducibility.md).
-
 **★ Symptom: a token compared with `==` or `String.equals` and a security review flags it.** Cause:
 a comparison that returns early on the first differing byte leaks, through timing, how much of the
 guess was right. Fix: a constant-time comparison — `MessageDigest.isEqual` in Java. ⚠️ This is
@@ -234,15 +175,6 @@ unguessable id narrows the attack surface and does nothing about a leaked URL, a
 shared screenshot, or an authenticated user probing another tenant's ids that they legitimately
 learned.
 
-**★ Symptom: security-relevant randomness generated in a Node process and `crypto` resolves to the
-wrong thing.** Cause: `crypto` is a global in modern Node and the Web Crypto surface differs from the
-legacy `require("crypto")` module surface — `crypto.randomBytes` is Node's, `crypto.getRandomValues`
-is the Web one, and code copied between browser and server hits whichever is not there. Fix: pick one
-surface deliberately per runtime and wrap it in a single helper, so there is exactly one place in
-the codebase that names a random source.
-
-## Interview questions
-
 **★ Why can't you use `Math.random()` for a session token?**
 Because it is not designed to be unpredictable, and MDN says so in its own documentation:
 *"`Math.random()` does not provide cryptographically secure random numbers. Do not use them for
@@ -251,16 +183,6 @@ uniformity and independence tests — while a cryptographic generator must addit
 adversary who has observed prior output from predicting future output. A session token's entire
 security property is unpredictability, so the wrong generator makes the token forgeable in
 principle, regardless of how random the output looks. Use `crypto.getRandomValues`.
-
-**★ `Random`, `ThreadLocalRandom`, `SecureRandom` — when each?**
-`Random` for ordinary randomness in single-threaded or low-contention code, and when you need
-reproducibility from a seed. `ThreadLocalRandom` for the same purposes under concurrency: the
-javadoc notes that *"the concurrent use of the same `java.util.Random` instance across threads may
-encounter contention and consequent poor performance"* and recommends the thread-local one, which is
-*"isolated to the current thread"* and used as `ThreadLocalRandom.current().nextX(...)`.
-`SecureRandom` whenever the value must be unguessable. The two non-secure classes both state that
-they are not cryptographically secure, so the choice between them is purely about concurrency and
-seeding, never about security.
 
 **★ Is a UUID a secure token?**
 A version-4 UUID is 128 bits with several fixed for the version and variant, generated — in a
@@ -297,4 +219,6 @@ test asserts the encoding, the length and the alphabet, which is what you actual
 the randomness itself is not a testable property. [10f](10f-seeding-and-reproducibility.md) is that
 pattern in general.
 
-{/* FOOTER */}
+---
+
+← Prev: [10d · Uniform integers and modulo bias](10d-uniform-integers-and-modulo-bias.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10j · The secure APIs, in both languages](10j-the-secure-apis-in-both-languages.md)

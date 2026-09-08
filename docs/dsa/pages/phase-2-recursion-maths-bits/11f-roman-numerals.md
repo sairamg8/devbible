@@ -237,4 +237,6 @@ vinculum (overline) notation multiplies a symbol by a thousand, and there is no 
 encoding of it — so the correct engineering answer is to validate the range and throw, rather than
 to emit `MMMM` and hope the caller agrees with your extension of the notation.
 
-{/* FOOTER */}
+---
+
+← Prev: [11e · Integer square root](11e-integer-square-root.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [11g · String to integer (atoi)](11g-string-to-integer.md)

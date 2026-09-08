@@ -252,4 +252,6 @@ depth and a stack overflow for a large exponent. A related and subtler mistake i
 recursive helper twice per level instead of binding its result once: that makes the recurrence
 `T(n) = 2T(n/2) + O(1)`, which is `Θ(n)`, so the function is linear while looking logarithmic.
 
-{/* FOOTER */}
+---
+
+← Prev: [11c · Palindromic numbers](11c-palindromic-numbers.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [11e · Integer square root](11e-integer-square-root.md)

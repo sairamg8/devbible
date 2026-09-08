@@ -177,8 +177,8 @@ small `n` the exact answer does not fit any machine integer, so the problem asks
 instead — and then every multiplication has to be reduced, every division becomes a multiplication
 by a modular inverse, and `%` in both languages is a *remainder* that goes negative after a
 subtraction. **This page does not own that machinery.** The modular arithmetic is
-**Fast exponentiation and the modular inverse** *(not written yet)*, and the underlying `%` and
-overflow behaviour is **Mathematical foundations** *(not written yet)*. What this page owns is
+[Fast exponentiation and the modular inverse](07-fast-exponentiation-and-the-modular-inverse.md), and the underlying `%` and
+overflow behaviour is [Mathematical foundations](03-mathematical-foundations.md). What this page owns is
 knowing that you need it, and at what size.
 
 ## Gotchas
@@ -276,4 +276,6 @@ is counted twice. Orders that used a promo plus orders that used a gift card dou
 that used both, and the fix is either to redefine the cases or to reach for inclusion–exclusion. Most
 wrong counts are one of those two conditions violated silently, and both take one sentence to check.
 
-{/* FOOTER */}
+---
+
+← Prev: [07f · Any associative operation](07f-any-associative-operation.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [08b · Pascal's rule and the DP table](08b-pascals-rule-and-the-dp-table.md)

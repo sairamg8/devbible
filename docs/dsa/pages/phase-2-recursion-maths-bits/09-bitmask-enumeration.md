@@ -287,4 +287,6 @@ write. That turns an array index into a string build plus a hash, per state, and
 that millions of times. If `n` were large enough that the mask did not fit, the `Set` would not save
 you either: the number of states is the problem, not their representation.
 
-{/* FOOTER */}
+---
+
+← Prev: [08g · The pigeonhole principle](08g-the-pigeonhole-principle.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [09b · Precedence and the 32-bit bound](09b-precedence-and-the-32-bit-loop-bound.md)

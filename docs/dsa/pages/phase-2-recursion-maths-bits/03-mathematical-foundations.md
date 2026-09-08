@@ -244,4 +244,6 @@ the pair becomes `(b, a)`, so the algorithm sorts them itself at a cost of one e
 explicit swap is not a correctness fix, it is a micro-optimisation of one iteration, and it is a
 common source of the bug where the swap is written inside the loop instead of before it.
 
-{/* FOOTER */}
+---
+
+← Prev: [02i · Binary search as degenerate D&C](02i-binary-search-as-degenerate-divide-and-conquer.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03b · gcd on signed and wide types](03b-gcd-on-signed-and-wide-types.md)

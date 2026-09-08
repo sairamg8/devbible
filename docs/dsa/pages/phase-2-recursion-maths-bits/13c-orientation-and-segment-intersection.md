@@ -277,4 +277,6 @@ coordinates follow as `p1 + t·(p2 − p1)`. Reduce each fraction by its `gcd`. 
 doubles, convert at the boundary and say that this is the point where the computation stops being
 exact.
 
-{/* FOOTER */}
+---
+
+← Prev: [13b · The cross product](13b-the-cross-product.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [13d · Shoelace area and convexity](13d-shoelace-area-and-convexity.md)

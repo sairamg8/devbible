@@ -218,4 +218,6 @@ reaches depth n, which is both Θ(n²) in time and a stack overflow risk, and th
 is to recurse on the smaller partition and loop on the larger so the depth is Θ(log n) whatever the
 pivots do.
 
-{/* FOOTER */}
+---
+
+← Prev: [02 · Divide and conquer](02-divide-and-conquer.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02c · Merge sort](02c-merge-sort.md)

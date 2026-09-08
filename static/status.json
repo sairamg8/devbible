@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-08 17:50",
+  "updated": "2026-09-08 19:25",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -10,8 +10,8 @@
     "parked": 2,
     "blocked": 1,
     "topics": 3955,
-    "completed": 2517,
-    "pending": 1438,
+    "completed": 2530,
+    "pending": 1425,
     "percent": 64
   },
   "importedTotals": {
@@ -460,16 +460,16 @@
       "key": "dsa",
       "label": "DSA",
       "status": "in-progress",
-      "percent": 8,
+      "percent": 13,
       "counts": "syllabus topics explained",
       "topics": 301,
-      "completed": 25,
-      "pending": 276,
+      "completed": 38,
+      "pending": 263,
       "imported": false,
-      "phases": "2/21",
-      "next": "2 · Recursion, maths and bits",
+      "phases": "3/21",
+      "next": "3 · Arrays, hashing and prefix sums",
       "docs": "/docs/dsa",
-      "updated": "2026-09-07 16:55",
+      "updated": "2026-09-08 19:25",
       "note": null
     },
     {

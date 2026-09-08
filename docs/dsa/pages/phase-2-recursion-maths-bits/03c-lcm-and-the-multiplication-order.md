@@ -76,7 +76,7 @@ static long lcmChecked(long a, long b) {
 
 In TypeScript there is no wrap and no exception: a product past `2^53 − 1` is silently *rounded*,
 which is a different and quieter failure. [03j · Modular arithmetic and the remainder trap](03j-modular-arithmetic-and-the-remainder-trap.md) covers that boundary where it matters most;
-the general case is **05 · Integer limits and overflow** *(not written yet)*.
+the general case is [05 · Integer limits and overflow](05-integer-limits-and-overflow.md).
 
 ## `lcm` over a list
 
@@ -138,7 +138,7 @@ approximately, so `a * b / g` comes back close to the answer and unequal to it. 
 exception and no negative value to notice. Fix: divide first, and gate the result:
 `if (!Number.isSafeInteger(result)) throw new RangeError(…)`. The rounding boundary itself is
 [03j · Modular arithmetic and the remainder trap](03j-modular-arithmetic-and-the-remainder-trap.md)
-and **05 · Integer limits and overflow** *(not written yet)*.
+and [05 · Integer limits and overflow](05-integer-limits-and-overflow.md).
 
 **★ Symptom: `lcm(0, 0)` throws, returns `NaN`, or returns `Infinity`.** Cause: `gcd(0, 0)` is `0`
 by convention and the formula divides by it. Fix: guard, and decide the degenerate answer
@@ -234,4 +234,6 @@ integer, and it is the least such common multiple under the divisibility orderin
 that genuinely needs a guard is `lcm(0, 0)`, because `gcd(0, 0)` is `0` and the formula would divide
 by it.
 
-{/* FOOTER */}
+---
+
+← Prev: [03b · gcd on signed and wide types](03b-gcd-on-signed-and-wide-types.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03d · Extended Euclid and Bézout](03d-the-extended-euclidean-algorithm-and-bezout.md)

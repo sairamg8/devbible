@@ -26,7 +26,8 @@ linear recurrence. Its companion pages are the modular form, where every multipl
 and where the intermediate product is the trap
 ([07b](07b-modular-exponentiation-and-where-the-product-overflows.md)), the modular inverse it makes
 possible ([07d](07d-the-modular-inverse.md)), and binomial coefficients under a modulus
-([07e](07e-binomial-coefficients-under-a-modulus.md)).
+([07e](07e-binomial-coefficients-under-a-modulus.md)), and the generalisation to any monoid —
+matrices, permutations, min-plus — which is [07f](07f-any-associative-operation.md).
 
 ## The derivation
 
@@ -160,37 +161,6 @@ yet)*; here it is enough to know that the exponent of a `power` function is exac
 value that outgrows 32 bits, and that Java has no equivalent problem because `>>` and `&` on a
 `long` operate on all 64 bits.
 
-## It works for any associative operation
-
-Nothing in the derivation used commutativity, or numbers. It used exactly two things: that the
-operation is **associative**, so the grouping into powers of two is legitimate, and that there is an
-**identity** to initialise the accumulator with. Anything satisfying those — a *monoid* — can be
-exponentiated in `Θ(log n)` applications:
-
-```ts
-// TypeScript — binary exponentiation over an arbitrary monoid
-export function monoidPower<T>(x: T, n: number, op: (p: T, q: T) => T, identity: T): T {
-  let result = identity;
-  let base = x;
-  let e = n;
-  while (e > 0) {
-    if (e % 2 === 1) result = op(result, base);
-    base = op(base, base);
-    e = Math.floor(e / 2);
-  }
-  return result;
-}
-```
-
-Instantiations worth recognising: **matrix multiplication**, which turns an `n`-step linear
-recurrence into `Θ(log n)` matrix products and is the whole of **12 · Matrix exponentiation**
-*(not written yet)*; **function composition**, so "apply this permutation `n` times" is
-`Θ(size · log n)` instead of `Θ(size · n)`; **min-plus (tropical) matrix product**, which gives
-shortest paths with exactly `k` edges; and **string concatenation** if you ever need a string
-repeated a power-of-two number of times. The order of arguments to `op` matters when the operation
-is not commutative — matrix multiplication is not — so keep the accumulator on the same side
-throughout, as `op(result, base)` does above.
-
 ## Gotchas
 
 **★ Symptom: the "fast" exponentiation is no faster than the naive loop.** Cause: the recursive
@@ -233,11 +203,6 @@ value is wanted, use `BigInt` / `BigInteger`; if a residue is wanted, use the mo
 reduce every multiply, which is [07b](07b-modular-exponentiation-and-where-the-product-overflows.md).
 Unmodular `power` over `number` is useful only when you know the result is small.
 
-**Symptom: a matrix or permutation "power" produces the transpose or an unrelated result.** Cause:
-the operation is not commutative and the accumulator was combined from the wrong side — `op(base,
-result)` in one branch and `op(result, base)` in another. Fix: pick a side and keep it. The
-derivation never needed commutativity, but it does need consistency.
-
 **Symptom: `power` is used where `Math.pow` would do.** Cause: reaching for the algorithm rather
 than the requirement. Fix: for floating-point results, the built-in is right. Binary exponentiation
 earns its place when the operation is *not* floating-point multiplication — under a modulus, on
@@ -260,15 +225,6 @@ It computes the same subproblem twice, so the recurrence becomes `T(n) = 2T(n/2)
 clever. The fix is to bind the recursive result to a local and square it. It is the same failure as
 naive recursive Fibonacci in miniature, and it is worth being able to name the recurrence for both
 versions rather than saying "that's slower".
-
-**★ Why does the same algorithm work for matrices, and what does it need from the operation?**
-Because the derivation used only associativity and the existence of an identity. Associativity is
-what licenses regrouping `a·a·a·…·a` into blocks of `a^(2ⁱ)`; the identity is what the accumulator
-starts at. That is exactly a monoid, so matrix multiplication, function composition, permutation
-composition and min-plus matrix product all work, giving `Θ(log n)` applications of the operation
-rather than `n`. Commutativity is *not* required, which is why the accumulator must be combined from
-a consistent side. The classic payoff is turning a linear recurrence — Fibonacci, or any
-constant-coefficient one — into a `Θ(log n)` matrix power.
 
 **★ Your TypeScript version uses `%` and `Math.floor` where the Java version uses `&` and `>>`. Why
 not use the bit operators in both?**
@@ -297,4 +253,6 @@ chain only on set bits, so `b` desynchronises from the bit position. The bug is 
 exponents of the form `2^k − 1`, whose bits are all ones, which is exactly the family of small test
 values someone is likely to try.
 
-{/* FOOTER */}
+---
+
+← Prev: [06j · N-Queens and symmetry](06j-n-queens-and-symmetry.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [07b · Modular exponentiation and overflow](07b-modular-exponentiation-and-where-the-product-overflows.md)

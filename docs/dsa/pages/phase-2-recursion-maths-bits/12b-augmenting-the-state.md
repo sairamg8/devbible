@@ -228,4 +228,6 @@ multiplication is cubic in that dimension, the number to check before committing
 It is also the framing that makes the whole topic make sense: this is not a Fibonacci trick, it is
 the general way to apply a fixed linear system a very large number of times.
 
-{/* FOOTER */}
+---
+
+← Prev: [12 · Matrix exponentiation](12-matrix-exponentiation.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [12c · The multiply and the modulus](12c-the-multiply-the-power-and-the-modulus.md)

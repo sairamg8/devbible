@@ -230,4 +230,6 @@ is not being restored: some set, counter or marked cell that the test consults w
 earlier subtree's un-choose. That split covers nearly every case and costs nothing to check, which
 matters because these searches are exponential and stepping through one is not a strategy.
 
-{/* FOOTER */}
+---
+
+← Prev: [06g · Duplicates in permutations](06g-duplicates-in-permutations.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06i · Bound pruning and ordering](06i-bound-pruning-and-ordering.md)

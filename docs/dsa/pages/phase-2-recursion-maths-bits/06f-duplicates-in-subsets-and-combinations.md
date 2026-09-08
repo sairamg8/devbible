@@ -222,4 +222,6 @@ candidates too; only the base case changes. What does *not* carry across is the 
 skeleton, where every unused index is a candidate at every node and "same node" cannot be read off
 the index — that needs the different condition in [06g](06g-duplicates-in-permutations.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [06e · Permutations and the used array](06e-permutations-and-the-used-array.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06g · Duplicates in permutations](06g-duplicates-in-permutations.md)

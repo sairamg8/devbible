@@ -264,4 +264,6 @@ Because the default value of a freshly allocated numeric array is zero in both l
 `Array.fill` or an `Arrays.fill` over `n` entries before the algorithm starts. It is a small thing
 and it is the sort of detail that shows you have written one rather than read one.
 
-{/* FOOTER */}
+---
+
+← Prev: [03f · Primality by trial division](03f-primality-by-trial-division.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03h · Factorisation and smallest prime factors](03h-factorisation-and-smallest-prime-factors.md)

@@ -11,7 +11,7 @@ sidebar_position: 8.1
 > thresholds are arithmetic, checked against the constants quoted in
 > [08](08-combinatorics-for-counting-problems.md) (MDN `Number.MAX_SAFE_INTEGER`; JDK 25
 > `Integer.MAX_VALUE`). Computing binomials **under a modulus**, and the inverse-factorial
-> precompute, belong to **Fast exponentiation and the modular inverse** *(not written yet)* — this
+> precompute, belong to [Fast exponentiation and the modular inverse](07-fast-exponentiation-and-the-modular-inverse.md) — this
 > page stops at the table. Java targets **JDK 25**. **No sandbox run.**
 
 **`C(n, k) = C(n−1, k−1) + C(n−1, k)` is not a numerical curiosity; it is the addition principle
@@ -234,4 +234,6 @@ better than factorials, which stop at `20!` in a `long`, but it is still small �
 problem with `n` in the hundreds is asking for either `BigInteger` or a modulus, and the phrasing of
 the question tells you which.
 
-{/* FOOTER */}
+---
+
+← Prev: [08 · Counting: the two principles](08-combinatorics-for-counting-problems.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [08c · Stars and bars, multisets](08c-stars-and-bars-and-multisets.md)

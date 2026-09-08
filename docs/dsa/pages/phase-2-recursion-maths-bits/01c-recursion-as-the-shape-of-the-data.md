@@ -176,8 +176,8 @@ The `push` / `go` / `pop` triple is the whole of what makes this a *backtracking
 than a plain one: the path is shared mutable state, and the undo restores the invariant that the
 function found on entry. The depth is the number of positions, so it is bounded by the input length
 rather than by the exponential number of outputs — which is why this recursion is Θ(n) on the stack
-while producing 2ⁿ results. The full skeleton, the pruning and the pitfalls belong to **06 · The
-backtracking skeleton** *(not written yet)*; what belongs here is that the recursion's *shape* came
+while producing 2ⁿ results. The full skeleton, the pruning and the pitfalls belong to [06 · The
+backtracking skeleton](06-the-backtracking-skeleton.md); what belongs here is that the recursion's *shape* came
 from the same transcription rule, with "one call per option" in place of "one call per child".
 
 ## Gotchas
@@ -277,4 +277,6 @@ and the 2ⁿ leaves are visited one after another, not simultaneously. That is t
 as naive Fibonacci: total calls is time, simultaneously live calls is space. The honest bound is
 "Θ(n) auxiliary for the recursion and the path, beyond an output of 2ⁿ subsets."
 
-{/* FOOTER */}
+---
+
+← Prev: [01b · The three ways the contract breaks](01b-the-three-ways-the-contract-breaks.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [01d · Tail position and mutual recursion](01d-tail-position-and-mutual-recursion.md)

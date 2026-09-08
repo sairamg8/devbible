@@ -274,4 +274,6 @@ with probability `k/10^9`, so the reservoir is effectively frozen and stops refl
 The fix is not a better reservoir but a different problem statement — windowed or time-decayed
 sampling, restarting the reservoir per interval, which is what observability pipelines do.
 
-{/* FOOTER */}
+---
+
+← Prev: [10g · The randomised pivot](10g-the-randomised-pivot.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10i · Why add randomness](10i-why-add-randomness.md)

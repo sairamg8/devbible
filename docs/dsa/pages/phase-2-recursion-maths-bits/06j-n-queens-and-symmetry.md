@@ -156,7 +156,7 @@ sets are passed as parameters — per-frame state, self-restoring, which is
 to 32-bit integers — *"Numbers with more than 32 bits get their most significant bits discarded"* —
 and that the result is signed two's complement, so this form is limited to boards small enough to
 fit that, and `1 << 31` is negative. Java's `int` has the same limit and its `long` doubles it. That
-is the bit-manipulation topic's territory: **Bit manipulation** *(not written yet)*.
+is the bit-manipulation topic's territory: [Bit manipulation](04-bit-manipulation.md).
 
 ## Symmetry: the argument that halves the work
 
@@ -294,4 +294,6 @@ None of these change the asymptotic class — they are constant-factor and memor
 exponential search — and the JavaScript version is capped by the 32-bit truncation of the bitwise
 operators, which is a language limit rather than an algorithmic one.
 
-{/* FOOTER */}
+---
+
+← Prev: [06i · Bound pruning and ordering](06i-bound-pruning-and-ordering.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [07 · Binary exponentiation](07-fast-exponentiation-and-the-modular-inverse.md)

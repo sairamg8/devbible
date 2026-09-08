@@ -260,4 +260,6 @@ built-in and you implement it over `BigInt`, using the modular exponentiation fr
 [07 · Binary exponentiation](07-fast-exponentiation-and-the-modular-inverse.md). If the task is
 *factoring* rather than testing, the corresponding step up is Pollard's rho.
 
-{/* FOOTER */}
+---
+
+← Prev: [03e · The Chinese remainder theorem](03e-the-chinese-remainder-theorem.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03g · The sieve of Eratosthenes](03g-the-sieve-of-eratosthenes.md)

@@ -132,7 +132,7 @@ signal:
 
 The `n ≤ 10^18` row is the one that most often *forces* the closed form: if you cannot iterate over
 `n`, a recurrence has to be either solved in closed form or evaluated by matrix exponentiation, which
-is that topic's business (**Matrix exponentiation** *(not written yet)*).
+is that topic's business ([Matrix exponentiation](12-matrix-exponentiation.md)).
 
 ## When the answer is "both"
 
@@ -238,4 +238,6 @@ blocked cells", "such that the running total never goes negative", "using each c
 Each of those clauses is the coupling, and finding it is the same skill as finding the assumption a
 closed-form derivation would have needed.
 
-{/* FOOTER */}
+---
+
+← Prev: [08e · Inclusion–exclusion, derangements](08e-inclusion-exclusion-and-derangements.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [08g · The pigeonhole principle](08g-the-pigeonhole-principle.md)

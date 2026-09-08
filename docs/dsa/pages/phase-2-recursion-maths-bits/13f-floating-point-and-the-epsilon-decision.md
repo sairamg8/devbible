@@ -279,4 +279,6 @@ What is never right is *creating* the problem — converting exact integer input
 because a remembered formula contained a division, when multiplying the division out would have
 kept the whole computation exact.
 
-{/* FOOTER */}
+---
+
+← Prev: [13e · Point in polygon by ray casting](13e-point-in-polygon-by-ray-casting.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [13g · Integer exactness, and where it ends](13g-integer-exactness-and-where-it-ends.md)

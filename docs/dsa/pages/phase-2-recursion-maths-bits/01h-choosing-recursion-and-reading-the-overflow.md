@@ -252,4 +252,6 @@ telling you what d′ is. It is a reasonable measure when the depth is known and
 recursion is genuinely clearer — a compiler pass over an AST of known shape, say. It is not a
 substitute for converting a recursion whose depth is the input size.
 
-{/* FOOTER */}
+---
+
+← Prev: [01g · Post-order and the resume-point frame](01g-post-order-and-the-resume-point-frame.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02 · Divide and conquer](02-divide-and-conquer.md)

@@ -226,4 +226,6 @@ topic and dynamic programming: enumerate to list, count or optimise by other mea
 side is [Part 6](../../syllabus/06-backtracking-greedy-and-dp.md) and the combinatorial side is
 this phase's own [08 · Combinatorics for counting problems](08-combinatorics-for-counting-problems.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [06b · Copies and the two path designs](06b-copies-and-the-two-path-designs.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06d · Subsets and combinations](06d-subsets-and-combinations.md)

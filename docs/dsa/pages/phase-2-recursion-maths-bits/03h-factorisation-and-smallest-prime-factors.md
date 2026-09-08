@@ -205,4 +205,6 @@ division, and Miller–Rabin tells you whether what you have left needs splittin
 name both rather than write them from memory in an interview, and say what each is for: Miller–Rabin
 tests, rho splits.
 
-{/* FOOTER */}
+---
+
+← Prev: [03g · The sieve of Eratosthenes](03g-the-sieve-of-eratosthenes.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03i · Divisor functions and the totient](03i-divisor-functions-and-the-totient.md)

@@ -209,4 +209,6 @@ each node is pushed once and popped once over a full traversal. That amortised a
 1's "each element pushed once and popped at most once" sentence applied to an iterator, and saying
 it is what distinguishes a memorised pattern from an understood one.
 
-{/* FOOTER */}
+---
+
+← Prev: [01f · Converting to an explicit stack](01f-converting-recursion-to-an-explicit-stack.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [01h · Choosing, and reading the overflow](01h-choosing-recursion-and-reading-the-overflow.md)

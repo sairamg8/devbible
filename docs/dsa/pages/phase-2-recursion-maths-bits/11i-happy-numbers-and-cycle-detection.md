@@ -222,4 +222,6 @@ matters when the state is large or the sequence is long — a pointer chase over
 structure, say — and it costs a correctness argument that a future maintainer has to reconstruct.
 Naming the condition under which each wins is a better answer than picking one.
 
-{/* FOOTER */}
+---
+
+← Prev: [11h · What the platform parsers do](11h-what-the-platform-parsers-do.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [11j · Base conversion and digit sums](11j-base-conversion-and-digit-sums.md)

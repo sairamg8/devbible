@@ -233,4 +233,6 @@ small constant. The decision is therefore "is the tail acceptable?", and if it i
 usually a hybrid rather than an all-deterministic algorithm, because the hybrid keeps the fast path
 and bounds the bad one.
 
-{/* FOOTER */}
+---
+
+← Prev: [10h · Reservoir sampling](10h-reservoir-sampling.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [11 · Number problems that recur](11-number-problems-that-recur.md)

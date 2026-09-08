@@ -274,4 +274,6 @@ allows. Then default explicitly with a branch, never with `||`, which would also
 legitimate `0`. In Java the parser already throws, so the work is catching `NumberFormatException`
 at the boundary and returning a 400 rather than letting it become a 500.
 
-{/* FOOTER */}
+---
+
+← Prev: [11g · String to integer (atoi)](11g-string-to-integer.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [11i · Happy numbers and cycles](11i-happy-numbers-and-cycle-detection.md)

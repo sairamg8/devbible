@@ -262,4 +262,6 @@ close to 1, which is exactly the regime where modulo bias is a factor-of-two eff
 rounding curiosity. Draw a few extra bytes beyond the bound's width and the rejection probability
 becomes small.
 
-{/* FOOTER */}
+---
+
+← Prev: [10c · The random comparator shuffle](10c-the-random-comparator-shuffle.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10e · The security boundary](10e-the-security-boundary.md)

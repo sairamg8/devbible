@@ -247,4 +247,6 @@ precedence levels and merging them into one function with a "level" parameter th
 readability that made recursive descent worth choosing. So: collapse when the functions differ only
 by state, keep them apart when they differ by meaning.
 
-{/* FOOTER */}
+---
+
+← Prev: [01c · Recursion as the shape of the data](01c-recursion-as-the-shape-of-the-data.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [01e · Memoising a recursive function](01e-memoising-a-recursive-function.md)

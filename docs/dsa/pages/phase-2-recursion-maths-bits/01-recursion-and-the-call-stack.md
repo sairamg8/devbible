@@ -221,4 +221,6 @@ output is 2ⁿ items of length up to n." Separating the two is how you avoid quo
 space bound for a recursion that holds n frames, and how you avoid quoting Θ(n) for a function
 that is about to materialise every permutation.
 
-{/* FOOTER */}
+---
+
+← Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [01b · The three ways the contract breaks](01b-the-three-ways-the-contract-breaks.md)

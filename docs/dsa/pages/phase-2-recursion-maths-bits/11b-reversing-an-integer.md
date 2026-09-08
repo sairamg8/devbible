@@ -252,4 +252,6 @@ overflowed and returned the sentinel. This matters because "reverse and compare"
 palindrome test, and it inherits both problems —
 [11c](11c-palindromic-numbers.md) is why the half-reversal is the better construction.
 
-{/* FOOTER */}
+---
+
+← Prev: [11 · Number problems that recur](11-number-problems-that-recur.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [11c · Palindromic numbers](11c-palindromic-numbers.md)

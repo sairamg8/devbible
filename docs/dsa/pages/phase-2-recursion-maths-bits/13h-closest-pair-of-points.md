@@ -259,4 +259,6 @@ Chebyshev distance, and Chebyshev closest pair reduces to comparisons on the tra
 coordinates. Recognising that the metric changes the algorithm rather than just the distance
 function is the point of the question.
 
-{/* FOOTER */}
+---
+
+← Prev: [13g · Integer exactness, and where it ends](13g-integer-exactness-and-where-it-ends.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [13i · Convex hull and the sweep line](13i-convex-hull-and-the-sweep-line.md)

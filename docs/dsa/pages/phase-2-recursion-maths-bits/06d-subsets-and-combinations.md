@@ -85,7 +85,7 @@ there is the bug that loses every non-maximal subset.
 
 The same enumeration on a different tree, and worth being able to write because some follow-ups are
 much easier on it — counting, converting to a bitmask
-(**Bitmask enumeration** *(not written yet)*), and anything where "the decision at index i" is the
+([Bitmask enumeration](09-bitmask-enumeration.md)), and anything where "the decision at index i" is the
 natural state to memoise on:
 
 ```ts
@@ -269,4 +269,6 @@ duplicate input the correct fix is to skip equal siblings in the choice loop, wh
 the duplicate branch at all — the `Set` version still walks the entire duplicated tree and merely
 hides the result, so it is slower by exactly the factor the input's multiplicities imply.
 
-{/* FOOTER */}
+---
+
+← Prev: [06c · The cost of the search tree](06c-the-cost-of-the-search-tree.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06e · Permutations and the used array](06e-permutations-and-the-used-array.md)

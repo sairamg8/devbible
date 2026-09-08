@@ -292,4 +292,6 @@ width is a data-modelling decision, not an algorithmic one, and the answers are 
 or an array of 32-bit words — [04g](04g-the-32-bit-ceiling-and-what-to-use-instead.md) has the
 trade-off in full.
 
-{/* FOOTER */}
+---
+
+← Prev: [09 · Bitmask enumeration](09-bitmask-enumeration.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [09c · Generating masks in a useful order](09c-generating-masks-in-a-useful-order.md)

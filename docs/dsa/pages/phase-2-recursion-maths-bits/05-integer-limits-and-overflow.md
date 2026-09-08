@@ -255,4 +255,6 @@ depend on. Java also gives you an opt-in that turns the wrap into an exception, 
 its family ([05c](05c-javas-int-and-the-checked-arithmetic.md)); JavaScript has no equivalent for
 the rounding, only the choice to use a different type.
 
-{/* FOOTER */}
+---
+
+← Prev: [04g · The 32-bit ceiling, and what to use instead](04g-the-32-bit-ceiling-and-what-to-use-instead.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [05b · BigInt, and when to reach for it](05b-bigint-and-when-to-reach-for-it.md)

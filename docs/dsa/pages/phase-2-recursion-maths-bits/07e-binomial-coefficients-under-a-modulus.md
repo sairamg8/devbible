@@ -23,7 +23,7 @@ be **prime**, or the inverses may not exist; and `n` must be **less than the mod
 congruent to zero and the entire inverse-factorial table collapses to zeros without any error. When
 `n` exceeds a small prime, Lucas's theorem is the answer; when the modulus is composite, Pascal's
 recurrence is. Combinatorics proper — Catalan numbers, inclusion–exclusion, stars and bars — is
-**08 · Combinatorics for counting problems** *(not written yet)*; this page is only the machinery
+[08 · Combinatorics for counting problems](08-combinatorics-for-counting-problems.md); this page is only the machinery
 that makes them computable modulo a prime.
 
 ## The precompute
@@ -232,8 +232,7 @@ each entry accumulates contributions it should not have. Fix: iterate `j` downwa
 **Symptom: a Catalan number computed as `C(2n, n) / (n + 1)` returns nonsense.** Cause: the division
 was done as integer division under a modulus. Fix: multiply by the inverse —
 `C(2n, n) * inverseFermat(n + 1, p) % p` — which is valid provided `n + 1` is not a multiple of `p`.
-The combinatorial content of Catalan numbers belongs to **08 · Combinatorics for counting problems**
-*(not written yet)*; only the modular mechanics are here.
+The combinatorial content of Catalan numbers belongs to [08 · Combinatorics for counting problems](08-combinatorics-for-counting-problems.md); only the modular mechanics are here.
 
 ## Interview questions
 
@@ -290,4 +289,6 @@ multiplication. The guard is that the `kᵢ` must sum to `n` and each be non-neg
 serve binomials, multinomials, Catalan numbers and permutation counts alike — the precompute is the
 reusable asset, not any individual formula.
 
-{/* FOOTER */}
+---
+
+← Prev: [07d · The modular inverse](07d-the-modular-inverse.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [07f · Any associative operation](07f-any-associative-operation.md)

@@ -292,4 +292,6 @@ preprocessing option: if the coordinates are large but the *spread* is small, su
 minimum corner from every point shrinks the magnitudes before any multiplication happens, which can
 move a computation back inside an exact integer range.
 
-{/* FOOTER */}
+---
+
+← Prev: [12e · Fast doubling, and not Binet](12e-fast-doubling-and-why-not-binet.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [13b · The cross product](13b-the-cross-product.md)

@@ -238,4 +238,6 @@ digit — reasoning entirely with values that are known to be in range. It is th
 never forming `lo + hi` in a binary search
 ([05d](05d-the-three-silent-overflows.md)): rewrite so the large intermediate never exists.
 
-{/* FOOTER */}
+---
+
+← Prev: [11f · Roman numerals](11f-roman-numerals.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [11h · What the platform parsers do](11h-what-the-platform-parsers-do.md)

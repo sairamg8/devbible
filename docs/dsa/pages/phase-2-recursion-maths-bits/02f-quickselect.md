@@ -137,7 +137,7 @@ Two practical caveats, both real:
 
 - **The randomness has to be unpredictable to whoever supplies the input.** `Math.random()` is not
   seedable and not cryptographically secure — MDN says so directly — which is fine here and matters
-  for other things. The details are **10 · Randomisation** *(not written yet)*.
+  for other things. The details are [10 · Randomisation](10g-the-randomised-pivot.md).
 - **`Math.random()` cannot be seeded**, so a randomised algorithm is not reproducible in JavaScript
   without injecting your own generator, which is the practical answer to "how do you write a
   deterministic test for this?": pass the pivot chooser in as a parameter.
@@ -229,4 +229,6 @@ tuned. The case for quickselect is a large n with a single order statistic wante
 selection where the Θ(n) matters. The senior answer names the trade-off rather than reaching for the
 cleverer algorithm by reflex.
 
-{/* FOOTER */}
+---
+
+← Prev: [02e · Counting inversions](02e-counting-inversions.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02g · Median of medians, and duplicates](02g-median-of-medians-and-duplicate-heavy-input.md)

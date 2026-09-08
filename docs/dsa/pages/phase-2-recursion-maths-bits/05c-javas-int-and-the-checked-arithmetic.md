@@ -271,4 +271,6 @@ and checksums live. Java also gives you the `Exact` opt-in and a wider primitive
 JavaScript has neither for the number type, only the decision to use `BigInt` instead
 ([05b](05b-bigint-and-when-to-reach-for-it.md)).
 
-{/* FOOTER */}
+---
+
+← Prev: [05b · BigInt, and when to reach for it](05b-bigint-and-when-to-reach-for-it.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [05d · The three silent overflows](05d-the-three-silent-overflows.md)

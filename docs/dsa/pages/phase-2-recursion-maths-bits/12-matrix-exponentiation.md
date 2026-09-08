@@ -48,8 +48,7 @@ v(n+1) = M · v(n)     and therefore     v(n) = M^(n-1) · v(1)
 
 and the whole problem becomes: compute `M` to a power. Since matrix multiplication is associative,
 that power can be taken by repeated squaring rather than repeated multiplication, which is the
-`Θ(log n)`. That squaring schedule is **Fast exponentiation and the modular inverse**
-*(not written yet)* — the argument there is about any associative operation, and matrices are one, so
+`Θ(log n)`. That squaring schedule is [Fast exponentiation and the modular inverse](07-fast-exponentiation-and-the-modular-inverse.md) — the argument there is about any associative operation, and matrices are one, so
 nothing about it needs re-deriving here. This page is about *what matrix*, which is the part that
 actually gets asked.
 
@@ -230,4 +229,6 @@ are raising a larger matrix to a power for nothing, at a cubic cost in the dimen
 same principle as choosing a DP state — the state is what the future depends on, no more — and it is
 why the augmentations on this page each add exactly one component per thing the future needs.
 
-{/* FOOTER */}
+---
+
+← Prev: [11j · Base conversion and digit sums](11j-base-conversion-and-digit-sums.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [12b · Augmenting the state](12b-augmenting-the-state.md)

@@ -10,8 +10,8 @@ sidebar_position: 2.8
 > formulation are **standard technique** with no single primary source; the recurrence
 > T(n) = T(n/2) + Θ(1) is solved against
 > [phase 1 · 08](../phase-1-complexity/08-recurrences-and-the-master-theorem.md). The Java midpoint
-> overflow is real and is stated in one sentence here only — it belongs to **05 · Integer limits and
-> overflow** *(not written yet)* and is not developed. Ninth and last file of topic 02 —
+> overflow is real and is stated in one sentence here only — it belongs to [05 · Integer limits and
+> overflow](05-integer-limits-and-overflow.md) and is not developed. Ninth and last file of topic 02 —
 > [02](02-divide-and-conquer.md) is the template. **No sandbox run.**
 
 **Set `a = 1` and `f(n) = Θ(1)` in T(n) = a·T(n/b) + f(n) and you get binary search: one recursive
@@ -99,7 +99,7 @@ static int firstTrue(int lo, int hi, java.util.function.IntPredicate p) {
 
 🔴 **`mid = lo + (hi - lo) / 2`, never `(lo + hi) / 2`.** In Java the addition can overflow `int`
 and produce a negative midpoint; `+` wraps silently rather than throwing. That is an integer-limits
-story, developed on **05 · Integer limits and overflow** *(not written yet)*; here it is a habit
+story, developed on [05 · Integer limits and overflow](05-integer-limits-and-overflow.md); here it is a habit
 applied unconditionally, including in TypeScript where the arithmetic is safe but the muscle memory
 is worth having.
 
@@ -173,7 +173,7 @@ hi` when the division rounds down). It is the progress clause of
 
 **★ Symptom: in Java, an `ArrayIndexOutOfBoundsException` with a negative index on a very large
 array.** Cause: `(lo + hi) / 2` overflowing `int`. Fix: `lo + (hi - lo) / 2`, always. Developed on
-**05 · Integer limits and overflow** *(not written yet)*.
+[05 · Integer limits and overflow](05-integer-limits-and-overflow.md).
 
 **★ Symptom: the search returns *an* occurrence of a duplicated value rather than the first or the
 last.** Cause: form 1, which stops at whichever equal element it happens to hit. Fix: form 2 with
@@ -274,4 +274,6 @@ the input. In each case `hi` is chosen because it is provably feasible and `lo` 
 below it can be, and stating those two reasons is what makes the answer complete rather than a
 guess that happened to work.
 
-{/* FOOTER */}
+---
+
+← Prev: [02h · Solve halves, combine — without sorting](02h-solve-halves-combine-when-it-is-not-sorting.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03 · gcd and Euclid's algorithm](03-mathematical-foundations.md)

@@ -230,4 +230,6 @@ mask, like a popcount-implied position, it is duplication. Replay rather than st
 popcount by exactly one, keep only two popcount layers, which turns `2^n` into `C(n, k-1) + C(n, k)`.
 Each is a time-for-memory trade, which is the right direction when memory is what binds.
 
-{/* FOOTER */}
+---
+
+← Prev: [09h · Sum over subsets and Möbius](09h-sum-over-subsets-and-the-mobius-inverse.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10 · Randomisation](10-randomisation.md)

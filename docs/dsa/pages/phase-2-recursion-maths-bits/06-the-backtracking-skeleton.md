@@ -25,7 +25,9 @@ leaf, because the shared object keeps changing after you store it. The complexit
 tree rather than off the code. And pruning — cutting a subtree before descending into it — is the
 only thing between a correct solution and one that never returns.
 
-This chunk is the shape and the un-choose. Memory and cost are [06b](06b-copies-and-the-two-path-designs.md)
+This chunk is the shape and the un-choose; the rest of the shared state — flag arrays,
+conflict sets, grid marks, running totals, and the three whose inverse is not a plain inverse —
+is [06k](06k-state-that-is-not-the-path.md). Memory and cost are [06b](06b-copies-and-the-two-path-designs.md)
 and [06c](06c-the-cost-of-the-search-tree.md); the enumerations are [06d](06d-subsets-and-combinations.md)
 and [06e](06e-permutations-and-the-used-array.md); duplicate input is
 [06f](06f-duplicates-in-subsets-and-combinations.md) and [06g](06g-duplicates-in-permutations.md);
@@ -174,35 +176,6 @@ void go(int[] nums, int start, List<Integer> path, List<List<Integer>> out) {
 }
 ```
 
-## State that is not the path
-
-The path is the obvious shared object, and it is rarely the only one. Anything the recursion
-writes and a sibling later reads has to be undone by the same discipline, and forgetting one of
-these is the most common real bug in an otherwise correct-looking search:
-
-| Shared state | Choose | Un-choose |
-|---|---|---|
-| the path itself | `path.push(c)` | `path.pop()` |
-| a `used` flag array (permutations) | `used[i] = true` | `used[i] = false` |
-| conflict sets (N-Queens) | `cols.add(c)`, `diag.add(r - c)` | `cols.delete(c)`, `diag.delete(r - c)` |
-| a remaining budget or target | `remaining -= v` | `remaining += v` |
-| a grid cell marked in-use (word search) | `grid[r][c] = '#'` | `grid[r][c] = saved` |
-| a running count or sum | `sum += v` | `sum -= v` |
-| a `Map` of counts (multiset choices) | `counts.set(v, k - 1)` | `counts.set(v, k)` |
-
-Three of these have a trap of their own. **A grid cell must be restored from a saved value, not
-to a constant** — writing back `'.'` is right only if every cell that can be visited started as
-`'.'`. **A budget passed as a parameter needs no undo at all**, because a parameter is per-frame;
-the undo is only needed for state reachable from the *outside* of the call, which is exactly why
-passing `remaining - v` as an argument is often simpler than mutating a field. And **a
-floating-point running sum is not exactly restorable** — `sum += v` followed by `sum -= v` need
-not return the original bits, so a search that accumulates prices should carry integer cents, or
-recompute rather than undo.
-
-That last one shows up in a storefront: a checkout search that tries combinations of promotions
-against an order total, mutating a running discount as a `number`, drifts as the tree gets deep.
-Carry the total in integer minor units and the undo is exact.
-
 ## Gotchas
 
 **★ Symptom: the emitted answers are ever-lengthening prefixes rather than the intended
@@ -217,32 +190,11 @@ recursive call and inside the loop body. After the loop it runs once for `b` cho
 state is wrong for every sibling except the last — and, unlike a missing pop, the answer count
 often still looks plausible.
 
-**★ Symptom: the path is restored correctly and the answers are still wrong.** Cause: a second
-piece of shared state — a `used[]`, a conflict set, a marked grid cell, a running sum — that the
-subtree wrote and nobody undid. Fix: enumerate every piece of state the recursion writes, not
-just the path, and decide for each whether it is per-branch (undo it) or deliberately global (a
-best-so-far, a memo — say so in a comment so the next reader does not "fix" it).
-
-**Symptom: a grid cell restored to `'.'` and a later answer walks through a wall.** Cause: the
-un-choose writes a constant instead of the saved value. Fix: `const saved = grid[r][c]` before the
-mark, `grid[r][c] = saved` after the recursion.
-
 **Symptom: the search never terminates on an input that should be small.** Cause: a completion
 test that can be stepped *past* rather than landed on — `path.length === k` when a branch adds two
 elements, or `remaining === 0` when `remaining` can go negative. Fix: make the base case a `>=`
 guard, or make every step change the measure by exactly one. MDN's rule that a missing base case
 throws is the friendly failure; a base case that is merely unreachable is the unfriendly one.
-
-**Symptom: a stale `visited` set makes whole regions unreachable in later answers.** Cause: a DFS
-habit — a global visited set — imported into a search where the mark is per-path. Fix: mark on the
-way in and unmark on the way out, or reason explicitly that the cell may never be reused in any
-answer.
-
-**Symptom: an accumulated floating-point total does not return to its original value after the
-undo.** Cause: `sum += v; …; sum -= v` is not the identity in binary floating point. Fix: carry
-integer minor units, or pass the total as a parameter so no undo is needed.
-
-## Interview questions
 
 **★ Why does backtracking need an un-choose at all?**
 Because the path is a single mutable object shared by every node of the search tree. The
@@ -289,12 +241,6 @@ answer (subsets is exactly that), and it is worth saying which of the two shapes
 because it changes whether the recursion needs a base case at all: a subsets search terminates
 because `start` runs off the end of the array, so the base case is the empty loop.
 
-**Why is a parameter often better than mutable state in a backtracking search?**
-Because a parameter is per-frame and therefore self-restoring — passing `remaining - v` down needs
-no undo, while mutating a `remaining` field does. The cost is that a parameter is copied per call,
-which is free for a number and Θ(depth) for an array, so the rule of thumb is: scalars go as
-parameters, aggregates go as shared state with an explicit undo. That split removes most of the
-opportunities to forget an inverse, and it is the reason the standard subsets/permutations
-skeletons carry `start` and `target` as arguments and the path as a field.
+---
 
-{/* FOOTER */}
+← Prev: [05f · The cross-language trap](05f-the-cross-language-trap.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06k · State that is not the path](06k-state-that-is-not-the-path.md)

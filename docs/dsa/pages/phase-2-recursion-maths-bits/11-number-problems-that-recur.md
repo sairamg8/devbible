@@ -285,4 +285,6 @@ because it tells the interviewer you will not be surprised by the variant they a
 because the *boundaries* are shared too, so a candidate who has the zero, negative and `MIN_VALUE`
 cases right has them right for all eight.
 
-{/* FOOTER */}
+---
+
+← Prev: [10i · Why add randomness](10i-why-add-randomness.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [11b · Reversing an integer](11b-reversing-an-integer.md)

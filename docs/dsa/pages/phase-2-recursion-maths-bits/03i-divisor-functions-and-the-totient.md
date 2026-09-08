@@ -211,4 +211,6 @@ without ever forming `1/p`. The product formula in floating point accumulates ro
 comes back a hair below an integer, which then truncates to the wrong value. It is the same
 "divide before you multiply" rule that governs `lcm`, applied to a subtraction.
 
-{/* FOOTER */}
+---
+
+← Prev: [03h · Factorisation and smallest prime factors](03h-factorisation-and-smallest-prime-factors.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03j · Modular arithmetic as a ring](03j-modular-arithmetic-and-the-remainder-trap.md)

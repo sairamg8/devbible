@@ -272,4 +272,6 @@ only value that cannot be confused with a real answer, which is a reasonable API
 terrible array index. Any code that turns a mask into an index must check the mask for zero first,
 and the cheapest way to guarantee that is to put the check in the loop condition.
 
-{/* FOOTER */}
+---
+
+← Prev: [04c · Clearing and isolating the lowest bit](04c-clearing-and-isolating-the-lowest-bit.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [04e · XOR, and the problems it solves](04e-xor-and-the-problems-it-solves.md)

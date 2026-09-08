@@ -196,4 +196,6 @@ predecessor and the sequence cannot have a pre-period tail. Hence it is purely p
 most `m²`. That is the Pisano period. The honest follow-up is that this rarely helps: finding the
 period costs a walk of the sequence, and fast doubling already gives `F(n) mod m` in `Θ(log n)`.
 
-{/* FOOTER */}
+---
+
+← Prev: [12d · Walks, and when not to bother](12d-counting-walks-and-when-not-to-bother.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [13 · Geometry basics](13-geometry-basics.md)

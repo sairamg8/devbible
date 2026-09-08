@@ -206,4 +206,6 @@ divergence is invisible on small inputs. The engineering answer is to treat it a
 defect with a migration attached: fix the Java arithmetic, decide what happens to the existing
 values, and make the two agree explicitly — rather than letting one side quietly become right.
 
-{/* FOOTER */}
+---
+
+← Prev: [05e · Overflow on purpose](05e-overflow-on-purpose.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06 · The backtracking skeleton](06-the-backtracking-skeleton.md)

@@ -92,8 +92,7 @@ break the code.
 
 Matrix multiplication is associative, so the ordinary binary-exponentiation schedule applies
 unchanged: square the base at every step, and multiply the accumulator by the current square
-whenever the exponent's bit is set. **Fast exponentiation and the modular inverse**
-*(not written yet)* derives why that is correct and why it takes about `log₂ n` squarings; nothing
+whenever the exponent's bit is set. [Fast exponentiation and the modular inverse](07-fast-exponentiation-and-the-modular-inverse.md) derives why that is correct and why it takes about `log₂ n` squarings; nothing
 about the argument depends on the operands being numbers, so it is not re-derived here.
 
 ```ts
@@ -296,4 +295,6 @@ its exponent, so the squarings — the bulk of the work — are shared across al
 repeated. It is the same structure as a level-ancestor table on a tree, and recognising that the two
 are the same idea is usually what the question is after.
 
-{/* FOOTER */}
+---
+
+← Prev: [12b · Augmenting the state](12b-augmenting-the-state.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [12d · Walks, and when not to bother](12d-counting-walks-and-when-not-to-bother.md)

@@ -196,4 +196,6 @@ is precisely the order-irrelevance the formula assumes — so if the search's ou
 match the formula, one of the two has an off-by-one, and it is usually the recursion using `i + 1`
 by habit.
 
-{/* FOOTER */}
+---
+
+← Prev: [08b · Pascal's rule and the DP table](08b-pascals-rule-and-the-dp-table.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [08d · Catalan numbers](08d-catalan-numbers.md)

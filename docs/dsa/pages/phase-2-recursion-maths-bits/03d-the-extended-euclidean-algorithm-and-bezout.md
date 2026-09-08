@@ -250,4 +250,6 @@ is a line you can point at, whereas the recursive version's correctness lives in
 reader has to redo. When the coefficients are wrong, the iterative form is the one you can debug by
 printing the invariant at each step.
 
-{/* FOOTER */}
+---
+
+← Prev: [03c · lcm and the multiplication order](03c-lcm-and-the-multiplication-order.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03e · The Chinese remainder theorem](03e-the-chinese-remainder-theorem.md)

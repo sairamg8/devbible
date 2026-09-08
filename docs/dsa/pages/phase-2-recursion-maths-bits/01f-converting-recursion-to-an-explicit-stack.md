@@ -254,4 +254,6 @@ the JVM documents as a depth, while the heap is bounded by the process's memory.
 therefore never justified by "it uses less space"; it is justified by "the depth is proportional to
 the input and the call stack will not take it", which is a different claim and the one to make.
 
-{/* FOOTER */}
+---
+
+← Prev: [01e · Memoising a recursive function](01e-memoising-a-recursive-function.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [01g · Post-order and the resume-point frame](01g-post-order-and-the-resume-point-frame.md)

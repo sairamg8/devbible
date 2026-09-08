@@ -110,7 +110,7 @@ private static void merge(int[] a, int[] aux, int lo, int mid, int hi) {
 `mid = lo + (hi - lo) / 2` rather than `(lo + hi) / 2` matters in Java because `int` addition wraps
 silently rather than throwing; on an array long enough for `lo + hi` to exceed `Integer.MAX_VALUE`
 the midpoint goes negative and the index throws. That is an integer-overflow story rather than a
-sorting one, and it belongs to **05 · Integer limits and overflow** *(not written yet)* — here it is
+sorting one, and it belongs to [05 · Integer limits and overflow](05-integer-limits-and-overflow.md) — here it is
 a habit, written the safe way every time.
 
 ## The auxiliary array: allocate once, not once per level
@@ -186,7 +186,7 @@ left exhausted, right exhausted, compare, else — and the exhaustion checks fir
 
 **★ Symptom: `mid` computed as `(lo + hi) / 2` and an index exception on a very large Java array.**
 Cause: `int` overflow in the addition before the division. Fix: `lo + (hi - lo) / 2`, always, as a
-habit. Developed on **05 · Integer limits and overflow** *(not written yet)*.
+habit. Developed on [05 · Integer limits and overflow](05-integer-limits-and-overflow.md).
 
 **★ Symptom: a bottom-up merge sort that drops the tail of the array.** Cause: `hi` not clamped, or
 the outer loop condition written as `lo < n` so a final unpaired run is "merged" against nothing.
@@ -256,7 +256,7 @@ T(n) = 2T(n/2) + Θ(n) always holds. Quicksort's split is by *value*, around a p
 depends on the data: a good pivot gives two halves and the same recurrence, a bad pivot gives a
 partition of size n − 1 and 0, and T(n) = T(n − 1) + Θ(n) is Θ(n²). The average over random pivots
 is Θ(n log n), and randomising the pivot is what converts "bad on sorted input" into "bad only with
-bad luck", which is **10 · Randomisation** *(not written yet)*.
+bad luck", which is [10 · Randomisation](10c-the-random-comparator-shuffle.md).
 
 **Can merge sort be made in-place?**
 There are in-place merge algorithms, but they trade the simple linear merge for something
@@ -266,4 +266,6 @@ in-place merging is possible in Θ(n log n) with a more complex merge, and that 
 requirement the practical choice is heapsort (Θ(n log n) worst case, Θ(1) space, not stable) or
 quicksort (Θ(1) auxiliary beyond the recursion, average Θ(n log n), not stable).
 
-{/* FOOTER */}
+---
+
+← Prev: [02b · Base cases, induction, and when to reach for it](02b-base-cases-induction-and-when-to-reach-for-it.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02d · Stability and the comparator contract](02d-stability-and-the-comparator-contract.md)

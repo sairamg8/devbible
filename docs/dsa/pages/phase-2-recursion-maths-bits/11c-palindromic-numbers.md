@@ -211,4 +211,6 @@ constant factor I would not claim to have measured. The arithmetic version is wh
 testing and what I would write if the constraint were stated, or if this were on a hot path where
 allocation mattered. Naming the trade rather than asserting one is faster is the answer.
 
-{/* FOOTER */}
+---
+
+← Prev: [11b · Reversing an integer](11b-reversing-an-integer.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [11d · Integer pow](11d-integer-pow.md)

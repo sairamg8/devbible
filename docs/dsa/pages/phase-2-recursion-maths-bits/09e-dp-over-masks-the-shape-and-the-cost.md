@@ -190,4 +190,6 @@ dimension is not information, it is duplication, and carrying it would multiply 
 nothing. The habit this teaches generalises past bitmasks — before adding a dimension to a DP, ask
 whether it is implied by the ones you already have.
 
-{/* FOOTER */}
+---
+
+← Prev: [09d · Fixed-size subsets and Gray code](09d-fixed-size-subsets-and-gray-code.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [09f · dp[mask][last] and the tour](09f-dp-over-masks-with-a-last-element.md)

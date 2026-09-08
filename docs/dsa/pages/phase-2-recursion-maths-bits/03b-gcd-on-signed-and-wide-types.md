@@ -100,7 +100,7 @@ static int gcdBroken(int a, int b) {
 `long` has the same asymmetry one power of two higher — `Math.abs(Long.MIN_VALUE)` is negative for
 the same reason — so widening moves the cliff rather than removing it. It removes it *for `int`
 inputs*, which is the case you actually have. The general problem, every place a signed type has no
-positive counterpart, belongs to **05 · Integer limits and overflow** *(not written yet)*.
+positive counterpart, belongs to [05 · Integer limits and overflow](05-integer-limits-and-overflow.md).
 
 ## `BigInt` and `BigInteger`
 
@@ -175,7 +175,7 @@ else's code. The plain remainder loop is still the one to write: it is shorter, 
 bookkeeping, and its bound is the same `Θ(log min(a, b))`. 🔴 In JavaScript, Stein's algorithm is
 also a trap rather than an optimisation, because the shift and mask operators it depends on coerce
 their operands to 32 bits — the vocabulary for that, and the coercion rules that cause it, are
-**04 · Bit manipulation** *(not written yet)*.
+[04 · Bit manipulation](04-bit-manipulation.md).
 
 ## Gotchas
 
@@ -276,4 +276,6 @@ the code is a quarter the length, and there is no parity bookkeeping to get wron
 specifically it is worse than merely unnecessary — the bitwise operators it is built from coerce
 their operands to 32 bits, so it is silently wrong above that range while the remainder loop is not.
 
-{/* FOOTER */}
+---
+
+← Prev: [03 · gcd and Euclid's algorithm](03-mathematical-foundations.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03c · lcm and the multiplication order](03c-lcm-and-the-multiplication-order.md)

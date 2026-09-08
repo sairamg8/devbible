@@ -290,4 +290,6 @@ information that `+` preserves, which is why no comparison-based or greedy-on-ma
 survives it. It is also why XOR shows up as the cheap reversible mixing step in hash functions and
 checksums.
 
-{/* FOOTER */}
+---
+
+← Prev: [04d · Counting set bits, and the platform methods](04d-counting-set-bits-and-the-platform-methods.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [04f · Submasks, and the 3^n count](04f-submasks-and-the-3-to-the-n-count.md)

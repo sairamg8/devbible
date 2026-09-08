@@ -289,4 +289,6 @@ factorisation. Where it does earn its place is exponent reduction: `a^b mod m` m
 reduced modulo `φ(m)` when `gcd(a, m) = 1`, which is the only licence there is for shrinking an
 exponent.
 
-{/* FOOTER */}
+---
+
+← Prev: [07c · An exact modular multiply in JS](07c-an-exact-modular-multiply-in-javascript.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [07e · Binomials under a modulus](07e-binomial-coefficients-under-a-modulus.md)

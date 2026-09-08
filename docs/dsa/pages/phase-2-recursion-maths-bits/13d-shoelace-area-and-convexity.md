@@ -284,4 +284,6 @@ answer is to anchor the sum at `p₀` first, which replaces coordinates with coo
 `BigInteger`. Recognising that the accumulator, not the term, is the overflow site is the point of
 the question — [13g](13g-integer-exactness-and-where-it-ends.md) has the arithmetic.
 
-{/* FOOTER */}
+---
+
+← Prev: [13c · Orientation and segment intersection](13c-orientation-and-segment-intersection.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [13e · Point in polygon by ray casting](13e-point-in-polygon-by-ray-casting.md)

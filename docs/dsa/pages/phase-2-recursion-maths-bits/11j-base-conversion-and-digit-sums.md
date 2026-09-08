@@ -279,4 +279,6 @@ never correctness — and it is blind to any error that is a multiple of nine, w
 common case of two transposed digits. That combination of cheapness and a large invisible error class
 is exactly why it survives as a mental check and not as a data-integrity mechanism.
 
-{/* FOOTER */}
+---
+
+← Prev: [11i · Happy numbers and cycles](11i-happy-numbers-and-cycle-detection.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [12 · Matrix exponentiation](12-matrix-exponentiation.md)

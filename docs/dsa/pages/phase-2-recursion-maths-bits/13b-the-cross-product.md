@@ -286,4 +286,6 @@ exact in binary here and would not be for a point like `(1, 1.5)` reached by the
 The cross product is that comparison with the denominators multiplied out, which is why it has no
 special cases.
 
-{/* FOOTER */}
+---
+
+← Prev: [13 · Geometry basics](13-geometry-basics.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [13c · Orientation and segment intersection](13c-orientation-and-segment-intersection.md)

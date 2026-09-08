@@ -220,4 +220,6 @@ cheaper trick, when the semantics allow it, is to add a self-loop at every verte
 stand still; then "exactly `L`" already includes everything shorter. The first is exact and general,
 the second changes the graph, so say which you are doing.
 
-{/* FOOTER */}
+---
+
+← Prev: [12c · The multiply and the modulus](12c-the-multiply-the-power-and-the-modulus.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [12e · Fast doubling, and not Binet](12e-fast-doubling-and-why-not-binet.md)

@@ -81,8 +81,8 @@ static int binarySearch(int[] a, int target, int lo, int hi) {
 ```
 
 That `lo + (hi - lo) / 2` rather than `(lo + hi) / 2` is an integer-overflow fix, not a termination
-fix — it matters in Java, where `int` addition wraps silently. It is developed on **05 · Integer
-limits and overflow** *(not written yet)*; here it is only the habit.
+fix — it matters in Java, where `int` addition wraps silently. It is developed on [05 · Integer
+limits and overflow](05-integer-limits-and-overflow.md); here it is only the habit.
 
 The graph version of the same bug is a cycle: DFS on a graph without a `visited` set makes progress
 in no measure at all, because `u → v → u` is an infinite descent. The "measure" for a graph DFS is
@@ -287,4 +287,6 @@ which is the recursive analogue of BFS marking on dequeue — the traversal is s
 and worse bug: the neighbour re-enters the current vertex while it is still unmarked, and the two
 recurse into each other without bound.
 
-{/* FOOTER */}
+---
+
+← Prev: [01 · Recursion and the call stack](01-recursion-and-the-call-stack.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [01c · Recursion as the shape of the data](01c-recursion-as-the-shape-of-the-data.md)

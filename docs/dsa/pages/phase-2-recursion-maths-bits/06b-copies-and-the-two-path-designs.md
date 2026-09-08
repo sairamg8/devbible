@@ -265,4 +265,6 @@ argument is valid only for the duration of the call, or snapshot before invoking
 Θ(depth) per leaf. Iterators and generators are the same trade with nicer syntax and the identical
 lifetime question.
 
-{/* FOOTER */}
+---
+
+← Prev: [06k · State that is not the path](06k-state-that-is-not-the-path.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06c · The cost of the search tree](06c-the-cost-of-the-search-tree.md)
