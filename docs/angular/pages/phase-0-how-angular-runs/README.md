@@ -19,20 +19,20 @@ bundler could, why the upgrade path runs through `ng update` rather than
 `npm install`, and why a published library on npm contains function calls you
 have never heard of.
 
-🚧 **In progress — 1 of 12 written, 2 more in flight** (measured off disk
-2026-09-06). Topic **02** is content-complete and wired, 32 chunks; topics **01**
-and **03** are part-written, roughly 5 of 17 chunks each, and are linked to
-whatever is on disk today; topics **04–12** are unstarted. The table below is the
-phase's running order, tier by tier. A title that is **not a link** has no page
-yet — a link to a page that does not exist is a broken link, and this repo builds
-with none. Each row becomes a link as its topic lands.
+🚧 **In progress — 3 of 12 closed, a fourth open** (measured off disk 2026-09-09).
+Topic **01** closed at **86 pages**, all 17 chunks, its metadata-error catalogue completed;
+topic **02** is content-complete and wired, 32 chunks; topic **03** closed at **90 pages**, all 17
+chunks. Topic **04** is open and being written. Topics **05–12** are unstarted but all nine now
+have a research bank. The table below is the phase's running order, tier by tier. A title that is
+**not a link** has no page yet — a link to a page that does not exist is a broken link, and this
+repo builds with none. Each row becomes a link as its topic lands.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | [A compiler with a framework attached](01-compiler-with-a-framework-attached/README.md) 🚧 | <span className="db-tier t-master">Master</span> | Templates are a separate language, compiled ahead of time into instruction calls |
 | 02 | [Standalone by default](02-standalone-by-default/README.md) | <span className="db-tier t-master">Master</span> | `bootstrapApplication(App, appConfig)`, no `NgModule`, and what `imports` now means |
 | 03 | [The provider array is the wiring](03-the-provider-array/README.md) 🚧 | <span className="db-tier t-master">Master</span> | `ApplicationConfig.providers` — what belongs there and what does not |
-| 04 | **`ng update`, not `npm install`** | <span className="db-tier t-understand">Understand</span> | Schematics rewrite your source; skipping a major is the expensive mistake |
+| 04 | [`ng update`, not `npm install`](04-ng-update-not-npm-install/README.md) 🚧 | <span className="db-tier t-understand">Understand</span> | Schematics rewrite your source; skipping a major is the expensive mistake |
 | 05 | **The build: `@angular/build`** | <span className="db-tier t-understand">Understand</span> | 🔴 esbuild compiles, **Rolldown** re-bundles chunks (default since 22.1.0), Vite serves; Webpack builders are legacy |
 | 06 | **`angular.json` anatomy** | <span className="db-tier t-understand">Understand</span> | Projects, targets, builders, `configurations`, `fileReplacements`, `budgets` |
 | 07 | **The TypeScript setup Angular requires** | <span className="db-tier t-understand">Understand</span> | The hard `>=6.0 <6.1` peer pin, `strictTemplates`, and the tsconfig split |
