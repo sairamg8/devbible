@@ -43,6 +43,30 @@ const config = {
   // swcHtmlMinimizer, lightningCssMinimizer, mdxCrossCompilerCache,
   // rspackBundler, rspackPersistentCache, ssgWorkerThreads, gitEagerVcs.
   //
+  // 🔴 We pass an OBJECT, not `true`, to switch ONE of the nine off —
+  // `rspackPersistentCache`. The other eight stay on and are NOT listed here,
+  // because `v4: true` sets `fasterByDefault: true` and
+  // `postProcessDocusaurusConfig` fills every faster key left `undefined` with
+  // that value (configValidation.js:437-448). So an unlisted flag is ON, and
+  // this object never needs updating when Docusaurus adds a tenth.
+  //
+  // ⚠️ Why THIS flag: on 2026-09-09 four of five deploys died 3-5 minutes into
+  // `Creating an optimized production build...` with `The runner has received a
+  // shutdown signal` and exit 143 — the whole runner VM, not the node process.
+  // A passing build takes ~10 minutes from that same line, so it is marginal
+  // rather than deterministic: 03:23 passed, 02:27 / 03:06 / 03:47 x2 did not,
+  // on a corpus of 6,495 pages.
+  //
+  // 🔴 The heap flag in the deploy workflow CANNOT fix that and the workflow's
+  // own comment says so: `--max-old-space-size` caps V8's heap, while rspack's
+  // memory is Rust-side and outside V8 entirely. The persistent cache is the
+  // part of rspack that trades memory for a warm rebuild — and in CI the
+  // checkout is cold every run, so it writes a cache nothing ever reads. It is
+  // the one flag here whose benefit is zero in the environment that is dying.
+  //
+  // If the 143 returns WITH this off, the cause is elsewhere again — do not
+  // start switching off the other eight one at a time.
+  //
   // 🔴 ssgWorkerThreads is the reason the tuning in package.json finally does
   // something. `ssgExecutor.js:139` only spawns SSG workers when that flag is on,
   // so DOCUSAURUS_SSG_WORKER_THREAD_COUNT and
@@ -56,7 +80,7 @@ const config = {
   //
   // If a build breaks in a way that smells like the bundler rather than the
   // content, set this to false to get webpack back and confirm before digging.
-  future: {v4: true, faster: true},
+  future: {v4: true, faster: {rspackPersistentCache: false}},
 
   // Published to GitHub Pages as a project site, so the repo name is part of
   // the path: https://sairamg8.github.io/devbible/
