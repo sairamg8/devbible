@@ -1,7 +1,7 @@
 {
   "version": 3,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-09-08 21:00",
+  "updated": "2026-09-09 07:55",
   "totals": {
     "languages": 31,
     "complete": 9,
@@ -10,8 +10,8 @@
     "parked": 2,
     "blocked": 1,
     "topics": 3955,
-    "completed": 2530,
-    "pending": 1425,
+    "completed": 2531,
+    "pending": 1424,
     "percent": 64
   },
   "importedTotals": {
@@ -111,13 +111,13 @@
       "percent": 1,
       "counts": "syllabus topics explained",
       "topics": 211,
-      "completed": 2,
-      "pending": 209,
+      "completed": 3,
+      "pending": 208,
       "imported": false,
       "phases": "0/16",
       "next": "0 · How Angular runs",
       "docs": "/docs/angular",
-      "updated": "2026-09-07 19:05",
+      "updated": "2026-09-09 07:55",
       "note": null
     },
     {

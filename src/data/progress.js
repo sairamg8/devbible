@@ -272,23 +272,23 @@ export const LANGUAGES = {
   },
   angular: {
     label: 'Angular',
-    updated: '2026-09-07 19:05',
+    updated: '2026-09-09 07:55',
     docsPath: '/docs/angular',
     pagesPath: '/docs/angular/pages',
     phases: [
-      // Phase 0 is mid-flight, measured against disk 2026-09-07 (third pass).
-      // Its 147 pages are three topics deep, not twelve: topic 01
+      // Phase 0 is mid-flight, measured against disk 2026-09-09 (fourth pass).
+      // Its 197 pages are three topics deep, not twelve: topic 01
       // `compiler-with-a-framework-attached` CLOSED 2026-09-06 at 69 pages /
-      // 17,807 lines / all 17 chunks, and topic 02 `standalone-by-default` is
-      // content-complete and wired (38 pages). Topic 03 `the-provider-array`
-      // (40 pages) is still open at 12 of 17 chunks, and topics 04-12 are
-      // unstarted. Only a FINISHED topic counts, so `pages: 2` — and
-      // `pagesPlanned` is what stops those 147 pages reading as a finished
+      // 17,807 lines / all 17 chunks, topic 02 `standalone-by-default` is
+      // content-complete and wired (38 pages), and topic 03 `the-provider-array`
+      // CLOSED 2026-09-09 at 90 pages / all 17 chunks. Topics 04-12 are
+      // unstarted. Only a FINISHED topic counts, so `pages: 3` — and
+      // `pagesPlanned` is what stops those 197 pages reading as a finished
       // phase and crediting all 12 topics.
       // 🔴 Counts here are PAGES (README.md excluded), which is what
       // page-counts.json measures; earlier revisions of this comment counted
       // files including each topic's README and so read one higher per topic.
-      {n: 0, slug: 'phase-0-how-angular-runs', name: 'How Angular runs', part: 'The Angular model', topics: 12, pages: 2, pagesPlanned: 12},
+      {n: 0, slug: 'phase-0-how-angular-runs', name: 'How Angular runs', part: 'The Angular model', topics: 12, pages: 3, pagesPlanned: 12},
       {n: 1, slug: 'phase-1-components-templates', name: 'Components and templates', part: 'The Angular model', topics: 16, pages: 0},
       {n: 2, slug: 'phase-2-signals', name: 'Signals', part: 'The Angular model', topics: 15, pages: 0},
       {n: 3, slug: 'phase-3-signal-component-api', name: 'The signal component API', part: 'Components in the signal era', topics: 12, pages: 0},

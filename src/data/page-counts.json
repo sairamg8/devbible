@@ -1,12 +1,12 @@
 {
   "angular": {
-    "pages": 154,
-    "validated": 154,
+    "pages": 197,
+    "validated": 197,
     "phases": {
-      "phase-0-how-angular-runs": 154
+      "phase-0-how-angular-runs": 197
     },
     "validatedPhases": {
-      "phase-0-how-angular-runs": 154
+      "phase-0-how-angular-runs": 197
     }
   },
   "babel": {
@@ -129,7 +129,7 @@
   },
   "eslint-oxlint": {
     "pages": 21,
-    "validated": 0,
+    "validated": 1,
     "phases": {
       "01-linting-landscape-and-tooling-decisions": 1,
       "02-eslint-core-architecture": 1,
@@ -154,7 +154,7 @@
       "21-real-world-workflows-and-recipes": 1
     },
     "validatedPhases": {
-      "01-linting-landscape-and-tooling-decisions": 0,
+      "01-linting-landscape-and-tooling-decisions": 1,
       "02-eslint-core-architecture": 0,
       "03-eslint-flat-config": 0,
       "04-eslint-language-options-globals-and-parsing": 0,
@@ -592,8 +592,8 @@
     }
   },
   "postgresql": {
-    "pages": 298,
-    "validated": 298,
+    "pages": 300,
+    "validated": 300,
     "phases": {
       "phase-0-architecture": 13,
       "phase-1-psql": 15,
@@ -602,7 +602,7 @@
       "phase-12-beyond-tables": 21,
       "phase-13-ops": 40,
       "phase-2-types": 19,
-      "phase-3-ddl": 22,
+      "phase-3-ddl": 24,
       "phase-4-crud": 22,
       "phase-5-joins": 16,
       "phase-6-aggregation": 40,
@@ -618,7 +618,7 @@
       "phase-12-beyond-tables": 21,
       "phase-13-ops": 40,
       "phase-2-types": 19,
-      "phase-3-ddl": 22,
+      "phase-3-ddl": 24,
       "phase-4-crud": 22,
       "phase-5-joins": 16,
       "phase-6-aggregation": 40,
@@ -628,16 +628,16 @@
     }
   },
   "python": {
-    "pages": 412,
-    "validated": 412,
+    "pages": 415,
+    "validated": 415,
     "phases": {
       "phase-0-runtime": 121,
-      "phase-1-language-core": 264,
+      "phase-1-language-core": 267,
       "phase-2-functions": 27
     },
     "validatedPhases": {
       "phase-0-runtime": 121,
-      "phase-1-language-core": 264,
+      "phase-1-language-core": 267,
       "phase-2-functions": 27
     }
   },
