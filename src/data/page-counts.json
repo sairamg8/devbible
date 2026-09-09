@@ -1,12 +1,12 @@
 {
   "angular": {
-    "pages": 197,
-    "validated": 197,
+    "pages": 214,
+    "validated": 214,
     "phases": {
-      "phase-0-how-angular-runs": 197
+      "phase-0-how-angular-runs": 214
     },
     "validatedPhases": {
-      "phase-0-how-angular-runs": 197
+      "phase-0-how-angular-runs": 214
     }
   },
   "babel": {
