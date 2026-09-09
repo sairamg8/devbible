@@ -154,6 +154,42 @@ schema, and this is the *good* outcome. The message begins `Schema validation fa
 following errors:` and the offending key is appended in parentheses on the `Data path` line. Fix:
 read the parenthesis, not the JSON pointer — it names the key you misspelled.
 
+**★ Symptom: a `serve` target copied from another project — or from a project still on the webpack
+dev server — fails validation.** Cause: `@angular/build:dev-server` and
+`@angular-devkit/build-angular:dev-server` are two different builders declared in two different
+packages, each with its own `schema.json`. An option that exists on one is not guaranteed to exist
+on the other, and `@angular/build`'s schema refuses anything it does not declare. Fix: copy the
+`buildTarget` wiring and re-derive the rest from the nineteen options above rather than pasting a
+target wholesale:
+
+```json
+"serve": {
+  "builder": "@angular/build:dev-server",
+  "options": { "port": 4200 },
+  "configurations": {
+    "development": { "buildTarget": "my-app:build:development" }
+  },
+  "defaultConfiguration": "development"
+}
+```
+
+**Symptom: you cannot find where to configure a Vite feature you know exists.** Cause: there is no
+place. Vite *"cannot be directly configured"*, and only `allowedHosts`, `prebundle` and
+`proxyConfig` pass anything through. A `vite.config.ts` in the workspace root is inert. Fix: check
+whether what you want is one of the three before looking further — if it is not, the answer is that
+the option does not exist rather than that you have not found it:
+
+```json
+"serve": {
+  "builder": "@angular/build:dev-server",
+  "options": {
+    "allowedHosts": ["dev.internal"],
+    "prebundle": { "exclude": ["some-dep"] },
+    "proxyConfig": "src/proxy.conf.json"
+  }
+}
+```
+
 **Symptom: `architect` in the file and every snippet you find says `targets`.** Cause: both key
 names are accepted for the target map; `architect` is the older one and is still read. Fix: read
 whichever key your file has and keep exactly one — which key wins when both are present is topic
@@ -177,6 +213,25 @@ looking correct and do nothing, and you would debug the symptom instead of the t
 CLI's option validation rejects the command and names the offending key in parentheses after the
 `Data path` in the message. The trade is that you cannot stash arbitrary metadata on the target; in
 exchange, everything the file says about `serve` is something the dev server actually reads.
+
+**★ How would you enumerate the dev server's real option surface, rather than guessing at it?**
+Read the schema the builder declares. `@angular/build`'s `builders.json` names
+`./src/builders/dev-server/schema.json` for the `dev-server` entry, and that file — at the exact tag
+your project is on — is the option list, the defaults and the descriptions, all in one place. Every
+row of the table on this page came from there at `v22.1.7`. Doing it that way rather than from a
+documentation page has two advantages: the schema is versioned with the builder, so it cannot be
+stale, and it is what actually validates your `angular.json`, so it is the same source that decides
+whether your file is accepted.
+
+**Why does this topic treat the dev server as a separate contract instead of "`ng build` with a
+watch loop"?**
+Because they are separate builders with separate schemas, separate defaults and one deliberate link.
+Nineteen options against forty-four, `watch` defaulting to `true` on one and `false` on the other,
+`define` and `poll` declared independently on both — none of that follows from thinking of `serve`
+as a variation on `build`. The mental model that survives contact with real problems is: the dev
+server owns a socket and a rebuild loop, delegates everything else through one string, and is the
+only place Vite appears at all. Every question about it then resolves to "is this mine, or the build
+target's?", which is answerable by looking at two schemas.
 
 **How would you prove which builder and which configuration `ng serve` is about to use, without
 running it?**

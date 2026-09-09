@@ -93,7 +93,7 @@ Vite. That is one of only three places the dev server exposes a Vite setting at 
 **Its default is the empty array.** That is what the Angular schema declares.
 
 ⚠️ **What Vite does with an empty list, and what its matching rules are, is Vite's documentation to
-state — and I did not fetch it.** The schema points you at
+state — and it was not fetched.** The schema points you at
 [vite.dev's `server.allowedHosts`](https://vite.dev/config/server-options.html#server-allowedhosts)
 for exactly that reason. If the dev server is refusing requests based on their `Host` header, this
 is the option that governs it; read Vite's page for the semantics rather than inferring them from

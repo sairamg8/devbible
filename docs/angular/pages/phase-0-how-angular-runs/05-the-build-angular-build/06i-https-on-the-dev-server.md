@@ -59,7 +59,7 @@ The one hard piece of evidence available is the dependency list: `@angular/build
 runtime dependency on **`@vitejs/plugin-basic-ssl` 2.3.0**, a package whose entire purpose is
 producing a self-signed certificate for a dev server. That makes a self-signed fallback the obvious
 reading — but a dependency is not a specification, the plugin could be wired to some other
-condition, and **I did not confirm the behaviour**. This page therefore states the evidence and
+condition, and **the behaviour was not confirmed**. This page therefore states the evidence and
 declines to state the conclusion.
 
 The practical consequence is the same either way: if you want a certificate your browser accepts
@@ -105,7 +105,7 @@ secure context. Fix: turn on HTTPS locally with a certificate you control:
 
 **★ Symptom: `ssl: true` produces a certificate the browser refuses to trust.** Cause: without a
 supplied `sslKey`/`sslCert` you are not using a certificate from an authority your machine trusts.
-The schema does not state what is used instead, and I could not confirm it — the only hard evidence
+The schema does not state what is used instead, and it could not be confirmed — the only hard evidence
 is that `@angular/build` depends on `@vitejs/plugin-basic-ssl` 2.3.0. Fix: stop depending on
 unspecified behaviour and supply a certificate your machine trusts:
 
@@ -177,7 +177,7 @@ does not buy you is any confidence about production TLS: the dev server's certif
 configuration have nothing to do with whatever terminates TLS in front of your deployment.
 
 **★ What happens if you set `ssl: true` and supply no certificate?**
-The honest answer is that the schema does not say, and I could not confirm it. What is verifiable is
+The honest answer is that the schema does not say, and it could not be confirmed. What is verifiable is
 that `@angular/build` 22.1.7 declares a runtime dependency on `@vitejs/plugin-basic-ssl` 2.3.0, a
 package that exists to generate a self-signed certificate for a dev server — which makes a
 self-signed fallback the obvious reading, but a dependency is evidence of capability rather than a

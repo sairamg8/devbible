@@ -95,7 +95,7 @@ the fallback the switch selects, and it is optional because most projects never 
 `chunk-optimizer.ts` imports from it only as a type — `import type { Plugin } from 'rollup'` — which
 costs nothing at runtime.
 
-🔴 **What I could not confirm: whether taking the Rollup path requires you to install `rollup`
+🔴 **What could not be confirmed: whether taking the Rollup path requires you to install `rollup`
 yourself.** An optional peer plus a type-only import is consistent with either answer, and neither
 the changelog nor angular.dev — which does not mention the chunk optimizer at all — settles it.
 Treat `NG_BUILD_CHUNKS_ROLLDOWN=0` as a switch that may need `rollup` present in `node_modules`, and

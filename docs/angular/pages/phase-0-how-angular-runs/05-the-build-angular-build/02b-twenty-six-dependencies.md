@@ -136,7 +136,7 @@ Two entries in that table are worth a second look. **`sass` is a direct dependen
 PostCSS and Tailwind are optional *peers* — a real asymmetry with real consequences, worked through
 in [02d](02d-the-peer-contract.md). And **`@angular-devkit/architect` is versioned `0.2201.7`**, not
 `22.1.7`. The devkit packages have long carried a `0.MMmm.p`-shaped number, and `0.2201.7` lines up
-with major 22, minor 1, patch 7 — the same release train, written differently. ⚠️ I did not find a
+with major 22, minor 1, patch 7 — the same release train, written differently. ⚠️ No source was found for a
 document that states that scheme normatively; treat the mapping as a reading of the number rather
 than a rule you can cite.
 

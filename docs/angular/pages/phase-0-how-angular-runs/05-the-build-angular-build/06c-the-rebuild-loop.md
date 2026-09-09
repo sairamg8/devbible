@@ -188,7 +188,7 @@ you turned live reload off, and turning live reload off silently turns HMR off w
 covers is less settled than it looks: the option's own schema description at 22.1.7 says *"only
 global and component stylesheets are supported"*, while the build-system migration guide also lists
 component templates, and the builder's environment-variable module gates the two behind separate
-switches. Those statements disagree and I could not determine which describes runtime behaviour at
+switches. Those statements disagree, and which describes runtime behaviour at
 this version. The part every source agrees on is that general JavaScript HMR is not supported, so a
 change to a component class reloads the page.
 

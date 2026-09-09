@@ -213,7 +213,7 @@ for a free port.
 Not through this path at 22.1.7. `check-port.ts` contains a commented-out branch with the note
 *"Disabled due to Vite not handling port 0 and instead always using the default value (5173)"* and a
 `TODO` to re-enable it once that is fixed upstream. That comment establishes why the code is
-disabled; it does not establish what setting `port` to `0` does end to end today, and I could not
+disabled; it does not establish what setting `port` to `0` does end to end today, and that could not be
 confirm that. The practical answer is to choose a port yourself, which is what you want in CI
 anyway — an arbitrary port is difficult to hand to a test runner or a health check.
 

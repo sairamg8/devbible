@@ -231,7 +231,7 @@ builder's own schema says of `hmr`: *"Currently, only global and component style
 supported"* — no templates, and *"only"* makes that exclusionary. And `environment-options.ts` has
 `NG_HMR_TEMPLATES` defaulting to on (`!== false`) and `NG_HMR_CSTYLES` defaulting to off
 (`=== true`), which is the opposite emphasis again. Which one reflects runtime behaviour at 22.1.7
-I could not determine; the environment switches may gate an additional path rather than the primary
+could not be determined; the environment switches may gate an additional path rather than the primary
 one. What all three agree on, and is therefore safe to state, is that **general JavaScript-based HMR
 is not supported** — change a component's logic and you get a reload.
 
