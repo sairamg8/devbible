@@ -261,4 +261,6 @@ which block applies depends on the working directory. Four independent silent fa
 symptom is why the practical advice is to reduce the surface: one level, fully qualified names,
 `camelCase` throughout.
 
-{/* FOOTER */}
+---
+
+← Prev: [The project-level block](13g-the-project-level-cli-block.md) · Index: [Topic index](README.md) · Next → [`schematicCollections`](13i-schematic-collections.md)

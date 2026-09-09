@@ -250,4 +250,6 @@ worth naming is putting a personal decision in the committed file and then wonde
 to colleagues, or putting a project policy in the machine-wide file and then wondering why CI
 behaves differently.
 
-{/* FOOTER */}
+---
+
+← Prev: [`packageManager`](13c-the-package-manager-key.md) · Index: [Topic index](README.md) · Next → [`cli.cache`](13e-the-cache-key.md)

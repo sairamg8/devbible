@@ -264,4 +264,6 @@ like an object schema at all, so silence is not evidence of correctness. Combine
 the reader never inspects `cli` at either level, the project-level block is the least-checked corner
 of the file — which is a good reason to keep only the one key the schema names there.
 
-{/* FOOTER */}
+---
+
+← Prev: [Which `cli` block wins](13f-two-levels-of-cli.md) · Index: [Topic index](README.md) · Next → [`schematics` defaults](13h-schematics-and-generator-defaults.md)

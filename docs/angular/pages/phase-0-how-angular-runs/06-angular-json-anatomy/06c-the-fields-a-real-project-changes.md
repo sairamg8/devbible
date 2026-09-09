@@ -258,4 +258,6 @@ each target, because it decides what a bare `ng build` or `ng serve` actually do
 it is usually the least surprising part of the file, and anything unusual in it will already have
 been implied by the first three.
 
-{/* FOOTER */}
+---
+
+← Prev: [The scaffolding half](06b-scaffolding-you-do-not-edit.md) · Index: [Topic index](README.md) · Next → [fileReplacements](07-file-replacements.md)

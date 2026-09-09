@@ -55,7 +55,7 @@ Six keys, and three facts that follow from those last two lines:
    containing only `{"version": 1}` is schema-valid.
 3. 🔴 **`defaultProject` is not in the list and appears nowhere in the schema at 22.1.7.** Any
    tutorial, blog post or memory that mentions it is describing Angular 13 or earlier. What
-   replaced it is **14 · Multi-project workspaces** *(not written yet)*.
+   replaced it is [14 · Multi-project workspaces](14-multi-project-workspaces.md).
 
 ## `$schema` and `version` are read and then deliberately ignored
 
@@ -105,7 +105,7 @@ schematic writes the file above, with `"projects": {}`; the application schemati
 project object into it. Two schematics, one resulting file. That is why `newProjectRoot` is written
 even into a workspace that will only ever hold one application — the top level is generated without
 knowing what will be added to it. The project object that lands inside `projects` is
-**05 · The generated project, line by line** *(not written yet)*.
+[05 · The generated project, line by line](05-the-generated-project-line-by-line.md).
 
 The `cli` block is conditional: it appears only when a package manager was chosen. A generated
 `angular.json` with no `cli` key is normal, not truncated.
@@ -153,7 +153,7 @@ have one:
 Cause: it is written unconditionally by the workspace schematic, which runs before any application
 exists and therefore cannot know the workspace will hold only one. It becomes load-bearing the
 moment you run `ng generate application`. Fix: leave it. Its semantics are
-**13 · The `cli` block and workspace-wide defaults** *(not written yet)*.
+[13 · The `cli` block and workspace-wide defaults](13-the-cli-block-and-workspace-defaults.md).
 
 **Symptom: editor autocompletion and validation inside `angular.json` stopped working, and builds
 are fine.** Cause: `$schema` is a relative path resolved from the workspace file, and it points into
@@ -271,4 +271,6 @@ error rather than a legacy key that is politely ignored. It is also a strong sig
 else the file contains was written for a much older CLI — the builder strings and target names are
 worth auditing at the same time.
 
-{/* FOOTER */}
+---
+
+← Prev: [It is JSONC, not JSON](01c-the-file-is-jsonc-not-json.md) · Index: [Topic index](README.md) · Next → [The version gate](01e-the-version-gate.md)

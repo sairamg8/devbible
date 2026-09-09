@@ -234,4 +234,6 @@ the metafile, which records the inputs each output was produced from. The source
 what makes it possible to report a per-component failure with a name a developer can act on, which
 is the entire point of the `anyComponentStyle` type.
 
-{/* FOOTER */}
+---
+
+← Prev: [What each type sums](08b-what-each-type-sums.md) · Index: [Topic index](README.md) · Next → [Threshold strings](08d-threshold-strings-and-the-baseline.md)

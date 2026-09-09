@@ -269,4 +269,6 @@ checks the inner keys against the schema. The consequence is that precedence bug
 same way: silently, with the default applying, which is why the diagnosis has to be a deliberate
 walk through the lookup order rather than a search for an error message.
 
-{/* FOOTER */}
+---
+
+← Prev: [`cli.cache`](13e-the-cache-key.md) · Index: [Topic index](README.md) · Next → [The project-level block](13g-the-project-level-cli-block.md)

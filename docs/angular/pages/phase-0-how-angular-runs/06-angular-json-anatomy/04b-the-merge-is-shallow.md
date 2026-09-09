@@ -226,4 +226,6 @@ semantics implicit. The only authoritative statement is the code, and the eighte
 it are in the Architect host rather than anywhere a reader of the workspace-configuration page would
 think to look.
 
-{/* FOOTER */}
+---
+
+← Prev: [`options` and `configurations`](04-options-and-configurations.md) · Index: [Topic index](README.md) · Next → [The two canonical cases](04c-the-two-canonical-cases.md)

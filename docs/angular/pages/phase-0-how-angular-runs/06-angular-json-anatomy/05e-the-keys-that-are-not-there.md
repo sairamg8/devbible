@@ -281,4 +281,6 @@ builder's defaults for one scenario. `optimization`, `sourceMap`, `extractLicens
 `outputHashing` never appear in `options` in a generated file precisely because their defaults are
 right for one configuration and wrong for the other, so each configuration states its own.
 
-{/* FOOTER */}
+---
+
+← Prev: [serve, test and libraries](05d-serve-test-and-libraries.md) · Index: [Topic index](README.md) · Next → [What you set, what you never touch](06-what-you-set-and-what-you-never-touch.md)

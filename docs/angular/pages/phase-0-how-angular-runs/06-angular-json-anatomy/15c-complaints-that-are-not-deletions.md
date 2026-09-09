@@ -275,4 +275,6 @@ message is the only place the real mistake is ever named, so the cost of noise h
 aesthetic — it is the loss of the one signal that would have made a later failure a two-line
 diagnosis.
 
-{/* FOOTER */}
+---
+
+← Prev: [Warnings that drop keys](15b-the-warnings-that-drop-keys.md) · Index: [Topic index](README.md) · Next → [Reading a validation failure](15d-option-validation-failures.md)

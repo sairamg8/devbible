@@ -84,7 +84,7 @@ The workspace schematic writes `newProjectRoot` into the file *before* the appli
 adds anything ([01d](01d-version-and-the-six-top-level-keys.md)), which is why it appears even in a
 workspace that will only ever contain one application. It governs where *future* projects are
 generated; it has no retroactive effect and no influence on the project already there. Its full
-semantics belong to **13 · The `cli` block and workspace-wide defaults** *(not written yet)*.
+semantics belong to [13 · The `cli` block and workspace-wide defaults](13-the-cli-block-and-workspace-defaults.md).
 
 ## If you want a uniform layout, move the first project down
 
@@ -126,7 +126,7 @@ the workspace `tsconfig.json` — has to be re-pointed. The TypeScript side of t
 **07 · The TypeScript setup Angular requires** *(not written yet)*.
 
 Which project a bare `ng build` selects in a workspace like this is a separate mechanism and is
-**14 · Multi-project workspaces** *(not written yet)*.
+[14 · Multi-project workspaces](14-multi-project-workspaces.md).
 
 ## Gotchas
 
@@ -276,4 +276,6 @@ design instead keeps existing projects untouched and gives new ones a home under
 **No source was found stating the rationale explicitly**, so treat that as an explanation of the
 consequences rather than as the maintainers' argument.
 
-{/* FOOTER */}
+---
+
+← Prev: [`root`, `sourceRoot`, `prefix`](02b-root-sourceroot-and-prefix.md) · Index: [Topic index](README.md) · Next → [`architect` or `targets`](02d-architect-or-targets.md)

@@ -283,4 +283,6 @@ projects go at the workspace root" is the empty value plus a comment saying it i
 is a small example of a general habit worth having with this file, where several values look like
 placeholders and are not.
 
-{/* FOOTER */}
+---
+
+← Prev: [`schematicCollections`](13i-schematic-collections.md) · Index: [Topic index](README.md) · Next → [Multi-project workspaces](14-multi-project-workspaces.md)

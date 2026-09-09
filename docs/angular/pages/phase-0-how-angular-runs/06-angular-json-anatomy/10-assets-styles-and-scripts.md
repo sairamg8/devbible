@@ -293,4 +293,6 @@ address arbitrary filesystem locations during a build would be a real hazard in 
 be aware of is that it is a silent constraint rather than a validation error, so the symptom is a
 missing file rather than a message.
 
-{/* FOOTER */}
+---
+
+← Prev: [Raw bytes and the defaults](09b-raw-bytes-and-the-defaults-discrepancy.md) · Index: [Topic index](README.md) · Next → [`outputPath`, `index`, `dist`](11-outputpath-index-and-dist.md)

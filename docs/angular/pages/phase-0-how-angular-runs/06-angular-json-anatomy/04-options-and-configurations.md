@@ -278,4 +278,6 @@ you missed. The model the file is designed around — a base plus named differen
 possible: a reader can see what production changes by reading five lines instead of diffing two
 twenty-line blocks.
 
-{/* FOOTER */}
+---
+
+← Prev: [A typo has no schema error](03f-a-typo-has-no-schema-error.md) · Index: [Topic index](README.md) · Next → [The merge is shallow](04b-the-merge-is-shallow.md)

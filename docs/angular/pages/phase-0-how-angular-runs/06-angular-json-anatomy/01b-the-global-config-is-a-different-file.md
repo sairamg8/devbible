@@ -97,8 +97,7 @@ ignored — the mistake surfaces as a validation failure or an editor squiggle r
 ```
 
 The full contents of the workspace `cli` block, its interaction with a per-project `cli` block, and
-the precedence between them belong to **13 · The `cli` block and workspace-wide defaults**
-*(not written yet)*. This page is only about which of the two files a block goes in.
+the precedence between them belong to [13 · The `cli` block and workspace-wide defaults](13-the-cli-block-and-workspace-defaults.md). This page is only about which of the two files a block goes in.
 
 ## The scoping question the file split is answering
 
@@ -270,4 +269,6 @@ both files exist, was not confirmed against the source for this page. The safe r
 the message itself implies: treat the legacy path as deprecated, move the file, and keep exactly
 one.
 
-{/* FOOTER */}
+---
+
+← Prev: [The file the CLI reads](01-the-file-the-cli-reads.md) · Index: [Topic index](README.md) · Next → [It is JSONC, not JSON](01c-the-file-is-jsonc-not-json.md)

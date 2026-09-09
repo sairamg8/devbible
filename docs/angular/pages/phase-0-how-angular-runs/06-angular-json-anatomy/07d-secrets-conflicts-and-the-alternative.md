@@ -251,4 +251,6 @@ that classification down next to the value, in a comment, saves the next securit
 re-deriving it and stops a genuinely public key being "fixed" into a server round-trip nobody
 needed.
 
-{/* FOOTER */}
+---
+
+← Prev: [Adding an environment](07c-adding-a-new-environment.md) · Index: [Topic index](README.md) · Next → [Budgets: the seven types](08-budgets-the-seven-types.md)

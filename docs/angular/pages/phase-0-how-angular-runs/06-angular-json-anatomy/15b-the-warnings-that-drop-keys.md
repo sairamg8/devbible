@@ -273,4 +273,6 @@ mistake in the real vocabulary. The instinct is to re-read the key that the erro
 precisely the key that is fine. Making "read the first ten lines of output before the last ten" a
 habit turns a confusing indirection into a two-line diagnosis.
 
-{/* FOOTER */}
+---
+
+← Prev: [When it is wrong](15-when-angular-json-is-wrong.md) · Index: [Topic index](README.md) · Next → [Complaints, not deletions](15c-complaints-that-are-not-deletions.md)

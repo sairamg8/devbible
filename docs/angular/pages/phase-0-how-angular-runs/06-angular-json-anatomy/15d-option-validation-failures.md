@@ -229,4 +229,6 @@ validation failure is therefore a certificate for everything upstream, and the i
 be confined to option names and values. This is the clearest practical payoff of thinking in layers —
 it does not just tell you where to look, it tells you where not to.
 
-{/* FOOTER */}
+---
+
+← Prev: [Complaints, not deletions](15c-complaints-that-are-not-deletions.md) · Index: [Topic index](README.md) · Next → [Closed schemas and spelling](15e-four-ways-to-fail-a-closed-schema.md)

@@ -264,4 +264,6 @@ fails with `Cannot determine project for command.` and a list of candidates. Sin
 a property of the command class rather than anything visible in `angular.json`, that behavioural test
 is the honest way to answer — and it is worth saying so rather than reciting a list you cannot cite.
 
-{/* FOOTER */}
+---
+
+← Prev: [What commands do with it](14b-what-the-commands-do-with-it.md) · Index: [Topic index](README.md) · Next → [The empty root and layout](14d-designing-for-unambiguous-resolution.md)

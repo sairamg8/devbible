@@ -271,4 +271,6 @@ value, and it survives a change to the default in a future major. An absent key 
 the builder decides next version. For a value your deployment depends on, writing it out is
 insurance against a silent change; for everything else it is noise.
 
-{/* FOOTER */}
+---
+
+← Prev: [The keys that are not there](05e-the-keys-that-are-not-there.md) · Index: [Topic index](README.md) · Next → [The scaffolding half](06b-scaffolding-you-do-not-edit.md)

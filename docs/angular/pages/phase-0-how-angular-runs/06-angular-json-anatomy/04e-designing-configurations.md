@@ -287,4 +287,6 @@ computes its own options, or generating `angular.json` from a source of truth as
 are significant commitments, which is why the practical answer is usually to reduce the matrix — move
 environment differences out of the build and into runtime configuration — before reaching for either.
 
-{/* FOOTER */}
+---
+
+← Prev: [Every shape the rule bites](04d-every-option-shape-the-rule-bites.md) · Index: [Topic index](README.md) · Next → [Selecting a configuration](04f-selecting-a-configuration.md)

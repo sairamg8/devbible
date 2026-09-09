@@ -282,4 +282,6 @@ folder, so the files land under `projects/acme/ui`. The key and the directory ar
 different, which breaks any tooling that reconstructs a filesystem path from a project name instead
 of reading `root`.
 
-{/* FOOTER */}
+---
+
+← Prev: [The generated project](05-the-generated-project-line-by-line.md) · Index: [Topic index](README.md) · Next → [The build target](05c-the-build-target.md)

@@ -232,4 +232,6 @@ other key's symptom, because defaults are applied after a schematic has already 
 the two symptoms apart is what stops a debugging session from editing the wrong block for twenty
 minutes, since neither key complains when it is not the one at fault.
 
-{/* FOOTER */}
+---
+
+← Prev: [`schematics` defaults](13h-schematics-and-generator-defaults.md) · Index: [Topic index](README.md) · Next → [`newProjectRoot`](13j-newprojectroot.md)

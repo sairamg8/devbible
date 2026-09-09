@@ -228,4 +228,6 @@ only for as long as the default file continues to hold production values. Reorga
 production lives in a replacement and `production: true` becomes a lie in every build that does not
 name that configuration.
 
-{/* FOOTER */}
+---
+
+← Prev: [fileReplacements](07-file-replacements.md) · Index: [Topic index](README.md) · Next → [Adding an environment](07c-adding-a-new-environment.md)

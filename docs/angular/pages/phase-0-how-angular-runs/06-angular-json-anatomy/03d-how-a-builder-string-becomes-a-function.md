@@ -259,4 +259,6 @@ documented layout adds the source-level detail — `src/my-builder.ts`, `src/sch
 `builders.json`, `package.json`, `tsconfig.json`. Nothing about Angular's own builders differs from
 this; they are found by exactly the same five steps.
 
-{/* FOOTER */}
+---
+
+← Prev: [The seventeen builder strings](03c-the-seventeen-builder-strings.md) · Index: [Topic index](README.md) · Next → [The error ladder](03e-the-error-ladder-of-an-invocation.md)

@@ -251,4 +251,6 @@ entry's name and the configuration it selects are unrelated strings and nothing 
 If the intent is genuinely "serve production with a staging proxy", say so in the proxy
 configuration's own file rather than relying on the reader noticing that two names disagree.
 
-{/* FOOTER */}
+---
+
+← Prev: [The build target](05c-the-build-target.md) · Index: [Topic index](README.md) · Next → [The keys that are not there](05e-the-keys-that-are-not-there.md)

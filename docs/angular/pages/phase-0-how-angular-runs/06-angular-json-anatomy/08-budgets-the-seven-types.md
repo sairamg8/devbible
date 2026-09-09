@@ -211,4 +211,6 @@ because someone wrote `maxError` instead of `maximumError` would be worse than n
 it would be a guard everybody believed in. The nine allowed properties are the whole surface, and
 anything else stops the build.
 
-{/* FOOTER */}
+---
+
+← Prev: [Secrets, conflicts, alternative](07d-secrets-conflicts-and-the-alternative.md) · Index: [Topic index](README.md) · Next → [What each type sums](08b-what-each-type-sums.md)

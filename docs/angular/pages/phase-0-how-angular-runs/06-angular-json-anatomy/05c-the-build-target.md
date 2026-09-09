@@ -279,4 +279,6 @@ statement honest — `options` describes the application, configurations describ
 The cost is the one this page keeps returning to: any other configuration you add gets `"none"`
 unless it says otherwise.
 
-{/* FOOTER */}
+---
+
+← Prev: [The project-level fields](05b-the-five-project-level-fields.md) · Index: [Topic index](README.md) · Next → [serve, test and libraries](05d-serve-test-and-libraries.md)

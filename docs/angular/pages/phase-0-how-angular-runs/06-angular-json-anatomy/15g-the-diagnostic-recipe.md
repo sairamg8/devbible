@@ -252,4 +252,6 @@ at the end of the output in unrelated wording. Everything else in the recipe is 
 one habit converts the single most confusing failure mode in `angular.json` — a key that is visibly
 present and reported as not existing — into a two-line diagnosis.
 
-{/* FOOTER */}
+---
+
+← Prev: [Migrated and misplaced](15f-migrated-and-misplaced-options.md) · Index: [Topic index](README.md) · Next topic → **07 · The TypeScript setup Angular requires** *(not written yet)*

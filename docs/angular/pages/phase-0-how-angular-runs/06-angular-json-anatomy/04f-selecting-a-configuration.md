@@ -225,4 +225,6 @@ command line will run, and the application builder will fail for want of `tsConf
 literal reading of *"`options` are used directly without modification"* — there is no hidden layer of
 defaults coming from the workspace file.
 
-{/* FOOTER */}
+---
+
+← Prev: [Designing configurations](04e-designing-configurations.md) · Index: [Topic index](README.md) · Next → [Configurations are per target](04g-configurations-are-per-target.md)

@@ -289,4 +289,6 @@ as a CI check rather than a review convention. The reason to automate it is that
 invisible: the CLI does not warn, the effective configuration is whichever block came last, and a
 formatter or a merge can flip that at any time without touching a single option value.
 
-{/* FOOTER */}
+---
+
+← Prev: [The empty `root`](02c-the-empty-root-and-workspace-layout.md) · Index: [Topic index](README.md) · Next → [The extension escape hatch](02e-the-extension-escape-hatch.md)

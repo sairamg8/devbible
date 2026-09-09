@@ -219,4 +219,6 @@ an extension it carries along. That is precisely why a project missing `projectT
 is still flagged by an editor: the requirement exists in the format, not in the code path that reads
 the file.
 
-{/* FOOTER */}
+---
+
+← Prev: [`architect` or `targets`](02d-architect-or-targets.md) · Index: [Topic index](README.md) · Next → [Living with extension keys](02f-living-with-extension-keys.md)

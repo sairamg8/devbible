@@ -271,4 +271,6 @@ strictly, formatters that strip them, and schematics that rewrite regions of the
 last of those unconfirmed either way. A comment that points at a durable document is a good use; a
 comment that *is* the document is not.
 
-{/* FOOTER */}
+---
+
+← Prev: [The global config file](01b-the-global-config-is-a-different-file.md) · Index: [Topic index](README.md) · Next → [The six top-level keys](01d-version-and-the-six-top-level-keys.md)

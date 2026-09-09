@@ -275,4 +275,6 @@ is that it is workspace-relative and therefore correct in every checkout without
 risk only appears when someone changes it to an absolute path and then copies the file to another
 machine.
 
-{/* FOOTER */}
+---
+
+← Prev: [`analytics` and `warnings`](13d-analytics-and-warnings.md) · Index: [Topic index](README.md) · Next → [Which `cli` block wins](13f-two-levels-of-cli.md)

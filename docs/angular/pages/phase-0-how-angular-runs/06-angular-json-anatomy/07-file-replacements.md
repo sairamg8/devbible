@@ -228,4 +228,6 @@ is written out. That verbosity is a feature at review time — a diff shows exac
 environment substitutes, which is the sort of thing you want visible when someone adds a staging
 build.
 
-{/* FOOTER */}
+---
+
+← Prev: [The live fields](06c-the-fields-a-real-project-changes.md) · Index: [Topic index](README.md) · Next → [Environments in practice](07b-environments-in-practice.md)

@@ -284,4 +284,6 @@ working directory is not on the command line and is not echoed in the output, so
 the same command in the same repository can legitimately see different results. Naming the input —
 either by naming the project or by controlling the directory — removes the feeling entirely.
 
-{/* FOOTER */}
+---
+
+← Prev: [`newProjectRoot`](13j-newprojectroot.md) · Index: [Topic index](README.md) · Next → [What commands do with it](14b-what-the-commands-do-with-it.md)

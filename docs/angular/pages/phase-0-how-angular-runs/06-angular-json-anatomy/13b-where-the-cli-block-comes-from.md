@@ -260,4 +260,6 @@ override it, and the machine-wide config carries a value of its own. Treat it as
 the CLI's own install steps rather than as policy, and put the actual enforcement where enforcement
 lives — a lockfile that is committed, and a CI job that fails when it changes unexpectedly.
 
-{/* FOOTER */}
+---
+
+← Prev: [The `cli` block](13-the-cli-block-and-workspace-defaults.md) · Index: [Topic index](README.md) · Next → [`packageManager`](13c-the-package-manager-key.md)

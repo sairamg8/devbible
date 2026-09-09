@@ -247,4 +247,6 @@ sentence is natural; for a maximum, "budget X was not met by Y" is describing th
 overshoot rather than a shortfall. It is worth recognising because the wording makes people wonder
 whether they are reading the wrong message; the clause to trust is the first one.
 
-{/* FOOTER */}
+---
+
+← Prev: [Threshold strings](08d-threshold-strings-and-the-baseline.md) · Index: [Topic index](README.md) · Next → [Raw bytes and the defaults](09b-raw-bytes-and-the-defaults-discrepancy.md)

@@ -275,4 +275,6 @@ position, so it can appear anywhere in the top-level object. This matters mostly
 result: reordering keys is a popular but useless response to a version error, and the actual causes
 are only ever that the key is missing or that its value is not the number `1`.
 
-{/* FOOTER */}
+---
+
+← Prev: [The six top-level keys](01d-version-and-the-six-top-level-keys.md) · Index: [Topic index](README.md) · Next → [`projects` and the project object](02-projects-and-the-project-object.md)

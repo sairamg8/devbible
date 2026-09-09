@@ -253,4 +253,6 @@ build-time it belongs in `define` on the build target, where the builder substit
 bundle; if it is genuinely tool metadata it belongs behind a short-prefix top-level extension key,
 which is the one place the file deliberately allows unknown names.
 
-{/* FOOTER */}
+---
+
+← Prev: [`optimization` and `sourceMap`](12-optimization-and-sourcemap.md) · Index: [Topic index](README.md) · Next → [Where the block comes from](13b-where-the-cli-block-comes-from.md)

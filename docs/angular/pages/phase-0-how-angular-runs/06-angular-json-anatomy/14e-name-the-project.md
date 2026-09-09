@@ -235,4 +235,6 @@ failure mode to avoid is the mixed state — some scripts naming the project, ot
 working directory — because after the rename the named ones fail loudly and the unnamed ones keep
 working, which reads like a partially broken rename rather than a fully applied one.
 
-{/* FOOTER */}
+---
+
+← Prev: [The empty root and layout](14d-designing-for-unambiguous-resolution.md) · Index: [Topic index](README.md) · Next → [When it is wrong](15-when-angular-json-is-wrong.md)

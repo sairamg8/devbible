@@ -273,4 +273,6 @@ Blanket deletion gets the second group right and silently changes behaviour for 
 symptom arrives later as a build that no longer does something it used to. Checking each key against
 the rename inventory is the difference between a migration and a truncation.
 
-{/* FOOTER */}
+---
+
+← Prev: [Closed schemas and spelling](15e-four-ways-to-fail-a-closed-schema.md) · Index: [Topic index](README.md) · Next → [The diagnostic recipe](15g-the-diagnostic-recipe.md)

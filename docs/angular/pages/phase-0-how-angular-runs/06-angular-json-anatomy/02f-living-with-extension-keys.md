@@ -232,4 +232,6 @@ all of them are exposed to schematic rewrites and to the JSONC-versus-JSON split
 ask of each is whether it needs to be *per project*; the ones that do belong there, and the ones
 that do not are usually a file in disguise.
 
-{/* FOOTER */}
+---
+
+← Prev: [The extension escape hatch](02e-the-extension-escape-hatch.md) · Index: [Topic index](README.md) · Next → [Targets and builders](03-targets-and-builders.md)

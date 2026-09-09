@@ -265,4 +265,6 @@ what you intended. Neither is an error; both are behaviour. The way to find them
 from the effective options rather than forwards from a message, which is the last step of the
 recipe on [15g](15g-the-diagnostic-recipe.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [Name the project](14e-name-the-project.md) · Index: [Topic index](README.md) · Next → [Warnings that drop keys](15b-the-warnings-that-drop-keys.md)

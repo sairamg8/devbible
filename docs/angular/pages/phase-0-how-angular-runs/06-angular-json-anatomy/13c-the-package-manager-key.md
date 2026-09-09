@@ -228,4 +228,6 @@ which schematic collections you will install, or whether you want a version-mism
 are decisions about a project that does not exist yet, so the template leaves them out, which is why
 every other `cli` key in every repository was added by a person.
 
-{/* FOOTER */}
+---
+
+← Prev: [Where the block comes from](13b-where-the-cli-block-comes-from.md) · Index: [Topic index](README.md) · Next → [`analytics` and `warnings`](13d-analytics-and-warnings.md)

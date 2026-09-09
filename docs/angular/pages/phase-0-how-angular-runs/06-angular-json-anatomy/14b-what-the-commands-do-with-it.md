@@ -272,4 +272,6 @@ which is the right decision, since falling back would mean running a command aga
 were not in. The fix is to name the project that has the target, or to add the target to the project
 you are in.
 
-{/* FOOTER */}
+---
+
+← Prev: [Multi-project workspaces](14-multi-project-workspaces.md) · Index: [Topic index](README.md) · Next → [Multi-target and `ng run`](14c-multi-target-commands-and-ng-run.md)

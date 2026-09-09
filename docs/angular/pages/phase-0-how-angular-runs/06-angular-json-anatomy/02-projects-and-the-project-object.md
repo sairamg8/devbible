@@ -289,4 +289,6 @@ target rather than as a missing project, which sends people looking in the wrong
 a find-and-replace across `angular.json`, `package.json` scripts and CI configuration, not a
 one-line edit.
 
-{/* FOOTER */}
+---
+
+← Prev: [The version gate](01e-the-version-gate.md) · Index: [Topic index](README.md) · Next → [`root`, `sourceRoot`, `prefix`](02b-root-sourceroot-and-prefix.md)

@@ -83,8 +83,7 @@ that package's own schematic rather than by the application schematic, which is 
 six properties — `$schema`, `version`, `cli`, `schematics`, `newProjectRoot`, `projects` — with
 `additionalProperties: false`, and only `version` is required. Any tutorial, blog post or
 Stack Overflow answer that tells you to set `defaultProject` is describing Angular 13 or earlier.
-How the CLI decides which project a command applies to now is **14 · Multi-project workspaces**
-*(not written yet)*.
+How the CLI decides which project a command applies to now is [14 · Multi-project workspaces](14-multi-project-workspaces.md).
 
 ## Gotchas
 
@@ -242,4 +241,6 @@ written as `1` by the workspace template. It tracks the structure of `angular.js
 framework. Bumping it to match a framework major produces a file the schema will not validate and
 communicates nothing.
 
-{/* FOOTER */}
+---
+
+← Prev: [What you set, what you never touch](06-what-you-set-and-what-you-never-touch.md) · Index: [Topic index](README.md) · Next → [The live fields](06c-the-fields-a-real-project-changes.md)

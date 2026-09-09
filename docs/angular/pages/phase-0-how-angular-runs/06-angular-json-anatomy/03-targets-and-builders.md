@@ -276,4 +276,6 @@ right, with any variation supplied from the command line — but mostly it is wo
 tells you what the CLI will and will not fill in: `options` defaults to nothing, and `?? {}` covers
 its absence rather than any inference about what you meant.
 
-{/* FOOTER */}
+---
+
+← Prev: [Living with extension keys](02f-living-with-extension-keys.md) · Index: [Topic index](README.md) · Next → [The six wired target names](03b-the-six-command-bound-targets.md)

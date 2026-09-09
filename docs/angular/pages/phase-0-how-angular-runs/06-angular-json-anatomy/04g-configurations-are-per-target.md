@@ -259,4 +259,6 @@ custom builders, in npm scripts and in CI commands. The rename is only safe when
 been updated, and the file gives you no help — an out-of-date reference is a valid string that fails
 at run time with a message about a configuration not being set in the workspace.
 
-{/* FOOTER */}
+---
+
+← Prev: [Selecting a configuration](04f-selecting-a-configuration.md) · Index: [Topic index](README.md) · Next → [The generated project](05-the-generated-project-line-by-line.md)

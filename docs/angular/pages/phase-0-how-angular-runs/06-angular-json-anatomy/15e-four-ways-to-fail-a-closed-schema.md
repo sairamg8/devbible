@@ -220,4 +220,6 @@ and it applies to key *names* at the workspace and project level rather than to 
 the option surface has no escape hatch at all is what makes "it must be being ignored" a hypothesis
 you can rule out immediately.
 
-{/* FOOTER */}
+---
+
+← Prev: [Reading a validation failure](15d-option-validation-failures.md) · Index: [Topic index](README.md) · Next → [Migrated and misplaced](15f-migrated-and-misplaced-options.md)

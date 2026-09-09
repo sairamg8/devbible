@@ -267,7 +267,8 @@ Nothing at the file level — and that is the point. Angular's model is a single
 `projects` map holds every application and library, so the ascending search reaching the root
 workspace file is the *intended* behaviour, and project selection happens inside that file rather
 than through the directory you are standing in. Directory-based project selection is a separate
-mechanism layered on top of the resolved workspace, covered in **14 · Multi-project workspaces**
-*(not written yet)*.
+mechanism layered on top of the resolved workspace, covered in [14 · Multi-project workspaces](14-multi-project-workspaces.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [The global config file](01b-the-global-config-is-a-different-file.md)

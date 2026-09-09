@@ -275,4 +275,6 @@ and expects the missing sub-keys to be inherited. They are not inherited from `o
 absent, and the builder falls back to its own defaults. The failure is invisible because both
 outcomes produce a working build with different characteristics.
 
-{/* FOOTER */}
+---
+
+← Prev: [The two canonical cases](04c-the-two-canonical-cases.md) · Index: [Topic index](README.md) · Next → [Designing configurations](04e-designing-configurations.md)

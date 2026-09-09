@@ -275,4 +275,6 @@ expressed as a JSON number — and no pattern is attached to it. The only parsin
 genuine gap: this is one of the few places in `angular.json` where a mistake is neither caught by
 the schema nor reported at runtime, which is why it is worth a review habit rather than a tool.
 
-{/* FOOTER */}
+---
+
+← Prev: [What reaches the calculator](08c-what-reaches-the-calculator.md) · Index: [Topic index](README.md) · Next → [When a budget fails](09-when-a-budget-fails.md)

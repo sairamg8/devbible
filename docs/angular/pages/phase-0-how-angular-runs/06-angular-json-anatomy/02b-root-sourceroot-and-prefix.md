@@ -223,4 +223,6 @@ No. The documented default is `''`, the empty string. Every generated project ha
 CLI would apply on its own. Removing the key does not fall back to `src`; it falls back to the
 workspace-relative empty path, which is almost never what a project wants.
 
-{/* FOOTER */}
+---
+
+← Prev: [`projects` and the project object](02-projects-and-the-project-object.md) · Index: [Topic index](README.md) · Next → [The empty `root`](02c-the-empty-root-and-workspace-layout.md)

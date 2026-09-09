@@ -233,4 +233,6 @@ target you asked for is in your command line, or in the `buildTarget` string tha
 is the one rung where the message does not carry its own context, and it is worth knowing that in
 advance rather than re-reading the output looking for a name that was never printed.
 
-{/* FOOTER */}
+---
+
+← Prev: [Resolving a builder string](03d-how-a-builder-string-becomes-a-function.md) · Index: [Topic index](README.md) · Next → [A typo has no schema error](03f-a-typo-has-no-schema-error.md)

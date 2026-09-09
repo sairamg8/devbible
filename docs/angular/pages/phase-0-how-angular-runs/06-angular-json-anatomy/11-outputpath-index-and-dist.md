@@ -273,4 +273,6 @@ What changed is the builder: the old webpack stats format and the tooling built 
 webpack-bundle-analyzer in particular — do not apply. The flag is still the way to get a
 machine-readable description of what was emitted; only the reader changed.
 
-{/* FOOTER */}
+---
+
+← Prev: [`assets`, `styles`, `scripts`](10-assets-styles-and-scripts.md) · Index: [Topic index](README.md) · Next → [`optimization` and `sourceMap`](12-optimization-and-sourcemap.md)

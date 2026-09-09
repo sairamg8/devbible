@@ -255,4 +255,6 @@ file, turns an invisible trap into a decision the reader can make. It also prote
 one of the two changes, the page is still true, whereas a page that silently picked a side would
 have become wrong without anyone noticing.
 
-{/* FOOTER */}
+---
+
+← Prev: [When a budget fails](09-when-a-budget-fails.md) · Index: [Topic index](README.md) · Next → [`assets`, `styles`, `scripts`](10-assets-styles-and-scripts.md)

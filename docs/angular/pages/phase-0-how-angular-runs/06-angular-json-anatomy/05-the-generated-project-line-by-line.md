@@ -257,4 +257,6 @@ package manager was specified at generation time. A workspace without it is not 
 the CLI falls back to its own resolution. What the block can contain, and how workspace-level and
 project-level `cli` settings interact, is **13 · The `cli` block and workspace-wide defaults**.
 
-{/* FOOTER */}
+---
+
+← Prev: [Configurations are per target](04g-configurations-are-per-target.md) · Index: [Topic index](README.md) · Next → [The project-level fields](05b-the-five-project-level-fields.md)

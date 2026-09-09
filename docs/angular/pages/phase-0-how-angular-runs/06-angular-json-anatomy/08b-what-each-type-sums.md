@@ -280,4 +280,6 @@ budget sums every match and reports one figure under the name you supplied. That
 you want for a feature area split across chunks, and it is worth knowing when a `bundle` budget
 reports a number larger than any single file you can find in the output.
 
-{/* FOOTER */}
+---
+
+← Prev: [Budgets: the seven types](08-budgets-the-seven-types.md) · Index: [Topic index](README.md) · Next → [What reaches the calculator](08c-what-reaches-the-calculator.md)

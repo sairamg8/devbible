@@ -273,4 +273,6 @@ CI: `ng run` is explicit about the project and the configuration, which is what 
 pipeline, whereas the bare command leans on project resolution and `defaultConfiguration` — two
 defaults that are convenient locally and undesirable in a job that must be reproducible.
 
-{/* FOOTER */}
+---
+
+← Prev: [Targets and builders](03-targets-and-builders.md) · Index: [Topic index](README.md) · Next → [The seventeen builder strings](03c-the-seventeen-builder-strings.md)

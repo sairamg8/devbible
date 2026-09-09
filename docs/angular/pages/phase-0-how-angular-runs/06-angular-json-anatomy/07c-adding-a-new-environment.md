@@ -180,7 +180,7 @@ the serve-side entry that points at the build configuration:
 **★ Symptom: `ng build --configuration stagng` fails with a message naming the configuration rather
 than suggesting one.** Cause: an unknown configuration name throws; there is no fuzzy matching and
 no fallback to `options`. Fix: the names are exact strings — the full error surface is
-**15 · When `angular.json` is wrong** *(not written yet)*:
+[15 · When `angular.json` is wrong](15-when-angular-json-is-wrong.md):
 
 ```bash
 ng build --configuration staging
@@ -280,4 +280,6 @@ builds correctly but cannot be served, or a CI job still building `production` b
 changed the command. Treat "does anything actually name this configuration?" as the last check
 before calling the change done.
 
-{/* FOOTER */}
+---
+
+← Prev: [Environments in practice](07b-environments-in-practice.md) · Index: [Topic index](README.md) · Next → [Secrets, conflicts, alternative](07d-secrets-conflicts-and-the-alternative.md)

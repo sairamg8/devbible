@@ -286,4 +286,6 @@ CLI falls back when it is confused, whereas the real model says the initial app 
 candidate, and it will keep being the only candidate for any directory outside another project's
 root. Under the real model the fix is obvious, and under the wrong one it is not.
 
-{/* FOOTER */}
+---
+
+← Prev: [Multi-target and `ng run`](14c-multi-target-commands-and-ng-run.md) · Index: [Topic index](README.md) · Next → [Name the project](14e-name-the-project.md)

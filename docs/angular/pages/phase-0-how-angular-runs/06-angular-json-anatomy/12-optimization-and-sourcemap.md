@@ -286,4 +286,6 @@ awkwardness is that this is precisely the convention the wider ecosystem uses to
 banner obligation, the default is wrong and the failure is silent — the banner is simply not in the
 output.
 
-{/* FOOTER */}
+---
+
+← Prev: [`outputPath`, `index`, `dist`](11-outputpath-index-and-dist.md) · Index: [Topic index](README.md) · Next → [The `cli` block](13-the-cli-block-and-workspace-defaults.md)

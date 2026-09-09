@@ -284,4 +284,6 @@ reasons that have nothing to do with the change being tested. This is a good ill
 general placement rule: `options` is for what is true whenever the target runs, and a size limit that
 only makes sense against optimised output is not.
 
-{/* FOOTER */}
+---
+
+← Prev: [The merge is shallow](04b-the-merge-is-shallow.md) · Index: [Topic index](README.md) · Next → [Every shape the rule bites](04d-every-option-shape-the-rule-bites.md)
