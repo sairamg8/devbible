@@ -70,7 +70,7 @@ Three fields, three jobs:
 🔴 **All eight of `@angular/core`'s v22 entries are `"version": "22.0.0"` and none carries
 `"optional": true`.** That is the checkable form of "the upgrade rewrites your source": on a
 v21 → v22 update, all eight run, and none of them asks. The two-bucket mechanism that `optional`
-selects is **06 · Required and optional migrations** *(not written yet)*.
+selects is [06 · Required and optional migrations](06-required-and-optional-migrations.md).
 
 ## `change-detection-eager` — the one that touches every component file
 

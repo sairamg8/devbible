@@ -92,7 +92,7 @@ accepts, and the update refuses to proceed on an incompatible peer unless you pa
 CLI does soften this for `@angular/core` specifically, in a way that is worth understanding before
 you reach for `--force` — [02c · How the CLI keeps its own promise](02c-how-the-cli-keeps-its-own-promise.md).
 The gate itself, both directions of the check and what `--force` actually skips, is
-**05 · The peer-dependency gate** *(not written yet)*.
+[05 · The peer-dependency gate](05-the-peer-dependency-gate.md).
 
 ## Sequencing it as work, not as a command
 

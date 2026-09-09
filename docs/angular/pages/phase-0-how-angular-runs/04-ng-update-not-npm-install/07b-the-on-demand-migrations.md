@@ -177,4 +177,4 @@ what exists; the directory only shows where some of it is implemented.
 
 ---
 
-← Prev: [The v22 migration inventory](07-the-v22-migration-inventory.md) · Index: [Topic index](README.md) · Next topic → **05 · The build: `@angular/build`** *(not written yet)*
+← Prev: [The v22 migration inventory](07-the-v22-migration-inventory.md) · Index: [Topic index](README.md) · Next topic → [05 · The build: `@angular/build`](../05-the-build-angular-build/README.md)

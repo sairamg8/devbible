@@ -199,8 +199,8 @@ built for major N will work on major N+1 — and to *stop assuming* at N+2, exac
   forgiving.
 
 The full peer gate — that it validates in both directions, that an *optional* peer mismatch logs an
-error without failing, and precisely what `--force` skips — is **05 · The peer-dependency gate**
-*(not written yet)*.
+error without failing, and precisely what `--force` skips — is
+[05 · The peer-dependency gate](05-the-peer-dependency-gate.md).
 
 ## Gotchas
 

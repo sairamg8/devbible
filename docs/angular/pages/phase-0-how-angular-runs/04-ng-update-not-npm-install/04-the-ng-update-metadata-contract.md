@@ -169,7 +169,7 @@ the key in a manifest knows it is part of the contract and not a stray; what it 
 unstated deliberately, rather than guessed at.
 
 The gate that stops an update on an incompatible peer dependency is a different mechanism entirely,
-and it is the subject of **05 · The peer-dependency gate** *(not written yet)*.
+and it is the subject of [05 · The peer-dependency gate](05-the-peer-dependency-gate.md).
 
 ## Gotchas
 

@@ -92,15 +92,15 @@ more, and `use-application-builder` is the only entry in either collection carry
 Without an interactive TTY there is nothing to answer the question, so optional migrations do not
 run. An upgrade performed by an automation job therefore produces a *different result* from the
 same upgrade performed on a laptop — the required three run in both cases, the optional two only in
-one. The precise mechanism and the exact prompt are **06 · Required and optional migrations**
-*(not written yet)*.
+one. The precise mechanism and the exact prompt are
+[06 · Required and optional migrations](06-required-and-optional-migrations.md).
 
 ## The big one: `use-application-builder`
 
 Read its description again. It replaces the `browser` or `browser-esbuild` builder from
 `@angular-devkit/build-angular` with the `application` builder — that is a change of build system,
 not a change of configuration, and it is the migration behind the entire
-**05 · The build: `@angular/build`** *(not written yet)* topic. It arrives as a single pre-ticked
+[05 · The build: `@angular/build`](../05-the-build-angular-build/README.md) topic. It arrives as a single pre-ticked
 checkbox during an upgrade you started for an entirely different reason.
 
 angular.dev is explicit that it can be deferred and run later, verbatim:

@@ -181,7 +181,7 @@ and patched the compile errors yourself, your source is *build-correct* but not 
 hand-bump, run the migrations you skipped explicitly rather than leaving the gap. The recovery
 surface (`--migrate-only`, `--from`, `--to`, `--name`) is
 [03 · What `ng update` actually does](03-what-ng-update-actually-does.md) and
-**06 · Required and optional migrations** *(not written yet)*.
+[06 · Required and optional migrations](06-required-and-optional-migrations.md).
 
 **★ Symptom: you upgraded `@angular/core` alone and `@angular/router` now fails at runtime with a
 version-skew error.** Cause: `packageGroup` lists sixteen packages that Angular builds and tests as

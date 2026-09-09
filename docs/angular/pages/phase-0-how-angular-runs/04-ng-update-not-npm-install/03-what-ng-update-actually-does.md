@@ -127,7 +127,7 @@ refuses a two-major jump — [02 · One major at a time](02-one-major-at-a-time.
 to and including this point is read-only.** A failure here has changed nothing.
 
 **8 · Resolve the update plan.** Peer dependencies are validated in both directions here, and this
-is where `--force` applies. The gate is **05 · The peer-dependency gate** *(not written yet)*; the
+is where `--force` applies. The gate is [05 · The peer-dependency gate](05-the-peer-dependency-gate.md); the
 `@angular/core`-specific range widening that happens as part of it is in
 [02c](02c-how-the-cli-keeps-its-own-promise.md).
 
