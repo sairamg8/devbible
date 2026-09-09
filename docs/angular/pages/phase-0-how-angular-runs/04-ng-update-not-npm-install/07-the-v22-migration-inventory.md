@@ -82,9 +82,16 @@ stops being checkable.
 
 ## The two that switch v22's own defaults back off
 
-`strict-templates-default` writes `"strictTemplates": false` into your `tsconfig.json` **when the
-key is not already set**. `strict-safe-navigation-narrow` disables the `nullishCoalescingNotNullable`
-and `optionalChainNotNullable` extended diagnostics.
+`strict-templates-default` writes `"strictTemplates": false` **when the key is not already set**.
+`strict-safe-navigation-narrow` disables the `nullishCoalescingNotNullable` and
+`optionalChainNotNullable` extended diagnostics.
+
+🔴 **Note where it writes, because the migration's own description is loose about it.** The
+description says *"in tsconfig.json"*, but the migration visits project tsconfigs — `tsconfig.app.json`
+and `tsconfig.spec.json` — and **skips the workspace root by name**. `project_tsconfig_paths.ts` at
+`v22.1.5` says so in a comment: *"Note that we are not interested in IDE-specific tsconfig files
+(e.g. /tsconfig.json)"*. So grepping the root for `strictTemplates` and finding nothing is **not**
+evidence that the migration did not run.
 
 Both are opt-outs for behaviour v22 turned on. That looks backwards until you consider the
 alternative: a project that upgrades and finds its templates no longer type-check is a project that
@@ -100,12 +107,18 @@ the wider picture of what v22 demands is
 The removal itself is one line:
 
 ```jsonc
-// tsconfig.json — after the migration
+// tsconfig.app.json — after the migration (NOT the workspace root)
 {
   "angularCompilerOptions": {
     "strictTemplates": false   // ← written by strict-templates-default; delete when ready
   }
 }
+```
+
+Find every copy of it rather than assuming there is one:
+
+```bash
+grep -rn 'strictTemplates' --include='tsconfig*.json' .
 ```
 
 ## The CLI — all five, complete
@@ -177,7 +190,7 @@ ng update @angular/cli --name use-application-builder
 
 ## Gotchas
 
-**★ Symptom: after upgrading to v22, `tsconfig.json` contains a `"strictTemplates": false` that
+**★ Symptom: after upgrading to v22, a project `tsconfig` contains a `"strictTemplates": false` that
 nobody on the team wrote.** Cause: the required `strict-templates-default` migration adds it when
 the key is unset, so that a project whose templates do not yet type-check still builds. Fix: treat
 it as a dated TODO rather than a setting — delete the line, fix what breaks, and read
