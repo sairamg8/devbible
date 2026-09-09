@@ -235,4 +235,4 @@ read for this page does not state a rationale, so treat the shape as a fact abou
 as a pattern to copy when writing your own `provide*`
 ([04](04-writing-your-own-provide-function.md) has the pattern that is house style).
 
-{/* FOOTER */}
+← Prev: [What the merge does not do](17b-what-the-merge-does-not-do.md) · Index: [Topic index](README.md) · Next → [BootstrapContext and NG0401](17d-bootstrapcontext-and-the-server-platform.md)

@@ -76,7 +76,7 @@ must not ship, the shape of that block is the shape to copy.
 
 ## Gotchas
 
-**★ Symptom: production logs contain `NG0201` with no other text and you cannot reproduce it locally.** Cause: two independent mechanisms strip everything. `NullInjector` sets `message` to `''` when `ngDevMode` is falsy, and the catch block replaces the error with `new RuntimeError(errorCode, null)`. Fix: source maps do not help — the string was never generated. Reproduce against a development build of the same route, or stand up a staging origin serving a development build with the same server config (**17 · The server config merge** *(not written yet)* is where a server-only provider difference would come from).
+**★ Symptom: production logs contain `NG0201` with no other text and you cannot reproduce it locally.** Cause: two independent mechanisms strip everything. `NullInjector` sets `message` to `''` when `ngDevMode` is falsy, and the catch block replaces the error with `new RuntimeError(errorCode, null)`. Fix: source maps do not help — the string was never generated. Reproduce against a development build of the same route, or stand up a staging origin serving a development build with the same server config ([17 · The server config merge](17-the-server-config-merge.md) is where a server-only provider difference would come from).
 
 **★ Symptom: `Find more at https://angular.dev/errors/NG0201` shows locally and never in production, and you suspect the link is being stripped by a logger.** Cause: `if (ngDevMode && code < 0)` in `formatRuntimeError`. It is not stripped; it is never appended. Fix: none needed — but do not build a log parser that expects it.
 
@@ -107,4 +107,4 @@ Because two separate mechanisms strip it. `NullInjector` builds the message as `
 **★ Why is the dev-only logic written as `if (ngDevMode) { … } else { … }` rather than an early return?**
 The source answers it directly: *"ESBuild is conservative about removing dead code that follows `return;` inside a function body, so the block may remain in the bundle. Using a conditional ensures the dev-only logic is reliably tree-shaken in production builds."* `ngDevMode` is substituted with a constant at build time, so a conditional whose test folds to `false` has its whole branch eliminated; statements sequenced after a `return` are not eliminated with the same confidence. This is worth knowing beyond trivia because it is the exact pattern you should copy in your own `provide*` validation ([04](04-writing-your-own-provide-function.md)): put dev-only checks inside `if (ngDevMode)`, never after a guard clause.
 
-{/* FOOTER */}
+← Prev: [How the message is assembled](16b-how-the-message-is-assembled.md) · Index: [Topic index](README.md) · Next → [Catching it in code](16d-catching-it-in-code.md)

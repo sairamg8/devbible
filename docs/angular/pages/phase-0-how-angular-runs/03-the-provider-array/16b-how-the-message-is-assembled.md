@@ -209,4 +209,4 @@ It marks the codes that have a guide page on angular.dev, and the enum's header 
 **★ Why does the `Path:` clause disappear for a single-token failure, and is that a good design?**
 `formatErrorMessage` guards it: `if (path && path.length > 1)`, with the comment *"If the path is empty or contains only one element (self) - do not append additional info the error message."* It is a good design, because a one-element path is `Path: UserClient.` after a message that already said `No provider found for UserClient.` — pure noise. The cost is that the absence has to be interpreted rather than read, and people assume the error was truncated. Treating the absence as a signal is the right habit: no `Path:` in a development build means the failing injection is the one you wrote, not one buried three services deep, and that is genuinely useful narrowing.
 
-{/* FOOTER */}
+← Prev: [The injector error surface](16-the-injector-error-surface.md) · Index: [Topic index](README.md) · Next → [What production tells you](16c-what-a-production-build-tells-you.md)

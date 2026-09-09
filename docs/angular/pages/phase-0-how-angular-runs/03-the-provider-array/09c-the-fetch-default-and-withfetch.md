@@ -110,7 +110,7 @@ export const serverConfig: ApplicationConfig = {
 ```
 
 ⚠️ That merge relies on the server config being applied *after* the browser one, which is
-**17 · The server config merge** *(not written yet)*. Verify the resulting backend rather than
+[17 · The server config merge](17-the-server-config-merge.md). Verify the resulting backend rather than
 assuming the ordering.
 
 **Symptom: after `ng update` to v22, your `provideHttpClient()` call contains a `withXhr()` nobody

@@ -106,7 +106,7 @@ function bootstrapApplication(
 > application's root component."*
 
 The third parameter, `BootstrapContext`, is the SSR handoff and is covered in
-**chunk 17** *(not written yet)*. The second parameter is optional — `bootstrapApplication(App)`
+[chunk 17d · `BootstrapContext` and the server platform](17d-bootstrapcontext-and-the-server-platform.md). The second parameter is optional — `bootstrapApplication(App)`
 is legal and boots an application with no application-level providers at all.
 
 Internally the call lands in `internalCreateApplication`, and this is the part worth memorising.
@@ -138,7 +138,7 @@ Read that literally:
 2. **Your array is spread in last.** `...(appProviders || [])` — everything you wrote in
    `app.config.ts` is appended after the framework's defaults. Because a later provider for the
    same token wins, *this is the mechanism by which your config overrides framework defaults*.
-   **Chunk 13** *(not written yet)* works through what "wins" means precisely.
+   [Chunk 13](13-order-dependence.md) works through what "wins" means precisely.
 3. **There is exactly one injector for the whole array.** Its parent is the platform injector; its
    dev-mode debug name is the literal string `Environment Injector`, which is what you will see in
    Angular DevTools and in the `Source:` clause of a v22 DI error.

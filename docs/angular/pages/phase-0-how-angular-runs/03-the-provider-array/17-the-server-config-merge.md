@@ -241,4 +241,4 @@ TypeScript will not show you on the result. The moment `ApplicationConfig` gains
 or the moment somebody writes their own `mergeMyConfig` in this shape, that branch becomes the
 observable behaviour and it is a replace, not a merge.
 
-{/* FOOTER */}
+← Prev: [The errors with no code](16j-the-errors-with-no-code.md) · Index: [Topic index](README.md) · Next → [What the merge does not do](17b-what-the-merge-does-not-do.md)

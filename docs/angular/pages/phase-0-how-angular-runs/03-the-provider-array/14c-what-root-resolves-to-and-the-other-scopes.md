@@ -181,7 +181,7 @@ export interface BootstrapContext {
   _platformInjector = typeof ngServerMode === 'undefined' || !ngServerMode ? injector : null;
 ```
 
-Under SSR the platform injector is deliberately **not** retained in the module-level global, because concurrent requests would share it. `bootstrapApplication`'s own JSDoc for the `context` parameter says the same, verbatim: *"This is useful for advanced use-cases, for example, server-side rendering, where the platform is created for each request."* So a `providedIn: 'platform'` service is a per-page singleton in the browser and a per-request singleton on the server — never a process-wide one. How the *application* config is assembled on the server is **17 · The server config merge** *(not written yet)*.
+Under SSR the platform injector is deliberately **not** retained in the module-level global, because concurrent requests would share it. `bootstrapApplication`'s own JSDoc for the `context` parameter says the same, verbatim: *"This is useful for advanced use-cases, for example, server-side rendering, where the platform is created for each request."* So a `providedIn: 'platform'` service is a per-page singleton in the browser and a per-request singleton on the server — never a process-wide one. How the *application* config is assembled on the server is [17 · The server config merge](17-the-server-config-merge.md).
 
 ## `'any'` — deprecated, and it is not a scope at all
 

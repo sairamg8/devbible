@@ -254,4 +254,4 @@ actual HTTP request during the render, and no testing backend installed. Product
 the message text entirely. So "I did not see NG2801" is worth something only if you know a request
 was issued during a development server render.
 
-{/* FOOTER */}
+← Prev: [What belongs in which config](17e-what-belongs-in-which-config.md) · Index: [Topic index](README.md) · Next → **Topic 04 · `ng update`, not `npm install`** *(not written yet)*

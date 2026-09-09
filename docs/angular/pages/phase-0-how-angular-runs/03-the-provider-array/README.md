@@ -25,13 +25,11 @@ convention, the catalogue, and the ways the array goes wrong.
 
 ## Chunks
 
-🚧 **15 of 17 planned chunks written, across 74 files.** Twelve of the fifteen exhausted their
+✅ **All 17 chunks written, across 90 files.** Fourteen of the seventeen exhausted their
 subject and split into lettered siblings, which is the 300-line cap working as designed — the cap
 is a file size, never a content budget, so chunk 05 became eight files, chunk 06 seven, chunk 08
-seven, chunk 10 seven, chunk 11 seven, chunk 12 eight, chunk 13 eight, chunk 14 six, chunk 15 five
-and chunk 09 five, rather than any of them being shortened. The rows without links are planned and
-named; a link to a page that does not exist breaks the build, so they stay as plain text until they
-land.
+seven, chunk 10 seven, chunk 11 seven, chunk 12 eight, chunk 13 eight, chunk 14 six, chunk 15 five,
+chunk 16 ten, chunk 17 six and chunk 09 five, rather than any of them being shortened.
 
 | # | Chunk | Covers |
 |---|---|---|
@@ -109,8 +107,22 @@ land.
 | 15c | **[Where `providers` belong](15c-where-providers-belong.md)** | The shape that pays off, the anti-shape, and the two placements that are not a choice at all |
 | 15d | **[Guards, resolvers and route initializers](15d-guards-resolvers-and-route-initializers.md)** | 🔴 Four guard kinds, **three different injectors** — `canActivate`, `canDeactivate` and `canMatch` see the route's own, `canActivateChild` sees the **declaring ancestor's** |
 | 15e | **[The injector that is never destroyed](15e-the-injector-that-is-never-destroyed.md)** | *"Prior to this proposed change, these injectors were never destroyed"* — why `takeUntilDestroyed` and `toSignal` were unreliable in guards, and ⚠️ the design doc names `withAutoCleanupInjectors()` while v22.1.5 ships `withExperimentalAutoCleanupInjectors()` |
-| 16 | **The injector error surface** *(not written yet)* | 🔴 `NullInjectorError: No provider for X!` **no longer exists in v20+** — the current message, `NG0201`, `ɵNotFound`, and the three different causes behind one symptom |
-| 17 | **The server config merge** *(not written yet)* | `app.config.server.ts`, `mergeApplicationConfig()`, and why the server config is a *merge* rather than a replacement |
+| 16 | **[The injector error surface](16-the-injector-error-surface.md)** | 🔴 `NullInjectorError` **does not exist in v22** — `grep -c` on the core golden is 0. The message is `` No provider found for `X`. ``, `error.name` is `ɵNotFound`, and `PROVIDER_NOT_FOUND = -201` is what renders `NG0201` |
+| 16b | **[How the message is assembled](16b-how-the-message-is-assembled.md)** | 🔴 `augmentRuntimeError`'s own JSDoc: `Source:` names where the resolution **began**, not where it failed — and `previousInjector` in the catch is the return of `setCurrentInjector`, **not** the parent injector |
+| 16c | **[What a production build tells you](16c-what-a-production-build-tells-you.md)** | Two independent mechanisms strip the text, so a production `NG0201` arrives with nothing attached |
+| 16d | **[Catching it in code](16d-catching-it-in-code.md)** | 🔴 `isNotFound()` / `NOT_FOUND` / `NotFoundError` are `// @public` in `core/primitives/di`, a genuinely published subpath — the supported programmatic check. ⚠️ Its being false in a production build is a reading of two sources, not documented, so the fix tests `code === -201` too |
+| 16e | **[The two message shapes](16e-the-two-message-shapes.md)** | ⚠️ Exactly **one** producer of the second shape confirmed — `injectRootLimpMode`, which is limp mode, not the element injector. The other `render3` call sites were not read and the page says so |
+| 16f | **[How a token is printed](16f-how-a-token-is-printed.md)** | Two different stringifiers run on one error — the message and the `Path:` diverge over `overriddenName`, newline truncation and arrays |
+| 16g | **[Not there, or not reachable](16g-not-there-or-not-reachable.md)** | The two causes behind one symptom, and the walk that tells them apart |
+| 16h | **[When it is a different token](16h-when-it-is-a-different-token.md)** | The identity failure that reads as a missing registration |
+| 16i | **[The codes next door](16i-the-codes-next-door.md)** | `NG0203`, `NG0205` and `NG0200` verbatim — and an `NG0200` gets a `Path:` and **no** `Source:`, which is how you tell its producers apart |
+| 16j | **[The errors with no code](16j-the-errors-with-no-code.md)** | `throwInvalidProviderError`'s two plain `Error`s — including a three-word `'Invalid provider'` that no code will ever help you search for |
+| 17 | **[The server config merge](17-the-server-config-merge.md)** | 🔴 `Object.assign(prev, curr, {providers: [...prev, ...curr]})` — the third argument is the only reason `prev.providers` survives, and every *other* key is a plain overwrite, not a merge |
+| 17b | **[What the merge does not do](17b-what-the-merge-does-not-do.md)** | *"This wrapper type prevents access to the `Provider`s inside"* — why the merge **cannot** de-duplicate, not merely does not |
+| 17c | **[The generated server files](17c-the-generated-server-files.md)** | What the CLI actually writes, and ⚠️ `IS_DISCOVERING_ROUTES` named but not described, because its implementation was not read |
+| 17d | **[`BootstrapContext` and the server platform](17d-bootstrapcontext-and-the-server-platform.md)** | The third `bootstrapApplication` parameter, and why the platform injector is deliberately not retained in a module global under concurrency |
+| 17e | **[What belongs in which config](17e-what-belongs-in-which-config.md)** | The placement rule, with the transfer cache as the worked case — a second `provideClientHydration()` in the server config silently overrides the configured one |
+| 17f | **[The HTTP backend across two configs](17f-the-http-backend-across-two-configs.md)** | 🔴 `HttpBackend` is written **three times** in the merged array, non-multi, last wins — so a bare `provideHttpClient()` in the server config quietly restores `FetchBackend` |
 
 ## The one question this topic exists to answer
 

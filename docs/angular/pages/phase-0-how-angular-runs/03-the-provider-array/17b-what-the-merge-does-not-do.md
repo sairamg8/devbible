@@ -276,4 +276,4 @@ one works (returns a shallow clone with a fresh providers array). That matters w
 is built programmatically, because a spread of a possibly-empty array is then safe rather than a case
 you have to guard.
 
-{/* FOOTER */}
+← Prev: [The server config merge](17-the-server-config-merge.md) · Index: [Topic index](README.md) · Next → [The generated server files](17c-the-generated-server-files.md)

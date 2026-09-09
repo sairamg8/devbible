@@ -257,4 +257,4 @@ import path for every project, including the majority that never adds a browser-
 cost of that decision is that the browser bucket is the one people forget exists, and its absence is
 routinely misread as "the shared config is the browser config".
 
-{/* FOOTER */}
+← Prev: [BootstrapContext and NG0401](17d-bootstrapcontext-and-the-server-platform.md) · Index: [Topic index](README.md) · Next → [The HTTP backend across two configs](17f-the-http-backend-across-two-configs.md)

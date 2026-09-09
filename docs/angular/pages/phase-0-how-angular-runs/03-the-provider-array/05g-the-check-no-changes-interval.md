@@ -206,7 +206,7 @@ provideCheckNoChangesConfig({ exhaustive: true, interval: 1000 }),
 
 **Symptom: the interval provider ends up in the server configuration through a config merge.** Cause:
 a server config is normally the application config merged with server-specific providers — the merge
-mechanics are **17 · The server config merge** *(not written yet)* — so anything in the shared array
+mechanics are [17 · The server config merge](17-the-server-config-merge.md) — so anything in the shared array
 is registered during server-side rendering too, and the initializer arms a timer there. The loop's
 only exit is `applicationRef.destroyed`, so it ends when the rendered application is destroyed; this
 page did not verify how a given server build defines `ngDevMode` or exactly when that destruction

@@ -234,4 +234,4 @@ exactly why it needs its own page in a topic about the provider array. It is the
 server bootstrap that no amount of correct configuration can supply: a perfectly merged config still
 throws if the entry point drops the argument.
 
-{/* FOOTER */}
+← Prev: [The generated server files](17c-the-generated-server-files.md) · Index: [Topic index](README.md) · Next → [What belongs in which config](17e-what-belongs-in-which-config.md)

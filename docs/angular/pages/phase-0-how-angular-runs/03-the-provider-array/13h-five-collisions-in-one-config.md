@@ -158,7 +158,7 @@ export const config = mergeApplicationConfig(serverConfig, appConfig);
 
 And the multi half applies too: a `provideAppInitializer()` in each config produces **two**
 initializers on the server, both of which run, and a `provideRouter()` in each produces two route
-tables. **17 · The server config merge** *(not written yet)* is the chunk that covers the server
+tables. [17 · The server config merge](17-the-server-config-merge.md) is the chunk that covers the server
 surface itself; what belongs here is that `mergeApplicationConfig` introduces no new rule at all — it
 is array concatenation feeding the same two operations.
 

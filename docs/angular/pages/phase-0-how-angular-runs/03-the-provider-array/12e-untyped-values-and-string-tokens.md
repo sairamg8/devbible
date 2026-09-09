@@ -161,7 +161,7 @@ in both places; never construct a token inside a function or a class body.
 **★ Symptom: you searched the source for `NullInjectorError` because a doc comment told you to, and
 found nothing.** Cause: the string is stale in Angular's own `InjectionToken` doc comment and on the
 DI troubleshooting guide. The v22 error's `name` is `ɵNotFound` and its code is `NG0201`. Fix:
-search for `NG0201` or `ɵNotFound`; see **16 · The injector error surface** *(not written yet)*.
+search for `NG0201` or `ɵNotFound`; see [16 · The injector error surface](16-the-injector-error-surface.md).
 
 **★ Symptom: a token with a default `factory` is also listed in `app.config.ts`, and a reviewer
 asks whether that is wrong.** Cause: it is redundant rather than wrong — the factory already
