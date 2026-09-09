@@ -23,7 +23,7 @@ have never heard of.
 Topic **01** closed at **86 pages**, all 17 chunks, its metadata-error catalogue completed;
 topic **02** is content-complete and wired, 32 chunks; topic **03** closed at **90 pages**, all 17
 chunks; topic **04** closed at **21 pages**, all 7 concepts; topic **05** closed at **40 pages**, all
-12 concepts; topic **06** closed at **68 pages**, all 15 concepts. Topics **07–12** are unstarted;
+12 concepts; topic **06** closed at **68 pages**, all 15 concepts. Topic **07** is open and being written. Topics **08–12** are unstarted;
 **07, 08 and 10–12 have a research bank**, and bank F's topic-08 half is incomplete. The table below is the phase's running order, tier by tier. A title that is
 **not a link** has no page yet — a link to a page that does not exist is a broken link, and this
 repo builds with none. Each row becomes a link as its topic lands.
@@ -36,7 +36,7 @@ repo builds with none. Each row becomes a link as its topic lands.
 | 04 | [`ng update`, not `npm install`](04-ng-update-not-npm-install/README.md) | <span className="db-tier t-understand">Understand</span> | Schematics rewrite your source; skipping a major is the expensive mistake |
 | 05 | [The build: `@angular/build`](05-the-build-angular-build/README.md) | <span className="db-tier t-understand">Understand</span> | 🔴 esbuild compiles, **Rolldown** re-bundles chunks (default since 22.1.0), Vite serves; the webpack builders were **deprecated in v22.0.0**, in three packages |
 | 06 | [`angular.json` anatomy](06-angular-json-anatomy/README.md) | <span className="db-tier t-understand">Understand</span> | Projects, targets, builders, `configurations`, `fileReplacements`, `budgets` |
-| 07 | **The TypeScript setup Angular requires** | <span className="db-tier t-understand">Understand</span> | The hard `>=6.0 <6.1` peer pin, `strictTemplates`, and the tsconfig split |
+| 07 | [The TypeScript setup Angular requires](07-the-typescript-setup/README.md) 🚧 | <span className="db-tier t-understand">Understand</span> | The hard `>=6.0 <6.1` peer pin, `strictTemplates`, and the tsconfig split |
 | 08 | **What `ng new` produces in v22** | <span className="db-tier t-understand">Understand</span> | The file tree, `app.config.ts`, `app.routes.ts`, `main.ts`, line by line |
 | 09 | **The release train** | <span className="db-tier t-understand">Understand</span> | 🔴 A major every **12** months since v22, 4-6 minors each, ~24 months supported, and how to read a changelog |
 | 10 | **Partial compilation** | <span className="db-tier t-know">Know</span> | `ɵɵngDeclareComponent` in published libraries, and what the linker does |
