@@ -58,7 +58,7 @@ it: the `ngDevMode` contradiction checks you write yourself in
 [05c](05c-the-redundant-opt-in-and-ng0408.md), the hydration feature conflicts in
 [11e](11e-the-contradiction-checks.md). There is no general duplicate check and there will not be
 one. **A long array is a large surface for a collision nobody wrote a check for.** Where order
-matters and where it genuinely does not is **13 · Order dependence** *(not written yet)*.
+matters and where it genuinely does not is [13 · Order dependence](13-order-dependence.md).
 
 ## Cost 4 — multi tokens accumulate rather than replace
 
@@ -257,4 +257,4 @@ cannot raise one without forbidding the legitimate case of a route contributing 
 defence is a convention, not a check: exactly one `provideRouter()` per application, everything
 else expressed inside the `Routes` array.
 
-{/* FOOTER */}
+← Prev: [What does not belong](12-what-does-not-belong.md) · Index: [Topic index](README.md) · Next → [The things with a better home](12c-the-things-with-a-better-home.md)

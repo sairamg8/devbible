@@ -170,4 +170,4 @@ which is likely for `'API_URL'`, `'CONFIG'` or `'ENVIRONMENT'`, and there is not
 neither side references the other. So the same mechanism produces a bug with no import edge
 connecting cause and effect, which is about the hardest shape of bug to find.
 
-{/* FOOTER */}
+← Prev: [Untyped values and typed tokens](12e-untyped-values-and-string-tokens.md) · Index: [Topic index](README.md) · Next → [Registered in the wrong injector](12g-registered-in-the-wrong-injector.md)

@@ -266,4 +266,4 @@ two entries are in different files owned by different concerns and the override 
 interface between them. Two entries in one literal have no such separation, and the second one is
 always either a mistake or an undocumented decision.
 
-{/* FOOTER */}
+← Prev: [Where order does not matter](13g-where-order-does-not-matter.md) · Index: [Topic index](README.md) · Next → [`providedIn: 'root'` vs the array](14-providedin-root-vs-the-array.md)

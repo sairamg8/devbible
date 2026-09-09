@@ -250,4 +250,4 @@ versions, which is a slow way to debug a current error. Methodologically, it sho
 survives inside the repository and not just on the documentation site, so "the doc comment says so"
 is weaker evidence than the code it is attached to. When the two disagree, the source wins.
 
-{/* FOOTER */}
+← Prev: [Lifetime is the question](12d-lifetime-is-the-whole-question.md) · Index: [Topic index](README.md) · Next → [String tokens](12f-string-tokens-and-the-deprecated-overload.md)

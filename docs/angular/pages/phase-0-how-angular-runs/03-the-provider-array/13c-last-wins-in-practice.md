@@ -162,7 +162,7 @@ because `FetchBackend` is already the default.
 
 **★ Symptom: you moved a `provide*` call to "make sure it runs last" and the bug persisted.** Cause:
 last-wins applies per token. If the two calls write disjoint tokens, moving them changes nothing at
-all — see [13d · Where order does not matter](13g-where-order-does-not-matter.md). Fix: identify the
+all — see [13g · Where order does not matter](13g-where-order-does-not-matter.md). Fix: identify the
 token first, then check whether it is multi. Reordering without naming the token is guessing.
 
 **★ Symptom: you expected `provideZoneChangeDetection()` to swap the change-detection *scheduler* and
@@ -201,4 +201,4 @@ affected by ordering at all. Working that out is the general procedure in miniat
 function returns, intersect the token sets, and only then ask which branch of `processProvider` the
 shared tokens take.
 
-{/* FOOTER */}
+← Prev: [Mixing multi and non-multi](13b-mixing-multi-and-non-multi.md) · Index: [Topic index](README.md) · Next → [Features vs hand-written providers](13d-features-versus-hand-written-providers.md)

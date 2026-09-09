@@ -24,7 +24,7 @@ and the surprises hiding in that runner — an Observable finishes on `complete`
 value, a synchronous return value is not tracked at all, and adding your first async initializer
 changes the timing of every step after it. Ordering and failure are
 [06b](06b-initializer-ordering-and-failure.md); the two initializers that are *not* awaited are
-[06c](06d-environment-initializers.md).
+[06d](06d-environment-initializers.md).
 
 ## The three, side by side
 

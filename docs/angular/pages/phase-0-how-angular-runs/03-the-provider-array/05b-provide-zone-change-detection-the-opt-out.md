@@ -210,7 +210,7 @@ Because provider registration is a `Map` write and the last non-multi write for 
 `...(appProviders || [])`, so your array is flattened in afterwards; your `{provide: ZONELESS_ENABLED,
 useValue: false}` and `{provide: NgZone, useFactory: …}` overwrite the framework's `true` and
 `NoopNgZone`. Nothing about change detection is special here — it is the ordinary override rule
-that **chunk 13** *(not written yet)* works through.
+that [chunk 13](13-order-dependence.md) works through.
 
 **★ `provideZoneChangeDetection()` re-provides two tokens. Which one does it deliberately leave
 alone, and why does that matter?**

@@ -107,7 +107,7 @@ A request made from a service injected inside `/reports` now runs
 `xsrf → reportAudit → (delegate) → xsrf → auth → log → fetch`. Note that `xsrfInterceptorFn` appears
 in **both** chains: each `provideHttpClient()` call pushed it into its own injector's array, and the
 de-duplication is per handler, so a function registered at two levels genuinely runs twice. Route-level
-`providers` themselves are **15 · Route-level providers** *(not written yet)*.
+`providers` themselves are [15 · Route-level providers](15-route-level-providers.md).
 
 ## The failure mode is later and quieter than it looks
 

@@ -148,7 +148,7 @@ collapse to one `provideRouter()` call. There is no feature to suppress the dupl
 table.** Cause: the root `Router` read `ROUTES` from the injector it was constructed in and holds the
 result in a field; a route injector's `ROUTES` record is never consulted by it. Fix: contribute lazy
 routes through `loadChildren`, and keep route-scoped *services* in the route's `providers` —
-**15 · Route-level providers** *(not written yet)*.
+[15 · Route-level providers](15-route-level-providers.md).
 
 ## Interview questions
 
@@ -170,4 +170,4 @@ the argument, not a once-only latch. Both listeners are invoked with the same fi
 pass, and `router.initialNavigation()`, preloader setup, scroller init and `resetRootComponentType`
 all run twice. Only the `BOOTSTRAP_DONE` block is idempotent, via `if (!bootstrapDone.closed)`.
 
-{/* FOOTER */}
+← Prev: [Features vs hand-written providers](13d-features-versus-hand-written-providers.md) · Index: [Topic index](README.md) · Next → [Interceptors and initializers](13f-interceptors-and-initializers-append.md)

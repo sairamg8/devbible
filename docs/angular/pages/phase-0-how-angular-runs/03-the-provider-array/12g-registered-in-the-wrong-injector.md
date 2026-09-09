@@ -257,4 +257,4 @@ correct-looking configuration whose only defence is knowing the consumer. That i
 `provide*` convention matters beyond ergonomics: a function named for its subsystem is at least a
 hint about where its subsystem lives, which a bare `{provide: TOKEN, useValue: x}` never is.
 
-{/* FOOTER */}
+← Prev: [String tokens](12f-string-tokens-and-the-deprecated-overload.md) · Index: [Topic index](README.md) · Next → [Experimental and dev-only](12h-experimental-preview-and-dev-only.md)

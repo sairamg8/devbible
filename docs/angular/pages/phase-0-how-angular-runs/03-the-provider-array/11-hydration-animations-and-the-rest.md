@@ -126,12 +126,12 @@ suppresses the default call, because the options feature's own `ɵproviders` —
 **3. Incremental hydration is on by default.** `ɵwithIncrementalHydration()` runs unless you passed
 `withNoIncrementalHydration()`. This is new in v22, is the single largest behavioural change in this
 function's history, and is why `withEventReplay()` is now redundant —
-[11b](11c-incremental-hydration-and-event-replay.md).
+[11c](11c-incremental-hydration-and-event-replay.md).
 
 **4. `provideStabilityDebugging()` is installed for you in dev mode.** If you are debugging an
 application that will not stabilise under SSR, you very likely already have the debugger. Adding it
 by hand is not merely redundant, it is a production cost, because it is deliberately *not* stripped
-— [11f](11g-the-standalone-core-providers.md).
+— [11g](11g-the-standalone-core-providers.md).
 
 **5. `provideEnabledBlockingInitialNavigationDetector()` is the router cross-check.** It is the
 mechanism behind the warning [08f · Initial navigation](08f-initial-navigation.md) works through:
@@ -167,7 +167,7 @@ is `provideEnabledBlockingInitialNavigationDetector()`, installed by the first d
 `provideClientHydration()` installs `provideStabilityDebugging()` in dev mode, so any hydrating app
 that fails to stabilise within nine seconds reports itself. Fix: nothing — this is the framework
 handing you the diagnosis for free. Read the stack it prints; it names the task holding the
-application un-stable. Details in [11f](11g-the-standalone-core-providers.md).
+application un-stable. Details in [11g](11g-the-standalone-core-providers.md).
 
 **★ Symptom: a bug reproduces in a production build and not in `ng serve`, and hydration is
 involved.** Cause: this function genuinely returns a different provider set in the two modes — the

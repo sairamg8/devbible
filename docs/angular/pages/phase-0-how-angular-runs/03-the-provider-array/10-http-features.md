@@ -203,7 +203,7 @@ point: a request cannot leave without the XSRF interceptor having had a chance t
 The only construction that could conceivably beat it is a raw `HTTP_INTERCEPTOR_FNS` multi provider
 placed earlier in the same `providers` array; the record ordering between a plain provider and an
 `EnvironmentProviders` value in one array was not verified for this page, so do not build on it in
-either direction. **13 · Order dependence** *(not written yet)* is where that belongs.
+either direction. [13 · Order dependence](13-order-dependence.md) is where that belongs.
 
 **★ Does the order of the arguments to `provideHttpClient()` matter?**
 For interceptors, yes — and that surprises people who have learned that most `with*` features are

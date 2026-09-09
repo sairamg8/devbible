@@ -248,4 +248,4 @@ false and you have gained one function call. The secondary benefit follows from 
 arrangement — a feature that owns its `provide*` can later be moved behind a lazy route, or
 published as a package, without the root config changing at all.
 
-{/* FOOTER */}
+← Prev: [Collisions and the triage order](12b-collisions-multi-tokens-and-the-triage-order.md) · Index: [Topic index](README.md) · Next → [Lifetime is the question](12d-lifetime-is-the-whole-question.md)

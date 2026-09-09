@@ -168,4 +168,4 @@ second collision you did not know about — the `LocationStrategy` case and the 
 sit in the same two lines. The reliable procedure is the reverse: name the token, find every entry
 that writes it, decide which one you want, and delete the rest.
 
-{/* FOOTER */}
+← Prev: [Last-wins in practice](13c-last-wins-in-practice.md) · Index: [Topic index](README.md) · Next → [Multi tokens append](13e-multi-tokens-append.md)

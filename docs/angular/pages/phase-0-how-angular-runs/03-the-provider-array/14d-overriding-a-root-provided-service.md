@@ -251,4 +251,4 @@ Because `deps` is positional and unchecked. The documentation is explicit that t
 **★ When would you put the substitution on the class — `@Injectable({providedIn: 'root', useClass: Other})` — rather than in `ApplicationConfig.providers`?**
 When the substitution is a property of the service rather than of this application's configuration. A common shape is a public abstract-ish token whose default implementation lives elsewhere: the token stays the thing consumers inject, the class carries the recipe, and no application has to know. The practical payoff is that the record stays on the class, so it keeps its `/*@__PURE__*/` annotation and its tree-shakability, and `app.config.ts` does not grow a line. Move it to the array the moment two builds need different answers — that is exactly when it has stopped being a property of the service.
 
-{/* FOOTER */}
+← Prev: [What `'root'` resolves to](14c-what-root-resolves-to-and-the-other-scopes.md) · Index: [Topic index](README.md) · Next → [The inheritance trap](14e-the-inheritance-trap.md)

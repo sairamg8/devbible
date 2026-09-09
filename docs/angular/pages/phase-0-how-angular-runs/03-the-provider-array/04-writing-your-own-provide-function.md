@@ -221,7 +221,7 @@ uses the first configuration for services created before navigation and the seco
 Cause: the route call creates a route injector with its own `BILLING_CONFIG` record; anything
 already instantiated against the application injector keeps the application's config. Fix: pick one
 level. If billing is application-wide, call it once in `app.config.ts`; if it is feature-scoped,
-remove it from `app.config.ts` entirely — **chunk 15** *(not written yet)*.
+remove it from `app.config.ts` entirely — [chunk 15](15-route-level-providers.md).
 
 **★ Symptom: `ReferenceError: ngDevMode is not defined` in a unit test or a Node script.** Cause: the
 bare `if (ngDevMode)` form assumes the Angular build has defined the global. Fix: use the defensive

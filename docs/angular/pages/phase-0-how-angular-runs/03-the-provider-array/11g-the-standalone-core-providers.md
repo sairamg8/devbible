@@ -153,7 +153,7 @@ unregistered on **injector destruction**, so the lifetime is the injector's rath
 application's. `execute` runs **in the injection context** of that injector, which means a tool can
 call `inject()` directly instead of capturing services in a closure. And the return type is
 `EnvironmentProviders` with the doc explicitly sanctioning **route providers** — which is the
-pattern **15 · Route-level `providers`** *(not written yet)* exists to cover, and the reason the
+pattern [15 · Route-level `providers`](15-route-level-providers.md) exists to cover, and the reason the
 injector-scoped lifetime is a feature rather than an implementation detail: register a lazy
 feature's tools with that feature's route, and they disappear when the user navigates away.
 
@@ -248,4 +248,4 @@ and the function is the thing making a deprecated feature survivable in the mean
 
 ---
 
-← Prev: [Animations are deprecated](11f-animations-are-deprecated.md) · Index: [Topic index](README.md) · Next → **12 · What does *not* belong in the array** *(not written yet)*
+← Prev: [Animations are deprecated](11f-animations-are-deprecated.md) · Index: [Topic index](README.md) · Next → [What does not belong](12-what-does-not-belong.md)

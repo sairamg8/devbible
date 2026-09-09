@@ -84,4 +84,4 @@ export const appConfig: ApplicationConfig = {
 **★ Why does `getInjectableDef` deliberately refuse an inherited `ɵprov`, when JavaScript would have given it to it for free?**
 Because a provider record identifies a token, and a subclass is a different token. An inherited `ɵprov` still has `token: BaseClass` and a factory that constructs the base class, so honouring it would mean injecting `Derived` and receiving a `Base` — or, once the factory branch is taken into account, receiving something whose identity does not match what the caller asked for. `getOwnDefinition` uses `Object.hasOwn` precisely to make that impossible, and its comment says so: *"Return definition only if it is defined directly on `type` and is not inherited from a base class of `type`."* The older, prototype-walking lookup still exists for compatibility, but it is `@deprecated`, it warns in dev mode, and its doc comment states the scenario *"will become an error in a future version of Angular"*.
 
-{/* FOOTER */}
+← Prev: [Overriding a root service](14d-overriding-a-root-provided-service.md) · Index: [Topic index](README.md) · Next → [Testing overrides](14f-testing-overrides.md)

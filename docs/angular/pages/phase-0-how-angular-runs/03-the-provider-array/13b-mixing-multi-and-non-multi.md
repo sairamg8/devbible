@@ -219,4 +219,4 @@ calls yield the same function instance. For a multi token whose consumer just it
 exists, and the honest answer is to guard inside the callback and say so in the function's own
 documentation.
 
-{/* FOOTER */}
+← Prev: [Order dependence](13-order-dependence.md) · Index: [Topic index](README.md) · Next → [Last-wins in practice](13c-last-wins-in-practice.md)

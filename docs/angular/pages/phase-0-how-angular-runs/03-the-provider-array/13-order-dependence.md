@@ -212,7 +212,7 @@ isolated from the rest of the array.** Cause: `isEnvironmentProviders(provider)`
 recurse into `provider.ɵproviders` at the same position — the brand controls *where the value may be
 written* ([03](03-environmentproviders-vs-provider.md)), not how it is registered. Fix: if you need
 isolation, you need a different injector — a route's `providers` — not a different wrapper. See
-**15 · Route-level providers** *(not written yet)*.
+[15 · Route-level providers](15-route-level-providers.md).
 
 **★ Symptom: a `forwardRef` in the provider array did not delay anything.** Cause: `processProvider`
 opens with `provider = resolveForwardRef(provider)` and resolves the `provide` key the same way, both
@@ -279,4 +279,4 @@ provider's own record by the provider object rather than by the multi token. Wit
 last member of a multi-provider would overwrite the container record that holds all of them, and
 injecting the token would yield one value instead of an array.
 
-{/* FOOTER */}
+← Prev: [Experimental and dev-only](12h-experimental-preview-and-dev-only.md) · Index: [Topic index](README.md) · Next → [Mixing multi and non-multi](13b-mixing-multi-and-non-multi.md)

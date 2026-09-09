@@ -25,11 +25,13 @@ convention, the catalogue, and the ways the array goes wrong.
 
 ## Chunks
 
-🚧 **12 of 17 planned chunks written, across 47 files.** Eight of the twelve exhausted their
+🚧 **15 of 17 planned chunks written, across 74 files.** Twelve of the fifteen exhausted their
 subject and split into lettered siblings, which is the 300-line cap working as designed — the cap
 is a file size, never a content budget, so chunk 05 became eight files, chunk 06 seven, chunk 08
-seven, chunk 10 seven, chunk 11 seven and chunk 09 five, rather than any of them being shortened. The rows without links are planned and named; a link to a
-page that does not exist breaks the build, so they stay as plain text until they land.
+seven, chunk 10 seven, chunk 11 seven, chunk 12 eight, chunk 13 eight, chunk 14 six, chunk 15 five
+and chunk 09 five, rather than any of them being shortened. The rows without links are planned and
+named; a link to a page that does not exist breaks the build, so they stay as plain text until they
+land.
 
 | # | Chunk | Covers |
 |---|---|---|
@@ -80,10 +82,33 @@ page that does not exist breaks the build, so they stay as plain text until they
 | 11e | **[The contradiction checks](11e-the-contradiction-checks.md)** | Two checks, one code `NG5001` (from **platform-browser**'s 5000-5500 range, not core's 100-999) — and both inside `if (ngDevMode)`, so the config that throws in `ng serve` ships silently |
 | 11f | **[Animations are deprecated](11f-animations-are-deprecated.md)** | ⚠️ All three providers deprecated with **no replacement provider** — `provideAnimationsAsync` names v23 — while angular.dev's guide opens with the deprecation and later tells you to add it |
 | 11g | **[The standalone core providers](11g-the-standalone-core-providers.md)** | `provideStabilityDebugging()` is documented as **not** removed from production bundles; `provideNgReflectAttributes()` is *not* tagged deprecated even though its attributes are; plus the idle-service override and one `@experimental` |
-| 12 | **What does *not* belong in the array** *(not written yet)* | 🔴 The "everything ends up in `app.config.ts`" anti-pattern: component-scoped services, per-route lifetime, feature config, and `useValue` blobs that should be a typed `InjectionToken` |
-| 13 | **Order dependence** *(not written yet)* | Where order matters and where it genuinely does not; last-wins for the same token; the cases people assume are ordered and are not |
-| 14 | **`providedIn: 'root'` vs listing in the array** *(not written yet)* | When you need the array at all, what `'root'` buys, and the tree-shaking difference between the two |
-| 15 | **Route-level `providers`** *(not written yet)* | The correct home for feature scope — lazy feature config, per-route lifetime, and how this forward-references Phases 6 and 8 |
+| 12 | **[What does *not* belong in the array](12-what-does-not-belong.md)** | 🔴 The "everything ends up in `app.config.ts`" anti-pattern, as a five-step triage — and every step shows the move in code, not just the verdict |
+| 12b | **[Collisions and the triage order](12b-collisions-multi-tokens-and-the-triage-order.md)** | The costs the array pays *always* versus the ones it pays only on collision, and the order to ask the five questions in |
+| 12c | **[The things with a better home](12c-the-things-with-a-better-home.md)** | Ownership, steps 1 and 3 — what belongs to a component, what belongs to a feature, and what belongs nowhere |
+| 12d | **[Lifetime is the question](12d-lifetime-is-the-whole-question.md)** | Step 2: an application-lifetime instance is a decision, not a default — and ⚠️ whether a route injector is destroyed on navigation is **not verified**, do not assume it |
+| 12e | **[Untyped values and typed tokens](12e-untyped-values-and-string-tokens.md)** | Step 4: the `useValue` blob that should be an `InjectionToken`, and ⚠️ `providedIn: 'any'` on `InjectionToken` is deprecated — the `@Injectable` case is settled in 14 |
+| 12f | **[String tokens](12f-string-tokens-and-the-deprecated-overload.md)** | `Injector.get`'s string overload has been deprecated since v4 and returns `any`; ⚠️ whether `inject()` takes a bare string in v22 is a claim this page cannot settle |
+| 12g | **[Registered in the wrong injector](12g-registered-in-the-wrong-injector.md)** | The failures that are silent rather than loud — including a route-level `provideAppInitializer()`, marked ⚠️ as a reading of the mechanism, not a documented guarantee |
+| 12h | **[Experimental and dev-only](12h-experimental-preview-and-dev-only.md)** | 🔴 A golden's `// @public` is API-Extractor's release tag, **not** Angular's stability marker — `provideCheckNoChangesConfig` is `@public` in the golden and `@developerPreview` in its JSDoc |
+| 13 | **[Order dependence](13-order-dependence.md)** | Why your provider beats the framework's, read out of `allAppProviders` — and the three questions that decide whether order matters at all |
+| 13b | **[Mixing multi and non-multi](13b-mixing-multi-and-non-multi.md)** | `throwMixedMultiProviderError`, and ⚠️ both its call sites are `ngDevMode`-guarded — so the production path is stated as a *reading* of the source, never as documented behaviour |
+| 13c | **[Last-wins in practice](13c-last-wins-in-practice.md)** | Both orderings of the two change-detection calls, and the same `NG0408` either way |
+| 13d | **[Features vs hand-written providers](13d-features-versus-hand-written-providers.md)** | A `provide*` feature and a literal provider for the same token do not compete the way people expect |
+| 13e | **[Multi tokens append](13e-multi-tokens-append.md)** | The failing two-call `provideRouter` arrangement with a wildcard shadowing the second table, and the fixed single call — plus the two `APP_BOOTSTRAP_LISTENER` entries it also creates |
+| 13f | **[Interceptors and initializers](13f-interceptors-and-initializers-append.md)** | `withInterceptorsFromDi`'s intermediate token is the framework's own idempotence pattern — the only documented way to make a repeated `provide*` harmless |
+| 13g | **[Where order does not matter](13g-where-order-does-not-matter.md)** | The larger half: the cases people rearrange code to fix and never needed to |
+| 13h | **[Five collisions in one config](13h-five-collisions-in-one-config.md)** | One `app.config.ts` carrying five of them at once, diagnosed in order |
+| 14 | **[`providedIn: 'root'` vs the array](14-providedin-root-vs-the-array.md)** | 🔴 `'root'` is a **provider, not a keyword** — it arrives as `{provide: INJECTOR_SCOPE, useValue: 'root'}` prepended from `BROWSER_MODULE_PROVIDERS`, and `R3Injector.get` reads records before `ɵprov`, so the array wins by **lookup order**, not by last-wins |
+| 14b | **[Where the decorator runs out](14b-where-the-decorator-runs-out.md)** | The cases `providedIn` cannot express, and what the array buys you in each |
+| 14c | **[What `'root'` resolves to](14c-what-root-resolves-to-and-the-other-scopes.md)** | `'root'`, `'platform'`, `'any'` and `null` — and ⚠️ `providedIn: 'any'` **is** deprecated for `@Injectable`: the golden flattens overloads, `injectable.ts` carries the marker |
+| 14d | **[Overriding a root service](14d-overriding-a-root-provided-service.md)** | Doing it deliberately, and the two ways it happens by accident |
+| 14e | **[The inheritance trap](14e-the-inheritance-trap.md)** | A subclass inheriting a `providedIn` it never asked for — ⚠️ with the caller of `getInheritedInjectableDef` named as unread rather than guessed |
+| 14f | **[Testing overrides](14f-testing-overrides.md)** | `TestBed.overrideProvider`'s *"Overwrites all providers for the given token"* and its synthetic `RootScopeModule` — ⚠️ its behaviour on a `multi: true` token is not documented past that one sentence |
+| 15 | **[Route-level `providers`](15-route-level-providers.md)** | The nine lines of router source that do all of it, and what the contract actually says |
+| 15b | **[When the injector is created](15b-when-the-injector-is-created.md)** | *"Only create the Route's `EnvironmentInjector` if it matches the attempted navigation"* — the comment that settles when it exists |
+| 15c | **[Where `providers` belong](15c-where-providers-belong.md)** | The shape that pays off, the anti-shape, and the two placements that are not a choice at all |
+| 15d | **[Guards, resolvers and route initializers](15d-guards-resolvers-and-route-initializers.md)** | 🔴 Four guard kinds, **three different injectors** — `canActivate`, `canDeactivate` and `canMatch` see the route's own, `canActivateChild` sees the **declaring ancestor's** |
+| 15e | **[The injector that is never destroyed](15e-the-injector-that-is-never-destroyed.md)** | *"Prior to this proposed change, these injectors were never destroyed"* — why `takeUntilDestroyed` and `toSignal` were unreliable in guards, and ⚠️ the design doc names `withAutoCleanupInjectors()` while v22.1.5 ships `withExperimentalAutoCleanupInjectors()` |
 | 16 | **The injector error surface** *(not written yet)* | 🔴 `NullInjectorError: No provider for X!` **no longer exists in v20+** — the current message, `NG0201`, `ɵNotFound`, and the three different causes behind one symptom |
 | 17 | **The server config merge** *(not written yet)* | `app.config.server.ts`, `mergeApplicationConfig()`, and why the server config is a *merge* rather than a replacement |
 

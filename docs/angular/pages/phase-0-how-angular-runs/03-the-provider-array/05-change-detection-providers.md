@@ -126,7 +126,7 @@ export function provideZonelessChangeDetectionInternal(): Provider[] {
 `internalCreateApplication`, `allAppProviders` is
 `[provideZonelessChangeDetectionInternal(), errorHandlerEnvironmentInitializer, …, ...(appProviders || [])]`.
 **Your array is spread in last**, which is the entire override mechanism — see
-**chunk 13 · Order dependence** *(not written yet)*.
+[chunk 13 · Order dependence](13-order-dependence.md).
 
 Read together, the three pieces of evidence say the same thing at three different layers: the CLI
 does not write the provider, the changelog says the framework stopped supplying the zone scheduler,

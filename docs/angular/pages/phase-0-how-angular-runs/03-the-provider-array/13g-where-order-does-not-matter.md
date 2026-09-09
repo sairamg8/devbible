@@ -120,7 +120,7 @@ export const HTTP_INTERCEPTOR_FNS = new InjectionToken<readonly HttpInterceptorF
 a registration.** That is the ordering-relevant consequence — a `{provide: SOME_TOKEN, useValue: x}`
 for a token whose factory already returns something is a case of last-wins against an invisible
 opponent, and it wins because the array is consulted before the factory. The comparison to keep
-straight is covered in **14 · `providedIn: 'root'` vs the array** *(not written yet)*.
+straight is covered in [14 · `providedIn: 'root'` vs the array](14-providedin-root-vs-the-array.md).
 
 ## Route providers are a different injector, not a later position
 
@@ -150,7 +150,7 @@ Two consequences that people reach for array ordering to explain, and should not
   ([05b](05b-provide-zone-change-detection-the-opt-out.md) has this case). No reordering makes it
   work.
 
-The hierarchy itself is Phase 6's subject; **15 · Route-level providers** *(not written yet)* is the
+The hierarchy itself is Phase 6's subject; [15 · Route-level providers](15-route-level-providers.md) is the
 chunk in this topic that covers the route array.
 
 ## Multi accumulation across *different* tokens
@@ -283,4 +283,4 @@ that the alias binds to the *token*, not to the record present at the time it wa
 later provider replacing the target changes what the alias yields — which is last-wins reaching
 through an indirection, not an ordering rule of its own.
 
-{/* FOOTER */}
+← Prev: [Interceptors and initializers](13f-interceptors-and-initializers-append.md) · Index: [Topic index](README.md) · Next → [Five collisions in one config](13h-five-collisions-in-one-config.md)

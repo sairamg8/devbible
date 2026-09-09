@@ -227,7 +227,7 @@ reach the `ErrorHandler` too (**[chunk 06g](06g-error-handler-and-ng0402.md)**).
 config — you also listed it in a component's `providers`, or in a route's `providers`, which
 creates a *different* injector record. The root record was never wrong; a narrower one shadowed it.
 Fix: remove the narrower listing, or accept it deliberately — see
-**chunk 12** *(not written yet)* and **chunk 15** *(not written yet)*.
+[chunk 12](12-what-does-not-belong.md) and [chunk 15](15-route-level-providers.md).
 
 ## Interview questions
 

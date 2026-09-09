@@ -83,7 +83,7 @@ export function provideHttpClient(
 
 **1 · The XSRF interceptor is pushed before the feature loop, so XSRF always runs first.**
 `HTTP_INTERCEPTOR_FNS` is `multi: true`, and multi-providers **append** rather than replace
-(**13 · Order dependence** *(not written yet)*), so `xsrfInterceptorFn`
+([13 · Order dependence](13-order-dependence.md)), so `xsrfInterceptorFn`
 occupies index 0 of the array no matter what you pass to `withInterceptors`. This is a security
 decision expressed as a line position: no interceptor of yours can run ahead of XSRF and
 short-circuit, retry or rewrite a request before the token has been attached.

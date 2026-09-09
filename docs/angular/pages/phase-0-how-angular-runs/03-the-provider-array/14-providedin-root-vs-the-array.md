@@ -168,4 +168,4 @@ Because the common case is a root singleton with no provider keys and no constru
 **★ What does the `/*@__PURE__*/` in front of `ɵɵdefineService` actually license a bundler to do?**
 It is an assertion that the call has no observable side effects, which is what lets a minifier delete the whole `static ɵprov = …` initialiser when the binding it feeds is never read. Without it a bundler must assume that calling `ɵɵdefineService` might do something — mutate a registry, touch a global — and keep it, which would keep the class, which would keep everything the class imports. The annotation is why "the provider record lives on the class" is a bundle-size claim and not just an architectural one. Note it is present on **both** `@Service()` and `@Service({autoProvided: false})` output: the annotation is about the call, not about the scope.
 
-{/* FOOTER */}
+← Prev: [Five collisions in one config](13h-five-collisions-in-one-config.md) · Index: [Topic index](README.md) · Next → [Where the decorator runs out](14b-where-the-decorator-runs-out.md)

@@ -173,4 +173,4 @@ Because the two cases need different placement to behave correctly. A `providedI
 **★ A test for a `providedIn: 'root'` service passes on its own and fails when the suite runs. Where do you look first?**
 Not at DI. Each `TestBed` builds its own injector, so the service instance is genuinely fresh per test — that is what *"a single, shared instance for the entire application"* means when the "application" is one test. What is *not* fresh is anything the module holds outside the class: a module-level `let`, a cached promise, a registry populated at import time, a `WeakMap` keyed on something long-lived. Those are initialised once per module load and survive every `TestBed` reset in the file. The second place to look is an `overrideProvider` call made after the testing module was already instantiated, which `TestBed` rejects rather than silently applying.
 
-{/* FOOTER */}
+← Prev: [The inheritance trap](14e-the-inheritance-trap.md) · Index: [Topic index](README.md) · Next → [Route-level `providers`](15-route-level-providers.md)

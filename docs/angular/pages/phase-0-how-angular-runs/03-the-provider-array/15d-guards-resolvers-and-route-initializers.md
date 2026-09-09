@@ -132,7 +132,7 @@ because it describes the route-injector lifetime as a *feature* rather than a ca
 >
 > *"The `tools[number].execute` function is invoked in the injection context of the associated `Injector`."*
 >
-> *"@returns An {@link EnvironmentProviders} that can be used in `bootstrapApplication` or route providers."*
+> *"@returns An `{@link EnvironmentProviders}` that can be used in `bootstrapApplication` or route providers."*
 >
 > `@experimental`
 
@@ -208,4 +208,4 @@ Anything consumed once at bootstrap. `provideRouter` — the `Router` read `ROUT
 **Which environment initializers run in a route injector?**
 Only the ones registered in that route's own `providers`. The runner in `r3_injector.ts` reads the multi-token with `{self: true}`, which disables the walk to the parent — so the application's environment initializers are not re-run when a route injector is constructed, and a route's are not run at bootstrap. The return value is also discarded, so an initializer returning a promise is not awaited: a route injector's construction is synchronous and nothing blocks navigation on it.
 
-{/* FOOTER */}
+← Prev: [Where `providers` belong](15c-where-providers-belong.md) · Index: [Topic index](README.md) · Next → [The injector that is never destroyed](15e-the-injector-that-is-never-destroyed.md)

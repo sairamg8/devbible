@@ -123,7 +123,7 @@ provideEnvironmentInitializer(() => {
 
 This is also how the framework builds features that need startup work without adding latency:
 `provideBrowserGlobalErrorListeners()` is *nothing but* an environment initializer
-([06e](06f-provide-browser-global-error-listeners.md)), and
+([06f](06f-provide-browser-global-error-listeners.md)), and
 `provideCheckNoChangesConfig({exhaustive: true, interval})` schedules its periodic check from one
 too. Chunk [04](04-writing-your-own-provide-function.md) shows the same shape inside your own
 `with*` feature.

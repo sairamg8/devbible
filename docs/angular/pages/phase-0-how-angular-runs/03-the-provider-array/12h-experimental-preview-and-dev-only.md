@@ -233,4 +233,4 @@ newest, not the ones that look oldest. The one thing to check on a deprecated en
 stated replacement exists yet, because a deprecation with no successor is a signal to wait rather
 than to act.
 
-{/* FOOTER */}
+← Prev: [Registered in the wrong injector](12g-registered-in-the-wrong-injector.md) · Index: [Topic index](README.md) · Next → [Order dependence](13-order-dependence.md)

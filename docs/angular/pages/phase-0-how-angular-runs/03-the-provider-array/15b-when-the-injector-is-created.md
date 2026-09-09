@@ -162,4 +162,4 @@ Its parent is whatever injector the recognition walk was carrying when the route
 **Why does `recognize` keep two injector variables, `injector` and `childInjector`?**
 Because a route's own snapshot and its children can legitimately want different injectors. `injector` is `route._injector ?? injector` — the route's own providers if it has any — and is used for this route's snapshot and for `getChildConfig`, so `canLoad` and the lazy loader run in it. `childInjector` is `route._loadedInjector ?? injector`, and is what the recursion into child segments receives, so that a lazily loaded `NgModule`'s injector takes over for everything below. If the two were collapsed into one variable, either the route's own guards would run in the module's injector or the module's providers would be invisible to its own routes. Two names, two scopes, one line apart.
 
-{/* FOOTER */}
+← Prev: [Route-level `providers`](15-route-level-providers.md) · Index: [Topic index](README.md) · Next → [Where `providers` belong](15c-where-providers-belong.md)

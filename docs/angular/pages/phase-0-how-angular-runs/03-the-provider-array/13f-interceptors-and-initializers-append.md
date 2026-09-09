@@ -243,4 +243,4 @@ registration-time check compares a new provider against an existing record; if t
 provider and it is wrong, there is nothing to compare it to. The consumer-side check in
 `resolveInjectorInitializers` is where that shows up, and its message names the fix explicitly.
 
-{/* FOOTER */}
+← Prev: [Multi tokens append](13e-multi-tokens-append.md) · Index: [Topic index](README.md) · Next → [Where order does not matter](13g-where-order-does-not-matter.md)

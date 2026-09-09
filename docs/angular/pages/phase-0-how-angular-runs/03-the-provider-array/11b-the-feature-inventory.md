@@ -52,7 +52,7 @@ function has already been dropped from the doc comment, while the golden still e
 v22 is no longer true of a default application: event replay is already enabled. The JSDoc is
 half-migrated. That is not really a criticism of the comment; it is the practical reason you cannot
 settle the `withEventReplay()` question from documentation and have to read
-`ɵwithIncrementalHydration`, which is what [11b](11c-incremental-hydration-and-event-replay.md) does.
+`ɵwithIncrementalHydration`, which is what [11c](11c-incremental-hydration-and-event-replay.md) does.
 
 ## The six features, and which are real choices
 
@@ -123,7 +123,7 @@ than a provider one, and `@defer` with a `hydrate` trigger for the incremental c
 Cause: it returns `Provider[]`, not `EnvironmentProviders`, so the brand that makes root-only a
 compile error does not apply to it. Fix: keep it in the application config — and note that the same
 hole applies to `provideAnimations()` and `provideNoopAnimations()`, covered in
-[11e](11f-animations-are-deprecated.md).
+[11f](11f-animations-are-deprecated.md).
 
 **★ Symptom: you read the JSDoc, concluded `withEventReplay()` is how you enable event replay, and
 added it.** Cause: the doc comment still lists it under *"These functions allow you to disable some
@@ -159,7 +159,7 @@ Because the function tracks two things separately: a `Set` of `ɵkind` values an
 default incremental hydration read only the `Set`. So `withNoIncrementalHydration()` — which calls
 `hydrationFeature()` with no providers at all — works purely by being *present* in the kinds. It is
 the same design as `withNoXsrfProtection()` in [10e](10e-xsrf-protection.md), and it is what makes
-the contradiction checks in [11d](11e-the-contradiction-checks.md) possible without inspecting any
+the contradiction checks in [11e](11e-the-contradiction-checks.md) possible without inspecting any
 provider.
 
 **★ The golden marks `withIncrementalHydration` as `@public @deprecated` while the function's own

@@ -277,4 +277,4 @@ route's components and so have no direct access to route-specific information �
 guard can read the service, but the service cannot read the route. Design for information flowing
 in that direction and route-scoped services stay simple.
 
-{/* FOOTER */}
+← Prev: [The things with a better home](12c-the-things-with-a-better-home.md) · Index: [Topic index](README.md) · Next → [Untyped values and typed tokens](12e-untyped-values-and-string-tokens.md)

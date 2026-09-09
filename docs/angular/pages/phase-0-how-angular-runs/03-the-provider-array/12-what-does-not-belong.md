@@ -242,4 +242,4 @@ whenever a developer is unsure where something goes, the config is the only plac
 compile. Trial and error therefore lands everything in one file, and nothing ever moves it back
 out.
 
-{/* FOOTER */}
+← Prev: [The standalone core providers](11g-the-standalone-core-providers.md) · Index: [Topic index](README.md) · Next → [Collisions and the triage order](12b-collisions-multi-tokens-and-the-triage-order.md)
