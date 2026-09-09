@@ -109,8 +109,8 @@ a one-line alias rather than an implementation:
 *(That is the first entry of the file, quoted exactly; the remaining entries — `app-shell`,
 `browser`, `browser-esbuild`, `dev-server`, `extract-i18n`, `karma`, `server`, `ng-packagr`,
 `ssr-dev-server`, `prerender` — are objects with `implementation` and `schema` keys, not aliases.
-How Architect follows a string-valued alias to another package is **topic 06 · `angular.json`
-anatomy** *(not written yet)*.)*
+How Architect follows a string-valued alias to another package is [topic 06 · `angular.json`
+anatomy](../06-angular-json-anatomy/README.md).)*
 
 Three consequences follow, and they are the practical content of this page:
 
@@ -121,7 +121,7 @@ Three consequences follow, and they are the practical content of this page:
    install; roughly twenty webpack packages arrive with it.
 3. **The migration order is: change the builder strings, then remove the dependency.** Removing it
    first breaks the targets that still name it. The mechanics are
-   **08 · Migrating off webpack** *(not written yet)*.
+   [08 · Migrating off webpack](08-migrating-off-webpack.md).
 
 ## Gotchas
 
@@ -221,4 +221,6 @@ therefore writes `--configuration development` explicitly on `watch` only. It is
 encodes a real fact about the target graph, and editing it out is a common self-inflicted
 slow-build.
 
-{/* FOOTER */}
+---
+
+← Prev: [The peer contract](02d-the-peer-contract.md) · Index: [Topic index](README.md) · Next → [esbuild does the output](03-esbuild-does-the-output.md)

@@ -82,7 +82,7 @@ Both switches live under one option, and the shape matters more than the values:
 group: minification, the rolldown chunk-optimization pass ([03b](03b-eleven-concerns-one-process.md)),
 critical CSS and font inlining all go at once. Reach for the nested form and change exactly the leaf
 you meant. The full schema — every nested default, and the documentation's own copy-paste error in
-that section — is **topic 06 · `angular.json` anatomy** *(not written yet)*.
+that section — is [topic 06 · `angular.json` anatomy](../06-angular-json-anatomy/README.md).
 
 ## Gotchas
 
@@ -95,8 +95,8 @@ specific sub-option rather than the whole `optimization` object:
 ```
 
 The other direction — keeping the performance benefit and making the CSP accept it — is what the
-builder's `security.autoCsp` option is for; the field itself belongs to **topic 06 ·
-`angular.json` anatomy** *(not written yet)*.
+builder's `security.autoCsp` option is for; the field itself belongs to [topic 06 ·
+`angular.json` anatomy](../06-angular-json-anatomy/README.md).
 
 **★ Symptom: builds succeed on a laptop and hang or fail on a locked-down CI network.** Cause:
 `optimization.fonts.inline` fetches Google and Adobe font CSS at build time and is on by default.
@@ -218,4 +218,6 @@ built HTML is the source HTML with a couple of tags appended — a diff-based de
 checksum, a template scanner — is going to be wrong, and it will be wrong differently depending on
 whether the build machine could reach the font services.
 
-{/* FOOTER */}
+---
+
+← Prev: [browserslist → esbuild target](03c-browserslist-becomes-an-esbuild-target.md) · Index: [Topic index](README.md) · Next → [The Rolldown chunk optimizer](04-the-rolldown-chunk-optimizer.md)

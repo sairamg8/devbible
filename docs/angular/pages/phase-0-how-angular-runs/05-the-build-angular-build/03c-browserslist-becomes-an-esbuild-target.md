@@ -131,7 +131,7 @@ Two more defaults reshape the output **after** the bundle is written — critica
 your HTML and font CSS is fetched over the network — and a third, the rolldown chunk-optimization
 pass, re-chunks it. The first two are
 [03d · Critical CSS and font inlining](03d-critical-css-and-font-inlining.md); the third is
-**04 · The Rolldown chunk optimizer** *(not written yet)*.
+[04 · The Rolldown chunk optimizer](04-the-rolldown-chunk-optimizer.md).
 
 ## Gotchas
 
@@ -232,4 +232,6 @@ target expresses a *minimum* feature level, so the oldest supported version of a
 what may be emitted. Note the mention of rolldown in that comment — the target has to satisfy both
 bundlers in the pipeline, not just esbuild.
 
-{/* FOOTER */}
+---
+
+← Prev: [Eleven concerns, one process](03b-eleven-concerns-one-process.md) · Index: [Topic index](README.md) · Next → [Critical CSS and font inlining](03d-critical-css-and-font-inlining.md)

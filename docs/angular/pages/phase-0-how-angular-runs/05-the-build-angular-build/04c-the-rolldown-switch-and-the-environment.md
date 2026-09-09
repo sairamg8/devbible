@@ -60,7 +60,7 @@ supplies the default. The source even acknowledges the gap, in a comment beside 
 every other plausible-looking spelling. There is no warning, no log line and no failure — you get
 the default and a false sense of having configured something. The same strictness governs the whole
 `NG_BUILD_*` family; that surface and its parsing rules belong to
-**11 · Cache, workers and the environment variables** *(not written yet)*.
+[11 · Cache, workers and the environment variables](11-cache-and-workers.md).
 
 🔴 **Note the contrast with its neighbour.** `NG_BUILD_OPTIMIZE_CHUNKS`, taught in
 **[04b · What the second pass is worth](04b-what-the-second-pass-is-worth.md)**, does *not* use
@@ -87,7 +87,7 @@ at an exact pin:
 ```
 
 *(Three fields lifted from the published manifest; the complete dependency and peer lists are
-**02 · Inside the package** *(not written yet)*.)*
+[02 · Inside the package](02-inside-the-package.md).)*
 
 That asymmetry is exactly what you would expect from the 22.1.0 changelog line
 *"default chunk optimization to use Rolldown"*: Rollup was the previous implementation, it is now
@@ -259,4 +259,6 @@ Rolldown the default implementation (`585d08af8`). For an SSR project the practi
 you have to attribute a change during that review, the distinguishing signal is that a server bundle
 entering the pass for the first time can only be the second entry.
 
-{/* FOOTER */}
+---
+
+← Prev: [What the second pass is worth](04b-what-the-second-pass-is-worth.md) · Index: [Topic index](README.md) · Next → [Vite is only the dev server](05-vite-is-only-the-dev-server.md)

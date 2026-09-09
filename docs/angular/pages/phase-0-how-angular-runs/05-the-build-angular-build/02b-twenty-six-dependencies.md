@@ -107,7 +107,7 @@ optimization now runs for server builds as well as browser ones.
 
 🔴 **A production Angular build therefore runs two bundlers.** esbuild bundles; rolldown then
 re-chunks what esbuild produced. When that second pass runs, when it does not, and what it changes
-about your output is **04 · The Rolldown chunk optimizer** *(not written yet)*.
+about your output is [04 · The Rolldown chunk optimizer](04-the-rolldown-chunk-optimizer.md).
 
 ⚠️ **Babel did not leave.** `@babel/core` is still an exact dependency at `8.0.1`, with two Babel
 helpers beside it. The changelog names *which* passes moved to oxc — the advanced-optimization
@@ -154,7 +154,7 @@ grep -n '"builder"' angular.json
 ```
 
 Every `"builder"` line beginning `@angular-devkit/build-angular:` is a reason the webpack stack is
-installed; **08 · Migrating off webpack** *(not written yet)* removes them.
+installed; [08 · Migrating off webpack](08-migrating-off-webpack.md) removes them.
 
 **★ Symptom: a security scanner flags the `esbuild` or `vite` version and `npm audit fix` will not
 move it.** Cause: `@angular/build` pins them **exactly** — `"esbuild": "0.28.2"`, not `^0.28.2` —
@@ -174,8 +174,8 @@ The durable fix is a patch bump of `@angular/build` itself, which is what `ng up
 tune.** Cause: there is no terser in the dependency list, and minification is not a separately
 configured tool here — it is one of the things the builder's `optimization` option turns on, per
 that option's own schema description (*"Including minification of scripts and styles"*). Fix: the
-toggle you have is `optimization`, not a minifier configuration — **topic 06 ·
-`angular.json` anatomy** *(not written yet)* owns its shape:
+toggle you have is `optimization`, not a minifier configuration — [topic 06 ·
+`angular.json` anatomy](../06-angular-json-anatomy/README.md) owns its shape:
 
 ```json
 { "optimization": { "scripts": false } }
@@ -184,8 +184,7 @@ toggle you have is `optimization`, not a minifier configuration — **topic 06 �
 **★ Symptom: you try to add a Vite plugin, or look for `vite.config.ts`, and find no way in.**
 Cause: Vite is here as the **development server**, not as the bundler — production output is
 esbuild's, and there is no Vite configuration file in an Angular workspace to extend. Fix: use the
-extension points the builder actually declares, and read **05 · Vite is only the dev server**
-*(not written yet)* before designing around Vite:
+extension points the builder actually declares, and read [05 · Vite is only the dev server](05-vite-is-only-the-dev-server.md) before designing around Vite:
 
 ```bash
 grep -rn "vite" angular.json || echo "nothing to configure here"
@@ -262,4 +261,6 @@ project that keeps `@angular-devkit/build-angular` installed for one remaining w
 paying for roughly twenty webpack packages it does not otherwise use, and the migration is
 therefore a subtraction: change the builder strings, then delete the dependency.
 
-{/* FOOTER */}
+---
+
+← Prev: [Inside the package](02-inside-the-package.md) · Index: [Topic index](README.md) · Next → [The six builders it declares](02c-the-six-builders-it-declares.md)

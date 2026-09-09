@@ -76,8 +76,8 @@ setting, documented as *"Configure in which environment disk cache is enabled"*,
 inside CI (an end-to-end job, say) is running with the cache off and therefore, by the schema's own
 condition, without prebundling. That is an inference from two defaults rather than a sentence
 anyone wrote down; the cache options themselves belong to
-**11 · Cache, workers and the environment variables** *(not written yet)*, and the `cli` section of
-`angular.json` to **topic 06 · `angular.json` anatomy** *(not written yet)*.
+[11 · Cache, workers and the environment variables](11-cache-and-workers.md), and the `cli` section of
+`angular.json` to [topic 06 · `angular.json` anatomy](../06-angular-json-anatomy/README.md).
 
 ## When you need to customise it
 
@@ -260,4 +260,6 @@ what makes that result stale. So the honest operational advice is: if a dependen
 showing up, restart the dev server first, and treat "the lockfile changed so it must have been
 re-prebundled" as an assumption you have not verified.
 
-{/* FOOTER */}
+---
+
+← Prev: [Vite is only the dev server](05-vite-is-only-the-dev-server.md) · Index: [Topic index](README.md) · Next → [What HMR actually replaces](05c-what-hmr-actually-replaces.md)

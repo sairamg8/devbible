@@ -181,4 +181,6 @@ documentation and the schema both state the restriction rather than explaining i
 answer names the boundary — code yes, metadata no — and notes that it fails silently, which is what
 makes it worth memorising rather than deriving.
 
-{/* FOOTER */}
+---
+
+← Prev: [What the build stops telling you](09b-what-the-build-stops-telling-you.md) · Index: [Topic index](README.md) · Next → [`loader`](10b-the-loader-option.md)

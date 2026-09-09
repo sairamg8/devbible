@@ -240,4 +240,6 @@ never enters the block at all, because it is falsy. That is a reasonable design 
 ambient variable should not take down a dev server — but it means you cannot infer from "the server
 started normally" that `PORT` was not set. Only reading the variable settles that.
 
-{/* FOOTER */}
+---
+
+← Prev: [The four that do what they say](06e-the-four-that-do-what-they-say.md) · Index: [Topic index](README.md) · Next → [When the port is taken](06g-when-the-port-is-taken.md)

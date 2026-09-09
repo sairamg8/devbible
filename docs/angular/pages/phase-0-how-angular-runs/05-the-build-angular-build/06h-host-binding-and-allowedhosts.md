@@ -233,4 +233,6 @@ reaching the server by hostname rather than IP and the server is refusing based 
 three cover almost every variant of the report, and they are all readable from the serve target plus
 the URL your colleague typed.
 
-{/* FOOTER */}
+---
+
+← Prev: [When the port is taken](06g-when-the-port-is-taken.md) · Index: [Topic index](README.md) · Next → [HTTPS on the dev server](06i-https-on-the-dev-server.md)

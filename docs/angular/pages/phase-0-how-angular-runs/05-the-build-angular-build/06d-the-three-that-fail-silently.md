@@ -85,7 +85,7 @@ declarations on separate schemas — the same relationship `watch`, `poll` and `
 usually a feature rather than a nuisance: a localhost API host while serving and a real one while
 building is exactly the case the duplication makes expressible. The full `define` semantics,
 including how `--define` on the command line merges with the file, are
-**10 · Features only this builder has** *(not written yet)*.
+[10 · Features only this builder has](10-features-only-this-builder-has.md).
 
 ## `prebundle` — a performance lever with a remote off-switch
 
@@ -126,7 +126,7 @@ prefer:
 ```
 
 What prebundling does to a dependency graph, and the situations angular.dev names as reasons to
-customise it, are **05 · Vite is only the dev server** *(not written yet)*.
+customise it, are [05 · Vite is only the dev server](05-vite-is-only-the-dev-server.md).
 
 ## Gotchas
 
@@ -284,4 +284,6 @@ nothing about the key is wrong. The general defence is to read the option's own 
 assuming it applies — all three state their condition in their own schema text, which is exactly why
 this page quotes descriptions verbatim rather than summarising them.
 
-{/* FOOTER */}
+---
+
+← Prev: [The rebuild loop](06c-the-rebuild-loop.md) · Index: [Topic index](README.md) · Next → [The four that do what they say](06e-the-four-that-do-what-they-say.md)

@@ -85,14 +85,14 @@ leave the dev server out.
 tells you to set `"builder": "@angular/build:browser"`, that builder does not exist and never did;
 what you want is `@angular/build:application`, which covers what `browser`, `server`, `prerender`
 and `app-shell` used to do between them. The full inventory of what lives where, and which package
-was deprecated when, is **07 · The webpack builders are deprecated** *(not written yet)*.
+was deprecated when, is [07 · The webpack builders are deprecated](07-the-webpack-builders-are-deprecated.md).
 
 **3 · `unit-test` labels itself `[EXPERIMENTAL]` in its own description** — and is also what
 `ng new` writes as the `test` target on a v22 workspace. ⚠️ **Both are true at once, and the
 documentation does not state a stability level for it.** angular.dev has no `unit-test` page at
 `v22.1.5`, and the changelog entries for it are ordinary `fix`/`feat` rows rather than a stability
 announcement. Do not treat "the default" as "declared stable", and do not treat `[EXPERIMENTAL]` as
-"avoid" when the scaffolding picks it for you. **12 · The test builders** *(not written yet)* picks
+"avoid" when the scaffolding picks it for you. [12 · The test builders](12-the-test-builders.md) picks
 this apart.
 
 ## The `schema` key is the part people skip, and it is the authority
@@ -104,7 +104,7 @@ defaults. That has three practical consequences:
 - When angular.dev and a builder's `schema.json` disagree about a default, **the schema is what
   runs.** And the documentation *does* drift in Angular 22: the budget defaults angular.dev prints
   for `anyComponentStyle` are not the values the CLI's own application schematic writes into a new
-  `angular.json`. **Topic 06 · `angular.json` anatomy** *(not written yet)* has to state that as a
+  `angular.json`. [Topic 06 · `angular.json` anatomy](../06-angular-json-anatomy/README.md) has to state that as a
   discrepancy rather than reconcile it.
 - The `application` schema declares `"additionalProperties": false`, so a mistyped option is a hard
   failure rather than a silently ignored key. That is a feature, and it is why copying options from
@@ -206,7 +206,7 @@ ng build --help
 { "externalDependencies": ["some-package"] }
 ```
 
-What each of those four does is **10 · Features only this builder has** *(not written yet)*.
+What each of those four does is [10 · Features only this builder has](10-features-only-this-builder-has.md).
 Writing your own builder is the other option, and it is a much larger commitment than a webpack
 plugin was.
 
@@ -246,4 +246,6 @@ reached for plugins, and, at the far end, writing your own builder. The trade is
 places to hook means a build system that can change its internals (esbuild, then rolldown on top)
 without breaking everyone's configuration.
 
-{/* FOOTER */}
+---
+
+← Prev: [Twenty-six dependencies](02b-twenty-six-dependencies.md) · Index: [Topic index](README.md) · Next → [The peer contract](02d-the-peer-contract.md)

@@ -200,4 +200,6 @@ not get you where you wanted — and in an Angular dev setup the usual culprit i
 on `http://`. Check the proxy configuration as well as the serve options, and remember that the
 browser's own console is the fastest way to see which request downgraded.
 
-{/* FOOTER */}
+---
+
+← Prev: [Host binding and allowedHosts](06h-host-binding-and-allowedhosts.md) · Index: [Topic index](README.md) · Next → [Proxying to a backend](06j-proxying-to-a-backend.md)

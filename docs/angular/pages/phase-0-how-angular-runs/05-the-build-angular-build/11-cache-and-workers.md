@@ -211,4 +211,6 @@ long-lived build agent that matters, and the option exists so you can relocate i
 infrastructure does control. It is also worth knowing that `enabled: false` turns off build disk
 caching specifically, not everything that writes under `.angular/`.
 
-{/* FOOTER */}
+---
+
+← Prev: [Import attributes and conditions](10c-import-attributes-and-conditions.md) · Index: [Topic index](README.md) · Next → [The `NG_BUILD_*` surface](11b-the-ng-build-environment-surface.md)

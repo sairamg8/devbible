@@ -166,4 +166,6 @@ you supply the bridge with `declare module '*.svg'` — and the declared type ha
 you configured, `string` for `text` and `Uint8Array` for `binary`. A mismatch type-checks cleanly and
 fails at run time.
 
-{/* FOOTER */}
+---
+
+← Prev: [`define`](10-features-only-this-builder-has.md) · Index: [Topic index](README.md) · Next → [Import attributes and conditions](10c-import-attributes-and-conditions.md)

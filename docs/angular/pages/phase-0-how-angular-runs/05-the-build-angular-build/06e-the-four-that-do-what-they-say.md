@@ -117,7 +117,7 @@ ng serve --verbose
 The same option name exists on the `application` builder, where it defaults to `false`. As with
 every option that appears on both schemas, the two are independent declarations and neither
 inherits from the other. The wider diagnostic surface — the `NG_BUILD_*` environment variables the
-build system reads — is **11 · Cache, workers and the environment variables** *(not written yet)*.
+build system reads — is [11 · Cache, workers and the environment variables](11-cache-and-workers.md).
 
 ## Gotchas
 
@@ -225,4 +225,6 @@ If verbose output still does not explain it, the next layer is the build system'
 variables rather than the option surface — that is a different set of switches on a different part
 of the toolchain.
 
-{/* FOOTER */}
+---
+
+← Prev: [The three that fail silently](06d-the-three-that-fail-silently.md) · Index: [Topic index](README.md) · Next → [Ports and the PORT variable](06f-ports-and-the-port-variable.md)

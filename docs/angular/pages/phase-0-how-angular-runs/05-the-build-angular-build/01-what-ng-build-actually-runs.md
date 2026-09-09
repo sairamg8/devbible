@@ -66,7 +66,7 @@ Four rows, and the shape of the whole topic is already visible in them:
 ⚠️ **The two `@angular-devkit/build-angular` rows are deprecated as of v22.0.0** and the
 documentation page above does not say so — the deprecation lives in the changelog. Both still ship
 and still work at 22.1.7. Which packages were deprecated, on what day, and why the release notes
-name no removal version is **07 · The webpack builders are deprecated** *(not written yet)*.
+name no removal version is [07 · The webpack builders are deprecated](07-the-webpack-builders-are-deprecated.md).
 
 🔴 **The `application` row is doing more than the other three.** *"a client-side bundle, a Node
 server, and build-time prerendered routes"* — one builder covering what used to take `browser`,
@@ -153,7 +153,7 @@ there is: do not have both.
 `application` builder writes the browser output into a **`browser/` subdirectory** of that path, so
 a default `my-app` build puts the deployable files in `dist/my-app/browser/`, not `dist/my-app/`.
 The full layout — and why the extra level exists once a build can emit a server bundle beside the
-client one — is **09 · What breaks when you switch** *(not written yet)*.
+client one — is [09 · What breaks when you switch](09-what-breaks-when-you-switch.md).
 
 The practical version, worth internalising before you write a deploy script rather than after:
 
@@ -261,4 +261,6 @@ optimizes when you build and does not when you serve — which is correct, and i
 in `ng serve` but not in `ng build`" is such a common report. Naming the configuration explicitly
 removes the ambiguity.
 
-{/* FOOTER */}
+---
+
+← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [Inside the package](02-inside-the-package.md)

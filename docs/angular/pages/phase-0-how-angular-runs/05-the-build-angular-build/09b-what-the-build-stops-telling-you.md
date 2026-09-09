@@ -178,4 +178,6 @@ error is genuinely raised, but its default text names browser targets when the c
 downlevelling. In every case the build is doing something reasonable and the reader's model of what
 "the build checks" is quietly wrong, which is a much harder failure to notice than a red pipeline.
 
-{/* FOOTER */}
+---
+
+← Prev: [What breaks when you switch](09-what-breaks-when-you-switch.md) · Index: [Topic index](README.md) · Next → [`define`](10-features-only-this-builder-has.md)

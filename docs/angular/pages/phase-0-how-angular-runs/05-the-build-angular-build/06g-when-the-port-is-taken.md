@@ -224,4 +224,6 @@ outcomes from identical state, so any behaviour you observed interactively is we
 CI. The habit worth forming is to make the automated path explicit: set the port, pass `--no-open`,
 and never let a default answer decide something a later step depends on.
 
-{/* FOOTER */}
+---
+
+← Prev: [Ports and the PORT variable](06f-ports-and-the-port-variable.md) · Index: [Topic index](README.md) · Next → [Host binding and allowedHosts](06h-host-binding-and-allowedhosts.md)

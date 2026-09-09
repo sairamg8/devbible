@@ -266,4 +266,6 @@ optimized. On top of that, the schema states that `default`, `import`, `require`
 matters because `default` is your fallback branch, and it is what resolves in any environment that
 does not set a build condition, editors and test runners included.
 
-{/* FOOTER */}
+---
+
+← Prev: [`loader`](10b-the-loader-option.md) · Index: [Topic index](README.md) · Next → [Cache and workers](11-cache-and-workers.md)

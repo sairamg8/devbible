@@ -225,4 +225,6 @@ silent about it. That distinction matters because a build that runs on an out-of
 fail later and much less legibly, at a syntax or API the runtime does not have, with no line in the
 log connecting it back to the version.
 
-{/* FOOTER */}
+---
+
+← Prev: [What `ng build` actually runs](01-what-ng-build-actually-runs.md) · Index: [Topic index](README.md) · Next → [Twenty-six dependencies](02b-twenty-six-dependencies.md)

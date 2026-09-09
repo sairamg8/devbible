@@ -92,7 +92,7 @@ The schema lists stylesheets only; the guide adds templates. **The precise scope
 confirmed**, and there is a third source — the builder's environment-variable module, which gates
 template and component-style hot reloading behind separate switches with opposite defaults — that
 does not obviously agree with either. Those switches, and that third reading, belong to
-**05 · Vite is only the dev server** *(not written yet)*.
+[05 · Vite is only the dev server](05-vite-is-only-the-dev-server.md).
 
 What every source does agree on is the sentence you can act on:
 
@@ -226,4 +226,6 @@ would destroy state you are inspecting; and serve a fixed build with no watcher 
 into one flag would remove both. The cost of the separation is the `hmr` inheritance described
 above — the one place where the two options are not actually independent.
 
-{/* FOOTER */}
+---
+
+← Prev: [The serve-to-build coupling](06b-the-serve-to-build-coupling.md) · Index: [Topic index](README.md) · Next → [The three that fail silently](06d-the-three-that-fail-silently.md)

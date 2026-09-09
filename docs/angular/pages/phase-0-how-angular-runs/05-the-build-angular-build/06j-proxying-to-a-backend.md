@@ -233,4 +233,6 @@ to Vite's `server.proxy`. angular.dev acknowledges this by linking Vite's docume
 rule list itself. Practically, that means when a proxy question is not answered by the Angular page,
 the correct next source is Vite's, not a deeper reading of Angular's.
 
-{/* FOOTER */}
+---
+
+← Prev: [HTTPS on the dev server](06i-https-on-the-dev-server.md) · Index: [Topic index](README.md) · Next → [The webpack builders are deprecated](07-the-webpack-builders-are-deprecated.md)

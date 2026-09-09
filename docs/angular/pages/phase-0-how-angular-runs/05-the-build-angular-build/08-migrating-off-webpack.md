@@ -104,7 +104,7 @@ For `browser-esbuild` the whole procedure is one line:
 ⚠️ **`browser-esbuild` is itself deprecated.** It buys you esbuild's build performance without the
 option churn, and it does so from inside the package v22.0.0 deprecated. Treat it as a staging post
 with a decision attached, not a destination — the details are
-**07 · The webpack builders are deprecated** *(not written yet)*.
+[07 · The webpack builders are deprecated](07-the-webpack-builders-are-deprecated.md).
 
 ## Gotchas
 
@@ -171,4 +171,6 @@ Angular without also absorbing a build migration on the same day. The cost of th
 worth naming: optional migrations need a prompt, so a pipeline upgrade never offers it, and a
 project can sit several majors past a migration nothing ever brought up again.
 
-{/* FOOTER */}
+---
+
+← Prev: [What still ships, what was removed](07b-what-still-ships-and-what-was-removed.md) · Index: [Topic index](README.md) · Next → [The option renames](08b-the-option-renames.md)

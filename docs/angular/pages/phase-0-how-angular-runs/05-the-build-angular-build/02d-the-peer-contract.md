@@ -124,8 +124,7 @@ a single JSON object.
 optimization pass uses rolldown — a direct, exact-pinned dependency — while `rollup` remains
 declared as an optional peer. ⚠️ **Whether opting out of rolldown requires you to install `rollup`
 yourself was not confirmed**; the fallback path's install requirements are not documented. Do not
-plan around a rollup fallback without testing it. **04 · The Rolldown chunk optimizer**
-*(not written yet)* has what is known.
+plan around a rollup fallback without testing it. [04 · The Rolldown chunk optimizer](04-the-rolldown-chunk-optimizer.md) has what is known.
 
 ## The one optional peer v22 turned into a migration step
 
@@ -272,4 +271,6 @@ install step — and that Tailwind's `^2 || ^3 || ^4` range means the build syst
 on which major you run, so a mismatch between your config format and your installed major is your
 problem to detect.
 
-{/* FOOTER */}
+---
+
+← Prev: [The six builders it declares](02c-the-six-builders-it-declares.md) · Index: [Topic index](README.md) · Next → [What `ng new` installs](02e-what-ng-new-installs.md)

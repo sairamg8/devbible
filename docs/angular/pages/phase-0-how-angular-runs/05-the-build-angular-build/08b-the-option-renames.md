@@ -192,4 +192,6 @@ later that an option you believed was set has never applied. Failing the build n
 option immediately, and because the check is exhaustive you find every one of them in a single run
 rather than one build at a time.
 
-{/* FOOTER */}
+---
+
+← Prev: [Migrating off webpack](08-migrating-off-webpack.md) · Index: [Topic index](README.md) · Next → [What breaks when you switch](09-what-breaks-when-you-switch.md)

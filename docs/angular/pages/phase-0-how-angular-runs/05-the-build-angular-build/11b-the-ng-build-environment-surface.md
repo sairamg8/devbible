@@ -191,4 +191,6 @@ becomes `0`, which applies it with no threshold at all. Its default is `3`. Pass
 "the normal amount, enabled" gets you the most aggressive setting available, which is the opposite of
 the intent most people have when they type it.
 
-{/* FOOTER */}
+---
+
+← Prev: [Cache and workers](11-cache-and-workers.md) · Index: [Topic index](README.md) · Next → [The test builders](12-the-test-builders.md)

@@ -92,7 +92,7 @@ angular.dev states the rule for configurations generally:
 So `my-app:build:production,staging` gives `staging` the last word on any key both set. How that
 merge actually works — and 🔴 that it is **shallow**, per top-level key, so a configuration that
 names `budgets` replaces the whole array rather than appending to it — belongs to topic 06's chunk
-on options and configurations, **06 · `angular.json` anatomy** *(not written yet)*.
+on options and configurations, [06 · `angular.json` anatomy](../06-angular-json-anatomy/README.md).
 
 ## An unknown configuration throws — there is no fallback
 
@@ -264,4 +264,6 @@ pointer is a string you maintain by hand. Everything else follows: the two selec
 a project rename invalidates the pointer, an unknown configuration name in the pointer throws, and
 the fastest diagnosis for any of it is to print the serve target and read the string.
 
-{/* FOOTER */}
+---
+
+← Prev: [The dev-server contract](06-the-dev-server-contract.md) · Index: [Topic index](README.md) · Next → [The rebuild loop](06c-the-rebuild-loop.md)

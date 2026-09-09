@@ -100,7 +100,7 @@ and each says so in its own schema description:
 Everything else in Vite's server configuration — the file-system allow list, watcher options, the
 plugin array, the middleware mode — is simply not reachable. **The full nineteen-option surface of
 the `dev-server` builder, including the proxy semantics change and the `PORT` precedence rule** is
-**06 · The dev-server contract** *(not written yet)*. `prebundle` is
+[06 · The dev-server contract](06-the-dev-server-contract.md). `prebundle` is
 **[05b · Prebundling](05b-prebundling.md)**, and what hot module replacement can actually replace —
 which three primary sources describe three different ways — is
 **[05c · What HMR actually replaces](05c-what-hmr-actually-replaces.md)**.
@@ -130,35 +130,6 @@ the version is the wrong lever.
 deliberate: an optional peer is something you may supply, a pinned dependency is something the
 package insists on.
 
-## What this means for the dev/prod gap
-
-Once you accept that both sides run the same builder, "works in `ng serve`, breaks in `ng build`"
-stops being mysterious and becomes a list of *option* differences. The generated `development`
-configuration is short, and every line of it matters:
-
-```json
-"development": {
-  "optimization": false,
-  "extractLicenses": false,
-  "sourceMap": true
-}
-```
-
-`optimization: false` alone accounts for most of the gap. It turns off minification and mangling,
-and — less obviously — it disables the Rolldown chunk optimizer entirely, because that pass is gated
-on `optimization.scripts`; see
-[04b · What the second pass is worth](04b-what-the-second-pass-is-worth.md). So the chunk graph you
-inspect in development was produced by esbuild alone, while the one you deploy was produced by
-esbuild and then re-bundled.
-
-🔴 **The useful reframing: `ng serve` is not a preview of production, it is a different
-configuration of the same build.** To reduce the gap, build the configuration you ship and serve the
-result with any static server, rather than expecting the dev server to behave like one:
-
-```bash
-ng build --configuration production
-```
-
 ## Gotchas
 
 **★ Symptom: you add a `vite.config.ts` to an Angular project and nothing changes.** Cause: the
@@ -181,7 +152,7 @@ lives:
 nowhere to put it.** Cause: the Vite plugin pipeline is not exposed by the `dev-server` builder, and
 Vite is not building your code anyway — esbuild is. Fix: ask what the plugin actually does. If it
 transforms source, the equivalent is an esbuild-stage feature of the `application` builder
-(`define`, `loader`, and the rest, in **10 · Features only this builder has** *(not written yet)*).
+(`define`, `loader`, and the rest, in [10 · Features only this builder has](10-features-only-this-builder-has.md)).
 If it serves something, the equivalent is a `dev-server` option such as `proxyConfig` or `headers`:
 
 ```json
@@ -202,24 +173,6 @@ upgrade the package that owns the pin, and confirm which copy is actually resolv
 ```bash
 npm ls vite
 ng update @angular/cli
-```
-
-**★ Symptom: you look in `dist/` while `ng serve` is running and find stale files, or none.** Cause:
-the dev server *"generate[s] a development build of the application in memory"* — nothing is written
-to the output directory. Whatever is in `dist/` is left over from the last real build. Fix: to
-inspect what is being served, use the browser's network panel; to inspect files, run a build:
-
-```bash
-ng build --configuration development
-```
-
-**★ Symptom: a bundle-size or chunk-count observation from `ng serve` does not match production at
-all.** Cause: the development configuration sets `optimization: false`, which disables minification
-*and* the Rolldown chunk optimizer, so both the contents and the boundaries of every chunk differ.
-Fix: never size anything from the dev server; build what you ship:
-
-```bash
-ng build --configuration production
 ```
 
 **★ Symptom: a design document or an architecture review states that the project "uses Vite".**
@@ -286,14 +239,6 @@ which means an Angular CLI release and `ng update`. Contrast this with `rollup`,
 as an optional peer precisely because it is a path the user may supply; the difference in
 declaration is the difference in who owns the version.
 
-**Why is "it works in `ng serve`" weak evidence that something works?**
-Because the dev server builds a *different configuration* of the same application. The generated
-`development` configuration sets `optimization: false`, `extractLicenses: false` and
-`sourceMap: true`; the first of those disables minification and mangling and also skips the Rolldown
-chunk optimization pass, which is gated on `optimization.scripts`. So code that survives development
-may break under mangling, and a chunk layout observed in development is not the one you ship. The
-useful mental model is that `ng serve` and `ng build` are the same builder with different options,
-which turns "why is production different" into a diff of two configuration objects rather than a
-comparison of two tools.
+---
 
-{/* FOOTER */}
+← Prev: [The Rolldown switch](04c-the-rolldown-switch-and-the-environment.md) · Index: [Topic index](README.md) · Next → [Prebundling](05b-prebundling.md)

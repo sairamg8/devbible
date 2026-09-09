@@ -84,10 +84,11 @@ For new work the guide is equally direct:
 
 ## 🔴 When are they removed? The release notes do not say
 
-No removal version is published. The v22.0.0 changelog deprecates the builders in
-three packages and **names no target version for their removal**. The migration guide's *"temporarily
-continue"* is the strongest statement available and it is not a schedule. There is no
-deprecation-timeline document for CLI builders analogous to the framework's own deprecation guide.
+No removal version was found in any primary source consulted for this page. The v22.0.0 changelog
+deprecates the builders in three packages and **names no target version for their removal**. The
+migration guide's *"temporarily continue"* is the strongest statement available and it is not a
+schedule. No deprecation-timeline document for CLI builders — analogous to the framework's own
+deprecation guide — was located.
 
 **So the honest sentence, and the one to use: deprecated in v22; the release notes do not state a
 removal version.**
@@ -228,7 +229,7 @@ against.
 The release notes do not state a removal version, and none could be found. The changelog deprecates
 them without naming a target release, and the migration guide's strongest scheduling language is
 *"Applications can temporarily continue to use the `browser` builder"* — which is a word, not a date.
-There is no deprecation-timeline document for CLI builders equivalent to the framework's own. The
+No deprecation-timeline document for CLI builders equivalent to the framework's own was located. The
 correct answer is therefore "deprecated in v22, with no stated removal version", and the correct
 follow-up is that the absence of a date is not a reason to defer: the migration is a single named
 migration today and will not get cheaper.
@@ -257,4 +258,6 @@ that is *about builders* will not learn it. That is worth internalising as a gen
 than a complaint: for status changes — deprecations, removals, default flips — the changelog of the
 major release is the primary source, and the reference pages catch up afterwards.
 
-{/* FOOTER */}
+---
+
+← Prev: [Proxying to a backend](06j-proxying-to-a-backend.md) · Index: [Topic index](README.md) · Next → [What still ships, what was removed](07b-what-still-ships-and-what-was-removed.md)

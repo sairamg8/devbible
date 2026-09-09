@@ -84,8 +84,7 @@ comparing two different artefacts.
 not merely skip minification; it skips an entire second bundling stage, which can change the
 *number and names* of your chunks. That is why "I disabled minification to debug something and the
 chunk layout changed" is expected rather than a bug. The threshold that decides whether the pass
-runs at all, and what it does when it does, is **04 · The Rolldown chunk optimizer**
-*(not written yet)*.
+runs at all, and what it does when it does, is [04 · The Rolldown chunk optimizer](04-the-rolldown-chunk-optimizer.md).
 
 Put together, they produce the most common false alarm in this area: **budgets that pass locally and
 fail in CI.** The `build` target's `defaultConfiguration` is `production` and `serve`'s is
@@ -123,7 +122,7 @@ to keep despite it not being ESM, and each one is a small tax on tree-shaking.
 
 **Module side-effect order is the module graph's, not a bundler configuration's.** Code that relied
 on webpack's evaluation order can behave differently under ESM semantics. The catalogue of what
-changes when you move is **09 · What breaks when you switch** *(not written yet)*.
+changes when you move is [09 · What breaks when you switch](09-what-breaks-when-you-switch.md).
 
 ## Gotchas
 
@@ -145,7 +144,7 @@ you meant to, using the nested form:
 { "optimization": { "scripts": false, "styles": true, "fonts": true } }
 ```
 
-Verify the nested shape against **topic 06 · `angular.json` anatomy** *(not written yet)* before
+Verify the nested shape against [topic 06 · `angular.json` anatomy](../06-angular-json-anatomy/README.md) before
 relying on it — the outer default is `true` and the inner defaults are independent of it.
 
 **★ Symptom: a dependency that worked under the `browser` builder now produces a CommonJS
@@ -206,8 +205,8 @@ sets before assuming inheritance:
 node -p "JSON.stringify(require('./angular.json').projects['my-app'].targets.build, null, 2)"
 ```
 
-The merge semantics between `options` and `configurations` are **topic 06 · `angular.json`
-anatomy** *(not written yet)*, and they are shallower than most people expect.
+The merge semantics between `options` and `configurations` are [topic 06 · `angular.json`
+anatomy](../06-angular-json-anatomy/README.md), and they are shallower than most people expect.
 
 ## Interview questions
 
@@ -252,4 +251,6 @@ since that flag gates the whole second pass. It also tells you the order to debu
 suddenly fails, ask what changed about optimization or chunking before you go hunting for a fat new
 dependency.
 
-{/* FOOTER */}
+---
+
+← Prev: [esbuild does the output](03-esbuild-does-the-output.md) · Index: [Topic index](README.md) · Next → [browserslist → esbuild target](03c-browserslist-becomes-an-esbuild-target.md)

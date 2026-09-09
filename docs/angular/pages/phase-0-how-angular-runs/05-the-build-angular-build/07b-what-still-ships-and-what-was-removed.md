@@ -98,7 +98,7 @@ argument for migrating in one sentence: you are not choosing between two build s
 choosing whether to also install a second one you do not run.
 
 Compare it with what the new package contains — twenty-six dependencies, esbuild, Vite, Rolldown and
-oxc-parser, and no webpack at all — in **02 · Inside the package** *(not written yet)*.
+oxc-parser, and no webpack at all — in [02 · Inside the package](02-inside-the-package.md).
 
 ## What `application` swallowed
 
@@ -116,7 +116,7 @@ So four of the eleven entries in the manifest above are superseded by options on
 rather than by four replacements. A project migrating away from them is deleting targets, not
 rewriting them — which is also why the automated migration *"Removes any previous SSR builders
 (because `application` does that now)"*. The mechanics of that migration are
-**08 · Migrating off webpack** *(not written yet)*.
+[08 · Migrating off webpack](08-migrating-off-webpack.md).
 
 ## What was actually removed in v22.0.0
 
@@ -188,7 +188,7 @@ grep -n '"builder"' angular.json
 update.** Cause: it was **removed**, not deprecated — *"The experimental
 `@angular-devkit/build-angular:jest` and `@angular-devkit/build-angular:web-test-runner` builders
 have been removed."* Fix: move the `test` target to a builder that exists; what `ng new` writes at
-22.1.7 and its stability label are **12 · The test builders** *(not written yet)*.
+22.1.7 and its stability label are [12 · The test builders](12-the-test-builders.md).
 
 **★ Symptom: a script that invoked `architect` from `@angular-devkit/architect-cli` fails to
 install.** Cause: *"The `@angular-devkit/architect-cli` package is no longer available. The
@@ -285,4 +285,6 @@ releases; anything you reach by importing the package is not, and can move in a 
 built around Angular builds should therefore shell out to `ng` rather than import builder
 implementations, however tempting the latter is.
 
-{/* FOOTER */}
+---
+
+← Prev: [The webpack builders are deprecated](07-the-webpack-builders-are-deprecated.md) · Index: [Topic index](README.md) · Next → [Migrating off webpack](08-migrating-off-webpack.md)

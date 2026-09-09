@@ -48,7 +48,7 @@ dynamic `import()`** — which is [03b · Eleven concerns, one process](03b-elev
 
 ⚠️ Note what the third bullet does *not* say. It names esbuild **and** Vite as tools the build
 system uses; it does not say Vite bundles your production output. Vite's role is the development
-server — **05 · Vite is only the dev server** *(not written yet)*.
+server — [05 · Vite is only the dev server](05-vite-is-only-the-dev-server.md).
 
 ## AOT is on by default, and it runs inside the bundler
 
@@ -81,8 +81,8 @@ The `application` builder's schema declares exactly one required option:
 entry point named in `angular.json`, but not one without a TypeScript configuration — which is the
 same statement as the peer list in [02d](02d-the-peer-contract.md), made by a different file. What
 belongs *inside* those tsconfig files is **topic 07 · The TypeScript setup** *(not written yet)*;
-the field itself, and the consequences of `additionalProperties: false`, are **topic 06 ·
-`angular.json` anatomy** *(not written yet)*.
+the field itself, and the consequences of `additionalProperties: false`, are [topic 06 ·
+`angular.json` anatomy](../06-angular-json-anatomy/README.md).
 
 ## What esbuild does not do here
 
@@ -90,8 +90,8 @@ Three boundaries, so you know which page answers which question:
 
 | Not esbuild's job | Whose it is |
 |---|---|
-| Re-chunking the bundled output | rolldown, a second pass — **04 · The Rolldown chunk optimizer** *(not written yet)* |
-| Serving your app during development | Vite — **05 · Vite is only the dev server** *(not written yet)* |
+| Re-chunking the bundled output | rolldown, a second pass — [04 · The Rolldown chunk optimizer](04-the-rolldown-chunk-optimizer.md) |
+| Serving your app during development | Vite — [05 · Vite is only the dev server](05-vite-is-only-the-dev-server.md) |
 | Deciding which JavaScript syntax to emit | your browserslist, translated — [03c](03c-browserslist-becomes-an-esbuild-target.md) |
 | Rewriting `index.html` after the bundle is written | critical CSS and font inlining — [03d](03d-critical-css-and-font-inlining.md) |
 
@@ -122,7 +122,7 @@ node -p "require('./angular.json').projects['my-app'].targets.build.builder"
 
 If that prints a custom builder, you are not on `@angular/build` at all. The sanctioned extension
 points on this builder — `define`, `loader`, `conditions`, `externalDependencies` — are
-**10 · Features only this builder has** *(not written yet)*.
+[10 · Features only this builder has](10-features-only-this-builder-has.md).
 
 **★ Symptom: `aot: false` was set "to make development faster" and template behaviour changed.**
 Cause: `aot` defaults to `true`, and turning it off changes the compilation mode rather than merely
@@ -230,4 +230,6 @@ projects that predate it and still name webpack builders, which is a different q
 *should I trust this*, but *what breaks when I switch*. In v22 the second question got sharper,
 because the webpack builders moved from "legacy" to formally deprecated.
 
-{/* FOOTER */}
+---
+
+← Prev: [What `ng new` installs](02e-what-ng-new-installs.md) · Index: [Topic index](README.md) · Next → [Eleven concerns, one process](03b-eleven-concerns-one-process.md)

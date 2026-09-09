@@ -45,8 +45,7 @@ verbatim from `builders.json` at `v22.1.7`:
 That is the entire public declaration. Nothing about Vite appears in it, because Vite is an
 implementation detail of `./src/builders/dev-server/index` — which is exactly why there is no
 `vite.config.ts` in an Angular workspace and why adding one changes nothing. What that
-encapsulation costs you, in angular.dev's own words, is **05 · Vite is only the dev server**
-*(not written yet)*.
+encapsulation costs you, in angular.dev's own words, is [05 · Vite is only the dev server](05-vite-is-only-the-dev-server.md).
 
 ## The one option that couples serve to build
 
@@ -242,4 +241,6 @@ That single object answers "which builder", "which configuration by default", an
 configuration does that reach" — which are the three questions behind almost every "it works for me"
 report about the dev server.
 
-{/* FOOTER */}
+---
+
+← Prev: [The dev/prod gap](05d-the-dev-prod-gap.md) · Index: [Topic index](README.md) · Next → [The serve-to-build coupling](06b-the-serve-to-build-coupling.md)

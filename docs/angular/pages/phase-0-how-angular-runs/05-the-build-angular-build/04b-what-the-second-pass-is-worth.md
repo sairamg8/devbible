@@ -295,4 +295,6 @@ whether either environment variable is set in the shell or the CI job. Then conf
 differential build. If a build with `NG_BUILD_OPTIMIZE_CHUNKS=0` produces byte-identical JavaScript
 to one without it, the pass was not running either way.
 
-{/* FOOTER */}
+---
+
+← Prev: [The Rolldown chunk optimizer](04-the-rolldown-chunk-optimizer.md) · Index: [Topic index](README.md) · Next → [The Rolldown switch](04c-the-rolldown-switch-and-the-environment.md)

@@ -78,8 +78,7 @@ comfortably with source 1's flat list of three either.
 ⚠️ **`NG_HMR_CSTYLES` and `NG_HMR_TEMPLATES` are not public API.** They live in an internal `utils/`
 file, appear in no schema, and are absent from angular.dev. They are cited here as *evidence about
 the disagreement*, not as configuration to adopt — the wider `NG_BUILD_*` / `NG_HMR_*` surface and
-that warning in general belong to **11 · Cache, workers and the environment variables**
-*(not written yet)*.
+that warning in general belong to [11 · Cache, workers and the environment variables](11-cache-and-workers.md).
 
 ## What is not known, stated plainly
 
@@ -127,8 +126,7 @@ operational follows from that one sentence:
 
 ⚠️ **`hmr` *"Defaults to the value of 'liveReload'"*** — it is not independently defaulted to `true`,
 it inherits. One option, two behaviours: switch live reload off and HMR goes with it. The full
-nineteen-option dev-server surface, `liveReload` included, is **06 · The dev-server contract**
-*(not written yet)*.
+nineteen-option dev-server surface, `liveReload` included, is [06 · The dev-server contract](06-the-dev-server-contract.md).
 
 ## The flash of unstyled content is documented, and expected
 
@@ -271,4 +269,6 @@ migration guide — general JavaScript HMR *"is currently not supported"* — an
 is the only forward-looking claim available; nothing names a version where that changes, and this
 page does not guess one.
 
-{/* FOOTER */}
+---
+
+← Prev: [Prebundling](05b-prebundling.md) · Index: [Topic index](README.md) · Next → [The dev/prod gap](05d-the-dev-prod-gap.md)

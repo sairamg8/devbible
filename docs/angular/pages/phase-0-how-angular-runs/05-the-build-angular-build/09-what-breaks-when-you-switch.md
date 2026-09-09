@@ -207,4 +207,6 @@ application, and aligns TypeScript's view with what esbuild will actually emit. 
 automated migration does, which is a reasonable signal about the intended path — and a reason a
 manual migration is the riskier of the two.
 
-{/* FOOTER */}
+---
+
+← Prev: [The option renames](08b-the-option-renames.md) · Index: [Topic index](README.md) · Next → [What the build stops telling you](09b-what-the-build-stops-telling-you.md)

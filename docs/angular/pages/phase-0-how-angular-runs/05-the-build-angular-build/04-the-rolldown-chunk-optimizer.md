@@ -59,7 +59,7 @@ unhedged dependency:
 ```
 
 *(Four entries out of the twenty-six in the real manifest; the full list is
-**02 · Inside the package** *(not written yet)*.)* A bundler does not appear in another bundler's
+[02 · Inside the package](02-inside-the-package.md).)* A bundler does not appear in another bundler's
 dependency list by accident.
 
 ## Where the pass sits, from the call site
@@ -108,7 +108,7 @@ Four facts are visible in that block before you know anything else about rolldow
   met, rolldown is never even imported into the process. That is why the pass is invisible in a
   small project — not merely inactive, absent.
 - **The pass is instrumented** under the label `OPTIMIZE_CHUNKS` via `profileAsync`. The build's
-  profiling switches are **11 · Cache, workers and the environment variables** *(not written yet)*.
+  profiling switches are [11 · Cache, workers and the environment variables](11-cache-and-workers.md).
 - **`bundlingResult = optimizationResult`** — on success the optimized result *replaces* the
   esbuild result for the remainder of the build.
 
@@ -275,4 +275,6 @@ published pipeline diagram; Angular does not document a stage list for the `appl
 which is exactly why reading that one file is the reliable way to answer the question for a given
 version.
 
-{/* FOOTER */}
+---
+
+← Prev: [Critical CSS and font inlining](03d-critical-css-and-font-inlining.md) · Index: [Topic index](README.md) · Next → [What the second pass is worth](04b-what-the-second-pass-is-worth.md)
