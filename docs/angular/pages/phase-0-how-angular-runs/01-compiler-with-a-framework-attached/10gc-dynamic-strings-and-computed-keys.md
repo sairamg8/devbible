@@ -147,4 +147,4 @@ Because both go through the same `literal()` helper, and `literal()` has an expl
 **A computed object key sometimes works and sometimes does not. What is the actual rule?**
 `stringNameFromPropertyName` accepts an identifier, a string literal or a numeric literal directly, and for a computed name it evaluates the expression and keeps the result **only if `typeof result === 'string'`**. So computed keys are supported, but only when they fold to a string: `` [`${PREFIX}-role`] `` is fine, `[SOME_SYMBOL]` is not, and a computed key folding to `42` is not either — even though the plain literal key `42` is accepted by the earlier branch. When the key is rejected the whole object literal becomes dynamic, wrapped as `fromDynamicInput` around `fromDynamicString`, so you see two notes and the useful one is the inner one.
 
-{/* FOOTER */}
+← Prev: [Builtins and invalid expression types](10gb-builtins-and-invalid-expression-types.md) · Index: [Topic index](README.md) · Next → [Enum members and the core guard](10gd-enum-members-and-the-core-guard.md)

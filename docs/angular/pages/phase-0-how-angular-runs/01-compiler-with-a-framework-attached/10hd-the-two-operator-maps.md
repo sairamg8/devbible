@@ -241,4 +241,4 @@ They are the two constructors for entries in `BINARY_OPERATORS`, differing in on
 **Door two contains exactly two operators. Why is a fact like that worth establishing?**
 Because it closes a branch of the search. When a metadata error says `This syntax is not supported.`, the useful question is which of three doors it came from, and a door whose contents you can enumerate is a door you can eliminate in one glance. Door two is `++x` and `--x`, established by subtracting Angular's four-entry `UNARY_OPERATORS` map from TypeScript's own six-member `PrefixUnaryOperator` union — both read verbatim, no inference. In a decorator argument neither can occur meaningfully, so in practice every real instance of this error is door one or door three, and knowing that turns a three-way question into a two-way one before you have looked at any code.
 
-{/* FOOTER */}
+← Prev: [TypeScript it never heard of](10hc-the-typescript-the-evaluator-has-never-heard-of.md) · Index: [Topic index](README.md) · Next → [What looks like this and is not](10he-what-looks-like-this-error-and-is-not.md)

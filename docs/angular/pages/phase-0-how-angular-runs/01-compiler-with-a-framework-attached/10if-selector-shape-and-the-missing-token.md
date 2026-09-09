@@ -229,4 +229,4 @@ By the noun. `annotations/directive/src/shared.ts` hard-codes `Directive ${name}
 **The ShadowDom selector check skips anything containing a dot or a bracket pair. Is that a bug?**
 No, and the source says so in a comment: it exists to avoid flagging `foo-bar[baz]`, it is admitted not to be bulletproof, and the author states it does not need to be. The check's purpose is to catch the common mistake — a one-word tag name on a ShadowDom component, which the browser will reject as a custom element name — not to be a complete custom-element validator. The reader-facing consequence is what matters: NG2009 firing means your selector is definitely wrong, but NG2009 *not* firing does not mean it is right. Treating a partial check as a total one is how a wrong tag name reaches the browser with a green build behind it.
 
-{/* FOOTER */}
+← Prev: [The standalone gates](10ie-the-standalone-gates.md) · Index: [Topic index](README.md) · Next → [NG2003 and the sign of the enum](10ig-ng2003-and-the-sign-of-the-enum.md)

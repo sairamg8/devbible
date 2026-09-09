@@ -291,4 +291,4 @@ The per-element check inside the `styleUrls` array branch reuses the singular me
 **The compiler validates `interpolation` and, in the function that validates it, discards the result. How should you present that on a reference page?**
 As exactly what it is, and no further. The source read establishes two things: the validation exists and produces a very specific message, and within `parseTemplateDeclaration` the value is not carried into the returned declaration. It does **not** establish that the value is unused by the compiler as a whole — that would need a wider read than the files this page was written from. The honest form is to state the check, state the observation, and say the wider question was not settled. A page that promotes "not used in this function" to "custom delimiters do not work in v22" would be a confident invention, and it is the exact failure mode this corpus's evidence rules exist to prevent.
 
-{/* FOOTER */}
+← Prev: [Resources that are not there](10ib-resources-that-are-not-there.md) · Index: [Topic index](README.md) · Next → [The imports family](10id-the-imports-family.md)

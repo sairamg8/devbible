@@ -221,4 +221,4 @@ Because of the three lines at the bottom of `visitExpression`: if a sub-expressi
 **Why is there no way to write a platform check in an evaluated metadata field?**
 Because every spelling of one is either an absent node kind or an absent operator. `typeof window` is a `ts.TypeOfExpression` with no branch; `window` on its own resolves to an ambient declaration and fails as an external reference ([10c](10c-symbols-the-compiler-cannot-resolve.md)); `globalThis?.document ?? null` adds a `??` that is not in the operator map ([10hd](10hd-the-two-operator-maps.md)). That is not a series of coincidences — the evaluator runs once, at build time, producing one component definition, so a field whose value depends on the runtime platform has no meaning in it. The fix is always structural: two components, or a build-time constant, never a conditional inside the decorator.
 
-{/* FOOTER */}
+← Prev: [Enum members and the core guard](10gd-enum-members-and-the-core-guard.md) · Index: [Topic index](README.md) · Next → [Code as a metadata value](10hb-code-as-a-metadata-value.md)

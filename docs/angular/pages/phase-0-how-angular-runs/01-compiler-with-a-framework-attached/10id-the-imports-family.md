@@ -228,4 +228,4 @@ Because NG1010's sentences all mean the same class of thing — a field's value 
 **Why is the difference between `imports` and `deferredImports` written only in a ternary?**
 Because the compiler treats the two arrays with one function, `validateAndFlattenComponentImports`, parameterised by an `isDeferred` boolean, and the only place the semantic difference surfaces is the error message it chooses. `'imports' must be an array of components, directives, pipes, or NgModules.` versus `'deferredImports' must be an array of components, directives, or pipes.` — NgModules are in one list and not the other. That is the specification, and it exists in exactly one line of source. It is worth knowing both because it is the rule and because it is a good example of how much of Angular's real contract lives in message strings rather than in documentation.
 
-{/* FOOTER */}
+← Prev: [Stylesheets and the scalar fields](10ic-stylesheets-and-the-scalar-fields.md) · Index: [Topic index](README.md) · Next → [The standalone gates](10ie-the-standalone-gates.md)

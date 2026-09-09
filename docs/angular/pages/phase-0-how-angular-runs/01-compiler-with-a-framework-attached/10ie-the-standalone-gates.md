@@ -231,4 +231,4 @@ No, and the reason is not that it fails — it is that it succeeds while making 
 Because it would be a second, contradictory source of truth. A selectorless template names its dependencies inline, so the component's dependency set is derivable from the template alone; an `imports` array would either agree with it — in which case it is noise that will drift — or disagree, in which case the compiler would have to pick a winner and neither choice is defensible. So `UNSUPPORTED_SELECTORLESS_COMPONENT_FIELD` rejects the field and poisons the component. Note also that selectorless is detected from the template by `analyzeTemplateForSelectorless`, not from a decorator flag, which means the error can appear on a component you edited only in its markup.
 
 
-{/* FOOTER */}
+← Prev: [The imports family](10id-the-imports-family.md) · Index: [Topic index](README.md) · Next → [Selector shape](10if-selector-shape-and-the-missing-token.md)

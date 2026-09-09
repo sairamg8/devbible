@@ -265,4 +265,4 @@ The source mapping. A string-literal template is read out of the `.ts` file by b
 **A tool reports `NG1010` for six different fields in one component. Is that one bug or six?**
 Six, potentially. NG1010 is `VALUE_HAS_WRONG_TYPE` and it is written by one helper, `createValueHasWrongTypeError`, which every field-shape call site funnels through; the field name lives in the message text, not in the code. So the number carries no information about which field failed and grouping by code groups unrelated problems. Any lint suppression, CI filter or error-budget dashboard keyed on NG1010 is keyed on "some metadata field somewhere had the wrong type", which is almost the same as no filter at all. Filter on the message text.
 
-{/* FOOTER */}
+← Prev: [Where the chain surprises you](10hf-where-the-chain-surprises-you.md) · Index: [Topic index](README.md) · Next → [Resources that are not there](10ib-resources-that-are-not-there.md)

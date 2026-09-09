@@ -206,4 +206,4 @@ Look for the artefacts, not the date. If the page mentions `.metadata.json`, a *
 **Both `Unable to evaluate an invalid expression.` and `This syntax is not supported.` can come from `visitBinaryExpression`. What distinguishes them?**
 Which check failed. The first line of the method looks the operator token up in `BINARY_OPERATORS`; a miss returns `fromUnsupportedSyntax` — you used an operator the evaluator has no entry for, such as `??`. If the lookup hits and the entry is one of the twenty `literal` operators, both operands are pushed through the `literal()` helper, which accepts primitives, `null`, `undefined` and already-failed values and rejects everything else with `fromInvalidExpressionType` — you used a supported operator on an object, array or reference. So the same method produces two of the ten strings, and the distinction is operator-versus-operand: change the operator for the first, change the operands for the second.
 
-{/* FOOTER */}
+← Prev: [The two operator maps](10hd-the-two-operator-maps.md) · Index: [Topic index](README.md) · Next → [Where the chain surprises you](10hf-where-the-chain-surprises-you.md)

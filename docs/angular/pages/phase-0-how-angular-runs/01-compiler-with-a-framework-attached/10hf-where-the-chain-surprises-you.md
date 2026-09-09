@@ -192,4 +192,4 @@ Because it removes an entire family of failed remedies. When a metadata value wi
 **★ How much of the JavaScript standard library can you use in decorator metadata?**
 Four members, by name: `length`, `slice` and `concat` on a resolved array, and `concat` on a resolved string. They are hard-coded in `accessHelper` as `ArraySliceBuiltinFn`, `ArrayConcatBuiltinFn` and `StringConcatBuiltinFn`, and there is no general mechanism behind them — anything else, including `map`, `join`, `includes`, `trim` and `toUpperCase`, falls to that function's final `return DynamicValue.fromUnknown(node)` and produces `Unable to evaluate statically.` The practical rule that follows is to build metadata strings with operators rather than methods: `+` and template interpolation are both supported, so anything you wanted `join` or `trim` for can usually be written without a method call, and anything that genuinely needs one has to be precomputed into a literal.
 
-{/* FOOTER */}
+← Prev: [What looks like this and is not](10he-what-looks-like-this-error-and-is-not.md) · Index: [Topic index](README.md) · Next → [The field-shape family](10i-the-field-shape-family.md)

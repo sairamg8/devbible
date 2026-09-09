@@ -164,7 +164,7 @@ So resolving the identifier `reportImportsArrow` does not produce a `Reference` 
 }
 ```
 
-That `DynamicValue` comes back as the callee, rung 1 fires, and you get a two-line trace: `Unable to evaluate this expression statically.` on the call, `This syntax is not supported.` on the arrow. The everything-unsupported family is **10h · Syntax the evaluator cannot read** *(not written yet)*; the part that matters here is that it reaches you through the *call* ladder and therefore looks like a call problem.
+That `DynamicValue` comes back as the callee, rung 1 fires, and you get a two-line trace: `Unable to evaluate this expression statically.` on the call, `This syntax is not supported.` on the arrow. The everything-unsupported family is [10h · Syntax the evaluator cannot read](10h-syntax-the-evaluator-cannot-read.md); the part that matters here is that it reaches you through the *call* ladder and therefore looks like a call problem.
 
 A `function` declaration takes a different route — `visitDeclaration` has no branch for it, so it falls through to `getReference(node, context)` and comes back as a `Reference<ts.FunctionDeclaration>`, which is exactly what rung 5 wants.
 
@@ -253,4 +253,4 @@ Twice, in two unrelated functions, for two different node kinds. `visitFunctionB
 **★ Which Angular error code sits above every trace in this catalogue, and what follows from its number?**
 `VALUE_HAS_WRONG_TYPE`, NG1010, read from `error_code.ts`. It follows because the trace is built by `traceDynamicValue`, whose only production consumer is `createValueHasWrongTypeError`, which always throws that code. Two things follow from the number itself. First, 1010 is positive, and Angular appends the `Find more at https://v22.angular.dev/errors/NGxxxx` suffix only for negatively-declared codes — so NG1010 has no encyclopedia page, and searching for one is wasted time. Second, filtering CI output on NG1010 catches every metadata evaluation failure in one rule, which is more useful than it sounds, precisely because the code is so broad.
 
-{/* FOOTER */}
+← Prev: [Destructuring in metadata](10f-destructuring-in-metadata.md) · Index: [Topic index](README.md) · Next → [Builtins and invalid expression types](10gb-builtins-and-invalid-expression-types.md)

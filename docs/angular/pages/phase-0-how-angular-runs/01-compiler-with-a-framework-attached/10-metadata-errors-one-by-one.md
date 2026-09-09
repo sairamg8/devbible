@@ -18,13 +18,38 @@ sidebar_position: 10
 
 **Chunk 09 argued why your `@Component` argument has to be statically analysable. This chunk and its siblings are the other half: the catalogue you open at 2am when the build is red and the message is one you have never seen. It exists because Angular's metadata errors are unusually *readable* once you know their shape — and completely opaque until you do. Every one of them is assembled by the same handful of functions, in the same order: a headline naming the field, a chained sentence naming what the evaluator got instead of a value, and a related-information trace whose entries come from a closed set of exactly ten strings. Learn those ten and the rest of the catalogue stops being something you read and becomes an index you look things up in. This page is the decoder; [10b](10b-the-decorator-argument-itself.md) through [10f](10f-destructuring-in-metadata.md) are the entries.**
 
-🔴 **This catalogue is incomplete, deliberately and visibly. Read this before you conclude an error is not in it.** Six pages exist — the decoder, and five families of cause. **Two planned families have not been written yet**, and their errors are therefore *absent, not excluded*:
+✅ **This catalogue is now complete.** It was written incomplete on purpose and said so; the three
+families it was missing landed 2026-09-09 and every error named below has a worked entry.
 
-- **10g · Calls, enums and the values in between** *(not written yet)* — the single-return-statement rule for helper functions and `Unable to evaluate function call of complex function. A function must have exactly one return statement.`; `Unable to evaluate an invalid expression.`; `A string value could not be determined statically.`; enum members and `encapsulation must be a member of ViewEncapsulation enum from @angular/core`; enum members whose computed names are silently dropped rather than reported.
-- **10h · Syntax the evaluator cannot read** *(not written yet)* — everything that prints `This syntax is not supported.`: `new`, tagged template literals, `??` (absent from the operator table while `||` is present), function and arrow expressions in an evaluated position, spread at expression position, `typeof`, `await`, `delete`, `void`, class expressions — plus the View Engine rules on angular.dev that no longer describe this compiler.
-- **The NG2xxx field-shape family is also unwritten** — `@Component is missing a template. Add either a template or templateUrl`, `templateUrl must be a string`, `template must be a string`, the resource-not-found and duplicate-`styleUrl`/`styleUrls` errors, `selector must be a string` and the missing-selector error, the `'imports' must be an array of components, directives, pipes, or NgModules.` family including the `Module.forRoot()` message, the standalone-shape errors, `NG2003: Missing Token`, and the completeness table of NG1xxx / NG2xxx / NG5xxx codes.
+- **[10g · Calls, enums and the values in between](10g-calls-enums-and-the-values-in-between.md)**
+  — the single-return-statement rule, `Unable to evaluate function call of complex function. A
+  function must have exactly one return statement.`, `Unable to evaluate an invalid expression.`,
+  `A string value could not be determined statically.`, and the `ViewEncapsulation` /
+  `ChangeDetectionStrategy` enum guard. Four pages: `10g`, [10gb](10gb-builtins-and-invalid-expression-types.md),
+  [10gc](10gc-dynamic-strings-and-computed-keys.md), [10gd](10gd-enum-members-and-the-core-guard.md).
+- **[10h · Syntax the evaluator cannot read](10h-syntax-the-evaluator-cannot-read.md)** — everything
+  printing `This syntax is not supported.` Six pages: `10h`, [10hb](10hb-code-as-a-metadata-value.md),
+  [10hc](10hc-the-typescript-the-evaluator-has-never-heard-of.md), [10hd](10hd-the-two-operator-maps.md),
+  [10he](10he-what-looks-like-this-error-and-is-not.md), [10hf](10hf-where-the-chain-surprises-you.md).
+- **[10i · The `NG2xxx` field-shape family](10i-the-field-shape-family.md)** — templates, resources,
+  stylesheets, `imports`, the standalone gates, selector shape and `NG2003: Missing Token`. Seven
+  pages: `10i`, [10ib](10ib-resources-that-are-not-there.md), [10ic](10ic-stylesheets-and-the-scalar-fields.md),
+  [10id](10id-the-imports-family.md), [10ie](10ie-the-standalone-gates.md),
+  [10if](10if-selector-shape-and-the-missing-token.md), [10ig](10ig-ng2003-and-the-sign-of-the-enum.md).
 
-If your message is in one of those three lists, the mechanism behind it is still on this page — it is the same decoder — but the worked entry is not written. If it is in neither, work the decoder below.
+🔴 **Two corrections this page owes you, both proved at source when 10h was written.** The earlier
+version of this note asserted both, and both were wrong:
+
+1. **"Spread at expression position" does *not* print `This syntax is not supported.`** It never
+   reaches the dispatch — `visitSpreadElement`, `evaluateFunctionArguments` and
+   `visitObjectLiteralExpression` each intercept spread first, so the failure surfaces as
+   `Unable to evaluate this expression statically.` or `Unable to evaluate an invalid expression.`
+   [10h](10h-syntax-the-evaluator-cannot-read.md) works the real paths.
+2. **angular.dev's AOT-collector table is inverted on two rows.** It lists `New` (`new Oven()`) as
+   *supported syntax* while `ngtsc` has no `ts.isNewExpression` branch at all, and lists
+   spread-in-a-literal-array as *not foldable* while `visitArrayLiteralExpression` folds it. That
+   page describes View Engine's collector, not this compiler —
+   [10hc](10hc-the-typescript-the-evaluator-has-never-heard-of.md) has the comparison.
 
 ## The shape: a headline, a chain sentence, and a trace
 
@@ -143,9 +168,23 @@ The five sibling pages are grouped by **cause**, because the cause is what deter
 | [10d · Import cycles and local mode](10d-import-cycles-and-local-compilation.md) | NG3003 and remote scoping; local-compilation NG11001 / NG11003 | the error is about a **file**, not a value |
 | [10e · Values that do not fold](10e-values-that-resolve-but-do-not-fold.md) | `export let`, ambient `declare const`, literal vs wide types, tuples and `Dynamic type.` | the trace names a *value* |
 | [10f · Destructuring in metadata](10f-destructuring-in-metadata.md) | the three destructuring forms that fail, all printing `Unable to evaluate statically.` | a binding pattern in the span |
-| **10g · Calls, enums and the values in between** *(not written yet)* | complex function calls, invalid expression types, dynamic strings, enum members | — |
-| **10h · Syntax the evaluator cannot read** *(not written yet)* | everything printing `This syntax is not supported.` | — |
-| **The NG2xxx field-shape family** *(not written yet)* | templates, styles, selectors, `imports`, standalone, `NG2003: Missing Token` | **no trace**, and the headline names a field |
+| [10g · Calls, enums and the values in between](10g-calls-enums-and-the-values-in-between.md) | `Unable to evaluate function call of complex function…`, `Unable to evaluate an invalid expression.`, `A string value could not be determined statically.`, the enum guard | the trace names a *call* or a *member* |
+| [10gb · Builtins and invalid expression types](10gb-builtins-and-invalid-expression-types.md) | the four standard-library members the evaluator implements, and what everything else does | the trace names the builtin |
+| [10gc · Dynamic strings and computed keys](10gc-dynamic-strings-and-computed-keys.md) | `A string value could not be determined statically.`, computed property keys | the trace names a *string* |
+| [10gd · Enum members and the core guard](10gd-enum-members-and-the-core-guard.md) | `encapsulation must be a member of ViewEncapsulation enum from @angular/core` and its `changeDetection` twin | the headline names the field and the enum |
+| [10h · Syntax the evaluator cannot read](10h-syntax-the-evaluator-cannot-read.md) | everything printing `This syntax is not supported.` | related information, not a trace |
+| [10hb · Code as a metadata value](10hb-code-as-a-metadata-value.md) | function and arrow expressions, class expressions, tagged template literals | the span is the code you passed |
+| [10hc · The TypeScript it has never heard of](10hc-the-typescript-the-evaluator-has-never-heard-of.md) | `new`, `typeof`, `await`, `delete`, `void` — and the two angular.dev rows that are inverted | the span is the operator |
+| [10hd · The two operator maps](10hd-the-two-operator-maps.md) | 🔴 `??` is genuinely absent: 22 of 42 binary operators supported, and exactly two unary missing (`++x`, `--x`) | the span is the operator |
+| [10he · What looks like this error and is not](10he-what-looks-like-this-error-and-is-not.md) | the near-misses that print a *different* message — read this before concluding you are in 10h | — |
+| [10hf · Where the chain surprises you](10hf-where-the-chain-surprises-you.md) | `visitConditionalExpression` visits only the taken branch, so an unsupported node in the untaken one is never reported | no diagnostic at all |
+| [10i · The NG2xxx field-shape family](10i-the-field-shape-family.md) | templates, styles, selectors, `imports`, standalone, `NG2003: Missing Token` | **no trace**, and the headline names a field |
+| [10ib · Resources that are not there](10ib-resources-that-are-not-there.md) | `NG2008`, the three resource-not-found sentences | the headline names the file |
+| [10ic · Stylesheets and the scalar fields](10ic-stylesheets-and-the-scalar-fields.md) | `NG2021` for both `styleUrl` and `styleUrls`, `template`/`templateUrl` must be a string — ⚠️ and `interpolation`, whose resolved value is assigned to nothing in the handler |
+| [10id · The imports family](10id-the-imports-family.md) | `'imports' must be an array of components, directives, pipes, or NgModules.` and the `Module.forRoot()` message — 🔴 all of it **skipped entirely in local compilation mode** | the headline names `imports` |
+| [10ie · The standalone gates](10ie-the-standalone-gates.md) | `NG2010`, `NG2011`, `NG2012`, `NG2023`, and `foreignImports` | the headline names the offending class |
+| [10if · Selector shape](10if-selector-shape-and-the-missing-token.md) | 🔴 `selector: ''` is `NG2004` on a `@Directive` and **silently becomes `ng-component`** on a `@Component` | the headline names the selector |
+| [10ig · NG2003 and the sign of the enum](10ig-ng2003-and-the-sign-of-the-enum.md) | `NG2003: Missing Token` and its six chain messages — and why only `-2003` and `-2009` have angular.dev pages | the chain names the parameter |
 
 ## Gotchas
 
@@ -171,7 +210,7 @@ export const CARD_CONFIG = {
 
 **★ Symptom: `Value is of type 'undefined'.` and you go hunting for a static-analysis failure.** Cause: that sentence is the *success* branch — the evaluator resolved your identifier and the answer was genuinely `undefined`. Only `Value could not be determined statically.` means the analysis gave up. Fix: initialise the constant rather than trying to make it "more static"; see [10e](10e-values-that-resolve-but-do-not-fold.md).
 
-**★ Symptom: the error has no trace under it at all.** Cause: it was thrown before the partial evaluator ran — an arity gate, an object-literal gate, or a plain field-shape check. There is nothing to trace because nothing was evaluated. Fix: read the headline literally; it is a syntactic complaint about the decorator call or the field, not about a value inside it. The decorator-call half lives in [10b](10b-the-decorator-argument-itself.md); the field-shape half is the **NG2xxx family** *(not written yet)*.
+**★ Symptom: the error has no trace under it at all.** Cause: it was thrown before the partial evaluator ran — an arity gate, an object-literal gate, or a plain field-shape check. There is nothing to trace because nothing was evaluated. Fix: read the headline literally; it is a syntactic complaint about the decorator call or the field, not about a value inside it. The decorator-call half lives in [10b](10b-the-decorator-argument-itself.md); the field-shape half is the [10i · the NG2xxx field-shape family](10i-the-field-shape-family.md).
 
 **Symptom: you copy an NG number out of a blog post into a CI suppression list and it never matches.** Cause: Angular's error numbers are only as stable as the enum, and the *documented* set is exactly ten codes — everything else is an internal number no page describes. Fix: filter on the message text or on the enum name, and if you must use a number, read it out of `error_code.ts` at the version you actually build with. The daggered numbers in this catalogue have not been confirmed against that file.
 

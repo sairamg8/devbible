@@ -247,4 +247,4 @@ Because `visitCallExpression` evaluates the callee before it does anything else,
 **Every Angular document about metadata restrictions names `new`, arrow functions and tagged templates. What does the omission of `satisfies` and `import.meta` tell you?**
 That the lists are historical rather than derived. They were written for View Engine's collector, in an era before those language features existed, and nothing regenerates them from the current implementation — so they will always describe the traps of the year they were written. The evaluator's chain, by contrast, is regenerated every time someone edits it, which is why the reliable procedure is to read the chain rather than the list. It also predicts the future accurately: whatever TypeScript ships next will be unsupported in metadata on the day it lands, silently, and no document will say so.
 
-{/* FOOTER */}
+← Prev: [Code as a metadata value](10hb-code-as-a-metadata-value.md) · Index: [Topic index](README.md) · Next → [The two operator maps](10hd-the-two-operator-maps.md)

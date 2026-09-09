@@ -22,7 +22,7 @@ sidebar_position: 10.5
 
 angular.dev's [AOT compilation](https://angular.dev/tools/cli/aot-compiler) page describes phases built around a *collector* that emitted `.metadata.json` files and a `StaticReflector` that read them back. `ngtsc` has no collector and emits no `.metadata.json`; it is a `ts.CustomTransformers` pipeline with a `StaticInterpreter` partial evaluator running inside the TypeScript program. So that page's rules are not a stale description of the current compiler — they are an accurate description of a different one.
 
-**Treat everything on that page as evidence about intent and nothing on it as evidence about behaviour.** Destructuring is the clearest case where the two diverge; the arrow-functions-in-`providers` rule is another, covered in **10h · Syntax the evaluator cannot read** *(not written yet)*.
+**Treat everything on that page as evidence about intent and nothing on it as evidence about behaviour.** Destructuring is the clearest case where the two diverge; the arrow-functions-in-`providers` rule is another, covered in [10h · Syntax the evaluator cannot read](10h-syntax-the-evaluator-cannot-read.md).
 
 ## What actually runs
 
@@ -216,7 +216,7 @@ export const CARD_CONFIG = {selector: 'app-user-card'} as const;
 export const CARD_SELECTOR = CARD_CONFIG.selector;
 ```
 
-**★ Symptom: `const {selector} = getConfig();` fails while `const {selector} = CONFIG;` works.** Cause: `visitBindingElement` evaluates the closest variable declaration's *initializer*, and a call expression only folds if the callee has a single-return body reachable in the program. The destructuring is not the problem; the call is. Fix: check the call first — see the single-return rule in **10g · Calls, enums and the values in between** *(not written yet)*.
+**★ Symptom: `const {selector} = getConfig();` fails while `const {selector} = CONFIG;` works.** Cause: `visitBindingElement` evaluates the closest variable declaration's *initializer*, and a call expression only folds if the callee has a single-return body reachable in the program. The destructuring is not the problem; the call is. Fix: check the call first — see the single-return rule in [10g · Calls, enums and the values in between](10g-calls-enums-and-the-values-in-between.md).
 
 **Symptom: a helper that destructures its options parameter breaks metadata, and inlining it fixes everything.** Cause: the parameter pattern's closest declaration is a `ts.ParameterDeclaration`, not a `ts.VariableDeclaration`, so the guard fires — regardless of how simple the helper is. Fix: keep the parameter whole and read properties off it inside the return expression, as shown above. The single-return rule and the destructuring rule are independent, and a helper has to satisfy both.
 
@@ -245,4 +245,4 @@ That a documentation page's *age* is less important than which implementation it
 
 ---
 
-← Prev: [10e · Values that do not fold](10e-values-that-resolve-but-do-not-fold.md) · Index: [Topic index](README.md) · Next → [Why `@defer` can split a bundle no bundler could](11-why-defer-can-split-a-bundle.md)
+← Prev: [10e · Values that do not fold](10e-values-that-resolve-but-do-not-fold.md) · Index: [Topic index](README.md) · Next → [10g · Calls, enums and the values in between](10g-calls-enums-and-the-values-in-between.md)

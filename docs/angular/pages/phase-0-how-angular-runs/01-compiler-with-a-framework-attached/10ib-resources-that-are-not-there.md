@@ -173,4 +173,4 @@ Whenever `templateUrl` or `styleUrl` was not a string literal. The quoted string
 **Why does the compiler not tell you which directory it searched?**
 Because it does not know. `resourceLoader.resolve` is a host method, and the host is `@angular/build` in a CLI build, the language-service host in an editor and something else again in a test. The compiler wraps the call in `try` / `catch` and constructs its own message from the URL it passed in, discarding whatever the host threw. That is why the same source can produce NG2008 under one tool and not another, and why the productive investigation is of the two hosts' configuration rather than of the component.
 
-{/* FOOTER */}
+← Prev: [The field-shape family](10i-the-field-shape-family.md) · Index: [Topic index](README.md) · Next → [Stylesheets and the scalar fields](10ic-stylesheets-and-the-scalar-fields.md)

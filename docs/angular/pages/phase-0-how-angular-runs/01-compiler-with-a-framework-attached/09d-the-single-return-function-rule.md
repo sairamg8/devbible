@@ -129,7 +129,7 @@ export class Report {}
 
 **Same function, same call, opposite outcomes** — because one of them sits where a syntax check runs and the other sits where an evaluator runs. If you remember one thing from this page, make it that.
 
-⚠️ **What this page does not establish:** whether an arrow function assigned to a `const` — `export const wrapInArray = <T,>(v: T): T[] => [v];` — is reachable as a callee. `visitFunctionBody` takes a `FunctionDefinition` produced by the reflection host, and the source read behind this page did not cover which declaration forms that host recognises. The forms that are demonstrably supported, because the framework and the documentation both use them, are the **exported `function` declaration** and the **static method**. Write those.
+🔴 **Settled 2026-09-09, at source: an arrow function assigned to a `const` is NOT reachable as a callee.** `export const wrapInArray = <T,>(v: T): T[] => [v];` cannot be called from metadata. `TypeScriptReflectionHost.getVariableValue` returns `declaration.initializer || null`, and `visitExpression`'s dispatch has **no** `ts.isArrowFunction` or `ts.isFunctionExpression` branch — so the initializer falls straight through to `DynamicValue.fromUnsupportedSyntax`. The forms that work are the **exported `function` declaration** and the **static method**; write those. The full derivation, with both source reads, is in [10g · Calls, enums and the values in between](10g-calls-enums-and-the-values-in-between.md), and the one place an arrow *is* legal in evaluated metadata — `forwardRef`, which applies the same single-return rule through `expandForwardRef` — is there too.
 
 ## What you were told was banned and is not
 

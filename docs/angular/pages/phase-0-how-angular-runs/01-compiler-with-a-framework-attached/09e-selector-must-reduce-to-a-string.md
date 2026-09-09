@@ -49,6 +49,8 @@ Four things happen in that order, and the order is the whole behaviour:
 2. **`assertLocalCompilationUnresolvedConst`** — a mode-specific check that fires *before* the type check, and only in local compilation mode.
 3. **`typeof resolved !== 'string'`** — the actual constraint. Note it is a check on the *resolved value*, not on the TypeScript type and not on the syntax.
 4. **empty string means "use the default"**, and if there is no default, the missing-selector error.
+   🔴 **`defaultSelector` is not the same for both decorators, and that changes the outcome
+   completely** — see [10if · Selector shape](10if-selector-shape-and-the-missing-token.md).
 
 So the accurate statement of the rule is: **`selector` must reduce, at build time, to a value whose JavaScript type is `string`.** Everything else people say about it is a consequence or a mode.
 
@@ -106,7 +108,16 @@ The first four all produce `selector must be a string`, and only the *second* se
 
 ## The empty-string case
 
-`selector = resolved === '' ? defaultSelector : resolved;` — an empty string is not an error, it is a request for the caller-supplied default. If the caller supplied none, `!selector` is true and you get `ErrorCode.DIRECTIVE_MISSING_SELECTOR` (NG2004). So a component whose selector constant happens to fold to `''` reports a **missing** selector rather than an empty one, and the reported node is the decorator, not the constant that produced the empty string. If you are staring at a missing-selector error on a component that visibly has a `selector:` key, that is what happened.
+`selector = resolved === '' ? defaultSelector : resolved;` — an empty string is not an error, it is a request for the caller-supplied default. If the caller supplied none, `!selector` is true and you get `ErrorCode.DIRECTIVE_MISSING_SELECTOR` (NG2004), and the reported node is the decorator, not the constant that produced the empty string. If you are staring at a missing-selector error on a **directive** that visibly has a `selector:` key, that is what happened.
+
+🔴 **On a `@Component` it does not happen at all, and that is worse.** The two decorators call this
+same function with different defaults: the directive handler passes `/* defaultSelector */ null`,
+while the component handler passes `elementSchemaRegistry.getDefaultComponentElementName()`, which
+returns the truthy string `'ng-component'`. So `!selector` is false, **no error is raised**, and the
+component compiles with the selector `ng-component` — silently. A selector constant that folds to
+`''` therefore fails loudly on a directive and ships quietly on a component. Both call sites are
+quoted, with the failing example, in
+[10if · Selector shape](10if-selector-shape-and-the-missing-token.md).
 
 ## Gotchas
 
@@ -185,8 +196,8 @@ No, it is not true as usually stated. `selector` is an ordinary evaluated field:
 **★ Why can the same selector expression compile in one build configuration and fail in another?**
 Because of `assertLocalCompilationUnresolvedConst`, which runs before the type check and only in local compilation mode. Local compilation narrows what the compiler may look at, so an identifier imported from another file has no resolvable declaration and the check fires with a message that names both fixes: move the declaration into the compilation unit, or inline the selector. Nothing about your source changed; the amount of the program the compiler was permitted to read did. It is the sharpest reminder that "statically analysable" is relative to a compilation, not an absolute property of an expression.
 
-**★ Why does `selector: ''` produce a "missing selector" error rather than an "empty selector" error?**
-Because the empty string is treated as a request for a default rather than as a value: `selector = resolved === '' ? defaultSelector : resolved`. When the caller supplied no default, `selector` is falsy and the next check throws `DIRECTIVE_MISSING_SELECTOR`. The diagnostic is attached to the decorator, so the constant that folded to `''` is not named anywhere in the error. It is a genuinely misleading message, and knowing the two lines of source above is the whole difference between five seconds and half an hour.
+**★ Why does `selector: ''` produce a "missing selector" error on a `@Directive` — and no error at all on a `@Component`?**
+Because the empty string is treated as a request for a default rather than as a value: `selector = resolved === '' ? defaultSelector : resolved`. Everything then turns on what the caller passed as `defaultSelector`. The directive handler passes `null`, so `selector` is falsy and the next check throws `DIRECTIVE_MISSING_SELECTOR`; the diagnostic is attached to the decorator, so the constant that folded to `''` is not named anywhere in the error. The component handler passes `getDefaultComponentElementName()`, which returns `'ng-component'` — truthy — so the check is never reached and nothing is reported. One decorator gives you a genuinely misleading message; the other gives you silence and a component that matches `ng-component`. Knowing which handler you are in is the whole difference.
 
 **When the compiler says `selector must be a string`, what should you look at first?**
 The sentence after it. `createValueHasWrongTypeError` builds a message chain, and the second sentence tells you which of two entirely different failures happened. `Value could not be determined statically.` means the evaluator gave up — something in the expression is not foldable, and the related-information notes trace which part. `Value is of type 'number'.` (or any other type) means the evaluation *succeeded* and produced the wrong kind of thing, which is a plain mistake in your constants rather than an analysability problem. Reading past the first sentence is the single highest-yield habit for metadata errors ([09g](09g-reading-a-metadata-failure.md)).

@@ -26,15 +26,20 @@ stop being a list of rules and start being consequences.
 
 ## Chunks
 
-✅ **All 17 numbered chunks written — 69 pages plus this index, 17,807 lines, 421 ★.** Eleven of the seventeen
-exhausted their subject past the 300-line cap and split into lettered siblings — the cap is a file
-size, never a content budget, so a chunk that ran long became five, six or seven files rather than
-a shorter page. Every row below links to a page that exists.
+✅ **All 17 numbered chunks written — 86 pages plus this index.** Twelve of the seventeen exhausted
+their subject past the 300-line cap and split into lettered siblings — the cap is a file size, never
+a content budget, so a chunk that ran long became five, six or seventeen files rather than a shorter
+page. Every row below links to a page that exists.
 
-⚠️ **Chunk 10 is a catalogue and is deliberately unfinished.** It carries its own coverage note
-naming every error it does *not* yet reach — `10g` (calls and enums) and `10h` (unsupported
-syntax) are planned, and the `NG2xxx` field-shape family after them. Read the note before
-concluding an error is absent because it cannot happen.
+✅ **Chunk 10's catalogue is now complete, and this is the note that used to say it was not.** It
+shipped deliberately unfinished with a coverage note naming what it could not yet reach; on
+2026-09-09 the three missing families landed — `10g` (calls and enums, 4 pages), `10h` (unsupported
+syntax, 6 pages) and `10i` (the `NG2xxx` field-shape family, 7 pages), taking chunk 10 from 6 pages
+to 23. 🔴 Writing them **corrected two claims this topic had been making**: spread at expression
+position does *not* print `This syntax is not supported.`, and `selector: ''` silently becomes
+`ng-component` on a `@Component` rather than reporting a missing selector. Both fixes are in
+[chunk 10's note](10-metadata-errors-one-by-one.md) and in
+[09e](09e-selector-must-reduce-to-a-string.md).
 
 | # | Chunk | Covers |
 |---|---|---|

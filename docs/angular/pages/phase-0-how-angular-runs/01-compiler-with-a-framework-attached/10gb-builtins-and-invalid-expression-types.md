@@ -222,4 +222,4 @@ Because they are the only two whose semantics do not require reading the operand
 **A metadata array built with `.concat()` compiles, and one of its elements is broken. Why did you not get an error at the array?**
 Because `ArrayConcatBuiltinFn` handles a dynamic argument by pushing `DynamicValue.fromDynamicInput(node, arg)` into the result rather than abandoning the whole concatenation. The array is produced; one of its slots holds a `DynamicValue`. Whether that is reported depends on what the field does next — a field that walks the elements and demands a class reference will report it at that index, and a field that merely counts or relays the array will not report it at all. It is the clearest example in the evaluator of a failure that is *contained* rather than propagated, and it is a good argument for writing metadata arrays as literals: a literal fails at the element, immediately, with a span you can click.
 
-{/* FOOTER */}
+← Prev: [Calls and invalid expressions](10g-calls-enums-and-the-values-in-between.md) · Index: [Topic index](README.md) · Next → [Dynamic strings and computed keys](10gc-dynamic-strings-and-computed-keys.md)

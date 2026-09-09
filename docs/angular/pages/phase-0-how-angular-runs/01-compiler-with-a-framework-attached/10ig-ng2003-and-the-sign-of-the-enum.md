@@ -191,4 +191,4 @@ Their editor or linter converted class imports used only as constructor paramete
 It is written as an `if` / `else if` chain in `annotations/common/src/di.ts` — `Inject`, `Optional`, `SkipSelf`, `Self`, `Host`, `Attribute` — with a final `else` that throws `Unexpected decorator ${name} on parameter.` under NG1005. There is no registry, no extension point and no way to teach it a seventh. What saves most codebases is the filter one line above the chain, `.filter((dec) => isCore || isAngularCore(dec))`, which discards any parameter decorator the compiler does not believe came from `@angular/core` before the chain sees it. So a third-party parameter decorator normally passes through silently, and when you *do* see NG1005 the interesting question is why the compiler thought your decorator was a core one — usually a barrel re-export or an alias.
 
 
-{/* FOOTER */}
+← Prev: [Selector shape](10if-selector-shape-and-the-missing-token.md) · Index: [Topic index](README.md) · Next → [Why `@defer` can split a bundle no bundler could](11-why-defer-can-split-a-bundle.md)
