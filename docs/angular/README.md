@@ -30,7 +30,11 @@ change-detection strategy under you without changing your components.
 ## Where this sits, as of September 2026
 
 **Angular 22 is the current major** and the version this syllabus targets.
-Majors land every six months, in May/June and November:
+🔴 **The cadence changed at v22.** angular.dev now states *"A major release every 12 months"* with
+*"4-6 minor releases for each major release"*, and carries an explicit callout: *"Until Angular v22,
+Angular had a 6-month major release cycle, with 1-3 minor releases for each major release."* The
+table below is therefore a history of the **old** cadence up to v22, not a prediction of the next
+release:
 
 | Major | Released | Support state, Sept 2026 |
 |---|---|---|
@@ -39,9 +43,12 @@ Majors land every six months, in May/June and November:
 | 20 | 28 May 2025 | 🟡 LTS ending ~Nov 2026. Frozen line at `20.3.30` |
 | 19 | 19 Nov 2024 | 🔴 **Out of support.** Its last patch, `19.2.25`, shipped 2 Jun 2026 — the day before v22 |
 
-The support window is **6 months active + 12 months LTS**, so any given major is
-supported for 18 months and exactly three are alive at once. **The next major,
-v23, is due around November 2026** — nothing in this syllabus anticipates it.
+The support window changed with the cadence: angular.dev now states *"All major releases are
+typically supported for 24 months"* — read as 12 months active plus 12 months LTS, against the
+6 + 12 = 18 months that applied to every major up to and including v21. The majors listed above
+were released under the old schedule and their published end dates reflect it. 🔴 **Under a
+12-month cadence v23 is not due around November 2026**; do not plan against the old November/May
+rhythm. Verified 2026-09-09 against [angular.dev/reference/releases](https://angular.dev/reference/releases).
 
 ⚠️ **If you last used Angular before v19, most of what you know about how an app
 is wired is out of date.** These are not stylistic changes; the old way is gone

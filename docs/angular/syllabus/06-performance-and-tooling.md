@@ -48,8 +48,8 @@ code is not in it.
 ## Phase 15 — Tooling, upgrades and the ecosystem
 
 *12 topics.* The phase that decides whether this application is still on a
-supported Angular in two years. With a six-month major cadence and an
-eighteen-month support window, "we'll upgrade later" has a deadline attached
+supported Angular in two years. With a twelve-month major cadence since v22 and a
+twenty-four-month support window, "we'll upgrade later" has a deadline attached
 whether or not anyone wrote it down.
 
 | Topic | Tier |

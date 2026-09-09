@@ -33,13 +33,13 @@ with none. Each row becomes a link as its topic lands.
 | 02 | [Standalone by default](02-standalone-by-default/README.md) | <span className="db-tier t-master">Master</span> | `bootstrapApplication(App, appConfig)`, no `NgModule`, and what `imports` now means |
 | 03 | [The provider array is the wiring](03-the-provider-array/README.md) 🚧 | <span className="db-tier t-master">Master</span> | `ApplicationConfig.providers` — what belongs there and what does not |
 | 04 | **`ng update`, not `npm install`** | <span className="db-tier t-understand">Understand</span> | Schematics rewrite your source; skipping a major is the expensive mistake |
-| 05 | **The build: `@angular/build`** | <span className="db-tier t-understand">Understand</span> | esbuild for output, Vite for the dev server; Webpack builders are legacy |
+| 05 | **The build: `@angular/build`** | <span className="db-tier t-understand">Understand</span> | 🔴 esbuild compiles, **Rolldown** re-bundles chunks (default since 22.1.0), Vite serves; Webpack builders are legacy |
 | 06 | **`angular.json` anatomy** | <span className="db-tier t-understand">Understand</span> | Projects, targets, builders, `configurations`, `fileReplacements`, `budgets` |
 | 07 | **The TypeScript setup Angular requires** | <span className="db-tier t-understand">Understand</span> | The hard `>=6.0 <6.1` peer pin, `strictTemplates`, and the tsconfig split |
 | 08 | **What `ng new` produces in v22** | <span className="db-tier t-understand">Understand</span> | The file tree, `app.config.ts`, `app.routes.ts`, `main.ts`, line by line |
-| 09 | **The release train** | <span className="db-tier t-understand">Understand</span> | Majors every six months, 6 active + 12 LTS, and how to read a changelog |
+| 09 | **The release train** | <span className="db-tier t-understand">Understand</span> | 🔴 A major every **12** months since v22, 4-6 minors each, ~24 months supported, and how to read a changelog |
 | 10 | **Partial compilation** | <span className="db-tier t-know">Know</span> | `ɵɵngDeclareComponent` in published libraries, and what the linker does |
-| 11 | **JIT vs AOT** | <span className="db-tier t-know">Know</span> | Where JIT still exists, and why it is not a deployment option |
+| 11 | **JIT vs AOT** | <span className="db-tier t-know">Know</span> | Where JIT still exists — ⚠️ `platform-browser-dynamic` is npm-deprecated at 22.1.5 — and why it is not a deployment option |
 | 12 | **Dev-mode-only behaviour** | <span className="db-tier t-know">Know</span> | `isDevMode()`, `ngDevMode`, `provideNgReflectAttributes()`, and what vanishes |
 
 ## Phase gate
