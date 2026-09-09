@@ -199,4 +199,6 @@ about. It is useful as a scheduled reporting job whose output a human reads. The
 a worse fit still, because optional migrations need a TTY to prompt and will be skipped —
 [01c · The CLI's own collection](01c-the-clis-own-collection.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [The CLI's own collection](01c-the-clis-own-collection.md) · Index: [Topic index](README.md) · Next → [One major at a time](02-one-major-at-a-time.md)

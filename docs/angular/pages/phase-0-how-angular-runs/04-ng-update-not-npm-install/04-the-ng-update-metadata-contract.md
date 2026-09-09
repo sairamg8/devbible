@@ -269,4 +269,6 @@ them together. `peerDependencies` is about *compatibility with something you do 
 library works against Angular in this range. A library publishes both — a group for its own siblings
 and a peer range for the framework — and they are read by different parts of the update.
 
-{/* FOOTER */}
+---
+
+← Prev: [The option surface](03d-the-option-surface.md) · Index: [Topic index](README.md) · Next → [Finding the migrations](04b-finding-the-migrations.md)

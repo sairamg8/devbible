@@ -239,4 +239,6 @@ pinned to the previous major passes that check without its author having tested 
 CLI verified is that nothing declared an outright conflict; what it did not verify is that the code
 works.
 
-{/* FOOTER */}
+---
+
+← Prev: [Finding the migrations](04b-finding-the-migrations.md) · Index: [Topic index](README.md) · Next → [What else shapes the plan](05b-what-else-shapes-the-plan.md)

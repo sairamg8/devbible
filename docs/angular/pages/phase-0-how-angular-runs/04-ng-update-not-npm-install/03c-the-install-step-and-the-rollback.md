@@ -225,4 +225,6 @@ from a dirty tree. On a branch with committed state and a committed lockfile, th
 `git checkout` and a reinstall. On a dirty tree with `--allow-dirty`, the worst case is that you
 cannot tell your own uncommitted work from the tool's changes.
 
-{/* FOOTER */}
+---
+
+← Prev: [What it writes to package.json](03b-what-it-writes-to-your-project.md) · Index: [Topic index](README.md) · Next → [The option surface](03d-the-option-surface.md)

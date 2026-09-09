@@ -216,4 +216,6 @@ documented as *"Ignore peer dependency version mismatches"* — it suppresses th
 make the combination work. It is a legitimate tool when you know the library is compatible and its
 range is merely stale, and a way to ship an unreproducible bug otherwise.
 
-{/* FOOTER */}
+---
+
+← Prev: [One major at a time](02-one-major-at-a-time.md) · Index: [Topic index](README.md) · Next → [How the CLI keeps its promise](02c-how-the-cli-keeps-its-own-promise.md)

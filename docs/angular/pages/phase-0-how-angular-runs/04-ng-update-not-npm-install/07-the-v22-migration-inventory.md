@@ -266,4 +266,6 @@ alongside the optional `migrate-karma-to-vitest`, it says the v22 position plain
 works and is kept working, but Vitest is where the CLI is going, and the move is offered rather than
 imposed.
 
-{/* FOOTER */}
+---
+
+← Prev: [`--create-commits`](06c-create-commits.md) · Index: [Topic index](README.md) · Next → [The on-demand migrations](07b-the-on-demand-migrations.md)

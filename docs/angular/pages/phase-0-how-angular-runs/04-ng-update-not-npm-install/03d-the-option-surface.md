@@ -220,4 +220,6 @@ for the dependency change and one per migration, so a four-hundred-file change a
 message naming the migration that made it. Without it, the dependency change and every migration's
 edits land in one working-tree diff that has to be read line by line to be trusted.
 
-{/* FOOTER */}
+---
+
+← Prev: [The install step](03c-the-install-step-and-the-rollback.md) · Index: [Topic index](README.md) · Next → [The `ng-update` metadata contract](04-the-ng-update-metadata-contract.md)

@@ -278,4 +278,6 @@ it means the update is exactly the `npm install` that
 The distinction matters when you are auditing an upgrade: a clean working tree after `ng update` is
 evidence of nothing until you know whether the package ships migrations at all.
 
-{/* FOOTER */}
+---
+
+← Prev: [The `ng-update` metadata contract](04-the-ng-update-metadata-contract.md) · Index: [Topic index](README.md) · Next → [The peer-dependency gate](05-the-peer-dependency-gate.md)

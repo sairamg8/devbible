@@ -259,4 +259,6 @@ import statement requires knowing whether the module is already imported and und
 Both are AST operations. A regex that gets them right on a hundred files gets them wrong on the
 hundred-and-first, silently.
 
-{/* FOOTER */}
+---
+
+← Prev: [Why `npm install` is not an upgrade](01-why-npm-install-is-not-an-upgrade.md) · Index: [Topic index](README.md) · Next → [The CLI's own collection](01c-the-clis-own-collection.md)

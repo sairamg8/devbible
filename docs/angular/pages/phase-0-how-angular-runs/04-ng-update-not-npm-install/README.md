@@ -24,19 +24,38 @@ this corpus, corrected on 2026-09-09 — is describing the old schedule.
 
 ## Chunks
 
-🚧 **Being written.** Chunks land one at a time and every row below links to a page that exists;
-planned chunks appear as plain text until they do, because a link to a page that does not exist
-fails the build for the whole site.
+Twenty pages across seven concepts. Each concept that outgrew the 300-line cap split on a concept
+boundary into lettered siblings; the numbering is the concept, the letter is the page.
 
 | # | Chunk | Covers |
 |---|---|---|
-| 01 | **Why `npm install` is not an upgrade** *(not written yet)* | Schematics rewrite source; the version numbers are the least of it |
-| 02 | **One major at a time** *(not written yet)* | 🔴 The guard that refuses a two-major jump, and `angularMajorCompatGuarantee` |
-| 03 | **What `ng update` actually does, step by step** *(not written yet)* | The command's real sequence, start to finish |
-| 04 | **The `ng-update` metadata contract** *(not written yet)* | How a package declares its own migrations |
-| 05 | **The peer-dependency gate** *(not written yet)* | What blocks an update before any migration runs |
-| 06 | **Required and optional migrations** *(not written yet)* | The two kinds, and why the optional ones are the ones that rot |
-| 07 | **The v22 migration inventory** *(not written yet)* | Both v22 collections, in full |
+| 01 | **[Why `npm install` is not an upgrade](01-why-npm-install-is-not-an-upgrade.md)** | Schematics rewrite source; the version numbers are the least of it |
+| 01b | [What a migration rewrites](01b-what-a-migration-rewrites.md) | What a schematic actually touches in your project |
+| 01c | [The CLI's own collection](01c-the-clis-own-collection.md) | Why `@angular/cli` migrates separately from `@angular/core` |
+| 01d | [A bare `ng update` is a report](01d-a-bare-ng-update-is-a-report.md) | 🔴 `everything seems to be in order` means "no `ng-update`-aware package is behind" |
+| 02 | **[One major at a time](02-one-major-at-a-time.md)** | 🔴 The guard that refuses a two-major jump |
+| 02b | [Running the ladder](02b-running-the-ladder.md) | The worked v20 → v22 climb, rung by rung |
+| 02c | [How the CLI keeps its promise](02c-how-the-cli-keeps-its-own-promise.md) | `angularMajorCompatGuarantee` from the framework's side |
+| 03 | **[What `ng update` actually does](03-what-ng-update-actually-does.md)** | The twelve steps, in the fixed order they run |
+| 03b | [What it writes to `package.json`](03b-what-it-writes-to-your-project.md) | The dependency edits, and what they are computed from |
+| 03c | [The install step](03c-the-install-step-and-the-rollback.md) | 🔴 The version moves before any migration runs — which is what recovery has to work around |
+| 03d | [The option surface](03d-the-option-surface.md) | Ten flags; the four that `imply` and `conflict` are the whole recovery surface |
+| 04 | **[The `ng-update` metadata contract](04-the-ng-update-metadata-contract.md)** | `packageGroup` in both published shapes, and the `0.MAJORMINOR.PATCH` devkit scheme |
+| 04b | [Finding the migrations](04b-finding-the-migrations.md) | Four validation errors, two resolution shapes, and the private-registry fallback |
+| 05 | **[The peer-dependency gate](05-the-peer-dependency-gate.md)** | 🔴 `angularMajorCompatGuarantee` is a CLI allowance, not a library's promise |
+| 05b | [What else shapes the plan](05b-what-else-shapes-the-plan.md) | The `catalog:` refusal, deprecated versions installed anyway, `minReleaseAge` |
+| 06 | **[Required and optional migrations](06-required-and-optional-migrations.md)** | 🔴 No TTY means every optional migration is skipped — CI and a laptop diverge silently |
+| 06b | [Running one migration](06b-running-one-migration.md) | The four steps, and why step four is Prettier |
+| 06c | [`--create-commits`](06c-create-commits.md) | 🔴 `git add -A` and `--no-verify`, which is why the clean tree is a precondition |
+| 07 | **[The v22 migration inventory](07-the-v22-migration-inventory.md)** | Both collections complete; eleven of thirteen run without asking |
+| 07b | [The on-demand migrations](07b-the-on-demand-migrations.md) | The fifteen `ng generate` generators nothing will ever offer you |
+
+## Phase gate
+
+You are done with this topic when you can take a project two majors behind, plan the climb, run each
+rung, read the output well enough to say which of the twelve steps a failure happened in, recover
+from a migration that died halfway without re-running the update, and say — before running anything
+— which migrations a CI pipeline will skip and what you will do about them.
 
 ## Where this sits
 
@@ -53,4 +72,4 @@ upgrade did not.
 
 ---
 
-← Prev topic: [03 · The provider array is the wiring](../03-the-provider-array/README.md) · Index: [Phase 0](../README.md) · Next topic → **05 · The build: `@angular/build`** *(not written yet)*
+← Prev: [03 · The provider array is the wiring](../03-the-provider-array/README.md) · Index: [Phase 0](../README.md) · Start → [01 · Why `npm install` is not an upgrade](01-why-npm-install-is-not-an-upgrade.md) · Next topic → **05 · The build: `@angular/build`** *(not written yet)*

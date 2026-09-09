@@ -230,7 +230,7 @@ git commit -am "standalone migration: formatting and lint"
 **Symptom: the schematic errors out or produces nothing useful on an older project.** Cause: the
 documented floor is *"using Angular 15.2.0 or later"* — the schematic emits `imports` arrays and
 standalone metadata that earlier compilers reject. Fix: get onto a supported line first with `ng update`
-(topic **04 · Keeping an Angular app current** *(not written yet)* owns that command; Phase 15 owns
+(topic [04 · `ng update`, not `npm install`](../04-ng-update-not-npm-install/README.md) owns that command; Phase 15 owns
 upgrade mechanics end to end), and only then run this schematic. The two are unrelated tools that
 people routinely confuse — `ng update` moves your *version*, this schematic changes your *code shape*.
 

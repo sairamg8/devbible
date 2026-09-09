@@ -257,4 +257,6 @@ migrations you need are selected by a range built from the *installed* version, 
 that input when you edited the number. The recovery is to drive the migrations directly with
 `--migrate-only` and an explicit `--from`.
 
-{/* FOOTER */}
+---
+
+← Prev: [How the CLI keeps its promise](02c-how-the-cli-keeps-its-own-promise.md) · Index: [Topic index](README.md) · Next → [What it writes to package.json](03b-what-it-writes-to-your-project.md)

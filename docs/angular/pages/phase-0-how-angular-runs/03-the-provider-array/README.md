@@ -154,7 +154,7 @@ root `provide*`, a route-level `providers` array and `providedIn: 'root'` withou
   survive the analysis `NgModule.forRoot()` fought against.
 - **[02 · Standalone by default](../02-standalone-by-default/README.md)** — removing
   `NgModule` removed the place configuration used to live. This topic is where it went.
-- **04 · `ng update`, not `npm install`** *(not written yet)* — the schematics that rewrite
+- **[04 · `ng update`, not `npm install`](../04-ng-update-not-npm-install/README.md)** — the schematics that rewrite
   this array for you when a `provide*` signature changes or a feature is deprecated.
 - **Phase 5 — Change detection and zoneless** *(not written yet)* — chunk 05 names the
   providers; that phase explains the machine behind them.
@@ -167,4 +167,4 @@ root `provide*`, a route-level `providers` array and `providedIn: 'root'` withou
 
 ---
 
-← Prev: [02 · Standalone by default](../02-standalone-by-default/README.md) · Start → [01 · `app.config.ts` and what bootstrap does with it](01-app-config-and-what-bootstrap-does-with-it.md) · Next topic → **04 · `ng update`, not `npm install`** *(not written yet)*
+← Prev: [02 · Standalone by default](../02-standalone-by-default/README.md) · Start → [01 · `app.config.ts` and what bootstrap does with it](01-app-config-and-what-bootstrap-does-with-it.md) · Next topic → [04 · `ng update`, not `npm install`](../04-ng-update-not-npm-install/README.md)

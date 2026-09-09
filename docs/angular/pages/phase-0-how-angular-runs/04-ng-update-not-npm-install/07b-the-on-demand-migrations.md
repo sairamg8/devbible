@@ -175,4 +175,6 @@ twelve directories match neither the eight automatic migrations nor the fifteen 
 up because it looks authoritative in a file listing. The two `.json` collections are what define
 what exists; the directory only shows where some of it is implemented.
 
-{/* FOOTER */}
+---
+
+← Prev: [The v22 migration inventory](07-the-v22-migration-inventory.md) · Index: [Topic index](README.md) · Next topic → **05 · The build: `@angular/build`** *(not written yet)*

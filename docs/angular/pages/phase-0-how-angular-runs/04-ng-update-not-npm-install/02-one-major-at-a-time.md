@@ -210,7 +210,7 @@ guard has no bypass at all. Fix: there is no flag; run the ladder.
 **★ Symptom: the guard fires on a package you did not name on the command line.** Cause: it walks
 the resolved dependency graph, and `packageGroup` pulls a whole family in with the package you did
 name. Fix: expected — the family moves together, so the constraint applies to every member. The
-`packageGroup` mechanism is **04 · The `ng-update` metadata contract** *(not written yet)*.
+`packageGroup` mechanism is [04 · The `ng-update` metadata contract](04-the-ng-update-metadata-contract.md).
 
 ## Interview questions
 
@@ -250,4 +250,6 @@ Untouched. The check runs before the update plan is applied, so `package.json`, 
 `node_modules` are all exactly as they were, and the process exits 1. That is worth knowing because
 it means you can attempt the wrong thing safely and read the error for the right command.
 
-{/* FOOTER */}
+---
+
+← Prev: [A bare `ng update` is a report](01d-a-bare-ng-update-is-a-report.md) · Index: [Topic index](README.md) · Next → [Running the ladder](02b-running-the-ladder.md)

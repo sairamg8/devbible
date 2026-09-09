@@ -227,4 +227,6 @@ workspace's dependencies. Writing the new version into the catalog would change 
 for every package that references it, including ones the command was never asked to touch. Refusing
 and printing the recipe keeps a monorepo-wide decision with the human making it.
 
-{/* FOOTER */}
+---
+
+← Prev: [The peer-dependency gate](05-the-peer-dependency-gate.md) · Index: [Topic index](README.md) · Next → [Required and optional migrations](06-required-and-optional-migrations.md)

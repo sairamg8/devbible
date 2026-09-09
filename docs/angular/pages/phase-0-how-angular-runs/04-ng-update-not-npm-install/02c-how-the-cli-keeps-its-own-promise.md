@@ -290,4 +290,6 @@ nothing that a newer CLI would be required for.
 explicitly, and the child's own version check reads it and skips. Without that, a CLI whose
 version check disagreed with its own would recurse.
 
-{/* FOOTER */}
+---
+
+← Prev: [Running the ladder](02b-running-the-ladder.md) · Index: [Topic index](README.md) · Next → [What `ng update` actually does](03-what-ng-update-actually-does.md)

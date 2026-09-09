@@ -264,4 +264,6 @@ has nothing to do with correctness. The trade-off is visibility: the only eviden
 `WARNING:` line in a long log, and the practical effect — migrated files left unformatted — looks
 like nothing at all.
 
-{/* FOOTER */}
+---
+
+← Prev: [Required and optional migrations](06-required-and-optional-migrations.md) · Index: [Topic index](README.md) · Next → [`--create-commits`](06c-create-commits.md)

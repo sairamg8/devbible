@@ -227,4 +227,6 @@ deployment topology, which no migration can know. "Required" means only *"this r
 asking"* — it is a statement about the prompt, not about the risk. The migration's own description
 linking to a security guidance page is the framework saying as much.
 
-{/* FOOTER */}
+---
+
+← Prev: [What a migration rewrites](01b-what-a-migration-rewrites.md) · Index: [Topic index](README.md) · Next → [A bare `ng update` is a report](01d-a-bare-ng-update-is-a-report.md)

@@ -252,4 +252,6 @@ alias with the new target version, keeping both the original alias registry name
 prefix. This is one of the few places where the CLI does string surgery rather than a plain
 replacement, and the source comment documents it.
 
-{/* FOOTER */}
+---
+
+← Prev: [What `ng update` actually does](03-what-ng-update-actually-does.md) · Index: [Topic index](README.md) · Next → [The install step](03c-the-install-step-and-the-rollback.md)

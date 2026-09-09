@@ -278,4 +278,6 @@ is the publisher saying "most people should take this one". Reading it as a proj
 recommendation is the mistake, and it matters because accepting the pre-ticked set unread is how a
 large refactoring migration lands in a diff nobody expected.
 
-{/* FOOTER */}
+---
+
+← Prev: [What else shapes the plan](05b-what-else-shapes-the-plan.md) · Index: [Topic index](README.md) · Next → [Running one migration](06b-running-one-migration.md)

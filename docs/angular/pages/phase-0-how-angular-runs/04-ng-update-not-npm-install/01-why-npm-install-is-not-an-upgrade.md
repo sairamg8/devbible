@@ -72,7 +72,7 @@ Two facts follow, and both matter more than they look.
 - **`packageGroup` names sixteen packages that move as a unit.** That is why the documented
   invocation updates the framework as a group rather than a package at a time. The full contract —
   what each field means and how a third-party library declares its own — is
-  **04 · The `ng-update` metadata contract** *(not written yet)*.
+  [04 · The `ng-update` metadata contract](04-the-ng-update-metadata-contract.md).
 
 ## What those migrations are, and what they do to your files
 
@@ -270,4 +270,6 @@ carries a `version` field, and `ng update` builds a semver range from the instal
 target and runs the migrations inside it. Editing the installed version by hand does not just skip
 a step — it destroys the input the selection depends on.
 
-{/* FOOTER */}
+---
+
+← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [What a migration rewrites](01b-what-a-migration-rewrites.md)

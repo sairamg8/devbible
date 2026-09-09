@@ -203,4 +203,6 @@ name — the history now lies. Returning `1` at the first failure keeps the inva
 promises, at the cost of leaving the update partially applied, which is recoverable with
 `--migrate-only --from`.
 
-{/* FOOTER */}
+---
+
+← Prev: [Running one migration](06b-running-one-migration.md) · Index: [Topic index](README.md) · Next → [The v22 migration inventory](07-the-v22-migration-inventory.md)
