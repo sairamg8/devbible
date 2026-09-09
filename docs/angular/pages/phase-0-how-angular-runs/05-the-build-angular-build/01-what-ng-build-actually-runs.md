@@ -261,6 +261,4 @@ optimizes when you build and does not when you serve — which is correct, and i
 in `ng serve` but not in `ng build`" is such a common report. Naming the configuration explicitly
 removes the ambiguity.
 
----
-
-← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → **Inside the package** *(not written yet)*
+{/* FOOTER */}
