@@ -220,4 +220,6 @@ type), `strictInputAccessModifiers` (absent means off even under `strictTemplate
 `strictTemplates` itself (absent means on since v22). Those four carry the surprises; the remaining
 flags follow the baseline predictably and can reasonably be left absent.
 
-{/* FOOTER */}
+---
+
+← Prev: [The override layer](06c-the-override-layer.md) · Index: [Topic index](README.md) · Next → [What strictTemplates rejects](07-what-stricttemplates-rejects.md)

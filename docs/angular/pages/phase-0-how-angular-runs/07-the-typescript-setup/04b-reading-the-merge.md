@@ -255,4 +255,6 @@ happens to `extendedDiagnostics`, the only nested object in the public surface:
 implementation of the same walk — the one that rewrites your tsconfig on upgrade — is
 [04d · The second implementation](04d-the-second-implementation.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [angularCompilerOptions inheritance](04-angularcompileroptions-and-how-it-inherits.md) · Index: [Topic index](README.md) · Next → [What the shallow merge costs](04c-what-the-shallow-merge-costs.md)

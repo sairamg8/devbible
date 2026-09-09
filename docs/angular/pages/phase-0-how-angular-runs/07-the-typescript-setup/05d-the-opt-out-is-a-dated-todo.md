@@ -266,4 +266,6 @@ migration that would have adjusted the setting for you will also pass the projec
 value buys stability and gives up automation; that is a fair trade, and it should be a decision
 rather than a habit.
 
-{/* FOOTER */}
+---
+
+← Prev: [What the upgrade wrote](05c-what-the-upgrade-wrote-into-your-file.md) · Index: [Topic index](README.md) · Next → [The three guards](05e-the-three-guards.md)

@@ -262,4 +262,6 @@ Two Angular compiler options are resolved **outside** both the branch and this b
 default-resolution idioms, and one of them survives a `strictTemplates` opt-out entirely:
 [06d · The options outside the switch](06d-the-options-outside-the-switch.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [The two branches](06b-the-two-branches.md) · Index: [Topic index](README.md) · Next → [The options outside the switch](06d-the-options-outside-the-switch.md)

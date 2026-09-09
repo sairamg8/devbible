@@ -269,4 +269,6 @@ leave the rest absent, and treat the compiler's own source as the reference for 
 policy that requires reading the tsconfig alone to know the build's behaviour is unachievable in
 v22.
 
-{/* FOOTER */}
+---
+
+← Prev: [The three guards](05e-the-three-guards.md) · Index: [Topic index](README.md) · Next → [The two branches](06b-the-two-branches.md)

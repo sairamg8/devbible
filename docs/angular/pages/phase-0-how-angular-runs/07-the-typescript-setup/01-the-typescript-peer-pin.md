@@ -271,4 +271,6 @@ The Angular-versioned entries in `latestVersions` are substituted during the rel
 **A colleague fixed a peer conflict with `--legacy-peer-deps` and says the build is fine. What do you check?**
 Whether the pipeline compiles at all. `--legacy-peer-deps` makes npm ignore `peerDependencies` while building the tree — not just this one, every one — so a green install proves nothing about any compatibility constraint in the project. The check that would catch a wrong TypeScript is the build, and the check that would catch the *other* peer ranges the flag suppressed does not exist any more. The correct sequence is: remove the flag, install, and deal with whatever single conflict actually reappears.
 
-{/* FOOTER */}
+---
+
+← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [The check inside the compiler](01b-the-check-inside-the-compiler.md)

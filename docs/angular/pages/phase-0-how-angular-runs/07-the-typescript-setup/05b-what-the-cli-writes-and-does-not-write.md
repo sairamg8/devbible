@@ -263,4 +263,6 @@ project. Silence keeps the project on the framework's default, wherever that mov
 [05c](05c-what-the-upgrade-wrote-into-your-file.md) for the same logic running in the other
 direction.
 
-{/* FOOTER */}
+---
+
+← Prev: [strictTemplates is the default](05-stricttemplates-is-the-default-in-v22.md) · Index: [Topic index](README.md) · Next → [What the upgrade wrote](05c-what-the-upgrade-wrote-into-your-file.md)

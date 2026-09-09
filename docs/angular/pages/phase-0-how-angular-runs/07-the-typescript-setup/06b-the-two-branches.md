@@ -268,4 +268,6 @@ and the special cases would be invisible; written as two literal objects, every 
 you can read, with a comment next to it explaining itself. It is also why quoting this object is a
 better answer than any prose summary of what `strictTemplates` does.
 
-{/* FOOTER */}
+---
+
+← Prev: [What strictTemplates switches on](06-what-stricttemplates-switches-on.md) · Index: [Topic index](README.md) · Next → [The override layer](06c-the-override-layer.md)

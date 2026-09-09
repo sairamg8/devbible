@@ -273,4 +273,6 @@ The strongest evidence that the shallow, hand-rolled merge is a real quirk rathe
 detail is that Angular implements it **twice**, in two places that behave differently:
 [04d · The second implementation](04d-the-second-implementation.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [Reading the merge](04b-reading-the-merge.md) · Index: [Topic index](README.md) · Next → [The second implementation](04d-the-second-implementation.md)

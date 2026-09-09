@@ -238,4 +238,6 @@ nobody reads them. A project that intends to benefit from them sets `defaultCate
 names the specific checks it is not ready for under `checks` — the same escalate-narrowly discipline
 that applies to the strictness flags in [07c](07c-the-escape-hatches-are-ranked.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [The options you add yourself](08b-the-options-you-add-yourself.md) · Index: [Topic index](README.md) · Next → […and the upgrade](08d-extended-diagnostics-and-the-upgrade.md)

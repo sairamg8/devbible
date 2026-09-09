@@ -271,4 +271,6 @@ yet"*. And host bindings are governed by a separate option, `typeCheckHostBindin
 still having its `host` expressions and `@HostListener` arguments checked.
 [14k](../01-compiler-with-a-framework-attached/14k-the-checks-with-no-switch.md) is the full inventory.
 
-{/* FOOTER */}
+---
+
+← Prev: [The escape hatches are ranked](07c-the-escape-hatches-are-ranked.md) · Index: [Topic index](README.md) · Next → [Where the opt-out goes](07e-where-the-opt-out-goes.md)

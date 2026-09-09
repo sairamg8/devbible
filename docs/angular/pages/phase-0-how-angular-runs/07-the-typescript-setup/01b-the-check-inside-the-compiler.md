@@ -279,4 +279,6 @@ It is a test seam — it lets Angular's own suite drive `checkVersion` against a
 **A build fails with this error in CI and passes on three developers' machines. Where do you look first?**
 At what is resolved on disk in each place, not at the configuration. The check reads the version off the `typescript` module the compilation loaded, so the question is which copy each environment resolves — a stale `node_modules` locally versus a clean `npm ci` in CI is the most common answer, followed by a hoisting difference in a workspace and then an `overrides` or `resolutions` entry that only one lockfile carries. `npm ls typescript --all` in each environment settles it in one command; comparing `package.json` files does not, because the file is not what is being read.
 
-{/* FOOTER */}
+---
+
+← Prev: [The TypeScript peer pin](01-the-typescript-peer-pin.md) · Index: [Topic index](README.md) · Next → [Why the pin is one minor wide](02-why-the-pin-is-one-minor-wide.md)

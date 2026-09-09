@@ -258,4 +258,6 @@ TypeScript's. Putting one in the other's object produces no error at all in eith
 why the mistake survives so long — see
 [04](04-angularcompileroptions-and-how-it-inherits.md) for the merge that makes this true.
 
-{/* FOOTER */}
+---
+
+← Prev: [The other angularCompilerOptions](08-the-other-angular-compiler-options.md) · Index: [Topic index](README.md) · Next → [Configuring extended diagnostics](08c-configuring-extended-diagnostics.md)

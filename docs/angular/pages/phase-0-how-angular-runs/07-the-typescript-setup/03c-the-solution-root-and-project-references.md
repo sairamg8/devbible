@@ -214,4 +214,6 @@ At the root's `references` array, and then at whether the spec config exists at 
 **Why can adding a second application never clobber the first application's references?**
 Because the helper reads the existing value first and spreads it — `Array.isArray(value) ? [...value, ...newReferences] : newReferences` — so it appends when there is an array and creates one when there is not. This is worth knowing as a diagnostic fact rather than as trivia: it means a missing reference in a real workspace was always a human edit, so the question to ask is "who removed this and why" rather than "did the CLI fail to write it".
 
-{/* FOOTER */}
+---
+
+← Prev: [The app and spec configs](03b-the-app-and-spec-configs.md) · Index: [Topic index](README.md) · Next → [angularCompilerOptions inheritance](04-angularcompileroptions-and-how-it-inherits.md)

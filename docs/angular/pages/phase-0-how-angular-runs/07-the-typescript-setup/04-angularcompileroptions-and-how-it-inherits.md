@@ -276,4 +276,6 @@ array `extends` and the two ways a file in the chain contributes nothing without
 any of it: Angular implements this walk **twice**, in two places that behave differently —
 [04d · The second implementation](04d-the-second-implementation.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [The solution root and references](03c-the-solution-root-and-project-references.md) · Index: [Topic index](README.md) · Next → [Reading the merge](04b-reading-the-merge.md)

@@ -75,7 +75,7 @@ The third line is the one worth running before you accept an automated dependenc
 The chain is short, and every link is a fact quoted elsewhere in this topic or in topic 01:
 
 - `@angular/compiler-cli` constructs and owns a `ts.Program` — `NgtscProgram`, whose constructor is quoted in [01b](01b-the-check-inside-the-compiler.md).
-- It calls TypeScript's configuration API directly, `ts.readConfigFile` and `ts.parseJsonConfigFileContent`, to load your `tsconfig.json` — see **04 · `angularCompilerOptions` and how it inherits** *(not written yet)*.
+- It calls TypeScript's configuration API directly, `ts.readConfigFile` and `ts.parseJsonConfigFileContent`, to load your `tsconfig.json` — see [04 · `angularCompilerOptions` and how it inherits](04-angularcompileroptions-and-how-it-inherits.md).
 - It reads `ts.version` off the module object at runtime, rather than off a manifest ([01b](01b-the-check-inside-the-compiler.md)).
 - It **generates type-check blocks**: synthetic TypeScript that TypeScript is then asked to check, which is what template type checking actually is — see [14 · Template type checking](../01-compiler-with-a-framework-attached/14-template-type-checking.md).
 - Its diagnostic categories map onto `ts.DiagnosticCategory`, so Angular's error surface *is* TypeScript's error surface ([13c](../01-compiler-with-a-framework-attached/13c-the-ng-error-code-is-a-typescript-code.md)).
@@ -175,4 +175,6 @@ No page stating the rationale was found — not the compiler-options reference, 
 **A colleague wants to skip from Angular 21 to 23 in one step to reduce disruption. What does the TypeScript pin have to do with it?**
 The window moves with the major, so a two-major hop is also a two-window hop, and the intermediate release — the one that added support for the TypeScript you are landing on — is the one you skipped. The CLI refuses this independently of TypeScript, which [04 · One major at a time](../04-ng-update-not-npm-install/02-one-major-at-a-time.md) covers. The TypeScript angle is the reason the refusal is doing you a favour rather than being pedantic: the ramp only exists if you stand on each rung.
 
-{/* FOOTER */}
+---
+
+← Prev: [The check inside the compiler](01b-the-check-inside-the-compiler.md) · Index: [Topic index](README.md) · Next → [The three tsconfig files](03-the-three-tsconfig-files.md)

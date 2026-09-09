@@ -281,4 +281,6 @@ every build — so silencing the install-time peer warning with `--force` only m
 `ng build`. The correct action is to let `ng update` move both together
 ([01b](01b-the-check-inside-the-compiler.md)).
 
-{/* FOOTER */}
+---
+
+← Prev: […and the upgrade](08d-extended-diagnostics-and-the-upgrade.md) · Index: [Topic index](README.md) · Next → [The generated compilerOptions](09b-the-generated-compileroptions-line-by-line.md)

@@ -274,4 +274,6 @@ TypeScript options Angular refuses outright, covered in
 The practical defence is to copy key names from the reference page rather than typing them, and to
 verify a new setting changed something before believing it took.
 
-{/* FOOTER */}
+---
+
+← Prev: [Where the opt-out goes](07e-where-the-opt-out-goes.md) · Index: [Topic index](README.md) · Next → [The options you add yourself](08b-the-options-you-add-yourself.md)

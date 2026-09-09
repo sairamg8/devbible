@@ -231,4 +231,6 @@ for the compiler — so that a package specifier and an array both resolve. The 
 change; the two already produce the same precedence. Everything else in the divergence table follows
 from resolution, not from merging.
 
-{/* FOOTER */}
+---
+
+← Prev: [What the shallow merge costs](04c-what-the-shallow-merge-costs.md) · Index: [Topic index](README.md) · Next → [strictTemplates is the default](05-stricttemplates-is-the-default-in-v22.md)

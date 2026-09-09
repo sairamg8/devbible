@@ -266,4 +266,6 @@ nothing by design. It is not a `compilerOptions` key at all.
 [03c](03c-the-solution-root-and-project-references.md) covers how the `references` array gets there and
 which tools actually read it.
 
-{/* FOOTER */}
+---
+
+← Prev: [TypeScript 6 defaults](09-typescript-6-defaults-and-what-ng-new-writes.md) · Index: [Topic index](README.md) · Next topic → **08 · What `ng new` produces in v22** *(not written yet)*

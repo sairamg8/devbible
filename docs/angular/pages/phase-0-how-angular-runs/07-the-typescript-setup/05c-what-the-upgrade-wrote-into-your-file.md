@@ -133,49 +133,6 @@ with the reason in the function's own doc comment:
 > *"This avoids picking up tsconfig files of non-Angular projects in a mixed workspace (e.g. an Nx
 > monorepo), which should not be touched by Angular migrations."*
 
-## Three guards, and why each exists
-
-```ts
-      if (
-        !compilerOptions ||
-        typeof compilerOptions !== 'object' ||
-        Object.keys(compilerOptions).length === 0
-      ) {
-        continue;
-      }
-
-      const angularOptions = getResolvedAngularCompilerOptions(tree, tsconfigPath);
-
-      if (angularOptions['strictTemplates'] !== undefined) {
-        continue;
-      }
-
-      if (json.get(['angularCompilerOptions', 'strictTemplates']) === undefined) {
-        json.modify(['angularCompilerOptions', 'strictTemplates'], false);
-      }
-```
-
-- **The `compilerOptions` guard** skips a file that has no meaningful TypeScript configuration of
-  its own — missing, not an object, or empty.
-- **The resolved-value guard** asks whether the project already has an opinion *anywhere in its
-  inheritance chain*, walking `extends` by hand — the resolver, and the ways it diverges from the
-  compiler's, are [04d · The second implementation](04d-the-second-implementation.md).
-- **The own-key guard** asks whether this particular file already carries the key, which matters
-  when a build target and a test target resolve to the same file.
-
-Together: the migration only ever writes into a file that was genuinely relying on the framework's
-default.
-
-## The asymmetry, stated plainly
-
-| How the app reached v22 | `strictTemplates` in the project tsconfigs | Effective value |
-|---|---|---|
-| `ng new` on v22 | **absent** | **`true`** — the compiler's default |
-| `ng update` from v21 | **written explicitly as `false`** by the migration | **`false`** |
-
-Both projects are on Angular 22.1.5. Both are "using the defaults" as far as anyone reading the
-project's history is concerned. They type-check differently.
-
 ## Gotchas
 
 **★ Symptom: the same component compiles in a new project and fails in an old one, on the same
@@ -297,4 +254,6 @@ preference, how to remove it without reinstating it wholesale, and the second v2
 does exactly the same thing for two extended diagnostics — is
 [05d · The opt-out is a dated TODO](05d-the-opt-out-is-a-dated-todo.md).
 
-{/* FOOTER */}
+---
+
+← Prev: [What the CLI writes](05b-what-the-cli-writes-and-does-not-write.md) · Index: [Topic index](README.md) · Next → [The opt-out is a dated TODO](05d-the-opt-out-is-a-dated-todo.md)

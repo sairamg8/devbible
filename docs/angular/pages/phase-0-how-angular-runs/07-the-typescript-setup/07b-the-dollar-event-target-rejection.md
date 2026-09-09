@@ -245,4 +245,6 @@ does not even fix the second error — it looks like a fix and is not one. The g
 template expression should contain no type reasoning; push it across the boundary into TypeScript
 where it can be checked.
 
-{/* FOOTER */}
+---
+
+← Prev: [What strictTemplates rejects](07-what-stricttemplates-rejects.md) · Index: [Topic index](README.md) · Next → [The escape hatches are ranked](07c-the-escape-hatches-are-ranked.md)

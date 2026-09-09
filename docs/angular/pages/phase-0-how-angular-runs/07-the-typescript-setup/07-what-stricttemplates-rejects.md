@@ -271,4 +271,6 @@ tested. Narrowing in the parent is right when the child genuinely must not exist
 boundary, or a route whose data has not resolved — because then the child's code never has to consider
 `null` at all and its input can stay required.
 
-{/* FOOTER */}
+---
+
+← Prev: [The options outside the switch](06d-the-options-outside-the-switch.md) · Index: [Topic index](README.md) · Next → [The $event.target rejection](07b-the-dollar-event-target-rejection.md)

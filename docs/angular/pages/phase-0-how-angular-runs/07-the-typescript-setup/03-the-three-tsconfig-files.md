@@ -89,7 +89,7 @@ The `strict` option defaults to `true` in both schemas that can reach this templ
 }
 ```
 
-What each of those ten `compilerOptions` keys is for — and which are Angular requirements versus workspace choices you may change — belongs to **09 · TypeScript 6 defaults and the generated options** *(not written yet)*. What matters here is the shape: two sibling objects, ten keys in one and three in the other, and `"files": []` at the bottom.
+What each of those ten `compilerOptions` keys is for — and which are Angular requirements versus workspace choices you may change — belongs to [09 · TypeScript 6 defaults and the generated options](09-typescript-6-defaults-and-what-ng-new-writes.md). What matters here is the shape: two sibling objects, ten keys in one and three in the other, and `"files": []` at the bottom.
 
 ## 🔴 Read what is not there
 
@@ -99,7 +99,7 @@ Neither `"strict": true` nor `"strictTemplates": true` appears anywhere in that 
 
 > *"The appetite for stricter typing continues to grow, and we've found that most new projects want `strict` mode enabled. If you were already using `"strict": true`, nothing changes for you. If you were relying on the previous default of `false`, you'll need to explicitly set `"strict": false` in your `tsconfig.json`."*
 
-**`angularCompilerOptions.strictTemplates` comes from Angular.** It has defaulted to `true` since 22.0.0, and topic 01 documents the flip and its consequences at Master tier in [14f · `strictTemplates` is on by default](../01-compiler-with-a-framework-attached/14f-what-stricttemplates-actually-switches.md). What that default switches on flag by flag, and what an upgrade migration does about it, are **05 · `strictTemplates` is the default in v22** *(not written yet)* and **06 · What `strictTemplates` actually switches on** *(not written yet)*.
+**`angularCompilerOptions.strictTemplates` comes from Angular.** It has defaulted to `true` since 22.0.0, and topic 01 documents the flip and its consequences at Master tier in [14f · `strictTemplates` is on by default](../01-compiler-with-a-framework-attached/14f-what-stricttemplates-actually-switches.md). What that default switches on flag by flag, and what an upgrade migration does about it, are [05 · `strictTemplates` is the default in v22](05-stricttemplates-is-the-default-in-v22.md) and [06 · What `strictTemplates` actually switches on](06-what-stricttemplates-switches-on.md).
 
 Notice how tightly those two decisions are coupled without either file mentioning the other. The CLI can safely omit `"strict": true` **only because** it also pins `typescript` to `~6.0.2` ([01](01-the-typescript-peer-pin.md)), which guarantees the workspace is on a TypeScript where that default holds. A workspace whose TypeScript was dragged backwards would silently lose strictness with no line in any config file changing.
 
@@ -191,7 +191,7 @@ Every conversation about this goes wrong in the same place, so disambiguate on f
 
 with `"strictTemplates": false` deleted outright rather than set to `true` — deleting it restores the framework default and leaves one fewer thing to maintain when the default next moves.
 
-**★ Symptom: an upgraded project has `"strictTemplates": false` in a file nobody on the team edited.** Cause: this is not the `ng new` template — an upgrade migration wrote it, so that a project which built before the default flipped still builds after. Fix: the line is a deferral, not a decision. Delete it and fix the errors that appear, on a branch, deliberately. [14g · What turning it off costs](../01-compiler-with-a-framework-attached/14g-what-turning-strict-templates-off-costs.md) is the argument for doing so, and **05 · `strictTemplates` is the default in v22** *(not written yet)* covers the migration itself.
+**★ Symptom: an upgraded project has `"strictTemplates": false` in a file nobody on the team edited.** Cause: this is not the `ng new` template — an upgrade migration wrote it, so that a project which built before the default flipped still builds after. Fix: the line is a deferral, not a decision. Delete it and fix the errors that appear, on a branch, deliberately. [14g · What turning it off costs](../01-compiler-with-a-framework-attached/14g-what-turning-strict-templates-off-costs.md) is the argument for doing so, and [05 · `strictTemplates` is the default in v22](05-stricttemplates-is-the-default-in-v22.md) covers the migration itself.
 
 **★ Symptom: `"strictTemplates": false` is in the file and nobody can say whether it was generated that way or written by an upgrade.** Cause: the `--no-strict` branch of the template and the v22 upgrade migration produce the *same line*, and the file does not record which wrote it. Fix: read the neighbours, because the two origins have different fingerprints. A `--no-strict` generation also wrote `"strict": false` and omitted both extras:
 
@@ -280,4 +280,6 @@ That *newly generated* projects are strict by default, because the schematic's `
 **Which of the three "strict" switches would you expect to find in `angular.json` rather than `tsconfig.json`?**
 None of them at generation time — the schematic's `--strict` is a command-line option consumed when the workspace is created, not a persisted setting, and the other two are TypeScript and Angular compiler options that live in `tsconfig.json`. The nuance worth knowing is that a schematic's default *can* be persisted in `angular.json`'s schematics defaults block, which [13h · Schematics and generator defaults](../06-angular-json-anatomy/13h-schematics-and-generator-defaults.md) covers — so the value used by a future `ng generate` is configurable even though the flag itself leaves no trace in the tsconfig.
 
-{/* FOOTER */}
+---
+
+← Prev: [Why the pin is one minor wide](02-why-the-pin-is-one-minor-wide.md) · Index: [Topic index](README.md) · Next → [The app and spec configs](03b-the-app-and-spec-configs.md)

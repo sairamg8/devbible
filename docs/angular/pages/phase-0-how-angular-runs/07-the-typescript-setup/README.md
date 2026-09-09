@@ -38,21 +38,41 @@ Where they meet, this topic links rather than re-argues.
 
 ## Chunks
 
-🚧 **Being written.** Chunks land one at a time and every row below links to a page that exists;
-planned chunks appear as plain text until they do, because a link to a page that does not exist
-fails the build for the whole site.
+Thirty pages across nine concepts. Every concept that outgrew the 300-line cap split on a
+concept boundary into lettered siblings.
 
-| # | Chunk | Covers |
-|---|---|---|
-| 01 | **The TypeScript peer pin** *(not written yet)* | 🔴 Two mechanisms, two failure surfaces, one escape hatch that works |
-| 02 | **Why the pin is one minor wide** *(not written yet)* | What Angular depends on that moves between TypeScript minors |
-| 03 | **The three `tsconfig` files** *(not written yet)* | The base, the app, the spec — and what each is for |
-| 04 | **`angularCompilerOptions` and how it inherits** *(not written yet)* | The inheritance rule that is not TypeScript's |
-| 05 | **`strictTemplates` is the default in v22** *(not written yet)* | 🔴 And a migration writes `false` into your file to keep you building |
-| 06 | **What `strictTemplates` actually switches on** *(not written yet)* | The individual flags it is shorthand for |
-| 07 | **What `strictTemplates` rejects** *(not written yet)* | The errors, and which are worth suppressing |
-| 08 | **The other `angularCompilerOptions`** *(not written yet)* | The rest of the surface, option by option |
-| 09 | **TypeScript 6 defaults and the generated options** *(not written yet)* | What `ng new` writes and what it no longer needs to |
+| # | Chunk |
+|---|---|
+| 01 | **[The TypeScript peer pin](01-the-typescript-peer-pin.md)** |
+| 01b | [The check inside the compiler](01b-the-check-inside-the-compiler.md) |
+| 02 | **[Why the pin is one minor wide](02-why-the-pin-is-one-minor-wide.md)** |
+| 03 | **[The three tsconfig files](03-the-three-tsconfig-files.md)** |
+| 03b | [The app and spec configs](03b-the-app-and-spec-configs.md) |
+| 03c | [The solution root and references](03c-the-solution-root-and-project-references.md) |
+| 04 | **[angularCompilerOptions inheritance](04-angularcompileroptions-and-how-it-inherits.md)** |
+| 04b | [Reading the merge](04b-reading-the-merge.md) |
+| 04c | [What the shallow merge costs](04c-what-the-shallow-merge-costs.md) |
+| 04d | [The second implementation](04d-the-second-implementation.md) |
+| 05 | **[strictTemplates is the default](05-stricttemplates-is-the-default-in-v22.md)** |
+| 05b | [What the CLI writes](05b-what-the-cli-writes-and-does-not-write.md) |
+| 05c | [What the upgrade wrote](05c-what-the-upgrade-wrote-into-your-file.md) |
+| 05d | [The opt-out is a dated TODO](05d-the-opt-out-is-a-dated-todo.md) |
+| 05e | [The three guards](05e-the-three-guards.md) |
+| 06 | **[What strictTemplates switches on](06-what-stricttemplates-switches-on.md)** |
+| 06b | [The two branches](06b-the-two-branches.md) |
+| 06c | [The override layer](06c-the-override-layer.md) |
+| 06d | [The options outside the switch](06d-the-options-outside-the-switch.md) |
+| 07 | **[What strictTemplates rejects](07-what-stricttemplates-rejects.md)** |
+| 07b | [The $event.target rejection](07b-the-dollar-event-target-rejection.md) |
+| 07c | [The escape hatches are ranked](07c-the-escape-hatches-are-ranked.md) |
+| 07d | [The other rejection classes](07d-the-other-rejection-classes.md) |
+| 07e | [Where the opt-out goes](07e-where-the-opt-out-goes.md) |
+| 08 | **[The other angularCompilerOptions](08-the-other-angular-compiler-options.md)** |
+| 08b | [The options you add yourself](08b-the-options-you-add-yourself.md) |
+| 08c | [Configuring extended diagnostics](08c-configuring-extended-diagnostics.md) |
+| 08d | […and the upgrade](08d-extended-diagnostics-and-the-upgrade.md) |
+| 09 | **[TypeScript 6 defaults](09-typescript-6-defaults-and-what-ng-new-writes.md)** |
+| 09b | [The generated compilerOptions](09b-the-generated-compileroptions-line-by-line.md) |
 
 ## Where this sits
 
@@ -69,4 +89,4 @@ your project.
 
 ---
 
-← Prev: [06 · `angular.json` anatomy](../06-angular-json-anatomy/README.md) · Index: [Phase 0](../README.md) · Next topic → **08 · What `ng new` produces in v22** *(not written yet)*
+← Prev: [06 · `angular.json` anatomy](../06-angular-json-anatomy/README.md) · Index: [Phase 0](../README.md) · Start → [01 · The TypeScript peer pin](01-the-typescript-peer-pin.md) · Next topic → **08 · What `ng new` produces in v22** *(not written yet)*

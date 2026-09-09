@@ -121,7 +121,7 @@ tsconfig.app.json   tsconfig.spec.json
   types: []            types: ["vitest/globals"]
 ```
 
-🔴 **So anything you put in `tsconfig.app.json` is invisible to your tests.** A `paths` mapping, a `lib` entry, a strictness override, an `angularCompilerOptions` key — the spec program never sees it, because its `extends` chain does not pass through the app config. Shared configuration has exactly one correct home, and it is the root. How `angularCompilerOptions` in particular merges across `extends` — by a mechanism that is not TypeScript's — is **04 · `angularCompilerOptions` and how it inherits** *(not written yet)*.
+🔴 **So anything you put in `tsconfig.app.json` is invisible to your tests.** A `paths` mapping, a `lib` entry, a strictness override, an `angularCompilerOptions` key — the spec program never sees it, because its `extends` chain does not pass through the app config. Shared configuration has exactly one correct home, and it is the root. How `angularCompilerOptions` in particular merges across `extends` — by a mechanism that is not TypeScript's — is [04 · `angularCompilerOptions` and how it inherits](04-angularcompileroptions-and-how-it-inherits.md).
 
 ## Which file each tool is actually pointed at
 
@@ -274,4 +274,6 @@ Because `testRunner` defaults to `vitest` in v22's application schema, and the t
 **You need `process.env` typing inside application code. What do you change, and what do you not change?**
 Add `"node"` to `tsconfig.app.json`'s `types` array. What you do not do is delete the array to "let TypeScript find everything", because that also readmits the test framework's globals into application source and silently removes the check that keeps them out. The general principle: `types` is an allowlist, and the correct edit to an allowlist is always to add an entry, never to remove the list.
 
-{/* FOOTER */}
+---
+
+← Prev: [The three tsconfig files](03-the-three-tsconfig-files.md) · Index: [Topic index](README.md) · Next → [The solution root and references](03c-the-solution-root-and-project-references.md)

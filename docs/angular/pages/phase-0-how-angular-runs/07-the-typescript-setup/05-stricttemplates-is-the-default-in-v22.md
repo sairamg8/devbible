@@ -242,4 +242,6 @@ change meaning when the framework's default moves again. The cost is that it is 
 next migration has to reason about, and migrations do inspect it: the v22 one skips any file whose
 resolved `strictTemplates` is already defined.
 
-{/* FOOTER */}
+---
+
+← Prev: [The second implementation](04d-the-second-implementation.md) · Index: [Topic index](README.md) · Next → [What the CLI writes](05b-what-the-cli-writes-and-does-not-write.md)

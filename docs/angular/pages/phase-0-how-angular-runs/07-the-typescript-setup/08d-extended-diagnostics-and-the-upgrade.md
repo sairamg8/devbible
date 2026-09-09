@@ -188,4 +188,6 @@ about coverage. Failing at config time converts an invisible no-op into a decisi
 in writing, which is the same reasoning behind checking `=== false` rather than falsy: the compiler is
 trying to make sure an omission is never mistaken for an intent.
 
-{/* FOOTER */}
+---
+
+← Prev: [Configuring extended diagnostics](08c-configuring-extended-diagnostics.md) · Index: [Topic index](README.md) · Next → [TypeScript 6 defaults](09-typescript-6-defaults-and-what-ng-new-writes.md)
