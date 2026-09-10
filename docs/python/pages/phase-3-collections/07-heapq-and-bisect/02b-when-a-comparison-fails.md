@@ -87,7 +87,7 @@ in code that has no loop over the heap.
 inside the comparison — a lazily-loading `__lt__`, a property that schedules follow-up work on
 the same queue, or another thread — changed the heap mid-sift.
 **Fix.** Comparisons must be pure. Resolve anything lazy before the push, and give the heap one
-owner or one lock (**05d · Heaps shared by threads and tasks** *(not written yet)*):
+owner or one lock ([05d](05d-heaps-across-threads.md)):
 
 ```python
 entry = (job.resolve_priority(), next(_seq), job)   # any I/O happens here, not in __lt__

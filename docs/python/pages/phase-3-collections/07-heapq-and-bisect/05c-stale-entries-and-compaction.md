@@ -214,4 +214,4 @@ keeps the heap valid.
 
 ---
 
-← Prev: [05b · Removing and re-prioritising entries](05b-removal-and-update.md) · [Topic index](README.md) · Next → **05d · Heaps shared by threads and tasks** *(not written yet)*
+← Prev: [05b · Removing and re-prioritising entries](05b-removal-and-update.md) · [Topic index](README.md) · Next → [05d · Heaps shared by threads and tasks](05d-heaps-across-threads.md)
