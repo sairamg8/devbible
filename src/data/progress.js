@@ -958,7 +958,7 @@ export const LANGUAGES = {
       {n: 4, slug: 'phase-4-classes-data-model', name: 'Classes and the data model', part: 'Data model', topics: 15, pages: 0},
       {n: 5, slug: 'phase-5-iterators-generators', name: 'Iterators, generators, context managers', part: 'Data model', topics: 10, pages: 0},
       {n: 6, slug: 'phase-6-typing', name: 'Typing', part: 'Data model', topics: 12, pages: 0},
-      {n: 7, slug: 'phase-7-packaging-tooling', name: 'Packaging, projects and tooling', part: 'Application', topics: 12, pages: 0},
+      {n: 7, slug: 'phase-7-packaging-tooling', name: 'Packaging, projects and tooling', part: 'Application', topics: 12, pages: 0, pagesPlanned: 12},
       {n: 8, slug: 'phase-8-concurrency-async', name: 'Concurrency and async', part: 'Application', topics: 13, pages: 0},
       {n: 9, slug: 'phase-9-web-service', name: 'The web service', part: 'Application', topics: 14, pages: 0},
       {n: 10, slug: 'phase-10-data-files', name: 'Data, files and integrations', part: 'Application', topics: 13, pages: 0},

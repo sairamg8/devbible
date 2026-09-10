@@ -93,6 +93,18 @@ export const PINS = {
     label: 'Python', source: 'eol:python', policy: 'latest',
     pin: '3.14', checked: '2026-08-31', tracks: ['python'], names: ['python', 'cpython'],
   },
+  uv: {
+    label: 'uv', source: 'gh:astral-sh/uv', policy: 'latest',
+    pin: '0.12.12', checked: '2026-09-10', tracks: ['python'], names: ['uv'],
+  },
+  ruff: {
+    label: 'Ruff', source: 'gh:astral-sh/ruff', policy: 'latest',
+    pin: '0.16.6', checked: '2026-09-10', tracks: ['python'], names: ['ruff'],
+  },
+  precommit: {
+    label: 'pre-commit', source: 'gh:pre-commit/pre-commit', policy: 'latest',
+    pin: '4.6.2', checked: '2026-09-10', tracks: ['python'], names: ['pre-commit'],
+  },
   jdk: {
     label: 'JDK (Temurin)', source: 'eol:eclipse-temurin', policy: 'lts', cycle: '25',
     pin: '25', checked: '2026-08-31', tracks: ['java'], names: ['jdk', 'java'],
