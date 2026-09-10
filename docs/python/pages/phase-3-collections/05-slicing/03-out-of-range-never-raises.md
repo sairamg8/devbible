@@ -166,7 +166,7 @@ def parse_payment(line: str) -> tuple[str, str, int]:
 ```
 
 Named slices for such layouts, and the column-numbering bugs specific to fixed-width files, are in
-[04](04-slice-objects.md) and **14** *(not written yet)*.
+[04](04-slice-objects.md) and [11c](11c-fixed-width-records.md).
 
 ## Gotchas
 

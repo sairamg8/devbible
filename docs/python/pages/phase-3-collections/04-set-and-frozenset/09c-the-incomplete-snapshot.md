@@ -99,8 +99,8 @@ Two things help. **Page by key, not position**: a cursor that encodes the last k
 which is why `fetch_all_ids` follows a `next_cursor`. And **count before you deduplicate**: a
 `set.update` quietly swallows a repeated ID, so a set of IDs can never tell you the pages overlapped.
 Carrying `items_seen` does — and where there was a repeat, there was probably a skip too. Paging
-itself is **Slicing in real code** *(not written yet)* in
-[05 · Slicing deeply](../05-slicing/README.md).
+itself is
+[Slicing in real code: pagination](../05-slicing/11-slicing-in-real-code.md) in the slicing topic.
 
 ## A second guard: absence has to persist
 

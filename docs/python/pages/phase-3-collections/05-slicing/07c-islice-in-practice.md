@@ -110,7 +110,7 @@ assert list(zip(stream, stream, stream)) == [("A", "B", "C"), ("D", "E", "F")]  
 ```
 
 Batching as a job — bulk inserts, API page limits, sequences that should stay lists — is in
-**Slicing in real code** *(not written yet)*.
+[11b · Slicing in real code: batching](11b-batching.md).
 
 ## On a sequence, `islice` walks
 

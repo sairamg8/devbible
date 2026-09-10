@@ -11,11 +11,6 @@ sidebar_position: 0
 
 **`[start:stop:step]`, negatives, slice assignment, and slices as copies.**
 
-:::caution In progress — 24 chunks written
-This topic is being written. The chunks below are complete and verified; the rest of the plan,
-listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
-:::
-
 | # | Chunk | What it argues |
 |---|---|---|
 | 1 | **[01 · The three numbers](01-the-three-numbers.md)** | A slice is two fence posts and a stride — start is in, stop is out, negative numbers count back from the end, and -0… |
@@ -42,10 +37,8 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 22 | **[10d · Typing and multi-dimensional keys](10d-typing-and-multidimensional-keys.md)** | Type __getitem__ with two overloads, not a union; a comma passes a tuple, which a 2-D class interprets per axis and a… |
 | 23 | **[11 · Slicing in real code: pagination](11-slicing-in-real-code.md)** | A page is two multiplications — page 0 is empty, page −1 is a real page from the end, a page past the last is silently `[]`, and `OFFSET` walks… |
 | 24 | **[11b · Slicing in real code: batching](11b-batching.md)** | `items[i:i + n]` tiles a list with nothing lost and the offset is the checkpoint — a relative resume, a front-deleting drain and a cut inside a character… |
-
-## Still to come
-
-- **11c · Fixed-width records** *(not written yet)*
+| 25 | **[11c · Slicing in real code: fixed-width records](11c-fixed-width-records.md)** | Spec columns 11–14 are `slice(10, 14)`; slice bytes when the spec counts bytes, strip the terminator and nothing else, and each field — not the line… |
+| 26 | **[11d · Slicing in real code: struct records and writing](11d-struct-records-and-writing.md)** | Terminator-less records are a `struct` of `s` fields; on the way out `ljust` never truncates, a slice truncates silently and `struct.pack` pads with NUL… |
 
 ---
 

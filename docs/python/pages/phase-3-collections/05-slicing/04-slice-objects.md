@@ -102,7 +102,7 @@ value.  Lists, tuples, and strings accept an index or a slice"*, with the exampl
 `itemgetter(slice(2, None))('ABCDEFG')` returning `'CDEFG'`. With several items it returns a
 tuple, which is what makes `split_record(line)` unpack into four fields in one call. The 1-based
 column numbering of real specifications, and why the slicing should happen on bytes rather than
-text, are in **14** *(not written yet)*.
+text, are in [11c](11c-fixed-width-records.md).
 
 A slice key works for sorting too: to order CSV rows by their first two columns, the key is a
 two-element list, and lists compare lexicographically.

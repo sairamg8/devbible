@@ -18,7 +18,7 @@ sidebar_position: 23
 **Chunks [01](01-the-three-numbers.md)–[10d](10d-typing-and-multidimensional-keys.md) are the
 mechanism. This page and the next two are the three jobs that mechanism does most often in a
 service: cutting a result into pages, cutting work into batches ([11b](11b-batching.md)),
-and cutting a record into fields (**11c · Fixed-width records** *(not written yet)*). Pagination is the one that
+and cutting a record into fields ([11c](11c-fixed-width-records.md)). Pagination is the one that
 arrives from the outside: the page number and size come from a query string, and every property of
 slicing that is a convenience inside a program — negative indices count from the end, out-of-range
 bounds clamp, nothing raises — becomes a way for a request to get the wrong rows without an error.

@@ -271,4 +271,4 @@ code point — encode, slice, and decode with `errors="ignore"` to drop an incom
 
 ---
 
-← Prev: [11 · Slicing in real code: pagination](11-slicing-in-real-code.md) · [Topic index](README.md) · Next → **11c · Fixed-width records** *(not written yet)*
+← Prev: [11 · Slicing in real code: pagination](11-slicing-in-real-code.md) · [Topic index](README.md) · Next → [11c · Slicing in real code: fixed-width records](11c-fixed-width-records.md)
