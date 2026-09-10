@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-09-10 against the PyPA *Entry points specification* ([packaging.python.org](https://packaging.python.org/en/latest/specifications/entry-points/)), the *pyproject.toml specification* ([packaging.python.org](https://packaging.python.org/en/latest/specifications/pyproject-toml/)), and installer source read at named tags — pip **26.2.1** [`operations/install/wheel.py`](https://github.com/pypa/pip/blob/26.2.1/src/pip/_internal/operations/install/wheel.py) with its vendored distlib 0.4.2 [`scripts.py`](https://github.com/pypa/pip/blob/26.2.1/src/pip/_vendor/distlib/scripts.py), pypa/installer **1.0.1** [`scripts.py`](https://github.com/pypa/installer/blob/1.0.1/src/installer/scripts.py), uv **0.12.12** [`uv-install-wheel/src/wheel.rs`](https://github.com/astral-sh/uv/blob/0.12.12/crates/uv-install-wheel/src/wheel.rs) and [`uv-build-backend/src/metadata.rs`](https://github.com/astral-sh/uv/blob/0.12.12/crates/uv-build-backend/src/metadata.rs), the uv [CHANGELOG](https://github.com/astral-sh/uv/blob/0.12.12/CHANGELOG.md) and [CLI reference](https://docs.astral.sh/uv/reference/cli/).
+> Verified: 2026-09-10 against the PyPA *Entry points specification* ([packaging.python.org](https://packaging.python.org/en/latest/specifications/entry-points/)), the *pyproject.toml specification* ([packaging.python.org](https://packaging.python.org/en/latest/specifications/pyproject-toml/)), and installer source read at named tags — pip **26.2.1** [`operations/install/wheel.py`](https://github.com/pypa/pip/blob/26.2.1/src/pip/_internal/operations/install/wheel.py) with its vendored distlib 0.4.2 [`scripts.py`](https://github.com/pypa/pip/blob/26.2.1/src/pip/_vendor/distlib/scripts.py), pypa/installer **1.0.1** [`scripts.py`](https://github.com/pypa/installer/blob/1.0.1/src/installer/scripts.py), uv **0.12.12** [`uv-install-wheel/src/wheel.rs`](https://github.com/astral-sh/uv/blob/0.12.12/crates/uv-install-wheel/src/wheel.rs) and [`uv-build-backend/src/metadata.rs`](https://github.com/astral-sh/uv/blob/0.12.12/crates/uv-build-backend/src/metadata.rs), the uv [CHANGELOG](https://github.com/astral-sh/uv/blob/0.12.12/CHANGELOG.md) and [CLI reference](https://docs.astral.sh/uv/reference/cli/), and the Python 3.14 [`venv`](https://docs.python.org/3.14/library/venv.html) documentation.
 > Target: **Python 3.14.7** · **uv 0.12.12** · ruff 0.16.6 · pre-commit 4.6.2. Source-validated — **no sandbox run; the templates below are quoted from source, not captured from an install**.
 
 **Nothing in your project is executable until an installer makes it so. The build backend writes a `console_scripts` section into `entry_points.txt` inside the wheel's `.dist-info` directory; at install time the installer reads that section and writes one real file per command into the environment's scripts directory. That file is small and completely predictable — its first line names the interpreter of the environment it was installed into, by absolute path, and its body imports your module and calls `sys.exit(your_function())`. Every "the command works on my machine" mystery is a property of that file: it is per-environment, it exists only after installation, it cannot follow a moved environment, and it lands in a directory the installer is explicitly not responsible for putting on `PATH`.**
@@ -36,7 +36,7 @@ and writes it to a metadata file:
 > *"Install tools are expected to set up wrappers for both `console_scripts` and `gui_scripts` in the scripts directory of the install scheme. They are not responsible for putting this directory in the `PATH` environment variable which defines where command-line tools are found."*
 > — [entry points specification](https://packaging.python.org/en/latest/specifications/entry-points/)
 
-Every other group in `entry_points.txt` — `pytest11`, `flake8.extension`, your own `invoice_service.exporters` — produces no file at all. It is data that sits in the `.dist-info` directory until some program asks for it at run time (**05** *(not written yet)*).
+Every other group in `entry_points.txt` — `pytest11`, `flake8.extension`, your own `invoice_service.exporters` — produces no file at all. It is data that sits in the `.dist-info` directory until some program asks for it at run time ([05](05-reading-entry-points-at-runtime.md)).
 
 ## The wrapper, as each installer writes it
 
@@ -110,7 +110,7 @@ Distlib's own template — the one pip overrides — puts the `from … import` 
 ## Line by line: what runs when you type `invoice`
 
 1. **The kernel reads the shebang** and starts the interpreter it names, passing the wrapper's path. That interpreter is the environment's own `python`, so `sys.prefix` is the environment and its `site-packages` is on `sys.path` — no activation involved.
-2. **Python runs the wrapper as a script.** The command-line documentation states the consequence: *"If the script name refers directly to a Python file, the directory containing that file is added to the start of `sys.path`, and the file is executed as the `__main__` module"* ([cmdline](https://docs.python.org/3.14/using/cmdline.html)). So `sys.path[0]` is the scripts directory — `.venv/bin` — not your working directory. **04** *(not written yet)* is why that difference matters.
+2. **Python runs the wrapper as a script.** The command-line documentation states the consequence: *"If the script name refers directly to a Python file, the directory containing that file is added to the start of `sys.path`, and the file is executed as the `__main__` module"* ([cmdline](https://docs.python.org/3.14/using/cmdline.html)). So `sys.path[0]` is the scripts directory — `.venv/bin` — not your working directory. [04](04-python-m-and-dunder-main.md) is why that difference matters.
 3. **`from invoice_service.cli import main`** imports your package, its `__init__.py`, the `cli` module and everything they import at module level. All of it runs before `main` does; **11** *(not written yet)* is what that costs.
 4. **The guard is true** because the wrapper is `__main__`.
 5. **`argv[0]` loses a Windows suffix**, so help text says `invoice`, not `invoice.exe` ([02](02-windows-launchers-and-gui-scripts.md)).
@@ -129,6 +129,11 @@ return format!("#!/bin/sh\n'''exec' {executable} \"$0\" \"$@\"\n' '''");
 ```
 
 To `sh`, `'''exec'` is an empty string glued to `exec`, so the line is `exec <interpreter> "$0" "$@"` — re-run this file under Python with the original arguments. To Python, the same two lines are a triple-quoted string literal that does nothing. Distlib describes it as *"a contrived shebang which allows the script to run either under Python or sh, using suitable quoting"*. uv also uses this form for every wrapper in a relocatable environment, with the interpreter path computed from the script's own directory at run time.
+
+The `venv` documentation states the consequence for every environment, not just uv's:
+
+> *"Because scripts installed in environments should not expect the environment to be activated, their shebang lines contain the absolute paths to their environment's interpreters. Because of this, environments are inherently non-portable, in the general case."*
+> — [`venv`](https://docs.python.org/3.14/library/venv.html)
 
 Two operational facts follow. A trampoline wrapper **needs `/bin/sh` at run time**, which a minimal or distroless image may not have. And a simple wrapper **needs the interpreter at exactly the recorded path**, which a moved environment no longer has.
 
