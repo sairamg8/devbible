@@ -143,4 +143,4 @@ multi-dimensional slicing with `NotImplementedError`.
 
 ---
 
-← Prev: [10c · `__setitem__`, `__delitem__` and the ABCs](10c-setitem-delitem-and-the-abcs.md) · [Topic index](README.md)
+← Prev: [10c · `__setitem__`, `__delitem__` and the ABCs](10c-setitem-delitem-and-the-abcs.md) · [Topic index](README.md) · Next → [11 · Slicing in real code: pagination](11-slicing-in-real-code.md)
