@@ -25,10 +25,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 3 | **[03 · The function contract](03-the-function-contract.md)** | called with no arguments, return value straight to `sys.exit`: `None` is 0, 🔴 a returned string is status 1, other objects (a coroutine) too, 0–127 only, an escaped exception is 1, Ctrl-C exits via SIGINT; flake8's `main(argv=None) -> int`; exceptions mapped to codes in the entry point, 2 for usage; 🔴 `BrokenPipeError` handled per the SIGPIPE note, as pytest's `_console_main` does, or shutdown makes it 120; testing without a subprocess |
 | 4 | **[04 · `python -m` and `__main__.py`](04-python-m-and-dunder-main.md)** | the second door to the same function — no wrapper, `PATH` or shebang; a delegating `__main__.py`, guard or no guard (docs vs flake8/pytest); the two doors side by side — 🔴 `sys.path[0]` is the working directory, which pip's own `__main__.py` pops; the double-import trap and `runpy`'s warning; the `-m` error strings; `uv run -m` (0.4.18); `-m` as a container `ENTRYPOINT` |
 | 5 | **[05 · Reading entry points at runtime](05-reading-entry-points-at-runtime.md)** | `importlib.metadata` in 3.14 — `entry_points(group=…)`, `select`, `.names`/`.groups`, `EntryPoint` fields; the 3.10/3.12/3.13 API changes and the *now-removed* `pkg_resources`; `load()` is `import_module` + `getattr` and returns a module for module-only values; 🔴 every call re-reads every distribution on `sys.path`, first distribution of a name wins; can't select by `dist`; `--version` from `version()` |
+| 6 | **[06 · Plugin discovery patterns](06-plugin-discovery-patterns.md)** | the guide's three approaches — naming convention, namespace package, metadata — and why only metadata separates finding from importing; owning the group (PyPI-name prefix, 🔴 no hyphens, quoted in TOML); a host that defines the interface, refuses duplicate names, attributes failures, checks an API version and loads lazily; autoloading is running installed code, so ship an off switch; testing with fake `EntryPoint`s and a path-dependency plugin |
 
 ## Still to come
 
-- **06 · Plugin discovery patterns** *(not written yet)*
+- **06b · Plugin hosts in the wild — pytest, flake8, `pipx.run`** *(not written yet)*
 - **07 · `uv run` and the project's own command** *(not written yet)*
 - **08 · Getting commands to users — `uv tool`, `uvx`, `pipx`** *(not written yet)*
 - **09 · Stale wrappers and editable installs** *(not written yet)*

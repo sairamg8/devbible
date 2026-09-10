@@ -260,4 +260,4 @@ Because `version()` takes a *distribution* name — the `[project] name`, here `
 
 ---
 
-← Prev: [04 · `python -m` and `__main__.py`](04-python-m-and-dunder-main.md) · [Topic index](README.md) · Next → **06 · Plugin discovery patterns** *(not written yet)*
+← Prev: [04 · `python -m` and `__main__.py`](04-python-m-and-dunder-main.md) · [Topic index](README.md) · Next → [06 · Plugin discovery patterns](06-plugin-discovery-patterns.md)
