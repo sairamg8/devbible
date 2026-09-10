@@ -177,6 +177,9 @@ No — in both `dict` and `OrderedDict` an existing key keeps its position and o
 **When would you use an `OrderedDict` instead of a `deque` as a queue?**
 When the queue's items are keyed and must be unique or individually cancellable: an `OrderedDict` of message ID to payload answers "already queued?" and "cancel this one" in O(1) with `in` and `pop`, and still yields items in arrival order with `popitem(last=False)`. A deque needs a linear scan for both. For an anonymous stream of items where you only ever touch the ends, the deque is lighter.
 
+**How do you read the first and last entries of an `OrderedDict` without removing them?**
+`next(iter(od))` for the first key and `next(reversed(od))` for the last — both walk to one end of the linked list, so they are O(1) regardless of how many entries were deleted before. `od[key]` then gives the value, or use `next(iter(od.items()))`. `popitem(last=...)` does the same but removes; `list(od)[0]` materialises every key to read one and is the version to avoid.
+
 **What happens if you call `move_to_end` inside a loop over the same `OrderedDict`?**
 The C implementation increments an internal state counter whenever the linked list changes, including on `move_to_end`, and the iterator raises `RuntimeError("OrderedDict mutated during iteration")` at its next step. Iterate over `list(od)` — a snapshot of the keys — and reorder the original.
 

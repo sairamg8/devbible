@@ -178,6 +178,9 @@ It accepts the dict subclasses — `defaultdict`, `Counter`, `OrderedDict` — a
 **★ What happens if you pass a `defaultdict` as named parameters to `sqlite3` and forget one?**
 The query runs with the factory's default bound. `sqlite3` uses the named-parameter path for any dict subclass and looks each name up with `PyMapping_GetOptionalItemString`, which for anything but an exact `dict` goes through `__getitem__` and only treats `KeyError` as missing — so `__missing__` supplies a value. A plain `dict` would have raised `ProgrammingError` naming the missing parameter. The same happens with a `Counter`, which binds `0`.
 
+**How do you serialise a response that mixes Counters, deques, named tuples and ChainMaps?**
+Convert the whole structure to plain JSON types before encoding, in one function whose branch order is deliberate: named tuples first (they would otherwise match the tuple branch and become arrays), `UserString` to its `data`, any `Mapping` — which covers the dict subclasses and `ChainMap`/`UserDict` — to a dict with explicitly stringified keys, and `list`, `tuple`, `deque` and `UserList` to lists, recursing into values. A `default` hook cannot do this alone, because the encoder never calls it for tuples and dict subclasses.
+
 **What does pickling a `Counter` subclass preserve?**
 Only the class and the counts: `Counter.__reduce__` returns `(self.__class__, (dict(self),))`, with no state element, so instance attributes are not saved and the constructor is called with a dict on load. A subclass with extra attributes must define its own `__reduce__` returning a state dictionary as the third element. `defaultdict` has the same limitation — its `__reduce__` returns no state — plus the requirement that its factory be importable by name.
 
@@ -186,4 +189,4 @@ Only the class and the counts: `Counter.__reduce__` returns `(self.__class__, (d
 
 ---
 
-← Prev: [08b · `UserString`](08b-userstring.md) · [Topic index](README.md)
+← Prev: [08b · `UserString`](08b-userstring.md) · [Topic index](README.md) · Next topic → **07 · `heapq` and `bisect`** *(not written yet)*

@@ -228,6 +228,9 @@ Both are O(total number of keys across all layers) per call. In CPython 3.14, `_
 **Why does `ChainMap.__getitem__` use `try`/`except KeyError` instead of `if key in mapping`?**
 The source comment says why: *"can't use 'key in mapping' with defaultdict"*. Asking each layer for `mapping[key]` lets a layer's own missing-key behaviour (a `defaultdict` factory, a `Counter`'s zero) take part in the lookup. The price is an exception per missed layer — and, as [06b · `ChainMap` traps](06b-chainmap-traps.md) shows, a layer that never raises ends the search at that layer.
 
+**Can a `ChainMap` be passed where code expects keyword arguments or a template mapping?**
+Yes, through the mapping protocol rather than as a dict. `func(**chain)` and `{**chain}` call `keys()` and `__getitem__`, so they flatten with first-layer-wins values. `"{user} in {region}".format_map(chain)` uses the chain directly — `format_map` does not copy into a dict — so each placeholder is looked up through the layers, which makes a chain of request context over site defaults a natural template context. What does *not* accept it is anything that checks `isinstance(x, dict)`, including `json.dumps`.
+
 **How would you give each request its own feature-flag overrides on top of tenant and global flags?**
 Build a chain per request: `BASE.new_child(tenant_layer).new_child(request_overrides)`. It costs a short list of references, not a copy of the base flags; lookups fall through request → tenant → global; writes land in the request's own front dict and never leak into shared layers. Wrapping the shared layers in `MappingProxyType` makes an accidental write to them raise.
 

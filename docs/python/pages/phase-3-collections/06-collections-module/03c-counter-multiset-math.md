@@ -213,6 +213,12 @@ The binary operators start with `if not isinstance(other, Counter): return NotIm
 **Is `<=` on Counters a total order?**
 No, it is a partial order — multiset inclusion. `Counter(coffee=2, tea=1)` and `Counter(coffee=1, wine=1)` each contain something the other does not, so neither `<=` nor `>=` holds, and `not (a <= b)` does not imply `a > b`. That makes Counters unsuitable as sort keys; sort a list of Counters by `total()` or another scalar.
 
+**★ Can a ransom note be built from the letters of a magazine?**
+`Counter(note) <= Counter(magazine)` — multiset inclusion: every letter the note needs appears in the magazine at least as many times (3.10+). If you also want what is missing, `Counter(note) - Counter(magazine)` is exactly the letters short, with how many. It is O(*n* + *m*) and says in one expression what a loop with a dict of counts and early exits says in ten lines — the same shape as "does the warehouse have enough stock for this order".
+
+**In what order are the elements of `c + d` or `c | d`?**
+The 3.7 note in the documentation: *"Results are ordered according to when an element is first encountered in the left operand and then by the order encountered in the right operand."* The operators iterate `self` first and then `other`, inserting into a fresh Counter, so the left operand's order wins for shared keys and new keys from the right come after. The `repr` does not show this — it sorts by count — so check `list(result)` if order matters.
+
 **How do you diff two lists that may contain duplicates?**
 `Counter(expected) - Counter(actual)` gives what is missing with multiplicity, and `Counter(actual) - Counter(expected)` what is extra. A set difference cannot do this, because converting to a set discards how many times each element appeared. `Counter(a) == Counter(b)` is the equality form — the multiset (anagram) check.
 

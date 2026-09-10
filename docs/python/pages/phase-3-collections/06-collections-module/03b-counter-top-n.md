@@ -209,6 +209,14 @@ total.subtract(expired)
 total = +total
 ```
 
+**Symptom: `ZeroDivisionError` from a "share of traffic" report on a quiet night.** Cause: percentages computed as `n / c.total()` with an empty counter — or one whose counts net to zero after `subtract`. Fix: guard the denominator.
+
+```python
+def shares(counts: Counter[str]) -> dict[str, float]:
+    total = counts.total()
+    return {key: n / total for key, n in counts.most_common()} if total > 0 else {}
+```
+
 **Symptom: an endpoint returns `[["timeout", 12], ["dns", 3]]` and the front end expected an object.** Cause: `most_common` returns a list of tuples, which JSON encodes as nested arrays. Fix: convert, keeping the ranking order.
 
 ```python
@@ -225,6 +233,9 @@ The documentation: *"Elements with equal counts are ordered in the order first e
 
 **★ Why is `max(counter)` usually wrong?**
 Because iterating a Counter yields its keys, so `max` compares keys — it returns the alphabetically (or numerically) largest element, not the most frequent. `max(counter, key=counter.get)` compares counts and is a single O(*m*) pass; `counter.most_common(1)[0]` gives the element and its count.
+
+**How would you get the top three products in each category from a stream of sales?**
+Nest the counts — `per_category: defaultdict[str, Counter[str]] = defaultdict(Counter)` and `per_category[sale.category][sale.product] += sale.quantity` — then rank each inner counter: `{cat: c.most_common(3) for cat, c in per_category.items()}`. One pass to count, and a heap selection of three per category. Counting with a tuple key `(category, product)` in one flat Counter works for lookups but forces a regroup before ranking within categories.
 
 **How would you compute the top users overall from per-day counters?**
 Merge, then rank: create an empty `Counter`, `update` it with each day's counter — `update` adds counts in place — and call `most_common(10)`. `sum(days, Counter())` also works but builds a new Counter at each step and drops non-positive counts because it uses multiset `+`; `sum(days)` fails outright because it starts from `0`.

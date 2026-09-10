@@ -176,6 +176,22 @@ available = +stock
 weighted = [(key, weight) for key, weight in c.items() if weight > 0]
 ```
 
+**Symptom: after `Counter(events)`, a second loop over `events` does nothing.** Cause: `events` was a generator (a query cursor, `map`, a file); counting consumed it. Fix: materialise once if you need two passes, or compute everything in the one pass.
+
+```python
+events = list(fetch_events())
+by_type = Counter(e.kind for e in events)
+by_user = Counter(e.user_id for e in events)
+```
+
+**Symptom: a "remaining quota" counter shows `-1` for a user who never had a quota.** Cause: `c[k] -= 1` on a missing key reads `0` through `__missing__`, subtracts, and *inserts* `-1`. Fix: decide whether absence is allowed before decrementing.
+
+```python
+if quota[user] <= 0:
+    raise QuotaExceeded(user)
+quota[user] -= 1
+```
+
 **Symptom: a log line shows a counter in a different order from the one the code processed it in.** Cause: `repr` sorts by `most_common()`; iteration follows insertion. Fix: log what you mean.
 
 ```python
@@ -199,6 +215,12 @@ The source says the semantics would be ambiguous — `Counter.fromkeys('aaabbc',
 
 **Is it safe to read a `Counter` with arbitrary keys inside a loop over the same counter?**
 Yes, and that is a real difference from `defaultdict`. A missing-key read calls `__missing__`, which returns `0` and stores nothing, so the dict's size does not change and iteration is not disturbed. Writing — `c[k] += 1` for a new `k` — does insert, and inserting during iteration is the usual `RuntimeError` ([14 · Mutating while iterating](../03-dict/05b-mutating-while-iterating.md)).
+
+**How do you find the elements that occur exactly once — say, the unique visitors in a log?**
+Count, then filter: `[item for item, n in Counter(visits).items() if n == 1]`. One pass to count, one pass over the distinct elements, and the result keeps first-seen order because the Counter does. The tempting alternative — `[v for v in visits if visits.count(v) == 1]` — is a full scan per element, the quadratic pattern [03d · Partial sorts and counting](../01-list-internals/03d-partial-sorts-and-counting.md) warns about.
+
+**What does `c[k] -= 1` do when `k` is not in the counter?**
+It inserts `k` with a count of `-1`. The augmented assignment reads `c[k]` — `__missing__` returns `0` without inserting — computes `0 - 1`, and assigns the result, which inserts. That is by design for balances (*"Counts are allowed to be any integer value including zero or negative counts"*) and a bug for quotas or stock that must never go below zero; check before decrementing, or use multiset `-`, which never produces a non-positive count.
 
 **Can a `Counter` hold non-integer counts?**
 Yes. The documentation's type note: the class has *"no restrictions on its keys and values"*; `c[key] += 1`, `update` and `subtract` need only addition and subtraction, so floats, `Decimal` and `Fraction` work, negative values included; `most_common` needs only orderable values. The limits are `elements()`, which *"requires integer counts"*, and the multiset operators, which need addition, subtraction and comparison and keep only positive results.

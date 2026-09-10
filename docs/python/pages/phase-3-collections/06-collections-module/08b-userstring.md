@@ -224,4 +224,4 @@ Yes to both: `__hash__` returns `hash(self.data)` and `__eq__` compares `self.da
 
 ---
 
-← Prev: [08 · `UserList` and `UserDict` — wrappers, not funnels](08-userlist-and-userdict.md) · [Topic index](README.md)
+← Prev: [08 · `UserList` and `UserDict` — wrappers, not funnels](08-userlist-and-userdict.md) · [Topic index](README.md) · Next → [09 · Crossing a boundary — JSON, pickle, copy, `isinstance`](09-crossing-a-boundary.md)

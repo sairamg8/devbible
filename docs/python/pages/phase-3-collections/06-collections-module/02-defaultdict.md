@@ -265,6 +265,12 @@ It switches the default off: `__missing__` then raises `KeyError`, so the object
 **What happens if the factory raises?**
 The documentation: the exception *"is propagated unchanged"*. `__missing__` has not inserted anything at that point, so the key stays absent and the next `d[k]` calls the factory again. That makes a raising factory safe to retry, and means a caught exception must not be followed by code that assumes the key now exists.
 
+**★ Why does `defaultdict` insert the default instead of just returning it?**
+Because the pattern it exists for mutates the result: `groups[k].append(v)`. If `__missing__` only returned a new empty list, the append would go into a list nobody holds and the grouping would stay empty. Storing it first means the object you mutate is the one in the dict. The cost of that design is the read-inserts behaviour; a mapping that should answer a default *without* growing is a `dict` subclass whose `__missing__` returns without storing — which is exactly what `Counter` does for its zero.
+
+**How would you implement `defaultdict` yourself?**
+As a `dict` subclass with a `default_factory` attribute and a `__missing__` method: if the factory is `None`, raise `KeyError(key)`; otherwise call it with no arguments, store the result under the key with `self[key] = value`, and return it. The constructor takes the factory as its first positional argument and passes everything else to `dict.__init__`. That is the documented behaviour and the C docstring's pseudo-code; the real type additionally inserts with insert-if-absent semantics, keeps the factory in `copy()`, `repr` and pickling, and preserves its type through `|`.
+
 **Why is `defaultdict(lambda: [])` correct but `defaultdict(lambda: my_list)` wrong?**
 Both are zero-argument callables, but the first evaluates `[]` on each call and returns a new list, while the second returns the same existing list every time. Every key then shares one list — the same aliasing bug as `dict.fromkeys(keys, [])` ([12 · `fromkeys`](../03-dict/04d-fromkeys.md)). The factory's job is to *build* a default, not to name one.
 

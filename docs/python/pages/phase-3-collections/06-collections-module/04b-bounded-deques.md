@@ -108,6 +108,28 @@ That choice is a pattern worth copying: **when you need to act on what falls out
 
 **A bounded undo history** — `history.append(state)` on every edit, `history.pop()` to undo; `maxlen` caps memory at the last N states and forgets the oldest.
 
+**The maximum over a sliding window — both ends at once.** "Peak latency over the last 100 requests" or "highest price in the last N ticks", updated per item, is the classic monotonic-deque algorithm. The deque holds *indices* whose values are strictly decreasing from left to right; each new value evicts every smaller value from the right (they can never be a maximum again), and the left end is dropped when it leaves the window:
+
+```python
+from collections import deque
+from collections.abc import Iterator, Sequence
+
+
+def window_max(values: Sequence[float], k: int) -> Iterator[float]:
+    """Maximum of every window of k consecutive values — O(n) overall."""
+    candidates: deque[int] = deque()
+    for i, value in enumerate(values):
+        while candidates and values[candidates[-1]] <= value:
+            candidates.pop()                  # dominated: never a maximum again
+        candidates.append(i)
+        if candidates[0] <= i - k:
+            candidates.popleft()              # left the window
+        if i >= k - 1:
+            yield values[candidates[0]]
+```
+
+Every index is appended once and popped at most once, so the whole pass is linear — it needs O(1) pops at *both* ends, which is the one thing a list cannot give it. It deliberately does not use `maxlen`: what leaves the window is decided by index, and a count-based silent eviction would drop the wrong element.
+
 ## `maxlen=0`: accepts everything, keeps nothing
 
 `maxlen` may be `0`, and `deque_extend_impl` has a special case for it — *"Shortcut for the extend/extendleft methods when maxlen == 0"* — that runs the iterator to exhaustion and discards every item. The itertools `consume` recipe uses exactly that on purpose (*"Use functions that consume iterators at C speed."*):
@@ -242,6 +264,9 @@ Because it bounds memory by destroying accepted work. When full, each append sil
 
 **How would you implement a per-client rate limiter with a deque?**
 Keep a deque of request timestamps per client. On each request, pop from the left while the oldest timestamp is outside the window, then allow the request only if the remaining length is under the limit, and append the current time. Both ends are O(1), and the deque holds at most `limit` timestamps. `maxlen` alone cannot do this, because it bounds the number of entries, not their age.
+
+**★ How do you compute the maximum of every window of *k* values in linear time?**
+With a deque of indices kept in decreasing order of value. For each new value, pop from the right every index whose value is not larger (it can never be a window maximum while the new value is in the window), append the new index, pop from the left if the front index has left the window, and the front is the current maximum. Each index enters and leaves once, so the total work is O(*n*) rather than O(*n*·*k*) for recomputing `max` per window — and it depends on O(1) operations at both ends, which is why it is a deque and not a list.
 
 **What is `deque(iterator, maxlen=0)` for?**
 Consuming an iterator entirely, fast, while keeping nothing — the itertools `consume` recipe, which notes that it *"consume[s] iterators at C speed"*. CPython special-cases `maxlen == 0` in `extend` and just runs the iterator to exhaustion. It is useful for driving an iterator for its side effects; by accident, it is a buffer that is always empty.

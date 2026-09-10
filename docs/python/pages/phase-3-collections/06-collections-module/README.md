@@ -10,11 +10,6 @@ sidebar_position: 0
 
 **`defaultdict` is the group-by, `Counter` is the tally and the top-N, `deque` is the queue that `list.pop(0)` only pretends to be, `ChainMap` is layered configuration, `OrderedDict` is the reorderable mapping an LRU cache needs, and `namedtuple` is a record type with no per-instance dictionary. Each one is a small amount of code wrapped around a specific mechanism — a `__missing__` hook, a doubly-linked list of 64-slot blocks, a list of mappings searched in order, a linked list threaded through a dict — and every surprise it produces comes from that mechanism: a `defaultdict` read that inserts, a `Counter` that keeps zero counts, a `deque` iterator that refuses any append, a `ChainMap` write that lands in the caller's dict. This topic takes each type through its mechanism, its cost, the ways it fails in a running service, and the questions an interviewer uses to find out whether you know the difference.**
 
-:::caution In progress
-This topic is being written. The chunks below are complete and verified; the rest of the plan,
-listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
-:::
-
 ## Chunks
 
 | # | Chunk | What it argues |
@@ -35,10 +30,7 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 14 | **[07b · `OrderedDict` as an LRU cache](07b-ordereddict-lru-caches.md)** | `move_to_end` on hit, `popitem(last=False)` on overflow; `functools.lru_cache` first, and exactly what it cannot do; a locked generic `LRUCache`; the doc's `TimeBoundedLRU` and `MultiHitLRUCache`; per-key invalidation, eviction callbacks, byte budgets; 🔴 `@lru_cache` on a method keeps instances alive |
 | 15 | **[08 · `UserList` and `UserDict` — wrappers, not funnels](08-userlist-and-userdict.md)** | 🔴 every `UserList` method writes `self.data` directly, so `__setitem__` validation is bypassed by `append`/`extend`/`insert`/`+=`/the constructor — the path table vs `list` and `MutableSequence`, and both fixes; `UserDict`'s `\|=` and `__copy__` bypass `__setitem__`; shallow instance attributes in copies; `repr` hides the type |
 | 16 | **[08b · `UserString`](08b-userstring.md)** | which methods re-wrap in your subclass and which return plain `str`; 🔴 `+`/`%` launder untrusted input into a "safe" subclass — and the escaping override; refused by `json`, `str.join`, `open`, format specs; hashable and equal to the plain string; why a `str` subclass is usually the right base |
-
-## Still to come
-
-- **09 · Crossing a boundary — JSON, pickle, copy, `isinstance`** *(not written yet)*
+| 17 | **[09 · Crossing a boundary — JSON, pickle, copy, `isinstance`](09-crossing-a-boundary.md)** | all nine types through four boundaries in one matrix; 🔴 the JSON encoder writes named tuples and dict subclasses before `default` can see them; an explicit `to_jsonable`; which `__reduce__` drops instance attributes; `.copy()` vs `copy.copy()`; 🔴 `sqlite3` binds a `Counter`'s `0` for a forgotten named parameter and treats a `ChainMap` as a sequence |
 
 ## Phase gate
 

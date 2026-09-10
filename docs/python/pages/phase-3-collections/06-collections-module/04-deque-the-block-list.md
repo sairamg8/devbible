@@ -207,6 +207,15 @@ cancelled_ids = {job.job_id for job in cancelled}
 pending = deque(job for job in pending if job.job_id not in cancelled_ids)
 ```
 
+**Symptom: a deque kept in sorted order with `index` and `insert` gets slower as it grows.** Cause: there is no binary search on a deque, and `index` is a linear scan while `insert` in the middle is two rotations. Fix: keep sorted data in a `list` and use `bisect` — topic **07 · `heapq` and `bisect`** *(not written yet)*.
+
+```python
+import bisect
+
+deadlines: list[float] = []
+bisect.insort(deadlines, new_deadline)      # O(log n) search, then an O(n) pointer shift
+```
+
 **Symptom: `IndexError: pop from an empty deque` in a consumer.** Cause: popping without checking — or, across threads, checking and then popping ([04c · `deque` during iteration and across threads](04c-deque-iteration-and-threads.md)). Fix, single-threaded: loop on truthiness.
 
 ```python
@@ -230,6 +239,12 @@ With `rotate`. The source comment says so: rotate by `-i` so the target is at th
 
 **Why doesn't `deque` support slicing, and what do you do instead?**
 Slicing a block list would mean walking to the start index and copying out a range; CPython simply does not implement `__getitem__` for slice objects on deques, so `d[1:3]` raises `TypeError`. Use `itertools.islice(d, start, stop)` to read a window from the front without copying the whole deque, `list(d)[a:b]` for arbitrary windows, or `d.rotate` plus `popleft` for the recipe-style "slice by rotation" the documentation describes.
+
+**Does a deque give memory back as it shrinks?**
+Yes, block by block. When `pop` or `popleft` empties an end block, CPython unlinks it and either keeps it on the deque's private free list (up to 16 blocks, `MAXFREEBLOCKS`) for reuse or frees it. There is no single large array to shrink and no `realloc`, so a queue that surges and then drains returns to a footprint proportional to what it currently holds, plus at most those 16 spare blocks. The documentation says only *"memory efficient"*; the block details are CPython's and give no guaranteed figure.
+
+**What is `rotate` for in real code?**
+Moving the front item to the back without allocating: `d.rotate(-1)` is `d.append(d.popleft())`. The documentation's round-robin recipe uses it to give each iterator a turn, and its `delete_nth` recipe uses it to bring an arbitrary index to the end where removal is cheap. Rotation by *k* costs the smaller of *k* and *n*−*k* pointer moves, since CPython normalises the step modulo the length.
 
 **What is the difference between `d + other` and `d += other` for a deque?**
 `+` builds a new deque and requires `other` to be a deque — otherwise `TypeError: can only concatenate deque (not "list") to deque`. `+=` is `extend`: it mutates `d` in place and accepts any iterable. The same split exists for lists, but a list's `+` at least accepts another list; a deque's accepts only another deque.

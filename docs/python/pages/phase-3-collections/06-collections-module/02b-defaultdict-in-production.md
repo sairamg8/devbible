@@ -241,6 +241,16 @@ with _lock:
 logger.info("groups=%s", json.dumps(dict(groups)))
 ```
 
+**Symptom: a function annotated `-> dict[str, list[Order]]` returns a defaultdict, type-checks cleanly, and callers get empty lists for customers that do not exist.** Cause: `defaultdict` is a `dict` subclass, so the annotation is satisfied while the behaviour differs. Fix: return what the annotation promises.
+
+```python
+def orders_by_customer(orders: list[Order]) -> dict[str, list[Order]]:
+    grouped: defaultdict[str, list[Order]] = defaultdict(list)
+    for order in orders:
+        grouped[order.customer_id].append(order)
+    return dict(grouped)
+```
+
 ## Interview questions
 
 **★ Why is returning a `defaultdict` from a public function a design smell?**
@@ -257,6 +267,12 @@ A new defaultdict of the same class with the same `default_factory`, holding the
 
 **Your service keeps request counts in a module-level `defaultdict(int)`. What are the risks?**
 Three. Reads with `counts[path]` insert, so scans and typos grow it permanently; use `get` on every read path. `counts[path] += 1` from concurrent handlers is a read-modify-write that loses increments on both builds; use a lock, a per-thread counter merged later, or a metrics library. And the dictionary never shrinks on its own, so an unbounded key space (paths with IDs in them) needs normalising or capping before it is used as a key.
+
+**Why can `copy.deepcopy` copy a `defaultdict(lambda: 0)` when `pickle` cannot?**
+The two modules treat functions differently by design. `pickle` stores a function *"by fully qualified name, not by value"*, and a lambda has no importable name, so pickling fails. `copy` does not serialise at all; its documentation says it *"does "copy" functions and classes (shallow and deeply), by returning the original object unchanged"*. So the deep copy shares the same lambda object as its factory and duplicates the contents. Any design that must cross a process boundary needs a named factory; one that only copies in memory does not.
+
+**How do you turn nested defaultdicts into plain dicts?**
+Recursively: for any `dict` instance, rebuild it as `{k: convert(v) for k, v in value.items()}`; return anything else unchanged. `dict(outer)` alone converts only the outer level — the inner values are still defaultdicts that insert on read. Because `Counter` and `OrderedDict` are also dict subclasses, a blanket converter flattens them too; write it for the shape you have if the caller needs `most_common` or `move_to_end` afterwards.
 
 **How does `json` treat a `defaultdict`, and why does that matter for caching?**
 As an ordinary `dict` subclass: the encoder writes it as a JSON object and never records the factory. Loading gives back plain dicts. So a value written to a cache as a defaultdict and read back is a different kind of object — code that relied on `d[k]` defaults works on a cache miss (fresh object) and raises `KeyError` on a cache hit. Either re-wrap on load with `defaultdict(factory, loaded)` or stop relying on the factory outside the code that builds the structure.
