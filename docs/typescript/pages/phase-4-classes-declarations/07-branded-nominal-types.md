@@ -101,7 +101,7 @@ the ceremony and provides none of the guarantee.
 
 ⚠️ **You may hit `TS2352`** if you try to assert across an incompatible shape:
 
-> *"Conversion of type '{0}' to type '{1}' may be a mistake because neither type
+> *"Conversion of type '\{0\}' to type '\{1\}' may be a mistake because neither type
 > sufficiently overlaps with the other. If this was intentional, convert the
 > expression to 'unknown' first."*
 
