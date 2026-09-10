@@ -273,4 +273,4 @@ Because the encoder checks for `True`, `False` and `None` before it checks for `
 
 ---
 
-← [25 · `dict` across threads](10-dict-across-threads.md) · [Topic index](README.md) · Next topic → **04 · `set` and `frozenset`** *(not written yet)* · [Phase index](../README.md)
+← [25 · `dict` across threads](10-dict-across-threads.md) · [Topic index](README.md) · Next topic → [04 · `set` and `frozenset`](../04-set-and-frozenset/README.md) · [Phase index](../README.md)

@@ -122,7 +122,7 @@ pinned — if at all — in a workflow file, and nothing keeps the two equal. Wh
 developers format differently and every contributor's diff fights the last one. Either mechanism is
 fine alone. For a formatter whose output must be identical everywhere, the locked dev dependency run
 with `uv run` is usually the better single source, because it is also what an editor integration and a
-pre-commit hook can be pointed at; topic **05 · ruff** *(not written yet)* and topic **11 · pre-commit**
+pre-commit hook can be pointed at; topic [05 · ruff](../05-ruff/README.md) and topic **11 · pre-commit**
 *(not written yet)* argue the specifics for those two consumers.
 
 ---

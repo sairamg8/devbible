@@ -257,4 +257,4 @@ Because `git mv` moves only tracked files. The old directory survives holding `_
 
 ---
 
-← Prev: [13 · Workspaces as a layout](13-workspaces-as-a-layout.md) · [Topic index](README.md) · Next → **05 · ruff** *(not written yet)*
+← Prev: [13 · Workspaces as a layout](13-workspaces-as-a-layout.md) · [Topic index](README.md) · Next → [05 · ruff](../05-ruff/README.md)

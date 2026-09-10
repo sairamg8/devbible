@@ -62,7 +62,7 @@ You are done with this topic when you can take a flat project and, without looki
 - **[Phase 7 — Packaging, projects and tooling](../README.md)** — the phase this topic belongs to.
 - **[01 · pyproject.toml](../01-pyproject-toml/README.md)** — the file every layout decision is configured in; its **[build-system and backends](../01-pyproject-toml/11-build-system-and-choosing-a-backend.md)** chunk is where the backends in chunks 07–08 are chosen, and its **[tool namespace](../01-pyproject-toml/12-the-tool-namespace.md)** chunk explains the `[tool.*]` tables used throughout.
 - [02 · uv](../02-uv/README.md) — owns `uv sync`, `uv run`, `[tool.uv.sources]` and uv in containers; this topic covers only `uv init`'s layouts and workspaces as a layout.
-- **05 · ruff** *(not written yet)* — lint configuration beyond the `src` setting.
+- [05 · ruff](../05-ruff/README.md) — lint configuration beyond the `src` setting.
 - **07 · Wheels vs sdists** *(not written yet)* — everything about what goes into each artifact; this topic covers file selection only as far as layout decides it.
 - **10 · Editable installs** *(not written yet)* — `.pth` files, import hooks and path dependencies in depth; chunk 04 covers only what the layout decides.
 - **Phase 12 — Testing with pytest** *(not written yet)* — the test runner this topic configures for layout.

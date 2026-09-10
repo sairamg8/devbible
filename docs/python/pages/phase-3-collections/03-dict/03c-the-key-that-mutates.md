@@ -153,7 +153,7 @@ The same applies to `frozenset` — freezing the container does not freeze the e
 
 ## `set` has the identical bug
 
-`set` and `frozenset` are the same table without values, so an element whose hash changes after `add()` is stranded in exactly the same way — `x in s` becomes `False` while `x` is still yielded by iteration. Everything on this page applies unchanged; **04 · `set` and `frozenset`** *(not written yet)* covers the set-specific surface.
+`set` and `frozenset` are the same table without values, so an element whose hash changes after `add()` is stranded in exactly the same way — `x in s` becomes `False` while `x` is still yielded by iteration. Everything on this page applies unchanged; [04 · `set` and `frozenset`](../04-set-and-frozenset/README.md) covers the set-specific surface.
 
 ## Gotchas
 

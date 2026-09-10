@@ -82,7 +82,7 @@ def is_banned_fast(user_id: str) -> bool:
     return user_id in banned_ids                    # O(1)
 ```
 
-The time-complexity page gives *O*(1) for `key in d` and, for lists, membership is a scan. Inside a loop over a request batch, that is the difference between *O*(batch × banned) and *O*(batch). `set` is the same hash table with the values omitted — it gets its own topic at **04 · `set` and `frozenset`** *(not written yet)*.
+The time-complexity page gives *O*(1) for `key in d` and, for lists, membership is a scan. Inside a loop over a request batch, that is the difference between *O*(batch × banned) and *O*(batch). `set` is the same hash table with the values omitted — it gets its own topic at [04 · `set` and `frozenset`](../04-set-and-frozenset/README.md).
 
 ## The layout is CPython's business — read it, do not depend on it
 

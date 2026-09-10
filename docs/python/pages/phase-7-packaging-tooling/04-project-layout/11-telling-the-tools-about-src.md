@@ -34,7 +34,7 @@ and for several source roots, which is what a workspace looks like ([13](13-work
 src = ["src", "packages/*/src"]
 ```
 
-Lint configuration generally is **05 · ruff** *(not written yet)*.
+Lint configuration generally is [05 · ruff](../05-ruff/README.md).
 
 ## coverage.py: measure the package, map the paths
 

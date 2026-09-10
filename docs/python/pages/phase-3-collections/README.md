@@ -33,8 +33,8 @@ the tier assignments below reflect that.
 | 01 | **[`list` internals](./01-list-internals/README.md)** · 31 chunks | <span className="db-tier t-master">Master</span> | Dynamic array, over-allocation, Timsort, and the `x = x.sort()` bug |
 | 02 | **[`tuple`](./02-tuple/README.md)** · 28 chunks | <span className="db-tier t-understand">Understand</span> | Immutable, hashable-if-contents-are, and when a dataclass beats a 4-tuple |
 | 03 | **[`dict`](./03-dict/README.md)** · 26 chunks | <span className="db-tier t-master">Master</span> | Insertion order as a guarantee, views, merge, and what may be a key |
-| 04 | **`set` and `frozenset`** *(not written yet)* | <span className="db-tier t-master">Master</span> | O(1) membership, dedupe, and set algebra instead of a nested loop |
-| 05 | **Slicing deeply** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `[start:stop:step]`, negatives, slice assignment, and slices as copies |
+| 04 | **[`set` and `frozenset`](./04-set-and-frozenset/README.md)** · 🚧 7 chunks, in progress | <span className="db-tier t-master">Master</span> | O(1) membership, dedupe, and set algebra instead of a nested loop |
+| 05 | **[Slicing deeply](./05-slicing/README.md)** · 🚧 8 chunks, in progress | <span className="db-tier t-understand">Understand</span> | `[start:stop:step]`, negatives, slice assignment, and slices as copies |
 | 06 | **`collections`** *(not written yet)* | <span className="db-tier t-master">Master</span> | `defaultdict`, `Counter`, `deque`, `namedtuple`, `ChainMap` |
 | 07 | **`heapq` and `bisect`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Top-K without a full sort; binary search on sorted data |
 | 08 | **`copy` vs `deepcopy`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | One level vs the whole graph, and the config two requests shared |

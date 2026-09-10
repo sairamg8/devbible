@@ -65,7 +65,7 @@ You are done with this topic when you can explain, without opening documentation
 - **Phase 1 · 12 · EAFP vs LBYL** owns the `d[k]`-and-catch versus check-first argument that chunk 9 relies on.
 - [01 · `list` internals](../01-list-internals/README.md) is the dynamic array whose iteration-while-mutating failure is silent where the dict's is loud.
 - [02 · `tuple`](../02-tuple/README.md) is the hashable-if-its-contents-are key type.
-- **04 · `set` and `frozenset`** *(not written yet)* is the same hash table without values — every hashability rule here applies unchanged, and its iteration order is *not* guaranteed.
+- [04 · `set` and `frozenset`](../04-set-and-frozenset/README.md) is the same hash table without values — every hashability rule here applies unchanged, and its iteration order is *not* guaranteed.
 - **06 · `collections`** *(not written yet)* owns `defaultdict`, `Counter`, `OrderedDict` and `ChainMap`, which this topic uses only at their boundary with `dict`.
 - **08 · `copy` vs `deepcopy`** *(not written yet)* is the answer to every "shallow" warning in chunks 17, 19 and 21.
 - **09 · Iteration idioms** *(not written yet)* and **10 · Sorting compound data** *(not written yet)* cover `zip(strict=True)` and multi-key `sorted()` beyond the dict-shaped uses here.

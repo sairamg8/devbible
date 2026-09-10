@@ -92,7 +92,7 @@ up:
   mutable, growable sequence whose over-allocation is why "extend a list, then convert" is linear.
 - [03 · `dict`](../03-dict/README.md) is where tuple keys live — its hash-table cost model and
   its rules for what may be a key are the other side of chunks 3–4b.
-- **04 · `set` and `frozenset`** *(not written yet)* is the answer when a tuple is being used for
+- [04 · `set` and `frozenset`](../04-set-and-frozenset/README.md) is the answer when a tuple is being used for
   membership, and `frozenset` is the immutable field type for unordered data.
 - **06 · `collections`** *(not written yet)* returns to `namedtuple` alongside `defaultdict`,
   `Counter` and `deque`.

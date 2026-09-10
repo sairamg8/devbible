@@ -94,7 +94,7 @@ and its failure mode without running it. Concretely, without looking anything up
 - [03 · `dict`](../03-dict/README.md) and **04 · `set` and `frozenset`** *(not written
   yet)* — the structures that replace `in` on a list, and whose iterators do detect
   mutation.
-- **05 · Slicing deeply** *(not written yet)* — slice assignment and slices as copies,
+- [05 · Slicing deeply](../05-slicing/README.md) — slice assignment and slices as copies,
   beyond the costs covered here.
 - **06 · `collections`** *(not written yet)* — `deque`, the queue a list only pretends
   to be.

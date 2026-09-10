@@ -112,7 +112,7 @@ answer without a search:
 - [03 · Dependencies done right](../03-dependencies/README.md) owns the policy this topic's mechanics serve:
   specifiers, extras versus groups, and why applications lock and libraries range.
 - [04 · Project layout](../04-project-layout/README.md) owns the src-layout choice that `uv init` makes for you.
-- **05 · ruff** *(not written yet)* is the tool most often run with `uvx` or pinned in a dev group.
+- [05 · ruff](../05-ruff/README.md) is the tool most often run with `uvx` or pinned in a dev group.
 - **07 · Wheels vs sdists** *(not written yet)* is what `uv build` asks the backend to produce.
 - **09 · PEP 723 inline metadata** *(not written yet)* is the third environment `uv run` can build — from
   a script's own declaration.
