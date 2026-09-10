@@ -20,7 +20,7 @@ sidebar_position: 7
 The sibling of [chunk 06](./06-the-name-is-wrong.md), with the same shape and one
 genuinely surprising feature.
 
-> 🔴 **`TS2304` — *"Cannot find name '{0}'."* — is also a last resort**, and the
+> 🔴 **`TS2304` — *"Cannot find name '\{0\}'."* — is also a last resort**, and the
 > ladder above it is stranger than the property one. Part of it is a **hardcoded
 > `switch` on the identifier's literal text**: the compiler carries a list of the
 > global names people most often forget to install types for, and for each one it
@@ -36,8 +36,8 @@ genuinely surprising feature.
 | `$` | *"…install type definitions for jQuery? Try `npm i --save-dev @types/jquery`."* | `TS2581` / `TS2592` |
 | 🔴 `Bun` | *"…install type definitions for Bun? Try `npm i --save-dev @types/bun`."* | `TS2867` / `TS2868` |
 | `Map`, `Set`, `Promise`, `Symbol`, `WeakMap`, `WeakSet`, `Iterator`, `AsyncIterator`, `SharedArrayBuffer`, `Atomics`, `AsyncIterable`, `AsyncIterableIterator`, `AsyncGenerator`, `AsyncGeneratorFunction`, `BigInt`, `Reflect`, `BigInt64Array`, `BigUint64Array` | *"…Do you need to change your target library? Try changing the `'lib'` compiler option to `'{1}'` or later."* | `TS2583` |
-| `await`, **in a call position** | *"Cannot find name '{0}'. Did you mean to write this in an async function?"* | `TS2311` |
-| anything, in a **shorthand property assignment** | *"No value exists in scope for the shorthand property '{0}'. Either declare one or provide an initializer."* | `TS18004` |
+| `await`, **in a call position** | *"Cannot find name '\{0\}'. Did you mean to write this in an async function?"* | `TS2311` |
+| anything, in a **shorthand property assignment** | *"No value exists in scope for the shorthand property '\{0\}'. Either declare one or provide an initializer."* | `TS18004` |
 | everything else | `Cannot find name '{0}'.` | `TS2304` |
 
 📌 **`Bun` being on that list is a small piece of ecosystem history in the
@@ -132,7 +132,7 @@ it stops *failing* on it.
 
 ### The spelling check — `TS2552`
 
-*"Cannot find name '{0}'. Did you mean '{1}'?"* — the same machinery as `TS2551`,
+*"Cannot find name '\{0\}'. Did you mean '\{1\}'?"* — the same machinery as `TS2551`,
 `TS2724` and `TS2820`, with the exact budget in
 [chunk 08](./08-the-spelling-budget.md).
 
@@ -164,7 +164,7 @@ different fix.** `Symbol` is the classic: it exists as a *type* in older libs an
 as a *value* only from `es2015` onward, so using it as a value under an old `lib`
 produces the combined message. The fix is `lib`, not your code.
 
-**`TS2503`** — *"Cannot find namespace '{0}'."* — is the same failure in namespace
+**`TS2503`** — *"Cannot find namespace '\{0\}'."* — is the same failure in namespace
 position, chosen when the lookup was for a namespace meaning rather than a value.
 
 ## Gotchas
@@ -260,8 +260,8 @@ class, while the instance check only looks at the immediate, non-static containe
 because a static method has no instance to suggest.
 
 **What is `TS2749` and why is it worth memorising?**
-*"'{0}' refers to a value, but is being used as a type here. Did you mean 'typeof
-{0}'?"* It is the most useful suggestion in the language, because `typeof` in a
+*"'\{0\}' refers to a value, but is being used as a type here. Did you mean 'typeof
+\{0\}'?"* It is the most useful suggestion in the language, because `typeof` in a
 type position is a different operator from `typeof` in an expression, and nothing
 in JavaScript experience prepares you for it. Its mirror is `TS2693`, a type used
 where a value is needed — which has no such easy fix, because interfaces and type
@@ -269,7 +269,7 @@ aliases genuinely do not exist at runtime.
 
 **Give an example of a flag changing an error into a suggestion rather than
 removing it.**
-`allowUmdGlobalAccess`. `TS2686` — *"'{0}' refers to a UMD global, but the current
+`allowUmdGlobalAccess`. `TS2686` — *"'\{0\}' refers to a UMD global, but the current
 file is a module"* — is reported through `errorOrSuggestion(!allowUmdGlobalAccess,
 …)`, so the flag decides its category rather than its existence. It is the same
 mechanism as the 7043–7050 Suggestion twins of the `noImplicitAny` errors, and as
