@@ -7,7 +7,7 @@ sidebar_position: 2
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-08 against the **TypeScript handbook** (*Generics → Type
-> argument inference*). `TS2558` (*"Expected {0} type arguments, but got {1}."*),
+> argument inference*). `TS2558` (*"Expected \{0\} type arguments, but got \{1\}."*),
 > `TS2347` (*"Untyped function calls may not accept type arguments."*) and
 > `TS2345` were read out of the **compiler's own diagnostic table**, not
 > recalled. ⚠️ Compiler inspected: TypeScript **6.0.3**, not the 7.0.2 this
