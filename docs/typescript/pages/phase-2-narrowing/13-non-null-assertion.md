@@ -6,7 +6,7 @@ sidebar_position: 13
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08. `TS2564` (*"Property '{0}' has no initializer and is not
+> Verified: 2026-08. `TS2564` (*"Property '\{0\}' has no initializer and is not
 > definitely assigned in the constructor."*), `TS1255` (*"A definite assignment
 > assertion '!' is not permitted in this context."*), `TS8013` and `TS18047` were
 > read out of the **TypeScript compiler's own diagnostic table**, not recalled.

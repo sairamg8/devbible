@@ -111,7 +111,7 @@ JavaScript order:
 So a field initializer in the same class **cannot read a parameter property** —
 the field runs first. This is the shape that produces:
 
-> **TS2729:** *"Property '{0}' is used before its initialization."*
+> **TS2729:** *"Property '\{0\}' is used before its initialization."*
 
 ```ts
 class Bad {
@@ -136,7 +136,7 @@ output rather than reasoning about it when a value mysteriously reverts.
 `private readonly repo: OrderRepo` gives a field assignable only within the
 constructor. Attempting otherwise:
 
-> **TS2540:** *"Cannot assign to '{0}' because it is a read-only property."*
+> **TS2540:** *"Cannot assign to '\{0\}' because it is a read-only property."*
 
 Combining `readonly` with a visibility modifier is one of the genuine reasons to
 prefer `private` over `#` from

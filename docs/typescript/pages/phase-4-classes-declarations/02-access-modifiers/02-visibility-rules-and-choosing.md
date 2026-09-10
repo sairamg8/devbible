@@ -64,9 +64,9 @@ subclasses** — not through a **sibling** branch. Both are `Base`s and it still
 fails: access is granted by the class you are writing in, not by a shared
 ancestor.
 
-That is what TS2446's third placeholder is reporting — *"Property '{0}' is
-protected and only accessible through an instance of class '{1}'. This is an
-instance of class '{2}'."* The message names both classes precisely because the
+That is what TS2446's third placeholder is reporting — *"Property '\{0\}' is
+protected and only accessible through an instance of class '\{1\}'. This is an
+instance of class '\{2\}'."* The message names both classes precisely because the
 two-class case is the confusing one.
 
 **The practical read:** if two sibling classes need to cooperate over shared

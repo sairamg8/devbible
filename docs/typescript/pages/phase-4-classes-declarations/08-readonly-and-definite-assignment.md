@@ -39,7 +39,7 @@ class Order {
 }
 ```
 
-> **TS2540:** *"Cannot assign to '{0}' because it is a read-only property."*
+> **TS2540:** *"Cannot assign to '\{0\}' because it is a read-only property."*
 
 Assignment is permitted **in the constructor and in the declaration's
 initialiser**, and nowhere else. That is what makes `private readonly` such a
@@ -63,8 +63,8 @@ freely, and `Object.freeze` is the runtime tool.
 
 Where the shallowness bites downstream:
 
-> **TS4104:** *"The type '{0}' is 'readonly' and cannot be assigned to the mutable
-> type '{1}'."*
+> **TS4104:** *"The type '\{0\}' is 'readonly' and cannot be assigned to the mutable
+> type '\{1\}'."*
 
 That is a `readonly` array — often one inferred from `as const` or a
 [`<const T>` parameter](../phase-3-generics/12-const-type-parameters/README.md) — reaching something that
@@ -73,7 +73,7 @@ the `readonly` upstream.
 
 And on index signatures:
 
-> **TS2542:** *"Index signature in type '{0}' only permits reading."*
+> **TS2542:** *"Index signature in type '\{0\}' only permits reading."*
 
 ## `strictPropertyInitialization` — the check `!` turns off
 
@@ -86,7 +86,7 @@ class Greeter {
 }
 ```
 
-> **TS2564:** *"Property '{0}' has no initializer and is not definitely assigned
+> **TS2564:** *"Property '\{0\}' has no initializer and is not definitely assigned
 > in the constructor."*
 
 This is a genuinely valuable check. It catches the single most common source of
@@ -148,11 +148,11 @@ surfacing as `Cannot read properties of undefined` three frames away.
 
 The same operator works on a `let`, silencing:
 
-> **TS2454:** *"Variable '{0}' is used before being assigned."*
+> **TS2454:** *"Variable '\{0\}' is used before being assigned."*
 
 Its property-level sibling is:
 
-> **TS2565:** *"Property '{0}' is used before being assigned."*
+> **TS2565:** *"Property '\{0\}' is used before being assigned."*
 
 Two constraints from the diagnostic table:
 

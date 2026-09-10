@@ -89,11 +89,11 @@ if (moduleResolution === Bundler && !emitModuleKindIsNonNodeESM(moduleKind)
                                  && moduleKind !== Preserve) { /* TS5095 */ }
 ```
 
-and its message reads *"Option '{0}' can only be used when 'module' is set to
+and its message reads *"Option '\{0\}' can only be used when 'module' is set to
 'preserve' or to 'es2015' or later."* — so `es2020` and `es2022` are accepted
 too, despite the doc naming only `esnext` and `preserve`.
 
-🔴 In the **7.0.2** binary the same `TS5095` reads *"Option '{0}' can only be used
+🔴 In the **7.0.2** binary the same `TS5095` reads *"Option '\{0\}' can only be used
 when 'module' is set to 'preserve', **'commonjs'**, or 'es2015' or later."*
 TypeScript 7 additionally permits `bundler` resolution with CommonJS emit — a
 real behaviour change, visible only in the message text. **Take the doc as the

@@ -51,7 +51,7 @@ interface Config { retries: string }
 ```
 
 > **TS2717:** *"Subsequent property declarations must have the same type.
-> Property '{0}' must be of type '{1}', but here has type '{2}'."*
+> Property '\{0\}' must be of type '\{1\}', but here has type '\{2\}'."*
 
 🔴 **If you see TS2717 for a name you believed was declared once, you have found
 an accidental merge.** The word *"subsequent"* is the giveaway — the compiler is
@@ -61,7 +61,7 @@ wrong response.
 
 Generic parameters have their own version:
 
-> **TS2428:** *"All declarations of '{0}' must have identical type parameters."*
+> **TS2428:** *"All declarations of '\{0\}' must have identical type parameters."*
 
 Identical means **names, order, constraints and defaults** — not merely the
 count. It is the same rule met in

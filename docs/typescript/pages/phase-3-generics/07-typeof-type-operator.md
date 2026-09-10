@@ -7,8 +7,8 @@ sidebar_position: 7
 <span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-08 against the **TypeScript handbook** (*Type Manipulation →
-> Typeof Type Operator*). `TS2749` — *"'{0}' refers to a value, but is being used
-> as a type here. Did you mean 'typeof {0}'?"* — and `TS2693` — *"'{0}' only
+> Typeof Type Operator*). `TS2749` — *"'\{0\}' refers to a value, but is being used
+> as a type here. Did you mean 'typeof \{0\}'?"* — and `TS2693` — *"'\{0\}' only
 > refers to a type, but is being used as a value here."* — were read out of the
 > **compiler's own diagnostic table**, as were the `InstanceType` and
 > `ConstructorParameters` declarations from `lib.es5.d.ts`. ⚠️ Install

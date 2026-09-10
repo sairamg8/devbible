@@ -87,7 +87,7 @@ the file a module.
 `declare module 'some-package'` must name the module **exactly as you would
 import it**. Get it wrong and, helpfully, you *do* get an error here:
 
-> **TS2664:** *"Invalid module name in augmentation, module '{0}' cannot be
+> **TS2664:** *"Invalid module name in augmentation, module '\{0\}' cannot be
 > found."*
 
 Two specifics that bite:
@@ -103,8 +103,8 @@ Two specifics that bite:
 
 And when the package ships no types:
 
-> **TS2665:** *"Invalid module name in augmentation. Module '{0}' resolves to an
-> untyped module at '{1}', which cannot be augmented."*
+> **TS2665:** *"Invalid module name in augmentation. Module '\{0\}' resolves to an
+> untyped module at '\{1\}', which cannot be augmented."*
 
 There is nothing to reopen. An untyped package needs a `declare module 'pkg';`
 ambient declaration first — which is a different thing from an augmentation, and
@@ -112,10 +112,10 @@ belongs in Phase 6.
 
 ## 4. The target is not a module at all
 
-> **TS2671:** *"Cannot augment module '{0}' because it resolves to a non-module
+> **TS2671:** *"Cannot augment module '\{0\}' because it resolves to a non-module
 > entity."*
 >
-> **TS2649:** *"Cannot augment module '{0}' with value exports because it
+> **TS2649:** *"Cannot augment module '\{0\}' with value exports because it
 > resolves to a non-module entity."*
 
 You are pointing `declare module` at something that is a namespace or a variable

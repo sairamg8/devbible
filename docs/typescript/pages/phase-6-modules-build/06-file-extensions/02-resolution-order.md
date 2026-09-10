@@ -98,7 +98,7 @@ The compiler distinguishes *a file that describes something* from *a file that i
 something*, and it will tell you when you have confused them:
 
 **TS2846** — *"A declaration file cannot be imported without 'import type'. Did
-you mean to import an implementation file '{0}' instead?"*
+you mean to import an implementation file '\{0\}' instead?"*
 
 ```ts
 import { Config } from "./config.d.ts";        // ❌ TS2846

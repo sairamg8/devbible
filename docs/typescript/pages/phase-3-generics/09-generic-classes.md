@@ -8,9 +8,9 @@ sidebar_position: 9
 
 > Verified: 2026-08 against the **TypeScript handbook** (*Generics → Generic
 > Classes*, *Classes*). `TS2302` (*"Static members cannot reference class type
-> parameters."*), `TS2420` (*"Class '{0}' incorrectly implements interface
-> '{1}'."*) and `TS2442` (*"Types have separate declarations of a private
-> property '{0}'."*) were read out of the **compiler's own diagnostic table**.
+> parameters."*), `TS2420` (*"Class '\{0\}' incorrectly implements interface
+> '\{1\}'."*) and `TS2442` (*"Types have separate declarations of a private
+> property '\{0\}'."*) were read out of the **compiler's own diagnostic table**.
 > ⚠️ Install inspected: TypeScript **6.0.3**, not the 7.0.2 this corpus targets.
 > **No console block** — no sandbox run covers this phase.
 

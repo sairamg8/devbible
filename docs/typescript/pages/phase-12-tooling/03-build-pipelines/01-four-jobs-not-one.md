@@ -72,8 +72,8 @@ requiring annotations so declarations can be emitted per file without inference.
 Two diagnostics worth knowing verbatim, because they are the ones that appear while
 you are assembling a two-tool pipeline:
 
-> `TS5069` · *"Option '{0}' cannot be specified without specifying option '{1}' or
-> option '{2}'."*
+> `TS5069` · *"Option '\{0\}' cannot be specified without specifying option '\{1\}' or
+> option '\{2\}'."*
 
 That is what `declarationMap`, `declarationDir` and `emitDeclarationOnly` each hit
 when `declaration` (or `composite`) is not set. 📌 **The message is generic and its

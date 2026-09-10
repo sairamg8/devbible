@@ -129,7 +129,7 @@ type Box = { a: number };
 type Box = { b: number };   // TS2300
 ```
 
-> **TS2300:** *"Duplicate identifier '{0}'."*
+> **TS2300:** *"Duplicate identifier '\{0\}'."*
 
 A type alias creates only a **type**, and it is a **closed** declaration —
 declaring it twice is a collision, not a merge. An `interface` in the same

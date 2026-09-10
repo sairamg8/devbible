@@ -72,8 +72,8 @@ Type '"activ"' is not assignable to type '"active" | "inactive" | "pending"'.
   Did you mean '"active"'?
 ```
 
-That second clause is its own template, `TS2820` — *"Type '{0}' is not assignable
-to type '{1}'. Did you mean '{2}'?"* — and it is the **same similarity machinery**
+That second clause is its own template, `TS2820` — *"Type '\{0\}' is not assignable
+to type '\{1\}'. Did you mean '\{2\}'?"* — and it is the **same similarity machinery**
 that produces `TS2551` for property names.
 [Chunk 08](./08-the-spelling-budget.md) has the exact edit-distance budget.
 
@@ -118,7 +118,7 @@ object-shape rules is settled in
 [topic 09](../09-excess-property-checks/03-the-second-and-third-rules.md). Do not
 re-derive it; that page owns it.
 
-📌 **`TS2728` — *"'{0}' is declared here."*** is a `Message`-category line the
+📌 **`TS2728` — *"'\{0\}' is declared here."*** is a `Message`-category line the
 compiler attaches as **related information** to several of these. In an editor it
 is a clickable jump to the declaration; in `tsc` output it is an extra line with a
 different file and position. It is the fastest route from a missing-property error

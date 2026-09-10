@@ -23,16 +23,16 @@ down**, plus the reason the whole family exists at all.
 The type can be reached but not *written down*. These are rarer and each has a
 distinct cause worth recognising:
 
-> **TS5088:** *"The inferred type of '{0}' references a type with a cyclic
+> **TS5088:** *"The inferred type of '\{0\}' references a type with a cyclic
 > structure which cannot be trivially serialized. A type annotation is
 > necessary."*
-> **TS2527:** *"The inferred type of '{0}' references an inaccessible '{1}' type.
+> **TS2527:** *"The inferred type of '\{0\}' references an inaccessible '\{1\}' type.
 > A type annotation is necessary."* — the `{1}` is `this`.
 > **TS7056:** *"The inferred type of this node exceeds the maximum length the
 > compiler will serialize. An explicit type annotation is needed."*
 > **TS4118:** *"The type of this node cannot be serialized because its property
-> '{0}' cannot be serialized."*
-> **TS4094:** *"Property '{0}' of exported anonymous class type may not be
+> '\{0\}' cannot be serialized."*
+> **TS4094:** *"Property '\{0\}' of exported anonymous class type may not be
 > private or protected."*
 
 **`TS7056` is the interesting one.** It is not an error about correctness — the
@@ -61,10 +61,10 @@ declaration.
 
 ## Group E — declaration emit from JavaScript
 
-> **TS9005:** *"Declaration emit for this file requires using private name '{0}'.
+> **TS9005:** *"Declaration emit for this file requires using private name '\{0\}'.
 > An explicit type annotation may unblock declaration emit."*
-> **TS9006:** *"Declaration emit for this file requires using private name '{0}'
-> from module '{1}'. An explicit type annotation may unblock declaration emit."*
+> **TS9006:** *"Declaration emit for this file requires using private name '\{0\}'
+> from module '\{1\}'. An explicit type annotation may unblock declaration emit."*
 
 🔴 **These come from the JavaScript declaration path**, not the TypeScript one —
 in the installed 5.9.3 build their only call site is `transformDeclarationsForJS`,

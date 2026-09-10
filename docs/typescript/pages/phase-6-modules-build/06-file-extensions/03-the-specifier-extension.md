@@ -41,7 +41,7 @@ is ESM. Two diagnostics say so:
 imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an
 extension to the import path."*
 
-**TS2835** — the same sentence, ending *"Did you mean '{0}'?"*
+**TS2835** — the same sentence, ending *"Did you mean '\{0\}'?"*
 
 🔴 **They are a pair, and the difference is whether the compiler worked out the
 answer.** TS2835 fills `{0}` with the specifier it thinks you meant — so when you
@@ -71,7 +71,7 @@ you know what to type.
 Because the emitted string would be `./router.ts`, and there is no `.ts` file at
 runtime. The compiler refuses:
 
-**TS5097** — *"An import path can only end with a '{0}' extension when
+**TS5097** — *"An import path can only end with a '\{0\}' extension when
 'allowImportingTsExtensions' is enabled."*
 
 And `allowImportingTsExtensions` has a precondition, whose exact text **changed

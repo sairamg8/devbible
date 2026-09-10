@@ -23,7 +23,7 @@ edit distance you would assume.
 |---|---|
 | `TS2551` | a property name — [chunk 06](./06-the-name-is-wrong.md) |
 | `TS2552` | an identifier — [chunk 07](./07-cannot-find-name.md) |
-| `TS2724` | an imported member — *"'{0}' has no exported member named '{1}'. Did you mean '{2}'?"* |
+| `TS2724` | an imported member — *"'\{0\}' has no exported member named '\{1\}'. Did you mean '\{2\}'?"* |
 | `TS2820` | a string-literal union member — [chunk 03](./03-two-types-with-one-name.md) |
 | `TS2561` | an excess property — [topic 09](../09-excess-property-checks/01-freshness.md) |
 

@@ -86,7 +86,7 @@ usual conclusion — *"there are no types, I'll write a shim"* — is wrong.
 📌 **The compiler will tell you it is doing this** if you ask. With
 `--traceResolution` it emits:
 
-> **TS6182:** *"Scoped package detected, looking in '{0}'"*
+> **TS6182:** *"Scoped package detected, looking in '\{0\}'"*
 
 ## Where the compiler looks, and the two options that change it
 
@@ -119,7 +119,7 @@ browser bundle's type-checking. Just know that setting it once makes every futur
 
 **A name in `types` that does not resolve is its own error:**
 
-> **TS2688:** *"Cannot find type definition file for '{0}'."*
+> **TS2688:** *"Cannot find type definition file for '\{0\}'."*
 
 ## Option three — and only now
 

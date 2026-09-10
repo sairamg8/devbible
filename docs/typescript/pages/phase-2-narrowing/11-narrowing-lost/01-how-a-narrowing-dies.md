@@ -10,7 +10,7 @@ sidebar_position: 1
 > results below are **sandbox-measured** in
 > `sandbox/ts-p2/ex2-guards-and-loss.sh` by the assign-to-`1` technique; that run
 > saved no output file, so the findings are stated in prose and this page carries
-> **no console block**. `TS18047` — *"'{0}' is possibly 'null'."* — was read out
+> **no console block**. `TS18047` — *"'\{0\}' is possibly 'null'."* — was read out
 > of the compiler's own diagnostic table (⚠️ TypeScript **6.0.3**, not 7.0.2),
 > and matches the code the recorded run reported. Behaviour otherwise validated
 > against the **TypeScript handbook** (*Narrowing → Control flow analysis*).

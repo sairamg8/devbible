@@ -9,8 +9,8 @@ sidebar_position: 2
 > Verified: 2026-08 against the **TypeScript handbook** (*Indexed Access Types*,
 > *Generics*) and the **`lib.es5.d.ts`** declarations of `Pick` and `Record`,
 > read directly. `TS7053` (*"Element implicitly has an 'any' type because
-> expression of type '{0}' can't be used to index type '{1}'."*) and `TS2536`
-> (*"Type '{0}' cannot be used to index type '{1}'."*) were read out of the
+> expression of type '\{0\}' can't be used to index type '\{1\}'."*) and `TS2536`
+> (*"Type '\{0\}' cannot be used to index type '\{1\}'."*) were read out of the
 > **compiler's own diagnostic table** — ⚠️ TypeScript **6.0.3**, not the 7.0.2
 > this corpus targets. **No console block** — no sandbox run covers this phase.
 
@@ -119,7 +119,7 @@ error TS7053: Element implicitly has an 'any' type because expression of type
 
 `TS7053` is the un-generic version of this whole topic showing up as an error —
 the message is telling you to constrain the key. Its sibling `TS2536`
-(*"Type '{0}' cannot be used to index type '{1}'."*) appears when the indexing
+(*"Type '\{0\}' cannot be used to index type '\{1\}'."*) appears when the indexing
 type is a type parameter that is not constrained to `keyof`.
 
 **3. `T` is a union.**

@@ -18,7 +18,7 @@ something whose *emit* depends on another file. Read each rule as an answer to
 
 ## 1 · Re-exporting a type
 
-**TS1205** — *"Re-exporting a type when '{0}' is enabled requires using 'export
+**TS1205** — *"Re-exporting a type when '\{0\}' is enabled requires using 'export
 type'."*
 
 ```ts
@@ -30,8 +30,8 @@ export type { User } from "./types";   // ✅
 
 Its sibling fires when the name is a *type-only import* somewhere upstream:
 
-**TS1448** — *"'{0}' resolves to a type-only declaration and must be re-exported
-using a type-only re-export when '{1}' is enabled."*
+**TS1448** — *"'\{0\}' resolves to a type-only declaration and must be re-exported
+using a type-only re-export when '\{1\}' is enabled."*
 
 🔴 **The two are a diagnosis pair, and the difference matters.** TS1205 means the
 thing is a type. TS1448 means the thing might be a value, but somebody upstream
@@ -46,10 +46,10 @@ you get is itself information:
 
 | Code | Condition | Suggested fix |
 |---|---|---|
-| **TS1289** | resolves to a **type-only declaration**, re-exported normally | *"Consider using 'import type' where '{0}' is imported."* |
-| **TS1290** | the same, as `export default` | *"Consider using 'export type &#123; {0} as default &#125;'."* |
-| **TS1291** | resolves to a **type**, re-exported normally | *"Consider using 'import type' where '{0}' is imported."* |
-| **TS1292** | the same, as `export default` | *"Consider using 'export type &#123; {0} as default &#125;'."* |
+| **TS1289** | resolves to a **type-only declaration**, re-exported normally | *"Consider using 'import type' where '\{0\}' is imported."* |
+| **TS1290** | the same, as `export default` | *"Consider using 'export type &#123; \{0\} as default &#125;'."* |
+| **TS1291** | resolves to a **type**, re-exported normally | *"Consider using 'import type' where '\{0\}' is imported."* |
+| **TS1292** | the same, as `export default` | *"Consider using 'export type &#123; \{0\} as default &#125;'."* |
 
 The pattern behind all four: you imported a name as a value and re-exported it,
 so the file's *own* import statement is the thing that has to be marked, not the
@@ -68,7 +68,7 @@ A transpiler sees `export default Config` and must emit an assignment. If
 ## 4 · `export import` on a type
 
 **TS1269** — *"Cannot use 'export import' on a type or type-only namespace when
-'{0}' is enabled."*
+'\{0\}' is enabled."*
 
 `export import X = Y` is the namespace-era spelling, and it has the same problem
 in a sharper form: the statement is a value declaration whose target may be a
@@ -76,7 +76,7 @@ type.
 
 ## 5 · Ambient `const enum` access
 
-**TS2748** — *"Cannot access ambient const enums when '{0}' is enabled."*
+**TS2748** — *"Cannot access ambient const enums when '\{0\}' is enabled."*
 
 ```ts
 // vendor.d.ts
@@ -105,7 +105,7 @@ enum E {
 }
 ```
 
-**TS18055** — *"'{0}' has a string type, but must have syntactically recognizable
+**TS18055** — *"'\{0\}' has a string type, but must have syntactically recognizable
 string syntax when 'isolatedModules' is enabled."*
 
 ```ts
@@ -120,7 +120,7 @@ insist those two agree.
 
 ## 7 · Namespaces in a global script file
 
-**TS1280** — *"Namespaces are not allowed in global script files when '{0}' is
+**TS1280** — *"Namespaces are not allowed in global script files when '\{0\}' is
 enabled. If this file is not intended to be a global script, set
 'moduleDetection' to 'force' or add an empty 'export &#123;&#125;' statement."*
 
@@ -153,10 +153,10 @@ standard decorators.
 
 Two diagnostics, and they are subtler than the rest:
 
-**TS2865** — *"Import '{0}' conflicts with local value, so must be declared with
+**TS2865** — *"Import '\{0\}' conflicts with local value, so must be declared with
 a type-only import when 'isolatedModules' is enabled."*
 
-**TS2866** — *"Import '{0}' conflicts with global value used in this file, so
+**TS2866** — *"Import '\{0\}' conflicts with global value used in this file, so
 must be declared with a type-only import when 'isolatedModules' is enabled."*
 
 ```ts

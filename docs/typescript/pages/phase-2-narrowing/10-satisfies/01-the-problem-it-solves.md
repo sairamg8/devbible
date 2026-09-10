@@ -8,7 +8,7 @@ sidebar_position: 1
 
 > Verified: 2026-08 against the **TypeScript 4.9 release notes** (which
 > introduced the operator) and the **handbook**. `TS1360`'s exact text —
-> *"Type '{0}' does not satisfy the expected type '{1}'."* — was read out of the
+> *"Type '\{0\}' does not satisfy the expected type '\{1\}'."* — was read out of the
 > **compiler's own diagnostic table**, not recalled. ⚠️ The compiler inspected was
 > TypeScript **6.0.3**, not the 7.0.2 this corpus targets; that is the version
 > actually read. **No console block** — no recorded run covers this topic, and a

@@ -174,7 +174,7 @@ typo.
 you?**
 `TS2353` when the extra property resembles nothing in the target, and `TS2561`
 when it is close to a real one — the latter includes *"Did you mean to write
-'{2}'?"* with the intended name. `TS2561` is almost always a typo; `TS2353` more
+'\{2\}'?"* with the intended name. `TS2561` is almost always a typo; `TS2353` more
 often means you are passing to the wrong function or looking at the wrong
 interface.
 

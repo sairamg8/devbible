@@ -65,7 +65,7 @@ here.
 🔴 **Read from the compiler, not recalled: the 5.9.3 message table has exactly one
 merged-declaration diagnostic**, and it is about something else entirely —
 
-> `TS2395` · *"Individual declarations in merged declaration '{0}' must be all
+> `TS2395` · *"Individual declarations in merged declaration '\{0\}' must be all
 > exported or all local."*
 
 **Export consistency is checked; unimplemented members are not.** So there is no

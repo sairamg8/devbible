@@ -54,8 +54,8 @@ somewhere it *does* type-check against something:
 
 | Code | Fires on | But not on |
 |---|---|---|
-| `TS2801` *"This condition will always return true since this '{0}' is always defined."* | `if (promise)` | a bare statement |
-| `TS2367` *"…the types '{0}' and '{1}' have no overlap."* | `promise === value` | a bare statement |
+| `TS2801` *"This condition will always return true since this '\{0\}' is always defined."* | `if (promise)` | a bare statement |
+| `TS2367` *"…the types '\{0\}' and '\{1\}' have no overlap."* | `promise === value` | a bare statement |
 | `TS2339` + `TS2773` *"Did you forget to use 'await'?"* | `promise.field` | a bare statement |
 
 🔴 **Every one of those needs the promise to be *used*.** A floating promise is

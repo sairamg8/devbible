@@ -96,7 +96,7 @@ treated as* an interface. It never makes the class *become* it.
 
 ## What the failure looks like
 
-> **TS2420:** *"Class '{0}' incorrectly implements interface '{1}'."*
+> **TS2420:** *"Class '\{0\}' incorrectly implements interface '\{1\}'."*
 
 Followed by the specific member that does not fit. It fires when a required
 member is missing or has an incompatible type — the entire job of the clause.
@@ -104,10 +104,10 @@ member is missing or has an incompatible type — the entire job of the clause.
 Two more, and they are worth knowing as a pair because each suggests the other
 keyword:
 
-> **TS2720:** *"Class '{0}' incorrectly implements class '{1}'. Did you mean to
-> extend '{1}' and inherit its members as a subclass?"*
+> **TS2720:** *"Class '\{0\}' incorrectly implements class '\{1\}'. Did you mean to
+> extend '\{1\}' and inherit its members as a subclass?"*
 >
-> **TS2689:** *"Cannot extend an interface '{0}'. Did you mean 'implements'?"*
+> **TS2689:** *"Cannot extend an interface '\{0\}'. Did you mean 'implements'?"*
 
 The compiler is explicitly built to catch people reaching for the wrong one, in
 both directions. If you see either, the fix is usually the swap it is proposing.
@@ -135,11 +135,11 @@ the compiler cannot pin down. The clause needs a fixed list to check against.
   by the base — the exact thing `implements` refuses to do.
 - **`super` exists.** There is a real prototype chain, and `instanceof` works.
 - **The derived class is checked against the base.** An incompatible override is
-  > **TS2416:** *"Property '{0}' in type '{1}' is not assignable to the same
-  > property in base type '{2}'."*
+  > **TS2416:** *"Property '\{0\}' in type '\{1\}' is not assignable to the same
+  > property in base type '\{2\}'."*
 - **Abstract members are enforced.**
-  > **TS2515:** *"Non-abstract class '{0}' does not implement inherited abstract
-  > member {1} from class '{2}'."*
+  > **TS2515:** *"Non-abstract class '\{0\}' does not implement inherited abstract
+  > member \{1\} from class '\{2\}'."*
 
   (`TS2653` is the same rule for a class *expression*.) Abstract classes are
   [topic 11](./11-abstract-classes.md); the point here is that an `abstract` base

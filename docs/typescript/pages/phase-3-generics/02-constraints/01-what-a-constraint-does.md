@@ -7,8 +7,8 @@ sidebar_position: 1
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-08 against the **TypeScript handbook** (*Generics → Generic
-> Constraints*). `TS2344` (*"Type '{0}' does not satisfy the constraint
-> '{1}'."*), `TS2345` and `TS2313` (*"Type parameter '{0}' has a circular
+> Constraints*). `TS2344` (*"Type '\{0\}' does not satisfy the constraint
+> '\{1\}'."*), `TS2345` and `TS2313` (*"Type parameter '\{0\}' has a circular
 > constraint."*) were read out of the **compiler's own diagnostic table**, not
 > recalled. ⚠️ Compiler inspected: TypeScript **6.0.3**, not the 7.0.2 this
 > corpus targets. **No console block** — no sandbox run covers this phase.

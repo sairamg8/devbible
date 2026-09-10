@@ -31,12 +31,12 @@ Grep the 4xxx range and the messages sort themselves into three phrasings —
 **46** of them say *"private name"*, **15** say *"cannot be named"*, and the rest
 say *"from private module"*:
 
-> `TS4016` · *"Type parameter '{0}' of exported function has or is using private
-> name '{1}'."*
-> `TS4023` · *"Exported variable '{0}' has or is using name '{1}' from external
-> module {2} but **cannot be named**."*
-> `TS4024` · *"Exported variable '{0}' has or is using name '{1}' from **private
-> module** '{2}'."*
+> `TS4016` · *"Type parameter '\{0\}' of exported function has or is using private
+> name '\{1\}'."*
+> `TS4023` · *"Exported variable '\{0\}' has or is using name '\{1\}' from external
+> module \{2\} but **cannot be named**."*
+> `TS4024` · *"Exported variable '\{0\}' has or is using name '\{1\}' from **private
+> module** '\{2\}'."*
 
 **All three are the same complaint.** To write a `.d.ts`, the compiler must produce
 a **name** for every type in your public surface. Inside your own source it never

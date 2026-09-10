@@ -39,19 +39,19 @@ These are the good ones. You get a diagnostic, at compile time, with a code.
 
 | Code | Message (verbatim) | Real cause |
 |---|---|---|
-| `TS2307` | *Cannot find module '{0}' or its corresponding type declarations.* | Anything. The generic miss |
-| `TS2792` | *Cannot find module '{0}'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?* | Mismatch #1 — the compiler has guessed the cause for you |
-| `TS6280` | *There are types at '{0}', but this result could not be resolved under your current 'moduleResolution' setting…* | Mismatch #1. **Your** config |
-| `TS6278` | *There are types at '{0}', but this result could not be resolved when respecting package.json "exports". The '{1}' library may need to update its package.json or typings.* | The **library's** `package.json` |
+| `TS2307` | *Cannot find module '\{0\}' or its corresponding type declarations.* | Anything. The generic miss |
+| `TS2792` | *Cannot find module '\{0\}'. Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?* | Mismatch #1 — the compiler has guessed the cause for you |
+| `TS6280` | *There are types at '\{0\}', but this result could not be resolved under your current 'moduleResolution' setting…* | Mismatch #1. **Your** config |
+| `TS6278` | *There are types at '\{0\}', but this result could not be resolved when respecting package.json "exports". The '\{1\}' library may need to update its package.json or typings.* | The **library's** `package.json` |
 | `TS2834` | *Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'.* | Mismatch #1, caught early |
-| `TS2835` | *…Did you mean '{0}'?* | The same, with the answer supplied |
-| `TS1479` | *The current file is a CommonJS module whose imports will produce 'require' calls; however, the referenced file is an ECMAScript module and cannot be imported with 'require'. Consider writing a dynamic 'import("{0}")' call instead.* | Mismatch #3 |
-| `TS1471` | *Module '{0}' cannot be imported using this construct. The specifier only resolves to an ES module, which cannot be imported with 'require'. Use an ECMAScript import instead.* | Mismatch #3, via `import x = require()` |
-| `TS5109` / `TS5110` | *Option 'moduleResolution' must be set to '{0}'…* / *Option 'module' must be set to '{0}'…* | An incoherent config, caught before it can cause #1 or #3 |
-| `TS5095` | *Option '{0}' can only be used when 'module' is set to 'preserve' or to 'es2015' or later.* | The same, for `bundler` |
+| `TS2835` | *…Did you mean '\{0\}'?* | The same, with the answer supplied |
+| `TS1479` | *The current file is a CommonJS module whose imports will produce 'require' calls; however, the referenced file is an ECMAScript module and cannot be imported with 'require'. Consider writing a dynamic 'import("\{0\}")' call instead.* | Mismatch #3 |
+| `TS1471` | *Module '\{0\}' cannot be imported using this construct. The specifier only resolves to an ES module, which cannot be imported with 'require'. Use an ECMAScript import instead.* | Mismatch #3, via `import x = require()` |
+| `TS5109` / `TS5110` | *Option 'moduleResolution' must be set to '\{0\}'…* / *Option 'module' must be set to '\{0\}'…* | An incoherent config, caught before it can cause #1 or #3 |
+| `TS5095` | *Option '\{0\}' can only be used when 'module' is set to 'preserve' or to 'es2015' or later.* | The same, for `bundler` |
 | `TS1293` | *ECMAScript module syntax is not allowed in a CommonJS module when 'module' is set to 'preserve'.* | Mismatch #3 |
 | `TS1295` | *ECMAScript imports and exports cannot be written in a CommonJS file under 'verbatimModuleSyntax'…* | Mismatch #3 |
-| `TS2732` | *Cannot find module '{0}'. Consider using '--resolveJsonModule' to import module with '.json' extension.* | Not a module problem at all |
+| `TS2732` | *Cannot find module '\{0\}'. Consider using '--resolveJsonModule' to import module with '.json' extension.* | Not a module problem at all |
 
 📌 **`TS1479` is the interesting one.** It is not "you cannot do this" — it is
 "you cannot do this *synchronously*", and the message hands you the workaround:

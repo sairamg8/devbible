@@ -15,7 +15,7 @@ sidebar_position: 6
 > `TS2812`, `TS18031`, `TS18032`. **No sandbox, no console block** — this is a
 > file read.
 
-`TS2339` — *"Property '{0}' does not exist on type '{1}'."* — is the error
+`TS2339` — *"Property '\{0\}' does not exist on type '\{1\}'."* — is the error
 everybody has seen a thousand times, and almost nobody knows what it actually
 means.
 
@@ -34,10 +34,10 @@ that applies:
 |---|---|---|
 | 0 | already reported for this node and type | 🔴 **nothing** — results are cached per `(node, typeId, isUncheckedJS)` |
 | 1 | the containing type is a **non-primitive union** | a `TS2339` **prefix naming the first union member that lacks it** |
-| 2 | the property exists as a **`static`** member | `TS2576` *"…Did you mean to access the static member '{2}' instead?"* |
+| 2 | the property exists as a **`static`** member | `TS2576` *"…Did you mean to access the static member '\{2\}' instead?"* |
 | 3 | the containing type is a **`Promise`** whose awaited type has the property | plain `TS2339` **plus `TS2773`** *"Did you forget to use 'await'?"* as related information |
-| 4 | the property exists in a **later library slice** | `TS2550` *"…Do you need to change your target library? Try changing the 'lib' compiler option to '{2}' or later."* |
-| 5 | a **similar name** exists on the type | `TS2551` *"…Did you mean '{2}'?"*, plus `TS2728` *"'{0}' is declared here."* |
+| 4 | the property exists in a **later library slice** | `TS2550` *"…Do you need to change your target library? Try changing the 'lib' compiler option to '\{2\}' or later."* |
+| 5 | a **similar name** exists on the type | `TS2551` *"…Did you mean '\{2\}'?"*, plus `TS2728` *"'\{0\}' is declared here."* |
 | 6 | the type looks like an **empty DOM element** and `lib` omits `dom` | `TS2812` *"…Try changing the 'lib' compiler option to include 'dom'."* |
 | 7 | none of the above | **bare `TS2339`** — with a `never`-intersection explanation prepended if applicable |
 
@@ -167,8 +167,8 @@ several times. 📌 **Corollary: the number of `TS2339`s in your output is a cou
 migration's error count moves in ways that look impossible.
 
 **In a JavaScript file it is a Suggestion, not an error.** Under `allowJs` without
-`checkJs`, step 5 uses `TS2568` — *"Property '{0}' **may** not exist on type
-'{1}'. Did you mean '{2}'?"* — and it is reported at **Suggestion** category, so it
+`checkJs`, step 5 uses `TS2568` — *"Property '\{0\}' **may** not exist on type
+'\{1\}'. Did you mean '\{2\}'?"* — and it is reported at **Suggestion** category, so it
 greys out in an editor and never fails a build. The hedged wording ("may not") is
 deliberate: in unchecked JS the compiler's type is a guess.
 

@@ -50,12 +50,12 @@ The type is *reachable* but not *exported*, so the declaration file cannot refer
 to it. Four members of the family, differing only in where the offending type
 appears:
 
-> **TS4025:** *"Exported variable '{0}' has or is using private name '{1}'."*
-> **TS4081:** *"Exported type alias '{0}' has or is using private name '{1}'."*
-> **TS4020:** *"'extends' clause of exported class '{0}' has or is using private
-> name '{1}'."*
+> **TS4025:** *"Exported variable '\{0\}' has or is using private name '\{1\}'."*
+> **TS4081:** *"Exported type alias '\{0\}' has or is using private name '\{1\}'."*
+> **TS4020:** *"'extends' clause of exported class '\{0\}' has or is using private
+> name '\{1\}'."*
 > **TS4060:** *"Return type of exported function has or is using private name
-> '{0}'."*
+> '\{0\}'."*
 
 ```ts
 interface Config { retries: number }        // ← not exported
@@ -79,12 +79,12 @@ The type *is* exported — but from somewhere the output file cannot reach. This
 the group that breaks monorepos and pnpm installs, and `TS2742` is the one you
 will actually meet:
 
-> **TS2742:** *"The inferred type of '{0}' cannot be named without a reference to
-> '{1}'. This is likely not portable. A type annotation is necessary."*
-> **TS4023:** *"Exported variable '{0}' has or is using name '{1}' from external
-> module {2} but cannot be named."*
+> **TS2742:** *"The inferred type of '\{0\}' cannot be named without a reference to
+> '\{1\}'. This is likely not portable. A type annotation is necessary."*
+> **TS4023:** *"Exported variable '\{0\}' has or is using name '\{1\}' from external
+> module \{2\} but cannot be named."*
 > **TS4053:** *"Return type of public method from exported class has or is using
-> name '{0}' from external module {1} but cannot be named."*
+> name '\{0\}' from external module \{1\} but cannot be named."*
 
 Read `TS2742`'s wording carefully, because it tells you the whole story: *"cannot
 be named **without a reference to**"* a specifier, and *"this is likely not

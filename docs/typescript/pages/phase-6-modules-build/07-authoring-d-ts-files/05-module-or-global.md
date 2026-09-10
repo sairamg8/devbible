@@ -121,7 +121,7 @@ global that can collide with `lib.dom.d.ts`.
 
 The corollary that catches people going the other way:
 
-> **TS2306:** *"File '{0}' is not a module."*
+> **TS2306:** *"File '\{0\}' is not a module."*
 
 You cannot `import { Foo } from './globals'` when `globals.d.ts` is a script.
 Its declarations are already in scope. A script declaration file gets into the

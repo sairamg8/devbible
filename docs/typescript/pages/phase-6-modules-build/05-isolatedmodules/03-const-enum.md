@@ -96,7 +96,7 @@ the import is unresolvable.
 
 ## And the ambient case cannot be saved at all
 
-**TS2748** — *"Cannot access ambient const enums when '{0}' is enabled."*
+**TS2748** — *"Cannot access ambient const enums when '\{0\}' is enabled."*
 
 ```ts
 // vendor.d.ts

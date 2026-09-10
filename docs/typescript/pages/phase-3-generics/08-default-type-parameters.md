@@ -9,8 +9,8 @@ sidebar_position: 8
 > Verified: 2026-08 against the **TypeScript handbook** (*Generics*) and the
 > **2.3 release notes**, which introduced generic parameter defaults.
 > `TS2706` (*"Required type parameters may not follow optional type
-> parameters."*), `TS2707` (*"Generic type '{0}' requires between {1} and {2}
-> type arguments."*), `TS2716` (*"Type parameter '{0}' has a circular default."*)
+> parameters."*), `TS2707` (*"Generic type '\{0\}' requires between \{1\} and \{2\}
+> type arguments."*), `TS2716` (*"Type parameter '\{0\}' has a circular default."*)
 > and `TS2314` were read out of the **compiler's own diagnostic table**. ⚠️
 > Install inspected: TypeScript **6.0.3**, not the 7.0.2 this corpus targets.
 > **No console block** — no sandbox run covers this phase.

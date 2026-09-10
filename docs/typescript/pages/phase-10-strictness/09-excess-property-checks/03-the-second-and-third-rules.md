@@ -9,7 +9,7 @@ sidebar_position: 3
 > Verified: 2026-08 from the **compiler's own diagnostic table** in the
 > **TypeScript 5.9.3** build for `TS2559` *"Type `'{0}'` has no properties in
 > common with type `'{1}'`."*, `TS2739` *"Type `'{0}'` is missing the following
-> properties from type `'{1}'`: {2}"* and `TS2741` *"Property `'{0}'` is missing
+> properties from type `'{1}'`: \{2\}"* and `TS2741` *"Property `'{0}'` is missing
 > in type `'{1}'` but required in type `'{2}'`."* 🔴 **Weak type detection and
 > its exact limit were MEASURED in phase 1** and are cited from
 > [phase 1 · Object types](../../phase-1-type-vocabulary/04-object-types.md)
@@ -80,7 +80,7 @@ assignability rather than a heuristic:
 | Code | Message | Fires when |
 |---|---|---|
 | `TS2741` | *"Property `'{0}'` is missing in type `'{1}'` but required in type `'{2}'`."* | **one** property is missing |
-| `TS2739` | *"Type `'{0}'` is missing the following properties from type `'{1}'`: {2}"* | **several** are missing, listed |
+| `TS2739` | *"Type `'{0}'` is missing the following properties from type `'{1}'`: \{2\}"* | **several** are missing, listed |
 
 ```ts
 interface User { id: string; name: string; email: string }

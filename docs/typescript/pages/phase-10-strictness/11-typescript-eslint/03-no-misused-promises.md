@@ -40,7 +40,7 @@ if (isReady()) { … }        // isReady is async
 ```
 
 The compiler already reports this as `TS2801` — *"This condition will always return
-true since this '{0}' is always defined."* — and a comparison instead of a
+true since this '\{0\}' is always defined."* — and a comparison instead of a
 condition gets `TS2367` with a `TS2773` *"Did you forget to use 'await'?"* hint
 attached ([topic 10 chunk 11](../10-the-error-codes/11-the-condition-is-decided.md)).
 

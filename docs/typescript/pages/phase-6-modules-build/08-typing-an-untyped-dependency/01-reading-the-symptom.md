@@ -23,9 +23,9 @@ package".
 
 | Code | Message | What it means |
 |---|---|---|
-| **TS2307** | *"Cannot find module '{0}' or its corresponding type declarations."* | Nothing resolved. There is **no file** — not the JavaScript, not the types |
-| **TS7016** | *"Could not find a declaration file for module '{0}'. '{1}' implicitly has an 'any' type."* | The **JavaScript resolved**; only the types are missing. `{1}` is the path to the real `.js` file it found |
-| **TS2688** | *"Cannot find type definition file for '{0}'."* | A name in your `types` array (or a `/// <reference types>`) does not resolve to a types package |
+| **TS2307** | *"Cannot find module '\{0\}' or its corresponding type declarations."* | Nothing resolved. There is **no file** — not the JavaScript, not the types |
+| **TS7016** | *"Could not find a declaration file for module '\{0\}'. '\{1\}' implicitly has an 'any' type."* | The **JavaScript resolved**; only the types are missing. `{1}` is the path to the real `.js` file it found |
+| **TS2688** | *"Cannot find type definition file for '\{0\}'."* | A name in your `types` array (or a `/// <reference types>`) does not resolve to a types package |
 
 🔴 **The distinction that matters is TS2307 versus TS7016.**
 
@@ -40,7 +40,7 @@ package".
 
 ⚠️ There is a fourth, and it is a resolution problem wearing this one's clothes:
 
-> **TS2792:** *"Cannot find module '{0}'. Did you mean to set the
+> **TS2792:** *"Cannot find module '\{0\}'. Did you mean to set the
 > 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths'
 > option?"*
 
@@ -90,14 +90,14 @@ cleverness:
 | `describe`, `suite`, `it`, `test` | `@types/jest` **or** `@types/mocha` |
 | `process`, `require`, `Buffer`, `module` | `npm i --save-dev @types/node` |
 | `Bun` | `npm i --save-dev @types/bun` |
-| `Map`, `Set`, `Promise`, `Symbol`, `WeakMap`, `WeakSet`, `Iterator`, `AsyncIterator`, `SharedArrayBuffer`, `Atomics`, `BigInt`, `Reflect`, `BigInt64Array`, … | *"Do you need to change your target library? Try changing the `lib` compiler option to '{1}' or later."* |
+| `Map`, `Set`, `Promise`, `Symbol`, `WeakMap`, `WeakSet`, `Iterator`, `AsyncIterator`, `SharedArrayBuffer`, `Atomics`, `BigInt`, `Reflect`, `BigInt64Array`, … | *"Do you need to change your target library? Try changing the `lib` compiler option to '\{1\}' or later."* |
 | `await` in a call position | *"Did you mean to write this in an async function?"* |
 
 🔴 **And the message you get tells you whether `types` is configured.** For each
 package suggestion there are *two* diagnostics, and the checker picks between
 them on `compilerOptions.types`:
 
-> **TS2580:** *"Cannot find name '{0}'. Do you need to install type definitions
+> **TS2580:** *"Cannot find name '\{0\}'. Do you need to install type definitions
 > for node? Try `npm i --save-dev @types/node`."*
 > **TS2591:** *"…Try `npm i --save-dev @types/node` **and then add 'node' to the
 > types field in your tsconfig**."*
@@ -116,13 +116,13 @@ missing is a `lib`/`target` question — [04 · `lib`, `target` and the ambient 
 Once the module is `any`, everything downstream of it goes quiet in ways that
 have their own codes. Recognising them keeps you from chasing symptoms:
 
-> **TS7006:** *"Parameter '{0}' implicitly has an '{1}' type."*
-> **TS7005:** *"Variable '{0}' implicitly has an '{1}' type."*
-> **TS7034:** *"Variable '{0}' implicitly has type '{1}' in some locations where
+> **TS7006:** *"Parameter '\{0\}' implicitly has an '\{1\}' type."*
+> **TS7005:** *"Variable '\{0\}' implicitly has an '\{1\}' type."*
+> **TS7034:** *"Variable '\{0\}' implicitly has type '\{1\}' in some locations where
 > its type cannot be determined."*
 > **TS7009:** *"'new' expression, whose target lacks a construct signature,
 > implicitly has an 'any' type."*
-> **TS7043:** *"Variable '{0}' implicitly has an '{1}' type, but a better type may
+> **TS7043:** *"Variable '\{0\}' implicitly has an '\{1\}' type, but a better type may
 > be inferred from usage."*
 
 **TS7009 is the useful one here.** It means you called `new` on something the
@@ -133,8 +133,8 @@ as a value rather than a class. That is exactly the `declare class` versus
 
 ## One more, worth recognising immediately
 
-> **TS6137:** *"Cannot import type declaration files. Consider importing '{0}'
-> instead of '{1}'."*
+> **TS6137:** *"Cannot import type declaration files. Consider importing '\{0\}'
+> instead of '\{1\}'."*
 
 You wrote `import … from './types/legacy-lib.d'`. You never import a `.d.ts`
 directly — it is found by inclusion or by resolution, never by path. If your
