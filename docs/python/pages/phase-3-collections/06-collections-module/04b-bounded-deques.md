@@ -251,4 +251,4 @@ You cannot; it is fixed at construction and read-only. Build a new one with `deq
 
 ---
 
-← Prev: [04 · `deque` — the block list underneath](04-deque-the-block-list.md) · [Topic index](README.md)
+← Prev: [04 · `deque` — the block list underneath](04-deque-the-block-list.md) · [Topic index](README.md) · Next → [04c · `deque` during iteration and across threads](04c-deque-iteration-and-threads.md)

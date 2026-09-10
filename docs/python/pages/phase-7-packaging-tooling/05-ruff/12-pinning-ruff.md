@@ -83,7 +83,7 @@ so nobody installing the package ever resolves against it.
 | `astral-sh/ruff-action` | `version` / `version-file` / nearest `pyproject.toml` | `version-file: uv.lock` ([11c](11c-ruff-action.md)) |
 | GitLab or Docker jobs | the `ghcr.io/astral-sh/ruff` image tag | nothing — keep it `0.16.6-alpine` by hand ([11d](11d-ci-reports.md)) |
 | an ad-hoc `uvx ruff` | the call site, else whatever uv cached first | `uvx ruff@0.16.6` ([`uvx` versions](../02-uv/07b-uvx-versions-sources-and-plugins.md)) |
-| the VS Code extension | the environment's ruff, else the bundled one | a synced `.venv` the extension can find (**13 · Editor integration** *(not written yet)*) |
+| the VS Code extension | the environment's ruff, else the bundled one | a synced `.venv` the extension can find ([13 · Editor integration](13-editor-integration.md)) |
 | PyCharm 2025.3+ | the interpreter's ruff, or one on `PATH` | *Interpreter* execution mode + a synced environment |
 | `uv tool install ruff@latest`, Homebrew, standalone installer | the machine | nothing at all |
 
@@ -115,7 +115,7 @@ and the extension's `pyproject.toml` notes that its *"Release automation intenti
 latest Ruff"*. Its default `importStrategy` is
 `fromEnvironment`, which *"finds Ruff in the environment, falling back to the bundled version"*.
 With a synced `.venv` the editor runs the locked ruff; without one it silently runs whatever the
-extension last shipped. Settings and failure modes are **13** *(not written yet)*.
+extension last shipped. Settings and failure modes are [13](13-editor-integration.md).
 
 ### Global installs
 

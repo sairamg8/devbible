@@ -207,7 +207,7 @@ cancelled_ids = {job.job_id for job in cancelled}
 pending = deque(job for job in pending if job.job_id not in cancelled_ids)
 ```
 
-**Symptom: `IndexError: pop from an empty deque` in a consumer.** Cause: popping without checking — or, across threads, checking and then popping (**04c · `deque` during iteration and across threads** *(not written yet)*). Fix, single-threaded: loop on truthiness.
+**Symptom: `IndexError: pop from an empty deque` in a consumer.** Cause: popping without checking — or, across threads, checking and then popping ([04c · `deque` during iteration and across threads](04c-deque-iteration-and-threads.md)). Fix, single-threaded: loop on truthiness.
 
 ```python
 while pending:

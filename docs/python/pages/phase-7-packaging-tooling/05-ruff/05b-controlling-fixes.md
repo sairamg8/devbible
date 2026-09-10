@@ -165,7 +165,7 @@ uv run ruff check --diff . || true  # informational: what --fix would change
 **Symptom: after `unfixable = ["F"]`, unused imports still disappear on save in the editor.**
 Cause: the editor is not reading this configuration — a different ruff binary, editor-level
 settings taking precedence (`editorFirst` is the default), or a workspace opened at a different
-root. Fix: point the editor at the project's configuration and binary (**13** *(not written yet)*).
+root. Fix: point the editor at the project's configuration and binary ([13](13-editor-integration.md)).
 
 ```json
 {

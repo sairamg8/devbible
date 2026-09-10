@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **Linter + formatter in one, rule selection, `--fix`, CI and pre-commit.**
 
-:::caution In progress — 34 chunks written
+:::caution In progress — 35 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -52,10 +52,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 32 | **[11e · Changed files and pre-commit in CI](11e-changed-files-and-pre-commit-in-ci.md)** | Changed-files runs are sound only while config, version and layout are unchanged — fall back to the full tree on `pyproject.toml`/`ruff.toml`/`uv.lock`; 🔴 explicit paths bypass `exclude` without `--force-exclude`; `fetch-depth: 0`; `pre-commit run --all-files` adds a second version pin (`rev`) |
 | 33 | **[12 · Pinning ruff](12-pinning-ruff.md)** | Exact pin in the dev group (🔴 minors are ruff's breaking releases, patches may still change verdicts — `~=` admits them, and preview changes on any patch); why the specifier matters despite the lock; the inventory of every place a ruff version lives — `rev`, action, image tag, editor, global tools |
 | 34 | **[12b · required-version and keeping pins in step](12b-required-version-and-keeping-pins-in-step.md)** | The one pin every ruff obeys — checked before strict parsing since 0.14.11, inherited only through `extend` (🔴 a sub-project `[tool.ruff]` without `extend` has no tripwire); `==` vs floor-and-ceiling vs floor; keeping the pre-commit `rev` in step — tripwire, a CI pin check, or a local `uv run --locked` hook with no `rev` at all |
+| 35 | **[13 · Editor integration](13-editor-integration.md)** | `ruff server` is the editor backend; VS Code picks the environment's ruff, then `PATH`, then 🔴 a bundled binary that tracks the *latest* release — silently; untrusted workspaces always use it; a leftover `ruff.lint.args` swaps in deprecated `ruff-lsp`; editor settings beat `pyproject.toml` under the default `editorFirst` — commit `filesystemFirst` |
 
 ## Still to come
 
-- **Editor integration** *(not written yet)*
+- **Editor integration, continued — 13b · On save, other tools and other editors** *(not written yet)*
 - **Upgrading ruff safely** *(not written yet)*
 
 ---

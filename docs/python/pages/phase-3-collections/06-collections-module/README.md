@@ -27,10 +27,10 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 6 | **[03c · `Counter` — multiset arithmetic](03c-counter-multiset-math.md)** | `+ - & \|` and unary ops drop results ≤ 0; 🔴 `stock - order` hides the shortfall that `subtract` shows, and `-=` deletes every zero count in the counter; binary ops need a Counter, in-place ones take any mapping; `<=` is a partial order; list diffs with duplicates; subclasses come back as `Counter` |
 | 7 | **[04 · `deque` — the block list underneath](04-deque-the-block-list.md)** | 64-slot blocks in a doubly-linked list: ends O(1) because nothing moves, middle indexing walks blocks, `insert`/`del`/`remove` are rotations; the source-derived cost table; queue, BFS, round-robin; 🔴 `pop()` is LIFO; `+` needs a deque, `==` only matches a deque, `extendleft` reverses, no slicing or `sort` |
 | 8 | **[04b · Bounded deques](04b-bounded-deques.md)** | `maxlen` evicts silently from the opposite end — tail, ring buffers, sliding windows, undo; 🔴 data loss in a work queue (use `Queue(maxsize)`); `maxlen=0` keeps nothing; `insert` raises where `append` evicts; `appendleft` evicts the newest; `deque(d)` drops the bound; count is not time in a rate limiter |
+| 9 | **[04c · `deque` during iteration and across threads](04c-deque-iteration-and-threads.md)** | 🔴 the state counter: any append or pop kills a live iterator, even at equal length; drain, rotate-filter or snapshot; atomic single calls vs racy `if d: d.popleft()`; 🔴 a health endpoint iterating a shared ring buffer; `copy()` for snapshots; `queue.Queue` and `asyncio.Queue` are deques with synchronisation |
 
 ## Still to come
 
-- **04c · `deque` during iteration and across threads** *(not written yet)*
 - **05 · `namedtuple` from the factory side** *(not written yet)*
 - **06 · `ChainMap` — layered lookup** *(not written yet)*
 - **06b · `ChainMap` traps** *(not written yet)*

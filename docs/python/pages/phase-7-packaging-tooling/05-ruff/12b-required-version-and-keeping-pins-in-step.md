@@ -258,4 +258,4 @@ consulted for those files. `extend = "../../pyproject.toml"` inherits the root's
 
 ---
 
-← Prev: [12 · Pinning ruff](12-pinning-ruff.md) · [Topic index](README.md) · Next → **13 · Editor integration** *(not written yet)*
+← Prev: [12 · Pinning ruff](12-pinning-ruff.md) · [Topic index](README.md) · Next → [13 · Editor integration](13-editor-integration.md)
