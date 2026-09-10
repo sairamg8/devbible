@@ -66,7 +66,7 @@ almost universally misunderstood in three specific ways:
 Two names, both read out of 5.9.3, that say what the flag is more plainly than
 any documentation:
 
-- **TS18055** — *"'{0}' has a string type, but must have **syntactically
+- **TS18055** — *"'\{0\}' has a string type, but must have **syntactically
   recognizable** string syntax when 'isolatedModules' is enabled."* That phrase
   is the standard: what the checker knows and what the text says must agree.
 - **`appearsValueyToTranspiler`** — the checker's own variable name for the
