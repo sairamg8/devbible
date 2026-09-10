@@ -51,8 +51,7 @@ bypass an installed version.
 
 ⚠️ For a team, the honest answer to "which ruff" is not a `uvx` flag at all. If a formatter's output
 has to be identical on every machine and in CI, the version belongs in a committed file — a dev
-dependency group locked in `uv.lock`, or the `rev` of a pre-commit hook. Topic **05 · ruff** *(not
-written yet)* makes that argument for ruff specifically; the general rule is that `uvx` without a
+dependency group locked in `uv.lock`, or the `rev` of a pre-commit hook. Topic [05 · ruff](../05-ruff/12-pinning-ruff.md) makes that argument for ruff specifically; the general rule is that `uvx` without a
 version is a personal convenience, not a team contract.
 
 ## `--from`: when the command is not the package

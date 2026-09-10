@@ -149,8 +149,7 @@ that means when someone installs your project with pip.
   not read a script table out of `pyproject.toml` the way `npm run` reads `scripts`. Named
   commands come from `[project.scripts]`, which requires a package — topic
   **06 · Entry points** *(not written yet)*.
-- **Not a linter, formatter or type checker.** That is ruff (topic **05 · ruff** *(not written
-  yet)*, pinned at **0.16.6**) and a type checker of your choice.
+- **Not a linter, formatter or type checker.** That is ruff (topic [05 · ruff](../05-ruff/README.md), pinned at **0.16.6**) and a type checker of your choice.
 - **Not a drop-in pip in every case.** `uv pip` is *"designed as a drop-in replacement for
   common `pip` and `pip-tools` workflows"* but *"uv is not intended to be an exact clone of
   `pip`"* ([pip compatibility](https://docs.astral.sh/uv/pip/compatibility/)). The deliberate
