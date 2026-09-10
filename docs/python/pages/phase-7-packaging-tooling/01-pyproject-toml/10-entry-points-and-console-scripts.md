@@ -163,7 +163,7 @@ if __name__ == "__main__":
     raise SystemExit(main())
 ```
 
-`python -m invoice_service` needs no installation of a wrapper and no scripts directory on `PATH` — it needs only that the package is importable. It is the escape hatch when `PATH` is wrong, when the venv was moved, or when you are inside a container with no shell profile. Shipping both costs four lines and removes a whole class of support question. Deeper treatment of the console-script surface belongs to **06 · Entry points** *(not written yet)*.
+`python -m invoice_service` needs no installation of a wrapper and no scripts directory on `PATH` — it needs only that the package is importable. It is the escape hatch when `PATH` is wrong, when the venv was moved, or when you are inside a container with no shell profile. Shipping both costs four lines and removes a whole class of support question. Deeper treatment of the console-script surface belongs to [06 · Entry points](../06-entry-points/README.md).
 
 ## Gotchas
 
