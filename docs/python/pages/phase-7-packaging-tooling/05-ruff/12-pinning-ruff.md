@@ -22,7 +22,7 @@ file, and each commits the other's "fix". ruff's versioning makes this worse tha
 library: there is no stable API yet, breaking changes ship in *minor* releases, and the patch
 policy allows bug fixes that change behaviour. So the dev dependency gets an exact version, the
 lock carries it, and then comes the part most projects miss — ruff runs in five or six places,
-each of which picks its own version unless told otherwise. 12b *(not written yet)*
+each of which picks its own version unless told otherwise. [12b](12b-required-version-and-keeping-pins-in-step.md)
 is the mechanism that turns a disagreement between them into an error.**
 
 ## Why exact, not a range
@@ -79,7 +79,7 @@ so nobody installing the package ever resolves against it.
 | Where ruff runs | Where its version comes from | Tied to the lock by |
 |---|---|---|
 | `uv run ruff` — developers and CI | `[dependency-groups]` → `uv.lock` | `uv sync --locked` ([11b](11b-the-ci-runner.md)) |
-| the ruff-pre-commit hooks | `rev:` in `.pre-commit-config.yaml` | nothing — a second pin (**12b** *(not written yet)*) |
+| the ruff-pre-commit hooks | `rev:` in `.pre-commit-config.yaml` | nothing — a second pin ([12b](12b-required-version-and-keeping-pins-in-step.md)) |
 | `astral-sh/ruff-action` | `version` / `version-file` / nearest `pyproject.toml` | `version-file: uv.lock` ([11c](11c-ruff-action.md)) |
 | GitLab or Docker jobs | the `ghcr.io/astral-sh/ruff` image tag | nothing — keep it `0.16.6-alpine` by hand ([11d](11d-ci-reports.md)) |
 | an ad-hoc `uvx ruff` | the call site, else whatever uv cached first | `uvx ruff@0.16.6` ([`uvx` versions](../02-uv/07b-uvx-versions-sources-and-plugins.md)) |
@@ -122,7 +122,7 @@ extension last shipped. Settings and failure modes are **13** *(not written yet)
 The installation page offers `uv tool install ruff@latest` and standalone installers. Both put a
 `ruff` on `PATH` that knows nothing about any project, and a developer who types `ruff format .`
 instead of `uv run ruff format .` gets it. The project cannot stop that command from running — it
-can only make it fail, which is `required-version` (**12b** *(not written yet)*).
+can only make it fail, which is `required-version` ([12b](12b-required-version-and-keeping-pins-in-step.md)).
 
 ## Gotchas
 
@@ -138,7 +138,7 @@ uv add --dev 'ruff==0.16.6'
 **★ Symptom: two developers keep reformatting each other's lines, and both swear they ran
 `ruff format`.** Cause: one ran `uv run ruff format` (the lock's 0.16.6), the other a global ruff
 from `uv tool install ruff@latest`. Fix: run the project's ruff — and make any other one refuse to
-run (**12b** *(not written yet)*).
+run ([12b](12b-required-version-and-keeping-pins-in-step.md)).
 
 ```bash
 uv run ruff format .
@@ -213,4 +213,4 @@ use outside any project; inside one, `uv run ruff` runs the locked version.
 
 ---
 
-← Prev: [11e · Changed files and pre-commit in CI](11e-changed-files-and-pre-commit-in-ci.md) · [Topic index](README.md) · Next → **12b · required-version and keeping pins in step** *(not written yet)*
+← Prev: [11e · Changed files and pre-commit in CI](11e-changed-files-and-pre-commit-in-ci.md) · [Topic index](README.md) · Next → [12b · required-version and keeping pins in step](12b-required-version-and-keeping-pins-in-step.md)

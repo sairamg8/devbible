@@ -186,7 +186,7 @@ uv run ruff check --select I --fix . && git commit -am "Sort imports (ruff 0.16 
 
 **Symptom: a team member's local ruff reports far fewer problems than CI.** Cause: their ruff is
 older than 0.16 and the project relies on the defaults, so the two binaries run different rule
-sets. Fix: pin the version and make it enforceable ([12](12-pinning-ruff.md)).
+sets. Fix: pin the version and make it enforceable ([12b](12b-required-version-and-keeping-pins-in-step.md)).
 
 ```toml
 [tool.ruff]

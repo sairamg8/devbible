@@ -170,7 +170,7 @@ ruff format . --config "format.quote-style = 'single'"
 only on one developer's machine.** Cause: their ruff (often the editor's bundled copy) predates
 the option, and ruff rejects unknown keys. `nested-string-quote-style`, added in 0.15.9, is a
 recent example. Fix: pin the version in the repository so an old binary fails with a clear
-message ([12](12-pinning-ruff.md)).
+message ([12b](12b-required-version-and-keeping-pins-in-step.md)).
 
 ```toml
 [tool.ruff]

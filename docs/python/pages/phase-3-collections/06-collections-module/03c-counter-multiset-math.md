@@ -218,4 +218,4 @@ No, it is a partial order — multiset inclusion. `Counter(coffee=2, tea=1)` and
 
 ---
 
-← Prev: [03b · `Counter` — top-N and per-group tallies](03b-counter-top-n.md) · [Topic index](README.md)
+← Prev: [03b · `Counter` — top-N and per-group tallies](03b-counter-top-n.md) · [Topic index](README.md) · Next → [04 · `deque` — the block list underneath](04-deque-the-block-list.md)
