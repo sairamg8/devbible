@@ -145,7 +145,7 @@ What each piece answers:
 
 ## Autoloading is running installed code
 
-A host that loads every entry point in its group at start-up — pytest does, for `pytest11` — gives every installed distribution that registers in the group a way to run code inside the host's process. That is the feature, and it is also why one broken or hostile package can stop every run. pytest's answer is an off switch: plugins can be blocked by name with `-p no:NAME`, and autoloading turned off with `PYTEST_DISABLE_PLUGIN_AUTOLOAD` or, since pytest 8.4, `--disable-plugin-autoload` (**06b** *(not written yet)*). A host of your own should offer the same pair — an allow-list and a deny-list:
+A host that loads every entry point in its group at start-up — pytest does, for `pytest11` — gives every installed distribution that registers in the group a way to run code inside the host's process. That is the feature, and it is also why one broken or hostile package can stop every run. pytest's answer is an off switch: plugins can be blocked by name with `-p no:NAME`, and autoloading turned off with `PYTEST_DISABLE_PLUGIN_AUTOLOAD` or, since pytest 8.4, `--disable-plugin-autoload` ([06b](06b-plugin-hosts-in-the-wild.md)). A host of your own should offer the same pair — an allow-list and a deny-list:
 
 ```python
 import os
@@ -271,4 +271,4 @@ At the unit level, construct `EntryPoint` objects — the constructor is public 
 
 ---
 
-← Prev: [05 · Reading entry points at runtime](05-reading-entry-points-at-runtime.md) · [Topic index](README.md) · Next → **06b · Plugin hosts in the wild** *(not written yet)*
+← Prev: [05 · Reading entry points at runtime](05-reading-entry-points-at-runtime.md) · [Topic index](README.md) · Next → [06b · Plugin hosts in the wild](06b-plugin-hosts-in-the-wild.md)
