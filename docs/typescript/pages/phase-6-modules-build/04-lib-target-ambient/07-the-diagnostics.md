@@ -40,9 +40,9 @@ message from a literal switch. Here is every case it has:
 | `describe`, `suite`, `it`, `test` | **TS2582 / TS2593** — install `@types/jest` or `@types/mocha` |
 | `process`, `require`, `Buffer`, `module` | **TS2580 / TS2591** — install `@types/node` |
 | `Bun` | install `@types/bun` |
-| `Map`, `Set`, `Promise`, `Symbol`, `WeakMap`, `WeakSet`, `Iterator`, `AsyncIterator`, `SharedArrayBuffer`, `Atomics`, `AsyncIterable`, `AsyncIterableIterator`, `AsyncGenerator`, `AsyncGeneratorFunction`, `BigInt`, `Reflect`, `BigInt64Array`, `BigUint64Array` | **TS2583** — *"…Try changing the 'lib' compiler option to '{1}' or later."* |
+| `Map`, `Set`, `Promise`, `Symbol`, `WeakMap`, `WeakSet`, `Iterator`, `AsyncIterator`, `SharedArrayBuffer`, `Atomics`, `AsyncIterable`, `AsyncIterableIterator`, `AsyncGenerator`, `AsyncGeneratorFunction`, `BigInt`, `Reflect`, `BigInt64Array`, `BigUint64Array` | **TS2583** — *"…Try changing the 'lib' compiler option to '\{1\}' or later."* |
 | `await`, in call position | *"Did you mean to write this in an async function?"* |
-| **everything else** | **TS2304** — *"Cannot find name '{0}'."* and nothing more |
+| **everything else** | **TS2304** — *"Cannot find name '\{0\}'."* and nothing more |
 
 **Twenty-seven names.** That is the complete set of identifiers TypeScript has an
 opinion about.
@@ -108,8 +108,8 @@ Missing *members* get the identical treatment through
 `getSuggestedLibForNonExistentProperty`, and here the feature table earns its
 keep, because the version differs per method:
 
-**TS2550** — *"Property '{0}' does not exist on type '{1}'. Do you need to change
-your target library? Try changing the 'lib' compiler option to '{2}' or later."*
+**TS2550** — *"Property '\{0\}' does not exist on type '\{1\}'. Do you need to change
+your target library? Try changing the 'lib' compiler option to '\{2\}' or later."*
 
 ```ts
 [3, 1, 2].toSorted();
@@ -119,8 +119,8 @@ your target library? Try changing the 'lib' compiler option to '{2}' or later."*
 ```
 
 That `'es2023'` is read straight out of the `Array` entry above. When the property
-is not in the table you get the bare **TS2339** instead — *"Property '{0}' does
-not exist on type '{1}'."* — and you are back to working it out yourself.
+is not in the table you get the bare **TS2339** instead — *"Property '\{0\}' does
+not exist on type '\{1\}'."* — and you are back to working it out yourself.
 
 ## 🔴 The DOM has one heuristic that is not a list
 
@@ -147,7 +147,7 @@ Three conditions, and each is doing real work:
 An `HTMLInputElement` with no members means somebody declared the name without
 the DOM lib behind it. So instead of TS2339 you get:
 
-**TS2812** — *"Property '{0}' does not exist on type '{1}'. Try changing the 'lib'
+**TS2812** — *"Property '\{0\}' does not exist on type '\{1\}'. Try changing the 'lib'
 compiler option to include 'dom'."*
 
 This is the one place the compiler reasons about your environment rather than
@@ -160,13 +160,13 @@ Worth recognising on sight, because each names a *different* option as the fix:
 
 | Code | Message | The fix is |
 |---|---|---|
-| **TS2585** | *"'{0}' only refers to a type, but is being used as a value here. Do you need to change your target library? Try changing the 'lib' compiler option to es2015 or later."* | `lib` — you have the *type* `Symbol` but not the *value* |
+| **TS2585** | *"'\{0\}' only refers to a type, but is being used as a value here. Do you need to change your target library? Try changing the 'lib' compiler option to es2015 or later."* | `lib` — you have the *type* `Symbol` but not the *value* |
 | **TS2705** | *"An async function or method in ES5 requires the 'Promise' constructor. Make sure you have a declaration for the 'Promise' constructor or include 'ES2015' in your '--lib' option."* | `lib` **or** a polyfill declaration |
-| **TS2802** | *"Type '{0}' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher."* | `target` **or** `downlevelIteration` — a rare error naming two |
+| **TS2802** | *"Type '\{0\}' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher."* | `target` **or** `downlevelIteration` — a rare error naming two |
 | **TS2791** | *"Exponentiation cannot be performed on 'bigint' values unless the 'target' option is set to 'es2016' or later."* | `target`, not `lib` |
 | **TS1056** | *"Accessors are only available when targeting ECMAScript 5 and higher."* | `target` |
-| **TS2318** | *"Cannot find global type '{0}'."* | your libs are **broken or absent** |
-| **TS2468** | *"Cannot find global value '{0}'."* | same |
+| **TS2318** | *"Cannot find global type '\{0\}'."* | your libs are **broken or absent** |
+| **TS2468** | *"Cannot find global value '\{0\}'."* | same |
 
 🔴 **TS2318 and TS2468 are in a different category from all the others.** Every
 other code on this page means "your environment does not have this API". These
@@ -268,7 +268,7 @@ anything, and the suggestion is about a single name rather than about your
 project — following it literally can drop the DOM.
 
 **What is TS2812?**
-*"Property '{0}' does not exist on type '{1}'. Try changing the 'lib' compiler
+*"Property '\{0\}' does not exist on type '\{1\}'. Try changing the 'lib' compiler
 option to include 'dom'."* — issued when `lib` is set without `lib.dom.d.ts` and
 you touch an **empty** type named `Element`, `Node`, `EventTarget` or `HTML*Element`.
 It is the one genuine heuristic among the list-driven messages.
