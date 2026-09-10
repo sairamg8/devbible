@@ -8,7 +8,7 @@ sidebar_position: 2
 
 > Verified: 2026-09-10 against the Python 3.14 documentation — [`collections.defaultdict`](https://docs.python.org/3.14/library/collections.html#defaultdict-objects) and its examples, [Mapping Types — `dict`](https://docs.python.org/3.14/library/stdtypes.html#mapping-types-dict) (`__missing__`), [`str.format_map`](https://docs.python.org/3.14/library/stdtypes.html#str.format_map). Mechanism read from CPython **v3.14.7** [`Modules/_collectionsmodule.c`](https://github.com/python/cpython/blob/v3.14.7/Modules/_collectionsmodule.c) (`defdict_missing`, `defdict_init`, the `default_factory` member) — implementation detail where the docs are silent. Target: **Python 3.14.7**. **No sandbox run.**
 
-**`defaultdict` changes one thing about `dict`: what `d[key]` does when the key is absent. Instead of raising `KeyError`, it calls `default_factory()` — with no arguments — stores the result under the key, and returns it. That single behaviour turns the four-line "if the key is missing, create an empty list, then append" into `groups[key].append(item)`, and the documentation calls it *"simpler and faster than an equivalent technique using `dict.setdefault()`"*. The factory also has two limits that are the source of every defaultdict bug: it is called without the key, so it cannot build a key-specific default; and it runs on every missing `d[key]`, including the ones that were only meant to read. This chunk is the mechanism and the build-phase patterns; **02b · `defaultdict` in production** *(not written yet)* is what happens when a defaultdict leaves the function that built it.**
+**`defaultdict` changes one thing about `dict`: what `d[key]` does when the key is absent. Instead of raising `KeyError`, it calls `default_factory()` — with no arguments — stores the result under the key, and returns it. That single behaviour turns the four-line "if the key is missing, create an empty list, then append" into `groups[key].append(item)`, and the documentation calls it *"simpler and faster than an equivalent technique using `dict.setdefault()`"*. The factory also has two limits that are the source of every defaultdict bug: it is called without the key, so it cannot build a key-specific default; and it runs on every missing `d[key]`, including the ones that were only meant to read. This chunk is the mechanism and the build-phase patterns; [02b · `defaultdict` in production](02b-defaultdict-in-production.md) is what happens when a defaultdict leaves the function that built it.**
 
 ## The mechanism: `__missing__`, and nothing else
 
@@ -31,7 +31,7 @@ def __missing__(self, key):
     return value
 ```
 
-In `v3.14.7` the actual insert is `PyDict_SetDefaultRef` — insert only if the key is still absent, and return whatever ends up stored. That detail matters only under concurrency, and **02b** *(not written yet)* covers it.
+In `v3.14.7` the actual insert is `PyDict_SetDefaultRef` — insert only if the key is still absent, and return whatever ends up stored. That detail matters only under concurrency, and [02b](02b-defaultdict-in-production.md) covers it.
 
 And the scope rule, which is the one to remember:
 
@@ -270,4 +270,4 @@ Both are zero-argument callables, but the first evaluates `[]` on each call and 
 
 ---
 
-← Prev: [01 · Nine types, three families](01-nine-types-three-families.md) · [Topic index](README.md)
+← Prev: [01 · Nine types, three families](01-nine-types-three-families.md) · [Topic index](README.md) · Next → [02b · `defaultdict` in production](02b-defaultdict-in-production.md)
