@@ -130,9 +130,9 @@ The compiler's diagnostic table carries three placement messages:
 
 | Code | Message text (verbatim from the table) |
 |---|---|
-| **TS1273** | *"'{0}' modifier cannot appear on a type parameter"* |
-| **TS1274** | *"'{0}' modifier can only appear on a type parameter of a class, interface or type alias"* |
-| **TS1277** | *"'{0}' modifier can only appear on a type parameter of a function, method or class"* |
+| **TS1273** | *"'\{0\}' modifier cannot appear on a type parameter"* |
+| **TS1274** | *"'\{0\}' modifier can only appear on a type parameter of a class, interface or type alias"* |
+| **TS1277** | *"'\{0\}' modifier can only appear on a type parameter of a function, method or class"* |
 
 TS1274's list — class, interface, type alias — is where the **variance**
 annotations `in`/`out` belong ([topic 14](../14-variance.md)). TS1277's list is
