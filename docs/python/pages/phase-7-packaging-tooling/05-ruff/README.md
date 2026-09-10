@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **Linter + formatter in one, rule selection, `--fix`, CI and pre-commit.**
 
-:::caution In progress — 31 chunks written
+:::caution In progress — 32 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -49,10 +49,10 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 29 | **[11b · The CI runner](11b-the-ci-runner.md)** | Install the locked ruff (`uv sync --locked --only-dev` + `uv run`); a complete workflow; 🔴 `setup-uv@v10` does not exist (no major tags since v8); `RUFF_OUTPUT_FORMAT=github` for annotations — never auto-detected |
 | 30 | **[11c · ruff-action](11c-ruff-action.md)** | Installs a ruff binary with no Python/uv; 🔴 version from `pyproject.toml` only, a range resolves to the *newest* release — `version-file: uv.lock` keeps it on the lock; no floating `v4` tag; the integrations page still shows `@v3` |
 | 31 | **[11d · CI reports](11d-ci-reports.md)** | GitLab Code Quality (`--output-format=gitlab`, exact image tag), SARIF to code scanning (🔴 report job needs `--exit-zero` or it never uploads; `security-events: write`), the output-format list, nullable JSON locations since 0.16.0 |
+| 32 | **[11e · Changed files and pre-commit in CI](11e-changed-files-and-pre-commit-in-ci.md)** | Changed-files runs are sound only while config, version and layout are unchanged — fall back to the full tree on `pyproject.toml`/`ruff.toml`/`uv.lock`; 🔴 explicit paths bypass `exclude` without `--force-exclude`; `fetch-depth: 0`; `pre-commit run --all-files` adds a second version pin (`rev`) |
 
 ## Still to come
 
-- **`ruff` in CI, continued — 11e · Changed files and pre-commit in CI** *(not written yet)*
 - **Pinning ruff** *(not written yet)*
 - **Editor integration** *(not written yet)*
 - **Upgrading ruff safely** *(not written yet)*

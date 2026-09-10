@@ -22,7 +22,7 @@ its exit code carries three answers, not two: clean, dirty, or *the gate itself 
 page is the gate — the commands and what their exit codes mean. [11b](11b-the-ci-runner.md) is
 the runner that executes it: which ruff gets installed and one complete workflow;
 [11c](11c-ruff-action.md) covers `ruff-action`, [11d](11d-ci-reports.md) GitLab, code-scanning
-and JSON reports, and **11e** *(not written yet)* changed-files-only runs and pre-commit as the CI
+and JSON reports, and [11e](11e-changed-files-and-pre-commit-in-ci.md) changed-files-only runs and pre-commit as the CI
 step.**
 
 ## The two commands
