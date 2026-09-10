@@ -1,7 +1,7 @@
 ---
 title: "A command name is global twice over — two packages in one environment that ship it leave one file owned by whoever installed last, and two directories on PATH that hold it are resolved by order and a shell hash table — so choose names nobody else ships, and diagnose with type -a before blaming the package"
 sidebar_label: "10 · Name collisions and PATH shadowing"
-sidebar_position: 11
+sidebar_position: 12
 ---
 
 <span className="db-tier t-understand">Understand</span>

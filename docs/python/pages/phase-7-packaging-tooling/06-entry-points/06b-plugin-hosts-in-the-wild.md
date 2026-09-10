@@ -1,7 +1,7 @@
 ---
 title: "pytest, flake8 and pipx each read entry points differently — pytest autoloads every pytest11 module and gives you three ways to stop it, flake8 treats the entry-point name as an error-code prefix and silently deactivates duplicates, and pipx reads a pipx.run group so the command name need not match the package — and each choice is a lesson for your own host"
 sidebar_label: "06b · Plugin hosts in the wild"
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 <span className="db-tier t-understand">Understand</span>

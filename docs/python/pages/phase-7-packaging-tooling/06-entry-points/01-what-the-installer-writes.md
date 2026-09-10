@@ -253,8 +253,8 @@ Speed. Both sources say so: pip's template exists to be *"one that doesn't impor
 Not the installer — the specification says install tools *"are not responsible for putting this directory in the `PATH` environment variable"*. pip warns when it installs into a directory that is not on `PATH`, except the directory holding its own interpreter. Tool installers go further: `uv tool update-shell` and `pipx ensurepath` edit shell configuration because putting commands on `PATH` is their whole purpose ([08](08-getting-commands-to-users.md)). For a project environment the answer is activation or `uv run`.
 
 **Why can a wheel with a broken script entry build successfully?**
-Because the backend and the installer validate different things. uv_build checks that script names are well-formed and forbids `[project.entry-points.console_scripts]`, but its source carries a TODO to validate object references, so `module.function` without a colon passes. The installer must generate a call, so it requires the callable part — pip raises `MissingCallableSuffix`, uv reports an invalid console script. Catch it in CI by installing the built wheel into a clean environment and running the command (**12** *(not written yet)*).
+Because the backend and the installer validate different things. uv_build checks that script names are well-formed and forbids `[project.entry-points.console_scripts]`, but its source carries a TODO to validate object references, so `module.function` without a colon passes. The installer must generate a call, so it requires the callable part — pip raises `MissingCallableSuffix`, uv reports an invalid console script. Catch it in CI by installing the built wheel into a clean environment and running the command ([12](12-when-the-command-fails.md)).
 
 ---
 
-← [Topic index](README.md) · Next → [02 · Windows launchers and GUI scripts](02-windows-launchers-and-gui-scripts.md)
+← [Topic index](README.md) · Next → [01b · entry_points.txt](01b-entry-points-txt.md)

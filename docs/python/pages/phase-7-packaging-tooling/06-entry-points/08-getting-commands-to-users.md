@@ -1,7 +1,7 @@
 ---
 title: "uv tool install, uvx and pipx deliver a command by installing your package into a private environment and exposing only that package's console and GUI scripts on PATH — so a package with no [project.scripts] cannot be a tool, a command that lives in a dependency is invisible, a name that differs from the package needs --from or pipx.run, and plugins must be installed into the tool's environment, not beside it"
 sidebar_label: "08 · Getting commands to users"
-sidebar_position: 9
+sidebar_position: 10
 ---
 
 <span className="db-tier t-understand">Understand</span>

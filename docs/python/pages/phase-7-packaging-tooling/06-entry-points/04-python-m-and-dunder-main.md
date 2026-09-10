@@ -1,7 +1,7 @@
 ---
 title: "python -m yourpkg reaches the same function as the console script through a different door — no wrapper, no PATH, no frozen interpreter, but the working directory first on sys.path and your module possibly imported twice — so ship a four-line __main__.py beside every console script and know which door each failure lives behind"
 sidebar_label: "04 · python -m and __main__.py"
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 <span className="db-tier t-understand">Understand</span>

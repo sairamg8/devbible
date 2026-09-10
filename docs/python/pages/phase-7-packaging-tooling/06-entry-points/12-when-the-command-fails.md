@@ -1,7 +1,7 @@
 ---
 title: "A broken console script fails at exactly one of four stages — the wrapper does not exist, it exists but the shell cannot reach it, it runs but cannot import your code, or it imports your code and exits wrongly — and each stage has a one-line test, so diagnose in that order instead of reinstalling until it works"
 sidebar_label: "12 · When the command fails"
-sidebar_position: 13
+sidebar_position: 14
 ---
 
 <span className="db-tier t-understand">Understand</span>

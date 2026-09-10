@@ -1,7 +1,7 @@
 ---
 title: "A plugin system built on entry points couples the host and its plugins through one string — the group name — so the host's real job is to own that name, define the interface, load lazily, survive bad plugins, resolve duplicate names on purpose, and give users a way to switch autoloading off"
 sidebar_label: "06 · Plugin discovery patterns"
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 <span className="db-tier t-understand">Understand</span>

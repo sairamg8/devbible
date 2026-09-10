@@ -1,7 +1,7 @@
 ---
 title: "In a uv project, uv run invoice works because sync installed your project editable and wrote its wrapper into .venv/bin, then uv put that directory first on the child's PATH — and uv re-installs the project when pyproject.toml changes, so a new [project.scripts] entry appears on the next run unless the build system, --no-sync or dynamic metadata gets in the way"
 sidebar_label: "07 · uv run and the project command"
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 <span className="db-tier t-understand">Understand</span>

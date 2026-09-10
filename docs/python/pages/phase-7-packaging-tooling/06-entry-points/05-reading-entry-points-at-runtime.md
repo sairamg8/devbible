@@ -1,7 +1,7 @@
 ---
 title: "importlib.metadata.entry_points() reads entry_points.txt from every distribution on sys.path each time it is called and hands back EntryPoint objects that import nothing until load() — so selection is cheap string matching, the first distribution of a name wins, and the import cost lands exactly where you call load()"
 sidebar_label: "05 · Reading entry points at runtime"
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "An installed command is two things installed at two different moments — your code, which an editable install keeps live, and the wrapper plus entry_points.txt, which are written once at install time — so renaming a function breaks the command only when it runs, a new command needs a reinstall, and a wrapper can outlive the interpreter or the package it points at"
 sidebar_label: "09 · Stale wrappers and editable installs"
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -60,7 +60,7 @@ def test_entry_point_resolves(ep):
         assert callable(target)
 ```
 
-It reads the *installed* metadata, so it is only as fresh as the last install. Under `uv run pytest` that is not a problem — the edit to `pyproject.toml` triggers the re-install before the test starts. Under a bare `pytest` in a `pip install -e .` environment, re-install first. The end-to-end version, which runs the real wrapper from a real wheel, is in **12** *(not written yet)*.
+It reads the *installed* metadata, so it is only as fresh as the last install. Under `uv run pytest` that is not a problem — the edit to `pyproject.toml` triggers the re-install before the test starts. Under a bare `pytest` in a `pip install -e .` environment, re-install first. The end-to-end version, which runs the real wrapper from a real wheel, is in [12](12-when-the-command-fails.md).
 
 ## The command that should not exist any more
 

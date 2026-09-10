@@ -1,7 +1,7 @@
 ---
 title: "Windows has no shebangs, so a Windows command is an .exe — a small launcher binary with the shebang and a zip of the same wrapper appended — and the console/GUI split that is a no-op everywhere else decides there whether a window appears, whether stdout exists, and whether the shell waits for the exit code"
 sidebar_label: "02 · Windows launchers and GUI scripts"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -212,4 +212,4 @@ Potentially nowhere. The GUI launcher runs `pythonw`, and the `sys` documentatio
 
 ---
 
-← Prev: [01 · What the installer writes](01-what-the-installer-writes.md) · [Topic index](README.md) · Next → [03 · The function contract](03-the-function-contract.md)
+← Prev: [01b · entry_points.txt](01b-entry-points-txt.md) · [Topic index](README.md) · Next → [03 · The function contract](03-the-function-contract.md)

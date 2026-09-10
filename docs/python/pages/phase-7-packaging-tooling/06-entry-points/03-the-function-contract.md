@@ -1,7 +1,7 @@
 ---
 title: "The function an entry point names is called with no arguments and its return value goes straight to sys.exit — so the contract is argv from sys.argv, an int from 0 to 127, exceptions mapped to exit codes on purpose, and a closed pipe handled before Python's own shutdown turns it into a traceback"
 sidebar_label: "03 · The function contract"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -182,7 +182,7 @@ def test_help_exits_zero():
     assert excinfo.value.code == 0
 ```
 
-These test the function. They do not test that the wrapper exists, that its shebang is valid, or that the installed package contains `invoice_service.cli` — that needs the installed command itself (**12** *(not written yet)*).
+These test the function. They do not test that the wrapper exists, that its shebang is valid, or that the installed package contains `invoice_service.cli` — that needs the installed command itself ([12](12-when-the-command-fails.md)).
 
 ## Gotchas
 

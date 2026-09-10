@@ -1,7 +1,7 @@
 ---
 title: "Every run of a console script — --help, a typo, a shell completion — first imports the module the entry point names and everything that module imports at top level, so a CLI's start-up time is its import graph: measure it with -X importtime, keep __init__.py and the CLI module thin, import each subcommand's dependencies inside the subcommand, and guard the result with a test"
 sidebar_label: "11 · The import-time cost of a CLI"
-sidebar_position: 12
+sidebar_position: 13
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -235,4 +235,4 @@ Because the wrapper runs on every invocation of every console script, so even on
 
 ---
 
-← Prev: [10 · Name collisions and `PATH` shadowing](10-name-collisions-and-path-shadowing.md) · [Topic index](README.md) · Next → **12 · When the command fails** *(not written yet)*
+← Prev: [10 · Name collisions and `PATH` shadowing](10-name-collisions-and-path-shadowing.md) · [Topic index](README.md) · Next → [12 · When the command fails](12-when-the-command-fails.md)
