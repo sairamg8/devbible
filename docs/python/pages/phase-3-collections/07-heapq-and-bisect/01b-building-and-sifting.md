@@ -86,8 +86,7 @@ A class that defines only `__lt__` works in a heap; a class that defines only `_
 (`Lib/test/test_heapq.py`, `test_comparison_operator`). And there is no `key=` on `heappush`,
 `heappop` or `heapify`: the ordering must live in the elements themselves, which is why heaps
 hold `(priority, count, item)` tuples. That pattern is the subject of **05 · Priority queues** *(not written yet)*;
-the `key=` that `nlargest`, `nsmallest` and `merge` *do* accept is in **03 · `nlargest` and `nsmallest`**
-*(not written yet)* and **06 · `heapq.merge`** *(not written yet)*.
+the `key=` that `nlargest`, `nsmallest` and `merge` *do* accept is in [03](03-nlargest-and-nsmallest.md) and **06 · `heapq.merge`** *(not written yet)*.
 
 ## What each operation costs
 
@@ -97,7 +96,7 @@ the `key=` that `nlargest`, `nsmallest` and `merge` *do* accept is in **03 · `n
 | `heappush`, `heappop`, `heapreplace`, `heappushpop` | O(log n) comparisons | docs, Theory: *"clearly logarithmic"* |
 | `heap[0]` | O(1) | docs: *"use `heap[0]`"* |
 | find, remove or re-prioritise an arbitrary item | O(n) | no index exists — see **05b** *(not written yet)* |
-| `heapq.nsmallest(k, xs)` / `nlargest` | O(n log k), k items of memory | source notes, see **03** *(not written yet)* |
+| `heapq.nsmallest(k, xs)` / `nlargest` | O(n log k), k items of memory | source notes, see [03](03-nlargest-and-nsmallest.md) |
 | heapsort (push all, pop all) | O(n log n), **not stable** | docs: *"unlike `sorted()`, this implementation is not stable"* |
 
 ## Gotchas

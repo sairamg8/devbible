@@ -8,7 +8,7 @@ sidebar_position: 5
 
 > Verified: 2026-09-10 against the Python 3.14 documentation — [`heapq.nlargest` / `nsmallest`](https://docs.python.org/3.14/library/heapq.html#heapq.nlargest) and the [Sorting Techniques HOWTO — Partial Sorts](https://docs.python.org/3.14/howto/sorting.html#partial-sorts) — and CPython **v3.14.7** [`Lib/heapq.py`](https://github.com/python/cpython/blob/v3.14.7/Lib/heapq.py) (lines 411–593: the algorithm notes, `nsmallest`, `nlargest`) plus `Lib/test/test_heapq.py` (`test_nsmallest`, `test_nlargest`). Target: **Python 3.14.7**. **No sandbox run, no timings** — the comparison counts quoted below are CPython's own, from a source comment.
 
-**"The ten slowest requests", "the five closest warehouses", "the hundred biggest invoices": a top-K question does not need the other N − K items put in order. `heapq.nlargest(k, iterable, key=...)` walks the input once, keeps the K best so far in a heap whose root is the weakest survivor, and discards everything that cannot beat that root with a single comparison — so memory is K entries rather than N, and the comparison count approaches N as the input grows. That is why it wins for small K and why the documentation tells you to use `sorted()` instead when K is large, and `min`/`max` when K is 1 — which the implementation already does for you. This chunk is the mechanism and the cost; which of several equal items you get back, how the `key=` behaves and how to shape real top-N queries is **03b · Ties, keys and top-N queries** *(not written yet)*.**
+**"The ten slowest requests", "the five closest warehouses", "the hundred biggest invoices": a top-K question does not need the other N − K items put in order. `heapq.nlargest(k, iterable, key=...)` walks the input once, keeps the K best so far in a heap whose root is the weakest survivor, and discards everything that cannot beat that root with a single comparison — so memory is K entries rather than N, and the comparison count approaches N as the input grows. That is why it wins for small K and why the documentation tells you to use `sorted()` instead when K is large, and `min`/`max` when K is 1 — which the implementation already does for you. This chunk is the mechanism and the cost; which of several equal items you get back, how the `key=` behaves and how to shape real top-N queries is [03b](03b-ties-keys-and-top-n-queries.md).**
 
 ## The contract
 
@@ -67,8 +67,8 @@ Three details carry most of the behaviour:
 - **Each entry carries a sequence number.** Without a key the entry is `(elem, order)`; with a
   key it is `(key(elem), order, elem)`. The number makes equal elements come out in the order
   they arrived — the "equivalent to `sorted`" guarantee — and, in the key form, means two
-  elements themselves are **never compared**. **03b** *(not written yet)* is about exactly
-  that.
+  elements themselves are **never compared**. [03b](03b-ties-keys-and-top-n-queries.md) is
+  about exactly that.
 - **The comparison against the root is strict** (`top < elem`). An element equal to the current
   K-th best does not displace it, so the earlier of two equal elements wins.
 
@@ -272,4 +272,4 @@ files", the same call over `itertools.chain` of the file generators does it in o
 
 ---
 
-← Prev: [02b · When a comparison fails](02b-when-a-comparison-fails.md) · [Topic index](README.md) · Next → **03b · Ties, keys and top-N queries** *(not written yet)*
+← Prev: [02b · When a comparison fails](02b-when-a-comparison-fails.md) · [Topic index](README.md) · Next → [03b · Ties, keys and top-N queries](03b-ties-keys-and-top-n-queries.md)

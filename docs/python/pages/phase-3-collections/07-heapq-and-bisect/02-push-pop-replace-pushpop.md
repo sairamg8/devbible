@@ -143,8 +143,8 @@ def slowest_requests(log: Iterable[tuple[float, str]], k: int) -> list[tuple[flo
 With `heapreplace` in that `else` branch, every new entry would evict the current K-th largest
 *unconditionally* — including when the new entry is smaller — and the result would drift
 toward the most recent K items. This loop is exactly what `heapq.nlargest(k, log)` does
-internally, with tie-breaking and a few shortcuts added; **03 · `nlargest` and `nsmallest`**
-*(not written yet)* shows when to call that instead of writing the loop.
+internally, with tie-breaking and a few shortcuts added; [03](03-nlargest-and-nsmallest.md)
+shows when to call that instead of writing the loop.
 
 | | empty heap | item ≤ root | item > root | heap size |
 |---|---|---|---|---|

@@ -23,10 +23,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 2 | **[01b · Building and sifting](01b-building-and-sifting.md)** | `heapify` is O(n) bottom-up, n pushes are O(n log n); CPython's sift-to-leaf pop; only `<` is ever called and there is no `key=`; 🔴 each comparison is a call into your objects, so precompute the priority; `heapify` returns `None`; the cost table; heapsort is not stable |
 | 3 | **[02 · push, pop, replace, pushpop](02-push-pop-replace-pushpop.md)** | `heappush`/`heappop` and the empty-heap decision; `heapreplace` pops first and always returns the old root, `heappushpop` pushes first and hands back an item that is not larger without touching the heap; 🔴 a streaming top-K needs `heappushpop`, not `heapreplace`; recurring jobs are `heapreplace` |
 | 4 | **[02b · When a comparison fails](02b-when-a-comparison-fails.md)** | 🔴 no rollback: per the v3.14.7 source a push that raises has already appended its item and a pop that raises has already dropped the root; `(priority, dict)` ties are how it happens; comparisons that resize the heap raise `RuntimeError`; a `NaN` priority corrupts the heap without raising |
+| 5 | **[03 · `nlargest` and `nsmallest`](03-nlargest-and-nsmallest.md)** | one pass, a heap of K decorated entries, the root as the weakest survivor; `n == 1` is `min`/`max` and `n >= len` is `sorted`; CPython's own comparison counts; 🔴 wins for small K and streams, loses to `sorted` when K is most of N; repeated queries want a real heap |
+| 6 | **[03b · Ties, keys and top-N queries](03b-ties-keys-and-top-n-queries.md)** | first-seen wins ties, so ties are only as deterministic as input order; `key` runs once per element and the elements are never compared; 🔴 a dict ranks its keys; score-desc/name-asc via `nsmallest` and negation; per-group top-N; `ORDER BY … LIMIT` when the rows live in a database |
 
 ## Still to come
 
-- **03 · `nlargest` and `nsmallest`** *(not written yet)*
 - **04 · Max-heaps in 3.14** *(not written yet)*
 - **05 · Priority queues — ties and the counter** *(not written yet)*
 - **05b · Removing and re-prioritising entries** *(not written yet)*

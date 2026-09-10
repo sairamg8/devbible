@@ -137,4 +137,4 @@ where they enter the heap — reject `NaN`, or map it to `math.inf` or `-math.in
 
 ---
 
-← Prev: [02 · push, pop, replace, pushpop](02-push-pop-replace-pushpop.md) · [Topic index](README.md) · Next → **03 · `nlargest` and `nsmallest`** *(not written yet)*
+← Prev: [02 · push, pop, replace, pushpop](02-push-pop-replace-pushpop.md) · [Topic index](README.md) · Next → [03 · `nlargest` and `nsmallest`](03-nlargest-and-nsmallest.md)
