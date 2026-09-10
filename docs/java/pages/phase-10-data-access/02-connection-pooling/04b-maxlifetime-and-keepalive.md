@@ -100,7 +100,7 @@ The failure is confusing because it does not arrive when the connection is
 killed. It arrives on the next borrow, from a thread that did nothing wrong:
 
 - if HikariCP validates the connection, it is quietly evicted and replaced, and
-  you see a WARN from `PoolBase`: *"Failed to validate connection {} ({}).
+  you see a WARN from `PoolBase`: *"Failed to validate connection \{\} (\{\}).
   Possibly consider using a shorter maxLifetime value."* — which is the pool
   telling you precisely what this chunk is about;
 - if the borrow falls inside the 500 ms alive-bypass window
