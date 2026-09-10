@@ -279,4 +279,4 @@ Not as a cache. Individual `OrderedDict` operations keep the structure consisten
 
 ---
 
-← Prev: [07 · `OrderedDict` — what it still does](07-ordereddict-what-it-still-does.md) · [Topic index](README.md)
+← Prev: [07 · `OrderedDict` — what it still does](07-ordereddict-what-it-still-does.md) · [Topic index](README.md) · Next → [08 · `UserList` and `UserDict` — wrappers, not funnels](08-userlist-and-userdict.md)
