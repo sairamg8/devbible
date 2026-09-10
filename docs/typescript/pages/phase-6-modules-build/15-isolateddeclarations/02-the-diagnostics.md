@@ -70,7 +70,7 @@ Patterns that cannot be declared per-file at all:
 | **9025** | *"Declaration emit for this parameter requires implicitly adding `undefined` to its type. This is not supported with `--isolatedDeclarations`."* |
 | **9026** | *"Declaration emit for this file requires preserving this import for augmentations. This is not supported with `--isolatedDeclarations`."* |
 | **9037** | *"Default exports can't be inferred with `--isolatedDeclarations`."* |
-| **9039** | *"Type containing private name '{0}' can't be used with `--isolatedDeclarations`."* |
+| **9039** | *"Type containing private name '\{0\}' can't be used with `--isolatedDeclarations`."* |
 
 🔴 **`TS9021` and `TS9022` are the pair that makes the mixin factory pattern
 unbuildable**, and this corpus already met them:
@@ -115,7 +115,7 @@ direction — the 90xxx range is mostly not errors at all.
 
 `TS9027`–`TS9036` are not diagnostics you can hit:
 
-> *"Add a type annotation to the variable {0}."* · *"Add a return type to the
+> *"Add a type annotation to the variable \{0\}."* · *"Add a return type to the
 > function declaration."* · *"Add a return type to the get accessor
 > declaration."* · *"Add a type to parameter of the set accessor declaration."* ·
 > 🔴 *"Add satisfies and a type assertion to this expression (satisfies T as T)
