@@ -10,11 +10,6 @@ sidebar_position: 0
 
 **Two small modules that operate on a plain `list` you own. `heapq` keeps a list in *heap order* — the smallest element at index 0 and nothing else promised — so a priority queue, a scheduler, a streaming top-K or a k-way merge costs O(log n) per change instead of a sort per change. `bisect` does binary search on a list that is *already sorted*, returning an insertion point rather than a match, which makes it the tool for range queries, breakpoint tables and "which bucket does this value fall in". Neither module checks its precondition: a heap whose items were mutated, or a list that was never sorted, produces confident wrong answers rather than errors. And both sit on top of a `list`, so the moment the workload is "insert and delete in the middle, constantly", the O(n) list shift underneath is the real cost — and the answer is a different structure, or the database.**
 
-:::caution In progress
-This topic is being written. The chunks below are complete and verified; the rest of the plan,
-listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
-:::
-
 ## Chunks
 
 | # | Chunk | What it argues |
@@ -34,11 +29,9 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 13 | **[07 · `bisect_left` and `bisect_right`](07-bisect-left-and-right.md)** | an insertion point, not a match — the documented partition for each side, the equal run as `[left, right)`; the loop and why only `<` is called (and which operand is on the left); any `__len__` + `__getitem__` sequence; `lo`/`hi` are not slice bounds; the documentation's five lookups; 🔴 unsorted, descending or `NaN` input returns a confident wrong index |
 | 14 | **[07b · The `key=` parameter and its asymmetry](07b-the-key-parameter.md)** | 🔴 search functions apply `key` to elements only — pass a key value; `insort` applies it to `x` — pass the record; the key runs on every probe, so precompute a parallel key list (and keep it in step); `functools.cache` needs hashable elements; binary search on the answer with `range` and a monotonic boolean key; case-folded and descending searches |
 | 15 | **[08 · `insort` and the cost of keeping a list sorted](08-insort-and-sorted-list-cost.md)** | O(log n) to find the slot, O(n) to open it — 🔴 n insorts are quadratic, so batches are `extend` + `sort` (or `heapq.merge`); left vs right among equal keys; insort calls the object's `insert`; removing by bisect; the documented thread-safety warning; the leaderboard test for when a sorted list is the wrong structure |
-
-## Still to come
-
-- **09 · Range queries, breakpoint tables and lookup rings** *(not written yet)*
-- **10 · When the answer is not `heapq` or `bisect`** *(not written yet)*
+| 16 | **[09 · Range queries on sorted data](09-range-queries.md)** | two bisects make a range — the table of which side for each bound; 🔴 half-open time windows so boundary values are counted once; per-hour counts from one set of edges; nearest value compares both neighbours; tuple-prefix ranges; naive vs aware datetimes; the B-tree index when the rows live in a database |
+| 17 | **[09b · Breakpoint tables and lookup rings](09b-breakpoint-tables-and-rings.md)** | the documentation's grade table; 🔴 `bisect` for "*n* and up", `bisect_left` for "above *n*", and one more outcome than breakpoints; validated tier tables in `Decimal`; progressive brackets with cumulative totals; `le` histogram buckets; IP range tables; a consistent-hashing ring on a `hashlib` digest, never the salted `hash()` |
+| 18 | **[10 · When the answer is not `heapq` or `bisect`](10-when-the-answer-is-not-heapq-or-bisect.md)** | the decision table; 🔴 a leaderboard (rank + range + constant updates) defeats both — a sorted container such as the third-party `sortedcontainers.SortedList`, pinned, or shared storage; FIFO is `deque`, exact lookup is `dict`/`set`; per-process structures in multi-worker deployments; the database operation for each in-process one |
 
 ## Phase gate
 

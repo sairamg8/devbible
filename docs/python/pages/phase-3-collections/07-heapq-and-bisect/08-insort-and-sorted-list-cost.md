@@ -123,7 +123,7 @@ updating continuously it is the entire cost of the service. The decision:
 | build once, query many times | sorted `list` + `bisect` |
 | only ever need the smallest / largest | heap ([01](01-the-heap-invariant.md)) |
 | a batch of inserts, then queries | `extend` + `sort`, then `bisect` |
-| constant inserts *and* deletes *and* range queries, in one process | a sorted container — **10 · When the answer is not `heapq` or `bisect`** *(not written yet)* |
+| constant inserts *and* deletes *and* range queries, in one process | a sorted container — [10](10-when-the-answer-is-not-heapq-or-bisect.md) |
 | shared by processes, durable, or bigger than memory | a database index |
 
 ## Gotchas
@@ -217,4 +217,4 @@ the object's `insert` method. Overriding `insert` therefore intercepts insort, a
 
 ---
 
-← Prev: [07b · The `key=` parameter and its asymmetry](07b-the-key-parameter.md) · [Topic index](README.md) · Next → **09 · Range queries, breakpoint tables and lookup rings** *(not written yet)*
+← Prev: [07b · The `key=` parameter and its asymmetry](07b-the-key-parameter.md) · [Topic index](README.md) · Next → [09 · Range queries on sorted data](09-range-queries.md)
