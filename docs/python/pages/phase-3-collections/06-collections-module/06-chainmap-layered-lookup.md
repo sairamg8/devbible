@@ -8,7 +8,7 @@ sidebar_position: 11
 
 > Verified: 2026-09-10 against the Python 3.14 documentation — [`collections.ChainMap`](https://docs.python.org/3.14/library/collections.html#chainmap-objects) (`maps`, `new_child`, `parents`, iteration order, the examples and recipes). Method bodies read from CPython **v3.14.7** [`Lib/collections/__init__.py`](https://github.com/python/cpython/blob/v3.14.7/Lib/collections/__init__.py) (`class ChainMap`, lines 998–1126) — implementation detail where the docs are silent. Target: **Python 3.14.7**. **No sandbox run, no timings.**
 
-**Configuration in a service comes in layers — command-line flags over environment variables over a config file over built-in defaults — and so do template contexts, per-tenant feature flags and variable scopes. `ChainMap` represents the layering directly: it keeps a list of mappings and answers `chain[key]` by trying each one in order until one has the key. *"There is no other state."* Nothing is merged or copied, so a change to any layer is visible immediately, building a chain costs nothing, and pushing a per-request override on top is `chain.new_child(overrides)`. Writes, by contrast, go only to the first mapping. The costs follow from the same design: a lookup that misses tries every layer, each miss in a layer is a caught `KeyError`, and `len()` and iteration have to union the keys of every layer each time they are called. This chunk is the mechanism and the patterns; **06b · `ChainMap` traps** *(not written yet)* is where writes, deletes and odd layers go wrong.**
+**Configuration in a service comes in layers — command-line flags over environment variables over a config file over built-in defaults — and so do template contexts, per-tenant feature flags and variable scopes. `ChainMap` represents the layering directly: it keeps a list of mappings and answers `chain[key]` by trying each one in order until one has the key. *"There is no other state."* Nothing is merged or copied, so a change to any layer is visible immediately, building a chain costs nothing, and pushing a per-request override on top is `chain.new_child(overrides)`. Writes, by contrast, go only to the first mapping. The costs follow from the same design: a lookup that misses tries every layer, each miss in a layer is a caught `KeyError`, and `len()` and iteration have to union the keys of every layer each time they are called. This chunk is the mechanism and the patterns; [06b · `ChainMap` traps](06b-chainmap-traps.md) is where writes, deletes and odd layers go wrong.**
 
 ## The mechanism
 
@@ -92,7 +92,7 @@ def load_settings(cli: dict[str, str], file_config: dict[str, str]) -> ChainMap[
     )
 ```
 
-Every write goes to the anonymous dict at `maps[0]`; the proxies make an accidental write to a lower layer (through a `DeepChainMap`-style subclass, or direct `maps[i]` access) raise instead of succeed. **06b · `ChainMap` traps** *(not written yet)* has the failures this prevents.
+Every write goes to the anonymous dict at `maps[0]`; the proxies make an accidental write to a lower layer (through a `DeepChainMap`-style subclass, or direct `maps[i]` access) raise instead of succeed. [06b · `ChainMap` traps](06b-chainmap-traps.md) has the failures this prevents.
 
 ## Per-request overrides: `new_child()`
 
@@ -175,7 +175,7 @@ Keys come out in the order a series of `dict.update` calls from the last layer t
 
 ## Gotchas
 
-**★ Symptom: a key set through the settings object appears in the user's CLI-args dict (or in `os.environ`).** Cause: *"writes, updates, and deletions only operate on the first mapping"*, and the first mapping is a real dict someone else holds. Fix: put an empty, owned dict first — `new_child()` does exactly that. (**06b · `ChainMap` traps** *(not written yet)* has the `os.environ` case.)
+**★ Symptom: a key set through the settings object appears in the user's CLI-args dict (or in `os.environ`).** Cause: *"writes, updates, and deletions only operate on the first mapping"*, and the first mapping is a real dict someone else holds. Fix: put an empty, owned dict first — `new_child()` does exactly that. ([06b · `ChainMap` traps](06b-chainmap-traps.md) has the `os.environ` case.)
 
 ```python
 settings = ChainMap(cli_args, os.environ, DEFAULTS).new_child()
@@ -226,11 +226,11 @@ When the layers are live or the view is short-lived: settings where one layer (e
 Both are O(total number of keys across all layers) per call. In CPython 3.14, `__len__` builds `set().union(*self.maps)` to count distinct keys and `__iter__` builds a dict by merging `dict.fromkeys` of each map from last to first. Neither is cached, because the layers may have changed since the last call. On a hot path, flatten once with `dict(chain)` if the layers are static.
 
 **Why does `ChainMap.__getitem__` use `try`/`except KeyError` instead of `if key in mapping`?**
-The source comment says why: *"can't use 'key in mapping' with defaultdict"*. Asking each layer for `mapping[key]` lets a layer's own missing-key behaviour (a `defaultdict` factory, a `Counter`'s zero) take part in the lookup. The price is an exception per missed layer — and, as **06b · `ChainMap` traps** *(not written yet)* shows, a layer that never raises ends the search at that layer.
+The source comment says why: *"can't use 'key in mapping' with defaultdict"*. Asking each layer for `mapping[key]` lets a layer's own missing-key behaviour (a `defaultdict` factory, a `Counter`'s zero) take part in the lookup. The price is an exception per missed layer — and, as [06b · `ChainMap` traps](06b-chainmap-traps.md) shows, a layer that never raises ends the search at that layer.
 
 **How would you give each request its own feature-flag overrides on top of tenant and global flags?**
 Build a chain per request: `BASE.new_child(tenant_layer).new_child(request_overrides)`. It costs a short list of references, not a copy of the base flags; lookups fall through request → tenant → global; writes land in the request's own front dict and never leak into shared layers. Wrapping the shared layers in `MappingProxyType` makes an accidental write to them raise.
 
 ---
 
-← Prev: [05 · `namedtuple` from the factory side](05-namedtuple-factory-side.md) · [Topic index](README.md)
+← Prev: [05 · `namedtuple` from the factory side](05-namedtuple-factory-side.md) · [Topic index](README.md) · Next → [06b · `ChainMap` traps](06b-chainmap-traps.md)

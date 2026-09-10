@@ -30,10 +30,10 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 9 | **[04c · `deque` during iteration and across threads](04c-deque-iteration-and-threads.md)** | 🔴 the state counter: any append or pop kills a live iterator, even at equal length; drain, rotate-filter or snapshot; atomic single calls vs racy `if d: d.popleft()`; 🔴 a health endpoint iterating a shared ring buffer; `copy()` for snapshots; `queue.Queue` and `asyncio.Queue` are deques with synchronisation |
 | 10 | **[05 · `namedtuple` from the factory side](05-namedtuple-factory-side.md)** | one call = validate, `eval` a `__new__`, `type()` a new class, stamp the caller's module; 🔴 the per-row class (the `sqlite3` doc recipe) and its fix; why per-call classes break `isinstance` and pickling; the field names CSV headers and SQL columns bring, and normalising them; `_asdict`, `copy.replace`, `SimpleNamespace` |
 | 11 | **[06 · `ChainMap` — layered lookup](06-chainmap-layered-lookup.md)** | a list of mappings searched in order, writes to `maps[0]`, live by reference; CLI > env > file > defaults made safe with an owned front dict and `MappingProxyType` layers; per-request overrides with `new_child`; scopes with `parents`; 🔴 every miss is a caught `KeyError` per layer and `len()`/iteration rebuild all keys — when to flatten |
+| 12 | **[06b · `ChainMap` traps](06b-chainmap-traps.md)** | 🔴 writes land in the caller's dict or `os.environ`; `del`/`pop`/`clear` touch only `maps[0]`, and masking with a sentinel; `DeepChainMap` and its cost; a `defaultdict` or `Counter` layer ends the search; `new_child(m, **kw)` edits `m`; `parents` into nothing; env strings vs default ints; no snapshot |
 
 ## Still to come
 
-- **06b · `ChainMap` traps** *(not written yet)*
 - **07 · `OrderedDict` — what it still does** *(not written yet)*
 - **07b · `OrderedDict` as an LRU cache** *(not written yet)*
 - **08 · `UserList` and `UserDict` — wrappers, not funnels** *(not written yet)*
