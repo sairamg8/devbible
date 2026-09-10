@@ -45,7 +45,7 @@ heapq.heappop(queue)
 
 The fix is never a `try`/`except` around the pop — by then the entry is lost. It is making the
 comparison total before anything enters the heap, with a unique counter in the second slot
-(**05 · Priority queues** *(not written yet)* covers the pattern in full):
+([05](05-priority-queues.md) covers the pattern in full):
 
 ```python
 import heapq

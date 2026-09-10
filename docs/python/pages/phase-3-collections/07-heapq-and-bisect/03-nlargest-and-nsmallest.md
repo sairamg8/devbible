@@ -36,7 +36,7 @@ To find the K **largest**, `nlargest` keeps a **min**-heap of K entries. Its roo
 of the current top K — the one that must go if something better arrives. Each later element is
 compared with that root once; only a strictly larger one triggers a `heapreplace`. At the end
 the K survivors are sorted once. `nsmallest` is the mirror image with a max-heap (it calls the
-3.14 `heapify_max` and `heapreplace_max` — **04 · Max-heaps in 3.14** *(not written yet)*).
+3.14 `heapify_max` and `heapreplace_max` — [04](04-max-heaps.md)).
 
 The source, trimmed to the key-less path of `nlargest`:
 

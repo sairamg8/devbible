@@ -85,7 +85,7 @@ A class that defines only `__lt__` works in a heap; a class that defines only `_
 `__gt__` does not — CPython's own test suite asserts that *"`__le__` alone is not enough"*
 (`Lib/test/test_heapq.py`, `test_comparison_operator`). And there is no `key=` on `heappush`,
 `heappop` or `heapify`: the ordering must live in the elements themselves, which is why heaps
-hold `(priority, count, item)` tuples. That pattern is the subject of **05 · Priority queues** *(not written yet)*;
+hold `(priority, count, item)` tuples. That pattern is the subject of [05](05-priority-queues.md);
 the `key=` that `nlargest`, `nsmallest` and `merge` *do* accept is in [03](03-nlargest-and-nsmallest.md) and **06 · `heapq.merge`** *(not written yet)*.
 
 ## What each operation costs

@@ -25,11 +25,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 4 | **[02b · When a comparison fails](02b-when-a-comparison-fails.md)** | 🔴 no rollback: per the v3.14.7 source a push that raises has already appended its item and a pop that raises has already dropped the root; `(priority, dict)` ties are how it happens; comparisons that resize the heap raise `RuntimeError`; a `NaN` priority corrupts the heap without raising |
 | 5 | **[03 · `nlargest` and `nsmallest`](03-nlargest-and-nsmallest.md)** | one pass, a heap of K decorated entries, the root as the weakest survivor; `n == 1` is `min`/`max` and `n >= len` is `sorted`; CPython's own comparison counts; 🔴 wins for small K and streams, loses to `sorted` when K is most of N; repeated queries want a real heap |
 | 6 | **[03b · Ties, keys and top-N queries](03b-ties-keys-and-top-n-queries.md)** | first-seen wins ties, so ties are only as deterministic as input order; `key` runs once per element and the elements are never compared; 🔴 a dict ranks its keys; score-desc/name-asc via `nsmallest` and negation; per-group top-N; `ORDER BY … LIMIT` when the rows live in a database |
+| 7 | **[04 · Max-heaps in 3.14](04-max-heaps.md)** | `heapify_max`, `heappush_max`, `heappop_max`, `heapreplace_max`, `heappushpop_max` are new in 3.14 (3.13 had three private ones, kept as aliases); the negation trick and its four failures; 🔴 a max-heap is an unmarked list — `heappop` on it corrupts it — and a `(priority, count, item)` tie-break turns LIFO unless the count is negated; running median; K-smallest with a max-heap |
+| 8 | **[05 · Priority queues — ties and the counter](05-priority-queues.md)** | the documentation's four challenges; `(priority, count, item)` gives FIFO ties and never compares the item — `sched` does it, asyncio's timer heap does not and documents *undefined* order; 🔴 the `order=True` dataclass wrapper stops the `TypeError` but is not FIFO; priorities that do not order (`Enum`, `None`, strings); direction; starvation fixed by pushing a start-by deadline |
 
 ## Still to come
 
-- **04 · Max-heaps in 3.14** *(not written yet)*
-- **05 · Priority queues — ties and the counter** *(not written yet)*
 - **05b · Removing and re-prioritising entries** *(not written yet)*
 - **05c · Heaps shared by threads and tasks** *(not written yet)*
 - **06 · `heapq.merge` — k-way merge as a stream** *(not written yet)*
