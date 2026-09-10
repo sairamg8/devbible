@@ -57,8 +57,8 @@ class Box<T> {
 constructor, and constructors have prototype chains too. Which means the static
 side is checked as well:
 
-> **TS2417:** *"Class static side '{0}' incorrectly extends base class static side
-> '{1}'."*
+> **TS2417:** *"Class static side '\{0\}' incorrectly extends base class static side
+> '\{1\}'."*
 
 A subclass redeclaring a static with an incompatible type gets that, not the
 ordinary instance-member error. **The message naming "static side" is the tell**
@@ -66,8 +66,8 @@ that you are looking at the constructor, not the instance.
 
 One narrower rule, worth recognising because the cause is invisible:
 
-> **TS2699:** *"Static property '{0}' conflicts with built-in property
-> 'Function.{0}' of constructor function '{1}'."*
+> **TS2699:** *"Static property '\{0\}' conflicts with built-in property
+> 'Function.\{0\}' of constructor function '\{1\}'."*
 
 A constructor **is a function**, so `static name`, `static length` and
 `static caller` collide with what every function already has. `static name` is
