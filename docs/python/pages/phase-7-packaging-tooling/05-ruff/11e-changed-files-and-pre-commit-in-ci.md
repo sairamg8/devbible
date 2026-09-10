@@ -160,7 +160,7 @@ value of `rev` is an immutable ref (such as a tag or SHA) and will cache based o
 ruff-pre-commit `rev` *is* the ruff version, so the project now states its ruff in two files that
 nothing forces to agree. pre-commit.ci makes this worse by design — it *"will periodically
 autoupdate your configuration"*, moving `rev` on its own schedule. Keeping the two in step is
-**12 · Pinning ruff** *(not written yet)*; the hook configuration itself is topic
+[12 · Pinning ruff](12-pinning-ruff.md); the hook configuration itself is topic
 **11 · pre-commit** *(not written yet)*.
 
 ## Gotchas
@@ -237,7 +237,7 @@ on:
 **Symptom: CI's pre-commit run and a developer's `uv run ruff check` disagree about the same
 file.** Cause: pre-commit runs the ruff of the hook's `rev`; `uv run` runs the one in `uv.lock`;
 someone — or pre-commit.ci's autoupdate — moved one of them. Fix: make ruff refuse to run at any
-other version, so the drift fails loudly (**12** *(not written yet)*).
+other version, so the drift fails loudly ([12](12-pinning-ruff.md)).
 
 ```toml
 [tool.ruff]
@@ -277,4 +277,4 @@ history, including the base branch the script diffs against.
 
 ---
 
-← Prev: [11d · CI reports](11d-ci-reports.md) · [Topic index](README.md) · Next → **12 · Pinning ruff** *(not written yet)*
+← Prev: [11d · CI reports](11d-ci-reports.md) · [Topic index](README.md) · Next → [12 · Pinning ruff](12-pinning-ruff.md)

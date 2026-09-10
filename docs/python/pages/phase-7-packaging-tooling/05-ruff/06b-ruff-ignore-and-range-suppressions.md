@@ -33,7 +33,7 @@ unclosed one is reported. And because these are new — ranges in 0.15.0, the ot
 | rule *names* inside any of them (`unused-import`) | **preview only** | 0.15.17 (preview) |
 
 An older ruff does not error on these comments — to it they are ordinary comments — so the
-diagnostics they were meant to suppress come back. Pin ruff (**11b** *(not written yet)*).
+diagnostics they were meant to suppress come back. Pin ruff ([12](12-pinning-ruff.md)).
 
 ## `ruff: ignore` — a logical line
 

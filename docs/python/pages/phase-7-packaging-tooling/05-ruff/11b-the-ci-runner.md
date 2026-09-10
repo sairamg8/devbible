@@ -32,7 +32,7 @@ asked for.**
 |---|---|---|
 | `uv sync --locked --only-dev`, then `uv run --no-sync ruff` | `uv.lock` | yes — the reviewed lock, and `--locked` fails if `pyproject.toml` and the lock disagree ([`--locked` in CI](../03-dependencies/20-the-ci-flags-that-refuse-to-re-resolve.md)) |
 | `astral-sh/ruff-action` | its `version` input, else the nearest `pyproject.toml`, else latest | only with an exact pin or `version-file: uv.lock` ([11c](11c-ruff-action.md)) |
-| `uvx ruff@0.16.6`, `pip install ruff==0.16.6` | the literal at the call site | only while someone keeps the literal in step with the lock (**12 · Pinning ruff** *(not written yet)*) |
+| `uvx ruff@0.16.6`, `pip install ruff==0.16.6` | the literal at the call site | only while someone keeps the literal in step with the lock ([12 · Pinning ruff](12-pinning-ruff.md)) |
 | `pip install ruff` | whatever PyPI has at job time | no — the next minor reaches CI before anyone chose it |
 
 The last row is the integrations page's own GitHub Actions example (`pip install ruff`, then

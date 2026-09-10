@@ -87,7 +87,7 @@ uv run ruff format --check .
 ```
 
 Then remove Black from everywhere it runs: the dev dependency group, the `[tool.black]` table,
-the pre-commit hook (**12** *(not written yet)*), the CI job, and every editor's
+the pre-commit hook ([12](12-pinning-ruff.md) shows the ruff hooks that replace it), the CI job, and every editor's
 "format on save" provider (**13** *(not written yet)*). A `[tool.black]` table nobody reads
 is harmless to ruff but actively misleading to the next reader, who will edit it and wonder why
 nothing changes.

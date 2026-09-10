@@ -132,7 +132,7 @@ uv run pytest                 # behaviour
 ```
 
 Pinning ruff so that those commands mean the same thing everywhere is
-**11b** *(not written yet)*; installing it as a dev dependency is
+[12](12-pinning-ruff.md); installing it as a dev dependency is
 [uv add and uv remove](../02-uv/04-add-and-remove.md).
 
 ## Gotchas

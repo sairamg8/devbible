@@ -58,7 +58,7 @@ The image tag is the version pin here. The Docker tags ruff publishes are `lates
 `{major}.{minor}.{patch}` and `{major}.{minor}` — the last documented as *"the latest patch
 version"* — each also with a base suffix such as `-alpine`. `0.16.6-alpine` is exact; `0.16-alpine`
 moves with every patch; `latest` moves with every release. Keep the tag equal to the version in
-`uv.lock` (**12 · Pinning ruff** *(not written yet)*) — the image runs ruff without the project's
+`uv.lock` ([12 · Pinning ruff](12-pinning-ruff.md)) — the image runs ruff without the project's
 environment, so nothing else ties the two together.
 
 Since 0.16.0, `format --check` *"supports the same output formats as the linter, including the

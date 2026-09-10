@@ -84,7 +84,7 @@ changelog bullets; treat the bullets as representative, not exhaustive.
 
 The practical consequence: **a ruff minor upgrade may reformat code nobody touched.** That is a
 feature of the versioning policy, and it is why the formatter's version belongs in the lockfile
-and the pre-commit `rev`, not floating (**11b** *(not written yet)*).
+and the pre-commit `rev`, not floating ([12](12-pinning-ruff.md)).
 
 ### The except-tuple change depends on your target
 

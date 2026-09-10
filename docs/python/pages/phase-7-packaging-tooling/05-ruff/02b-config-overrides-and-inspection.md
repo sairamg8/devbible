@@ -106,7 +106,7 @@ select = ["E", "F"]         # unknown table: silently ignored by every tool
 
 The same strictness makes a *newer* key fatal to an *older* ruff. `format.nested-string-quote-style`
 arrived in **0.15.9**; a configuration using it cannot be parsed by an earlier ruff — a stale
-editor-bundled binary, say. **11b** *(not written yet)* covers keeping every consumer on one
+editor-bundled binary, say. [12](12-pinning-ruff.md) covers keeping every consumer on one
 version; the 0.16.6 source checks `required-version` *before* strict parsing (*"Inspect
 `required-version` without triggering strict deserialization errors"*), so a pinned project gets
 a version-mismatch error instead of a confusing unknown-field one.
@@ -170,7 +170,7 @@ ruff format . --config "format.quote-style = 'single'"
 only on one developer's machine.** Cause: their ruff (often the editor's bundled copy) predates
 the option, and ruff rejects unknown keys. `nested-string-quote-style`, added in 0.15.9, is a
 recent example. Fix: pin the version in the repository so an old binary fails with a clear
-message (**11b** *(not written yet)*).
+message ([12](12-pinning-ruff.md)).
 
 ```toml
 [tool.ruff]

@@ -100,7 +100,7 @@ ignore = ["B008"]                    # FastAPI's Depends() in argument defaults 
 
 **Option B — the defaults plus additions.** `extend-select = ["S", "PT"]` rides whatever ruff
 ships and adds to it. It gets the new correctness rules automatically; it also means a routine
-minor upgrade can fail the build. Pair it with an exact version pin (**11b** *(not written yet)*)
+minor upgrade can fail the build. Pair it with an exact version pin ([12](12-pinning-ruff.md))
 so that the upgrade is a deliberate commit.
 
 ## `ALL` is a moving target by definition
@@ -186,7 +186,7 @@ uv run ruff check --select I --fix . && git commit -am "Sort imports (ruff 0.16 
 
 **Symptom: a team member's local ruff reports far fewer problems than CI.** Cause: their ruff is
 older than 0.16 and the project relies on the defaults, so the two binaries run different rule
-sets. Fix: pin the version and make it enforceable (**11b** *(not written yet)*).
+sets. Fix: pin the version and make it enforceable ([12](12-pinning-ruff.md)).
 
 ```toml
 [tool.ruff]

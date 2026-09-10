@@ -57,7 +57,7 @@ uv run --no-sync ruff format --diff .    # a gate that also shows the fix in the
 
 `2` is the code a CI script must never swallow. It is what an upgrade produces when a
 configuration key was removed or renamed, what a typo in `pyproject.toml` produces, and what
-`required-version` produces on the wrong ruff (**12 · Pinning ruff** *(not written yet)*). A job that turns `2`
+`required-version` produces on the wrong ruff ([12 · Pinning ruff](12-pinning-ruff.md)). A job that turns `2`
 into green has stopped checking anything and will say so to nobody.
 
 The flags that move these codes:
