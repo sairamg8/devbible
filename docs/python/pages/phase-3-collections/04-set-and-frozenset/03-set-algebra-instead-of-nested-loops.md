@@ -166,7 +166,7 @@ def reconcile(invoices, payments):
 Key views accept the operators directly and return plain sets. Two things the loop kept that this
 drops: duplicate references (a dict comprehension keeps the *last* record per key), and the order
 of the inputs — hence the `sorted` calls on everything that leaves the function
-(**8** *(not written yet)*).
+([6](06-iteration-order.md)).
 
 ## Gotchas
 

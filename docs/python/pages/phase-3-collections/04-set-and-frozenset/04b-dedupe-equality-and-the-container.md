@@ -147,4 +147,4 @@ needs orderable elements and loses arrival order.
 
 ---
 
-← Prev: [Dedupe and what it destroys](04-dedupe-and-what-it-destroys.md) · [Topic index](README.md) · Next → **`frozenset` — hashable sets, sets of sets** *(not written yet)*
+← Prev: [Dedupe and what it destroys](04-dedupe-and-what-it-destroys.md) · [Topic index](README.md) · Next → [frozenset — hashable sets](05-frozenset-hashable-sets.md)

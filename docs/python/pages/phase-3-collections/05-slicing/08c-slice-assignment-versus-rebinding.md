@@ -269,4 +269,4 @@ object and the binding is a real rebinding.
 
 ---
 
-← Prev: [08b · Slice bounds and target types](08b-slice-bounds-and-types.md) · [Topic index](README.md)
+← Prev: [08b · Slice bounds and target types](08b-slice-bounds-and-types.md) · [Topic index](README.md) · Next →: [09 · Extended-slice assignment](09-extended-slice-assignment.md)

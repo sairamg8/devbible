@@ -118,7 +118,7 @@ there was already a line break within any of the expression parts."*
 
 **Implicitly concatenated strings.** *"Ruff merges implicitly concatenated strings if the entire
 string fits on a single line"* — so `"Invoice " "overdue"` on a short line becomes one literal.
-That is why the formatter and `ISC001` no longer conflict (**08** *(not written yet)*).
+That is why the formatter and `ISC001` no longer conflict ([08](08-formatter-lint-conflicts.md)).
 
 **Python code in Markdown files — by default since 0.16.0.** *"Ruff can now format Python code
 blocks in Markdown files and will do this by default."* A repository migrating from Black on
@@ -143,7 +143,7 @@ The whole surface — `line-length`, `indent-width`, and the `[tool.ruff.format]
 *target*, not a limit. The settings reference: *"While the formatter will attempt to format lines
 such that they remain within the `line-length`, it isn't a hard upper bound, and formatted lines
 may exceed the `line-length`."* Black has the same property; it is why `E501` and the formatter
-need care together (**08** *(not written yet)*).
+need care together ([08](08-formatter-lint-conflicts.md)).
 
 ### Preview style
 

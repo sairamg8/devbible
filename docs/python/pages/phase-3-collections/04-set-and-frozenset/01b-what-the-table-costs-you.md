@@ -54,7 +54,7 @@ element is stored. The built-in types enforce it by refusing to hash anything mu
 > key or as an element of another set."* —
 > [Set Types](https://docs.python.org/3.14/library/stdtypes.html#set-types-set-frozenset)
 
-That sentence is also why sets of sets need **`frozenset`** *(not written yet)*.
+That sentence is also why sets of sets need [`frozenset`](05-frozenset-hashable-sets.md).
 
 ### What the failure looks like in 3.14
 
@@ -95,7 +95,7 @@ Anything in the standard library that needs positions refuses a set for the same
 > supported."* — [`random.sample`](https://docs.python.org/3.14/library/random.html#random.sample)
 
 What order you *do* see when you iterate, and why it differs between runs, is
-**8** *(not written yet)*.
+[6](06-iteration-order.md).
 
 ## The table remembers each element's hash
 

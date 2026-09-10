@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **`[start:stop:step]`, negatives, slice assignment, and slices as copies.**
 
-:::caution In progress — 15 chunks written
+:::caution In progress — 18 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -33,10 +33,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 13 | **[08 · Slice assignment](08-slice-assignment.md)** | Assigning to a slice replaces a run of elements with the contents of any iterable, lengths independent — replace,… |
 | 14 | **[08b · Slice bounds and target types](08b-slice-bounds-and-types.md)** | On the left of =, clamped bounds change the operation — past the end appends, a reversed pair inserts, -0 empties —… |
 | 15 | **[08c · Slice assignment versus rebinding](08c-slice-assignment-versus-rebinding.md)** | a = new moves one name and leaves every other holder on the old list; a[:] = new rewrites the object every holder… |
+| 16 | **[09 · Extended-slice assignment](09-extended-slice-assignment.md)** | An extended slice names scattered positions, so assignment is one-for-one — and a step of 1 is decided at run time,… |
+| 17 | **[09b · Deleting slices](09b-deleting-slices.md)** | del on a slice removes a run or a pattern in one pass — no length rule, no IndexError — and a comma-separated del runs… |
+| 18 | **[09c · Deletion cost and types](09c-deletion-cost-and-types.md)** | A list deletion moves the tail, a bytearray front deletion only advances its start, del a forgets a name, and the… |
 
 ## Still to come
 
-- **Extended-slice assignment and `del`** *(not written yet)*
 - **Slicing your own class — `__getitem__` with a `slice`** *(not written yet)*
 - **Slicing in real code — pagination, batching, fixed-width records** *(not written yet)*
 

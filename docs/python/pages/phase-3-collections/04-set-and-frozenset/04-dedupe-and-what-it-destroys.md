@@ -42,7 +42,7 @@ the duplicates".
 
 A set iterates in slot order, which is determined by the hashes, and for strings the hashes are
 salted per process — so `list(set(names))` is not only reordered, it is reordered **differently in
-every run** (the mechanism is **Iteration order** *(not written yet)*). Output built from it cannot be
+every run** (the mechanism is [6 · Iteration order](06-iteration-order.md)). Output built from it cannot be
 diffed, cached by content or asserted in a test.
 
 A `dict` keeps insertion order, and its keys are exactly as unique as a set's elements:

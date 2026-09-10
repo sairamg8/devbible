@@ -185,7 +185,7 @@ preview = false
 **★ Symptom: the same `with` statement is formatted with one context manager per line on one
 project and with continuations inside the calls on another.** Cause: the layout depends on the
 target Python — parenthesised context managers are used for 3.9+ targets only. Fix: make the
-target version explicit (**09** *(not written yet)*).
+target version explicit ([09](09-target-version.md)).
 
 ```toml
 [project]

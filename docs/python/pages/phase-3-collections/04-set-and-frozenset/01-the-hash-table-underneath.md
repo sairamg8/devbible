@@ -153,7 +153,7 @@ class ToySet:
 ```
 
 Read `_probe` against the four steps and three later chunks stop being surprising: iteration walks
-slots, so order is whatever the hashes made it (**8** *(not written yet)*); `add` keeps the element
+slots, so order is whatever the hashes made it ([6](06-iteration-order.md)); `add` keeps the element
 already stored, so the first of several equal values wins (**9** *(not written yet)*);
 and `_grow` never re-hashes, so an element whose hash changed after insertion is never re-filed
 (**10** *(not written yet)*).

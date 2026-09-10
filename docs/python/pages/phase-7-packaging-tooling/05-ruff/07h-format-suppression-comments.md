@@ -257,4 +257,4 @@ every region is code that never gets the formatter's consistency again.
 
 ---
 
-← Prev: [07g · Docstring and Markdown code](07g-docstring-and-markdown-code.md) · [Topic index](README.md)
+← Prev: [07g · Docstring and Markdown code](07g-docstring-and-markdown-code.md) · [Topic index](README.md) · Next → [08 · Formatter/lint conflicts](08-formatter-lint-conflicts.md)

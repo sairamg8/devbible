@@ -166,7 +166,7 @@ dev = ["ruff==0.16.6"]
 
 **Symptom: with `select = ["ALL"]`, `ruff format` prints a warning that a rule *"may cause
 conflicts when used with the formatter"*.** Cause: `ALL` includes `COM812`, which the formatter
-checks for and warns about. Fix: ignore it (**08** *(not written yet)* has the rest of
+checks for and warns about. Fix: ignore it ([08](08-formatter-lint-conflicts.md) has the rest of
 the list).
 
 ```toml

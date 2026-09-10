@@ -47,7 +47,7 @@ What the clamped bounds do on the left of `=`, and which types accept a slice ta
 
 "The contents of the iterable" is the whole rule. Nothing requires *t* to have `j - i` items; that
 constraint exists only for extended slices with a step other than 1, which is
-**09 · Extended-slice assignment and `del`** *(not written yet)*.
+[09 · Extended-slice assignment](09-extended-slice-assignment.md).
 
 ## Replace, shrink, grow, insert, clear
 

@@ -109,7 +109,7 @@ documentation states the consequence for hook order, and the same logic applies 
 > *"(As long as your Ruff configuration avoids any linter-formatter incompatibilities, `ruff format` should never introduce new lint errors, so it's safe to run Ruff's format hook after `ruff check --fix`.)"*
 
 The parenthetical is load-bearing. It holds only if you avoid the rules that fight the
-formatter — **08** *(not written yet)* has the list.
+formatter — [08](08-formatter-lint-conflicts.md) has the list.
 
 A local "fix everything" script, in the right order:
 
@@ -159,7 +159,7 @@ uv run ruff check --fix . && uv run ruff format .
 **Symptom: formatting a file makes `ruff check` report a new violation.** Cause: an enabled
 lint rule contradicts the formatter — `COM812` and the `Q` quote rules are the usual ones — or
 `E501` is enabled and the formatter's wrapping is *"best-effort"*. Fix: drop the conflicting
-rules (**08** *(not written yet)*).
+rules ([08](08-formatter-lint-conflicts.md)).
 
 ```toml
 [tool.ruff.lint]

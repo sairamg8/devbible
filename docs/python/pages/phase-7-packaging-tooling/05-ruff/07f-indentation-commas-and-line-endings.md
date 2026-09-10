@@ -31,7 +31,7 @@ formatter touches and which style it prints.**
 
 `indent-width` (top-level, default 4) sets the width of one indentation level when indenting with
 spaces. Choosing `tab` puts you in conflict with `W191` (`tab-indentation`) and `D206` if either
-is selected — **08** *(not written yet)* has the list and the warning `ruff format`
+is selected — [08](08-formatter-lint-conflicts.md) has the list and the warning `ruff format`
 prints.
 
 ## `skip-magic-trailing-comma`
@@ -64,7 +64,7 @@ comma and format.
 
 isort has the same idea for imports (`split-on-trailing-comma`, default `true`); setting
 `skip-magic-trailing-comma = true` while isort still honours trailing commas is one of the
-combinations `ruff format` warns about (**08** *(not written yet)*).
+combinations `ruff format` warns about ([08](08-formatter-lint-conflicts.md)).
 
 ## `line-ending`
 

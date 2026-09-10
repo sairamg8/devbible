@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **Linter + formatter in one, rule selection, `--fix`, CI and pre-commit.**
 
-:::caution In progress — 21 chunks written
+:::caution In progress — 24 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -39,10 +39,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 19 | **[07f · Indentation, commas and line endings](07f-indentation-commas-and-line-endings.md)** | `indent-style`, the magic trailing comma, `line-ending` (🔴 never `native` on a mixed team), format-only `exclude` — which a path passed explicitly ignores unless `force-exclude` is on |
 | 20 | **[07g · Docstring and Markdown code](07g-docstring-and-markdown-code.md)** | Markdown Python fences formatted by default since 0.16.0 (only labelled ones); docstring examples opt-in — and 🔴 there unlabelled blocks are assumed Python, so `ls -la` becomes `ls - la`; `fmt:off` HTML comments |
 | 21 | **[07h · Format suppression comments](07h-format-suppression-comments.md)** | `# fmt: off`/`on` and `# fmt: skip` work on statements only — 🔴 inside an expression they silently do nothing; formatting pragmas, `noqa` and isort action comments are three systems that never overlap |
+| 22 | **[08 · Formatter/lint conflicts](08-formatter-lint-conflicts.md)** | The rules that fight the formatter (indentation, quotes, `COM812`/`COM819`, `D203`, `ISC002`) — none default, ignore them all; 🔴 the warning comes from `ruff format` only and is conditional; `E501` needs a policy; `ISC001` stopped conflicting in 0.9.0 |
+| 23 | **[08b · isort settings and the fix/format loop](08b-isort-settings-and-the-fix-format-loop.md)** | `lines-after-imports` (only -1/1/2), `lines-between-types` (0/1), trailing-comma settings that must agree; Black + ruff lint need one `line-length`; 🔴 a settledness check — run fix+format twice, the second pass must change nothing |
+| 24 | **[09 · target-version](09-target-version.md)** | The oldest Python the code must run on — drives `UP` rules, fix safety, version-related syntax errors and formatter layout; 🔴 too high ships syntax production cannot parse; `target-version` beats `requires-python` when both are set |
 
 ## Still to come
 
-- **Formatter and lint-rule conflicts** *(not written yet)*
 - **`target-version` and `requires-python`** *(not written yet)*
 - **Import sorting** *(not written yet)*
 - **`ruff` in CI** *(not written yet)*

@@ -127,7 +127,7 @@ collide. That is why string hashes are salted per process:
 The defence is on by default and can be switched off: *"Specifying the value 0 will disable hash
 randomization."* ([`PYTHONHASHSEED`](https://docs.python.org/3.14/using/cmdline.html#envvar-PYTHONHASHSEED)).
 The same salt is also why a set of strings iterates in a different order in every process
-(**8** *(not written yet)*); what a fixed seed is and is not for is covered in
+([6](06-iteration-order.md)); what a fixed seed is and is not for is covered in
 [tuple · 3b](../02-tuple/03b-what-a-hash-value-is-not.md).
 
 ## Assumption 3: hashing and comparing are O(1)
@@ -197,7 +197,7 @@ fresh = [event for event in incoming if event.event_id not in seen_ids]
 set falls over under a modest request rate.** Cause: someone set `PYTHONHASHSEED=0` in the image to
 make test output deterministic, which *"will disable hash randomization"* and re-opens the O(n²)
 collision attack the salt exists to stop. Fix: remove it from runtime images, and fix the tests
-instead (**8** *(not written yet)*).
+instead ([6](06-iteration-order.md)).
 
 ```dockerfile
 # delete this line from the runtime image

@@ -59,7 +59,7 @@ docstring-code-line-length = "dynamic"
 | `exclude` | `[tool.ruff.format]` | glob list | — |
 | `preview` | `[tool.ruff.format]` | boolean | — |
 
-The last column is why several of these belong to **08 · formatter/lint conflicts** *(not written yet)*
+The last column is why several of these belong to [08 · formatter/lint conflicts](08-formatter-lint-conflicts.md)
 as much as to this page: the formatter and some lint rules read the same setting and must agree.
 
 ## `line-length` and `indent-width` are shared

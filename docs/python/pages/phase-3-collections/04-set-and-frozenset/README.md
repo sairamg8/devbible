@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **O(1) membership, dedupe, and set algebra instead of a nested loop.**
 
-:::caution In progress — 15 chunks written
+:::caution In progress — 18 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -33,11 +33,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 13 | **[3h · Removal and mutation mid-loop](03h-removal-and-mutation-during-iteration.md)** | `remove()` raises where `discard()` does not, `pop()` has no order, check-then-act is not atomic across threads, and a loop that… |
 | 14 | **[4 · Dedupe and what it destroys](04-dedupe-and-what-it-destroys.md)** | `list(set(items))` loses the arrival order (differently every run), the counts and the choice of survivor — `dict.fromkeys`, a seen-set… |
 | 15 | **[4b · Dedupe: equality and the container](04b-dedupe-equality-and-the-container.md)** | `1`, `1.0` and `True` collapse into one, identical-looking strings stay two, dicts cannot be deduped, and a set is not JSON… |
+| 16 | **[5 · frozenset — hashable sets](05-frozenset-hashable-sets.md)** | A `set` has no hash because it can change; `frozenset` is the hashable form — sets of sets, set-keyed dicts and caches, unordered… |
+| 17 | **[5b · frozenset beside set](05b-frozenset-beside-set.md)** | Mixed operations return the left operand's type, a frozenset is not an instance of `set`, and `frozen=True` does not freeze a… |
+| 18 | **[6 · Iteration order](06-iteration-order.md)** | A set iterates in slot order — strings reorder in every process, small ints look sorted by accident, equal sets can iterate differently… |
 
 ## Still to come
 
-- **`frozenset` — hashable sets, sets of sets, mixed-type results** *(not written yet)*
-- **Iteration order — arbitrary, and different between runs** *(not written yet)*
 - **Equal but distinct elements — `1`, `1.0` and `True`, and NaN** *(not written yet)*
 - **Custom classes as elements** *(not written yet)*
 - **Diffing ID sets from a database or an API** *(not written yet)*

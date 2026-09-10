@@ -64,7 +64,7 @@ assert slice_length(slice(-3, None), 2) == 2          # "last three" of two is b
 ```
 
 That is also the number an extended slice *assignment* demands on the right-hand side — the
-length rule of **12** *(not written yet)* — so computing it this way lets you
+length rule of [09](09-extended-slice-assignment.md) — so computing it this way lets you
 build a replacement of exactly the right size.
 
 ## Job 2: enumerate the positions

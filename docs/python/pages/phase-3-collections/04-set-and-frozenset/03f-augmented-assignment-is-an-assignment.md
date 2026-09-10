@@ -45,6 +45,7 @@ assignment operators are applied to elements of a tuple that point to mutable ob
 > same object that `a_tuple[0]` already points to, that final assignment still results in an error,
 > because tuples are immutable."* — [Programming FAQ](https://docs.python.org/3.14/faq/programming.html#why-does-a-tuple-i-item-raise-an-exception-when-the-addition-works)
 
+The tuple-side view of the same trap is [tuple · 2](../02-tuple/02-the-augmented-assignment-trap.md).
 With a set, `pair[0] |= {"x"}` adds `"x"` to the set inside the tuple **and** raises
 `TypeError: 'tuple' object does not support item assignment`. The same shape hits a read-only
 property: `post.tags |= {"python"}` calls the getter, mutates the set it returned, then tries to
@@ -86,7 +87,7 @@ class Post:
 ```
 
 A `@dataclass` refuses the class-level version outright: a `set()` default is unhashable, and the
-generated class raises `ValueError` at definition time, pointing you at
+decorator raises `ValueError` at class-definition time, pointing you at
 `field(default_factory=set)` — the same fix, enforced.
 
 **It reads the target first.** The reference spells out the order:
