@@ -22,11 +22,11 @@ answered by these messages, and `--verbose` prints them.
 
 | Code | Message |
 |---|---|
-| **6352** | *"Project '{0}' is out of date because output file '{1}' does not exist"* |
-| **6350** | *"Project '{0}' is out of date because output '{1}' is older than input '{2}'"* |
-| **6353** | *"Project '{0}' is out of date because its dependency '{1}' is out of date"* |
-| **6381** | *"Project '{0}' is out of date because output for it was generated with version '{1}' that differs with current version '{2}'"* |
-| **6388** | *"Project '{0}' is being forcibly rebuilt"* |
+| **6352** | *"Project '\{0\}' is out of date because output file '\{1\}' does not exist"* |
+| **6350** | *"Project '\{0\}' is out of date because output '\{1\}' is older than input '\{2\}'"* |
+| **6353** | *"Project '\{0\}' is out of date because its dependency '\{1\}' is out of date"* |
+| **6381** | *"Project '\{0\}' is out of date because output for it was generated with version '\{1\}' that differs with current version '\{2\}'"* |
+| **6388** | *"Project '\{0\}' is being forcibly rebuilt"* |
 
 🔴 **`TS6381` is the one worth knowing about in advance.** Upgrading TypeScript
 invalidates every project's output, because the version is recorded in the
@@ -38,9 +38,9 @@ output from a different version.
 
 | Code | Message |
 |---|---|
-| **6351** | *"Project '{0}' is up to date because newest input '{1}' is older than output '{2}'"* |
-| **6361** | *"Project '{0}' is up to date"* |
-| 🔴 **6354** | *"Project '{0}' is up to date with `.d.ts` files from its dependencies"* |
+| **6351** | *"Project '\{0\}' is up to date because newest input '\{1\}' is older than output '\{2\}'"* |
+| **6361** | *"Project '\{0\}' is up to date"* |
+| 🔴 **6354** | *"Project '\{0\}' is up to date with `.d.ts` files from its dependencies"* |
 
 **`TS6354` is the optimisation that makes project references worth having**, and
 it is worth stating carefully:
