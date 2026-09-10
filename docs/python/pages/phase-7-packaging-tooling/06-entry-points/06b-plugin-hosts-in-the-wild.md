@@ -136,7 +136,7 @@ invoice = "invoice_service.cli:main"
 invoice-service = "invoice_service.cli:main"
 ```
 
-Now `pipx install invoice-service` exposes `invoice`, and `pipx run invoice-service` runs the same function without `--spec`. This is a group read by a *tool*, not a plugin host — the same mechanism used to attach a small piece of configuration to a distribution. uv's `uvx` solves the same mismatch from the caller's side with `--from` (**08** *(not written yet)*); the sources read for this page show no `pipx.run`-style group in uv.
+Now `pipx install invoice-service` exposes `invoice`, and `pipx run invoice-service` runs the same function without `--spec`. This is a group read by a *tool*, not a plugin host — the same mechanism used to attach a small piece of configuration to a distribution. uv's `uvx` solves the same mismatch from the caller's side with `--from` ([08](08-getting-commands-to-users.md)); the sources read for this page show no `pipx.run`-style group in uv.
 
 ## Side by side
 
@@ -209,4 +209,4 @@ Because flake8 iterates `importlib.metadata.distributions()` directly — it nee
 
 ---
 
-← Prev: [06 · Plugin discovery patterns](06-plugin-discovery-patterns.md) · [Topic index](README.md) · Next → **07 · `uv run` and the project's own command** *(not written yet)*
+← Prev: [06 · Plugin discovery patterns](06-plugin-discovery-patterns.md) · [Topic index](README.md) · Next → [07 · `uv run` and the project command](07-uv-run-and-the-project-command.md)
