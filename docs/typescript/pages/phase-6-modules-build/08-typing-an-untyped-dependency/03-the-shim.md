@@ -52,7 +52,7 @@ rule arriving with consequences. A file with any top-level `import` or `export`
 is a **module**, and `declare module 'x'` inside a module is read as an
 **augmentation** of `x` — which fails, because `x` has no types to augment:
 
-> **TS2664:** *"Invalid module name in augmentation, module '{0}' cannot be
+> **TS2664:** *"Invalid module name in augmentation, module '\{0\}' cannot be
 > found."*
 
 ```ts
@@ -174,8 +174,8 @@ different justification — [16 · Typing non-code imports](../16-typing-non-cod
 If the package *does* resolve to real JavaScript with no types and your
 `declare module` block is being treated as an augmentation anyway:
 
-> **TS2665:** *"Invalid module name in augmentation. Module '{0}' resolves to an
-> untyped module at '{1}', which cannot be augmented."*
+> **TS2665:** *"Invalid module name in augmentation. Module '\{0\}' resolves to an
+> untyped module at '\{1\}', which cannot be augmented."*
 
 This one is a **resolution** problem, not a declaration one: your block has to be
 found *instead of* the untyped resolution, not alongside it. The usual levers are
