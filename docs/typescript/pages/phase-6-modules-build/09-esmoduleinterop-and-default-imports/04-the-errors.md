@@ -17,22 +17,22 @@ difference is the whole of their usefulness.
 
 ## The set
 
-> **TS1259:** *"Module '{0}' can only be default-imported using the '{1}' flag"*
+> **TS1259:** *"Module '\{0\}' can only be default-imported using the '\{1\}' flag"*
 > **TS2497:** *"This module can only be referenced with ECMAScript
-> imports/exports by turning on the '{0}' flag and referencing its default
+> imports/exports by turning on the '\{0\}' flag and referencing its default
 > export."*
-> **TS2595:** *"'{0}' can only be imported by using a default import."*
-> **TS2596:** *"'{0}' can only be imported by turning on the 'esModuleInterop'
+> **TS2595:** *"'\{0\}' can only be imported by using a default import."*
+> **TS2596:** *"'\{0\}' can only be imported by turning on the 'esModuleInterop'
 > flag and using a default import."*
-> **TS2598:** *"'{0}' can only be imported by using a 'require' call or by
+> **TS2598:** *"'\{0\}' can only be imported by using a 'require' call or by
 > turning on the 'esModuleInterop' flag and using a default import."*
-> **TS2617:** *"'{0}' can only be imported by using 'import {1} = require({2})'
+> **TS2617:** *"'\{0\}' can only be imported by using 'import \{1\} = require(\{2\})'
 > or by turning on the 'esModuleInterop' flag and using a default import."*
 
 And the two that look like this problem and often are not:
 
-> **TS1192:** *"Module '{0}' has no default export."*
-> **TS2613:** *"Module '{0}' has no default export. Did you mean to use
+> **TS1192:** *"Module '\{0\}' has no default export."*
+> **TS2613:** *"Module '\{0\}' has no default export. Did you mean to use
 > `import { {1} } from {0}` instead?"*
 
 ## Reading them as a family
@@ -48,7 +48,7 @@ Grouped by what they are telling you to change:
 | TS2598 | ✓ | ✓ **or** `require()` | Offers an escape hatch |
 | TS2617 | ✓ | ✓ **or** `import x = require(…)` | The most specific of the set |
 
-🔴 **`TS2595` is the odd one out and the most informative.** *"'{0}' can only be
+🔴 **`TS2595` is the odd one out and the most informative.** *"'\{0\}' can only be
 imported by using a default import"* — with no mention of a flag — means the
 declaration genuinely has a default and you did not ask for one. That is not an
 interop problem; it is a wrong import statement, and no configuration change will
@@ -180,7 +180,7 @@ territory; the interop flag is downstream of the format question.
 ## Interview questions
 
 **★ What separates `TS2595` from the other interop errors?**
-It names no flag. *"'{0}' can only be imported by using a default import"* means
+It names no flag. *"'\{0\}' can only be imported by using a default import"* means
 the module really does have a default and your import statement is wrong — a code
 fix, not a configuration one. Every other error in the family offers a flag,
 which is how you tell them apart at a glance.
