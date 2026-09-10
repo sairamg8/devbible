@@ -69,7 +69,7 @@ Reinstalling removes the old wrappers, because uninstalling is driven by what th
 A wrapper survives when that bookkeeping is bypassed:
 
 - **The metadata was deleted by hand** — a `rm -rf` of a `.dist-info` or `.egg-info` directory. The wrapper is now owned by nothing, and no uninstall will find it.
-- **Another distribution overwrote it** — pip installs with `clobber = True` (*"Ensure old scripts are overwritten"*), so two packages shipping one command name leave one file, owned by whichever installed last; uninstalling that one removes the command the other still expects (**10** *(not written yet)*).
+- **Another distribution overwrote it** — pip installs with `clobber = True` (*"Ensure old scripts are overwritten"*), so two packages shipping one command name leave one file, owned by whichever installed last; uninstalling that one removes the command the other still expects ([10](10-name-collisions-and-path-shadowing.md)).
 - **It lives in a directory shared across interpreters** — see the next section.
 
 ## Wrappers that point at nothing
@@ -184,4 +184,4 @@ Because `uv run` and `uv sync` check whether the editable project needs rebuildi
 
 ---
 
-← Prev: [08 · Getting commands to users](08-getting-commands-to-users.md) · [Topic index](README.md) · Next → **10 · Name collisions and `PATH` shadowing** *(not written yet)*
+← Prev: [08 · Getting commands to users](08-getting-commands-to-users.md) · [Topic index](README.md) · Next → [10 · Name collisions and `PATH` shadowing](10-name-collisions-and-path-shadowing.md)
