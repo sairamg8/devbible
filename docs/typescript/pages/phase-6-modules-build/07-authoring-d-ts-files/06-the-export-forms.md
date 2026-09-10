@@ -95,7 +95,7 @@ Whether a consumer may instead write the friendlier `import x from 'pkg'` is the
 `esModuleInterop` question — [09 · `esModuleInterop` and default imports](../09-esmoduleinterop-and-default-imports/README.md) — and the diagnostic when they cannot is:
 
 > **TS2497:** *"This module can only be referenced with ECMAScript
-> imports/exports by turning on the '{0}' flag and referencing its default
+> imports/exports by turning on the '\{0\}' flag and referencing its default
 > export."*
 
 ⚠️ **Do not "fix" `TS2497` by changing the declaration to `export default`.**
@@ -139,7 +139,7 @@ This describes a library that is *both* importable and, when loaded by a
 `<script>` tag, available as a global. The compiler enforces that you pick one
 per consuming file:
 
-> **TS2686:** *"'{0}' refers to a UMD global, but the current file is a module.
+> **TS2686:** *"'\{0\}' refers to a UMD global, but the current file is a module.
 > Consider adding an import instead."*
 
 Inside a module you must import it; the bare global form is for script files
