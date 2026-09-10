@@ -139,7 +139,7 @@ of whether a strictness migration achieved anything.
 
 ## `TS18046` is different from the other three
 
-*"'{0}' is of type 'unknown'"* is **not a nullability complaint**. It is the type
+*"'\{0\}' is of type 'unknown'"* is **not a nullability complaint**. It is the type
 system working correctly at a boundary you set up deliberately:
 
 - a `catch` variable under `useUnknownInCatchVariables` —
