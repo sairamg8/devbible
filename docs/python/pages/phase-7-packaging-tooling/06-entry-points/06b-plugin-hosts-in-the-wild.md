@@ -170,7 +170,7 @@ for ep in entry_points(group="flake8.extension"):
 pytest --trace-config
 ```
 
-**Symptom: a pytest plugin under development loads from the editable install, but a newly added hook module is ignored.** Cause: the `pytest11` entry names a module, and its value was recorded when the plugin was installed; adding a second module means adding a second entry, which means reinstalling (**09** *(not written yet)*). Fix:
+**Symptom: a pytest plugin under development loads from the editable install, but a newly added hook module is ignored.** Cause: the `pytest11` entry names a module, and its value was recorded when the plugin was installed; adding a second module means adding a second entry, which means reinstalling ([09](09-stale-wrappers-and-editable-installs.md)). Fix:
 
 ```bash
 uv sync --reinstall-package myproject

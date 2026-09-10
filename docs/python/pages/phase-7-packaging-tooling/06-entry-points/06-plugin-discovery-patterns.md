@@ -183,7 +183,7 @@ def test_loads_a_declared_exporter(monkeypatch):
     assert registry.load("csv").file_suffix == ".csv"
 ```
 
-For an end-to-end test, install a tiny real plugin into the test environment — a path dependency in the `dev` group — so its `entry_points.txt` exists. Its metadata is written at install time, so changing the plugin's entry points needs a reinstall (**09** *(not written yet)*).
+For an end-to-end test, install a tiny real plugin into the test environment — a path dependency in the `dev` group — so its `entry_points.txt` exists. Its metadata is written at install time, so changing the plugin's entry points needs a reinstall ([09](09-stale-wrappers-and-editable-installs.md)).
 
 ```toml
 [dependency-groups]
@@ -243,7 +243,7 @@ if exporter.api_version != API_VERSION:
     raise PluginError(f"exporter {name!r} targets API v{exporter.api_version}")
 ```
 
-**Symptom: a plugin under development is edited to add a second exporter, and the host never sees it.** Cause: `entry_points.txt` was written when the plugin was installed, and an editable install makes code live, not metadata. Fix: reinstall the plugin (**09** *(not written yet)*).
+**Symptom: a plugin under development is edited to add a second exporter, and the host never sees it.** Cause: `entry_points.txt` was written when the plugin was installed, and an editable install makes code live, not metadata. Fix: reinstall the plugin ([09](09-stale-wrappers-and-editable-installs.md)).
 
 ```bash
 uv sync --reinstall-package invoice-plugin-example

@@ -92,7 +92,7 @@ pipx 1.17.2 has one more thing to know: it now prefers uv underneath — *"When 
 uv tool install --editable .
 ```
 
-Code changes are then live; new or renamed commands are not, because the wrappers in the tool's bin directory were written at install time (**09** *(not written yet)*). Re-run the install after editing `[project.scripts]` — uv's CLI reference says *"If the tool was previously installed, the existing tool will generally be replaced."*
+Code changes are then live; new or renamed commands are not, because the wrappers in the tool's bin directory were written at install time ([09](09-stale-wrappers-and-editable-installs.md)). Re-run the install after editing `[project.scripts]` — uv's CLI reference says *"If the tool was previously installed, the existing tool will generally be replaced."*
 
 ## What to put in your README
 
@@ -176,4 +176,4 @@ The first builds and installs a snapshot, so later edits have no effect until yo
 
 ---
 
-← Prev: [07 · `uv run` and the project command](07-uv-run-and-the-project-command.md) · [Topic index](README.md) · Next → **09 · Stale wrappers and editable installs** *(not written yet)*
+← Prev: [07 · `uv run` and the project command](07-uv-run-and-the-project-command.md) · [Topic index](README.md) · Next → [09 · Stale wrappers and editable installs](09-stale-wrappers-and-editable-installs.md)
