@@ -162,4 +162,4 @@ key fails because the type has no mapping subscript.
 
 ---
 
-← Prev: [09b · Deleting slices](09b-deleting-slices.md) · [Topic index](README.md)
+← Prev: [09b · Deleting slices](09b-deleting-slices.md) · [Topic index](README.md) · Next →: [10 · Slicing your own class](10-slicing-your-own-class.md)

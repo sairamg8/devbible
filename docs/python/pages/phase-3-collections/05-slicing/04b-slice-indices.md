@@ -117,7 +117,7 @@ assert squares[-2:100] == [16, 25]
 ```
 
 That class still has gaps — it accepts a float index, and returns a list rather than its own type
-— which **13** *(not written yet)* closes.
+— which [10](10-slicing-your-own-class.md) closes.
 
 ## The trap: the numbers are for `range`, not for slicing
 

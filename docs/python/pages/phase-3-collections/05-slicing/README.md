@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **`[start:stop:step]`, negatives, slice assignment, and slices as copies.**
 
-:::caution In progress — 18 chunks written
+:::caution In progress — 20 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -36,10 +36,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 16 | **[09 · Extended-slice assignment](09-extended-slice-assignment.md)** | An extended slice names scattered positions, so assignment is one-for-one — and a step of 1 is decided at run time,… |
 | 17 | **[09b · Deleting slices](09b-deleting-slices.md)** | del on a slice removes a run or a pattern in one pass — no length rule, no IndexError — and a comma-separated del runs… |
 | 18 | **[09c · Deletion cost and types](09c-deletion-cost-and-types.md)** | A list deletion moves the tail, a bytearray front deletion only advances its start, del a forgets a name, and the… |
+| 19 | **[10 · Slicing your own class](10-slicing-your-own-class.md)** | A slice reaches your class as a slice object in __getitem__ that validates nothing — raise TypeError for the kind,… |
+| 20 | **[10b · Integer keys and return types](10b-integer-keys-and-return-types.md)** | Convert integer keys with operator.index, never int(), and choose the slice return type on purpose — subclasses of… |
 
 ## Still to come
 
-- **Slicing your own class — `__getitem__` with a `slice`** *(not written yet)*
+- **`__setitem__`, `__delitem__` and the ABCs — writing through a slice in your own class** *(not written yet)*
 - **Slicing in real code — pagination, batching, fixed-width records** *(not written yet)*
 
 ---

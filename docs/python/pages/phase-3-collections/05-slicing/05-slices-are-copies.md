@@ -133,7 +133,7 @@ assert not hasattr(first_two, "tag")
 For a `str` subclass used as a *marker* — a type meaning "this text has been validated" or "this
 text came from a user" — the marker silently disappears in every slice, which matters if the rest
 of the code trusts it. A subclass that must survive slicing has to override `__getitem__`;
-**13** *(not written yet)* shows how, and when `collections.UserList` does it for you.
+[10b](10b-integer-keys-and-return-types.md) shows how, and when `collections.UserList` does it for you.
 
 ## When the "copy" is the original
 
@@ -195,7 +195,7 @@ summary = {"symbol": trade.symbol, "quantity": trade.quantity}
 
 **Symptom: a batch's `tag` attribute vanishes after the batch is split into halves.** Cause:
 slicing a `list` subclass returns a plain `list`. Fix: rebuild the subclass explicitly, or make
-`__getitem__` do it (**13** *(not written yet)*).
+`__getitem__` do it ([10b](10b-integer-keys-and-return-types.md)).
 
 ```python
 halves = [TaggedBatch(batch[:mid], tag=batch.tag), TaggedBatch(batch[mid:], tag=batch.tag)]

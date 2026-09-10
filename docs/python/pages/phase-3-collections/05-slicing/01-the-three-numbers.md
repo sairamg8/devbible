@@ -105,7 +105,7 @@ So `s[2:]` is `s[slice(2, None, None)]`, `s[:]` and `s[::]` are both `s[slice(No
 and the grammar insists only that *"a slice must contain at least one colon"*. Everything about
 defaults is therefore decided at the moment the sequence interprets `None` — which is why the
 defaults can depend on the sign of the step. [04 · `slice` objects](04-slice-objects.md) covers
-the object itself; **13** *(not written yet)* covers receiving one in your own class.
+the object itself; [10](10-slicing-your-own-class.md) covers receiving one in your own class.
 
 ## Negative numbers count from the end
 
