@@ -31,7 +31,7 @@ if heapq is None:
 return heapq.nlargest(n, self.items(), key=_itemgetter(1))
 ```
 
-`heapq.nlargest` is documented as *"Equivalent to: `sorted(iterable, key=key, reverse=True)[:n]`"* — same answer, same tie order, without sorting the elements that cannot make the cut. So the rule is simply: **always pass the `n` you want.** `c.most_common()[:10]` sorts everything and throws most of it away; `c.most_common(10)` does not. The list topic's [03d · Partial sorts and counting](../01-list-internals/03d-partial-sorts-and-counting.md) covers when a full sort wins anyway — which is when `n` is close to the number of elements. Topic **07 · `heapq` and `bisect`** *(not written yet)* is the heap itself.
+`heapq.nlargest` is documented as *"Equivalent to: `sorted(iterable, key=key, reverse=True)[:n]`"* — same answer, same tie order, without sorting the elements that cannot make the cut. So the rule is simply: **always pass the `n` you want.** `c.most_common()[:10]` sorts everything and throws most of it away; `c.most_common(10)` does not. The list topic's [03d · Partial sorts and counting](../01-list-internals/03d-partial-sorts-and-counting.md) covers when a full sort wins anyway — which is when `n` is close to the number of elements. Topic [07 · `heapq` and `bisect`](../07-heapq-and-bisect/README.md) is the heap itself.
 
 The result is a list of `(element, count)` tuples. For a JSON response, `dict(c.most_common(10))` keeps the ranking order and serialises as an object; the list itself serialises as an array of arrays.
 

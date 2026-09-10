@@ -135,7 +135,7 @@ from operator import itemgetter
 top_10 = dict(heapq.nlargest(10, scores.items(), key=itemgetter(1)))
 ```
 
-`heapq` is **07 · `heapq` and `bisect`** *(not written yet)*; the point here is that `dict(...)` over any ordered iterable of pairs is how a dict acquires an order, whatever produced that order.
+`heapq` is [07 · `heapq` and `bisect`](../07-heapq-and-bisect/README.md); the point here is that `dict(...)` over any ordered iterable of pairs is how a dict acquires an order, whatever produced that order.
 
 ⚠️ **`sorted(d)` sorts the keys, not the items.** `sorted(d)` iterates `d`, and iterating a dict yields keys — *"`iter(d)` — Return an iterator over the keys of the dictionary."* So `sorted(d)` gives you a **list of keys**, and `dict(sorted(d))` is a `ValueError` unless the keys happen to be 2-element iterables. The item form is `sorted(d.items())`.
 

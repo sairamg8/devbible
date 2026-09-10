@@ -49,7 +49,7 @@ is usually the better answer.
 - [03 · `dict`](../03-dict/README.md) — `__missing__`, `setdefault`, merging, subclassing and `UserDict` at their boundary with `dict`; this topic links there rather than repeating them.
 - [04 · `set` and `frozenset`](../04-set-and-frozenset/README.md) — `Counter` is the multiset a `set` cannot be.
 - [05 · Slicing deeply](../05-slicing/README.md) — why a `deque` cannot be sliced and what `islice` does instead.
-- **07 · `heapq` and `bisect`** *(not written yet)* — what `Counter.most_common(n)` calls underneath.
+- [07 · `heapq` and `bisect`](../07-heapq-and-bisect/README.md) — what `Counter.most_common(n)` calls underneath.
 - **08 · `copy` vs `deepcopy`** *(not written yet)*, **11 · Choosing a structure** *(not written yet)*.
 
 ---

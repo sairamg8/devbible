@@ -207,7 +207,7 @@ cancelled_ids = {job.job_id for job in cancelled}
 pending = deque(job for job in pending if job.job_id not in cancelled_ids)
 ```
 
-**Symptom: a deque kept in sorted order with `index` and `insert` gets slower as it grows.** Cause: there is no binary search on a deque, and `index` is a linear scan while `insert` in the middle is two rotations. Fix: keep sorted data in a `list` and use `bisect` — topic **07 · `heapq` and `bisect`** *(not written yet)*.
+**Symptom: a deque kept in sorted order with `index` and `insert` gets slower as it grows.** Cause: there is no binary search on a deque, and `index` is a linear scan while `insert` in the middle is two rotations. Fix: keep sorted data in a `list` and use `bisect` — topic [07 · `heapq` and `bisect`](../07-heapq-and-bisect/README.md).
 
 ```python
 import bisect

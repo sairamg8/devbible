@@ -189,4 +189,4 @@ Only the class and the counts: `Counter.__reduce__` returns `(self.__class__, (d
 
 ---
 
-← Prev: [08b · `UserString`](08b-userstring.md) · [Topic index](README.md) · Next topic → **07 · `heapq` and `bisect`** *(not written yet)*
+← Prev: [08b · `UserString`](08b-userstring.md) · [Topic index](README.md) · Next topic → [07 · `heapq` and `bisect`](../07-heapq-and-bisect/README.md)

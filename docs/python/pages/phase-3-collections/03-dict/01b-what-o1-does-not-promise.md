@@ -148,7 +148,7 @@ for user in all_users:
 admins = users_by_role.get("admin", [])     # O(1) to the bucket
 ```
 
-And if the answer is "find every user whose signup date is between two dates", a dictionary is the wrong structure — hash tables have no order over keys at all. That is `bisect` on a sorted list, or a database index; **07 · `heapq` and `bisect`** *(not written yet)* and **11 · Choosing a structure** *(not written yet)* are where that decision lives.
+And if the answer is "find every user whose signup date is between two dates", a dictionary is the wrong structure — hash tables have no order over keys at all. That is `bisect` on a sorted list, or a database index; [07 · `heapq` and `bisect`](../07-heapq-and-bisect/README.md) and **11 · Choosing a structure** *(not written yet)* are where that decision lives.
 
 ## Gotchas
 

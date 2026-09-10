@@ -98,7 +98,7 @@ and its failure mode without running it. Concretely, without looking anything up
   beyond the costs covered here.
 - [06 · `collections`](../06-collections-module/README.md) — `deque`, the queue a list only pretends
   to be.
-- **07 · `heapq` and `bisect`** *(not written yet)* — top-K and sorted insertion
+- [07 · `heapq` and `bisect`](../07-heapq-and-bisect/README.md) — top-K and sorted insertion
   without a full sort.
 - **08 · `copy` vs `deepcopy`** *(not written yet)* — the whole-graph copy chunk 25
   points at.

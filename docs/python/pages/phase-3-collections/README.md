@@ -26,7 +26,7 @@ top-N, `deque` is the queue that `list.pop(0)` only pretends to be. Reaching for
 them is the single largest readability win available in day-to-day Python, and
 the tier assignments below reflect that.
 
-🚧 **In flight — 6 of 12.**
+🚧 **In flight — 7 of 12.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -36,7 +36,7 @@ the tier assignments below reflect that.
 | 04 | **[`set` and `frozenset`](./04-set-and-frozenset/README.md)** · 26 chunks | <span className="db-tier t-master">Master</span> | O(1) membership, dedupe, and set algebra instead of a nested loop |
 | 05 | **[Slicing deeply](./05-slicing/README.md)** · 26 chunks | <span className="db-tier t-understand">Understand</span> | `[start:stop:step]`, negatives, slice assignment, and slices as copies |
 | 06 | **[`collections`](./06-collections-module/README.md)** · 17 chunks | <span className="db-tier t-master">Master</span> | `defaultdict`, `Counter`, `deque`, `namedtuple`, `ChainMap` |
-| 07 | **`heapq` and `bisect`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Top-K without a full sort; binary search on sorted data |
+| 07 | **[`heapq` and `bisect`](./07-heapq-and-bisect/README.md)** · 18 chunks | <span className="db-tier t-understand">Understand</span> | Top-K without a full sort; binary search on sorted data |
 | 08 | **`copy` vs `deepcopy`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | One level vs the whole graph, and the config two requests shared |
 | 09 | **Iteration idioms** *(not written yet)* | <span className="db-tier t-master">Master</span> | `enumerate`, `zip(strict=True)`, `reversed`, `any`/`all`, `min`/`max` |
 | 10 | **Sorting compound data** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `key=`, `itemgetter`/`attrgetter`, multi-key sorts, stability as a feature |
