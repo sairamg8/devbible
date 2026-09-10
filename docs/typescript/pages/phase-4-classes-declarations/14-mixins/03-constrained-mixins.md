@@ -49,10 +49,10 @@ The constraint does two jobs at once, and both matter:
 
 - **Inside the mixin**, `this.setPos` type-checks. Without the constraint, `this`
   is only known to be the anonymous subclass of `{}`, and the call is `TS2339`
-  — *"Property '{0}' does not exist on type '{1}'."*
+  — *"Property '\{0\}' does not exist on type '\{1\}'."*
 - **At the call site**, passing a class that lacks `setPos` fails as an ordinary
-  argument-assignability error — `TS2345`, *"Argument of type '{0}' is not
-  assignable to parameter of type '{1}'."* The error lands on
+  argument-assignability error — `TS2345`, *"Argument of type '\{0\}' is not
+  assignable to parameter of type '\{1\}'."* The error lands on
   `Jumpable(WrongBase)`, which is where the mistake is.
 
 That second half is the real payoff. An unconstrained mixin that happens to call
