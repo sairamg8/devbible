@@ -256,4 +256,4 @@ the documented deviation.
 
 ---
 
-← Prev: [07c · Known deviations from Black](07c-known-deviations-from-black.md) · [Topic index](README.md)
+← Prev: [07c · Known deviations from Black](07c-known-deviations-from-black.md) · [Topic index](README.md) · Next → [07e · Formatter settings](07e-formatter-settings.md)
