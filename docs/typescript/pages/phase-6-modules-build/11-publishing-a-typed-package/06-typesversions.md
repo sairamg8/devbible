@@ -64,9 +64,9 @@ Three consequences, and the compiler reports each of them:
 | Code | Message | What it means |
 |---|---|---|
 | **6206** | *"'package.json' has a 'typesVersions' field with version-specific path mappings."* | The field was found and will be used |
-| **6208** | *"'package.json' has a 'typesVersions' entry '{0}' that matches compiler version '{1}', looking for a pattern to match module name '{2}'."* | 🔴 Names the **winning range**, the compiler version, and the specifier |
-| **6207** | *"'package.json' does not have a 'typesVersions' entry that matches version '{0}'."* | No range matched — falls back to `types` |
-| **6209** | *"'package.json' has a 'typesVersions' entry '{0}' that is not a valid semver range."* | A typo'd key, silently ignored otherwise |
+| **6208** | *"'package.json' has a 'typesVersions' entry '\{0\}' that matches compiler version '\{1\}', looking for a pattern to match module name '\{2\}'."* | 🔴 Names the **winning range**, the compiler version, and the specifier |
+| **6207** | *"'package.json' does not have a 'typesVersions' entry that matches version '\{0\}'."* | No range matched — falls back to `types` |
+| **6209** | *"'package.json' has a 'typesVersions' entry '\{0\}' that is not a valid semver range."* | A typo'd key, silently ignored otherwise |
 
 🔴 **`TS6209` is the one that costs people days.** An unparseable range key does
 not fail the build — it is skipped, and the package silently serves whatever the
