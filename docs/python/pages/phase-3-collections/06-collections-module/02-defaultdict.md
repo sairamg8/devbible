@@ -116,7 +116,7 @@ def status_codes_by_endpoint(log: list[tuple[str, int]]) -> dict[str, Counter[in
     return dict(per_endpoint)
 ```
 
-`defaultdict(int)` counts too — the documentation says it makes *"the `defaultdict` useful for counting (like a bag or multiset in other languages)"* — but a `Counter` gives you `most_common`, `total` and multiset arithmetic for the same line of code, so prefer it for counting (**03 · `Counter`** *(not written yet)*).
+`defaultdict(int)` counts too — the documentation says it makes *"the `defaultdict` useful for counting (like a bag or multiset in other languages)"* — but a `Counter` gives you `most_common`, `total` and multiset arithmetic for the same line of code, so prefer it for counting ([03 · `Counter`](03-counter.md)).
 
 ## The factory is a callable, not a value
 
