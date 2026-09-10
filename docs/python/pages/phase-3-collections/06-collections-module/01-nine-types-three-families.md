@@ -101,8 +101,8 @@ So `isinstance(d, MutableSequence)` is `True` and `isinstance(d, list)` is `Fals
 | `sorted(d.items(), key=lambda kv: kv[1], reverse=True)[:10]` | `Counter.most_common(10)` | [03b](03b-counter-top-n.md) |
 | `queue.pop(0)` / `queue.insert(0, x)` on a list | `deque.popleft()` / `appendleft()` | [04](04-deque-the-block-list.md) |
 | `lines = lines[-100:]` after every append | `deque(maxlen=100)` | [04b](04b-bounded-deques.md) |
-| `row[3]` with a comment saying what 3 is | a `namedtuple` (or a dataclass) | **05** *(not written yet)* |
-| `{**defaults, **env, **cli}` rebuilt on every change | `ChainMap(cli, env, defaults)` | **06** *(not written yet)* |
+| `row[3]` with a comment saying what 3 is | a `namedtuple` (or a dataclass) | [05](05-namedtuple-factory-side.md) |
+| `{**defaults, **env, **cli}` rebuilt on every change | `ChainMap(cli, env, defaults)` | [06](06-chainmap-layered-lookup.md) |
 | a dict plus a list of keys kept "in recency order" | `OrderedDict.move_to_end` — or `functools.lru_cache` | **07b** *(not written yet)* |
 
 ## Annotating them
@@ -191,7 +191,7 @@ Because its storage has nothing in common with a list's. A list is one contiguou
 The documentation's answer is that their need *"has been partially supplanted by the ability to subclass directly"* from the built-in, but they *"can be easier to work with because the underlying"* container *"is accessible as an attribute."* The deeper reason is that a built-in subclass inherits C methods that do not call each other, so overriding one method does not change the others; a class written in Python over a `.data` attribute has only the behaviour its Python methods give it. Whether that actually makes overriding easier differs between the three — chunk **08** *(not written yet)* shows that `UserList`, unlike `UserDict`, does not route its methods through `__setitem__`.
 
 **Is `namedtuple` a class?**
-No — it is a factory function. Each call runs code that validates the field names, compiles a `__new__` for them and calls `type(typename, (tuple,), namespace)` to build a brand-new `tuple` subclass. Your objects are instances of that returned class. That is why `isinstance(x, namedtuple)` is a `TypeError`, and why calling `namedtuple(...)` inside a loop or a request handler creates a different class every time (chunk **05** *(not written yet)*).
+No — it is a factory function. Each call runs code that validates the field names, compiles a `__new__` for them and calls `type(typename, (tuple,), namespace)` to build a brand-new `tuple` subclass. Your objects are instances of that returned class. That is why `isinstance(x, namedtuple)` is a `TypeError`, and why calling `namedtuple(...)` inside a loop or a request handler creates a different class every time ([05 · `namedtuple` from the factory side](05-namedtuple-factory-side.md)).
 
 **How should you annotate a `defaultdict` of `Counter`s in 3.14?**
 `defaultdict[str, Counter[str]]`, subscripting the `collections` classes directly. The `typing.DefaultDict`, `typing.Counter` family are *"Deprecated alias[es]"* since 3.9, when the `collections` classes gained `[]` support through PEP 585. The annotation documents the shape; it does not check anything at runtime, and it says nothing about the `default_factory`, which you still pass as the constructor's first argument.

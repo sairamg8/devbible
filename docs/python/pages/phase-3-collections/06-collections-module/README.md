@@ -28,11 +28,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 7 | **[04 · `deque` — the block list underneath](04-deque-the-block-list.md)** | 64-slot blocks in a doubly-linked list: ends O(1) because nothing moves, middle indexing walks blocks, `insert`/`del`/`remove` are rotations; the source-derived cost table; queue, BFS, round-robin; 🔴 `pop()` is LIFO; `+` needs a deque, `==` only matches a deque, `extendleft` reverses, no slicing or `sort` |
 | 8 | **[04b · Bounded deques](04b-bounded-deques.md)** | `maxlen` evicts silently from the opposite end — tail, ring buffers, sliding windows, undo; 🔴 data loss in a work queue (use `Queue(maxsize)`); `maxlen=0` keeps nothing; `insert` raises where `append` evicts; `appendleft` evicts the newest; `deque(d)` drops the bound; count is not time in a rate limiter |
 | 9 | **[04c · `deque` during iteration and across threads](04c-deque-iteration-and-threads.md)** | 🔴 the state counter: any append or pop kills a live iterator, even at equal length; drain, rotate-filter or snapshot; atomic single calls vs racy `if d: d.popleft()`; 🔴 a health endpoint iterating a shared ring buffer; `copy()` for snapshots; `queue.Queue` and `asyncio.Queue` are deques with synchronisation |
+| 10 | **[05 · `namedtuple` from the factory side](05-namedtuple-factory-side.md)** | one call = validate, `eval` a `__new__`, `type()` a new class, stamp the caller's module; 🔴 the per-row class (the `sqlite3` doc recipe) and its fix; why per-call classes break `isinstance` and pickling; the field names CSV headers and SQL columns bring, and normalising them; `_asdict`, `copy.replace`, `SimpleNamespace` |
+| 11 | **[06 · `ChainMap` — layered lookup](06-chainmap-layered-lookup.md)** | a list of mappings searched in order, writes to `maps[0]`, live by reference; CLI > env > file > defaults made safe with an owned front dict and `MappingProxyType` layers; per-request overrides with `new_child`; scopes with `parents`; 🔴 every miss is a caught `KeyError` per layer and `len()`/iteration rebuild all keys — when to flatten |
 
 ## Still to come
 
-- **05 · `namedtuple` from the factory side** *(not written yet)*
-- **06 · `ChainMap` — layered lookup** *(not written yet)*
 - **06b · `ChainMap` traps** *(not written yet)*
 - **07 · `OrderedDict` — what it still does** *(not written yet)*
 - **07b · `OrderedDict` as an LRU cache** *(not written yet)*
