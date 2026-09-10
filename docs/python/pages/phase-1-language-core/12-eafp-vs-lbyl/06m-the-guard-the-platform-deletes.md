@@ -297,4 +297,4 @@ and a `__pycache__` that does not still hold the optimized bytecode.
 
 ---
 
-← Prev: [`catch_warnings` and tests](06u-catch-warnings-and-the-test-runner.md) · Index: [EAFP vs LBYL](README.md) · Next → [The check that lies](06s-the-check-that-lies.md)
+← Prev: [`catch_warnings` and tests](06u-catch-warnings-and-the-test-runner.md) · Index: [EAFP vs LBYL](README.md) · Next → [The bytecode cache and the flag](06zd-the-bytecode-cache-and-the-flag.md)

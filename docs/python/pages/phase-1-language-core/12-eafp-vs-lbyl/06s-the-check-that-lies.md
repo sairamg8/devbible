@@ -1,7 +1,7 @@
 ---
 title: "The other half of the ambient-state problem is a guard that runs and answers wrongly — os.access documents three independent reasons its True is not the answer you wanted, os.path.exists documents two reasons its False is a lie, and pathlib collapses three distinct failures into one boolean"
 sidebar_label: "06s · The check that lies"
-sidebar_position: 169
+sidebar_position: 174
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -297,4 +297,4 @@ program *does* rather than what it *says*, it is the security hole the docs desc
 
 ---
 
-← Prev: [The guard the platform deletes](06m-the-guard-the-platform-deletes.md) · Index: [EAFP vs LBYL](README.md) · Next → [The cost argument](07-the-cost-argument.md)
+← Prev: [When the cache stops noticing](06zr-when-the-cache-stops-noticing.md) · Index: [EAFP vs LBYL](README.md) · Next → [The answer with a shelf life](06ze-the-answer-with-a-shelf-life.md)

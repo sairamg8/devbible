@@ -1,7 +1,7 @@
 ---
 title: "Python publishes exactly two cost figures for exception handling, both from What's New in 3.11, and neither compares a try against an if — so the only honest place to start is the mechanism, which moved the cost onto the raising path rather than removing it"
 sidebar_label: "07 · The cost argument"
-sidebar_position: 170
+sidebar_position: 178
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -254,4 +254,4 @@ looking at; if they have a remembered ratio, it is folklore with a decimal point
 
 ---
 
-← Prev: [The check that lies](06s-the-check-that-lies.md) · Index: [EAFP vs LBYL](README.md) · Next → [The miss rate decides](07b-the-miss-rate-decides.md)
+← Prev: [Cache only what the leap reverifies](06zh-cache-only-what-the-leap-reverifies.md) · Index: [EAFP vs LBYL](README.md) · Next → [The miss rate decides](07b-the-miss-rate-decides.md)
