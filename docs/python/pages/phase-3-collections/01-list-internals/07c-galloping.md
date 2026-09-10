@@ -43,7 +43,7 @@ A merge starts in *one pair at a time* mode, counting consecutive wins per side:
 
 > *"In galloping mode, we first look for A[0] in B. We do this via \"galloping\",
 > comparing A[0] in turn to B[0], B[1], B[3], B[7], ..., B[2**j - 1], ..., until
-> finding the k such that B[2**(k-1) - 1] < A[0] <= B[2**k - 1]."*
+> finding the k such that B[2**(k-1) - 1] &lt; A[0] &lt;= B[2**k - 1]."*
 
 > *"Note that no matter where A[0] belongs in B, the combination of galloping + binary
 > search finds it in no more than about 2*lg(B) comparisons."*

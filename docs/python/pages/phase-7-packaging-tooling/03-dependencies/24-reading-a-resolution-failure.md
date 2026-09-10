@@ -43,7 +43,7 @@ The smallest example in uv's documentation, from `uv add "httpx>9999"`:
       we can conclude that your project's requirements are unsatisfiable.
 ```
 
-One step: a fact about the index (*"only httpx<=1.0.0b0 is available"*) and a fact about you (*"your project
+One step: a fact about the index (*"only httpx&lt;=1.0.0b0 is available"*) and a fact about you (*"your project
 depends on httpx>9999"*). The "only … is available" clause is the most useful phrase uv prints: it states what
 the resolver could *see*, which is often less than what is on PyPI.
 
@@ -88,7 +88,7 @@ while.` — which the docs say *"is not unexpected behaviour or a bug."*
 
 | Shape | How it reads | Fix, and where it lives |
 |---|---|---|
-| no acceptable version exists | *"only X<=… is available and your project depends on X>…"* | the specifier, or what is hiding versions (below) |
+| no acceptable version exists | *"only X&lt;=… is available and your project depends on X>…"* | the specifier, or what is hiding versions (below) |
 | a diamond | two requirers, two specifiers, one package | loosen the stricter side — [15](15-the-diamond-that-cannot-resolve.md) |
 | your own extras or groups | `myproject[a]` and `myproject[b]` are incompatible | declare the conflict — [25b](25b-declared-conflicts.md) |
 | Python range too wide | a dependency has no version for the bottom of `requires-python` | raise the floor — [16](16-requires-python-constrains-everything.md) |

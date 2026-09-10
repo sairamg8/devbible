@@ -14,7 +14,7 @@ sidebar_position: 24
 
 `stdtypes`:
 
-> *"Dictionaries compare equal if and only if they have the same `(key, value)` pairs (regardless of ordering). Order comparisons ('<', '<=', '>=', '>') raise `TypeError`."*
+> *"Dictionaries compare equal if and only if they have the same `(key, value)` pairs (regardless of ordering). Order comparisons ('&lt;', '&lt;=', '>=', '>') raise `TypeError`."*
 
 The language reference adds the clause that decides the `NaN` case:
 

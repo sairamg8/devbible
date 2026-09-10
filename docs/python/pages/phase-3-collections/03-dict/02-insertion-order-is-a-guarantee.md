@@ -70,7 +70,7 @@ def touch(cache: dict[str, Row], key: str) -> None:
 
 This is the trap that survives the folklore, because "dicts are ordered now" makes people expect ordered comparison. The constructor documentation is unambiguous:
 
-🔴 > *"Dictionaries compare equal if and only if they have the same `(key, value)` pairs (regardless of ordering). Order comparisons ('<', '<=', '>=', '>') raise `TypeError`."*
+🔴 > *"Dictionaries compare equal if and only if they have the same `(key, value)` pairs (regardless of ordering). Order comparisons ('&lt;', '&lt;=', '>=', '>') raise `TypeError`."*
 
 ```python
 a = {"x": 1, "y": 2}

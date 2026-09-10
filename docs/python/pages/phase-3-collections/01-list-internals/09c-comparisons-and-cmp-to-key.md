@@ -51,7 +51,7 @@ The data model explains that reflection:
 And warns that the six are independent unless you make them agree:
 
 > *"There are no other implied relationships among the comparison operators or default
-> implementations; for example, the truth of (x<y or x==y) does not imply x<=y. To
+> implementations; for example, the truth of (x&lt;y or x==y) does not imply x&lt;=y. To
 > automatically generate ordering operations from a single root operation, see
 > @functools.total_ordering."*
 

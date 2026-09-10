@@ -59,7 +59,7 @@ the output is not guaranteed to be sorted. No exception is raised.
 ([06b](06b-during-the-sort.md) has the `(x is None, x or 0)` key.)
 
 **Dicts** — *"This is needed because dict-to-dict comparisons raise a TypeError."* The
-reference: *"Order comparisons (<, >, <=, and >=) raise TypeError."*
+reference: *"Order comparisons (&lt;, >, &lt;=, and >=) raise TypeError."*
 
 **Sets** — the most dangerous, because they *do* support `<`, meaning *proper subset*:
 

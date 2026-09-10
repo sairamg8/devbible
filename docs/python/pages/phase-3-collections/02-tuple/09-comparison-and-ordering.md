@@ -222,7 +222,7 @@ types raises `TypeError`.
 Because only the first unequal pair is compared with `<`. In the first case position 0 differs,
 `1 < 2` decides, and the `None`s are never ordered. In the second, position 0 is equal, so the
 scan moves on and the first unequal pair is `None` and `5`, which have no ordering — CPython
-raises `TypeError` with *"'<' not supported between instances of 'NoneType' and 'int'"*. The
+raises `TypeError` with *"'&lt;' not supported between instances of 'NoneType' and 'int'"*. The
 error depends on the data, which is why it tends to appear long after the code shipped.
 
 **Why is `[1, 2] == (1, 2)` false?**
