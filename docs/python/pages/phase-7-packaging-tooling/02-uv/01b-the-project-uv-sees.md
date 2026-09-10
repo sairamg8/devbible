@@ -120,7 +120,7 @@ uv's own rule of thumb for which side you are on:
 
 The src-layout row is the one that catches people, and it is not arbitrary: with `src/`, the
 package is not importable from the project root unless it is installed, which is exactly the
-property src layout exists to give you. Topic **04 · Project layout** *(not written yet)*
+property src layout exists to give you. Topic [04 · Project layout](../04-project-layout/README.md)
 argues that at length.
 
 ## `[tool.uv]` is uv-specific by specification, not by accident

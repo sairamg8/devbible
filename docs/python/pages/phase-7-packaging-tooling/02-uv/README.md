@@ -109,9 +109,9 @@ answer without a search:
 - **[01 · pyproject.toml](../01-pyproject-toml/README.md)** is the file every project command here
   reads; it covers the `[project]`, `[build-system]` and `[tool]` tables field by field.
 - **[Phase 7 — Packaging, projects and tooling](../README.md)** is the phase this topic belongs to.
-- **03 · Dependencies done right** *(not written yet)* owns the policy this topic's mechanics serve:
+- [03 · Dependencies done right](../03-dependencies/README.md) owns the policy this topic's mechanics serve:
   specifiers, extras versus groups, and why applications lock and libraries range.
-- **04 · Project layout** *(not written yet)* owns the src-layout choice that `uv init` makes for you.
+- [04 · Project layout](../04-project-layout/README.md) owns the src-layout choice that `uv init` makes for you.
 - **05 · ruff** *(not written yet)* is the tool most often run with `uvx` or pinned in a dev group.
 - **07 · Wheels vs sdists** *(not written yet)* is what `uv build` asks the backend to produce.
 - **09 · PEP 723 inline metadata** *(not written yet)* is the third environment `uv run` can build — from

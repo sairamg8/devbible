@@ -296,4 +296,4 @@ and the root does not.
 
 ---
 
-← Prev: [09b · uv build and uv publish](09b-uv-build-and-uv-publish.md) · [Topic index](README.md) · Next → **03 · Dependencies done right** *(not written yet)*
+← Prev: [09b · uv build and uv publish](09b-uv-build-and-uv-publish.md) · [Topic index](README.md) · Next → [03 · Dependencies done right](../03-dependencies/README.md)

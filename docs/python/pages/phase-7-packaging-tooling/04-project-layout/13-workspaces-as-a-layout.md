@@ -95,7 +95,7 @@ With `exclude = ["packages/seeds"]`, the example has two members: `albatross` an
 
 > *"If a workspace member provides `tool.uv.sources` for some dependency, it will ignore any `tool.uv.sources` for the same dependency in the workspace root, even if the member's source is limited by a marker that doesn't match the current platform."*
 
-A dependency on a member is still an ordinary requirement in `[project.dependencies]` — `"bird-feeder"` — so the published metadata of `albatross` names a normal distribution. The `workspace = true` source is uv-only routing that tells the resolver where to find it during development; how `[tool.uv.sources]` works in general is **02 · uv** *(not written yet)*.
+A dependency on a member is still an ordinary requirement in `[project.dependencies]` — `"bird-feeder"` — so the published metadata of `albatross` names a normal distribution. The `workspace = true` source is uv-only routing that tells the resolver where to find it during development; how `[tool.uv.sources]` works in general is [02 · uv](../02-uv/README.md).
 
 *"Editable"* is the layout-relevant word. Every member imports every other member's `src/` directly, which is [04](04-editable-installs-reopen-the-hole.md)'s hole at repository scale: a file one member's build configuration would leave out is still importable by its siblings.
 

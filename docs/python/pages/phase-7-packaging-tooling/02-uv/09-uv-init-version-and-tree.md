@@ -107,7 +107,7 @@ wrong.
 > — [creating projects](https://docs.astral.sh/uv/concepts/projects/init/)
 
 Which *layout* to choose, and why `src/` protects you from importing the wrong copy of your own code, is
-topic **04 · Project layout** *(not written yet)*. `--script` belongs to topic **09 · PEP 723 inline
+topic [04 · Project layout](../04-project-layout/README.md). `--script` belongs to topic **09 · PEP 723 inline
 metadata** *(not written yet)*. What this page owns is what each flag does to the project uv then
 manages.
 

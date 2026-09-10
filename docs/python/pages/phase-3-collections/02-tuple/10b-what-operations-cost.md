@@ -262,4 +262,4 @@ length. And when the question is membership, neither: a `frozenset`.
 
 ---
 
-← [The real surface](10-cost-and-the-real-surface.md) · [Topic index](README.md) · Next topic → **03 · `dict`** *(not written yet)* · Phase: [Phase 3 — Collections in depth](../README.md)
+← [The real surface](10-cost-and-the-real-surface.md) · [Topic index](README.md) · Next topic → [03 · `dict`](../03-dict/README.md) · Phase: [Phase 3 — Collections in depth](../README.md)

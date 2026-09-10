@@ -139,7 +139,7 @@ RUN python -m pip install --no-cache-dir .
 CMD ["invoice-service"]
 ```
 
-The uv-based version of this, with layer caching, belongs to **02 · uv** *(not written yet)*.
+The uv-based version of this, with layer caching, belongs to [02 · uv](../02-uv/README.md).
 
 **CI and task runners.** Cache keys, path filters and `PYTHONPATH` settings:
 

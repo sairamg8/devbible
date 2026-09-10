@@ -89,9 +89,9 @@ and its failure mode without running it. Concretely, without looking anything up
 
 - **[Phase 3 — Collections in depth](../README.md)** — this topic opens the phase; the
   complexity page it cites has tables for the other built-ins too.
-- **02 · `tuple`** *(not written yet)* — the immutable sequence: no spare capacity,
+- [02 · `tuple`](../02-tuple/README.md) — the immutable sequence: no spare capacity,
   O(1) copy, hashable if its items are.
-- **03 · `dict`** *(not written yet)* and **04 · `set` and `frozenset`** *(not written
+- [03 · `dict`](../03-dict/README.md) and **04 · `set` and `frozenset`** *(not written
   yet)* — the structures that replace `in` on a list, and whose iterators do detect
   mutation.
 - **05 · Slicing deeply** *(not written yet)* — slice assignment and slices as copies,

@@ -46,8 +46,8 @@ invoice-service/
 | `README.md` | the backend, *if* `project.readme` names it | [pyproject.toml · 05 · description and readme](../01-pyproject-toml/05-description-and-readme.md) |
 | `LICENSE` | the backend, via `license-files` | [pyproject.toml · 08 · license and PEP 639](../01-pyproject-toml/08-license-and-the-pep-639-migration.md) |
 | `.gitignore` | git; **hatchling** for file selection | *"By default, Hatch will respect the first `.gitignore` or `.hgignore` file found in your project's root directory or parent directories."* |
-| `uv.lock` | uv | created at first `uv run`/`uv sync`/`uv lock` — **02 · uv** *(not written yet)* |
-| `.python-version` | uv | created by `uv init`, pins the interpreter uv uses — **02 · uv** *(not written yet)* |
+| `uv.lock` | uv | created at first `uv run`/`uv sync`/`uv lock` — [02 · uv](../02-uv/README.md) |
+| `.python-version` | uv | created by `uv init`, pins the interpreter uv uses — [02 · uv](../02-uv/README.md) |
 | `.venv/` | uv, your editor | *"uv will create a virtual environment and `uv.lock` file in the root of your project the first time you run a project command"* |
 | `tests/` | pytest | [05](05-where-tests-live.md) |
 | `conftest.py` in the root | pytest | its directory is inserted into `sys.path` in `prepend` mode — [06](06-pytest-import-modes.md) |

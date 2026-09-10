@@ -244,4 +244,4 @@ rejected at install time rather than discovered as a broken import in production
 
 ---
 
-← [25 · Constraints, overrides, exclusions](25-constraints-overrides-and-declared-conflicts.md) · [Topic index](README.md) · Next topic → **04 · Project layout** *(not written yet)*
+← [25 · Constraints, overrides, exclusions](25-constraints-overrides-and-declared-conflicts.md) · [Topic index](README.md) · Next topic → [04 · Project layout](../04-project-layout/README.md)

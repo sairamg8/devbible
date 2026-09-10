@@ -62,7 +62,7 @@ follow:
   it is the whole argument for committing the lock ([03](03-the-lockfile.md)).
 - **Your library is protected by nothing.** A consumer resolving `>=0.27.2` may get any future
   release, including a breaking one. Whether to add an upper bound is genuinely contested and is topic
-  **03 · Dependencies done right** *(not written yet)*'s argument; what matters here is that uv makes
+  [03 · Dependencies done right](../03-dependencies/README.md)'s argument; what matters here is that uv makes
   the permissive choice for you unless you speak up.
 
 ```bash

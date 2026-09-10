@@ -88,9 +88,9 @@ up:
 ## Where this connects
 
 - **[Phase 3 — Collections in depth](../README.md)** is the phase this topic belongs to.
-- **01 · `list` internals** *(not written yet)* is the other half of the record/array split: the
+- [01 · `list` internals](../01-list-internals/README.md) is the other half of the record/array split: the
   mutable, growable sequence whose over-allocation is why "extend a list, then convert" is linear.
-- **03 · `dict`** *(not written yet)* is where tuple keys live — its hash-table cost model and
+- [03 · `dict`](../03-dict/README.md) is where tuple keys live — its hash-table cost model and
   its rules for what may be a key are the other side of chunks 3–4b.
 - **04 · `set` and `frozenset`** *(not written yet)* is the answer when a tuple is being used for
   membership, and `frozenset` is the immutable field type for unordered data.

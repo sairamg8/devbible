@@ -174,4 +174,4 @@ a point at runtime.
 
 ---
 
-← [Memory: list, tuple and array](12-memory-list-tuple-array.md) · [Topic index](README.md) · Next → [Phase 3 — Collections in depth](../README.md)
+← [Memory: list, tuple and array](12-memory-list-tuple-array.md) · [Topic index](README.md) · Next topic → [02 · `tuple`](../02-tuple/README.md) · Phase: [Phase 3 — Collections in depth](../README.md)

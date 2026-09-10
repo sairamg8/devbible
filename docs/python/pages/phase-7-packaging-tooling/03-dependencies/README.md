@@ -91,10 +91,10 @@ machine reproduces production exactly, and defend every line. Concretely, withou
   [dependencies and markers](../01-pyproject-toml/06-dependencies-and-markers.md) and
   [extras and dependency groups](../01-pyproject-toml/07-extras-and-dependency-groups.md) as a specification;
   this topic is the practice.
-- **02 · uv** *(not written yet)* covers the tool in depth — environments, `uv sync` mechanics, Docker images,
+- [02 · uv](../02-uv/README.md) covers the tool in depth — environments, `uv sync` mechanics, Docker images,
   the lockfile's upgrade and export workflow — where this topic uses uv as the reference implementation of the
   policy.
-- **04 · Project layout** *(not written yet)* is where workspaces and the src layout decide which
+- [04 · Project layout](../04-project-layout/README.md) is where workspaces and the src layout decide which
   `pyproject.toml` a lock is computed from.
 - **12 · Publishing to PyPI** *(not written yet)* is where the library half of this topic becomes public:
   the ranges you declare are what every consumer's resolver sees.

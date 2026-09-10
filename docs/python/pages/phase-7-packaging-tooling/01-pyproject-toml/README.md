@@ -86,9 +86,9 @@ You are done with this topic when you can write a complete `pyproject.toml` for 
 ## Where this connects
 
 - **[Phase 7 — Packaging, projects and tooling](../README.md)** is the phase this topic opens; everything else in it configures itself inside this file.
-- **02 · uv** *(not written yet)* is the tool that reads `[project]` and `[dependency-groups]` to build and lock an environment, and adds `[tool.uv]`.
-- **03 · Dependencies done right** *(not written yet)* takes over the policy question this topic deliberately leaves open: ranges versus a committed lockfile, and why an application locks while a library ranges.
-- **04 · Project layout** *(not written yet)* owns the src-layout decision that `[tool.setuptools.packages.find]` and its hatchling equivalent exist to configure.
+- [02 · uv](../02-uv/README.md) is the tool that reads `[project]` and `[dependency-groups]` to build and lock an environment, and adds `[tool.uv]`.
+- [03 · Dependencies done right](../03-dependencies/README.md) takes over the policy question this topic deliberately leaves open: ranges versus a committed lockfile, and why an application locks while a library ranges.
+- [04 · Project layout](../04-project-layout/README.md) owns the src-layout decision that `[tool.setuptools.packages.find]` and its hatchling equivalent exist to configure.
 - **05 · ruff** *(not written yet)* is the largest single `[tool.*]` subtable most projects will ever write.
 - **06 · Entry points** *(not written yet)* goes further into the console-script and plugin surface that chunk 10 introduces.
 - **07 · Wheels vs sdists** *(not written yet)* is what the backend in `[build-system]` actually produces, and why a missing wheel makes users compile.

@@ -68,7 +68,7 @@ And the rule that explains "why did it not pick the release candidate":
 
 Read that last clause carefully: if the *only* satisfying version is a pre-release, you get the pre-release. A specifier like `>=3.0` on a package whose only 3.x release is `3.0.0rc1` installs the release candidate, silently.
 
-⚠️ **Whether to put a ceiling on a library dependency is a policy question, not a syntax question**, and it belongs to **03 · Dependencies done right** *(not written yet)*. The one-line version: an application pins through a lockfile and leaves ranges open in `pyproject.toml`; a library that caps its dependencies makes itself unco-installable with everything else that capped differently.
+⚠️ **Whether to put a ceiling on a library dependency is a policy question, not a syntax question**, and it belongs to [03 · Dependencies done right](../03-dependencies/README.md). The one-line version: an application pins through a lockfile and leaves ranges open in `pyproject.toml`; a library that caps its dependencies makes itself unco-installable with everything else that capped differently.
 
 ## Environment markers: ship the condition, not the answer
 

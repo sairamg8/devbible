@@ -128,7 +128,7 @@ CI environment and nobody else's.
 That makes committing it correct *and* creates a specific blind spot: if CI only ever runs the
 locked versions, you have never tested the range you published. The tool-level answer is the
 `lowest-direct` job above. The declaration-level argument — how wide a range to publish, and why
-applications and libraries differ — is topic **03 · Dependencies done right** *(not written yet)*.
+applications and libraries differ — is topic [03 · Dependencies done right](../03-dependencies/README.md).
 
 ## Upgrading is not refreshing
 
