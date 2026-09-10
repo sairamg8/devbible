@@ -10,8 +10,8 @@ sidebar_position: 1
 > Types*, *Type Manipulation*). **The utility-type declarations quoted below are
 > read verbatim from `lib.es5.d.ts`** — including `type NonNullable<T> = T & {};`
 > and `type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;` —
-> rather than reproduced from memory. `TS2314` (*"Generic type '{0}' requires
-> {1} type argument(s)."*) was read out of the compiler's own diagnostic table.
+> rather than reproduced from memory. `TS2314` (*"Generic type '\{0\}' requires
+> \{1\} type argument(s)."*) was read out of the compiler's own diagnostic table.
 > ⚠️ Install inspected: TypeScript **6.0.3**, not the 7.0.2 this corpus targets.
 > **No console block** — no sandbox run covers this phase.
 
