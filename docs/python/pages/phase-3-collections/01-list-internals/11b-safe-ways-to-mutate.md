@@ -134,7 +134,7 @@ while pending:
 > *"Deques support thread-safe, memory efficient appends and pops from either side of
 > the deque with approximately the same O(1) performance in either direction."*
 
-Topic 06 of this phase, **`collections`** *(not written yet)*, owns `deque`;
+Topic 06 of this phase, [`collections`](../06-collections-module/README.md), owns `deque`;
 [03b](03b-quadratic-patterns-and-deque.md) is why a list cannot play this role.
 
 ## Gotchas

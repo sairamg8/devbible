@@ -68,7 +68,7 @@ for event in events:
     counts[event.kind] = counts.setdefault(event.kind, 0) + 1
 ```
 
-⚠️ That one is *not* the good use. Integers are immutable, so the "mutate the returned object" trick does nothing for you and you end up writing the key twice. For counters, `counts[k] = counts.get(k, 0) + 1` is clearer, and `collections.Counter` is clearer still — **06 · `collections`** *(not written yet)*.
+⚠️ That one is *not* the good use. Integers are immutable, so the "mutate the returned object" trick does nothing for you and you end up writing the key twice. For counters, `counts[k] = counts.get(k, 0) + 1` is clearer, and `collections.Counter` is clearer still — [06 · `collections`](../06-collections-module/README.md).
 
 🔴 **The rule of thumb: `setdefault` earns its place when the default is a *mutable container you are about to mutate*. Everywhere else, `get` says what you mean.**
 

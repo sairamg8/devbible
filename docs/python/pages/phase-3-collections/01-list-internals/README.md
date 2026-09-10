@@ -96,7 +96,7 @@ and its failure mode without running it. Concretely, without looking anything up
   mutation.
 - [05 · Slicing deeply](../05-slicing/README.md) — slice assignment and slices as copies,
   beyond the costs covered here.
-- **06 · `collections`** *(not written yet)* — `deque`, the queue a list only pretends
+- [06 · `collections`](../06-collections-module/README.md) — `deque`, the queue a list only pretends
   to be.
 - **07 · `heapq` and `bisect`** *(not written yet)* — top-K and sorted insertion
   without a full sort.

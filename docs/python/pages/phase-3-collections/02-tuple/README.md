@@ -94,7 +94,7 @@ up:
   its rules for what may be a key are the other side of chunks 3–4b.
 - [04 · `set` and `frozenset`](../04-set-and-frozenset/README.md) is the answer when a tuple is being used for
   membership, and `frozenset` is the immutable field type for unordered data.
-- **06 · `collections`** *(not written yet)* returns to `namedtuple` alongside `defaultdict`,
+- [06 · `collections`](../06-collections-module/README.md) returns to `namedtuple` alongside `defaultdict`,
   `Counter` and `deque`.
 - **08 · `copy` vs `deepcopy`** *(not written yet)* covers what `tuple(t)` and slicing do *not*
   copy.

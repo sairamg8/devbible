@@ -164,7 +164,7 @@ buckets.get("b")        # None; NOTHING created — get never calls __missing__
 len(buckets)            # 1 — only "a" exists
 ```
 
-`defaultdict` is topic **06 · `collections`** *(not written yet)*, and it is the right answer to most "insert-if-missing" code. This page does not teach it; it names it, and it tells you the one interaction that surprises people: `get` and `in` bypass the factory entirely.
+`defaultdict` is topic [06 · `collections`](../06-collections-module/README.md), and it is the right answer to most "insert-if-missing" code. This page does not teach it; it names it, and it tells you the one interaction that surprises people: `get` and `in` bypass the factory entirely.
 
 ## Gotchas
 

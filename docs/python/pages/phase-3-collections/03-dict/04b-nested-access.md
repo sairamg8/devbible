@@ -116,7 +116,7 @@ metrics = tree()
 metrics["acme"]["2026-09"]["requests"] = 1        # every level springs into being
 ```
 
-🔴 **The cost is that *reading* also creates.** `metrics["nope"]["nope"]` does not raise — it creates two nested dictionaries and returns an empty one, and now `"nope" in metrics` is `True`. A typo in a read path silently grows the structure, and a `len()` or a serialisation later shows keys nobody wrote. `defaultdict` is topic **06 · `collections`** *(not written yet)*; the relevant fact here is that its `__missing__` fires on `d[k]` and only on `d[k]`, so the create-on-read behaviour is unavoidable by construction.
+🔴 **The cost is that *reading* also creates.** `metrics["nope"]["nope"]` does not raise — it creates two nested dictionaries and returns an empty one, and now `"nope" in metrics` is `True`. A typo in a read path silently grows the structure, and a `len()` or a serialisation later shows keys nobody wrote. `defaultdict` is topic [06 · `collections`](../06-collections-module/README.md); the relevant fact here is that its `__missing__` fires on `d[k]` and only on `d[k]`, so the create-on-read behaviour is unavoidable by construction.
 
 The mitigation, when you do use a tree, is to freeze it before anything reads it:
 

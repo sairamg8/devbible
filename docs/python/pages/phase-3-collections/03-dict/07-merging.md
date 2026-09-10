@@ -159,7 +159,7 @@ settings["timeout"]              # first map that has it
 settings["timeout"] = 5          # written into cli_args — the first map
 ```
 
-It is the right tool when the layers change after the lookup object is built — *"if one of the underlying mappings gets updated, those changes will be reflected in `ChainMap`"* — and the wrong one when you wanted a snapshot. `ChainMap` belongs to **06 · `collections`** *(not written yet)*; the merge-specific fact is its reversed priority.
+It is the right tool when the layers change after the lookup object is built — *"if one of the underlying mappings gets updated, those changes will be reflected in `ChainMap`"* — and the wrong one when you wanted a snapshot. `ChainMap` belongs to [06 · `collections`](../06-collections-module/README.md); the merge-specific fact is its reversed priority.
 
 ## Gotchas
 
