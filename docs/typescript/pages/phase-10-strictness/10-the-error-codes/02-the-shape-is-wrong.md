@@ -79,7 +79,7 @@ output for `TS2328` takes two seconds and reclassifies the whole error.
 
 ## 🔴 `TS2328` is the contravariance line, and it reads backwards
 
-*"Types of parameters '{0}' and '{1}' are incompatible."*
+*"Types of parameters '\{0\}' and '\{1\}' are incompatible."*
 
 This is the line that makes people conclude the checker is broken. The two names
 are **your** parameter and **their** parameter, and the required direction is the
