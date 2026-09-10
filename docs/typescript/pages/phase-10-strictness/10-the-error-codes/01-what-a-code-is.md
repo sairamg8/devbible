@@ -20,8 +20,8 @@ Before the nine codes, the thing nobody explains: **what the number is, and what
 it is for.** Learning it once turns every future error from a paragraph to be
 read into a key to be looked up.
 
-> **The code is stable. The message is not.** `TS2322` has meant *"Type '{0}' is
-> not assignable to type '{1}'"* for a decade. The **wording** of a diagnostic
+> **The code is stable. The message is not.** `TS2322` has meant *"Type '\{0\}' is
+> not assignable to type '\{1\}'"* for a decade. The **wording** of a diagnostic
 > changes between releases without notice — this corpus has already caught
 > `TS5096` being reworded between 5.9.3 and 7.0.2. So **search by code, never by
 > sentence**, in your codebase, your issue tracker and your CI logs alike.
@@ -51,12 +51,12 @@ single word of the message**, which is most of the value:
 
 | Range | Count | What it is | What it means for you |
 |---|---|---|---|
-| **1xxx** | 449 | **Parser and grammar.** *"Unterminated string literal"*, *"'{0}' expected"* | 🔴 **The file did not parse.** Every type error reported in that file is downstream noise — fix these first |
+| **1xxx** | 449 | **Parser and grammar.** *"Unterminated string literal"*, *"'\{0\}' expected"* | 🔴 **The file did not parse.** Every type error reported in that file is downstream noise — fix these first |
 | **2xxx** | 530 | **The checker.** The largest range, and where almost everything you meet lives | A real type problem. All nine codes in this topic except `7053`, `18046` and `18048` are here |
-| **4xxx** | 110 | **Declaration emit.** *"Type parameter '{0}' of exported class has or is using private name"* | Your code type-checks; the **`.d.ts` cannot be written**. Only appears with `declaration: true` |
+| **4xxx** | 110 | **Declaration emit.** *"Type parameter '\{0\}' of exported class has or is using private name"* | Your code type-checks; the **`.d.ts` cannot be written**. Only appears with `declaration: true` |
 | **5xxx** | 64 | **Options and the command line.** `TS5023` unknown option, `TS5096`, `TS5101`/`TS5102` | 🔴 **Your `tsconfig.json` is wrong, not your code.** Fix before believing anything else |
 | **6xxx** | 474 | **Mostly `--help` text** (431 of 474 are `Message`) — but **43 are Errors**, including the whole unused-code family | Mixed range. `6133` and friends are real findings; the rest is UI text |
-| **7xxx** | 53 | **The `noImplicitAny` family.** *"…implicitly has an '{1}' type"* | 🔴 **Not a type error — a refusal to insert an implicit `any`.** See [chunk 09](./09-the-index-codes.md) |
+| **7xxx** | 53 | **The `noImplicitAny` family.** *"…implicitly has an '\{1\}' type"* | 🔴 **Not a type error — a refusal to insert an implicit `any`.** See [chunk 09](./09-the-index-codes.md) |
 | **8xxx** | 35 | **TypeScript syntax in a JavaScript file**, and refactor restrictions | You are in a `.js` file under `allowJs` |
 | **9xxx** | 34 | **`isolatedDeclarations` and declaration-emit strictness.** `TS9007` *"Function must have an explicit return type annotation with --isolatedDeclarations"* | A flag you turned on is asking for an annotation |
 | **17xxx** | 20 | **JSX** | `--jsx` is unset, or a tag is unbalanced |
@@ -64,7 +64,7 @@ single word of the message**, which is most of the value:
 | **69xxx** | 1 | A single stray `Message` | Curiosity |
 | **80xxx** | 10 | **All `Suggestion`** — *"File is a CommonJS module; it may be converted to an ES module"* | 🔴 **Never fails a build.** Editor hint only |
 | **90xxx** | 50 | **All `Message`** — *"Add missing `super()` call"* | Not a diagnostic |
-| **95xxx** | 192 | **All `Message`** — *"Convert function to an ES2015 class"*, *"Extract to {0} in {1}"* | Not a diagnostic |
+| **95xxx** | 192 | **All `Message`** — *"Convert function to an ES2015 class"*, *"Extract to \{0\} in \{1\}"* | Not a diagnostic |
 
 🔴 **242 of the 2,073 entries are not diagnostics.** The 90xxx and 95xxx ranges
 are the **labels on your editor's lightbulb menu**, stored in the same table as
@@ -116,14 +116,14 @@ as a Suggestion with an extra clause.
 
 | Error (fires under `noImplicitAny`) | Suggestion twin | The twin's extra clause |
 |---|---|---|
-| `TS7005` *Variable '{0}' implicitly has an '{1}' type.* | `TS7043` | *…but a better type may be inferred from usage.* |
-| `TS7006` *Parameter '{0}' implicitly has an '{1}' type.* | `TS7044` | same |
-| `TS7008` *Member '{0}' implicitly has an '{1}' type.* | `TS7045` | same |
-| `TS7034` *Variable '{0}' implicitly has type '{1}' in some locations…* | `TS7046` | same |
-| `TS7019` *Rest parameter '{0}' implicitly has an 'any\[]' type.* | `TS7047` | same |
+| `TS7005` *Variable '\{0\}' implicitly has an '\{1\}' type.* | `TS7043` | *…but a better type may be inferred from usage.* |
+| `TS7006` *Parameter '\{0\}' implicitly has an '\{1\}' type.* | `TS7044` | same |
+| `TS7008` *Member '\{0\}' implicitly has an '\{1\}' type.* | `TS7045` | same |
+| `TS7034` *Variable '\{0\}' implicitly has type '\{1\}' in some locations…* | `TS7046` | same |
+| `TS7019` *Rest parameter '\{0\}' implicitly has an 'any\[]' type.* | `TS7047` | same |
 | *(get accessor)* | `TS7048` | *…for its get accessor…* |
 | *(set accessor)* | `TS7049` | *…for its set accessor…* |
-| `TS7010`/`TS7011` *…implicitly has an '{0}' return type.* | `TS7050` | same |
+| `TS7010`/`TS7011` *…implicitly has an '\{0\}' return type.* | `TS7050` | same |
 
 **So turning `noImplicitAny` off does not remove the finding — it demotes it to
 grey.** The compiler still computes it, still knows a better type is inferable
