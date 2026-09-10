@@ -20,10 +20,10 @@ listed under *Still to come*, is not written yet and will be linked here as each
 
 | # | Chunk | What it argues |
 |---|---|---|
+| 1 | **[01 · What the installer writes](01-what-the-installer-writes.md)** | `entry_points.txt` at build time, a real file per `console_scripts`/`gui_scripts` name at install time; the pip 26.2.1, installer 1.0.1 and uv 0.12.12 templates verbatim; 🔴 an absolute interpreter shebang — or a `#!/bin/sh` trampoline past 127 bytes, with a space, or when relocatable; `PATH` is not the installer's job; a colon-less value builds with uv_build and fails at install |
 
 ## Still to come
 
-- **01 · What the installer writes** *(not written yet)*
 - **02 · Windows launchers and GUI scripts** *(not written yet)*
 - **03 · The function contract — arguments, return values, exit codes** *(not written yet)*
 - **04 · `python -m` and `__main__.py`** *(not written yet)*
@@ -56,4 +56,4 @@ without importing any plugin it was not asked for.
 
 ---
 
-← [Phase index](../README.md) · Start → **01 · What the installer writes** *(not written yet)*
+← [Phase index](../README.md) · Start → [01 · What the installer writes](01-what-the-installer-writes.md)
