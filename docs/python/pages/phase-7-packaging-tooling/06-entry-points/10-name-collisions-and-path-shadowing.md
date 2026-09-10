@@ -194,4 +194,4 @@ Prefix every command with the project name; avoid shell builtins, common system 
 
 ---
 
-← Prev: [09 · Stale wrappers and editable installs](09-stale-wrappers-and-editable-installs.md) · [Topic index](README.md) · Next → **11 · The import-time cost of a CLI** *(not written yet)*
+← Prev: [09 · Stale wrappers and editable installs](09-stale-wrappers-and-editable-installs.md) · [Topic index](README.md) · Next → [11 · The import-time cost of a CLI](11-import-time-cost.md)
