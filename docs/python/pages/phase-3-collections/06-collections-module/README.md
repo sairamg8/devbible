@@ -31,11 +31,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 10 | **[05 · `namedtuple` from the factory side](05-namedtuple-factory-side.md)** | one call = validate, `eval` a `__new__`, `type()` a new class, stamp the caller's module; 🔴 the per-row class (the `sqlite3` doc recipe) and its fix; why per-call classes break `isinstance` and pickling; the field names CSV headers and SQL columns bring, and normalising them; `_asdict`, `copy.replace`, `SimpleNamespace` |
 | 11 | **[06 · `ChainMap` — layered lookup](06-chainmap-layered-lookup.md)** | a list of mappings searched in order, writes to `maps[0]`, live by reference; CLI > env > file > defaults made safe with an owned front dict and `MappingProxyType` layers; per-request overrides with `new_child`; scopes with `parents`; 🔴 every miss is a caught `KeyError` per layer and `len()`/iteration rebuild all keys — when to flatten |
 | 12 | **[06b · `ChainMap` traps](06b-chainmap-traps.md)** | 🔴 writes land in the caller's dict or `os.environ`; `del`/`pop`/`clear` touch only `maps[0]`, and masking with a sentinel; `DeepChainMap` and its cost; a `defaultdict` or `Counter` layer ends the search; `new_child(m, **kw)` edits `m`; `parents` into nothing; env strings vs default ints; no snapshot |
+| 13 | **[07 · `OrderedDict` — what it still does](07-ordereddict-what-it-still-does.md)** | reordering, not order: a linked list beside the hash table; `move_to_end` both ways vs a dict's one-way emulation; 🔴 why `next(iter(d))` + `pop` slows under front churn and `popitem(last=False)` does not; a unique, cancellable FIFO; order-sensitive `==`; `update` honours a subclass `__setitem__`; reordering mid-iteration raises |
+| 14 | **[07b · `OrderedDict` as an LRU cache](07b-ordereddict-lru-caches.md)** | `move_to_end` on hit, `popitem(last=False)` on overflow; `functools.lru_cache` first, and exactly what it cannot do; a locked generic `LRUCache`; the doc's `TimeBoundedLRU` and `MultiHitLRUCache`; per-key invalidation, eviction callbacks, byte budgets; 🔴 `@lru_cache` on a method keeps instances alive |
 
 ## Still to come
 
-- **07 · `OrderedDict` — what it still does** *(not written yet)*
-- **07b · `OrderedDict` as an LRU cache** *(not written yet)*
 - **08 · `UserList` and `UserDict` — wrappers, not funnels** *(not written yet)*
 - **08b · `UserString`** *(not written yet)*
 - **09 · Crossing a boundary — JSON, pickle, copy, `isinstance`** *(not written yet)*

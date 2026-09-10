@@ -103,7 +103,7 @@ So `isinstance(d, MutableSequence)` is `True` and `isinstance(d, list)` is `Fals
 | `lines = lines[-100:]` after every append | `deque(maxlen=100)` | [04b](04b-bounded-deques.md) |
 | `row[3]` with a comment saying what 3 is | a `namedtuple` (or a dataclass) | [05](05-namedtuple-factory-side.md) |
 | `{**defaults, **env, **cli}` rebuilt on every change | `ChainMap(cli, env, defaults)` | [06](06-chainmap-layered-lookup.md) |
-| a dict plus a list of keys kept "in recency order" | `OrderedDict.move_to_end` — or `functools.lru_cache` | **07b** *(not written yet)* |
+| a dict plus a list of keys kept "in recency order" | `OrderedDict.move_to_end` — or `functools.lru_cache` | [07b](07b-ordereddict-lru-caches.md) |
 
 ## Annotating them
 
