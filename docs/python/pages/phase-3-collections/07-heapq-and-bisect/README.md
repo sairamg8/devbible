@@ -29,14 +29,14 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 8 | **[05 · Priority queues — ties and the counter](05-priority-queues.md)** | the documentation's four challenges; `(priority, count, item)` gives FIFO ties and never compares the item — `sched` does it, asyncio's timer heap does not and documents *undefined* order; 🔴 the `order=True` dataclass wrapper stops the `TypeError` but is not FIFO; priorities that do not order (`Enum`, `None`, strings); direction; starvation fixed by pushing a start-by deadline |
 | 9 | **[05b · Removing and re-prioritising entries](05b-removal-and-update.md)** | a heap has no index, so removal is O(n) — `sched.cancel` does `remove` + `heapify`; the documentation's lazy-deletion recipe (dict of task → list entry, mark the payload slot, skip on pop) and why each piece is shaped that way; 🔴 never overwrite a compared field; an identity-only sentinel; bulk cancel as one rebuild |
 | 10 | **[05c · Stale entries and compaction](05c-stale-entries-and-compaction.md)** | 🔴 dead entries make `len()`, peeks and memory lie — cancelled timeouts grow a heap without bound; compaction at half dead, as asyncio's event loop does; a self-compacting queue class; Dijkstra without decrease-key is the same stale-entry skip |
+| 11 | **[05d · Heaps shared by threads and tasks](05d-heaps-across-threads.md)** | 🔴 the `heapq` docs promise nothing about threads; CPython 3.14's per-call critical section is an implementation detail and never makes check-then-pop atomic; `queue.PriorityQueue` is `heappush`/`heappop` behind a lock; a `Condition`-guarded delay queue for retries; `asyncio.PriorityQueue` is not thread-safe; processes need a `SKIP LOCKED` table or a broker |
+| 12 | **[06 · `heapq.merge` — k-way merge as a stream](06-merge.md)** | one pending item per input in a heap of k, O(N log k), lazy enough for endless inputs; stable because the input index breaks ties; 🔴 never checks that an input is sorted, and `reverse=True` needs largest-first inputs; log files, shard scatter-gather, dedupe with `groupby`; open files, bad lines and when `sorted` is the better call |
+| 13 | **[07 · `bisect_left` and `bisect_right`](07-bisect-left-and-right.md)** | an insertion point, not a match — the documented partition for each side, the equal run as `[left, right)`; the loop and why only `<` is called (and which operand is on the left); any `__len__` + `__getitem__` sequence; `lo`/`hi` are not slice bounds; the documentation's five lookups; 🔴 unsorted, descending or `NaN` input returns a confident wrong index |
+| 14 | **[07b · The `key=` parameter and its asymmetry](07b-the-key-parameter.md)** | 🔴 search functions apply `key` to elements only — pass a key value; `insort` applies it to `x` — pass the record; the key runs on every probe, so precompute a parallel key list (and keep it in step); `functools.cache` needs hashable elements; binary search on the answer with `range` and a monotonic boolean key; case-folded and descending searches |
+| 15 | **[08 · `insort` and the cost of keeping a list sorted](08-insort-and-sorted-list-cost.md)** | O(log n) to find the slot, O(n) to open it — 🔴 n insorts are quadratic, so batches are `extend` + `sort` (or `heapq.merge`); left vs right among equal keys; insort calls the object's `insert`; removing by bisect; the documented thread-safety warning; the leaderboard test for when a sorted list is the wrong structure |
 
 ## Still to come
 
-- **05d · Heaps shared by threads and tasks** *(not written yet)*
-- **06 · `heapq.merge` — k-way merge as a stream** *(not written yet)*
-- **07 · `bisect_left` and `bisect_right`** *(not written yet)*
-- **07b · The `key=` parameter and its asymmetry** *(not written yet)*
-- **08 · `insort` and the cost of keeping a list sorted** *(not written yet)*
 - **09 · Range queries, breakpoint tables and lookup rings** *(not written yet)*
 - **10 · When the answer is not `heapq` or `bisect`** *(not written yet)*
 
