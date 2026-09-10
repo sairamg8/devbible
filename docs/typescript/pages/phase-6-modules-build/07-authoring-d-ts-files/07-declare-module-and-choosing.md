@@ -34,10 +34,10 @@ declare module 'express' {             // module HAS types → you are AUGMENTIN
 The compiler tells you which one it decided, and both messages use the word
 *augmentation* even when you meant to declare:
 
-> **TS2664:** *"Invalid module name in augmentation, module '{0}' cannot be
+> **TS2664:** *"Invalid module name in augmentation, module '\{0\}' cannot be
 > found."*
-> **TS2665:** *"Invalid module name in augmentation. Module '{0}' resolves to an
-> untyped module at '{1}', which cannot be augmented."*
+> **TS2665:** *"Invalid module name in augmentation. Module '\{0\}' resolves to an
+> untyped module at '\{1\}', which cannot be augmented."*
 
 ⚠️ **`TS2665` is the confusing one, and it is worth understanding now.** It fires
 when the module *does* resolve — to a real `.js` file with no types — so the
