@@ -44,13 +44,13 @@ correct declaration.
 The compiler's suggestion-carrying diagnostics are informative here, because a
 suggestion means the name nearly matched something real:
 
-> **TS2305:** *"Module '{0}' has no exported member '{1}'."*
-> **TS2724:** *"'{0}' has no exported member named '{1}'. Did you mean '{2}'?"*
-> **TS2551:** *"Property '{0}' does not exist on type '{1}'. Did you mean
-> '{2}'?"*
-> **TS2613:** *"Module '{0}' has no default export. Did you mean to use
+> **TS2305:** *"Module '\{0\}' has no exported member '\{1\}'."*
+> **TS2724:** *"'\{0\}' has no exported member named '\{1\}'. Did you mean '\{2\}'?"*
+> **TS2551:** *"Property '\{0\}' does not exist on type '\{1\}'. Did you mean
+> '\{2\}'?"*
+> **TS2613:** *"Module '\{0\}' has no default export. Did you mean to use
 > `import { {1} } from {0}` instead?"*
-> **TS2614:** *"Module '{0}' has no exported member '{1}'. Did you mean to use
+> **TS2614:** *"Module '\{0\}' has no exported member '\{1\}'. Did you mean to use
 > `import {1} from {0}` instead?"*
 
 📌 **`TS2613` and `TS2614` are a mirror pair and they are usually an interop
