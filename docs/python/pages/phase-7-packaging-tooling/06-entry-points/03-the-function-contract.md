@@ -294,4 +294,4 @@ Because the object an entry point names becomes importable public API whether yo
 
 ---
 
-← Prev: [02 · Windows launchers and GUI scripts](02-windows-launchers-and-gui-scripts.md) · [Topic index](README.md) · Next → **04 · `python -m` and `__main__.py`** *(not written yet)*
+← Prev: [02 · Windows launchers and GUI scripts](02-windows-launchers-and-gui-scripts.md) · [Topic index](README.md) · Next → [04 · `python -m` and `__main__.py`](04-python-m-and-dunder-main.md)

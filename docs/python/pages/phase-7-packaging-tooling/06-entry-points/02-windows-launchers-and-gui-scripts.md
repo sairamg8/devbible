@@ -124,7 +124,7 @@ def protect_pip_from_modification_on_windows(modifying_pip: bool) -> None:
     """
 ```
 
-It checks whether `sys.argv[0]` is `pip`, `pip3` or `pip3.14`-style and, if so, raises *"To modify pip, please run the following command:"* followed by the `python -m pip …` equivalent. The design point generalises: the command's `.exe` is the file an upgrade of the command would replace. Any CLI with a self-update subcommand needs a `python -m` path (**04** *(not written yet)*) and should send Windows users to it the same way:
+It checks whether `sys.argv[0]` is `pip`, `pip3` or `pip3.14`-style and, if so, raises *"To modify pip, please run the following command:"* followed by the `python -m pip …` equivalent. The design point generalises: the command's `.exe` is the file an upgrade of the command would replace. Any CLI with a self-update subcommand needs a `python -m` path ([04](04-python-m-and-dunder-main.md)) and should send Windows users to it the same way:
 
 ```python
 import os
