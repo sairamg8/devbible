@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **Linter + formatter in one, rule selection, `--fix`, CI and pre-commit.**
 
-:::caution In progress — 28 chunks written
+:::caution In progress — 31 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -45,10 +45,14 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 25 | **[09b · requires-python inference](09b-requires-python-inference.md)** | ruff reads `requires-python` beside the *found configuration*, not the linted file's package — 🔴 a monorepo sub-package without `[tool.ruff]` gets the root's version; no-config inference depends on the working directory; `--config` disables it |
 | 26 | **[10 · Import sorting](10-import-sorting.md)** | Lint rule `I001` with a fix (default since 0.16.0), not the formatter; near-isort `profile = "black"`; 🔴 first-party is decided on disk under `src` — wrong sections almost always mean a missing `src` root; `# isort: split` for side-effect imports |
 | 27 | **[10b · isort settings](10b-isort-settings.md)** | `[tool.ruff.lint.isort]`, kebab-case (🔴 underscore keys are a parse error, `[tool.isort]` is never read); `known-*` overrides vs fixing `src`; `required-imports` needs `I002` selected; the layout switches and which are formatter-safe |
+| 28 | **[11 · ruff in CI](11-ruff-in-ci.md)** | CI checks, never fixes: `ruff check` + `ruff format --check` (🔴 `check --fix`, bare `format` and `check --diff` all pass a dirty tree); exit `2` = broken gate — `--exit-zero`, never `\|\| true`; let the format step report after a lint failure |
+| 29 | **[11b · The CI runner](11b-the-ci-runner.md)** | Install the locked ruff (`uv sync --locked --only-dev` + `uv run`); a complete workflow; 🔴 `setup-uv@v10` does not exist (no major tags since v8); `RUFF_OUTPUT_FORMAT=github` for annotations — never auto-detected |
+| 30 | **[11c · ruff-action](11c-ruff-action.md)** | Installs a ruff binary with no Python/uv; 🔴 version from `pyproject.toml` only, a range resolves to the *newest* release — `version-file: uv.lock` keeps it on the lock; no floating `v4` tag; the integrations page still shows `@v3` |
+| 31 | **[11d · CI reports](11d-ci-reports.md)** | GitLab Code Quality (`--output-format=gitlab`, exact image tag), SARIF to code scanning (🔴 report job needs `--exit-zero` or it never uploads; `security-events: write`), the output-format list, nullable JSON locations since 0.16.0 |
 
 ## Still to come
 
-- **`ruff` in CI** *(not written yet)*
+- **`ruff` in CI, continued — 11e · Changed files and pre-commit in CI** *(not written yet)*
 - **Pinning ruff** *(not written yet)*
 - **Editor integration** *(not written yet)*
 - **Upgrading ruff safely** *(not written yet)*

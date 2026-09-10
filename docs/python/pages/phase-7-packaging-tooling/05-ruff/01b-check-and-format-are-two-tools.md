@@ -126,7 +126,7 @@ uv run ruff check .         # 3. report what no fix could solve
 `ruff check` exits `1` when violations remain, `0` when none were found *"or if all present
 violations were fixed automatically"*. `ruff format` exits `0` *"regardless of whether any files
 were formatted"* — only `--check`, `--diff`, or `--exit-non-zero-on-format` make reformatting a
-failure. The full table and the CI consequences are in **11** *(not written yet)*.
+failure. The full table and the CI consequences are in [11](11-ruff-in-ci.md).
 
 ## Gotchas
 

@@ -217,4 +217,4 @@ their fix, instead of adding it to every file.
 
 ---
 
-← Prev: [10 · Import sorting](10-import-sorting.md) · [Topic index](README.md)
+← Prev: [10 · Import sorting](10-import-sorting.md) · [Topic index](README.md) · Next → [11 · ruff in CI](11-ruff-in-ci.md)
