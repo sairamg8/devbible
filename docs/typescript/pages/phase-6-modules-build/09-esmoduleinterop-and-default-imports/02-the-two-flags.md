@@ -110,7 +110,7 @@ const compilerOptionName = moduleKind >= ES2015 ? "allowSyntheticDefaultImports"
 error2(node.name, Diagnostics.Module_0_can_only_be_default_imported_using_the_1_flag, …);
 ```
 
-> **TS1259:** *"Module '{0}' can only be default-imported using the '{1}' flag"*
+> **TS1259:** *"Module '\{0\}' can only be default-imported using the '\{1\}' flag"*
 
 **`{1}` is not fixed.** With an ES-module `module` setting you are told
 `allowSyntheticDefaultImports`; with a CommonJS-emitting one you are told
