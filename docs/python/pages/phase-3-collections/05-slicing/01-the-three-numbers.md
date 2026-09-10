@@ -84,7 +84,7 @@ assert word[3:3] == ""
 The first line holds even for `i = 10` or `i = -10`, because out-of-range posts clamp to the ends
 (note 4 — [03](03-out-of-range-never-raises.md) is about when that clamping hides a bug). The
 third consequence is why slice *assignment* can insert: `items[3:3] = [...]` writes into a
-position rather than over an element, which **10** *(not written yet)* builds on.
+position rather than over an element, which [08](08-slice-assignment.md) builds on.
 
 The tutorial states the design reason in one sentence: *"Note how the start is always included,
 and the end always excluded.  This makes sure that `s[:i] + s[i:]` is always equal to `s`"*. The

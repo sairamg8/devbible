@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **O(1) membership, dedupe, and set algebra instead of a nested loop.**
 
-:::caution In progress — 11 chunks written
+:::caution In progress — 15 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -29,11 +29,13 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 9 | **[3d · Views and ABC sets as operands](03d-views-and-abc-sets-as-operands.md)** | The sets-only rule belongs to `set`, not the operator — a dict view or `collections.abc.Set` accepts any iterable, returns a plain… |
 | 10 | **[3e · The in-place forms](03e-the-in-place-forms.md)** | `s \|= t` mutates the object every alias holds and `s = s \| t` builds a new one — a shared default accumulates, a frozenset… |
 | 11 | **[3f · Augmented assignment is an assignment](03f-augmented-assignment-is-an-assignment.md)** | `\|=` makes a name local, mutates a class-level set before storing it on the instance, and writes back to a tuple slot after… |
+| 12 | **[3g · Subclassing set does not intercept mutation](03g-subclassing-set-does-not-intercept-mutation.md)** | The constructor, `update()` and `\|=` never call an overridden `add()`, and `\|` returns a plain set — own every mutation path with… |
+| 13 | **[3h · Removal and mutation mid-loop](03h-removal-and-mutation-during-iteration.md)** | `remove()` raises where `discard()` does not, `pop()` has no order, check-then-act is not atomic across threads, and a loop that… |
+| 14 | **[4 · Dedupe and what it destroys](04-dedupe-and-what-it-destroys.md)** | `list(set(items))` loses the arrival order (differently every run), the counts and the choice of survivor — `dict.fromkeys`, a seen-set… |
+| 15 | **[4b · Dedupe: equality and the container](04b-dedupe-equality-and-the-container.md)** | `1`, `1.0` and `True` collapse into one, identical-looking strings stay two, dicts cannot be deduped, and a set is not JSON… |
 
 ## Still to come
 
-- **Subclasses, single-element removal and mutation during iteration** *(not written yet)*
-- **Dedupe and what it destroys** *(not written yet)*
 - **`frozenset` — hashable sets, sets of sets, mixed-type results** *(not written yet)*
 - **Iteration order — arbitrary, and different between runs** *(not written yet)*
 - **Equal but distinct elements — `1`, `1.0` and `True`, and NaN** *(not written yet)*

@@ -183,4 +183,4 @@ the whole function. The read half of the augmented assignment then finds a local
 
 ---
 
-← Prev: [The in-place forms](03e-the-in-place-forms.md) · [Topic index](README.md) · Next → **Subclasses, single-element removal and mutation during iteration** *(not written yet)*
+← Prev: [The in-place forms](03e-the-in-place-forms.md) · [Topic index](README.md) · Next → [Subclassing set does not intercept mutation](03g-subclassing-set-does-not-intercept-mutation.md)

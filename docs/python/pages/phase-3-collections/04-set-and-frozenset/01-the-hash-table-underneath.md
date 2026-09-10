@@ -39,7 +39,7 @@ promise is [1c](01c-what-constant-time-does-not-promise.md).**
 > [Set Types](https://docs.python.org/3.14/library/stdtypes.html#set-types-set-frozenset)
 
 The three uses in the first sentence are the three halves of this topic: membership
-([2](02-the-membership-test-in-a-loop.md)), dedupe (**4** *(not written yet)*) and
+([2](02-the-membership-test-in-a-loop.md)), dedupe ([4](04-dedupe-and-what-it-destroys.md)) and
 algebra ([3](03-set-algebra-instead-of-nested-loops.md)). The second quote is the price list, and
 [1b](01b-what-the-table-costs-you.md) explains each item on it.
 

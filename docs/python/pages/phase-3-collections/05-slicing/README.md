@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **`[start:stop:step]`, negatives, slice assignment, and slices as copies.**
 
-:::caution In progress — 12 chunks written
+:::caution In progress — 15 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -30,10 +30,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 10 | **[07b · islice bounds and negatives](07b-islice-bounds.md)** | islice takes only non-negative integers — the last n and all-but-the-last n are a bounded deque, and a bad bound is… |
 | 11 | **[07c · islice in practice](07c-islice-in-practice.md)** | take, nth, consume, sliding windows and batched are each a line of islice — and on a list islice walks where a slice… |
 | 12 | **[07d · islice lifetimes](07d-islice-lifetimes.md)** | An islice is a one-pass, length-less, always-truthy iterator, and a generator it stops early stays suspended with its… |
+| 13 | **[08 · Slice assignment](08-slice-assignment.md)** | Assigning to a slice replaces a run of elements with the contents of any iterable, lengths independent — replace,… |
+| 14 | **[08b · Slice bounds and target types](08b-slice-bounds-and-types.md)** | On the left of =, clamped bounds change the operation — past the end appends, a reversed pair inserts, -0 empties —… |
+| 15 | **[08c · Slice assignment versus rebinding](08c-slice-assignment-versus-rebinding.md)** | a = new moves one name and leaves every other holder on the old list; a[:] = new rewrites the object every holder… |
 
 ## Still to come
 
-- **Slice assignment — growing, shrinking, and `a[:] = …` versus rebinding** *(not written yet)*
 - **Extended-slice assignment and `del`** *(not written yet)*
 - **Slicing your own class — `__getitem__` with a `slice`** *(not written yet)*
 - **Slicing in real code — pagination, batching, fixed-width records** *(not written yet)*

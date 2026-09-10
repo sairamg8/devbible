@@ -21,7 +21,7 @@ one: it counts it and then iterates it (the second pass is empty), tests it with
 true), or calls `len()` on it (`TypeError`). The generator underneath has a lifetime problem of its
 own. Stopping it after five rows does not finish it — it is paused at its `yield`, inside whatever
 `with` block opened the file or the cursor, and it stays there until it is closed or finalized.
-In CPython that can be immediate or never, depending on who else holds a reference. Finally,
+In CPython that can be immediate or much later, depending on who else holds a reference. Finally,
 reading a stream twice: 3.14 removed `copy` and `pickle` support from itertools iterators, which
 leaves `tee` — with a buffer and a rule of its own — or a list.
 [07c](07c-islice-in-practice.md) is the recipes and the cost of `islice` on a list.**
@@ -195,4 +195,4 @@ touch the original iterator after calling `tee`.
 
 ---
 
-← Prev: [07c · islice in practice](07c-islice-in-practice.md) · [Topic index](README.md)
+← Prev: [07c · islice in practice](07c-islice-in-practice.md) · [Topic index](README.md) · Next →: [08 · Slice assignment](08-slice-assignment.md)

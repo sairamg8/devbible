@@ -39,8 +39,8 @@ test** — [3c](03c-set-comparison-is-a-partial-order.md).
 | — | `s.isdisjoint(other)` | *"Return `True` if the set has no elements in common with other. Sets are disjoint if and only if their intersection is the empty set."* |
 
 — [Set Types](https://docs.python.org/3.14/library/stdtypes.html#set-types-set-frozenset). Every
-operation returns a *new* set; the in-place forms and the operator-versus-method rules are
-[3b](03b-operators-versus-methods.md).
+operation returns a *new* set; the operator-versus-method rules are
+[3b](03b-operators-versus-methods.md), and the in-place forms are [3e](03e-the-in-place-forms.md).
 
 ## Six nested loops and the operator each one was
 
