@@ -207,4 +207,4 @@ All tasks run on one thread, so no deque operation is ever interrupted halfway �
 
 ---
 
-← Prev: [04b · Bounded deques](04b-bounded-deques.md) · [Topic index](README.md)
+← Prev: [04b · Bounded deques](04b-bounded-deques.md) · [Topic index](README.md) · Next → [05 · `namedtuple` from the factory side](05-namedtuple-factory-side.md)

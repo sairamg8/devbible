@@ -23,8 +23,8 @@ falls back without comment to the copy it bundles — the newest ruff release, n
 Which *configuration*: editor-level settings such as `ruff.lineLength` outrank `pyproject.toml`
 by default, so a user setting made for one project reformats every other. Get both right and the
 editor is a faster copy of CI; get either wrong and it is a second, disagreeing linter. This page
-is those two choices; 13b *(not written yet)* is what runs on save, living
-alongside other Python tools, notebooks, and editors other than VS Code.**
+is those two choices; [13b](13b-on-save-in-vs-code.md) is what runs on save, and
+[13c](13c-pyright-and-other-editors.md) living alongside Pyright and editors other than VS Code.**
 
 ## One language server, many editors
 
@@ -137,7 +137,7 @@ override one that has.
 
 `filesystemFirst` does not remove anyone's editor settings; it makes the repository's configuration
 win where both exist. `importStrategy` is already the default — stating it in the workspace file
-overrides a user-level `useBundled`, since VS Code's workspace settings outrank user settings. What runs on save is **13b** *(not written yet)*.
+overrides a user-level `useBundled`, since VS Code's workspace settings outrank user settings. What runs on save is [13b](13b-on-save-in-vs-code.md).
 
 ### Configuration changes need file watching
 
@@ -235,4 +235,4 @@ until the workspace is trusted.
 
 ---
 
-← Prev: [12b · required-version and keeping pins in step](12b-required-version-and-keeping-pins-in-step.md) · [Topic index](README.md) · Next → **13b · On save, other tools and other editors** *(not written yet)*
+← Prev: [12b · required-version and keeping pins in step](12b-required-version-and-keeping-pins-in-step.md) · [Topic index](README.md) · Next → [13b · On save in VS Code](13b-on-save-in-vs-code.md)
