@@ -65,14 +65,14 @@ That is chunk 01's ambient-context rule applied mechanically to your source.
 🔴 **Three of them require `declaration` — or `composite`.** The compiler's
 `verifyCompilerOptions` raises the same diagnostic for each:
 
-> **TS5069:** *"Option '{0}' cannot be specified without specifying option '{1}'
-> or option '{2}'."*
+> **TS5069:** *"Option '\{0\}' cannot be specified without specifying option '\{1\}'
+> or option '\{2\}'."*
 
 …instantiated as `declarationMap` → (`declaration`, `composite`),
 `declarationDir` → (`declaration`, `composite`), and `emitDeclarationOnly` →
 (`declaration`, `composite`). And one more:
 
-> **TS5053:** *"Option '{0}' cannot be specified with option '{1}'."* —
+> **TS5053:** *"Option '\{0\}' cannot be specified with option '\{1\}'."* —
 > `declarationDir` with `outFile`.
 
 ### `declarationMap` is the one people leave off and should not
