@@ -1,7 +1,7 @@
 ---
 title: "A return, break or continue in a finally block discards the saved exception outright — a wider handler than except BaseException: pass, and one that does not read as a handler at all"
 sidebar_label: "06k · The jump that discards"
-sidebar_position: 153
+sidebar_position: 160
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -297,4 +297,4 @@ discovers the change during an upgrade.
 
 ---
 
-← Prev: [The guarantee and the nesting](06p-the-guarantee-and-the-nesting.md) · Index: [EAFP vs LBYL](README.md) · Next → [When cleanup raises](06i-when-cleanup-raises-and-the-grammar-refuses.md)
+← Prev: [`push`, `pop_all` and ownership transfer](06zc-push-pop-all-and-ownership-transfer.md) · Index: [EAFP vs LBYL](README.md) · Next → [When cleanup raises](06i-when-cleanup-raises-and-the-grammar-refuses.md)

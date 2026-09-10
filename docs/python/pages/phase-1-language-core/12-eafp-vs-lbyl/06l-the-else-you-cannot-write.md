@@ -1,14 +1,14 @@
 ---
-title: "The grammar refuses the narrowing tool you might reach for — there is no else without an except, no mixing of except and except*, and the else you can always write is the one on a loop, which means the opposite of what you want"
+title: "The grammar refuses the narrowing tool you might reach for — there is no else without an except, the clause order is fixed and is the execution order, and the else you can always write is the one on a loop, which means very nearly the opposite thing"
 sidebar_label: "06l · The `else` you cannot write"
-sidebar_position: 154
+sidebar_position: 162
 ---
 
 <span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-09 against the Python 3.14 Language Reference —
 > [The `try` statement](https://docs.python.org/3.14/reference/compound_stmts.html#the-try-statement)
-> (the `try1_stmt` and `try2_stmt` grammars, the `except*` restrictions),
+> (the `try1_stmt` grammar, the `else` paragraph, the expression-less `except` rule),
 > [The `for` statement](https://docs.python.org/3.14/reference/compound_stmts.html#the-for-statement)
 > and the `while` statement (the loop `else`),
 > [The `break` statement](https://docs.python.org/3.14/reference/simple_stmts.html#the-break-statement)
@@ -18,12 +18,15 @@ sidebar_position: 154
 
 **[06g](06g-width-at-a-boundary.md) made `else` the narrowing tool of choice. This chunk is
 the fine print: the grammar will not always let you have it. `else` requires at least one
-`except` clause and must follow all of them; a `try` statement may use `except` **or**
-`except*` but never both; and `break`, `continue` and `return` are banned outright from an
-`except*` clause. Each restriction looks arbitrary until you see what `else` is actually for,
-at which point every one of them is the language refusing to let you write something that
-could not mean anything. The chunk closes on the `else` you *can* always write — the one on a
-`for` or `while` loop — which uses the same keyword to mean very nearly the opposite thing.**
+`except` clause, it must follow all of them, and what it promises is narrower than most
+people assume — the reference states outright that exceptions raised *in* the `else` clause
+are not handled by the handlers directly above it, which is the whole point and also the
+trap. Each restriction looks arbitrary until you see what `else` is actually for, at which
+point every one of them is the language refusing to let you write something that could not
+mean anything. The chunk closes on the `else` you *can* always write — the one on a `for` or
+`while` loop — which uses the same keyword to mean very nearly the opposite thing. The other
+grammar, `except*`, refuses far more and gets its own chunk:
+[06r](06r-except-star-does-not-mix.md).**
 
 ## The grammar: there is no `else` without an `except`
 
@@ -67,6 +70,22 @@ raises, because the exception propagates past it. `else` earns its keep only whe
 `except` clause it needs to stay outside of. That is the whole design, and the grammar is
 just enforcing it.
 
+## What `else` actually promises, in the reference's own words
+
+The narrowing argument rests on one paragraph, and both of its sentences matter:
+
+> *"The optional `else` clause is executed if the control flow leaves the `try` suite, no
+> exception was raised, and no `return`, `continue`, or `break` statement was executed.
+> Exceptions in the `else` clause are not handled by the preceding `except` clauses."*
+
+The first sentence is the one people quote: `else` is the success path. The second is the one
+that makes `else` a *narrowing* tool rather than a stylistic preference — the handlers above
+it do not cover it. That is exactly why you move the follow-on work there: a `KeyError` from
+`transform(value)` is no longer indistinguishable from a `KeyError` raised by the lookup you
+were guarding. It is also why an `else` clause is not a free place to put code. Anything that
+raises in there propagates straight out of the statement, past handlers that look, on screen,
+as though they enclose it.
+
 ## The full clause order, and what skips what
 
 | Clause | Runs when | Skipped by |
@@ -83,46 +102,14 @@ it cannot be narrowed at all ([06h](06h-finally-and-the-widest-handler.md)). And
 in the grammar is the execution order, so a clause out of place is a `SyntaxError` rather
 than a subtly different program.
 
-## `except` and `except*` do not mix
+One more ordering rule belongs in the same table, because it is the same kind of refusal:
 
-Python 3.11 added `except*` for exception groups, with its own grammar production
-(`try2_stmt`) and two hard restrictions the reference states outright:
+> *"An expression-less `except` clause, if present, must be last; it matches any exception."*
 
-> *"A `try` statement can have either `except` or `except*` clauses, but not both."*
-
-> *"`break`, `continue` and `return` cannot appear in an `except*` clause."*
-
-The first has a practical consequence for narrowing: you cannot keep an ordinary
-`except ValueError` for the flat case and add an `except* ValueError` for the grouped case
-in the same statement. If a call site can raise both a bare exception and an
-`ExceptionGroup`, that is **two statements**, and deciding which is which is a real design
-question rather than a syntax one.
-
-```python
-# 🔴 SyntaxError — one statement cannot have both kinds of clause.
-try:
-    results = gather_all(tasks)
-except ValueError:
-    return []
-except* ValueError:
-    return []
-
-# Two statements, and the nesting says which shape you expect where.
-try:
-    results = gather_all(tasks)       # documented to raise an ExceptionGroup
-except* ValueError as eg:
-    logger.warning("%d bad inputs", len(eg.exceptions))
-    results = []
-return post_process(results)          # its own flat ValueError, its own statement
-```
-
-The second restriction — no `break`, `continue` or `return` inside an `except*` clause — is
-the language pre-empting exactly the confusion that
-[06k](06k-the-jump-that-discards.md) is about: a group handler may run more than one of its
-clauses, so "which `return` wins" would have no sensible answer. Assign in the clause and
-return after the statement. `else` and `finally` are both permitted with `except*`, in the
-same positions as always. The semantics of the clause itself are
-[08c · `except*` semantics](../11-exceptions/08c-except-star-semantics.md).
+So the two "must be last" rules stack — the bare `except:` after every typed handler, then
+`else`, then `finally` — and none of them can be reordered to read better. The third
+condition on that `else` row — no `return`, `continue` or `break` in the suite — is a whole
+failure mode of its own and is [06k](06k-the-jump-that-discards.md).
 
 ## The other `else` — the one on loops
 
@@ -200,35 +187,27 @@ finally:
     metrics.observe()              # then finally
 ```
 
-**★ Symptom: adding an `except*` clause beside an existing `except` clause will not
-compile.** Cause: *"A `try` statement can have either `except` or `except*` clauses, but not
-both."* Fix: two statements, nested so the shapes are separated — the group handler around
-the call documented to raise a group, the flat handler around the call documented to raise a
-flat exception.
+**★ Symptom: an exception raised inside the `else` clause escapes the statement, past an
+`except` clause that names its class.** Cause: this is the documented contract, not a bug —
+*"Exceptions in the `else` clause are not handled by the preceding `except` clauses."* The
+handlers guard the `try` suite only, and `else` sits outside them by construction. Fix:
+decide which it is. If the follow-on work genuinely needs the same handling, it belongs in
+the `try` suite; if it needs different handling — which is usually the case, and the reason
+you moved it — it needs its own statement.
 
 ```python
 try:
-    results = gather_all(tasks)
-except* ValueError as eg:
-    logger.warning("%d bad inputs", len(eg.exceptions))
-    results = []
-return post_process(results)       # flat ValueError handled by its own statement
+    value = collection[key]
+except KeyError:
+    return None
+else:
+    try:
+        return transform(value)    # its own KeyError is a different failure
+    except KeyError as exc:
+        raise MalformedRecord(key) from exc
 ```
 
-**★ Symptom: `SyntaxError` on a `return` inside an `except*` clause.** Cause: *"`break`,
-`continue` and `return` cannot appear in an `except*` clause"* — a group handler may run
-several of its clauses, so a jump out of one has no defined meaning. Fix: assign in the
-clause, return after the statement.
-
-```python
-try:
-    results = gather_all(tasks)
-except* TimeoutError:
-    results = []                   # assign here
-return results                     # return here
-```
-
-**Symptom: a `for … else` fires on the success path and nobody can see why.** Cause: it
+**★ Symptom: a `for … else` fires on the success path and nobody can see why.** Cause: it
 does not — a loop's `else` runs when *"the iterator is exhausted"*, i.e. when no `break` was
 taken, so it is the *not-found* branch. Someone read it with `try` / `else` semantics. Fix:
 if the two readings keep colliding in a codebase, use the `break`-less form, which has no
@@ -266,17 +245,6 @@ handlers, so with no handlers there is nothing to shrink — and code placed aft
 `try` / `finally` already has the property you wanted, because an exception in the suite
 propagates past it.
 
-**★ Can a single `try` statement mix `except` and `except*`?**
-No: *"A `try` statement can have either `except` or `except*` clauses, but not both."* The
-restriction is not cosmetic — the two clause kinds have different matching semantics, one
-against an exception and one against the leaves of a group, and a statement that mixed them
-would need a rule for which applies to a bare exception that is also groupable. If a region
-of code can produce both shapes, that is two statements, and choosing the nesting is a real
-design decision: the group handler goes around the call that is documented to raise a group.
-The same production also forbids `break`, `continue` and `return` inside an `except*`
-clause, because a group handler may execute more than one of its clauses and there would be
-no answer to which jump wins.
-
 **★ Two call sites raise the same class and should recover differently. How do you express
 that, given `except` matches on class alone?** Not in the clause — in the boundary. Either
 give each leap its own `try` so the two handlers have disjoint scopes, which is
@@ -298,6 +266,17 @@ out of the suite: `break` skips a loop's `else` exactly as a `return` skips a `t
 can state that, you can also predict the failure people hit with `try` / `else`, which is a
 `return` in the suite making the `else` unreachable.
 
+**★ Both `else` and the end of the `try` suite run only on success. Why prefer `else`?**
+Because the two differ in what the handlers cover, and the reference says so in one sentence:
+*"Exceptions in the `else` clause are not handled by the preceding `except` clauses."* Code
+at the end of the `try` suite is inside the handlers' scope, so a `KeyError` it raises is
+caught by the `except KeyError` you wrote for the lookup — the handler now answers for a
+failure it was never written for, which is the width problem
+[06](06-narrowing-the-try.md) is about. Moving that code to `else` narrows the handler to the
+line you were actually guarding without splitting the statement in two. The cost, and it is
+the reason `else` is not free, is that the `else` clause now has no handler at all: whatever
+it raises leaves the statement.
+
 **Why does the clause order in the grammar match the execution order, and what does that buy
 you?** Because the grammar is the execution order written down: `try`, then every `except`,
 then `else`, then `finally`. The payoff is that a misordered clause is a `SyntaxError` at
@@ -318,4 +297,4 @@ involved at all.
 
 ---
 
-← Prev: [When cleanup raises](06i-when-cleanup-raises-and-the-grammar-refuses.md) · Index: [EAFP vs LBYL](README.md) · Next → [Ambient state](06j-ambient-state-the-guard-cannot-see.md)
+← Prev: [When cleanup raises](06i-when-cleanup-raises-and-the-grammar-refuses.md) · Index: [EAFP vs LBYL](README.md) · Next → [`except*` does not mix](06r-except-star-does-not-mix.md)

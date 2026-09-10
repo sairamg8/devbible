@@ -1,28 +1,27 @@
 ---
-title: "The interpreter can delete your check and the filesystem can contradict it — -O removes assert statements from the program entirely, and os.access documents three separate reasons its answer may be wrong before you act on it"
+title: "Under -O the compiler emits no code at all for an assert statement, and the flag can arrive from an environment variable, a base image or a pre-compiled .pyc — so a check you can read in the source may not exist in the program that runs"
 sidebar_label: "06m · The guard the platform deletes"
-sidebar_position: 156
+sidebar_position: 168
 ---
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-09 against the Python 3.14 Language Reference
-> [The `assert` statement](https://docs.python.org/3.14/reference/simple_stmts.html#the-assert-statement),
-> the [command-line options](https://docs.python.org/3.14/using/cmdline.html#cmdoption-O)
-> (`-O`, `-OO`, `PYTHONOPTIMIZE`),
-> [`os.access`](https://docs.python.org/3.14/library/os.html#os.access) (both notes, the
-> real-vs-effective uid paragraph, `effective_ids` and `os.supports_effective_ids`), and
-> [`os.path.exists`](https://docs.python.org/3.14/library/os.path.html#os.path.exists).
+> Verified: 2026-09-10 against the Python 3.14 reference — [The `assert` statement](https://docs.python.org/3.14/reference/simple_stmts.html#the-assert-statement),
+> [`-O` / `-OO` / `PYTHONOPTIMIZE`](https://docs.python.org/3.14/using/cmdline.html#cmdoption-O),
+> [`__debug__`](https://docs.python.org/3.14/library/constants.html#debug__), [`sys.flags`](https://docs.python.org/3.14/library/sys.html#sys.flags),
+> [PEP 488](https://peps.python.org/pep-0488/), [`importlib.util.cache_from_source`](https://docs.python.org/3.14/library/importlib.html#importlib.util.cache_from_source),
+> [`compileall`](https://docs.python.org/3.14/library/compileall.html), [Cached bytecode invalidation](https://docs.python.org/3.14/reference/import.html#pyc-invalidation),
+> [`doctest`](https://docs.python.org/3.14/library/doctest.html), and the [Click docs](https://click.palletsprojects.com/en/stable/documentation/) (stable, read 2026-09-10).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
 **[06j](06j-ambient-state-the-guard-cannot-see.md) covered ambient state you configure:
 `decimal` contexts and warning filters. This chunk is the harder half, where the ambient
-state belongs to the interpreter or the operating system and your code has no say. Under
-`-O` the compiler emits *no code at all* for an `assert`, so a handler for `AssertionError`
-guards a statement that is not in the program. And `os.access` documents three independent
-reasons its answer may already be wrong — stale, wrong permission model, wrong identity —
-with `os.path.exists` carrying a quieter version of the same problem. The chunk closes the
-whole width argument with the three questions to ask of any guard.**
+state belongs to the interpreter itself and your code has no say. Under `-O` the compiler
+emits *no code at all* for an `assert`, so a handler for `AssertionError` guards a
+statement that is not in the program — and the flag need not appear on any command line
+you can see, because `PYTHONOPTIMIZE` in a base image sets it, and a `.pyc` compiled at a
+level bakes it in. [06s](06s-the-check-that-lies.md) covers the other half of the same
+problem: the guard that does run, and answers wrongly.**
 
 ## `-O` and the `assert` that is not there
 
@@ -63,138 +62,122 @@ except InvalidOrder:
 The reference's own equivalence makes the mechanism plain — `assert expression1, expression2`
 is equivalent to `if __debug__: if not expression1: raise AssertionError(expression2)` — and
 `__debug__` is fixed at interpreter start: *"Assignments to `__debug__` are illegal. The
-value for the built-in variable is determined when the interpreter starts."* This is [05b ·
+value for the built-in variable is determined when the interpreter starts."* The constants
+reference adds that it is not even assignable: `__debug__` *"cannot be reassigned
+(assignments to them, even as an attribute name, raise `SyntaxError`)"*. This is [05b ·
 `assert` is not validation](05b-assert-is-not-validation.md)'s subject; it appears here
 because it is the purest case of the pattern.
 
-### `-OO`, `PYTHONOPTIMIZE`, and where the flag comes from
+## What `-O` removes, and what it does not
 
-The command-line documentation is broader than the `assert` rule suggests. `-O` is described
-as *"Remove assert statements and any code conditional on the value of `__debug__`"* — so a
-hand-written `if __debug__:` block goes the same way — and `-OO` is *"Do `-O` and also
-discard docstrings."*
+The command-line documentation is narrower and stranger than the name suggests. `-O` is
+documented as exactly two deletions, plus the bytecode filename change covered below:
 
-🔴 And the flag does not have to appear on any command line you can see:
+> *"Remove assert statements and any code conditional on the value of `__debug__`."*
+
+`-OO` adds a third:
+
+> *"Do `-O` and also discard docstrings."*
+
+That is the whole documented surface. There is **no documented speed optimisation** — no
+inlining, no constant propagation, no dead-code pass you can point at in the docs. `-O`
+makes a program faster only in the sense that code you deleted does not run. Anyone who set
+`PYTHONOPTIMIZE=1` "for performance" bought exactly one thing: the removal of their own
+checks.
+
+### `if __debug__:` goes the same way
+
+*"any code conditional on the value of `__debug__`"* is not a footnote — it deletes
+hand-written blocks too, and those blocks are frequently doing something the program
+depends on:
+
+```python
+# 🔴 Under -O the whole block is removed, registrations and all.
+if __debug__:
+    register_invariant_checks(engine)
+    engine.echo = True
+```
+
+```python
+if settings.debug_checks:        # a value you own, in a program you can read
+    register_invariant_checks(engine)
+```
+
+The rule of thumb: `__debug__` is fine as a *marker* of a diagnostic that is allowed to
+vanish, and never as the switch for anything with a side effect the rest of the program
+observes.
+
+## The three ways optimization arrives
+
+**One — the command line.** `python -O app.py`. Visible, greppable, rare in the wild.
+
+**Two — the environment.** This is the one that reaches production without appearing in a
+diff:
 
 > *"`PYTHONOPTIMIZE` — If this is set to a non-empty string it is equivalent to specifying
 > the `-O` option. If set to an integer, it is equivalent to specifying `-O` multiple
 > times."*
 
-That is how this reaches production without appearing in a diff: a base container image or a
-deployment template sets `PYTHONOPTIMIZE=1`, and every `assert` in the tree stops existing.
-Nothing in the application changed, the tests still pass in CI where the variable is unset,
-and the validation quietly stopped running. `-OO` adds a second failure mode for anything
-that reads `__doc__` at runtime — argument parsers built from docstrings, plugin registries,
-some serialisation libraries — because the docstrings are gone too.
+So `PYTHONOPTIMIZE=2` is `-OO`, docstrings included. A base container image with `ENV
+PYTHONOPTIMIZE=1`, a Kubernetes `env:` entry, a systemd `Environment=` line or a CI runner
+default all set it for every process in the tree. Nothing in the application changed, the
+tests still pass where the variable is unset, and the validation quietly stopped running.
 
-The compiled files are the one visible trace: `-O` and `-OO` each *"Augment the filename for
-compiled (bytecode) files"*, adding `.opt-1` and `.opt-2` respectively before the `.pyc`
-extension.
+⚠️ The two sentences do not settle `PYTHONOPTIMIZE=0`: `"0"` is both *a non-empty string* (which the
+first sentence equates to `-O`) and *an integer* (which the second reads as "`-O` zero times").
+**The documentation does not resolve this and I could not confirm the behaviour without running
+it.** Do not use `PYTHONOPTIMIZE=0` to mean "off" — unset the variable.
 
-## And the check can lie: what `os.access` admits about itself
+**Three — the bytecode.** Optimization is applied *at compile time*, so a `.pyc` built with
+`compileall -o 2` already has its assertions removed, whatever flags the interpreter that
+loads it was given. `compileall` documents the level as a build-time choice, repeatable:
 
-The `os.access` entry that supplied [06g](06g-width-at-a-boundary.md)'s rewrite carries a
-**second** note, and it is the strongest argument in the standard library for making the
-operation itself the guard:
+> *"Compile with the given optimization level. May be used multiple times to compile for
+> multiple levels at a time (for example, `compileall -o 1 -o 2`)."*
 
-> *"I/O operations may fail even when `access()` indicates that they would succeed,
-> particularly for operations on network filesystems which may have permissions semantics
-> beyond the usual POSIX permission-bit model."*
+## The cache is per optimisation level
 
-The first note says the check goes **stale** — the window between the check and the open is
-exploitable, which is [02b](02b-the-filesystem-and-the-atomic-flag.md)'s subject. This one
-says the check can be **wrong on arrival**, with no race required and no attacker involved:
-the file's real access rules are simply not expressible in the model `access()` queries.
+This is where the `.opt-1` and `.opt-2` tags in the `-O` and `-OO` entries land. PEP 488
+gives each level its own filename, so the levels coexist in one `__pycache__`:
 
-And a third sentence in the same entry says it may not be asking about the right principal:
+> *"`'{name}.{cache_tag}.opt-{optimization}.pyc'.format(name=module_name, cache_tag=sys.implementation.cache_tag, optimization=str(sys.flags.optimize))`"*
 
-> *"Use the real uid/gid to test for access to path. Note that most operations will use the
-> effective uid/gid, therefore this routine can be used in a suid/sgid environment to test if
-> the invoking user has the specified access to path."*
+with the unoptimized case keeping the old name — *"When no optimization level is specified,
+the pre-PEP `.pyc` file name will be used"*. `importlib.util.cache_from_source` exposes the
+same mapping from the library side, defaulting to the running process:
+*"`None` causes the interpreter's optimization level to be used"*.
 
-That is a deliberate feature with one narrow use — asking "may the *invoking* user do this?"
-in a setuid program — and a trap everywhere else, because `open()` will act as the effective
-user. The parameter that switches it is not portable:
+Two consequences. The interpreter looks for **one** file — PEP 488: *"the import system
+looks for a single bytecode file based on the optimization level of the interpreter already
+and generates a new bytecode file if it doesn't exist"*. With source present a level mismatch
+only costs a recompile; with source absent the module is not found at all, which is why PEP
+488 says bytecode-only distributors *"will have to choose which optimization level they want
+their bytecode files to be"*. And whether a stale cache is noticed at all depends on how it
+was built — the import reference says one variant is never checked: *"For unchecked
+hash-based `.pyc` files, Python simply assumes the cache file is valid if it exists."* Such
+an image runs the bytecode it shipped with, so an `assert` added to the source afterwards is
+not in the process: the `-O` symptom from an entirely different cause. Build the cache
+checked, and force it, if a source edit must be able to win:
 
-> *"If `effective_ids` is `True`, `access()` will perform its access checks using the
-> effective uid/gid instead of the real uid/gid. `effective_ids` may not be supported on your
-> platform; you can check whether or not it is available using `os.supports_effective_ids`.
-> If it is unavailable, using it will raise a `NotImplementedError`."*
-
-Three independent failure modes — stale, wrong model, wrong identity — plus a fix for the
-third that raises on some platforms. None of them apply to a `try` around `open()`, because
-it *is* the operation whose result you wanted.
-
-### `os.path.exists` lies too, and more quietly
-
-`os.access` at least documents its problems under a **Note** heading. The function people
-actually reach for buries the same class of caveat in its one-paragraph description:
-
-> *"Return `True` if path refers to an existing path or an open file descriptor. Returns
-> `False` for broken symbolic links. On some platforms, this function may return `False` if
-> permission is not granted to execute `os.stat()` on the requested file, even if the path
-> physically exists."*
-
-Two distinct falsehoods in one sentence. A broken symlink *exists* as a directory entry and
-`exists()` says `False` — use `os.path.lexists`, which is documented to *"Return `True` if
-path refers to an existing path, including broken symbolic links"*, if that distinction
-matters. And a file you cannot `stat` reports as absent, so an `exists()` check on a
-permission-restricted directory produces "no such file" for a file that is right there,
-after which your code creates it, or reports a 404, or skips a migration.
-
-```python
-# 🔴 Reports "config not found" for a config that exists but is not stat-able,
-#    and for a symlink whose target moved.
-if not os.path.exists(path):
-    return DEFAULTS
-with open(path) as fp:
-    return json.load(fp)
+```bash
+python -m compileall --invalidation-mode checked-hash -f -q /app
 ```
 
+## Make the interpreter say it out loud
+
+`__debug__` is a bool; `sys.flags.optimize` is the integer, and it is the only one of the two
+that distinguishes `-O` from `-OO`. `sys.flags` is documented as *"a named tuple [that]
+exposes the status of command line flags"*, with `flags.optimize` mapped to *"`-O` or
+`-OO`"*. Log it at startup, where you can see it, instead of inferring it from behaviour:
+
 ```python
-try:
-    fp = open(path)
-except FileNotFoundError:          # the real, specific answer, from the real operation
-    return DEFAULTS
-else:
-    with fp:
-        return json.load(fp)       # PermissionError is now distinct, and escapes
+import sys
+if sys.flags.optimize:      # 1 = asserts gone; 2 = asserts and docstrings gone
+    logger.warning("optimization level %d: assert statements are not compiled in",
+                   sys.flags.optimize)
 ```
-
-The EAFP version distinguishes three outcomes the LBYL version collapses into one: the file
-is absent, the file is unreadable, the file is unparseable.
-
-## The three questions to ask of any guard
-
-The topic collapses to this. Before trusting a `try`, ask in order:
-
-1. **Does the class match?** Is it what the callee documents, and is it the leaf rather than
-   a base? — [06c](06c-the-breadth-of-one-class.md)
-2. **Does the scope match?** Is the guarded suite the one expression that can fail, with the
-   consumer in `else`? — [06g](06g-width-at-a-boundary.md)
-3. **Does this process make it raise at all?** Contexts, warning filters, `-O`, platform. —
-   [06j](06j-ambient-state-the-guard-cannot-see.md) and this page
-
-Questions 1 and 2 are answerable by reading the file. Question 3 is not, which is why it is
-the one that survives review and reaches production.
 
 ## Gotchas
-
-**★ Symptom: `os.access(path, os.R_OK)` returned `True` and the `open()` on the next line
-raised anyway.** Cause: the documented one — *"I/O operations may fail even when `access()`
-indicates that they would succeed, particularly for operations on network filesystems"* — and
-`access()` tests the real uid/gid while the open will use the effective one. Fix: delete the
-check; the operation is the only reliable test.
-
-```python
-try:
-    fp = open(path)
-except PermissionError:
-    return "some default data"
-else:
-    with fp:
-        return fp.read()
-```
 
 **★ Symptom: validation stopped rejecting bad input after a deployment change, and nothing
 in the diff touched validation.** Cause: the deployment added `-O`, and *"the current code
@@ -218,57 +201,36 @@ if not __debug__:
     logger.warning("running under -O: assert statements are not compiled in")
 ```
 
-**★ Symptom: `os.path.exists()` says a file is missing and `ls` says it is there.** Cause:
-*"this function may return `False` if permission is not granted to execute `os.stat()` on the
-requested file, even if the path physically exists"* — and it also returns `False` for a
-broken symlink. Fix: open the file; if you truly need the existence question and nothing
-else, `lexists` at least answers the symlink half honestly.
+**★ Symptom: a debug-only registration never happens in production, and removing the flag
+"fixes" it.** Cause: `-O` removes *"any code conditional on the value of `__debug__`"*, so
+an `if __debug__:` block is gone in its entirety — not skipped, absent. Anything that block
+was wiring up (a metrics hook, an SQL echo, an invariant checker) never existed. Fix: gate
+optional behaviour on your own configuration value, which no interpreter flag can delete.
 
-```python
-try:
-    fp = open(path)
-except FileNotFoundError:
-    return DEFAULTS                # absent
-except PermissionError:
-    raise ConfigUnreadable(path)   # present but not readable — a different problem
-else:
-    with fp:
-        return json.load(fp)
-```
-
-**Symptom: `os.access(path, os.R_OK, effective_ids=True)` raised `NotImplementedError` in
-production and not on the developer's laptop.** Cause: *"`effective_ids` may not be supported
-on your platform; you can check whether or not it is available using
-`os.supports_effective_ids`. If it is unavailable, using it will raise a
-`NotImplementedError`."* Fix: do not repair the check — remove it. If you genuinely need the
-pre-flight for a user-facing message rather than for control flow, gate it on the capability
-set and say which identity you asked about.
-
-```python
-if "effective_ids" in os.supports_effective_ids:
-    readable = os.access(path, os.R_OK, effective_ids=True)
-else:
-    readable = os.access(path, os.R_OK)     # answers about the real uid; say so in the UI
-```
+**★ Symptom: the doctest suite collects nothing on the production interpreter and everything
+locally.** Cause: `-OO` is documented as *"Do `-O` and also discard docstrings"*, and doctest
+is documented to search docstrings — *"The module docstring, and all function, class and
+method docstrings are searched"*. With the docstrings discarded there is nothing left to
+search. (The doctest page itself does not mention `-OO`; this is the consequence of the two
+documented sentences, not a quote.) Fix: never run a doctest suite under an optimized
+interpreter — and if docstrings carry executable examples you rely on, that is one more
+reason `-OO` is not a deployment default.
 
 **Symptom: a CLI's help text is empty in production.** Cause: `-OO` is documented as *"Do
-`-O` and also discard docstrings"*, and the tool builds its help from `__doc__`. It is the
-same class of defect as the missing `assert` — the interpreter removed something the code
-depends on existing. Fix: never derive runtime behaviour from docstrings; keep help text in
-a string constant the optimiser does not touch.
+`-O` and also discard docstrings"*, and the tool builds its help from `__doc__` — Click, for
+one, documents that *"For commands, the docstring of the function is automatically used if
+provided."* It is the same class of defect as the missing `assert`: the interpreter removed
+something the code depends on existing. Fix: never derive runtime behaviour from docstrings;
+keep help text in a string constant the optimiser does not touch.
+
+```python
+HELP = "Reconcile settlements for a date range."
+@click.command(help=HELP)
+def reconcile():
+    """Reconcile settlements for a date range."""   # documentation only, not the help text
+```
 
 ## Interview questions
-
-**★ The `os.access` entry has a second note, about network filesystems. Why does it matter to
-the width argument?** Because it removes the last defence of the check-first shape. The first
-note is the race — the check goes stale between checking and opening, and an attacker can
-exploit the window. The second says the check can be wrong with no race and no attacker at
-all: *"I/O operations may fail even when `access()` indicates that they would succeed,
-particularly for operations on network filesystems which may have permissions semantics
-beyond the usual POSIX permission-bit model."* And a third sentence says it may not be asking
-about the right principal: it *"Use[s] the real uid/gid"* while *"most operations will use
-the effective uid/gid"*. Stale, wrong model, wrong identity — the `try` around `open()` has
-none of the three, because it is the operation whose result you wanted in the first place.
 
 **★ Why is `except AssertionError` never a real guard?**
 Because the statement it is guarding may not be in the program. The reference is unambiguous:
@@ -283,6 +245,25 @@ benefit of a developer; anything a caller can cause is an `if` and a `raise`. Th
 [05b](05b-assert-is-not-validation.md)'s argument, and the `except AssertionError` clause is
 the tell that the distinction was missed.
 
+**★ What exactly does `-O` do?**
+Two things, and it is worth being able to recite them because most of what people assume is
+not in the documentation at all: *"Remove assert statements and any code conditional on the
+value of `__debug__`"*, plus a `.opt-1` tag on the cached bytecode filename. `-OO` adds
+*"discard docstrings"* and tags `.opt-2`. That is the entire documented behaviour — no
+inlining, no constant folding, nothing described as making code faster. The correct summary
+is that `-O` is a *deletion* flag, not an optimiser, and the things it deletes are the ones a
+careful codebase put there deliberately.
+
+**★ You cannot see `-O` on any command line. Name the ways it can still be in effect.**
+Three. The environment: *"If this is set to a non-empty string it is equivalent to specifying
+the `-O` option. If set to an integer, it is equivalent to specifying `-O` multiple times"* —
+so a base image's `ENV PYTHONOPTIMIZE=2`, a pod spec or a CI default silently applies `-OO`.
+Pre-compiled bytecode: optimization happens at compile time, so a `.pyc` produced by
+`compileall -o 1` carries the deletions regardless of how the interpreter was started. And a
+wrapper: an entrypoint script, a supervisor unit or a `Makefile` target that inserts the flag
+between your `docker run` and the interpreter. The only reliable answer comes from inside the
+process — `sys.flags.optimize`.
+
 **★ Name the kinds of ambient state that decide whether a call raises at all.**
 Four appear in the standard library and cover most real cases. A library-level context
 object, `decimal` being the model — per-thread, with a `traps` list that decides whether a
@@ -293,28 +274,27 @@ rather than the command line. And the platform, where `os.access` may report suc
 filesystem whose permission semantics it cannot express, and `os.path.exists` may report
 `False` for a file it merely cannot `stat`. What they have in common is that none of them are
 visible in the file containing the `try`, which is why "read the handler and the suite" is a
-necessary but not sufficient review.
+necessary but not sufficient review. The fourth is [06s](06s-the-check-that-lies.md)'s
+subject, and it is the one where the guard runs and still misleads you.
 
-**★ `os.path.exists()` returned `False` for a file that is definitely there. Give two
-documented reasons.**
-Broken symlink and unreadable parent. The docs cover both in the same paragraph: it *"Returns
-`False` for broken symbolic links"*, and *"On some platforms, this function may return `False`
-if permission is not granted to execute `os.stat()` on the requested file, even if the path
-physically exists."* The second is the operationally nastier one, because it converts a
-permissions problem into a "not found" and sends whoever is debugging in the wrong direction
-entirely — they go looking for a missing deployment artefact. `os.path.lexists` fixes the
-symlink half by design; nothing fixes the permissions half, which is the argument for opening
-the file and letting `FileNotFoundError` and `PermissionError` stay distinct.
+**`__debug__` or `sys.flags.optimize` — which should a startup check use?**
+`sys.flags.optimize`, unless all you care about is "were assertions compiled in". `__debug__`
+is a bool: it is documented as *"true if Python was not started with an `-O` option"*, so it
+collapses `-O` and `-OO` into one `False` and cannot tell you that docstrings were discarded
+too. `sys.flags` is *"a named tuple [that] exposes the status of command line flags"* with
+`flags.optimize` covering *"`-O` or `-OO`"* as an integer, so `> 1` is the docstring
+question. Use `__debug__` in code (it is the constant the compiler folds), and
+`sys.flags.optimize` in the message you log.
 
-**`os.access` has an `effective_ids` parameter. Does using it fix the security note?**
-No, and reaching for it usually means the first note was not read. `effective_ids` fixes only
-the *identity* mismatch — *"`access()` will perform its access checks using the effective
-uid/gid instead of the real uid/gid"* — and it does not exist everywhere: *"`effective_ids`
-may not be supported on your platform … If it is unavailable, using it will raise a
-`NotImplementedError`."* The race is untouched, and so is the network-filesystem note. You
-would have swapped one wrong answer for a more precisely wrong answer, on the platforms that
-support it. The documented recommendation is to stop asking and open the file.
+**Can you turn assertions back on at runtime after starting with `-O`?**
+No. Two independent reasons, and both are documented. The value is frozen — *"Assignments to
+`__debug__` are illegal. The value for the built-in variable is determined when the
+interpreter starts"* — and the constants reference adds that assigning to it raises
+`SyntaxError`, so the attempt does not even compile. More fundamentally, there is nothing to
+turn on: the code generator emitted no bytecode for the statement, so even if the flag flipped
+there would be no instruction to execute. The only remedy is a new process without the flag,
+and a `__pycache__` that does not still hold the optimized bytecode.
 
 ---
 
-← Prev: [Ambient state](06j-ambient-state-the-guard-cannot-see.md) · Index: [EAFP vs LBYL](README.md) · Next → [The cost argument](07-the-cost-argument.md)
+← Prev: [`catch_warnings` and tests](06u-catch-warnings-and-the-test-runner.md) · Index: [EAFP vs LBYL](README.md) · Next → [The check that lies](06s-the-check-that-lies.md)

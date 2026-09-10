@@ -22,7 +22,7 @@ assignment is late enough to count as inside the block and does get cleanup. And
 nesting is not sugar for saving a line; it is the structural repair for the leak, because it
 turns the second acquisition into code running inside the first manager's suite. When the
 object cannot be made to fit the protocol at all, that is
-**`contextlib`, when the object does not cooperate** *(not written yet)*.**
+[06q](06q-contextlib-when-the-object-does-not-cooperate.md).**
 
 ## The guarantee is conditional on `__enter__` succeeding
 
@@ -285,4 +285,4 @@ only `__enter__` may acquire it.
 
 ---
 
-← Prev: [`with` is the sanctioned form](06o-with-is-the-sanctioned-form.md) · Index: [EAFP vs LBYL](README.md) · Next → [The jump that discards](06k-the-jump-that-discards.md)
+← Prev: [`with` is the sanctioned form](06o-with-is-the-sanctioned-form.md) · Index: [EAFP vs LBYL](README.md) · Next → [`contextlib` when the object won't cooperate](06q-contextlib-when-the-object-does-not-cooperate.md)

@@ -139,7 +139,8 @@ a manager missing `__exit__` fails before acquiring anything. This is the benign
 the ordering — nothing leaked — but it is also why the traceback points at the `with` line
 rather than at any code you wrote inside the manager. Fix: define both halves of the protocol,
 or wrap the object in `contextlib.closing` and let it supply the missing half
-(**`contextlib`, when the object does not cooperate** *(not written yet)*).
+([06q](06q-contextlib-when-the-object-does-not-cooperate.md), and
+[06x](06x-closing-a-close-method-is-enough.md) for `closing` itself).
 
 ```python
 class Session:
