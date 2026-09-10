@@ -94,8 +94,8 @@ it has a dedicated message for it. The checker picks between two:
 
 | Code | Message |
 |---|---|
-| `TS2580` | *"Cannot find name '{0}'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`."* |
-| `TS2591` | *"Cannot find name '{0}'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` **and then add 'node' to the types field in your tsconfig**."* |
+| `TS2580` | *"Cannot find name '\{0\}'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`."* |
+| `TS2591` | *"Cannot find name '\{0\}'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` **and then add 'node' to the types field in your tsconfig**."* |
 
 The condition is exactly `compilerOptions.types` being set. **`TS2591` is the
 compiler telling you it noticed you have a `types` array**, and the extra clause
