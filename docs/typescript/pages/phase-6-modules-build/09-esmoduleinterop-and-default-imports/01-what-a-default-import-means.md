@@ -112,7 +112,7 @@ it models the namespace object properly — which is more correct and **breaks
 exactly this code**:
 
 > **TS2497:** *"This module can only be referenced with ECMAScript
-> imports/exports by turning on the '{0}' flag and referencing its default
+> imports/exports by turning on the '\{0\}' flag and referencing its default
 > export."*
 
 ⚠️ **So `esModuleInterop` is not purely permissive.** It *allows* a default
