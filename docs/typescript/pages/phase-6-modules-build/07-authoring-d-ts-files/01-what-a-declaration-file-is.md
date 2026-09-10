@@ -66,7 +66,7 @@ console.log("loading widgets");                      // ❌ TS1036
 > **TS1183:** *"An implementation cannot be declared in ambient contexts."*
 > **TS1039:** *"Initializers are not allowed in ambient contexts."*
 > **TS1036:** *"Statements are not allowed in ambient contexts."*
-> **TS1040:** *"'{0}' modifier cannot be used in an ambient context."*
+> **TS1040:** *"'\{0\}' modifier cannot be used in an ambient context."*
 > **TS1038:** *"A 'declare' modifier cannot be used in an already ambient
 > context."*
 
