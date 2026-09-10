@@ -52,7 +52,7 @@ Three independent sources of difference, and each has a different remedy.
 |---|---|---|
 | **Deliberate deviations** | ruff formats a construct differently on purpose — trailing end-of-line comments, pragma comments ignored for line width, `assert` messages, tuples | [07c](07c-known-deviations-from-black.md), [07d](07d-layout-deviations-from-black.md) |
 | **Style-guide drift** | ruff's stable style is revised in a minor release (the 2025 style in 0.9.0, the 2026 style in 0.15.0); Black revises its own yearly | this page, and upgrading (**14** *(not written yet)*) |
-| **Scope ruff added** | f-string expressions, Python blocks in Markdown, code in docstrings (opt-in) — places Black leaves alone | this page, formatter settings (**07e** *(not written yet)*) |
+| **Scope ruff added** | f-string expressions, Python blocks in Markdown, code in docstrings (opt-in) — places Black leaves alone | this page, formatter settings ([07e](07e-formatter-settings.md)), code examples ([07g](07g-docstring-and-markdown-code.md)) |
 
 ### The style guide moves in minor releases
 
@@ -139,7 +139,7 @@ higher."*
 > *"Given the focus on Black compatibility (and unlike formatters like YAPF), Ruff does not currently expose any other configuration options."*
 
 The whole surface — `line-length`, `indent-width`, and the `[tool.ruff.format]` table — is
-**07e** *(not written yet)*. One property matters before you migrate: `line-length` is a
+[07e](07e-formatter-settings.md). One property matters before you migrate: `line-length` is a
 *target*, not a limit. The settings reference: *"While the formatter will attempt to format lines
 such that they remain within the `line-length`, it isn't a hard upper bound, and formatted lines
 may exceed the `line-length`."* Black has the same property; it is why `E501` and the formatter

@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **Linter + formatter in one, rule selection, `--fix`, CI and pre-commit.**
 
-:::caution In progress — 17 chunks written
+:::caution In progress — 21 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -35,10 +35,13 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 15 | **[07b · Migrating from Black](07b-migrating-from-black.md)** | One reviewed reformat commit: translate Black's settings (🔴 its `exclude` is a regex, ruff's a glob list; its `target-version` a list), `--diff` first, `.git-blame-ignore-revs`, remove Black from every consumer at once |
 | 16 | **[07c · Known deviations from Black](07c-known-deviations-from-black.md)** | The deviations that protect meaning: end-of-line comments stay by their code, 🔴 pragma comments (`# noqa`, `# type:`) are ignored for line width so they never move off the line they suppress, width is Unicode columns |
 | 17 | **[07d · Layout deviations from Black](07d-layout-deviations-from-black.md)** | `assert` breaks the message, tuples always parenthesised, call args expanded only when forced, older-Black choices, f-string formatting — and 🔴 layouts chosen by the target Python version |
+| 18 | **[07e · Formatter settings](07e-formatter-settings.md)** | The whole formatter surface; `line-length`/`indent-width` are top-level because 🔴 the linter reads them too; `quote-style` and its two documented exceptions; `nested-string-quote-style` (no effect below 3.12) |
+| 19 | **[07f · Indentation, commas and line endings](07f-indentation-commas-and-line-endings.md)** | `indent-style`, the magic trailing comma, `line-ending` (🔴 never `native` on a mixed team), format-only `exclude` — which a path passed explicitly ignores unless `force-exclude` is on |
+| 20 | **[07g · Docstring and Markdown code](07g-docstring-and-markdown-code.md)** | Markdown Python fences formatted by default since 0.16.0 (only labelled ones); docstring examples opt-in — and 🔴 there unlabelled blocks are assumed Python, so `ls -la` becomes `ls - la`; `fmt:off` HTML comments |
+| 21 | **[07h · Format suppression comments](07h-format-suppression-comments.md)** | `# fmt: off`/`on` and `# fmt: skip` work on statements only — 🔴 inside an expression they silently do nothing; formatting pragmas, `noqa` and isort action comments are three systems that never overlap |
 
 ## Still to come
 
-- **Formatter settings** *(not written yet)*
 - **Formatter and lint-rule conflicts** *(not written yet)*
 - **`target-version` and `requires-python`** *(not written yet)*
 - **Import sorting** *(not written yet)*

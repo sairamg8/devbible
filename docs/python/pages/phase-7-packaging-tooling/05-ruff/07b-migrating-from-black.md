@@ -131,7 +131,7 @@ makes some different decisions than Black, and so more deviations should be expe
 procedure is the same; the review is longer. YAPF's region pragmas keep working: *"Like Black,
 Ruff will also recognize YAPF's `# yapf: disable` and `# yapf: enable` pragma comments"*. YAPF's
 style knobs do not carry over at all — ruff *"does not currently expose any other configuration
-options"* beyond the small set in **07e** *(not written yet)*.
+options"* beyond the small set in [07e](07e-formatter-settings.md).
 
 ## Gotchas
 
