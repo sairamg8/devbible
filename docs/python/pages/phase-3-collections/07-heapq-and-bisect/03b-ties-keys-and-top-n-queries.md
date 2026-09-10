@@ -75,7 +75,7 @@ return [elem for (k, order, elem) in result]
 Two consequences:
 
 - **`key` runs exactly once per input element** — N calls, never more. (Contrast `bisect`,
-  where the key is re-run on every probe — **07b · The `key=` parameter** *(not written yet)*.) An expensive key — a distance calculation, a parsed timestamp — is paid
+  where the key is re-run on every probe — [07b](07b-the-key-parameter.md).) An expensive key — a distance calculation, a parsed timestamp — is paid
   once per item, which is the minimum possible.
 - **Entries are `(key, unique_index, element)`**, so tuple comparison is always decided by the
   first two positions. The element is carried, never compared. A top-N over dicts, ORM objects
