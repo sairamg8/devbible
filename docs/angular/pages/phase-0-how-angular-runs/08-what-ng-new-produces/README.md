@@ -40,7 +40,11 @@ fails the build for the whole site.
 |---|---|---|
 | 01 | **`ng new` is two schematics** *(not written yet)* | 🔴 `ng-new` runs `workspace` then `application` — and which file comes from which |
 | 02 | **The workspace layer** *(not written yet)* | What the outer schematic writes, before any application exists |
-| 03 | **The `src` directory** *(not written yet)* | The application's own files, and which are conventions |
+| 03 | **[The `src` directory](03-the-src-directory.md)** | The four files, `index.html` from its template, the `<base href>` the router needs, the root element |
+| 03b | **[`index.html` is a shell the build rewrites](03b-index-html-is-a-shell-the-build-rewrites.md)** | No `<script>` tags, no `index` key, and the `<title>` `utils.classify` spells |
+| 03c | **[`styles.css` and its extension](03c-styles-css-and-its-extension.md)** | One comment line, `--style`, and the `tailwind` rewrite |
+| 03d | **[`public/` is a sibling of `src/`](03d-public-is-a-sibling-of-src.md)** | Copied as-is, never fingerprinted — and why `src/assets/` silently fails |
+| 03e | **[`main.ts` and the load-bearing `.catch`](03e-main-ts-and-the-load-bearing-catch.md)** | Three imports, one call, and what a missing rejection handler costs |
 | 04 | **The root component** *(not written yet)* | `signal`, `protected`, `readonly` — and the zoneless spec |
 
 ⚠️ **Chunks past 04 are not yet planned**, because the research bank for this topic was cut off
