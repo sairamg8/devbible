@@ -7,9 +7,9 @@ sidebar_position: 6
 <span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-08 against the **TypeScript handbook** (*Type Manipulation →
-> Indexed Access Types*). `TS2713` — *"Cannot access '{0}.{1}' because '{0}' is a
+> Indexed Access Types*). `TS2713` — *"Cannot access '\{0\}.\{1\}' because '\{0\}' is a
 > type, but not a namespace. Did you mean to retrieve the type of the property
-> '{1}' in '{0}' with '{0}[\"{1}\"]'?"* — and `TS2536` were read out of the
+> '\{1\}' in '\{0\}' with '\{0\}[\"\{1\}\"]'?"* — and `TS2536` were read out of the
 > **compiler's own diagnostic table**, and `Awaited`/`ReturnType` directly from
 > `lib.es5.d.ts`. ⚠️ Install inspected: TypeScript **6.0.3**, not the 7.0.2 this
 > corpus targets. **No console block** — no sandbox run covers this phase.
