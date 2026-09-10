@@ -107,7 +107,7 @@ targeting 3.13 or earlier it must keep them, because the unparenthesised form is
 there. (PEP 758 allows the bare form only without an `as` clause, so `except (A, B) as exc:`
 keeps its parentheses on every target.) A project whose `target-version` is wrong in either direction gets either a missed style
 change or — far worse, if forced — code that does not parse on the interpreter it deploys to.
-Where the target version comes from is **09b** *(not written yet)*.
+Where the target version comes from is [09b](09b-requires-python-inference.md).
 
 ## What `ruff format` touches that Black does not
 

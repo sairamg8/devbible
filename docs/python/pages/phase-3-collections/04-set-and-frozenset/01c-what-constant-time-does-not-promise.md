@@ -239,7 +239,7 @@ Because NaN broke the "collisions are uncommon" assumption. Every NaN hashed to 
 compare equal, so a set or dict holding many NaNs put them all on one chain and building it was
 quadratic. Since 3.10 NaN hashes by identity, which spreads distinct NaN objects across the table.
 The side effect is that a set does not de-duplicate NaNs at all — each distinct NaN object is its
-own element (**9** *(not written yet)*).
+own element ([7](07-equal-but-distinct-elements.md)).
 
 **Why are `str` hashes randomised, and what does that protect?**
 So that nobody outside the process can predict which strings collide. Without it, an attacker who

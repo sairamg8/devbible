@@ -154,9 +154,9 @@ class ToySet:
 
 Read `_probe` against the four steps and three later chunks stop being surprising: iteration walks
 slots, so order is whatever the hashes made it ([6](06-iteration-order.md)); `add` keeps the element
-already stored, so the first of several equal values wins (**9** *(not written yet)*);
+already stored, so the first of several equal values wins ([7](07-equal-but-distinct-elements.md));
 and `_grow` never re-hashes, so an element whose hash changed after insertion is never re-filed
-(**10** *(not written yet)*).
+([8](08-custom-classes-as-elements.md)).
 
 Two details of the model are load-bearing rather than cosmetic. The growth check keeps the table
 under about 60% full — CPython's condition is literally `fill*5 < mask*3` in `set_add_entry` — and

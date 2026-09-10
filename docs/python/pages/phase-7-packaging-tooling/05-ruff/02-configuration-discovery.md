@@ -198,7 +198,7 @@ line-length = 100
 configuration, defaults included, and ruff's default rule set is not your root's rule set. Fix:
 either `extend` the root, or — if the only goal was the interpreter version — set
 `requires-python` in that package's `[project]` table and leave `[tool.ruff]` out, so discovery
-still reaches the root (**09b** *(not written yet)* covers how a
+still reaches the root ([09b](09b-requires-python-inference.md) covers how a
 `requires-python` is found).
 
 ```toml

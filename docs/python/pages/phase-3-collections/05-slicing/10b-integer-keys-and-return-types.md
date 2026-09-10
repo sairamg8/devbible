@@ -182,4 +182,4 @@ constructor accepts a single sequence argument.
 
 ---
 
-← Prev: [10 · Slicing your own class](10-slicing-your-own-class.md) · [Topic index](README.md)
+← Prev: [10 · Slicing your own class](10-slicing-your-own-class.md) · [Topic index](README.md) · Next →: [10c · `__setitem__`, `__delitem__` and the ABCs](10c-setitem-delitem-and-the-abcs.md)

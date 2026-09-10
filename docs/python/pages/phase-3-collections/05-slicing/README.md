@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **`[start:stop:step]`, negatives, slice assignment, and slices as copies.**
 
-:::caution In progress — 20 chunks written
+:::caution In progress — 22 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -38,10 +38,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 18 | **[09c · Deletion cost and types](09c-deletion-cost-and-types.md)** | A list deletion moves the tail, a bytearray front deletion only advances its start, del a forgets a name, and the… |
 | 19 | **[10 · Slicing your own class](10-slicing-your-own-class.md)** | A slice reaches your class as a slice object in __getitem__ that validates nothing — raise TypeError for the kind,… |
 | 20 | **[10b · Integer keys and return types](10b-integer-keys-and-return-types.md)** | Convert integer keys with operator.index, never int(), and choose the slice return type on purpose — subclasses of… |
+| 21 | **[10c · `__setitem__`, `__delitem__` and the ABCs](10c-setitem-delitem-and-the-abcs.md)** | Writes and deletes reach your class with a slice key; no ABC mixin handles it, and a validating list subclass is… |
+| 22 | **[10d · Typing and multi-dimensional keys](10d-typing-and-multidimensional-keys.md)** | Type __getitem__ with two overloads, not a union; a comma passes a tuple, which a 2-D class interprets per axis and a… |
 
 ## Still to come
 
-- **`__setitem__`, `__delitem__` and the ABCs — writing through a slice in your own class** *(not written yet)*
 - **Slicing in real code — pagination, batching, fixed-width records** *(not written yet)*
 
 ---

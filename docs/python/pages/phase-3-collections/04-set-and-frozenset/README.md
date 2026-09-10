@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **O(1) membership, dedupe, and set algebra instead of a nested loop.**
 
-:::caution In progress — 18 chunks written
+:::caution In progress — 21 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -36,11 +36,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 16 | **[5 · frozenset — hashable sets](05-frozenset-hashable-sets.md)** | A `set` has no hash because it can change; `frozenset` is the hashable form — sets of sets, set-keyed dicts and caches, unordered… |
 | 17 | **[5b · frozenset beside set](05b-frozenset-beside-set.md)** | Mixed operations return the left operand's type, a frozenset is not an instance of `set`, and `frozen=True` does not freeze a… |
 | 18 | **[6 · Iteration order](06-iteration-order.md)** | A set iterates in slot order — strings reorder in every process, small ints look sorted by accident, equal sets can iterate differently… |
+| 19 | **[7 · Equal but distinct elements](07-equal-but-distinct-elements.md)** | `1`, `1.0`, `True` and `Decimal("1")` are one element and `True in {1}` is `True`; NaN equals nothing, so every NaN object… |
+| 20 | **[8 · Custom classes as elements](08-custom-classes-as-elements.md)** | Identity by default, unhashable once you define `__eq__`, correct only when `__eq__` and `__hash__` read the same unchanging… |
+| 21 | **[8b · When identity is the equality you want](08b-identity-elements.md)** | Connections, tasks and listeners belong in a set as themselves — the strong reference is a registry's leak and a background task's… |
 
 ## Still to come
 
-- **Equal but distinct elements — `1`, `1.0` and `True`, and NaN** *(not written yet)*
-- **Custom classes as elements** *(not written yet)*
 - **Diffing ID sets from a database or an API** *(not written yet)*
 
 ---

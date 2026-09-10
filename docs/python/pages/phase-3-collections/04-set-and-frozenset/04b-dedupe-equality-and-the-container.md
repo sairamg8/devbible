@@ -32,7 +32,7 @@ A set cannot hold two elements that compare equal, and Python's idea of equal is
 
 So `[1, 1.0, True]` dedupes to one element, and by loss 3 in [4](04-dedupe-and-what-it-destroys.md) it is the `1` that arrived first — a
 column of flags and counts mixed together silently collapses. The full treatment of `1`, `1.0`,
-`True`, `Decimal`, `Fraction` and NaN is **Equal but distinct elements** *(not written yet)*.
+`True`, `Decimal`, `Fraction` and NaN is [7 · Equal but distinct elements](07-equal-but-distinct-elements.md).
 
 The opposite failure is values you consider equal that Python does not. Strings compare by code
 point:

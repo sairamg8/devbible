@@ -29,8 +29,8 @@ type, a plain list, or a lazy view. The cleanest answer to most of these is to d
 positions in a `list` or a `range` and let *it* interpret the slice.**
 
 Integer keys and return types are [10b](10b-integer-keys-and-return-types.md); writing and deleting
-through a slice, the ABCs and type hints are **10c · `__setitem__`, `__delitem__` and the ABCs**
-*(not written yet)*.
+through a slice and the ABCs are [10c](10c-setitem-delitem-and-the-abcs.md); type hints and tuple
+keys are [10d](10d-typing-and-multidimensional-keys.md).
 
 ## What arrives in `__getitem__`
 

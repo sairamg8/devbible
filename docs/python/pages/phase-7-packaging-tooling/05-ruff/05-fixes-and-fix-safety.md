@@ -122,7 +122,7 @@ def exchange_rate(currency: str) -> float:
 
 Whether this fix is safe depends on `target-version` — below 3.10 it is unsafe, at 3.10 and
 above the `X | Y` syntax exists at runtime. That coupling is why a wrong `target-version`
-produces wrong fixes (**09b** *(not written yet)*).
+produces wrong fixes ([09b](09b-requires-python-inference.md)).
 
 ## Safe, with an exception — `F401`
 

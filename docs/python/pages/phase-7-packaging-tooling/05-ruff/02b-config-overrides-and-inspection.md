@@ -40,7 +40,7 @@ A passed file also changes Python-version inference: *"If a configuration file i
 directly, Ruff does not attempt to infer a missing `target-version`."* In the 0.16.6 source a
 `pyproject.toml` passed this way still has its *own* `[project] requires-python` read when
 `[tool.ruff]` sets no `target-version`; what stops is the search of *other* files — which is what
-a passed `ruff.toml` depends on (**09b** *(not written yet)*).
+a passed `ruff.toml` depends on ([09b](09b-requires-python-inference.md)).
 
 ## `--config` with `KEY = VALUE`: one setting, everywhere
 

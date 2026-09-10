@@ -95,7 +95,7 @@ can change freely. The glossary's claim about immutable objects — *"Immutable 
 thread-safe because their state cannot be modified after creation"* — covers the frozenset's
 membership; it says nothing about the state of the objects inside it. Elements whose hash depends
 on state that changes are broken in any set, frozen or not — that is
-**Custom classes as elements** *(not written yet)*.
+[8 · Custom classes as elements](08-custom-classes-as-elements.md).
 
 ## `frozen=True` on a dataclass does not freeze a set field
 

@@ -57,7 +57,7 @@ version = "1.4.0"
 requires-python = ">=3.12"      # ruff infers target-version = "py312" from this
 ```
 
-How ruff finds that `requires-python` — and when it does not — is **09b** *(not written yet)*.
+How ruff finds that `requires-python` — and when it does not — is [09b](09b-requires-python-inference.md).
 
 ## What it drives
 
@@ -235,4 +235,4 @@ production, which is why a conservative floor is the safer mistake.
 
 ---
 
-← Prev: [08b · isort settings and the fix/format loop](08b-isort-settings-and-the-fix-format-loop.md) · [Topic index](README.md)
+← Prev: [08b · isort settings and the fix/format loop](08b-isort-settings-and-the-fix-format-loop.md) · [Topic index](README.md) · Next → [09b · requires-python inference](09b-requires-python-inference.md)

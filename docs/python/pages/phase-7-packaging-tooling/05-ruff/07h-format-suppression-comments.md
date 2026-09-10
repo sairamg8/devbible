@@ -126,7 +126,7 @@ blocks"*, and whole blocks can additionally be fenced off with `<!-- fmt:off -->
 The isort action comments are linter features: *"Ruff respects isort's action comments
 (`# isort: skip_file`, `# isort: on`, `# isort: off`, `# isort: skip`, and `# isort: split`)"* —
 with the caveat that *"Unlike isort, Ruff does not respect action comments within docstrings."*
-Import sorting in full is **10** *(not written yet)*.
+Import sorting in full is [10](10-import-sorting.md).
 
 The two systems do cooperate in one place: the formatter never moves a pragma comment, because
 pragma comments (`# noqa`, `# type:` and others) *"are ignored when computing the width of a

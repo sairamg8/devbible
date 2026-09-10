@@ -110,9 +110,10 @@ not.
 
 A fixed seed makes string order repeat between runs of the same build. It does not make it
 *meaningful* — it is still slot order, and it still changes when the table size, the history, the
-build or the Python version changes. It also switches off the denial-of-service protection the salt
-exists for ([1c](01c-what-constant-time-does-not-promise.md)), which is why it belongs in a debugging
-session, not in a runtime image. The general case against persisting or depending on hash values is
+build or the Python version changes. And it weakens the denial-of-service protection the salt
+exists for ([1c](01c-what-constant-time-does-not-promise.md)) — seed `0` disables randomisation
+outright, and any fixed seed makes the hashes the same in every process — which is why it belongs in
+a debugging session, not in a runtime image. The general case against persisting or depending on hash values is
 [tuple · 3b](../02-tuple/03b-what-a-hash-value-is-not.md).
 
 ## The fix: `sorted()` wherever order leaves the set
@@ -270,4 +271,4 @@ population, and therefore the sample, reproducible.
 
 ---
 
-← Prev: [frozenset beside set](05b-frozenset-beside-set.md) · [Topic index](README.md) · Next → **Equal but distinct elements** *(not written yet)*
+← Prev: [frozenset beside set](05b-frozenset-beside-set.md) · [Topic index](README.md) · Next → [Equal but distinct elements](07-equal-but-distinct-elements.md)

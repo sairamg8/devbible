@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **Linter + formatter in one, rule selection, `--fix`, CI and pre-commit.**
 
-:::caution In progress — 24 chunks written
+:::caution In progress — 28 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -42,11 +42,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 22 | **[08 · Formatter/lint conflicts](08-formatter-lint-conflicts.md)** | The rules that fight the formatter (indentation, quotes, `COM812`/`COM819`, `D203`, `ISC002`) — none default, ignore them all; 🔴 the warning comes from `ruff format` only and is conditional; `E501` needs a policy; `ISC001` stopped conflicting in 0.9.0 |
 | 23 | **[08b · isort settings and the fix/format loop](08b-isort-settings-and-the-fix-format-loop.md)** | `lines-after-imports` (only -1/1/2), `lines-between-types` (0/1), trailing-comma settings that must agree; Black + ruff lint need one `line-length`; 🔴 a settledness check — run fix+format twice, the second pass must change nothing |
 | 24 | **[09 · target-version](09-target-version.md)** | The oldest Python the code must run on — drives `UP` rules, fix safety, version-related syntax errors and formatter layout; 🔴 too high ships syntax production cannot parse; `target-version` beats `requires-python` when both are set |
+| 25 | **[09b · requires-python inference](09b-requires-python-inference.md)** | ruff reads `requires-python` beside the *found configuration*, not the linted file's package — 🔴 a monorepo sub-package without `[tool.ruff]` gets the root's version; no-config inference depends on the working directory; `--config` disables it |
+| 26 | **[10 · Import sorting](10-import-sorting.md)** | Lint rule `I001` with a fix (default since 0.16.0), not the formatter; near-isort `profile = "black"`; 🔴 first-party is decided on disk under `src` — wrong sections almost always mean a missing `src` root; `# isort: split` for side-effect imports |
+| 27 | **[10b · isort settings](10b-isort-settings.md)** | `[tool.ruff.lint.isort]`, kebab-case (🔴 underscore keys are a parse error, `[tool.isort]` is never read); `known-*` overrides vs fixing `src`; `required-imports` needs `I002` selected; the layout switches and which are formatter-safe |
 
 ## Still to come
 
-- **`target-version` and `requires-python`** *(not written yet)*
-- **Import sorting** *(not written yet)*
 - **`ruff` in CI** *(not written yet)*
 - **Pinning ruff** *(not written yet)*
 - **Editor integration** *(not written yet)*

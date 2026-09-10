@@ -55,8 +55,8 @@ ruff installs as a prebuilt wheel, so no Rust toolchain is involved:
 |---|---|---|
 | flake8 core (pyflakes `F`, pycodestyle `E`/`W`) | `ruff check`, selectors `F`, `E`, `W` | [03](03-rule-codes-and-selection.md) |
 | flake8-bugbear, -comprehensions, -simplify, … | selectors `B`, `C4`, `SIM`, … | [03](03-rule-codes-and-selection.md) |
-| isort | rule `I001` + `ruff check --select I --fix` | **10** *(not written yet)* |
-| pyupgrade | selector `UP`, driven by `target-version` | **09b** *(not written yet)* |
+| isort | rule `I001` + `ruff check --select I --fix` | [10](10-import-sorting.md) |
+| pyupgrade | selector `UP`, driven by `target-version` | [09b](09b-requires-python-inference.md) |
 | autoflake | the fixes for `F401` (unused import) and `F841` (unused variable) | [05](05-fixes-and-fix-safety.md) |
 | pydocstyle | selector `D` plus `lint.pydocstyle.convention` | [03](03-rule-codes-and-selection.md) |
 | yesqa | `RUF100` (unused `noqa`) | [06c](06c-unused-suppressions-and-adoption.md) |

@@ -118,7 +118,7 @@ Storing the hash beside the reference buys three things, all implementation deta
 - **The set never notices a hash change.** If an element's hash changes after insertion, the stale
   value stays in the slot — and, by the previous bullet, travels with the element into any set
   built from this one. That is harmless for built-in immutable types and the whole problem in
-  **10** *(not written yet)*.
+  [8](08-custom-classes-as-elements.md).
 
 `len(s)` is not counted either: *"The number of elements is stored in the object, so `len()`
 does not need to count them."* ([Time complexity](https://docs.python.org/3.14/library/time-complexity.html),
@@ -186,7 +186,7 @@ rollout_wave = random.sample(regions, 2)
 **Symptom: after fixing a bug that mutated elements in place, `pending = set(pending)` still cannot
 find them.** Cause: copying a set copies each entry's *stored* hash, so a stale hash moves into the
 new table with the element; nothing is re-hashed. Fix: rebuild from a non-set iterable, which
-hashes every element afresh — and then stop mutating hashed fields (**10** *(not written yet)*).
+hashes every element afresh — and then stop mutating hashed fields ([8](08-custom-classes-as-elements.md)).
 
 ```python
 pending = set(list(pending))              # a list forces a fresh hash per element
