@@ -1,0 +1,65 @@
+---
+title: "06 · collections — nine containers that replace the code most people hand-roll, each with a mechanism that decides its cost and a boundary where it stops behaving like the built-in it resembles"
+sidebar_label: "Overview"
+sidebar_position: 0
+---
+
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-09-10 against the Python 3.14 documentation — [`collections`](https://docs.python.org/3.14/library/collections.html), [`collections.abc`](https://docs.python.org/3.14/library/collections.abc.html), [`queue`](https://docs.python.org/3.14/library/queue.html), [`pickle`](https://docs.python.org/3.14/library/pickle.html), [`copy`](https://docs.python.org/3.14/library/copy.html), [`json`](https://docs.python.org/3.14/library/json.html), [`functools.lru_cache`](https://docs.python.org/3.14/library/functools.html#functools.lru_cache) — and CPython source at the [**v3.14.7**](https://github.com/python/cpython/tree/v3.14.7) tag (`Lib/collections/__init__.py`, `Modules/_collectionsmodule.c`, `Objects/odictobject.c`), labelled as implementation detail wherever the documentation is silent. Target: **Python 3.14.7**. Documentation-validated — **no sandbox run, no timings, no byte counts on any page in this topic**.
+
+**`defaultdict` is the group-by, `Counter` is the tally and the top-N, `deque` is the queue that `list.pop(0)` only pretends to be, `ChainMap` is layered configuration, `OrderedDict` is the reorderable mapping an LRU cache needs, and `namedtuple` is a record type with no per-instance dictionary. Each one is a small amount of code wrapped around a specific mechanism — a `__missing__` hook, a doubly-linked list of 64-slot blocks, a list of mappings searched in order, a linked list threaded through a dict — and every surprise it produces comes from that mechanism: a `defaultdict` read that inserts, a `Counter` that keeps zero counts, a `deque` iterator that refuses any append, a `ChainMap` write that lands in the caller's dict. This topic takes each type through its mechanism, its cost, the ways it fails in a running service, and the questions an interviewer uses to find out whether you know the difference.**
+
+:::caution In progress
+This topic is being written. The chunks below are complete and verified; the rest of the plan,
+listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
+:::
+
+## Chunks
+
+| # | Chunk | What it argues |
+|---|---|---|
+| 1 | **[01 · Nine types, three families](01-nine-types-three-families.md)** | 🔴 dict subclasses are real dicts; `ChainMap`/`User*` are ABC-built and fail `isinstance(x, dict)` and `json.dumps`; `deque` is registered, not inherited; `namedtuple` is a function — plus the hand-rolled-code-to-type table and `collections.abc` since 3.10 |
+| 2 | **[02 · `defaultdict` — a factory behind `d[k]`](02-defaultdict.md)** | `__missing__` and nothing else; group-by, distinct-per-key, inverted index, adjacency, per-key `Counter`; 🔴 the factory must build a new object and cannot see the key — `__missing__` on a `dict` subclass can; `format_map` vs `format(**m)`; switching `default_factory` off |
+
+## Still to come
+
+- **02b · `defaultdict` in production** *(not written yet)*
+- **03 · `Counter` — counting semantics** *(not written yet)*
+- **03b · `Counter` — top-N and per-group tallies** *(not written yet)*
+- **03c · `Counter` — multiset arithmetic** *(not written yet)*
+- **04 · `deque` — the block list underneath** *(not written yet)*
+- **04b · Bounded deques** *(not written yet)*
+- **04c · `deque` during iteration and across threads** *(not written yet)*
+- **05 · `namedtuple` from the factory side** *(not written yet)*
+- **06 · `ChainMap` — layered lookup** *(not written yet)*
+- **06b · `ChainMap` traps** *(not written yet)*
+- **07 · `OrderedDict` — what it still does** *(not written yet)*
+- **07b · `OrderedDict` as an LRU cache** *(not written yet)*
+- **08 · `UserList` and `UserDict` — wrappers, not funnels** *(not written yet)*
+- **08b · `UserString`** *(not written yet)*
+- **09 · Crossing a boundary — JSON, pickle, copy, `isinstance`** *(not written yet)*
+
+## Phase gate
+
+You are done with this topic when you can write *"page views per user per day, then the top ten
+users"* as `defaultdict(Counter)` plus `most_common(10)` with no index arithmetic; say in one
+sentence why a work queue is a `deque` and not a `list`, and why a `for` loop over that deque must
+not append to it; build a CLI-over-environment-over-defaults settings object that never writes into
+`os.environ`; and implement an LRU cache on `OrderedDict` — then explain why `functools.lru_cache`
+is usually the better answer.
+
+## Where this connects
+
+- **[Phase 3 — Collections in depth](../README.md)** is the phase this topic belongs to.
+- [01 · `list` internals](../01-list-internals/README.md) — the O(n) front of a list that `deque` exists to avoid, and the counting and top-N loops that `Counter` replaces.
+- [02 · `tuple`](../02-tuple/README.md) — owns everything about a named tuple *being a tuple*; this topic covers only the factory.
+- [03 · `dict`](../03-dict/README.md) — `__missing__`, `setdefault`, merging, subclassing and `UserDict` at their boundary with `dict`; this topic links there rather than repeating them.
+- [04 · `set` and `frozenset`](../04-set-and-frozenset/README.md) — `Counter` is the multiset a `set` cannot be.
+- [05 · Slicing deeply](../05-slicing/README.md) — why a `deque` cannot be sliced and what `islice` does instead.
+- **07 · `heapq` and `bisect`** *(not written yet)* — what `Counter.most_common(n)` calls underneath.
+- **08 · `copy` vs `deepcopy`** *(not written yet)*, **11 · Choosing a structure** *(not written yet)*.
+
+---
+
+← [Phase index](../README.md) · Start → [01 · Nine types, three families](01-nine-types-three-families.md)
