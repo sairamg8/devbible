@@ -11,11 +11,6 @@ sidebar_position: 0
 
 **O(1) membership, dedupe, and set algebra instead of a nested loop.**
 
-:::caution In progress — 23 chunks written
-This topic is being written. The chunks below are complete and verified; the rest of the plan,
-listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
-:::
-
 | # | Chunk | What it argues |
 |---|---|---|
 | 1 | **[1 · The hash table underneath](01-the-hash-table-underneath.md)** | A set is a hash table of references with nothing attached — `x in s` hashes `x` once and inspects a few slots instead… |
@@ -41,11 +36,9 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 21 | **[8b · When identity is the equality you want](08b-identity-elements.md)** | Connections, tasks and listeners belong in a set as themselves — the strong reference is a registry's leak and a background task's… |
 | 22 | **[9 · Diffing ID sets](09-diffing-id-sets.md)** | A sync is three set differences over keys — and `42` vs `"42"`, `(42,)` vs `42` or a forgiving `int()` turns the plan into… |
 | 23 | **[9b · Composite keys, NULLs and values](09b-composite-keys-nulls-and-values.md)** | A `UUID` equals none of its strings, a tenant ID is half a key, every NULL collapses into one `None`, and `Decimal` vs `float`… |
-
-## Still to come
-
-- **9c · Applying the diff** *(not written yet)*
-- **9d · Diffs too big for one set** *(not written yet)*
+| 24 | **[9c · The incomplete snapshot](09c-the-incomplete-snapshot.md)** | 🔴 `existing - incoming` deletes everything the fetch missed — an empty response, a capped pager or offset paging over moving data; prove completeness… |
+| 25 | **[9d · Sets as SQL parameters](09d-sets-as-sql-parameters.md)** | A set is not a parameter sequence, a string ID binds as one parameter per character, `IN` lists have a ceiling and `IN ()` is a syntax error… |
+| 26 | **[9e · The diff inside the database](09e-the-diff-inside-the-database.md)** | Too big to hold: a temp table and `EXCEPT`/`NOT EXISTS`, or a merge over sorted streams — with SQL's `NULL`, types and collations in place of `==`… |
 
 ---
 

@@ -98,7 +98,7 @@ def split_owned(con) -> tuple[set[int], list[int]]:
 ```
 
 What SQL then does with a `NULL` inside `IN` or `NOT IN` is a different set of rules again —
-**9c · Applying the diff** *(not written yet)*.
+[9e](09e-the-diff-inside-the-database.md).
 
 ## Duplicates in the payload
 
@@ -262,4 +262,4 @@ writes.
 
 ---
 
-← Prev: [Diffing ID sets](09-diffing-id-sets.md) · [Topic index](README.md) · Next → **9c · Applying the diff** *(not written yet)*
+← Prev: [Diffing ID sets](09-diffing-id-sets.md) · [Topic index](README.md) · Next → [The incomplete snapshot](09c-the-incomplete-snapshot.md)
