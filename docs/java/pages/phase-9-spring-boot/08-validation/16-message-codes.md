@@ -182,7 +182,7 @@ need special wording, instead of annotating every field individually.
 
 **★ What is the trap in the documented message arguments?**
 The order is field name, maximum, minimum — so a message written as *"between
-{1} and {2}"* renders the bounds backwards. It is a copywriting bug no
+\{1\} and \{2\}"* renders the bounds backwards. It is a copywriting bug no
 validation test catches, because the request still fails with the right code on
 the right field; only a reader notices.
 
