@@ -182,4 +182,4 @@ VS Code.
 
 ---
 
-← Prev: [13b · On save in VS Code](13b-on-save-in-vs-code.md) · [Topic index](README.md) · Next → **14 · Upgrading ruff safely** *(not written yet)*
+← Prev: [13b · On save in VS Code](13b-on-save-in-vs-code.md) · [Topic index](README.md) · Next → [14 · Upgrading ruff safely](14-upgrading-ruff.md)

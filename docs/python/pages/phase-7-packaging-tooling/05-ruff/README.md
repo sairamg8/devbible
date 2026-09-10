@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **Linter + formatter in one, rule selection, `--fix`, CI and pre-commit.**
 
-:::caution In progress — 37 chunks written
+:::caution In progress — 38 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -55,10 +55,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 35 | **[13 · Editor integration](13-editor-integration.md)** | `ruff server` is the editor backend; VS Code picks the environment's ruff, then `PATH`, then 🔴 a bundled binary that tracks the *latest* release — silently; untrusted workspaces always use it; a leftover `ruff.lint.args` swaps in deprecated `ruff-lsp`; editor settings beat `pyproject.toml` under the default `editorFirst` — commit `filesystemFirst` |
 | 36 | **[13b · On save in VS Code](13b-on-save-in-vs-code.md)** | Save = `source.fixAll.ruff` + `source.organizeImports.ruff` + ruff as `defaultFormatter` — the same pipeline CI checks; 🔴 unscoped `source.fixAll` invites every extension's fixer; Fix all skips unsafe fixes; Black/isort extension combinations; `[markdown]` needs `formatOnSaveMode: "file"`, notebooks need `notebook.source.*` |
 | 37 | **[13c · Pyright and other editors](13c-pyright-and-other-editors.md)** | ruff lints/sorts/formats, Pyright types and navigates; 🔴 the documented `python.analysis.ignore = { '*' }` also kills Pyright's type errors; Neovim, Helix, Zed, PyCharm, Emacs, Kate setups; `cmd = { 'ruff', 'server' }` runs the `PATH` ruff — start it through `uv run` |
+| 38 | **[14 · Upgrading ruff safely](14-upgrading-ruff.md)** | What a minor can change and what you see (removed-rule exit `2`, remap warnings, reformats, new defaults, dead `noqa`); read `BREAKING_CHANGES.md` for every minor crossed; worked 0.15.22 → 0.16.6: move every pin + `git grep` the old one, `--exit-zero --statistics`, then commits — config, reformat (blame-ignored), safe fixes, 🔴 `RUF100` with `--extend-select` never `--select`, baseline |
 
 ## Still to come
 
-- **Upgrading ruff safely** *(not written yet)*
+- **Upgrading ruff, continued — 14b · Trial runs, preview and upgrade bots** *(not written yet)*
 
 ---
 

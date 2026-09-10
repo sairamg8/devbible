@@ -51,7 +51,7 @@ Three independent sources of difference, and each has a different remedy.
 | Source | What it looks like | Where it is covered |
 |---|---|---|
 | **Deliberate deviations** | ruff formats a construct differently on purpose — trailing end-of-line comments, pragma comments ignored for line width, `assert` messages, tuples | [07c](07c-known-deviations-from-black.md), [07d](07d-layout-deviations-from-black.md) |
-| **Style-guide drift** | ruff's stable style is revised in a minor release (the 2025 style in 0.9.0, the 2026 style in 0.15.0); Black revises its own yearly | this page, and upgrading (**14** *(not written yet)*) |
+| **Style-guide drift** | ruff's stable style is revised in a minor release (the 2025 style in 0.9.0, the 2026 style in 0.15.0); Black revises its own yearly | this page, and upgrading ([14](14-upgrading-ruff.md)) |
 | **Scope ruff added** | f-string expressions, Python blocks in Markdown, code in docstrings (opt-in) — places Black leaves alone | this page, formatter settings ([07e](07e-formatter-settings.md)), code examples ([07g](07g-docstring-and-markdown-code.md)) |
 
 ### The style guide moves in minor releases

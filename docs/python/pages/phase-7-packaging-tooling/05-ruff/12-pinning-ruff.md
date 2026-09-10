@@ -44,7 +44,7 @@ list is not "nothing visible changes":
 A rule that had a false negative and gets fixed in a patch flags code the previous patch passed.
 A project with `preview = true` is exposed to every item marked *preview* in that list, on any
 patch — and the versioning page reserves the right to change preview behaviour freely. Pin the
-exact version and upgrade on purpose (**14 · Upgrading ruff** *(not written yet)*).
+exact version and upgrade on purpose ([14 · Upgrading ruff](14-upgrading-ruff.md)).
 
 ```bash
 uv add --dev 'ruff==0.16.6'

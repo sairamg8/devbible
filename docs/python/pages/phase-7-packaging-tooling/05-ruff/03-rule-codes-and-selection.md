@@ -120,7 +120,7 @@ configurations. Deprecated rules warn (``Rule `{code}` is deprecated and will be
 future release.``), and a rule that has been *removed* is an error when selected by its exact
 code: ``Rule `{code}` was removed and cannot be selected.`` `E999` (`syntax-error`) is the
 classic case — removed in 0.8.0 because *"Syntax errors will always be shown regardless of
-whether this rule is selected or not."* Upgrading through these is **14** *(not written yet)*.
+whether this rule is selected or not."* Upgrading through these is [14](14-upgrading-ruff.md).
 
 ## Names and categories are preview-only in 0.16.6
 
