@@ -54,7 +54,7 @@ in review, where `as SomeType` draws comment and a single `!` does not.
 
 Verbatim, and note that the message **quotes its own escape hatch**:
 
-> `TS2352` · *"Conversion of type '{0}' to type '{1}' may be a mistake because
+> `TS2352` · *"Conversion of type '\{0\}' to type '\{1\}' may be a mistake because
 > neither type sufficiently overlaps with the other. If this was intentional,
 > convert the expression to 'unknown' first."*
 
@@ -75,7 +75,7 @@ Three things follow, and each one matters more than it looks:
 
 ## `satisfies` is the one that checks
 
-> `TS1360` · *"Type '{0}' does not satisfy the expected type '{1}'."*
+> `TS1360` · *"Type '\{0\}' does not satisfy the expected type '\{1\}'."*
 
 `satisfies` ([Phase 2 · 10](../../phase-2-narrowing/10-satisfies/README.md) has it in
 full) verifies the value against `T` **and leaves the value's own narrow type in
