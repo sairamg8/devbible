@@ -25,11 +25,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 4 | **[03 · `Counter` — counting semantics](03-counter.md)** | missing reads as `0` without inserting; 🔴 the constructor and `update()` count *elements*, so a `str` counts letters and `(key, n)` pairs count as tuples; `update` adds, `subtract` goes negative; zero counts stay keys; silent `del`; refused `fromkeys`; `repr` sorted by count; non-integer counts |
 | 5 | **[03b · `Counter` — top-N and per-group tallies](03b-counter-top-n.md)** | `most_common(n)` is `heapq.nlargest`, `most_common()` a full sort; ties by arrival order and how to make them deterministic; 🔴 `sorted(c)` and `max(c)` rank keys; the phase gate as `defaultdict(Counter)`; merging with `update` not `sum`; a rolling window of per-minute counters |
 | 6 | **[03c · `Counter` — multiset arithmetic](03c-counter-multiset-math.md)** | `+ - & \|` and unary ops drop results ≤ 0; 🔴 `stock - order` hides the shortfall that `subtract` shows, and `-=` deletes every zero count in the counter; binary ops need a Counter, in-place ones take any mapping; `<=` is a partial order; list diffs with duplicates; subclasses come back as `Counter` |
+| 7 | **[04 · `deque` — the block list underneath](04-deque-the-block-list.md)** | 64-slot blocks in a doubly-linked list: ends O(1) because nothing moves, middle indexing walks blocks, `insert`/`del`/`remove` are rotations; the source-derived cost table; queue, BFS, round-robin; 🔴 `pop()` is LIFO; `+` needs a deque, `==` only matches a deque, `extendleft` reverses, no slicing or `sort` |
+| 8 | **[04b · Bounded deques](04b-bounded-deques.md)** | `maxlen` evicts silently from the opposite end — tail, ring buffers, sliding windows, undo; 🔴 data loss in a work queue (use `Queue(maxsize)`); `maxlen=0` keeps nothing; `insert` raises where `append` evicts; `appendleft` evicts the newest; `deque(d)` drops the bound; count is not time in a rate limiter |
 
 ## Still to come
 
-- **04 · `deque` — the block list underneath** *(not written yet)*
-- **04b · Bounded deques** *(not written yet)*
 - **04c · `deque` during iteration and across threads** *(not written yet)*
 - **05 · `namedtuple` from the factory side** *(not written yet)*
 - **06 · `ChainMap` — layered lookup** *(not written yet)*

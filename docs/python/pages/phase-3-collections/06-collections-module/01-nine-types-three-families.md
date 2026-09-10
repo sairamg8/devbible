@@ -76,7 +76,7 @@ Three consequences follow from that one fact, and they are the ones that surface
 
 ## Family 3 — the two that stand alone
 
-**`deque`** is a C type with its own storage (a doubly-linked list of fixed-size blocks — **04 · `deque` — the block list underneath** *(not written yet)*). It does not inherit from `list`; the module registers it with the ABC after importing it:
+**`deque`** is a C type with its own storage (a doubly-linked list of fixed-size blocks — [04 · `deque` — the block list underneath](04-deque-the-block-list.md)). It does not inherit from `list`; the module registers it with the ABC after importing it:
 
 ```python
 # Lib/collections/__init__.py, v3.14.7, lines 44–49
@@ -99,8 +99,8 @@ So `isinstance(d, MutableSequence)` is `True` and `isinstance(d, list)` is `Fals
 | `if k not in d: d[k] = []` then `d[k].append(v)` | `defaultdict(list)` | [02](02-defaultdict.md) |
 | `d[k] = d.get(k, 0) + 1` in a loop | `Counter` (or `Counter(iterable)` in one call) | [03](03-counter.md) |
 | `sorted(d.items(), key=lambda kv: kv[1], reverse=True)[:10]` | `Counter.most_common(10)` | [03b](03b-counter-top-n.md) |
-| `queue.pop(0)` / `queue.insert(0, x)` on a list | `deque.popleft()` / `appendleft()` | **04** *(not written yet)* |
-| `lines = lines[-100:]` after every append | `deque(maxlen=100)` | **04b** *(not written yet)* |
+| `queue.pop(0)` / `queue.insert(0, x)` on a list | `deque.popleft()` / `appendleft()` | [04](04-deque-the-block-list.md) |
+| `lines = lines[-100:]` after every append | `deque(maxlen=100)` | [04b](04b-bounded-deques.md) |
 | `row[3]` with a comment saying what 3 is | a `namedtuple` (or a dataclass) | **05** *(not written yet)* |
 | `{**defaults, **env, **cli}` rebuilt on every change | `ChainMap(cli, env, defaults)` | **06** *(not written yet)* |
 | a dict plus a list of keys kept "in recency order" | `OrderedDict.move_to_end` — or `functools.lru_cache` | **07b** *(not written yet)* |

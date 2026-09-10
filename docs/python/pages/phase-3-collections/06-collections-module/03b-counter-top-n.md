@@ -159,7 +159,7 @@ class RollingCounts:
         return self.total.most_common(n)
 ```
 
-`subtract` leaves zero counts behind, so without the `+self.total` a key that has not occurred for an hour stays in `total` forever — present in `len`, in iteration and at the bottom of `most_common()`. The deque is not bounded with `maxlen` here on purpose: a bounded deque discards the oldest bucket silently on `append` (**04b · Bounded deques** *(not written yet)*), and the total needs to see what was discarded.
+`subtract` leaves zero counts behind, so without the `+self.total` a key that has not occurred for an hour stays in `total` forever — present in `len`, in iteration and at the bottom of `most_common()`. The deque is not bounded with `maxlen` here on purpose: a bounded deque discards the oldest bucket silently on `append` ([04b · Bounded deques](04b-bounded-deques.md)), and the total needs to see what was discarded.
 
 ## Gotchas
 
