@@ -62,8 +62,8 @@ Once the gate is passed, the checker walks these in sequence:
 | 1 | the key is a block-scoped `globalThis` export | plain `TS2339` |
 | 2 | the property exists as a **`static`** member | `TS2576`, in bracket form — *"Did you mean to access the static member `'Type[expr]'`"* |
 | 3 | the type has a **numeric** index signature and your key is not a number | `TS7015` *"Element implicitly has an 'any' type because index expression is not of type 'number'."* |
-| 4 | a **similar property name** exists | 🔴 `TS2551` *"…Did you mean '{2}'?"* — the spelling machinery works on bracket access too |
-| 5 | the type has a method you could have **called** | `TS7052` *"…has no index signature. Did you mean to call '{1}'?"* |
+| 4 | a **similar property name** exists | 🔴 `TS2551` *"…Did you mean '\{2\}'?"* — the spelling machinery works on bracket access too |
+| 5 | the type has a method you could have **called** | `TS7052` *"…has no index signature. Did you mean to call '\{1\}'?"* |
 | 6 | none of the above | 🔴 **`TS7053` wrapping a more specific inner line** |
 
 📌 **Step 4 is worth knowing about.** `config["retires"]` gets *"Did you mean
