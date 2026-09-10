@@ -27,8 +27,8 @@ have no overlap.
 > 🔴 **`TS2367` is a nicer wording of a more general error, and it exists for
 > exactly four operators.** `tryGiveBetterPrimaryError` substitutes it for `===`,
 > `==`, `!==` and `!=`. Every other operator with the same underlying failure
-> reports `TS2365` — *"Operator '{0}' cannot be applied to types '{1}' and
-> '{2}'."* So the two codes are the same finding, differentiated purely by whether
+> reports `TS2365` — *"Operator '\{0\}' cannot be applied to types '\{1\}' and
+> '\{2\}'."* So the two codes are the same finding, differentiated purely by whether
 > a comparison reads better than an operator complaint.
 
 ## 🔴 The single most common cause is a forgotten `await`
@@ -228,8 +228,8 @@ So a `TS2367` mentioning a `Promise<…>` type needs no further analysis.
 **Is `TS2367` its own check?**
 Not exactly. It is a better wording substituted by `tryGiveBetterPrimaryError` for
 four operators — `===`, `==`, `!==`, `!=`. The same underlying failure with any
-other operator reports `TS2365`, *"Operator '{0}' cannot be applied to types
-'{1}' and '{2}'"*. The finding is identical; the message is specialised because a
+other operator reports `TS2365`, *"Operator '\{0\}' cannot be applied to types
+'\{1\}' and '\{2\}'"*. The finding is identical; the message is specialised because a
 comparison deserves a clearer sentence than an operator complaint.
 
 **When should you not trust a `TS2367`?**
