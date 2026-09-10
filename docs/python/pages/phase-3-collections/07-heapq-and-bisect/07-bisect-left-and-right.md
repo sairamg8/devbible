@@ -82,7 +82,7 @@ Each iteration halves `[lo, hi)`, so a million-element list takes about twenty c
 only difference between the two is the question asked at `mid` — `a[mid] < x` ("is everything up
 to here strictly smaller?") versus `x < a[mid]` ("is `x` strictly smaller than this?") — which is
 what sends equal elements to opposite sides. The source comment says why `<` alone: *"the
-comparison uses "<" to match the `__lt__()` logic in list.sort() and in heapq."*
+comparison uses "&lt;" to match the `__lt__()` logic in list.sort() and in heapq."*
 
 Note which operand is on the left. `bisect_left` calls `element < x`; `bisect_right` calls
 `x < element`. When `x` and the elements are different types, those are different methods — see

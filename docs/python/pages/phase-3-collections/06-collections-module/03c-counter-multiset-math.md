@@ -28,7 +28,7 @@ The documentation's own doctest, with `c = Counter(a=3, b=1)` and `d = Counter(a
 | `c & d` | *"intersection: min(c[x], d[x])"* | `Counter({'a': 1, 'b': 1})` |
 | `c \| d` | *"union: max(c[x], d[x])"* | `Counter({'a': 3, 'b': 2})` |
 | `c == d` | *"equality: c[x] == d[x]"* | `False` |
-| `c <= d` | *"inclusion: c[x] <= d[x]"* | `False` |
+| `c <= d` | *"inclusion: c[x] &lt;= d[x]"* | `False` |
 
 In `c - d`, `b` would be `1 - 2 = -1`; it is not in the result. Result order follows the 3.7 note — *"Results are ordered according to when an element is first encountered in the left operand and then by the order encountered in the right operand."*
 

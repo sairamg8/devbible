@@ -59,7 +59,7 @@ smaller child moves up).
 `_siftup` does not stop as soon as the sinking item is no larger than both children. It
 promotes the smaller child all the way to a leaf, drops the item there, then sifts it back up:
 
-> *"We *could* break out of the loop as soon as we find a pos where newitem <= both its children,
+> *"We *could* break out of the loop as soon as we find a pos where newitem &lt;= both its children,
 > but turns out that's not a good idea, and despite that many books write the algorithm that
 > way. During a heap pop, the last array element is sifted in, and that tends to be large, so
 > that comparing it against values starting from the root usually doesn't pay"* —
