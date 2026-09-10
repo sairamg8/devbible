@@ -10,8 +10,8 @@ sidebar_position: 2
 > **handbook**. `TS9035` — *"Add satisfies and a type assertion to this
 > expression (satisfies T as T) to make the type explicit."* — was read out of
 > the **compiler's own diagnostic table**, as was `TS2353`
-> (*"Object literal may only specify known properties, and '{0}' does not exist
-> in type '{1}'."*). ⚠️ Compiler inspected: TypeScript **6.0.3**, not the 7.0.2
+> (*"Object literal may only specify known properties, and '\{0\}' does not exist
+> in type '\{1\}'."*). ⚠️ Compiler inspected: TypeScript **6.0.3**, not the 7.0.2
 > this corpus targets. **No console block** — no recorded run covers this topic.
 
 [Chunk 01](./01-the-problem-it-solves.md) established the mechanic: check the
