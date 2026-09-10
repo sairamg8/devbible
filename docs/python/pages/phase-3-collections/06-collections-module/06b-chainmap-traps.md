@@ -277,4 +277,4 @@ Because the chain is a live view with no snapshot: each lookup walks the current
 
 ---
 
-← Prev: [06 · `ChainMap` — layered lookup](06-chainmap-layered-lookup.md) · [Topic index](README.md)
+← Prev: [06 · `ChainMap` — layered lookup](06-chainmap-layered-lookup.md) · [Topic index](README.md) · Next → [07 · `OrderedDict` — what it still does](07-ordereddict-what-it-still-does.md)
