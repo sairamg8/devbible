@@ -8,10 +8,10 @@ sidebar_position: 5
 
 > Verified: 2026-08. 🔴 **The four circularity diagnostics are read out of the compiler's
 > own message table** — **TypeScript 5.9.3**,
-> `sandbox/ts-p0/node_modules/typescript5/lib/typescript.js`: `TS2456` *"Type alias '{0}'
-> circularly references itself."*, `TS2615` *"Type of property '{0}' circularly references
-> itself in mapped type '{1}'."*, `TS2313` *"Type parameter '{0}' has a circular
-> constraint."* and `TS2716` *"Type parameter '{0}' has a circular default."* The depth and
+> `sandbox/ts-p0/node_modules/typescript5/lib/typescript.js`: `TS2456` *"Type alias '\{0\}'
+> circularly references itself."*, `TS2615` *"Type of property '\{0\}' circularly references
+> itself in mapped type '\{1\}'."*, `TS2313` *"Type parameter '\{0\}' has a circular
+> constraint."* and `TS2716` *"Type parameter '\{0\}' has a circular default."* The depth and
 > instantiation budgets they are contrasted with are
 > [topic 09 · chunk 01](../09-type-level-performance/01-the-three-budgets.md)'s.
 > ⚠️ **Constants are 5.9.3's and are not claimed for the 7.0.2 Go port.** **No sandbox, no
@@ -144,10 +144,10 @@ diagnostics for them:
 
 | Code | Message | Usually means |
 |---|---|---|
-| `TS2456` | *"Type alias '{0}' circularly references itself."* | an alias that expands to itself with no conditional to stop at |
-| `TS2615` | *"Type of property '{0}' circularly references itself in mapped type '{1}'."* | a mapped type whose property type reaches the mapped type again at the same level — [topic 01 · chunk 04](../01-mapped-types/04-limits.md) has the shapes |
-| `TS2313` | *"Type parameter '{0}' has a circular constraint."* | `T extends U, U extends T`, or a constraint that mentions the parameter it constrains |
-| `TS2716` | *"Type parameter '{0}' has a circular default."* | a default that refers back to the parameter — easy to write by accident when the default is the counter |
+| `TS2456` | *"Type alias '\{0\}' circularly references itself."* | an alias that expands to itself with no conditional to stop at |
+| `TS2615` | *"Type of property '\{0\}' circularly references itself in mapped type '\{1\}'."* | a mapped type whose property type reaches the mapped type again at the same level — [topic 01 · chunk 04](../01-mapped-types/04-limits.md) has the shapes |
+| `TS2313` | *"Type parameter '\{0\}' has a circular constraint."* | `T extends U, U extends T`, or a constraint that mentions the parameter it constrains |
+| `TS2716` | *"Type parameter '\{0\}' has a circular default."* | a default that refers back to the parameter — easy to write by accident when the default is the counter |
 
 🔴 **Telling them apart is the diagnostic skill this topic is for.** `TS2589` means *the
 compiler stopped*; these four mean *there is nothing to compute*. Adding a depth cap to a
@@ -183,7 +183,7 @@ failure surfaces somewhere unrelated.
 **Fix:** Pin it with a type-level assertion on an input one level past the cap. It is the
 only thing that makes the number a decision rather than a default.
 
-**Symptom:** `TS2716` — *"Type parameter '{0}' has a circular default."*
+**Symptom:** `TS2716` — *"Type parameter '\{0\}' has a circular default."*
 **Cause:** The counter's default refers to the parameter it is defaulting.
 **Fix:** Seed with a literal — `D extends number = 5`, `Depth extends 1[] = []` — never
 with an expression over `D` itself.
@@ -252,7 +252,7 @@ from 100 to 1,000 by changing which counter the compiler spends. A cap lowers th
 usually nested, because you are not trying to reach either compiler limit.
 
 **What is `TS2716` and why does it show up in this construction specifically?**
-*"Type parameter '{0}' has a circular default."* — a default that refers to the parameter
+*"Type parameter '\{0\}' has a circular default."* — a default that refers to the parameter
 it is defaulting. It shows up here because the counter parameter is the one with a
 default, so writing the seed in terms of the counter is a one-character mistake away, and
 the message says nothing about depth.
