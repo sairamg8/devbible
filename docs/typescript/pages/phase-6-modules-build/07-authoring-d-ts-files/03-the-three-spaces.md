@@ -118,9 +118,9 @@ callable with properties in a declaration file.
 
 Two diagnostics are the compiler telling you that you crossed a boundary:
 
-> **TS2749:** *"'{0}' refers to a value, but is being used as a type here. Did you
-> mean 'typeof {0}'?"*
-> **TS2503:** *"Cannot find namespace '{0}'."*
+> **TS2749:** *"'\{0\}' refers to a value, but is being used as a type here. Did you
+> mean 'typeof \{0\}'?"*
+> **TS2503:** *"Cannot find namespace '\{0\}'."*
 
 `TS2749` means the name exists only in the value space — a `const`, a `function`
 — and you used it where a type belongs. `typeof` is the bridge from the value
