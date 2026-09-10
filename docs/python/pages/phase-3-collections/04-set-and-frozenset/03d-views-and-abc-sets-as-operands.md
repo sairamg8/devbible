@@ -101,4 +101,4 @@ and a `dict_keys` or custom `Set` implementation passed in will not have them.
 
 ---
 
-← Prev: [Operators versus methods](03b-operators-versus-methods.md) · [Topic index](README.md) · Next → **The in-place forms** *(not written yet)*
+← Prev: [Operators versus methods](03b-operators-versus-methods.md) · [Topic index](README.md) · Next → [The in-place forms](03e-the-in-place-forms.md)

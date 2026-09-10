@@ -32,7 +32,8 @@ counting from the end requires having already seen the end. This page is the mec
 [07b](07b-islice-bounds.md) is the bounds it refuses.**
 
 The recipes built on `islice`, its cost on a list, and the lifetime traps of a half-consumed
-generator are in **07c · islice in practice** *(not written yet)*.
+generator are in [07c · islice in practice](07c-islice-in-practice.md) and
+[07d · islice lifetimes](07d-islice-lifetimes.md).
 
 ## An iterator has no positions
 
@@ -191,7 +192,7 @@ first_page = list(islice(fetch_events(), 10))
 
 **★ Symptom: a batching loop never ends, and every batch is the first 100 rows.** Cause: `rows` is
 a list, so each `islice(rows, 100)` starts a fresh iterator at index 0. Fix: make one iterator
-before the loop — or on 3.12 and later use `itertools.batched` (**07c** *(not written yet)*).
+before the loop — or on 3.12 and later use `itertools.batched` ([07c](07c-islice-in-practice.md)).
 
 ```python
 iterator = iter(rows)

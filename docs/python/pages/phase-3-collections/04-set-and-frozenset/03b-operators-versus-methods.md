@@ -1,5 +1,5 @@
 ---
-title: "The set operators demand a set on both sides and the named methods take any iterable — `a | lst` raises where `a.union(lst)` works, `==` against a list is silently `False`, the left operand's type decides what is legal, and precedence turns `a - b | c` into something nobody meant"
+title: "The set operators demand a set on both sides and the named methods take any iterable — `a | lst` raises where `a.union(lst)` works, `==` against a list is silently `False`, the other operand's type decides what is legal, and precedence turns `a - b | c` into something nobody meant"
 sidebar_label: "3b · Operators versus methods"
 sidebar_position: 8
 ---
@@ -25,7 +25,7 @@ it exists to catch a string or a list sneaking into set algebra — but it is no
 never refuses, a dictionary view on either side lifts the restriction, and the operators bind
 at different precedences, so an expression that reads left to right does not evaluate that way.**
 The in-place spellings (`|=`, `update()`) are a second, separate trap and have their own page,
-**3e · The in-place forms** *(not written yet)*.
+[3e · The in-place forms](03e-the-in-place-forms.md).
 
 ## The rule, verbatim
 
@@ -39,8 +39,8 @@ The in-place spellings (`|=`, `update()`) are a second, separate trap and have t
 > `difference_update()`, and `symmetric_difference_update()` methods will accept any iterable as an
 > argument."* — [Set Types](https://docs.python.org/3.14/library/stdtypes.html#set-types-set-frozenset)
 
-The full map, with the documented signatures. Six relations have no counterpart in the other
-spelling, and that is where people reach for the wrong one:
+The full map, with the documented signatures. Four relations exist in only one of the two
+spellings, and that is where people reach for the wrong one:
 
 | Relation | Operator (sets only) | Method (any iterable) | Arity of the method |
 |---|---|---|---|

@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **O(1) membership, dedupe, and set algebra instead of a nested loop.**
 
-:::caution In progress — 9 chunks written
+:::caution In progress — 11 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -27,10 +27,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 7 | **[3c · Set comparison is a partial order](03c-set-comparison-is-a-partial-order.md)** | Set comparison is containment, and containment is only a partial order — `not (a < b)` is not `a >= b`, two sets can… |
 | 8 | **[3b · Operators versus methods](03b-operators-versus-methods.md)** | The operators demand a set on both sides and the methods take any iterable — `==` against a list is silently `False`, `a - b \| c` is… |
 | 9 | **[3d · Views and ABC sets as operands](03d-views-and-abc-sets-as-operands.md)** | The sets-only rule belongs to `set`, not the operator — a dict view or `collections.abc.Set` accepts any iterable, returns a plain… |
+| 10 | **[3e · The in-place forms](03e-the-in-place-forms.md)** | `s \|= t` mutates the object every alias holds and `s = s \| t` builds a new one — a shared default accumulates, a frozenset… |
+| 11 | **[3f · Augmented assignment is an assignment](03f-augmented-assignment-is-an-assignment.md)** | `\|=` makes a name local, mutates a class-level set before storing it on the instance, and writes back to a tuple slot after… |
 
 ## Still to come
 
-- **The in-place forms — `|=` versus `update()`, and what augmented assignment rebinds** *(not written yet)*
+- **Subclasses, single-element removal and mutation during iteration** *(not written yet)*
 - **Dedupe and what it destroys** *(not written yet)*
 - **`frozenset` — hashable sets, sets of sets, mixed-type results** *(not written yet)*
 - **Iteration order — arbitrary, and different between runs** *(not written yet)*

@@ -88,7 +88,8 @@ three messages from the source:
   is exactly `-1`, is not an integer (a `float`, a `str`), or overflows `Py_ssize_t`;
 - `Indices for islice() must be None or an integer: 0 <= x <= sys.maxsize.` — a negative or
   unconvertible start, or a stop below `-1`;
-- `Step for islice() must be a positive integer or None.` — a step of zero or less.
+- `Step for islice() must be a positive integer or None.` — a step of zero or less, or one that is
+  not an integer.
 
 So `islice(rows, len(rows) / 2)` raises `ValueError`, where `rows[:len(rows) / 2]` raises
 `TypeError` — code that catches only one of them for "bad bound" handles only one of the two
@@ -204,4 +205,4 @@ through, whereas `s[:-0]` is `s[:0]`, the empty sequence.
 
 ---
 
-← Prev: [07 · itertools.islice and iterators](07-islice-and-iterators.md) · [Topic index](README.md)
+← Prev: [07 · itertools.islice and iterators](07-islice-and-iterators.md) · [Topic index](README.md) · Next →: [07c · islice in practice](07c-islice-in-practice.md)
