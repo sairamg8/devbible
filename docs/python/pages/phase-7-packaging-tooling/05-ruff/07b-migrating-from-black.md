@@ -114,7 +114,7 @@ The diff will be large and almost entirely boring. Skim for the four things that
   unformatted code — the FAQ singles this out as where *"more deviations should be expected"*.
   A comment that moved lines may now describe the wrong statement.
 - **Pragma comments.** `# noqa`, `# type: ignore` and friends are ignored when ruff computes
-  line width, so ruff does not move them; confirm none of your suppressions ended up on a
+  line width, so ruff does not move them ([07c](07c-known-deviations-from-black.md)); confirm none of your suppressions ended up on a
   different physical line ([06](06-noqa.md) — a `noqa` covers one physical line).
 - **`except` tuples and other version-gated style.** If the target version resolved to 3.14+,
   the 2026 style drops parentheses around exception tuples; confirm that is the version you
@@ -131,7 +131,7 @@ makes some different decisions than Black, and so more deviations should be expe
 procedure is the same; the review is longer. YAPF's region pragmas keep working: *"Like Black,
 Ruff will also recognize YAPF's `# yapf: disable` and `# yapf: enable` pragma comments"*. YAPF's
 style knobs do not carry over at all — ruff *"does not currently expose any other configuration
-options"* beyond the small set in **07d** *(not written yet)*.
+options"* beyond the small set in **07e** *(not written yet)*.
 
 ## Gotchas
 

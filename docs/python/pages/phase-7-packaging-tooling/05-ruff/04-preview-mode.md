@@ -116,7 +116,7 @@ Not exhaustive — check a rule's page for its 🧪 marker — but the items thi
 | Rule names as selectors (`unused-import`) and in suppression comments | [03](03-rule-codes-and-selection.md), [06b](06b-ruff-ignore-and-range-suppressions.md) |
 | Rule categories (`correctness`, `suspicious`, …) — new in 0.16.5 | [03](03-rule-codes-and-selection.md) |
 | `F401` fixes in `__init__.py` files | [05](05-fixes-and-fix-safety.md) |
-| The fluent method-chain layout in the formatter | **07c** *(not written yet)* |
+| The fluent method-chain layout in the formatter | [07d](07d-layout-deviations-from-black.md) |
 | Discovery of `*.pyw` files | [02](02-configuration-discovery.md) |
 | New rules added in 0.16.x, e.g. `UP048` (0.16.3) | the rules index |
 

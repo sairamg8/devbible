@@ -50,9 +50,9 @@ Three independent sources of difference, and each has a different remedy.
 
 | Source | What it looks like | Where it is covered |
 |---|---|---|
-| **Deliberate deviations** | ruff formats a construct differently on purpose — trailing end-of-line comments, pragma comments ignored for line width, `assert` messages, tuples | **07c** *(not written yet)* |
+| **Deliberate deviations** | ruff formats a construct differently on purpose — trailing end-of-line comments, pragma comments ignored for line width, `assert` messages, tuples | [07c](07c-known-deviations-from-black.md), [07d](07d-layout-deviations-from-black.md) |
 | **Style-guide drift** | ruff's stable style is revised in a minor release (the 2025 style in 0.9.0, the 2026 style in 0.15.0); Black revises its own yearly | this page, and upgrading (**14** *(not written yet)*) |
-| **Scope ruff added** | f-string expressions, Python blocks in Markdown, code in docstrings (opt-in) — places Black leaves alone | this page, formatter settings (**07d** *(not written yet)*) |
+| **Scope ruff added** | f-string expressions, Python blocks in Markdown, code in docstrings (opt-in) — places Black leaves alone | this page, formatter settings (**07e** *(not written yet)*) |
 
 ### The style guide moves in minor releases
 
@@ -139,7 +139,7 @@ higher."*
 > *"Given the focus on Black compatibility (and unlike formatters like YAPF), Ruff does not currently expose any other configuration options."*
 
 The whole surface — `line-length`, `indent-width`, and the `[tool.ruff.format]` table — is
-**07d** *(not written yet)*. One property matters before you migrate: `line-length` is a
+**07e** *(not written yet)*. One property matters before you migrate: `line-length` is a
 *target*, not a limit. The settings reference: *"While the formatter will attempt to format lines
 such that they remain within the `line-length`, it isn't a hard upper bound, and formatted lines
 may exceed the `line-length`."* Black has the same property; it is why `E501` and the formatter
@@ -151,7 +151,7 @@ need care together (**08** *(not written yet)*).
 unstable preview style formatting."* The formatter page also states: *"Going forward, the Ruff
 Formatter will support Black's preview style under Ruff's own preview mode."* It is ruff's
 preview, on ruff's schedule; the fluent method-chain layout is the current example
-(**07c** *(not written yet)*). Moving a codebase off Black step by step is
+([07d](07d-layout-deviations-from-black.md)). Moving a codebase off Black step by step is
 [07b](07b-migrating-from-black.md).
 
 ## Gotchas

@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **Linter + formatter in one, rule selection, `--fix`, CI and pre-commit.**
 
-:::caution In progress — 15 chunks written
+:::caution In progress — 17 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -33,6 +33,8 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 13 | **[06c · Unused suppressions and adoption](06c-unused-suppressions-and-adoption.md)** | Suppressions rot, so ruff audits them — `RUF100` reports any `noqa` that no longer suppresses something (and, since… |
 | 14 | **[07 · The formatter and Black](07-the-formatter-and-black.md)** | `ruff format` is a Black replacement, not a clone — >99.9% identical lines on Black-formatted code, deliberate deviations, and 🔴 a stable style that changes in *minor* releases (2025 style in 0.9.0, 2026 in 0.15.0) |
 | 15 | **[07b · Migrating from Black](07b-migrating-from-black.md)** | One reviewed reformat commit: translate Black's settings (🔴 its `exclude` is a regex, ruff's a glob list; its `target-version` a list), `--diff` first, `.git-blame-ignore-revs`, remove Black from every consumer at once |
+| 16 | **[07c · Known deviations from Black](07c-known-deviations-from-black.md)** | The deviations that protect meaning: end-of-line comments stay by their code, 🔴 pragma comments (`# noqa`, `# type:`) are ignored for line width so they never move off the line they suppress, width is Unicode columns |
+| 17 | **[07d · Layout deviations from Black](07d-layout-deviations-from-black.md)** | `assert` breaks the message, tuples always parenthesised, call args expanded only when forced, older-Black choices, f-string formatting — and 🔴 layouts chosen by the target Python version |
 
 ## Still to come
 
