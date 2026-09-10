@@ -33,11 +33,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 12 | **[06b · `ChainMap` traps](06b-chainmap-traps.md)** | 🔴 writes land in the caller's dict or `os.environ`; `del`/`pop`/`clear` touch only `maps[0]`, and masking with a sentinel; `DeepChainMap` and its cost; a `defaultdict` or `Counter` layer ends the search; `new_child(m, **kw)` edits `m`; `parents` into nothing; env strings vs default ints; no snapshot |
 | 13 | **[07 · `OrderedDict` — what it still does](07-ordereddict-what-it-still-does.md)** | reordering, not order: a linked list beside the hash table; `move_to_end` both ways vs a dict's one-way emulation; 🔴 why `next(iter(d))` + `pop` slows under front churn and `popitem(last=False)` does not; a unique, cancellable FIFO; order-sensitive `==`; `update` honours a subclass `__setitem__`; reordering mid-iteration raises |
 | 14 | **[07b · `OrderedDict` as an LRU cache](07b-ordereddict-lru-caches.md)** | `move_to_end` on hit, `popitem(last=False)` on overflow; `functools.lru_cache` first, and exactly what it cannot do; a locked generic `LRUCache`; the doc's `TimeBoundedLRU` and `MultiHitLRUCache`; per-key invalidation, eviction callbacks, byte budgets; 🔴 `@lru_cache` on a method keeps instances alive |
+| 15 | **[08 · `UserList` and `UserDict` — wrappers, not funnels](08-userlist-and-userdict.md)** | 🔴 every `UserList` method writes `self.data` directly, so `__setitem__` validation is bypassed by `append`/`extend`/`insert`/`+=`/the constructor — the path table vs `list` and `MutableSequence`, and both fixes; `UserDict`'s `\|=` and `__copy__` bypass `__setitem__`; shallow instance attributes in copies; `repr` hides the type |
+| 16 | **[08b · `UserString`](08b-userstring.md)** | which methods re-wrap in your subclass and which return plain `str`; 🔴 `+`/`%` launder untrusted input into a "safe" subclass — and the escaping override; refused by `json`, `str.join`, `open`, format specs; hashable and equal to the plain string; why a `str` subclass is usually the right base |
 
 ## Still to come
 
-- **08 · `UserList` and `UserDict` — wrappers, not funnels** *(not written yet)*
-- **08b · `UserString`** *(not written yet)*
 - **09 · Crossing a boundary — JSON, pickle, copy, `isinstance`** *(not written yet)*
 
 ## Phase gate
