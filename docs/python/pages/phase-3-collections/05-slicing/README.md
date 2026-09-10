@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **`[start:stop:step]`, negatives, slice assignment, and slices as copies.**
 
-:::caution In progress — 22 chunks written
+:::caution In progress — 24 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -40,10 +40,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 20 | **[10b · Integer keys and return types](10b-integer-keys-and-return-types.md)** | Convert integer keys with operator.index, never int(), and choose the slice return type on purpose — subclasses of… |
 | 21 | **[10c · `__setitem__`, `__delitem__` and the ABCs](10c-setitem-delitem-and-the-abcs.md)** | Writes and deletes reach your class with a slice key; no ABC mixin handles it, and a validating list subclass is… |
 | 22 | **[10d · Typing and multi-dimensional keys](10d-typing-and-multidimensional-keys.md)** | Type __getitem__ with two overloads, not a union; a comma passes a tuple, which a 2-D class interprets per axis and a… |
+| 23 | **[11 · Slicing in real code: pagination](11-slicing-in-real-code.md)** | A page is two multiplications — page 0 is empty, page −1 is a real page from the end, a page past the last is silently `[]`, and `OFFSET` walks… |
+| 24 | **[11b · Slicing in real code: batching](11b-batching.md)** | `items[i:i + n]` tiles a list with nothing lost and the offset is the checkpoint — a relative resume, a front-deleting drain and a cut inside a character… |
 
 ## Still to come
 
-- **Slicing in real code — pagination, batching, fixed-width records** *(not written yet)*
+- **11c · Fixed-width records** *(not written yet)*
 
 ---
 
