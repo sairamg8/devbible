@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **O(1) membership, dedupe, and set algebra instead of a nested loop.**
 
-:::caution In progress — 21 chunks written
+:::caution In progress — 23 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -39,10 +39,13 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 19 | **[7 · Equal but distinct elements](07-equal-but-distinct-elements.md)** | `1`, `1.0`, `True` and `Decimal("1")` are one element and `True in {1}` is `True`; NaN equals nothing, so every NaN object… |
 | 20 | **[8 · Custom classes as elements](08-custom-classes-as-elements.md)** | Identity by default, unhashable once you define `__eq__`, correct only when `__eq__` and `__hash__` read the same unchanging… |
 | 21 | **[8b · When identity is the equality you want](08b-identity-elements.md)** | Connections, tasks and listeners belong in a set as themselves — the strong reference is a registry's leak and a background task's… |
+| 22 | **[9 · Diffing ID sets](09-diffing-id-sets.md)** | A sync is three set differences over keys — and `42` vs `"42"`, `(42,)` vs `42` or a forgiving `int()` turns the plan into… |
+| 23 | **[9b · Composite keys, NULLs and values](09b-composite-keys-nulls-and-values.md)** | A `UUID` equals none of its strings, a tenant ID is half a key, every NULL collapses into one `None`, and `Decimal` vs `float`… |
 
 ## Still to come
 
-- **Diffing ID sets from a database or an API** *(not written yet)*
+- **9c · Applying the diff** *(not written yet)*
+- **9d · Diffs too big for one set** *(not written yet)*
 
 ---
 

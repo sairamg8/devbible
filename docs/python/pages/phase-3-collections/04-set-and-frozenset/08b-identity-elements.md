@@ -68,7 +68,7 @@ awaits them.
 
 **★ Symptom: deduplicating entities loaded from the database or an API removes nothing.** Cause: the
 default hash and equality are identity, and every load builds new objects. Fix: deduplicate on the
-key — a set of IDs, or a dict keyed by ID (**Diffing ID sets** *(not written yet)*) — rather than making ORM
+key — a set of IDs, or a dict keyed by ID ([9 · Diffing ID sets](09-diffing-id-sets.md)) — rather than making ORM
 entities hash by value.
 
 **Symptom: memory grows with every request, and a heap dump shows thousands of handler objects held
@@ -89,4 +89,4 @@ them alive.
 
 ---
 
-← Prev: [Custom classes as elements](08-custom-classes-as-elements.md) · [Topic index](README.md) · Next → **Diffing ID sets from a database or an API** *(not written yet)*
+← Prev: [Custom classes as elements](08-custom-classes-as-elements.md) · [Topic index](README.md) · Next → [Diffing ID sets](09-diffing-id-sets.md)
