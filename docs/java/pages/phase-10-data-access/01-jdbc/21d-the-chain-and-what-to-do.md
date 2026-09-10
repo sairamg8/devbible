@@ -223,8 +223,8 @@ exceptions *and* their causes in order, which is the one call that covers both.
 
 **★ Why can `printStackTrace` on a `BatchUpdateException` hide the real error?**
 Because the useful information is on the chain, not the cause. pgJDBC's batch handler
-builds the exception with a message from the template *"Batch entry {0} {1} was aborted:
-{2}  Call getNextException to see other errors in the batch."* and attaches subsequent
+builds the exception with a message from the template *"Batch entry \{0\} \{1\} was aborted:
+\{2\}  Call getNextException to see other errors in the batch."* and attaches subsequent
 failures with `setNextException`. `printStackTrace` walks causes and suppressed
 exceptions; it does not know the chain exists. So you get the first failure and an
 instruction, and everything after it is invisible unless you iterate. In a 500-row batch
