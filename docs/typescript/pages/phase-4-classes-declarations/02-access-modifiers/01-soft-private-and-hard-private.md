@@ -22,9 +22,9 @@ these:
 
 | Code | Message text (verbatim from the diagnostic table) |
 |---|---|
-| **TS2341** | *"Property '{0}' is private and only accessible within class '{1}'."* |
-| **TS2445** | *"Property '{0}' is protected and only accessible within class '{1}' and its subclasses."* |
-| **TS2446** | *"Property '{0}' is protected and only accessible through an instance of class '{1}'. This is an instance of class '{2}'."* |
+| **TS2341** | *"Property '\{0\}' is private and only accessible within class '\{1\}'."* |
+| **TS2445** | *"Property '\{0\}' is protected and only accessible within class '\{1\}' and its subclasses."* |
+| **TS2446** | *"Property '\{0\}' is protected and only accessible through an instance of class '\{1\}'. This is an instance of class '\{2\}'."* |
 
 TS2446 has three placeholders for a reason —
 [chunk 02](./02-visibility-rules-and-choosing.md) covers it.
