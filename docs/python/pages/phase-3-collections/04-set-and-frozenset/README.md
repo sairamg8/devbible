@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **O(1) membership, dedupe, and set algebra instead of a nested loop.**
 
-:::caution In progress — 7 chunks written
+:::caution In progress — 9 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -25,10 +25,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 5 | **[2 · The membership test in a loop](02-the-membership-test-in-a-loop.md)** | An `in` test against a 50,000-element list inside a loop is the most common accidental O(n·m) in a Python service —… |
 | 6 | **[3 · Set algebra instead of nested loops](03-set-algebra-instead-of-nested-loops.md)** | Every nested loop that asks "which of these are also in that" is a set operation in disguise — intersection,… |
 | 7 | **[3c · Set comparison is a partial order](03c-set-comparison-is-a-partial-order.md)** | Set comparison is containment, and containment is only a partial order — `not (a < b)` is not `a >= b`, two sets can… |
+| 8 | **[3b · Operators versus methods](03b-operators-versus-methods.md)** | The operators demand a set on both sides and the methods take any iterable — `==` against a list is silently `False`, `a - b \| c` is… |
+| 9 | **[3d · Views and ABC sets as operands](03d-views-and-abc-sets-as-operands.md)** | The sets-only rule belongs to `set`, not the operator — a dict view or `collections.abc.Set` accepts any iterable, returns a plain… |
 
 ## Still to come
 
-- **Operators versus methods — in-place forms, and why methods take any iterable while operators need sets** *(not written yet)*
+- **The in-place forms — `|=` versus `update()`, and what augmented assignment rebinds** *(not written yet)*
 - **Dedupe and what it destroys** *(not written yet)*
 - **`frozenset` — hashable sets, sets of sets, mixed-type results** *(not written yet)*
 - **Iteration order — arbitrary, and different between runs** *(not written yet)*

@@ -11,7 +11,7 @@ sidebar_position: 0
 
 **Linter + formatter in one, rule selection, `--fix`, CI and pre-commit.**
 
-:::caution In progress — 13 chunks written
+:::caution In progress — 15 chunks written
 This topic is being written. The chunks below are complete and verified; the rest of the plan,
 listed under *Still to come*, is not written yet and will be linked here as each chunk lands.
 :::
@@ -31,10 +31,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 11 | **[06 · noqa comments](06-noqa.md)** | `# noqa: CODE` suppresses one rule on one physical line, a bare `# noqa` suppresses every rule on it, and the… |
 | 12 | **[06b · ruff: ignore and ranges](06b-ruff-ignore-and-range-suppressions.md)** | ruff's own suppression comments fix what `noqa` cannot express — `ruff: ignore[...]` on the line above covers a whole… |
 | 13 | **[06c · Unused suppressions and adoption](06c-unused-suppressions-and-adoption.md)** | Suppressions rot, so ruff audits them — `RUF100` reports any `noqa` that no longer suppresses something (and, since… |
+| 14 | **[07 · The formatter and Black](07-the-formatter-and-black.md)** | `ruff format` is a Black replacement, not a clone — >99.9% identical lines on Black-formatted code, deliberate deviations, and 🔴 a stable style that changes in *minor* releases (2025 style in 0.9.0, 2026 in 0.15.0) |
+| 15 | **[07b · Migrating from Black](07b-migrating-from-black.md)** | One reviewed reformat commit: translate Black's settings (🔴 its `exclude` is a regex, ruff's a glob list; its `target-version` a list), `--diff` first, `.git-blame-ignore-revs`, remove Black from every consumer at once |
 
 ## Still to come
 
-- **The formatter and Black** *(not written yet)*
 - **Formatter settings** *(not written yet)*
 - **Formatter and lint-rule conflicts** *(not written yet)*
 - **`target-version` and `requires-python`** *(not written yet)*

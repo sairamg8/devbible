@@ -198,6 +198,44 @@ Cause: the reformat commit touched every line whose layout changed. Fix: record 
 git config blame.ignoreRevsFile .git-blame-ignore-revs
 ```
 
+**★ Symptom: the migrated configuration excludes nothing — `migrations/` and generated
+`*_pb2.py` files are reformatted.** Cause: Black's `exclude`/`extend-exclude` take a regular
+expression, and it was pasted into ruff's `extend-exclude`, which takes a list of glob patterns;
+a string like `/(migrations|build)/` matches no path. Fix: rewrite it as globs.
+
+```toml
+[tool.ruff]
+extend-exclude = ["migrations", "*_pb2.py", "*_pb2.pyi"]
+```
+
+**Symptom: ruff rejects the configuration with a parse error after `target-version` was copied
+from `[tool.black]`.** Cause: Black takes a list of versions (`["py312", "py313"]`); ruff takes a
+single string, the minimum. Fix: use the lowest version from Black's list — or, better, delete it
+and let `requires-python` drive both.
+
+```toml
+[project]
+requires-python = ">=3.12"
+```
+
+**Symptom: the migration branch's CI fails on a `ruff format --diff .` step before any
+reformatting was committed.** Cause: `--diff` exits non-zero whenever there is a difference to
+show; it is not an informational command. Fix: keep `--diff` for local review and gate CI on
+`--check` once the reformat commit has landed.
+
+```bash
+uv run ruff format --check .
+```
+
+**Symptom: two weeks after the migration, one developer's commits keep re-wrapping lines.**
+Cause: their editor still formats on save with Black. The repository no longer lists Black, but
+an editor extension brings its own copy. Fix: set the editor's Python formatter to ruff
+(**13** *(not written yet)*), and make CI the arbiter so drift is caught at review time.
+
+```bash
+uv run ruff format --check .
+```
+
 ## Interview questions
 
 **★ How would you migrate a large repository from Black to `ruff format` without damaging
@@ -208,6 +246,36 @@ contains nothing else, add that commit to `.git-blame-ignore-revs`, then remove 
 dependencies, configuration, pre-commit, CI and editors in the same change so nothing runs it
 again. Finally, enforce with `ruff format --check` in CI.
 
+**★ Which Black settings carry over to ruff, and which only look like they do?**
+`line-length` and `skip-magic-trailing-comma` carry over directly (the first only if you changed
+Black's default of 88, which ruff shares). String normalisation maps to `quote-style =
+"preserve"`. Three are traps: Black's `target-version` is a list while ruff's is one minimum
+version (and `requires-python` is preferred over either); Black's `exclude` is a regex while
+ruff's is a glob list; and Black's `preview` must go in `[tool.ruff.format]`, because top-level
+`preview` also enables preview lint rules.
+
+**Why remove Black from every consumer in the same change, rather than gradually?**
+Because a formatter's output is only stable if it is the only formatter. Any leftover consumer —
+a pre-commit hook, a CI job, one developer's editor — reformats the lines where the two tools
+disagree, and ruff reformats them back, producing churn in unrelated commits and failing
+`--check`. A gradual rollout is exactly the "used interchangeably on an ongoing basis" the ruff
+documentation says the formatter is not intended for.
+
+**What would you look for when reviewing the reformat commit?**
+Not the bulk re-wraps, which are mechanical. Look for files Black never touched (notebooks,
+Markdown code fences since 0.16.0), comments that moved to a different line — especially
+end-of-line comments on previously unformatted code, where the FAQ says deviations concentrate —
+suppression pragmas that no longer sit on the line they suppress, and version-gated style such as
+the removal of parentheses around `except` tuples, which is only correct if the resolved target
+version matches the interpreter you deploy on.
+
+**How does migrating from YAPF differ from migrating from Black?**
+The procedure is identical; the diff is much larger, because the >99.9% figure only applies to
+code already formatted by Black. YAPF's `# yapf: disable` / `# yapf: enable` regions are
+respected, but none of YAPF's style options have an equivalent — ruff deliberately exposes only
+quote style, indent style, line endings and a few related options, so the team adopts ruff's
+style rather than configuring it to match the old one.
+
 ---
 
-← Prev: [07 · The formatter and Black](07-the-formatter-and-black.md) · [Topic index](README.md)
+← Prev: [07 · The formatter and Black](07-the-formatter-and-black.md) · [Topic index](README.md) · Next → [07c · Known deviations from Black](07c-known-deviations-from-black.md)

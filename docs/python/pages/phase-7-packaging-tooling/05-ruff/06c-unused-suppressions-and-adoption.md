@@ -208,4 +208,4 @@ delete the comments.
 
 ---
 
-← Prev: [06b · ruff: ignore and ranges](06b-ruff-ignore-and-range-suppressions.md) · [Topic index](README.md) · Next → **07 · The formatter and Black** *(not written yet)*
+← Prev: [06b · ruff: ignore and ranges](06b-ruff-ignore-and-range-suppressions.md) · [Topic index](README.md) · Next → [07 · The formatter and Black](07-the-formatter-and-black.md)

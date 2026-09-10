@@ -40,7 +40,7 @@ test** — [3c](03c-set-comparison-is-a-partial-order.md).
 
 — [Set Types](https://docs.python.org/3.14/library/stdtypes.html#set-types-set-frozenset). Every
 operation returns a *new* set; the in-place forms and the operator-versus-method rules are
-**3b** *(not written yet)*.
+[3b](03b-operators-versus-methods.md).
 
 ## Six nested loops and the operator each one was
 

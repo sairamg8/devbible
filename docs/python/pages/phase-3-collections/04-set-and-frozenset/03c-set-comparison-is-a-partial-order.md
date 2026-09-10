@@ -66,4 +66,4 @@ the subset comparisons *"do not generalize to a total ordering function"*.
 
 ---
 
-← Prev: [Set algebra instead of nested loops](03-set-algebra-instead-of-nested-loops.md) · [Topic index](README.md) · Next → **Operators versus methods** *(not written yet)*
+← Prev: [Set algebra instead of nested loops](03-set-algebra-instead-of-nested-loops.md) · [Topic index](README.md) · Next → [Operators versus methods](03b-operators-versus-methods.md)

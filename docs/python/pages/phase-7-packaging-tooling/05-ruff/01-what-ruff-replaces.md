@@ -60,7 +60,7 @@ ruff installs as a prebuilt wheel, so no Rust toolchain is involved:
 | autoflake | the fixes for `F401` (unused import) and `F841` (unused variable) | [05](05-fixes-and-fix-safety.md) |
 | pydocstyle | selector `D` plus `lint.pydocstyle.convention` | [03](03-rule-codes-and-selection.md) |
 | yesqa | `RUF100` (unused `noqa`) | [06c](06c-unused-suppressions-and-adoption.md) |
-| Black | `ruff format` | **07** *(not written yet)* |
+| Black | `ruff format` | [07](07-the-formatter-and-black.md) |
 | Pylint | partial — the `PL` selectors overlap, no more | below |
 
 The FAQ states the formatter-and-friends half of the list directly:

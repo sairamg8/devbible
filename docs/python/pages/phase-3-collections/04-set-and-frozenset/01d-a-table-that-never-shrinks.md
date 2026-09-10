@@ -100,7 +100,7 @@ so compact after a bulk drain, not after every removal.
 >
 > *"[9] O(len(s) + len(t)) if t is not a set."* — attached to difference.
 
-The method forms accept any iterable (**3b** *(not written yet)*), and when they get one
+The method forms accept any iterable ([3b](03b-operators-versus-methods.md)), and when they get one
 they must iterate it and hash every element — there is no stored hash to reuse and no way to know
 the smaller side in advance. So `s.intersection(t)` with a three-element `s` and a million-element
 list `t` costs a million hashes; with a million-element *set* `t` it costs three lookups. Converting

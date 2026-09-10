@@ -159,7 +159,7 @@ path in `PyObject_GetItem` and raises `TypeError` with the message `sequence ind
 integer, not 'slice'`. The documentation's own suggestion for in-place work is rotation: *"To
 implement `deque` slicing, use a similar approach applying `rotate()` to bring a target element to
 the left side of the deque."* To read a window, walk it with `islice`
-(**08** *(not written yet)*):
+([07](07-islice-and-iterators.md)):
 
 ```python
 from collections import deque
@@ -259,4 +259,4 @@ slicing a ten-element one.
 
 ---
 
-← Prev: [05 · Slices are copies](05-slices-are-copies.md) · [Topic index](README.md)
+← Prev: [05 · Slices are copies](05-slices-are-copies.md) · [Topic index](README.md) · Next →: [07 · itertools.islice and iterators](07-islice-and-iterators.md)
