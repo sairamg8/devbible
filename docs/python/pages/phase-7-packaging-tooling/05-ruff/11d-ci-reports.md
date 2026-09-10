@@ -63,7 +63,7 @@ environment, so nothing else ties the two together.
 
 Since 0.16.0, `format --check` *"supports the same output formats as the linter, including the
 `github` and `gitlab` outputs"*, so the format job can also produce a Code Quality file with
-`ruff format --check --output-format=gitlab --output-file=…`. How GitLab combines two
+`ruff format --check --output-format=gitlab --output-file=format-quality-report.json`. How GitLab combines two
 `codequality` reports from two jobs was not checked for this page.
 
 ## GitHub code scanning (SARIF)
@@ -195,4 +195,4 @@ names its format — per command, or for the whole job through `RUFF_OUTPUT_FORM
 
 ---
 
-← Prev: [11c · ruff-action](11c-ruff-action.md) · [Topic index](README.md) · Next → **11e · Changed files and pre-commit in CI** *(not written yet)*
+← Prev: [11c · ruff-action](11c-ruff-action.md) · [Topic index](README.md) · Next → [11e · Changed files and pre-commit in CI](11e-changed-files-and-pre-commit-in-ci.md)
