@@ -7,8 +7,8 @@ sidebar_position: 1
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-08 against the **TypeScript handbook** (*Generics*). `TS2345`
-> (*"Argument of type '{0}' is not assignable to parameter of type '{1}'."*) and
-> `TS2344` (*"Type '{0}' does not satisfy the constraint '{1}'."*) were read out
+> (*"Argument of type '\{0\}' is not assignable to parameter of type '\{1\}'."*) and
+> `TS2344` (*"Type '\{0\}' does not satisfy the constraint '\{1\}'."*) were read out
 > of the **compiler's own diagnostic table**, not recalled. ⚠️ Compiler
 > inspected: TypeScript **6.0.3**, not the 7.0.2 this corpus targets. **No
 > console block** — no sandbox run covers this phase.
