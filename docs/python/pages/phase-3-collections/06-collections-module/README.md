@@ -21,12 +21,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 |---|---|---|
 | 1 | **[01 · Nine types, three families](01-nine-types-three-families.md)** | 🔴 dict subclasses are real dicts; `ChainMap`/`User*` are ABC-built and fail `isinstance(x, dict)` and `json.dumps`; `deque` is registered, not inherited; `namedtuple` is a function — plus the hand-rolled-code-to-type table and `collections.abc` since 3.10 |
 | 2 | **[02 · `defaultdict` — a factory behind `d[k]`](02-defaultdict.md)** | `__missing__` and nothing else; group-by, distinct-per-key, inverted index, adjacency, per-key `Counter`; 🔴 the factory must build a new object and cannot see the key — `__missing__` on a `dict` subclass can; `format_map` vs `format(**m)`; switching `default_factory` off |
+| 3 | **[02b · `defaultdict` in production](02b-defaultdict-in-production.md)** | 🔴 reads that insert grow a long-running service's dict per probe; return a plain `dict`; lambda factories cannot be pickled; JSON drops the factory; `copy()`/`\|`/pickle call the class factory-first; the factory can run twice under contention; class-attribute and dataclass defaults |
+| 4 | **[03 · `Counter` — counting semantics](03-counter.md)** | missing reads as `0` without inserting; 🔴 the constructor and `update()` count *elements*, so a `str` counts letters and `(key, n)` pairs count as tuples; `update` adds, `subtract` goes negative; zero counts stay keys; silent `del`; refused `fromkeys`; `repr` sorted by count; non-integer counts |
+| 5 | **[03b · `Counter` — top-N and per-group tallies](03b-counter-top-n.md)** | `most_common(n)` is `heapq.nlargest`, `most_common()` a full sort; ties by arrival order and how to make them deterministic; 🔴 `sorted(c)` and `max(c)` rank keys; the phase gate as `defaultdict(Counter)`; merging with `update` not `sum`; a rolling window of per-minute counters |
 
 ## Still to come
 
-- **02b · `defaultdict` in production** *(not written yet)*
-- **03 · `Counter` — counting semantics** *(not written yet)*
-- **03b · `Counter` — top-N and per-group tallies** *(not written yet)*
 - **03c · `Counter` — multiset arithmetic** *(not written yet)*
 - **04 · `deque` — the block list underneath** *(not written yet)*
 - **04b · Bounded deques** *(not written yet)*

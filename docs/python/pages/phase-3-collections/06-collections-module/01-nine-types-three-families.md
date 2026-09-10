@@ -97,8 +97,8 @@ So `isinstance(d, MutableSequence)` is `True` and `isinstance(d, list)` is `Fals
 | You wrote | Reach for | Chunk |
 |---|---|---|
 | `if k not in d: d[k] = []` then `d[k].append(v)` | `defaultdict(list)` | [02](02-defaultdict.md) |
-| `d[k] = d.get(k, 0) + 1` in a loop | `Counter` (or `Counter(iterable)` in one call) | **03** *(not written yet)* |
-| `sorted(d.items(), key=lambda kv: kv[1], reverse=True)[:10]` | `Counter.most_common(10)` | **03b** *(not written yet)* |
+| `d[k] = d.get(k, 0) + 1` in a loop | `Counter` (or `Counter(iterable)` in one call) | [03](03-counter.md) |
+| `sorted(d.items(), key=lambda kv: kv[1], reverse=True)[:10]` | `Counter.most_common(10)` | [03b](03b-counter-top-n.md) |
 | `queue.pop(0)` / `queue.insert(0, x)` on a list | `deque.popleft()` / `appendleft()` | **04** *(not written yet)* |
 | `lines = lines[-100:]` after every append | `deque(maxlen=100)` | **04b** *(not written yet)* |
 | `row[3]` with a comment saying what 3 is | a `namedtuple` (or a dataclass) | **05** *(not written yet)* |
