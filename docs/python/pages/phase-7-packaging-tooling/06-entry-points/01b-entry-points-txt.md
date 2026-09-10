@@ -145,7 +145,7 @@ def export_main() -> int:
 
 ## Names the build backend will and will not write
 
-uv's backend validates names at build time, more strictly for scripts than for other groups (`metadata.rs`, lines 902–948). A script name must satisfy *"Script entry point name `{0}` must include a non-dot character and consist only of letters, numbers, dots, underscores and dashes"* — an error. Any other group only gets a warning: *"Entrypoint names should consist of letters, numbers, dots, underscores and dashes; non-compliant name: {name}"*. And the object reference itself carries a `TODO(konsti): Validate that the object references are valid Python identifiers.` — not checked at build time at all ([01](01-what-the-installer-writes.md)).
+uv's backend validates names at build time, more strictly for scripts than for other groups (`metadata.rs`, lines 902–948). A script name must satisfy *"Script entry point name `{0}` must include a non-dot character and consist only of letters, numbers, dots, underscores and dashes"* — an error. Any other group only gets a warning: *"Entrypoint names should consist of letters, numbers, dots, underscores and dashes; non-compliant name: \{name\}"*. And the object reference itself carries a `TODO(konsti): Validate that the object references are valid Python identifiers.` — not checked at build time at all ([01](01-what-the-installer-writes.md)).
 
 ## Gotchas
 

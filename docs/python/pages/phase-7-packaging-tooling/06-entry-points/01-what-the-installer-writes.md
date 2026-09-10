@@ -156,7 +156,7 @@ msg_lines.append(
 )
 ```
 
-followed by *"Consider adding {} to PATH or, if you prefer to suppress this warning, use --no-warn-script-location."* pip deliberately skips the warning for the directory holding `sys.executable` — *"This covers the case of venv invocations without activating the venv"* — so installing into an unactivated venv prints nothing, and the command is still not on your `PATH`.
+followed by *"Consider adding \{\} to PATH or, if you prefer to suppress this warning, use --no-warn-script-location."* pip deliberately skips the warning for the directory holding `sys.executable` — *"This covers the case of venv invocations without activating the venv"* — so installing into an unactivated venv prints nothing, and the command is still not on your `PATH`.
 
 The wrapper is recorded in the distribution's `RECORD` like any other installed file — uv writes every wrapper through `write_file_recorded`, which appends a sha256 entry — and pip's uninstaller also removes scripts by entry-point name. Uninstalling removes the command; reinstalling rewrites it.
 
@@ -164,8 +164,8 @@ The wrapper is recorded in the distribution's `RECORD` like any other installed 
 
 uv's build backend checks command *names* and group names but not the object reference: `metadata.rs` line 943 is a `TODO(konsti): Validate that the object references are valid Python identifiers.` The installers are stricter about scripts, because a wrapper has to call something:
 
-- **pip** raises `MissingCallableSuffix`: *"Invalid script entry point: {entry_point} - A callable suffix is required."*
-- **uv** requires a colon in its `console_scripts` regex and fails with *"invalid console script: '{value}'"* (`script.rs`, lines 34–37).
+- **pip** raises `MissingCallableSuffix`: *"Invalid script entry point: \{entry_point\} - A callable suffix is required."*
+- **uv** requires a colon in its `console_scripts` regex and fails with *"invalid console script: '\{value\}'"* (`script.rs`, lines 34–37).
 - **installer** matches `(:\s*(?P<attrs>[\w.]+))` and asserts the attribute exists.
 
 So `invoice = "invoice_service.cli.main"` — a dot where the colon belongs — can produce a wheel with uv_build and then fail when anyone installs it. The specification requires the callable for scripts: *"The object reference points to a function which will be called with no arguments when this command is run."* Whether hatchling or setuptools catch it at build time was not established here; do not rely on the backend.

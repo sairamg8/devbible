@@ -79,7 +79,7 @@ pipx notes that *"Injected packages do not add their entry points to your ``PATH
 The specification leaves `PATH` to the user ([01](01-what-the-installer-writes.md)); the tool installers help without taking it over.
 
 - uv warns when its executable directory is missing from `PATH` — the source's message begins *"`{}` is not on your PATH. To use installed tools, run"* followed by `uv tool update-shell` — and `uv tool dir --bin` prints the directory.
-- pipx warns *"'{local_bin_dir}' is not on your PATH"* and points to `pipx ensurepath`; *"Pass ``--prepend`` to ``pipx ensurepath`` to prepend the pipx bin directory to ``PATH`` instead of appending it, so pipx-installed binaries win over system binaries of the same name."*
+- pipx warns *"'\{local_bin_dir\}' is not on your PATH"* and points to `pipx ensurepath`; *"Pass ``--prepend`` to ``pipx ensurepath`` to prepend the pipx bin directory to ``PATH`` instead of appending it, so pipx-installed binaries win over system binaries of the same name."*
 - Neither overwrites a file it did not create. uv: *"Installation of tools will not overwrite executables in the executable directory that were not previously installed by uv. For example, if `pipx` has been used to install a tool, `uv tool install` will fail."* pipx logs *"File exists at … Not modifying."* Collisions are [10](10-name-collisions-and-path-shadowing.md).
 
 pipx 1.17.2 has one more thing to know: it now prefers uv underneath — *"When the **uv backend** is active (the default whenever uv is available, via the ``pipx[uv]`` extra or on ``PATH``) pipx skips the shared environment and uses ``uv venv`` and ``uv pip`` instead"*. The environments it creates are still pipx's.
