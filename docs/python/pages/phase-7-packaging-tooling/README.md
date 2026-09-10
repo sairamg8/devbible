@@ -30,12 +30,12 @@ The three **Master** rows are the ones that decide whether a project is reproduc
 by someone other than you. Everything else in this phase is a consequence of getting
 those three right.
 
-🚧 **In flight — 1 of 12.**
+🚧 **In flight — 2 of 12.**
 
 | # | Topic | Tier | In one line |
 |---|---|---|---|
 | 01 | **[`pyproject.toml`](./01-pyproject-toml/README.md)** · 14 chunks | <span className="db-tier t-master">Master</span> | The one config file: metadata, dependencies, tool config, and the death of `setup.py` |
-| 02 | **`uv`** *(not written yet)* | <span className="db-tier t-master">Master</span> | venv + resolver + lockfile + `uv run` — and `pip` + `venv` as the floor |
+| 02 | **[`uv`](./02-uv/README.md)** · 36 chunks | <span className="db-tier t-master">Master</span> | venv + resolver + lockfile + `uv run` — and `pip` + `venv` as the floor |
 | 03 | **Dependencies done right** *(not written yet)* | <span className="db-tier t-master">Master</span> | Ranges vs a committed lockfile, extras, groups — why apps lock and libraries range |
 | 04 | **Project layout** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | The src layout, and the import-the-wrong-copy bug flat layout invites |
 | 05 | **`ruff`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Linter + formatter in one, rule selection, `--fix`, CI and pre-commit |

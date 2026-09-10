@@ -226,4 +226,4 @@ No. You can write a PEP 517 backend in your own repository and point at it with 
 
 ---
 
-← Prev: [13 · Dynamic metadata](13-dynamic-metadata.md) · [Topic index](README.md) · Next → **02 · uv** *(not written yet)*
+← Prev: [13 · Dynamic metadata](13-dynamic-metadata.md) · [Topic index](README.md) · Next → [02 · uv](../02-uv/README.md)
