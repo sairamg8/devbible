@@ -156,7 +156,7 @@ Each new value is first passed through the *other* heap with a push-pop, so what
 of the lower half and `hi[0]` the smallest of the upper half; the median is one of them or their
 average. Each step is O(log n) and memory is O(n) — every value is kept. The same shape answers
 "p50 latency so far" on a stream; for a sliding window or bounded memory you need removal, which
-is the subject of **05b · Removing and re-prioritising entries** *(not written yet)*.
+is the subject of [05b](05b-removal-and-update.md).
 
 ## Keeping the K smallest: the max-heap as a bouncer
 

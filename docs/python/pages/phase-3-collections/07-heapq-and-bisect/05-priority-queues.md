@@ -30,9 +30,9 @@ This chunk takes the entry design the rest of the way.
 > tasks with the same priority are returned in the order they were added. And since no two entry
 > counts are the same, the tuple comparison will never attempt to directly compare two tasks."*
 
-The last two problems — changing and deleting — are the subject of **05b · Removing and
-re-prioritising entries** *(not written yet)*; here the entry is designed so that the first two can
-never happen.
+The last two problems — changing and deleting — are the subject of
+[05b](05b-removal-and-update.md); here the entry is designed so that the first two can never
+happen.
 
 ## The entry, written out
 
@@ -288,4 +288,4 @@ later push or pop rather than at the point where the bad value arrived.
 
 ---
 
-← Prev: [04 · Max-heaps in 3.14](04-max-heaps.md) · [Topic index](README.md) · Next → **05b · Removing and re-prioritising entries** *(not written yet)*
+← Prev: [04 · Max-heaps in 3.14](04-max-heaps.md) · [Topic index](README.md) · Next → [05b · Removing and re-prioritising entries](05b-removal-and-update.md)

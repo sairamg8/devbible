@@ -95,7 +95,7 @@ the `key=` that `nlargest`, `nsmallest` and `merge` *do* accept is in [03](03-nl
 | `heapq.heapify(x)` | O(n) | docs: *"in linear time"* |
 | `heappush`, `heappop`, `heapreplace`, `heappushpop` | O(log n) comparisons | docs, Theory: *"clearly logarithmic"* |
 | `heap[0]` | O(1) | docs: *"use `heap[0]`"* |
-| find, remove or re-prioritise an arbitrary item | O(n) | no index exists — see **05b** *(not written yet)* |
+| find, remove or re-prioritise an arbitrary item | O(n) | no index exists — see [05b](05b-removal-and-update.md) |
 | `heapq.nsmallest(k, xs)` / `nlargest` | O(n log k), k items of memory | source notes, see [03](03-nlargest-and-nsmallest.md) |
 | heapsort (push all, pop all) | O(n log n), **not stable** | docs: *"unlike `sorted()`, this implementation is not stable"* |
 

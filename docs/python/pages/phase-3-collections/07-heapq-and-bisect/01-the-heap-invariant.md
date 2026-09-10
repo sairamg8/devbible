@@ -142,7 +142,7 @@ jobs first; later pops come out in an order no one can explain.
 the invariant is now false on that object's path — silently, because nothing re-checks it.
 **Fix.** Never change what the heap compares while the entry is in the heap. Make entries
 immutable, and re-prioritise by invalidating the old entry and pushing a new one
-(**05b · Removing and re-prioritising entries** *(not written yet)*):
+([05b](05b-removal-and-update.md)):
 
 ```python
 from dataclasses import dataclass, field

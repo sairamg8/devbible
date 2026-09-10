@@ -27,11 +27,12 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | 6 | **[03b · Ties, keys and top-N queries](03b-ties-keys-and-top-n-queries.md)** | first-seen wins ties, so ties are only as deterministic as input order; `key` runs once per element and the elements are never compared; 🔴 a dict ranks its keys; score-desc/name-asc via `nsmallest` and negation; per-group top-N; `ORDER BY … LIMIT` when the rows live in a database |
 | 7 | **[04 · Max-heaps in 3.14](04-max-heaps.md)** | `heapify_max`, `heappush_max`, `heappop_max`, `heapreplace_max`, `heappushpop_max` are new in 3.14 (3.13 had three private ones, kept as aliases); the negation trick and its four failures; 🔴 a max-heap is an unmarked list — `heappop` on it corrupts it — and a `(priority, count, item)` tie-break turns LIFO unless the count is negated; running median; K-smallest with a max-heap |
 | 8 | **[05 · Priority queues — ties and the counter](05-priority-queues.md)** | the documentation's four challenges; `(priority, count, item)` gives FIFO ties and never compares the item — `sched` does it, asyncio's timer heap does not and documents *undefined* order; 🔴 the `order=True` dataclass wrapper stops the `TypeError` but is not FIFO; priorities that do not order (`Enum`, `None`, strings); direction; starvation fixed by pushing a start-by deadline |
+| 9 | **[05b · Removing and re-prioritising entries](05b-removal-and-update.md)** | a heap has no index, so removal is O(n) — `sched.cancel` does `remove` + `heapify`; the documentation's lazy-deletion recipe (dict of task → list entry, mark the payload slot, skip on pop) and why each piece is shaped that way; 🔴 never overwrite a compared field; an identity-only sentinel; bulk cancel as one rebuild |
+| 10 | **[05c · Stale entries and compaction](05c-stale-entries-and-compaction.md)** | 🔴 dead entries make `len()`, peeks and memory lie — cancelled timeouts grow a heap without bound; compaction at half dead, as asyncio's event loop does; a self-compacting queue class; Dijkstra without decrease-key is the same stale-entry skip |
 
 ## Still to come
 
-- **05b · Removing and re-prioritising entries** *(not written yet)*
-- **05c · Heaps shared by threads and tasks** *(not written yet)*
+- **05d · Heaps shared by threads and tasks** *(not written yet)*
 - **06 · `heapq.merge` — k-way merge as a stream** *(not written yet)*
 - **07 · `bisect_left` and `bisect_right`** *(not written yet)*
 - **07b · The `key=` parameter and its asymmetry** *(not written yet)*
