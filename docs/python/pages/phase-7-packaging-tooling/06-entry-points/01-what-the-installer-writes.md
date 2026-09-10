@@ -113,8 +113,8 @@ Distlib's own template — the one pip overrides — puts the `from … import` 
 2. **Python runs the wrapper as a script.** The command-line documentation states the consequence: *"If the script name refers directly to a Python file, the directory containing that file is added to the start of `sys.path`, and the file is executed as the `__main__` module"* ([cmdline](https://docs.python.org/3.14/using/cmdline.html)). So `sys.path[0]` is the scripts directory — `.venv/bin` — not your working directory. **04** *(not written yet)* is why that difference matters.
 3. **`from invoice_service.cli import main`** imports your package, its `__init__.py`, the `cli` module and everything they import at module level. All of it runs before `main` does; **11** *(not written yet)* is what that costs.
 4. **The guard is true** because the wrapper is `__main__`.
-5. **`argv[0]` loses a Windows suffix**, so help text says `invoice`, not `invoice.exe` (**02** *(not written yet)*).
-6. **`sys.exit(main())`** — whatever `main` returns becomes the process exit status. That contract is **03** *(not written yet)*.
+5. **`argv[0]` loses a Windows suffix**, so help text says `invoice`, not `invoice.exe` ([02](02-windows-launchers-and-gui-scripts.md)).
+6. **`sys.exit(main())`** — whatever `main` returns becomes the process exit status. That contract is [03](03-the-function-contract.md).
 
 ## The shebang: an absolute path, or a `/bin/sh` trampoline
 
@@ -252,4 +252,4 @@ Because the backend and the installer validate different things. uv_build checks
 
 ---
 
-← [Topic index](README.md) · Next → **02 · Windows launchers and GUI scripts** *(not written yet)*
+← [Topic index](README.md) · Next → [02 · Windows launchers and GUI scripts](02-windows-launchers-and-gui-scripts.md)

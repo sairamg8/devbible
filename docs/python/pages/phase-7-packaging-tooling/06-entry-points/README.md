@@ -21,11 +21,11 @@ listed under *Still to come*, is not written yet and will be linked here as each
 | # | Chunk | What it argues |
 |---|---|---|
 | 1 | **[01 · What the installer writes](01-what-the-installer-writes.md)** | `entry_points.txt` at build time, a real file per `console_scripts`/`gui_scripts` name at install time; the pip 26.2.1, installer 1.0.1 and uv 0.12.12 templates verbatim; 🔴 an absolute interpreter shebang — or a `#!/bin/sh` trampoline past 127 bytes, with a space, or when relocatable; `PATH` is not the installer's job; a colon-less value builds with uv_build and fails at install |
+| 2 | **[02 · Windows launchers and GUI scripts](02-windows-launchers-and-gui-scripts.md)** | a Windows command is launcher `.exe` + shebang + zip of the same wrapper (installer's eight `t*`/`w*` launchers, distlib's, uv's trampoline); console vs GUI matters only on Windows — 🔴 GUI means `pythonw`, streams that can be `None`, and a shell that does not wait for the exit code; `argv[0]` suffix stripping; a running `.exe` cannot upgrade itself, so pip demands `python -m pip` |
+| 3 | **[03 · The function contract](03-the-function-contract.md)** | called with no arguments, return value straight to `sys.exit`: `None` is 0, 🔴 a returned string is status 1, other objects (a coroutine) too, 0–127 only, an escaped exception is 1, Ctrl-C exits via SIGINT; flake8's `main(argv=None) -> int`; exceptions mapped to codes in the entry point, 2 for usage; 🔴 `BrokenPipeError` handled per the SIGPIPE note, as pytest's `_console_main` does, or shutdown makes it 120; testing without a subprocess |
 
 ## Still to come
 
-- **02 · Windows launchers and GUI scripts** *(not written yet)*
-- **03 · The function contract — arguments, return values, exit codes** *(not written yet)*
 - **04 · `python -m` and `__main__.py`** *(not written yet)*
 - **05 · Reading entry points at runtime** *(not written yet)*
 - **06 · Plugin discovery patterns** *(not written yet)*
