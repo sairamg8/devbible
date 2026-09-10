@@ -148,13 +148,13 @@ to diagnose from directly:
 
 | Code | Message |
 |---|---|
-| **6276** | *"Export specifier '{0}' does not exist in package.json scope at path '{1}'."* |
-| **6271** | *"Import specifier '{0}' does not exist in package.json scope at path '{1}'."* |
-| **6273** | *"package.json scope '{0}' has no imports defined."* |
-| **6274** | *"package.json scope '{0}' explicitly maps specifier '{1}' to null."* |
-| **6275** | *"package.json scope '{0}' has invalid type for target of specifier '{1}'"* |
-| **6272** | *"Invalid import specifier '{0}' has no possible resolutions."* |
-| **6270** | *"Directory '{0}' has no containing package.json scope. Imports will not resolve."* |
+| **6276** | *"Export specifier '\{0\}' does not exist in package.json scope at path '\{1\}'."* |
+| **6271** | *"Import specifier '\{0\}' does not exist in package.json scope at path '\{1\}'."* |
+| **6273** | *"package.json scope '\{0\}' has no imports defined."* |
+| **6274** | *"package.json scope '\{0\}' explicitly maps specifier '\{1\}' to null."* |
+| **6275** | *"package.json scope '\{0\}' has invalid type for target of specifier '\{1\}'"* |
+| **6272** | *"Invalid import specifier '\{0\}' has no possible resolutions."* |
+| **6270** | *"Directory '\{0\}' has no containing package.json scope. Imports will not resolve."* |
 
 🔴 **`TS6276` is the one you will meet most**, and it is precise: the subpath is
 not in the map. That is the "adding `exports` is a breaking change" failure from
