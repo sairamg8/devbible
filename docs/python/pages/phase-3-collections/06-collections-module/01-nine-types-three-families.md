@@ -179,6 +179,16 @@ def hot_sum(values: list[int]) -> int:
 hot_sum(rows.data)        # the real list inside the UserList
 ```
 
+**Symptom: a class registered with `MutableSequence.register(MyQueue)` passes `isinstance` checks and then fails with `AttributeError` inside a library.** Cause: registration checks nothing — the ABC documentation only says registered classes *"should define the full API including all of the abstract methods and all of the mixin methods"*. `deque` meets that bar for the ABC's methods (and still has no slicing); your class may not. Fix: inherit from the ABC instead of registering, so a missing abstract method fails at instantiation.
+
+```python
+from collections.abc import MutableSequence
+
+class MyQueue(MutableSequence):
+    """Must define __getitem__, __setitem__, __delitem__, __len__ and insert —
+    MyQueue() raises TypeError naming whichever abstract method is missing."""
+```
+
 ## Interview questions
 
 **★ Which types in `collections` are subclasses of `dict`, and why does it matter?**
@@ -198,6 +208,12 @@ No — it is a factory function. Each call runs code that validates the field na
 
 **A function should accept "any mapping" — what do you check and what do you return?**
 Check (or annotate) `collections.abc.Mapping`, which every family-1 and family-2 mapping satisfies, and return a plain `dict` built with `dict(m)` or `{**m}`. That accepts a `ChainMap` of settings, a `Counter`, a `UserDict` or a `MappingProxyType`, and gives the caller the one type that `json`, `isinstance(x, dict)` checks and every library accept. The same shape for sequences is `Sequence` in, `list` out.
+
+**What is the difference between inheriting from an ABC and registering with it?**
+Inheriting (`class C(MutableMapping)`) makes the ABC a real base: you get its mixin methods, and instantiating a class that has not implemented every abstract method raises `TypeError`. Registering (`MutableMapping.register(C)`) makes `isinstance` and `issubclass` answer yes and does nothing else — no mixins, no check that the methods exist. The standard library uses registration for C types whose layout cannot inherit from a Python ABC: `dict` is registered as a `MutableMapping`, `list` as a `MutableSequence`, and `deque` as a `MutableSequence` by `collections` itself.
+
+**Why were the ABCs moved out of `collections` into `collections.abc`, and what broke?**
+To separate the concrete container types from the interfaces they implement; `collections.abc` has existed since 3.3 (*"Formerly, this module was part of the `collections` module"*), and the old names stayed as deprecated aliases until 3.10, whose What's New records *"Remove deprecated aliases to Collections Abstract Base Classes from the `collections` module."* Code written against the aliases — `from collections import Mapping` — fails with `ImportError` on 3.10 and later; the fix is the `collections.abc` import, and in a dependency, an upgrade.
 
 ---
 
