@@ -8,7 +8,7 @@ sidebar_position: 10
 
 > Verified: 2026-08 against the **TypeScript handbook** (*Type Inference*,
 > *Contextual Typing*, *Generics → Type argument inference*). `TS7006`
-> (*"Parameter '{0}' implicitly has an '{1}' type."*) and `TS2345` were read out
+> (*"Parameter '\{0\}' implicitly has an '\{1\}' type."*) and `TS2345` were read out
 > of the **compiler's own diagnostic table**. ⚠️ Install inspected: TypeScript
 > **6.0.3**, not the 7.0.2 this corpus targets. **No console block** — no sandbox
 > run covers this phase.
