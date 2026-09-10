@@ -38,8 +38,8 @@ An `abstract` member declares a signature with no implementation; the class
 cannot be instantiated, and a concrete subclass must supply every abstract
 member — otherwise:
 
-> **TS2515:** *"Non-abstract class '{0}' does not implement inherited abstract
-> member {1} from class '{2}'."*
+> **TS2515:** *"Non-abstract class '\{0\}' does not implement inherited abstract
+> member \{1\} from class '\{2\}'."*
 
 (`TS2653` is the same rule for a class *expression*.)
 
@@ -47,7 +47,7 @@ Two smaller rules from the table:
 
 > **TS1244:** *"Abstract methods can only appear within an abstract class."*
 >
-> **TS2513:** *"Abstract method '{0}' in class '{1}' cannot be accessed via super
+> **TS2513:** *"Abstract method '\{0\}' in class '\{1\}' cannot be accessed via super
 > expression."*
 
 TS2513 is the one worth remembering: `super.getName()` inside a subclass is a
