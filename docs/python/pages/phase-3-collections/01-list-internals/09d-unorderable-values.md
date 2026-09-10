@@ -63,8 +63,8 @@ reference: *"Order comparisons (&lt;, >, &lt;=, and >=) raise TypeError."*
 
 **Sets** — the most dangerous, because they *do* support `<`, meaning *proper subset*:
 
-> *"Those relations do not define total orderings (for example, the two sets {1,2} and
-> {2,3} are not equal, nor subsets of one another, nor supersets of one another).
+> *"Those relations do not define total orderings (for example, the two sets \{1,2\} and
+> \{2,3\} are not equal, nor subsets of one another, nor supersets of one another).
 > Accordingly, sets are not appropriate arguments for functions which depend on total
 > ordering (for example, min(), max(), and sorted() produce undefined results given a
 > list of sets as inputs)."*

@@ -35,7 +35,7 @@ workers, the tie order in your output changes from run to run while every indivi
 sort is perfectly stable. The HOWTO's own warning about sets:
 
 > *"This is needed because the elements contained in set types do not have a
-> deterministic order. For example, list({'a', 'b'}) may produce either ['a', 'b'] or
+> deterministic order. For example, list(\{'a', 'b'\}) may produce either ['a', 'b'] or
 > ['b', 'a']."*
 
 When output must be reproducible — snapshot tests, diffs, cache keys, cursor

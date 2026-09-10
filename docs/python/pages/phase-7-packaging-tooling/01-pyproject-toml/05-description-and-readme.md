@@ -117,7 +117,7 @@ readme = { file = ["README.md", "CHANGELOG.md"], content-type = "text/markdown" 
 
 That is the setuptools spelling from its own documentation:
 
-> *"When these fields are expected to be provided by `setuptools` a corresponding entry is required in the `tool.setuptools.dynamic` table. For example: version = {attr = "my_package.__version__"} [and] readme = {file = ["README.rst", "USAGE.rst"]}"*
+> *"When these fields are expected to be provided by `setuptools` a corresponding entry is required in the `tool.setuptools.dynamic` table. For example: version = \{attr = "my_package.__version__"\} [and] readme = \{file = ["README.rst", "USAGE.rst"]\}"*
 
 Two constraints come with it. First, `readme` must be listed in `dynamic` and absent from `[project]`, or the backend is being asked to fill a key you already filled — see **[13 · Dynamic metadata](13-dynamic-metadata.md)**. Second, concatenation is textual: two Markdown files each starting with an `# H1` produce a page with two top-level headings, and relative links in the second file are still relative to the second file's original location, which is not where PyPI is rendering them from.
 

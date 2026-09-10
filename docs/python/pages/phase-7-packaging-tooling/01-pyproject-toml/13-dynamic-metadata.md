@@ -107,7 +107,7 @@ version = { attr = "invoice_service.__version__" }
 readme = { file = ["README.md", "CHANGELOG.md"], content-type = "text/markdown" }
 ```
 
-> *"For example: version = {attr = "my_package.__version__"} [and] readme = {file = ["README.rst", "USAGE.rst"]}"*
+> *"For example: version = \{attr = "my_package.__version__"\} [and] readme = \{file = ["README.rst", "USAGE.rst"]\}"*
 
 **hatchling** — its own version table:
 

@@ -51,7 +51,7 @@ dynamic = ["version"]
 version = { attr = "invoice_service.__version__" }
 ```
 
-> *"When these fields are expected to be provided by `setuptools` a corresponding entry is required in the `tool.setuptools.dynamic` table. For example: version = {attr = "my_package.__version__"} [and] readme = {file = ["README.rst", "USAGE.rst"]}"*
+> *"When these fields are expected to be provided by `setuptools` a corresponding entry is required in the `tool.setuptools.dynamic` table. For example: version = \{attr = "my_package.__version__"\} [and] readme = \{file = ["README.rst", "USAGE.rst"]\}"*
 > — [setuptools, Configuring setuptools using pyproject.toml](https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html)
 
 Flit derives it from the module instead:
