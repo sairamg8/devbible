@@ -68,7 +68,7 @@ The split exists because these two files categories have opposite correctness re
 
 ## Library mode — the same principle, a different output shape
 
-Vite's own [Library Mode](https://vite.dev/guide/build#library-mode) documentation and the deep mechanics of `build.lib` — externalizing peer dependencies, the `formats`/`name`/`fileName` options, the UMD-vs-ESM defaults — are covered in full at [Build System — Library Mode](../05-build-system-rollup/01-build-options.md#build-lib-a-fundamentally-different-output-shape); this section is only the deployment-relevant difference.
+Vite's own [Library Mode](https://vite.dev/guide/build#library-mode) documentation and the deep mechanics of `build.lib` — externalizing peer dependencies, the `formats`/`name`/`fileName` options, the UMD-vs-ESM defaults — are covered in full at [Build System — Library Mode](../05-build-system-rollup/01-build-options.md#buildlib-a-fundamentally-different-output-shape); this section is only the deployment-relevant difference.
 
 A library build's output is not the hashed-assets-plus-fixed-entry shape this chunk has been describing at all:
 
