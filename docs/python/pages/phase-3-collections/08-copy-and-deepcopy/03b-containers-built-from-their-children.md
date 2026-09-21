@@ -241,4 +241,4 @@ No. It makes the half-built element hashable, which removes the exception, but t
 
 ---
 
-← [03 · Cycles and shared children](03-cycles-and-shared-children-traced.md) · [Topic index](README.md)
+← [03 · Cycles and shared children](03-cycles-and-shared-children-traced.md) · [Topic index](README.md) · Next → [04 · The reduce protocol](04-the-reduce-protocol.md)
