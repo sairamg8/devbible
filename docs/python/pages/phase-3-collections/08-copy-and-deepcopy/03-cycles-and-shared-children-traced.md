@@ -225,4 +225,4 @@ Only objects that copy to themselves — atomic types, enum members, `Decimal`, 
 
 ---
 
-← [02b · The memo as an API](02b-the-memo-as-an-api.md) · [Topic index](README.md)
+← [02b · The memo as an API](02b-the-memo-as-an-api.md) · [Topic index](README.md) · Next → [03b · Containers built from their children](03b-containers-built-from-their-children.md)
