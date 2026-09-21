@@ -222,4 +222,4 @@ Because for your own classes there are better hooks — `__reduce__`, `__getstat
 
 ---
 
-← [05 · Writing copy hooks](05-writing-copy-hooks.md) · [Topic index](README.md)
+← [05 · Writing copy hooks](05-writing-copy-hooks.md) · [Topic index](README.md) · Next → [06 · __slots__ classes](06-slots-classes.md)
