@@ -208,4 +208,4 @@ Because the dispatch table is consulted before the instance's `__deepcopy__` is 
 
 ---
 
-← [01b · Atomic types and identity](01b-atomic-types-and-identity.md) · [Topic index](README.md)
+← [01b · Atomic types and identity](01b-atomic-types-and-identity.md) · [Topic index](README.md) · Next → [02b · The memo as an API](02b-the-memo-as-an-api.md)
