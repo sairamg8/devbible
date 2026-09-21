@@ -11,6 +11,7 @@ sidebar_position: 27
 > ([docs.astral.sh](https://docs.astral.sh/uv/reference/storage/)), *Caching*
 > ([docs.astral.sh](https://docs.astral.sh/uv/concepts/cache/)) and the CLI reference
 > ([docs.astral.sh](https://docs.astral.sh/uv/reference/cli/)).
+> Action pin checked 2026-09-21 on the repository's releases page and tag list: `actions/cache` **v6.1.0** is the newest release, a floating `v6` tag exists, and `path` and `key` are inputs of its [`action.yml`](https://github.com/actions/cache/blob/v6.1.0/action.yml) — the v5 and v6 release notes list a Node 24 runtime and an ESM migration, no input change.
 > Version spine: **uv 0.12.12** (2026-09-09) · Python 3.14.7 · **ruff 0.16.6** · pre-commit 4.6.2.
 > Documentation-validated, **no sandbox run, no timings**.
 
@@ -128,7 +129,7 @@ cache somewhere the CI system persists, and pin the tool so the cache key is sta
 env:
   UV_CACHE_DIR: ${{ github.workspace }}/.uv-cache
 steps:
-  - uses: actions/cache@v4
+  - uses: actions/cache@v6
     with:
       path: .uv-cache
       key: uv-${{ runner.os }}-ruff-0.16.6

@@ -12,6 +12,7 @@ sidebar_position: 20
 > ([docs.astral.sh](https://docs.astral.sh/uv/concepts/projects/sync/)), the environment variable
 > reference ([docs.astral.sh](https://docs.astral.sh/uv/reference/environment/)) and CPython's `venv`
 > documentation ([docs.python.org](https://docs.python.org/3.14/library/venv.html)).
+> Action pin checked 2026-09-21 on the repository's releases page and tag list: `actions/checkout` **v7.0.1** is the newest release and a floating `v7` tag exists ([github.com](https://github.com/actions/checkout/releases)); `actions/cache` **v6.1.0** is the newest release, a floating `v6` tag exists, and `path` and `key` are inputs of its [`action.yml`](https://github.com/actions/cache/blob/v6.1.0/action.yml) — the v5 and v6 release notes list a Node 24 runtime and an ESM migration, no input change.
 > Version spine: **uv 0.12.12** (2026-09-09) · **Python 3.14.7** · ruff 0.16.6 · pre-commit 4.6.2.
 > Documentation-validated, **no sandbox run, no timings**.
 
@@ -86,7 +87,7 @@ strategy:
   matrix:
     python: ["3.13", "3.14"]
 steps:
-  - uses: actions/checkout@v4
+  - uses: actions/checkout@v7
   - run: curl -LsSf https://astral.sh/uv/0.12.12/install.sh | sh
   - run: echo "$HOME/.local/bin" >> "$GITHUB_PATH"
   - run: uv python install ${{ matrix.python }}
@@ -133,7 +134,7 @@ the cache key becomes obvious:
 env:
   UV_PYTHON_INSTALL_DIR: ${{ github.workspace }}/.uv-python
 steps:
-  - uses: actions/cache@v4
+  - uses: actions/cache@v6
     with:
       path: .uv-python
       key: uv-python-${{ matrix.python }}-${{ runner.os }}

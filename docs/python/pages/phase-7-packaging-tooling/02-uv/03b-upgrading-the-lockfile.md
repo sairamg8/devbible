@@ -12,6 +12,7 @@ sidebar_position: 12
 > ([docs.astral.sh](https://docs.astral.sh/uv/concepts/projects/layout/)), *Caching*
 > ([docs.astral.sh](https://docs.astral.sh/uv/concepts/cache/)) and the release list
 > ([github.com](https://github.com/astral-sh/uv/releases)).
+> Action pin checked 2026-09-21 on the repository's releases page and tag list: `actions/checkout` **v7.0.1** is the newest release and a floating `v7` tag exists ([github.com](https://github.com/actions/checkout/releases)).
 > Version spine: **uv 0.12.12** (2026-09-09) · Python 3.14.7 · ruff 0.16.6 · pre-commit 4.6.2.
 > Documentation-validated, **no sandbox run, no timings**.
 
@@ -77,7 +78,7 @@ modern so you are not debugging a five-year-old `certifi` at the same time.
 lowest-direct:
   runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - run: curl -LsSf https://astral.sh/uv/0.12.12/install.sh | sh
     - run: uv lock --resolution lowest-direct
     - run: uv sync --no-dev --group test

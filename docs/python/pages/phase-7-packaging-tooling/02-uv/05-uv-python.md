@@ -11,6 +11,7 @@ sidebar_position: 18
 > reference ([docs.astral.sh](https://docs.astral.sh/uv/reference/environment/)), *Working on
 > projects* ([docs.astral.sh](https://docs.astral.sh/uv/guides/projects/)) and the uv documentation
 > home ([docs.astral.sh](https://docs.astral.sh/uv/)).
+> Action pin checked 2026-09-21 on the repository's releases page and tag list: `actions/cache` **v6.1.0** is the newest release, a floating `v6` tag exists, and `path` and `key` are inputs of its [`action.yml`](https://github.com/actions/cache/blob/v6.1.0/action.yml) — the v5 and v6 release notes list a Node 24 runtime and an ESM migration, no input change.
 > Version spine: **uv 0.12.12** (2026-09-09) · **Python 3.14.7** · ruff 0.16.6 · pre-commit 4.6.2.
 > Documentation-validated, **no sandbox run, no timings**.
 
@@ -181,7 +182,7 @@ Cause: managed interpreters live outside the workspace, in `UV_PYTHON_INSTALL_DI
 only the workspace. Fix: cache that directory too, or install the interpreter in the base image.
 
 ```yaml
-- uses: actions/cache@v4
+- uses: actions/cache@v6
   with:
     path: ~/.local/share/uv/python
     key: uv-python-3.14-${{ runner.os }}
