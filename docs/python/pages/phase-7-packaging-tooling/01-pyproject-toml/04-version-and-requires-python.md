@@ -7,6 +7,7 @@ sidebar_position: 4
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-09-10 against the PyPA *pyproject.toml specification* ([packaging.python.org](https://packaging.python.org/en/latest/specifications/pyproject-toml/)), *Version specifiers* ([packaging.python.org](https://packaging.python.org/en/latest/specifications/version-specifiers/)), *Core metadata specifications* ([packaging.python.org](https://packaging.python.org/en/latest/specifications/core-metadata/)), and *Writing your pyproject.toml* ([packaging.python.org](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/)).
+> Action pin checked 2026-09-21 on the repository's releases page and tag list: `actions/checkout` **v7.0.1** is the newest release, a floating `v7` tag exists, and `fetch-depth` is an input of its [`action.yml`](https://github.com/actions/checkout/blob/v7.0.1/action.yml) (*"0 indicates all history for all branches and tags"*).
 > Target: **Python 3.14.7**. Documentation-validated — **no sandbox run, no program output**.
 
 **Two fields, two completely different jobs, and both are routinely got wrong in the same file. `version` is the identity of one release and is the *only* required key the specification lets you defer to the build backend. `requires-python` is a constraint on the interpreter, it is optional, and it is the sole mechanism that will actually prevent your package being installed on Python 3.9 — the `Programming Language :: Python :: 3.12` classifier you also wrote is, in the packaging guide's own words, used only for searching and browsing on PyPI. Getting the second wrong is worse than leaving it out, because an over-tight upper bound on the interpreter propagates to every consumer's resolver and cannot be overridden by them.**
@@ -193,7 +194,7 @@ version = "1.2.0rc1"
 
 ```yaml
 # .github/workflows/release.yml — the fetch-depth that matters
-- uses: actions/checkout@v4
+- uses: actions/checkout@v7
   with:
     fetch-depth: 0        # 0 = full history + tags; the default 1 has neither
 ```

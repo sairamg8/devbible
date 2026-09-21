@@ -7,6 +7,7 @@ sidebar_position: 13
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-09-10 against the PyPA *pyproject.toml specification* ([packaging.python.org](https://packaging.python.org/en/latest/specifications/pyproject-toml/)), PEP 621 ([peps.python.org](https://peps.python.org/pep-0621/)), *Core metadata specifications* ([packaging.python.org](https://packaging.python.org/en/latest/specifications/core-metadata/)), setuptools' *Configuring setuptools using pyproject.toml* ([setuptools.pypa.io](https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html)), flit's *pyproject.toml* reference ([flit.pypa.io](https://flit.pypa.io/en/stable/pyproject_toml.html)), and hatch's *Versioning* docs ([hatch.pypa.io](https://hatch.pypa.io/latest/version/)).
+> Action pin checked 2026-09-21 on the repository's releases page and tag list: `actions/checkout` **v7.0.1** is the newest release, a floating `v7` tag exists, and `fetch-depth` is an input of its [`action.yml`](https://github.com/actions/checkout/blob/v7.0.1/action.yml) (*"0 indicates all history for all branches and tags"*).
 > Target: **Python 3.14.7**. Documentation-validated — **no sandbox run, no program output**.
 
 **`dynamic = ["version"]` does not tell a backend to compute the version. It tells the backend that you left the key out *on purpose*, which is the only information the backend lacks — it can already see the key is missing, but it cannot tell whether that was intent or oversight. PEP 621 says exactly that: requiring dynamic to be declared "disambiguates the intent when metadata goes unspecified." Everything else about the mechanism follows from that framing, including the two half-configurations that fail: a key in `dynamic` with no backend config behind it, and a key both written statically and listed as dynamic.**
@@ -195,7 +196,7 @@ print(metadata("invoice-service").get_all("Requires-Dist"))
 **★ Symptom: a dynamic version yields `0.0.0` or `0.1.dev1+g<hash>` in CI and the right number locally.** Cause: a VCS version source in a shallow clone — no tags, so the backend falls back to a development version. Fix: fetch the full history.
 
 ```yaml
-- uses: actions/checkout@v4
+- uses: actions/checkout@v7
   with:
     fetch-depth: 0
 ```
