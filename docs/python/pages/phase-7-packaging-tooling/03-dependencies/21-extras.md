@@ -14,6 +14,7 @@ sidebar_position: 24
 > **Locking and syncing** ([docs.astral.sh](https://docs.astral.sh/uv/concepts/projects/dependencies/),
 > **uv 0.12.12**) and uv's **CLI reference** ([docs.astral.sh](https://docs.astral.sh/uv/reference/cli/)).
 > Target: **Python 3.14.7**. Documentation-verified, **no sandbox run**.
+> Action pins checked 2026-09-21 on each repository's releases page and tag list: `actions/checkout` **v7.0.1** (a floating `v7` tag exists); `astral-sh/setup-uv` pinned to the exact tag **v10.0.1** — it has published no floating major tag since v8.0.0 ([release notes](https://github.com/astral-sh/setup-uv/releases/tag/v8.0.0)), so the old `@v5` still resolved but `@v10` would not.
 
 **The field — `[project.optional-dependencies]`, `Provides-Extra`, the `extra ==` marker — is covered in
 [pyproject.toml · 07](../01-pyproject-toml/07-extras-and-dependency-groups.md). This page is what happens
@@ -127,8 +128,8 @@ jobs:
         extras: ["", "--extra pdf", "--all-extras"]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1
       - run: uv sync --locked ${{ matrix.extras }}
       - run: uv run --locked pytest -q
 ```

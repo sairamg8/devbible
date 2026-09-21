@@ -14,6 +14,7 @@ sidebar_position: 29
 > updates now support uv in general availability*, 2025-03-13
 > ([github.blog](https://github.blog/changelog/2025-03-13-dependabot-version-updates-now-support-uv-in-general-availability/)).
 > Target: **Python 3.14.7**. Documentation-verified, **no sandbox run**.
+> Action pins checked 2026-09-21 on each repository's releases page and tag list: `actions/checkout` **v7.0.1** (a floating `v7` tag exists); `astral-sh/setup-uv` pinned to the exact tag **v10.0.1** — it has published no floating major tag since v8.0.0 ([release notes](https://github.com/astral-sh/setup-uv/releases/tag/v8.0.0)), so the old `@v5` still resolved but `@v10` would not; `peter-evans/create-pull-request` **v8.1.1** (a floating `v8` tag exists; the v8.0.0 release notes add only a Node 24 runner requirement, and `branch` and `title` are inputs of its [`action.yml`](https://github.com/peter-evans/create-pull-request/blob/v8.1.1/action.yml)).
 
 **A lock trades currency for stability, on purpose ([17b](17b-a-lock-never-expires.md)): nothing moves unless
 you move it. That makes refreshing a routine you have to build, and the routine has three parts that pull in
@@ -66,11 +67,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions: { contents: write, pull-requests: write }
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1
       - run: uv lock --upgrade
       - run: uv sync --locked && uv run --locked pytest -q
-      - uses: peter-evans/create-pull-request@v7
+      - uses: peter-evans/create-pull-request@v8
         with:
           branch: chore/refresh-lock
           title: "chore: weekly uv.lock refresh"

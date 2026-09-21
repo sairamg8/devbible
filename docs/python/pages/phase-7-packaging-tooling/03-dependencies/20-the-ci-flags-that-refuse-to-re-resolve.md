@@ -14,6 +14,7 @@ sidebar_position: 23
 > pip docs v26.2.1) and the **pip-tools** documentation
 > ([pip-tools.readthedocs.io](https://pip-tools.readthedocs.io/en/stable/)). Target: **Python 3.14.7**.
 > Documentation-verified, **no sandbox run**.
+> Action pins checked 2026-09-21 on each repository's releases page and tag list: `actions/checkout` **v7.0.1** (a floating `v7` tag exists); `astral-sh/setup-uv` pinned to the exact tag **v10.0.1** — it has published no floating major tag since v8.0.0 ([release notes](https://github.com/astral-sh/setup-uv/releases/tag/v8.0.0)), so the old `@v5` still resolved but `@v10` would not.
 
 **The lockfile's one guarantee — no resolution at install time ([17](17-what-a-lockfile-guarantees.md)) —
 is only delivered if nothing resolves. uv's defaults are built for the developer at a keyboard: `uv run`,
@@ -79,16 +80,16 @@ jobs:
   lock-is-current:                     # the cheapest possible gate, and it runs first
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1
       - run: uv lock --check
 
   test:
     needs: lock-is-current
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1
       - run: uv sync                   # exact sync, asserted by UV_LOCKED
       - run: uv run pytest -q          # uv run is asserted too — no silent re-lock here
 ```
@@ -108,8 +109,8 @@ RUN uv sync --frozen --no-dev                          # then the project itself
 `--no-install-project` exists for exactly this: *"This is particularly useful in situations like building
 Docker images where installing the project separately from its dependencies allows optimal layer caching."*
 `--frozen` is defensible here only because the `lock-is-current` job already proved the lock matches; the image
-build itself would not notice a drift. The Docker and cache mechanics belong to **02 · uv** *(not written
-yet)*; the dependency rule is simply that a trusting flag must sit downstream of an asserting one.
+build itself would not notice a drift. The Docker and cache mechanics belong to [02 · uv](../02-uv/README.md)
+([uv inside a container image](../02-uv/02e-uv-inside-a-container-image.md), [the cache](../02-uv/01d-the-cache-and-the-speed-claim.md)); the dependency rule is simply that a trusting flag must sit downstream of an asserting one.
 
 ## The pip-world equivalents
 

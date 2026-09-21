@@ -13,6 +13,7 @@ sidebar_position: 19
 > **CLI reference** ([docs.astral.sh](https://docs.astral.sh/uv/reference/cli/)) and **PEP 751**
 > ([peps.python.org](https://peps.python.org/pep-0751/)). Target: **Python 3.14.7**.
 > Documentation-verified, **no sandbox run**.
+> Action pins checked 2026-09-21 on each repository's releases page and tag list: `astral-sh/setup-uv` pinned to the exact tag **v10.0.1** — it has published no floating major tag since v8.0.0 ([release notes](https://github.com/astral-sh/setup-uv/releases/tag/v8.0.0)), so the old `@v5` still resolved but `@v10` would not; `version` is an input of its [`action.yml`](https://github.com/astral-sh/setup-uv/blob/v10.0.1/action.yml).
 
 **The last two gaps. A lockfile sitting in the repository proves nothing about the environment on the
 machine in front of you: the declaration, the lock and the installed packages are three separate states, uv
@@ -69,7 +70,7 @@ uv python pin 3.14          # writes .python-version, which uv sync then honours
 
 ```yaml
 # CI runs the same minor as production, from the same pin
-- uses: astral-sh/setup-uv@v5
+- uses: astral-sh/setup-uv@v10.0.1
 - run: uv sync --locked
 - run: uv run pytest -q
 ```
@@ -198,7 +199,7 @@ a greater schema version, and *"lockfiles may only be rejected across minor rele
 refuses it. Fix: pin uv itself in CI to the version the team uses:
 
 ```yaml
-- uses: astral-sh/setup-uv@v5
+- uses: astral-sh/setup-uv@v10.0.1
   with:
     version: "0.12.12"
 ```

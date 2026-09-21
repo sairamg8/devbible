@@ -14,6 +14,7 @@ sidebar_position: 26
 > **CLI reference** ([docs.astral.sh](https://docs.astral.sh/uv/reference/cli/)) and pip's **pip install**
 > reference ([pip.pypa.io](https://pip.pypa.io/en/stable/cli/pip_install/), pip docs v26.2.1).
 > Target: **Python 3.14.7**. Documentation-verified, **no sandbox run**.
+> Action pins checked 2026-09-21 on each repository's releases page and tag list: `actions/checkout` **v7.0.1** (a floating `v7` tag exists); `astral-sh/setup-uv` pinned to the exact tag **v10.0.1** — it has published no floating major tag since v8.0.0 ([release notes](https://github.com/astral-sh/setup-uv/releases/tag/v8.0.0)), so the old `@v5` still resolved but `@v10` would not.
 
 **The table itself — top-level `[dependency-groups]`, `include-group`, normalised names, the MUST that
 keeps groups out of built metadata — is [pyproject.toml · 07](../01-pyproject-toml/07-extras-and-dependency-groups.md).
@@ -118,24 +119,24 @@ jobs:
   lint:                                  # ruff never imports your code: no project, no runtime deps
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1
       - run: uv sync --only-group lint
       - run: uv run ruff check .
 
   typing:                                # mypy must see your code and its dependencies
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1
       - run: uv sync --no-default-groups --group typing
       - run: uv run mypy src
 
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1
       - run: uv sync --no-default-groups --group test
       - run: uv run pytest -q
 ```

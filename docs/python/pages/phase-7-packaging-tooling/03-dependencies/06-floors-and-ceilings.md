@@ -16,6 +16,7 @@ sidebar_position: 6
 > ([packaging.python.org](https://packaging.python.org/en/latest/discussions/install-requires-vs-requirements/)).
 > Target: **Python 3.14.7**. Documentation-verified, **no sandbox run** — no resolution was
 > executed and no timing is claimed.
+> Action pins checked 2026-09-21 on each repository's releases page and tag list: `actions/checkout` **v7.0.1** (a floating `v7` tag exists); `astral-sh/setup-uv` pinned to the exact tag **v10.0.1** — it has published no floating major tag since v8.0.0 ([release notes](https://github.com/astral-sh/setup-uv/releases/tag/v8.0.0)), so the old `@v5` still resolved but `@v10` would not.
 
 **The two ends of a range are not symmetric, and treating them as if they were is the most
 expensive habit in Python dependency management. A lower bound is a factual claim — "this
@@ -99,16 +100,16 @@ jobs:
   test-latest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1
       - run: uv sync --locked
       - run: uv run pytest -q
 
   test-lowest-direct:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1
       - run: uv sync --resolution lowest-direct
       - run: uv run pytest -q
 ```

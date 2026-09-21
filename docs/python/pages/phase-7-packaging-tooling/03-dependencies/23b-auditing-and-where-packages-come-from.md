@@ -12,6 +12,7 @@ sidebar_position: 30
 > **Package indexes** concepts ([docs.astral.sh](https://docs.astral.sh/uv/concepts/indexes/)) and pip's
 > **pip install** reference ([pip.pypa.io](https://pip.pypa.io/en/stable/cli/pip_install/), pip docs
 > v26.2.1). Target: **Python 3.14.7**. Documentation-verified, **no sandbox run**.
+> Action pins checked 2026-09-21 on each repository's releases page and tag list: `actions/checkout` **v7.0.1** (a floating `v7` tag exists); `astral-sh/setup-uv` pinned to the exact tag **v10.0.1** — it has published no floating major tag since v8.0.0 ([release notes](https://github.com/astral-sh/setup-uv/releases/tag/v8.0.0)), so the old `@v5` still resolved but `@v10` would not; `version` is an input of its [`action.yml`](https://github.com/astral-sh/setup-uv/blob/v10.0.1/action.yml).
 
 **A lock records what you chose and never revisits it; an advisory published tomorrow against a package you
 locked last month changes nothing in the file. Something has to ask, on a schedule and before every deploy,
@@ -54,14 +55,14 @@ jobs:
   deploy-gate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1
       - run: uv audit --frozen --no-dev
   everything:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.0.1
       - run: uv audit --frozen --output-format sarif > audit.sarif
 ```
 
@@ -198,7 +199,7 @@ preview, and is subject to change until stabilized."* Fix: pin uv in CI and read
 upgrading it:
 
 ```yaml
-- uses: astral-sh/setup-uv@v5
+- uses: astral-sh/setup-uv@v10.0.1
   with:
     version: "0.12.12"
 ```
