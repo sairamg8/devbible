@@ -291,4 +291,4 @@ No. A frozen dataclass, a named tuple and a `frozenset` subclass are immutable a
 
 ---
 
-← [01 · What copy.copy decides](01-what-copy-copy-decides.md) · [Topic index](README.md)
+← [01 · What copy.copy decides](01-what-copy-copy-decides.md) · [Topic index](README.md) · Next → [02 · deepcopy, the algorithm](02-deepcopy-the-algorithm.md)

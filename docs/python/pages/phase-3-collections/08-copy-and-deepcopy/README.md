@@ -16,6 +16,8 @@ sidebar_position: 0
 | # | Chunk | What it argues |
 |---|---|---|
 | 1 | **[01 · What copy.copy decides](01-what-copy-copy-decides.md)** | one decision per call, in a fixed order — atomic set, builtin `.copy`, class, `__copy__`, `copyreg`, `__reduce_ex__(4)` — and every table is keyed by the *exact* type, so 🔴 a `list` subclass never takes the list branch and `__copy__` is read from the class, never the instance; a tuple "copy" is the tuple |
+| 2 | **[01b · Atomic types and identity](01b-atomic-types-and-identity.md)** | the two atomic sets differ by `tuple`, `frozenset`, `slice`, `super`; identity is decided per type, not by immutability — enum members, `Decimal`, `Fraction`, compiled patterns and loggers return themselves; a deep-copied tuple is shared only if nothing inside needed copying; 🔴 an `object()` sentinel is rebuilt so `is MISSING` fails, and a `weakref.ref` back-pointer keeps pointing at the original |
+| 3 | **[02 · deepcopy, the algorithm](02-deepcopy-the-algorithm.md)** | the function verbatim and its nine ordered checks; the dispatch table has four entries (`list`, `tuple`, `dict`, bound methods) and comes *before* `__deepcopy__`; a step-by-step trace of a shared child copied once; `_keep_alive` and 🔴 why the memo holds every original alive for the whole call; two separate calls do not share a memo |
 
 ## Phase gate
 

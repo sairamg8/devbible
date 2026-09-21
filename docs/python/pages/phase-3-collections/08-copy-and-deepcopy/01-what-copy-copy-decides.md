@@ -247,4 +247,4 @@ Almost never. It is raised only when an object has neither `__reduce_ex__` nor `
 
 ---
 
-← [Topic index](README.md)
+← [Topic index](README.md) · Next → [01b · Atomic types and identity](01b-atomic-types-and-identity.md)
