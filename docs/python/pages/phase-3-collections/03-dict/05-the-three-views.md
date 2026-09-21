@@ -7,6 +7,7 @@ sidebar_position: 13
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-09-10 against the Python 3.14 documentation — [Dictionary view objects](https://docs.python.org/3.14/library/stdtypes.html#dictionary-view-objects), [Mapping Types — dict](https://docs.python.org/3.14/library/stdtypes.html#mapping-types-dict), [Glossary — *dictionary view*](https://docs.python.org/3.14/glossary.html#term-dictionary-view), [`types.MappingProxyType`](https://docs.python.org/3.14/library/types.html#types.MappingProxyType). Target: **CPython 3.14** (3.14.7). Documentation-validated; **no sandbox run**.
+> Corrected 2026-09-21: the three claims that `next(iter(d))` is *O*(1) now say when it is not — dead slots at the front after deletions — with the `v3.14.7` `Objects/dictobject.c` source in [04 · Working with the order](02b-working-with-the-order.md).
 
 **A view is not a list and it is not a snapshot. `d.keys()` does not walk the dictionary, does not allocate one element per key and does not freeze anything — it hands back a small object that reads the dictionary every time you ask it something. That makes creating a view *O*(1) and essentially free, which is why `for k in d.keys()` is not slow. It also means a view you stored five lines ago reflects a dictionary someone else has since changed, which is the source of every surprise on this page and the next.**
 
@@ -45,7 +46,7 @@ And what it does **not** support: indexing, slicing, `.append`, `.sort`, `+`. A 
 d.keys()[0]          # TypeError — 'dict_keys' object is not subscriptable
 d.items()[1:3]       # TypeError — no slicing
 list(d)[0]           # the correct spelling, at the cost of a full copy
-next(iter(d))        # the O(1) spelling for "the first key"
+next(iter(d))        # "the first key" with no copy; O(1) unless entries were deleted from the front
 ```
 
 ## The co-ordering guarantee
@@ -176,7 +177,7 @@ self._known = list(config)        # not config.keys()
 **★ Symptom: `TypeError: 'dict_keys' object is not subscriptable`.** Cause: a view is not a sequence; it supports `len`, iteration, membership and `reversed`, and nothing else. Fix: index a list if you need a position, or use `next(iter(...))` if you only need the first.
 
 ```python
-first = next(iter(d))          # O(1)
+first = next(iter(d))          # no copy; O(1) unless entries were deleted from the front
 third = list(d)[2]             # O(n), but honest about the cost
 ```
 
@@ -227,7 +228,7 @@ Because values views are not set-like and define no value equality, so the compa
 A live, read-only window. They cannot mutate through it, so it feels safe, but they will see every key added or removed afterwards — and if they store it, they pin the entire dictionary in memory, values included. If the contract is "the keys as of now", return `list(self._data)`. If it is "a live read-only view of the whole mapping", return `MappingProxyType(self._data)`, which at least says so in the type.
 
 **★ How do you get the first key of a dict, and why is `list(d)[0]` the wrong habit?**
-`next(iter(d))`. Views are not subscriptable, so people reach for `list(d)[0]`, which copies every key to read one — *O*(n) time and *O*(n) memory for a constant-time answer. On a large mapping inside a request path that is a genuine cost, and it hides behind a familiar-looking index expression. The same applies to `list(d)[-1]` versus `next(reversed(d))` on 3.8 and later.
+`next(iter(d))`. Views are not subscriptable, so people reach for `list(d)[0]`, which copies every key to read one — *O*(n) time and *O*(n) memory for an answer that needs no copy at all. (`next(iter(d))` is *O*(1) only while no entries were deleted from the front; [04 · Working with the order](02b-working-with-the-order.md) has the source and the exception.) On a large mapping inside a request path that is a genuine cost, and it hides behind a familiar-looking index expression. The same applies to `list(d)[-1]` versus `next(reversed(d))` on 3.8 and later.
 
 **What is `.mapping` on a view for?**
 It gives you back a read-only handle to the dictionary the view belongs to, as a `types.MappingProxyType`, added in 3.10. The use is symmetric to the view itself: given only a `values()` view, you can recover keyed access without being handed the mutable dictionary. It is a proxy rather than a copy, so it stays live — good for exposing configuration to a plugin, useless as a defence against concurrent modification.

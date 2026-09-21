@@ -7,6 +7,12 @@ sidebar_position: 4
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-09-10 against the Python 3.14 documentation — [Mapping Types — dict](https://docs.python.org/3.14/library/stdtypes.html#mapping-types-dict), [Dictionary view objects](https://docs.python.org/3.14/library/stdtypes.html#dictionary-view-objects), [`sorted()`](https://docs.python.org/3.14/library/functions.html#sorted), [`collections` — OrderedDict objects](https://docs.python.org/3.14/library/collections.html#ordereddict-objects). Error strings read from `Objects/dictobject.c` at the [CPython **v3.14.7**](https://github.com/python/cpython/blob/v3.14.7/Objects/dictobject.c) tag, not from a run. Target: **CPython 3.14** (3.14.7). Documentation-validated; **no sandbox run**.
+> Corrected 2026-09-21: an earlier version of this page called `next(iter(d))` *O*(1) without
+> qualification. Re-read from the same `v3.14.7` `Objects/dictobject.c`: `dictiter_new`,
+> `dictiter_iternextkey_lock_held`, `dictreviter_iter_lock_held`, `delitem_common`,
+> `dict_popitem_impl`, `insertion_resize` and `dictresize` — the scan, the deletion, the tail trim
+> and the compaction that decide the cost, all quoted or named in *When `next(iter(d))` is not
+> O(1)* below.
 
 **Once order is a guarantee, a set of operations becomes meaningful that previously were not: taking the last item, taking the first, walking backwards, and rebuilding a mapping in a chosen order. Each has a documented promise attached — `popitem()` is LIFO *by guarantee* since 3.7, `reversed(d)` exists *since 3.8*, and `sorted()` is stable *by guarantee* — and each has a shape that is obviously correct and a shape people write instead. This chunk is the ordering toolkit.**
 
@@ -48,11 +54,11 @@ def drain(pending: dict[str, Job]) -> None:
 first_key, first_value = (k := next(iter(queue)), queue.pop(k))    # FIFO by hand
 ```
 
-That walrus expression is the documented idiom, not a trick someone invented; it works because `next(iter(d))` is the first key in insertion order and `pop` removes it. On an empty dict it raises `StopIteration`, not `KeyError` — a real difference from `popitem()`.
+That walrus expression is the documented idiom, not a trick someone invented; it works because `next(iter(d))` is the first key in insertion order and `pop` removes it. On an empty dict it raises `StopIteration`, not `KeyError` — a real difference from `popitem()`. Its cost is not flat, either: on a dict drained from the front it degrades, as *When `next(iter(d))` is not O(1)* below shows.
 
 ## First and last without removing anything
 
-There is no `d.first()` or `d.last()`. There are two one-liners, and both are *O*(1):
+There is no `d.first()` or `d.last()`. There are two one-liners, and both are *O*(1) as long as no entries were deleted from the end they read — *When `next(iter(d))` is not O(1)*, below, is what happens when some were:
 
 ```python
 first_key = next(iter(d))                 # StopIteration if d is empty
@@ -77,6 +83,30 @@ newest = list(cache.keys())[-1]
 # O(1), and it reads better
 newest = next(reversed(cache))
 ```
+
+## When `next(iter(d))` is not *O*(1)
+
+The quoted `collections` recipe states no cost for it, and the source shows why it is not a flat *O*(1) — an implementation detail of CPython, not a language guarantee. A CPython dict keeps its entries in a dense array in insertion order (the compact layout, [01](01-the-hash-table-underneath.md)). A fresh iterator starts at slot 0 (`dictiter_new` sets `di_pos` to `0`), and its first `next` walks forward over *dead* slots — entries whose value is `NULL` — until it reaches a live one. From `dictiter_iternextkey_lock_held` in CPython **v3.14.7**, the branch for `str` keys (the general-key branch is the same loop, and the free-threaded build's `dictiter_iternext_threadsafe` repeats it):
+
+```c
+PyDictUnicodeEntry *entry_ptr = &DK_UNICODE_ENTRIES(k)[i];
+while (i < n && entry_ptr->me_value == NULL) {
+    entry_ptr++;
+    i++;
+}
+if (i >= n)
+    goto fail;
+key = entry_ptr->me_key;
+```
+
+Deleting never repairs that. `delitem_common` — which `del d[k]` and `d.pop(k)` both reach — sets the entry's key and value to `NULL` and leaves `dk_nentries`, the array's length, alone. The array is compacted only by a resize, and a resize is triggered by an *insertion* that finds no usable slot (`insertion_resize`, then `dictresize`, which copies just the live entries), never by a deletion. This is the layout of an ordinary dict; the shared-key split table behind instance `__dict__`s is read by a separate branch (`get_index_from_order`) and is not what is described here. So:
+
+- **The cheap case.** Creating the iterator, and the first `next` when slot 0 is live, is *O*(1) — a dict that has only been inserted into, or that was just resized or rebuilt from its live items.
+- **The expensive case.** With *k* dead slots ahead of the first live entry, `next(iter(d))` scans *k* slots, which is *O*(k). Each deletion of the current first key adds one, and only a resize resets the count.
+- **Draining from the front is quadratic.** `while d: k = next(iter(d)); d.pop(k)` — the documented FIFO emulation above — scans 0, then 1, then 2 … dead slots: *O*(n²) for *n* entries when nothing is inserted meanwhile. A steady insert-one-delete-one queue saw-tooths instead: the dead run grows until an insertion forces a resize, then drops. Each skipped slot is a `NULL` check, so the constant is small; the shape is the point, and this page reports no timings.
+- **The back mirrors it.** `next(reversed(d))` starts at `dk_nentries - 1` and skips dead slots backwards (`dictreviter_iter_lock_held`), so it degrades after `del d[k]` or `d.pop(k)` on the newest keys in the same way. `popitem()` is the exception: it walks back to the last live entry and then sets `dk_nentries` to that entry's index (`dict_popitem_impl`), which drops the dead tail, so a `popitem()` drain never rescans what it already removed.
+
+The structure built for cheap access at both ends is `collections.deque`. When items must also be found or cancelled by key, `OrderedDict.popitem(last=False)` reads the head of a linked list instead — [07 · `OrderedDict`](../06-collections-module/07-ordereddict-what-it-still-does.md) has the mechanism and the same source.
 
 ## Iterating the three views in step
 
@@ -166,7 +196,7 @@ last_key = next(reversed(d))     # 3.8+; explicit, not reliant on popitem's orde
 value = d.pop(last_key)
 ```
 
-**★ Symptom: `list(d.keys())[0]` shows up as an allocation hotspot.** Cause: it materialises every key to read one. Fix: `next(iter(d))`, which reads exactly one entry.
+**★ Symptom: `list(d.keys())[0]` shows up as an allocation hotspot.** Cause: it materialises every key to read one. Fix: `next(iter(d))`, which builds an iterator instead of a list and reads one live entry, skipping any deleted slots ahead of it (their cost is the FIFO gotcha below).
 
 ```python
 first_key = next(iter(d))
@@ -187,11 +217,27 @@ ordered = dict(sorted(d.items()))
 scores = dict(sorted(scores.items(), key=lambda kv: kv[1]))
 ```
 
-**Symptom: a FIFO drain loop written as `d.popitem()` processes newest-first.** Cause: `popitem` is LIFO by guarantee. Fix: use the documented leftmost emulation.
+**Symptom: a FIFO drain loop written as `d.popitem()` processes newest-first.** Cause: `popitem` is LIFO by guarantee. Fix: use the documented leftmost emulation — for a small dict; the next gotcha is what it costs on a large one.
 
 ```python
 while d:
     key, value = (k := next(iter(d)), d.pop(k))     # oldest first
+    handle(key, value)
+```
+
+**★ Symptom: the leftmost-emulation drain above gets slower the further it runs — each iteration scans more dead slots than the one before.** Cause: every `pop` leaves a dead slot at the front of the entries array, and every new `next(iter(d))` scans all of them from slot 0 — *O*(n²) in total when nothing refills the dict (`dictiter_iternextkey_lock_held`, `v3.14.7`). Fix: take a snapshot once and pop by key, or use a structure built for the front.
+
+```python
+for key in list(d):                  # one O(n) snapshot; keys added by handle() are not seen
+    handle(key, d.pop(key))
+```
+
+```python
+from collections import OrderedDict
+
+queue = OrderedDict(d)               # a queue that is also refilled while it drains
+while queue:
+    key, value = queue.popitem(last=False)     # head of a linked list, not a scan
     handle(key, value)
 ```
 
@@ -227,7 +273,10 @@ last_key = list(d)[-1]     # 3.7 floor: reversed(d) is 3.8+
 The most recently inserted one. The documentation says *"Pairs are returned in LIFO (last-in, first-out) order"* and marks it *"Changed in version 3.7: LIFO order is now guaranteed. In prior versions, `popitem` would return an arbitrary key/value pair."* That makes it a stack pop over a mapping, and the docs suggest it precisely for *"destructively iterate over a dictionary"* — a `while d: d.popitem()` loop is the one mutation-during-consumption pattern that cannot raise `RuntimeError`, because it never holds an iterator.
 
 **★ How do you get the first key of a dict without building a list?**
-`next(iter(d))`. Iterating a dict yields keys in insertion order, so the first thing the iterator produces is the first key, at *O*(1). The last key is `next(reversed(d))`, available since 3.8. Both raise `StopIteration` on an empty dict, and both take a sentinel second argument if you would rather have a default. `list(d)[0]` gives the same answer and costs a full copy of the key sequence, which is the version that shows up in profiles.
+`next(iter(d))`. Iterating a dict yields keys in insertion order, so the first thing the iterator produces is the first key, with no list built — *O*(1) when no deleted entries sit ahead of it, *O*(k) when k do (next question). The last key is `next(reversed(d))`, available since 3.8. Both raise `StopIteration` on an empty dict, and both take a sentinel second argument if you would rather have a default. `list(d)[0]` gives the same answer and costs a full copy of the key sequence, which is the version that shows up in profiles.
+
+**★ Is `next(iter(d))` always *O*(1)?**
+No. A fresh dict iterator starts at the first slot of the entries array and skips dead slots — entries whose value is `NULL`, left behind by `del` and `pop` — until it finds a live one (`dictiter_iternextkey_lock_held`, CPython `v3.14.7`). Deletion never compacts that array; a resize does, and only an insertion triggers one. So the cost is proportional to the deletions from the front since the last resize, and the documented FIFO emulation `(k := next(iter(d)), d.pop(k))`, looped over a dict that is not being refilled, is *O*(n²) overall. `popitem()` does not have the problem in the other direction, because it trims the dead tail as it goes. For a real queue use `collections.deque`, or `OrderedDict.popitem(last=False)` when items must also be found by key.
 
 **★ Why is there no `dict.sort()`?**
 Because sorting a hash table in place is not a thing a hash table can do — position is determined by insertion, and the entries array is append-only by construction. Ordering a mapping means building a new one: `dict(sorted(d.items(), key=...))`. That is also why the `dict` ordering guarantee is about *insertion*, not about any intrinsic order over keys; a dict has no notion of a key being "less than" another, which is exactly why `<` between dicts raises `TypeError`.
