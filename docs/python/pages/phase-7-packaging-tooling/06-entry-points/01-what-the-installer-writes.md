@@ -162,7 +162,7 @@ The wrapper is recorded in the distribution's `RECORD` like any other installed 
 
 ## Validation happens at install, not at build
 
-uv's build backend checks command *names* and group names but not the object reference: `metadata.rs` line 943 is a `TODO(konsti): Validate that the object references are valid Python identifiers.` The installers are stricter about scripts, because a wrapper has to call something:
+uv's build backend checks command *names* and group names but not the object reference: `metadata.rs` line 939 is a `TODO(konsti): Validate that the object references are valid Python identifiers.` The installers are stricter about scripts, because a wrapper has to call something:
 
 - **pip** raises `MissingCallableSuffix`: *"Invalid script entry point: \{entry_point\} - A callable suffix is required."*
 - **uv** requires a colon in its `console_scripts` regex and fails with *"invalid console script: '\{value\}'"* (`script.rs`, lines 34–37).
