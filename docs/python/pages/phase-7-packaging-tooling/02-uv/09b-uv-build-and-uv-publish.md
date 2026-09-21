@@ -90,8 +90,10 @@ VIRTUAL_ENV=/tmp/wheel-check uv pip install dist/invoice_service-0.4.2-py3-none-
 
 The `cd` matters as much as the fresh environment. `python -c` puts the current directory on
 `sys.path`, so in a flat-layout project the import can be answered by the source directory sitting next
-to you rather than by the wheel — the import-the-wrong-copy bug topic **04 · Project layout** *(not
-written yet)* is built around. Inside the project, the editable install answers it regardless.
+to you rather than by the wheel — the import-the-wrong-copy bug topic
+[04 · Project layout](../04-project-layout/README.md) is built around
+([the bug, built end to end](../04-project-layout/03-the-wrong-copy-bug.md)). Inside the project, the
+editable install answers it regardless.
 
 ## `uv publish`
 
