@@ -216,4 +216,4 @@ A list of every original that was copied, put there by `_keep_alive` so no origi
 
 ---
 
-← [02 · deepcopy, the algorithm](02-deepcopy-the-algorithm.md) · [Topic index](README.md)
+← [02 · deepcopy, the algorithm](02-deepcopy-the-algorithm.md) · [Topic index](README.md) · Next → [03 · Cycles and shared children](03-cycles-and-shared-children-traced.md)
