@@ -105,6 +105,13 @@ export const PINS = {
     label: 'pre-commit', source: 'gh:pre-commit/pre-commit', policy: 'latest',
     pin: '4.6.2', checked: '2026-09-10', tracks: ['python'], names: ['pre-commit'],
   },
+  // Named in phase 3 topic 07 (heapq and bisect) as the answer when a sorted list is edited in
+  // place. Pinned 2026-09-21: PyPI and the GitHub tags both say 2.4.0 (released 2021-05-16), so
+  // the checker will only speak if a newer release appears.
+  sortedcontainers: {
+    label: 'sortedcontainers', source: 'gh:grantjenks/python-sortedcontainers', policy: 'latest',
+    pin: '2.4.0', checked: '2026-09-21', tracks: ['python'], names: ['sortedcontainers'],
+  },
   jdk: {
     label: 'JDK (Temurin)', source: 'eol:eclipse-temurin', policy: 'lts', cycle: '25',
     pin: '25', checked: '2026-08-31', tracks: ['java'], names: ['jdk', 'java'],
