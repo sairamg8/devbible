@@ -226,4 +226,4 @@ That the object is a global with that name, so the copy is the object itself. It
 
 ---
 
-← [03b · Containers built from their children](03b-containers-built-from-their-children.md) · [Topic index](README.md)
+← [03b · Containers built from their children](03b-containers-built-from-their-children.md) · [Topic index](README.md) · Next → [04b · _reconstruct step by step](04b-reconstruct-step-by-step.md)
