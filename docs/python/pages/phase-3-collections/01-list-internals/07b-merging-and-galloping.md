@@ -16,6 +16,14 @@ sidebar_position: 16
 > Documentation-validated; **no sandbox run, no timings, no comparison counts of my
 > own** — every count below is quoted from `listsort.txt`. Target: **CPython 3.14**
 > (3.14.7).
+> Corrected 2026-09-21: the first gotcha's `sorted_stream` kept every sorted run in memory while
+> citing `heapq.merge`'s *"does not pull the data into memory all at once"* as the saving. Re-read
+> from the [`heapq.merge` documentation](https://docs.python.org/3.14/library/heapq.html#heapq.merge),
+> CPython **v3.14.7** [`Lib/heapq.py`](https://github.com/python/cpython/blob/v3.14.7/Lib/heapq.py)
+> (`merge`, line 330: one `[key(value), order, value, next]` entry per input) and
+> [`tempfile.TemporaryFile`](https://docs.python.org/3.14/library/tempfile.html#tempfile.TemporaryFile);
+> the gotcha now says what the in-memory version does and does not save, and shows a version whose
+> runs really live on disk.
 
 **[07](07-timsort.md) found the runs. This chunk is how they are combined, and what
 that costs in memory. Stability forbids merging anything but two *adjacent* runs, so
@@ -155,8 +163,9 @@ during `rows.sort(key=…)` — not while building the list.
 **Cause.** "In place" describes where the result ends up. The merge needs up to N//2
 pointers of temp space, a `key=` sort adds an N-pointer keys array, and every key
 object is alive at once.
-**Fix.** Sort chunks that fit, then stream-merge them — `heapq.merge` *"does not pull
-the data into memory all at once"*:
+**Fix.** Do not pay the whole sort's overhead at once. Sorting chunk by chunk bounds the temp
+area, the keys array and the key objects by `chunk` — each `sorted(batch, key=key)` frees them
+when it returns — and `heapq.merge` then keeps one key per run while it merges:
 
 ```python
 import heapq
@@ -164,11 +173,43 @@ from itertools import batched
 
 def sorted_stream(rows, key, chunk=500_000):
     runs = [sorted(batch, key=key) for batch in batched(rows, chunk)]
-    return heapq.merge(*runs, key=key)       # an iterator; nothing merged up front
+    return heapq.merge(*runs, key=key)       # lazy output, but every run is a list held in memory
 ```
 
-For data that does not fit at all, write the sorted chunks to disk and merge the
-files; the shape is identical.
+That version does **not** bound the rows themselves: `runs` holds all N pointers and keeps every
+row object alive until the iterator is dropped. `heapq.merge` *"does not pull the data into
+memory all at once"* describes how it consumes its inputs, one item ahead from each — it cannot
+shrink inputs you already hold as lists. When the rows themselves do not fit, the runs must live
+on disk and be read back lazily, so the merge holds one line per run. A text file already
+iterates as lines, so it is a valid `heapq.merge` input:
+
+```python
+import heapq
+import tempfile
+from collections.abc import Callable, Iterable, Iterator
+from itertools import batched
+
+def sorted_lines(
+    lines: Iterable[str], key: Callable[[str], object], chunk: int = 500_000
+) -> Iterator[str]:
+    """Lines must end in a newline. One chunk in memory while sorting, one line per chunk merging."""
+    spilled = []
+    try:
+        for batch in batched(lines, chunk):
+            tmp = tempfile.TemporaryFile("w+", encoding="utf-8")
+            spilled.append(tmp)                       # registered first, so the finally closes it
+            tmp.writelines(sorted(batch, key=key))    # this chunk's temp area and keys die here
+            tmp.seek(0)
+        yield from heapq.merge(*spilled, key=key)     # each file yields its lines in order, lazily
+    finally:
+        for tmp in spilled:
+            tmp.close()                               # a TemporaryFile is destroyed when closed
+```
+
+`writelines` adds no newlines, so a line without one would fuse with whichever line follows it in
+its chunk. Each chunk is an open file for the length of the merge, so a very small `chunk` can hit
+the process's open-file limit. The same shape works for any row format you can write one record at
+a time and read back lazily, provided the key gives the same answer on the reloaded row.
 
 ### Hand-writing a two-pointer merge of two sorted lists
 **Symptom.** A Python `while i < len(a) and j < len(b)` loop in a hot path, with its
@@ -232,8 +273,9 @@ consequences of that one code path.
 
 **You have two sorted lists. What is the idiomatic way to merge them?**
 `(a + b).sort()` if you want a list — timsort sees two runs and performs one merge in
-C. `heapq.merge(a, b)` if you want a lazy iterator or have many sorted inputs, since it
-*"does not pull the data into memory all at once"*. A hand-written two-pointer loop is
+C. `heapq.merge(a, b)` if you want a lazy iterator or have many sorted inputs — and, when the
+inputs are streams rather than lists you already hold, because it *"does not pull the data into
+memory all at once"*. A hand-written two-pointer loop is
 the one answer that is both slower and easier to get wrong.
 
 **Why does a merge trim both runs before copying anything?**
