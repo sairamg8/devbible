@@ -7,9 +7,10 @@ sidebar_position: 10
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-09-10 against the PyPA *Entry points specification* ([packaging.python.org](https://packaging.python.org/en/latest/specifications/entry-points/)), the *pyproject.toml specification* ([packaging.python.org](https://packaging.python.org/en/latest/specifications/pyproject-toml/)), and *Writing your pyproject.toml* ([packaging.python.org](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/)).
-> Target: **Python 3.14.7**. Documentation-validated — **no sandbox run, no program output**.
+> Corrected 2026-09-21 — three claims — against PEP 517 ([peps.python.org](https://peps.python.org/pep-0517/)), *Creating and discovering plugins* ([packaging.python.org](https://packaging.python.org/en/latest/guides/creating-and-discovering-plugins/)), and installer source read at named tags: pip **26.2.1** [`operations/install/wheel.py`](https://github.com/pypa/pip/blob/26.2.1/src/pip/_internal/operations/install/wheel.py) with its vendored [`distlib/util.py`](https://github.com/pypa/pip/blob/26.2.1/src/pip/_vendor/distlib/util.py) and [`pyproject_hooks/_in_process/_in_process.py`](https://github.com/pypa/pip/blob/26.2.1/src/pip/_vendor/pyproject_hooks/_in_process/_in_process.py), pypa/installer **1.0.1** [`utils.py`](https://github.com/pypa/installer/blob/1.0.1/src/installer/utils.py), uv **0.12.12** [`uv-install-wheel/src/script.rs`](https://github.com/astral-sh/uv/blob/0.12.12/crates/uv-install-wheel/src/script.rs), [`lib.rs`](https://github.com/astral-sh/uv/blob/0.12.12/crates/uv-install-wheel/src/lib.rs) and [`uv-build-backend/src/metadata.rs`](https://github.com/astral-sh/uv/blob/0.12.12/crates/uv-build-backend/src/metadata.rs).
+> Target: **Python 3.14.7**. Documentation- and source-validated — **no sandbox run, no program output**; installer behaviour is quoted from source at those tags, not captured from an install.
 
-**A console script is not a file you write. It is three metadata lines that the installer turns into an executable wrapper, and understanding that inversion explains everything odd about them: why the command exists only after installation, why it vanishes outside the virtual environment, why `python -m yourpkg` and `yourpkg` can behave differently, and why a script that "works when I run the file" fails as an installed command. The same mechanism, under a different group name, is how every plugin system in Python — pytest plugins, PEP 517 build backends, Flask extensions, `console_scripts` themselves — discovers code it has never heard of.**
+**A console script is not a file you write. It is three metadata lines that the installer turns into an executable wrapper, and understanding that inversion explains everything odd about them: why the command exists only after installation, why it vanishes outside the virtual environment, why `python -m yourpkg` and `yourpkg` can behave differently, and why a script that "works when I run the file" fails as an installed command. The same mechanism, under a different group name, is how many Python plugin systems — pytest plugins, flake8 plugins, `console_scripts` themselves — discover code they have never heard of. It is not how every one does: a PEP 517 build backend is imported from the `build-backend` string, and Flask extensions are found by naming convention.**
 
 ## `[project.scripts]` — the whole mechanism in one sentence
 
@@ -65,7 +66,13 @@ Whitespace around the colon is tolerated:
 
 > *"Within a value, readers must accept and ignore spaces (including multiple consecutive spaces) before or after the colon, between the object reference and the left square bracket."*
 
-⚠️ **The most common error is a dot where a colon belongs.** `"invoice_service.cli.main"` is a valid object reference — it means *import the module `invoice_service.cli.main`* — so it does not fail validation. It fails at run time with a `ModuleNotFoundError` naming a module you never wrote.
+🔴 **A dot where a colon belongs is a valid object reference and an invalid script — and it is refused when the wrapper is written, at install time, not when the command runs.** `"invoice_service.cli.main"` is an `importable.module` reference (*import the module `invoice_service.cli.main`*), so the grammar accepts it and uv_build 0.12.12 packs it into a wheel — its source carries a `TODO` to validate object references. But a script must name something to call: the object reference *"points to a function which will be called with no arguments when this command is run."* Each installer checks for the callable part before it writes the wrapper, and refuses ([06 · What the installer writes](../06-entry-points/01-what-the-installer-writes.md) has the templates):
+
+- **pip 26.2.1** — `PipScriptMaker.make` raises `MissingCallableSuffix` before it generates that script: `Invalid script entry point: {entry_point} - A callable suffix is required.` (distlib leaves the entry's `suffix` as `None` when there is no colon).
+- **pypa/installer 1.0.1** — the entry-point regex makes the `:attr` part mandatory for scripts, and the parser does a bare `assert match`.
+- **uv 0.12.12** — its `console_scripts` regex requires the colon and fails with `invalid console script: '{value}'`, inside an error whose text begins `The wheel is invalid:`.
+
+Whether *your* backend stops it earlier depends on the backend: uv_build does not, and hatchling, setuptools and flit were not checked here. Either way the failure is an install error that names the entry — never a run-time `ModuleNotFoundError` for a module you did not write. (A colon in the right place with a *wrong* module path is the run-time case: installers check that the value has a callable part, not that the callable exists — see *Gotchas*.)
 
 ### Command names are looser than module names
 
@@ -133,7 +140,11 @@ for ep in entry_points(group="invoice_service.exporters"):
     print(ep.name, exporter_cls)
 ```
 
-`ep.load()` is where the import actually happens — which is the point of the whole design. Your host package knows the *group* name and nothing else; the plugin's import path arrives as data from an installed distribution's metadata.
+`ep.load()` is where the import actually happens — which is the point of the whole design. Your host package knows the *group* name and nothing else; the plugin's import path arrives as data from an installed distribution's metadata. [06 · Reading entry points at runtime](../06-entry-points/05-reading-entry-points-at-runtime.md) covers the API in depth.
+
+### Two systems that look like entry points and are not
+
+A **PEP 517 build backend** is named by a string that *borrows* the entry-point syntax — *"formatted following the same `module:object` syntax as a `setuptools` entry point"* ([PEP 517](https://peps.python.org/pep-0517/)) — but nothing is looked up: no group is queried and no `entry_points.txt` is read. The frontend imports the string, and pip's vendored `pyproject_hooks` does exactly that with `mod_path, _, obj_path = ep.partition(":")` followed by `obj = import_module(mod_path)` ([02](02-pep-517-the-frontend-backend-split.md)). **Flask extensions** are found by naming convention, and the packaging guide picks Flask as its example of that approach: *"Flask uses the naming convention `flask_{plugin_name}`."* ([Creating and discovering plugins](https://packaging.python.org/en/latest/guides/creating-and-discovering-plugins/)). [06 · Plugin discovery patterns](../06-entry-points/06-plugin-discovery-patterns.md) sets the three approaches side by side.
 
 ### The one construct the spec forbids
 
@@ -174,11 +185,20 @@ if __name__ == "__main__":
 python -m invoice_service --customer acme   # works with no scripts dir at all
 ```
 
-**★ Symptom: `ModuleNotFoundError: No module named 'invoice_service.cli.main'`.** Cause: a dot where the colon belongs. `"invoice_service.cli.main"` is a *valid* object reference meaning "import that module", so nothing rejects it at build time. Fix:
+**★ Symptom: `pip install .` or `uv sync` fails with `Invalid script entry point: … - A callable suffix is required.` (pip) or `invalid console script: 'invoice_service.cli.main'` (uv).** Cause: a dot where the colon belongs. `"invoice_service.cli.main"` is a *valid* object reference meaning "import that module", so the grammar and uv_build accept it — but a script must name a callable, and every installer checks for one when it writes the wrapper. Nothing reaches run time. Fix:
 
 ```toml
 [project.scripts]
 invoice = "invoice_service.cli:main"
+```
+
+**★ Symptom: the command installs, then fails with `ModuleNotFoundError: No module named 'invoice_service.clii'` or `cannot import name 'main'`.** Cause: the colon is there but the target is wrong — a typo, a moved module, a renamed function. Installers check that a script value has a callable part, not that the callable exists, so the wrapper is written and the import runs only when the command does ([06 · stale wrappers](../06-entry-points/09-stale-wrappers-and-editable-installs.md)). Fix: load every declared entry point in a test.
+
+```python
+from importlib.metadata import distribution
+
+for ep in distribution("invoice-service").entry_points:
+    ep.load()          # raises what the wrapper's own import would raise
 ```
 
 **★ Symptom: the command runs your module's top-level code but not your function.** Cause: the wrapper *imports* the module, so anything at module scope executes, and your `if __name__ == "__main__":` guard is false because the module is imported under its own name. Fix: put the work in the function named by the entry point, and keep the guard only for direct execution.
@@ -258,7 +278,7 @@ Because `[project.scripts]` already *is* the `console_scripts` group. Allowing b
 Because the wrapper imports the module to reach the attribute. Import executes the module body top to bottom, so a `logging.basicConfig()` call, a database connection, or an expensive constant computation at module scope all happen before your function is entered — and they also happen if the module is imported for any other reason, such as by your test suite. It is also why `if __name__ == "__main__":` does not fire: the module is imported under its real dotted name, not as `__main__`. Anything that must happen only when the command runs belongs inside the function.
 
 **★ How does an entry point make a plugin system work without the host knowing the plugin exists?**
-The host agrees on a *group name* and nothing else. Each plugin declares an entry in that group in its own `pyproject.toml`, and at install time the backend writes it into that plugin's `entry_points.txt`. The host then calls `importlib.metadata.entry_points(group=...)`, which scans installed distributions' metadata and returns the matching entries, and `ep.load()` performs the import. So the coupling is a string, resolved through metadata written by a third party — no registry, no configuration file to edit, and no import of the plugin until the host asks for it. That is exactly how pytest finds plugins and how pip finds a PEP 517 backend.
+The host agrees on a *group name* and nothing else. Each plugin declares an entry in that group in its own `pyproject.toml`, and at install time the backend writes it into that plugin's `entry_points.txt`. The host then calls `importlib.metadata.entry_points(group=...)`, which scans installed distributions' metadata and returns the matching entries, and `ep.load()` performs the import. So the coupling is a string, resolved through metadata written by a third party — no registry, no configuration file to edit, and no import of the plugin until the host asks for it. That is how pytest finds its plugins (the `pytest11` group) and how flake8 finds its checks (`flake8.extension`). It is not how pip finds a PEP 517 backend — the frontend imports the `build-backend` string directly; PEP 517 borrows the entry-point syntax for it but resolves it without reading any metadata ([02](02-pep-517-the-frontend-backend-split.md)) — and not how Flask finds its extensions, which is a naming convention ([06 · Plugin discovery patterns](../06-entry-points/06-plugin-discovery-patterns.md)).
 
 **★ Should you ship a `__main__.py` as well as a console script?**
 Yes, in almost every case, because they fail independently. A console script depends on the scripts directory being on `PATH` and on the venv not having been moved, and neither is under your control. `python -m yourpackage` depends only on the package being importable, which is the same condition your library already requires — so it works inside containers with no shell profile, on Windows where `Scripts` may be unlisted, and after a venv rename that broke every wrapper's shebang. The cost is four lines in `__main__.py` that delegate to the same function the entry point names.
