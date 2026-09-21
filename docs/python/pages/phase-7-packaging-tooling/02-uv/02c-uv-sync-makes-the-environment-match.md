@@ -10,6 +10,10 @@ sidebar_position: 7
 > ([docs.astral.sh](https://docs.astral.sh/uv/concepts/projects/sync/)), *Configuring projects*
 > ([docs.astral.sh](https://docs.astral.sh/uv/concepts/projects/config/)) and *Locking an
 > environment* ([docs.astral.sh](https://docs.astral.sh/uv/pip/compile/)).
+> Updated 2026-09-21 against *Cache → Dynamic metadata* ([docs.astral.sh](https://docs.astral.sh/uv/concepts/cache/#dynamic-metadata)),
+> *Running commands in projects* ([docs.astral.sh](https://docs.astral.sh/uv/concepts/projects/run/)) and the
+> [CLI reference](https://docs.astral.sh/uv/reference/cli/) (`--no-sync`, `--reinstall-package`) — the cache and run text is
+> identical at the 0.12.12 and 0.12.17 tags — which settle whether an edited `[project.scripts]` is picked up.
 > Version spine: **uv 0.12.12** (2026-09-09) · Python 3.14.7 · ruff 0.16.6 · pre-commit 4.6.2.
 > Documentation-validated, **no sandbox run, no timings**.
 
@@ -88,8 +92,9 @@ installs it unless told otherwise.
 | `--extra <name>` | adds one extra (an optional-dependency set) |
 | `--all-extras` | *"To quickly enable all extras, use the `--all-extras` option."* |
 
-The two axes are genuinely different things and topic **03 · Dependencies done right** *(not
-written yet)* argues the distinction: **extras** are optional features your *consumers* can ask
+The two axes are genuinely different things and topic [03 · Dependencies done right](../03-dependencies/README.md)
+argues the distinction ([extras](../03-dependencies/21-extras.md), [groups](../03-dependencies/22-dependency-groups.md)):
+**extras** are optional features your *consumers* can ask
 for (`pip install myapp[postgres]`), **groups** are sets your *developers* need and consumers
 never see. Sync flags exist for both because both end up in the lockfile.
 
@@ -110,11 +115,25 @@ That is what makes a `src/` layout painless: your package is importable because 
 and edits take effect immediately because the install points at your source tree rather than
 copying it.
 
-⚠️ **What I could not confirm:** the documentation says *"changes"* without distinguishing source
-edits from *metadata* changes. An editable install records entry points and dependencies at
-install time, so it is reasonable to expect a newly-added `[project.scripts]` entry or dependency
-to need a re-sync — but uv's docs do not say so, and this page will not assert it. If a new
-console script does not appear, re-install the project and move on rather than theorising:
+An editable install reflects *source* edits without a re-sync, because it points at your tree. Metadata is a
+separate question — entry points and dependencies are recorded when the project is installed — and uv's
+cache documentation answers it:
+
+> *"By default, uv will _only_ rebuild and reinstall local directory dependencies (e.g., editables) if the `pyproject.toml`, `setup.py`, or `setup.cfg` file in the directory root has changed, or if a `src` directory is added or removed. This is a heuristic and, in some cases, may lead to fewer re-installs than desired."*
+> — [cache → dynamic metadata](https://docs.astral.sh/uv/concepts/cache/#dynamic-metadata)
+
+Your project is a local directory installed editable, and `[project.scripts]` lives in `pyproject.toml`,
+so adding, renaming or removing a script edits a watched file. The next `uv sync` rebuilds and reinstalls
+the project and writes the new wrapper. So does the next `uv run`:
+
+> *"When using `run`, uv will ensure that the project environment is up-to-date before running the given command."*
+> — [running commands](https://docs.astral.sh/uv/concepts/projects/run/)
+
+The heuristic is the limit. It misses entry points generated from a file it does not watch (a backend filling
+`[project] dynamic = ["scripts"]`), it is defeated by a `tool.uv.cache-keys` list that replaced the defaults
+without `pyproject.toml`, and `uv run --no-sync` skips the check altogether. For those, reinstall by hand; the
+cases and their fixes are worked through in
+[06 · uv run and the project command](../06-entry-points/07-uv-run-and-the-project-command.md).
 
 ```bash
 uv sync --reinstall-package my-project
@@ -170,12 +189,17 @@ uv sync --group lint          # project + deps + a named group
 ```
 
 **★ Symptom: you added a console script to `[project.scripts]` and the command is not found.**
-Cause: entry points are written when the project is installed; the docs promise only that
-*"changes"* are reflected without re-syncing and do not say metadata is included. Fix: reinstall
-the project rather than guessing.
+Cause: the wrapper is written when the project is installed, and editing the file installs nothing. uv
+notices the edit — its cache documentation names `pyproject.toml`, `setup.py`, `setup.cfg` and an added or
+removed `src` as the triggers — but only when something runs the check: `uv sync`, or `uv run`. Typing the
+command from an activated shell after the edit, with no sync in between, finds the old environment. Fix:
+sync first, or go through `uv run`; reinstall explicitly when the entry point comes from a file uv does not
+watch or the run used `--no-sync` ([06 · uv run and the project command](../06-entry-points/07-uv-run-and-the-project-command.md)).
 
 ```bash
-uv sync --reinstall-package my-project
+uv sync                                   # notices the pyproject.toml edit and reinstalls the project
+uv run invoice --customer acme            # the same check, then the command
+uv sync --reinstall-package my-project    # when uv's heuristic cannot see the change
 ```
 
 **★ Symptom: after switching branches, imports fail for packages the other branch had.**
