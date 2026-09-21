@@ -120,7 +120,8 @@ never had:
    broken custom `__hash__` — are found by the list and missed by the set.
 4. **Nothing about types is fixed.** `"4812" in {4812}` is `False`, exactly as `"4812" in [4812]`
    was. The conversion does not repair a type mismatch between the probe and the data; normalise at
-   the boundary (**14b** *(not written yet)*).
+   the boundary — [9](09-diffing-id-sets.md) has the rule: one canonical type per key, converted on
+   both sides before either reaches a set.
 
 ## The same bug in other clothes
 
