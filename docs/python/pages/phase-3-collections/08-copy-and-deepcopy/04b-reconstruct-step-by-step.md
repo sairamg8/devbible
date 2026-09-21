@@ -253,4 +253,4 @@ A shallow copy passes the arguments, the state and the items through unchanged �
 
 ---
 
-← [04 · The reduce protocol](04-the-reduce-protocol.md) · [Topic index](README.md)
+← [04 · The reduce protocol](04-the-reduce-protocol.md) · [Topic index](README.md) · Next → [04c · What a copy runs unexpectedly](04c-what-a-copy-runs-unexpectedly.md)
