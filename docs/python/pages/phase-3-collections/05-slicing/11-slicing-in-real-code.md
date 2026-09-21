@@ -275,4 +275,4 @@ the page, which is what a "Rows 21–25 of 25" label needs when you only have a 
 
 ---
 
-← Prev: [10d · Typing and multi-dimensional keys](10d-typing-and-multidimensional-keys.md) · [Topic index](README.md) · Next → [11b · Slicing in real code: batching](11b-batching.md)
+← Prev: [10e · Why a validating subclass leaks](10e-why-a-validating-subclass-leaks.md) · [Topic index](README.md) · Next → [11b · Slicing in real code: batching](11b-batching.md)

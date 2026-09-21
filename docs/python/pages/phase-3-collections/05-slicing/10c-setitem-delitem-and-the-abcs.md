@@ -1,5 +1,5 @@
 ---
-title: "Writing and deleting through a slice reach your class as __setitem__ and __delitem__ with a slice key — no ABC mixin will handle it for you, and a list subclass that validates in __setitem__ is bypassed by append, extend and its own constructor"
+title: "Writing and deleting through a slice reach your class as __setitem__ and __delitem__ with a slice key — no ABC mixin will handle it for you, so delegate to a list and validate the whole right-hand side first, or refuse to resize fixed storage"
 sidebar_label: "10c · __setitem__, __delitem__ and the ABCs"
 sidebar_position: 21
 ---
@@ -15,6 +15,15 @@ sidebar_position: 21
 > (the mixin bodies) and [`Objects/listobject.c`](https://github.com/python/cpython/blob/3.14/Objects/listobject.c)
 > (`list_append_impl`, `list_extend_impl`, `list_insert_impl`) — implementation detail.
 > Documentation-verified — **no sandbox run, no program output**.
+> Corrected 2026-09-21: an earlier version of this page said `collections.UserList` routes every
+> write through methods you control. It does not — in CPython **v3.14.7**
+> [`Lib/collections/__init__.py`](https://github.com/python/cpython/blob/v3.14.7/Lib/collections/__init__.py)
+> (`class UserList`, lines 1230–1356) its constructor, `append`, `insert`, `extend` and `+=` write
+> `self.data` directly. The corrected account, with the source excerpt, and the section on why a
+> validating `list` subclass leaks moved to [10e](10e-why-a-validating-subclass-leaks.md).
+> `MutableSequence` re-read from
+> [`Lib/_collections_abc.py`](https://github.com/python/cpython/blob/v3.14.7/Lib/_collections_abc.py)
+> (lines 1104–1168).
 
 **`obj[1:3] = values` calls `obj.__setitem__(slice(1, 3, None), values)`; `del obj[::2]` calls
 `obj.__delitem__(slice(None, None, 2))`. So the slice rules of [08](08-slice-assignment.md) and
@@ -24,8 +33,11 @@ right is again to delegate to a list. The standard building blocks do less than 
 `MutableSequence` supplies `append`, `extend`, `pop`, `remove`, `+=` and friends, but every one of
 them is written with integer indices; no mixin ever passes a slice, so slice support is exactly as
 good as your two methods. Subclassing `list` to validate is worse: `list.append`, `extend`,
-`insert` and the constructor are C functions that never call your `__setitem__`. Typing `__getitem__`
-and tuple keys are [10d](10d-typing-and-multidimensional-keys.md).**
+`insert` and the constructor are C functions that never call your `__setitem__`. `UserList` is not
+the way out either: its methods are Python and can be overridden, but in 3.14.7 each of them writes
+`self.data` directly instead of calling `__setitem__`. Only `MutableSequence` funnels writes; why the
+other two leak, with the `UserList` source, is [10e](10e-why-a-validating-subclass-leaks.md). Typing
+`__getitem__` and tuple keys are [10d](10d-typing-and-multidimensional-keys.md).**
 
 ## Two more methods, the same key
 
@@ -136,33 +148,7 @@ lengths. Get the positions from `slice.indices`, and refuse a length mismatch in
             self._write(index, value)
 ```
 
-## Why a validating `list` subclass leaks
-
-Overriding `__setitem__` on a `list` subclass intercepts `obj[i] = x` and `obj[i:j] = xs`, and
-nothing else. CPython's list methods are C functions that write the array directly —
-`list_append_impl` calls `_PyList_AppendTakeRef`, `list_insert_impl` goes through `ins1`,
-`list_extend_impl` copies items in, and the constructor goes through `list___init___impl` — so none
-of them looks up your override. A subclass that validates in `__setitem__` therefore accepts bad
-data through `append`, `insert`, `extend`, `+=` and `MyList(bad_items)`. There is a second trap
-inside `__setitem__` itself: for a slice key, `value` is an *iterable of items*, and a validator
-written for one item either rejects every legitimate slice assignment or, worse, passes a list
-object as "a valid item".
-
-The fix is not to find every method to override; it is to stop inheriting a C implementation that
-does not call you. `MutableSequence` (above) or `collections.UserList` routes every path through
-methods you control.
-
 ## Gotchas
-
-**★ Symptom: a `list` subclass that rejects negative prices in `__setitem__` still ends up holding
-`-5`.** Cause: the value came in through `append`, `extend`, `insert`, `+=` or the constructor —
-C methods that never call `__setitem__`. Fix: build on `MutableSequence` or `UserList` so every
-write path goes through your methods.
-
-```python
-class Prices(MutableSequence):      # not: class Prices(list)
-    ...
-```
 
 **★ Symptom: `prices[1:3] = [200, 300]` raises "price must be a non-negative int, got [200,
 300]".** Cause: `__setitem__` validates `value` as one item, but for a slice key the value is an
@@ -221,14 +207,6 @@ to an internal list, which enforces the ordinary-versus-extended length rules an
 a list, compute the positions with `range(*key.indices(len(self)))`, enforce the one-for-one rule
 for extended slices (and for all slices, if the storage cannot resize), and raise the same
 `TypeError`/`IndexError` as indexing does.
-
-**★ Why is subclassing `list` a poor way to build a validated list?**
-Because overriding `__setitem__` only intercepts subscription writes. In CPython `append`,
-`insert`, `extend`, `+=` and the constructor are C functions that write the underlying array without
-calling any overridden Python method, so they bypass validation entirely — you would have to
-override every one of them and keep up with any added later. Building on
-`collections.abc.MutableSequence` or `collections.UserList` routes every mutation through methods
-you define, so one validation point covers them all.
 
 **Does `collections.abc.Sequence` give your class slicing?**
 No. It requires `__getitem__` and `__len__` and supplies `__contains__`, `__iter__`,

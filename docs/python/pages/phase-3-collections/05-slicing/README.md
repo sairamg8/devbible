@@ -33,12 +33,13 @@ sidebar_position: 0
 | 18 | **[09c · Deletion cost and types](09c-deletion-cost-and-types.md)** | A list deletion moves the tail, a bytearray front deletion only advances its start, del a forgets a name, and the… |
 | 19 | **[10 · Slicing your own class](10-slicing-your-own-class.md)** | A slice reaches your class as a slice object in __getitem__ that validates nothing — raise TypeError for the kind,… |
 | 20 | **[10b · Integer keys and return types](10b-integer-keys-and-return-types.md)** | Convert integer keys with operator.index, never int(), and choose the slice return type on purpose — subclasses of… |
-| 21 | **[10c · `__setitem__`, `__delitem__` and the ABCs](10c-setitem-delitem-and-the-abcs.md)** | Writes and deletes reach your class with a slice key; no ABC mixin handles it, and a validating list subclass is… |
+| 21 | **[10c · `__setitem__`, `__delitem__` and the ABCs](10c-setitem-delitem-and-the-abcs.md)** | Writes and deletes reach your class with a slice key; no ABC mixin handles it, so delegate to a list, validate the whole right-hand side first, and refuse to resize fixed storage… |
 | 22 | **[10d · Typing and multi-dimensional keys](10d-typing-and-multidimensional-keys.md)** | Type __getitem__ with two overloads, not a union; a comma passes a tuple, which a 2-D class interprets per axis and a… |
 | 23 | **[11 · Slicing in real code: pagination](11-slicing-in-real-code.md)** | A page is two multiplications — page 0 is empty, page −1 is a real page from the end, a page past the last is silently `[]`, and `OFFSET` walks… |
 | 24 | **[11b · Slicing in real code: batching](11b-batching.md)** | `items[i:i + n]` tiles a list with nothing lost and the offset is the checkpoint — a relative resume, a front-deleting drain and a cut inside a character… |
 | 25 | **[11c · Slicing in real code: fixed-width records](11c-fixed-width-records.md)** | Spec columns 11–14 are `slice(10, 14)`; slice bytes when the spec counts bytes, strip the terminator and nothing else, and each field — not the line… |
 | 26 | **[11d · Slicing in real code: struct records and writing](11d-struct-records-and-writing.md)** | Terminator-less records are a `struct` of `s` fields; on the way out `ljust` never truncates, a slice truncates silently and `struct.pack` pads with NUL… |
+| 27 | **[10e · Why a validating subclass leaks](10e-why-a-validating-subclass-leaks.md)** | A list subclass that validates in `__setitem__` is bypassed by `append`, `insert`, `extend`, `+=` and its constructor — and `UserList` writes `self.data` directly too, so only `MutableSequence` funnels every write… |
 
 ---
 
