@@ -1,12 +1,12 @@
 {
   "angular": {
-    "pages": 214,
-    "validated": 214,
+    "pages": 375,
+    "validated": 375,
     "phases": {
-      "phase-0-how-angular-runs": 214
+      "phase-0-how-angular-runs": 375
     },
     "validatedPhases": {
-      "phase-0-how-angular-runs": 214
+      "phase-0-how-angular-runs": 375
     }
   },
   "babel": {
@@ -628,17 +628,21 @@
     }
   },
   "python": {
-    "pages": 415,
-    "validated": 415,
+    "pages": 760,
+    "validated": 760,
     "phases": {
       "phase-0-runtime": 121,
-      "phase-1-language-core": 267,
-      "phase-2-functions": 27
+      "phase-1-language-core": 288,
+      "phase-2-functions": 27,
+      "phase-3-collections": 172,
+      "phase-7-packaging-tooling": 152
     },
     "validatedPhases": {
       "phase-0-runtime": 121,
-      "phase-1-language-core": 267,
-      "phase-2-functions": 27
+      "phase-1-language-core": 288,
+      "phase-2-functions": 27,
+      "phase-3-collections": 172,
+      "phase-7-packaging-tooling": 152
     }
   },
   "react": {
