@@ -1,13 +1,13 @@
 {
   "version": 1,
   "generatedFrom": "src/data/pins.js",
-  "generated": "2026-09-21",
+  "generated": "2026-09-24",
   "horizonDays": 60,
   "totals": {
-    "pins": 64,
-    "current": 23,
-    "patch": 17,
-    "minor": 14,
+    "pins": 65,
+    "current": 22,
+    "patch": 15,
+    "minor": 18,
     "major": 2,
     "unanchored": 7,
     "unreachable": 0,
@@ -21,7 +21,7 @@
       "kind": "lts",
       "cycle": "26",
       "date": "2026-10-28",
-      "inDays": 37
+      "inDays": 34
     }
   ],
   "inconsistent": [
@@ -64,7 +64,7 @@
     "redux-toolkit": "minor",
     "tanstack-query": "minor",
     "framer-motion": "minor",
-    "angular": "patch",
+    "angular": "minor",
     "vite": "minor",
     "webpack": "minor",
     "babel": "patch",
@@ -80,7 +80,7 @@
       "policy": "lts",
       "pin": "24.19.0",
       "latest": "24.21.0",
-      "newestOverall": "26.9.0",
+      "newestOverall": "26.10.0",
       "drift": "minor",
       "eol": "2028-04-30",
       "events": [
@@ -88,7 +88,7 @@
           "kind": "lts",
           "cycle": "26",
           "date": "2026-10-28",
-          "inDays": 37
+          "inDays": 34
         }
       ],
       "tracks": [
@@ -268,7 +268,7 @@
       "tracks": [
         "python"
       ],
-      "pages": 809,
+      "pages": 826,
       "claimed": "3.14.7",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -286,7 +286,7 @@
       "source": "gh:astral-sh/uv",
       "policy": "latest",
       "pin": "0.12.12",
-      "latest": "0.12.17",
+      "latest": "0.12.18",
       "newestOverall": null,
       "drift": "patch",
       "eol": null,
@@ -294,7 +294,7 @@
       "tracks": [
         "python"
       ],
-      "pages": 130,
+      "pages": 131,
       "claimed": "0.12.12",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -317,7 +317,7 @@
       "tracks": [
         "python"
       ],
-      "pages": 96,
+      "pages": 97,
       "claimed": "0.16.6",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -349,6 +349,29 @@
       "error": null,
       "note": null,
       "checked": "2026-09-10"
+    },
+    "sortedcontainers": {
+      "label": "sortedcontainers",
+      "source": "gh:grantjenks/python-sortedcontainers",
+      "policy": "latest",
+      "pin": "2.4.0",
+      "latest": "2.4.0",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "python"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedDrift": null,
+      "claimedMatchesPin": null,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-09-21"
     },
     "jdk": {
       "label": "JDK (Temurin)",
@@ -401,8 +424,8 @@
       "source": "eol:firefox",
       "policy": "frozen",
       "pin": "153.0.3",
-      "latest": "156.0",
-      "newestOverall": "156.0",
+      "latest": "156.0.1",
+      "newestOverall": "156.0.1",
       "drift": "frozen",
       "eol": false,
       "events": [],
@@ -555,9 +578,9 @@
       "source": "npm:@angular/core",
       "policy": "latest",
       "pin": "22.1.4",
-      "latest": "22.1.7",
+      "latest": "22.2.0",
       "newestOverall": null,
-      "drift": "patch",
+      "drift": "minor",
       "eol": null,
       "events": [],
       "tracks": [
@@ -580,7 +603,7 @@
       "source": "npm:next",
       "policy": "latest",
       "pin": "16.3.4",
-      "latest": "16.3.5",
+      "latest": "16.3.6",
       "newestOverall": null,
       "drift": "patch",
       "eol": null,
@@ -606,9 +629,9 @@
       "source": "npm:npm",
       "policy": "latest",
       "pin": "12.0.2",
-      "latest": "12.0.2",
+      "latest": "12.1.0",
       "newestOverall": null,
-      "drift": "none",
+      "drift": "minor",
       "eol": null,
       "events": [],
       "tracks": [
@@ -629,9 +652,9 @@
       "source": "npm:undici",
       "policy": "latest",
       "pin": "8.10.0",
-      "latest": "8.10.2",
+      "latest": "8.11.0",
       "newestOverall": null,
-      "drift": "patch",
+      "drift": "minor",
       "eol": null,
       "events": [],
       "tracks": [
@@ -701,7 +724,7 @@
       "source": "npm:turbo",
       "policy": "latest",
       "pin": "2.10.12",
-      "latest": "2.11.2",
+      "latest": "2.11.3",
       "newestOverall": null,
       "drift": "minor",
       "eol": null,
@@ -847,9 +870,9 @@
       "source": "gh:mockito/mockito",
       "policy": "latest",
       "pin": "5.23.0",
-      "latest": "5.23.0",
+      "latest": "5.24.0",
       "newestOverall": null,
-      "drift": "none",
+      "drift": "minor",
       "eol": null,
       "events": [],
       "tracks": [
@@ -985,7 +1008,7 @@
       "source": "npm:rolldown",
       "policy": "latest",
       "pin": "1.2.7",
-      "latest": "1.2.9",
+      "latest": "1.2.10",
       "newestOverall": null,
       "drift": "patch",
       "eol": null,
@@ -1031,7 +1054,7 @@
       "source": "npm:@rspack/core",
       "policy": "latest",
       "pin": "2.2.2",
-      "latest": "2.2.6",
+      "latest": "2.2.7",
       "newestOverall": null,
       "drift": "patch",
       "eol": null,
@@ -1100,7 +1123,7 @@
       "source": "npm:oxlint",
       "policy": "latest",
       "pin": null,
-      "latest": "1.83.0",
+      "latest": "1.85.0",
       "newestOverall": null,
       "drift": "unanchored",
       "eol": null,
@@ -1265,7 +1288,7 @@
       "source": "npm:motion",
       "policy": "latest",
       "pin": null,
-      "latest": "13.4.0",
+      "latest": "13.4.2",
       "newestOverall": null,
       "drift": "unanchored",
       "eol": null,
@@ -1502,7 +1525,7 @@
       "source": "npm:@clerk/nextjs",
       "policy": "latest",
       "pin": "7.9.1",
-      "latest": "7.9.4",
+      "latest": "7.9.5",
       "newestOverall": null,
       "drift": "patch",
       "eol": null,
@@ -1525,7 +1548,7 @@
       "source": "npm:@supabase/supabase-js",
       "policy": "latest",
       "pin": "2.115.0",
-      "latest": "2.116.0",
+      "latest": "2.117.1",
       "newestOverall": null,
       "drift": "minor",
       "eol": null,
