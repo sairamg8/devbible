@@ -141,20 +141,20 @@ port · 542 PEM Encodings final · 544 Ahead-of-Time Code Compilation (proposed;
 
 ## 4 · Summary by LTS line
 
-Counts are rows of §3 (161 in all). "Security" = TLS/JCA/keystore rows, which the unit's syllabus
-has no topic for at all — they are shown separately so the language/platform verdict is not
-diluted by them.
+Counts are rows of §3 (161 in all). The bracketed figure is how many of the MISSING rows are
+TLS/crypto (rows 10, 30, 37, 52, 59, 66, 78, 103, 108, 113, 127, 142, 143, 148, 160) — a subject the
+unit's syllabus has no topic for, shown separately so the language/platform verdict is not diluted.
 
-| Line | Rows | COVERED | PARTIAL | MISSING (of which security) | CONTRADICTED | PLANNED | Verdict |
+| Line | Rows | COVERED | PARTIAL | MISSING (of which TLS/crypto) | CONTRADICTED | PLANNED | Verdict |
 |---|---|---|---|---|---|---|---|
 | **17 LTS** — 12–16 baseline + 17 (rows 1–30) | 30 | 18 | 1 | 11 (2) | 0 | 0 | **Complete for the language.** Every 17-line language feature is taught; the gaps are tools and small APIs (`jpackage`, JFR streaming, `HexFormat`, hidden classes, `strictfp`). |
 | **21 LTS** — 18→21 (rows 31–78) | 48 | 18 | 6 | 24 (5) | 0 | 0 | **Every headline JEP taught** (virtual threads, record/`switch` patterns, sequenced collections, gen-ZGC, UTF-8). 24 missing are the API small print — `Math.clamp`, `StringBuilder.repeat`, `splitWithDelimiters`, `Thread.threadId`, `jwebserver`, `@snippet`, `KEM`, `URL` deprecation, the 30 s `HttpClient` keep-alive. |
-| **25 LTS** — 22→25 (rows 79–127) | 49 | 25 | 4 | 19 (5) | 1 | 0 | **The pin, and taught as the pin.** FFM, gatherers, scoped values, instance `main`, flexible constructors, the AOT cache, compact headers, JFR 509/518/520 all taught. Missing: module imports, Class-File API, Markdown doc comments, the Security Manager's end, KDF, ML-KEM/ML-DSA. One live error: the JSON thread dump "omits locks" (row 126). |
+| **25 LTS** — 22→25 (rows 79–127) | 49 | 25 | 4 | 19 (4) | 1 | 0 | **The pin, and taught as the pin.** FFM, gatherers, scoped values, instance `main`, flexible constructors, the AOT cache, compact headers, JFR 509/518/520 all taught. Missing: module imports, Class-File API, Markdown doc comments, the Security Manager's end, KDF, ML-KEM/ML-DSA. One live error: the JSON thread dump "omits locks" (row 126). |
 | **26** — non-LTS, now EOL (rows 128–143) | 16 | 0 | 7 | 8 (2) | 1 | 0 | **Not taught.** Seven pages are right for 25 and wrong for 26 (overhead limit on G1, initial heap, `Thread.stop`, UUIDv7, VT class-init unmount, `MaxRAM` deprecation, final-field warnings); HTTP/3, `Process.close()`, `Comparator.min/max` absent; the HttpClient timeout page describes 26 behaviour as 25's (row 135). |
-| **27** — latest stable (rows 144–156) | 13 | 1 | 4 | 5 (2) | 2 | 1 | **Not taught** beyond compact-headers-by-default, which was pre-announced. G1-everywhere (JEP 523) contradicts a whole small-container page on 27; `UseCompressedClassPointers` is dated to the wrong release on 16 lines; the release-model page still calls 26 the latest. |
-| Still preview at 27 (rows 157–161) | 5 | 0 | 1 | 3 (0) | 1 | 0 | Structured concurrency taught in its 25 shape; the syllabus wrongly says it finalizes in 27. Primitive patterns, lazy constants, PEM untouched. |
-| **All** | **161** | **62** | **23** | **70 (16)** | **5** | **1** | |
+| **27** — latest stable (rows 144–156) | 13 | 1 | 4 | 5 (1) | 2 | 1 | **Not taught** beyond compact-headers-by-default, which was pre-announced. G1-everywhere (JEP 523) contradicts a whole small-container page on 27; `UseCompressedClassPointers` is dated to the wrong release on 16 lines; the release-model page still calls 26 the latest. |
+| Still preview at 27 (rows 157–161) | 5 | 0 | 1 | 3 (1) | 1 | 0 | Structured concurrency taught in its 25 shape; the syllabus wrongly says it finalizes in 27. Primitive patterns, lazy constants, PEM untouched. |
+| **All** | **161** | **62** | **23** | **70 (15)** | **5** | **1** | |
 
-**One-line verdict: complete for 17 LTS and 21 LTS at the level of features; 19 missing (5 of them
-security) and 1 contradicted for 25 LTS; 26 and 27 essentially untaught — 16 and 13 changes with 1
+**One-line verdict: complete for 17 LTS and 21 LTS at the level of features; 19 missing (4 of them
+TLS/crypto) and 1 contradicted for 25 LTS; 26 and 27 essentially untaught — 16 and 13 changes with 1
 covered between them, and 3 live pages teaching a wrong release fact.**
