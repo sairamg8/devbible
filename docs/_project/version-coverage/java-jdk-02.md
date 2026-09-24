@@ -114,17 +114,17 @@ and `jdk.jsobject` removal, JDBC 4.5 (the `java-spring` data unit), Unicode 17, 
 | 153 | 25→27 | `-Djdk.lang.Process.launchMechanism=VFORK` deprecated (25), removed (27) | removed | MISSING | `VFORK`, `launchMechanism` → 0 hits (a `vfork` memory aside only, `p12/01-memory-layout/02b-the-rest-of-the-map.md:123`) | RN25 JDK-8357179, RN27 JDK-8357089 |
 | 154 | 27 | JFR `jdk.OldObjectSample` disabled under generational ZGC | default | PARTIAL | taught as the leak-hunting alternative with no collector caveat: `p12/04-out-of-memory-error/04d-old-object-sample-instead-of-a-dump.md`; `…/03d-the-dump-you-could-not-take.md:169` | RN27 JDK-8382740 |
 | 155 | 27 | Predefined ISO-8601 formatters parse short offsets (`+01`) | default | MISSING | `short (zone )?offset`, `ISO_OFFSET_DATE_TIME` → one listing, `p7/01-java-time/04-formatting-parsing-testing.md:39`; the parse change not taught | RN27 JDK-8210336 |
+| 156 | 26→27 | Launch rules for instance `main` tightened: the source launcher rejects a private no-arg constructor (26); a package-private `main` inherited from another package is no longer launched (27) | default | MISSING | `no-arg constructor`, `package-private.{0,40}main`, `inherit.{0,40}main` → 0 hits in `p0/04-running-code.md`, `p0/06-main-startup-config.md` (which teach the 25 launch protocol) | RN26 JDK-8371470, RN27 JDK-8377004 |
 
 Folded: 531 → 159; 532 → 158; 533 → 157; 537 → 161; 538 → 160. Excluded: bash completion for
 `jcmd`, `jcmd VM.security_properties`, ML-KEM/ML-DSA key encodings, TLS certificate compression,
 `ffdhe6144/8192` default-group removal, `ThreadPoolExecutor.finalize` removal,
-`java.locale.useOldISOCodes` removal, the launcher's package-private inherited `main` rule, CLDR 48.2.
+`java.locale.useOldISOCodes` removal, CLDR 48.2.
 
 ### 3.7 · Still in preview or incubation at JDK 27
 
 | # | Since | Change | Kind | Status | Evidence | Source |
 |---|---|---|---|---|---|---|
-| 156 | 19→27 | *(reserved — unused; numbering kept stable for cross-references)* | — | — | — | — |
 | 157 | 19→27 | Structured concurrency, `StructuredTaskScope`: incubator 19 (428), 20 (437); preview 21 (453), 22 (462), 23 (480), 24 (499), 25 (505), 26 (525), **27 (533, seventh preview)** | new (preview) | CONTRADICTED | `syl/02-core-library.md:110` "finalizing in 27" — false (§2c S1). The page itself, `p6/08-structured-concurrency.md:25-31`, `:50`, teaches the 25 shape correctly labelled; 26's renames (`anySuccessfulOrThrow`, list-returning `allSuccessfulOrThrow`, `Joiner.onTimeout`) and 27's third type parameter are absent (§2c S13) | JEP 525, JEP 533, P27 |
 | 158 | 23→27 | Primitive types in patterns, `instanceof` and `switch`: 23 (455), 24 (488), 25 (507), 26 (530), 27 (532, fifth preview) | new (preview) | MISSING | `primitive types? in patterns`, `JEP 455`, `JEP 532` → 0 hits | P23–P27 |
 | 159 | 25→27 | Lazy constants (was Stable Values): 25 (502), 26 (526), 27 (531, third preview) | new (preview) | MISSING | `StableValue`, `lazy constant`, `JEP 502` → 0 hits | P25–P27 |
