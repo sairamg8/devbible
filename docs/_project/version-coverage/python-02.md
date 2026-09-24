@@ -87,7 +87,7 @@ with `syllabus/`.
 | 12.12 | 3.12 | Immortal objects (PEP 683) | new | **COVERED** | `phase-0-runtime/07-everything-is-an-object/04b-immortal-objects.md:131` | W12 Summary (PEP 683) |
 | 12.13 | 3.12 | `slice` objects are hashable | new | **COVERED** | `phase-3-collections/05-slicing/04-slice-objects.md:21,122` | W12 Other Language Changes |
 | 12.14 | 3.12 | `sum()` of floats uses Neumaier compensated summation | default | **COVERED** | `02-numbers/05d-accurate-float-arithmetic.md:2,16` | W12 Other Language Changes |
-| 12.15 | 3.12 | `tarfile` / `shutil.unpack_archive` extraction `filter=`; `'data'` becomes default in 3.14 (path-traversal defence) | security | **MISSING** | grep `extraction filter\|filter=.data.` → 0; `tarfile` named only as a `-m` target / module list | W12 Other Language Changes; W14 tarfile |
+| 12.15 | 3.12 | `tarfile` / `shutil.unpack_archive` extraction `filter=`; `'data'` becomes default in 3.14 (path-traversal defence) | security | **MISSING** | grep `extraction filter\|filter=.data.` → 0; `tarfile` named only as a `-m` target / module list | W12 Other Language Changes; docs.python.org/3.14/library/tarfile.html ("Changed in version 3.14: The filter parameter now defaults to 'data'") |
 | 12.16 | 3.12 | `-X perf` / `PYTHONPERFSUPPORT` Linux perf support | new | **COVERED** | `phase-0-runtime/06-running-code/05-options-worth-knowing.md:197` | W12 Other Language Changes |
 | 12.17 | 3.12 | `itertools.batched()` | new | **COVERED** | `phase-3-collections/05-slicing/07c-islice-in-practice.md`; `08-control-flow/02b-zip-idioms-and-neighbours.md:2` | W12 itertools |
 | 12.18 | 3.12 | `math.sumprod()`, `math.nextafter(…, steps=)` | new | **COVERED** | `02-numbers/14f-aggregation-and-the-rest.md:20`; `02-numbers/05c-the-float-number-line.md:66` | W12 math |
@@ -219,3 +219,5 @@ W14 = What's New 3.14.
 | 14.47 | 3.14 | `os.popen()` / `os.spawn*` soft-deprecated → `subprocess` | deprecated | **PLANNED** | no page uses them (grep `os\.popen` → 0); S3:116 | W14 New deprecations |
 | 14.48 | 3.14 | `sys._is_immortal()` | new | **COVERED** | `06-comparisons/04c-the-syntaxwarning-and-lifetimes.md:161` (as a debugging-only probe) | W14 sys |
 | 14.49 | 3.14 | PGP signatures discontinued for CPython releases — verify with Sigstore (PEP 761) | security | **MISSING** | grep `PGP\|gpg`, `[Ss]igstore` → 0; `phase-0-runtime/04-installing-and-versions/` never covers verifying a download | W14 Summary (PEP 761); W14 Discontinuation of PGP signatures |
+
+*§3 continues in [python-03.md](python-03.md) (3.15 and the tools).*
