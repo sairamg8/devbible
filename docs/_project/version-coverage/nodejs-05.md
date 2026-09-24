@@ -168,6 +168,7 @@ PLANNED (3): T20 and S38 (REPL — `syllabus/01-foundations.md:33`), T56 (worker
    (minor). npm 12 needs Node `^22.22.2 || ^24.15.0 || >=26.0.0` — worth a `note`.
 3. **undici** — `pin: '8.10.0'` is the npm package; Node 24's built-in `fetch` runs **7.29.1**,
    Node 26's runs **8.10.2**. Record that split in `note`; latest is **8.11.0** (minor).
-4. **currency drift classes** — the check that reported "24.19.0 → 24.21.0 (patch)" mislabels a
-   minor bump; for `policy: 'lts'` the class should be computed from the semver of the two
-   versions, not from the cycle staying the same.
+4. **drift label** — `static/currency.json` (generated 2026-09-24) already classes node as
+   `drift: 'minor'`, correctly; the audit brief that dispatched this unit called it "patch". No
+   tool change needed — but the lane should treat node as a minor bump (a re-read of the pages
+   that 24.20/24.21 touch), not a stamp-only patch sweep.
