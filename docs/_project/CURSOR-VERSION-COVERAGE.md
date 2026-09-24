@@ -61,7 +61,7 @@ the old script (release-change audit); **batch 9** then adds the map for its fou
 
 | # | Units | Run ID | State |
 |---|---|---|---|
-| 1 | nodejs · java-jdk · java-spring · python (**old way**: release-change audit) | `wf_af3cc5c0-4c5` (8 agents, 4 at once) | 🔵 **at usage-limit save (2026-09-24 ~13:40): all 4 audit reports written (§1–§5, committed) · 0 of 4 have `## 6 · Verification` yet** — verifiers were running; the run may die at the limit |
+| 1 | nodejs · java-jdk · java-spring · python (**old way**: release-change audit) | `wf_af3cc5c0-4c5` (8 agents, 4 at once) | ⏹️ **STOPPED by the user 2026-09-24 ~13:50 (TaskStop).** All 4 audit reports written and committed (§1–§5). **Verify never landed — 0 of 4 have `## 6 · Verification`.** Next: re-run the verify stage only, all 4 units |
 | 2 | postgresql · angular · mongodb · redis | — | ⏸️ held — **first to launch when the user resumes** |
 | 3 | nginx · docker · git · typescript | — | — |
 | 4 | javascript · react · nextjs · expressjs | — | — |
@@ -97,14 +97,14 @@ LTS-bearing products go first (batches 1–2), as the order asked.
 
 ## Next action
 
-⏸️ **HELD.** Session `0c2599b5` saved here at the usage limit, 2026-09-24 ~13:40. The run
+⏹️ **EVERYTHING STOPPED by the user, 2026-09-24 ~13:50** (*"save session progress for cold start and stop everything"*). No workflow is running. Session `0c2599b5`. The run
 `wf_af3cc5c0-4c5` cannot be resumed from a new session. Pre-move copy of the store folder:
 `/mnt/Storage/my-learning/.devbible-premove-20260924/` (safety net; the user decides when to delete it).
 
 When the user resumes:
-1. Check batch 1 finished: every `version-coverage/{nodejs,java-jdk,java-spring,python}*.md` set has
-   a `## 6 · Verification` section. If one lacks it, re-run only that unit's verify stage with
-   `_workflow-batch.js` + `_batch-01-args.json` (units filtered).
+1. **Batch 1's verify stage never ran to completion.** Re-run ONLY the verify stage for all 4 units: a
+   small script calling `verifyPrompt(u, f)` from `_workflow-batch.js`, with `f` rebuilt from each report's
+   frontmatter description + `report_files` = the unit's `*.md` files (the audit stage is DONE — do not redo it).
 2. Fill the batch table above with batch 1's outcome (applies-up-to + gap counts per track).
 3. Launch **batch 2 the new way**: `Workflow({scriptPath: "<repo>/docs/_project/version-coverage/_workflow-map.js", args: <_batch-02-args.json>})`.
    Save the run ID here at dispatch. One Workflow at a time; ask before chaining (the hold stands).

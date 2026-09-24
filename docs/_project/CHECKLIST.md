@@ -7,20 +7,20 @@ metadata:
 
 # ✅ devbible — master checklist (pending · upcoming · bugs · features)
 
-**As of 2026-09-24 ~13:45.** One line per item, with a pointer to the file that holds the detail.
+**As of 2026-09-24 ~13:50.** One line per item, with a pointer to the file that holds the detail.
 Legend: `[ ]` open · `[~]` in progress · `⏸` held by the user · `❓` needs your decision.
 Paths are relative to `docs/_project/` unless they start with `docs/`, `src/` or `scripts/`.
 
-> ⏸ **Everything is on HOLD (user, 2026-09-24).** Only the running batch-1 audit continues. Nothing
+> ⏹️ **Everything is STOPPED (user, 2026-09-24 ~13:50).** No workflow or agent is running. Nothing
 > below starts until you say which item.
 
 ---
 
 ## 1 · Right now
 
-- [~] **Version-coverage audit, batch 1** (Node.js · Java JDK · Java Spring · Python), run
-      `wf_af3cc5c0-4c5`. All 4 audit reports are written; the verify stage (`## 6 · Verification`) is
-      still running. → [CURSOR-VERSION-COVERAGE.md](CURSOR-VERSION-COVERAGE.md)
+- [ ] **Version-coverage audit, batch 1** (Node.js · Java JDK · Java Spring · Python): all 4 audit reports
+      written; ⏹️ **stopped by the user before the verify stage landed.** Next: re-run the verify stage only.
+      → [CURSOR-VERSION-COVERAGE.md](CURSOR-VERSION-COVERAGE.md)
 - ⏸ **Batches 2–8 the new way:** official LTS syllabus × our pages × free content → LINK / KEEP / WRITE.
       Batch 2 = PostgreSQL · Angular · MongoDB · Redis, first to launch. → same cursor
 - ⏸ **Batch 9:** the new-way map for the four batch-1 tracks, then **batch 10: synthesis** (one table +
