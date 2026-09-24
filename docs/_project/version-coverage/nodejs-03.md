@@ -36,7 +36,7 @@ an LTS line on 24 (23.x semver-majors ship on 24; 24.x minors not back-ported to
 | T20 | 24.0 → 25.0 | REPL: multiline history; instantiating without `new` runtime-deprecated (EOL 25.0); 25.9 custom error handling | new | PLANNED | `syllabus/01-foundations.md:33` "The REPL …" (Know), mapped to page 08 by `phase-0-runtime-model/README.md:48`; `08-running-node.md` has no REPL section | #57400 #54869 #59495 #62188 |
 | T21 | 24.2 | `util.types.isNativeError` deprecated → `Error.isError` (DEP0197) | deprecated | PARTIAL | `Error.isError` taught in `javascript/…/13-instanceof-and-hasinstance/02-where-it-fails.md`; DEP0197 never named | #58262 |
 | T22 | 24.4 · stable 24.13.1 | `crypto.hash()` one-shot; `outputLength` for XOF (SHAKE default length DEP0198, 25.0) | new | MISSING | terms `crypto.hash(`, `outputLength` (the hits are zlib `maxOutputLength`) | #58121 #60994 #59008 |
-| T23 | 24.5 / 22.20 | OpenSSL 3.5 bundled | new | COVERED | `01-what-node-is.md:10`, `:50`–`58`; `20-node-crypto.md:9` | #58100 |
+| T23 | 24.5 / 22.19 | OpenSSL 3.5 bundled | new | COVERED | `01-what-node-is.md:10`, `:50`–`58`; `20-node-crypto.md:9` | #58100 |
 | T24 | 24.5 | Web Locks API (`navigator.locks`) | new | MISSING | terms `navigator.locks`, `LockManager` (javascript track: browser) | #58666 |
 | T25 | 24.6 | `fs.Utf8Stream` (SonicBoom in core) | new | MISSING | terms `Utf8Stream`, `SonicBoom` (`02-pino-in-practice.md` none) | #58897 |
 | T26 | 24.6 → 24.8 · stable 24.19 | Post-quantum `node:crypto`: ML-KEM `encapsulate`/`decapsulate`, ML-DSA, SLH-DSA | new | MISSING | terms `ML-KEM`, `encapsulate`, `post-quantum` | #59259 #59491 #59537 #63924 |
