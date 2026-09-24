@@ -71,3 +71,70 @@ Folded: 447/482/492 → 112; 455/488/507 → 158; 457/466 → 97; 459 → 91; 46
 barrier expansion, 479/501/503 32-bit ports, the old core-reflection removal (22), `jdk.random`
 module removal (23), `-Xnoagent`/`-Xdebug` deprecations, JAXP limits, CLDR 44–47, Unicode 15.1/16,
 tzdata 2024b.
+
+### 3.5 · JDK 26 (non-LTS, GA 2026-03-17, EOL 2026-09-15/18)
+
+| # | Since | Change | Kind | Status | Evidence | Source |
+|---|---|---|---|---|---|---|
+| 128 | 26 | Warnings on deep-reflective mutation of `final` fields — prepare to make final mean final (JEP 500) | deprecated | PARTIAL | `p6/15-immutability-first-strategy/01-why-it-deletes-the-problem.md:140` says frameworks "can even write final fields reflectively" as permitted — pin-true, no mention of the 26 warnings or `--enable-final-field-mutation` | P26, JEP 500 |
+| 129 | 26 | AOT object caching with any GC, including ZGC (JEP 516) | new | MISSING | `JEP 516`, `object caching`, `(AOT\|CDS).{0,100}ZGC` → 0 hits; heap objects in the cache are taught, `p12/10-packaging-for-deploy/05d-the-aot-cache.md:31` | P26, JEP 516 |
+| 130 | 26 | HTTP/3 for `HttpClient`, opt-in (JEP 517) | new | MISSING | `HTTP/3`, `HTTP_3`, `JEP 517` → 0 hits; `p7/04-httpclient.md` covers 1.1/2 only | P26, JEP 517 |
+| 131 | 26 | `Process` implements `AutoCloseable` / `Closeable` | new | MISSING | `Process.{0,20}AutoCloseable` → 0 hits; `p7/10-processbuilder.md` and `p5/03-try-with-resources/03-autocloseable-in-practice.md` silent | RN26 JDK-8364361 |
+| 132 | 26 | `Comparator.min(T, T)` / `max(T, T)` default methods | new | MISSING | `Comparator\.(min\|max)`, `\.min\(T` → 0 hits; `p3/10-comparable-comparator/` silent | RN26 JDK-8356995 |
+| 133 | 26 | `UUID.ofEpochMillis(long)` — a UUIDv7 factory | new | PARTIAL | `p7/07-uuid-and-randomness.md:52-53`: "no `UUID` factory for v7 exists as of JDK 25" — correct for 25, superseded by 26 (§2c S18) | RN26 JDK-8334015 |
+| 134 | 26 | `Duration.MIN` / `Duration.MAX`; `Instant.plusSaturating(Duration)` | new | MISSING | `Duration\.(MIN\|MAX)`, `plusSaturating` → 0 hits | RN26 JDK-8366829, JDK-8368856 |
+| 135 | 26 | `HttpRequest` timeout now also covers reading the response body | default | CONTRADICTED | `p7/04-httpclient.md:69` tables the request timeout as "(whole exchange)" and `:71-75` says it guards a stall mid-response — on JDK 25, the page's target, it ends at the headers (§2c S15) | RN26 JDK-8208693 |
+| 136 | 26 | `HttpRequest.BodyPublishers.ofFileChannel(channel, offset, length)` | new | MISSING | `ofFileChannel` → 0 hits | RN26 JDK-8329829 |
+| 137 | 26 | Default initial heap = `MinHeapSize` when `-Xms` is unset (no longer 1/64 of RAM) | default | PARTIAL | `p12/03-heap-sizing-in-containers/03-maxrampercentage.md:162`; `…/03b-the-ergonomics-algorithm.md:116` teach the 1/64 start — pin-true, latest-false (§2c S12) | RN26 JDK-8371986 |
+| 138 | 26 | G1 supports `UseGCOverheadLimit`, on by default | default | PARTIAL | `p12/02-gc-in-practice/09b-why-g1-never-throws-it.md:2`, `:147`; `p12/04-out-of-memory-error/02c-gc-overhead-limit-is-parallel-only.md:2`, `:21` — true on 25, false from 26 (§2c S16) | RN26 JDK-8212084 |
+| 139 | 26 | `-XX:MaxRAM`, `-XX:+AggressiveHeap`, `-XX:±AlwaysActAsServerClassMachine`/`NeverActAsServerClassMachine` deprecated | deprecated | PARTIAL | taught as live knobs with no deprecation: `p12/01-memory-layout/01e-the-native-budget.md:132`; `p12/03-heap-sizing-in-containers/03b-the-ergonomics-algorithm.md:256`; `…/07-what-ergonomics-picks-in-a-small-container.md:132` | RN26 JDK-8369346, JDK-8370813, JDK-8370843 |
+| 140 | 26 | `Thread.stop` removed (deprecated for removal 18, throws UOE from 20; `suspend`/`resume`/`ThreadGroup.stop` removed 23) | removed | PARTIAL | `p6/01-threads-lifecycle-interrupt/02-interruption.md:19-21` "the platform now throws `UnsupportedOperationException`" — true 20–25; on 26 the call does not compile (§2c S17) | RN18 JDK-8277861, RN20 JDK-8289610, RN23 JDK-8320532, RN26 JDK-8368226 |
+| 141 | 26 | Virtual threads unmount while waiting for another thread's class initializer | default | PARTIAL | `p6/14-virtual-thread-pinning.md:65` and `p12/01-memory-layout/06c-carriers-mounting-and-pinning.md:234` list class initialization as still pinning — pin-true, latest-false | RN26 JDK-8369238 |
+| 142 | 26 | Hybrid Public Key Encryption, `Cipher.getInstance("HPKE")` | new (security) | MISSING | `HPKE`, `Hybrid Public Key` → 0 hits | RN26 JDK-8325448 |
+| 143 | 26 | Tools and `KeyStore` APIs warn on JKS / JCEKS keystores | deprecated (security) | MISSING | `\bJKS\b`, `JCEKS`, `keytool` → only a Maven filtering example, `p8/06-layout-and-multi-module/01-the-standard-layout.md:111` | RN26 JDK-8353749 |
+
+Folded: 524 → 160; 525 → 157; 526 → 159; 529 → 161; 530 → 158; `LockingMode` obsolete → 94.
+Excluded: 504 applet API removal (client), 522 G1 synchronization throughput (internal), `jrunscript`
+and `jdk.jsobject` removal, JDBC 4.5 (the `java-spring` data unit), Unicode 17, CLDR 48,
+`ByteOrder` enum conversion, `DecimalFormat` algorithm alignment.
+
+### 3.6 · JDK 27 (non-LTS, latest stable, GA 2026-09-15)
+
+| # | Since | Change | Kind | Status | Evidence | Source |
+|---|---|---|---|---|---|---|
+| 144 | 27 | JDK 27 is GA; 26 is end-of-life — the release-model facts | default | CONTRADICTED | `p0/03-release-model.md:29` "Latest release … JDK 26", `:30` "Next release … JDK 27" (§2c S2–S5) | P27; endoflife.date `oracle-jdk`, `eclipse-temurin` |
+| 145 | 27 | G1 is the default collector in all environments — no more ergonomic Serial on small machines (JEP 523) | default | PARTIAL | `p12/03-heap-sizing-in-containers/07-what-ergonomics-picks-in-a-small-container.md:2`, `:89`, `:178`; `…/10-the-checklist.md:63`; `p12/13-jvm-flags-that-matter/05c-the-live-list-gc.md:41` teach Serial auto-selection — pin-true, latest-false (§2c S11); `JEP 523` → 0 hits | P27, JEP 523 |
+| 146 | 27 | Compact object headers on by default (JEP 534) | default | COVERED | `p12/01-memory-layout/09c-class-pointers-and-compact-headers.md:10`, `:129`; `…/01-memory-layout/README.md:74`; `…/04b-the-metaspace-flags.md:117` | P27, RN27 JDK-8360700 |
+| 147 | 27 | `-XX:±UseCompressedClassPointers` obsolete — in **27**, not 26 | removed | CONTRADICTED | 16 lines in 6 files say "obsolete in 26": `p12/01-memory-layout/04b-the-metaspace-flags.md:2`, `:102`, `:114`, `:121`, `:188`, `:228`, `:236`; `…/09c-class-pointers-and-compact-headers.md:73`, `:83`, `:234`; `…/08b-compact-object-headers.md:179`, `:226`; `p12/04-out-of-memory-error/02b-the-four-native-messages.md:102`, `:195`; `…/04-out-of-memory-error/README.md:92`; `p12/_PHASE-NOTES.md:82` (§2c S6–S10) | RN27 JDK-8363996 ("now obsolete in JDK 27") |
+| 148 | 27 | Post-quantum hybrid key exchange for TLS 1.3, `X25519MLKEM768` (JEP 527) | security | MISSING | `JEP 527`, `hybrid key`, `X25519MLKEM768` → 0 hits | P27 |
+| 149 | 27 | JFR redacts sensitive arguments, env vars and properties by default; `-XX:FlightRecorderOptions:redact-key/redact-argument` (JEP 536) | security | MISSING | `JEP 536`, `redact-key`, `InitialEnvironmentVariable`, `(secret\|password).{0,80}(JFR\|recording)` → 0 hits | P27, RN27 JDK-8367584 |
+| 150 | 27 | `-XX:InitiatingHeapOccupancyPercent` renamed `-XX:G1IHOP` (old name a deprecated alias) | deprecated | PARTIAL | old name only: `p12/02-gc-in-practice/03c2-the-g1-flag-table.md:113`; `…/03c-g1-pause-time-and-the-knobs.md:17`, `:136`; `G1IHOP` → 0 hits | RN27 JDK-8227106 |
+| 151 | 24→27 | Legacy launcher options: `-Xfuture`, `-t`, `-tm`, `-checksource`, `-cs`, `-noasyncgc` removed (24); `-verbosegc`, `-ms`, `-mx`, `-ss`, `-verify` deprecated (24); `-noclassgc`, `-noverify`, `-verifyremote`, `-Xverify:none` removed (27) | removed | MISSING | `Xverify:none`, `noverify`, `-noclassgc`, `-verbosegc` → 0 hits; the retired-flags list is planned in `p12/13-jvm-flags-that-matter/_plan.md:24` but unwritten | RN24 JDK-8339918, JDK-8286851, RN27 JDK-8373481 |
+| 152 | 27 | JVMCI removed (with `jdk.graal.compiler`) — no Graal JIT on HotSpot | removed | PARTIAL | `p12/01-memory-layout/02b-the-rest-of-the-map.md:92` ("Zero unless you are running the Graal JIT") and `…/01-heap-is-not-the-process.md:218` treat JVMCI as live | RN27 JDK-8382582 |
+| 153 | 25→27 | `-Djdk.lang.Process.launchMechanism=VFORK` deprecated (25), removed (27) | removed | MISSING | `VFORK`, `launchMechanism` → 0 hits (a `vfork` memory aside only, `p12/01-memory-layout/02b-the-rest-of-the-map.md:123`) | RN25 JDK-8357179, RN27 JDK-8357089 |
+| 154 | 27 | JFR `jdk.OldObjectSample` disabled under generational ZGC | default | PARTIAL | taught as the leak-hunting alternative with no collector caveat: `p12/04-out-of-memory-error/04d-old-object-sample-instead-of-a-dump.md`; `…/03d-the-dump-you-could-not-take.md:169` | RN27 JDK-8382740 |
+| 155 | 27 | Predefined ISO-8601 formatters parse short offsets (`+01`) | default | MISSING | `short (zone )?offset`, `ISO_OFFSET_DATE_TIME` → one listing, `p7/01-java-time/04-formatting-parsing-testing.md:39`; the parse change not taught | RN27 JDK-8210336 |
+
+Folded: 531 → 159; 532 → 158; 533 → 157; 537 → 161; 538 → 160. Excluded: bash completion for
+`jcmd`, `jcmd VM.security_properties`, ML-KEM/ML-DSA key encodings, TLS certificate compression,
+`ffdhe6144/8192` default-group removal, `ThreadPoolExecutor.finalize` removal,
+`java.locale.useOldISOCodes` removal, the launcher's package-private inherited `main` rule, CLDR 48.2.
+
+### 3.7 · Still in preview or incubation at JDK 27
+
+| # | Since | Change | Kind | Status | Evidence | Source |
+|---|---|---|---|---|---|---|
+| 156 | 19→27 | *(reserved — unused; numbering kept stable for cross-references)* | — | — | — | — |
+| 157 | 19→27 | Structured concurrency, `StructuredTaskScope`: incubator 19 (428), 20 (437); preview 21 (453), 22 (462), 23 (480), 24 (499), 25 (505), 26 (525), **27 (533, seventh preview)** | new (preview) | CONTRADICTED | `syl/02-core-library.md:110` "finalizing in 27" — false (§2c S1). The page itself, `p6/08-structured-concurrency.md:25-31`, `:50`, teaches the 25 shape correctly labelled; 26's renames (`anySuccessfulOrThrow`, list-returning `allSuccessfulOrThrow`, `Joiner.onTimeout`) and 27's third type parameter are absent (§2c S13) | JEP 525, JEP 533, P27 |
+| 158 | 23→27 | Primitive types in patterns, `instanceof` and `switch`: 23 (455), 24 (488), 25 (507), 26 (530), 27 (532, fifth preview) | new (preview) | MISSING | `primitive types? in patterns`, `JEP 455`, `JEP 532` → 0 hits | P23–P27 |
+| 159 | 25→27 | Lazy constants (was Stable Values): 25 (502), 26 (526), 27 (531, third preview) | new (preview) | MISSING | `StableValue`, `lazy constant`, `JEP 502` → 0 hits | P25–P27 |
+| 160 | 25→28 | PEM encodings of cryptographic objects: 25 (470), 26 (524), 27 (538); final targeted to 28 (542) | new (preview) | MISSING | `PEM` → only a secrets `grep` pattern, `p12/11-graalvm-native-image/04b-the-secret-baked-into-the-image.md:89` | P25–P28 |
+| 161 | 16→27 | Vector API, `jdk.incubator.vector`: incubators 16 (338) through 27 (537, twelfth) | new (incubator) | PARTIAL | named once, `p7/13-ffm-api.md:150` ("still-incubating"); not taught | P16–P27 |
+
+### 3.8 · Targeted to JDK 28 (March 2027) — not shipped, not graded
+
+JEP 401 Value Objects (Preview) · 535 Shenandoah generational mode by default (already
+pre-announced, `p12/02-gc-in-practice/02b-shenandoah-and-availability.md:129`) · 539 Strict Field
+Initialization in the JVM (Preview) · 540 Simple JSON API (Incubator) · 541 Deprecate the macOS/x64
+port · 542 PEM Encodings final · 544 Ahead-of-Time Code Compilation (proposed; review ends
+2026-09-28). Source: P28.
