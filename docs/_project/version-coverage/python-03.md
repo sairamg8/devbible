@@ -56,3 +56,56 @@ PARTIAL ("older shape") and listed in §5 under *expires 2026-10-01*.
 | 15.37 | 3.15 | JIT substantially upgraded; Windows x64 binaries use the tail-calling interpreter | default | **MISSING** | `01-what-python-is/06-runtime-optimisation.md:86,118` stop at 3.14 | W15 Summary; Upgraded experimental JIT |
 | 15.38 | 3.15 | `datetime.strptime()` with `%d` but no year raises `ValueError` | removed | **PLANNED** | S3:109 | W15 Removed (datetime) |
 | 15.39 | 3.15 | Removed: `NamedTuple` keyword syntax, zero-field `TypedDict("TD")`, `no_type_check_decorator` | removed | **COVERED** | `phase-3-collections/02-tuple/08b-typing-namedtuple.md:81,153` ("will be disallowed in 3.15") — the TypedDict/decorator halves are S2:107 | W15 Removed (typing) |
+
+### Tools — only as far as Phase 7 teaches them (pins: uv 0.12.12, ruff 0.16.6, pre-commit 4.6.2)
+
+Everything below shipped **after** the pins (patch releases), so none of it can be expected in the
+pages yet; the rows say where each would land at the next bump. `devbible-currency` classes these as
+patch drift (no re-read); they are listed so the next *minor* bump does not miss them.
+
+| # | Since | Change | Kind | Status | Evidence | Source |
+|---|---|---|---|---|---|---|
+| T.01 | uv 0.12.14 | Exit codes classified: `1` for expected failures, `2` for operational/internal failures | default | **MISSING** | grep `exit code 2\|exit status 2` → 0; CI page `phase-7-packaging-tooling/02-uv/02d-frozen-and-locked-in-ci.md` predates it | uv-rel 0.12.14 |
+| T.02 | uv 0.12.16 | Downloads verified against index-supplied hashes; hashes allowed in `build-constraint-dependencies` | security | **MISSING** | grep `index-supplied hash\|hashes supplied by`, `build-constraint` → 0; beside `03-dependencies/19-hashes-and-hash-checking-mode.md` | uv-rel 0.12.16 |
+| T.03 | uv 0.12.18 | `uv pip install/sync --check` (report without changing) and `--output-format json` | new | **MISSING** | grep `pip (install\|sync) --check` → 0 (`--output-format json` appears only for ruff, `05-ruff/05b-controlling-fixes.md:185`); beside `02-uv/06c-uv-pip.md` | uv-rel 0.12.18 |
+| T.04 | uv 0.12.18 | `uv add` / `remove` / `version` restore `pyproject.toml`, script and lock files when they fail or are interrupted | default | **MISSING** | beside `02-uv/04-add-and-remove.md`; grep `restore.*lock` → 0 | uv-rel 0.12.18 |
+| T.05 | uv 0.12.14–0.12.17 | Preview churn: `uv export --batch`, `minimum-libc-version`, `pylock.toml` filename/size validation, `uv check` scope | new (preview) | **PARTIAL** | `02-uv/03c-exporting-the-lockfile.md:132-171` and `01c-installing-and-pinning-uv.md:140-144` track preview changes through **0.12.11** only | uv-rel 0.12.14, 0.12.16, 0.12.17 |
+| T.06 | ruff 0.16.8 | `TC001`–`TC003` prefer `lazy` imports over `if TYPE_CHECKING:` when `target-version` ≥ py315 | default | **MISSING** | grep `TC00[1-3]` → 0; the pattern it replaces is taught at `phase-0-runtime/08-imports/06c-type-checking-imports.md:19` | ruff-rel 0.16.8 |
+| T.07 | ruff 0.16.8 | `UP040` fix is always unsafe; `UP035` stops recommending `ByteString` and `no_type_check_decorator` | default | **MISSING** | grep `UP040` → 0; beside `05-ruff/05b-controlling-fixes.md` | ruff-rel 0.16.7, 0.16.8 |
+| T.08 | ruff 0.16.8 | `lint.flake8-tidy-imports.extend-banned-api` | new | **PARTIAL** | `banned-api` taught, `05-ruff/01-what-ruff-replaces.md:211`; the `extend-` form is post-pin | ruff-rel 0.16.8 |
+| T.09 | ruff 0.16.7–0.16.8 | 3.15 awareness: `__lazy_modules__`, `frozendict`/`slice` generics, `re.prefixmatch`, PEP 728 keywords, `TypeForm`, no `__cached__` | new | **PARTIAL** | `05-ruff/09-target-version.md:39` notes 0.16.6 already accepts `py315`; what that target means semantically is post-pin | ruff-rel 0.16.7, 0.16.8 |
+| T.10 | pre-commit 4.6.0 | `pre-commit hook-impl` without `--hook-dir` (git 2.54+ config-based hooks) | new | **PLANNED** | grep `hook-impl\|--hook-dir`, `core\.hooksPath` → 0; S3:34 (topic 11 `pre-commit`, unwritten) | pc-rel v4.6.0 |
+
+## 4 · Summary by release line
+
+272 rows. Python has no LTS, so the "lines" are the five supported branches plus the 3.15 prerelease
+and the pinned tools. "Written-scope coverage" leaves PLANNED rows out (their phase is unwritten).
+
+| Line | Status today | Rows | COVERED | PARTIAL | MISSING | CONTRADICTED | PLANNED | Written-scope coverage | Verdict |
+|---|---|---|---|---|---|---|---|---|---|
+| **3.10** | security, EOL 2026-10 | 37 | 21 | 3 | 3 | 0 | 10 | 21 / 27 = 78 % | Complete for everything its written phases own; the 3 gaps are PEP 626, the TLS defaults and `parse_qs`'s `&`-only separator. |
+| **3.11** | security, EOL 2027-10 | 54 | 23 | 4 | 10 | **2** | 15 | 23 / 39 = 59 % | Headline features taught (exception groups, notes, `-P`, specialising interpreter); **2 wrong** (`singledispatch` unions, C-stack recursion) and `re`/`enum`/`LiteralString`/PEP 594 missing. |
+| **3.12** | security, EOL 2028-10 | 44 | 19 | 4 | 6 | 0 | 15 | 19 / 29 = 66 % | f-strings, inlining, immortals, `batched`, `sum()` all taught; missing error hints, `sys.monitoring`, tar filters, `ssl` removals, `cached_property` locking. |
+| **3.13** | bugfix → security 2026-10-01, EOL 2029-10 | 39 | 21 | 3 | 5 | **1** | 9 | 21 / 30 = 70 % | REPL, free-threading, JIT, `locals()`, `copy.replace`, `.gitignore` all taught; **1 wrong** (docstring dedent); PEP 594 removals and `ssl` strict verify missing. |
+| **3.14** | **bugfix — latest stable, the target** | 49 | 23 | 5 | 6 | **2** | 13 | 23 / 36 = 64 % | Every headline feature taught; **2 wrong** (`partial` as a method descriptor, `json.tool`); missing `-c` dedent, `Placeholder`, `uuid7`, Sigstore, `\z`, `is_none`. |
+| **3.15** (rc2) | prerelease, GA 2026-10-01 | 39 | 4 | 9 | 17 | 0 | 9 | 4 / 30 = 13 % | Only lazy imports, UTF-8 default, `__cached__`/`__package__` and the `NamedTuple` removal are taught; 9 pages state 3.14 facts that 3.15 reverses (frozendict, `ContextDecorator`, `isnormal`, graphemes, `-b`…). |
+| Tools (uv / ruff / pre-commit) | pins 0.12.12 / 0.16.6 / 4.6.2 → 0.12.18 / 0.16.8 / 4.6.2 | 10 | 0 | 3 | 6 | 0 | 1 | 0 / 9 | All post-pin patch features; nothing wrong, nothing expected yet. |
+| **Total** | | **272** | **111** | **31** | **53** | **5** | **72** | 111 / 200 = 56 % (142 / 200 = 71 % with PARTIAL) | |
+
+One line: **complete for 3.10's written scope; 2 wrong + 10 missing from 3.11, 6 missing from 3.12,
+1 wrong + 5 missing from 3.13, 2 wrong + 6 missing from 3.14; 3.15 is previewed, not covered.**
+
+## 5 · Hand-off to the owning lane
+
+Owner: the `python` lane (`docs/python`, cursor in `devbible/LOCKS.md` / `CURSOR-PYTHON.md`). Every
+"beside" path below was checked with `ls` on 2026-09-24. Tiers are the corpus's four.
+
+### 5a · CONTRADICTED — a live page teaching the wrong thing (fix first)
+
+| # | Page:line | What it says | What is true (source) | Fix | Tier |
+|---|---|---|---|---|---|
+| 14.28 | `phase-2-functions/06-functools/01-partial-and-freezing-callables.md:101,154` | "partial is NOT a descriptor; self will not be passed!" | Since 3.14 `functools.partial` **is** a method descriptor; 3.13 warned with `FutureWarning` (W14/W13 Porting). `partial(request, "GET")` in a class body now receives `self` *after* `"GET"` — silently wrong arguments, not a missing `self`. | Rewrite the gotcha: on 3.14 the class-body `partial` binds `self` in the wrong slot; `partialmethod` is still the answer; `staticmethod(partial(…))` restores the old behaviour. | Understand |
+| 11.54 | `phase-2-functions/10-recursion-and-the-limit/01-recursion-error-and-the-c-stack.md:42-45,111` | every Python call runs `_PyEval_EvalFrameDefault` and "consumes significant C stack space" | Since 3.11 most Python-to-Python calls "consume no C stack space" (W11 Inlined Python function calls); since 3.12 the limit counts Python frames only and C recursion is guarded separately (W12). The `sys` docs still warn a too-high limit can crash. | Replace the mechanism section with the 3.11/3.12 model; keep "iterate, don't raise the limit". | Know |
+| 11.32 | `phase-2-functions/06-functools/03-singledispatch-and-reduce.md:153-168` | files `Union[int, str]` with `list[str]` as unregistrable; stack `register(int)`/`register(float)` | Since 3.11 `register` accepts `int \| float` / `Union[…]` annotations (functools docs, "Changed in version 3.11"). Subscripted generics like `list[str]` are still refused. | Split the gotcha: generics refused, unions accepted since 3.11; show `def _(val: int \| float)`. | Understand |
+| 13.09 | `phase-2-functions/08-docstrings/02-help-inspect-getdoc-and-doctest.md:59` | "`obj.__doc__` preserves the indentation of the Python source file" | Since 3.13 the compiler strips common leading whitespace from docstrings (W13 Other Language Changes). | Say `__doc__` is already dedented on 3.13+; `getdoc()` still adds MRO lookup and `cleandoc` of the first line. | Understand |
+| 14.31 | `phase-0-runtime/06-running-code/03-m-packages-and-main-py.md:79` | `python -m json.tool < data.json    # pretty-print JSON` | 3.14: `python -m json` is preferred and `json.tool` is soft-deprecated (W14 json). | Change the example to `python -m json`. | Understand |
