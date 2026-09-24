@@ -44,3 +44,12 @@ words on what those pages miss.
   and let the user decide. See [[devbible-brief]], [[senior-roadmap-suggestions]].
 - **Resume the research from [[cursor-free-resources-gap]]** (`CURSOR-FREE-RESOURCES-GAP.md`).
   It was paused 2026-09-14 with no results banked.
+
+## Reconfirmed 2026-09-24 — and turned into the audit method
+
+> *"Look in online there is tone of free content and all existing languages which are written already existed right"* … *"yes switch to the new way"*
+
+Every track's official LTS syllabus is now mapped against our pages AND the best free content,
+each topic graded **LINK / KEEP / WRITE** — see [[cursor-version-coverage]]. The user wants the plan
+explained in plain words (they asked *"Please simplify what is this ?"* on the first, dense version).
+

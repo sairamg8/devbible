@@ -13,9 +13,10 @@ metadata:
 > explanation upto which version they are applicable first compare LTS versions what was missing.
 > create a task for this and work on please N you have ultracode"*
 
-> *"continue with the next batches, don't wait for me"* — 2026-09-24. **Chain the batches with no
-> check-in**: the moment one Workflow returns, bank it, repoint this table, commit, launch the next.
-> Still one Workflow at a time (usage), never two in parallel.
+> ⏸️ **HELD by the user, 2026-09-24 ~13:30:** *"lets switch this new way … update memory accordingly
+> upto whatever completed let it be and hold everything for now let the background tasks complete
+> later i will check with you"*. **Do NOT launch batch 2 (or anything) until the user says so.**
+> This supersedes the earlier *"continue with the next batches, don't wait for me"* order.
 
 **This file is that task.** It takes **no language lock** — it is a read-only audit. No agent in
 this lane edits `docs/`; every finding is banked here and handed to the owning lane.
@@ -60,8 +61,8 @@ the old script (release-change audit); **batch 9** then adds the map for its fou
 
 | # | Units | Run ID | State |
 |---|---|---|---|
-| 1 | nodejs · java-jdk · java-spring · python | `wf_af3cc5c0-4c5` (8 agents, 4 at once) | 🔴 dispatched 2026-09-24 ~13:00 |
-| 2 | postgresql · angular · mongodb · redis | — | — |
+| 1 | nodejs · java-jdk · java-spring · python (**old way**: release-change audit) | `wf_af3cc5c0-4c5` (8 agents, 4 at once) | 🔵 running at hold time — left to finish; audit reports were at §5, verify stage next |
+| 2 | postgresql · angular · mongodb · redis | — | ⏸️ held — **first to launch when the user resumes** |
 | 3 | nginx · docker · git · typescript | — | — |
 | 4 | javascript · react · nextjs · expressjs | — | — |
 | 5 | css · vite · webpack · babel | — | — |
@@ -96,4 +97,10 @@ LTS-bearing products go first (batches 1–2), as the order asked.
 
 ## Next action
 
-Batch 1 in flight (`wf_af3cc5c0-4c5`). If this session died: check which of `version-coverage/{nodejs,java-jdk,java-spring,python}.md` lack `## 6 · Verification` and re-dispatch only those, reusing `version-coverage/_workflow-batch.js` (repointed at docs/_project/ 2026-09-24 — pass it as `scriptPath`) with the args in `version-coverage/_batch-01-args.json` (filter `units` to the unfinished ones). Then **batch 2**.
+⏸️ **HELD.** When the user resumes:
+1. Check batch 1 finished: every `version-coverage/{nodejs,java-jdk,java-spring,python}*.md` set has
+   a `## 6 · Verification` section. If one lacks it, re-run only that unit's verify stage with
+   `_workflow-batch.js` + `_batch-01-args.json` (units filtered).
+2. Fill the batch table above with batch 1's outcome (applies-up-to + gap counts per track).
+3. Launch **batch 2 the new way**: `Workflow({scriptPath: "<repo>/docs/_project/version-coverage/_workflow-map.js", args: <_batch-02-args.json>})`.
+   Save the run ID here at dispatch. One Workflow at a time; ask before chaining (the hold stands).

@@ -34,7 +34,7 @@ these orders.
 | *"continue DSA"* · *"continue system design"* | **[CURSOR-DSA-SYSTEM-DESIGN.md](CURSOR-DSA-SYSTEM-DESIGN.md)** | yes |
 | a version bump · *"is X still current"* | `.agents/skills/devbible-currency/SKILL.md` | no |
 | how many pages / how much is done | **[progress_corpus_audit_20260905.md](progress_corpus_audit_20260905.md)** — distrust any count written before it | no |
-| *"version coverage"* · *"up to which version"* · *"compare LTS"* | **[CURSOR-VERSION-COVERAGE.md](CURSOR-VERSION-COVERAGE.md)** — all 32 units vs LTS, 9 batches, opened 2026-09-24 | no |
+| *"version coverage"* · *"up to which version"* · *"compare LTS"* · *"free content map"* | **[CURSOR-VERSION-COVERAGE.md](CURSOR-VERSION-COVERAGE.md)** — every track: official LTS syllabus × our pages × free content (LINK/KEEP/WRITE). ⏸️ **held 2026-09-24** after batch 1; batch 2 next on the user's word | no |
 | *"free resources gap"* · *"w3schools vs devbible"* · *"study map"* | **[CURSOR-FREE-RESOURCES-GAP.md](CURSOR-FREE-RESOURCES-GAP.md)** — paused 2026-09-14, 0 results banked | no |
 
 ## The tracks
