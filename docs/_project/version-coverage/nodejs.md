@@ -1,6 +1,6 @@
 ---
 name: version-coverage-nodejs
-description: (in progress) nodejs · version coverage vs supported Node.js lines 22 / 24 / 26 + npm + undici — numbers filled in at the end
+description: nodejs (Node.js runtime + npm + undici) · applies up to Node 24.19.0 (floor 22.18 for phases 0–5, 24.19.0 for the whole unit) · compared 22 LTS / 24 LTS / 26 Current (LTS 2026-10-28) + npm 11/12 + undici 7/8 · 255 changes — 44 covered, 49 partial, 143 missing, 16 contradicted (11 live, 5 latent), 3 planned · 21 stale claims · report in nodejs.md + nodejs-02..05.md
 metadata:
   type: project
 ---
@@ -97,7 +97,7 @@ Companion stamps inside those lines: **npm 12.0.2** × 6 · **undici 8.10.0** ×
 | **24.0** | V8 13.6 (`using`, RegExp.escape, Error.isError, Float16Array) · npm 11 · ALS on AsyncContextFrame · global URLPattern · `--permission` · runner auto-awaits subtests · undici 7 | `--permission` ✓; V8 13.6 in `docs/javascript` ✓; **ALS mechanism CONTRADICTED**; npm 11, URLPattern, auto-await, undici 7 ✗ |
 | **24.1 – 24.19** | 24.12 type stripping stable ✓ · 24.14 sqlite defensive default ✓ · 24.15 require(esm) stable ✓, `mock.module({exports})` ✓ · 24.16 `--test-randomize` ✓ · 24.18 `Buffer.poolSize` 64 KiB ✓, `--test-rerun-failures` ✓ · **24.19 test tags ✓** | the newest taught feature is **24.19.0** (`--experimental-test-tag-filter`, `14-runner-flags.md:104`) |
 | **24.20 – 24.21** | `permission.drop()` · `--permission-audit` · package maps · `node:stream/iter` · `t.log()` · ALS `using` scopes · STORE key loaders · `MIMEType.parse` | **0 taught**; `permission.drop` is **contradicted** (`24-permission-model.md:193`) |
-| **25.x → 26.0** | Temporal on · V8 14.1/14.6 (Uint8Array base64, getOrInsert, Iterator.concat) · undici 8 (h2 default) · `--allow-net` · Web Storage on · Corepack dropped · SlowBuffer/`fs.F_OK` removed · `module.register()` runtime-deprecated · transform-types removed | Temporal shown **behind a flag** (`10-time-on-the-server.md:68`); `--allow-net` named as absent on 24; npm `undici@8` used as a library; **4 pages still state the 24-only shape as current** (Corepack, SEA ESM, transform-types, FFI) |
+| **25.x → 26.0** | Temporal on · V8 14.1/14.6 (Uint8Array base64, getOrInsert, Iterator.concat) · undici 8 (h2 default) · `--allow-net` · Web Storage on · Corepack dropped · SlowBuffer/`fs.F_OK` removed · `module.register()` runtime-deprecated · transform-types removed | Temporal shown **behind a flag** (`10-time-on-the-server.md:68`); `--allow-net` named as absent on 24; npm `undici@8` used as a library; **5 pages still state the 24-only shape as current** (Corepack, SEA ESM entry, transform-types, FFI, FileHandle-on-GC) |
 | **26.1 – 26.10** | `node:ffi` · `node:vfs` · `util.throttle/debounce` · crypto MAC API · ZipFile · DTLS · `node:bench` | **0 taught** |
 
 **Floor.** The runtime/module phases (0–5) hold back to **22.18** — the first 22.x with type
@@ -110,7 +110,7 @@ features (`mock.module({exports})` 24.15, `--test-randomize` 24.16, `--test-reru
 **Verdict — Content applies up to Node.js 24.19.0 (floor 22.18 for phases 0–5; 24.19.0 for the
 whole unit).** Every 24.x minor through 24.19 has at least one feature taught and nothing from
 24.20/24.21 or 26.x is taught, while one page contradicts a 24.20 API. Node 26 — Active LTS in 34
-days — appears only as a date; its runtime changes are untaught and four pages state the
+days — appears only as a date; its runtime changes are untaught and five pages state the
 24-only behaviour unscoped.
 
 ### 2c · Stale claims (false today, 2026-09-24)
@@ -143,3 +143,9 @@ Scoped statements that are **true** and were left out of the list: "Node 24's bu
 negotiates HTTP/1.1" (`14-http2.md:107`), "Node 24 has no `--allow-net`" (`12-ssrf.md:211`),
 "on 24.19.0 `Temporal` is undefined without the flag" (`10-time-on-the-server.md:68`). Each is
 correct for 24 and silent about 26 — graded PARTIAL in §3, not stale.
+
+---
+
+**Continues:** §3 delta table in [`nodejs-02.md`](./nodejs-02.md) (method, release policy, Node 22
+line), [`nodejs-03.md`](./nodejs-03.md) (Node 24 line), [`nodejs-04.md`](./nodejs-04.md) (Node 26 line, npm,
+undici); §4 summary and §5 hand-off in [`nodejs-05.md`](./nodejs-05.md).
