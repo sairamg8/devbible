@@ -1,6 +1,6 @@
 ---
 name: version-coverage-java-spring
-description: java-spring (Boot/Framework/Security/Data/Cloud + JUnit/Mockito/Testcontainers/Flyway/jOOQ) · IN PROGRESS — numbers filled in at the end
+description: java-spring (Boot/Framework/Security/Data/Cloud + JUnit/Mockito/Testcontainers/Flyway/jOOQ) · applies up to Spring Boot 4.1.1 / Framework 7.0.9 / Security 7.1.1 (floor Boot 4.0; phase 10 effectively 4.1) · lines compared Boot 3.5 (de-facto LTS) → 4.0 → 4.1 (pin) → shipped-beyond-pins → 4.2.0-M1 · 214 changes — 77 covered / 33 partial / 84 missing / 7 contradicted / 13 planned · 18 stale claims · report continues in java-spring-02/03/04.md
 metadata:
   type: project
 ---
