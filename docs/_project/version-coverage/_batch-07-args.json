@@ -1,6 +1,50 @@
-{"batch": 7, "today": "2026-09-24", "units": [
-{"unit": "framer-motion", "label": "Motion (formerly Framer Motion)", "dirs": ["docs/framer-motion"], "pins": "motion {source npm:motion, pin null — unanchored, note: package renamed framer-motion → motion; 14 pages still import the old name}", "currency": "❔ Motion — → 13.4.2 (unanchored). framer-motion validation lane is 8 of 18 units done; 13 wrong imports were proven on disk 2026-09-06.", "notes": "No LTS. Compare framer-motion 10 → 11 (the last 'framer-motion' era) → motion 12 (rename to `motion`, import from 'motion/react', 'motion/react-client' for RSC, mini animate) → 13 → latest, from motion.dev/changelog (or github.com/motiondivision/motion CHANGELOG.md) and the upgrade guide: layout animation changes, useAnimate, scroll/useScroll changes, springs with duration/bounce, removed APIs. Flag every page that imports from 'framer-motion' as CONTRADICTED only if it presents that as the current package (the old package still publishes — check npm whether framer-motion still receives releases). Imported track."},
-{"unit": "tanstack-query", "label": "TanStack Query (React Query)", "dirs": ["docs/tanstack-query"], "pins": "tanstack {source npm:@tanstack/react-query, pin 5.102.8, checked 2026-09-05, tracks tanstack-query/nextjs}", "currency": "TanStack Query 5.102.8 → 5.103.2 (minor, 4 pages). 'pages say 5.40.0' is a KNOWN FALSE POSITIVE — those are minimum-version floors in docs/nextjs (v5.40.0 added promise dehydration); do not re-report it. A3 (v4-isms) is CLOSED — v4 mentions in this track are deliberate migration teaching.", "notes": "No LTS (tanstack.com/query/latest/docs/framework/react/overview; GitHub releases). Compare v4 → v5.0 → 5.x latest: the v5 migration (object syntax only, cacheTime→gcTime, isLoading→isPending, keepPreviousData→placeholderData, useSuspenseQuery, queryOptions, infiniteQueryOptions, maxPages, experimental_streamedQuery, queryClient.query(), environmentManager, mutation state APIs, select stability, skipToken, usePrefetchQuery) → any announced v6 — take the real list from the release notes, and the 'main' docs vs published version subtlety noted in pins.js. Validation backlog topics 11, 14, 15, 16 exist."},
-{"unit": "redux-toolkit", "label": "Redux Toolkit, RTK Query and React-Redux", "dirs": ["docs/redux-toolkit"], "pins": "rtk {source npm:@reduxjs/toolkit, pin 2.12.0, checked 2026-09-05, note: react-redux 9.3.0 travels with it}", "currency": "Redux Toolkit 2.12.0 — current per pin (validated in full).", "notes": "No LTS. Compare RTK 1.9 → 2.0 (ESM, removed object syntax for createReducer/extraReducers, combineSlices, selectors in createSlice, createAppAsyncThunk / .withTypes, Redux core 5, reselect 5, immer 10) → 2.x latest (RTK Query infinite queries, SSR/streaming changes, codegen changes) and react-redux 8 → 9 (useSelector dev checks, React 18+/19), from github.com/reduxjs/redux-toolkit/releases and redux-toolkit.js.org. Check whether any page teaches pre-2.0 syntax as current."},
-{"unit": "web-vitals-performance", "label": "Web Vitals and frontend performance", "dirs": ["docs/web-vitals-performance"], "pins": "webVitals {source npm:web-vitals, pin null — unanchored}", "currency": "❔ web-vitals — → 6.2.2 (unanchored).", "notes": "The 'LTS' here is the Core Web Vitals definition set (web.dev/articles/vitals, the CrUX / Chrome speed metrics changelog) plus the web-vitals library major versions. Compare: FID retired and INP made a Core Web Vital (March 2024), web-vitals v3 → v4 (onFID removed, attribution changes) → v5 → v6 (check what changed), LoAF (Long Animation Frames) API, soft navigations, Speculation Rules / prerender, fetchpriority, bfcache, CLS/LCP definition changes, Chrome's LCP/INP threshold changes if any — take the real list from web.dev / chromium changelog / GitHub releases. Check for pages teaching FID as a current Core Web Vital. Imported track; propose a pin (report only)."}
-]}
+{
+ "batch": 7,
+ "today": "2026-09-24",
+ "units": [
+  {
+   "unit": "framer-motion",
+   "label": "Motion (formerly Framer Motion)",
+   "dirs": [
+    "docs/framer-motion"
+   ],
+   "pins": "motion {source npm:motion, pin null — unanchored, note: package renamed framer-motion → motion; 14 pages still import the old name}",
+   "currency": "❔ Motion — → 13.4.2 (unanchored). framer-motion validation lane is 8 of 18 units done; 13 wrong imports were proven on disk 2026-09-06.",
+   "notes": "No LTS. Compare framer-motion 10 → 11 (the last 'framer-motion' era) → motion 12 (rename to `motion`, import from 'motion/react', 'motion/react-client' for RSC, mini animate) → 13 → latest, from motion.dev/changelog (or github.com/motiondivision/motion CHANGELOG.md) and the upgrade guide: layout animation changes, useAnimate, scroll/useScroll changes, springs with duration/bounce, removed APIs. Flag every page that imports from 'framer-motion' as CONTRADICTED only if it presents that as the current package (the old package still publishes — check npm whether framer-motion still receives releases). Imported track.",
+   "syllabus_hint": "Official: https://motion.dev/docs/react nav (Motion for React: animation, gestures, layout, scroll, motion values, components, hooks, integrations, upgrade guide). Free: the official docs + free examples. Imported track."
+  },
+  {
+   "unit": "tanstack-query",
+   "label": "TanStack Query (React Query)",
+   "dirs": [
+    "docs/tanstack-query"
+   ],
+   "pins": "tanstack {source npm:@tanstack/react-query, pin 5.102.8, checked 2026-09-05, tracks tanstack-query/nextjs}",
+   "currency": "TanStack Query 5.102.8 → 5.103.2 (minor, 4 pages). 'pages say 5.40.0' is a KNOWN FALSE POSITIVE — those are minimum-version floors in docs/nextjs (v5.40.0 added promise dehydration); do not re-report it. A3 (v4-isms) is CLOSED — v4 mentions in this track are deliberate migration teaching.",
+   "notes": "No LTS (tanstack.com/query/latest/docs/framework/react/overview; GitHub releases). Compare v4 → v5.0 → 5.x latest: the v5 migration (object syntax only, cacheTime→gcTime, isLoading→isPending, keepPreviousData→placeholderData, useSuspenseQuery, queryOptions, infiniteQueryOptions, maxPages, experimental_streamedQuery, queryClient.query(), environmentManager, mutation state APIs, select stability, skipToken, usePrefetchQuery) → any announced v6 — take the real list from the release notes, and the 'main' docs vs published version subtlety noted in pins.js. Validation backlog topics 11, 14, 15, 16 exist.",
+   "syllabus_hint": "Official: https://tanstack.com/query/latest/docs/framework/react/overview nav (Guides & Concepts, API reference, SSR/Next.js, TypeScript, testing). Free: the official docs, TkDodo's blog 'Practical React Query' series (tkdodo.eu — widely regarded, free)."
+  },
+  {
+   "unit": "redux-toolkit",
+   "label": "Redux Toolkit, RTK Query and React-Redux",
+   "dirs": [
+    "docs/redux-toolkit"
+   ],
+   "pins": "rtk {source npm:@reduxjs/toolkit, pin 2.12.0, checked 2026-09-05, note: react-redux 9.3.0 travels with it}",
+   "currency": "Redux Toolkit 2.12.0 — current per pin (validated in full).",
+   "notes": "No LTS. Compare RTK 1.9 → 2.0 (ESM, removed object syntax for createReducer/extraReducers, combineSlices, selectors in createSlice, createAppAsyncThunk / .withTypes, Redux core 5, reselect 5, immer 10) → 2.x latest (RTK Query infinite queries, SSR/streaming changes, codegen changes) and react-redux 8 → 9 (useSelector dev checks, React 18+/19), from github.com/reduxjs/redux-toolkit/releases and redux-toolkit.js.org. Check whether any page teaches pre-2.0 syntax as current.",
+   "syllabus_hint": "Official: https://redux.js.org/tutorials/essentials/part-1-overview-concepts + https://redux-toolkit.js.org/ nav (RTK, RTK Query) + react-redux.js.org. Free: the official Redux Essentials tutorial (it is excellent — judge LINK carefully), freeCodeCamp."
+  },
+  {
+   "unit": "web-vitals-performance",
+   "label": "Web Vitals and frontend performance",
+   "dirs": [
+    "docs/web-vitals-performance"
+   ],
+   "pins": "webVitals {source npm:web-vitals, pin null — unanchored}",
+   "currency": "❔ web-vitals — → 6.2.2 (unanchored).",
+   "notes": "The 'LTS' here is the Core Web Vitals definition set (web.dev/articles/vitals, the CrUX / Chrome speed metrics changelog) plus the web-vitals library major versions. Compare: FID retired and INP made a Core Web Vital (March 2024), web-vitals v3 → v4 (onFID removed, attribution changes) → v5 → v6 (check what changed), LoAF (Long Animation Frames) API, soft navigations, Speculation Rules / prerender, fetchpriority, bfcache, CLS/LCP definition changes, Chrome's LCP/INP threshold changes if any — take the real list from web.dev / chromium changelog / GitHub releases. Check for pages teaching FID as a current Core Web Vital. Imported track; propose a pin (report only).",
+   "syllabus_hint": "Official: web.dev/learn/performance + web.dev/explore/metrics (Core Web Vitals: LCP, INP, CLS; TTFB, FCP) + the web-vitals library README + Chrome DevTools performance docs. Free: web.dev, MDN performance guides, DebugBear/Calibre free guides."
+  }
+ ]
+}

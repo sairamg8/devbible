@@ -20,6 +20,23 @@ metadata:
 **This file is that task.** It takes **no language lock** — it is a read-only audit. No agent in
 this lane edits `docs/`; every finding is banked here and handed to the owning lane.
 
+## 🔴 PLAN SWITCHED — 2026-09-24, "the new way" (user: *"yes switch to the new way"*)
+
+The user pointed out that every written track already exists as free content online (the
+2026-09-14 hub + delta direction — [[devbible-feedback-hub-plus-delta]]). So from **batch 2** on,
+each track is mapped, not just release-checked:
+
+1. **LTS syllabus from the official docs** — the docs' own topic list for the LTS version.
+2. **Every topic sorted:** **LINK** (a free page teaches it well — link out) · **KEEP** (ours is
+   deeper) · **WRITE** (nobody teaches it well — our real gap) · **PLANNED** · **SKIP**.
+3. **A short outdated check** (pages teaching removed/changed behaviour as current).
+4. **Adversarial verify** of every WRITE, LINK and OUTDATED verdict.
+
+Script: `version-coverage/_workflow-map.js` (pass as `scriptPath`), args `_batch-0N-args.json`
+(each unit carries a `syllabus_hint`). Reports `version-coverage/<unit>.md`. Batch 1 finishes on
+the old script (release-change audit); **batch 9** then adds the map for its four tracks as
+`<unit>-map.md`. This lane now also covers what [[cursor-free-resources-gap]] was for.
+
 ## What each unit answers
 
 1. **Content applies up to** — the newest upstream version whose notable changes the pages
@@ -51,7 +68,8 @@ this lane edits `docs/`; every finding is banked here and handed to the owning l
 | 6 | eslint-oxlint · jest-rtl · playwright · storybook | — | — |
 | 7 | framer-motion · tanstack-query · redux-toolkit · web-vitals-performance | — | — |
 | 8 | real-world · dsa · system-design · frontend-architecture | — | — |
-| 9 | **synthesis** — one master table + ranked gap list across all 32 units | — | — |
+| 9 | nodejs-map · java-jdk-map · java-spring-map · python-map (batch-1 tracks, new way) | — | — |
+| 10 | **synthesis** — one table + ranked WRITE / OUTDATED / LINK lists across all tracks | — | — |
 
 LTS-bearing products go first (batches 1–2), as the order asked.
 

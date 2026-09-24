@@ -1,0 +1,75 @@
+{
+ "batch": 9,
+ "today": "2026-09-24",
+ "units": [
+  {
+   "unit": "nodejs",
+   "label": "Node.js (runtime, npm, undici)",
+   "dirs": [
+    "docs/nodejs"
+   ],
+   "pins": "node {source eol:nodejs, policy lts, cycle 24, pin 24.19.0, checked 2026-08-31} · npm 12.0.2 · undici 8.10.0",
+   "currency": "Node.js 24.19.0 → 24.21.0 (patch, 610 pages across tracks) · npm 12.0.2 → 12.1.0 (minor) · undici 8.10.0 → 8.11.0 (minor) · 📅 Node 26 becomes Active LTS on 2026-10-28 (34 days).",
+   "notes": "Pin policy is 'lts' on cycle 24; 140 pages were de-expired from 'Active LTS' to '(LTS)' on 2026-09-08. Some pages cite 'the Node.js v26.7.0 API index'. Compare every supported line endoflife.date shows (expect 22, 24, 26). In scope: the runtime, core modules, node:test, the permission model, ESM/CJS, npm and undici/fetch. Out of scope: Express (own unit), database drivers, third-party libraries.",
+   "syllabus_hint": "Official: Node.js 24 API docs index https://nodejs.org/docs/latest-v24.x/api/ + the Learn section https://nodejs.org/en/learn (Getting started, HTTP, file system, command line, TypeScript, asynchronous work, test runner, security best practices, diagnostics). Free: nodejs.org/learn, w3schools Node.js (133 pages in 19 sections — judge depth), The Odin Project NodeJS, Full Stack Open part 3, freeCodeCamp.",
+   "report": "nodejs-map",
+   "prior": "The release-change audit (applies-up-to, LTS delta, verify) is already in nodejs.md in the same folder — read its §2 verdict and §5 hand-off first and do not redo them; your §5 may simply point to it and add only what it missed."
+  },
+  {
+   "unit": "java-jdk",
+   "label": "Java — JDK language and platform",
+   "dirs": [
+    "docs/java/pages/phase-0-platform-jvm",
+    "docs/java/pages/phase-1-language-core",
+    "docs/java/pages/phase-2-classes-objects",
+    "docs/java/pages/phase-3-generics-collections",
+    "docs/java/pages/phase-4-lambdas-streams",
+    "docs/java/pages/phase-5-exceptions",
+    "docs/java/pages/phase-6-concurrency",
+    "docs/java/pages/phase-7-io-time-stdlib",
+    "docs/java/pages/phase-8-build-dependencies",
+    "docs/java/pages/phase-12-jvm-production",
+    "docs/java/syllabus"
+   ],
+   "pins": "jdk {source eol:eclipse-temurin, policy lts, cycle 25, pin 25, checked 2026-08-31}",
+   "currency": "JDK pin 25 is current by policy; the checker found NO bolded JDK version on any page (unanchored-by-bold), so pages may name versions only in prose or version spines.",
+   "notes": "The language/platform half of the java track (Spring and libraries are the java-spring unit — skip them). Compare LTS lines 17, 21, 25 and every GA non-LTS release after 25 (26, and 27 if GA by today). Track JEPs through preview → final: records, sealed, pattern matching for switch/instanceof, record patterns, unnamed variables, virtual threads, structured concurrency, scoped values, string templates (withdrawn), flexible constructor bodies, module imports, compact source files/instance main, stream gatherers, FFM API, class-file API, generational ZGC, compact object headers, AOT cache, etc. — but take the list from openjdk.org/projects/jdk/<N>/ pages, not this note. The java track is parked at 160/232 topics — use PLANNED for syllabus items not yet written.",
+   "syllabus_hint": "Official: dev.java/learn (the free Oracle learning path: language basics, classes & objects, generics, lambdas, collections, streams, exceptions, concurrency, I/O, date-time, modules, JVM tools) + Java SE 25 docs https://docs.oracle.com/en/java/javase/25/. Free: dev.java/learn, w3schools Java, Baeldung (free), the Java Tutorials (legacy, JDK 8 — mark as outdated source), MOOC.fi Java Programming (free).",
+   "report": "java-jdk-map",
+   "prior": "The release-change audit (applies-up-to, LTS delta, verify) is already in java-jdk.md in the same folder — read its §2 verdict and §5 hand-off first and do not redo them; your §5 may simply point to it and add only what it missed."
+  },
+  {
+   "unit": "java-spring",
+   "label": "Java — Spring Boot, Spring Framework and the library stack",
+   "dirs": [
+    "docs/java/pages/phase-9-spring-boot",
+    "docs/java/pages/phase-10-data-access",
+    "docs/java/pages/phase-11-testing",
+    "docs/java/pages/phase-13-oauth2-oidc",
+    "docs/java/pages/phase-14-microservice-architecture",
+    "docs/java/pages/phase-15-messaging-event-driven",
+    "docs/java/pages/phase-16-resilience-operations",
+    "docs/java/syllabus"
+   ],
+   "pins": "springBoot 4.1.1 (eol:spring-boot) · springFramework 7.0.9 (eol:spring-framework) · mockito 5.23.0 · junit 6.0.3 (gh:junit-team/junit-framework) · testcontainers 2.0.5 · jooq 3.21 · flyway 12",
+   "currency": "Mockito 5.23.0 → 5.24.0 (minor, 151p) · JUnit 6.0.3 → 6.1.3 (minor, 113p) · 🔴 Flyway 12 → 13.7.0 (MAJOR, 50p — an open user decision since 2026-09-06: sweep, or freeze at 12) · Spring Boot 4.1.1 / Framework 7.0.9 current per pin · jOOQ and Testcontainers have no bolded version on any page.",
+   "notes": "Compare Spring Boot's supported lines from spring.io/projects/spring-boot#support and endoflife.date (expect 3.5.x, 4.0.x, 4.1.x and the next), Spring Framework 6.2 → 7.0 → next, Spring Security 6 → 7, Spring Data, JUnit 5 → 6, Mockito, Flyway 12 → 13, Testcontainers 1.x → 2.x, jOOQ. Include Spring Cloud / Resilience4j / Kafka / messaging / OAuth2 libraries only as far as these phases actually teach them (grep to find which, then use their release notes). The JDK language itself is the java-jdk unit — skip it.",
+   "syllabus_hint": "Official: Spring Boot 4.1 reference https://docs.spring.io/spring-boot/ nav + spring.io/guides (free getting-started guides) + Spring Framework / Security / Data reference docs. Free: spring.io guides, Baeldung (free, deep), Spring Academy (free courses), Testcontainers guides.",
+   "report": "java-spring-map",
+   "prior": "The release-change audit (applies-up-to, LTS delta, verify) is already in java-spring.md in the same folder — read its §2 verdict and §5 hand-off first and do not redo them; your §5 may simply point to it and add only what it missed."
+  },
+  {
+   "unit": "python",
+   "label": "Python (CPython + uv, ruff, pre-commit)",
+   "dirs": [
+    "docs/python"
+   ],
+   "pins": "python 3.14 (eol:python, policy latest) · uv 0.12.12 · ruff 0.16.6 · pre-commit 4.6.2 · sortedcontainers 2.4.0",
+   "currency": "Python 3.14 current per pin · uv 0.12.12 → 0.12.18 (patch, 131p). Pages carry '> Target: **CPython 3.14** (3.14.7)' spines.",
+   "notes": "Python has no LTS — use the supported-branches status from devguide.python.org/versions and endoflife.date (security-only vs bugfix lines) and the next feature release (3.15 — check its PEP release schedule and whether it is GA by today). Compare 3.10 → 3.11 → 3.12 → 3.13 → 3.14 → 3.15 from the docs.python.org/3/whatsnew pages. The track is mid-write: phases 0, 1, 2, 3 (partial: topics 08–09 partial) and 7 exist; the syllabus lists the rest — grade unwritten syllabus items PLANNED, not MISSING. Include uv / ruff / pre-commit changes only as far as phase 7 teaches them.",
+   "syllabus_hint": "Official: Python 3.14 docs https://docs.python.org/3.14/ — the Tutorial TOC, the Library Reference areas a developer uses daily, the HOWTOs, and the Python Packaging User Guide (packaging.python.org) for phase 7. Free: docs.python.org tutorial, w3schools Python, Real Python (partially free — say which parts are paywalled), Automate the Boring Stuff (free book), Python Packaging User Guide, uv docs (docs.astral.sh/uv).",
+   "report": "python-map",
+   "prior": "The release-change audit (applies-up-to, LTS delta, verify) is already in python.md in the same folder — read its §2 verdict and §5 hand-off first and do not redo them; your §5 may simply point to it and add only what it missed."
+  }
+ ]
+}

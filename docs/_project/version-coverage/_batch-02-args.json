@@ -1,6 +1,50 @@
-{"batch": 2, "today": "2026-09-24", "units": [
-{"unit": "postgresql", "label": "PostgreSQL", "dirs": ["docs/postgresql"], "pins": "postgresql {source eol:postgresql, policy major, cycle 18, pin 18.4, patchIndex 1, checked 2026-08-31, tracks postgresql/nodejs/nextjs}", "currency": "PostgreSQL 18.4 → 18.6 (patch, 415 pages across tracks; also 17.10 on 3 pages). Spines bold **PostgreSQL 18.4** on ~298 pages.", "notes": "PostgreSQL has no LTS label — every major is supported for 5 years (postgresql.org/support/versioning). Compare every supported major endoflife.date lists (expect 14–18) and the next major (19 — check its beta/RC/GA status today). Use the release notes at postgresql.org/docs/release/ for each major: SQL features, psql, JSON/SQL-JSON, MERGE, logical replication, virtual generated columns, uuidv7, async I/O, OAuth auth, removed/changed defaults, md5 password deprecation, etc. — take the list from the notes, not this sentence. The track also teaches the Node pg driver in phases 7–9 — include node-postgres (pg) version changes only as far as those phases teach them."},
-{"unit": "angular", "label": "Angular", "dirs": ["docs/angular"], "pins": "angular {source npm:@angular/core, policy latest, pin 22.1.4, checked 2026-08-31}", "currency": "Angular 22.1.4 → 22.2.0 (minor, 390 pages). Spines bold **Angular 22.1.5** on ~506 lines and **Angular CLI 22.1.7** on ~116 — the pin (22.1.4) disagrees with the pages; report that.", "notes": "Angular's support policy (angular.dev/reference/releases): each major gets ~6 months active + 12 months LTS. Compare every supported major (active + LTS lines, e.g. 20, 21, 22) and the next major (23 — check its date/RC). Only Phase 0 ('how Angular runs' — compiler, build system @angular/build, angular.json, TypeScript setup, ng new/ng update, linker, JIT vs AOT, dev mode, zoneless, etc.) is written: topics 01–07 closed, 08 scaffolded. The syllabus holds ~211 unwritten topics — grade unwritten syllabus items PLANNED, not MISSING. Signals, control flow, defer, zoneless, SSR/hydration, resource API, signal forms, standalone default, Vitest as default test runner etc. — take the actual list from the Angular changelog / blog release posts, not this note."},
-{"unit": "mongodb", "label": "MongoDB", "dirs": ["docs/mongodb"], "pins": "mongodb {source eol:mongodb, policy latest, pin 8.0, checked 2026-08-31, tracks mongodb/nodejs}", "currency": "MongoDB 8.0 → 8.3.11 (minor, 16 pages; also 8.2.12 on 2 pages).", "notes": "MongoDB's lifecycle: major releases (7.0, 8.0) with long support, plus minor releases (8.1, 8.2, 8.3) — check mongodb.com/legal/support-policy/lifecycles and endoflife.date for which lines are supported and which minors are available for self-managed deployments. Compare 7.0 → 8.0 → 8.x latest → next major (9.0 if announced). The track is 34/82 topics written (phases 0–6: runtime, BSON, mongosh, schema design, CRUD, query operators, aggregation); unwritten syllabus items are PLANNED. Include mongosh and the Node driver only as far as the pages teach them."},
-{"unit": "redis", "label": "Redis", "dirs": ["docs/redis"], "pins": "redis {source eol:redis, policy latest, pin 8.10.0, checked 2026-08-31, tracks redis/nodejs}", "currency": "Redis 8.10.0 → 8.10.2 (patch, 7 pages).", "notes": "Only Phase 0 ('how Redis runs') is written — 12 files; the syllabus holds ~74 topics, 0 written beyond phase 0, so most deltas will be PLANNED. Compare every supported Redis line endoflife.date lists (7.2 / 7.4 / 8.x) plus the licence change history (BSD → RSALv2/SSPLv1 in 7.4 → AGPLv3 option in 8.0) and the Redis Stack modules folded into Redis 8 (JSON, search/query engine, time series, probabilistic, vector sets) — take the actual lists from redis.io release notes / GitHub releases. Also note Valkey as the fork, only if the pages mention it. The node-redis / ioredis clients only as far as the pages teach them."}
-]}
+{
+ "batch": 2,
+ "today": "2026-09-24",
+ "units": [
+  {
+   "unit": "postgresql",
+   "label": "PostgreSQL",
+   "dirs": [
+    "docs/postgresql"
+   ],
+   "pins": "postgresql {source eol:postgresql, policy major, cycle 18, pin 18.4, patchIndex 1, checked 2026-08-31, tracks postgresql/nodejs/nextjs}",
+   "currency": "PostgreSQL 18.4 → 18.6 (patch, 415 pages across tracks; also 17.10 on 3 pages). Spines bold **PostgreSQL 18.4** on ~298 pages.",
+   "notes": "PostgreSQL has no LTS label — every major is supported for 5 years (postgresql.org/support/versioning). Compare every supported major endoflife.date lists (expect 14–18) and the next major (19 — check its beta/RC/GA status today). Use the release notes at postgresql.org/docs/release/ for each major: SQL features, psql, JSON/SQL-JSON, MERGE, logical replication, virtual generated columns, uuidv7, async I/O, OAuth auth, removed/changed defaults, md5 password deprecation, etc. — take the list from the notes, not this sentence. The track also teaches the Node pg driver in phases 7–9 — include node-postgres (pg) version changes only as far as those phases teach them.",
+   "syllabus_hint": "Official: PostgreSQL 18 manual TOC https://www.postgresql.org/docs/18/index.html (Part I Tutorial, Part II The SQL Language, Part III Server Administration — the parts a developer meets: config, roles, backup, monitoring; Part V internals only as far as MVCC/indexes). node-postgres docs https://node-postgres.com for phases 7–9. Free: the official tutorial, w3schools PostgreSQL, postgresqltutorial.com, use-the-index-luke.com, Crunchy Data/Neon free tutorials."
+  },
+  {
+   "unit": "angular",
+   "label": "Angular",
+   "dirs": [
+    "docs/angular"
+   ],
+   "pins": "angular {source npm:@angular/core, policy latest, pin 22.1.4, checked 2026-08-31}",
+   "currency": "Angular 22.1.4 → 22.2.0 (minor, 390 pages). Spines bold **Angular 22.1.5** on ~506 lines and **Angular CLI 22.1.7** on ~116 — the pin (22.1.4) disagrees with the pages; report that.",
+   "notes": "Angular's support policy (angular.dev/reference/releases): each major gets ~6 months active + 12 months LTS. Compare every supported major (active + LTS lines, e.g. 20, 21, 22) and the next major (23 — check its date/RC). Only Phase 0 ('how Angular runs' — compiler, build system @angular/build, angular.json, TypeScript setup, ng new/ng update, linker, JIT vs AOT, dev mode, zoneless, etc.) is written: topics 01–07 closed, 08 scaffolded. The syllabus holds ~211 unwritten topics — grade unwritten syllabus items PLANNED, not MISSING. Signals, control flow, defer, zoneless, SSR/hydration, resource API, signal forms, standalone default, Vitest as default test runner etc. — take the actual list from the Angular changelog / blog release posts, not this note.",
+   "syllabus_hint": "Official: angular.dev (Angular 22) — the nav of https://angular.dev/overview (Essentials, In-depth Guides: signals, components, templates, DI, routing, forms, HTTP, SSR, testing, i18n, animations, CLI/build tooling, best practices) + https://angular.dev/tutorials. Free: angular.dev tutorials and learn playground; ⚠️ w3schools only has AngularJS (1.x) — check, and mark it as not a valid free source for modern Angular if so; freeCodeCamp Angular content; Angular University free articles."
+  },
+  {
+   "unit": "mongodb",
+   "label": "MongoDB",
+   "dirs": [
+    "docs/mongodb"
+   ],
+   "pins": "mongodb {source eol:mongodb, policy latest, pin 8.0, checked 2026-08-31, tracks mongodb/nodejs}",
+   "currency": "MongoDB 8.0 → 8.3.11 (minor, 16 pages; also 8.2.12 on 2 pages).",
+   "notes": "MongoDB's lifecycle: major releases (7.0, 8.0) with long support, plus minor releases (8.1, 8.2, 8.3) — check mongodb.com/legal/support-policy/lifecycles and endoflife.date for which lines are supported and which minors are available for self-managed deployments. Compare 7.0 → 8.0 → 8.x latest → next major (9.0 if announced). The track is 34/82 topics written (phases 0–6: runtime, BSON, mongosh, schema design, CRUD, query operators, aggregation); unwritten syllabus items are PLANNED. Include mongosh and the Node driver only as far as the pages teach them.",
+   "syllabus_hint": "Official: MongoDB 8.0 manual https://www.mongodb.com/docs/manual/ (Introduction, CRUD, Aggregation, Data Modeling, Indexes, Transactions, Replication, Sharding, Security) + mongosh docs. Free: MongoDB University (learn.mongodb.com — free courses), w3schools MongoDB, the Node driver docs."
+  },
+  {
+   "unit": "redis",
+   "label": "Redis",
+   "dirs": [
+    "docs/redis"
+   ],
+   "pins": "redis {source eol:redis, policy latest, pin 8.10.0, checked 2026-08-31, tracks redis/nodejs}",
+   "currency": "Redis 8.10.0 → 8.10.2 (patch, 7 pages).",
+   "notes": "Only Phase 0 ('how Redis runs') is written — 12 files; the syllabus holds ~74 topics, 0 written beyond phase 0, so most deltas will be PLANNED. Compare every supported Redis line endoflife.date lists (7.2 / 7.4 / 8.x) plus the licence change history (BSD → RSALv2/SSPLv1 in 7.4 → AGPLv3 option in 8.0) and the Redis Stack modules folded into Redis 8 (JSON, search/query engine, time series, probabilistic, vector sets) — take the actual lists from redis.io release notes / GitHub releases. Also note Valkey as the fork, only if the pages mention it. The node-redis / ioredis clients only as far as the pages teach them.",
+   "syllabus_hint": "Official: https://redis.io/docs/latest/ — Develop (data types, commands, keyspace, pub/sub, transactions, pipelining, programmability, Redis Query Engine, JSON, vector sets) and Operate (persistence, replication, Sentinel, cluster, security, memory). Free: Redis University (university.redis.io — free courses), node-redis docs. w3schools has no Redis tutorial (404 measured 2026-09-14)."
+  }
+ ]
+}

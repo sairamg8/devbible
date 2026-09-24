@@ -7,6 +7,10 @@ metadata:
 
 # 🔴 START HERE — free-resources gap research
 
+> ⤴️ **2026-09-24: folded into [CURSOR-VERSION-COVERAGE.md](CURSOR-VERSION-COVERAGE.md)** — its "new way" maps
+> every track's official LTS syllabus against our pages AND the best free content (LINK / KEEP / WRITE).
+> Resume there, not here.
+
 **Standing order (2026-09-14):** [[devbible-feedback-hub-plus-delta]]. devbible becomes the one
 place that gathers the best free resources (w3schools, MDN, official docs, the big free courses)
 and **fills their gaps**, instead of re-explaining what they already teach well. PERN + MERN

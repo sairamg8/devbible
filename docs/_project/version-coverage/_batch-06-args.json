@@ -1,6 +1,50 @@
-{"batch": 6, "today": "2026-09-24", "units": [
-{"unit": "eslint-oxlint", "label": "ESLint, typescript-eslint and Oxlint", "dirs": ["docs/eslint-oxlint"], "pins": "eslint {source npm:eslint, pin null} · oxlint {source npm:oxlint, pin null} — both UNANCHORED: no page names a version.", "currency": "❔ ESLint — → 10.11.0 · ❔ Oxlint — → 1.85.0 (unanchored: nothing on any page to check against).", "notes": "ESLint's version support policy (eslint.org/version-support — current vs maintenance majors). Compare ESLint 8 (flat config opt-in, EOL) → 9 (flat config default, eslintrc deprecated) → 10 (eslintrc removed? — check) → 10.x latest, from eslint.org/blog release posts; typescript-eslint 8 → latest (typescript-eslint.io/blog); Oxlint 1.0 → latest (oxc.rs/blog, github.com/oxc-project/oxc/releases — type-aware linting, JS plugins, config migration). Also the React hooks plugin rule changes tied to the React Compiler if pages teach them. Imported track; no version spines — so 'applies up to' must come from feature probes alone; say so. Propose the pin values for pins.js (report only)."},
-{"unit": "jest-rtl", "label": "Jest and React Testing Library (and Vitest where taught)", "dirs": ["docs/jest-rtl"], "pins": "jest {source npm:jest, pin null — unanchored} · rtl {source npm:@testing-library/react, pin null — unanchored} · vitest 5.0.0 · react 19.2.8", "currency": "❔ Jest — → 30.5.2 (8 pages mention it, no pin) · ❔ Testing Library — → 16.3.3 · Vitest 5.0.0 → 5.0.1 (patch). Dashboard says Jest & RTL is 27% of a 59-topic syllabus — grade unwritten syllabus items PLANNED.", "notes": "No LTS for either. Compare Jest 29 → 30 (jestjs.io/blog: dropped Node versions, jsdom 26, removed matchers aliases like toBeCalled/toThrowError, jest.genMockFromModule removal, .mjs config, TS config support, etc. — take the list from the Jest 30 post and CHANGELOG) → 30.x latest; @testing-library/react 14 → 15 → 16 (peer @testing-library/dom split, React 19 support, renderHook moved in), @testing-library/user-event 14, @testing-library/jest-dom 6 (import path change); act() from react instead of react-dom/test-utils. Vitest 3 → 4 → 5 only as far as pages teach it. Propose pins (report only)."},
-{"unit": "playwright", "label": "Playwright", "dirs": ["docs/playwright"], "pins": "playwright {source npm:playwright, pin null — unanchored}", "currency": "❔ Playwright — → 1.63.0 (unanchored: no page names a version).", "notes": "Playwright has no LTS; it ships a minor roughly monthly with browser-version bumps (playwright.dev/docs/release-notes). Compare the last ~2 years of minors (1.4x → 1.63): clock API, ARIA snapshots / toMatchAriaSnapshot, --only-changed, --last-failed, test.step improvements, locator.describe / toHaveAccessibleName etc., UI mode / trace viewer changes, the Playwright MCP / agents / test generation features, component testing status (still experimental?), Chrome for Testing / chromium headless shell switch, removed APIs and Node floor — take the real list from the release notes. Imported track (18 files), no version spines — 'applies up to' must come from feature probes; say so. Propose a pin (report only)."},
-{"unit": "storybook", "label": "Storybook", "dirs": ["docs/storybook"], "pins": "storybook {source npm:storybook, pin 10.5.8, checked 2026-08-31}", "currency": "Storybook 10.5.8 → 10.6.0 (minor, 26 pages). Imported, never brought to house style; 7 files over the 300-line cap; 35 topics unwritten — grade unwritten syllabus items PLANNED.", "notes": "Storybook has no LTS (storybook.js.org/releases, github.com/storybookjs/storybook/blob/next/CHANGELOG.md, MIGRATION.md). Compare 7 → 8 (Vitest-free test runner, removed storiesOf) → 9 (Storybook Test with Vitest addon, slimmer core, consolidated addons, essentials in core) → 10 (ESM-only, CSF Next / CSF factories, etc.) → 10.x latest — take the real list from the release posts and MIGRATION.md. Check whether pages still teach removed addons/APIs (@storybook/addon-essentials as a separate install, @storybook/testing-library, @storybook/jest, storiesOf, .storybook/main.js CJS) as current."}
-]}
+{
+ "batch": 6,
+ "today": "2026-09-24",
+ "units": [
+  {
+   "unit": "eslint-oxlint",
+   "label": "ESLint, typescript-eslint and Oxlint",
+   "dirs": [
+    "docs/eslint-oxlint"
+   ],
+   "pins": "eslint {source npm:eslint, pin null} · oxlint {source npm:oxlint, pin null} — both UNANCHORED: no page names a version.",
+   "currency": "❔ ESLint — → 10.11.0 · ❔ Oxlint — → 1.85.0 (unanchored: nothing on any page to check against).",
+   "notes": "ESLint's version support policy (eslint.org/version-support — current vs maintenance majors). Compare ESLint 8 (flat config opt-in, EOL) → 9 (flat config default, eslintrc deprecated) → 10 (eslintrc removed? — check) → 10.x latest, from eslint.org/blog release posts; typescript-eslint 8 → latest (typescript-eslint.io/blog); Oxlint 1.0 → latest (oxc.rs/blog, github.com/oxc-project/oxc/releases — type-aware linting, JS plugins, config migration). Also the React hooks plugin rule changes tied to the React Compiler if pages teach them. Imported track; no version spines — so 'applies up to' must come from feature probes alone; say so. Propose the pin values for pins.js (report only).",
+   "syllabus_hint": "Official: https://eslint.org/docs/latest/use/ + /extend/ nav (ESLint 10), typescript-eslint.io/getting-started nav, https://oxc.rs/docs/guide/usage/linter nav. Free: the official docs. Imported track."
+  },
+  {
+   "unit": "jest-rtl",
+   "label": "Jest and React Testing Library (and Vitest where taught)",
+   "dirs": [
+    "docs/jest-rtl"
+   ],
+   "pins": "jest {source npm:jest, pin null — unanchored} · rtl {source npm:@testing-library/react, pin null — unanchored} · vitest 5.0.0 · react 19.2.8",
+   "currency": "❔ Jest — → 30.5.2 (8 pages mention it, no pin) · ❔ Testing Library — → 16.3.3 · Vitest 5.0.0 → 5.0.1 (patch). Dashboard says Jest & RTL is 27% of a 59-topic syllabus — grade unwritten syllabus items PLANNED.",
+   "notes": "No LTS for either. Compare Jest 29 → 30 (jestjs.io/blog: dropped Node versions, jsdom 26, removed matchers aliases like toBeCalled/toThrowError, jest.genMockFromModule removal, .mjs config, TS config support, etc. — take the list from the Jest 30 post and CHANGELOG) → 30.x latest; @testing-library/react 14 → 15 → 16 (peer @testing-library/dom split, React 19 support, renderHook moved in), @testing-library/user-event 14, @testing-library/jest-dom 6 (import path change); act() from react instead of react-dom/test-utils. Vitest 3 → 4 → 5 only as far as pages teach it. Propose pins (report only).",
+   "syllabus_hint": "Official: https://jestjs.io/docs/getting-started nav (Jest 30) + https://testing-library.com/docs/ (React Testing Library, user-event, jest-dom) + vitest.dev/guide where taught. Free: the official docs, Kent C. Dodds' free blog posts on RTL ('Common mistakes with React Testing Library'), testingjavascript free articles."
+  },
+  {
+   "unit": "playwright",
+   "label": "Playwright",
+   "dirs": [
+    "docs/playwright"
+   ],
+   "pins": "playwright {source npm:playwright, pin null — unanchored}",
+   "currency": "❔ Playwright — → 1.63.0 (unanchored: no page names a version).",
+   "notes": "Playwright has no LTS; it ships a minor roughly monthly with browser-version bumps (playwright.dev/docs/release-notes). Compare the last ~2 years of minors (1.4x → 1.63): clock API, ARIA snapshots / toMatchAriaSnapshot, --only-changed, --last-failed, test.step improvements, locator.describe / toHaveAccessibleName etc., UI mode / trace viewer changes, the Playwright MCP / agents / test generation features, component testing status (still experimental?), Chrome for Testing / chromium headless shell switch, removed APIs and Node floor — take the real list from the release notes. Imported track (18 files), no version spines — 'applies up to' must come from feature probes; say so. Propose a pin (report only).",
+   "syllabus_hint": "Official: https://playwright.dev/docs/intro nav (Getting started, Writing tests, Guides, Test runner, Integrations, API). Free: the official docs, Playwright's free YouTube 'Playwright Test' series, freeCodeCamp. Imported track."
+  },
+  {
+   "unit": "storybook",
+   "label": "Storybook",
+   "dirs": [
+    "docs/storybook"
+   ],
+   "pins": "storybook {source npm:storybook, pin 10.5.8, checked 2026-08-31}",
+   "currency": "Storybook 10.5.8 → 10.6.0 (minor, 26 pages). Imported, never brought to house style; 7 files over the 300-line cap; 35 topics unwritten — grade unwritten syllabus items PLANNED.",
+   "notes": "Storybook has no LTS (storybook.js.org/releases, github.com/storybookjs/storybook/blob/next/CHANGELOG.md, MIGRATION.md). Compare 7 → 8 (Vitest-free test runner, removed storiesOf) → 9 (Storybook Test with Vitest addon, slimmer core, consolidated addons, essentials in core) → 10 (ESM-only, CSF Next / CSF factories, etc.) → 10.x latest — take the real list from the release posts and MIGRATION.md. Check whether pages still teach removed addons/APIs (@storybook/addon-essentials as a separate install, @storybook/testing-library, @storybook/jest, storiesOf, .storybook/main.js CJS) as current.",
+   "syllabus_hint": "Official: https://storybook.js.org/docs nav (Storybook 10: Get started, Writing stories, Writing docs, Testing, Sharing, Essentials/addons, Configure, API) + storybook.js.org/tutorials (free). Imported track."
+  }
+ ]
+}
