@@ -61,7 +61,7 @@ the old script (release-change audit); **batch 9** then adds the map for its fou
 
 | # | Units | Run ID | State |
 |---|---|---|---|
-| 1 | nodejs · java-jdk · java-spring · python (**old way**: release-change audit) | `wf_af3cc5c0-4c5` (8 agents, 4 at once) | 🔵 running at hold time — left to finish; audit reports were at §5, verify stage next |
+| 1 | nodejs · java-jdk · java-spring · python (**old way**: release-change audit) | `wf_af3cc5c0-4c5` (8 agents, 4 at once) | 🔵 **at usage-limit save (2026-09-24 ~13:40): all 4 audit reports written (§1–§5, committed) · 0 of 4 have `## 6 · Verification` yet** — verifiers were running; the run may die at the limit |
 | 2 | postgresql · angular · mongodb · redis | — | ⏸️ held — **first to launch when the user resumes** |
 | 3 | nginx · docker · git · typescript | — | — |
 | 4 | javascript · react · nextjs · expressjs | — | — |
@@ -97,7 +97,11 @@ LTS-bearing products go first (batches 1–2), as the order asked.
 
 ## Next action
 
-⏸️ **HELD.** When the user resumes:
+⏸️ **HELD.** Session `0c2599b5` saved here at the usage limit, 2026-09-24 ~13:40. The run
+`wf_af3cc5c0-4c5` cannot be resumed from a new session. Pre-move copy of the store folder:
+`/mnt/Storage/my-learning/.devbible-premove-20260924/` (safety net; the user decides when to delete it).
+
+When the user resumes:
 1. Check batch 1 finished: every `version-coverage/{nodejs,java-jdk,java-spring,python}*.md` set has
    a `## 6 · Verification` section. If one lacks it, re-run only that unit's verify stage with
    `_workflow-batch.js` + `_batch-01-args.json` (units filtered).
