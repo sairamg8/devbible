@@ -51,7 +51,9 @@ function prose(src) {
 function walk(dir, acc = []) {
   for (const e of fs.readdirSync(dir, {withFileTypes: true})) {
     const p = path.join(dir, e.name);
-    if (e.isDirectory()) walk(p, acc);
+    // `**/_*/**` is excluded from the build in docusaurus.config.js — docs/_project/
+    // (project tracking, moved in 2026-09-24) is never built, so its links cannot fail it.
+    if (e.isDirectory()) { if (!e.name.startsWith('_')) walk(p, acc); }
     else if (e.name.endsWith('.md') || e.name.endsWith('.mdx')) acc.push(p);
   }
   return acc;

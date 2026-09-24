@@ -8,15 +8,22 @@ same arrangement the other projects get.
 
 ## Memory
 
-**One store, one index: `/mnt/Storage/my-learning/claude/`** — a separate git repo on the
-Storage partition, so it survives an OS reinstall. It holds memory and progress for every
-project, this one included.
+🔴 **Since 2026-09-24 this project's tracking lives IN THIS REPO, at `docs/_project/`** (the
+user's order). LOCKS, cursors, progress, research banks, ledgers, audits — all of it. The
+leading `_` keeps it out of the site build (`**/_*/**` is excluded in `docusaurus.config.js`),
+and `yarn linkcheck` / `validate` skip it. A push touching only `docs/_project/**` does not
+trigger a Pages build.
 
-🔴 **Read it, do not import it.** `MEMORY.md` there lists the projects; this project's
-memories are in `devbible/`, indexed by `devbible/INDEX.md` — open only the entries whose
-keywords match the task. `devbible/LOCKS.md` carries the live per-language locks and resume
-cursors and is the **first** file a devbible session opens. `shared/` holds facts true
-across every project.
+**The old path still works:** `/mnt/Storage/my-learning/claude/devbible` is a symlink to
+`docs/_project/`, so every memory, hook and script that names `devbible/LOCKS.md` resolves
+here, and `shared/scripts/store-commit.sh` commits such paths in THIS repo. Cross-project
+memory (`shared/`, `MEMORY.md`) stays in the store at `/mnt/Storage/my-learning/claude/`.
+
+🔴 **Read it, do not import it.** This project's memories are indexed by
+`docs/_project/INDEX.md` — open only the entries whose keywords match the task.
+`docs/_project/LOCKS.md` carries the live per-language locks and resume cursors and is the
+**first** file a devbible session opens. `shared/` in the store holds facts true across every
+project.
 
 (The `@`-import of `MEMORY.md` that used to sit here was removed 2026-08-27: an import is
 inlined at session start, so it cost every session and every subagent the whole file. A path
@@ -30,9 +37,9 @@ and is authoritative. Why each rule exists:
 prompt names. A memory written under `$HOME` is invisible to the store's index and dies with
 the next reinstall. That ban is about memory *directories*, not about `~/.claude/CLAUDE.md`.
 
-When saving something new, pick the folder by scope first — `shared/` only if it holds for
-every project, otherwise `devbible/` — and add a one-line entry with keywords to
-`devbible/INDEX.md`.
+When saving something new, pick the folder by scope first — the store's `shared/` only if it
+holds for every project, otherwise `docs/_project/` — and add a one-line entry with keywords to
+the matching `docs/_project/INDEX-*.md` shard. Commit explicit paths (never `git add -A`).
 
 ## This project
 
@@ -93,7 +100,7 @@ prefixes, so `04-allowlists/` serves at `allowlists/`) — a naive filesystem ch
 site being quoted — never to us.** Never repoint a quoted anchor at a local heading. Class 2
 recurs precisely because a quote is the one place a writer is *trying* not to alter the text.
 
-Full incident history: `…/claude/devbible/feedback_verify_in_ci_not_locally.md`.
+Full incident history: `docs/_project/feedback_verify_in_ci_not_locally.md`.
 
 ## graphify
 

@@ -1,0 +1,394 @@
+[
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/01-file-system-routing-pagetsx.md",
+  "quote": "The components defined in special files are rendered in a specific hierarchy:* *\u2022 `layout.js` \u2022 `template.js` \u2022 `error.js` (React error boundary) \u2022 `loading.js` (React suspense boundary) \u2022 `not-found.js` (React error boundary for \"not found\" UI) \u2022 `p"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/01c-layout-vs-template.md",
+  "quote": "They are useful when you need to:* *\u2022 Resynchronize `useEffect` on navigation.* *\u2022 Reset the state of a child Client Components on navigation. For example, an input field.* *\u2022 To change default framework behavior. For example, Suspense boundaries ins"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/01e-error-and-not-found-boundaries.md",
+  "quote": "`error.digest`: An automatically generated hash of the error thrown. It can be used to match the corresponding error in server-side logs."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/01f-not-found-and-the-notfound-function.md",
+  "quote": "Next.js provides two conventions to handle not found cases:* *\u2022 **`not-found.js`**: Used when you call the `notFound` function in a route segment.* *\u2022 **`global-not-found.js`**: Used to define a global 404 page for unmatched routes across your entire"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/01f-not-found-and-the-notfound-function.md",
+  "quote": "The **not-found** file is used to render UI when the `notFound` function is thrown within a route segment. Along with serving a custom UI, Next.js will return a `200` HTTP status code for streamed responses, and `404` for non-streamed responses."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/01f-not-found-and-the-notfound-function.md",
+  "quote": "You do not need to write `return notFound()`. Calling it is enough, because it throws an exception that stops function execution. TypeScript understands this from its `never` return type, so a value you check first stays narrowed afterward."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/01f-not-found-and-the-notfound-function.md",
+  "quote": "Add a `not-found.tsx` alongside the route to define that UI. Without one, the nearest parent `not-found` boundary renders, falling back to Next.js's default 404 page."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/01g-global-not-found.md",
+  "quote": "`global-not-found.js` is useful when you can't build a 404 page using a combination of `layout.js` and `not-found.js`. This can happen in two cases:* *\u2022 Your app has multiple root layouts (e.g. `app/(admin)/layout.tsx` and `app/(shop)/layout.tsx`), s"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/01g-global-not-found.md",
+  "quote": "For `global-not-found.js`, you can export a `metadata` object or a `generateMetadata` function to customize the `<title>`, `<meta>`, and other head tags for your 404 page."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/02-nested-layouts-parallel-routes-slot-intercepting-routes-rout.md",
+  "quote": "\u2022 Organizing routes by team, concern, or feature.* *\u2022 Defining multiple root layouts.* *\u2022 Opting specific route segments into sharing a layout, while keeping others out."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/02-nested-layouts-parallel-routes-slot-intercepting-routes-rout.md",
+  "quote": "Private folders can be created by prefixing a folder with an underscore: `_folderName`. This indicates the folder is a private implementation detail and should not be considered by the routing system, thereby **opting the folder and all its subfolder"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/02b-parallel-routes-and-named-slots.md",
+  "quote": "By default, Next.js keeps track of the active *state* (or subpage) for each slot. However, the content rendered within a slot will depend on the type of navigation:* *\u2022 **Soft Navigation**: During client-side navigation, Next.js will perform a partia"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/02b-parallel-routes-and-named-slots.md",
+  "quote": "Parallel Routes can be streamed independently, allowing you to define independent error and loading states for each route."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/02b-parallel-routes-and-named-slots.md",
+  "quote": "Both slots render on the server, regardless of which one the layout returns. The conditional decides what the user sees, not what runs: `@admin/page.js` executes its data fetches for every user, and its output is included in the response sent to the "
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/02c-defaultjs-is-required-in-nextjs-16.md",
+  "quote": "`params` (optional): A promise that resolves to an object containing the dynamic route parameters from the root segment down to the slot's subpages."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/02d-intercepting-routes-and-the-modal-pattern.md",
+  "quote": "You can use:* *\u2022 `(.)` to match segments on the **same level*** *\u2022 `(..)` to match segments **one level above*** *\u2022 `(..)(..)` to match segments **two levels above*** *\u2022 `(...)` to match segments from the **root** `app` directory"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/02d-intercepting-routes-and-the-modal-pattern.md",
+  "quote": "Parallel Routes can be used together with Intercepting Routes to create modals that support deep linking. This allows you to solve common challenges when building modals, such as: making the modal content **shareable through a URL**; **preserving con"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/04i-the-not-found-boundary-and-the-404-status.md",
+  "quote": "Along with serving a custom UI, Next.js will return a `200` HTTP status code for streamed responses, and `404` for non-streamed responses."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/06-163-preview-instant-navigations-stream-cache-block-and-parti.md",
+  "quote": "We'd love to hear any feedback you have on GitHub, and we'll continue to publish updates to the preview tag as we work towards a polished stable release."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/06-163-preview-instant-navigations-stream-cache-block-and-parti.md",
+  "quote": "Now, when a route awaits some data on the server, you will be presented with a choice between a few options"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/06-163-preview-instant-navigations-stream-cache-block-and-parti.md",
+  "quote": "To make a navigation instant, you 'turn' an asynchronous operation into something that can be available instantly:"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/06-163-preview-instant-navigations-stream-cache-block-and-parti.md",
+  "quote": "**Stream** with `<Suspense>`. The user will instantly see a loading state (with more UI streaming in after)."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/06-163-preview-instant-navigations-stream-cache-block-and-parti.md",
+  "quote": "**Cache** with `'use cache'`. The user will instantly see a previously cached UI (reused between requests)."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/06-163-preview-instant-navigations-stream-cache-block-and-parti.md",
+  "quote": "Dev overlay insight for a blocking-route, showing the uncached data access on `app/products/[slug]/page.tsx` with Stream, Cache, and Block fix cards"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/06-163-preview-instant-navigations-stream-cache-block-and-parti.md",
+  "quote": "So we've decided to borrow this trick from single-page apps. Instead of prefetching a page per link, Next.js will now prefetch a reusable shell per route. Those shells will then be cached on the client so they're only fetched once."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/06-163-preview-instant-navigations-stream-cache-block-and-parti.md",
+  "quote": "For example, if you had a sidebar with twenty chat links, Next.js used to send a separate prefetch request per link. However, with the new behavior, it will only prefetch once per route: a shell for the `/chat/[id]` route, a shell for the `/dashboard"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/06c-stream-cache-and-block-in-detail.md",
+  "quote": "**Stream** with `<Suspense>`. The user will instantly see a loading state (with more UI streaming in after)."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/06c-stream-cache-and-block-in-detail.md",
+  "quote": "**Cache** with `'use cache'`. The user will instantly see a previously cached UI (reused between requests)."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/07b-adopting-proxy-the-rename-the-limits-and-where-it-runs.md",
+  "quote": "The reason behind the renaming of `middleware` is that the term 'middleware' can often be confused with Express.js middleware, leading to a misinterpretation of its purpose. Also, Middleware is highly capable, so it may encourage the usage; however, "
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/07b-adopting-proxy-the-rename-the-limits-and-where-it-runs.md",
+  "quote": "The term 'middleware' often confuses users with Express.js middleware, which can encourage misuse. To clarify our direction, we are renaming the file convention to 'proxy.' This highlights that we are moving away from Middleware, breaking down its ov"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/07b-adopting-proxy-the-rename-the-limits-and-where-it-runs.md",
+  "quote": "The name Proxy clarifies what Middleware is capable of. The term 'proxy' implies a network boundary in front of the app, which is how this feature behaves. **It can run outside of your application's main runtime and handle requests before they reach "
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/07b-adopting-proxy-the-rename-the-limits-and-where-it-runs.md",
+  "quote": "See Proxy.\"* **Proxy** \u2014 *\"A file (`proxy.js`) that runs code on the server before request is completed. Used to implement server-side logic like logging, redirects, and rewrites. Formerly known as Middleware."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/07b-adopting-proxy-the-rename-the-limits-and-where-it-runs.md",
+  "quote": "While Proxy can be useful for initial checks, it should not be your only line of defense in protecting your data. The majority of security checks should be performed as close as possible to your data source."
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/08-localized-routing-i18n-locale-prefixed-routes-locale-detecti.md",
+  "quote": "`en-US` - English as spoken in the United States \u00b7 `nl-NL` - Dutch as spoken in the Netherlands \u00b7 `nl` - Dutch, no specific region"
+ },
+ {
+  "file": "docs/nextjs/pages/02-routing-and-navigation/08c-negotiating-a-locale-and-redirecting.md",
+  "quote": "To generate static routes for a given set of locales, we can use `generateStaticParams` with any page or layout. This can be global, for example, in the root layout."
+ },
+ {
+  "file": "docs/nextjs/pages/05-caching-ppr-and-cache-components/01c-flipping-the-flag-on-an-existing-app.md",
+  "quote": "Route segment config \\\"dynamicParams\\\" is not compatible with `nextConfig.cacheComponents`."
+ },
+ {
+  "file": "docs/nextjs/pages/05-caching-ppr-and-cache-components/01d-what-changes-once-the-flag-is-on.md",
+  "quote": "Rather than unmounting the previous route when you navigate away, Next.js sets the Activity mode to `\\\"hidden\\\"`."
+ },
+ {
+  "file": "docs/nextjs/pages/05-caching-ppr-and-cache-components/02-the-use-cache-directive-and-custom-cachelife-profiles.md",
+  "quote": "`revalidate` of `0`, or `expire` under 5 minutes: excluded from prerenders, becoming a 'dynamic hole' resolved at request time."
+ },
+ {
+  "file": "docs/nextjs/pages/05-caching-ppr-and-cache-components/02-the-use-cache-directive-and-custom-cachelife-profiles.md",
+  "quote": "**Minimum of 30 seconds is enforced** to ensure prefetched links remain usable."
+ },
+ {
+  "file": "docs/nextjs/pages/06-ssg-isr-and-ssr-strategy/01b-data-velocity-and-the-staleness-budget.md",
+  "quote": "`updateTag` immediately expires the cached data for the specified tag. The next request will wait to fetch fresh data rather than serving stale content from the cache."
+ },
+ {
+  "file": "docs/nextjs/pages/06-ssg-isr-and-ssr-strategy/02d-when-the-path-set-changes-and-what-cache-components-changes.md",
+  "quote": "During build, Partial Prerendering splits each render into two parts: The **App Shell**: the generic, reusable part of the page that doesn't depend on URL data; and the rest of the statically renderable content: the param-specific prerenders for the "
+ },
+ {
+  "file": "docs/nextjs/pages/06-ssg-isr-and-ssr-strategy/03-isr-at-enterprise-level-stale-while-revalidate-tuning.md",
+  "quote": "A price change made in the admin must be visible on the public product page within 15 minutes, because that is what the pricing policy promises to customers."
+ },
+ {
+  "file": "docs/nextjs/pages/06-ssg-isr-and-ssr-strategy/03-isr-at-enterprise-level-stale-while-revalidate-tuning.md",
+  "quote": "A published blog post should appear on the index within an hour. If it takes two, nobody notices."
+ },
+ {
+  "file": "docs/nextjs/pages/06-ssg-isr-and-ssr-strategy/03-isr-at-enterprise-level-stale-while-revalidate-tuning.md",
+  "quote": "The terms-of-service page must show the current version within 24 hours of a legal update, and legal updates are announced in advance."
+ },
+ {
+  "file": "docs/nextjs/pages/06-ssg-isr-and-ssr-strategy/03b-the-stampede-and-what-the-framework-does-not-protect-you-from.md",
+  "quote": "`updateTag` immediately expires the cached data for the specified tag. The next request will wait to fetch fresh data rather than serving stale content from the cache."
+ },
+ {
+  "file": "docs/nextjs/pages/06-ssg-isr-and-ssr-strategy/03d-the-cache-is-not-one-thing.md",
+  "quote": "`revalidate` of `0`, or `expire` under 5 minutes: excluded from prerenders, becoming a 'dynamic hole' resolved at request time."
+ },
+ {
+  "file": "docs/nextjs/pages/06-ssg-isr-and-ssr-strategy/04c-when-export-wins-and-what-a-server-buys.md",
+  "quote": "The 'Edge Stitching' column is a **performance optimization**, not a correctness requirement. All features work correctly from a single origin server."
+ },
+ {
+  "file": "docs/nextjs/pages/06-ssg-isr-and-ssr-strategy/04c-when-export-wins-and-what-a-server-buys.md",
+  "quote": "Next.js's rendering model places the static/dynamic boundary at the component level rather than the route level. Finer-grained boundaries provide more flexibility for developers at the cost of broader requirements for hosting platforms. This is a del"
+ },
+ {
+  "file": "docs/nextjs/pages/06-ssg-isr-and-ssr-strategy/05c-operating-a-decomposed-page-at-archive-scale.md",
+  "quote": "To prevent unspecified paths from being prerendered at runtime, add the `export const dynamicParams = false` option in a route segment. When this config option is used, only paths provided by `generateStaticParams` will be served, and unspecified rou"
+ },
+ {
+  "file": "docs/nextjs/pages/08-state-management-in-an-rsc-world/02-when-rsc-data-flow-is-enough.md",
+  "quote": "After you set or delete a cookie in a Server Function, Next.js can return both the updated UI and new data in a single server roundtrip when the function is used as a Server Action."
+ },
+ {
+  "file": "docs/nextjs/pages/08-state-management-in-an-rsc-world/03d-prefetching-query-driven-routes-and-opting-out.md",
+  "quote": "You can 'debounce' the hint by adding an initial animation delay (e.g. 100ms) and starting as invisible (e.g. `opacity: 0`). This means the loading indicator will only be shown if the navigation takes longer than the specified delay."
+ },
+ {
+  "file": "docs/nextjs/pages/08-state-management-in-an-rsc-world/07b-milestone-filters-on-the-server.md",
+  "quote": "`searchParams` (optional) \u2014 A promise that resolves to an object containing the search parameters of the current URL."
+ },
+ {
+  "file": "docs/nextjs/pages/09-styling-and-ui/01b-css-import-order-chunking-and-what-css-costs.md",
+  "quote": "For example, `base-button.module.css` will be ordered before `page.module.css` since `BaseButton` is imported before `page.module.css`."
+ },
+ {
+  "file": "docs/nextjs/pages/09-styling-and-ui/01b-css-import-order-chunking-and-what-css-costs.md",
+  "quote": "Try to contain CSS imports to a single JavaScript or TypeScript entry file \u00b7 Import global styles and Tailwind stylesheets in the root of your application. \u00b7 **Use Tailwind CSS** for most styling needs as it covers common design patterns with utility"
+ },
+ {
+  "file": "docs/nextjs/pages/09-styling-and-ui/03b-the-loader-api-google-local-and-variable-fonts.md",
+  "quote": "Required if the font being used is **not** variable."
+ },
+ {
+  "file": "docs/nextjs/pages/09-styling-and-ui/03d-subsetting-preloading-and-where-the-loader-must-be-called.md",
+  "quote": "When a font function is called on a page of your site, it is not globally available and preloaded on all routes. Rather, the font is only preloaded on the related routes based on the type of file where it is used:* *\u00b7 If it's a unique page, it is pre"
+ },
+ {
+  "file": "docs/nextjs/pages/09-styling-and-ui/04-next-image-priority-blur-placeholders-remote-patterns-avif-w.md",
+  "quote": "You **must** set both `width` and `height` properties unless: The image is statically imported. The image has the `fill` property."
+ },
+ {
+  "file": "docs/nextjs/pages/09-styling-and-ui/04c-blur-placeholders-where-the-bytes-come-from.md",
+  "quote": "If the image is dynamic or remote, you must provide `blurDataURL` yourself. To generate one, you can use: A online tool like png-pixel.com. A library like Plaiceholder."
+ },
+ {
+  "file": "docs/nextjs/pages/09-styling-and-ui/04f-when-not-to-use-the-optimizer.md",
+  "quote": "We recommend using the `unoptimized` prop when the `src` prop is known to be SVG. This happens automatically when `src` ends with `\\\".svg\\\"`."
+ },
+ {
+  "file": "docs/nextjs/pages/10-forms-authentication-and-security-hardening/03g-authorization-ownership-checks-and-every-entry-point.md",
+  "quote": "A page-level authentication check does not extend to the Server Actions defined within it. Always re-verify inside the action."
+ },
+ {
+  "file": "docs/nextjs/pages/10-forms-authentication-and-security-hardening/03h-the-trust-boundary-around-a-server-action.md",
+  "quote": "You should always validate input from client, as they can be easily modified. For example, form data, URL parameters, headers, and `searchParams`."
+ },
+ {
+  "file": "docs/nextjs/pages/10-forms-authentication-and-security-hardening/04b-proxy-configuration-matchers-runtime-and-what-the-rename-meant.md",
+  "quote": "The reason behind the renaming of `middleware` is that the term 'middleware' can often be confused with Express.js middleware, leading to a misinterpretation of its purpose. Also, Middleware is highly capable, so it may encourage the usage; however, "
+ },
+ {
+  "file": "docs/nextjs/pages/10-forms-authentication-and-security-hardening/04b-proxy-configuration-matchers-runtime-and-what-the-rename-meant.md",
+  "quote": "The name Proxy clarifies what Middleware is capable of. The term 'proxy' implies a network boundary in front of the app, which is how this feature behaves. It can run outside of your application's main runtime and handle requests before they reach yo"
+ },
+ {
+  "file": "docs/nextjs/pages/10-forms-authentication-and-security-hardening/04c-defence-in-depth-the-innermost-layer-that-can-see-the-fact.md",
+  "quote": "While Proxy can be useful for initial checks, it should not be your only line of defense in protecting your data. The majority of security checks should be performed as close as possible to your data source."
+ },
+ {
+  "file": "docs/nextjs/pages/10-forms-authentication-and-security-hardening/05b-what-an-application-author-still-owns.md",
+  "quote": "// EXPOSED: This exposes all the fields in userData to the client because we are passing the data from the Server Component to the Client."
+ },
+ {
+  "file": "docs/nextjs/pages/10-forms-authentication-and-security-hardening/05b-what-an-application-author-still-owns.md",
+  "quote": "// BAD: This is a bad props interface because it accepts way more data than the Client Component needs and it encourages server components to pass all that data down. A better solution would be to accept a limited object with just the fields necessar"
+ },
+ {
+  "file": "docs/nextjs/pages/10-forms-authentication-and-security-hardening/06l-milestone-proxy-as-ux-not-control.md",
+  "quote": "There are some cases where you may want to use Proxy and redirect users based on permissions:* *\u2014 To perform optimistic checks. Since Proxy runs on every route, it's a good way to centralize redirect logic and pre-filter unauthorized users.* *\u2014 To pr"
+ },
+ {
+  "file": "docs/nextjs/pages/10-forms-authentication-and-security-hardening/06l-milestone-proxy-as-ux-not-control.md",
+  "quote": "[Server Functions](https://nextjs.org/docs/app/api-reference/directives/use-server) are not separate routes in this chain. They are handled as POST requests to the route where they are used, so a Proxy matcher that excludes a path will also skip Serv"
+ },
+ {
+  "file": "docs/nextjs/pages/11-performance-optimization-turbopack/01-turbopack-in-dev-and-production-fast-refresh.md",
+  "quote": "**Fast Refresh** \u2014 Supported. Updates JavaScript, TypeScript, and CSS without a full refresh."
+ },
+ {
+  "file": "docs/nextjs/pages/11-performance-optimization-turbopack/01-turbopack-in-dev-and-production-fast-refresh.md",
+  "quote": "**Incremental Bundling** \u2014 Supported. Turbopack lazily builds only what's requested by the dev server, speeding up large apps."
+ },
+ {
+  "file": "docs/nextjs/pages/11-performance-optimization-turbopack/01-turbopack-in-dev-and-production-fast-refresh.md",
+  "quote": "**Root layout creation** \u2014 Unsupported. Automatic creation of a root layout in App Router is not supported. Turbopack will instruct you to create it manually."
+ },
+ {
+  "file": "docs/nextjs/pages/11-performance-optimization-turbopack/01b-configuring-the-turbopack-compile-pipeline.md",
+  "quote": "Starting in Next.js 16, Turbopack uses Babel automatically if it detects a configuration file. Unlike in webpack, SWC is always used for Next.js's internal transforms and downleveling to older ECMAScript revisions. Next.js with webpack disables SWC i"
+ },
+ {
+  "file": "docs/nextjs/pages/11-performance-optimization-turbopack/03d-package-imports-and-server-externals.md",
+  "quote": "`v15.0.0` \u2014 Moved from experimental to stable. Renamed from `serverComponentsExternalPackages` to `serverExternalPackages`"
+ },
+ {
+  "file": "docs/nextjs/pages/11-performance-optimization-turbopack/04-nodejs-runtime-vs-edge-runtime-capabilities-cold-starts-choo.md",
+  "quote": "`v15.0.0-RC` \u2014 `export const runtime = \\\"experimental-edge\\\"` deprecated. A codemod is available."
+ },
+ {
+  "file": "docs/nextjs/pages/11-performance-optimization-turbopack/05-core-web-vitals-tuning-lcp-inp-cls-auditing-workflows.md",
+  "quote": "New functions passed to `useReportWebVitals` are called with the available metrics up to that point. To prevent reporting duplicated data, ensure that the callback function reference does not change."
+ },
+ {
+  "file": "docs/nextjs/pages/11-performance-optimization-turbopack/05b-shipping-the-metric-transport-analytics-and-pre-hydration-setup.md",
+  "quote": "`value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value)` // values must be integers"
+ },
+ {
+  "file": "docs/nextjs/pages/12-seo-metadata-and-accessibility/02e-imageresponse-and-its-hard-limits.md",
+  "quote": "Passing an `ArrayBuffer` to the `src` attribute of an `<img>` element is not part of the HTML spec. The rendering engine used by `next/og` supports it, but because TypeScript definitions follow the spec, you need a `@ts-expect-error` directive or sim"
+ },
+ {
+  "file": "docs/nextjs/pages/13-testing-and-developer-experience/03c-typed-routes-and-generated-types.md",
+  "quote": "It is often undesirable to run these [`next dev` / `next build`] just to type-check, for example in CI/CD environments."
+ },
+ {
+  "file": "docs/nextjs/pages/15-databases-apis-and-full-stack-patterns/02l-the-decision-rule.md",
+  "quote": "[Server Actions'] primary purpose is to mutate data from your frontend client. Server Actions are queued. Using them for data fetching introduces sequential execution."
+ },
+ {
+  "file": "docs/nextjs/pages/15-databases-apis-and-full-stack-patterns/02l-the-decision-rule.md",
+  "quote": "* Data that depends on client-only Web APIs: Geo-location API, Storage API, Audio API, File API * Frequently polled data"
+ },
+ {
+  "file": "docs/nextjs/pages/15-databases-apis-and-full-stack-patterns/05-edge-functions-and-custom-cache-structures-for-global-comput.md",
+  "quote": "The \\\"Edge Stitching\\\" column is a **performance optimization**, not a correctness requirement. All features work correctly from a single origin server."
+ },
+ {
+  "file": "docs/nextjs/pages/15-databases-apis-and-full-stack-patterns/05b-the-edge-runtime-is-deprecated.md",
+  "quote": "Remove the `runtime` export from your route files: `- export const runtime = 'edge'`"
+ },
+ {
+  "file": "docs/nextjs/pages/15-databases-apis-and-full-stack-patterns/05b-the-edge-runtime-is-deprecated.md",
+  "quote": "The \\\"Edge Stitching\\\" column is a **performance optimization**, not a correctness requirement. All features work correctly from a single origin server."
+ },
+ {
+  "file": "docs/nextjs/pages/15-databases-apis-and-full-stack-patterns/05b-the-edge-runtime-is-deprecated.md",
+  "quote": "The name Proxy clarifies what Middleware is capable of. The term \\\"proxy\\\" implies a network boundary in front of the app, which is how this feature behaves. It can run outside of your application's main runtime and handle requests before they reach "
+ },
+ {
+  "file": "docs/nextjs/pages/15-databases-apis-and-full-stack-patterns/05e-writing-a-custom-cache-handler.md",
+  "quote": "**`default`**: Used by the `'use cache'` directive. **`remote`**: Used by the `'use cache: remote'` directive."
+ },
+ {
+  "file": "docs/nextjs/pages/15-databases-apis-and-full-stack-patterns/05e-writing-a-custom-cache-handler.md",
+  "quote": "`getExpiration` returns: `0` if none of the tags were ever revalidated; a timestamp (in milliseconds) representing the most recent revalidation; `Infinity` to indicate soft tags should be checked in the `get` method instead."
+ },
+ {
+  "file": "docs/nextjs/pages/15-databases-apis-and-full-stack-patterns/05f-streams-and-failure-semantics-in-a-handler.md",
+  "quote": "your handler should catch internal errors and return `undefined` (the \\\"cache miss\\\" signal). The framework does not wrap `get()` in a try/catch, so an unhandled exception from `get()` will propagate as a render error."
+ },
+ {
+  "file": "docs/nextjs/pages/19-capstone-decision-trees-and-outlook/01ba-the-inherited-pile.md",
+  "quote": "**Minimum of 30 seconds is enforced** to ensure prefetched links remain usable."
+ },
+ {
+  "file": "docs/nextjs/pages/19-capstone-decision-trees-and-outlook/02c-the-cart-checkout-and-where-state-lives.md",
+  "quote": "Because it reads runtime data, the function executes on every server render and is excluded from static shell generation."
+ },
+ {
+  "file": "docs/nextjs/pages/19-capstone-decision-trees-and-outlook/02c-the-cart-checkout-and-where-state-lives.md",
+  "quote": "There is no ordering of a database transaction and an external call that is safe"
+ },
+ {
+  "file": "docs/nextjs/pages/19-capstone-decision-trees-and-outlook/02c-the-cart-checkout-and-where-state-lives.md",
+  "quote": "A timeout and a connection reset are not failures; they are the absence of information."
+ },
+ {
+  "file": "docs/nextjs/pages/19-capstone-decision-trees-and-outlook/04-outlook-deeper-ai-runtimes.md",
+  "quote": "When an AI coding agent is detected in the environment and no managed block is present, Next.js auto-generates `AGENTS.md` and `CLAUDE.md` at the project root. Existing `AGENTS.md` or `CLAUDE.md` files are upserted, so content outside the managed blo"
+ },
+ {
+  "file": "docs/nextjs/pages/19-capstone-decision-trees-and-outlook/04-outlook-deeper-ai-runtimes.md",
+  "quote": "Framework knowledge comes from the bundled docs, not from Skills. Benchmark results show that always-available context outperforms on-demand retrieval. Skills cover the tasks that are workflows rather than lookups."
+ },
+ {
+  "file": "docs/nextjs/pages/19-capstone-decision-trees-and-outlook/04b-compiler-evolution-and-the-next-default.md",
+  "quote": "Starting with **Next.js 16**, Turbopack is stable and used by default with `next dev` and `next build`."
+ },
+ {
+  "file": "docs/nextjs/pages/20-appendices/01-appendix-a-glossary-ppr.md",
+  "quote": "**Minimum of 30 seconds is enforced** to ensure prefetched links remain usable."
+ },
+ {
+  "file": "docs/nextjs/pages/20-appendices/01b-appendix-a-glossary-turbopack-mcp-instant.md",
+  "quote": "Starting with **Next.js 16**, Turbopack is stable and used by default with `next dev` and `next build`."
+ },
+ {
+  "file": "docs/nextjs/pages/20-appendices/04-appendix-d-production-readiness-checklist-security.md",
+  "quote": "**Prerendering**: Next.js prerenders Server and Client Components on the server at build time and caches the rendered result."
+ },
+ {
+  "file": "docs/nextjs/pages/20-appendices/04-appendix-d-production-readiness-checklist-security.md",
+  "quote": "**Caching**: Next.js caches data requests, the rendered result of Server and Client Components, static assets, and more."
+ }
+]

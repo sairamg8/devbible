@@ -27,7 +27,7 @@ topic. 🔴 **Never merge the two passes** — conflating them is how both stop 
 ## 🔴 Before you touch a page: check the lane
 
 This checkout is shared and several sessions write to it at once. Open
-**`/mnt/Storage/my-learning/claude/devbible/LOCKS.md`** and check whether another
+**`docs/_project/LOCKS.md`** and check whether another
 session holds the language your topic belongs to.
 
 **A locked lane is reported, not edited.** If the topic is in someone else's lane, say

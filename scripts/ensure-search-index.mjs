@@ -99,7 +99,7 @@ function mdFileCount() {
       return 0;
     }
     for (const entry of entries) {
-      if (entry.isDirectory()) n += walk(path.join(dir, entry.name));
+      if (entry.isDirectory()) { if (!entry.name.startsWith('_')) n += walk(path.join(dir, entry.name)); }
       else if (/\.mdx?$/.test(entry.name)) n += 1;
     }
     return n;

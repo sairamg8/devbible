@@ -35,3 +35,7 @@ build-*
 # whole-site index measured 94.7 MB, and `yarn deploy` pushes the built site to
 # gh-pages where GitHub hard-blocks any file over 100 MB.
 static/search-index*.json
+# 🔒 Interview-prep tracking stays in the PRIVATE memory store (user, 2026-09-24).
+# These two paths are symlinks into it; the public repo never carries them.
+docs/_project/interview
+docs/_project/CURSOR-INTERVIEW.md

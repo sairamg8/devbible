@@ -35,7 +35,8 @@ import {fileURLToPath} from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DOCS = path.join(ROOT, 'docs');
 const OUT = path.join(ROOT, 'static/validation.json');
-const MEMORY = process.env.DEVBIBLE_MEMORY || '/mnt/Storage/my-learning/claude/devbible';
+// Tracking moved into this repo 2026-09-24 (docs/_project/); the store's devbible/ is a symlink to it.
+const MEMORY = process.env.DEVBIBLE_MEMORY || path.join(ROOT, 'docs', '_project');
 const LEDGER = path.join(MEMORY, 'VALIDATION-LEDGER.md');
 
 const LINE_CAP = 300;
@@ -144,7 +145,8 @@ function collect() {
   const tracks = new Map();
   for (const track of fs.readdirSync(DOCS).sort()) {
     const tdir = path.join(DOCS, track);
-    if (!fs.statSync(tdir).isDirectory() || NOT_CONTENT.has(track)) continue;
+    // `_`-prefixed dirs are excluded from the build (docs/_project/ = project tracking).
+    if (!fs.statSync(tdir).isDirectory() || NOT_CONTENT.has(track) || track.startsWith('_')) continue;
     const files = walk(tdir)
       .filter((p) => !/\/(syllabus|reviews)\//.test(p))   // boards and historical records take no stamp
       .map(readFileState);

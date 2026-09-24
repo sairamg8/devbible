@@ -129,7 +129,7 @@ Build **once** at the end of a campaign (`yarn build`) and fix everything in tha
 ## 🔴 Check the lanes before editing any page
 
 Drift does not respect lane boundaries, and this checkout is shared. Before touching
-`docs/<track>/`, open **`/mnt/Storage/my-learning/claude/devbible/LOCKS.md`** and check
+`docs/<track>/`, open **`docs/_project/LOCKS.md`** and check
 whether another session holds that language.
 
 **A locked lane is reported, not fixed** — the tool reports, the owning session fixes.

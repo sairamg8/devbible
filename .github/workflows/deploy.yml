@@ -3,6 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+    # docs/_project/ is project tracking (never built — `_` dirs are excluded in
+    # docusaurus.config.js). A push touching ONLY it changes nothing on the site, so skip
+    # the ~13-minute build. A push that also touches content still builds.
+    paths-ignore:
+      - 'docs/_project/**'
   # Allows publishing by hand from the Actions tab without a push.
   workflow_dispatch:
 

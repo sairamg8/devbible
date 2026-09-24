@@ -90,7 +90,7 @@ gets its own stamp, the topic `README.md` included.
 ### 6 · Bank the row BEFORE starting the next unit
 
 ```bash
-$EDITOR "$DEVBIBLE_MEMORY/VALIDATION-LEDGER.md"     # default: /mnt/Storage/my-learning/claude/devbible/
+$EDITOR "$DEVBIBLE_MEMORY/VALIDATION-LEDGER.md"     # default: docs/_project/ in this repo
 git add docs/<exact>/<paths>.md && git commit -m "validate <unit>: <n> pages, S1×<n> S2×<n>"
 ```
 

@@ -1,0 +1,60 @@
+09-spring-data-jpa
+09 · Spring Data JPA
+An interface you never implement, a query language hidden in a method name, and every place that abstraction stops being free.
+Four parts. **The repository itself** — what Spring actually generates, the interface
+hierarchy, and which return type changes what runs. **Derived queries** — the method-name
+parser in full, and the name that becomes unreadable long before it becomes wrong.
+**Writing the query yourself** — `@Query`, JPQL, native SQL, and `@Modifying`'s defaults,
+which are the reverse of what folklore says. **Everything above one row** — `Pageable` and
+its extra COUNT, offset pagination at depth, specifications, projections, custom
+implementations, the transaction defaults on a repository, and auditing.
+---
+10-lazy-loading
+10 · Lazy-loading pitfalls
+The exception that never fires on your machine, because at least ten independent things have to be true before it can — and production satisfies none of them.
+Three parts. **What a proxy actually is** — the subclass Hibernate hands you, why asking it
+a type question is a fetch, and why a collection is not a proxy at all. **The exception** —
+its message clause by clause, and every place it fires: the serialiser, the mapper, the log
+line, the test. **Why you never see it in dev** — open-session-in-view, transactional tests,
+null foreign keys, small data sets, already-managed targets — and then the fix that actually
+holds: never let an entity cross the transaction boundary.
+---
+11-flyway-migrations
+11 · Migrations with Flyway
+Schema is code, the history table is the truth, and the migration you edited after it ran is the one that takes production down.
+Four parts. **The file** — the naming grammar in full, where migrations live, and how to
+choose version numbers when several people are writing them at once. **The history table** —
+every column, what it is for, and what happens when a migration fails halfway. **Immutability**
+— why editing an applied migration is the cardinal sin, and when `repair` is legitimate.
+**Running against something live** — expand/contract, why a rename is three deploys, the
+`ALTER TABLE` that took the site down, and what ten pods starting at once do to the lock.
+---
+12-caching
+12 · Caching
+You are trading correctness for latency; the whole topic is about naming that trade before you make it, and knowing what invalidation is going to cost.
+Three parts. **The abstraction** — `@Cacheable` and the rest, the proxy that makes them work
+and the self-invocation that defeats them, and what happens to a `CompletableFuture` return.
+**Keys** — the default generator, SpEL, the key that silently varies and the key that never
+repeats. **The store and the cost** — Redis as the backing store, why serialization is the
+hard part, Hibernate's second-level and query caches, invalidation, and two pods with two
+caches and one stale answer.
+---
+13-jooq
+13 · jOOQ
+SQL as a typed Java DSL, where the compiler checks the query — and a licence question that decides adoption before any of the engineering does.
+Three parts. **What it is** — the DSL as a tree rather than a string, and the licence terms,
+which are the single most consequential fact on this topic. **Code generation** — the schema
+is the source of truth, the generator reads it, and a migration-driven throwaway container is
+how you keep the two honest. **Using it** — joins where the type safety pays, mapping results
+into records, writes, the PostgreSQL features people actually adopt it for, and the honest
+comparison with JPA, including where the answer is to use JPA.
+---
+14-spring-data-other
+14 · Spring Data for MongoDB and Redis
+The repository interface is the same over every store; nothing underneath it is, and this is where the abstraction leaks.
+Three parts. **Mongo** — repositories and derived queries, `@Document` mapping and the
+`_class` discriminator, where the repository stops and `MongoTemplate` starts, aggregation
+from Java, and what a transaction needs. **Redis** — `@RedisHash` and what its secondary
+indexes really cost, `RedisTemplate` and the serializer question, and when a repository is
+simply the wrong shape for a data-structure server. **What does not carry across** — no dirty
+checking, no persistence context, no JPQL — and the closing argument of the whole phase.

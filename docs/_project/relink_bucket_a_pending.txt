@@ -1,0 +1,12 @@
+framer-motion/pages/15-advanced-patterns/01-production-grade-motion-design.md  ->  nextjs/03-rendering-strategies/01-server-client-components-and-rendering-modes.md
+frontend-architecture/pages/05-routing-and-navigation-architecture/01-real-world-routing-concerns.md  ->  nextjs/01-routing-fundamentals/01-file-conventions.md
+frontend-architecture/pages/14-performance-and-scalability-patterns/01-architecting-for-scale.md  ->  nextjs/06-caching-architecture/01-the-four-layers.md
+frontend-architecture/pages/06-styling-architecture/01-choosing-and-scaling-a-styling-approach.md  ->  css/11-color-backgrounds-and-borders/02-global-color-system-and-tokens.md#5-color-strategy-for-modern-fullstack-applications
+storybook/pages/17-theming-colors-and-fonts/01-global-colors-themes-and-tokens.md  ->  css/11-color-backgrounds-and-borders/02-global-color-system-and-tokens.md
+storybook/pages/17-theming-colors-and-fonts/01-global-colors-themes-and-tokens.md  ->  css/11-color-backgrounds-and-borders/02-global-color-system-and-tokens.md#5-color-strategy-for-modern-fullstack-applications
+storybook/pages/17-theming-colors-and-fonts/02-custom-fonts-and-typography.md  ->  css/10-typography-and-text-layout/01-fonts-text-and-i18n.md
+storybook/pages/17-theming-colors-and-fonts/02-custom-fonts-and-typography.md  ->  css/10-typography-and-text-layout/01-fonts-text-and-i18n.md
+tanstack-query/pages/12-query-cancellation/01-abortsignal-integration.md  ->  javascript/13-browser-apis-and-dom/01-interacting-with-the-page.md
+vite/pages/13-worker-and-wasm-support/01-advanced-runtime-targets.md  ->  javascript/13-browser-apis-and-dom/01-interacting-with-the-page.md
+vite/pages/12-path-resolution-and-aliases/01-resolve-options.md  ->  typescript/13-configuration/01-tsconfig-compiler-options.md
+vite/pages/05-build-system-rollup/01-build-options.md  ->  javascript/10-modules/01-module-systems.md
