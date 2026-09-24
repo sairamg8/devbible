@@ -199,12 +199,12 @@ deprecated) · `12-eafp-vs-lbyl/05j-designing-the-failure-channel/README.md:87` 
 
 ### 5e · Syllabus gaps the delta exposed (propose to the user; not added)
 
-- **No `re` topic anywhere** (grep all four syllabus parts for `regex|regular expression` → 0), yet 8 `re`
-  rows land in 3.11–3.15 and pages already use `\Z`. A Phase 1 or Phase 10 row — *Understand*.
+- **No `re` topic anywhere** (grep all four syllabus parts for `regex|regular expression` → 0), yet 5 `re`
+  rows (11.37, 11.38, 13.21, 14.44, 15.21) land in 3.11–3.15 and 20 pages already call `re.*`. A Phase 1 or Phase 10 row — *Understand*.
 - **No TLS / `ssl` row**: 10.31, 12.24, 13.23 have nowhere to go; S3:110 (HTTP clients) or S4:55
   (security hygiene) could carry "verify on, default context, never `wrap_socket`" — *Know*.
 - **No id-design row**: `uuid7` (14.34) belongs with S3:151 (create → 201, keys) — *Understand*.
-- **No `enum` row** though enums appear in 6 pages; 11.29–11.31 live in a comparisons page — *Know*.
+- **No `enum` row** though 32 pages use `Enum`/`IntEnum`/`StrEnum`; 11.29–11.31 live in a comparisons page — *Know*.
 - Archive extraction safety (12.15) fits S3:116 — *Know*.
 
 ### 5f · Pin and currency corrections (report only — nothing edited)
