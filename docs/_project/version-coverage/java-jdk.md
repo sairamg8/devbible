@@ -1,10 +1,13 @@
 ---
 name: version-coverage-java-jdk
-description: (in progress) java-jdk · version coverage vs LTS 17/21/25 + 26/27 — numbers filled in at the end
+description: java-jdk (java phases 0–8 and 12 + syllabus) · content applies up to JDK 25 LTS (floor 17 for the language core, 21 operationally) · LTS lines 17/21/25 compared, plus 26 (EOL) and 27 (latest, GA 2026-09-15) · 161 changes graded — 62 COVERED, 23 PARTIAL, 70 MISSING (15 of them TLS/crypto), 5 CONTRADICTED, 1 PLANNED · 17 and 21 complete for features; 25 has 19 missing and 1 contradicted; 26+27 have 1 of 29 covered · 20 stale/false claims (S1–S20) · parts java-jdk.md (§1–§3.3), java-jdk-02.md (§3.4–§4), java-jdk-03.md (§5)
 metadata:
   type: project
 ---
 # Java — JDK language and platform — version coverage vs LTS (2026-09-24)
+
+**Parts:** this file (§1 upstream lines · §2 baseline · §3 rows 1–78) → [java-jdk-02.md](java-jdk-02.md)
+(§3 rows 79–161 · §4 summary) → [java-jdk-03.md](java-jdk-03.md) (§5 hand-off).
 
 Unit `java-jdk` = the language/platform half of the java track: `docs/java/pages/phase-0` … `phase-8`,
 `phase-12-jvm-production`, and `docs/java/syllabus`. Spring and third-party libraries are the
