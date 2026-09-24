@@ -97,7 +97,7 @@ One line: **complete for 3.10's written scope; 2 wrong + 10 missing from 3.11, 6
 
 ## 5 · Hand-off to the owning lane
 
-Owner: the `python` lane (`docs/python`, cursor in `devbible/LOCKS.md` / `CURSOR-PYTHON.md`). Every
+Owners: the `python` lane (`devbible/LOCKS.md:56`, resume file `progress_python_pages.md`) for phases 0–3, and `python · phase 7` (`LOCKS.md:57`, `CURSOR-PYTHON-PHASE7.md`) for the Phase 7 and tool rows. Every
 "beside" path below was checked with `ls` on 2026-09-24. Tiers are the corpus's four.
 
 ### 5a · CONTRADICTED — a live page teaching the wrong thing (fix first)
@@ -109,3 +109,117 @@ Owner: the `python` lane (`docs/python`, cursor in `devbible/LOCKS.md` / `CURSOR
 | 11.32 | `phase-2-functions/06-functools/03-singledispatch-and-reduce.md:153-168` | files `Union[int, str]` with `list[str]` as unregistrable; stack `register(int)`/`register(float)` | Since 3.11 `register` accepts `int \| float` / `Union[…]` annotations (functools docs, "Changed in version 3.11"). Subscripted generics like `list[str]` are still refused. | Split the gotcha: generics refused, unions accepted since 3.11; show `def _(val: int \| float)`. | Understand |
 | 13.09 | `phase-2-functions/08-docstrings/02-help-inspect-getdoc-and-doctest.md:59` | "`obj.__doc__` preserves the indentation of the Python source file" | Since 3.13 the compiler strips common leading whitespace from docstrings (W13 Other Language Changes). | Say `__doc__` is already dedented on 3.13+; `getdoc()` still adds MRO lookup and `cleandoc` of the first line. | Understand |
 | 14.31 | `phase-0-runtime/06-running-code/03-m-packages-and-main-py.md:79` | `python -m json.tool < data.json    # pretty-print JSON` | 3.14: `python -m json` is preferred and `json.tool` is soft-deprecated (W14 json). | Change the example to `python -m json`. | Understand |
+
+### 5b · MISSING, by version — tier and where each would sit
+
+| # | Change | Tier | Sits beside (ls-verified) |
+|---|---|---|---|
+| 10.11 | PEP 626 line numbers (`co_lines`, `co_lnotab` gone in 3.15) | When Needed | `phase-0-runtime/12-dis-bytecode/01-reading-a-disassembly.md` |
+| 10.31 | TLS defaults (OpenSSL ≥ 1.1.1, TLS 1.2 minimum) | Know | no TLS page — see 5e; nearest `phase-0-runtime/04-installing-and-versions/08-platform-stories.md` |
+| 10.32 | `parse_qs` splits on `&` only | Know | `phase-1-language-core/05-truthiness/02c-tri-states-and-the-api-boundary.md` |
+| 11.13 | `--help-env` / `--help-xoptions` / `--help-all` | When Needed | `phase-0-runtime/06-running-code/05-options-worth-knowing.md` |
+| 11.18 | `typing.LiteralString` for injection-safe APIs | Understand | `phase-1-language-core/03-strings/04-t-strings.md` |
+| 11.31 | `enum` `verify`/`member`/`nonmember`/`global_enum`, `Flag` iteration | When Needed | `phase-1-language-core/06-comparisons/05b-text-sequences-time-and-enums.md` |
+| 11.33 | `hashlib.file_digest()` | Know | `phase-3-collections/02-tuple/03b-what-a-hash-value-is-not.md` |
+| 11.36 | `operator.call()` | When Needed | `phase-1-language-core/06-comparisons/01b-consistency-and-dispatch.md` |
+| 11.37 | `re` atomic groups, possessive quantifiers | Understand | no `re` page — see 5e; nearest `phase-1-language-core/03-strings/02-the-method-vocabulary.md` |
+| 11.38 | `re` inline flags only at the start | Understand | same as 11.37 |
+| 11.45 | Octal escapes > `\377` warn | Know | `phase-1-language-core/01-syntax-and-indentation/01e-line-joining-and-semicolons.md` (raw-string advice, :184) |
+| 11.47 | PEP 594 dead batteries deprecated | Know | `phase-0-runtime/03-release-model/05-the-deprecation-policy.md` |
+| 11.48 | `lib2to3` / `2to3` deprecated | When Needed | `phase-0-runtime/03-release-model/05-the-deprecation-policy.md` |
+| 12.05 | `sys.monitoring` (PEP 669) | When Needed | `phase-1-language-core/09-comprehensions/04b-what-inlining-changed.md` (the `settrace` gotcha) |
+| 12.08 | `NameError` "Did you forget to import", `self.x`, `ImportError` name hints | Know | `phase-0-runtime/08-imports/02d-diagnosing-import-failures.md` |
+| 12.15 | `tarfile` extraction filters, `'data'` default in 3.14 | Know | no archive page — add to S3:116 (tempfile/shutil/os) when written |
+| 12.24 | `ssl.wrap_socket` / `match_hostname` removed | Know | see 5e |
+| 12.43 | `cached_property` no longer locks | Know | `phase-2-functions/06-functools/02-lru-cache-and-unbounded-cache.md` |
+| 12.44 | `random.randrange` rejects non-integers | When Needed | `phase-1-language-core/02-numbers/12-conversions-and-precision-loss.md` |
+| 13.05 | Keyword-argument "Did you mean" | Know | `phase-2-functions/02-parameters-in-full/03-positional-only-and-keyword-only.md` |
+| 13.21 | `re.PatternError`; positional `maxsplit`/`count`/`flags` deprecated | Understand | see 5e (`re`) |
+| 13.23 | `ssl` default context: `VERIFY_X509_STRICT` | Know | see 5e (TLS) |
+| 13.33 | PEP 594 modules removed | Know | `phase-0-runtime/03-release-model/05-the-deprecation-policy.md` |
+| 13.34 | `2to3`, `tkinter.tix`, `typing.io`/`typing.re` removed | When Needed | same |
+| 14.26 | `python -c` dedents its argument | Know | `phase-0-runtime/06-running-code/04-c-and-stdin.md` |
+| 14.29 | `functools.Placeholder`; `reduce(initial=)` | Understand | `phase-2-functions/06-functools/01-partial-and-freezing-callables.md` |
+| 14.34 | `uuid.uuid7()` time-ordered ids | Understand | `phase-3-collections/03-dict/11-dicts-and-json.md` (uses `uuid4`); primary home is S3:151 (create → insert) |
+| 14.42 | `operator.is_none` / `is_not_none` | When Needed | `phase-1-language-core/14-none-and-no-result/01-what-none-is.md` |
+| 14.44 | `re` `\z`, `\B` on empty input | Understand | see 5e (`re`) |
+| 14.49 | PGP dropped; verify CPython downloads with Sigstore (PEP 761) | Know | `phase-0-runtime/04-installing-and-versions/08-platform-stories.md` |
+| 15.05 | Unpacking in comprehensions (PEP 798) | Understand | `phase-1-language-core/09-comprehensions/02b-multiple-clauses.md` |
+| 15.07 | `.start` files; `.pth` import lines deprecated (PEP 829) | Know | `phase-0-runtime/06-running-code/06e-sitecustomize-and-usercustomize.md` |
+| 15.08 | Frame pointers by default (PEP 831) | When Needed | `phase-0-runtime/01-what-python-is/06-runtime-optimisation.md` |
+| 15.09 | `AttributeError` nested / cross-language hints | Know | `phase-1-language-core/01-syntax-and-indentation/01g-syntax-errors-and-messages.md` |
+| 15.10 | `bytearray.take_bytes()` | When Needed | `phase-1-language-core/04-bytes-and-encoding/01-two-types-that-never-mix.md` |
+| 15.11 | Unary `+` in `match` literals | When Needed | `phase-1-language-core/10-match-pattern-matching/01b-capture-versus-value-patterns.md` |
+| 15.14 | Parent-first import locks | When Needed | `phase-0-runtime/08-imports/06-circular-imports.md` |
+| 15.15 | Non-empty `__slots__` on tuple subclasses | When Needed | `phase-3-collections/02-tuple/08c-namedtuple-restrictions.md` |
+| 15.17 | `Counter` `^` | Know | `phase-3-collections/06-collections-module/03c-counter-multiset-math.md` |
+| 15.21 | `re.prefixmatch()`; `re.match` soft-deprecated | Understand | see 5e (`re`) |
+| 15.24 | `tomllib` TOML 1.1 | When Needed | `phase-7-packaging-tooling/01-pyproject-toml/01-the-catch-22-that-killed-setup-py.md` (TOML strings gotcha) |
+| 15.26 | `base64` padding/`padded=` changes | When Needed | `phase-1-language-core/04-bytes-and-encoding/02-encode-and-decode.md` |
+| 15.27 | Stdlib `__version__` attributes deprecated | When Needed | `phase-0-runtime/08-imports/04-packages-and-init.md` |
+| 15.31 | `venv` real `platlib` dirs (no `lib64` symlink) | When Needed | `phase-0-runtime/05-virtual-environments/01-what-a-venv-is-on-disk.md` |
+| 15.32 | `importlib.metadata` `MetadataNotFound` | When Needed | `phase-7-packaging-tooling/01-pyproject-toml/13-dynamic-metadata.md` |
+| 15.35 | REPL coloured completion, `from … import` attribute completion | When Needed | `phase-0-runtime/06-running-code/06-the-repl.md` |
+| 15.37 | JIT upgrade; Windows x64 tail-calling interpreter | When Needed | `phase-0-runtime/01-what-python-is/06-runtime-optimisation.md` |
+| T.01 | uv exit codes 1 vs 2 | Know | `phase-7-packaging-tooling/02-uv/02d-frozen-and-locked-in-ci.md` |
+| T.02 | uv verifies index-supplied hashes | Know | `phase-7-packaging-tooling/03-dependencies/19-hashes-and-hash-checking-mode.md` |
+| T.03 | `uv pip install/sync --check`, JSON output | When Needed | `phase-7-packaging-tooling/02-uv/06c-uv-pip.md` |
+| T.04 | uv restores files when `add`/`remove`/`version` fail | When Needed | `phase-7-packaging-tooling/02-uv/04-add-and-remove.md` |
+| T.06 | ruff `TC001`–`TC003` prefer `lazy` imports on py315 | Know | `phase-0-runtime/08-imports/06c-type-checking-imports.md` |
+| T.07 | ruff `UP040` fix always unsafe | When Needed | `phase-7-packaging-tooling/05-ruff/05b-controlling-fixes.md` |
+
+### 5c · PARTIAL worth finishing while the page is open
+
+10.18 walrus 3.10 relaxations (`05-truthiness/05b-walrus-rules-and-scope.md:28`) · 10.26 `types.NoneType`
+as a spelling · 10.30/12.20 say `distutils` left the stdlib in 3.12 (`01-pyproject-toml/01-…setup-py.md:56`) ·
+11.20 `reveal_type`/`assert_type` · 11.26 `contextlib.chdir` (not parallel-safe) · 11.41
+`catch_warnings(action=…)` · 11.50 `getdefaultlocale` deprecated then un-deprecated in 3.15 · 12.11
+invalid-escape `SyntaxWarning` · 12.32 `sqlite3` named placeholders + sequence → `ProgrammingError`
+(3.14) · 12.33 the 3.12 recursion-limit split (pairs with 11.54) · 13.11 `PythonFinalizationError` ·
+13.15 `queue.Queue.shutdown()` beside the `None` sentinel · 13.32 `sys._is_interned()` · 14.03
+`from __future__ import annotations` is deprecated · 14.22 3.14 `precision_with_grouping` grammar
+(`03-strings/03c-the-format-spec-mini-language.md:28-37`) · 14.27 the 3.14.0–3.14.4 incremental-GC
+window · 14.33 `PicklingError` normalisation · 14.39 `compression.zstd` · T.05/T.08/T.09 at the next
+uv/ruff minor bump.
+
+### 5d · Expires 2026-10-01 (3.15.0 GA) — update these pages on release day
+
+`07-assignment-and-aliasing/10b-read-only-views-and-boundaries.md:17,62` and
+`06-comparisons/07b-mappings-and-sets.md:215` (no `frozendict` → builtin, PEP 814) ·
+`12-eafp-vs-lbyl/06w-the-decorator-form.md:22,110` (decorated generators now stay inside the context) ·
+`02-numbers/05c-the-float-number-line.md:120-122,192` (`math.isnormal`/`issubnormal` exist) ·
+`phase-3-collections/05-slicing/02b-strides-and-reversal.md:169`, `11b-batching.md:122,231`
+(`unicodedata.iter_graphemes`) · `04-bytes-and-encoding/01-two-types-that-never-mix.md:51` (`-b`/`-bb`
+deprecated) · `12-eafp-vs-lbyl/05j-designing-the-failure-channel/README.md:87` (`sentinel()` landed) ·
+`11-startup-and-import-cost/03-lazy-imports.md:13,167` (Target 3.15 is released) ·
+`04-bytes-and-encoding/03-the-default-encoding.md:170` (UTF-8 is now the default) ·
+`docs/python/README.md:26-28`, `syllabus/01-foundations.md:25`, `03-release-model/README.md:19`,
+`03-release-model/02-the-support-window.md` (3.15 current, 3.13 security-only, 3.10 EOL) — and the
+3.14.7 spine meets 3.14.8 on 2026-10-06 (PEP 745; patch drift only).
+
+### 5e · Syllabus gaps the delta exposed (propose to the user; not added)
+
+- **No `re` topic anywhere** (grep all four syllabus parts for `regex|regular expression` → 0), yet 8 `re`
+  rows land in 3.11–3.15 and pages already use `\Z`. A Phase 1 or Phase 10 row — *Understand*.
+- **No TLS / `ssl` row**: 10.31, 12.24, 13.23 have nowhere to go; S3:110 (HTTP clients) or S4:55
+  (security hygiene) could carry "verify on, default context, never `wrap_socket`" — *Know*.
+- **No id-design row**: `uuid7` (14.34) belongs with S3:151 (create → 201, keys) — *Understand*.
+- **No `enum` row** though enums appear in 6 pages; 11.29–11.31 live in a comparisons page — *Know*.
+- Archive extraction safety (12.15) fits S3:116 — *Know*.
+
+### 5f · Pin and currency corrections (report only — nothing edited)
+
+- `src/data/pins.js` python `pin: '3.14'` — **correct** until 3.15.0 ships on 2026-10-01; bump the
+  minor then (the corpus has 835 spines on 3.14; `devbible-currency` decides re-read scope).
+- `uv` pin 0.12.12 → 0.12.18 and `ruff` 0.16.6 → 0.16.8 are patch drift — no re-read needed.
+- **`static/currency.json` ruff `latest: "0.4.10"` is wrong** (§1): `scripts/currency.mjs:134` reads one
+  page of `/tags`, which ruff's old `v0.x` tags fill. Fix the script to use `/releases/latest` (or page
+  through `/tags`) for `gh:` sources — otherwise ruff drift stays invisible.
+
+### 5g · Non-version defects found in passing
+
+- `phase-2-functions/10-recursion-and-the-limit/01-recursion-error-and-the-c-stack.md:108`:
+  "`RecursionError` inherits directly from `Exception` (specifically `BuiltinException`)" — the 3.14
+  exceptions reference says it "is derived from `RuntimeError`".
+- Status boards out of date (§2c S1–S4): `docs/python/README.md:44`, `pages/README.md:22-34`,
+  `pages/phase-3-collections/README.md:40-41`.
