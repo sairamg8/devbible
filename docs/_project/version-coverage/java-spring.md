@@ -157,7 +157,9 @@ teaches Flyway 12, jOOQ 3.21 and Hibernate 7.4, and Boot 4.0.8 manages Flyway 11
 | S15 | `phase-10-data-access/README.md:7-9` (+243 Verified lines) | "Hibernate ORM 7.4.1 · Spring Data JPA 4.1.0" | the Boot 4.1.1 BOM manages 7.4.5.Final and Data 2026.0.1 (patch drift; low severity) |
 | S16 | `phase-10-data-access/13-jooq/_plan.md:3` (internal) | "Target: jOOQ 3.20.x" | the Boot 4.1.1 BOM manages jOOQ 3.21.7, which the pages themselves use |
 | S17 | `phase-9-…/16-the-alternatives/02-quarkus.md:190` | "3.27 LTS … supported until 24 September 2026" | **expires today**. Not false yet (3.27.5.3 shipped 2026-09-22), but due for the next sweep |
+| S18 | `phase-9-spring-boot/12-outbound-http/09-the-pool-is-the-real-limit.md:102-117, 129-134` | "the response is never completed" → pool leak from a bare `retrieve()` | Framework 6.2+ made a bare `retrieve()` a **no-op**: no request is sent, so nothing leaks. The real bug is a silently skipped call (found during §3) → **CONTRADICTED** |
 
 **Verdict: content applies up to Spring Boot 4.1.1 / Framework 7.0.9 / Security 7.1.1 (floor Boot 4.0.x; phase 10
 effectively 4.1).** Almost every page is verified against the 4.1.1 spine, and the 4.0 migration is taught thoroughly.
-But only a third of the 4.1-line headline features are taught, and 7 pages carry claims that are false on 4.x (S9–S14).
+But only 7 of the 32 changes on the 4.1 line are taught. §3 found 7 contradicted changes across 10 files (S9–S14, S18),
+each presenting pre-4.x or wrong behaviour as current.
