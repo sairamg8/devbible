@@ -30,7 +30,7 @@ these orders.
 
 | The user asks | Go to | Takes a lock? |
 |---|---|---|
-| *"what is pending"* · *"what do you suggest"* · *"is it up to date"* | **[CURSOR-AUDIT.md](CURSOR-AUDIT.md)** — ranked plan + the 4 decisions waiting on them | no |
+| *"what is pending"* · *"checklist"* · *"what do you suggest"* | **[CHECKLIST.md](CHECKLIST.md)** — 🔴 THE one checklist (2026-09-24): pending, upcoming, bugs, features, decisions · older ranked plan: [CURSOR-AUDIT.md](CURSOR-AUDIT.md) | no |
 | *"continue DSA"* · *"continue system design"* | **[CURSOR-DSA-SYSTEM-DESIGN.md](CURSOR-DSA-SYSTEM-DESIGN.md)** | yes |
 | a version bump · *"is X still current"* | `.agents/skills/devbible-currency/SKILL.md` | no |
 | how many pages / how much is done | **[progress_corpus_audit_20260905.md](progress_corpus_audit_20260905.md)** — distrust any count written before it | no |
