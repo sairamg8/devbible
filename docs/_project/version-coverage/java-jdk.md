@@ -174,7 +174,7 @@ concurrency · `p7` io-time-stdlib · `p8` build-dependencies · `p12` jvm-produ
 | 3 | 14 | JFR event streaming — `RecordingStream`, in-process consumption (JEP 349) | new | MISSING | `RecordingStream`, `JEP 349`, `event streaming` → only a native-image support note `p12/11-graalvm-native-image/07b-no-jit-no-jfr-no-jstack.md:107` | P14 |
 | 4 | 14 | CMS collector removed (JEP 363) | removed | COVERED | `p12/01-memory-layout/README.md:120`; `p12/02-gc-in-practice/03-g1.md:57` | P14 |
 | 5 | 15 | Text blocks (JEP 378; previews 355, 368) | new | COVERED | `p1/07-text-blocks.md` | P15 |
-| 6 | 15 | ZGC and Shenandoah become product features (JEP 377, 379) | new | COVERED | `p12/02-gc-in-practice/02b-shenandoah-and-availability.md:55`; ZGC topic in `p12/02-gc-in-practice/` | P15 |
+| 6 | 15 | ZGC and Shenandoah become product features (JEP 377, 379) | new | COVERED | `p12/02-gc-in-practice/02b-shenandoah-and-availability.md:55`; `p12/02-gc-in-practice/04-zgc.md` | P15 |
 | 7 | 15 | Biased locking disabled and deprecated (JEP 374; obsoleted in 18, RN18 JDK-8256425) | removed | COVERED | `p3/16-legacy-types.md:12`, `:37`; `p12/01-memory-layout/README.md:120` | P15, RN18 |
 | 8 | 15 | Nashorn JavaScript engine removed (JEP 372) | removed | MISSING | `Nashorn`, `jjs` → 0 hits | P15 |
 | 9 | 15 | Hidden classes — the framework proxy/lambda mechanism (JEP 371) | new | MISSING | `hidden class`, `JEP 371`, `defineHiddenClass` → 0 hits | P15 |
@@ -184,7 +184,7 @@ concurrency · `p7` io-time-stdlib · `p8` build-dependencies · `p12` jvm-produ
 | 13 | 16 | `Stream.toList()` (unmodifiable) | new | COVERED | `p4/11-tolist-vs-collectors.md:16` | RN16 JDK-8180352 |
 | 14 | 16 | `jpackage` packaging tool (JEP 392; incubator 343) | new (tool) | MISSING | `jpackage`, `JEP 392` → 0 hits | P16 |
 | 15 | 16 | Unix-domain socket channels (JEP 380) | new | MISSING | `UnixDomainSocketAddress`, `unix.domain socket`, `JEP 380` → 0 hits | P16 |
-| 16 | 16 | Warnings for value-based classes — `synchronized` on `Integer` etc. (JEP 390) | new (lint) | COVERED | `p6/04-synchronized-intrinsic-locks/README.md:12` (JEP 390), `03-choosing-the-lock-object.md` | P16 |
+| 16 | 16 | Warnings for value-based classes — `synchronized` on `Integer` etc. (JEP 390) | new (lint) | COVERED | `p6/04-synchronized-intrinsic-locks/03-choosing-the-lock-object.md:67`, `:147` | P16 |
 | 17 | 16 | Elastic metaspace (JEP 387) | default | COVERED | `p12/01-memory-layout/04c-the-classloader-leak.md:31` | P16 |
 | 18 | 13 | Dynamic CDS archives, `-XX:ArchiveClassesAtExit` (JEP 350; default CDS JEP 341, 12) | new (CLI) | COVERED | `p12/10-packaging-for-deploy/05-class-data-sharing.md:96` | P12, P13 |
 
