@@ -859,5 +859,6206 @@
   "ats": null,
   "slug": null,
   "dom": []
+ },
+ {
+  "name": "PhysicsWallah",
+  "careersUrl": "https://www.physicswallah.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Goldman Sachs",
+  "careersUrl": "https://www.goldmansachs.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "EngineeringEnvisions, builds, and deploys industry-leading innovations that drive our business and extend boundaries.",
+    "url": "https://www.goldmansachs.com/careers/our-firm/engineering"
+   }
+  ]
+ },
+ {
+  "name": "Salesforce",
+  "careersUrl": "https://www.salesforce.com/company/careers/?bc=OTH",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Walmart",
+  "careersUrl": "https://careers.walmart.com/us/en/home",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Persistent",
+  "careersUrl": "https://careers.persistent.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "PayPal",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Cognizant",
+  "careersUrl": "https://www.cognizant.com/in/en",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Hexaware",
+  "careersUrl": "https://jobs.hexaware.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "BEWARE OF FAKE JOB OFFER",
+    "url": "https://hexaware.com/beware-of-fake-job-offers/"
+   }
+  ]
+ },
+ {
+  "name": "HashiCorp",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Mphasis",
+  "careersUrl": "https://careers.mphasis.com/home.html",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Explore Jobs",
+    "url": "https://careers.mphasis.com/home.html#menu-1"
+   },
+   {
+    "title": "Information Center",
+    "url": "https://careers.mphasis.com/home.html#menu-2"
+   },
+   {
+    "title": "About Mphasis",
+    "url": "https://careers.mphasis.com/home.html#menu-3"
+   },
+   {
+    "title": "ASIA PACIFIC",
+    "url": "https://careers.mphasis.com/home/hot-jobs/location-search/asia-pacific.html"
+   },
+   {
+    "title": "UK AND EUROPE",
+    "url": "https://careers.mphasis.com/home/hot-jobs/location-search/europe.html"
+   },
+   {
+    "title": "INFORMATION SECURITY",
+    "url": "https://careers.mphasis.com/home/hot-jobs/skill-search/information-security-jobs.html"
+   },
+   {
+    "title": "HYBRID CLOUD",
+    "url": "https://careers.mphasis.com/home/hot-jobs/skill-search/hybrid-cloud-jobs.html"
+   },
+   {
+    "title": "CAMPUS PROGRAMS",
+    "url": "https://careers.mphasis.com/home/hot-jobs/category/campus-programs.html"
+   },
+   {
+    "title": "DIGITAL RISK",
+    "url": "https://careers.mphasis.com/home/hot-jobs/category/digital-risk.html"
+   },
+   {
+    "title": "CORPORATE FUNCTIONS",
+    "url": "https://careers.mphasis.com/home/hot-jobs/category/support-functions.html"
+   },
+   {
+    "title": "BUSINESS PROCESS SERVICES",
+    "url": "https://careers.mphasis.com/home/hot-jobs/category/business-process-services.html"
+   },
+   {
+    "title": "IT APPLICATION SERVICES",
+    "url": "https://careers.mphasis.com/home/hot-jobs/category/it-application-services.html"
+   },
+   {
+    "title": "INFRASTRUCTURE SERVICES",
+    "url": "https://careers.mphasis.com/home/hot-jobs/category/infrastructue-services.html"
+   },
+   {
+    "title": "APPLICATION PROCESS",
+    "url": "https://careers.mphasis.com/home/information-center/application-process.html"
+   },
+   {
+    "title": "EX-EMPLOYEE/ALUMNI HELPDESK",
+    "url": "https://careers.mphasis.com/home/information-center/ex-employee-helpdesk.html"
+   },
+   {
+    "title": "FRAUD AWARENESS",
+    "url": "https://careers.mphasis.com/home/information-center/fraud-awareness.html"
+   },
+   {
+    "title": "NEWS & EVENTS",
+    "url": "https://careers.mphasis.com/home/information-center/news-events.html"
+   },
+   {
+    "title": "Thought Leadership",
+    "url": "https://careers.mphasis.com/home/information-center/thought-leadership.html"
+   },
+   {
+    "title": "About Us",
+    "url": "https://careers.mphasis.com/home/about-mphasis.html"
+   },
+   {
+    "title": "ADVANCED LEARNING",
+    "url": "https://careers.mphasis.com/home/information-center/advanced-learning.html"
+   },
+   {
+    "title": "Diversity, Equity and Inclusion",
+    "url": "https://careers.mphasis.com/home/information-center/diversity-at-mphasis.html"
+   },
+   {
+    "title": "Job Search",
+    "url": "https://mphasis.ripplehire.com/ripplehire/careers"
+   },
+   {
+    "title": "Click Here to Know More",
+    "url": "https://careers.mphasis.com/home/mphasis-important-notice.html"
+   },
+   {
+    "title": "KNOW MORE",
+    "url": "https://careers.mphasis.com/home/geek.html"
+   },
+   {
+    "title": "Let's hear it from our Mphasians!",
+    "url": "https://careers.mphasis.com/home/adaylife-mphasian.html"
+   },
+   {
+    "title": "MPHASIS CAREERS",
+    "url": "https://careers.mphasis.com/home/mphasis-careers.html"
+   },
+   {
+    "title": "Blink UX, an Mphasis company",
+    "url": "https://careers.mphasis.com/home/mphasis-subsidiaries/blink.html"
+   },
+   {
+    "title": "Mphasis Datalytyx",
+    "url": "https://careers.mphasis.com/home/mphasis-subsidiaries/datalytyx.html"
+   },
+   {
+    "title": "Mphasis Digital Risk",
+    "url": "https://careers.mphasis.com/home/mphasis-subsidiaries/digital-risk.html"
+   },
+   {
+    "title": "Mphasis Javelina",
+    "url": "https://careers.mphasis.com/home/mphasis-subsidiaries/javelina.html"
+   },
+   {
+    "title": "Mphasis Silverline",
+    "url": "https://careers.mphasis.com/home/mphasis-subsidiaries/silverline.html"
+   },
+   {
+    "title": "Mphasis Stelligent",
+    "url": "https://careers.mphasis.com/home/mphasis-subsidiaries/stelligent.html"
+   },
+   {
+    "title": "Mphasis Wyde",
+    "url": "https://careers.mphasis.com/home/mphasis-subsidiaries/wyde.html"
+   },
+   {
+    "title": "Mphasis Corporation LCA",
+    "url": "https://www2.mphasis.com/Careers_LCA.html"
+   }
+  ],
+  "listUrl": "https://careers.mphasis.com/home.html#menu-1"
+ },
+ {
+  "name": "Retool",
+  "careersUrl": "https://careers.retool.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Shopify",
+  "careersUrl": "https://www.shopify.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Communications - Editorial Lead, Engineering & Technical ContentRemote - Americas",
+    "url": "https://www.shopify.com/careers/communications-editorial-lead-engineering-technical-content_457042ce-a4b6-4769-a932-3c181f46470f"
+   }
+  ]
+ },
+ {
+  "name": "Netflix",
+  "careersUrl": "https://jobs.netflix.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://explore.jobs.netflix.net/careers#main-container"
+   },
+   {
+    "title": "NETFLIX HOUSE",
+    "url": "https://apply.netflixhouse.com/careers"
+   },
+   {
+    "title": "Do Not Sell Or Share My Personal Information",
+    "url": "https://jobs.netflix.com/dnssi"
+   }
+  ],
+  "listUrl": "https://explore.jobs.netflix.net/careers"
+ },
+ {
+  "name": "DoorDash",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "MakeMyTrip",
+  "careersUrl": "https://careers.makemytrip.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Clio",
+  "careersUrl": "https://clio.in/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Ecobee",
+  "careersUrl": "https://jobs.ecobee.co/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Thinkific",
+  "careersUrl": "https://www.thinkific.com/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Ada",
+  "careersUrl": "https://about.ada.com/careers/",
+  "ats": "greenhouse",
+  "slug": "adahealth",
+  "dom": [
+   {
+    "title": "Create alert",
+    "url": "https://my.greenhouse.io/users/sign_in?job_board=adahealth&source=job_alert_board"
+   }
+  ],
+  "via": "careers-page",
+  "listUrl": "https://boards.greenhouse.io/adahealth"
+ },
+ {
+  "name": "Nuvei",
+  "careersUrl": "https://www.nuvei.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip Navigation",
+    "url": "https://www.nuvei.com/careers#main"
+   },
+   {
+    "title": "CareersJoin our team & advance your career",
+    "url": "https://www.nuvei.com/careers"
+   },
+   {
+    "title": "Resources & Support",
+    "url": "https://www.nuvei.com/careers#"
+   },
+   {
+    "title": "中文 (简体)",
+    "url": "https://www.nuvei.com/zh/careers"
+   },
+   {
+    "title": "General info0",
+    "url": "https://www.nuvei.com/careers#tab1"
+   },
+   {
+    "title": "Solutions & platform16",
+    "url": "https://www.nuvei.com/careers#tab2"
+   },
+   {
+    "title": "Articles & insights12",
+    "url": "https://www.nuvei.com/careers#tab4"
+   },
+   {
+    "title": "Regulatory & compliance3",
+    "url": "https://www.nuvei.com/careers#tab5"
+   },
+   {
+    "title": "Explore opportunities",
+    "url": "https://www.nuvei.com/careers#open-roles"
+   },
+   {
+    "title": "BackOffice Specialist Colombia, Bogota, Bogotá Global Operations",
+    "url": "https://apply.workable.com/j/E23598C240"
+   },
+   {
+    "title": "Bilingual Talent Acquisition Specialist - 12 month contract (English/French) Canada Other",
+    "url": "https://apply.workable.com/j/E28BFB005B"
+   },
+   {
+    "title": "Business Development Manager Italy, Metropolitan City of Milan, Milan Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/078DEB726F"
+   },
+   {
+    "title": "Business Development Manager Spain, Community of Madrid, Madrid Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/8B2B755C59"
+   },
+   {
+    "title": "Business Development Manager Cyprus, Nicosia, Nicosia Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/E2A9E3F325"
+   },
+   {
+    "title": "Business Development Manager iGaming Bulgaria, Sofia City Province, Sofia Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/425FCF4AC1"
+   },
+   {
+    "title": "Business Development Manager, Mid-Market United States, Arizona, Scottsdale Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/51D9C70DC8"
+   },
+   {
+    "title": "Business Development Manager- Mexico Mexico, Mexico City, Mexico City Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/3FD6D6746A"
+   },
+   {
+    "title": "Client Support Specialist - Nuvei Colombia, Bogota, Bogotá Global Operations",
+    "url": "https://apply.workable.com/j/D8A1BC530B"
+   },
+   {
+    "title": "Compliance Specialist Lithuania, Vilnius City Municipality, Vilnius Global Operations",
+    "url": "https://apply.workable.com/j/3C0C20AC1C"
+   },
+   {
+    "title": "Contract Specialist Cyprus, Nicosia, Nicosia Legal",
+    "url": "https://apply.workable.com/j/53493DD9A2"
+   },
+   {
+    "title": "Customer Support Specialist Australia, New South Wales, Sydney Global Operations",
+    "url": "https://apply.workable.com/j/B84045C078"
+   },
+   {
+    "title": "Enterprise Account Executive, B2B United States, Arizona, Scottsdale Corporate Development",
+    "url": "https://apply.workable.com/j/A813736BCB"
+   },
+   {
+    "title": "Enterprise Support Specialist (Tech Support) Colombia, Bogota, Bogotá Global Operations",
+    "url": "https://apply.workable.com/j/BDEC152CED"
+   },
+   {
+    "title": "Finance Operations Analyst - 10 month contract United States Finance",
+    "url": "https://apply.workable.com/j/E6B8728FCA"
+   },
+   {
+    "title": "Financial Controller Israel, Tel Aviv District, Tel Aviv-Yafo Finance",
+    "url": "https://apply.workable.com/j/EFD04385D2"
+   },
+   {
+    "title": "Integration Specialist Mexico, Mexico City, Mexico City Global Operations",
+    "url": "https://apply.workable.com/j/52B4CDE8EC"
+   },
+   {
+    "title": "Legal Counsel, Payments Canada Legal",
+    "url": "https://apply.workable.com/j/4BA3DECBFA"
+   },
+   {
+    "title": "Legal Operations Specialist, Technology and AI Canada Legal",
+    "url": "https://apply.workable.com/j/CDA5F029A2"
+   },
+   {
+    "title": "Operations Delivery Manager Bulgaria, Sofia City Province, Sofia Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/C6DEC906C3"
+   },
+   {
+    "title": "Oracle Cloud Developer Canada Finance",
+    "url": "https://apply.workable.com/j/76343BDD45"
+   },
+   {
+    "title": "Oracle Cloud Technical Architect Canada Finance",
+    "url": "https://apply.workable.com/j/1342A58BCD"
+   },
+   {
+    "title": "Payment Operations Monitoring Specialist Israel, Tel Aviv District, Tel Aviv-Yafo Product & Technology",
+    "url": "https://apply.workable.com/j/4F3ADB1EDC"
+   },
+   {
+    "title": "People Operations Analyst/Analyste aux opérations des personnes Canada, Quebec, Montreal People Operations",
+    "url": "https://apply.workable.com/j/B844DA63A1"
+   },
+   {
+    "title": "Post-Merger Integration Manager (PMI) - APAC Singapore, Singapore, Singapore Strategy & M&A",
+    "url": "https://apply.workable.com/j/933666A15D"
+   },
+   {
+    "title": "Post-Merger Integration Manager (PMI) - EMEA Israel, Tel Aviv District, Tel Aviv-Yafo Strategy & M&A",
+    "url": "https://apply.workable.com/j/A594672B43"
+   },
+   {
+    "title": "Relationship Manager United States, Arizona, Scottsdale Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/A1183BF23E"
+   },
+   {
+    "title": "Relationship Manager United States, Arizona, Scottsdale Corporate Development",
+    "url": "https://apply.workable.com/j/DBF47D08BE"
+   },
+   {
+    "title": "Relationship Manager Bulgaria, Sofia City Province, Sofia Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/0F5AF99B12"
+   },
+   {
+    "title": "Relationship Manager Bulgaria, Sofia City Province, Sofia Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/4B40F5FF91"
+   },
+   {
+    "title": "Relationship Manager - iGaming Bulgaria, Sofia City Province, Sofia Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/EFAAEDD143"
+   },
+   {
+    "title": "Relationship Manager- Colombia Colombia, Bogota, Bogotá Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/EDD52EFE1D"
+   },
+   {
+    "title": "Relationship Manager- Mandarin Speaking United States, Arizona, Scottsdale Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/8CE613816A"
+   },
+   {
+    "title": "Revenue Analyst Colombia Finance",
+    "url": "https://apply.workable.com/j/826B593FDD"
+   },
+   {
+    "title": "Revenue Operations Analyst Canada, Quebec, Montreal Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/9A84E51097"
+   },
+   {
+    "title": "Revenue Operations Manager - Americas Mexico, Mexico City, Mexico City Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/70C6233639"
+   },
+   {
+    "title": "Sage 100 Product and Implementation Manager United States Corporate Development",
+    "url": "https://apply.workable.com/j/B8D9D46673"
+   },
+   {
+    "title": "Sales Development Representative (SDR) Israel, Tel Aviv District, Tel Aviv-Yafo Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/548F3FD161"
+   },
+   {
+    "title": "Sales Development Representative (SDR) United States, Arizona, Scottsdale Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/3AA3C0E3CB"
+   },
+   {
+    "title": "Sales Development Representative - Japanese Speaking Japan, Tokyo, Tokyo Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/F64CEB6D50"
+   },
+   {
+    "title": "Salesforce Developer Israel, Tel Aviv District, Tel Aviv-Yafo Global Operations",
+    "url": "https://apply.workable.com/j/277ED8815A"
+   },
+   {
+    "title": "Senior Business Development Manager- Colombia Colombia, Bogota, Bogotá Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/199CE31CE8"
+   },
+   {
+    "title": "Senior Business Development Manager- Mexico Mexico, Mexico City, Mexico City Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/C53A3D0689"
+   },
+   {
+    "title": "Senior Contract Specialist Cyprus, Nicosia, Nicosia Legal",
+    "url": "https://apply.workable.com/j/595D4E2A81"
+   },
+   {
+    "title": "Senior Power BI Analyst Lithuania, Vilnius City Municipality, Vilnius Global Operations",
+    "url": "https://apply.workable.com/j/52667244EC"
+   },
+   {
+    "title": "Strategic Partnerships Manager - Mexico Mexico Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/A3F954DB38"
+   },
+   {
+    "title": "SVP, Global Head of Brand and Communications United States Client Engagement & Marketing",
+    "url": "https://apply.workable.com/j/1AF163DC6E"
+   },
+   {
+    "title": "Talent Acquisition Specialist Bulgaria, Sofia City Province, Sofia People Operations",
+    "url": "https://apply.workable.com/j/0019559FC3"
+   },
+   {
+    "title": "Talent Acquisition Specialist- GTM (Fixed-Term Contract) United States, Arizona, Scottsdale People Operations",
+    "url": "https://apply.workable.com/j/77A0A0E4A4"
+   },
+   {
+    "title": "Enterprise Architect - Chief Architect for Agentic Delivery",
+    "url": "https://apply.workable.com/j/7EEC248708"
+   },
+   {
+    "title": "Sales Development Representative/Representant(e) en developpement des ventes",
+    "url": "https://apply.workable.com/j/DF05AD0407"
+   }
+  ],
+  "listUrl": "https://www.nuvei.com/careers#open-roles"
+ },
+ {
+  "name": "Top Hat",
+  "careersUrl": "https://careers.tophat.io/",
+  "ats": null,
+  "slug": null,
+  "dom": [],
+  "listUrl": "https://careers.tophat.io/search/"
+ },
+ {
+  "name": "Personio",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Trade Republic",
+  "careersUrl": "https://traderepublic.com/en-de/about",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Zalando",
+  "careersUrl": "https://jobs.zalando.com/en",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "All Jobs",
+    "url": "https://jobs.zalando.com/en/jobs"
+   },
+   {
+    "title": "Careers Home",
+    "url": "https://jobs.zalando.com/en"
+   },
+   {
+    "title": "Perks & Benefits",
+    "url": "https://jobs.zalando.com/en/our-culture/perks-and-benefits"
+   },
+   {
+    "title": "Diversity & Inclusion",
+    "url": "https://jobs.zalando.com/en/our-culture/diversity-and-inclusion"
+   },
+   {
+    "title": "What We Do",
+    "url": "https://jobs.zalando.com/en/what-we-do"
+   },
+   {
+    "title": "Job Categories",
+    "url": "https://jobs.zalando.com/en/what-we-do#job-categories"
+   },
+   {
+    "title": "Early Careers",
+    "url": "https://jobs.zalando.com/en/what-we-do/early-careers"
+   },
+   {
+    "title": "Where We Work",
+    "url": "https://jobs.zalando.com/en/where-we-work"
+   },
+   {
+    "title": "How We Hire",
+    "url": "https://jobs.zalando.com/en/how-we-hire"
+   },
+   {
+    "title": "Wieselfahrer*in LogistikLogistics & Supply ChainGiessenView job",
+    "url": "https://jobs.zalando.com/en/jobs/2725002-Wieselfahrer*in-Logistik"
+   },
+   {
+    "title": "Team Lead Delivery Solutions (all genders)Logistics & Supply ChainBerlinView job",
+    "url": "https://jobs.zalando.com/en/jobs/2725812-Team-Lead-Delivery-Solutions-(all-genders)"
+   },
+   {
+    "title": "Senior Commercial Manager - Designer (all genders)Buying & MerchandisingBerlinView job",
+    "url": "https://jobs.zalando.com/en/jobs/2725311-Senior-Commercial-Manager---Designer-(all-genders)"
+   },
+   {
+    "title": "Senior Principal Product Manager - SearchProduct ManagementBerlinView job",
+    "url": "https://jobs.zalando.com/en/jobs/2724971-Senior-Principal-Product-Manager---Search"
+   },
+   {
+    "title": "Head of Applied Science - RankingApplied Science & ResearchBerlinView job",
+    "url": "https://jobs.zalando.com/en/jobs/2724970-Head-of-Applied-Science---Ranking"
+   },
+   {
+    "title": "Controller (all genders)Finance, Analytics & ControllingBerlinView job",
+    "url": "https://jobs.zalando.com/en/jobs/2725893-Controller-(all-genders)"
+   },
+   {
+    "title": "Senior Principal Product Manager - Propositions (all genders)Product ManagementBerlinView job",
+    "url": "https://jobs.zalando.com/en/jobs/2725434-Senior-Principal-Product-Manager---Propositions-(a"
+   },
+   {
+    "title": "Senior Software Engineer (all genders) – Analytics & Forecasting SolutionsDataBerlinView job",
+    "url": "https://jobs.zalando.com/en/jobs/2724425-Senior-Software-Engineer-(all-genders)-%E2%80%93-Analytics"
+   },
+   {
+    "title": "Team Lead Strategic Success Management (all genders)Sales & Account ManagementAnsbachView job",
+    "url": "https://jobs.zalando.com/en/jobs/2725598-Team-Lead-Strategic-Success-Management-(all-gender"
+   },
+   {
+    "title": "Engineering Manager (all genders)LeadershipBerlinView job",
+    "url": "https://jobs.zalando.com/en/jobs/2725342-Engineering-Manager-(all-genders)"
+   },
+   {
+    "title": "Security Guard (all genders)Logistics & Supply ChainLahrView job",
+    "url": "https://jobs.zalando.com/en/jobs/2725750-Security-Guard-(all-genders)"
+   },
+   {
+    "title": "Software Engineer (all genders)BackendBerlinView job",
+    "url": "https://jobs.zalando.com/en/jobs/2723963-Software-Engineer-(all-genders)"
+   },
+   {
+    "title": "Legal Notice",
+    "url": "https://jobs.zalando.com/en/imprint"
+   }
+  ],
+  "listUrl": "https://jobs.zalando.com/en/jobs"
+ },
+ {
+  "name": "SAP",
+  "careersUrl": "https://careers.sap.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Students and Graduates",
+    "url": "https://careers.sap.com/#undefined"
+   }
+  ]
+ },
+ {
+  "name": "Siemens",
+  "careersUrl": "https://www.siemens.com/en-us/company/jobs/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Mambu",
+  "careersUrl": "https://careers.mambu.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Solaris",
+  "careersUrl": "https://www.solaris.io/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Bosch",
+  "careersUrl": "https://jobs.bosch.com/en",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Klarna",
+  "careersUrl": "https://careers.klarna.in/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Revolut",
+  "careersUrl": "https://www.revolut.in/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Bolt",
+  "careersUrl": "https://atmholdings.com/domains/bolt-com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Taxfix",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Booking.com",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "HubSpot",
+  "careersUrl": "https://www.hubspot.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Product, UX & Engineering",
+    "url": "https://www.hubspot.com/careers/product-ux-engineering"
+   }
+  ]
+ },
+ {
+  "name": "Mistral AI",
+  "careersUrl": "https://mistral.ai/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Zendesk",
+  "careersUrl": "https://www.zendesk.com/company/careers/",
+  "ats": "workday",
+  "slug": "zendesk.wd1.myworkdayjobs.com|zendesk|zendesk",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Natixis",
+  "careersUrl": "https://natixis.groupebpce.com/page-404/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "BNP Paribas",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Credit Agricole",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Atlassian Trello",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Societe Generale",
+  "careersUrl": "https://careers.societegenerale.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "HSBC",
+  "careersUrl": "https://www.hsbc.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Deutsche Bank",
+  "careersUrl": "https://country.db.com/india/index?language_id=1&kid=www-deutschebank-in.domain",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Barclays",
+  "careersUrl": "https://home.barclays/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://search.jobs.barclays/#content"
+   },
+   {
+    "title": "Your account",
+    "url": "https://barclays.wd3.myworkdayjobs.com/External_Career_Site_Barclays/login?redirect=%2FExternal_Career_Site_Barclays#"
+   },
+   {
+    "title": "? Helpdesk Click here to connect with our resourcing helpdesk team",
+    "url": "https://yourresourcingsupport.com/Barclays-candidate-support/?utm_source=jobs.barclays.co.uk&utm_campaign=barclays-helpdesk&utm_medium=career_site&utm_content=display&ss=paid"
+   },
+   {
+    "title": "About Barclays",
+    "url": "https://search.jobs.barclays/about-us"
+   },
+   {
+    "title": "Inclusion & Opportunities",
+    "url": "https://search.jobs.barclays/inclusion-opportunities"
+   },
+   {
+    "title": "Explore more",
+    "url": "https://search.jobs.barclays/business-areas"
+   },
+   {
+    "title": "Our Stories",
+    "url": "https://search.jobs.barclays/life-at-barclays"
+   },
+   {
+    "title": "Wealth Planning Investment Operations Analyst",
+    "url": "https://search.jobs.barclays/job/glasgow/wealth-planning-investment-operations-analyst/13015/100798331376"
+   },
+   {
+    "title": "Transition Co-ordinator",
+    "url": "https://search.jobs.barclays/job/knutsford/transition-co-ordinator/13015/85195398176"
+   },
+   {
+    "title": "Senior Customer Service Advisor",
+    "url": "https://search.jobs.barclays/job/douglas/senior-customer-service-advisor/13015/82941230688"
+   },
+   {
+    "title": "Director - External Resilience Strategy & Partnerships",
+    "url": "https://search.jobs.barclays/job/london/director-external-resilience-strategy-and-partnerships/13015/101617958880"
+   },
+   {
+    "title": "Director, Pricing Strategy & Commercial Optimisation",
+    "url": "https://search.jobs.barclays/job/london/director-pricing-strategy-and-commercial-optimisation/13015/101448525328"
+   },
+   {
+    "title": "Executive Assistant",
+    "url": "https://search.jobs.barclays/job/new-york/executive-assistant/13015/101617958672"
+   },
+   {
+    "title": "Relationship Manager",
+    "url": "https://search.jobs.barclays/job/saint-helier/relationship-manager/13015/101617958624"
+   },
+   {
+    "title": "Quantitative Analytics Market Risk Modeler",
+    "url": "https://search.jobs.barclays/job/mumbai/quantitative-analytics-market-risk-modeler/13015/101617958080"
+   },
+   {
+    "title": "Credit Analyst",
+    "url": "https://search.jobs.barclays/job/noida/credit-analyst/13015/101121925136"
+   },
+   {
+    "title": "Quant AI/ML Model Developer VP",
+    "url": "https://search.jobs.barclays/job/prague/quant-ai-ml-model-developer-vp/13015/101617957888"
+   },
+   {
+    "title": "Featured story Discover Barclays with Aneesah",
+    "url": "https://search.jobs.barclays/discover-barclays-anneesah"
+   },
+   {
+    "title": "Featured story Meet Natalia Raclot",
+    "url": "https://search.jobs.barclays/NataliaRaclot"
+   },
+   {
+    "title": "Read story",
+    "url": "https://search.jobs.barclays/benefits"
+   },
+   {
+    "title": "Read story",
+    "url": "https://search.jobs.barclays/this-is-me"
+   },
+   {
+    "title": "Scroll to next section",
+    "url": "https://search.jobs.barclays/#who-we-are"
+   },
+   {
+    "title": "Scroll to previous section",
+    "url": "https://search.jobs.barclays/#home-search-form"
+   },
+   {
+    "title": "Scroll to next section",
+    "url": "https://search.jobs.barclays/#where-we-work"
+   },
+   {
+    "title": "Find your new home",
+    "url": "https://search.jobs.barclays/americas"
+   },
+   {
+    "title": "Find your new home",
+    "url": "https://search.jobs.barclays/united-kingdom"
+   },
+   {
+    "title": "Find your new home",
+    "url": "https://search.jobs.barclays/emea"
+   },
+   {
+    "title": "Find your new home",
+    "url": "https://search.jobs.barclays/apac"
+   },
+   {
+    "title": "Scroll to next section",
+    "url": "https://search.jobs.barclays/#business-area"
+   },
+   {
+    "title": "Scroll to next section",
+    "url": "https://search.jobs.barclays/#diversity-inclusion"
+   },
+   {
+    "title": "Scroll to next section",
+    "url": "https://search.jobs.barclays/#early-careers"
+   },
+   {
+    "title": "Find out more",
+    "url": "https://search.jobs.barclays/early-careers"
+   },
+   {
+    "title": "Find out more",
+    "url": "https://search.jobs.barclays/internships"
+   },
+   {
+    "title": "Find out more",
+    "url": "https://search.jobs.barclays/graduates"
+   },
+   {
+    "title": "Find out more",
+    "url": "https://search.jobs.barclays/apprenticeships"
+   },
+   {
+    "title": "Find out more",
+    "url": "https://search.jobs.barclays/mba"
+   },
+   {
+    "title": "Find out more",
+    "url": "https://search.jobs.barclays/discovery"
+   }
+  ],
+  "listUrl": "https://search.jobs.barclays/"
+ },
+ {
+  "name": "Commerzbank",
+  "careersUrl": "https://jobs.commerzbank.com/index.php?ac=search_result",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Database Infrastructure Engineer",
+    "url": "https://jobs.commerzbank.com/index.php?ac=jobad&id=62720"
+   }
+  ]
+ },
+ {
+  "name": "Standard Chartered",
+  "careersUrl": "https://jobs.standardchartered.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Workday",
+  "careersUrl": "https://www.workday.com/en-us/company/careers/overview.html",
+  "ats": "workday",
+  "slug": "workday.wd5.myworkdayjobs.com|workday|Workday",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "UBS",
+  "careersUrl": "https://careers.ubs.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "ING",
+  "careersUrl": "https://careers.ing.com/en",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Adyasha - Cloud Native Engineer Making people's lives easier December 06, 2024 Article Employee Stories Related Content",
+    "url": "https://careers.ing.com/en/be-story-adyasha"
+   },
+   {
+    "title": "Amit, Java Developer & cloud native expert December 06, 2024 Article Expertise & Teams Employee Stories Related Content",
+    "url": "https://careers.ing.com/en/be-story-amit"
+   },
+   {
+    "title": "Daniel - ITP Tech Doubt to drive - engineering to finance October 01, 2025 Article Employee Stories Related Content",
+    "url": "https://careers.ing.com/en/be-story-daniel"
+   },
+   {
+    "title": "Feed issue",
+    "url": "https://careers.ing.com/en#1019595"
+   }
+  ]
+ },
+ {
+  "name": "Santander",
+  "careersUrl": "https://www.santander.com/en/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "BBVA",
+  "careersUrl": "https://www.bbva.com/es/empleo/",
+  "ats": "workday",
+  "slug": "bbva.wd3.myworkdayjobs.com|bbva|es",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Rabobank",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "UniCredit",
+  "careersUrl": "https://unicredit.io/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Intesa Sanpaolo",
+  "careersUrl": "https://group.intesasanpaolo.com/it/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Opening Future: formazione e sviluppo digitale per PMI, startup e scuole",
+    "url": "https://group.intesasanpaolo.com/content/portalgroup/it/homepage/sezione-editoriale/eventi-progetti/tutti-i-progetti/innovazione/opening-future-competenze-digitali.html"
+   }
+  ]
+ },
+ {
+  "name": "ABN AMRO",
+  "careersUrl": "https://www.abnamro.com/nl/home",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Nordea",
+  "careersUrl": "https://careers.nordea.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://www.nordea.com/en/careers/vacant-positions#main-content"
+   },
+   {
+    "title": "Main menu",
+    "url": "https://www.nordea.com/en/careers/vacant-positions#"
+   },
+   {
+    "title": "Composition and diversity policy",
+    "url": "https://www.nordea.com/en/about-us/corporate-governance/board-of-directors/composition-and-diversity-policy"
+   },
+   {
+    "title": "Open jobs",
+    "url": "https://www.nordea.com/en/careers/vacant-positions"
+   },
+   {
+    "title": "A diverse community",
+    "url": "https://www.nordea.com/en/careers/a-diverse-community"
+   },
+   {
+    "title": "Grow with us",
+    "url": "https://www.nordea.com/en/careers/grow-with-us"
+   },
+   {
+    "title": "Meet our experts",
+    "url": "https://www.nordea.com/en/careers/meet-our-experts"
+   },
+   {
+    "title": "Career paths",
+    "url": "https://www.nordea.com/en/careers/career-paths"
+   },
+   {
+    "title": "Finance and banking",
+    "url": "https://www.nordea.com/en/careers/finance-and-banking"
+   },
+   {
+    "title": "Students & graduates",
+    "url": "https://www.nordea.com/en/careers/students-graduates"
+   },
+   {
+    "title": "Nordea Graduate Programme",
+    "url": "https://www.nordea.com/en/careers/nordea-graduate-programme"
+   },
+   {
+    "title": "Internships & student jobs",
+    "url": "https://www.nordea.com/en/careers/internships-student-jobs"
+   },
+   {
+    "title": "Students & interns at Nordea Markets LC&I",
+    "url": "https://www.nordea.com/en/careers/students-interns-at-nordea-lci"
+   },
+   {
+    "title": "Bachelor of financial management and services",
+    "url": "https://www.nordea.com/en/careers/bachelor-of-financial-management-and-services"
+   },
+   {
+    "title": "AP in Financial Management",
+    "url": "https://www.nordea.com/en/careers/academy-profession-degree-in-financial-management"
+   },
+   {
+    "title": "Nordea Group Legal trainee programme Norway",
+    "url": "https://www.nordea.com/en/careers/nordea-group-legal-trainee-programme-norway"
+   },
+   {
+    "title": "Future Finance Professional programme",
+    "url": "https://www.nordea.com/en/careers/future-finance-professional-programme"
+   },
+   {
+    "title": "Rest of the world",
+    "url": "https://www.nordea.com/en/careers/rest-of-the-world"
+   },
+   {
+    "title": "How we recruit",
+    "url": "https://www.nordea.com/en/careers/how-we-recruit"
+   },
+   {
+    "title": "Career events",
+    "url": "https://www.nordea.com/en/careers/career-events"
+   },
+   {
+    "title": "Finansiel Rådgiver til Nordea Ballerup (fast stilling) (Opens in new window)",
+    "url": "https://careers.nordea.com/job/Ballerup-Finansiel-R%C3%A5dgiver-til-Nordea-Ballerup-%28fast-stilling%29-2750/1409317733/?feedId=451033&amp;amp;utm_source=CareerSite"
+   },
+   {
+    "title": "Solution Architect, Power Platform (Opens in new window)",
+    "url": "https://careers.nordea.com/job/Warszawa-Solution-Architect%2C-Power-Platform-02-460/1432843533/?feedId=451033&amp;amp;utm_source=CareerSite"
+   },
+   {
+    "title": "Business Developer, Commercial Development, Private Banking Sweden (Opens in new window)",
+    "url": "https://careers.nordea.com/job/Stockholm-Business-Developer%2C-Commercial-Development%2C-Private-Banking-Sweden-111-46/1444607433/?feedId=451033&amp;amp;utm_source=CareerSite"
+   },
+   {
+    "title": "Risk Expert, Traded Market Risk (Opens in new window)",
+    "url": "https://careers.nordea.com/job/K%C3%B8benhavn-S-Risk-Expert%2C-Traded-Market-Risk-2300/1444613533/?feedId=451033&amp;amp;utm_source=CareerSite"
+   },
+   {
+    "title": "Senior UX/UI Designer (temporary) (Opens in new window)",
+    "url": "https://careers.nordea.com/job/Helsinki-Senior-UXUI-Designer-%28temporary%29-00500/1444608733/?feedId=451033&amp;amp;utm_source=CareerSite"
+   },
+   {
+    "title": "Solution Engineer, Power Platform (Opens in new window)",
+    "url": "https://careers.nordea.com/job/Warszawa-Solution-Engineer%2C-Power-Platform-02-460/1432848733/?feedId=451033&amp;amp;utm_source=CareerSite"
+   },
+   {
+    "title": "Unik mulighed som Finansiel Rådgiver til Nordea Odder, Skanderborg og Horsens (Opens in new window)",
+    "url": "https://careers.nordea.com/job/Horsens-Unik-mulighed-som-Finansiel-R%C3%A5dgiver-til-Nordea-Odder%2C-Skanderborg-og-Horsens-8700/1428673133/?feedId=451033&amp;amp;utm_source=CareerSite"
+   },
+   {
+    "title": "Finansiel rådgiver til Nordea Vejle - hjælp kunderne med at realisere deres drømme (Opens in new window)",
+    "url": "https://careers.nordea.com/job/Vejle-Finansiel-r%C3%A5dgiver-til-Nordea-Vejle-hj%C3%A6lp-kunderne-med-at-realisere-deres-dr%C3%B8mme-7100/1444597833/?feedId=451033&amp;amp;utm_source=CareerSite"
+   },
+   {
+    "title": "Lead Project Leader - AI Governance & Technology Enablers (IAM, Network & Security) (Opens in new window)",
+    "url": "https://careers.nordea.com/job/Gda%C5%84sk-Lead-Project-Leader-AI-Governance-&amp;amp;-Technology-Enablers-%28IAM%2C-Network-&amp;amp;-Security%29-80-309/1435664433/?feedId=451033&amp;amp;utm_source=CareerSite"
+   },
+   {
+    "title": "Lead Project Leader - AWS AI (Opens in new window)",
+    "url": "https://careers.nordea.com/job/Gda%C5%84sk-Lead-Project-Leader-AWS-AI-80-309/1435639633/?feedId=451033&amp;amp;utm_source=CareerSite"
+   },
+   {
+    "title": "Share on Threads (Opens in new window)",
+    "url": "https://www.threads.net/intent/post?url=https://www.nordea.com/en/careers/vacant-positions&text=Open%20jobs"
+   }
+  ],
+  "listUrl": "https://www.nordea.com/en/careers/vacant-positions"
+ },
+ {
+  "name": "NatWest",
+  "careersUrl": "https://careers.natwest.co/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "JPMorgan Chase",
+  "careersUrl": "https://www.jpmorganchase.com/careers?redirect=careers_jpm",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "By closing the skills gap—and opening doors—JPMorganChase is helping to strengthen Miami's workforce pipeline",
+    "url": "https://www.jpmorganchase.com/newsroom/stories/by-closing-the-skills-gap-and-opening-doors-jpmorganchase-is-helping-to-strengthen-miamis-workforce-pipeline"
+   },
+   {
+    "title": "How JPMorganChase is building career pathways for Atlantans",
+    "url": "https://www.jpmorganchase.com/newsroom/stories/how-jpmorganchase-is-building-career-pathways-for-atlantans"
+   },
+   {
+    "title": "Removing barriers for jobseekers in the D.C. area",
+    "url": "https://www.jpmorganchase.com/newsroom/stories/removing-barriers-for-jobseekers-in-the-dc-area"
+   },
+   {
+    "title": "New Skills Ready Network: Transforming youth career pathways",
+    "url": "https://www.jpmorganchase.com/newsroom/stories/new-skills-ready-network-transforming-youth-career-pathways"
+   },
+   {
+    "title": "What Works: Expanding high-quality career pathways in Texas",
+    "url": "https://www.jpmorganchase.com/newsroom/stories/expanding-high-quality-career-pathways-in-texas"
+   },
+   {
+    "title": "JPMorganChase is helping launch careers in banking and technology for young people in the UK",
+    "url": "https://www.jpmorganchase.com/newsroom/stories/careers-in-banking-and-technology"
+   },
+   {
+    "title": "Expanding Employment and Opportunity in Baltimore",
+    "url": "https://www.jpmorganchase.com/newsroom/stories/expanding-employment-and-opportunity-in-baltimore"
+   },
+   {
+    "title": "Creating Job Opportunities for Over 72,000 Detroiters",
+    "url": "https://www.jpmorganchase.com/newsroom/stories/detroit-jobs-and-skills"
+   }
+  ]
+ },
+ {
+  "name": "Bank of America",
+  "careersUrl": "https://careers.bankofamerica.com/en-us",
+  "ats": "workday",
+  "slug": "ghr.wd1.myworkdayjobs.com|ghr|en-us",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Lloyds Banking Group",
+  "careersUrl": "https://www.lloydsbankinggroup.com/careers",
+  "ats": "workday",
+  "slug": "lbg.wd3.myworkdayjobs.com|lbg|lbg_Careers",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Morgan Stanley",
+  "careersUrl": "https://www.morganstanley.com/people",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "American Express",
+  "careersUrl": "https://careers.americanexpress.com/en/sites/CX_1",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "About Team Amex",
+    "url": "https://www.americanexpress.com/en-us/careers/about-teamamex/"
+   },
+   {
+    "title": "Career Areas",
+    "url": "https://www.americanexpress.com/en-us/careers/career-areas/"
+   }
+  ]
+ },
+ {
+  "name": "Credit Suisse",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Royal Bank of Canada",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "BNY Mellon",
+  "careersUrl": "https://www.bny.com/corporate/global/en/about-us/careers/work-with-us.html",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content.",
+    "url": "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/BNY-Careers#main"
+   },
+   {
+    "title": "BNY Careers",
+    "url": "https://www.bny.com/corporate/global/en/careers/work-with-us.html"
+   },
+   {
+    "title": "Our Teams",
+    "url": "https://www.bny.com/corporate/global/en/careers/our-teams.html"
+   },
+   {
+    "title": "Early Career Opportunities",
+    "url": "https://www.bny.com/corporate/global/en/careers/students.html"
+   },
+   {
+    "title": "Experienced Professionals",
+    "url": "https://www.bny.com/corporate/global/en/careers/experienced-professionals.html"
+   },
+   {
+    "title": "Search BNY Jobs",
+    "url": "https://eofe-dev3.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_5001/jobs?mode=location"
+   },
+   {
+    "title": "I am an employee I am an employee",
+    "url": "https://eofe.fa.us2.oraclecloud.com/fscmUI/faces/deeplink?objType=IRC_RECRUITING&action=ICE_JOB_SEARCH_RESP"
+   },
+   {
+    "title": "Jobs 1357",
+    "url": "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/BNY-Careers/jobs?mode=location"
+   },
+   {
+    "title": "Events 2",
+    "url": "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/BNY-Careers/events"
+   },
+   {
+    "title": "Join Talent Community",
+    "url": "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/BNY-Careers/join-talent-community?mode=location"
+   }
+  ],
+  "listUrl": "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/BNY-Careers/jobs?mode=location"
+ },
+ {
+  "name": "State Street",
+  "careersUrl": "https://careers.statestreet.com/global/en",
+  "ats": "workday",
+  "slug": "statestreet.wd1.myworkdayjobs.com|statestreet|Global",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Wells Fargo",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Citi",
+  "careersUrl": "https://jobs.citi.com/",
+  "ats": "workday",
+  "slug": "citi.wd5.myworkdayjobs.com|citi|2",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "CIBC",
+  "careersUrl": "https://www.cibc.com/en/about-cibc/careers.html",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Scotiabank",
+  "careersUrl": "https://jobs.scotiabank.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "ICICI Bank",
+  "careersUrl": "https://www.icicibank.co/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "HDFC Bank",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Kotak Mahindra Bank",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "TD Bank",
+  "careersUrl": "https://careers.td.com/",
+  "ats": "workday",
+  "slug": "td.wd3.myworkdayjobs.com|td|TD_Bank_Careers",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "State Bank of India",
+  "careersUrl": "http://ww547.statebankofindia.co/?tkn=19vnMT3S",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "BMO",
+  "careersUrl": "https://jobs.bmo.com/us/en",
+  "ats": "workday",
+  "slug": "bmo.wd3.myworkdayjobs.com|bmo|External",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Axis Bank",
+  "careersUrl": "https://www.axis.bank.in/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Post on X App",
+    "url": "https://axisbank.ripplehire.com/candidate/?token=WIXhCuz0XRZ7H0GZCwjJ&source=CAREERSITE#"
+   },
+   {
+    "title": "RB-LS: Business Development Associate",
+    "url": "https://axisbank.ripplehire.com/candidate/?token=WIXhCuz0XRZ7H0GZCwjJ&source=CAREERSITE#detail/job/770050"
+   },
+   {
+    "title": "RB-LS: Business Development Associate",
+    "url": "https://axisbank.ripplehire.com/candidate/?token=WIXhCuz0XRZ7H0GZCwjJ&source=CAREERSITE#detail/job/770045"
+   },
+   {
+    "title": "RB-LS: Business Development Associate",
+    "url": "https://axisbank.ripplehire.com/candidate/?token=WIXhCuz0XRZ7H0GZCwjJ&source=CAREERSITE#detail/job/770042"
+   },
+   {
+    "title": "RB-LS: Business Development Associate",
+    "url": "https://axisbank.ripplehire.com/candidate/?token=WIXhCuz0XRZ7H0GZCwjJ&source=CAREERSITE#detail/job/770039"
+   },
+   {
+    "title": "Branch:Branch Relationship Officer",
+    "url": "https://axisbank.ripplehire.com/candidate/?token=WIXhCuz0XRZ7H0GZCwjJ&source=CAREERSITE#detail/job/770035"
+   },
+   {
+    "title": "RB-LS: Business Development Associate",
+    "url": "https://axisbank.ripplehire.com/candidate/?token=WIXhCuz0XRZ7H0GZCwjJ&source=CAREERSITE#detail/job/770034"
+   },
+   {
+    "title": "RB-LS: Business Development Associate",
+    "url": "https://axisbank.ripplehire.com/candidate/?token=WIXhCuz0XRZ7H0GZCwjJ&source=CAREERSITE#detail/job/770033"
+   },
+   {
+    "title": "Branch:Branch Relationship Officer",
+    "url": "https://axisbank.ripplehire.com/candidate/?token=WIXhCuz0XRZ7H0GZCwjJ&source=CAREERSITE#detail/job/770032"
+   },
+   {
+    "title": "RB-LS: Business Development Associate",
+    "url": "https://axisbank.ripplehire.com/candidate/?token=WIXhCuz0XRZ7H0GZCwjJ&source=CAREERSITE#detail/job/770027"
+   }
+  ],
+  "listUrl": "https://axisbank.ripplehire.com/candidate/?token=WIXhCuz0XRZ7H0GZCwjJ&source=CAREERSITE#list"
+ },
+ {
+  "name": "Bajaj Finserv",
+  "careersUrl": "https://www.bajajfinserv.in/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "AXA",
+  "careersUrl": "https://careers.axa.com/careers-home/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "IDFC First Bank",
+  "careersUrl": "https://www.idfcfirstbank.co/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Zurich Insurance",
+  "careersUrl": "https://www.zurichinsurance.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Allianz",
+  "careersUrl": "https://careers.allianz.com/global/en",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://careers.allianz.com/global/en/search-results#skipToMainContent"
+   },
+   {
+    "title": "View Profile",
+    "url": "https://career5.successfactors.eu/career?career_company=AZGROUPPROD&lang=en_GB&loginFlowRequired=true"
+   },
+   {
+    "title": "Explore Allianz",
+    "url": "https://careers.allianz.com/global/en/explore-allianz"
+   },
+   {
+    "title": "Who we are",
+    "url": "https://careers.allianz.com/global/en/who-we-are"
+   },
+   {
+    "title": "Inclusive Workplace",
+    "url": "https://careers.allianz.com/global/en/inclusive-workplace"
+   },
+   {
+    "title": "Our People",
+    "url": "https://careers.allianz.com/global/en/our-people"
+   },
+   {
+    "title": "Olympic & Paralympic Partnership",
+    "url": "https://careers.allianz.com/global/en/olympic-paralympic-movements"
+   },
+   {
+    "title": "Career Development",
+    "url": "https://careers.allianz.com/global/en/career-development"
+   },
+   {
+    "title": "Health & Well-being",
+    "url": "https://careers.allianz.com/global/en/health-and-well-being"
+   },
+   {
+    "title": "Hybrid Working",
+    "url": "https://careers.allianz.com/global/en/hybrid-working"
+   },
+   {
+    "title": "Open Jobs",
+    "url": "https://careers.allianz.com/global/en/search-results"
+   },
+   {
+    "title": "Your Journey",
+    "url": "https://careers.allianz.com/global/en/your-journey"
+   },
+   {
+    "title": "Locations & Units",
+    "url": "https://careers.allianz.com/global/en/locations-business-units"
+   },
+   {
+    "title": "Application Tips",
+    "url": "https://careers.allianz.com/global/en/application-tips"
+   },
+   {
+    "title": "Job Fields",
+    "url": "https://careers.allianz.com/global/en/job-fields"
+   },
+   {
+    "title": "Saved Jobs(0)",
+    "url": "https://careers.allianz.com/global/en/jobcart"
+   },
+   {
+    "title": "Skip to Search results",
+    "url": "https://careers.allianz.com/global/en/search-results#skip-facet"
+   },
+   {
+    "title": "Conseiller en Gestion de Patrimoine Expérimenté H/F - Paris (75)",
+    "url": "https://careers.allianz.com/global/en/job/95725/Conseiller-en-Gestion-de-Patrimoine-Exp%C3%A9riment%C3%A9-H-F-Paris-75"
+   },
+   {
+    "title": "Portfolio Steering and CAT Risk Analyst - Marine",
+    "url": "https://careers.allianz.com/global/en/job/103311/Portfolio-Steering-and-CAT-Risk-Analyst-Marine"
+   },
+   {
+    "title": "Conseiller Commercial en Protection Sociale Expérimenté H/F - Saint Girons (09)",
+    "url": "https://careers.allianz.com/global/en/job/77816/Conseiller-Commercial-en-Protection-Sociale-Exp%C3%A9riment%C3%A9-H-F-Saint-Girons-09"
+   },
+   {
+    "title": "Asesor/a Comercial",
+    "url": "https://careers.allianz.com/global/en/job/93302/Asesor-a-Comercial"
+   },
+   {
+    "title": "Nurse oder Rettungs-/ Notfallsanitäter in der med. Assistance (m/w/d) - Teilzeit 20 h",
+    "url": "https://careers.allianz.com/global/en/job/97713/Nurse-oder-Rettungs-Notfallsanit%C3%A4ter-in-der-med-Assistance-m-w-d-Teilzeit-20-h"
+   },
+   {
+    "title": "Portfolio Steering & CAT Risk Analyst, Marine",
+    "url": "https://careers.allianz.com/global/en/job/103865/Portfolio-Steering-CAT-Risk-Analyst-Marine"
+   },
+   {
+    "title": "Factory Squad Specialist",
+    "url": "https://careers.allianz.com/global/en/job/102142/Factory-Squad-Specialist"
+   },
+   {
+    "title": "Portfolio Steering Manager MidCorp Property",
+    "url": "https://careers.allianz.com/global/en/job/99219/Portfolio-Steering-Manager-MidCorp-Property"
+   },
+   {
+    "title": "Assoc. Director - AAGI Business Process Transformation Analyst",
+    "url": "https://careers.allianz.com/global/en/job/102877/Assoc-Director-AAGI-Business-Process-Transformation-Analyst"
+   },
+   {
+    "title": "Your Benefits",
+    "url": "https://careers.allianz.com/global/en/benefits"
+   }
+  ],
+  "listUrl": "https://careers.allianz.com/global/en/search-results"
+ },
+ {
+  "name": "Munich Re",
+  "careersUrl": "https://careers.munichre.com/en",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "MEAG Creative",
+    "url": "https://careers.munichre.com/en#1174012"
+   },
+   {
+    "title": "Munichre Phase 1",
+    "url": "https://careers.munichre.com/en#1100367"
+   },
+   {
+    "title": "Munichre  Phase 1",
+    "url": "https://careers.munichre.com/en#1100366"
+   },
+   {
+    "title": "functionality change",
+    "url": "https://careers.munichre.com/en#1097547"
+   },
+   {
+    "title": "not a bug",
+    "url": "https://careers.munichre.com/en#1097545"
+   },
+   {
+    "title": "phase a",
+    "url": "https://careers.munichre.com/en#1097223"
+   },
+   {
+    "title": "phase b",
+    "url": "https://careers.munichre.com/en#1097221"
+   },
+   {
+    "title": "change request",
+    "url": "https://careers.munichre.com/en#1097216"
+   },
+   {
+    "title": "priority 2",
+    "url": "https://careers.munichre.com/en#1096062"
+   },
+   {
+    "title": "Priority 4",
+    "url": "https://careers.munichre.com/en#1096059"
+   },
+   {
+    "title": "priority 3",
+    "url": "https://careers.munichre.com/en#1096063"
+   },
+   {
+    "title": "MUN-184 issue list",
+    "url": "https://careers.munichre.com/en#1092212"
+   }
+  ]
+ },
+ {
+  "name": "Prudential",
+  "careersUrl": "https://jobs.prudential.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Sun Life",
+  "careersUrl": "https://www.sunlife.io/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Manulife",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "AIG",
+  "careersUrl": "https://www.aig.com/careers",
+  "ats": "workday",
+  "slug": "aig.wd1.myworkdayjobs.com|aig|aig",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Generali",
+  "careersUrl": "https://www.generali.co/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Deloitte",
+  "careersUrl": "https://www.deloitte.com/us/en/careers/careers.html",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "AI & Engineering",
+    "url": "https://www.deloitte.com/us/en/careers/careers.html#"
+   }
+  ]
+ },
+ {
+  "name": "LIC India",
+  "careersUrl": "https://careers.licindia.co/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Aviva",
+  "careersUrl": "https://www.aviva.com/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to content",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/#main"
+   },
+   {
+    "title": "Skip to footer",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/#footer"
+   },
+   {
+    "title": "Menu - skip to menu",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/#nav"
+   },
+   {
+    "title": "Search - skip to search",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/#search"
+   },
+   {
+    "title": "Careers at Aviva overview",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/"
+   },
+   {
+    "title": "Job search",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/"
+   },
+   {
+    "title": "Careers around the world",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/#careers-around-the-world"
+   },
+   {
+    "title": "Job opportunities",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/#job-opportunities"
+   },
+   {
+    "title": "Graduates, apprentices and interns",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/#graduates-apprentices-and-interns"
+   },
+   {
+    "title": "Spot scams",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/#spot-scams"
+   },
+   {
+    "title": "Build a career",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/#go-to-careers"
+   },
+   {
+    "title": "More for graduates",
+    "url": "https://careers.aviva.co.uk/students-graduates/graduates/"
+   },
+   {
+    "title": "More for apprentices Apprentice information on careers.aviva.co.uk",
+    "url": "https://careers.aviva.co.uk/early-careers/apprenticeships/"
+   },
+   {
+    "title": "Aviva Investors internship",
+    "url": "https://careers.avivainvestors.com/global-careers/en/careers-landing/graduates.html#summer_internship_programme"
+   },
+   {
+    "title": "Go to careers",
+    "url": "https://www.aviva.com/careers/"
+   },
+   {
+    "title": "this FBI article",
+    "url": "https://www.fbi.gov/contact-us/field-offices/elpaso/news/press-releases/fbi-warns-cyber-criminals-are-using-fake-job-listings-to-target-applicants-personally-identifiable-information#english-text"
+   },
+   {
+    "title": "Flexible benefits",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/flexible-benefits/"
+   },
+   {
+    "title": "Learning and development",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/learning-and-development/"
+   },
+   {
+    "title": "Act with us for a better tomorrow",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/act-with-us-for-a-better-tomorrow/"
+   },
+   {
+    "title": "Smart and flexible working",
+    "url": "https://www.aviva.com/careers/life-at-aviva-overview/smart-and-flexible-working/"
+   },
+   {
+    "title": "Speak up",
+    "url": "https://www.aviva.com/careers/life-at-aviva-overview/speaking-up/"
+   },
+   {
+    "title": "Manage cookies",
+    "url": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/#onetrust-consent-sdk"
+   }
+  ],
+  "listUrl": "https://www.aviva.com/careers/careers-at-aviva-overview/job-search/"
+ },
+ {
+  "name": "BCG",
+  "careersUrl": "https://careers.bcg.com/global/en/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Technology and Engineering",
+    "url": "https://careers.bcg.com/global/en/teams/engineering-technology"
+   },
+   {
+    "title": "(Senior) AI Factory Product Builder, United States - BCG X",
+    "url": "https://experiencedtalent.bcg.com/careerhub/explore/jobs/790315191248?post_onboarding_pid=790315191248&amp;show_apply=1&amp;profile_type=candidate&amp;customredirect=1&utm_source=Phenom",
+    "location": "Boston, Massachusetts, United States of America"
+   },
+   {
+    "title": "BCG Platinion | Senior AI Tech Architect - AI Platforms",
+    "url": "https://experiencedtalent.bcg.com/careerhub/explore/jobs/790314312010?post_onboarding_pid=790314312010&amp;show_apply=1&amp;profile_type=candidate&amp;customredirect=1&utm_source=Phenom",
+    "location": "Atlanta, Georgia, United States of America"
+   },
+   {
+    "title": "BCG Platinion | Principal AI Tech Architect - AI Platforms",
+    "url": "https://experiencedtalent.bcg.com/careerhub/explore/jobs/790312931990?post_onboarding_pid=790312931990&amp;show_apply=1&amp;profile_type=candidate&amp;customredirect=1&utm_source=Phenom",
+    "location": "Atlanta, Georgia, United States of America"
+   }
+  ]
+ },
+ {
+  "name": "PwC",
+  "careersUrl": "https://careers.pwc.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://careers.pwc.com/search/#content"
+   },
+   {
+    "title": "View Profile",
+    "url": "https://careers.pwc.com/search/#"
+   },
+   {
+    "title": "Assurance - External Audit RTM Senior Associate (Banking/Insurance) - Jordan",
+    "url": "https://careers.pwc.com/job/Amman-Assurance-External-Audit-RTM-Senior-Associate-%28BankingInsurance%29-Jordan/1434465833/"
+   },
+   {
+    "title": "Tax & Legal Services - ITS/M&A - ITS - Senior Manager (Doha)",
+    "url": "https://careers.pwc.com/job/Doha-Tax-&-Legal-Services-ITSM&A-ITS-Senior-Manager-%28Doha%29/1409113933/"
+   },
+   {
+    "title": "DevOps Associate",
+    "url": "https://careers.pwc.com/job/Amman-DevOps-Associate/1434536433/"
+   },
+   {
+    "title": "PwC Risk - Internal Audit - Associate / Senior Associate - Qatar",
+    "url": "https://careers.pwc.com/job/Doha-PwC-Risk-Internal-Audit-Associate-Senior-Associate-Qatar/1434341333/"
+   },
+   {
+    "title": "Content writer and editor - Senior Associate",
+    "url": "https://careers.pwc.com/job/Amman-Content-writer-and-editor-Senior-Associate/1434222833/"
+   },
+   {
+    "title": "Assurance - Real Estate Valuation Expert Manager - Dubai, United Arab Emirates",
+    "url": "https://careers.pwc.com/job/Dubai-Assurance-Real-Estate-Valuation-Expert-Manager-Dubai%2C-United-Arab-Emirates/1444144433/"
+   },
+   {
+    "title": "Total Rewards Manager",
+    "url": "https://careers.pwc.com/job/Cairo-Total-Rewards-Manager/1444124033/"
+   },
+   {
+    "title": "Tax and Legal Services - Transfer Pricing - Manager (Dubai)",
+    "url": "https://careers.pwc.com/job/Dubai-Tax-and-Legal-Services-Transfer-Pricing-Manager-%28Dubai%29/1285758101/"
+   },
+   {
+    "title": "Assurance - External Audit Senior Associate (FS) - Abu Dhabi/Dubai",
+    "url": "https://careers.pwc.com/job/Abu-Dhabi-Assurance-External-Audit-Senior-Associate-%28FS%29-Abu-DhabiDubai/1432796333/"
+   },
+   {
+    "title": "Senior Manager - AI Solutions Architecture",
+    "url": "https://careers.pwc.com/job/Amman-Senior-Manager-AI-Solutions-Architecture/1422380733/"
+   }
+  ],
+  "listUrl": "https://careers.pwc.com/search/"
+ },
+ {
+  "name": "KPMG",
+  "careersUrl": "https://kpmg.com/xx/en/careers.html",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "McKinsey",
+  "careersUrl": "https://jobs.mckinsey.com/en_US/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "EY",
+  "careersUrl": "https://careers.ey.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to content",
+    "url": "https://www.ey.com/en_gl/careers#"
+   },
+   {
+    "title": "What you can do here",
+    "url": "https://www.ey.com/en_gl/careers/what-you-can-do-here"
+   },
+   {
+    "title": "Technology careers at EY",
+    "url": "https://www.ey.com/en_gl/careers/technology"
+   },
+   {
+    "title": "Careers in Assurance",
+    "url": "https://www.ey.com/en_gl/careers/assurance"
+   },
+   {
+    "title": "Careers in Consulting",
+    "url": "https://www.ey.com/en_gl/careers/consulting"
+   },
+   {
+    "title": "Careers in EY-Parthenon",
+    "url": "https://www.ey.com/en_gl/careers/parthenon"
+   },
+   {
+    "title": "Careers in Tax",
+    "url": "https://www.ey.com/en_gl/careers/tax"
+   },
+   {
+    "title": "Careers in People Advisory Services",
+    "url": "https://www.ey.com/en_gl/careers/people-advisory-services"
+   },
+   {
+    "title": "Careers in Financial Services",
+    "url": "https://www.ey.com/en_gl/careers/financial-services"
+   },
+   {
+    "title": "Careers in Global Delivery Services",
+    "url": "https://www.ey.com/en_gl/careers/global-delivery-services"
+   },
+   {
+    "title": "Careers in Core Business Services",
+    "url": "https://www.ey.com/en_gl/careers/core-business-services"
+   },
+   {
+    "title": "What it's like to work here",
+    "url": "https://www.ey.com/en_gl/careers/what-its-like-to-work-here"
+   },
+   {
+    "title": "Inclusiveness and your career",
+    "url": "https://www.ey.com/en_gl/careers/inclusiveness-for-everyone"
+   },
+   {
+    "title": "Personalized career development",
+    "url": "https://www.ey.com/en_gl/careers/personalized-career-development"
+   },
+   {
+    "title": "Flexibility and mobility",
+    "url": "https://www.ey.com/en_gl/careers/flexibility-mobility"
+   },
+   {
+    "title": "Shapers of the future at EY",
+    "url": "https://www.ey.com/en_gl/careers/shapers-of-the-future"
+   },
+   {
+    "title": "How to join us",
+    "url": "https://www.ey.com/en_gl/careers/how-to-join-us"
+   },
+   {
+    "title": "How we hire",
+    "url": "https://www.ey.com/en_gl/careers/how-we-hire"
+   },
+   {
+    "title": "Interview tips",
+    "url": "https://www.ey.com/en_gl/careers/interview-tips"
+   },
+   {
+    "title": "What we look for",
+    "url": "https://www.ey.com/en_gl/careers/what-we-look-for"
+   },
+   {
+    "title": "Job search",
+    "url": "https://www.ey.com/en_gl/careers/job-search"
+   },
+   {
+    "title": "Experienced professionals",
+    "url": "https://careers.ey.com/ey/search/?createNewAlert=false&q=&locationsearch=&optionsFacetsDD_country=&optionsFacetsDD_customfield1=&optionsFacetsDD_customfield3="
+   },
+   {
+    "title": "Students and entry-level",
+    "url": "https://eyglobal.yello.co/job_boards/c1riT--B2O-KySgYWsZO1Q?locale=en"
+   },
+   {
+    "title": "Talent community",
+    "url": "https://careers.ey.com/ey/lp/TC/f7abb34d58e4b33e/?locale=en_US"
+   },
+   {
+    "title": "Experienced Job Search",
+    "url": "https://careers.ey.com/ey/search/?createNewAlert=false&q=&locationsearch=&optionsFacetsDD_country=&optionsFacetsDD_customfield1=Strategy%20and%20Transactions"
+   },
+   {
+    "title": "Experienced professionals",
+    "url": "https://careers.ey.com/ey"
+   },
+   {
+    "title": "Find jobs",
+    "url": "https://careers.ey.com/ey/search/?createNewAlert=false&q=&locationsearch&local=en_US"
+   }
+  ],
+  "listUrl": "https://www.ey.com/en_gl/careers"
+ },
+ {
+  "name": "Infosys",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Capgemini",
+  "careersUrl": "https://careers.capgemini.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Capgemini Engineering",
+    "url": "https://www.capgemini.com/careers/career-paths/careers-at-capgemini-engineering/"
+   }
+  ]
+ },
+ {
+  "name": "Bain",
+  "careersUrl": "https://careers.bain.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Wipro",
+  "careersUrl": "https://careers.wipro.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://careers.wipro.com/search?searchResultView=LIST#content"
+   },
+   {
+    "title": "العَرَبِيَّة (السعودية)",
+    "url": "https://careers.wipro.com/search?locale=ar_SA"
+   },
+   {
+    "title": "Deutsch (Deutschland)",
+    "url": "https://careers.wipro.com/search?locale=de_DE"
+   },
+   {
+    "title": "English (United States)",
+    "url": "https://careers.wipro.com/search?locale=en_US"
+   },
+   {
+    "title": "Español (España)",
+    "url": "https://careers.wipro.com/search?locale=es_ES"
+   },
+   {
+    "title": "Español (México)",
+    "url": "https://careers.wipro.com/search?locale=es_MX"
+   },
+   {
+    "title": "Français (Canada)",
+    "url": "https://careers.wipro.com/search?locale=fr_CA"
+   },
+   {
+    "title": "Français (France)",
+    "url": "https://careers.wipro.com/search?locale=fr_FR"
+   },
+   {
+    "title": "Italiano (Italia)",
+    "url": "https://careers.wipro.com/search?locale=it_IT"
+   },
+   {
+    "title": "日本語 (日本)",
+    "url": "https://careers.wipro.com/search?locale=ja_JP"
+   },
+   {
+    "title": "Português (Brasil)",
+    "url": "https://careers.wipro.com/search?locale=pt_BR"
+   },
+   {
+    "title": "Português (Portugal)",
+    "url": "https://careers.wipro.com/search?locale=pt_PT"
+   },
+   {
+    "title": "Limba Română (România)",
+    "url": "https://careers.wipro.com/search?locale=ro_RO"
+   },
+   {
+    "title": "简体中文 (中国大陆)",
+    "url": "https://careers.wipro.com/search?locale=zh_CN"
+   },
+   {
+    "title": "Early Careers",
+    "url": "https://careers.wipro.com/content/Early-Careers/?locale=en_US"
+   },
+   {
+    "title": "Experienced Professionals",
+    "url": "https://careers.wipro.com/content/Experienced-Professionals/?locale=en_US"
+   },
+   {
+    "title": "Germany and Austria",
+    "url": "https://careers.wipro.com/content/Germany-and-Austria/?locale=en_US"
+   },
+   {
+    "title": "Southern Europe",
+    "url": "https://careers.wipro.com/content/Southern-Europe/?locale=en_US"
+   },
+   {
+    "title": "UK and Ireland",
+    "url": "https://careers.wipro.com/content/United-Kingdom-and-Ireland/?locale=en_US"
+   },
+   {
+    "title": "Join Our Talent Network",
+    "url": "https://careers.wipro.com/talentcommunity/subscribe/?locale=en_US"
+   },
+   {
+    "title": "Account Payable Executive with Polish",
+    "url": "https://careers.wipro.com/job/Account-Payable-Executive-with-Polish/160272-en_US"
+   },
+   {
+    "title": "Configurator - L4",
+    "url": "https://careers.wipro.com/job/Configurator-L4/40585-en_US"
+   },
+   {
+    "title": "TECHNO FUNCTIONAL CONSULTANT L1",
+    "url": "https://careers.wipro.com/job/TECHNO-FUNCTIONAL-CONSULTANT-L1/142130-en_US"
+   },
+   {
+    "title": "BMC Helix ITSM- Senior Developer",
+    "url": "https://careers.wipro.com/job/BMC-Helix-ITSM-Senior-Developer/126302-en_US"
+   },
+   {
+    "title": "Record to Report TL with Polish",
+    "url": "https://careers.wipro.com/job/Record-to-Report-TL-with-Polish/160267-en_US"
+   },
+   {
+    "title": "Record to Report Executive with Spanish",
+    "url": "https://careers.wipro.com/job/Record-to-Report-Executive-with-Spanish/160271-en_US"
+   },
+   {
+    "title": "BMC Control M - Architect",
+    "url": "https://careers.wipro.com/job/BMC-Control-M-Architect/126308-en_US"
+   },
+   {
+    "title": "Solution Architect L2",
+    "url": "https://careers.wipro.com/job/Solution-Architect-L2/133036-en_US"
+   },
+   {
+    "title": "Retail Associate",
+    "url": "https://careers.wipro.com/job/Retail-Associate/96205-en_US"
+   },
+   {
+    "title": "Tools Solution Architect - AIOPS",
+    "url": "https://careers.wipro.com/job/Tools-Solution-Architect-AIOPS/123570-en_US"
+   },
+   {
+    "title": "Explore All Jobs",
+    "url": "https://careers.wipro.com/search"
+   },
+   {
+    "title": "Fraud Awareness",
+    "url": "https://careers.wipro.com/content/Fraud-Awareness/?locale=en_US"
+   },
+   {
+    "title": "Opens in a new tab.",
+    "url": "https://www.facebook.com/wiprocareers/"
+   },
+   {
+    "title": "Opens in a new tab.",
+    "url": "https://www.instagram.com/wiprocareers/"
+   }
+  ],
+  "listUrl": "https://careers.wipro.com/search"
+ },
+ {
+  "name": "HCLTech",
+  "careersUrl": "https://careers.hcltech.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://careers.hcltech.com/#content"
+   },
+   {
+    "title": "Deutsch (Deutschland)",
+    "url": "https://careers.hcltech.com/?locale=de_DE"
+   },
+   {
+    "title": "English (United States)",
+    "url": "https://careers.hcltech.com/?locale=en_US"
+   },
+   {
+    "title": "Español (España)",
+    "url": "https://careers.hcltech.com/?locale=es_ES"
+   },
+   {
+    "title": "Français (France)",
+    "url": "https://careers.hcltech.com/?locale=fr_FR"
+   },
+   {
+    "title": "Português (Portugal)",
+    "url": "https://careers.hcltech.com/?locale=pt_PT"
+   },
+   {
+    "title": "Limba Română (România)",
+    "url": "https://careers.hcltech.com/?locale=ro_RO"
+   },
+   {
+    "title": "Tiếng Việt (Việt Nam)",
+    "url": "https://careers.hcltech.com/?locale=vi_VN"
+   },
+   {
+    "title": "View Profile",
+    "url": "https://careers.hcltech.com/#"
+   },
+   {
+    "title": "Explore Job Opportunities",
+    "url": "https://careers.hcltech.com/go/NonTPDemand/9558355/"
+   },
+   {
+    "title": "Find Your Best Path",
+    "url": "https://careers.hcltech.com/content/Find-Your-Best-Path/?locale=en_US"
+   },
+   {
+    "title": "Costa Rica",
+    "url": "https://careers.hcltech.com/go/Costa-Rica/9554155/"
+   },
+   {
+    "title": "United States",
+    "url": "https://careers.hcltech.com/go/United-States/9554455/"
+   },
+   {
+    "title": "New Zealand",
+    "url": "https://careers.hcltech.com/go/New-Zealand/9554655/"
+   },
+   {
+    "title": "Sri Lanka",
+    "url": "https://careers.hcltech.com/go/Sri-Lanka/9555555/"
+   },
+   {
+    "title": "United Kingdom",
+    "url": "https://careers.hcltech.com/go/United-Kingdom/9554755/"
+   },
+   {
+    "title": "Talent Community",
+    "url": "https://careers.hcltech.com/talentcommunity/subscribe/?locale=en_US"
+   },
+   {
+    "title": "Why Join Us",
+    "url": "https://careers.hcltech.com/#why-join-us"
+   },
+   {
+    "title": "Hiring Process",
+    "url": "https://careers.hcltech.com/#hiring-process"
+   },
+   {
+    "title": "Employer Recognition",
+    "url": "https://careers.hcltech.com/#employer-recognition"
+   },
+   {
+    "title": "See current LCA postings",
+    "url": "https://www.hcltech.com/careers/lca-postings"
+   }
+  ],
+  "listUrl": "https://careers.hcltech.com/#why-join-us"
+ },
+ {
+  "name": "Pfizer",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "LTIMindtree",
+  "careersUrl": "https://www.ltm.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Tech Mahindra",
+  "careersUrl": "https://careers.techmahindra.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Tech Mahindra",
+    "url": "https://careers.techmahindra.com/"
+   },
+   {
+    "title": "Why TechM",
+    "url": "https://www.techmahindra.com/careers/why-techm/"
+   },
+   {
+    "title": "The TechM Way",
+    "url": "https://www.techmahindra.com/careers/techm-way/"
+   },
+   {
+    "title": "Diversity & Inclusion",
+    "url": "https://www.techmahindra.com/careers/diversity-inclusion/"
+   },
+   {
+    "title": "Get Started",
+    "url": "https://careers.techmahindra.com/#"
+   },
+   {
+    "title": "IT Opportunities",
+    "url": "https://careers.techmahindra.com/CurrentOpportunity.aspx"
+   },
+   {
+    "title": "BPS Opportunities",
+    "url": "https://careers.techmahindra.com/BPSOpportunity.aspx"
+   },
+   {
+    "title": "IT Opportunities",
+    "url": "https://careers.techmahindra.com/Currentopportunity.aspx"
+   },
+   {
+    "title": "BPS Opportunities",
+    "url": "https://careers.techmahindra.com/BpsOpportunity.aspx"
+   },
+   {
+    "title": "JOIN US",
+    "url": "https://careers.techmahindra.com/#PostResume"
+   }
+  ],
+  "listUrl": "https://careers.techmahindra.com/#PostResume"
+ },
+ {
+  "name": "Sanofi",
+  "careersUrl": "https://jobs.sanofi.com/en",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Engineering & Maintenance",
+    "url": "https://jobs.sanofi.com/engineering-and-maintenance"
+   },
+   {
+    "title": "Miracle Makers",
+    "url": "https://jobs.sanofi.com/en#1228779"
+   },
+   {
+    "title": "Personalisation Module",
+    "url": "https://jobs.sanofi.com/en#1107063"
+   },
+   {
+    "title": "Website Amends May 25",
+    "url": "https://jobs.sanofi.com/en#1081836"
+   },
+   {
+    "title": "Post UAT Amend",
+    "url": "https://jobs.sanofi.com/en#1080595"
+   },
+   {
+    "title": "Amends - New Request",
+    "url": "https://jobs.sanofi.com/en#1080587"
+   },
+   {
+    "title": "AJD NEW - Smoke test",
+    "url": "https://jobs.sanofi.com/en#1061530"
+   },
+   {
+    "title": "Accessibility Impact",
+    "url": "https://jobs.sanofi.com/en#1054813"
+   },
+   {
+    "title": "Search Engine Impact",
+    "url": "https://jobs.sanofi.com/en#1054446"
+   },
+   {
+    "title": "No Client Impact – FE Code Validation",
+    "url": "https://jobs.sanofi.com/en#1054355"
+   },
+   {
+    "title": "Site Performance Impact",
+    "url": "https://jobs.sanofi.com/en#1052955"
+   }
+  ]
+ },
+ {
+  "name": "Novartis",
+  "careersUrl": "https://www.novartis.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://www.novartis.com/careers/career-search#main"
+   },
+   {
+    "title": "Asia Pacific",
+    "url": "https://www.novartis.com/careers/career-search#asia-pacific"
+   },
+   {
+    "title": "Middle East & Africa",
+    "url": "https://www.novartis.com/careers/career-search#middle-east---africa"
+   },
+   {
+    "title": "Career search",
+    "url": "https://www.novartis.com/careers/career-search"
+   },
+   {
+    "title": "Our business functions",
+    "url": "https://www.novartis.com/careers/our-business-functions"
+   },
+   {
+    "title": "Careers in research and development",
+    "url": "https://www.novartis.com/careers/our-business-functions/careers-research-and-development"
+   },
+   {
+    "title": "Careers in operations",
+    "url": "https://www.novartis.com/careers/our-business-functions/careers-operations"
+   },
+   {
+    "title": "Careers in commercial and sales",
+    "url": "https://www.novartis.com/careers/our-business-functions/careers-commercial-and-sales"
+   },
+   {
+    "title": "Careers in global functions",
+    "url": "https://www.novartis.com/careers/our-business-functions/careers-global-functions"
+   },
+   {
+    "title": "Why Novartis",
+    "url": "https://www.novartis.com/careers/why-novartis"
+   },
+   {
+    "title": "Career hub",
+    "url": "https://www.novartis.com/careers/career-hub"
+   },
+   {
+    "title": "Early careers",
+    "url": "https://www.novartis.com/careers/early-careers"
+   },
+   {
+    "title": "US Biomedical Research internship programs",
+    "url": "https://www.novartis.com/careers/early-careers/us-biomedical-research-internship-programs"
+   },
+   {
+    "title": "Community exploration and learning lab (CELL)",
+    "url": "https://www.novartis.com/careers/early-careers/community-exploration-and-learning-lab-cell"
+   },
+   {
+    "title": "This Week",
+    "url": "https://www.novartis.com/careers/career-search?field_job_posted_date=2"
+   },
+   {
+    "title": "Last Two Weeks",
+    "url": "https://www.novartis.com/careers/career-search?field_job_posted_date=3"
+   },
+   {
+    "title": "This Month",
+    "url": "https://www.novartis.com/careers/career-search?field_job_posted_date=4"
+   },
+   {
+    "title": "Job Title Sort ascending",
+    "url": "https://www.novartis.com/careers/career-search?sort=asc&order=Job%20Title"
+   },
+   {
+    "title": "Date Posted",
+    "url": "https://www.novartis.com/careers/career-search?sort=asc&order=Date%20Posted"
+   },
+   {
+    "title": "Equipment Operator",
+    "url": "https://www.novartis.com/careers/career-search/job/details/req-10085115-equipment-operator-de-de"
+   },
+   {
+    "title": "Shift Lead II, Automation - Assembly & Packaging (m/f/d)",
+    "url": "https://www.novartis.com/careers/career-search/job/details/req-10086683-shift-lead-ii-automation-assembly-packaging-mfd-de-de"
+   },
+   {
+    "title": "Equipment Operator (m/f/d)",
+    "url": "https://www.novartis.com/careers/career-search/job/details/req-10078774-equipment-operator-mfd-de-de"
+   },
+   {
+    "title": "Senior Process Expert (m/f/d)",
+    "url": "https://www.novartis.com/careers/career-search/job/details/req-10087634-senior-process-expert-mfd-de-de"
+   },
+   {
+    "title": "QC Analyst I",
+    "url": "https://www.novartis.com/careers/career-search/job/details/req-10086896-qc-analyst-i-de-de"
+   },
+   {
+    "title": "Equipment Operator I",
+    "url": "https://www.novartis.com/careers/career-search/job/details/req-10087808-equipment-operator-i-de-de"
+   },
+   {
+    "title": "Equipment Operator I",
+    "url": "https://www.novartis.com/careers/career-search/job/details/req-10087664-equipment-operator-i-de-de"
+   },
+   {
+    "title": "Equipment Operator I",
+    "url": "https://www.novartis.com/careers/career-search/job/details/req-10087817-equipment-operator-i-de-de"
+   },
+   {
+    "title": "Quality Control Specialist II (m/f/d)",
+    "url": "https://www.novartis.com/careers/career-search/job/details/req-10088285-quality-control-specialist-ii-mfd-de-de"
+   },
+   {
+    "title": "Technischer Produktionsmitarbeiter (m/w/d)",
+    "url": "https://www.novartis.com/careers/career-search/job/details/req-10087408-technischer-produktionsmitarbeiter-mwd-de-de"
+   },
+   {
+    "title": "› Next page",
+    "url": "https://www.novartis.com/careers/career-search?page=1"
+   },
+   {
+    "title": "Job seekers",
+    "url": "https://www.novartis.com/careers"
+   }
+  ],
+  "listUrl": "https://www.novartis.com/careers/career-search"
+ },
+ {
+  "name": "Johnson & Johnson",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "AstraZeneca",
+  "careersUrl": "https://careers.astrazeneca.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://careers.astrazeneca.com/#content"
+   },
+   {
+    "title": "About AstraZeneca",
+    "url": "https://careers.astrazeneca.com/about-us"
+   },
+   {
+    "title": "Our Locations",
+    "url": "https://careers.astrazeneca.com/locations"
+   },
+   {
+    "title": "BioPharmaceuticals R&D",
+    "url": "https://careers.astrazeneca.com/biopharmaceuticals-r-and-d"
+   },
+   {
+    "title": "Enterprise AI",
+    "url": "https://careers.astrazeneca.com/enterpriseai"
+   },
+   {
+    "title": "Enabling Functions",
+    "url": "https://careers.astrazeneca.com/enabling"
+   },
+   {
+    "title": "Fusion Pharma",
+    "url": "https://fusionpharma.com/careers/"
+   },
+   {
+    "title": "Information Technology",
+    "url": "https://careers.astrazeneca.com/business-area-it"
+   },
+   {
+    "title": "Oncology R&D",
+    "url": "https://careers.astrazeneca.com/oncology-r-and-d"
+   },
+   {
+    "title": "Early Talent",
+    "url": "https://careers.astrazeneca.com/early-talent"
+   },
+   {
+    "title": "Our People",
+    "url": "https://careers.astrazeneca.com/our-people"
+   },
+   {
+    "title": "Application Hints & Tips",
+    "url": "https://careers.astrazeneca.com/application-hints-tips"
+   },
+   {
+    "title": "Candidate Guidance on AI Use",
+    "url": "https://careers.astrazeneca.com/aiguidance"
+   },
+   {
+    "title": "Join Talent Network",
+    "url": "https://astrazeneca.eightfold.ai/careers/join?domain=astrazeneca.com&hl=en"
+   },
+   {
+    "title": "SEARCH ROLES",
+    "url": "https://careers.astrazeneca.com/#search-form-fields"
+   },
+   {
+    "title": "GET MATCHED TO A JOB UPLOAD YOUR RESUME",
+    "url": "https://astrazeneca.eightfold.ai/careers"
+   },
+   {
+    "title": "Site map",
+    "url": "https://careers.astrazeneca.com/sitemap"
+   }
+  ],
+  "listUrl": "https://careers.astrazeneca.com/#search-form-fields"
+ },
+ {
+  "name": "Sun Pharma",
+  "careersUrl": "https://careers.sunpharma.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://careers.sunpharma.com/search/#content"
+   },
+   {
+    "title": "About Us",
+    "url": "https://careers.sunpharma.com/search/#"
+   },
+   {
+    "title": "English (United Kingdom)",
+    "url": "https://careers.sunpharma.com/search/?locale=en_GB"
+   },
+   {
+    "title": "English (United States)",
+    "url": "https://careers.sunpharma.com/search/?locale=en_US"
+   },
+   {
+    "title": "Français (Canada)",
+    "url": "https://careers.sunpharma.com/search/?locale=fr_CA"
+   },
+   {
+    "title": "Français (France)",
+    "url": "https://careers.sunpharma.com/search/?locale=fr_FR"
+   },
+   {
+    "title": "עִבְרִית (יִשְׂרָאֵל)",
+    "url": "https://careers.sunpharma.com/search/?locale=he_IL"
+   },
+   {
+    "title": "Work Location",
+    "url": "https://careers.sunpharma.com/search/?q=&sortColumn=sort_facility&sortDirection=desc#hdrFacilityButton"
+   },
+   {
+    "title": "Manager - EM Legal",
+    "url": "https://careers.sunpharma.com/job/Mumbai-Manager-EM-Legal/56881044/"
+   },
+   {
+    "title": "National Sales Manager - Corporate Hospital",
+    "url": "https://careers.sunpharma.com/job/Mumbai-National-Sales-Manager-Corporate-Hospital/59552344/"
+   },
+   {
+    "title": "Product Manager - Branded Products (Emerging Markets)",
+    "url": "https://careers.sunpharma.com/job/Mumbai-Product-Manager-Branded-Products-%28Emerging-Markets%29/49066344/"
+   },
+   {
+    "title": "Sr.Manager - Reliability Engineering",
+    "url": "https://careers.sunpharma.com/job/Halol-Sr_Manager-Reliability-Engineering/51235744/"
+   },
+   {
+    "title": "Manager / Sr.Manager Engineering",
+    "url": "https://careers.sunpharma.com/job/Paonta-Sahib-Manager-Sr_Manager-Engineering/59543644/"
+   },
+   {
+    "title": "Senior Officer",
+    "url": "https://careers.sunpharma.com/job/Senior-Officer/60395144/"
+   },
+   {
+    "title": "Senior Officer",
+    "url": "https://careers.sunpharma.com/job/Senior-Officer/60393044/"
+   },
+   {
+    "title": "Jr Officer",
+    "url": "https://careers.sunpharma.com/job/Jr-Officer/60394944/"
+   },
+   {
+    "title": "Senior Executive",
+    "url": "https://careers.sunpharma.com/job/Senior-Executive/60397144/"
+   },
+   {
+    "title": "Senior Executive",
+    "url": "https://careers.sunpharma.com/job/Senior-Executive/60397544/"
+   },
+   {
+    "title": "Senior Officer",
+    "url": "https://careers.sunpharma.com/job/Senior-Officer/60396044/"
+   },
+   {
+    "title": "Senior Executive",
+    "url": "https://careers.sunpharma.com/job/Senior-Executive/60396944/"
+   },
+   {
+    "title": "Group Product Manager",
+    "url": "https://careers.sunpharma.com/job/Mumbai-Group-Product-Manager/60417844/"
+   },
+   {
+    "title": "Manager - Direct Procurement",
+    "url": "https://careers.sunpharma.com/job/Mumbai-Manager-Direct-Procurement/60415744/"
+   },
+   {
+    "title": "Senior Officer",
+    "url": "https://careers.sunpharma.com/job/Senior-Officer/60392744/"
+   },
+   {
+    "title": "Senior Officer",
+    "url": "https://careers.sunpharma.com/job/Senior-Officer/60395644/"
+   },
+   {
+    "title": "Senior Executive",
+    "url": "https://careers.sunpharma.com/job/Senior-Executive/60396544/"
+   },
+   {
+    "title": "Account Manager - Cutaneous Oncology - Richmond, VA",
+    "url": "https://careers.sunpharma.com/job/Account-Manager-Cutaneous-Oncology-Richmond%2C-VA/60422444/"
+   },
+   {
+    "title": "Manager, Global Quality Compliance",
+    "url": "https://careers.sunpharma.com/job/Princeton-Manager%2C-Global-Quality-Compliance-NJ-08540/53917144/"
+   },
+   {
+    "title": "Careers Home",
+    "url": "https://careers.sunpharma.com/"
+   },
+   {
+    "title": "Top Jobs",
+    "url": "https://careers.sunpharma.com/topjobs/"
+   }
+  ],
+  "listUrl": "https://careers.sunpharma.com/search/"
+ },
+ {
+  "name": "Bayer",
+  "careersUrl": "https://jobs.bayer.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://jobs.bayer.com/search#content"
+   },
+   {
+    "title": "Deutsch (Deutschland)",
+    "url": "https://jobs.bayer.com/search?locale=de_DE"
+   },
+   {
+    "title": "English (United States)",
+    "url": "https://jobs.bayer.com/search?locale=en_US"
+   },
+   {
+    "title": "Español (España)",
+    "url": "https://jobs.bayer.com/search?locale=es_ES"
+   },
+   {
+    "title": "Français (France)",
+    "url": "https://jobs.bayer.com/search?locale=fr_FR"
+   },
+   {
+    "title": "Italiano (Italia)",
+    "url": "https://jobs.bayer.com/search?locale=it_IT"
+   },
+   {
+    "title": "日本語 (日本)",
+    "url": "https://jobs.bayer.com/search?locale=ja_JP"
+   },
+   {
+    "title": "Nederlands (Nederland)",
+    "url": "https://jobs.bayer.com/search?locale=nl_NL"
+   },
+   {
+    "title": "Português (Brasil)",
+    "url": "https://jobs.bayer.com/search?locale=pt_BR"
+   },
+   {
+    "title": "简体中文 (中国大陆)",
+    "url": "https://jobs.bayer.com/search?locale=zh_CN"
+   },
+   {
+    "title": "View Profile",
+    "url": "https://jobs.bayer.com/search#"
+   },
+   {
+    "title": "Sr. Machine Learning Researcher, Domain-Aware Modeling & Scientific Machine Learning",
+    "url": "https://jobs.bayer.com/job/Residence-Based-Sr_-Machine-Learning-Researcher%2C-Domain-Aware-Modeling-&-Scientific-Machine-Learning-Resi/1404071833/"
+   },
+   {
+    "title": "Lead Product Manager - AI & Automation, Finance",
+    "url": "https://jobs.bayer.com/job/Warszawa-Lead-Product-Manager-AI-&-Automation%2C-Finance-Mazo/1403848033/"
+   },
+   {
+    "title": "Operational Excellence Lead",
+    "url": "https://jobs.bayer.com/job/Myerstown-Operational-Excellence-Lead-Penn/1371809733/"
+   },
+   {
+    "title": "Machine Learning Researcher, Genomic AI",
+    "url": "https://jobs.bayer.com/job/Residence-Based-Machine-Learning-Researcher%2C-Genomic-AI-Resi/1413457033/"
+   },
+   {
+    "title": "Veeva Vault Quality Support Engineer",
+    "url": "https://jobs.bayer.com/job/Bangalore-Veeva-Vault-Quality-Support-Engineer-Karn/1422849633/"
+   },
+   {
+    "title": "HR Stagiair (Administration Company Cars)",
+    "url": "https://jobs.bayer.com/job/Brussel-HR-Stagiair-%28Administration-Company-Cars%29-Belg/1434497633/"
+   },
+   {
+    "title": "IBSL Supply Chain Distribution Lead",
+    "url": "https://jobs.bayer.com/job/Thane-IBSL-Supply-Chain-Distribution-Lead-Maha/1408644633/"
+   },
+   {
+    "title": "Therapy Business Manager - XTF",
+    "url": "https://jobs.bayer.com/job/Mumbai-Therapy-Business-Manager-XTF-Maha/1444625933/"
+   },
+   {
+    "title": "Retailer Relationship Management",
+    "url": "https://jobs.bayer.com/job/Zambia-Retailer-Relationship-Management-Zamb/1444766833/"
+   },
+   {
+    "title": "Crop System and Knowledge Transfer Agronomist",
+    "url": "https://jobs.bayer.com/job/Zambia-Crop-System-and-Knowledge-Transfer-Agronomist-Zamb/1444759633/"
+   },
+   {
+    "title": "Careers Home",
+    "url": "https://career.bayer.com/en/career/index.html"
+   },
+   {
+    "title": "Opens in a new tab.",
+    "url": "https://www.facebook.com/BayerCareer"
+   },
+   {
+    "title": "Opens in a new tab.",
+    "url": "https://twitter.com/BayerCareer"
+   }
+  ],
+  "listUrl": "https://jobs.bayer.com/search"
+ },
+ {
+  "name": "Dr Reddys",
+  "careersUrl": "https://careers.drreddys.com/",
+  "ats": "smartrecruiters",
+  "slug": "my-applications",
+  "dom": [
+   {
+    "title": "JUMP TO CONTENT",
+    "url": "https://careers.drreddys.com/jobs#main-site-main-content"
+   },
+   {
+    "title": "Global Job Search",
+    "url": "https://careers.drreddys.com/jobs"
+   },
+   {
+    "title": "Talent Communities",
+    "url": "https://careers.drreddys.com/Jobs#Community"
+   },
+   {
+    "title": "Find out more",
+    "url": "https://careers.drreddys.com/"
+   },
+   {
+    "title": "Why Dr. Reddy's?",
+    "url": "https://careers.drreddys.com/why-dr-reddys"
+   },
+   {
+    "title": "Our ESG Goals",
+    "url": "https://careers.drreddys.com/why-dr-reddys#ESG"
+   },
+   {
+    "title": "Programmes & Initiatives",
+    "url": "https://careers.drreddys.com/why-dr-reddys#ProgrammesInitiatives"
+   },
+   {
+    "title": "Our Awards",
+    "url": "https://careers.drreddys.com/why-dr-reddys#Awards"
+   },
+   {
+    "title": "Global Early Careers",
+    "url": "https://careers.drreddys.com/early-careers"
+   },
+   {
+    "title": "North America Campus Programmes",
+    "url": "https://careers.drreddys.com/north-america-early-careers"
+   },
+   {
+    "title": "Global Offices",
+    "url": "https://careers.drreddys.com/offices"
+   },
+   {
+    "title": "Director / Lead Product & Pricing Management - Specialty Injectables",
+    "url": "https://careers.drreddys.com/job/director-lead-product-and-pricing-management-specialty-injectables-in-princeton-jid-5443"
+   },
+   {
+    "title": "Manager / Lead Associate Product & Pricing Management - Specialty Injectables",
+    "url": "https://careers.drreddys.com/job/manager-lead-associate-product-and-pricing-management-specialty-injectables-in-princeton-jid-5420"
+   },
+   {
+    "title": "Team Member - Engineering (Calibration)",
+    "url": "https://careers.drreddys.com/job/team-member-engineering-calibration-in-hyderabad-jid-5478"
+   },
+   {
+    "title": "Team Member – Process Engineering (Instrumentation)",
+    "url": "https://careers.drreddys.com/job/team-member-process-engineering-instrumentation-in-pydibimavaram-jid-5477"
+   },
+   {
+    "title": "Team Member - Engineering (Mechanical)",
+    "url": "https://careers.drreddys.com/job/team-member-engineering-mechanical-in-hyderabad-jid-5476"
+   },
+   {
+    "title": "Analista de Validação de Método PL",
+    "url": "https://careers.drreddys.com/job/analista-de-validacao-de-metodo-pl-in-sao-paulo-jid-5475"
+   },
+   {
+    "title": "Finance Associate",
+    "url": "https://careers.drreddys.com/job/finance-associate-in-hyderabad-jid-5474"
+   },
+   {
+    "title": "Team Member - Engineering Automation",
+    "url": "https://careers.drreddys.com/job/team-member-engineering-automation-in-miryalaguda-jid-5402"
+   },
+   {
+    "title": "Team Member Engineering (Water System)",
+    "url": "https://careers.drreddys.com/job/team-member-engineering-water-system-in-pydibimavaram-jid-5268"
+   },
+   {
+    "title": "Medical Representative",
+    "url": "https://careers.drreddys.com/job/medical-representative-in-cape-town-jid-5473"
+   },
+   {
+    "title": "Product Manager - Enterprise Processes",
+    "url": "https://careers.drreddys.com/job/product-manager-enterprise-processes-in-hyderabad-jid-5472"
+   },
+   {
+    "title": "AI Engineer",
+    "url": "https://careers.drreddys.com/job/ai-engineer-in-hyderabad-jid-5471"
+   },
+   {
+    "title": "Who we are",
+    "url": "https://careers.drreddys.com/#WhoWeAre"
+   },
+   {
+    "title": "Sign up for Job Alerts",
+    "url": "https://careers.drreddys.com/job-alerts"
+   },
+   {
+    "title": "Our Key Benefits",
+    "url": "https://careers.drreddys.com/why-dr-reddys#Benefits"
+   },
+   {
+    "title": "Alumni connect",
+    "url": "https://careers.drreddys.com/jobs#Alumni"
+   },
+   {
+    "title": "SmartRecruiters Attrax",
+    "url": "https://www.smartrecruiters.com/recruiting-software/career-sites/"
+   },
+   {
+    "title": "Emerging Markets",
+    "url": "https://careers.drreddys.com/jobs?options=196&page=1"
+   },
+   {
+    "title": "Europe Generics",
+    "url": "https://careers.drreddys.com/jobs?options=195&page=1"
+   },
+   {
+    "title": "North America Generics",
+    "url": "https://careers.drreddys.com/jobs?options=200&page=1"
+   },
+   {
+    "title": "PSAI Global",
+    "url": "https://careers.drreddys.com/jobs?options=202&page=1"
+   },
+   {
+    "title": "Sales & Marketing India",
+    "url": "https://careers.drreddys.com/jobs?options=197&page=1"
+   }
+  ],
+  "via": "careers-page",
+  "listUrl": "https://careers.drreddys.com/jobs"
+ },
+ {
+  "name": "Walmart Stores",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Cipla",
+  "careersUrl": "https://careers.cipla.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://careers.cipla.com/search/#content"
+   },
+   {
+    "title": "Qualified Person for Pharmacovigilance Officer",
+    "url": "https://careers.cipla.com/job/Nairobi-Qualified-Person-for-Pharmacovigilance-Officer-Nair/1368412066/"
+   },
+   {
+    "title": "Junior Team Member - Microbiology",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Team-Member-Microbiology-Sikk/1365544866/"
+   },
+   {
+    "title": "Engineer - Electrical",
+    "url": "https://careers.cipla.com/job/Rangpo-Engineer-Electrical-Sikk/1368332466/"
+   },
+   {
+    "title": "Demand Planner",
+    "url": "https://careers.cipla.com/job/Western-Cape-Demand-Planner-West/1368351666/"
+   },
+   {
+    "title": "Medical Representative",
+    "url": "https://careers.cipla.com/job/Tanger-Medical-Representative-Moro/1368345466/"
+   },
+   {
+    "title": "Senior Factory Finance Accountant",
+    "url": "https://careers.cipla.com/job/Bangalore-Senior-Factory-Finance-Accountant-Karn/1365522966/"
+   },
+   {
+    "title": "Junior Operator - Packing",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Operator-Packing-Sikk/1368295666/"
+   },
+   {
+    "title": "Junior Officer - Packing",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Officer-Packing-Sikk/1368295566/"
+   },
+   {
+    "title": "Junior Operator - Packing",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Operator-Packing-Sikk/1368295866/"
+   },
+   {
+    "title": "Junior Operator - Packing",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Operator-Packing-Sikk/1368295766/"
+   },
+   {
+    "title": "Junior Officer - Production",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Officer-Production-Sikk/1368293966/"
+   },
+   {
+    "title": "Operator - Stores",
+    "url": "https://careers.cipla.com/job/Rangpo-Operator-Stores-Sikk/1368213066/"
+   },
+   {
+    "title": "QA Associate - Reviewer",
+    "url": "https://careers.cipla.com/job/Hauppauge-QA-Associate-Reviewer-New/1368227966/"
+   },
+   {
+    "title": "Lead Procurement - One Africa",
+    "url": "https://careers.cipla.com/job/Gauteng-Lead-Procurement-One-Africa-Gaut/1368224466/"
+   },
+   {
+    "title": "QA Associate - Customer Complaints",
+    "url": "https://careers.cipla.com/job/Hauppauge-QA-Associate-Customer-Complaints-New/1368228066/"
+   },
+   {
+    "title": "Packaging Production Supervisor",
+    "url": "https://careers.cipla.com/job/Fall-River-Packaging-Production-Supervisor-Mass/1330966066/"
+   },
+   {
+    "title": "Pilot Plant QC Chemist II",
+    "url": "https://careers.cipla.com/job/Fall-River-Pilot-Plant-QC-Chemist-II-Mass/1366712566/"
+   },
+   {
+    "title": "4IR COE Manager",
+    "url": "https://careers.cipla.com/job/Lower-Parel-4IR-COE-Manager-Maha/1368136466/"
+   },
+   {
+    "title": "Junior Team Member - Microbiology",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Team-Member-Microbiology-Sikk/1368146666/"
+   },
+   {
+    "title": "Junior Operator - Packing",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Operator-Packing-Sikk/1368151866/"
+   },
+   {
+    "title": "Junior Operator - Production",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Operator-Production-Sikk/1368151666/"
+   },
+   {
+    "title": "Junior Operator - Production",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Operator-Production-Sikk/1368152266/"
+   },
+   {
+    "title": "Junior Operator Production",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Operator-Production-Sikk/1368151766/"
+   },
+   {
+    "title": "Junior Operator Production",
+    "url": "https://careers.cipla.com/job/Rangpo-Junior-Operator-Production-Sikk/1368151966/"
+   }
+  ],
+  "listUrl": "https://careers.cipla.com/search/"
+ },
+ {
+  "name": "Amazon",
+  "careersUrl": "https://amazon.jobs/en/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Costco",
+  "careersUrl": "https://careers.costco.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Accenture",
+  "careersUrl": "https://www.accenture.com/us-en/careers",
+  "ats": "workday",
+  "slug": "accenture.wd103.myworkdayjobs.com|accenture|AccentureCareers",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Roche",
+  "careersUrl": "https://careers.roche.com/global/en",
+  "ats": "workday",
+  "slug": "roche.wd3.myworkdayjobs.com|roche|roche-ext",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "IKEA",
+  "careersUrl": "https://www.ikea.com/in/en/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Member offers",
+    "url": "https://www.ikea.com/in/en/offers/family-offers/"
+   }
+  ],
+  "listUrl": "https://www.ikea.com/in/en/this-is-ikea/work-with-us/"
+ },
+ {
+  "name": "Aldi",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Lidl",
+  "careersUrl": "https://careers.lidl.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Reliance Retail",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Tesco",
+  "careersUrl": "https://careers.tesco.com/en_GB/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to content",
+    "url": "https://careers.tesco.com/en_GB/careers/SearchJobs#main"
+   },
+   {
+    "title": "Search jobs",
+    "url": "https://careers.tesco.com/en_GB/careers/SearchJobs"
+   },
+   {
+    "title": "CZ (Czech Republic)",
+    "url": "https://careers.tesco.com/cs_CZ/careers/SearchJobs"
+   },
+   {
+    "title": "HU (Hungary)",
+    "url": "https://careers.tesco.com/hu_HU/careers/SearchJobs"
+   },
+   {
+    "title": "SK (Slovakia)",
+    "url": "https://careers.tesco.com/sk_SK/careers/SearchJobs"
+   },
+   {
+    "title": "My profile",
+    "url": "https://careers.tesco.com/en_GB/careers/Login"
+   },
+   {
+    "title": "Use my current location",
+    "url": "https://careers.tesco.com/en_GB/careers/SearchJobs#"
+   },
+   {
+    "title": "Next >>",
+    "url": "https://careers.tesco.com/en_GB/careers/SearchJobs/?jobRecordsPerPage=10&jobOffset=10"
+   },
+   {
+    "title": "Shift Leader",
+    "url": "https://careers.tesco.com/en_GB/careers/JobDetail/Shift-Leader/213228"
+   },
+   {
+    "title": "Tesco Colleague - Coleraine Superstore",
+    "url": "https://careers.tesco.com/en_GB/careers/JobDetail/Tesco-Colleague-Coleraine-Superstore/213239"
+   },
+   {
+    "title": "Tesco Colleague - Coleraine Superstore",
+    "url": "https://careers.tesco.com/en_GB/careers/JobDetail/Tesco-Colleague-Coleraine-Superstore/213238"
+   },
+   {
+    "title": "Tesco Shift Leader - Days - Mansfield Dukeries Esso Express",
+    "url": "https://careers.tesco.com/en_GB/careers/JobDetail/Tesco-Shift-Leader-Days-Mansfield-Dukeries-Esso-Express/213234"
+   },
+   {
+    "title": "Cafe Barista",
+    "url": "https://careers.tesco.com/en_GB/careers/JobDetail/Cafe-Barista/213233"
+   },
+   {
+    "title": "Tesco Colleague",
+    "url": "https://careers.tesco.com/en_GB/careers/JobDetail/Tesco-Colleague/213232"
+   },
+   {
+    "title": "Cafe Team Leader",
+    "url": "https://careers.tesco.com/en_GB/careers/JobDetail/Cafe-Team-Leader/213231"
+   },
+   {
+    "title": "Customer Assistant -20-25 hours - Bloomfields",
+    "url": "https://careers.tesco.com/en_GB/careers/JobDetail/Customer-Assistant-20-25-hours-Bloomfields/213227"
+   },
+   {
+    "title": "Customer Assistant - 25-30 hours - Bloomfields",
+    "url": "https://careers.tesco.com/en_GB/careers/JobDetail/Customer-Assistant-25-30-hours-Bloomfields/213226"
+   },
+   {
+    "title": "Tesco Colleague - Hook Superstore",
+    "url": "https://careers.tesco.com/en_GB/careers/JobDetail/Tesco-Colleague-Hook-Superstore/213225"
+   },
+   {
+    "title": "Let's connect",
+    "url": "https://careers.tesco.com/en_GB/careers/TalentCommunity"
+   },
+   {
+    "title": "Create a job alert",
+    "url": "https://careers.tesco.com/en_GB/careers/RegisterJobAlerts"
+   },
+   {
+    "title": "Accessibility information",
+    "url": "https://www.tesco.com/careers/accessibility"
+   },
+   {
+    "title": "Job search",
+    "url": "https://careers.tesco.com/careers/SearchJobs"
+   }
+  ],
+  "listUrl": "https://careers.tesco.com/en_GB/careers/SearchJobs"
+ },
+ {
+  "name": "Carrefour",
+  "careersUrl": "https://www.carrefour.com/en/hr-work-carrefour",
+  "ats": null,
+  "slug": null,
+  "dom": [],
+  "listUrl": "https://www.carrefour.com/en/hr-work-carrefour#Join-us"
+ },
+ {
+  "name": "Tata Consumer",
+  "careersUrl": "https://careers.tataconsumer.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Procter & Gamble",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Target",
+  "careersUrl": "https://corporate.target.com/careers",
+  "ats": "workday",
+  "slug": "target.wd5.myworkdayjobs.com|target|targetcareers",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "LOreal",
+  "careersUrl": "https://careers.loreal.com/en",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "I'm an engineer at L'Oréal Groupe",
+    "url": "https://careers.loreal.com/en/over-coffee-engineer-at-loreal"
+   }
+  ]
+ },
+ {
+  "name": "Nestle",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Danone",
+  "careersUrl": "https://careers.danone.com/en-global/home.html",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Hindustan Unilever",
+  "careersUrl": "https://www.hindustanunilever.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Unilever",
+  "careersUrl": "https://careers.unilever.com/en",
+  "ats": "workday",
+  "slug": "unilever.wd3.myworkdayjobs.com|unilever|Unilever_Experienced_Professionals",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "TotalEnergies",
+  "careersUrl": "https://careers.totalenergies.com/en",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Shell",
+  "careersUrl": "https://shell.wd3.myworkdayjobs.com/shellcareers",
+  "ats": "workday",
+  "slug": "shell.wd3.myworkdayjobs.com|shell|shellcareers",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "BP",
+  "careersUrl": "https://careers.bp.com/",
+  "ats": "workday",
+  "slug": "bpinternational.wd3.myworkdayjobs.com|bpinternational|bpCareers",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "ITC",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Volkswagen",
+  "careersUrl": "https://www.volkswagen.de/de.html",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "IT Offers Test CA",
+    "url": "https://www.volkswagen.de/fa-offers.umd.js"
+   }
+  ]
+ },
+ {
+  "name": "BMW",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Reliance Industries",
+  "careersUrl": "https://careers.relianceindustries.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Tata Motors",
+  "careersUrl": "https://careers.tatamotors.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Engineering and R&D Our engineers love bringing technology to life",
+    "url": "https://careers.tatamotors.com/go/Engineering-and-R&D/3505101/"
+   }
+  ]
+ },
+ {
+  "name": "Siemens Energy",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Ford",
+  "careersUrl": "https://www.careers.ford.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Vehicle Hardware Engineering",
+    "url": "https://www.careers.ford.com/VHE"
+   },
+   {
+    "title": "Manufacturing Process Engineer",
+    "url": "https://www.careers.ford.com/job/dearborn/manufacturing-process-engineer/48560/101627854032"
+   },
+   {
+    "title": "Senior Full Stack Developer",
+    "url": "https://www.careers.ford.com/job/allen-park/senior-full-stack-developer/48560/101627852816"
+   }
+  ]
+ },
+ {
+  "name": "Mahindra",
+  "careersUrl": "https://www.mahindra.com/career",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Lufthansa",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Mercedes-Benz",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Airbus",
+  "careersUrl": "https://www.airbus.com/en/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Deutsche Telekom",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Tesla",
+  "careersUrl": "https://careers.tesla.co/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Vodafone",
+  "careersUrl": "https://jobs.vodafone.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Vodafone Business Unit  Marketing Product Owner",
+    "url": "https://jobs.vodafone.com/careers#563018698176728",
+    "location": "Giza, Egypt"
+   },
+   {
+    "title": "Office IT Project Manager - VOIS",
+    "url": "https://jobs.vodafone.com/careers#563018698155340",
+    "location": "Giza, Egypt"
+   },
+   {
+    "title": "UX Designer",
+    "url": "https://jobs.vodafone.com/careers#563018698175962",
+    "location": "Giza, Egypt"
+   },
+   {
+    "title": "Ecommerce Finance Ops Sr Speciaslist",
+    "url": "https://jobs.vodafone.com/careers#563018698176526",
+    "location": "Giza, Egypt"
+   },
+   {
+    "title": "CRM Senior Specialist",
+    "url": "https://jobs.vodafone.com/careers#563018698175963",
+    "location": "Giza, Egypt"
+   },
+   {
+    "title": "E-Commerce 3P Operations Lead",
+    "url": "https://jobs.vodafone.com/careers#563018698176256",
+    "location": "Giza, Egypt"
+   },
+   {
+    "title": "PMO Specialist, Tech VOIS",
+    "url": "https://jobs.vodafone.com/careers#563018698140273",
+    "location": "Pune, Maharashtra, India"
+   },
+   {
+    "title": "VodafoneThree - Fraud Operations Manager",
+    "url": "https://jobs.vodafone.com/careers#563018698161030",
+    "location": "Glasgow, United Kingdom"
+   },
+   {
+    "title": "Solution Sales Specialist (Mobile)",
+    "url": "https://jobs.vodafone.com/careers#563018697250620",
+    "location": "Dublin 2, Ireland"
+   },
+   {
+    "title": "VodafoneThree - Regulated Product Lead",
+    "url": "https://jobs.vodafone.com/careers#563018697988822",
+    "location": "London, United Kingdom"
+   },
+   {
+    "title": "How Vodacom eased the challenges of my hearing loss",
+    "url": "https://careers.vodafone.com/life-at-vodafone/projects-stories/how-vodacom-eased-the-challenges-of-my-hearing-loss/"
+   },
+   {
+    "title": "20 years have flown by for me at Vodafone – here’s why",
+    "url": "https://careers.vodafone.com/life-at-vodafone/projects-stories/craig-pemberton/"
+   },
+   {
+    "title": "How we’re making sure Vodafone’s inclusive for all our customers and employees",
+    "url": "https://careers.vodafone.com/life-at-vodafone/projects-stories/how-were-making-sure-vodafones-inclusive-for-all-our-customers-and-employees/"
+   },
+   {
+    "title": "How I help keep Vodafone’s fixed line service the best in the industry",
+    "url": "https://careers.vodafone.com/life-at-vodafone/projects-stories/ahmed-article/"
+   },
+   {
+    "title": "Specialist AI Agile Product Owner Lead",
+    "url": "https://jobs.vodafone.com/careers#563018697542730",
+    "location": "Madrid, Spain"
+   },
+   {
+    "title": "Product Owner",
+    "url": "https://jobs.vodafone.com/careers#563018697630894",
+    "location": "Bucuresti, Bucuresti, Romania"
+   },
+   {
+    "title": "Product Owner (VOIS)",
+    "url": "https://jobs.vodafone.com/careers#563018698013334",
+    "location": "Cairo, Egypt"
+   },
+   {
+    "title": "Praktikant Vodafone Business Unit mit Schwerp. Business Dev. (m/w/d) in Düsseldorf",
+    "url": "https://jobs.vodafone.com/careers#563018675577345",
+    "location": "Düsseldorf, Germany"
+   },
+   {
+    "title": "Salesforce Marketing Cloud Business Owner (german speaking)",
+    "url": "https://jobs.vodafone.com/careers#563018697841405",
+    "location": "Budapest, Hungary"
+   },
+   {
+    "title": "Business Solution Owner - Fixed Network (german speaking)",
+    "url": "https://jobs.vodafone.com/careers#563018697847862",
+    "location": "Budapest, Hungary"
+   },
+   {
+    "title": "Digital Experience Product Owner Lead",
+    "url": "https://jobs.vodafone.com/careers#563018697882040",
+    "location": "Giza, Egypt"
+   },
+   {
+    "title": "SAP SuccessFactors Employment Changes Product Owner - VOIS",
+    "url": "https://jobs.vodafone.com/careers#563018698088902",
+    "location": "Pune, Maharashtra, India"
+   },
+   {
+    "title": "Growth Marketing Manager",
+    "url": "https://jobs.vodafone.com/careers#563018698013438",
+    "location": "Bucuresti, Bucuresti, Romania"
+   },
+   {
+    "title": "Senior Product Manager",
+    "url": "https://jobs.vodafone.com/careers#563018696679137",
+    "location": "Athens, Attiki, Greece"
+   }
+  ]
+ },
+ {
+  "name": "Telus",
+  "careersUrl": "https://careers.telus.com/",
+  "ats": "workday",
+  "slug": "lifeworks.wd3.myworkdayjobs.com|lifeworks|External",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Jio",
+  "careersUrl": "https://careers.jio.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://careers.jio.com/frmStudent_Campus.aspx#main-navigation"
+   },
+   {
+    "title": "Job Opportunities",
+    "url": "https://careers.jio.com/frmJobCategories.aspx"
+   },
+   {
+    "title": "Validate Your Offer",
+    "url": "https://careers.jio.com/frmOfferCheck.aspx"
+   },
+   {
+    "title": "Digital Champions Program",
+    "url": "https://careers.jio.com/Champions.aspx"
+   },
+   {
+    "title": "Students & Campuses",
+    "url": "https://careers.jio.com/frmStudent_Campus.aspx#"
+   },
+   {
+    "title": "Jio Tech Scholars",
+    "url": "https://careers.jio.com/frmJioTechScholars.aspx"
+   },
+   {
+    "title": "Internship Program",
+    "url": "https://careers.jio.com/frmStudentIntern.aspx"
+   },
+   {
+    "title": "Graduate Engineer Trainee Program",
+    "url": "https://careers.jio.com/frmStudent_Campus.aspx#!"
+   },
+   {
+    "title": "Fraud Alert - Global",
+    "url": "https://careers.jio.com/pdf/Fraud%20Alert%20-%20Global.pdf"
+   },
+   {
+    "title": "Fraud Alert",
+    "url": "https://careers.jio.com/pdf/Fraud%20Alert%20-%20English.pdf"
+   },
+   {
+    "title": "à¤§à¥‹à¤–à¤¾à¤§à¤¡à¤¼à¥€ à¤•à¥€ à¤šà¥‡à¤¤à¤¾à¤µà¤¨à¥€",
+    "url": "https://careers.jio.com/pdf/Fraud%20Alert%20-%20Hindi.pdf"
+   },
+   {
+    "title": "à¤«à¤¸à¤µà¤£à¥à¤•à¥€à¤šà¤¾ à¤‡à¤¶à¤¾à¤°à¤¾",
+    "url": "https://careers.jio.com/pdf/Fraud%20Alert%20-%20Marathi.pdf"
+   },
+   {
+    "title": "àª›à«‡àª¤àª°àªªàª¿àª‚àª¡à«€ àª…àª‚àª—à«‡ àªšà«‡àª¤àªµàª£à«€",
+    "url": "https://careers.jio.com/pdf/Fraud%20Alert%20-%20Gujrati.pdf"
+   },
+   {
+    "title": "à®®à¯‹à®šà®Ÿà®¿ à®Žà®šà¯à®šà®°à®¿à®•à¯à®•à¯ˆ!",
+    "url": "https://careers.jio.com/pdf/Fraud%20Alert%20-%20Tamil.pdf"
+   },
+   {
+    "title": "à°®à±‹à°¸à°¾à°²à°ªà±ˆ à°¹à±†à°šà±à°šà°°à°¿à°•",
+    "url": "https://careers.jio.com/pdf/Fraud%20Alert%20-%20Telgu.pdf"
+   },
+   {
+    "title": "à´µà´žàµà´šà´¨à´¾ à´®àµà´¨àµà´¨à´±à´¿à´¯à´¿à´ªàµà´ªàµ!",
+    "url": "https://careers.jio.com/pdf/Fraud%20Alert%20-%20Malyalam.pdf"
+   },
+   {
+    "title": "à²®à³‹à²¸à²¦ à²•à³à²°à²¿à²¤à³ à²Žà²šà³à²šà²°à²¿à²•à³†!",
+    "url": "https://careers.jio.com/pdf/Fraud%20Alert%20-%20Kannada.pdf"
+   },
+   {
+    "title": "Forgot Password?",
+    "url": "https://careers.jio.com/frmForgotPassword.aspx"
+   }
+  ],
+  "listUrl": "https://careers.jio.com/frmStudent_Campus.aspx"
+ },
+ {
+  "name": "Orange",
+  "careersUrl": "https://www.orange.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Search results",
+    "url": "https://orange.jobs/gb/search-results"
+   },
+   {
+    "title": "Skip to main content",
+    "url": "https://orange.jobs/gb/en#skipToMainContent"
+   },
+   {
+    "title": "Search Jobs",
+    "url": "https://orange.jobs/gb/en/search-results"
+   },
+   {
+    "title": "Explore: Our Locations",
+    "url": "https://orange.jobs/gb/en/our-locations"
+   },
+   {
+    "title": "Africa and Middle East",
+    "url": "https://orange.jobs/gb/en/our-locations/africa-middle-east"
+   },
+   {
+    "title": "Other Countries",
+    "url": "https://orange.jobs/gb/en/our-locations/other-countries"
+   },
+   {
+    "title": "Explore: Job Areas",
+    "url": "https://orange.jobs/gb/en/explore-job-areas"
+   },
+   {
+    "title": "Software, Technology and Innovation",
+    "url": "https://orange.jobs/gb/en/explore-job-areas/software-technology-innovation"
+   },
+   {
+    "title": "Infrastructures and Networks",
+    "url": "https://orange.jobs/gb/en/explore-job-areas/infrastructure-networks"
+   },
+   {
+    "title": "Sales and Customer Facing-Roles",
+    "url": "https://orange.jobs/gb/en/explore-job-areas/sales-customer-facing-roles"
+   },
+   {
+    "title": "Corporate Support Functions and Management",
+    "url": "https://orange.jobs/gb/en/explore-job-areas/corporate-support-functions-management"
+   },
+   {
+    "title": "Employee Testimonials",
+    "url": "https://orange.jobs/gb/en/explore-job-areas/employee-testimonials"
+   },
+   {
+    "title": "Explore: Grow my Career",
+    "url": "https://orange.jobs/gb/en/grow-my-career"
+   },
+   {
+    "title": "Explore: Apply with Confidence",
+    "url": "https://orange.jobs/gb/en/grow-my-career/apply-with-confidence"
+   },
+   {
+    "title": "Prepare my Application",
+    "url": "https://orange.jobs/gb/en/apply-with-confidence/prepare-my-application"
+   },
+   {
+    "title": "Ace my Interview",
+    "url": "https://orange.jobs/gb/en/apply-with-confidence/ace-my-interview"
+   },
+   {
+    "title": "Soft Skills That Matter",
+    "url": "https://orange.jobs/gb/en/apply-with-confidence/soft-skills-that-matter"
+   },
+   {
+    "title": "I'm a Student",
+    "url": "https://orange.jobs/gb/en/grow-my-career/student"
+   },
+   {
+    "title": "I'm an Early-Career Professional",
+    "url": "https://orange.jobs/gb/en/grow-my-career/early-career-professional"
+   },
+   {
+    "title": "I'm a Mid-Career Professional",
+    "url": "https://orange.jobs/gb/en/grow-my-career/mid-career-professional"
+   },
+   {
+    "title": "I'm an Expert or Leader",
+    "url": "https://orange.jobs/gb/en/grow-my-career/expert-leader"
+   },
+   {
+    "title": "Explore: Work at Orange",
+    "url": "https://orange.jobs/gb/en/work-at-orange"
+   },
+   {
+    "title": "Explore: About us",
+    "url": "https://orange.jobs/gb/en/work-at-orange/about-us"
+   },
+   {
+    "title": "Our Activities",
+    "url": "https://orange.jobs/gb/en/about-us/our-activities"
+   },
+   {
+    "title": "Diversity, Equity and Inclusion",
+    "url": "https://orange.jobs/gb/en/about-us/diversity-equity-inclusion"
+   },
+   {
+    "title": "Benefits and Pay",
+    "url": "https://orange.jobs/gb/en/work-at-orange/benefits-pay"
+   },
+   {
+    "title": "Learning and Development",
+    "url": "https://orange.jobs/gb/en/work-at-orange/learning-development"
+   },
+   {
+    "title": "Explore: Make an Impact",
+    "url": "https://orange.jobs/gb/en/work-at-orange/make-an-impact"
+   },
+   {
+    "title": "Corporate Environmental and Social Responsibility",
+    "url": "https://orange.jobs/gb/en/make-an-impact/csr-orange"
+   },
+   {
+    "title": "Women in Tech",
+    "url": "https://orange.jobs/gb/en/make-an-impact/women-in-tech"
+   },
+   {
+    "title": "Saved jobs(0)",
+    "url": "https://orange.jobs/gb/en/jobcart"
+   },
+   {
+    "title": "Start here",
+    "url": "https://orange.jobs/gb/en/join-talent-community"
+   },
+   {
+    "title": "Manage your personal data",
+    "url": "https://orange.jobs/gb/en/emailpersonalinfo"
+   },
+   {
+    "title": "Accessibility – Non compliant",
+    "url": "https://orange.jobs/gb/en/accessibility-statement"
+   }
+  ],
+  "listUrl": "https://orange.jobs/"
+ },
+ {
+  "name": "Boeing",
+  "careersUrl": "https://jobs.boeing.com/",
+  "ats": "workday",
+  "slug": "boeing.wd1.myworkdayjobs.com|boeing|EXTERNAL_CAREERS",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Rogers",
+  "careersUrl": "https://jobs.rogers.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Warner Bros Discovery",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Airtel",
+  "careersUrl": "https://www.airtel.in/b2b/global-connectivity-solutions",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Disney",
+  "careersUrl": "https://www.disneycareers.com/en?k=/%EA%B0%95%EB%8F%99%EB%A7%88%EC%82%AC%EC%A7%80%E3%80%90BMM757.COM%E3%80%91%EA%B3%B5%EC%A3%BC%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%8F%EC%86%8D%EC%B4%88%EB%A7%88%EC%82%AC%EC%A7%80%E2%99%A1%EA%B5%B0%EC%82%B0%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%88%EA%B8%88%EC%A0%95%EB%A7%88%EC%82%AC%EC%A7%80",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Phenom Updates",
+    "url": "https://www.disneycareers.com/en?k=/%EA%B0%95%EB%8F%99%EB%A7%88%EC%82%AC%EC%A7%80%E3%80%90BMM757.COM%E3%80%91%EA%B3%B5%EC%A3%BC%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%8F%EC%86%8D%EC%B4%88%EB%A7%88%EC%82%AC%EC%A7%80%E2%99%A1%EA%B5%B0%EC%82%B0%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%88%EA%B8%88%EC%A0%95%EB%A7%88%EC%82%AC%EC%A7%80#1280122"
+   },
+   {
+    "title": "Megabrands IP",
+    "url": "https://www.disneycareers.com/en?k=/%EA%B0%95%EB%8F%99%EB%A7%88%EC%82%AC%EC%A7%80%E3%80%90BMM757.COM%E3%80%91%EA%B3%B5%EC%A3%BC%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%8F%EC%86%8D%EC%B4%88%EB%A7%88%EC%82%AC%EC%A7%80%E2%99%A1%EA%B5%B0%EC%82%B0%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%88%EA%B8%88%EC%A0%95%EB%A7%88%EC%82%AC%EC%A7%80#1248259"
+   },
+   {
+    "title": "Megabrands AUSNZ",
+    "url": "https://www.disneycareers.com/en?k=/%EA%B0%95%EB%8F%99%EB%A7%88%EC%82%AC%EC%A7%80%E3%80%90BMM757.COM%E3%80%91%EA%B3%B5%EC%A3%BC%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%8F%EC%86%8D%EC%B4%88%EB%A7%88%EC%82%AC%EC%A7%80%E2%99%A1%EA%B5%B0%EC%82%B0%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%88%EA%B8%88%EC%A0%95%EB%A7%88%EC%82%AC%EC%A7%80#1246557"
+   },
+   {
+    "title": "Megabrands Culinary",
+    "url": "https://www.disneycareers.com/en?k=/%EA%B0%95%EB%8F%99%EB%A7%88%EC%82%AC%EC%A7%80%E3%80%90BMM757.COM%E3%80%91%EA%B3%B5%EC%A3%BC%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%8F%EC%86%8D%EC%B4%88%EB%A7%88%EC%82%AC%EC%A7%80%E2%99%A1%EA%B5%B0%EC%82%B0%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%88%EA%B8%88%EC%A0%95%EB%A7%88%EC%82%AC%EC%A7%80#1209538"
+   },
+   {
+    "title": "Megabrands DX",
+    "url": "https://www.disneycareers.com/en?k=/%EA%B0%95%EB%8F%99%EB%A7%88%EC%82%AC%EC%A7%80%E3%80%90BMM757.COM%E3%80%91%EA%B3%B5%EC%A3%BC%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%8F%EC%86%8D%EC%B4%88%EB%A7%88%EC%82%AC%EC%A7%80%E2%99%A1%EA%B5%B0%EC%82%B0%EB%A7%88%EC%82%AC%EC%A7%80%E2%97%88%EA%B8%88%EC%A0%95%EB%A7%88%EC%82%AC%EC%A7%80#1209492"
+   }
+  ]
+ },
+ {
+  "name": "Groq",
+  "careersUrl": "https://groq.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Fanatics",
+  "careersUrl": "https://www.fanatics.io/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Safe Superintelligence",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Sony",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Chobani",
+  "careersUrl": "https://careers.chobani.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://careers.chobani.com/go/All-Jobs/8610600/#content"
+   },
+   {
+    "title": "English (United States)",
+    "url": "https://careers.chobani.com/?locale=en_US"
+   },
+   {
+    "title": "Español (México)",
+    "url": "https://careers.chobani.com/?locale=es_MX"
+   },
+   {
+    "title": "Create Profile",
+    "url": "https://careers.chobani.com/go/All-Jobs/8610600/#"
+   },
+   {
+    "title": "La Colombe",
+    "url": "https://www.lacolombe.com/pages/careers"
+   },
+   {
+    "title": "Daily Harvest",
+    "url": "https://daily-harvest.com/pages/careers"
+   },
+   {
+    "title": "Milk Receiving Operator I (Grade 5) B Shift (06:00 AM to 06:30 PM) every other weekend required",
+    "url": "https://careers.chobani.com/job/Twin-Falls-Milk-Receiving-Operator-I-%28Grade-5%29-B-Shift-%280600-AM-to-0630-PM%29-every-other-weekend-required-ID-83301/1412123300/"
+   },
+   {
+    "title": "Processing Relief Operator A Shift",
+    "url": "https://careers.chobani.com/job/Twin-Falls-Processing-Relief-Operator-A-Shift-ID-83301/1424270000/"
+   },
+   {
+    "title": "CW Fork Truck Operator (Grade H04) - D Shift (6:00 pm to 6:30 am, every other weekend required)",
+    "url": "https://careers.chobani.com/job/Twin-Falls-CW-Fork-Truck-Operator-%28Grade-H04%29-D-Shift-%28600-pm-to-630-am%2C-every-other-weekend-required%29-ID-83301/1437316700/"
+   },
+   {
+    "title": "Senior Talent Researcher",
+    "url": "https://careers.chobani.com/job/New-York-Senior-Talent-Researcher-NY-10001/1437365800/"
+   },
+   {
+    "title": "Network Engineer",
+    "url": "https://careers.chobani.com/job/Allentown-Network-Engineer-PA-18101/1437486200/"
+   },
+   {
+    "title": "CW FTO - A Shift",
+    "url": "https://careers.chobani.com/job/Twin-Falls-CW-FTO-A-Shift-ID-83301/1437561100/"
+   },
+   {
+    "title": "Fruit Room Operator (Grade 5) - B Shift (6:00 AM to 6:30 PM, every other weekend required)",
+    "url": "https://careers.chobani.com/job/Twin-Falls-Fruit-Room-Operator-%28Grade-5%29-B-Shift-%28600-AM-to-630-PM%2C-every-other-weekend-required%29-ID-83301/1436675700/"
+   },
+   {
+    "title": "CW FTO - A Shift",
+    "url": "https://careers.chobani.com/job/Twin-Falls-CW-FTO-A-Shift-ID-83301/1437027400/"
+   },
+   {
+    "title": "Validation Specialist",
+    "url": "https://careers.chobani.com/job/Twin-Falls-Validation-Specialist-ID-83301/1417020200/"
+   },
+   {
+    "title": "Arcil Case Packer Operator D Shift 06:00 PM to 06:30 AM every other weekend required",
+    "url": "https://careers.chobani.com/job/Twin-Falls-Arcil-Case-Packer-Operator-D-Shift-0600-PM-to-0630-AM-every-other-weekend-required-ID-83301/1417141100/"
+   },
+   {
+    "title": "Senior Engineering Project Manager",
+    "url": "https://careers.chobani.com/job/Twin-Falls-Senior-Engineering-Project-Manager-ID-83301/1407194500/"
+   },
+   {
+    "title": "Machine Operator - MI",
+    "url": "https://careers.chobani.com/job/Norton-Shores-Machine-Operator-MI-MI-49441/1416678700/"
+   },
+   {
+    "title": "Quality Lead",
+    "url": "https://careers.chobani.com/job/Norton-Shores-Quality-Lead-MI-49441/1426931800/"
+   },
+   {
+    "title": "Director of Automation and Controls",
+    "url": "https://careers.chobani.com/job/Twin-Falls-Director-of-Automation-and-Controls-ID-83301/1406736700/"
+   },
+   {
+    "title": "Director of Studio, Packaging",
+    "url": "https://careers.chobani.com/job/New-York-Director-of-Studio%2C-Packaging-NY-10001/1427024000/"
+   },
+   {
+    "title": "PT Barista | NYC | Noho",
+    "url": "https://careers.chobani.com/job/New-York-PT-Barista-NYC-Noho-NY-10001/1416617800/"
+   },
+   {
+    "title": "Director of Sales, Walmart",
+    "url": "https://careers.chobani.com/job/Bentonville-Director-of-Sales%2C-Walmart-AR-72712/1416120200/"
+   },
+   {
+    "title": "Director of Finance - Plant",
+    "url": "https://careers.chobani.com/job/Allentown-Director-of-Finance-Plant-PA-18101/1426484400/"
+   },
+   {
+    "title": "Category Development Manager",
+    "url": "https://careers.chobani.com/job/Philadelphia-Category-Development-Manager-PA-19019/1426618800/"
+   },
+   {
+    "title": "FT Bakery Shift Lead | PHL | Fishtown",
+    "url": "https://careers.chobani.com/job/Philadelphia-FT-Bakery-Shift-Lead-PHL-Fishtown-PA-19019/1391766200/"
+   },
+   {
+    "title": "EHS Supervisor",
+    "url": "https://careers.chobani.com/job/Twin-Falls-EHS-Supervisor-ID-83301/1405363900/"
+   },
+   {
+    "title": "Director of Finance - Plant",
+    "url": "https://careers.chobani.com/job/Twin-Falls-Director-of-Finance-Plant-ID-83301/1426482100/"
+   },
+   {
+    "title": "Associate Brand Content Manager",
+    "url": "https://careers.chobani.com/job/New-York-Associate-Brand-Content-Manager-NY-10001/1426554800/"
+   },
+   {
+    "title": "FT Cafe Shift Lead | NYC | Bryant Park",
+    "url": "https://careers.chobani.com/job/New-York-FT-Cafe-Shift-Lead-NYC-Bryant-Park-NY-10001/1426363100/"
+   },
+   {
+    "title": "Equipment & Reliability Engineer",
+    "url": "https://careers.chobani.com/job/New-Berlin-Equipment-&-Reliability-Engineer-NY-13411/1416295400/"
+   }
+  ],
+  "listUrl": "https://careers.chobani.com/go/All-Jobs/8610600/"
+ },
+ {
+  "name": "Bell Canada",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Helion Energy",
+  "careersUrl": "https://www.helionenergy.com/careers",
+  "ats": "ashby",
+  "slug": "helion",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Perplexity AI",
+  "careersUrl": "https://www.perplexityai.io/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Nscale",
+  "careersUrl": "https://www.nscale.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [],
+  "listUrl": "https://www.nscale.com/open-positions"
+ },
+ {
+  "name": "NinjaOne",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Cyera",
+  "careersUrl": "https://www.cyera.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "CareersWe're redefining how the world secures its data in the AI era.Join Cyera",
+    "url": "https://www.cyera.com/careers"
+   },
+   {
+    "title": "Careers IL",
+    "url": "https://www.cyera.com/careers-il"
+   },
+   {
+    "title": "Open positions",
+    "url": "https://www.cyera.com/careers#open-positions"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/EE.07C"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/9F.277"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/9F.275"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/17.277"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/EE.07B"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/08.375"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/4C.A33"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/75.56D"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/18.370"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/EB.F63"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/25.34F"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/C2.F6A"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/B2.371"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/54.869"
+   },
+   {
+    "title": "View position",
+    "url": "https://www.comeet.com/jobs/cyera/17.008/careers/22.37A"
+   },
+   {
+    "title": "Load more",
+    "url": "https://www.cyera.com/careers?2b203ba4_page=2"
+   },
+   {
+    "title": "Button Text",
+    "url": "https://www.cyera.com/careers#"
+   }
+  ],
+  "listUrl": "https://www.cyera.com/careers#open-positions"
+ },
+ {
+  "name": "Checkout.com",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Thinking Machines Lab",
+  "careersUrl": "https://www.thinkingmachineslab.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Skild AI",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "VAST Data",
+  "careersUrl": "https://www.vastdata.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "View Open Positions",
+    "url": "https://www.vastdata.com/careers#open-positions"
+   },
+   {
+    "title": "Alliances Director -APJSingaporeAlliances, OEM, Channel",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/alliances-director--apj/7D.07A"
+   },
+   {
+    "title": "Channel Director APACSingaporeAlliances, OEM, Channel",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/channel-director-apac/B7.76E"
+   },
+   {
+    "title": "Director, Business Development - NeoCloudsRemote - United StatesBusiness Development",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/director-business-development---neoclouds/15.07E"
+   },
+   {
+    "title": "Business Development Director - AWSUnited StatesBusiness Development",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/business-development-director---aws/DD.661"
+   },
+   {
+    "title": "Business Development Director - Microsoft AzureUnited StatesBusiness Development",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/business-development-director---microsoft-azure/CD.667"
+   },
+   {
+    "title": "Director, Strategic Alliances- AMDUnited StatesBusiness Development",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/director--strategic-alliances--amd/24.274"
+   },
+   {
+    "title": "Director, Business Development – AI PartnershipsUnited StatesBusiness Development",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/director-business-development--ai-partnerships/44.276"
+   },
+   {
+    "title": "Global Head of Hedge Fund Partnerships & StrategyUnited StatesBusiness Development",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/global-head-of-hedge-fund-partnerships--strategy/23.C63"
+   },
+   {
+    "title": "Solutions Architect - Google Cloud PlatformUnited StatesBusiness Development",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/solutions-architect---google-cloud-platform/1A.C5F"
+   },
+   {
+    "title": "Solutions Architect - Microsoft AzureUnited StatesBusiness Development",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/solutions-architect---microsoft-azure/2A.C55"
+   },
+   {
+    "title": "VP Business Development - CloudUnited StatesBusiness Development",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/vp-business-development---cloud/8D.27C"
+   },
+   {
+    "title": "Global Head of Commercial LegalBostonBusiness Operations",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/global-head-of-commercial-legal/AE.E62-E3.301"
+   },
+   {
+    "title": "Global Head of Commercial LegalNew YorkBusiness Operations",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/global-head-of-commercial-legal/AE.E62"
+   },
+   {
+    "title": "Senior Director, Corporate CounselRemote - United StatesBusiness Operations",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/senior-director-corporate-counsel/18.76C"
+   },
+   {
+    "title": "Services Operations Center -APACAPACCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/services-operations-center--apac/D9.D3F"
+   },
+   {
+    "title": "Customer Support EngineerAustin, TXCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer/79.832-80.50D"
+   },
+   {
+    "title": "Customer Support Engineer - IndiaBengaluruCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer---india/67.73C-80.50C"
+   },
+   {
+    "title": "Customer Support EngineerDallasCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer/79.832-19.207"
+   },
+   {
+    "title": "Resident Customer Support Engineer (Onsite - Dallas, TX)DallasCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/resident-customer-support-engineer-onsite---dallas-tx/A7.55F"
+   },
+   {
+    "title": "Technical Account Manager - USADallasCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/technical-account-manager---usa/04.33F-19.207"
+   },
+   {
+    "title": "Professional Services EngineerEast Coast, United StatesCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/professional-services-engineer/23.D47"
+   },
+   {
+    "title": "Customer Support EngineerHouston, TexasCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer/79.832-56.602"
+   },
+   {
+    "title": "Customer Support Engineer - IndiaIndiaCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer---india/67.73C"
+   },
+   {
+    "title": "Customer Support EngineerIsrael - Tel AvivCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer/96.61C"
+   },
+   {
+    "title": "Services Operations Center - Tel AvivIsrael - Tel AvivCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/services-operations-center---tel-aviv/85.443"
+   },
+   {
+    "title": "VAST On Cloud - Customer Success EngineerIsrael - Tel AvivCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/vast-on-cloud---customer-success-engineer/E3.E68"
+   },
+   {
+    "title": "Resident Customer Support Engineer - Memphis, TNMemphis, TNCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/resident-customer-support-engineer---memphis-tn/40.64A"
+   },
+   {
+    "title": "Professional Services EngineerNew JerseyCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/professional-services-engineer/23.D47-07.208"
+   },
+   {
+    "title": "Customer Support EngineerNew YorkCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer/79.832-45.503"
+   },
+   {
+    "title": "Professional Services EngineerRTP, North CarolinaCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/professional-services-engineer/23.D47-B0.309"
+   },
+   {
+    "title": "Sr. Tools & Automation Developer - Customer SupportRTP, North CarolinaCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/sr_-tools--automation-developer---customer-support/DD.84A"
+   },
+   {
+    "title": "Technical Escalation Engineer (Third Shift)RTP, North CarolinaCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/technical-escalation-engineer-third-shift/D1.F61"
+   },
+   {
+    "title": "Customer Support EngineerRaleigh, North CarolinaCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer/79.832-50.203"
+   },
+   {
+    "title": "Technical Account Manager - USARaleigh, North CarolinaCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/technical-account-manager---usa/04.33F-50.203"
+   },
+   {
+    "title": "Customer Support Team Lead with Vast Data, Inc.Remote - United StatesCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-team-lead-with-vast-data-inc_/64.279"
+   },
+   {
+    "title": "Customer Support EngineerSan FranciscoCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer/79.832-65.106"
+   },
+   {
+    "title": "Customer Support EngineerSan JoseCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer/79.832-68.20F"
+   },
+   {
+    "title": "Customer Support EngineerSeattleCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer/79.832-5B.104"
+   },
+   {
+    "title": "Technical Account Manager - USASeattleCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/technical-account-manager---usa/04.33F"
+   },
+   {
+    "title": "Customer Support Engineer- SingaporeSingaporeCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer--singapore/3B.D63"
+   },
+   {
+    "title": "Professional ServicesSingaporeCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/professional-services/E3.B69"
+   },
+   {
+    "title": "Customer Support Engineer - APACSydney AustraliaCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer---apac/77.A1C"
+   },
+   {
+    "title": "Customer Support Engineer - TaiwanTaiwanCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer---taiwan/82.C55"
+   },
+   {
+    "title": "Taiwan SupportTaiwanCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/taiwan-support/4F.076"
+   },
+   {
+    "title": "Resident Customer Support Engineer (Onsite - Dallas, TX)TexasCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/resident-customer-support-engineer-onsite---dallas-tx/A7.55F-6A.50E"
+   },
+   {
+    "title": "Customer Support EngineerUnited StatesCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer/79.832"
+   },
+   {
+    "title": "Customer Support EngineerUtahCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/customer-support-engineer/79.832-47.508"
+   },
+   {
+    "title": "Technical Escalation Engineer (Third Shift)UtahCustomer Support",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/technical-escalation-engineer-third-shift/D1.F61-47.508"
+   },
+   {
+    "title": "Technical Support Enablement ManagerRaleigh, North CarolinaEnablement",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/technical-support-enablement-manager/F4.078"
+   },
+   {
+    "title": "Senior Software Engineer - IndiaBengaluruEngineering",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/senior-software-engineer---india/82.F44"
+   },
+   {
+    "title": "Forward Deployed EngineerCampbell, CAEngineering",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/forward-deployed-engineer/1E.173-24.409"
+   },
+   {
+    "title": "Forward Deployed EngineerEast Coast, United StatesEngineering",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/forward-deployed-engineer/1E.173-0D.50B"
+   },
+   {
+    "title": "Core Database Developer (Database Internals)GermanyEngineering",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/core-database-developer-database-internals/60.D5F"
+   },
+   {
+    "title": "DevOps EngineerIceland - ReykjavikEngineering",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/devops-engineer/E2.564"
+   },
+   {
+    "title": "Frontend Developer (UI/UX)Iceland - ReykjavikEngineering",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/frontend-developer-uiux/E2.567"
+   },
+   {
+    "title": "Cloud Senior software EngineerIsrael - HaifaEngineering",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/cloud-senior-software-engineer/DB.366-17.10C"
+   },
+   {
+    "title": "Graduate QA Automation EngineerIsrael - HaifaEngineering",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/graduate-qa-automation-engineer/8F.946"
+   },
+   {
+    "title": "Infrastructure Team LeaderIsrael - HaifaEngineering",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/infrastructure-team-leader/EA.44C-17.10C"
+   },
+   {
+    "title": "Linux Kernel DeveloperIsrael - HaifaEngineering",
+    "url": "https://www.comeet.com/jobs/vastdata/43.001/linux-kernel-developer/F8.921-17.10C"
+   }
+  ],
+  "listUrl": "https://www.vastdata.com/careers#open-positions"
+ },
+ {
+  "name": "Notion Labs",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "OutSystems",
+  "careersUrl": "https://accounts.google.com/v3/signin/identifier?continue=https://sites.google.com/outsystems.com/careerpaths/&followup=https://sites.google.com/outsystems.com/careerpaths/&passive=1209600&flowName=WebLiteSignIn&flowEntry=ServiceLogin&dsh=S187405933:1791328918278979",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Talkdesk",
+  "careersUrl": "https://careers.talkdesk.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "All Open Positions",
+    "url": "https://careers.talkdesk.com/all-open-positions"
+   },
+   {
+    "title": "About Talkdesk",
+    "url": "https://careers.talkdesk.com/about"
+   },
+   {
+    "title": "Hiring Process",
+    "url": "https://careers.talkdesk.com/hiring-process"
+   },
+   {
+    "title": "Talent Community",
+    "url": "https://careers.talkdesk.com/talent-community"
+   },
+   {
+    "title": "Senior Applied AI Partner Solution Engineer - APACIndia (Onsite)",
+    "url": "https://careers.talkdesk.com/jobs?id=7862517"
+   },
+   {
+    "title": "Senior Solutions Engineer - Healthcare & Life Sciences (Central & East)USA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=7785778"
+   },
+   {
+    "title": "Manager, Solutions Engineering - CommercialUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8175199"
+   },
+   {
+    "title": "Senior Manager, Solutions Engineer (FSI)USA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8234123"
+   },
+   {
+    "title": "Channel Manager - Benelux Netherlands (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8113733"
+   },
+   {
+    "title": "SOC Engineer / Detection EngineerPortugal (Hybrid)",
+    "url": "https://careers.talkdesk.com/jobs?id=7613717"
+   },
+   {
+    "title": "Senior Software Engineer II - IndustriesPortugal (Hybrid)",
+    "url": "https://careers.talkdesk.com/jobs?id=7857495"
+   },
+   {
+    "title": "Senior Software Engineer I Portugal (Hybrid)",
+    "url": "https://careers.talkdesk.com/jobs?id=7857541"
+   },
+   {
+    "title": "Incident CommanderPortugal (Hybrid)",
+    "url": "https://careers.talkdesk.com/jobs?id=8048992"
+   },
+   {
+    "title": "Senior Software EngineerPortugal (Hybrid)",
+    "url": "https://careers.talkdesk.com/jobs?id=8111526"
+   },
+   {
+    "title": "Senior Director, Engineering Platform Portugal (Hybrid)",
+    "url": "https://careers.talkdesk.com/jobs?id=8127658"
+   },
+   {
+    "title": "Software Engineer IIPortugal (Hybrid)",
+    "url": "https://careers.talkdesk.com/jobs?id=8184763"
+   },
+   {
+    "title": "Data Governance & Compliance Manager Portugal (Hybrid)",
+    "url": "https://careers.talkdesk.com/jobs?id=8186440"
+   },
+   {
+    "title": "Partner Technical ArchitectPortugal (Hybrid)",
+    "url": "https://careers.talkdesk.com/jobs?id=7796321"
+   },
+   {
+    "title": "Senior Solution ConsultantPortugal (Hybrid)",
+    "url": "https://careers.talkdesk.com/jobs?id=8193682"
+   },
+   {
+    "title": "Senior Solution Consultant - HLSUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=7954269"
+   },
+   {
+    "title": "Vice President, Customer DeliveryUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8103819"
+   },
+   {
+    "title": "Senior Solution ArchitectUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8162852"
+   },
+   {
+    "title": "Senior Solution Consultant - FSIUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8167554"
+   },
+   {
+    "title": "Senior Solution ConsultantUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8226010"
+   },
+   {
+    "title": "Principal Product Manager - AISeattle",
+    "url": "https://careers.talkdesk.com/jobs?id=7187889"
+   },
+   {
+    "title": "Enterprise Account Executive - UK&IUK (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=7743172"
+   },
+   {
+    "title": "Enterprise Account Executive - Financial ServicesUSA (In Region)",
+    "url": "https://careers.talkdesk.com/jobs?id=8170928"
+   },
+   {
+    "title": "Enterprise Account Executive - Mixed IndustriesUSA (In Region)",
+    "url": "https://careers.talkdesk.com/jobs?id=8246913"
+   },
+   {
+    "title": "Enterprise Account Executive - Mixed IndustriesUSA (In Region)",
+    "url": "https://careers.talkdesk.com/jobs?id=8246924"
+   },
+   {
+    "title": "Enterprise Account Executive - Mixed IndustriesUSA (In Region)",
+    "url": "https://careers.talkdesk.com/jobs?id=8246937"
+   },
+   {
+    "title": "Senior Contract Recruiter - Go to Market (GTM)UK (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8226650"
+   },
+   {
+    "title": "Senior CX ManagerUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=7449885"
+   },
+   {
+    "title": "Technical Support Engineer - Platform SupportUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8103304"
+   },
+   {
+    "title": "Technical Support Engineer - Porting TeamUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8159422"
+   },
+   {
+    "title": "Senior Technical Support Engineer - TelephonyUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8197692"
+   },
+   {
+    "title": "Senior Manager, FP&A - GTMUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=7863268"
+   },
+   {
+    "title": "Corporate CounselUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=7943834"
+   },
+   {
+    "title": "Pricing Strategy ManagerUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=7960848"
+   },
+   {
+    "title": "Marketing Operations SpecialistUSA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8186832"
+   },
+   {
+    "title": "Senior People Business Partner – Go-to-Market (Sales & Marketing)USA (Remote)",
+    "url": "https://careers.talkdesk.com/jobs?id=8257399"
+   },
+   {
+    "title": "Personal Information",
+    "url": "https://careers.talkdesk.com/personal-information"
+   }
+  ],
+  "listUrl": "https://careers.talkdesk.com/all-open-positions"
+ },
+ {
+  "name": "Rapyd",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Bilt Rewards",
+  "careersUrl": "https://www.bilt.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Browse careers",
+    "url": "https://www.bilt.com/careers#open-roles"
+   },
+   {
+    "title": "How we work",
+    "url": "https://www.bilt.com/careers#wow"
+   }
+  ],
+  "listUrl": "https://www.bilt.com/careers#open-roles"
+ },
+ {
+  "name": "Zipline",
+  "careersUrl": "https://www.zipline.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [],
+  "listUrl": "https://www.zipline.com/open-roles"
+ },
+ {
+  "name": "iCapital",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "DataRobot",
+  "careersUrl": "https://www.datarobot.com/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to content",
+    "url": "https://www.datarobot.com/careers/open-positions/#content"
+   },
+   {
+    "title": "Why DataRobot",
+    "url": "https://www.datarobot.com/careers/open-positions/#"
+   },
+   {
+    "title": "Open Positions",
+    "url": "https://www.datarobot.com/careers/open-positions/"
+   },
+   {
+    "title": "Engineering Staff Software Engineer multiple locations",
+    "url": "https://www.datarobot.com/careers/open-positions/job/102685"
+   },
+   {
+    "title": "Professional Services Lead Engagement Director Remote Dubai",
+    "url": "https://www.datarobot.com/careers/open-positions/job/102687"
+   },
+   {
+    "title": "Sales Senior AI Solutions Engineer - UAE Remote Dubai",
+    "url": "https://www.datarobot.com/careers/open-positions/job/102717"
+   },
+   {
+    "title": "Engineering Senior AI Engineer - Professional Services - KSA Remote Saudi Arabia",
+    "url": "https://www.datarobot.com/careers/open-positions/job/102501"
+   },
+   {
+    "title": "Sales Account Director - KSA Remote Saudi Arabia",
+    "url": "https://www.datarobot.com/careers/open-positions/job/102647"
+   },
+   {
+    "title": "Professional Services Customer Success Engineer Remote Dubai",
+    "url": "https://www.datarobot.com/careers/open-positions/job/102711"
+   },
+   {
+    "title": "Engineering Lead AI Engineer Remote Dubai",
+    "url": "https://www.datarobot.com/careers/open-positions/job/102602"
+   },
+   {
+    "title": "Product Principal Product Manager, AI Infrastructure and Orchestration multiple locations",
+    "url": "https://www.datarobot.com/careers/open-positions/job/102745"
+   },
+   {
+    "title": "Professional Services AI Engineer - Professional Services Remote Japan",
+    "url": "https://www.datarobot.com/careers/open-positions/job/102663"
+   }
+  ],
+  "listUrl": "https://www.datarobot.com/careers/open-positions/"
+ },
+ {
+  "name": "Instinct",
+  "careersUrl": "https://instinct.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Higgsfield",
+  "careersUrl": "https://yasirmansoori.in/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Biosplice Therapeutics",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Labs Companies",
+  "careersUrl": "https://labscompanies.ai/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Dapper Labs",
+  "careersUrl": "https://www.dapperlabs.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Oyo",
+  "careersUrl": "https://www.hitmedia.in/uc/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Ineffable Intelligence",
+  "careersUrl": "https://www.ineffableintelligence.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "CloudKitchens",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Cognition AI",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Ola Consumer",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "SambaNova",
+  "careersUrl": "https://forsale.dynadot.com/sambanova.co?drefid=2071",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Vinted",
+  "careersUrl": "https://careers.vinted.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Engineering Academy",
+    "url": "https://careers.vinted.com/engineering-academy"
+   },
+   {
+    "title": "From Junior to Staff Engineer: Scaling beyond a single team",
+    "url": "https://careers.vinted.com/blog/from-junior-to-staff-engineer"
+   },
+   {
+    "title": "Inside Engineering at Vinted Go: building beyond the screen",
+    "url": "https://careers.vinted.com/blog/engineering-at-vinted-go"
+   },
+   {
+    "title": "The journey from Engineering Manager to Director: Leading at Vinted",
+    "url": "https://careers.vinted.com/blog/engineering-manager-to-director"
+   },
+   {
+    "title": "Becoming an Engineering Manager: A Backend Engineer's Guide at Vinted",
+    "url": "https://careers.vinted.com/blog/becoming-an-engineering-manager"
+   },
+   {
+    "title": "Life as an Engineering Manager at Vinted",
+    "url": "https://careers.vinted.com/blog/engineering-manager"
+   },
+   {
+    "title": "Life as a Site Reliability Engineer at Vinted",
+    "url": "https://careers.vinted.com/blog/SRE-at-vinted"
+   },
+   {
+    "title": "Engineering at Your Fingertips: Life in Mobile at Vinted",
+    "url": "https://careers.vinted.com/blog/mobile-at-vinted"
+   },
+   {
+    "title": "Engineering Academy",
+    "url": "https://careers.vinted.com/blog?categories%5B0%5D=engineering-academy"
+   }
+  ]
+ },
+ {
+  "name": "OfBusiness",
+  "careersUrl": "https://www.ofbcareers.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "View Details",
+    "url": "https://www.ofbcareers.com/jobs/business-development-manager-(industrial-gases)"
+   },
+   {
+    "title": "View Details",
+    "url": "https://www.ofbcareers.com/jobs/plant-manager-(mayurank-foods)"
+   },
+   {
+    "title": "View Details",
+    "url": "https://www.ofbcareers.com/jobs/business-development-(gujarat-foils)"
+   },
+   {
+    "title": "View Details",
+    "url": "https://www.ofbcareers.com/jobs/tto-head-(mayurank-foods)"
+   }
+  ],
+  "listUrl": "https://www.ofbcareers.com/categories"
+ },
+ {
+  "name": "Oura Health",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Magic Leap",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Octopus Energy",
+  "careersUrl": "https://octopusenergy.com/careers",
+  "ats": "lever",
+  "slug": "octoenergy",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Dataminr",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Arctic Wolf Networks",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Niantic",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Chainalysis",
+  "careersUrl": "https://www.chainalysis.com/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Careers at ChainalysisChainalysis is growing fast – join us today",
+    "url": "https://www.chainalysis.com/careers/"
+   },
+   {
+    "title": "Open Positions",
+    "url": "https://www.chainalysis.com/careers/job-openings/"
+   }
+  ],
+  "listUrl": "https://www.chainalysis.com/careers/job-openings/"
+ },
+ {
+  "name": "Zepz",
+  "careersUrl": "https://zepz.io/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Careers at Zepz",
+    "url": "https://zepz.io/careers/"
+   },
+   {
+    "title": "Search Jobs",
+    "url": "https://zepz.io/careers/#available-roles"
+   },
+   {
+    "title": "What to Expect",
+    "url": "https://zepz.io/careers/#what-to-expect"
+   },
+   {
+    "title": "Why Zepz?",
+    "url": "https://zepz.io/careers/#why-zepz"
+   },
+   {
+    "title": "Search through all Roles",
+    "url": "https://zepz.careers.hibob.com/"
+   }
+  ],
+  "listUrl": "https://zepz.io/careers/#available-roles"
+ },
+ {
+  "name": "Cohesity",
+  "careersUrl": "https://www.cohesity.com/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Noom",
+  "careersUrl": "https://www.noom.io/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Automation Anywhere",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Automattic",
+  "careersUrl": "https://automattic.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "ApplyBoard",
+  "careersUrl": "https://www.applyboard.com/careers",
+  "ats": "workday",
+  "slug": "applyboard.wd3.myworkdayjobs.com|applyboard|ApplyBoardNH",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "MessageBird",
+  "careersUrl": "https://bird.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Senior Security EngineerFull-time / Remote, United States (East Coast)",
+    "url": "https://bird.com/careers/senior-security-engineer"
+   },
+   {
+    "title": "Dashboard - dashboard.messagebird.com",
+    "url": "https://bird.com/careers#2b3bszk6npl6"
+   },
+   {
+    "title": "Dashboard - app.bird.com",
+    "url": "https://bird.com/careers#schs6sz3t8t8"
+   },
+   {
+    "title": "Bird Platform",
+    "url": "https://bird.com/careers#sr76bpl3mww8"
+   },
+   {
+    "title": "SMS - Connectivity - APAC",
+    "url": "https://bird.com/careers#1hrp6xc8mb2c"
+   },
+   {
+    "title": "Site bird.com",
+    "url": "https://bird.com/careers#dv1fbvpmh3k6"
+   },
+   {
+    "title": "AI Hub - Europe",
+    "url": "https://bird.com/careers#s10sl22xvbrf"
+   },
+   {
+    "title": "SMS - Connectivity - EMEA",
+    "url": "https://bird.com/careers#ymx92ndwmkrv"
+   },
+   {
+    "title": "Engagement Platform / CRM",
+    "url": "https://bird.com/careers#tj0r8qxf9c2m"
+   },
+   {
+    "title": "AI Hub - US (West)",
+    "url": "https://bird.com/careers#6d40ykzgqwvw"
+   },
+   {
+    "title": "Connectivity Platform",
+    "url": "https://bird.com/careers#wnkkscvw903d"
+   },
+   {
+    "title": "SMS - Connectivity - LATAM",
+    "url": "https://bird.com/careers#9lhm931lv2wm"
+   },
+   {
+    "title": "AI Hub - Asia (India)",
+    "url": "https://bird.com/careers#1gyqjl7l29q1"
+   },
+   {
+    "title": "SMS - Connectivity - NORAM",
+    "url": "https://bird.com/careers#bxs94rh2jggp"
+   },
+   {
+    "title": "Analytics - Europe",
+    "url": "https://bird.com/careers#0lvlxm1w2bjr"
+   },
+   {
+    "title": "Voice - Connectivity - Global",
+    "url": "https://bird.com/careers#75p2ss5pmknb"
+   },
+   {
+    "title": "Analytics - US (West)",
+    "url": "https://bird.com/careers#mj2t8mhyy1jz"
+   },
+   {
+    "title": "Analytics - Asia (India)",
+    "url": "https://bird.com/careers#3zhrgkr319pj"
+   },
+   {
+    "title": "SMS - SMPP - EU - SMPP01",
+    "url": "https://bird.com/careers#kh0skvsvpp43"
+   },
+   {
+    "title": "Campaigns - Europe",
+    "url": "https://bird.com/careers#22bgkvv4b8w9"
+   },
+   {
+    "title": "SMS - SMPP - EU - SMPP02",
+    "url": "https://bird.com/careers#6df11bv2b00y"
+   },
+   {
+    "title": "Campaigns - US (West)",
+    "url": "https://bird.com/careers#nwd4snp46hcg"
+   },
+   {
+    "title": "SMS - SMPP - EU - SMPP03",
+    "url": "https://bird.com/careers#8tvdfcdz9hw0"
+   },
+   {
+    "title": "Campaigns - Asia (India)",
+    "url": "https://bird.com/careers#syms2n4x66qv"
+   },
+   {
+    "title": "SMS - SMPP - APAC",
+    "url": "https://bird.com/careers#q847vkvxsyj6"
+   },
+   {
+    "title": "Channels - Europe",
+    "url": "https://bird.com/careers#r1x7t5f7nn0y"
+   },
+   {
+    "title": "Channels - US (West)",
+    "url": "https://bird.com/careers#zznsmz9xy3kd"
+   },
+   {
+    "title": "SMS - Mail to SMS Relay Service",
+    "url": "https://bird.com/careers#bl5ftmqgw7hr"
+   },
+   {
+    "title": "Channels - Asia (India)",
+    "url": "https://bird.com/careers#q4yk3rjf0fcj"
+   },
+   {
+    "title": "Content (Products, Templates) - Europe",
+    "url": "https://bird.com/careers#bxmq2738t09n"
+   },
+   {
+    "title": "Voice - SIP Trunking",
+    "url": "https://bird.com/careers#5xf6mqh3v3hy"
+   },
+   {
+    "title": "Content (Products, Templates) - US (West)",
+    "url": "https://bird.com/careers#5lcjsfhy105t"
+   },
+   {
+    "title": "Content (Products, Templates) - Asia (India)",
+    "url": "https://bird.com/careers#3b91t408s0ls"
+   },
+   {
+    "title": "Flow Builder",
+    "url": "https://bird.com/careers#gjy9lflwydhd"
+   },
+   {
+    "title": "Connectors - Europe",
+    "url": "https://bird.com/careers#5gv4ybj8l6c2"
+   },
+   {
+    "title": "Omnichannel Chat Widget",
+    "url": "https://bird.com/careers#qy71zywnnlgv"
+   },
+   {
+    "title": "Connectors - US (West)",
+    "url": "https://bird.com/careers#nsrm7qvwr79c"
+   },
+   {
+    "title": "Connectors - Asia (India)",
+    "url": "https://bird.com/careers#85vdr4wjz4k7"
+   },
+   {
+    "title": "Contacts - Europe",
+    "url": "https://bird.com/careers#d0mbktx26pqh"
+   },
+   {
+    "title": "Contacts - US (West)",
+    "url": "https://bird.com/careers#5rshzt63llfw"
+   },
+   {
+    "title": "Email Channel",
+    "url": "https://bird.com/careers#5nbphn33hdc5"
+   },
+   {
+    "title": "Contacts - Asia (India)",
+    "url": "https://bird.com/careers#2vgy4dkl38p7"
+   },
+   {
+    "title": "WhatsApp Channel",
+    "url": "https://bird.com/careers#g5rn5vt7d4m3"
+   },
+   {
+    "title": "Chat Widget - Europe",
+    "url": "https://bird.com/careers#y4ds26jx8yf1"
+   },
+   {
+    "title": "Chat Widget - US (West)",
+    "url": "https://bird.com/careers#c5qkq8w1nznb"
+   },
+   {
+    "title": "Chat Widget - Asia (India)",
+    "url": "https://bird.com/careers#pjyllsr2ycyy"
+   },
+   {
+    "title": "Flows  - Europe",
+    "url": "https://bird.com/careers#6lvsx23m61vh"
+   },
+   {
+    "title": "Flows  - US (West)",
+    "url": "https://bird.com/careers#g7x22lxjfb44"
+   },
+   {
+    "title": "Flows  - Asia (India)",
+    "url": "https://bird.com/careers#q4sjq0pzffdw"
+   },
+   {
+    "title": "Inbox - Europe",
+    "url": "https://bird.com/careers#f1dgk654kjyx"
+   },
+   {
+    "title": "Inbox - US (West)",
+    "url": "https://bird.com/careers#j75msn0s4fxp"
+   },
+   {
+    "title": "Inbox - Asia (India)",
+    "url": "https://bird.com/careers#4ftxb68h88k3"
+   },
+   {
+    "title": "Journey - Europe",
+    "url": "https://bird.com/careers#49trktyfg10z"
+   },
+   {
+    "title": "Journey - US (West)",
+    "url": "https://bird.com/careers#rxwf5gxc26lw"
+   },
+   {
+    "title": "Journey - Asia (India)",
+    "url": "https://bird.com/careers#693bl0p1vxwy"
+   },
+   {
+    "title": "Organizations (Billing, IAM, Settings, Wallets) - Europe",
+    "url": "https://bird.com/careers#mf2rcykyvkw0"
+   },
+   {
+    "title": "Organizations (Billing, IAM, Settings, Wallets) - US (West)",
+    "url": "https://bird.com/careers#jp7j0nc4vjyl"
+   },
+   {
+    "title": "Organizations (Billing, IAM, Settings, Wallets) - Asia (India)",
+    "url": "https://bird.com/careers#mtz1xg31f27c"
+   },
+   {
+    "title": "Payments - Card - Europe",
+    "url": "https://bird.com/careers#djz1rtsftpyv"
+   },
+   {
+    "title": "Payments - Card - US (West)",
+    "url": "https://bird.com/careers#hk0sznhbksf6"
+   }
+  ]
+ },
+ {
+  "name": "Plus.ai",
+  "careersUrl": "https://plusai.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Staff Software Engineer Engineering · Remote (North America Time Zone) · Full time",
+    "url": "https://plusai.com/careers/staff-software-engineer"
+   }
+  ]
+ },
+ {
+  "name": "Eruditus",
+  "careersUrl": "https://www.eruditus.io/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Blockchain.com",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "TradingView",
+  "careersUrl": "https://www.tradingview.com/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Senior Backend DeveloperLimassol, Cyprus",
+    "url": "https://tradingview.teamtailor.com/jobs/7528712-senior-backend-developer"
+   },
+   {
+    "title": "Engineering ManagerLimassol, Cyprus",
+    "url": "https://tradingview.teamtailor.com/jobs/7112620-engineering-manager"
+   },
+   {
+    "title": "Senior Analytics EngineerLimassol, Cyprus",
+    "url": "https://tradingview.teamtailor.com/jobs/8204636-senior-analytics-engineer"
+   },
+   {
+    "title": "Senior Data Platform EngineerLimassol, Cyprus",
+    "url": "https://tradingview.teamtailor.com/jobs/8118268-senior-data-platform-engineer"
+   },
+   {
+    "title": "Senior Python DeveloperLimassol, Cyprus",
+    "url": "https://tradingview.teamtailor.com/jobs/7555771-senior-python-developer"
+   },
+   {
+    "title": "Senior DevOps EngineerLimassol, Cyprus",
+    "url": "https://tradingview.teamtailor.com/jobs/7162779-senior-devops-engineer"
+   },
+   {
+    "title": "Android developerLimassol, Cyprus",
+    "url": "https://tradingview.teamtailor.com/jobs/6148080-android-developer"
+   },
+   {
+    "title": "iOS Senior DeveloperLimassol, Cyprus",
+    "url": "https://tradingview.teamtailor.com/jobs/5760854-ios-senior-developer"
+   }
+  ]
+ },
+ {
+  "name": "Seismic",
+  "careersUrl": "https://www.seismic.com/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "our website's job listings",
+    "url": "https://www.seismic.com/careers/job-listings"
+   },
+   {
+    "title": "Senior Site Reliability EngineerCloud OpsHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2379&pid=206"
+   },
+   {
+    "title": "Director, Technical Program ManagementP&E OpsVancouver - Vancouver, Canada",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2375&pid=230"
+   },
+   {
+    "title": "Senior Product Manager - Financial Services AIProduct ManagementRemote Canada; Remote United States",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2384&pid=230||17"
+   },
+   {
+    "title": "Quality Engineer I - Automation TestingEngineering - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2294&pid=206"
+   },
+   {
+    "title": "Quality Engineer I (Automation )Engineering - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2190&pid=206"
+   },
+   {
+    "title": "Renewals ManagerCS Core CommercialRemote Canada",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2301&pid=230"
+   },
+   {
+    "title": "Manager, Customer SuccessCustomer Success - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2370&pid=206"
+   },
+   {
+    "title": "Renewals ManagerServices - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2366&pid=206"
+   },
+   {
+    "title": "Customer Success ManagerCustomer Success - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2318&pid=206"
+   },
+   {
+    "title": "Customer Success Engineer ICustomer Success - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2250&pid=206"
+   },
+   {
+    "title": "Counsel / Senior CounselLegal CommercialRemote United Kingdom",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2381&pid=207"
+   },
+   {
+    "title": "Cloud Security AnalystInfo Security - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2364&pid=206"
+   },
+   {
+    "title": "Senior Manager, IT Operations – IndiaIT - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2376&pid=206"
+   },
+   {
+    "title": "Manager, Solution Consulting OperationsServices - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2360&pid=206"
+   },
+   {
+    "title": "Solution ConsultantServices - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2324&pid=206"
+   },
+   {
+    "title": "Manager, Solution ConsultingServices - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2289&pid=206"
+   },
+   {
+    "title": "Project ManagerServices - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2286&pid=206"
+   },
+   {
+    "title": "Technical Account ManagerServices - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2298&pid=206"
+   },
+   {
+    "title": "VP, GTMSales Management - CoreHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2357&pid=206"
+   },
+   {
+    "title": "Sales Development RepresentativeNA Core Sales DevelopmentSeattle - Seattle, Washington United States",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2385&pid=17"
+   },
+   {
+    "title": "Sales Development RepresentativeNA Core Sales DevelopmentBoston",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2386&pid=17"
+   },
+   {
+    "title": "Commercial Account ExecutiveNA Core Commercial SalesRemote United States",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2281&pid=17"
+   },
+   {
+    "title": "Senior Global Sales DirectorNA Core Global SalesRemote United States",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2363&pid=17"
+   },
+   {
+    "title": "Senior Director, India- CFO OrganizationFinance - IndiaHyderabad",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2293&pid=206"
+   },
+   {
+    "title": "Senior Customer Success Operations ManagerCustomer Success OperationsRemote United States",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2302&pid=17"
+   },
+   {
+    "title": "Vice President, Product MarketingCustomer & Product MarketingRemote United States",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2291&pid=17"
+   },
+   {
+    "title": "Senior Director of Brand StrategyGlobal Brand & EventsRemote United States",
+    "url": "https://www.seismic.com/careers/job-detail/?jid=2268&pid=17"
+   }
+  ],
+  "listUrl": "https://www.seismic.com/careers/job-listings/"
+ },
+ {
+  "name": "Udaan",
+  "careersUrl": "https://udaan.com/jobs",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Icertis",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Starburst Data",
+  "careersUrl": "https://www.starburst.io/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Sign up now",
+    "url": "https://job-boards.greenhouse.io/starbursttalentcommunity/jobs/5406533008"
+   }
+  ],
+  "listUrl": "https://www.starburst.io/careers/open-roles/"
+ },
+ {
+  "name": "Workrise",
+  "careersUrl": "https://www.rigup.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Wefox",
+  "careersUrl": "https://www.wefox.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "BharatPe",
+  "careersUrl": "https://www.bharatpe.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Aiven",
+  "careersUrl": "https://aiven.io/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to content",
+    "url": "https://aiven.io/careers/job#main"
+   },
+   {
+    "title": "careers page",
+    "url": "https://aiven.io/careers"
+   },
+   {
+    "title": "Account Executive, SMBAustin, Texas, United States",
+    "url": "https://aiven.io/careers/job/4885391101"
+   },
+   {
+    "title": "Backend Engineer, ClickHouseHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4902719101"
+   },
+   {
+    "title": "Commercial Account Executive Austin, Texas, United States",
+    "url": "https://aiven.io/careers/job/4715425101"
+   },
+   {
+    "title": "Director of Revenue MarketingIreland",
+    "url": "https://aiven.io/careers/job/4951386101"
+   },
+   {
+    "title": "Enterprise Account ExecutiveAustin, Texas, United States",
+    "url": "https://aiven.io/careers/job/4770123101"
+   },
+   {
+    "title": "Enterprise Account Executive (London)United Kingdom",
+    "url": "https://aiven.io/careers/job/4938410101"
+   },
+   {
+    "title": "Enterprise Account Executive - SwedenSweden",
+    "url": "https://aiven.io/careers/job/4777877101"
+   },
+   {
+    "title": "Fullstack Software Engineer, KafkaHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4962384101"
+   },
+   {
+    "title": "Inside Sales Representative - Cork, IrelandIreland",
+    "url": "https://aiven.io/careers/job/4846884101"
+   },
+   {
+    "title": "Key Account Director - OEMAustin, Texas, United States",
+    "url": "https://aiven.io/careers/job/4918674101"
+   },
+   {
+    "title": "Lead People PartnerHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4938460101"
+   },
+   {
+    "title": "Manager, Marketing OperationsHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4870465101"
+   },
+   {
+    "title": "Partner Success Manager (AMER)Austin, Texas, United States",
+    "url": "https://aiven.io/careers/job/4976325101"
+   },
+   {
+    "title": "Partner Success Manager (EMEA)Paris, Paris, France",
+    "url": "https://aiven.io/careers/job/4976361101"
+   },
+   {
+    "title": "Pricing and Packaging ManagerHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4947419101"
+   },
+   {
+    "title": "Product Marketing Manager AISan Francisco Bay Area",
+    "url": "https://aiven.io/careers/job/4912951101"
+   },
+   {
+    "title": "Senior AI Automation EngineerHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4938234101"
+   },
+   {
+    "title": "Senior IAM EngineerHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4989551101"
+   },
+   {
+    "title": "Senior Software Engineer, Agentic TeamIsrael",
+    "url": "https://aiven.io/careers/job/4987103101"
+   },
+   {
+    "title": "Senior Software Engineer, Aiven ContextHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4959959101"
+   },
+   {
+    "title": "Senior Software Engineer, AnalyticsHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4889290101"
+   },
+   {
+    "title": "Senior Software Engineer - ClickHouseHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4960858101"
+   },
+   {
+    "title": "Senior Software Engineer, Database OEMHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4889268101"
+   },
+   {
+    "title": "Senior Software Engineer, DatabasesHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4702668101"
+   },
+   {
+    "title": "Senior Software Engineer, DevOpsIsrael",
+    "url": "https://aiven.io/careers/job/4889244101"
+   },
+   {
+    "title": "Senior Software Engineer, DevOpsHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4889238101"
+   },
+   {
+    "title": "Senior Software Engineer, Internal DevExHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4981582101"
+   },
+   {
+    "title": "Senior Software Engineer, Platform DeliveryHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4976341101"
+   },
+   {
+    "title": "Senior Software Engineer, SearchHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4855509101"
+   },
+   {
+    "title": "Senior Solutions ArchitectNorth America",
+    "url": "https://aiven.io/careers/job/4947320101"
+   },
+   {
+    "title": "Senior Staff Engineer, SREHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4838490101"
+   },
+   {
+    "title": "Software Engineer, Aiven ContextHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4901533101"
+   },
+   {
+    "title": "Software Engineer, AnalyticsHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4889397101"
+   },
+   {
+    "title": "Software Engineer, Valkey CoreHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4889277101"
+   },
+   {
+    "title": "Staff Product Security EngineerHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4900414101"
+   },
+   {
+    "title": "Strategic Account ExecutiveSan Francisco Bay Area",
+    "url": "https://aiven.io/careers/job/4986639101"
+   },
+   {
+    "title": "Talent Acquisition Partner - GTMAustin, Texas, United States; Ireland",
+    "url": "https://aiven.io/careers/job/4955290101"
+   },
+   {
+    "title": "Technical Account Manager (OEM)Austin, Texas, United States",
+    "url": "https://aiven.io/careers/job/4970818101"
+   },
+   {
+    "title": "Technical AEO ManagerIreland",
+    "url": "https://aiven.io/careers/job/4838352101"
+   },
+   {
+    "title": "Technical Lead, CloudHelsinki, Uusimaa, Finland",
+    "url": "https://aiven.io/careers/job/4833444101"
+   }
+  ],
+  "listUrl": "https://aiven.io/careers/job"
+ },
+ {
+  "name": "CMR Surgical",
+  "careersUrl": "https://www.cmrsurgical.co/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Odoo",
+  "careersUrl": "https://careers.odoo.com/web/login?redirect=%2Fodoo%3F",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "The Boring Company",
+  "careersUrl": "http://www.boringcompany.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Exabeam",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "AmWINS Group",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Sourcegraph",
+  "careersUrl": "https://sourcegraph.com/jobs",
+  "ats": "greenhouse",
+  "slug": "sourcegraph91",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Tradeshift",
+  "careersUrl": "https://tradeshift.com/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Column 2",
+    "url": "https://tradeshift.com/careers/#"
+   },
+   {
+    "title": "Open Positions",
+    "url": "https://tradeshift.com/careers/#open_positions"
+   },
+   {
+    "title": "Perks & Benefits",
+    "url": "https://tradeshift.com/careers/#perks"
+   },
+   {
+    "title": "A Day in the Life",
+    "url": "https://tradeshift.com/careers/#life"
+   }
+  ],
+  "listUrl": "https://tradeshift.com/careers/#open_positions"
+ },
+ {
+  "name": "EasyA",
+  "careersUrl": "https://namedropping.com/domain/easya-com",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "MPL",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Infra.Market",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Mews (company)",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Highspot",
+  "careersUrl": "https://app.highspot.com/unsupported_browser",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Uptake",
+  "careersUrl": "https://www.uptake.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "BitSight",
+  "careersUrl": "https://www.bitsight.com/about/careers",
+  "ats": "workday",
+  "slug": "bitsight.wd1.myworkdayjobs.com|bitsight|Bitsight",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Addepar",
+  "careersUrl": "https://addepar.com/careers",
+  "ats": "greenhouse",
+  "slug": "addepar1",
+  "dom": [],
+  "via": "careers-page"
+ },
+ {
+  "name": "Mozido",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "ManoMano",
+  "careersUrl": "https://careers.manomano.jobs/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Senior Machine Learning Engineer - M/W",
+    "url": "https://careers.manomano.jobs/en-GB/jobs/8406553-senior-machine-learning-engineer-m-w"
+   },
+   {
+    "title": "Business Developer, Germany",
+    "url": "https://careers.manomano.jobs/en-GB/jobs/8339558-business-developer-germany"
+   },
+   {
+    "title": "Business Developer - Spain",
+    "url": "https://careers.manomano.jobs/en-GB/jobs/8308471-business-developer-spain"
+   }
+  ]
+ },
+ {
+  "name": "FlixMobility",
+  "careersUrl": "https://flix.careers/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "KeepTruckin",
+  "careersUrl": "https://gomotive.com/company/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "CareersJoin our hybrid-first team",
+    "url": "https://gomotive.com/company/careers/"
+   },
+   {
+    "title": "Head of Procure-to-Pay",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8682504002"
+   },
+   {
+    "title": "Lead Accountant",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8784520002"
+   },
+   {
+    "title": "Senior Accountant",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8784522002"
+   },
+   {
+    "title": "Senior Payroll Analyst",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8784616002"
+   },
+   {
+    "title": "Billing Specialist",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/6330417002"
+   },
+   {
+    "title": "SMB Account Manager - Spanish",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/7959019002"
+   },
+   {
+    "title": "Senior Enablement Operations Manager",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8672501002"
+   },
+   {
+    "title": "Business Strategy and Operations Analyst II (RevOps)",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/7761424002"
+   },
+   {
+    "title": "Business Strategy & Operations Analyst II (Sales Ops)",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8307807002"
+   },
+   {
+    "title": "Business Strategy & Operations Analyst II (Enterprise)",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8671133002"
+   },
+   {
+    "title": "Install Ops Partner MX",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8743525002"
+   },
+   {
+    "title": "Account Executive, Mid-Market - MX",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8622282002"
+   },
+   {
+    "title": "Strategic Partner Manager",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8705118002"
+   },
+   {
+    "title": "Partner Billing Specialist",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8855235002"
+   },
+   {
+    "title": "RVP, Enterprise Sales - Canada",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8384145002"
+   },
+   {
+    "title": "Director, Account Management - Canada",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8419784002"
+   },
+   {
+    "title": "Commercial Account Manager",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/6050374002"
+   },
+   {
+    "title": "Senior Manager, Commercial Account Management",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/7870024002"
+   },
+   {
+    "title": "Senior Director, Commercial Account Management",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8632721002"
+   },
+   {
+    "title": "Solutions Engineer, Mid Market (Canada)",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8110111002"
+   },
+   {
+    "title": "Enterprise Account Management - Central",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8728308002"
+   },
+   {
+    "title": "Director of Strategic Accounts, Eastern U.S.",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/7083305002"
+   },
+   {
+    "title": "Account Executive, Enterprise - Texas",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/7812263002"
+   },
+   {
+    "title": "Account Executive, Enterprise - Central",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/7812320002"
+   },
+   {
+    "title": "Account Executive, Enterprise - Mountain",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/7812339002"
+   },
+   {
+    "title": "Account Executive, Enterprise - West",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/7812348002"
+   },
+   {
+    "title": "Director of Strategic Accounts, Western U.S.",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8047035002"
+   },
+   {
+    "title": "Regional Director, Enterprise East Sales",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8720914002"
+   },
+   {
+    "title": "Account Executive, CMRL - MX",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8235635002"
+   },
+   {
+    "title": "Account Executive, Enterprise",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8534891002"
+   },
+   {
+    "title": "Account Executive, Strategic",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8706368002"
+   },
+   {
+    "title": "Account Executive, SMB - MX",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8790736002"
+   },
+   {
+    "title": "Mid-Market Account Executive",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8606982002"
+   },
+   {
+    "title": "Mid-Market Account Executive",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8606984002"
+   },
+   {
+    "title": "Mid-Market Account Executive",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8608835002"
+   },
+   {
+    "title": "Account Executive, Public Sector",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8700097002"
+   },
+   {
+    "title": "SMB Account Manager",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/6056440002"
+   },
+   {
+    "title": "SMB Account Executive - Outbound Sales",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/6056462002"
+   },
+   {
+    "title": "Manager, SMB Account Management",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/6854599002"
+   },
+   {
+    "title": "Commercial Account Executive, Outbound Sales",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8737445002"
+   },
+   {
+    "title": "Regional Vice President, Strategic Sales (Central)",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8800798002"
+   },
+   {
+    "title": "Sales Development Representative",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8767271002"
+   },
+   {
+    "title": "Sales Development Representative - Austin, TX",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8606959002"
+   },
+   {
+    "title": "Sales Development Representative",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8703246002"
+   },
+   {
+    "title": "French Speaking SDR",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8367923002"
+   },
+   {
+    "title": "Sales Development Manager",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8703240002"
+   },
+   {
+    "title": "Sales Development Representative - Nashville, TN",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8606976002"
+   },
+   {
+    "title": "Senior Manager, Solutions Engineering (Canada)",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8694521002"
+   },
+   {
+    "title": "Trial Success Manager - Central Region",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/7814541002"
+   },
+   {
+    "title": "Senior Solutions Engineer, Enterprise (Central/Eastern Regions)",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8635231002"
+   },
+   {
+    "title": "Senior Solutions Engineer, Maintenance",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8652557002"
+   },
+   {
+    "title": "Trial Success Manager",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8709975002"
+   },
+   {
+    "title": "Customer Success Manager, Enterprise",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8721156002"
+   },
+   {
+    "title": "Customer Success Manager",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8721158002"
+   },
+   {
+    "title": "Value Consultant",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8731098002"
+   },
+   {
+    "title": "Principal Business Value Consultant",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8727515002"
+   },
+   {
+    "title": "Field Engineer",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8721490002"
+   },
+   {
+    "title": "Senior Manager, Strategic Accounts Customer Success Managers",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8787033002"
+   },
+   {
+    "title": "Technical Account Manager - Enterprise",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8021079002"
+   }
+  ],
+  "listUrl": "https://gomotive.com/company/careers/jobs/"
+ },
+ {
+  "name": "PayFit",
+  "careersUrl": "https://careers.payfit.com/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to main content",
+    "url": "https://careers.payfit.com/jobs#main-content"
+   },
+   {
+    "title": "Senior Sales/SDR Barcelona - English Speaker",
+    "url": "https://careers.payfit.com/jobs/7749950-senior-sales-sdr-barcelona-english-speaker"
+   },
+   {
+    "title": "Product Builder UK",
+    "url": "https://careers.payfit.com/jobs/8492062-product-builder-uk"
+   },
+   {
+    "title": "Account Executive Spain",
+    "url": "https://careers.payfit.com/jobs/8489346-account-executive-spain"
+   },
+   {
+    "title": "Senior Organic Growth Expert",
+    "url": "https://careers.payfit.com/jobs/8446182-senior-organic-growth-expert"
+   },
+   {
+    "title": "Payroll Expert Spain / Asesor Laboral Contrato temporal 6 meses inicio Noviembre",
+    "url": "https://careers.payfit.com/jobs/8393653-payroll-expert-spain-asesor-laboral-contrato-temporal-6-meses-inicio-noviembre"
+   },
+   {
+    "title": "Senior Sales Development Representative London",
+    "url": "https://careers.payfit.com/jobs/8316737-senior-sales-development-representative-london"
+   },
+   {
+    "title": "UK Payroll Expert",
+    "url": "https://careers.payfit.com/jobs/8200168-uk-payroll-expert"
+   },
+   {
+    "title": "Account Executive Enterprise - Paris",
+    "url": "https://careers.payfit.com/jobs/8084914-account-executive-enterprise-paris"
+   },
+   {
+    "title": "Account Executive - Paris",
+    "url": "https://careers.payfit.com/jobs/8024220-account-executive-paris"
+   },
+   {
+    "title": "Business developper / SDR - Paris",
+    "url": "https://careers.payfit.com/jobs/7311720-business-developper-sdr-paris"
+   },
+   {
+    "title": "Business Development Representative / SDR Barcelona",
+    "url": "https://careers.payfit.com/jobs/7180079-business-development-representative-sdr-barcelona"
+   },
+   {
+    "title": "Customer Service",
+    "url": "https://careers.payfit.com/departments/customer-service"
+   },
+   {
+    "title": "All departments",
+    "url": "https://careers.payfit.com/departments"
+   },
+   {
+    "title": "General Management",
+    "url": "https://careers.payfit.com/departments/internships-apprenticeship"
+   },
+   {
+    "title": "Product Management",
+    "url": "https://careers.payfit.com/departments/product-management"
+   },
+   {
+    "title": "Applicant tracking system by Teamtailor",
+    "url": "https://www.teamtailor.com/?utm_campaign=poweredby&utm_content=careers.payfit.com&utm_medium=referral&utm_source=career-site"
+   }
+  ],
+  "listUrl": "https://careers.payfit.com/jobs"
+ },
+ {
+  "name": "Tipalti",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
  }
 ]

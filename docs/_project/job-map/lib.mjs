@@ -52,20 +52,42 @@ export function classify(j, region = 'any') {
   return { fn, track, how: byTitle ? 'title' : track === 'other-eng' ? '-' : 'jd', level: level(j.title), ...rest };
 }
 
+// ISO-2 country detection from a free-text job location. Order matters (specific before generic).
+const C2 = (code, rx) => [code, new RegExp(rx, 'i')];
 const COUNTRIES = [
-  ['IN', /india|bengaluru|bangalore|hyderabad|pune|mumbai|gurgaon|gurugram|noida|delhi|chennai|kolkata|ahmedabad|kochi|coimbatore|lucknow|jaipur|indore|chandigarh|thiruvananthapuram|remote.*india/i],
-  ['CA', /canada|toronto|vancouver|montreal|ottawa|calgary|waterloo|, ?(ON|BC|AB|QC)\b/i],
-  ['DE', /germany|deutschland|berlin|munich|münchen|hamburg|frankfurt|cologne|köln|stuttgart|düsseldorf|leipzig/i],
-  ['EU', /europe|emea|london|\buk\b|united kingdom|england|amsterdam|netherlands|dublin|ireland|paris|france|spain|barcelona|madrid|poland|warsaw|krakow|sweden|stockholm|zurich|switzerland|denmark|copenhagen|portugal|lisbon|austria|vienna|finland|helsinki|norway|oslo|belgium|brussels|estonia|tallinn|czech|prague|romania|bucharest|lithuania|vilnius|italy|milan/i],
-  ['US', /\b(usa?|united states)\b|, ?(AL|AK|AZ|AR|CA|CO|CT|DC|FL|GA|IL|MA|MD|MI|MN|MO|NC|NJ|NV|NY|OH|OR|PA|TX|UT|VA|WA)\b|san francisco|new york|seattle|austin|boston|chicago|los angeles|denver|atlanta|remote.*(us|united states)|bay area|mountain view|palo alto|sunnyvale|san jose/i],
+  C2('IN', 'india|bengaluru|bangalore|hyderabad|pune|mumbai|gurgaon|gurugram|noida|delhi|chennai|kolkata|ahmedabad|kochi|coimbatore|lucknow|jaipur|indore|chandigarh|thiruvananthapuram'),
+  C2('CA', 'canada|toronto|vancouver|montreal|montréal|ottawa|calgary|waterloo|edmonton|, ?(ON|BC|AB|QC)\\b'),
+  C2('DE', 'germany|deutschland|berlin|munich|münchen|hamburg|frankfurt|cologne|köln|stuttgart|düsseldorf|leipzig|nuremberg'),
+  C2('GB', 'united kingdom|\\buk\\b|england|scotland|wales|london|manchester|edinburgh|glasgow|birmingham|bristol|leeds|cambridge, uk|belfast|cardiff'),
+  C2('FR', 'france|paris|lyon|marseille|toulouse|lille|nantes|bordeaux|sophia antipolis|île-de-france|ile-de-france'),
+  C2('NL', 'netherlands|nederland|amsterdam|rotterdam|utrecht|eindhoven|the hague|den haag'),
+  C2('IE', 'ireland|dublin|cork|galway|limerick'),
+  C2('ES', 'spain|españa|madrid|barcelona|valencia|seville|malaga|bilbao'),
+  C2('IT', 'italy|italia|milan|milano|rome|roma|turin|torino|bologna'),
+  C2('PT', 'portugal|lisbon|lisboa|porto'),
+  C2('PL', 'poland|polska|warsaw|krakow|kraków|wroclaw|wrocław|gdansk|poznan'),
+  C2('SE', 'sweden|stockholm|gothenburg|göteborg|malmö|malmo'),
+  C2('DK', 'denmark|copenhagen|københavn|aarhus'),
+  C2('NO', 'norway|oslo|bergen'),
+  C2('FI', 'finland|helsinki|espoo|tampere'),
+  C2('CH', 'switzerland|schweiz|suisse|zurich|zürich|geneva|genève|basel|lausanne|zug'),
+  C2('AT', 'austria|österreich|vienna|wien|graz'),
+  C2('BE', 'belgium|belgique|brussels|bruxelles|antwerp|ghent'),
+  C2('LU', 'luxembourg'),
+  C2('EE', 'estonia|tallinn'), C2('LT', 'lithuania|vilnius'), C2('LV', 'latvia|riga'),
+  C2('CZ', 'czech|prague|praha|brno'), C2('RO', 'romania|bucharest|cluj'), C2('HU', 'hungary|budapest'), C2('GR', 'greece|athens'), C2('BG', 'bulgaria|sofia'), C2('UA', 'ukraine|kyiv|kiev'), C2('RS', 'serbia|belgrade'), C2('HR', 'croatia|zagreb'),
+  C2('TR', 'turkey|türkiye|istanbul|ankara'),
+  C2('AE', 'united arab emirates|\\buae\\b|dubai|abu dhabi'), C2('SA', 'saudi|riyadh|jeddah'), C2('QA', 'qatar|doha'), C2('IL', 'israel|tel aviv|jerusalem|haifa'), C2('EG', 'egypt|cairo'),
+  C2('SG', 'singapore'), C2('MY', 'malaysia|kuala lumpur'), C2('ID', 'indonesia|jakarta'), C2('PH', 'philippines|manila|cebu'), C2('TH', 'thailand|bangkok'), C2('VN', 'vietnam|hanoi|ho chi minh'),
+  C2('JP', 'japan|tokyo|osaka'), C2('KR', 'korea|seoul'), C2('CN', 'china|beijing|shanghai|shenzhen|hong kong|guangzhou'), C2('TW', 'taiwan|taipei'),
+  C2('AU', 'australia|sydney|melbourne|brisbane|perth|canberra'), C2('NZ', 'new zealand|auckland|wellington'),
+  C2('BR', 'brazil|brasil|são paulo|sao paulo|rio de janeiro'), C2('MX', 'mexico|méxico|mexico city|guadalajara|monterrey'), C2('AR', 'argentina|buenos aires'), C2('CO', 'colombia|bogot'), C2('CL', 'chile|santiago'),
+  C2('ZA', 'south africa|johannesburg|cape town'), C2('NG', 'nigeria|lagos'), C2('KE', 'kenya|nairobi'),
+  C2('PK', 'pakistan|karachi|lahore|islamabad'), C2('BD', 'bangladesh|dhaka'), C2('LK', 'sri lanka|colombo'),
+  C2('US', '\\b(usa?|united states)\\b|, ?(AL|AK|AZ|AR|CA|CO|CT|DC|DE|FL|GA|HI|IA|ID|IL|IN|KS|KY|LA|MA|MD|ME|MI|MN|MO|MS|MT|NC|ND|NE|NH|NJ|NM|NV|NY|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VA|VT|WA|WI|WV|WY)\\b|san francisco|new york|nyc|seattle|austin|boston|chicago|los angeles|denver|atlanta|bay area|mountain view|palo alto|sunnyvale|san jose|dallas|houston|miami|washington|philadelphia|phoenix|portland|san diego|remote.*(us|united states)'),
 ];
-export const countryOf = (loc = '') => COUNTRIES.find(([, rx]) => rx.test(loc))?.[0] ?? (/remote/i.test(loc) ? 'REMOTE' : 'OTHER');
-
-/** Position (what the job is) from the title plus the URL slug, which on Workday often carries the real title. */
-export function position(j) {
-  const t = `${j.title} ${decodeURIComponent(j.url ?? '').replace(/[-_]+/g, ' ')}`;
-  if (/full[- ]?stack/i.test(t)) return 'fullstack';
-  if (/front[- ]?end|\bui\b|\bux\b|web (developer|engineer)|\breact|angular|\bvue\b|design systems?/i.test(t)) return 'frontend';
-  if (/back[- ]?end|server[- ]?side|\bapi\b|\bjava\b|spring|node|golang|\bgo\b|distributed|platform|infrastructure|payments?|services?/i.test(t)) return 'backend';
-  return 'software';
-}
+export const EUROPE = new Set(['GB', 'FR', 'NL', 'IE', 'ES', 'IT', 'PT', 'PL', 'SE', 'DK', 'NO', 'FI', 'CH', 'AT', 'BE', 'LU', 'EE', 'LT', 'LV', 'CZ', 'RO', 'HU', 'GR', 'BG', 'UA', 'RS', 'HR', 'DE']);
+export const countryOf = (loc = '') => {
+  if (/\b(europe|emea)\b/i.test(loc) && !COUNTRIES.some(([, rx]) => rx.test(loc))) return 'EUROPE';
+  return COUNTRIES.find(([, rx]) => rx.test(loc))?.[0] ?? (/remote|anywhere|worldwide/i.test(loc) ? 'REMOTE' : 'OTHER');
+};

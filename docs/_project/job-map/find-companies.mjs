@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { ATS } from './ats.mjs';
 import { classify, countryOf } from './lib.mjs';
+import { fetchWikidata } from './wikidata.mjs';
 
 const UA = { 'user-agent': 'devbible-jobmap/1.0' };
 const j = async (u) => { try { const r = await fetch(u, { headers: UA, signal: AbortSignal.timeout(40000) }); return r.ok ? await r.json() : null; } catch { return null; } };
@@ -61,6 +62,19 @@ await pool(wikiRows, 14, async (w) => {
 });
 console.error(`Wikipedia companies with a readable board: ${discovered.length - before}`);
 
+// ---- 1c. Wikidata: the largest companies of 28 countries, with their own website and industry ----
+const wd = await fetchWikidata(250, (m) => console.error('wikidata', m));
+console.error(`Wikidata companies: ${wd.length}`);
+const beforeWd = discovered.length;
+await pool(wd, 14, async (w) => {
+  if (seenNames.has(w.name.toLowerCase())) return;
+  seenNames.add(w.name.toLowerCase());
+  const host = (() => { try { return new URL(w.website).hostname.replace(/^www\./, '').split('.')[0]; } catch { return ''; } })();
+  const { name, ...meta } = w;
+  await probe(name, [host], meta);
+});
+console.error(`Wikidata companies with a readable board: ${discovered.length - beforeWd}`);
+
 // ---- 2. Aggregator APIs: jobs come with company names ----
 const agg = []; // {company, title, location, url, desc, src}
 for (let p = 1; p <= 12; p++) {
@@ -79,6 +93,16 @@ for (let off = 0; off < 400; off += 20) {
 }
 console.error(`aggregator rows: ${agg.length}`);
 
+for (let p = 1; p <= 15; p++) {
+  const d = await j(`https://www.themuse.com/api/public/jobs?page=${p}`);
+  if (!d?.results?.length) break;
+  d.results.forEach((x) => agg.push({ company: x.company?.name, title: x.name, location: (x.locations ?? []).map((l) => l.name).join('; ') || 'Remote', url: x.refs?.landing_page, desc: strip(x.contents), src: 'themuse' }));
+}
+const jb = await j('https://jobicy.com/api/v2/remote-jobs?count=100');
+(jb?.jobs ?? []).forEach((x) => agg.push({ company: x.companyName, title: x.jobTitle, location: x.jobGeo || 'Remote', url: x.url, desc: strip(x.jobDescription), src: 'jobicy' }));
+const wn = await j('https://www.workingnomads.com/api/exposed_jobs/');
+(Array.isArray(wn) ? wn : []).forEach((x) => agg.push({ company: x.company_name, title: x.title, location: x.location || 'Remote', url: x.url, desc: strip(x.description), src: 'workingnomads' }));
+console.error(`aggregator rows incl. Muse/Jobicy/WorkingNomads: ${agg.length}`);
 const have = new Set([...known, ...discovered.map((d) => d.name.toLowerCase())]);
 const aggJobs = [], aggCos = new Map();
 for (const a of agg) {

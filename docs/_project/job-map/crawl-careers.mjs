@@ -15,8 +15,8 @@ const done = new Map(read('./careers-results.json', []).map((r) => [r.name.toLow
 const curated = read('./companies.json', []).filter((c) => !c.ats);
 const unresolved = read('./unresolved.json', []);
 const seen = new Set();
-const pri = (x) => ({ wikipedia: 1, yc: 2 }[x.src] ?? 0);
-let todo = [...curated, ...unresolved].sort((a, b) => pri(a) - pri(b)).filter((c) => !seen.has(c.name.toLowerCase()) && seen.add(c.name.toLowerCase()));
+const pri = (x) => ({ wikidata: 1, wikipedia: 2, yc: 3 }[x.src] ?? 0);
+let todo = [...curated, ...unresolved].sort((a, b) => pri(a) - pri(b) || (a.tier || 9) - (b.tier || 9) || (b.size || 0) - (a.size || 0)).filter((c) => !seen.has(c.name.toLowerCase()) && seen.add(c.name.toLowerCase()));
 if (only) todo = todo.filter((c) => only.includes(c.name.toLowerCase()));
 todo = todo.filter((c) => !done.has(c.name.toLowerCase()) || only);
 if (arg('limit')) todo = todo.slice(0, Number(arg('limit')));
