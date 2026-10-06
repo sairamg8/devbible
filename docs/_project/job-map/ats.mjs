@@ -33,6 +33,12 @@ export const ATS = {
       return [...seen.values()];
     },
   },
+  workable: {
+    async list(slug) {
+      const d = await get(`https://apply.workable.com/api/v1/widget/accounts/${slug}?details=true`);
+      return d && (d.jobs ?? []).map((j) => ({ title: j.title, location: [j.city, j.state, j.country].filter(Boolean).join(', '), url: j.url ?? j.shortlink, team: j.department ?? '', desc: strip(j.description) }));
+    },
+  },
   atlassian: {
     async list() {
       const d = await get('https://www.atlassian.com/endpoint/careers/listings');

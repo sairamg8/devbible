@@ -7,7 +7,8 @@
   "slug": "razorpaysoftwareprivatelimited",
   "hq": "in",
   "open": 25,
-  "engineering": 3
+  "engineering": 3,
+  "src": "curated"
  },
  {
   "name": "CRED",
@@ -17,7 +18,8 @@
   "slug": "cred",
   "hq": "in",
   "open": 8,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "PhonePe",
@@ -25,7 +27,8 @@
   "tier": 1,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Groww",
@@ -35,7 +38,8 @@
   "slug": "groww",
   "hq": "in",
   "open": 7,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Juspay",
@@ -43,7 +47,8 @@
   "tier": 1,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Cashfree",
@@ -51,7 +56,8 @@
   "tier": 2,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Paytm",
@@ -61,7 +67,8 @@
   "slug": "paytm",
   "hq": "in",
   "open": 176,
-  "engineering": 3
+  "engineering": 3,
+  "src": "curated"
  },
  {
   "name": "Slice",
@@ -71,7 +78,8 @@
   "slug": "slice",
   "hq": "in",
   "open": 29,
-  "engineering": 4
+  "engineering": 4,
+  "src": "curated"
  },
  {
   "name": "Zeta",
@@ -81,7 +89,8 @@
   "slug": "zeta",
   "hq": "in",
   "open": 25,
-  "engineering": 6
+  "engineering": 6,
+  "src": "curated"
  },
  {
   "name": "Postman",
@@ -89,7 +98,8 @@
   "tier": 1,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Freshworks",
@@ -99,7 +109,8 @@
   "slug": "Freshworks",
   "hq": "in",
   "open": 124,
-  "engineering": 38
+  "engineering": 38,
+  "src": "curated"
  },
  {
   "name": "Chargebee",
@@ -107,7 +118,8 @@
   "tier": 2,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Whatfix",
@@ -117,7 +129,8 @@
   "slug": "whatfix",
   "hq": "in",
   "open": 1,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Sprinklr",
@@ -127,7 +140,8 @@
   "slug": "sprinklr.wd1.myworkdayjobs.com|sprinklr|careers",
   "hq": "in",
   "open": 40,
-  "engineering": 8
+  "engineering": 8,
+  "src": "curated"
  },
  {
   "name": "Darwinbox",
@@ -135,7 +149,8 @@
   "tier": 2,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Mindtickle",
@@ -145,7 +160,8 @@
   "slug": "mindtickle",
   "hq": "in",
   "open": 19,
-  "engineering": 7
+  "engineering": 7,
+  "src": "curated"
  },
  {
   "name": "Capillary",
@@ -153,7 +169,8 @@
   "tier": 3,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "CleverTap",
@@ -161,7 +178,8 @@
   "tier": 2,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "BrowserStack",
@@ -171,7 +189,8 @@
   "slug": "browserstack.wd3.myworkdayjobs.com|browserstack|External",
   "hq": "in",
   "open": 20,
-  "engineering": 1
+  "engineering": 1,
+  "src": "curated"
  },
  {
   "name": "Zenoti",
@@ -181,7 +200,8 @@
   "slug": "zenoti",
   "hq": "in",
   "open": 50,
-  "engineering": 5
+  "engineering": 5,
+  "src": "curated"
  },
  {
   "name": "Gupshup",
@@ -189,7 +209,8 @@
   "tier": 3,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Meesho",
@@ -199,7 +220,8 @@
   "slug": "meesho",
   "hq": "in",
   "open": 59,
-  "engineering": 2
+  "engineering": 2,
+  "src": "curated"
  },
  {
   "name": "Swiggy",
@@ -209,7 +231,8 @@
   "slug": "swiggy",
   "hq": "in",
   "open": 170,
-  "engineering": 3
+  "engineering": 3,
+  "src": "curated"
  },
  {
   "name": "Zomato",
@@ -217,7 +240,8 @@
   "tier": 1,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Flipkart",
@@ -225,7 +249,8 @@
   "tier": 1,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Myntra",
@@ -233,7 +258,8 @@
   "tier": 1,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Nykaa",
@@ -241,7 +267,8 @@
   "tier": 2,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Lenskart",
@@ -249,7 +276,8 @@
   "tier": 2,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "ShareChat",
@@ -257,7 +285,8 @@
   "tier": 2,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "InMobi",
@@ -267,7 +296,8 @@
   "slug": "inmobi",
   "hq": "in",
   "open": 70,
-  "engineering": 5
+  "engineering": 5,
+  "src": "curated"
  },
  {
   "name": "Ola",
@@ -275,7 +305,8 @@
   "tier": 3,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "MakeMyTrip",
@@ -283,7 +314,8 @@
   "tier": 2,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Hotstar",
@@ -293,7 +325,8 @@
   "open": 71,
   "engineering": 57,
   "ats": "workday",
-  "slug": "jiostar.wd102.myworkdayjobs.com|jiostar|JioStar"
+  "slug": "jiostar.wd102.myworkdayjobs.com|jiostar|JioStar",
+  "src": "curated"
  },
  {
   "name": "Dream11",
@@ -301,7 +334,8 @@
   "tier": 2,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Zepto",
@@ -309,7 +343,8 @@
   "tier": 2,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Rapido",
@@ -317,7 +352,8 @@
   "tier": 3,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Unacademy",
@@ -327,7 +363,8 @@
   "slug": "unacademy",
   "ats": "smartrecruiters",
   "open": 3,
-  "engineering": 1
+  "engineering": 1,
+  "src": "curated"
  },
  {
   "name": "PhysicsWallah",
@@ -335,7 +372,8 @@
   "tier": 3,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Atlassian",
@@ -345,7 +383,8 @@
   "slug": "-",
   "hq": "us",
   "open": 355,
-  "engineering": 134
+  "engineering": 134,
+  "src": "curated"
  },
  {
   "name": "Adobe",
@@ -354,8 +393,9 @@
   "ats": "workday",
   "slug": "adobe.wd5.myworkdayjobs.com|adobe|external_experienced",
   "hq": "us",
-  "open": 118,
-  "engineering": 72
+  "open": 117,
+  "engineering": 70,
+  "src": "curated"
  },
  {
   "name": "Uber",
@@ -365,7 +405,8 @@
   "slug": "uber",
   "hq": "us",
   "open": 1,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Intuit",
@@ -373,7 +414,8 @@
   "tier": 1,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "PayPal",
@@ -381,7 +423,8 @@
   "tier": 1,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Salesforce",
@@ -389,7 +432,8 @@
   "tier": 1,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Walmart",
@@ -397,7 +441,8 @@
   "tier": 2,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Goldman Sachs",
@@ -405,7 +450,8 @@
   "tier": 1,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Cognizant",
@@ -413,7 +459,8 @@
   "tier": 3,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Synechron",
@@ -423,7 +470,8 @@
   "slug": "synechron",
   "hq": "us",
   "open": 3,
-  "engineering": 2
+  "engineering": 2,
+  "src": "curated"
  },
  {
   "name": "Persistent",
@@ -431,7 +479,8 @@
   "tier": 3,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Mphasis",
@@ -439,7 +488,8 @@
   "tier": 3,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Hexaware",
@@ -447,7 +497,8 @@
   "tier": 3,
   "hq": "in",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Stripe",
@@ -457,7 +508,8 @@
   "slug": "stripe",
   "ats": "greenhouse",
   "open": 728,
-  "engineering": 152
+  "engineering": 152,
+  "src": "curated"
  },
  {
   "name": "Coinbase",
@@ -467,7 +519,8 @@
   "slug": "coinbase",
   "ats": "greenhouse",
   "open": 226,
-  "engineering": 82
+  "engineering": 82,
+  "src": "curated"
  },
  {
   "name": "Robinhood",
@@ -477,7 +530,8 @@
   "slug": "robinhood",
   "ats": "greenhouse",
   "open": 160,
-  "engineering": 46
+  "engineering": 46,
+  "src": "curated"
  },
  {
   "name": "Brex",
@@ -487,7 +541,8 @@
   "slug": "brex",
   "ats": "greenhouse",
   "open": 287,
-  "engineering": 54
+  "engineering": 54,
+  "src": "curated"
  },
  {
   "name": "Ramp",
@@ -500,7 +555,8 @@
   "slug": "ramp",
   "ats": "ashby",
   "open": 161,
-  "engineering": 30
+  "engineering": 30,
+  "src": "curated"
  },
  {
   "name": "Plaid",
@@ -510,7 +566,8 @@
   "slug": "plaid",
   "ats": "ashby",
   "open": 120,
-  "engineering": 30
+  "engineering": 30,
+  "src": "curated"
  },
  {
   "name": "Chime",
@@ -520,7 +577,8 @@
   "slug": "chime",
   "ats": "greenhouse",
   "open": 65,
-  "engineering": 22
+  "engineering": 22,
+  "src": "curated"
  },
  {
   "name": "Affirm",
@@ -530,7 +588,8 @@
   "slug": "affirm",
   "ats": "greenhouse",
   "open": 187,
-  "engineering": 94
+  "engineering": 94,
+  "src": "curated"
  },
  {
   "name": "Block",
@@ -543,7 +602,8 @@
   "slug": "block",
   "ats": "greenhouse",
   "open": 224,
-  "engineering": 41
+  "engineering": 41,
+  "src": "curated"
  },
  {
   "name": "Airbnb",
@@ -552,8 +612,9 @@
   "hq": "us",
   "slug": "airbnb",
   "ats": "greenhouse",
-  "open": 160,
-  "engineering": 46
+  "open": 161,
+  "engineering": 46,
+  "src": "curated"
  },
  {
   "name": "DoorDash",
@@ -561,7 +622,8 @@
   "tier": 1,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Instacart",
@@ -575,7 +637,8 @@
   "slug": "instacart",
   "ats": "greenhouse",
   "open": 122,
-  "engineering": 24
+  "engineering": 24,
+  "src": "curated"
  },
  {
   "name": "Lyft",
@@ -585,7 +648,8 @@
   "slug": "lyft",
   "ats": "greenhouse",
   "open": 196,
-  "engineering": 47
+  "engineering": 47,
+  "src": "curated"
  },
  {
   "name": "Pinterest",
@@ -595,7 +659,8 @@
   "slug": "pinterest",
   "ats": "greenhouse",
   "open": 176,
-  "engineering": 47
+  "engineering": 47,
+  "src": "curated"
  },
  {
   "name": "Reddit",
@@ -605,7 +670,8 @@
   "slug": "reddit",
   "ats": "greenhouse",
   "open": 148,
-  "engineering": 65
+  "engineering": 65,
+  "src": "curated"
  },
  {
   "name": "Discord",
@@ -615,7 +681,8 @@
   "slug": "discord",
   "ats": "greenhouse",
   "open": 48,
-  "engineering": 27
+  "engineering": 27,
+  "src": "curated"
  },
  {
   "name": "Dropbox",
@@ -625,7 +692,8 @@
   "slug": "dropbox",
   "ats": "greenhouse",
   "open": 35,
-  "engineering": 4
+  "engineering": 4,
+  "src": "curated"
  },
  {
   "name": "Figma",
@@ -634,8 +702,9 @@
   "hq": "us",
   "slug": "figma",
   "ats": "greenhouse",
-  "open": 157,
-  "engineering": 25
+  "open": 156,
+  "engineering": 25,
+  "src": "curated"
  },
  {
   "name": "Notion",
@@ -645,7 +714,8 @@
   "slug": "notion",
   "ats": "ashby",
   "open": 133,
-  "engineering": 40
+  "engineering": 40,
+  "src": "curated"
  },
  {
   "name": "Linear",
@@ -655,7 +725,8 @@
   "slug": "linear",
   "ats": "ashby",
   "open": 31,
-  "engineering": 12
+  "engineering": 12,
+  "src": "curated"
  },
  {
   "name": "Vercel",
@@ -665,7 +736,8 @@
   "slug": "vercel",
   "ats": "greenhouse",
   "open": 84,
-  "engineering": 28
+  "engineering": 28,
+  "src": "curated"
  },
  {
   "name": "Netlify",
@@ -675,7 +747,8 @@
   "slug": "netlify",
   "ats": "greenhouse",
   "open": 6,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Datadog",
@@ -685,7 +758,8 @@
   "slug": "datadog",
   "ats": "greenhouse",
   "open": 435,
-  "engineering": 61
+  "engineering": 61,
+  "src": "curated"
  },
  {
   "name": "MongoDB",
@@ -695,7 +769,8 @@
   "slug": "mongodb",
   "ats": "greenhouse",
   "open": 396,
-  "engineering": 132
+  "engineering": 132,
+  "src": "curated"
  },
  {
   "name": "Cloudflare",
@@ -705,7 +780,8 @@
   "slug": "cloudflare",
   "ats": "greenhouse",
   "open": 418,
-  "engineering": 187
+  "engineering": 187,
+  "src": "curated"
  },
  {
   "name": "Twilio",
@@ -715,7 +791,8 @@
   "slug": "twilio",
   "ats": "greenhouse",
   "open": 131,
-  "engineering": 45
+  "engineering": 45,
+  "src": "curated"
  },
  {
   "name": "GitLab",
@@ -728,7 +805,8 @@
   "slug": "gitlab",
   "ats": "greenhouse",
   "open": 209,
-  "engineering": 81
+  "engineering": 81,
+  "src": "curated"
  },
  {
   "name": "HashiCorp",
@@ -736,7 +814,8 @@
   "tier": 1,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Elastic",
@@ -746,7 +825,8 @@
   "slug": "elastic",
   "ats": "greenhouse",
   "open": 413,
-  "engineering": 219
+  "engineering": 219,
+  "src": "curated"
  },
  {
   "name": "Okta",
@@ -756,7 +836,8 @@
   "slug": "okta",
   "ats": "greenhouse",
   "open": 375,
-  "engineering": 169
+  "engineering": 169,
+  "src": "curated"
  },
  {
   "name": "Snowflake",
@@ -766,7 +847,8 @@
   "slug": "snowflake",
   "ats": "ashby",
   "open": 356,
-  "engineering": 144
+  "engineering": 144,
+  "src": "curated"
  },
  {
   "name": "Databricks",
@@ -775,8 +857,9 @@
   "hq": "us",
   "slug": "databricks",
   "ats": "greenhouse",
-  "open": 886,
-  "engineering": 460
+  "open": 885,
+  "engineering": 460,
+  "src": "curated"
  },
  {
   "name": "Asana",
@@ -786,7 +869,8 @@
   "slug": "asana",
   "ats": "greenhouse",
   "open": 97,
-  "engineering": 32
+  "engineering": 32,
+  "src": "curated"
  },
  {
   "name": "Airtable",
@@ -796,7 +880,8 @@
   "slug": "airtable",
   "ats": "greenhouse",
   "open": 4,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Retool",
@@ -804,7 +889,8 @@
   "tier": 2,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Supabase",
@@ -814,7 +900,8 @@
   "slug": "supabase",
   "ats": "ashby",
   "open": 51,
-  "engineering": 24
+  "engineering": 24,
+  "src": "curated"
  },
  {
   "name": "PlanetScale",
@@ -824,7 +911,8 @@
   "slug": "planetscale",
   "ats": "greenhouse",
   "open": 13,
-  "engineering": 5
+  "engineering": 5,
+  "src": "curated"
  },
  {
   "name": "Anthropic",
@@ -834,7 +922,8 @@
   "slug": "anthropic",
   "ats": "greenhouse",
   "open": 642,
-  "engineering": 221
+  "engineering": 221,
+  "src": "curated"
  },
  {
   "name": "OpenAI",
@@ -844,7 +933,8 @@
   "slug": "openai",
   "ats": "ashby",
   "open": 824,
-  "engineering": 344
+  "engineering": 344,
+  "src": "curated"
  },
  {
   "name": "Scale AI",
@@ -857,7 +947,8 @@
   "slug": "scaleai",
   "ats": "greenhouse",
   "open": 190,
-  "engineering": 66
+  "engineering": 66,
+  "src": "curated"
  },
  {
   "name": "Perplexity",
@@ -866,8 +957,9 @@
   "hq": "us",
   "slug": "perplexity",
   "ats": "ashby",
-  "open": 130,
-  "engineering": 37
+  "open": 129,
+  "engineering": 37,
+  "src": "curated"
  },
  {
   "name": "Cohere",
@@ -877,7 +969,8 @@
   "slug": "cohere",
   "ats": "ashby",
   "open": 130,
-  "engineering": 38
+  "engineering": 38,
+  "src": "curated"
  },
  {
   "name": "Spotify",
@@ -887,7 +980,8 @@
   "slug": "spotify",
   "ats": "lever",
   "open": 75,
-  "engineering": 23
+  "engineering": 23,
+  "src": "curated"
  },
  {
   "name": "Netflix",
@@ -895,7 +989,8 @@
   "tier": 1,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Shopify",
@@ -903,7 +998,8 @@
   "tier": 1,
   "hq": "ca",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Wealthsimple",
@@ -913,7 +1009,8 @@
   "slug": "wealthsimple",
   "ats": "ashby",
   "open": 43,
-  "engineering": 11
+  "engineering": 11,
+  "src": "curated"
  },
  {
   "name": "Clio",
@@ -921,7 +1018,8 @@
   "tier": 2,
   "hq": "ca",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "1Password",
@@ -934,7 +1032,8 @@
   "slug": "1password",
   "ats": "ashby",
   "open": 69,
-  "engineering": 22
+  "engineering": 22,
+  "src": "curated"
  },
  {
   "name": "Hootsuite",
@@ -944,7 +1043,8 @@
   "slug": "hootsuite",
   "ats": "greenhouse",
   "open": 9,
-  "engineering": 2
+  "engineering": 2,
+  "src": "curated"
  },
  {
   "name": "Lightspeed",
@@ -954,7 +1054,8 @@
   "slug": "lightspeed",
   "ats": "ashby",
   "open": 6,
-  "engineering": 5
+  "engineering": 5,
+  "src": "curated"
  },
  {
   "name": "Thinkific",
@@ -962,7 +1063,8 @@
   "tier": 3,
   "hq": "ca",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Ecobee",
@@ -970,7 +1072,8 @@
   "tier": 3,
   "hq": "ca",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Faire",
@@ -983,7 +1086,8 @@
   "slug": "faire",
   "ats": "greenhouse",
   "open": 77,
-  "engineering": 27
+  "engineering": 27,
+  "src": "curated"
  },
  {
   "name": "Top Hat",
@@ -994,7 +1098,8 @@
    "tophat"
   ],
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Benevity",
@@ -1004,7 +1109,8 @@
   "slug": "benevity",
   "ats": "ashby",
   "open": 22,
-  "engineering": 6
+  "engineering": 6,
+  "src": "curated"
  },
  {
   "name": "Ada",
@@ -1016,7 +1122,8 @@
    "adasupport"
   ],
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Neo Financial",
@@ -1029,7 +1136,8 @@
   "slug": "neofinancial",
   "ats": "ashby",
   "open": 73,
-  "engineering": 2
+  "engineering": 2,
+  "src": "curated"
  },
  {
   "name": "Koho",
@@ -1039,7 +1147,8 @@
   "slug": "koho",
   "ats": "ashby",
   "open": 8,
-  "engineering": 2
+  "engineering": 2,
+  "src": "curated"
  },
  {
   "name": "Nuvei",
@@ -1047,7 +1156,8 @@
   "tier": 3,
   "hq": "ca",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Zalando",
@@ -1055,7 +1165,8 @@
   "tier": 1,
   "hq": "de",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "N26",
@@ -1065,7 +1176,8 @@
   "slug": "n26",
   "ats": "greenhouse",
   "open": 45,
-  "engineering": 12
+  "engineering": 12,
+  "src": "curated"
  },
  {
   "name": "Trade Republic",
@@ -1076,7 +1188,8 @@
    "traderepublic"
   ],
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Celonis",
@@ -1086,7 +1199,8 @@
   "slug": "celonis",
   "ats": "greenhouse",
   "open": 224,
-  "engineering": 115
+  "engineering": 115,
+  "src": "curated"
  },
  {
   "name": "Personio",
@@ -1094,7 +1208,8 @@
   "tier": 2,
   "hq": "de",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "GetYourGuide",
@@ -1104,7 +1219,8 @@
   "slug": "getyourguide",
   "ats": "greenhouse",
   "open": 57,
-  "engineering": 5
+  "engineering": 5,
+  "src": "curated"
  },
  {
   "name": "Delivery Hero",
@@ -1117,7 +1233,8 @@
   "slug": "deliveryhero",
   "ats": "smartrecruiters",
   "open": 977,
-  "engineering": 30
+  "engineering": 30,
+  "src": "curated"
  },
  {
   "name": "Auto1",
@@ -1130,7 +1247,8 @@
   "slug": "auto1",
   "ats": "smartrecruiters",
   "open": 695,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Contentful",
@@ -1140,7 +1258,8 @@
   "slug": "contentful",
   "ats": "greenhouse",
   "open": 18,
-  "engineering": 4
+  "engineering": 4,
+  "src": "curated"
  },
  {
   "name": "commercetools",
@@ -1150,7 +1269,8 @@
   "slug": "commercetools",
   "ats": "greenhouse",
   "open": 36,
-  "engineering": 20
+  "engineering": 20,
+  "src": "curated"
  },
  {
   "name": "SumUp",
@@ -1160,7 +1280,8 @@
   "slug": "sumup",
   "ats": "greenhouse",
   "open": 346,
-  "engineering": 31
+  "engineering": 31,
+  "src": "curated"
  },
  {
   "name": "Flix",
@@ -1170,7 +1291,8 @@
   "slug": "flix",
   "ats": "greenhouse",
   "open": 147,
-  "engineering": 12
+  "engineering": 12,
+  "src": "curated"
  },
  {
   "name": "HelloFresh",
@@ -1179,8 +1301,9 @@
   "hq": "de",
   "slug": "hellofresh",
   "ats": "greenhouse",
-  "open": 421,
-  "engineering": 33
+  "open": 422,
+  "engineering": 33,
+  "src": "curated"
  },
  {
   "name": "SAP",
@@ -1188,7 +1311,8 @@
   "tier": 1,
   "hq": "de",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Siemens",
@@ -1196,7 +1320,8 @@
   "tier": 3,
   "hq": "de",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Bosch",
@@ -1204,7 +1329,8 @@
   "tier": 3,
   "hq": "de",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Mambu",
@@ -1212,7 +1338,8 @@
   "tier": 2,
   "hq": "de",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Solaris",
@@ -1220,7 +1347,8 @@
   "tier": 3,
   "hq": "de",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Raisin",
@@ -1230,7 +1358,8 @@
   "slug": "raisin",
   "ats": "greenhouse",
   "open": 36,
-  "engineering": 2
+  "engineering": 2,
+  "src": "curated"
  },
  {
   "name": "Taxfix",
@@ -1238,7 +1367,8 @@
   "tier": 3,
   "hq": "de",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Zenjob",
@@ -1248,7 +1378,8 @@
   "slug": "zenjob",
   "ats": "ashby",
   "open": 12,
-  "engineering": 1
+  "engineering": 1,
+  "src": "curated"
  },
  {
   "name": "Wise",
@@ -1258,7 +1389,8 @@
   "slug": "wise",
   "ats": "greenhouse",
   "open": 15,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Revolut",
@@ -1266,7 +1398,8 @@
   "tier": 1,
   "hq": "eu",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Monzo",
@@ -1276,7 +1409,8 @@
   "slug": "monzo",
   "ats": "greenhouse",
   "open": 67,
-  "engineering": 8
+  "engineering": 8,
+  "src": "curated"
  },
  {
   "name": "Klarna",
@@ -1284,7 +1418,8 @@
   "tier": 1,
   "hq": "eu",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Adyen",
@@ -1294,7 +1429,8 @@
   "slug": "adyen",
   "ats": "greenhouse",
   "open": 230,
-  "engineering": 49
+  "engineering": 49,
+  "src": "curated"
  },
  {
   "name": "Mollie",
@@ -1304,7 +1440,8 @@
   "slug": "mollie",
   "ats": "ashby",
   "open": 43,
-  "engineering": 11
+  "engineering": 11,
+  "src": "curated"
  },
  {
   "name": "Bolt",
@@ -1312,7 +1449,8 @@
   "tier": 2,
   "hq": "eu",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Booking.com",
@@ -1320,7 +1458,8 @@
   "tier": 1,
   "hq": "eu",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Elastic NV",
@@ -1330,7 +1469,8 @@
   "slug": "elastic",
   "ats": "greenhouse",
   "open": 413,
-  "engineering": 219
+  "engineering": 219,
+  "src": "curated"
  },
  {
   "name": "JetBrains",
@@ -1340,7 +1480,8 @@
   "slug": "jetbrains",
   "ats": "greenhouse",
   "open": 65,
-  "engineering": 20
+  "engineering": 20,
+  "src": "curated"
  },
  {
   "name": "Canva",
@@ -1350,7 +1491,8 @@
   "slug": "canva",
   "ats": "smartrecruiters",
   "open": 127,
-  "engineering": 15
+  "engineering": 15,
+  "src": "curated"
  },
  {
   "name": "Miro",
@@ -1360,7 +1502,8 @@
   "slug": "miro",
   "ats": "ashby",
   "open": 26,
-  "engineering": 3
+  "engineering": 3,
+  "src": "curated"
  },
  {
   "name": "Typeform",
@@ -1370,7 +1513,8 @@
   "slug": "typeform",
   "ats": "greenhouse",
   "open": 14,
-  "engineering": 5
+  "engineering": 5,
+  "src": "curated"
  },
  {
   "name": "Intercom",
@@ -1380,7 +1524,8 @@
   "slug": "intercom",
   "ats": "greenhouse",
   "open": 105,
-  "engineering": 33
+  "engineering": 33,
+  "src": "curated"
  },
  {
   "name": "Workday",
@@ -1388,7 +1533,8 @@
   "tier": 1,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "ServiceNow",
@@ -1397,8 +1543,9 @@
   "hq": "us",
   "slug": "servicenow",
   "ats": "smartrecruiters",
-  "open": 707,
-  "engineering": 248
+  "open": 708,
+  "engineering": 248,
+  "src": "curated"
  },
  {
   "name": "Zendesk",
@@ -1406,7 +1553,8 @@
   "tier": 1,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "HubSpot",
@@ -1414,7 +1562,8 @@
   "tier": 1,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Atlassian Trello",
@@ -1422,7 +1571,8 @@
   "tier": 2,
   "hq": "us",
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  },
  {
   "name": "Mistral AI",
@@ -1433,6 +1583,7 @@
    "mistral"
   ],
   "open": 0,
-  "engineering": 0
+  "engineering": 0,
+  "src": "curated"
  }
 ]
