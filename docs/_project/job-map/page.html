@@ -31,6 +31,9 @@ h1 { font-size: 26px; margin: 0; letter-spacing: -.01em; text-wrap: balance; }
 .lbl { font: 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); min-width: 64px; }
 .chip { font: 500 13px var(--font); border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 5px 11px; border-radius: 6px; cursor: pointer; }
 .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+#more { display: grid; gap: 10px; }
+#tog { display: none; }
+.mob { display: none; }
 .hint { font-size: 12px; color: var(--muted); }
 .chip.t-ui[aria-pressed="true"] { background: var(--ui); border-color: var(--ui); color: var(--bg); }
 .chip.t-node[aria-pressed="true"] { background: var(--node); border-color: var(--node); color: var(--bg); }
@@ -73,7 +76,38 @@ h2 { font-size: 15px; margin: 26px 0 4px; }
 .manual a:hover { border-color: var(--accent); color: var(--accent); }
 .more { margin-top: 10px; }
 .empty { padding: 28px 12px; color: var(--muted); }
-@media (max-width: 640px) { .lbl { min-width: 100%; } }
+@media (max-width: 700px) {
+  body { font-size: 15px; padding-inline: 16px; }
+  h1 { font-size: 24px; }
+  .bar { position: static; gap: 8px; }
+  .bar .row { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .bar .row::-webkit-scrollbar { display: none; }
+  .bar .row .chip, .bar .row .hint { flex: none; }
+  .lbl { min-width: 0; flex: none; width: 66px; }
+  #filters { flex-wrap: wrap; overflow: visible; }
+    #filters select { flex: 1 1 45%; min-width: 0; padding: 9px; font-size: 14px; }
+  #sr input[type=search] { font-size: 16px; padding: 10px; }
+  #more { display: none; gap: 8px; }
+  #more.open { display: grid; }
+  #tog { display: inline-block; }
+  .chip { padding: 8px 13px; font-size: 14px; }
+  .summary strong { font-size: 20px; }
+  .tblwrap { background: transparent; border: 0; overflow: visible; }
+  table, thead, tbody, tr, td { display: block; min-width: 0; }
+  thead { display: none; }
+  tbody { display: grid; gap: 10px; }
+  tr { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
+  td { padding: 0; border: 0; width: auto; }
+  tr > td:first-child { flex: 1 1 100%; order: 0; }
+  td.num { text-align: left; font-size: 13px; color: var(--muted); }
+  .mob { display: inline; }
+  summary { font-size: 17px; }
+  .roles { margin-left: 0; gap: 10px; }
+  .role { padding-top: 8px; border-top: 1px solid var(--line); }
+  .role a { font-size: 15px; }
+  td .pill { margin-bottom: 4px; }
+  .manual a { padding: 8px 12px; }
+}
 @media (prefers-reduced-motion: no-preference) { .chip { transition: background .12s, border-color .12s; } }
 </style>
 
@@ -85,15 +119,16 @@ h2 { font-size: 15px; margin: 26px 0 4px; }
   <div class="bar">
     <div class="row" id="region"><span class="lbl">Region</span></div>
     <div class="row" id="pos"><span class="lbl">Position</span></div>
-    <div class="row" id="track"><span class="lbl">Stack</span><span class="hint">none selected = any</span></div>
-    <div class="row">
-      <span class="lbl">Filter</span>
-      <select id="cat" aria-label="Category"></select>
-      <select id="tier" aria-label="Company tier"></select>
-      <select id="level" aria-label="Seniority"></select>
-      <input id="q" type="search" placeholder="Company or role, e.g. razorpay, react, spring" aria-label="Search">
+    <div class="row" id="sr"><input id="q" type="search" placeholder="Search company or role" aria-label="Search"><button class="chip" id="tog" aria-expanded="false" aria-controls="more">More filters</button></div>
+    <div id="more">
+      <div class="row" id="track"><span class="lbl">Stack</span><span class="hint">none selected = any</span></div>
+      <div class="row" id="filters">
+        <select id="cat" aria-label="Category"></select>
+        <select id="tier" aria-label="Company tier"></select>
+        <select id="level" aria-label="Seniority"></select>
+      </div>
+      <div class="row"><span class="lbl">View</span><span id="view"></span></div>
     </div>
-    <div class="row"><span class="lbl">View</span><span id="view"></span></div>
   </div>
   <div class="summary" id="summary"></div>
   <div id="out"></div>
@@ -134,6 +169,7 @@ $('cat').innerHTML = '<option value="">All categories</option>' + Object.entries
 $('tier').innerHTML = '<option value="">All tiers</option><option value="1">Tier 1 · top bar</option><option value="2">Tier 2 · strong product</option><option value="3">Tier 3 · volume / services</option><option value="0">New · found by the crawler, unrated</option>';
 $('level').innerHTML = '<option value="">Any seniority</option><option value="junior">Junior</option><option value="mid">Mid (SDE-2)</option><option value="senior">Senior / Lead</option><option value="staff+">Staff+</option><option value="unspecified">Not stated</option>';
 ['cat', 'tier', 'level'].forEach((id) => ($(id).onchange = () => { S[id] = $(id).value; S.limit = 200; render(); }));
+$('tog').onclick = () => { const o = $('more').classList.toggle('open'); $('tog').setAttribute('aria-expanded', o); $('tog').textContent = o ? 'Fewer filters' : 'More filters'; };
 $('q').oninput = () => { S.q = $('q').value.trim().toLowerCase(); S.limit = 200; render(); };
 function save() { try { localStorage.setItem('jobmap', JSON.stringify({ region: S.region, pos: [...S.pos] })); } catch (e) {} }
 
@@ -157,7 +193,7 @@ function render() {
       const cnt = {}; js.forEach((j) => (cnt[j.pos] = (cnt[j.pos] || 0) + 1));
       const pills = POS.filter(([k]) => cnt[k]).map(([k]) => `<span class="pill p-${k}">${esc(PLABEL[k])} ${cnt[k]}</span>`).join('');
       const shown = js.slice().sort((a, b) => POS.findIndex((t) => t[0] === a.pos) - POS.findIndex((t) => t[0] === b.pos));
-      return `<tr><td><details><summary>${esc(c.name)}</summary><div class="roles">${shown.map(roleHtml).join('')}</div></details></td><td><span class="tier">${tierTxt(c)}</span></td><td class="cat" title="${esc(SRC[c.src] || c.src)}">${esc(CATS[c.cat] || c.cat)}</td><td>${pills}</td><td class="num">${js.length}</td></tr>`;
+      return `<tr><td><details><summary>${esc(c.name)}</summary><div class="roles">${shown.map(roleHtml).join('')}</div></details></td><td><span class="tier">${tierTxt(c)}</span></td><td class="cat" title="${esc(SRC[c.src] || c.src)}">${esc(CATS[c.cat] || c.cat)}</td><td>${pills}</td><td class="num">${js.length}<span class="mob"> role${js.length === 1 ? '' : 's'}</span></td></tr>`;
     }).join('') + '</tbody></table></div>' : '<div class="empty">No open roles match these filters. Try another region, or switch on Unclassified.</div>';
   } else {
     const rows = jobs.slice().sort((a, b) => tierKey(a.c) - tierKey(b.c) || a.c.name.localeCompare(b.c.name));
