@@ -35,7 +35,7 @@ for (const c of companies) {
     const all = (await ATS[c.ats].list(c.slug)) ?? [];
     let kept = 0;
     for (const j of all) {
-      if (!REGION_RX.test(j.location) || NOISE.test(j.title)) continue;
+      if (!(REGION_RX.test(j.location) || /^\d+ locations?$/i.test(j.location)) || NOISE.test(j.title)) continue;
       if (!ENG.test(j.title)) continue;
       const byTitle = TRACKS.find(([, rx]) => rx.test(j.title));
       const byDesc = !byTitle && DESC_TRACKS.map(([t, rx]) => [t, (j.desc ?? '').match(rx)?.length ?? 0]).sort((a, b) => b[1] - a[1])[0];
@@ -60,7 +60,7 @@ for (const track of ['ui', 'node', 'java', 'fullstack', 'other-eng']) {
   md.push('');
 }
 md.push('## Coverage', '', '| Company | Tier | Board | Open (all) | Matched |', '|---|---|---|---|---|');
-for (const s of status) md.push(`| ${s.name} | T${s.tier} | ${s.ats ? `${s.ats}/${s.slug}` : '—'} | ${s.total ?? '—'} | ${s.state === 'ok' ? s.matched : s.state} |`);
+for (const s of status) md.push(`| ${s.name} | T${s.tier} | ${s.ats ? `${s.ats}/${s.slug.split("|")[0]}` : '—'} | ${s.total ?? '—'} | ${s.state === 'ok' ? s.matched : s.state} |`);
 writeFileSync(new URL(`./JOBS-${region.toUpperCase()}.md`, import.meta.url), md.join('\n') + '\n');
 console.log(`${jobs.length} roles from ${status.filter((s) => s.state === 'ok').length}/${status.length} companies`);
 for (const t of ['ui', 'node', 'java', 'fullstack', 'other-eng']) console.log(t, jobs.filter((j) => j.track === t).length);

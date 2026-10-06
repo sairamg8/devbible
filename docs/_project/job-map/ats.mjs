@@ -8,7 +8,37 @@ const get = async (url) => {
 
 const strip = (h = '') => h.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/<[^>]+>/g, ' ').replace(/&[a-z]+;/g, ' ');
 
+const post = async (url, body) => {
+  const r = await fetch(url, { method: 'POST', signal: AbortSignal.timeout(20000), headers: { 'content-type': 'application/json', 'user-agent': 'devbible-jobmap/1.0' }, body: JSON.stringify(body) });
+  if (r.status === 404 || r.status === 422) return null;
+  if (!r.ok) throw new Error(`${r.status} ${url}`);
+  return r.json();
+};
+const QUERIES = ['frontend engineer', 'react developer', 'ui engineer', 'java developer', 'spring boot', 'node.js', 'full stack', 'software engineer', 'software development engineer', 'backend engineer'];
+
 export const ATS = {
+  // slug = "host|tenant|site", e.g. "adobe.wd5.myworkdayjobs.com|adobe|external_experienced"
+  workday: {
+    async list(slug) {
+      const [host, tenant, site] = slug.split('|');
+      const seen = new Map();
+      for (const q of QUERIES) {
+        for (let off = 0; off < 100; off += 20) {
+          const d = await post(`https://${host}/wday/cxs/${tenant}/${site}/jobs`, { appliedFacets: {}, limit: 20, offset: off, searchText: q });
+          if (!d) return null;
+          for (const j of d.jobPostings) seen.set(j.externalPath, { title: j.title, location: j.locationsText ?? '', url: `https://${host}/en-US/${site}${j.externalPath}`, team: '' });
+          if (off + 20 >= d.total) break;
+        }
+      }
+      return [...seen.values()];
+    },
+  },
+  atlassian: {
+    async list() {
+      const d = await get('https://www.atlassian.com/endpoint/careers/listings');
+      return d.map((j) => ({ title: j.title, location: (j.locations ?? []).join('; '), url: j.portalJobPost?.portalUrl ?? '', team: j.category ?? '', desc: strip(j.overview) }));
+    },
+  },
   greenhouse: {
     async list(slug) {
       const d = await get(`https://boards-api.greenhouse.io/v1/boards/${slug}/jobs?content=true`);

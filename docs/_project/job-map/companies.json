@@ -2,15 +2,16 @@
  {
   "name": "Razorpay",
   "category": "fintech",
-  "tier": 1
+  "tier": 1,
+  "ats": "greenhouse",
+  "slug": "razorpaysoftwareprivatelimited"
  },
  {
   "name": "CRED",
   "category": "fintech",
   "tier": 1,
   "ats": "lever",
-  "slug": "cred",
-  "probeCount": 8
+  "slug": "cred"
  },
  {
   "name": "PhonePe",
@@ -22,8 +23,7 @@
   "category": "fintech",
   "tier": 2,
   "ats": "greenhouse",
-  "slug": "groww",
-  "probeCount": 7
+  "slug": "groww"
  },
  {
   "name": "Juspay",
@@ -40,24 +40,21 @@
   "category": "fintech",
   "tier": 2,
   "ats": "lever",
-  "slug": "paytm",
-  "probeCount": 176
+  "slug": "paytm"
  },
  {
   "name": "Slice",
   "category": "fintech",
   "tier": 3,
   "ats": "greenhouse",
-  "slug": "slice",
-  "probeCount": 29
+  "slug": "slice"
  },
  {
   "name": "Zeta",
   "category": "fintech",
   "tier": 2,
   "ats": "lever",
-  "slug": "zeta",
-  "probeCount": 25
+  "slug": "zeta"
  },
  {
   "name": "Postman",
@@ -68,9 +65,8 @@
   "name": "Freshworks",
   "category": "saas",
   "tier": 2,
-  "ats": "lever",
-  "slug": "freshworks",
-  "probeCount": 0
+  "ats": "smartrecruiters",
+  "slug": "Freshworks"
  },
  {
   "name": "Chargebee",
@@ -82,13 +78,14 @@
   "category": "saas",
   "tier": 2,
   "ats": "smartrecruiters",
-  "slug": "whatfix",
-  "probeCount": 1
+  "slug": "whatfix"
  },
  {
   "name": "Sprinklr",
   "category": "saas",
-  "tier": 2
+  "tier": 2,
+  "ats": "workday",
+  "slug": "sprinklr.wd1.myworkdayjobs.com|sprinklr|careers"
  },
  {
   "name": "Darwinbox",
@@ -100,8 +97,7 @@
   "category": "saas",
   "tier": 2,
   "ats": "lever",
-  "slug": "mindtickle",
-  "probeCount": 19
+  "slug": "mindtickle"
  },
  {
   "name": "Capillary",
@@ -116,15 +112,16 @@
  {
   "name": "BrowserStack",
   "category": "saas",
-  "tier": 2
+  "tier": 2,
+  "ats": "workday",
+  "slug": "browserstack.wd3.myworkdayjobs.com|browserstack|External"
  },
  {
   "name": "Zenoti",
   "category": "saas",
   "tier": 2,
   "ats": "greenhouse",
-  "slug": "zenoti",
-  "probeCount": 50
+  "slug": "zenoti"
  },
  {
   "name": "Gupshup",
@@ -136,16 +133,14 @@
   "category": "unicorn",
   "tier": 2,
   "ats": "lever",
-  "slug": "meesho",
-  "probeCount": 59
+  "slug": "meesho"
  },
  {
   "name": "Swiggy",
   "category": "unicorn",
   "tier": 1,
   "ats": "smartrecruiters",
-  "slug": "swiggy",
-  "probeCount": 170
+  "slug": "swiggy"
  },
  {
   "name": "Zomato",
@@ -182,8 +177,7 @@
   "category": "unicorn",
   "tier": 2,
   "ats": "greenhouse",
-  "slug": "inmobi",
-  "probeCount": 70
+  "slug": "inmobi"
  },
  {
   "name": "Ola",
@@ -198,20 +192,23 @@
  {
   "name": "Atlassian",
   "category": "bigtech",
-  "tier": 1
+  "tier": 1,
+  "ats": "atlassian",
+  "slug": "-"
  },
  {
   "name": "Adobe",
   "category": "bigtech",
-  "tier": 1
+  "tier": 1,
+  "ats": "workday",
+  "slug": "adobe.wd5.myworkdayjobs.com|adobe|external_experienced"
  },
  {
   "name": "Uber",
   "category": "bigtech",
   "tier": 1,
   "ats": "smartrecruiters",
-  "slug": "uber",
-  "probeCount": 1
+  "slug": "uber"
  },
  {
   "name": "Intuit",
@@ -248,8 +245,7 @@
   "category": "services",
   "tier": 3,
   "ats": "smartrecruiters",
-  "slug": "synechron",
-  "probeCount": 3
+  "slug": "synechron"
  },
  {
   "name": "Persistent",
