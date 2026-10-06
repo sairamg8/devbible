@@ -42,3 +42,12 @@ const COUNTRIES = [
   ['US', /\b(usa?|united states)\b|, ?(AL|AK|AZ|AR|CA|CO|CT|DC|FL|GA|IL|MA|MD|MI|MN|MO|NC|NJ|NV|NY|OH|OR|PA|TX|UT|VA|WA)\b|san francisco|new york|seattle|austin|boston|chicago|los angeles|denver|atlanta|remote.*(us|united states)|bay area|mountain view|palo alto|sunnyvale|san jose/i],
 ];
 export const countryOf = (loc = '') => COUNTRIES.find(([, rx]) => rx.test(loc))?.[0] ?? (/remote/i.test(loc) ? 'REMOTE' : 'OTHER');
+
+/** Position (what the job is) from the title plus the URL slug, which on Workday often carries the real title. */
+export function position(j) {
+  const t = `${j.title} ${decodeURIComponent(j.url ?? '').replace(/[-_]+/g, ' ')}`;
+  if (/full[- ]?stack/i.test(t)) return 'fullstack';
+  if (/front[- ]?end|\bui\b|\bux\b|web (developer|engineer)|\breact|angular|\bvue\b|design systems?/i.test(t)) return 'frontend';
+  if (/back[- ]?end|server[- ]?side|\bapi\b|\bjava\b|spring|node|golang|\bgo\b|distributed|platform|infrastructure|payments?|services?/i.test(t)) return 'backend';
+  return 'software';
+}
