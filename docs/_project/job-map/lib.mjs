@@ -91,3 +91,12 @@ export const countryOf = (loc = '') => {
   if (/\b(europe|emea)\b/i.test(loc) && !COUNTRIES.some(([, rx]) => rx.test(loc))) return 'EUROPE';
   return COUNTRIES.find(([, rx]) => rx.test(loc))?.[0] ?? (/remote|anywhere|worldwide/i.test(loc) ? 'REMOTE' : 'OTHER');
 };
+
+/** Position (what an engineering job is) from the title plus the URL slug, which on Workday often carries the real title. */
+export function position(j) {
+  const t = `${j.title} ${decodeURIComponent(j.url ?? '').replace(/[-_]+/g, ' ')}`;
+  if (/full[- ]?stack/i.test(t)) return 'fullstack';
+  if (/front[- ]?end|\bui\b|\bux\b|web (developer|engineer)|\breact|angular|\bvue\b|design systems?/i.test(t)) return 'frontend';
+  if (/back[- ]?end|server[- ]?side|\bapi\b|\bjava\b|spring|node|golang|\bgo\b|distributed|platform|infrastructure|payments?|services?/i.test(t)) return 'backend';
+  return 'software';
+}
