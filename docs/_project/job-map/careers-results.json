@@ -205,5 +205,133 @@
    }
   ],
   "listUrl": "https://jobs.zalando.com/en/jobs"
+ },
+ {
+  "name": "CleverTap",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Cashfree",
+  "careersUrl": "https://www.cashfree.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Security Engineer-2",
+    "url": "https://www.cashfree.com/careers#4467"
+   },
+   {
+    "title": "Software Development Engineer 1",
+    "url": "https://www.cashfree.com/careers#5565"
+   },
+   {
+    "title": "Software Development Engineer 3",
+    "url": "https://www.cashfree.com/careers#5568"
+   },
+   {
+    "title": "Software Development Engineer 2",
+    "url": "https://www.cashfree.com/careers#5571"
+   },
+   {
+    "title": "Software Development Lead",
+    "url": "https://www.cashfree.com/careers#24477"
+   },
+   {
+    "title": "Principal Security Engineer",
+    "url": "https://www.cashfree.com/careers#27390"
+   },
+   {
+    "title": "SOC Engineer 3",
+    "url": "https://www.cashfree.com/careers#27396"
+   },
+   {
+    "title": "Software Development Manager",
+    "url": "https://www.cashfree.com/careers#29360"
+   },
+   {
+    "title": "SOC Engineer 1",
+    "url": "https://www.cashfree.com/careers#34402"
+   },
+   {
+    "title": "IT Engineer -2",
+    "url": "https://www.cashfree.com/careers#34772"
+   },
+   {
+    "title": "Sr Principal Engineer",
+    "url": "https://www.cashfree.com/careers#34784"
+   },
+   {
+    "title": "Software Development Engineer Infra 2",
+    "url": "https://www.cashfree.com/careers#37894"
+   },
+   {
+    "title": "Senior Quality and Training Engineer",
+    "url": "https://www.cashfree.com/careers#52249"
+   },
+   {
+    "title": "Software Development Engineer Infra - 1",
+    "url": "https://www.cashfree.com/careers#57464"
+   }
+  ]
+ },
+ {
+  "name": "Myntra",
+  "careersUrl": "https://www.myntra.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Capillary",
+  "careersUrl": "https://en.capillary.io/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Chargebee",
+  "careersUrl": "https://jobs.chargebee.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Ola",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "ShareChat",
+  "careersUrl": "https://sharechat.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Dream11",
+  "careersUrl": "https://www.dream11.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Gupshup",
+  "careersUrl": "https://www.gupshup.ai/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [],
+  "listUrl": "https://api.whatsapp.com/send?phone=+919873865178&text=Hi+&type=phone_number&app_absent=0"
+ },
+ {
+  "name": "Zepto",
+  "careersUrl": "https://www.zepto.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
  }
 ]
