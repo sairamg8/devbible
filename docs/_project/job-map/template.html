@@ -138,8 +138,8 @@ h2 { font-size: 15px; margin: 26px 0 4px; }
 
 <script>
 const DATA = __DATA__;
-const C = DATA.c.map((r, i) => ({ i, name: r[0], cat: r[1], tier: r[2], hq: r[3], ats: r[4], open: r[5], src: r[6] }));
-const J = DATA.j.map((r) => ({ c: C[r[0]], track: r[1], level: r[2], country: r[3], title: r[4], loc: r[5], url: r[6], pos: r[7] }));
+const C = DATA.c.map((r, i) => ({ i, name: r[0], cat: r[1], tier: r[2], hq: r[3], ats: r[4], open: r[5], src: r[6], careers: r[7] }));
+const J = DATA.j.map((r) => ({ c: C[r[0]], track: r[1], level: r[2], country: r[3], title: r[4], loc: r[5], url: r[6], pos: r[7], fromCareers: r[8] }));
 const REGIONS = [['IN', 'India'], ['US', 'USA'], ['CA', 'Canada'], ['DE', 'Germany'], ['EU', 'Europe (excl. Germany)'], ['REMOTE', 'Remote'], ['ALL', 'Anywhere']];
 const POS = [['frontend', 'Frontend / UI'], ['fullstack', 'Full-stack'], ['backend', 'Backend'], ['software', 'Software engineer (general)']];
 const STACKS = [['java', 'Java / Spring'], ['node', 'Node.js'], ['ui', 'React / Angular / JS'], ['none', 'Stack not stated']];
@@ -176,7 +176,7 @@ function save() { try { localStorage.setItem('jobmap', JSON.stringify({ region: 
 const inRegion = (j) => S.region === 'ALL' || j.country === S.region;
 const pass = (j) => inRegion(j) && S.pos.has(j.pos) && (!S.stacks.size || S.stacks.has(stackOf(j))) && (!S.cat || j.c.cat === S.cat) && (S.tier === '' || j.c.tier == S.tier) && (!S.level || j.level === S.level)
   && (!S.q || j.c.name.toLowerCase().includes(S.q) || j.title.toLowerCase().includes(S.q));
-const roleHtml = (j) => `<div class="role"><span class="pill p-${j.pos}">${esc(PLABEL[j.pos])}</span>${stackOf(j) !== 'none' ? `<span class="pill stack">${esc(SLABEL[stackOf(j)])}</span>` : ''}<a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a><span class="loc">${esc(j.loc || '—')} · ${esc(j.level)}</span></div>`;
+const roleHtml = (j) => `<div class="role"><span class="pill p-${j.pos}">${esc(PLABEL[j.pos])}</span>${stackOf(j) !== 'none' ? `<span class="pill stack">${esc(SLABEL[stackOf(j)])}</span>` : ''}<a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a><span class="loc">${esc(j.loc || '—')} · ${esc(j.level)}${j.fromCareers ? ' · from careers page' : ''}</span></div>`;
 const gsearch = (c) => `https://www.google.com/search?q=${encodeURIComponent(c.name + ' careers software engineer ' + (S.region === 'IN' ? 'India' : ''))}`;
 
 function render() {
@@ -193,7 +193,7 @@ function render() {
       const cnt = {}; js.forEach((j) => (cnt[j.pos] = (cnt[j.pos] || 0) + 1));
       const pills = POS.filter(([k]) => cnt[k]).map(([k]) => `<span class="pill p-${k}">${esc(PLABEL[k])} ${cnt[k]}</span>`).join('');
       const shown = js.slice().sort((a, b) => POS.findIndex((t) => t[0] === a.pos) - POS.findIndex((t) => t[0] === b.pos));
-      return `<tr><td><details><summary>${esc(c.name)}</summary><div class="roles">${shown.map(roleHtml).join('')}</div></details></td><td><span class="tier">${tierTxt(c)}</span></td><td class="cat" title="${esc(SRC[c.src] || c.src)}">${esc(CATS[c.cat] || c.cat)}</td><td>${pills}</td><td class="num">${js.length}<span class="mob"> role${js.length === 1 ? '' : 's'}</span></td></tr>`;
+      return `<tr><td><details><summary>${esc(c.name)}</summary><div class="roles">${c.careers ? `<div class="role"><a href="${esc(c.careers)}" target="_blank" rel="noopener">All openings on ${esc(c.name)}'s careers site ↗</a></div>` : ''}${shown.map(roleHtml).join('')}</div></details></td><td><span class="tier">${tierTxt(c)}</span></td><td class="cat" title="${esc(SRC[c.src] || c.src)}">${esc(CATS[c.cat] || c.cat)}</td><td>${pills}</td><td class="num">${js.length}<span class="mob"> role${js.length === 1 ? '' : 's'}</span></td></tr>`;
     }).join('') + '</tbody></table></div>' : '<div class="empty">No open roles match these filters. Try another region, or switch on Unclassified.</div>';
   } else {
     const rows = jobs.slice().sort((a, b) => tierKey(a.c) - tierKey(b.c) || a.c.name.localeCompare(b.c.name));
@@ -202,8 +202,10 @@ function render() {
   }
   $('out').innerHTML = html;
   if ($('more')) $('more').onclick = () => { S.limit += 200; render(); };
-  const man = C.filter((c) => c.src === 'curated' && !c.ats && (S.region === 'ALL' || S.region === 'REMOTE' || HQ[S.region].includes(c.hq)) && (!S.cat || c.cat === S.cat) && (S.tier === '' || c.tier == S.tier) && (!S.q || c.name.toLowerCase().includes(S.q)));
-  $('manual').innerHTML = man.length ? `<h2>Check manually (${man.length})</h2><p class="note">These companies use a custom careers site or a login-gated job system the crawler cannot read. Each link is a Google search for their engineering roles.</p><div class="manual">${man.sort((a, b) => tierKey(a) - tierKey(b)).map((c) => `<a href="${esc(gsearch(c))}" target="_blank" rel="noopener">${esc(c.name)} · ${tierTxt(c)}</a>`).join('')}</div>` : '';
+  const shownIds = new Set(byCo.keys());
+  const rest = C.filter((c) => !shownIds.has(c.i) && (S.region === 'ALL' || S.region === 'REMOTE' || HQ[S.region].includes(c.hq)) && (!S.cat || c.cat === S.cat) && (S.tier === '' || c.tier == S.tier) && (!S.q || c.name.toLowerCase().includes(S.q)));
+  const withSite = rest.filter((c) => c.careers).sort((a, b) => tierKey(a) - tierKey(b));
+  $('manual').innerHTML = withSite.length ? `<h2>More careers sites (${withSite.length})</h2><p class="note">These companies have no open role matching your filters in our crawl, or their site does not list roles in a form we can read. Each link goes to the company's own careers page.</p><div class="manual">${withSite.slice(0, 150).map((c) => `<a href="${esc(c.careers)}" target="_blank" rel="noopener">${esc(c.name)} · ${tierTxt(c)} ↗</a>`).join('')}</div>` : '';
 }
 render();
 </script>

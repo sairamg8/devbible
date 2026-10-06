@@ -16,22 +16,50 @@ const PROBE = ['greenhouse', 'lever', 'ashby', 'workable', 'smartrecruiters'];
 // ---- 1. Y Combinator companies that are hiring ----
 const yc = (await j('https://yc-oss.github.io/api/companies/hiring.json')) ?? [];
 console.error(`YC hiring: ${yc.length}`);
-const discovered = [];
-await pool(yc, 14, async (c) => {
-  if (known.has(c.name.toLowerCase())) return;
-  const host = (() => { try { return new URL(c.website).hostname.replace(/^www\./, '').split('.')[0]; } catch { return ''; } })();
-  const cands = [...new Set([host, c.slug, c.name.toLowerCase().replace(/[^a-z0-9]/g, ''), c.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')].filter(Boolean))];
+const discovered = [], unresolved = [];
+const seenNames = new Set(known);
+async function probe(name, extra, meta) {
+  const base = name.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const cands = [...new Set([...extra, base, name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')].filter((x) => x && x.length > 1))];
   for (const slug of cands) for (const ats of PROBE) {
     try {
       const jobs = await ATS[ats].list(slug);
-      if (jobs && jobs.length) {
-        discovered.push({ name: c.name, category: 'startup', tier: 0, hq: countryOf(c.all_locations).toLowerCase().replace('remote', 'us').replace('other', 'us'), src: 'yc', ats, slug, website: c.website, size: Number(c.team_size) || null, blurb: c.one_liner });
-        return;
-      }
+      if (jobs && jobs.length) { discovered.push({ name, tier: 0, ats, slug, ...meta }); return true; }
     } catch {}
   }
+  unresolved.push({ name, tier: 0, ...meta });
+  return false;
+}
+await pool(yc, 14, async (c) => {
+  if (seenNames.has(c.name.toLowerCase())) return;
+  seenNames.add(c.name.toLowerCase());
+  const host = (() => { try { return new URL(c.website).hostname.replace(/^www\./, '').split('.')[0]; } catch { return ''; } })();
+  await probe(c.name, [host, c.slug], { category: 'startup', hq: countryOf(c.all_locations).toLowerCase().replace(/remote|other/, 'us'), src: 'yc', website: c.website, size: Number(c.team_size) || null, blurb: c.one_liner });
 });
 console.error(`YC companies with a readable board: ${discovered.length}`);
+
+// ---- 1b. Wikipedia unicorn list: company + country, so India / Germany / Canada / Europe are covered by name ----
+const wiki = await j('https://en.wikipedia.org/w/api.php?action=parse&page=List_of_unicorn_startup_companies&prop=wikitext&format=json&formatversion=2');
+const wt = wiki?.parse?.wikitext ?? '';
+const CC = { india: 'in', germany: 'de', canada: 'ca', 'united states': 'us', usa: 'us' };
+const EUROPE = /united kingdom|^uk$|france|netherlands|sweden|switzerland|ireland|spain|poland|denmark|finland|norway|estonia|lithuania|austria|belgium|italy|portugal|czech|luxembourg|latvia|romania/i;
+const wikiRows = [];
+for (const row of wt.slice(wt.indexOf('!Company')).split('\n|-')) {
+  const cells = row.split('\n|').map((x) => x.trim());
+  const name = cells[1]?.match(/\[\[(?:[^\]|]*\|)?([^\]]+)\]\]/)?.[1] ?? cells[1]?.replace(/[\[\]']/g, '');
+  const country = (row.match(/\{\{flag\|([^}|]+)/i) ?? [])[1]?.toLowerCase();
+  if (!name || !country || name.length > 40) continue;
+  const hq = CC[country] ?? (EUROPE.test(country) ? 'eu' : null);
+  if (hq) wikiRows.push({ name, hq });
+}
+console.error(`Wikipedia unicorns in IN/US/CA/DE/EU: ${wikiRows.length}`);
+const before = discovered.length;
+await pool(wikiRows, 14, async (w) => {
+  if (seenNames.has(w.name.toLowerCase())) return;
+  seenNames.add(w.name.toLowerCase());
+  await probe(w.name, [], { category: 'unicorn', hq: w.hq, src: 'wikipedia' });
+});
+console.error(`Wikipedia companies with a readable board: ${discovered.length - before}`);
 
 // ---- 2. Aggregator APIs: jobs come with company names ----
 const agg = []; // {company, title, location, url, desc, src}
@@ -61,5 +89,6 @@ for (const a of agg) {
   if (!aggCos.has(a.company)) aggCos.set(a.company, { name: a.company, category: 'startup', tier: 0, hq: countryOf(a.location).toLowerCase(), src: a.src, ats: 'aggregator' });
 }
 writeFileSync(new URL('./discovered.json', import.meta.url), JSON.stringify([...discovered, ...aggCos.values()], null, 1));
+writeFileSync(new URL('./unresolved.json', import.meta.url), JSON.stringify(unresolved, null, 1));
 writeFileSync(new URL('./jobs-agg.json', import.meta.url), JSON.stringify(aggJobs));
 console.log(`discovered ${discovered.length} board companies + ${aggCos.size} aggregator companies (${aggJobs.length} roles)`);

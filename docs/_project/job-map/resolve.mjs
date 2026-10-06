@@ -21,30 +21,53 @@ export function sniff(url) {
   return null;
 }
 
+// Finds arrays of job-like objects inside any JSON a careers page loads (custom career sites call an internal API).
+const TITLE = ['title', 'jobTitle', 'job_title', 'posting_title', 'position', 'name', 'text'], LINK = ['url', 'jobUrl', 'job_url', 'applyUrl', 'absolute_url', 'hostedUrl', 'link', 'canonicalUrl', 'externalPath', 'slug'];
+export function jobsFromJson(obj, base, depth = 0, out = []) {
+  if (!obj || typeof obj !== 'object' || depth > 5 || out.length > 300) return out;
+  if (Array.isArray(obj)) {
+    const f = obj[0];
+    if (obj.length >= 3 && f && typeof f === 'object') {
+      const tk = TITLE.find((k) => typeof f[k] === 'string'), lk = LINK.find((k) => typeof f[k] === 'string');
+      if (tk && (lk || f.id != null)) for (const o of obj) {
+        if (typeof o?.[tk] !== 'string') continue;
+        let url = lk && o[lk] ? String(o[lk]) : `${base}#${o.id}`;
+        try { url = new URL(url, base).href; } catch {}
+        const loc = o.location ?? o.locations ?? o.city ?? o.office ?? '';
+        out.push({ title: o[tk].trim(), url, location: typeof loc === 'string' ? loc : Array.isArray(loc) ? loc.map((x) => (typeof x === 'string' ? x : x?.name ?? x?.city ?? '')).join('; ') : (loc?.name ?? '') });
+      }
+    }
+    obj.slice(0, 50).forEach((x) => jobsFromJson(x, base, depth + 1, out));
+  } else Object.values(obj).forEach((x) => jobsFromJson(x, base, depth + 1, out));
+  return out;
+}
+
 async function alive(url) {
   try { const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(8000), headers: { 'user-agent': 'Mozilla/5.0' } }); return r.ok ? r.url : null; } catch { return null; }
 }
 
-export async function resolve(name, { browser } = {}) {
+export async function resolve(name, { browser, website, quick } = {}) {
   const hit = presets().find((c) => c.name.toLowerCase() === name.toLowerCase() && c.ats);
   if (hit) return { ats: hit.ats, slug: hit.slug, via: 'preset' };
   // 2) guess slugs on the open boards
-  for (const slug of slugs(name)) for (const ats of SIMPLE) {
+  if (!quick) for (const slug of slugs(name)) for (const ats of SIMPLE) {
     try { const jobs = await ATS[ats].list(slug); if (jobs && jobs.length) return { ats, slug, via: 'slug-guess' }; } catch {}
   }
   // 3) find the careers page and watch what it loads
   const s = slugs(name)[0];
   const cands = ['careers.', 'jobs.', 'www.'].flatMap((p) => ['com', 'in', 'io', 'co'].flatMap((t) => (p === 'www.' ? [`https://www.${s}.${t}/careers`, `https://www.${s}.${t}/jobs`] : [`https://${p}${s}.${t}`])));
   let page, careersUrl;
+  if (website) { try { const o = new URL(website); const h = o.hostname.replace(/^www\./, ''); cands.unshift(`${o.origin}/careers`, `${o.origin}/jobs`, `https://careers.${h}`, `https://jobs.${h}`, o.origin); } catch {} }
   for (const u of cands) { const live = await alive(u); if (live) { careersUrl = live; break; } }
   if (!careersUrl || !browser) return { ats: null, careersUrl, via: 'none' };
   page = await browser.newPage();
-  const seen = new Set();
+  const seen = new Set(), json = [];
   page.on('request', (r) => seen.add(r.url()));
-  try { await page.goto(careersUrl, { waitUntil: 'networkidle', timeout: 45000 }); await page.waitForTimeout(1500); } catch {}
+  page.on('response', async (res) => { try { if ((res.headers()['content-type'] ?? '').includes('json') && !/cookie|consent|analytics|segment|sentry/i.test(res.url())) { const t = await res.text(); if (t.length < 4e6) jobsFromJson(JSON.parse(t), careersUrl, 0, json); } } catch {} });
+  try { await page.goto(careersUrl, { waitUntil: 'domcontentloaded', timeout: 30000 }); await page.waitForTimeout(4000); } catch {}
   const links = await page.$$eval('a[href],iframe[src]', (e) => e.map((x) => x.href || x.src)).catch(() => []);
   const dom = await page.$$eval('a', (as) => as.map((a) => ({ title: a.textContent.trim().replace(/\s+/g, ' '), url: a.href })).filter((a) => /engineer|developer|sde/i.test(a.title) && a.title.length < 120)).catch(() => []);
   await page.close();
   for (const u of [...links, ...seen]) { const s2 = sniff(u); if (s2) return { ...s2, via: 'careers-page', careersUrl }; }
-  return { ats: null, careersUrl, via: 'dom', dom };
+  return { ats: null, careersUrl, via: 'dom', dom: [...dom, ...json] };
 }
