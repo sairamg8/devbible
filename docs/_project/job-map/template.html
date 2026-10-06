@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>Job Map</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
@@ -86,7 +87,11 @@ h2 { font-size: 15px; margin: 26px 0 4px; }
   .lbl { min-width: 0; flex: none; width: 66px; }
   #filters { flex-wrap: wrap; overflow: visible; }
     #filters select { flex: 1 1 45%; min-width: 0; padding: 9px; font-size: 14px; }
+  #sr { flex-wrap: wrap; overflow: visible; }
   #sr input[type=search] { font-size: 16px; padding: 10px; }
+  #sr #q { flex: 1 1 100%; }
+  #sr #loc { flex: 1 1 50%; }
+  #sr #tog { flex: none; }
   #more { display: none; gap: 8px; }
   #more.open { display: grid; }
   #tog { display: inline-block; }
@@ -109,21 +114,28 @@ h2 { font-size: 15px; margin: 26px 0 4px; }
   .manual a { padding: 8px 12px; }
 }
 @media (prefers-reduced-motion: no-preference) { .chip { transition: background .12s, border-color .12s; } }
+
+.chip.t-fn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+.p-fn { background: var(--accent-soft); color: var(--accent); }
+.cnt { opacity: .6; margin-left: 5px; font: 11px var(--mono); }
+.loading { padding: 40px 12px; color: var(--muted); }
+#loc { flex: 1 1 160px; min-width: 0; }
 </style>
 
 <div class="wrap">
   <header>
     <h1>Job Map</h1>
-    <div class="meta" id="meta"></div>
+    <div class="meta" id="meta">loading…</div>
   </header>
   <div class="bar">
     <div class="row" id="region"><span class="lbl">Region</span></div>
-    <div class="row" id="pos"><span class="lbl">Position</span></div>
-    <div class="row" id="sr"><input id="q" type="search" placeholder="Search company or role" aria-label="Search"><button class="chip" id="tog" aria-expanded="false" aria-controls="more">More filters</button></div>
+    <div class="row" id="sr"><input id="q" type="search" placeholder="Search company or role" aria-label="Search company or role"><input id="loc" type="search" placeholder="City or country" aria-label="City or country"><button class="chip" id="tog" aria-expanded="false" aria-controls="more">More filters</button></div>
+    <div class="row" id="fn"><span class="lbl">Function</span><span class="hint">none selected = all</span></div>
     <div id="more">
-      <div class="row" id="track"><span class="lbl">Stack</span><span class="hint">none selected = any</span></div>
+      <div class="row" id="pos" hidden><span class="lbl">Position</span></div>
+      <div class="row" id="track" hidden><span class="lbl">Stack</span><span class="hint">none selected = any</span></div>
       <div class="row" id="filters">
-        <select id="cat" aria-label="Category"></select>
+        <select id="cat" aria-label="Company type"></select>
         <select id="tier" aria-label="Company tier"></select>
         <select id="level" aria-label="Seniority"></select>
       </div>
@@ -131,81 +143,94 @@ h2 { font-size: 15px; margin: 26px 0 4px; }
     </div>
   </div>
   <div class="summary" id="summary"></div>
-  <div id="out"></div>
+  <div id="out"><div class="loading">Loading roles…</div></div>
   <div id="manual"></div>
-  <p class="note" style="margin-top:28px">Companies marked New were found by the crawler (Y Combinator's hiring list and open job APIs) and have no tier yet. Roles come from each company's own public job board and are re-read on every crawl, so the date above is the freshness of every row. Position is read from the job title and link. Stack is shown only when the title, link or description names it; most generic \"Software Engineer\" roles do not, so choosing a stack hides them. Leave Stack empty to see everything.</p>
+  <p class="note" style="margin-top:28px">Roles are read from each company's own public job board or careers site, so the date above is the freshness of every row. Companies marked New were found by the crawler and have no tier yet. Function is read from the job title; Position and Stack apply to engineering roles only, and most generic engineer titles do not name a stack, so choosing one hides them. Some employers (for example Natixis) post only on third-party sites that block automated reading; they appear with a link to their careers page.</p>
 </div>
 
 <script>
-const DATA = __DATA__;
-const C = DATA.c.map((r, i) => ({ i, name: r[0], cat: r[1], tier: r[2], hq: r[3], ats: r[4], open: r[5], src: r[6], careers: r[7] }));
-const J = DATA.j.map((r) => ({ c: C[r[0]], track: r[1], level: r[2], country: r[3], title: r[4], loc: r[5], url: r[6], pos: r[7], fromCareers: r[8] }));
-const REGIONS = [['IN', 'India'], ['US', 'USA'], ['CA', 'Canada'], ['DE', 'Germany'], ['EU', 'Europe (excl. Germany)'], ['REMOTE', 'Remote'], ['ALL', 'Anywhere']];
-const POS = [['frontend', 'Frontend / UI'], ['fullstack', 'Full-stack'], ['backend', 'Backend'], ['software', 'Software engineer (general)']];
-const STACKS = [['java', 'Java / Spring'], ['node', 'Node.js'], ['ui', 'React / Angular / JS'], ['none', 'Stack not stated']];
-const PLABEL = Object.fromEntries(POS), SLABEL = Object.fromEntries(STACKS);
-const stackOf = (j) => (['java', 'node', 'ui'].includes(j.track) ? j.track : 'none');
-const CATS = { fintech: 'Fintech', saas: 'SaaS', unicorn: 'Consumer / unicorn', bigtech: 'Big tech', gcc: 'GCC / banks', services: 'IT services', ai: 'AI labs', startup: 'Startup' };
-const HQ = { IN: ['in'], US: ['us'], CA: ['ca'], DE: ['de'], EU: ['eu', 'de'], REMOTE: [], ALL: [] };
-const S = { region: 'IN', pos: new Set(['frontend', 'fullstack']), stacks: new Set(), cat: '', tier: '', level: '', q: '', view: 'companies', limit: 200 };
-try { const s = JSON.parse(localStorage.getItem('jobmap') || '{}'); if (s.region) S.region = s.region; if (s.pos) S.pos = new Set(s.pos); } catch (e) {}
-const tierTxt = (c) => (c.tier ? 'T' + c.tier : 'New');
-const tierKey = (c) => c.tier || 9;
-const SRC = { curated: 'Curated list', yc: 'Found via Y Combinator', arbeitnow: 'Found via Arbeitnow', remotive: 'Found via Remotive', remoteok: 'Found via RemoteOK', himalayas: 'Found via Himalayas' };
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const REGIONS = [['IN', 'India'], ['US', 'USA'], ['CA', 'Canada'], ['DE', 'Germany'], ['EU', 'Europe (excl. Germany)'], ['REMOTE', 'Remote'], ['ALL', 'Anywhere']];
+const FN = [['compliance', 'Compliance / AML / KYC'], ['finance', 'Finance & banking'], ['risk', 'Risk, audit & insurance'], ['engineering', 'Engineering'], ['data', 'Data & analytics'], ['product', 'Product & projects'], ['sales', 'Sales & business dev'], ['marketing', 'Marketing & comms'], ['hr', 'HR & recruiting'], ['legal', 'Legal'], ['design', 'Design'], ['support', 'Customer support'], ['ops', 'Operations & admin'], ['other', 'Other']];
+const POS = [['frontend', 'Frontend / UI'], ['fullstack', 'Full-stack'], ['backend', 'Backend'], ['software', 'Software engineer (general)']];
+const STACKS = [['java', 'Java / Spring'], ['node', 'Node.js'], ['ui', 'React / Angular / JS'], ['none', 'Stack not stated']];
+const CATS = { fintech: 'Fintech', saas: 'SaaS', unicorn: 'Consumer / unicorn', bigtech: 'Big tech', gcc: 'GCC', services: 'IT services', ai: 'AI labs', startup: 'Startup', bank: 'Banks', insurance: 'Insurance', consulting: 'Consulting', pharma: 'Pharma', retail: 'Retail', fmcg: 'Consumer goods', energy: 'Energy', auto: 'Automotive', aero: 'Aerospace', travel: 'Travel', telecom: 'Telecom', media: 'Media' };
+const LEVELS = [['', 'Any seniority'], ['intern', 'Intern / apprentice / graduate'], ['junior', 'Junior'], ['mid', 'Mid (SDE-2)'], ['senior', 'Senior / Lead'], ['staff+', 'Staff+ / Principal'], ['unspecified', 'Not stated']];
+const FNL = Object.fromEntries(FN), PL = Object.fromEntries(POS), SL = Object.fromEntries(STACKS);
+const HQ = { IN: ['in'], US: ['us'], CA: ['ca'], DE: ['de'], EU: ['eu', 'de'], REMOTE: [], ALL: [] };
+const S = { region: 'IN', fn: new Set(), pos: new Set(), stacks: new Set(), cat: '', tier: '', level: '', q: '', loc: '', view: 'companies', limit: 100 };
+try { const s = JSON.parse(localStorage.getItem('jobmap2') || '{}'); if (s.region) S.region = s.region; } catch (e) {}
+const save = () => { try { localStorage.setItem('jobmap2', JSON.stringify({ region: S.region })); } catch (e) {} };
+const tierTxt = (c) => (c.tier ? 'T' + c.tier : 'New');
+const tierKey = (c) => c.tier || 9;
+const stackOf = (j) => (['java', 'node', 'ui'].includes(j.track) ? j.track : 'none');
+let C = [], J = [], DATE = '';
 
-const found = C.filter((c) => c.src !== 'curated').length;
-$('meta').textContent = `crawled ${DATA.d} · ${C.length} companies (${found} found by the crawler) · ${J.length.toLocaleString()} roles`;
 function chips(host, items, pressed, onClick, cls) {
-  items.forEach(([k, t]) => { const b = document.createElement('button'); b.className = 'chip ' + (cls ? cls + k : ''); b.textContent = t; b.dataset.k = k; b.onclick = () => onClick(k); host.append(b); });
-  return () => host.querySelectorAll('.chip').forEach((b) => b.setAttribute('aria-pressed', pressed(b.dataset.k)));
+  items.forEach(([k, t]) => { const b = document.createElement('button'); b.className = 'chip ' + (cls || ''); b.dataset.k = k; b.dataset.t = t; b.textContent = t; b.onclick = () => onClick(k); host.append(b); });
+  return (counts) => host.querySelectorAll('.chip').forEach((b) => { b.setAttribute('aria-pressed', pressed(b.dataset.k)); b.innerHTML = esc(b.dataset.t) + (counts && counts[b.dataset.k] != null ? `<span class="cnt">${counts[b.dataset.k]}</span>` : ''); });
 }
-const syncRegion = chips($('region'), REGIONS, (k) => S.region === k, (k) => { S.region = k; save(); render(); });
-const syncPos = chips($('pos'), POS, (k) => S.pos.has(k), (k) => { S.pos.has(k) ? S.pos.delete(k) : S.pos.add(k); S.limit = 200; save(); render(); }, 't-');
-const syncTrack = chips($('track'), STACKS, (k) => S.stacks.has(k), (k) => { S.stacks.has(k) ? S.stacks.delete(k) : S.stacks.add(k); S.limit = 200; render(); }, 't-');
-const syncView = chips($('view'), [['companies', 'By company'], ['roles', 'All roles']], (k) => S.view === k, (k) => { S.view = k; S.limit = 200; render(); });
-$('cat').innerHTML = '<option value="">All categories</option>' + Object.entries(CATS).map(([k, v]) => `<option value="${k}">${v}</option>`).join('');
-$('tier').innerHTML = '<option value="">All tiers</option><option value="1">Tier 1 · top bar</option><option value="2">Tier 2 · strong product</option><option value="3">Tier 3 · volume / services</option><option value="0">New · found by the crawler, unrated</option>';
-$('level').innerHTML = '<option value="">Any seniority</option><option value="junior">Junior</option><option value="mid">Mid (SDE-2)</option><option value="senior">Senior / Lead</option><option value="staff+">Staff+</option><option value="unspecified">Not stated</option>';
-['cat', 'tier', 'level'].forEach((id) => ($(id).onchange = () => { S[id] = $(id).value; S.limit = 200; render(); }));
+const again = () => { S.limit = 100; render(); };
+const syncRegion = chips($('region'), REGIONS, (k) => S.region === k, (k) => { S.region = k; save(); again(); });
+const syncFn = chips($('fn'), FN, (k) => S.fn.has(k), (k) => { S.fn.has(k) ? S.fn.delete(k) : S.fn.add(k); if (!S.fn.has('engineering')) { S.pos.clear(); S.stacks.clear(); } again(); }, 't-fn');
+const syncPos = chips($('pos'), POS, (k) => S.pos.has(k), (k) => { S.pos.has(k) ? S.pos.delete(k) : S.pos.add(k); again(); });
+const syncStack = chips($('track'), STACKS, (k) => S.stacks.has(k), (k) => { S.stacks.has(k) ? S.stacks.delete(k) : S.stacks.add(k); again(); });
+const syncView = chips($('view'), [['companies', 'By company'], ['roles', 'All roles']], (k) => S.view === k, (k) => { S.view = k; again(); });
+$('tier').innerHTML = '<option value="">All tiers</option><option value="1">Tier 1 · top bar</option><option value="2">Tier 2 · strong</option><option value="3">Tier 3 · volume</option><option value="0">New · found by crawler</option>';
+$('level').innerHTML = LEVELS.map(([k, v]) => `<option value="${k}">${v}</option>`).join('');
+['cat', 'tier', 'level'].forEach((id) => ($(id).onchange = () => { S[id] = $(id).value; again(); }));
+$('q').oninput = () => { S.q = $('q').value.trim().toLowerCase(); again(); };
+$('loc').oninput = () => { S.loc = $('loc').value.trim().toLowerCase(); again(); };
 $('tog').onclick = () => { const o = $('more').classList.toggle('open'); $('tog').setAttribute('aria-expanded', o); $('tog').textContent = o ? 'Fewer filters' : 'More filters'; };
-$('q').oninput = () => { S.q = $('q').value.trim().toLowerCase(); S.limit = 200; render(); };
-function save() { try { localStorage.setItem('jobmap', JSON.stringify({ region: S.region, pos: [...S.pos] })); } catch (e) {} }
 
-const inRegion = (j) => S.region === 'ALL' || j.country === S.region;
-const pass = (j) => inRegion(j) && S.pos.has(j.pos) && (!S.stacks.size || S.stacks.has(stackOf(j))) && (!S.cat || j.c.cat === S.cat) && (S.tier === '' || j.c.tier == S.tier) && (!S.level || j.level === S.level)
-  && (!S.q || j.c.name.toLowerCase().includes(S.q) || j.title.toLowerCase().includes(S.q));
-const roleHtml = (j) => `<div class="role"><span class="pill p-${j.pos}">${esc(PLABEL[j.pos])}</span>${stackOf(j) !== 'none' ? `<span class="pill stack">${esc(SLABEL[stackOf(j)])}</span>` : ''}<a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a><span class="loc">${esc(j.loc || '—')} · ${esc(j.level)}${j.fromCareers ? ' · from careers page' : ''}</span></div>`;
-const gsearch = (c) => `https://www.google.com/search?q=${encodeURIComponent(c.name + ' careers software engineer ' + (S.region === 'IN' ? 'India' : ''))}`;
+const base = (j) => (S.region === 'ALL' || j.country === S.region) && (!S.cat || j.c.cat === S.cat) && (S.tier === '' || j.c.tier == S.tier) && (!S.level || j.level === S.level)
+  && (!S.q || j.c.name.toLowerCase().includes(S.q) || j.title.toLowerCase().includes(S.q)) && (!S.loc || j.loc.toLowerCase().includes(S.loc));
+const engOk = (j) => j.fn !== 'engineering' || ((!S.pos.size || S.pos.has(j.pos)) && (!S.stacks.size || S.stacks.has(stackOf(j))));
+const pass = (j) => base(j) && (!S.fn.size || S.fn.has(j.fn)) && engOk(j);
+const tags = (j) => `<span class="pill p-fn">${esc(FNL[j.fn])}</span>${j.fn === 'engineering' && j.pos ? `<span class="pill stack">${esc(PL[j.pos])}</span>` : ''}${j.fn === 'engineering' && stackOf(j) !== 'none' ? `<span class="pill stack">${esc(SL[stackOf(j)])}</span>` : ''}`;
+const roleHtml = (j) => `<div class="role">${tags(j)}<a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a><span class="loc">${esc(j.loc || '—')} · ${esc(j.level)}${j.fromCareers ? ' · from careers page' : ''}</span></div>`;
 
 function render() {
-  syncRegion(); syncPos(); syncTrack(); syncView();
-  const jobs = J.filter(pass);
+  const eng = S.fn.has('engineering');
+  $('pos').hidden = $('track').hidden = !eng;
+  const pool = J.filter(base), fc = {};
+  pool.forEach((j) => { if (engOk(j)) fc[j.fn] = (fc[j.fn] || 0) + 1; });
+  syncRegion(); syncFn(fc); syncPos(); syncStack(); syncView();
+  const jobs = pool.filter((j) => (!S.fn.size || S.fn.has(j.fn)) && engOk(j));
   const byCo = new Map();
   jobs.forEach((j) => { if (!byCo.has(j.c.i)) byCo.set(j.c.i, []); byCo.get(j.c.i).push(j); });
-  const regionName = (REGIONS.find((r) => r[0] === S.region) || [])[1];
-  $('summary').innerHTML = `<strong>${jobs.length.toLocaleString()} roles</strong><span>at ${byCo.size} companies · ${esc(regionName)}</span>`;
+  const rn = (REGIONS.find((r) => r[0] === S.region) || [])[1];
+  $('summary').innerHTML = `<strong>${jobs.length.toLocaleString()} roles</strong><span>at ${byCo.size} companies · ${esc(rn)}</span>`;
   let html = '';
   if (S.view === 'companies') {
     const rows = [...byCo.entries()].map(([i, js]) => ({ c: C[i], js })).sort((a, b) => tierKey(a.c) - tierKey(b.c) || b.js.length - a.js.length);
-    html = rows.length ? `<div class="tblwrap"><table><thead><tr><th>Company</th><th>Tier</th><th>Category</th><th>Positions hiring</th><th class="num">Roles</th></tr></thead><tbody>` + rows.map(({ c, js }) => {
-      const cnt = {}; js.forEach((j) => (cnt[j.pos] = (cnt[j.pos] || 0) + 1));
-      const pills = POS.filter(([k]) => cnt[k]).map(([k]) => `<span class="pill p-${k}">${esc(PLABEL[k])} ${cnt[k]}</span>`).join('');
-      const shown = js.slice().sort((a, b) => POS.findIndex((t) => t[0] === a.pos) - POS.findIndex((t) => t[0] === b.pos));
-      return `<tr><td><details><summary>${esc(c.name)}</summary><div class="roles">${c.careers ? `<div class="role"><a href="${esc(c.careers)}" target="_blank" rel="noopener">All openings on ${esc(c.name)}'s careers site ↗</a></div>` : ''}${shown.map(roleHtml).join('')}</div></details></td><td><span class="tier">${tierTxt(c)}</span></td><td class="cat" title="${esc(SRC[c.src] || c.src)}">${esc(CATS[c.cat] || c.cat)}</td><td>${pills}</td><td class="num">${js.length}<span class="mob"> role${js.length === 1 ? '' : 's'}</span></td></tr>`;
-    }).join('') + '</tbody></table></div>' : '<div class="empty">No open roles match these filters. Try another region, or switch on Unclassified.</div>';
+    html = rows.length ? `<div class="tblwrap"><table><thead><tr><th>Company</th><th>Tier</th><th>Type</th><th>Functions hiring</th><th class="num">Roles</th></tr></thead><tbody>` + rows.slice(0, S.limit).map(({ c, js }) => {
+      const cnt = {}; js.forEach((j) => (cnt[j.fn] = (cnt[j.fn] || 0) + 1));
+      const pills = FN.filter(([k]) => cnt[k]).sort((a, b) => cnt[b[0]] - cnt[a[0]]).slice(0, 4).map(([k]) => `<span class="pill p-fn">${esc(FNL[k])} ${cnt[k]}</span>`).join('');
+      const shown = js.slice(0, 80);
+      return `<tr><td><details><summary>${esc(c.name)}</summary><div class="roles">${c.careers ? `<div class="role"><a href="${esc(c.careers)}" target="_blank" rel="noopener">All openings on ${esc(c.name)}'s careers site ↗</a></div>` : ''}${shown.map(roleHtml).join('')}${js.length > 80 ? `<div class="role loc">+ ${js.length - 80} more — narrow the filters or open the careers site</div>` : ''}</div></details></td><td><span class="tier">${tierTxt(c)}</span></td><td class="cat">${esc(CATS[c.cat] || c.cat)}</td><td>${pills}</td><td class="num">${js.length}<span class="mob"> role${js.length === 1 ? '' : 's'}</span></td></tr>`;
+    }).join('') + '</tbody></table></div>' + (rows.length > S.limit ? `<button class="chip more" id="more2">Show more companies (${rows.length - S.limit} left)</button>` : '') : '<div class="empty">No open roles match these filters. Try another region, clear the location box, or pick fewer functions.</div>';
   } else {
     const rows = jobs.slice().sort((a, b) => tierKey(a.c) - tierKey(b.c) || a.c.name.localeCompare(b.c.name));
-    html = rows.length ? `<div class="tblwrap"><table><thead><tr><th>Company</th><th>Role</th><th>Location</th></tr></thead><tbody>` + rows.slice(0, S.limit).map((j) => `<tr><td>${esc(j.c.name)} <span class="tier">${tierTxt(j.c)}</span></td><td><span class="pill p-${j.pos}">${esc(PLABEL[j.pos])}</span>${stackOf(j) !== 'none' ? `<span class="pill stack">${esc(SLABEL[stackOf(j)])}</span>` : ''}<a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a><span class="sub">${esc(j.level)}</span></td><td class="cat">${esc(j.loc || '—')}</td></tr>`).join('') + '</tbody></table></div>'
-      + (rows.length > S.limit ? `<button class="chip more" id="more">Show ${Math.min(200, rows.length - S.limit)} more of ${rows.length - S.limit} remaining</button>` : '') : '<div class="empty">No open roles match these filters.</div>';
+    html = rows.length ? `<div class="tblwrap"><table><thead><tr><th>Company</th><th>Role</th><th>Location</th></tr></thead><tbody>` + rows.slice(0, S.limit * 2).map((j) => `<tr><td>${esc(j.c.name)} <span class="tier">${tierTxt(j.c)}</span></td><td>${tags(j)}<a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a><span class="sub">${esc(j.level)}</span></td><td class="cat">${esc(j.loc || '—')}</td></tr>`).join('') + '</tbody></table></div>'
+      + (rows.length > S.limit * 2 ? `<button class="chip more" id="more2">Show more (${rows.length - S.limit * 2} left)</button>` : '') : '<div class="empty">No open roles match these filters.</div>';
   }
   $('out').innerHTML = html;
-  if ($('more')) $('more').onclick = () => { S.limit += 200; render(); };
+  if ($('more2')) $('more2').onclick = () => { S.limit += 100; render(); };
   const shownIds = new Set(byCo.keys());
-  const rest = C.filter((c) => !shownIds.has(c.i) && (S.region === 'ALL' || S.region === 'REMOTE' || HQ[S.region].includes(c.hq)) && (!S.cat || c.cat === S.cat) && (S.tier === '' || c.tier == S.tier) && (!S.q || c.name.toLowerCase().includes(S.q)));
-  const withSite = rest.filter((c) => c.careers).sort((a, b) => tierKey(a) - tierKey(b));
-  $('manual').innerHTML = withSite.length ? `<h2>More careers sites (${withSite.length})</h2><p class="note">These companies have no open role matching your filters in our crawl, or their site does not list roles in a form we can read. Each link goes to the company's own careers page.</p><div class="manual">${withSite.slice(0, 150).map((c) => `<a href="${esc(c.careers)}" target="_blank" rel="noopener">${esc(c.name)} · ${tierTxt(c)} ↗</a>`).join('')}</div>` : '';
+  const rest = C.filter((c) => !shownIds.has(c.i) && c.careers && (S.region === 'ALL' || S.region === 'REMOTE' || HQ[S.region].includes(c.hq)) && (!S.cat || c.cat === S.cat) && (S.tier === '' || c.tier == S.tier) && (!S.q || c.name.toLowerCase().includes(S.q))).sort((a, b) => tierKey(a) - tierKey(b));
+  $('manual').innerHTML = rest.length ? `<h2>More careers sites (${rest.length})</h2><p class="note">No role in our crawl matches your filters at these companies, or their site does not list roles in a form we can read. Each link opens the company's own careers page.</p><div class="manual">${rest.slice(0, 150).map((c) => `<a href="${esc(c.careers)}" target="_blank" rel="noopener">${esc(c.name)} · ${tierTxt(c)} ↗</a>`).join('')}</div>` : '';
 }
-render();
+
+fetch('data.json').then((r) => r.json()).then((D) => {
+  DATE = D.d;
+  C = D.c.map((r, i) => ({ i, name: r[0], cat: r[1], tier: r[2], hq: r[3], ats: r[4], open: r[5], src: r[6], careers: r[7] }));
+  J = D.j.map((r) => ({ c: C[r[0]], fn: r[1], track: r[2], level: r[3], country: r[4], title: r[5], loc: r[6], url: r[7], pos: r[8], fromCareers: r[9] }));
+  const found = C.filter((c) => c.src !== 'curated').length;
+  $('meta').textContent = `crawled ${DATE} · ${C.length} companies (${found} found by the crawler) · ${J.length.toLocaleString()} roles`;
+  const used = [...new Set(C.map((c) => c.cat))];
+  $('cat').innerHTML = '<option value="">All company types</option>' + used.map((k) => `<option value="${k}">${esc(CATS[k] || k)}</option>`).join('');
+  render();
+}).catch(() => { $('out').innerHTML = '<div class="empty">Could not load the job data. Reload the page to try again.</div>'; $('meta').textContent = ''; });
 </script>

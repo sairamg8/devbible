@@ -14,7 +14,8 @@ const post = async (url, body) => {
   if (!r.ok) throw new Error(`${r.status} ${url}`);
   return r.json();
 };
-const QUERIES = ['frontend engineer', 'react developer', 'ui engineer', 'java developer', 'spring boot', 'node.js', 'full stack', 'software engineer', 'software development engineer', 'backend engineer'];
+// Workday needs a search term to page deeply, so ask for the empty search plus one term per job family.
+const QUERIES = ['', 'engineer', 'developer', 'aml kyc compliance', 'risk audit', 'finance accounting', 'analyst', 'sales', 'marketing', 'operations', 'human resources', 'legal', 'data', 'product project manager', 'customer support', 'manager'];
 
 export const ATS = {
   // slug = "host|tenant|site", e.g. "adobe.wd5.myworkdayjobs.com|adobe|external_experienced"
@@ -23,7 +24,7 @@ export const ATS = {
       const [host, tenant, site] = slug.split('|');
       const seen = new Map();
       for (const q of QUERIES) {
-        for (let off = 0; off < 100; off += 20) {
+        for (let off = 0; off < 200; off += 20) {
           const d = await post(`https://${host}/wday/cxs/${tenant}/${site}/jobs`, { appliedFacets: {}, limit: 20, offset: off, searchText: q });
           if (!d) return null;
           for (const j of d.jobPostings) seen.set(j.externalPath, { title: j.title, location: j.locationsText ?? '', url: `https://${host}/en-US/${site}${j.externalPath}`, team: '' });

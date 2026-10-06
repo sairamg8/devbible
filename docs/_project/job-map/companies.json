@@ -7,7 +7,7 @@
   "slug": "razorpaysoftwareprivatelimited",
   "hq": "in",
   "open": 25,
-  "engineering": 3,
+  "engineering": 25,
   "src": "curated"
  },
  {
@@ -18,7 +18,7 @@
   "slug": "cred",
   "hq": "in",
   "open": 8,
-  "engineering": 0,
+  "engineering": 8,
   "src": "curated"
  },
  {
@@ -38,7 +38,7 @@
   "slug": "groww",
   "hq": "in",
   "open": 7,
-  "engineering": 0,
+  "engineering": 7,
   "src": "curated"
  },
  {
@@ -67,7 +67,7 @@
   "slug": "paytm",
   "hq": "in",
   "open": 176,
-  "engineering": 3,
+  "engineering": 176,
   "src": "curated"
  },
  {
@@ -78,7 +78,7 @@
   "slug": "slice",
   "hq": "in",
   "open": 29,
-  "engineering": 4,
+  "engineering": 29,
   "src": "curated"
  },
  {
@@ -89,7 +89,7 @@
   "slug": "zeta",
   "hq": "in",
   "open": 25,
-  "engineering": 6,
+  "engineering": 25,
   "src": "curated"
  },
  {
@@ -109,7 +109,7 @@
   "slug": "Freshworks",
   "hq": "in",
   "open": 124,
-  "engineering": 38,
+  "engineering": 124,
   "src": "curated"
  },
  {
@@ -129,7 +129,7 @@
   "slug": "whatfix",
   "hq": "in",
   "open": 1,
-  "engineering": 0,
+  "engineering": 1,
   "src": "curated"
  },
  {
@@ -139,8 +139,8 @@
   "ats": "workday",
   "slug": "sprinklr.wd1.myworkdayjobs.com|sprinklr|careers",
   "hq": "in",
-  "open": 40,
-  "engineering": 8,
+  "open": 70,
+  "engineering": 70,
   "src": "curated"
  },
  {
@@ -160,7 +160,7 @@
   "slug": "mindtickle",
   "hq": "in",
   "open": 19,
-  "engineering": 7,
+  "engineering": 19,
   "src": "curated"
  },
  {
@@ -188,8 +188,8 @@
   "ats": "workday",
   "slug": "browserstack.wd3.myworkdayjobs.com|browserstack|External",
   "hq": "in",
-  "open": 20,
-  "engineering": 1,
+  "open": 32,
+  "engineering": 32,
   "src": "curated"
  },
  {
@@ -200,7 +200,7 @@
   "slug": "zenoti",
   "hq": "in",
   "open": 50,
-  "engineering": 5,
+  "engineering": 50,
   "src": "curated"
  },
  {
@@ -220,7 +220,7 @@
   "slug": "meesho",
   "hq": "in",
   "open": 59,
-  "engineering": 2,
+  "engineering": 59,
   "src": "curated"
  },
  {
@@ -231,7 +231,7 @@
   "slug": "swiggy",
   "hq": "in",
   "open": 170,
-  "engineering": 3,
+  "engineering": 170,
   "src": "curated"
  },
  {
@@ -296,7 +296,7 @@
   "slug": "inmobi",
   "hq": "in",
   "open": 70,
-  "engineering": 5,
+  "engineering": 70,
   "src": "curated"
  },
  {
@@ -322,8 +322,8 @@
   "category": "unicorn",
   "tier": 2,
   "hq": "in",
-  "open": 71,
-  "engineering": 57,
+  "open": 200,
+  "engineering": 200,
   "ats": "workday",
   "slug": "jiostar.wd102.myworkdayjobs.com|jiostar|JioStar",
   "src": "curated"
@@ -363,7 +363,7 @@
   "slug": "unacademy",
   "ats": "smartrecruiters",
   "open": 3,
-  "engineering": 1,
+  "engineering": 3,
   "src": "curated"
  },
  {
@@ -382,8 +382,8 @@
   "ats": "atlassian",
   "slug": "-",
   "hq": "us",
-  "open": 355,
-  "engineering": 134,
+  "open": 356,
+  "engineering": 356,
   "src": "curated"
  },
  {
@@ -393,8 +393,8 @@
   "ats": "workday",
   "slug": "adobe.wd5.myworkdayjobs.com|adobe|external_experienced",
   "hq": "us",
-  "open": 117,
-  "engineering": 70,
+  "open": 332,
+  "engineering": 332,
   "src": "curated"
  },
  {
@@ -405,7 +405,7 @@
   "slug": "uber",
   "hq": "us",
   "open": 1,
-  "engineering": 0,
+  "engineering": 1,
   "src": "curated"
  },
  {
@@ -470,7 +470,7 @@
   "slug": "synechron",
   "hq": "us",
   "open": 3,
-  "engineering": 2,
+  "engineering": 3,
   "src": "curated"
  },
  {
@@ -507,8 +507,8 @@
   "hq": "us",
   "slug": "stripe",
   "ats": "greenhouse",
-  "open": 728,
-  "engineering": 152,
+  "open": 729,
+  "engineering": 600,
   "src": "curated"
  },
  {
@@ -518,8 +518,8 @@
   "hq": "us",
   "slug": "coinbase",
   "ats": "greenhouse",
-  "open": 226,
-  "engineering": 82,
+  "open": 225,
+  "engineering": 225,
   "src": "curated"
  },
  {
@@ -530,7 +530,7 @@
   "slug": "robinhood",
   "ats": "greenhouse",
   "open": 160,
-  "engineering": 46,
+  "engineering": 160,
   "src": "curated"
  },
  {
@@ -541,7 +541,7 @@
   "slug": "brex",
   "ats": "greenhouse",
   "open": 287,
-  "engineering": 54,
+  "engineering": 287,
   "src": "curated"
  },
  {
@@ -555,7 +555,7 @@
   "slug": "ramp",
   "ats": "ashby",
   "open": 161,
-  "engineering": 30,
+  "engineering": 161,
   "src": "curated"
  },
  {
@@ -566,7 +566,7 @@
   "slug": "plaid",
   "ats": "ashby",
   "open": 120,
-  "engineering": 30,
+  "engineering": 120,
   "src": "curated"
  },
  {
@@ -577,7 +577,7 @@
   "slug": "chime",
   "ats": "greenhouse",
   "open": 65,
-  "engineering": 22,
+  "engineering": 65,
   "src": "curated"
  },
  {
@@ -588,7 +588,7 @@
   "slug": "affirm",
   "ats": "greenhouse",
   "open": 187,
-  "engineering": 94,
+  "engineering": 187,
   "src": "curated"
  },
  {
@@ -602,7 +602,7 @@
   "slug": "block",
   "ats": "greenhouse",
   "open": 224,
-  "engineering": 41,
+  "engineering": 224,
   "src": "curated"
  },
  {
@@ -612,8 +612,8 @@
   "hq": "us",
   "slug": "airbnb",
   "ats": "greenhouse",
-  "open": 161,
-  "engineering": 46,
+  "open": 160,
+  "engineering": 160,
   "src": "curated"
  },
  {
@@ -637,7 +637,7 @@
   "slug": "instacart",
   "ats": "greenhouse",
   "open": 122,
-  "engineering": 24,
+  "engineering": 122,
   "src": "curated"
  },
  {
@@ -648,7 +648,7 @@
   "slug": "lyft",
   "ats": "greenhouse",
   "open": 196,
-  "engineering": 47,
+  "engineering": 196,
   "src": "curated"
  },
  {
@@ -658,8 +658,8 @@
   "hq": "us",
   "slug": "pinterest",
   "ats": "greenhouse",
-  "open": 176,
-  "engineering": 47,
+  "open": 177,
+  "engineering": 177,
   "src": "curated"
  },
  {
@@ -670,7 +670,7 @@
   "slug": "reddit",
   "ats": "greenhouse",
   "open": 148,
-  "engineering": 65,
+  "engineering": 148,
   "src": "curated"
  },
  {
@@ -681,7 +681,7 @@
   "slug": "discord",
   "ats": "greenhouse",
   "open": 48,
-  "engineering": 27,
+  "engineering": 48,
   "src": "curated"
  },
  {
@@ -692,7 +692,7 @@
   "slug": "dropbox",
   "ats": "greenhouse",
   "open": 35,
-  "engineering": 4,
+  "engineering": 35,
   "src": "curated"
  },
  {
@@ -703,7 +703,7 @@
   "slug": "figma",
   "ats": "greenhouse",
   "open": 156,
-  "engineering": 25,
+  "engineering": 156,
   "src": "curated"
  },
  {
@@ -714,7 +714,7 @@
   "slug": "notion",
   "ats": "ashby",
   "open": 133,
-  "engineering": 40,
+  "engineering": 133,
   "src": "curated"
  },
  {
@@ -725,7 +725,7 @@
   "slug": "linear",
   "ats": "ashby",
   "open": 31,
-  "engineering": 12,
+  "engineering": 31,
   "src": "curated"
  },
  {
@@ -736,7 +736,7 @@
   "slug": "vercel",
   "ats": "greenhouse",
   "open": 84,
-  "engineering": 28,
+  "engineering": 84,
   "src": "curated"
  },
  {
@@ -747,7 +747,7 @@
   "slug": "netlify",
   "ats": "greenhouse",
   "open": 6,
-  "engineering": 0,
+  "engineering": 6,
   "src": "curated"
  },
  {
@@ -758,7 +758,7 @@
   "slug": "datadog",
   "ats": "greenhouse",
   "open": 435,
-  "engineering": 61,
+  "engineering": 435,
   "src": "curated"
  },
  {
@@ -768,8 +768,8 @@
   "hq": "us",
   "slug": "mongodb",
   "ats": "greenhouse",
-  "open": 396,
-  "engineering": 132,
+  "open": 394,
+  "engineering": 394,
   "src": "curated"
  },
  {
@@ -780,7 +780,7 @@
   "slug": "cloudflare",
   "ats": "greenhouse",
   "open": 418,
-  "engineering": 187,
+  "engineering": 418,
   "src": "curated"
  },
  {
@@ -791,7 +791,7 @@
   "slug": "twilio",
   "ats": "greenhouse",
   "open": 131,
-  "engineering": 45,
+  "engineering": 131,
   "src": "curated"
  },
  {
@@ -805,7 +805,7 @@
   "slug": "gitlab",
   "ats": "greenhouse",
   "open": 209,
-  "engineering": 81,
+  "engineering": 209,
   "src": "curated"
  },
  {
@@ -825,7 +825,7 @@
   "slug": "elastic",
   "ats": "greenhouse",
   "open": 413,
-  "engineering": 219,
+  "engineering": 413,
   "src": "curated"
  },
  {
@@ -836,7 +836,7 @@
   "slug": "okta",
   "ats": "greenhouse",
   "open": 375,
-  "engineering": 169,
+  "engineering": 375,
   "src": "curated"
  },
  {
@@ -847,7 +847,7 @@
   "slug": "snowflake",
   "ats": "ashby",
   "open": 356,
-  "engineering": 144,
+  "engineering": 356,
   "src": "curated"
  },
  {
@@ -858,7 +858,7 @@
   "slug": "databricks",
   "ats": "greenhouse",
   "open": 885,
-  "engineering": 460,
+  "engineering": 600,
   "src": "curated"
  },
  {
@@ -869,7 +869,7 @@
   "slug": "asana",
   "ats": "greenhouse",
   "open": 97,
-  "engineering": 32,
+  "engineering": 97,
   "src": "curated"
  },
  {
@@ -880,7 +880,7 @@
   "slug": "airtable",
   "ats": "greenhouse",
   "open": 4,
-  "engineering": 0,
+  "engineering": 4,
   "src": "curated"
  },
  {
@@ -900,7 +900,7 @@
   "slug": "supabase",
   "ats": "ashby",
   "open": 51,
-  "engineering": 24,
+  "engineering": 51,
   "src": "curated"
  },
  {
@@ -911,7 +911,7 @@
   "slug": "planetscale",
   "ats": "greenhouse",
   "open": 13,
-  "engineering": 5,
+  "engineering": 13,
   "src": "curated"
  },
  {
@@ -922,7 +922,7 @@
   "slug": "anthropic",
   "ats": "greenhouse",
   "open": 642,
-  "engineering": 221,
+  "engineering": 600,
   "src": "curated"
  },
  {
@@ -932,8 +932,8 @@
   "hq": "us",
   "slug": "openai",
   "ats": "ashby",
-  "open": 824,
-  "engineering": 344,
+  "open": 823,
+  "engineering": 600,
   "src": "curated"
  },
  {
@@ -947,7 +947,7 @@
   "slug": "scaleai",
   "ats": "greenhouse",
   "open": 190,
-  "engineering": 66,
+  "engineering": 190,
   "src": "curated"
  },
  {
@@ -957,8 +957,8 @@
   "hq": "us",
   "slug": "perplexity",
   "ats": "ashby",
-  "open": 129,
-  "engineering": 37,
+  "open": 128,
+  "engineering": 128,
   "src": "curated"
  },
  {
@@ -969,7 +969,7 @@
   "slug": "cohere",
   "ats": "ashby",
   "open": 130,
-  "engineering": 38,
+  "engineering": 130,
   "src": "curated"
  },
  {
@@ -980,7 +980,7 @@
   "slug": "spotify",
   "ats": "lever",
   "open": 75,
-  "engineering": 23,
+  "engineering": 75,
   "src": "curated"
  },
  {
@@ -1009,7 +1009,7 @@
   "slug": "wealthsimple",
   "ats": "ashby",
   "open": 43,
-  "engineering": 11,
+  "engineering": 43,
   "src": "curated"
  },
  {
@@ -1032,7 +1032,7 @@
   "slug": "1password",
   "ats": "ashby",
   "open": 69,
-  "engineering": 22,
+  "engineering": 69,
   "src": "curated"
  },
  {
@@ -1043,7 +1043,7 @@
   "slug": "hootsuite",
   "ats": "greenhouse",
   "open": 9,
-  "engineering": 2,
+  "engineering": 9,
   "src": "curated"
  },
  {
@@ -1054,7 +1054,7 @@
   "slug": "lightspeed",
   "ats": "ashby",
   "open": 6,
-  "engineering": 5,
+  "engineering": 6,
   "src": "curated"
  },
  {
@@ -1085,8 +1085,8 @@
   ],
   "slug": "faire",
   "ats": "greenhouse",
-  "open": 77,
-  "engineering": 27,
+  "open": 78,
+  "engineering": 78,
   "src": "curated"
  },
  {
@@ -1109,7 +1109,7 @@
   "slug": "benevity",
   "ats": "ashby",
   "open": 22,
-  "engineering": 6,
+  "engineering": 22,
   "src": "curated"
  },
  {
@@ -1136,7 +1136,7 @@
   "slug": "neofinancial",
   "ats": "ashby",
   "open": 73,
-  "engineering": 2,
+  "engineering": 73,
   "src": "curated"
  },
  {
@@ -1147,7 +1147,7 @@
   "slug": "koho",
   "ats": "ashby",
   "open": 8,
-  "engineering": 2,
+  "engineering": 8,
   "src": "curated"
  },
  {
@@ -1176,7 +1176,7 @@
   "slug": "n26",
   "ats": "greenhouse",
   "open": 45,
-  "engineering": 12,
+  "engineering": 45,
   "src": "curated"
  },
  {
@@ -1199,7 +1199,7 @@
   "slug": "celonis",
   "ats": "greenhouse",
   "open": 224,
-  "engineering": 115,
+  "engineering": 224,
   "src": "curated"
  },
  {
@@ -1219,7 +1219,7 @@
   "slug": "getyourguide",
   "ats": "greenhouse",
   "open": 57,
-  "engineering": 5,
+  "engineering": 57,
   "src": "curated"
  },
  {
@@ -1233,7 +1233,7 @@
   "slug": "deliveryhero",
   "ats": "smartrecruiters",
   "open": 977,
-  "engineering": 30,
+  "engineering": 600,
   "src": "curated"
  },
  {
@@ -1247,7 +1247,7 @@
   "slug": "auto1",
   "ats": "smartrecruiters",
   "open": 695,
-  "engineering": 0,
+  "engineering": 600,
   "src": "curated"
  },
  {
@@ -1258,7 +1258,7 @@
   "slug": "contentful",
   "ats": "greenhouse",
   "open": 18,
-  "engineering": 4,
+  "engineering": 18,
   "src": "curated"
  },
  {
@@ -1269,7 +1269,7 @@
   "slug": "commercetools",
   "ats": "greenhouse",
   "open": 36,
-  "engineering": 20,
+  "engineering": 36,
   "src": "curated"
  },
  {
@@ -1280,7 +1280,7 @@
   "slug": "sumup",
   "ats": "greenhouse",
   "open": 346,
-  "engineering": 31,
+  "engineering": 346,
   "src": "curated"
  },
  {
@@ -1291,7 +1291,7 @@
   "slug": "flix",
   "ats": "greenhouse",
   "open": 147,
-  "engineering": 12,
+  "engineering": 147,
   "src": "curated"
  },
  {
@@ -1302,7 +1302,7 @@
   "slug": "hellofresh",
   "ats": "greenhouse",
   "open": 422,
-  "engineering": 33,
+  "engineering": 422,
   "src": "curated"
  },
  {
@@ -1358,7 +1358,7 @@
   "slug": "raisin",
   "ats": "greenhouse",
   "open": 36,
-  "engineering": 2,
+  "engineering": 36,
   "src": "curated"
  },
  {
@@ -1378,7 +1378,7 @@
   "slug": "zenjob",
   "ats": "ashby",
   "open": 12,
-  "engineering": 1,
+  "engineering": 12,
   "src": "curated"
  },
  {
@@ -1389,7 +1389,7 @@
   "slug": "wise",
   "ats": "greenhouse",
   "open": 15,
-  "engineering": 0,
+  "engineering": 15,
   "src": "curated"
  },
  {
@@ -1409,7 +1409,7 @@
   "slug": "monzo",
   "ats": "greenhouse",
   "open": 67,
-  "engineering": 8,
+  "engineering": 67,
   "src": "curated"
  },
  {
@@ -1429,7 +1429,7 @@
   "slug": "adyen",
   "ats": "greenhouse",
   "open": 230,
-  "engineering": 49,
+  "engineering": 230,
   "src": "curated"
  },
  {
@@ -1440,7 +1440,7 @@
   "slug": "mollie",
   "ats": "ashby",
   "open": 43,
-  "engineering": 11,
+  "engineering": 43,
   "src": "curated"
  },
  {
@@ -1469,7 +1469,7 @@
   "slug": "elastic",
   "ats": "greenhouse",
   "open": 413,
-  "engineering": 219,
+  "engineering": 413,
   "src": "curated"
  },
  {
@@ -1480,7 +1480,7 @@
   "slug": "jetbrains",
   "ats": "greenhouse",
   "open": 65,
-  "engineering": 20,
+  "engineering": 65,
   "src": "curated"
  },
  {
@@ -1491,7 +1491,7 @@
   "slug": "canva",
   "ats": "smartrecruiters",
   "open": 127,
-  "engineering": 15,
+  "engineering": 127,
   "src": "curated"
  },
  {
@@ -1502,7 +1502,7 @@
   "slug": "miro",
   "ats": "ashby",
   "open": 26,
-  "engineering": 3,
+  "engineering": 26,
   "src": "curated"
  },
  {
@@ -1513,7 +1513,7 @@
   "slug": "typeform",
   "ats": "greenhouse",
   "open": 14,
-  "engineering": 5,
+  "engineering": 14,
   "src": "curated"
  },
  {
@@ -1524,7 +1524,7 @@
   "slug": "intercom",
   "ats": "greenhouse",
   "open": 105,
-  "engineering": 33,
+  "engineering": 105,
   "src": "curated"
  },
  {
@@ -1543,8 +1543,8 @@
   "hq": "us",
   "slug": "servicenow",
   "ats": "smartrecruiters",
-  "open": 708,
-  "engineering": 248,
+  "open": 706,
+  "engineering": 600,
   "src": "curated"
  },
  {
@@ -1585,5 +1585,1151 @@
   "open": 0,
   "engineering": 0,
   "src": "curated"
+ },
+ {
+  "name": "Natixis",
+  "category": "bank",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "BNP Paribas",
+  "category": "bank",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Societe Generale",
+  "category": "bank",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Credit Agricole",
+  "category": "bank",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "HSBC",
+  "category": "bank",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Barclays",
+  "category": "bank",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Standard Chartered",
+  "category": "bank",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Deutsche Bank",
+  "category": "bank",
+  "tier": 1,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Commerzbank",
+  "category": "bank",
+  "tier": 2,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "UBS",
+  "category": "bank",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Credit Suisse",
+  "category": "bank",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "ING",
+  "category": "bank",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Santander",
+  "category": "bank",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "BBVA",
+  "category": "bank",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "UniCredit",
+  "category": "bank",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Intesa Sanpaolo",
+  "category": "bank",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Nordea",
+  "category": "bank",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Rabobank",
+  "category": "bank",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "ABN AMRO",
+  "category": "bank",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Lloyds Banking Group",
+  "category": "bank",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "NatWest",
+  "category": "bank",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "JPMorgan Chase",
+  "category": "bank",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Citi",
+  "category": "bank",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Bank of America",
+  "category": "bank",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Wells Fargo",
+  "category": "bank",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Morgan Stanley",
+  "category": "bank",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Capital One",
+  "category": "bank",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "slug": "capital",
+  "ats": "lever",
+  "open": 52,
+  "engineering": 52
+ },
+ {
+  "name": "American Express",
+  "category": "bank",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "State Street",
+  "category": "bank",
+  "tier": 2,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "BNY Mellon",
+  "category": "bank",
+  "tier": 2,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Royal Bank of Canada",
+  "category": "bank",
+  "tier": 1,
+  "hq": "ca",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "TD Bank",
+  "category": "bank",
+  "tier": 1,
+  "hq": "ca",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Scotiabank",
+  "category": "bank",
+  "tier": 1,
+  "hq": "ca",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "BMO",
+  "category": "bank",
+  "tier": 1,
+  "hq": "ca",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "CIBC",
+  "category": "bank",
+  "tier": 2,
+  "hq": "ca",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "HDFC Bank",
+  "category": "bank",
+  "tier": 1,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "ICICI Bank",
+  "category": "bank",
+  "tier": 1,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Axis Bank",
+  "category": "bank",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Kotak Mahindra Bank",
+  "category": "bank",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "State Bank of India",
+  "category": "bank",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Yes Bank",
+  "category": "bank",
+  "tier": 3,
+  "hq": "in",
+  "src": "curated",
+  "slug": "yes",
+  "ats": "greenhouse",
+  "open": 4,
+  "engineering": 4
+ },
+ {
+  "name": "IDFC First Bank",
+  "category": "bank",
+  "tier": 3,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Bajaj Finserv",
+  "category": "bank",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Allianz",
+  "category": "insurance",
+  "tier": 1,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "AXA",
+  "category": "insurance",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Zurich Insurance",
+  "category": "insurance",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Munich Re",
+  "category": "insurance",
+  "tier": 1,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Generali",
+  "category": "insurance",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Aviva",
+  "category": "insurance",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Prudential",
+  "category": "insurance",
+  "tier": 2,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "MetLife",
+  "category": "insurance",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "slug": "metlife",
+  "ats": "lever",
+  "open": 39,
+  "engineering": 39
+ },
+ {
+  "name": "AIG",
+  "category": "insurance",
+  "tier": 2,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Manulife",
+  "category": "insurance",
+  "tier": 2,
+  "hq": "ca",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Sun Life",
+  "category": "insurance",
+  "tier": 2,
+  "hq": "ca",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "LIC India",
+  "category": "insurance",
+  "tier": 3,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Deloitte",
+  "category": "consulting",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "PwC",
+  "category": "consulting",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "EY",
+  "category": "consulting",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "KPMG",
+  "category": "consulting",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "McKinsey",
+  "category": "consulting",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "BCG",
+  "category": "consulting",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Bain",
+  "category": "consulting",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Accenture",
+  "category": "consulting",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Capgemini",
+  "category": "consulting",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "TCS",
+  "category": "services",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "slug": "tcs",
+  "ats": "greenhouse",
+  "open": 99,
+  "engineering": 99
+ },
+ {
+  "name": "Infosys",
+  "category": "services",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Wipro",
+  "category": "services",
+  "tier": 3,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "HCLTech",
+  "category": "services",
+  "tier": 3,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Tech Mahindra",
+  "category": "services",
+  "tier": 3,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "LTIMindtree",
+  "category": "services",
+  "tier": 3,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Pfizer",
+  "category": "pharma",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Novartis",
+  "category": "pharma",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Roche",
+  "category": "pharma",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Sanofi",
+  "category": "pharma",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "AstraZeneca",
+  "category": "pharma",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Bayer",
+  "category": "pharma",
+  "tier": 1,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Johnson & Johnson",
+  "category": "pharma",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Sun Pharma",
+  "category": "pharma",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Dr Reddys",
+  "category": "pharma",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Cipla",
+  "category": "pharma",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Amazon",
+  "category": "retail",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Walmart Stores",
+  "category": "retail",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Target",
+  "category": "retail",
+  "tier": 2,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Costco",
+  "category": "retail",
+  "tier": 2,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "IKEA",
+  "category": "retail",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Carrefour",
+  "category": "retail",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Tesco",
+  "category": "retail",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Lidl",
+  "category": "retail",
+  "tier": 2,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Aldi",
+  "category": "retail",
+  "tier": 2,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Reliance Retail",
+  "category": "retail",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Tata Consumer",
+  "category": "retail",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Unilever",
+  "category": "fmcg",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Nestle",
+  "category": "fmcg",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Procter & Gamble",
+  "category": "fmcg",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "LOreal",
+  "category": "fmcg",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Danone",
+  "category": "fmcg",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Hindustan Unilever",
+  "category": "fmcg",
+  "tier": 1,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "ITC",
+  "category": "fmcg",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Siemens Energy",
+  "category": "energy",
+  "tier": 2,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Shell",
+  "category": "energy",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "BP",
+  "category": "energy",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "TotalEnergies",
+  "category": "energy",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Reliance Industries",
+  "category": "energy",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Volkswagen",
+  "category": "auto",
+  "tier": 1,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "BMW",
+  "category": "auto",
+  "tier": 1,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Mercedes-Benz",
+  "category": "auto",
+  "tier": 1,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Tata Motors",
+  "category": "auto",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Mahindra",
+  "category": "auto",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Ford",
+  "category": "auto",
+  "tier": 2,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Tesla",
+  "category": "auto",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Airbus",
+  "category": "aero",
+  "tier": 1,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Boeing",
+  "category": "aero",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Lufthansa",
+  "category": "travel",
+  "tier": 2,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Air India",
+  "category": "travel",
+  "tier": 3,
+  "hq": "in",
+  "src": "curated",
+  "slug": "air",
+  "ats": "greenhouse",
+  "open": 34,
+  "engineering": 34
+ },
+ {
+  "name": "IndiGo",
+  "category": "travel",
+  "tier": 2,
+  "hq": "in",
+  "src": "curated",
+  "slug": "indigo",
+  "ats": "ashby",
+  "open": 26,
+  "engineering": 26
+ },
+ {
+  "name": "Vodafone",
+  "category": "telecom",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Deutsche Telekom",
+  "category": "telecom",
+  "tier": 1,
+  "hq": "de",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Orange",
+  "category": "telecom",
+  "tier": 2,
+  "hq": "eu",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Airtel",
+  "category": "telecom",
+  "tier": 1,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Jio",
+  "category": "telecom",
+  "tier": 1,
+  "hq": "in",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Telus",
+  "category": "telecom",
+  "tier": 2,
+  "hq": "ca",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Rogers",
+  "category": "telecom",
+  "tier": 2,
+  "hq": "ca",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Bell Canada",
+  "category": "telecom",
+  "tier": 2,
+  "hq": "ca",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Disney",
+  "category": "media",
+  "tier": 1,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Warner Bros Discovery",
+  "category": "media",
+  "tier": 2,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Sony",
+  "category": "media",
+  "tier": 2,
+  "hq": "us",
+  "src": "curated",
+  "open": 0,
+  "engineering": 0
  }
 ]

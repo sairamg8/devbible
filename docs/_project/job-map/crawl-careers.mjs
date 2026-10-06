@@ -22,8 +22,9 @@ todo = todo.filter((c) => !done.has(c.name.toLowerCase()) || only);
 if (arg('limit')) todo = todo.slice(0, Number(arg('limit')));
 console.error(`${todo.length} companies to crawl`);
 
-const ENG = /\b(engineer|developer|sde|programmer|architect|software|swe|frontend|front-end|backend|back-end|full[- ]?stack)\b/i;
-const NOT = /\b(learn more|read more|blog|docs|documentation|developer (portal|docs|hub|tools|program|relations|advocate|support)|api|sdk|apply now|view all|see all|engineering blog|culture|life at)\b/i;
+const ENG = /./; // keep every role-looking link; the page filters by function
+const JOBHREF = /job|position|opening|vacanc|requisition|offer|offre|stelle|apply|\/o\/|\/p\/|posting|opportunit|career/i;
+const NOT = /\b(privacy|cookie|terms|contact us|sign in|log ?in|register|newsletter|follow us|facebook|linkedin|twitter|instagram|youtube)\b|\b(learn more|read more|blog|docs|documentation|developer (portal|docs|hub|tools|program|relations|advocate|support)|api|sdk|apply now|view all|see all|engineering blog|culture|life at)\b/i;
 const MORE = /(open|current|all|available) (positions|roles|jobs|openings)|view (all )?(jobs|roles|openings|positions)|see (all )?(jobs|roles|openings|positions)|search (jobs|roles)|explore (jobs|roles|opportunities)|join (us|our team)|careers? (at|home)/i;
 
 const HINTS = { Flipkart: 'https://www.flipkartcareers.com', Zomato: 'https://www.eternal.com', Myntra: 'https://www.myntra.com', Nykaa: 'https://www.nykaa.com' };
@@ -34,8 +35,8 @@ async function extract(page) {
 }
 const jobLinks = (links) => {
   const m = new Map();
-  for (const l of links) if (ENG.test(l.title) && !NOT.test(l.title) && !m.has(l.url)) m.set(l.url, { title: l.title, url: l.url, ...(l.location ? { location: l.location } : {}) });
-  return [...m.values()].slice(0, 40);
+  for (const l of links) if (JOBHREF.test(l.url) && !NOT.test(l.title) && l.title.split(' ').length >= 2 && !m.has(l.url)) m.set(l.url, { title: l.title, url: l.url, ...(l.location ? { location: l.location } : {}) });
+  return [...m.values()].slice(0, 60);
 };
 
 async function crawl(c) {

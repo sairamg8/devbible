@@ -19,19 +19,37 @@ const DESC_TRACKS = [
 ];
 const ENG = /\b(engineer|developer|sde|programmer|architect|software|swe)\b/i;
 const NOISE = /\b(intern|recruit|sales|marketing|designer|analyst|support|qa\b|sdet|data scientist|devops|sre|ios|android|manager of|director|vp\b)/i;
-const level = (t) => /\b(staff|principal|architect)\b/i.test(t) ? 'staff+' : /\b(sr|senior|lead)\b/i.test(t) ? 'senior' : /\b(sde[- ]?1|junior|associate|graduate|fresher|entry)\b/i.test(t) ? 'junior' : /\b(sde[- ]?(2|ii)|engineer ii|developer ii)\b/i.test(t) ? 'mid' : 'unspecified';
+const level = (t) => /\b(intern|internship|stagiaire|apprenti|apprentice|werkstudent|trainee|vie\b|graduate programme)\b/i.test(t) ? 'intern' : /\b(staff|principal|architect)\b/i.test(t) ? 'staff+' : /\b(sr|senior|lead)\b/i.test(t) ? 'senior' : /\b(sde[- ]?1|junior|associate|graduate|fresher|entry)\b/i.test(t) ? 'junior' : /\b(sde[- ]?(2|ii)|engineer ii|developer ii)\b/i.test(t) ? 'mid' : 'unspecified';
 
-/** raw ATS job -> classified job, or null if it is not an engineering role in the region. */
-export function classify(j, region = 'india') {
+const FUNCTIONS = [
+  ['compliance', /\b(aml|kyc|kyb|cft|ctf|anti[- ]?money|financial crime|fin(ancial)? crime|sanctions?|compliance|mlro|know your|conformit|due diligence)\b/i],
+  ['legal', /\b(legal|counsel|attorney|lawyer|paralegal|juriste|regulatory affairs|company secretary)\b/i],
+  ['data', /\b(data (scientist|analyst|engineer|science|architect|steward|governance)|analytics|machine learning|\bml\b|\bai\b|\bbi\b|quant|statistic|business intelligence)\b/i],
+  ['engineering', /\b(engineer|developer|sde|software|devops|sre|architect|programmer|qa\b|sdet|ios|android|full[- ]?stack|front[- ]?end|back[- ]?end|cyber|infosec|security analyst|sysadmin|network admin|dba|technical lead|tech lead)\b/i],
+  ['design', /\b(designer|ux|ui\/ux|creative director|illustrator|art director|brand design)\b/i],
+  ['product', /\b(product (manager|owner|lead|analyst)|program(me)? manager|project manager|project coordinator|scrum|business analyst|delivery manager|pmo|transformation)\b/i],
+  ['risk', /\b(risk|credit (analyst|officer|manager)|audit|auditor|internal control|controls?|fraud|assurance|underwrit|actuar|claims)\b/i],
+  ['finance', /\b(financ|account(ant|ing| payable| receivable)|treasury|controller|tax|payroll|fp&a|billing|bookkeep|investor relations|equity research|analyst.*(bank|invest)|investment|trader|trading|portfolio|asset manage|wealth)\b/i],
+  ['hr', /\b(recruit|talent|human resources|\bhr\b|people (partner|operations|business)|learning and development|l&d|compensation|benefits|onboarding|employer brand)\b/i],
+  ['sales', /\b(sales|account (executive|manager)|business development|relationship manager|customer success|partnership|bd\b|client (partner|advisor|manager)|pre-?sales|solutions consultant|banker)\b/i],
+  ['marketing', /\b(marketing|brand|content|seo|communications?|\bpr\b|social media|community manager|growth|copywriter|campaign)\b/i],
+  ['support', /\b(support|service desk|customer (service|care|experience)|helpdesk|help desk|contact cent|call cent|agent)\b/i],
+  ['ops', /\b(operations?|logistics|supply chain|procurement|facilities|administrat|assistant|coordinator|warehouse|driver|technician|office manager|executive assistant|back office|middle office|settlement|processing)\b/i],
+];
+export const FUNCTION_LABELS = { compliance: 'Compliance / AML / KYC', legal: 'Legal', data: 'Data & analytics', engineering: 'Engineering', design: 'Design', product: 'Product & projects', risk: 'Risk, audit & insurance', finance: 'Finance & banking', hr: 'HR & recruiting', sales: 'Sales & business development', marketing: 'Marketing & comms', support: 'Customer support', ops: 'Operations & admin', other: 'Other' };
+const functionOf = (t) => FUNCTIONS.find(([, rx]) => rx.test(t))?.[0] ?? 'other';
+
+/** raw ATS job -> classified job (every role is kept; the region filter only applies when asked). */
+export function classify(j, region = 'any') {
   const loc = j.location ?? '';
-  if (!(REGIONS[region].test(loc) || /^\d+ locations?$/i.test(loc) || !loc) || NOISE.test(j.title) || !ENG.test(j.title)) return null;
-  // Workday titles are generic but the URL slug often carries the real one ("...Engineer---Frontend--...").
+  if (!(REGIONS[region].test(loc) || /^\d+ locations?$/i.test(loc) || !loc)) return null;
   const slug = decodeURIComponent(j.url ?? '').replace(/[-_]+/g, ' ');
+  const fn = functionOf(j.title) !== 'other' ? functionOf(j.title) : functionOf(slug);
   const byTitle = TRACKS.find(([, rx]) => rx.test(j.title)) ?? TRACKS.find(([, rx]) => rx.test(slug));
-  const byDesc = !byTitle && DESC_TRACKS.map(([t, rx]) => [t, (j.desc ?? '').match(rx)?.length ?? 0]).sort((a, b) => b[1] - a[1])[0];
+  const byDesc = !byTitle && fn === 'engineering' && DESC_TRACKS.map(([t, rx]) => [t, (j.desc ?? '').match(rx)?.length ?? 0]).sort((a, b) => b[1] - a[1])[0];
   const track = byTitle ? byTitle[0] : byDesc && byDesc[1] >= 2 ? byDesc[0] : 'other-eng';
   const { desc, ...rest } = j;
-  return { track, how: byTitle ? 'title' : track === 'other-eng' ? '-' : 'jd', level: level(j.title), ...rest };
+  return { fn, track, how: byTitle ? 'title' : track === 'other-eng' ? '-' : 'jd', level: level(j.title), ...rest };
 }
 
 const COUNTRIES = [

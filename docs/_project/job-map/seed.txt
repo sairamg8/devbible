@@ -150,3 +150,130 @@ Zendesk|saas|1|us
 HubSpot|saas|1|us
 Atlassian Trello|saas|2|us
 Mistral AI|ai|1|eu|mistral
+# --- non-tech employers: banks, insurers, consulting, pharma, retail, telecom, auto, energy, media ---
+Natixis|bank|1|eu
+BNP Paribas|bank|1|eu
+Societe Generale|bank|1|eu
+Credit Agricole|bank|1|eu
+HSBC|bank|1|eu
+Barclays|bank|1|eu
+Standard Chartered|bank|1|eu
+Deutsche Bank|bank|1|de
+Commerzbank|bank|2|de
+UBS|bank|1|eu
+Credit Suisse|bank|2|eu
+ING|bank|1|eu
+Santander|bank|1|eu
+BBVA|bank|2|eu
+UniCredit|bank|2|eu
+Intesa Sanpaolo|bank|2|eu
+Nordea|bank|2|eu
+Rabobank|bank|2|eu
+ABN AMRO|bank|2|eu
+Lloyds Banking Group|bank|2|eu
+NatWest|bank|2|eu
+JPMorgan Chase|bank|1|us
+Citi|bank|1|us
+Bank of America|bank|1|us
+Wells Fargo|bank|1|us
+Morgan Stanley|bank|1|us
+Capital One|bank|1|us
+American Express|bank|1|us
+State Street|bank|2|us
+BNY Mellon|bank|2|us
+Royal Bank of Canada|bank|1|ca
+TD Bank|bank|1|ca
+Scotiabank|bank|1|ca
+BMO|bank|1|ca
+CIBC|bank|2|ca
+HDFC Bank|bank|1|in
+ICICI Bank|bank|1|in
+Axis Bank|bank|2|in
+Kotak Mahindra Bank|bank|2|in
+State Bank of India|bank|2|in
+Yes Bank|bank|3|in
+IDFC First Bank|bank|3|in
+Bajaj Finserv|bank|2|in
+Allianz|insurance|1|de
+AXA|insurance|1|eu
+Zurich Insurance|insurance|1|eu
+Munich Re|insurance|1|de
+Generali|insurance|2|eu
+Aviva|insurance|2|eu
+Prudential|insurance|2|us
+MetLife|insurance|1|us
+AIG|insurance|2|us
+Manulife|insurance|2|ca
+Sun Life|insurance|2|ca
+LIC India|insurance|3|in
+Deloitte|consulting|1|us
+PwC|consulting|1|eu
+EY|consulting|1|eu
+KPMG|consulting|1|eu
+McKinsey|consulting|1|us
+BCG|consulting|1|us
+Bain|consulting|1|us
+Accenture|consulting|1|eu
+Capgemini|consulting|2|eu
+TCS|services|2|in
+Infosys|services|2|in
+Wipro|services|3|in
+HCLTech|services|3|in
+Tech Mahindra|services|3|in
+LTIMindtree|services|3|in
+Pfizer|pharma|1|us
+Novartis|pharma|1|eu
+Roche|pharma|1|eu
+Sanofi|pharma|1|eu
+AstraZeneca|pharma|1|eu
+Bayer|pharma|1|de
+Johnson & Johnson|pharma|1|us
+Sun Pharma|pharma|2|in
+Dr Reddys|pharma|2|in
+Cipla|pharma|2|in
+Amazon|retail|1|us
+Walmart Stores|retail|1|us
+Target|retail|2|us
+Costco|retail|2|us
+IKEA|retail|1|eu
+Carrefour|retail|2|eu
+Tesco|retail|2|eu
+Lidl|retail|2|de
+Aldi|retail|2|de
+Reliance Retail|retail|2|in
+Tata Consumer|retail|2|in
+Unilever|fmcg|1|eu
+Nestle|fmcg|1|eu
+Procter & Gamble|fmcg|1|us
+LOreal|fmcg|1|eu
+Danone|fmcg|2|eu
+Hindustan Unilever|fmcg|1|in
+ITC|fmcg|2|in
+Siemens Energy|energy|2|de
+Shell|energy|1|eu
+BP|energy|1|eu
+TotalEnergies|energy|1|eu
+Reliance Industries|energy|2|in
+Volkswagen|auto|1|de
+BMW|auto|1|de
+Mercedes-Benz|auto|1|de
+Tata Motors|auto|2|in
+Mahindra|auto|2|in
+Ford|auto|2|us
+Tesla|auto|1|us
+Airbus|aero|1|eu
+Boeing|aero|1|us
+Lufthansa|travel|2|de
+Air India|travel|3|in
+IndiGo|travel|2|in
+Vodafone|telecom|2|eu
+Deutsche Telekom|telecom|1|de
+Orange|telecom|2|eu
+Airtel|telecom|1|in
+Jio|telecom|1|in
+Telus|telecom|2|ca
+Rogers|telecom|2|ca
+Bell Canada|telecom|2|ca
+Disney|media|1|us
+Warner Bros Discovery|media|2|us
+Sony|media|2|us
