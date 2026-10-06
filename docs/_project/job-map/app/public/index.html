@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Job Map</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Job Map</h1>
+    <div class="hdr-right"><span class="meta" id="meta"></span><span id="auth"></span></div>
+  </header>
+  <nav class="tabs" role="tablist"><button class="tab" id="tab-search" role="tab" aria-selected="true">Search</button><button class="tab" id="tab-saved" role="tab" aria-selected="false">My jobs <span id="savedCount"></span></button></nav>
+
+  <section id="searchView">
+    <div class="bar">
+      <div class="row"><input id="q" type="search" placeholder="Role or company, e.g. kyc OR aml" aria-label="Search"><input id="loc" type="search" placeholder="City" aria-label="City"></div>
+      <div class="row"><select id="country" aria-label="Country"></select><select id="level" aria-label="Seniority"></select><select id="cat" aria-label="Company type"></select><select id="tier" aria-label="Tier"></select></div>
+      <div class="row chips" id="fn"></div>
+      <div class="row chips" id="pos" hidden></div>
+      <div class="row chips" id="stack" hidden></div>
+      <div class="row"><label class="chk"><input type="checkbox" id="fresh"> New in the last 7 days</label><button class="btn" id="saveSearch">Save this search</button><span id="searches" class="chips"></span></div>
+    </div>
+    <div class="summary" id="summary"></div>
+    <div id="results"></div>
+    <button class="btn more" id="more" hidden>Show more</button>
+  </section>
+
+  <section id="savedView" hidden>
+    <div class="row chips" id="statusFilter"></div>
+    <div id="saved"></div>
+  </section>
+</div>
+
+<dialog id="login">
+  <form id="loginForm" method="dialog">
+    <h2 id="loginTitle">Sign in</h2>
+    <label>Email<input id="email" type="email" autocomplete="username" required></label>
+    <label>Password<input id="password" type="password" autocomplete="current-password" minlength="10" required></label>
+    <p class="err" id="loginErr" role="alert"></p>
+    <div class="row"><button class="btn primary" id="loginGo" value="go">Sign in</button><button class="btn" id="loginSwitch" type="button">Create an account</button><button class="btn" id="loginClose" type="button">Cancel</button></div>
+    <p class="hint">Passwords need 10 or more characters.</p>
+  </form>
+</dialog>
+<script src="app.js" type="module"></script>
+</body>
+</html>
