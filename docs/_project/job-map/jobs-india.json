@@ -1,0 +1,648 @@
+{
+ "crawled": "2026-10-06",
+ "region": "india",
+ "jobs": [
+  {
+   "company": "Paytm",
+   "category": "fintech",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "senior",
+   "title": "Backend - Senior Software Engineer",
+   "location": "Noida, Uttar Pradesh",
+   "url": "https://jobs.lever.co/paytm/23534d2b-3e2e-4759-b498-0bb15b2fb995",
+   "team": "Recharges & Utilities"
+  },
+  {
+   "company": "Zeta",
+   "category": "fintech",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "mid",
+   "title": "Cloud Network Engineer II",
+   "location": "Hyderabad",
+   "url": "https://jobs.lever.co/zeta/dad16204-8051-4517-9e50-966f329045b5",
+   "team": "Engineering"
+  },
+  {
+   "company": "Zeta",
+   "category": "fintech",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "senior",
+   "title": "Lead Site Reliability Engineer",
+   "location": "Hyderabad",
+   "url": "https://jobs.lever.co/zeta/5eb7a75b-312c-4759-8813-70e67b5d4109",
+   "team": "Engineering"
+  },
+  {
+   "company": "Zeta",
+   "category": "fintech",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "senior",
+   "title": "Lead Site Reliability Engineer",
+   "location": "Hyderabad",
+   "url": "https://jobs.lever.co/zeta/803792f5-0e9c-45bc-82ce-c0a552ce0cf8",
+   "team": "Engineering"
+  },
+  {
+   "company": "Zeta",
+   "category": "fintech",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "unspecified",
+   "title": "Manager Site Reliability Engineer",
+   "location": "Hyderabad",
+   "url": "https://jobs.lever.co/zeta/cac1b9e2-b9fd-4450-8d20-16d3c4f37a10",
+   "team": "Engineering"
+  },
+  {
+   "company": "Zeta",
+   "category": "fintech",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "mid",
+   "title": "Product Security Engineer II",
+   "location": "Hyderabad",
+   "url": "https://jobs.lever.co/zeta/e21ca17d-7bf2-4781-94bb-bcfc8943aae0",
+   "team": "Cloud & Product Security"
+  },
+  {
+   "company": "Zeta",
+   "category": "fintech",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "mid",
+   "title": "SIEM & SecOps Engineer II",
+   "location": "Hyderabad",
+   "url": "https://jobs.lever.co/zeta/f140e9d7-8d0c-4e24-bace-8568385b6f5c",
+   "team": "Cloud & Product Security"
+  },
+  {
+   "company": "Mindtickle",
+   "category": "saas",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "unspecified",
+   "title": "AI Product Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://jobs.lever.co/mindtickle/864ac315-d7c5-4cd5-ab44-0e33d08f48f1",
+   "team": "Product Operations"
+  },
+  {
+   "company": "Mindtickle",
+   "category": "saas",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "unspecified",
+   "title": "Customer Success Engineer - II",
+   "location": "Pune, Maharashtra",
+   "url": "https://jobs.lever.co/mindtickle/166a3fea-6a19-48da-9a7d-bbff7d3c2f95",
+   "team": "Support"
+  },
+  {
+   "company": "Mindtickle",
+   "category": "saas",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "senior",
+   "title": "Lead Design Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://jobs.lever.co/mindtickle/a2bc1371-eade-465a-a017-46c746742baa",
+   "team": "Design"
+  },
+  {
+   "company": "Mindtickle",
+   "category": "saas",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "unspecified",
+   "title": "Security and Automation Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://jobs.lever.co/mindtickle/d62b36db-b088-48c7-a606-4ed458e30208",
+   "team": "Information Security & Privacy"
+  },
+  {
+   "company": "Mindtickle",
+   "category": "saas",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "unspecified",
+   "title": "SME Engineer IT",
+   "location": "Pune, Maharashtra",
+   "url": "https://jobs.lever.co/mindtickle/3ce036e8-d4f9-4086-bec4-186676ea109e",
+   "team": "Business Technology"
+  },
+  {
+   "company": "Mindtickle",
+   "category": "saas",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "unspecified",
+   "title": "Software Engineer, Business Systems",
+   "location": "Pune, Maharashtra",
+   "url": "https://jobs.lever.co/mindtickle/b6e024c2-42c2-463c-8bc8-ca0aa0826845",
+   "team": "Information Technology"
+  },
+  {
+   "company": "Mindtickle",
+   "category": "saas",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "staff+",
+   "title": "Staff Engineer",
+   "location": "Pune, Maharashtra",
+   "url": "https://jobs.lever.co/mindtickle/e3b6c7c4-4374-458a-a60e-3f7659e222af",
+   "team": "Engineering"
+  },
+  {
+   "company": "Zenoti",
+   "category": "saas",
+   "tier": 2,
+   "track": "fullstack",
+   "how": "title",
+   "level": "senior",
+   "title": "Lead Engineer - Full Stack (AI)",
+   "location": "Hyderabad, Telangana, India",
+   "url": "https://job-boards.greenhouse.io/zenoti/jobs/7825552003",
+   "team": ""
+  },
+  {
+   "company": "Zenoti",
+   "category": "saas",
+   "tier": 2,
+   "track": "ui",
+   "how": "jd",
+   "level": "senior",
+   "title": "Senior Software Engineer - .NET + AI",
+   "location": "Hyderabad, Telangana, India",
+   "url": "https://job-boards.greenhouse.io/zenoti/jobs/8004499003",
+   "team": ""
+  },
+  {
+   "company": "Zenoti",
+   "category": "saas",
+   "tier": 2,
+   "track": "ui",
+   "how": "jd",
+   "level": "senior",
+   "title": "Senior Software Engineer - .NET + AI",
+   "location": "Hyderabad, Telangana, India",
+   "url": "https://job-boards.greenhouse.io/zenoti/jobs/8004504003",
+   "team": ""
+  },
+  {
+   "company": "Zenoti",
+   "category": "saas",
+   "tier": 2,
+   "track": "ui",
+   "how": "jd",
+   "level": "senior",
+   "title": "Senior Software Engineer - .NET + AI",
+   "location": "Hyderabad, Telangana, India",
+   "url": "https://job-boards.greenhouse.io/zenoti/jobs/8004492003",
+   "team": ""
+  },
+  {
+   "company": "Zenoti",
+   "category": "saas",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "senior",
+   "title": "Senior Software Engineer - Python, Data Engineering, AI",
+   "location": "Hyderabad, Telangana, India",
+   "url": "https://job-boards.greenhouse.io/zenoti/jobs/8004516003",
+   "team": ""
+  },
+  {
+   "company": "Meesho",
+   "category": "unicorn",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "staff+",
+   "title": "Security Architect - AI-Powered Security Engineering",
+   "location": "Bangalore, Karnataka",
+   "url": "https://jobs.lever.co/meesho/f2de8c5f-1636-428d-aaea-af1400142975",
+   "team": "Infrastructure"
+  },
+  {
+   "company": "Meesho",
+   "category": "unicorn",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "unspecified",
+   "title": "Software Development Engineer III Data",
+   "location": "Bangalore, Karnataka",
+   "url": "https://jobs.lever.co/meesho/7bb1de7e-8756-412b-8c71-0ba40863edc8",
+   "team": "Data Engineering"
+  },
+  {
+   "company": "Swiggy",
+   "category": "unicorn",
+   "tier": 1,
+   "track": "other-eng",
+   "how": "-",
+   "level": "unspecified",
+   "title": "Software Development Engineer in Test",
+   "location": "Bengaluru, in",
+   "url": "https://jobs.smartrecruiters.com/swiggy/6000000001465549",
+   "team": ""
+  },
+  {
+   "company": "Swiggy",
+   "category": "unicorn",
+   "tier": 1,
+   "track": "other-eng",
+   "how": "-",
+   "level": "staff+",
+   "title": "Principal Architect",
+   "location": "Bengaluru, in",
+   "url": "https://jobs.smartrecruiters.com/swiggy/6000000001458938",
+   "team": ""
+  },
+  {
+   "company": "Swiggy",
+   "category": "unicorn",
+   "tier": 1,
+   "track": "other-eng",
+   "how": "-",
+   "level": "unspecified",
+   "title": "Software Development Engineer III - Backend",
+   "location": "Bengaluru, in",
+   "url": "https://jobs.smartrecruiters.com/swiggy/6000000001349356",
+   "team": ""
+  },
+  {
+   "company": "InMobi",
+   "category": "unicorn",
+   "tier": 2,
+   "track": "other-eng",
+   "how": "-",
+   "level": "staff+",
+   "title": "Staff Engineer I",
+   "location": "Bangalore",
+   "url": "https://job-boards.greenhouse.io/inmobi/jobs/7493120",
+   "team": ""
+  }
+ ],
+ "status": [
+  {
+   "name": "Razorpay",
+   "category": "fintech",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "CRED",
+   "category": "fintech",
+   "tier": 1,
+   "ats": "lever",
+   "slug": "cred",
+   "probeCount": 8,
+   "state": "ok",
+   "total": 8,
+   "matched": 0
+  },
+  {
+   "name": "PhonePe",
+   "category": "fintech",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Groww",
+   "category": "fintech",
+   "tier": 2,
+   "ats": "greenhouse",
+   "slug": "groww",
+   "probeCount": 7,
+   "state": "ok",
+   "total": 7,
+   "matched": 0
+  },
+  {
+   "name": "Juspay",
+   "category": "fintech",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Cashfree",
+   "category": "fintech",
+   "tier": 2,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Paytm",
+   "category": "fintech",
+   "tier": 2,
+   "ats": "lever",
+   "slug": "paytm",
+   "probeCount": 176,
+   "state": "ok",
+   "total": 176,
+   "matched": 1
+  },
+  {
+   "name": "Slice",
+   "category": "fintech",
+   "tier": 3,
+   "ats": "greenhouse",
+   "slug": "slice",
+   "probeCount": 29,
+   "state": "ok",
+   "total": 29,
+   "matched": 0
+  },
+  {
+   "name": "Zeta",
+   "category": "fintech",
+   "tier": 2,
+   "ats": "lever",
+   "slug": "zeta",
+   "probeCount": 25,
+   "state": "ok",
+   "total": 25,
+   "matched": 6
+  },
+  {
+   "name": "Postman",
+   "category": "saas",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Freshworks",
+   "category": "saas",
+   "tier": 2,
+   "ats": "lever",
+   "slug": "freshworks",
+   "probeCount": 0,
+   "state": "ok",
+   "total": 0,
+   "matched": 0
+  },
+  {
+   "name": "Chargebee",
+   "category": "saas",
+   "tier": 2,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Whatfix",
+   "category": "saas",
+   "tier": 2,
+   "ats": "smartrecruiters",
+   "slug": "whatfix",
+   "probeCount": 1,
+   "state": "ok",
+   "total": 1,
+   "matched": 0
+  },
+  {
+   "name": "Sprinklr",
+   "category": "saas",
+   "tier": 2,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Darwinbox",
+   "category": "saas",
+   "tier": 2,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Mindtickle",
+   "category": "saas",
+   "tier": 2,
+   "ats": "lever",
+   "slug": "mindtickle",
+   "probeCount": 19,
+   "state": "ok",
+   "total": 19,
+   "matched": 7
+  },
+  {
+   "name": "Capillary",
+   "category": "saas",
+   "tier": 3,
+   "state": "no-public-board"
+  },
+  {
+   "name": "CleverTap",
+   "category": "saas",
+   "tier": 2,
+   "state": "no-public-board"
+  },
+  {
+   "name": "BrowserStack",
+   "category": "saas",
+   "tier": 2,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Zenoti",
+   "category": "saas",
+   "tier": 2,
+   "ats": "greenhouse",
+   "slug": "zenoti",
+   "probeCount": 50,
+   "state": "ok",
+   "total": 50,
+   "matched": 5
+  },
+  {
+   "name": "Gupshup",
+   "category": "saas",
+   "tier": 3,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Meesho",
+   "category": "unicorn",
+   "tier": 2,
+   "ats": "lever",
+   "slug": "meesho",
+   "probeCount": 59,
+   "state": "ok",
+   "total": 59,
+   "matched": 2
+  },
+  {
+   "name": "Swiggy",
+   "category": "unicorn",
+   "tier": 1,
+   "ats": "smartrecruiters",
+   "slug": "swiggy",
+   "probeCount": 170,
+   "state": "ok",
+   "total": 170,
+   "matched": 3
+  },
+  {
+   "name": "Zomato",
+   "category": "unicorn",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Flipkart",
+   "category": "unicorn",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Myntra",
+   "category": "unicorn",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Nykaa",
+   "category": "unicorn",
+   "tier": 2,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Lenskart",
+   "category": "unicorn",
+   "tier": 2,
+   "state": "no-public-board"
+  },
+  {
+   "name": "ShareChat",
+   "category": "unicorn",
+   "tier": 2,
+   "state": "no-public-board"
+  },
+  {
+   "name": "InMobi",
+   "category": "unicorn",
+   "tier": 2,
+   "ats": "greenhouse",
+   "slug": "inmobi",
+   "probeCount": 70,
+   "state": "ok",
+   "total": 70,
+   "matched": 1
+  },
+  {
+   "name": "Ola",
+   "category": "unicorn",
+   "tier": 3,
+   "state": "no-public-board"
+  },
+  {
+   "name": "MakeMyTrip",
+   "category": "unicorn",
+   "tier": 2,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Atlassian",
+   "category": "bigtech",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Adobe",
+   "category": "bigtech",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Uber",
+   "category": "bigtech",
+   "tier": 1,
+   "ats": "smartrecruiters",
+   "slug": "uber",
+   "probeCount": 1,
+   "state": "ok",
+   "total": 1,
+   "matched": 0
+  },
+  {
+   "name": "Intuit",
+   "category": "bigtech",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "PayPal",
+   "category": "bigtech",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Salesforce",
+   "category": "bigtech",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Walmart",
+   "category": "gcc",
+   "tier": 2,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Goldman Sachs",
+   "category": "gcc",
+   "tier": 1,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Cognizant",
+   "category": "services",
+   "tier": 3,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Synechron",
+   "category": "services",
+   "tier": 3,
+   "ats": "smartrecruiters",
+   "slug": "synechron",
+   "probeCount": 3,
+   "state": "ok",
+   "total": 3,
+   "matched": 0
+  },
+  {
+   "name": "Persistent",
+   "category": "services",
+   "tier": 3,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Mphasis",
+   "category": "services",
+   "tier": 3,
+   "state": "no-public-board"
+  },
+  {
+   "name": "Hexaware",
+   "category": "services",
+   "tier": 3,
+   "state": "no-public-board"
+  }
+ ]
+}

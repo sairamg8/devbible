@@ -1,0 +1,269 @@
+[
+ {
+  "name": "Razorpay",
+  "category": "fintech",
+  "tier": 1
+ },
+ {
+  "name": "CRED",
+  "category": "fintech",
+  "tier": 1,
+  "ats": "lever",
+  "slug": "cred",
+  "probeCount": 8
+ },
+ {
+  "name": "PhonePe",
+  "category": "fintech",
+  "tier": 1
+ },
+ {
+  "name": "Groww",
+  "category": "fintech",
+  "tier": 2,
+  "ats": "greenhouse",
+  "slug": "groww",
+  "probeCount": 7
+ },
+ {
+  "name": "Juspay",
+  "category": "fintech",
+  "tier": 1
+ },
+ {
+  "name": "Cashfree",
+  "category": "fintech",
+  "tier": 2
+ },
+ {
+  "name": "Paytm",
+  "category": "fintech",
+  "tier": 2,
+  "ats": "lever",
+  "slug": "paytm",
+  "probeCount": 176
+ },
+ {
+  "name": "Slice",
+  "category": "fintech",
+  "tier": 3,
+  "ats": "greenhouse",
+  "slug": "slice",
+  "probeCount": 29
+ },
+ {
+  "name": "Zeta",
+  "category": "fintech",
+  "tier": 2,
+  "ats": "lever",
+  "slug": "zeta",
+  "probeCount": 25
+ },
+ {
+  "name": "Postman",
+  "category": "saas",
+  "tier": 1
+ },
+ {
+  "name": "Freshworks",
+  "category": "saas",
+  "tier": 2,
+  "ats": "lever",
+  "slug": "freshworks",
+  "probeCount": 0
+ },
+ {
+  "name": "Chargebee",
+  "category": "saas",
+  "tier": 2
+ },
+ {
+  "name": "Whatfix",
+  "category": "saas",
+  "tier": 2,
+  "ats": "smartrecruiters",
+  "slug": "whatfix",
+  "probeCount": 1
+ },
+ {
+  "name": "Sprinklr",
+  "category": "saas",
+  "tier": 2
+ },
+ {
+  "name": "Darwinbox",
+  "category": "saas",
+  "tier": 2
+ },
+ {
+  "name": "Mindtickle",
+  "category": "saas",
+  "tier": 2,
+  "ats": "lever",
+  "slug": "mindtickle",
+  "probeCount": 19
+ },
+ {
+  "name": "Capillary",
+  "category": "saas",
+  "tier": 3
+ },
+ {
+  "name": "CleverTap",
+  "category": "saas",
+  "tier": 2
+ },
+ {
+  "name": "BrowserStack",
+  "category": "saas",
+  "tier": 2
+ },
+ {
+  "name": "Zenoti",
+  "category": "saas",
+  "tier": 2,
+  "ats": "greenhouse",
+  "slug": "zenoti",
+  "probeCount": 50
+ },
+ {
+  "name": "Gupshup",
+  "category": "saas",
+  "tier": 3
+ },
+ {
+  "name": "Meesho",
+  "category": "unicorn",
+  "tier": 2,
+  "ats": "lever",
+  "slug": "meesho",
+  "probeCount": 59
+ },
+ {
+  "name": "Swiggy",
+  "category": "unicorn",
+  "tier": 1,
+  "ats": "smartrecruiters",
+  "slug": "swiggy",
+  "probeCount": 170
+ },
+ {
+  "name": "Zomato",
+  "category": "unicorn",
+  "tier": 1
+ },
+ {
+  "name": "Flipkart",
+  "category": "unicorn",
+  "tier": 1
+ },
+ {
+  "name": "Myntra",
+  "category": "unicorn",
+  "tier": 1
+ },
+ {
+  "name": "Nykaa",
+  "category": "unicorn",
+  "tier": 2
+ },
+ {
+  "name": "Lenskart",
+  "category": "unicorn",
+  "tier": 2
+ },
+ {
+  "name": "ShareChat",
+  "category": "unicorn",
+  "tier": 2
+ },
+ {
+  "name": "InMobi",
+  "category": "unicorn",
+  "tier": 2,
+  "ats": "greenhouse",
+  "slug": "inmobi",
+  "probeCount": 70
+ },
+ {
+  "name": "Ola",
+  "category": "unicorn",
+  "tier": 3
+ },
+ {
+  "name": "MakeMyTrip",
+  "category": "unicorn",
+  "tier": 2
+ },
+ {
+  "name": "Atlassian",
+  "category": "bigtech",
+  "tier": 1
+ },
+ {
+  "name": "Adobe",
+  "category": "bigtech",
+  "tier": 1
+ },
+ {
+  "name": "Uber",
+  "category": "bigtech",
+  "tier": 1,
+  "ats": "smartrecruiters",
+  "slug": "uber",
+  "probeCount": 1
+ },
+ {
+  "name": "Intuit",
+  "category": "bigtech",
+  "tier": 1
+ },
+ {
+  "name": "PayPal",
+  "category": "bigtech",
+  "tier": 1
+ },
+ {
+  "name": "Salesforce",
+  "category": "bigtech",
+  "tier": 1
+ },
+ {
+  "name": "Walmart",
+  "category": "gcc",
+  "tier": 2
+ },
+ {
+  "name": "Goldman Sachs",
+  "category": "gcc",
+  "tier": 1
+ },
+ {
+  "name": "Cognizant",
+  "category": "services",
+  "tier": 3
+ },
+ {
+  "name": "Synechron",
+  "category": "services",
+  "tier": 3,
+  "ats": "smartrecruiters",
+  "slug": "synechron",
+  "probeCount": 3
+ },
+ {
+  "name": "Persistent",
+  "category": "services",
+  "tier": 3
+ },
+ {
+  "name": "Mphasis",
+  "category": "services",
+  "tier": 3
+ },
+ {
+  "name": "Hexaware",
+  "category": "services",
+  "tier": 3
+ }
+]
