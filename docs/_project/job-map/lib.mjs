@@ -33,3 +33,12 @@ export function classify(j, region = 'india') {
   const { desc, ...rest } = j;
   return { track, how: byTitle ? 'title' : track === 'other-eng' ? '-' : 'jd', level: level(j.title), ...rest };
 }
+
+const COUNTRIES = [
+  ['IN', /india|bengaluru|bangalore|hyderabad|pune|mumbai|gurgaon|gurugram|noida|delhi|chennai|kolkata|ahmedabad|kochi|coimbatore|lucknow|jaipur|indore|chandigarh|thiruvananthapuram|remote.*india/i],
+  ['CA', /canada|toronto|vancouver|montreal|ottawa|calgary|waterloo|, ?(ON|BC|AB|QC)\b/i],
+  ['DE', /germany|deutschland|berlin|munich|münchen|hamburg|frankfurt|cologne|köln|stuttgart|düsseldorf|leipzig/i],
+  ['EU', /europe|emea|london|\buk\b|united kingdom|england|amsterdam|netherlands|dublin|ireland|paris|france|spain|barcelona|madrid|poland|warsaw|krakow|sweden|stockholm|zurich|switzerland|denmark|copenhagen|portugal|lisbon|austria|vienna|finland|helsinki|norway|oslo|belgium|brussels|estonia|tallinn|czech|prague|romania|bucharest|lithuania|vilnius|italy|milan/i],
+  ['US', /\b(usa?|united states)\b|, ?(AL|AK|AZ|AR|CA|CO|CT|DC|FL|GA|IL|MA|MD|MI|MN|MO|NC|NJ|NV|NY|OH|OR|PA|TX|UT|VA|WA)\b|san francisco|new york|seattle|austin|boston|chicago|los angeles|denver|atlanta|remote.*(us|united states)|bay area|mountain view|palo alto|sunnyvale|san jose/i],
+];
+export const countryOf = (loc = '') => COUNTRIES.find(([, rx]) => rx.test(loc))?.[0] ?? (/remote/i.test(loc) ? 'REMOTE' : 'OTHER');

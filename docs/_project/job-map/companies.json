@@ -4,262 +4,1435 @@
   "category": "fintech",
   "tier": 1,
   "ats": "greenhouse",
-  "slug": "razorpaysoftwareprivatelimited"
+  "slug": "razorpaysoftwareprivatelimited",
+  "hq": "in",
+  "open": 25,
+  "engineering": 3
  },
  {
   "name": "CRED",
   "category": "fintech",
   "tier": 1,
   "ats": "lever",
-  "slug": "cred"
+  "slug": "cred",
+  "hq": "in",
+  "open": 8,
+  "engineering": 0
  },
  {
   "name": "PhonePe",
   "category": "fintech",
-  "tier": 1
+  "tier": 1,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Groww",
   "category": "fintech",
   "tier": 2,
   "ats": "greenhouse",
-  "slug": "groww"
+  "slug": "groww",
+  "hq": "in",
+  "open": 7,
+  "engineering": 0
  },
  {
   "name": "Juspay",
   "category": "fintech",
-  "tier": 1
+  "tier": 1,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Cashfree",
   "category": "fintech",
-  "tier": 2
+  "tier": 2,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Paytm",
   "category": "fintech",
   "tier": 2,
   "ats": "lever",
-  "slug": "paytm"
+  "slug": "paytm",
+  "hq": "in",
+  "open": 176,
+  "engineering": 3
  },
  {
   "name": "Slice",
   "category": "fintech",
   "tier": 3,
   "ats": "greenhouse",
-  "slug": "slice"
+  "slug": "slice",
+  "hq": "in",
+  "open": 29,
+  "engineering": 4
  },
  {
   "name": "Zeta",
   "category": "fintech",
   "tier": 2,
   "ats": "lever",
-  "slug": "zeta"
+  "slug": "zeta",
+  "hq": "in",
+  "open": 25,
+  "engineering": 6
  },
  {
   "name": "Postman",
   "category": "saas",
-  "tier": 1
+  "tier": 1,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Freshworks",
   "category": "saas",
   "tier": 2,
   "ats": "smartrecruiters",
-  "slug": "Freshworks"
+  "slug": "Freshworks",
+  "hq": "in",
+  "open": 124,
+  "engineering": 38
  },
  {
   "name": "Chargebee",
   "category": "saas",
-  "tier": 2
+  "tier": 2,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Whatfix",
   "category": "saas",
   "tier": 2,
   "ats": "smartrecruiters",
-  "slug": "whatfix"
+  "slug": "whatfix",
+  "hq": "in",
+  "open": 1,
+  "engineering": 0
  },
  {
   "name": "Sprinklr",
   "category": "saas",
   "tier": 2,
   "ats": "workday",
-  "slug": "sprinklr.wd1.myworkdayjobs.com|sprinklr|careers"
+  "slug": "sprinklr.wd1.myworkdayjobs.com|sprinklr|careers",
+  "hq": "in",
+  "open": 40,
+  "engineering": 8
  },
  {
   "name": "Darwinbox",
   "category": "saas",
-  "tier": 2
+  "tier": 2,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Mindtickle",
   "category": "saas",
   "tier": 2,
   "ats": "lever",
-  "slug": "mindtickle"
+  "slug": "mindtickle",
+  "hq": "in",
+  "open": 19,
+  "engineering": 7
  },
  {
   "name": "Capillary",
   "category": "saas",
-  "tier": 3
+  "tier": 3,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "CleverTap",
   "category": "saas",
-  "tier": 2
+  "tier": 2,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "BrowserStack",
   "category": "saas",
   "tier": 2,
   "ats": "workday",
-  "slug": "browserstack.wd3.myworkdayjobs.com|browserstack|External"
+  "slug": "browserstack.wd3.myworkdayjobs.com|browserstack|External",
+  "hq": "in",
+  "open": 20,
+  "engineering": 1
  },
  {
   "name": "Zenoti",
   "category": "saas",
   "tier": 2,
   "ats": "greenhouse",
-  "slug": "zenoti"
+  "slug": "zenoti",
+  "hq": "in",
+  "open": 50,
+  "engineering": 5
  },
  {
   "name": "Gupshup",
   "category": "saas",
-  "tier": 3
+  "tier": 3,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Meesho",
   "category": "unicorn",
   "tier": 2,
   "ats": "lever",
-  "slug": "meesho"
+  "slug": "meesho",
+  "hq": "in",
+  "open": 59,
+  "engineering": 2
  },
  {
   "name": "Swiggy",
   "category": "unicorn",
   "tier": 1,
   "ats": "smartrecruiters",
-  "slug": "swiggy"
+  "slug": "swiggy",
+  "hq": "in",
+  "open": 170,
+  "engineering": 3
  },
  {
   "name": "Zomato",
   "category": "unicorn",
-  "tier": 1
+  "tier": 1,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Flipkart",
   "category": "unicorn",
-  "tier": 1
+  "tier": 1,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Myntra",
   "category": "unicorn",
-  "tier": 1
+  "tier": 1,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Nykaa",
   "category": "unicorn",
-  "tier": 2
+  "tier": 2,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Lenskart",
   "category": "unicorn",
-  "tier": 2
+  "tier": 2,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "ShareChat",
   "category": "unicorn",
-  "tier": 2
+  "tier": 2,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "InMobi",
   "category": "unicorn",
   "tier": 2,
   "ats": "greenhouse",
-  "slug": "inmobi"
+  "slug": "inmobi",
+  "hq": "in",
+  "open": 70,
+  "engineering": 5
  },
  {
   "name": "Ola",
   "category": "unicorn",
-  "tier": 3
+  "tier": 3,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "MakeMyTrip",
   "category": "unicorn",
-  "tier": 2
+  "tier": 2,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Hotstar",
+  "category": "unicorn",
+  "tier": 2,
+  "hq": "in",
+  "open": 71,
+  "engineering": 57,
+  "ats": "workday",
+  "slug": "jiostar.wd102.myworkdayjobs.com|jiostar|JioStar"
+ },
+ {
+  "name": "Dream11",
+  "category": "unicorn",
+  "tier": 2,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Zepto",
+  "category": "unicorn",
+  "tier": 2,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Rapido",
+  "category": "unicorn",
+  "tier": 3,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Unacademy",
+  "category": "unicorn",
+  "tier": 3,
+  "hq": "in",
+  "slug": "unacademy",
+  "ats": "smartrecruiters",
+  "open": 3,
+  "engineering": 1
+ },
+ {
+  "name": "PhysicsWallah",
+  "category": "unicorn",
+  "tier": 3,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Atlassian",
   "category": "bigtech",
   "tier": 1,
   "ats": "atlassian",
-  "slug": "-"
+  "slug": "-",
+  "hq": "us",
+  "open": 355,
+  "engineering": 134
  },
  {
   "name": "Adobe",
   "category": "bigtech",
   "tier": 1,
   "ats": "workday",
-  "slug": "adobe.wd5.myworkdayjobs.com|adobe|external_experienced"
+  "slug": "adobe.wd5.myworkdayjobs.com|adobe|external_experienced",
+  "hq": "us",
+  "open": 118,
+  "engineering": 72
  },
  {
   "name": "Uber",
   "category": "bigtech",
   "tier": 1,
   "ats": "smartrecruiters",
-  "slug": "uber"
+  "slug": "uber",
+  "hq": "us",
+  "open": 1,
+  "engineering": 0
  },
  {
   "name": "Intuit",
   "category": "bigtech",
-  "tier": 1
+  "tier": 1,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "PayPal",
   "category": "bigtech",
-  "tier": 1
+  "tier": 1,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Salesforce",
   "category": "bigtech",
-  "tier": 1
+  "tier": 1,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Walmart",
   "category": "gcc",
-  "tier": 2
+  "tier": 2,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Goldman Sachs",
   "category": "gcc",
-  "tier": 1
+  "tier": 1,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Cognizant",
   "category": "services",
-  "tier": 3
+  "tier": 3,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Synechron",
   "category": "services",
   "tier": 3,
   "ats": "smartrecruiters",
-  "slug": "synechron"
+  "slug": "synechron",
+  "hq": "us",
+  "open": 3,
+  "engineering": 2
  },
  {
   "name": "Persistent",
   "category": "services",
-  "tier": 3
+  "tier": 3,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Mphasis",
   "category": "services",
-  "tier": 3
+  "tier": 3,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
  },
  {
   "name": "Hexaware",
   "category": "services",
-  "tier": 3
+  "tier": 3,
+  "hq": "in",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Stripe",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "us",
+  "slug": "stripe",
+  "ats": "greenhouse",
+  "open": 728,
+  "engineering": 152
+ },
+ {
+  "name": "Coinbase",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "us",
+  "slug": "coinbase",
+  "ats": "greenhouse",
+  "open": 226,
+  "engineering": 82
+ },
+ {
+  "name": "Robinhood",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "us",
+  "slug": "robinhood",
+  "ats": "greenhouse",
+  "open": 160,
+  "engineering": 46
+ },
+ {
+  "name": "Brex",
+  "category": "fintech",
+  "tier": 2,
+  "hq": "us",
+  "slug": "brex",
+  "ats": "greenhouse",
+  "open": 287,
+  "engineering": 54
+ },
+ {
+  "name": "Ramp",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "us",
+  "slugs": [
+   "ramp"
+  ],
+  "slug": "ramp",
+  "ats": "ashby",
+  "open": 161,
+  "engineering": 30
+ },
+ {
+  "name": "Plaid",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "us",
+  "slug": "plaid",
+  "ats": "ashby",
+  "open": 120,
+  "engineering": 30
+ },
+ {
+  "name": "Chime",
+  "category": "fintech",
+  "tier": 2,
+  "hq": "us",
+  "slug": "chime",
+  "ats": "greenhouse",
+  "open": 65,
+  "engineering": 22
+ },
+ {
+  "name": "Affirm",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "us",
+  "slug": "affirm",
+  "ats": "greenhouse",
+  "open": 187,
+  "engineering": 94
+ },
+ {
+  "name": "Block",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "us",
+  "slugs": [
+   "block"
+  ],
+  "slug": "block",
+  "ats": "greenhouse",
+  "open": 224,
+  "engineering": 41
+ },
+ {
+  "name": "Airbnb",
+  "category": "unicorn",
+  "tier": 1,
+  "hq": "us",
+  "slug": "airbnb",
+  "ats": "greenhouse",
+  "open": 160,
+  "engineering": 46
+ },
+ {
+  "name": "DoorDash",
+  "category": "unicorn",
+  "tier": 1,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Instacart",
+  "category": "unicorn",
+  "tier": 1,
+  "hq": "us",
+  "slugs": [
+   "instacart",
+   "maplebear"
+  ],
+  "slug": "instacart",
+  "ats": "greenhouse",
+  "open": 122,
+  "engineering": 24
+ },
+ {
+  "name": "Lyft",
+  "category": "unicorn",
+  "tier": 1,
+  "hq": "us",
+  "slug": "lyft",
+  "ats": "greenhouse",
+  "open": 196,
+  "engineering": 47
+ },
+ {
+  "name": "Pinterest",
+  "category": "bigtech",
+  "tier": 1,
+  "hq": "us",
+  "slug": "pinterest",
+  "ats": "greenhouse",
+  "open": 176,
+  "engineering": 47
+ },
+ {
+  "name": "Reddit",
+  "category": "bigtech",
+  "tier": 1,
+  "hq": "us",
+  "slug": "reddit",
+  "ats": "greenhouse",
+  "open": 148,
+  "engineering": 65
+ },
+ {
+  "name": "Discord",
+  "category": "unicorn",
+  "tier": 1,
+  "hq": "us",
+  "slug": "discord",
+  "ats": "greenhouse",
+  "open": 48,
+  "engineering": 27
+ },
+ {
+  "name": "Dropbox",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "dropbox",
+  "ats": "greenhouse",
+  "open": 35,
+  "engineering": 4
+ },
+ {
+  "name": "Figma",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "figma",
+  "ats": "greenhouse",
+  "open": 157,
+  "engineering": 25
+ },
+ {
+  "name": "Notion",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "notion",
+  "ats": "ashby",
+  "open": 133,
+  "engineering": 40
+ },
+ {
+  "name": "Linear",
+  "category": "saas",
+  "tier": 2,
+  "hq": "us",
+  "slug": "linear",
+  "ats": "ashby",
+  "open": 31,
+  "engineering": 12
+ },
+ {
+  "name": "Vercel",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "vercel",
+  "ats": "greenhouse",
+  "open": 84,
+  "engineering": 28
+ },
+ {
+  "name": "Netlify",
+  "category": "saas",
+  "tier": 2,
+  "hq": "us",
+  "slug": "netlify",
+  "ats": "greenhouse",
+  "open": 6,
+  "engineering": 0
+ },
+ {
+  "name": "Datadog",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "datadog",
+  "ats": "greenhouse",
+  "open": 435,
+  "engineering": 61
+ },
+ {
+  "name": "MongoDB",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "mongodb",
+  "ats": "greenhouse",
+  "open": 396,
+  "engineering": 132
+ },
+ {
+  "name": "Cloudflare",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "cloudflare",
+  "ats": "greenhouse",
+  "open": 418,
+  "engineering": 187
+ },
+ {
+  "name": "Twilio",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "twilio",
+  "ats": "greenhouse",
+  "open": 131,
+  "engineering": 45
+ },
+ {
+  "name": "GitLab",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slugs": [
+   "gitlab"
+  ],
+  "slug": "gitlab",
+  "ats": "greenhouse",
+  "open": 209,
+  "engineering": 81
+ },
+ {
+  "name": "HashiCorp",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Elastic",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "elastic",
+  "ats": "greenhouse",
+  "open": 413,
+  "engineering": 219
+ },
+ {
+  "name": "Okta",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "okta",
+  "ats": "greenhouse",
+  "open": 375,
+  "engineering": 169
+ },
+ {
+  "name": "Snowflake",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "snowflake",
+  "ats": "ashby",
+  "open": 356,
+  "engineering": 144
+ },
+ {
+  "name": "Databricks",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "databricks",
+  "ats": "greenhouse",
+  "open": 886,
+  "engineering": 460
+ },
+ {
+  "name": "Asana",
+  "category": "saas",
+  "tier": 2,
+  "hq": "us",
+  "slug": "asana",
+  "ats": "greenhouse",
+  "open": 97,
+  "engineering": 32
+ },
+ {
+  "name": "Airtable",
+  "category": "saas",
+  "tier": 2,
+  "hq": "us",
+  "slug": "airtable",
+  "ats": "greenhouse",
+  "open": 4,
+  "engineering": 0
+ },
+ {
+  "name": "Retool",
+  "category": "saas",
+  "tier": 2,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Supabase",
+  "category": "saas",
+  "tier": 2,
+  "hq": "us",
+  "slug": "supabase",
+  "ats": "ashby",
+  "open": 51,
+  "engineering": 24
+ },
+ {
+  "name": "PlanetScale",
+  "category": "saas",
+  "tier": 2,
+  "hq": "us",
+  "slug": "planetscale",
+  "ats": "greenhouse",
+  "open": 13,
+  "engineering": 5
+ },
+ {
+  "name": "Anthropic",
+  "category": "ai",
+  "tier": 1,
+  "hq": "us",
+  "slug": "anthropic",
+  "ats": "greenhouse",
+  "open": 642,
+  "engineering": 221
+ },
+ {
+  "name": "OpenAI",
+  "category": "ai",
+  "tier": 1,
+  "hq": "us",
+  "slug": "openai",
+  "ats": "ashby",
+  "open": 824,
+  "engineering": 344
+ },
+ {
+  "name": "Scale AI",
+  "category": "ai",
+  "tier": 2,
+  "hq": "us",
+  "slugs": [
+   "scaleai"
+  ],
+  "slug": "scaleai",
+  "ats": "greenhouse",
+  "open": 190,
+  "engineering": 66
+ },
+ {
+  "name": "Perplexity",
+  "category": "ai",
+  "tier": 2,
+  "hq": "us",
+  "slug": "perplexity",
+  "ats": "ashby",
+  "open": 130,
+  "engineering": 37
+ },
+ {
+  "name": "Cohere",
+  "category": "ai",
+  "tier": 2,
+  "hq": "ca",
+  "slug": "cohere",
+  "ats": "ashby",
+  "open": 130,
+  "engineering": 38
+ },
+ {
+  "name": "Spotify",
+  "category": "bigtech",
+  "tier": 1,
+  "hq": "eu",
+  "slug": "spotify",
+  "ats": "lever",
+  "open": 75,
+  "engineering": 23
+ },
+ {
+  "name": "Netflix",
+  "category": "bigtech",
+  "tier": 1,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Shopify",
+  "category": "unicorn",
+  "tier": 1,
+  "hq": "ca",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Wealthsimple",
+  "category": "fintech",
+  "tier": 2,
+  "hq": "ca",
+  "slug": "wealthsimple",
+  "ats": "ashby",
+  "open": 43,
+  "engineering": 11
+ },
+ {
+  "name": "Clio",
+  "category": "saas",
+  "tier": 2,
+  "hq": "ca",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "1Password",
+  "category": "saas",
+  "tier": 1,
+  "hq": "ca",
+  "slugs": [
+   "1password"
+  ],
+  "slug": "1password",
+  "ats": "ashby",
+  "open": 69,
+  "engineering": 22
+ },
+ {
+  "name": "Hootsuite",
+  "category": "saas",
+  "tier": 3,
+  "hq": "ca",
+  "slug": "hootsuite",
+  "ats": "greenhouse",
+  "open": 9,
+  "engineering": 2
+ },
+ {
+  "name": "Lightspeed",
+  "category": "saas",
+  "tier": 2,
+  "hq": "ca",
+  "slug": "lightspeed",
+  "ats": "ashby",
+  "open": 6,
+  "engineering": 5
+ },
+ {
+  "name": "Thinkific",
+  "category": "saas",
+  "tier": 3,
+  "hq": "ca",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Ecobee",
+  "category": "saas",
+  "tier": 3,
+  "hq": "ca",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Faire",
+  "category": "unicorn",
+  "tier": 2,
+  "hq": "ca",
+  "slugs": [
+   "faire"
+  ],
+  "slug": "faire",
+  "ats": "greenhouse",
+  "open": 77,
+  "engineering": 27
+ },
+ {
+  "name": "Top Hat",
+  "category": "saas",
+  "tier": 3,
+  "hq": "ca",
+  "slugs": [
+   "tophat"
+  ],
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Benevity",
+  "category": "saas",
+  "tier": 3,
+  "hq": "ca",
+  "slug": "benevity",
+  "ats": "ashby",
+  "open": 22,
+  "engineering": 6
+ },
+ {
+  "name": "Ada",
+  "category": "saas",
+  "tier": 2,
+  "hq": "ca",
+  "slugs": [
+   "ada",
+   "adasupport"
+  ],
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Neo Financial",
+  "category": "fintech",
+  "tier": 3,
+  "hq": "ca",
+  "slugs": [
+   "neofinancial"
+  ],
+  "slug": "neofinancial",
+  "ats": "ashby",
+  "open": 73,
+  "engineering": 2
+ },
+ {
+  "name": "Koho",
+  "category": "fintech",
+  "tier": 3,
+  "hq": "ca",
+  "slug": "koho",
+  "ats": "ashby",
+  "open": 8,
+  "engineering": 2
+ },
+ {
+  "name": "Nuvei",
+  "category": "fintech",
+  "tier": 3,
+  "hq": "ca",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Zalando",
+  "category": "unicorn",
+  "tier": 1,
+  "hq": "de",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "N26",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "de",
+  "slug": "n26",
+  "ats": "greenhouse",
+  "open": 45,
+  "engineering": 12
+ },
+ {
+  "name": "Trade Republic",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "de",
+  "slugs": [
+   "traderepublic"
+  ],
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Celonis",
+  "category": "saas",
+  "tier": 1,
+  "hq": "de",
+  "slug": "celonis",
+  "ats": "greenhouse",
+  "open": 224,
+  "engineering": 115
+ },
+ {
+  "name": "Personio",
+  "category": "saas",
+  "tier": 2,
+  "hq": "de",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "GetYourGuide",
+  "category": "unicorn",
+  "tier": 1,
+  "hq": "de",
+  "slug": "getyourguide",
+  "ats": "greenhouse",
+  "open": 57,
+  "engineering": 5
+ },
+ {
+  "name": "Delivery Hero",
+  "category": "unicorn",
+  "tier": 1,
+  "hq": "de",
+  "slugs": [
+   "deliveryhero"
+  ],
+  "slug": "deliveryhero",
+  "ats": "smartrecruiters",
+  "open": 977,
+  "engineering": 30
+ },
+ {
+  "name": "Auto1",
+  "category": "unicorn",
+  "tier": 2,
+  "hq": "de",
+  "slugs": [
+   "auto1"
+  ],
+  "slug": "auto1",
+  "ats": "smartrecruiters",
+  "open": 695,
+  "engineering": 0
+ },
+ {
+  "name": "Contentful",
+  "category": "saas",
+  "tier": 2,
+  "hq": "de",
+  "slug": "contentful",
+  "ats": "greenhouse",
+  "open": 18,
+  "engineering": 4
+ },
+ {
+  "name": "commercetools",
+  "category": "saas",
+  "tier": 2,
+  "hq": "de",
+  "slug": "commercetools",
+  "ats": "greenhouse",
+  "open": 36,
+  "engineering": 20
+ },
+ {
+  "name": "SumUp",
+  "category": "fintech",
+  "tier": 2,
+  "hq": "eu",
+  "slug": "sumup",
+  "ats": "greenhouse",
+  "open": 346,
+  "engineering": 31
+ },
+ {
+  "name": "Flix",
+  "category": "unicorn",
+  "tier": 2,
+  "hq": "de",
+  "slug": "flix",
+  "ats": "greenhouse",
+  "open": 147,
+  "engineering": 12
+ },
+ {
+  "name": "HelloFresh",
+  "category": "unicorn",
+  "tier": 2,
+  "hq": "de",
+  "slug": "hellofresh",
+  "ats": "greenhouse",
+  "open": 421,
+  "engineering": 33
+ },
+ {
+  "name": "SAP",
+  "category": "bigtech",
+  "tier": 1,
+  "hq": "de",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Siemens",
+  "category": "services",
+  "tier": 3,
+  "hq": "de",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Bosch",
+  "category": "services",
+  "tier": 3,
+  "hq": "de",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Mambu",
+  "category": "fintech",
+  "tier": 2,
+  "hq": "de",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Solaris",
+  "category": "fintech",
+  "tier": 3,
+  "hq": "de",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Raisin",
+  "category": "fintech",
+  "tier": 2,
+  "hq": "de",
+  "slug": "raisin",
+  "ats": "greenhouse",
+  "open": 36,
+  "engineering": 2
+ },
+ {
+  "name": "Taxfix",
+  "category": "fintech",
+  "tier": 3,
+  "hq": "de",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Zenjob",
+  "category": "saas",
+  "tier": 3,
+  "hq": "de",
+  "slug": "zenjob",
+  "ats": "ashby",
+  "open": 12,
+  "engineering": 1
+ },
+ {
+  "name": "Wise",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "eu",
+  "slug": "wise",
+  "ats": "greenhouse",
+  "open": 15,
+  "engineering": 0
+ },
+ {
+  "name": "Revolut",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "eu",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Monzo",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "eu",
+  "slug": "monzo",
+  "ats": "greenhouse",
+  "open": 67,
+  "engineering": 8
+ },
+ {
+  "name": "Klarna",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "eu",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Adyen",
+  "category": "fintech",
+  "tier": 1,
+  "hq": "eu",
+  "slug": "adyen",
+  "ats": "greenhouse",
+  "open": 230,
+  "engineering": 49
+ },
+ {
+  "name": "Mollie",
+  "category": "fintech",
+  "tier": 2,
+  "hq": "eu",
+  "slug": "mollie",
+  "ats": "ashby",
+  "open": 43,
+  "engineering": 11
+ },
+ {
+  "name": "Bolt",
+  "category": "unicorn",
+  "tier": 2,
+  "hq": "eu",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Booking.com",
+  "category": "unicorn",
+  "tier": 1,
+  "hq": "eu",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Elastic NV",
+  "category": "saas",
+  "tier": 1,
+  "hq": "eu",
+  "slug": "elastic",
+  "ats": "greenhouse",
+  "open": 413,
+  "engineering": 219
+ },
+ {
+  "name": "JetBrains",
+  "category": "saas",
+  "tier": 1,
+  "hq": "eu",
+  "slug": "jetbrains",
+  "ats": "greenhouse",
+  "open": 65,
+  "engineering": 20
+ },
+ {
+  "name": "Canva",
+  "category": "saas",
+  "tier": 1,
+  "hq": "eu",
+  "slug": "canva",
+  "ats": "smartrecruiters",
+  "open": 127,
+  "engineering": 15
+ },
+ {
+  "name": "Miro",
+  "category": "saas",
+  "tier": 1,
+  "hq": "eu",
+  "slug": "miro",
+  "ats": "ashby",
+  "open": 26,
+  "engineering": 3
+ },
+ {
+  "name": "Typeform",
+  "category": "saas",
+  "tier": 2,
+  "hq": "eu",
+  "slug": "typeform",
+  "ats": "greenhouse",
+  "open": 14,
+  "engineering": 5
+ },
+ {
+  "name": "Intercom",
+  "category": "saas",
+  "tier": 1,
+  "hq": "eu",
+  "slug": "intercom",
+  "ats": "greenhouse",
+  "open": 105,
+  "engineering": 33
+ },
+ {
+  "name": "Workday",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "ServiceNow",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "slug": "servicenow",
+  "ats": "smartrecruiters",
+  "open": 707,
+  "engineering": 248
+ },
+ {
+  "name": "Zendesk",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "HubSpot",
+  "category": "saas",
+  "tier": 1,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Atlassian Trello",
+  "category": "saas",
+  "tier": 2,
+  "hq": "us",
+  "open": 0,
+  "engineering": 0
+ },
+ {
+  "name": "Mistral AI",
+  "category": "ai",
+  "tier": 1,
+  "hq": "eu",
+  "slugs": [
+   "mistral"
+  ],
+  "open": 0,
+  "engineering": 0
  }
 ]

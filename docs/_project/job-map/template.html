@@ -1,0 +1,161 @@
+<title>Job Map</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky filter bar over a dense, scannable company table; roles open inline under each company. */
+:root {
+  --bg: #f5f7f8; --surface: #ffffff; --fg: #14202b; --muted: #5d6c78; --line: #dbe2e7;
+  --accent: #0b6e8f; --accent-fg: #ffffff; --accent-soft: #e0f0f5;
+  --ui: #6b4bd1; --node: #1a7f4b; --java: #b4531a; --full: #0b6e8f; --other: #6b7782;
+  --ui-bg: #ece8fb; --node-bg: #dff3e8; --java-bg: #fbe9dc; --full-bg: #dff0f5; --other-bg: #e9edf0;
+  --font: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f171d; --surface: #16212a; --fg: #e5edf2; --muted: #93a3af; --line: #26343f;
+  --accent: #4cb8d8; --accent-fg: #06222c; --accent-soft: #14323d;
+  --ui: #b3a1ff; --node: #6fd69b; --java: #f2a36b; --full: #6cc6e2; --other: #9aa8b3;
+  --ui-bg: #272047; --node-bg: #143426; --java-bg: #3d2415; --full-bg: #12303b; --other-bg: #222e37; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0f171d; --surface: #16212a; --fg: #e5edf2; --muted: #93a3af; --line: #26343f;
+  --accent: #4cb8d8; --accent-fg: #06222c; --accent-soft: #14323d;
+  --ui: #b3a1ff; --node: #6fd69b; --java: #f2a36b; --full: #6cc6e2; --other: #9aa8b3;
+  --ui-bg: #272047; --node-bg: #143426; --java-bg: #3d2415; --full-bg: #12303b; --other-bg: #222e37; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 14px/1.45 var(--font); padding-inline: 16px; padding-block: 0 48px; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+header { padding-block: 22px 14px; display: flex; flex-wrap: wrap; gap: 6px 24px; align-items: baseline; justify-content: space-between; }
+h1 { font-size: 26px; margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+.meta { color: var(--muted); font: 12px var(--mono); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 10px; border-block: 1px solid var(--line); display: grid; gap: 10px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.lbl { font: 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); min-width: 64px; }
+.chip { font: 500 13px var(--font); border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 5px 11px; border-radius: 6px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+.chip.t-ui[aria-pressed="true"] { background: var(--ui); border-color: var(--ui); color: var(--bg); }
+.chip.t-node[aria-pressed="true"] { background: var(--node); border-color: var(--node); color: var(--bg); }
+.chip.t-java[aria-pressed="true"] { background: var(--java); border-color: var(--java); color: var(--bg); }
+.chip.t-fullstack[aria-pressed="true"] { background: var(--full); border-color: var(--full); color: var(--bg); }
+.chip.t-other-eng[aria-pressed="true"] { background: var(--other); border-color: var(--other); color: var(--bg); }
+.chip:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+select, input[type=search] { font: 13px var(--font); background: var(--surface); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 9px; }
+input[type=search] { flex: 1 1 200px; min-width: 0; }
+.summary { margin: 16px 0 8px; display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: baseline; }
+.summary strong { font-size: 18px; }
+.tblwrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; min-width: 640px; }
+th { text-align: left; font: 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 9px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td { padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--mono); }
+.tier { font: 500 11px var(--mono); padding: 2px 6px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); }
+.cat { color: var(--muted); }
+.pill { display: inline-block; font: 500 11px var(--mono); padding: 1px 7px; border-radius: 4px; margin-right: 6px; white-space: nowrap; }
+.p-ui { background: var(--ui-bg); color: var(--ui); } .p-node { background: var(--node-bg); color: var(--node); }
+.p-java { background: var(--java-bg); color: var(--java); } .p-fullstack { background: var(--full-bg); color: var(--full); }
+.p-other-eng { background: var(--other-bg); color: var(--other); }
+details > summary { cursor: pointer; font-weight: 700; list-style: none; }
+details > summary::before { content: "▸"; display: inline-block; width: 1.1em; color: var(--muted); }
+details[open] > summary::before { content: "▾"; }
+.roles { margin: 8px 0 2px 1.1em; display: grid; gap: 5px; }
+.role { display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; min-width: 0; }
+.role a { color: var(--fg); text-decoration-color: var(--line); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.role a:hover { color: var(--accent); }
+.role .loc { color: var(--muted); font-size: 12px; }
+.sub { color: var(--muted); font-size: 12px; font-weight: 400; margin-left: 6px; }
+h2 { font-size: 15px; margin: 26px 0 4px; }
+.note { color: var(--muted); font-size: 12.5px; margin: 0 0 10px; max-width: 70ch; }
+.manual { display: flex; flex-wrap: wrap; gap: 6px; }
+.manual a { font-size: 13px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--fg); text-decoration: none; }
+.manual a:hover { border-color: var(--accent); color: var(--accent); }
+.more { margin-top: 10px; }
+.empty { padding: 28px 12px; color: var(--muted); }
+@media (max-width: 640px) { .lbl { min-width: 100%; } }
+@media (prefers-reduced-motion: no-preference) { .chip { transition: background .12s, border-color .12s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Job Map</h1>
+    <div class="meta" id="meta"></div>
+  </header>
+  <div class="bar">
+    <div class="row" id="region"><span class="lbl">Region</span></div>
+    <div class="row" id="track"><span class="lbl">Stack</span></div>
+    <div class="row">
+      <span class="lbl">Filter</span>
+      <select id="cat" aria-label="Category"></select>
+      <select id="tier" aria-label="Company tier"></select>
+      <select id="level" aria-label="Seniority"></select>
+      <input id="q" type="search" placeholder="Company or role, e.g. razorpay, react, spring" aria-label="Search">
+    </div>
+    <div class="row"><span class="lbl">View</span><span id="view"></span></div>
+  </div>
+  <div class="summary" id="summary"></div>
+  <div id="out"></div>
+  <div id="manual"></div>
+  <p class="note" style="margin-top:28px">Roles come from each company's own public job board and are re-read on every crawl, so the date above is the freshness of every row. Stack is read from the job title, the job link and, where the board supplies it, the description. Roles tagged Unclassified are engineering jobs that do not name a stack (for example "Software Development Engineer").</p>
+</div>
+
+<script>
+const DATA = __DATA__;
+const C = DATA.c.map((r, i) => ({ i, name: r[0], cat: r[1], tier: r[2], hq: r[3], ats: r[4], open: r[5] }));
+const J = DATA.j.map((r) => ({ c: C[r[0]], track: r[1], level: r[2], country: r[3], title: r[4], loc: r[5], url: r[6] }));
+const REGIONS = [['IN', 'India'], ['US', 'USA'], ['CA', 'Canada'], ['DE', 'Germany'], ['EU', 'Europe (excl. Germany)'], ['REMOTE', 'Remote'], ['ALL', 'Anywhere']];
+const TRACKS = [['ui', 'UI / Frontend'], ['node', 'Node'], ['java', 'Java'], ['fullstack', 'Full-stack'], ['other-eng', 'Unclassified']];
+const LABEL = Object.fromEntries(TRACKS);
+const CATS = { fintech: 'Fintech', saas: 'SaaS', unicorn: 'Consumer / unicorn', bigtech: 'Big tech', gcc: 'GCC / banks', services: 'IT services', ai: 'AI labs' };
+const HQ = { IN: ['in'], US: ['us'], CA: ['ca'], DE: ['de'], EU: ['eu', 'de'], REMOTE: [], ALL: [] };
+const S = { region: 'IN', tracks: new Set(['ui', 'node', 'java', 'fullstack']), cat: '', tier: '', level: '', q: '', view: 'companies', limit: 200 };
+try { const s = JSON.parse(localStorage.getItem('jobmap') || '{}'); if (s.region) S.region = s.region; if (s.tracks) S.tracks = new Set(s.tracks); } catch (e) {}
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+$('meta').textContent = `crawled ${DATA.d} · ${C.length} companies · ${J.length.toLocaleString()} roles`;
+function chips(host, items, pressed, onClick, cls) {
+  items.forEach(([k, t]) => { const b = document.createElement('button'); b.className = 'chip ' + (cls ? cls + k : ''); b.textContent = t; b.dataset.k = k; b.onclick = () => onClick(k); host.append(b); });
+  return () => host.querySelectorAll('.chip').forEach((b) => b.setAttribute('aria-pressed', pressed(b.dataset.k)));
+}
+const syncRegion = chips($('region'), REGIONS, (k) => S.region === k, (k) => { S.region = k; save(); render(); });
+const syncTrack = chips($('track'), TRACKS, (k) => S.tracks.has(k), (k) => { S.tracks.has(k) ? S.tracks.delete(k) : S.tracks.add(k); save(); render(); }, 't-');
+const syncView = chips($('view'), [['companies', 'By company'], ['roles', 'All roles']], (k) => S.view === k, (k) => { S.view = k; S.limit = 200; render(); });
+$('cat').innerHTML = '<option value="">All categories</option>' + Object.entries(CATS).map(([k, v]) => `<option value="${k}">${v}</option>`).join('');
+$('tier').innerHTML = '<option value="">All tiers</option><option value="1">Tier 1 · top bar</option><option value="2">Tier 2 · strong product</option><option value="3">Tier 3 · volume / services</option>';
+$('level').innerHTML = '<option value="">Any seniority</option><option value="junior">Junior</option><option value="mid">Mid (SDE-2)</option><option value="senior">Senior / Lead</option><option value="staff+">Staff+</option><option value="unspecified">Not stated</option>';
+['cat', 'tier', 'level'].forEach((id) => ($(id).onchange = () => { S[id] = $(id).value; S.limit = 200; render(); }));
+$('q').oninput = () => { S.q = $('q').value.trim().toLowerCase(); S.limit = 200; render(); };
+function save() { try { localStorage.setItem('jobmap', JSON.stringify({ region: S.region, tracks: [...S.tracks] })); } catch (e) {} }
+
+const inRegion = (j) => S.region === 'ALL' || j.country === S.region;
+const pass = (j) => inRegion(j) && S.tracks.has(j.track) && (!S.cat || j.c.cat === S.cat) && (!S.tier || j.c.tier == S.tier) && (!S.level || j.level === S.level)
+  && (!S.q || j.c.name.toLowerCase().includes(S.q) || j.title.toLowerCase().includes(S.q));
+const roleHtml = (j) => `<div class="role"><span class="pill p-${j.track}">${esc(LABEL[j.track])}</span><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a><span class="loc">${esc(j.loc || '—')} · ${esc(j.level)}</span></div>`;
+const gsearch = (c) => `https://www.google.com/search?q=${encodeURIComponent(c.name + ' careers software engineer ' + (S.region === 'IN' ? 'India' : ''))}`;
+
+function render() {
+  syncRegion(); syncTrack(); syncView();
+  const jobs = J.filter(pass);
+  const byCo = new Map();
+  jobs.forEach((j) => { if (!byCo.has(j.c.i)) byCo.set(j.c.i, []); byCo.get(j.c.i).push(j); });
+  const regionName = (REGIONS.find((r) => r[0] === S.region) || [])[1];
+  $('summary').innerHTML = `<strong>${jobs.length.toLocaleString()} roles</strong><span>at ${byCo.size} companies · ${esc(regionName)}</span>`;
+  let html = '';
+  if (S.view === 'companies') {
+    const rows = [...byCo.entries()].map(([i, js]) => ({ c: C[i], js })).sort((a, b) => a.c.tier - b.c.tier || b.js.length - a.js.length);
+    html = rows.length ? `<div class="tblwrap"><table><thead><tr><th>Company</th><th>Tier</th><th>Category</th><th>Stacks hiring</th><th class="num">Roles</th></tr></thead><tbody>` + rows.map(({ c, js }) => {
+      const cnt = {}; js.forEach((j) => (cnt[j.track] = (cnt[j.track] || 0) + 1));
+      const pills = TRACKS.filter(([k]) => cnt[k]).map(([k]) => `<span class="pill p-${k}">${esc(LABEL[k])} ${cnt[k]}</span>`).join('');
+      const shown = js.slice().sort((a, b) => TRACKS.findIndex((t) => t[0] === a.track) - TRACKS.findIndex((t) => t[0] === b.track));
+      return `<tr><td><details><summary>${esc(c.name)}</summary><div class="roles">${shown.map(roleHtml).join('')}</div></details></td><td><span class="tier">T${c.tier}</span></td><td class="cat">${esc(CATS[c.cat] || c.cat)}</td><td>${pills}</td><td class="num">${js.length}</td></tr>`;
+    }).join('') + '</tbody></table></div>' : '<div class="empty">No open roles match these filters. Try another region, or switch on Unclassified.</div>';
+  } else {
+    const rows = jobs.slice().sort((a, b) => a.c.tier - b.c.tier || a.c.name.localeCompare(b.c.name));
+    html = rows.length ? `<div class="tblwrap"><table><thead><tr><th>Company</th><th>Role</th><th>Location</th></tr></thead><tbody>` + rows.slice(0, S.limit).map((j) => `<tr><td>${esc(j.c.name)} <span class="tier">T${j.c.tier}</span></td><td><span class="pill p-${j.track}">${esc(LABEL[j.track])}</span><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a><span class="sub">${esc(j.level)}</span></td><td class="cat">${esc(j.loc || '—')}</td></tr>`).join('') + '</tbody></table></div>'
+      + (rows.length > S.limit ? `<button class="chip more" id="more">Show ${Math.min(200, rows.length - S.limit)} more of ${rows.length - S.limit} remaining</button>` : '') : '<div class="empty">No open roles match these filters.</div>';
+  }
+  $('out').innerHTML = html;
+  if ($('more')) $('more').onclick = () => { S.limit += 200; render(); };
+  const man = C.filter((c) => !c.ats && (S.region === 'ALL' || S.region === 'REMOTE' || HQ[S.region].includes(c.hq)) && (!S.cat || c.cat === S.cat) && (!S.tier || c.tier == S.tier) && (!S.q || c.name.toLowerCase().includes(S.q)));
+  $('manual').innerHTML = man.length ? `<h2>Check manually (${man.length})</h2><p class="note">These companies use a custom careers site or a login-gated job system the crawler cannot read. Each link is a Google search for their engineering roles.</p><div class="manual">${man.sort((a, b) => a.tier - b.tier).map((c) => `<a href="${esc(gsearch(c))}" target="_blank" rel="noopener">${esc(c.name)} · T${c.tier}</a>`).join('')}</div>` : '';
+}
+render();
+</script>
