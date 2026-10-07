@@ -7,6 +7,8 @@ metadata:
 
 # RESUME-JOB-MAP — cold start (written 2026-10-07)
 
+🔴 **Wrong home.** This work was meant for the **resume-writer project**, not devbible. It was built here by mistake on branch `ccr-1555475c-8lxaf2` (`docs/_project/job-map/`). The user says another session has already fetched everything, so the devbible copy is only a backup; nothing further was done after that instruction.
+
 Say **"RESUME-JOB-MAP"** and read this file first, then [project_job_map.md](project_job_map.md). This project is not a devbible track: it takes no LOCKS entry and does not touch the site build.
 
 ## Get the code (laptop)
