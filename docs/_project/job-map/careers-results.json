@@ -7060,5 +7060,300 @@
   "ats": null,
   "slug": null,
   "dom": []
+ },
+ {
+  "name": "G4S",
+  "careersUrl": "http://www.g4s.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "United States Postal Service",
+  "careersUrl": "https://www.usps.com/careers/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "DHL Group",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "DHL",
+  "careersUrl": "https://careers.dhl.com/amer/en",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Randstad N.V.",
+  "careersUrl": "https://www.randstad.com/jobs/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "popular searches",
+    "url": "https://www.randstad.com/find-a-job/"
+   },
+   {
+    "title": "all jobs",
+    "url": "https://www.randstad.com/jobs/"
+   },
+   {
+    "title": "jobs in USA",
+    "url": "https://www.randstadusa.com/jobs/"
+   },
+   {
+    "title": "jobs in Canada",
+    "url": "https://www.randstad.ca/jobs/"
+   },
+   {
+    "title": "careers at randstad",
+    "url": "https://www.randstad.com/careers-at-randstad/"
+   },
+   {
+    "title": "operational career",
+    "url": "https://www.randstad.com/operational-career/"
+   },
+   {
+    "title": "industrial & skilled trades",
+    "url": "https://www.randstad.com/operational-career/industrial-skilled-trades/"
+   },
+   {
+    "title": "supervision & industrial management",
+    "url": "https://www.randstad.com/operational-career/supervision-and-industrial-management/"
+   },
+   {
+    "title": "call & contact centers",
+    "url": "https://www.randstad.com/operational-career/call-and-contact-center/"
+   },
+   {
+    "title": "hospitality & events",
+    "url": "https://www.randstad.com/operational-career/hospitality-and-events/"
+   },
+   {
+    "title": "professional career",
+    "url": "https://www.randstad.com/professional-career/"
+   },
+   {
+    "title": "office & administrative support",
+    "url": "https://www.randstad.com/professional-career/office-and-administrative/"
+   },
+   {
+    "title": "finance & accounting",
+    "url": "https://www.randstad.com/professional-career/finance-and-accounting/"
+   },
+   {
+    "title": "HR & legal",
+    "url": "https://www.randstad.com/professional-career/hr-and-legal/"
+   },
+   {
+    "title": "sales & marketing",
+    "url": "https://www.randstad.com/professional-career/sales-and-marketing/"
+   },
+   {
+    "title": "digital career",
+    "url": "https://www.randstaddigital.com/careers/"
+   },
+   {
+    "title": "working at randstad digital",
+    "url": "https://www.randstaddigital.com/careers/working-randstad-digital/"
+   },
+   {
+    "title": "current opportunities",
+    "url": "https://www.randstaddigital.com/careers/current-opportunities/"
+   },
+   {
+    "title": "randstad digital academy",
+    "url": "https://www.randstaddigital.com/careers/randstad-digital-academy/"
+   },
+   {
+    "title": "country websites",
+    "url": "https://www.randstad.com/randstad-careers-in-your-country/"
+   },
+   {
+    "title": "not now",
+    "url": "https://www.randstad.com/careers-at-randstad/#"
+   },
+   {
+    "title": "see open positions",
+    "url": "https://www.randstad.com/jobs/careers-at-randstad/"
+   },
+   {
+    "title": "career advice",
+    "url": "https://www.randstad.com/career-advice/"
+   },
+   {
+    "title": "careers at Randstad",
+    "url": "https://www.randstad.com/about-randstad/careers-at-randstad/"
+   }
+  ],
+  "listUrl": "https://www.randstad.com/careers-at-randstad/"
+ },
+ {
+  "name": "United Parcel Service",
+  "careersUrl": "https://www.ups.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Kroger",
+  "careersUrl": "https://www.krogerfamilycareers.com/en/sites/CX_2001",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Grocery Retail",
+    "url": "https://www.krogerfamilycareers.com/en/sites/5002"
+   },
+   {
+    "title": "Supply Chain & Distribution",
+    "url": "https://www.krogerfamilycareers.com/en/sites/5019"
+   },
+   {
+    "title": "Kroger Health & Wellness",
+    "url": "https://www.krogerfamilycareers.com/en/sites/5020"
+   },
+   {
+    "title": "Technology & Digital",
+    "url": "https://www.krogerfamilycareers.com/en/sites/5016"
+   },
+   {
+    "title": "Kroger Delivery",
+    "url": "https://www.krogerfamilycareers.com/en/sites/5017"
+   }
+  ]
+ },
+ {
+  "name": "Volkswagen Group",
+  "careersUrl": "https://www.volkswagen-group.com/en",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Skip to content",
+    "url": "https://www.volkswagen-group.com/en/career-16057#content"
+   },
+   {
+    "title": "Level up",
+    "url": "https://www.volkswagen-group.com/en/career-16057"
+   },
+   {
+    "title": "Europcar Offer",
+    "url": "https://www.volkswagen-group.com/en/disclaimer-europcar-offer-16109"
+   },
+   {
+    "title": "Careers with the Group",
+    "url": "https://www.volkswagen-group.com/en/careers-with-the-group-16105"
+   },
+   {
+    "title": "Show all",
+    "url": "https://www.volkswagen-group.com/en/career-16057#"
+   }
+  ],
+  "listUrl": "https://www.volkswagen-group.com/en/career-16057"
+ },
+ {
+  "name": "Edeka",
+  "careersUrl": "https://verbund.edeka/karriere/stellenboerse/",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Full Stack Web Developer (m/w/d)",
+    "url": "https://verbund.edeka/karriere/stellenboerse/stelle-full-stack-web-developer-m-w-d-hamburg-edeka-it-stiftung-amp-co.-ohg/?id=247689_171676&type=j"
+   }
+  ]
+ },
+ {
+  "name": "Yum China",
+  "careersUrl": "http://www.yumchina.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "FedEx",
+  "careersUrl": "https://www.fedex.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Schwarz Group",
+  "careersUrl": "https://gruppe.schwarz/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "R. J. Reynolds Tobacco Company",
+  "careersUrl": "https://rjrt.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "India Post",
+  "careersUrl": "https://www.indiapost.gov.in/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Reliance Industries Limited",
+  "careersUrl": "https://www.ril.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Daimler-Benz AG",
+  "careersUrl": null,
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Ahold Delhaize",
+  "careersUrl": "https://aholddelhaize.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "Berkshire Hathaway",
+  "careersUrl": "https://www.berkshirehathaway.com/",
+  "ats": null,
+  "slug": null,
+  "dom": []
+ },
+ {
+  "name": "IBM",
+  "careersUrl": "https://www.ibm.com/careers",
+  "ats": null,
+  "slug": null,
+  "dom": [
+   {
+    "title": "Hybrid Cloud",
+    "url": "https://www.ibm.com/careers#undefined"
+   },
+   {
+    "title": "Careers with IBM",
+    "url": "https://www.ibm.com/careers/us-en?lnk=flathl"
+   }
+  ]
+ },
+ {
+  "name": "Toyota",
+  "careersUrl": "https://global.toyota/",
+  "ats": null,
+  "slug": null,
+  "dom": []
  }
 ]
