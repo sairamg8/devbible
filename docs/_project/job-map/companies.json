@@ -540,7 +540,7 @@
   "hq": "us",
   "slug": "stripe",
   "ats": "greenhouse",
-  "open": 730,
+  "open": 731,
   "engineering": 600,
   "src": "curated"
  },
@@ -645,8 +645,8 @@
   "hq": "us",
   "slug": "airbnb",
   "ats": "greenhouse",
-  "open": 158,
-  "engineering": 158,
+  "open": 157,
+  "engineering": 157,
   "src": "curated"
  },
  {
@@ -837,8 +837,8 @@
   ],
   "slug": "gitlab",
   "ats": "greenhouse",
-  "open": 209,
-  "engineering": 209,
+  "open": 210,
+  "engineering": 210,
   "src": "curated"
  },
  {
@@ -1581,8 +1581,8 @@
   "hq": "eu",
   "slug": "intercom",
   "ats": "greenhouse",
-  "open": 105,
-  "engineering": 105,
+  "open": 107,
+  "engineering": 107,
   "src": "curated"
  },
  {
@@ -1590,8 +1590,8 @@
   "category": "saas",
   "tier": 1,
   "hq": "us",
-  "open": 278,
-  "engineering": 278,
+  "open": 277,
+  "engineering": 277,
   "src": "curated",
   "slug": "workday.wd5.myworkdayjobs.com|workday|Workday",
   "ats": "workday",
@@ -1604,7 +1604,7 @@
   "hq": "us",
   "slug": "servicenow",
   "ats": "smartrecruiters",
-  "open": 706,
+  "open": 705,
   "engineering": 600,
   "src": "curated"
  },
@@ -1883,8 +1883,8 @@
   "tier": 1,
   "hq": "us",
   "src": "curated",
-  "open": 573,
-  "engineering": 573,
+  "open": 572,
+  "engineering": 572,
   "slug": "citi.wd5.myworkdayjobs.com|citi|2",
   "ats": "workday",
   "careers": "https://jobs.citi.com/"
@@ -2301,7 +2301,7 @@
   "tier": 1,
   "hq": "eu",
   "src": "curated",
-  "open": 627,
+  "open": 634,
   "engineering": 600,
   "slug": "accenture.wd103.myworkdayjobs.com|accenture|AccentureCareers",
   "ats": "workday",
