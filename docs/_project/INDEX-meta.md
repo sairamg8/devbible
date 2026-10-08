@@ -23,6 +23,7 @@ the file. Budget: 108 entries, sharded at 120 ([../shared/MEMORY-ARCHITECTURE.md
 
 - [🔴 Never build/test locally — commit, push, verify in GitHub Actions (2026-09-24)](feedback_never_run_local_build_or_check_ci.md) — per-file gates stay linkcheck + mdxcheck `yarn build` `gh run` `CI`
 - [🔴 Hub + delta: link free basics, write the gaps (2026-09-14)](feedback_hub_plus_delta_20260914.md) — PERN/MERN, then Java; vs brief §5 `w3schools` `MDN` `gap` `delta`
+- [🔴 CURSOR link map — best page per topic, one place (2026-10-05)](CURSOR-LINK-MAP.md) — our syllabus is the spine; pilot Redux Toolkit, NO agents `link map` `hub` `best article` `study map`
 - [Answer the user briefly — every time (2026-09-04)](feedback_answer_simply.md) — The user wants SHORT, simplified answers every time — asked twice on 2026-09-04 ("simplify", then "every time you…
 - [Answer the question asked](feedback_answer_the_question_asked.md) — 2026-08-17 — asked whether pages were chunked to get under 300, I audited for "content debt" instead and started… `nn-topic/`
 - [Audit External Reviews](feedback_audit_external_reviews.md) — External reviews of the Dev Bible get audited against instructions.md before anything is applied — they have been… `review` `second opinion` `audit` `verify`

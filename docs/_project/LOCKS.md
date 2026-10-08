@@ -35,7 +35,8 @@ these orders.
 | a version bump · *"is X still current"* | `.agents/skills/devbible-currency/SKILL.md` | no |
 | how many pages / how much is done | **[progress_corpus_audit_20260905.md](progress_corpus_audit_20260905.md)** — distrust any count written before it | no |
 | *"version coverage"* · *"up to which version"* · *"compare LTS"* · *"free content map"* | **[CURSOR-VERSION-COVERAGE.md](CURSOR-VERSION-COVERAGE.md)** — every track: official LTS syllabus × our pages × free content (LINK/KEEP/WRITE). ⏹️ **stopped 2026-09-24** — batch 1 audits done, verify owed; batch 2 next on the user's word | no |
-| *"free resources gap"* · *"w3schools vs devbible"* · *"study map"* | **[CURSOR-FREE-RESOURCES-GAP.md](CURSOR-FREE-RESOURCES-GAP.md)** — paused 2026-09-14, 0 results banked | no |
+| *"link map"* · *"best article per topic"* · *"hub + delta"* · *"study map"* | **[CURSOR-LINK-MAP.md](CURSOR-LINK-MAP.md)** — 🔴 2026-10-05: our syllabus is the spine, link the best page anywhere, **no agents**; pilot Redux Toolkit ✅ 21/21 mapped 2026-10-05, awaiting the user's review (staged, not on the site) | no |
+| *"free resources gap"* · *"w3schools vs devbible"* | [CURSOR-FREE-RESOURCES-GAP.md](CURSOR-FREE-RESOURCES-GAP.md) — folded into the link-map row above | no |
 
 ## The tracks
 

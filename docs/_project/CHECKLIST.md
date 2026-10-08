@@ -12,12 +12,17 @@ Legend: `[ ]` open · `[~]` in progress · `⏸` held by the user · `❓` needs
 Paths are relative to `docs/_project/` unless they start with `docs/`, `src/` or `scripts/`.
 
 > ⏹️ **Everything is STOPPED (user, 2026-09-24 ~13:50).** No workflow or agent is running. Nothing
-> below starts until you say which item.
+> below starts until you say which item. **2026-10-05: the user picked the link-map task (pilot:
+> Redux Toolkit, no agents); everything else stays stopped.**
 
 ---
 
 ## 1 · Right now
 
+- [~] **Link map — Redux Toolkit pilot DONE 2026-10-05, awaiting your review** (21/21 topics mapped, 55 links
+      re-checked, 3 deltas, 1 real gap). Staged in `link-map/`, not on the site, **not committed** (no git in the session). Next: your verdict
+      on the format, then the next track (MongoDB: 39 written / 43 not) and the depth per topic. No agents.
+      → [CURSOR-LINK-MAP.md](CURSOR-LINK-MAP.md)
 - [ ] **Version-coverage audit, batch 1** (Node.js · Java JDK · Java Spring · Python): all 4 audit reports
       written; ⏹️ **stopped by the user before the verify stage landed.** Next: re-run the verify stage only.
       → [CURSOR-VERSION-COVERAGE.md](CURSOR-VERSION-COVERAGE.md)
@@ -67,6 +72,9 @@ Found by the batch-1 audit. **Unverified until each report's §6 lands**, since 
       → `/mnt/Storage/my-learning/claude/shared/scripts/memcheck.sh devbible`
 - [ ] ~10 index/board files in `docs/_project/` carry dangling `../shared/…` links since the move.
       Cosmetic, because the folder is never built. → reference_tracking_moved_to_docs_project_20260924.md
+- [ ] **20 pages cite retired hosts** — redux-toolkit.js.org, react-redux.js.org, reselect.js.org (18 in
+      `docs/redux-toolkit`). They redirect to redux.js.org today, so nothing is broken (cosmetic); canonicalize
+      when each page is next touched. → [CURSOR-LINK-MAP.md](CURSOR-LINK-MAP.md)
 - [ ] **Version drift:** 15 patch, 18 minor, 2 major (Flyway, Jotai), 2 inconsistent (TypeScript;
       TanStack 5.40.0 is a known false positive). → `node scripts/currency.mjs --check` + the triage ladder
 
