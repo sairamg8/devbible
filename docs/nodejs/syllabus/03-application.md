@@ -143,7 +143,7 @@ their weekend.
 | Coverage via `--experimental-test-coverage` — and why 100% is a bad target | <span className="db-tier t-understand">Understand</span> |
 | **Vitest / Jest** — when they earn their place over the built-in runner | <span className="db-tier t-understand">Understand</span> |
 | **Testcontainers** — integration tests against a real database | <span className="db-tier t-know">Know</span> |
-| Newer runner flags: `--test-random-order` (surfaces inter-test coupling), `--test-name-tag`, per-worker IDs, OTel-compatible diagnostics output | <span className="db-tier t-know">Know</span> |
+| Newer runner flags: `--test-randomize` (surfaces inter-test coupling), `--experimental-test-tag-filter`, per-worker IDs, OTel-compatible diagnostics output | <span className="db-tier t-know">Know</span> |
 | Snapshot testing | <span className="db-tier t-know">Know</span> |
 | ESLint flat config, Prettier, or Biome for both | <span className="db-tier t-know">Know</span> |
 | Property-based testing, mutation testing | <span className="db-tier t-when">When Needed</span> |

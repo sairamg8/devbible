@@ -10,7 +10,10 @@ sidebar_position: 1
 > built-in `node:crypto`. The console output below is real, from two committed scripts:
 > `sandbox/p8-security/ex1-crypto.mjs` (the bare-hash rate table and the scrypt cost
 > curve) and `sandbox/p8-security/ex4-throughput.mjs` (the thread-pool table).
-> Provenance added 2026-09-03; the numbers themselves are unchanged.
+> Provenance added 2026-09-03; the numbers themselves are unchanged. Re-verified
+> 2026-10-08 (argon2 claims only) against the Node 24.19.0 `crypto` docs
+> ([nodejs.org/docs/latest-v24.x/api/crypto.html](https://nodejs.org/docs/latest-v24.x/api/crypto.html))
+> and `CHANGELOG_V24.md` ([github.com/nodejs/node](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V24.md)).
 
 **A password hash must be slow on purpose.** Every other property — the salt, the
 algorithm's name, the output format — is secondary to that one idea. A fast hash is
@@ -47,7 +50,7 @@ excellent at being fast, which is precisely the property you do not want.
 
 | Algorithm | Use it? | Notes |
 |---|---|---|
-| **argon2id** | **First choice** | Winner of the Password Hashing Competition; memory-hard and side-channel resistant. Needs the `argon2` package |
+| **argon2id** | **First choice** | Winner of the Password Hashing Competition; memory-hard and side-channel resistant. Built in as `crypto.argon2()` from Node 24.7.0 (stable as of 24.19.0); older Node needs the `argon2` package |
 | **scrypt** | **Good, and built in** | Memory-hard, in `node:crypto`, zero dependencies |
 | **bcrypt** | Acceptable | Everywhere, well understood; capped at 72 bytes of input — [28 · bcrypt](./28-bcrypt/README.md) |
 | PBKDF2 | Only if mandated | Not memory-hard — cheap to attack on a GPU. Chosen for FIPS compliance, not security |
@@ -55,9 +58,10 @@ excellent at being fast, which is precisely the property you do not want.
 | md5 / sha1 | **No** | Fast *and* broken |
 | Plain / encrypted | **No** | Encryption is reversible; that is the problem |
 
-**Take argon2id** for a new project. **Take scrypt** when you want zero dependencies —
-it is genuinely fine, and `node:crypto` means no native build to break on a Node
-upgrade. Either is a defensible answer in an interview; `sha256` is not.
+**Take argon2id** for a new project — on Node 24 it is `crypto.argon2()`, no dependency
+([01b · argon2 in `node:crypto`](./01b-argon2-in-node-crypto.md)). **Take scrypt** when the same code
+must also run on Node older than 24.7.0 and you do not want the `argon2` package's native
+build — it is genuinely fine. Either is a defensible answer in an interview; `sha256` is not.
 
 ## scrypt, correctly
 
@@ -226,9 +230,10 @@ to make each hash unique so one precomputed table cannot attack every user at on
 so identical passwords do not produce identical hashes.
 
 **★ argon2 vs scrypt vs bcrypt?**
-argon2id is the current first choice — memory-hard and side-channel resistant. scrypt is
-memory-hard and built into `node:crypto`, so it is the best zero-dependency option.
-bcrypt is acceptable and ubiquitous but silently truncates at 72 bytes. PBKDF2 is not
+argon2id is the current first choice — memory-hard and side-channel resistant, and built
+into `node:crypto` as `argon2()` since Node 24.7.0. scrypt is also memory-hard and built in,
+and is the zero-dependency option on older Node. bcrypt is acceptable and ubiquitous but
+silently truncates at 72 bytes. PBKDF2 is not
 memory-hard and is chosen for compliance, not strength.
 
 **★ How do you raise the cost factor later?**
@@ -254,4 +259,4 @@ attacker enumerate registered accounts by timing alone.
 
 ---
 
-Phase index: [Security](./README.md) · Next → [Sessions vs JWT](./02-sessions-vs-jwt.md)
+Phase index: [Security](./README.md) · Next → [01b · argon2 in `node:crypto`](./01b-argon2-in-node-crypto.md) · then [Sessions vs JWT](./02-sessions-vs-jwt.md)

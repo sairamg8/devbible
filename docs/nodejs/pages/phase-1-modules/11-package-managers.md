@@ -6,7 +6,7 @@ sidebar_position: 11
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 with **npm 12.0.2** on Node 24.19.0. Corepack ships the others.
+> Verified: 2026-10-08 against the [Corepack README](https://github.com/nodejs/corepack/blob/main/README.md) and [CHANGELOG_V25.md](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V25.md) with **npm 12.0.2** (installed separately; Node 24.19.0 bundles npm 11.17.0). Corepack ships the others, on Node 24 (not on 25 and later).
 
 **All three install packages. The difference that matters is the shape of
 `node_modules`, and whether an undeclared dependency can accidentally work.**
@@ -48,7 +48,7 @@ error on your machine, not a surprise in production six weeks later.
 | Disk for 5 projects sharing a dep | 5 copies | 5 copies | **1 copy** |
 | Install speed | baseline | fast | **fastest on warm cache** |
 | Lockfile | `package-lock.json` | `yarn.lock` | `pnpm-lock.yaml` |
-| Ships with Node | **yes** | via Corepack | via Corepack |
+| Ships with Node 24 | **yes** | via Corepack | via Corepack |
 
 The honest recommendation: **npm is the default and it is fine.** It ships with
 Node, every tutorial assumes it, and no CI system needs configuring for it. Choose
@@ -60,7 +60,7 @@ ran what.
 
 ## Corepack
 
-Node ships Corepack, which pins the package manager per project:
+Node 24 ships Corepack, which pins the package manager per project:
 
 ```json
 { "packageManager": "pnpm@10.4.1" }
@@ -74,6 +74,17 @@ $ pnpm install        # Corepack fetches exactly 10.4.1
 Everyone gets the same package manager version without a global install. Corepack
 is distributed with Node but not enabled by default — `corepack enable` is a
 one-time per-machine step, which is the friction that keeps adoption low.
+
+**Scoped to Node 24.** Node 25.0.0 stopped distributing Corepack
+(`build: stop distributing Corepack`, [nodejs/node#57617](https://github.com/nodejs/node/pull/57617),
+listed in CHANGELOG_V25.md), so this section's "Node ships it" is false on 25 and
+26. The Corepack README states:
+
+> *"Corepack is distributed with Node.js from version 14.19.0 up to (but not including) 25.0.0."*
+
+Where it is not bundled, install it first with `npm install -g corepack`, then
+`corepack enable`. Likewise npm 12 is not bundled with any Node line: on Node 24
+get it with `npm install -g npm@12`.
 
 ## Workspaces
 
@@ -183,7 +194,8 @@ to fail loudly.
 **What is Corepack for?**
 Pinning the package manager and its version per project via the `packageManager`
 field, so everyone uses the same one without a global install. It ships with Node
-but must be enabled once per machine.
+24 (not 25 or later; install it with `npm install -g corepack` there) but must be
+enabled once per machine.
 
 ---
 

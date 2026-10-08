@@ -6,7 +6,7 @@ sidebar_position: 13
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (LTS).
+> Verified: 2026-10-08 against [net.html `socket.connect(options)`](https://nodejs.org/api/net.html) and [dns.html `dns.lookup`, `dns.setDefaultResultOrder`](https://nodejs.org/api/dns.html). **Node 24.19.0** (LTS).
 
 **`dns.lookup` and `dns.resolve` sound like the same thing and are not.
 `lookup` calls the operating system's resolver on a libuv thread pool thread;
@@ -72,9 +72,31 @@ localhost resolves to: ::1 (IPv6), 127.0.0.1 (IPv4)
 
 Since Node 17 the default result order is **`verbatim`** — addresses are returned
 in the order the resolver gave them, rather than IPv4 first. On a host where
-`localhost` resolves to `::1` before `127.0.0.1`, Node connects over IPv6. If your
-database or dev server is listening only on `127.0.0.1`, the connection is
-refused, and the symptom is `ECONNREFUSED` against a service you can see running.
+`localhost` resolves to `::1` before `127.0.0.1`, the *first* address tried is
+IPv6. What happens next depends on `autoSelectFamily`, which has defaulted to
+`true` since v20.0.0 / v18.18.0:
+
+> *"If set to `true`, it enables a family autodetection algorithm that loosely implements section 5 of RFC 8305. The `all` option passed to lookup is set to `true` and the sockets attempts to connect to all obtained IPv6 and IPv4 addresses, in sequence, until a connection is established."*
+> — [net.html, `socket.connect(options)`](https://nodejs.org/api/net.html)
+
+So on Node 24 a plain `net.connect` / `http.request` to `localhost` against a
+service bound to `127.0.0.1` only normally **succeeds**: the `::1` attempt is
+refused and the `127.0.0.1` attempt is tried next. The trap survives where that
+fallback does not run. The documentation says the algorithm is *"Ignored if the
+`family` option is not `0` or if `localAddress` is set"*, and its default can be
+turned off with `net.setDefaultAutoSelectFamily(false)` or the
+`--no-network-family-autoselection` flag. Without the algorithm the socket gets a
+single address from `dns.lookup` (its `all` option is documented as *"Default:
+`false`"*), `verbatim` leaves that list unsorted, and the documentation describes no
+second attempt. On a host that lists `::1` first, the symptom is `ECONNREFUSED`
+against a service you can see running. Whether a non-Node client (a database CLI,
+another runtime) falls back is that client's own behaviour; these docs say nothing
+about it, so test it rather than assume either way.
+
+When every attempt fails with the algorithm on, the documentation says *"a single
+`AggregateError` with all failed attempts is emitted"*. The passage specifies no
+`code` for that wrapper, so read the individual errors in `err.errors` rather than
+assuming a top-level `ECONNREFUSED`.
 
 ```js
 import { setDefaultResultOrder } from 'node:dns';
@@ -117,7 +139,9 @@ compression work
 
 **Symptom:** `ECONNREFUSED` connecting to `localhost` in development
 **Cause:** `verbatim` ordering resolved `::1` first; the service listens on
-`127.0.0.1` only.
+`127.0.0.1` only, and the client did not fall back (`autoSelectFamily` off, `family`
+or `localAddress` set, or a client that does not implement fallback). With the
+Node 24 default of `autoSelectFamily: true` a plain Node client falls back on its own.
 **Fix:** Use `127.0.0.1`, or listen on both, or `--dns-result-order=ipv4first`.
 
 **Symptom:** Traffic keeps going to a decommissioned host after a DNS change
@@ -156,8 +180,14 @@ per-connection cost, and a TTL-respecting cache such as `cacheable-lookup` is th
 fix.
 
 **★ Why does connecting to `localhost` sometimes fail while `127.0.0.1` works?**
-Node 17 changed the default result order to `verbatim`, so `::1` is often tried
-first. A service bound only to `127.0.0.1` refuses that connection.
+Node 17 changed the default result order to `verbatim`, so on a host that lists
+`::1` first, that is the address tried first, and a service bound only to
+`127.0.0.1` refuses that connection. On Node 24 a plain Node client then falls
+back to `127.0.0.1` by itself, because `autoSelectFamily` has defaulted to `true`
+since v20.0.0 / v18.18.0 and tries the returned addresses in sequence. The failure
+persists only where that fallback does not run: `autoSelectFamily` turned off, the
+`family` option not `0`, `localAddress` set, or a client that does not implement
+fallback. Either way the fix is to connect to `127.0.0.1` or listen on both.
 
 **Why is caching DNS forever a bad idea?**
 DNS is the mechanism behind failover and traffic migration. A process that pinned

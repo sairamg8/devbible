@@ -54,13 +54,13 @@ back to skipping this phase.
 | **CJS ↔ ESM interop**: importing CJS from ESM, default-export gotchas, `createRequire` | <span className="db-tier t-understand">Understand</span> |
 | **`exports` map**: conditional exports, subpath exports, encapsulation (blocking deep imports) | <span className="db-tier t-understand">Understand</span> |
 | Module resolution algorithm: how Node walks `node_modules`, extension resolution differences between CJS and ESM | <span className="db-tier t-understand">Understand</span> |
-| **TypeScript natively**: type stripping is **stable as of v24.12.0** (on by default since v23.6.0, warning-free since v24.3.0) — so it is stable on the Node 24 LTS target, not a Node 26 feature. Run `.ts` with no build step. `--experimental-transform-types` still required for `enum`, parameter properties, `namespace`. Type stripping skips `node_modules`. Node never type-checks — that stays `tsc --noEmit` | <span className="db-tier t-understand">Understand</span> |
+| **TypeScript natively**: type stripping is **stable as of v24.12.0** (on by default since v23.6.0, warning-free since v24.3.0) — so it is stable on the Node 24 LTS target, not a Node 26 feature. Run `.ts` with no build step. `--experimental-transform-types` is the opt-in for `enum`, parameter properties, `namespace` **on Node 24 only — it was removed in v26.0.0**, so write erasable syntax only and enforce it with `erasableSyntaxOnly`. Type stripping skips `node_modules`. Node never type-checks — that stays `tsc --noEmit` | <span className="db-tier t-understand">Understand</span> |
 | Circular dependencies: how they resolve in CJS vs ESM, and why they signal a design problem | <span className="db-tier t-understand">Understand</span> |
 | pnpm vs npm vs yarn — the node_modules layout difference and why pnpm is stricter | <span className="db-tier t-know">Know</span> |
 | Subpath **imports** (`#internal`) for private aliases | <span className="db-tier t-know">Know</span> |
 | Workspaces / monorepos | <span className="db-tier t-know">Know</span> |
 | Publishing: scoped packages, `npm pack`, provenance, dual CJS/ESM packages | <span className="db-tier t-know">Know</span> |
-| `node:module` API: `module.register()`, customization hooks, `enableCompileCache()` | <span className="db-tier t-when">When Needed</span> |
+| `node:module` API: `module.registerHooks()` (synchronous, in-thread customization hooks); the older async `module.register()` is **deprecated — DEP0205**, documentation-only since v24.15.0 and runtime since v26.0.0; `enableCompileCache()` | <span className="db-tier t-when">When Needed</span> |
 
 **Gate — deliverable:** a package with a clean `exports` map that imports
 correctly from both an ESM and a CJS consumer.

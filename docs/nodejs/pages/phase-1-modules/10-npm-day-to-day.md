@@ -6,7 +6,7 @@ sidebar_position: 10
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 with **npm 12.0.2**, the version bundled with Node 24.19.0.
+> Verified: 2026-10-08 against [nodejs.org/dist/index.json](https://nodejs.org/dist/index.json) and [registry.npmjs.org/npm/12.0.2](https://registry.npmjs.org/npm/12.0.2) with **npm 12.0.2** on Node 24.19.0. Node 24.19.0 bundles npm 11.17.0 (`index.json`); npm 12 is a separate install (`npm install -g npm@12`) and declares *"engines": `^22.22.2 || ^24.15.0 || >=26.0.0`*.
 
 **The dozen commands you actually run, and the two decisions that matter:
 which dependency list a package belongs in, and whether the machine you are on

@@ -6,14 +6,17 @@ sidebar_position: 0
 
 > **Target runtime: Node 24 (LTS) — supported to 30 April 2028.**
 > Every example on these pages was executed on **Node 24.19.0** with **npm
-> 12.0.2**, and every API used is available there.
+> 12.0.2**, and every API used is available there. The exceptions are the hook and
+> Node 26 migration examples on 12b, 14, 14b and 14c, which are written from the Node
+> docs and **not run**; each of those pages says so on its `> Verified:` line.
 
 How code gets into your program, and how other people's code gets into your
 project. Two module systems that finally interoperate in both directions, one
 resolution algorithm worth learning once, and the `package.json` fields that decide
 how everything is parsed and shipped.
 
-Fourteen pages. The first four are the ones you use daily.
+Fourteen pages, two of them continued by lettered siblings (12b; 14b and 14c). The
+first four are the ones you use daily.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -29,8 +32,11 @@ Fourteen pages. The first four are the ones you use daily.
 | 10 | **[npm day to day](10-npm-day-to-day.md)** | <span className="db-tier t-master">Master</span> | The dozen commands, and the dependency-list decision that only fails in production |
 | 11 | **[Package managers](11-package-managers.md)** | <span className="db-tier t-know">Know</span> | Hoisting, phantom dependencies, and what workspaces do and do not give you |
 | 12 | **[TypeScript natively](12-typescript-natively.md)** | <span className="db-tier t-understand">Understand</span> | `node server.ts` runs — and never checks a single type |
+| 12b | **[Erasable-only before Node 26](12b-erasable-only-before-node-26.md)** | <span className="db-tier t-understand">Understand</span> | `--experimental-transform-types` works on 24 and is removed in v26.0.0: make `tsc` fail first, rewrite four constructs, hunt the flag out of `NODE_OPTIONS` |
 | 13 | **[Publishing](13-publishing.md)** | <span className="db-tier t-know">Know</span> | A checklist, two irreversible steps, and `npm pack --dry-run` every time |
-| 14 | **[The `node:module` API](14-node-module-api.md)** | <span className="db-tier t-when">Learn When Needed</span> | Loader hooks and the compile cache — read it when a problem sends you here |
+| 14 | **[The `node:module` API](14-node-module-api.md)** | <span className="db-tier t-when">Learn When Needed</span> | `registerHooks()` and the compile cache — read it when a problem sends you here |
+| 14b | **[Hook contracts](14b-hook-contracts-and-failure-modes.md)** | <span className="db-tier t-when">When Needed</span> | What `resolve` and `load` receive and must return, chain order (last in, first out), the `format` hint, and how each rule fails |
+| 14c | **[Migrating off `register()`](14c-migrating-off-module-register.md)** | <span className="db-tier t-when">When Needed</span> | DEP0205: documentation-only in v24.15.0, runtime in v26.0.0 — drop `initialize`, the `MessagePort` and every `await` |
 
 ## Coverage
 
@@ -52,9 +58,9 @@ would never read one without the other; nothing is dropped.
 | npm basics: `install` vs `ci`, dependencies vs devDependencies, `npx` | 10 |
 | pnpm vs npm vs yarn — layout and strictness | 11 |
 | Workspaces / monorepos | 11 |
-| TypeScript natively: type stripping, non-erasable syntax, no type checking | 12 |
+| TypeScript natively: type stripping, non-erasable syntax, no type checking | 12, 12b |
 | Publishing: scoped packages, `npm pack`, provenance, dual CJS/ESM | 13 |
-| `node:module`: `module.register()`, hooks, `enableCompileCache()` | 14 |
+| `node:module`: `module.registerHooks()` and customization hooks; `module.register()` as the deprecated predecessor (DEP0205); `enableCompileCache()` | 14, 14b, 14c |
 
 ## Phase gate
 
@@ -84,6 +90,12 @@ a preview feature here — type stripping is **Stability 2 – Stable as of v24.
 
 Both change the correct default answer to common questions, so check the date on
 anything you read elsewhere about this phase.
+
+Two more changes sit on the path to Node 26, which enters LTS on 2026-10-28:
+`--experimental-transform-types` is **removed in v26.0.0**
+([12b](12b-erasable-only-before-node-26.md)), and `module.register()` is
+**runtime-deprecated in v26.0.0** after a documentation-only deprecation in v24.15.0
+([14c](14c-migrating-off-module-register.md)). Both still work on the Node 24 target.
 
 ## Where this connects
 

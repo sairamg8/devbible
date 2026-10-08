@@ -6,7 +6,7 @@ sidebar_position: 10
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0**, server `TZ=Asia/Kolkata`.
+> Verified: 2026-10-08 against the [Node 26.0.0 changelog](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V26.md) (*"The Temporal API is now enabled by default in Node.js 26."*), on **Node 24.19.0**, server `TZ=Asia/Kolkata`.
 
 **Store UTC. Convert at the edge. Never let a scheduled job decide what "today" means
 from the server's clock.** This is the bug class behind wrong trial expiries, reports
@@ -70,8 +70,10 @@ const start = Temporal.ZonedDateTime.from({timeZone: 'America/New_York', year: 2
 const end = start.add({days: 7});     // 7:00 a.m., correctly, on the other side of DST
 ```
 
-Until it is unflagged, use `date-fns-tz` or Luxon — or push the arithmetic into
-PostgreSQL, which has had it right all along.
+On 24.19.0, where it stays behind the flag, use `date-fns-tz` or Luxon — or push the
+arithmetic into PostgreSQL, which has had it right all along. **From Node 26.0.0
+(2026-05-05) `Temporal` is enabled by default**, with no flag; once you run 26 (Active
+LTS from 2026-10-28) the flag line above is unnecessary.
 
 Never hand-roll month arithmetic. "One month after 31 January" has no correct answer
 you will guess right.

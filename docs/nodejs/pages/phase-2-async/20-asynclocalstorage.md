@@ -6,7 +6,16 @@ sidebar_position: 20
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (LTS). Stable since **Node 16**.
+> Verified: 2026-10-08 on **Node 24.19.0** (LTS) against
+> [Async context](https://nodejs.org/api/async_context.html),
+> [CLI `--no-async-context-frame`](https://github.com/nodejs/node/blob/v24.19.0/doc/api/cli.md),
+> the [24.0.0 release notes](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V24.md),
+> [CLI `--experimental-async-context-frame`](https://github.com/nodejs/node/blob/v22.22.0/doc/api/cli.md) (v22.22.0)
+> and the v24.19.0 sources `lib/async_hooks.js`, `lib/internal/async_context_frame.js`
+> and `lib/internal/async_local_storage/{async_context_frame,async_hooks}.js`.
+> Stable since **Node 16**. Re-checked 2026-10-08: "How it works", the scoped note and the
+> "How does it survive an `await`?" answer. **No sandbox run** — the `als.mjs` listing and
+> its `console` block are unchanged from the 2026-08 revision and were not re-run.
 
 **Per-request context that follows your code through `await` without being passed
 as an argument. It is how request IDs reach your logger without every function
@@ -73,8 +82,72 @@ context**. Node propagates that context across every async boundary: promises,
 `await`, timers, I/O callbacks. When `repository` resumes after its `await`, it
 resumes in the same context it suspended in.
 
-The mechanism underneath is `async_hooks` — see
-[page 21](21-async-hooks.md). You do not need to touch it.
+**On Node 24 the mechanism underneath is not `async_hooks`.** The 24.0.0 release
+notes:
+
+> *"`AsyncLocalStorage` now uses `AsyncContextFrame` by default, which provides a
+> more efficient implementation of asynchronous context tracking. This change
+> improves performance and makes the API more robust for advanced use cases."*
+> — [CHANGELOG_V24.md, 24.0.0](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V24.md)
+
+In the v24.19.0 source, `require('node:async_hooks').AsyncLocalStorage` is a getter
+that picks one of two implementations: `internal/async_local_storage/async_context_frame`
+when `AsyncContextFrame.enabled`, otherwise `internal/async_local_storage/async_hooks`.
+The default implementation keeps no hook and no asyncId tree. It stores a **frame**
+— a `Map` of store to value, copied from the current frame with your entry set — in
+V8's continuation-preserved embedder data (the binding calls are named
+`getContinuationPreservedEmbedderData` and `setContinuationPreservedEmbedderData`):
+
+```js
+// pseudo-code, abridged from lib/internal/async_local_storage/async_context_frame.js (v24.19.0)
+enterWith(data) {
+  const frame = new AsyncContextFrame(this, data); // current frame + this store's entry
+  AsyncContextFrame.set(frame);                    // install as the current frame
+}
+run(data, fn, ...args) {
+  const prior = this.getStore();
+  this.enterWith(data);
+  try { return fn(...args); } finally { this.enterWith(prior); }
+}
+getStore() { return AsyncContextFrame.current()?.get(this); }
+```
+
+The prior, `createHook`-based implementation is the fallback. From the CLI docs
+(`--no-async-context-frame`, added v24.0.0):
+
+> *"Disables the use of `AsyncLocalStorage` backed by `AsyncContextFrame` and uses
+> the prior implementation which relied on async_hooks. The previous model is
+> retained for compatibility with Electron and for cases where the context flow
+> may differ. However, if a difference in flow is found please report it."*
+> — [cli.md, v24.19.0](https://github.com/nodejs/node/blob/v24.19.0/doc/api/cli.md)
+
+That is a change of **default**, not the first appearance of the implementation. On
+Node 22.7 and later it was opt-in through `--experimental-async-context-frame`, so
+"relied on `async_hooks`" describes the *default* before 24.0.0 and nothing more:
+
+> *"Enables the use of `AsyncLocalStorage` backed by `AsyncContextFrame` rather than
+> the default implementation which relies on async_hooks. This new model is
+> implemented very differently and so could have differences in how context data
+> flows within the application."*
+> — [cli.md, v22.22.0](https://github.com/nodejs/node/blob/v22.22.0/doc/api/cli.md)
+> (`--experimental-async-context-frame`, added v22.7.0)
+
+The v24.19.0 `cli.md` has no entry for that flag; it documents
+`--no-async-context-frame` instead.
+
+What this changes for you: the API (`run`, `getStore`, `enterWith`, `exit`) is the
+same, and the docs name no intended behaviour change — only that the flow "may
+differ" in some cases and should be reported. What changed is internal: the store
+is no longer copied onto each new async resource by an `async_hooks` `init` hook.
+[Page 21](21-async-hooks.md) covers that API and why `AsyncResource.bind` still
+matters.
+
+**Scoped note, because Node 26 becomes LTS on 2026-10-28.** `--no-async-context-frame`
+is still documented in `cli.md` at v25.0.0 and at every v26 tag checked (v26.0.0,
+v26.1.0, v26.3.0, v26.5.0, v26.8.0, v26.11.1). It is absent from the `main` branch
+docs, whose `node_version.h` is 27.0.0, and `main`'s `async_context_frame.js` has no
+enabled check. The release notes that removed the opt-out were not found, so do
+not build on the flag outside Node 24.
 
 ## The realistic use: request context
 
@@ -117,9 +190,13 @@ site and in its type signature. `getUser(id)` that silently reads a tenant from
 ambient context is a function you cannot unit-test without setting up context, and
 cannot reason about locally.
 
-There is also a cost — enabling async context tracking makes async operations
-measurably slower. It is small and worth it for tracing; it is not free, so do not
-reach for it as a general dependency-injection mechanism.
+There is also a cost question, and the documentation gives no number for it. The
+Node docs call `AsyncLocalStorage` *"a performant and memory safe implementation
+that involves significant optimizations that are non-obvious to implement"*, and
+the 24.0.0 notes call the `AsyncContextFrame` implementation more efficient than
+the old one — neither publishes a benchmark. Measure on your own workload, and do
+not reach for it as a general dependency-injection mechanism: the reason is hidden
+state, not speed.
 
 ## `enterWith` and `exit`
 
@@ -173,8 +250,11 @@ would overwrite each other.
 
 **★ How does it survive an `await`?**
 Node tracks the current async context and restores it whenever an async operation
-resumes, using `async_hooks` underneath. Code that continues after `await` resumes
-in the context it suspended in, so `getStore()` still returns the right store.
+resumes. On Node 24 that context is an `AsyncContextFrame` held in V8's
+continuation-preserved embedder data; the `async_hooks`-based implementation is
+only the fallback behind `--no-async-context-frame`. Code that continues after
+`await` resumes in the context it suspended in, so `getStore()` still returns the
+right store.
 
 **★ When should you not use it?**
 For data a function genuinely operates on. It is ambient hidden state, so it makes

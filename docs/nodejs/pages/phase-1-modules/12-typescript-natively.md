@@ -8,7 +8,11 @@ sidebar_position: 12
 
 > Verified: 2026-08 on **Node 24.19.0** (LTS). Type stripping is enabled by
 > default since **v23.6.0** and is **Stability 2 – Stable as of v24.12.0**, so it
-> is stable on the target runtime — no flag, no warning.
+> is stable on the target runtime — no flag, no warning. Flag-removal scoping
+> re-checked 2026-10-08 against [`typescript.html` (v26.x)](https://nodejs.org/docs/latest-v26.x/api/typescript.html),
+> [CHANGELOG_V26.md](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V26.md),
+> the v26.0.0 option parser ([`src/node_options-inl.h`](https://github.com/nodejs/node/blob/v26.0.0/src/node_options-inl.h))
+> and the [`tsconfig` reference](https://www.typescriptlang.org/tsconfig/#erasableSyntaxOnly).
 
 **`node server.ts` just runs. Node deletes the types and executes the JavaScript
 underneath. It never checks them.**
@@ -87,7 +91,7 @@ in strip-only mode
   code: 'ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX'
 ```
 
-There is a flag, and it costs you the stability guarantee:
+On Node 24 there is a flag, and it costs you the stability guarantee:
 
 ```console
 $ node --experimental-transform-types enums.ts
@@ -96,8 +100,30 @@ might change at any time
 0
 ```
 
-**The better move is to not use non-erasable syntax.** Replace `enum` with a const
-object plus a derived type, which is more idiomatic TypeScript anyway:
+🔴 **That flag has an end date: added in v22.7.0, removed in v26.0.0**
+([#61803](https://github.com/nodejs/node/pull/61803)). Node 26 enters LTS on
+2026-10-28, so the usual upgrade path from this page's target runs straight through
+the removal. Node 24's `typescript.md` ends the sentence with the flag:
+
+> *"Since Node.js is only removing inline types, any TypeScript features that involve _replacing_ TypeScript syntax with new JavaScript syntax will error, unless the flag `--experimental-transform-types` is passed."*
+
+Node 26's ends it one clause earlier:
+
+> *"Since Node.js is only removing inline types, any TypeScript features that involve _replacing_ TypeScript syntax with new JavaScript syntax will error."*
+
+The Node 26.0.0 changelog lists the removal as a semver-major commit, "**module**:
+remove --experimental-transform-types". The v24.x CLI docs mark the flag
+`Stability: 1.2 - Release candidate` (not Stable) and list it as allowed in
+`NODE_OPTIONS`, so it can hide in a Dockerfile or unit file as well as in
+`package.json`. Node 26 does not ignore a leftover flag: the v26.0.0 option parser no
+longer declares it, so the process exits at startup with code 9 — `bad option:` for
+the command line, `is not allowed in NODE_OPTIONS` for the environment — even when
+every file is already erasable-only ([12b](12b-erasable-only-before-node-26.md) has
+the source).
+
+**The better move is to not use non-erasable syntax — and on Node 26 it is the only
+way to run the file natively.** Replace `enum` with a const object plus a derived
+type, which is more idiomatic TypeScript anyway:
 
 ```ts
 // levels.ts
@@ -113,9 +139,15 @@ $ node levels.ts
 1
 ```
 
-`verbatimModuleSyntax` and `erasableSyntaxOnly` in `tsconfig.json` make `tsc`
-reject non-erasable syntax for you, so the mistake is caught at check time rather
-than at run time.
+Make `tsc` reject non-erasable syntax for you, so the mistake is caught at check
+time rather than at run time. `erasableSyntaxOnly` is the switch that does it
+(`verbatimModuleSyntax` is its companion for imports):
+
+> *"The `--erasableSyntaxOnly` flag will cause TypeScript to error on most TypeScript-specific constructs that have runtime behavior."*
+
+The tsconfig Node's docs recommend, a rewrite for each construct that needs one, and
+how to hunt the removed flag out of `NODE_OPTIONS` are on
+[12b](12b-erasable-only-before-node-26.md).
 
 ## `node_modules` is excluded
 
@@ -182,9 +214,11 @@ Type checking is required in all five. The build step is what became optional.
 
 **Symptom:** `ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX`
 **Cause:** `enum`, `namespace` with runtime code, or a parameter property.
-**Fix:** Rewrite it as erasable syntax — a `const` object for enums, explicit
-field assignment for parameter properties. `--experimental-transform-types` works
-but drops you back to an experimental code path.
+**Fix:** Rewrite it as erasable syntax — a `const` object for enums (above), explicit
+field assignment for parameter properties (a rewrite for each construct is on
+[12b](12b-erasable-only-before-node-26.md)). `--experimental-transform-types` works
+on Node 24 but drops you back to a non-Stable code path, and it is **removed in
+v26.0.0** — a bridge at best.
 
 **Symptom:** Type errors reach production
 **Cause:** Node strips types without checking them, and CI no longer runs `tsc`.
@@ -217,8 +251,9 @@ because "Node runs TypeScript" means type errors reach production.
 Erasable syntax is anything that can be deleted without changing runtime
 behaviour: annotations, `interface`, generics, `import type`. Non-erasable syntax
 — `enum`, runtime `namespace`, parameter properties — must *generate* JavaScript,
-which is a transform rather than an erasure. Node does the first by default and
-the second only behind an experimental flag.
+which is a transform rather than an erasure. Node does the first by default. On
+Node 24 it does the second only behind `--experimental-transform-types`; that flag
+was removed in v26.0.0, so on 26 the second is an error.
 
 **★ Why does Node refuse to strip types inside `node_modules`?**
 To keep published packages shipping JavaScript and `.d.ts` declarations rather
@@ -238,7 +273,16 @@ genuinely becomes optional.
 **What does `erasableSyntaxOnly` do?**
 It makes `tsc` reject non-erasable constructs, so the incompatibility is caught at
 check time rather than as a runtime `ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX`.
+`verbatimModuleSyntax` is the companion: Node's docs say it "can be used to match this
+behavior", meaning an import written without the `type` keyword is treated as a value import.
+
+**★ Is `--experimental-transform-types` a safe way to keep using `enum`?**
+Only as a bridge. It works on Node 24, where the CLI docs mark it
+`Stability: 1.2 - Release candidate` rather than Stable, and it is removed in
+v26.0.0 — Node 26's docs say TypeScript features that replace syntax "will error".
+The durable answer is to move to erasable syntax and enforce it in CI with
+`erasableSyntaxOnly`, before the Node 26 upgrade rather than because of it.
 
 ---
 
-← Prev: [npm, pnpm, yarn and workspaces](11-package-managers.md) · Next → [Publishing a package](13-publishing.md)
+← Prev: [npm, pnpm, yarn and workspaces](11-package-managers.md) · Next → [Erasable-only before Node 26](12b-erasable-only-before-node-26.md)

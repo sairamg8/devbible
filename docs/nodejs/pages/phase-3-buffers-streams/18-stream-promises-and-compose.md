@@ -6,7 +6,7 @@ sidebar_position: 18
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (LTS).
+> Verified: 2026-10-08 against the `stream.compose` history in the Node 24 [stream docs](https://nodejs.org/docs/latest-v24.x/api/stream.html) (v24.19.0: *"Marking the API stable."*). **Node 24.19.0** (LTS).
 
 **Three small modules remove most of the ceremony around streams:
 `stream/promises` (await a pipeline), `stream/consumers` (collect one), and
@@ -138,9 +138,11 @@ export function parseNdjson() {
 }
 ```
 
-`compose` is **Stability 1 – Experimental** in the Node 24 docs. It has been
-stable in practice since v16, but that marker is a real risk for a published
-library — pin your Node range or wrap it.
+`stream.compose` was **Stability 1 – Experimental** until it was marked stable
+in **v24.19.0** (the docs history entry reads *"Marking the API stable."*, PR
+#62562) — so on the pinned 24.19.0 it is stable, but on 24.0–24.18 and on
+Node 22 and earlier it is still experimental. A published library that supports
+older Node ranges should pin its range or wrap it.
 
 ## `Readable.from` and the iterator helpers
 
@@ -214,7 +216,8 @@ object mode.
 **Fix:** Always consume it through `pipeline`.
 
 **Symptom:** A library using `compose` or `.map()` breaks on a Node upgrade
-**Cause:** Both are Stability 1 – Experimental.
+**Cause:** `compose` is experimental before v24.19.0, and the iterator helpers
+(`.map()` and friends) are marked experimental in the docs this page was written against.
 **Fix:** Pin the supported Node range, or implement the stage by hand in
 published packages.
 
@@ -228,7 +231,8 @@ It resolves or rejects for every termination path — `'end'`, `'finish'`,
 **★ What is `compose()` for?**
 It glues several stages into a single Duplex whose writable side is the first
 stage and readable side is the last, so a multi-stage pipeline can be exported
-and reused as one value. It is still marked experimental.
+and reused as one value. It was experimental until v24.19.0, where the docs
+mark it stable.
 
 **★ What is the risk of `stream/consumers`?**
 No size limit. `await json(req)` will happily buffer a 2 GB body. Enforce the

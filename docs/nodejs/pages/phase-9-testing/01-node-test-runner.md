@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0**, 8 cores.
+> Verified: 2026-10-08 against [node:test reporters](https://nodejs.org/docs/latest-v24.x/api/test.html) (v23.0.0: *"The default reporter on non-TTY stdout is changed from `tap` to `spec`, aligning with TTY stdout."*). **Node 24.19.0**, 8 cores.
 
 **Node ships a test runner. You do not need a dependency to test a Node
 application.** `node:test` covers describe/it, hooks, mocking, timers, coverage,
@@ -191,7 +191,7 @@ $ echo $?
 1
 ```
 
-Reporters: `--test-reporter=spec` (the default when attached to a TTY), `tap`, `dot`,
+Reporters: `--test-reporter=spec` (the default; since v23.0.0 on non-TTY stdout too, previously `tap`), `tap`, `dot`,
 `junit`, `lcov`. CI usually wants `--test-reporter=junit
 --test-reporter-destination=results.xml`, and you can pass the flag twice to get both a
 human and a machine report.

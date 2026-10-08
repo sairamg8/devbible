@@ -7,7 +7,8 @@ sidebar_position: 25
 <span className="db-tier t-know">Know</span>
 
 > Verified: 2026-08 on **Node 24.19.0** — every output below is from
-> `sandbox/p8-security/ex23-webcrypto.mjs`.
+> `sandbox/p8-security/ex23-webcrypto.mjs`. The Argon2 availability statements were re-checked 2026-10-08 against the
+> [Web Crypto API docs](https://nodejs.org/docs/latest-v24.x/api/webcrypto.html) (history entry v24.8.0, Stability 1.1); no code was run.
 
 The same primitives as [page 20](./20-node-crypto.md), through the standard the browser
 uses. It is a global, it is entirely async, and it is stricter than `node:crypto` in ways
@@ -99,8 +100,8 @@ The rule that survives contact with a real codebase:
 - **Code shared with the browser or an edge runtime → Web Crypto.** A token verifier used
   by both a Node API and a Cloudflare Worker should exist once.
 - **Server-only, streaming, or password hashing → `node:crypto`.** Streaming a 2 GB file
-  through `createHash` has no Web Crypto equivalent, and scrypt/argon2 are not in the
-  standard.
+  through `createHash` has no Web Crypto equivalent, and scrypt is not in it at all (Argon2 is,
+  since v24.8.0, but only in the experimental *Modern Algorithms* set — Stability 1.1).
 - **Do not mix them for one concern.** Two ways to make a signature in one repo is how the
   second one ends up without `timingSafeEqual`.
 
@@ -113,8 +114,8 @@ PBKDF2 600k iterations -> 292.9 ms, key type AES-GCM
 ```
 
 That is deriving an **encryption key from a passphrase**, which is a legitimate use. For
-storing user passwords you want a memory-hard function, and Web Crypto has none — see
-[page 01](./01-password-storage.md). PBKDF2 is the fallback where nothing better exists,
+storing user passwords you want a memory-hard function, and Web Crypto's only ones are the experimental Argon2 variants (v24.8.0, Stability 1.1) — see
+[page 01](./01-password-storage.md) and [01b](./01b-argon2-in-node-crypto.md). PBKDF2 is the fallback where nothing better exists,
 at a high iteration count, and it is materially weaker against GPU attack than scrypt or
 argon2.
 
@@ -165,10 +166,10 @@ string key, and worse if you re-import the key each time. Irrelevant per request
 significant in a tight loop.
 
 **Can you hash passwords with it?**
-Not well. There is no scrypt or argon2 — `importKey(…, 'scrypt', …)` throws
-`NotSupportedError`. PBKDF2 at a high iteration count is the fallback; page 01 is the real
+Not well. There is no scrypt — `importKey(…, 'scrypt', …)` throws
+`NotSupportedError`. Argon2 (`'Argon2d'`, `'Argon2i'`, `'Argon2id'`) was added to Web Crypto in v24.8.0, but under the *Modern Algorithms* heading marked Stability 1.1 (active development), so treat it as non-final; `crypto.argon2()` from `node:crypto` is the documented route ([01b](./01b-argon2-in-node-crypto.md)). PBKDF2 at a high iteration count is the fallback; page 01 is the real
 answer.
 
 ---
 
-← Prev: [The Permission Model](./24-permission-model.md) · Next → [Encryption, signing and key management](./26-encryption-and-keys.md)
+← Prev: [Child-process inheritance](./24b-child-process-inheritance.md) · Next → [Encryption, signing and key management](./26-encryption-and-keys.md)

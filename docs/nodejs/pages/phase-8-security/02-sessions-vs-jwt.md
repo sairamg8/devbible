@@ -192,4 +192,4 @@ HS256 every verifier holds the signing secret, and every one of them is a forger
 
 ---
 
-← Prev: [Password storage](./01-password-storage.md) · Next → [Where to store tokens](./03-token-storage.md)
+← Prev: [argon2id in node:crypto](./01b-argon2-in-node-crypto.md) · Next → [Where to store tokens](./03-token-storage.md)

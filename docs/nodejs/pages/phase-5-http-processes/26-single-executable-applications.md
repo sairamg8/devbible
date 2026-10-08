@@ -6,7 +6,7 @@ sidebar_position: 26
 
 <span className="db-tier t-when">Learn When Needed</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (LTS), Linux x64. SEA is
+> Verified: 2026-10-08 against [Single executable applications](https://nodejs.org/api/single-executable-applications.html) and the [Node 25 changelog](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V25.md) (25.7.0: *"**sea**: support ESM entry point in SEA"*), on **Node 24.19.0** (LTS), Linux x64. SEA is
 > **Stability 1.1 — Active development**; the workflow below is stable enough to
 > use and the API may still move.
 
@@ -17,7 +17,7 @@ CLI tools — not a way to deploy a server, where a container already solves thi
 ## Building one, end to end
 
 ```js
-// app.js — CommonJS. ESM as the SEA entry point is not supported yet.
+// app.js — CommonJS. On 24.19.0 ESM as the SEA entry point is not supported (added in 25.7.0).
 const { getAsset, isSea } = require('node:sea');
 
 console.log('running inside a SEA?', isSea());
@@ -81,7 +81,7 @@ startup and size somewhat, but the order of magnitude does not change.
 
 | | |
 |---|---|
-| **Entry point must be CommonJS** | ESM is not supported as the SEA main. Bundle to CJS with esbuild first |
+| **Entry point must be CommonJS** | On 24.19.0 ESM is not supported as the SEA main; bundle to CJS with esbuild first. **From Node 25.7.0** the config accepts `"mainFormat": "module"` (default `"commonjs"`), so this row no longer holds on 25+/26 |
 | **`require` only resolves built-ins** | There is no `node_modules` inside. **Everything must be bundled into one file** |
 | **Assets are declared, not read from disk** | `sea.getAsset()` / `getAssetAsBlob()`; `fs` still reads the real filesystem |
 | **`__dirname` is the binary's directory** | Not a virtual root. Path assumptions from a normal script break |
@@ -121,8 +121,8 @@ committing to SEA.
 **Fix:** Bundle everything into the entry file first.
 
 **Symptom:** The build rejects an ESM entry point
-**Cause:** Only CommonJS is supported as the SEA main.
-**Fix:** Bundle to CJS.
+**Cause:** On 24.19.0 only CommonJS is supported as the SEA main. Node 25.7.0 added ESM entry points (`"mainFormat": "module"`; not combinable with `"useSnapshot"`), and 25.5.0 added `--build-sea`.
+**Fix:** On 24, bundle to CJS. On 25.7+/26, set `"mainFormat": "module"` in `sea-config.json`.
 
 **Symptom:** The binary will not run on macOS — "killed" or a signature error
 **Cause:** Injection invalidated the code signature.

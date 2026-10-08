@@ -199,4 +199,4 @@ dual package hazard that comes with it.
 
 ---
 
-← Prev: [TypeScript without a build step](12-typescript-natively.md) · Next → [The `node:module` API](14-node-module-api.md)
+← Prev: [Erasable-only before Node 26](12b-erasable-only-before-node-26.md) · Next → [The `node:module` API](14-node-module-api.md)

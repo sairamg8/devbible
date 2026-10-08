@@ -4,7 +4,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> Verified: 2026-08 against the Node.js v26.7.0 API index.
+> Verified: 2026-10-08 against the Node.js v26.11.1 API index (`nodejs.org/docs/latest-v26.x/api/`) and `nodejs.org/dist/index.json`, whose newest 26.x is v26.11.1 (2026-10-07).
 
 The complete topic inventory for Node.js, tiered for **mastery in fullstack
 application development**. 13 phases, split into 4 parts to stay under the
@@ -14,8 +14,8 @@ application development**. 13 phases, split into 4 parts to stay under the
 
 | | |
 |---|---|
-| Newest major line | **Node.js 26** (26.7.0) — shipped **5 May 2026** |
-| LTS line this bible targets | **Node.js 24** — Active LTS from 28 Oct 2025, Maintenance LTS from 28 Oct 2026, maintained through 30 Apr 2028 |
+| Newest major line | **Node.js 26** (26.11.1) — shipped **5 May 2026** |
+| LTS line this bible targets | **Node.js 24** — Active LTS from 28 Oct 2025, Maintenance LTS from 20 Oct 2026, maintained through 30 Apr 2028 |
 | Node 26 → Active LTS | **28 October 2026**, supported through 30 Apr 2029 |
 | Release model | Changes with **v27**: one major per year, every release LTS |
 | v27 dates | Alpha opens **Oct 2026**; **27.0.0 ships April 2027**, LTS Oct 2027, EOL April 2030 |
@@ -88,7 +88,7 @@ whatever you're building.
 
 ## Sources
 
-- [Node.js v26.7.0 API docs](https://nodejs.org/docs/latest/api/)
+- [Node.js v26.11.1 API docs](https://nodejs.org/docs/latest-v26.x/api/)
 - [Evolving the Node.js Release Schedule](https://nodejs.org/en/blog/announcements/evolving-the-nodejs-release-schedule)
 - [Node.js 26.0.0 release notes](https://nodejs.org/en/blog/release/v26.0.0)
 - [Modules: TypeScript](https://nodejs.org/api/typescript.html) · [node:sqlite](https://nodejs.org/api/sqlite.html)

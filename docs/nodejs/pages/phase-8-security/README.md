@@ -8,7 +8,7 @@ sidebar_position: 0
 > Every example was executed on **Node 24.19.0**, using the built-in `node:crypto`
 > unless a page names a package.
 
-**All 27 pages written.** The largest phase in the syllabus, and the one
+**All 29 pages written** (27 numbered, plus `01b` and `24b`). The largest phase in the syllabus, and the one
 the syllabus itself introduces with *"Not optional, and not a phase you do 'later'.
 Every item here has cost someone their weekend."*
 
@@ -22,6 +22,7 @@ generalises it.
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[Password storage](./01-password-storage.md)** | <span className="db-tier t-master">Master</span> | ~422,000 MD5 guesses/sec against about 11 scrypt hashes — and the 23 logins/sec your thread pool actually allows |
+| 01b | **[argon2id in `node:crypto`](./01b-argon2-in-node-crypto.md)** | <span className="db-tier t-master">Master</span> | argon2id is a core function on Node 24 — but it returns a raw `Buffer`, so the stored format is yours |
 | 02 | **[Sessions vs JWT](./02-sessions-vs-jwt.md)** | <span className="db-tier t-master">Master</span> | The whole trade is revocation against a lookup. Short expiry plus refresh is sessions with extra steps |
 | 03 | **[Where to store tokens](./03-token-storage.md)** | <span className="db-tier t-master">Master</span> | `localStorage` is readable by any script on the page; `SameSite` already closed most of the CSRF objection |
 | 04 | **[Authz vs authn](./04-authentication-vs-authorization.md)** | <span className="db-tier t-master">Master</span> | Authentication is a chokepoint; authorization is a decision at every object — which is why it gets forgotten |
@@ -55,6 +56,7 @@ generalises it.
 | 22 | **[Security headers and CSP](./22-security-headers.md)** | <span className="db-tier t-understand">Understand</span> | 0.80 µs and 356 bytes for the whole set — and a CSP with `unsafe-inline` is not a CSP |
 | 23 | **[Supply chain](./23-supply-chain.md)** | <span className="db-tier t-understand">Understand</span> | npm 12 blocks install scripts by default; an approved one read 103 env vars. A release cooldown is one config line |
 | 24 | **[The Permission Model](./24-permission-model.md)** | <span className="db-tier t-know">Know</span> | Locked down to one readable directory, the process still opened a TCP connection — there is no `--allow-net` |
+| 24b | **[Child-process inheritance](./24b-child-process-inheritance.md)** | <span className="db-tier t-know">Know</span> | A spawned Node child inherits the parent's permission flags; a non-Node child is not held to them — `--allow-child-process` is an accident guard, not a boundary |
 | 25 | **[Web Crypto API](./25-web-crypto.md)** | <span className="db-tier t-know">Know</span> | `extractable: false` is the one thing `node:crypto` cannot express; constant-time verify is built in |
 | 26 | **[Encryption and keys](./26-encryption-and-keys.md)** | <span className="db-tier t-know">Know</span> | Two messages, one IV: XOR returned the second plaintext with no key involved |
 | 27 | **[Audit logging](./27-audit-logging.md)** | <span className="db-tier t-when">When Needed</span> | A hash chain catches edits and deletions and reports **truncation as intact** — anchor the head externally |

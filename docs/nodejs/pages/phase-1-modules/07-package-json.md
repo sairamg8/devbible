@@ -6,8 +6,7 @@ sidebar_position: 7
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** with **npm 12.0.2** (the version bundled
-> with Node 24).
+> Verified: 2026-10-08 against [nodejs.org/dist/index.json](https://nodejs.org/dist/index.json) and [registry.npmjs.org/npm/12.0.2](https://registry.npmjs.org/npm/12.0.2) on **Node 24.19.0** with **npm 12.0.2**. Node 24.19.0 bundles npm 11.17.0; npm 12 is installed separately with `npm install -g npm@12`.
 
 **The file that decides how your code is parsed, what ships, and what runs. Six
 fields carry almost all of it.**

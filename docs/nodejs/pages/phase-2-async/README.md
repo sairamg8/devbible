@@ -47,7 +47,7 @@ this phase is worth more than any framework you will learn.
 |---|---|---|---|
 | 19 | **[AbortController](19-abortcontroller.md)** | <span className="db-tier t-master">Master</span> | Promises cannot be cancelled; this is how you stop work already in flight |
 | 20 | **[AsyncLocalStorage](20-asynclocalstorage.md)** | <span className="db-tier t-understand">Understand</span> | Per-request context that survives `await` without touching every signature |
-| 21 | **[async_hooks](21-async-hooks.md)** | <span className="db-tier t-when">When Needed</span> | The machinery underneath — and `AsyncResource.bind`, which fixes the common bug |
+| 21 | **[async_hooks](21-async-hooks.md)** | <span className="db-tier t-when">When Needed</span> | The older hook API (the fallback under `--no-async-context-frame`) — and `AsyncResource.bind`, which fixes the common bug |
 
 ## CPU-bound work
 

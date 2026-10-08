@@ -176,7 +176,7 @@ unlike the flags above it cannot make a broken suite look green.
 ## Reporters
 
 ```bash
-node --test --test-reporter=spec                                   # default on a TTY
+node --test --test-reporter=spec                                   # default on a TTY and, since v23.0.0, when stdout is not a TTY
 node --test --test-reporter=dot
 node --test --test-reporter=junit --test-reporter-destination=results.xml \
             --test-reporter=spec  --test-reporter-destination=stdout

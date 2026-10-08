@@ -6,7 +6,7 @@ sidebar_position: 9
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (LTS).
+> Verified: 2026-10-08 against [DEP0137](https://nodejs.org/api/deprecations.html#dep0137-closing-fsfilehandle-on-garbage-collection) (End-of-Life in v25.0.0), on **Node 24.19.0** (LTS).
 
 **`open()` returns a `FileHandle` that owns an OS file descriptor. Descriptors
 are a per-process limit, and one leaked handle per request takes the whole server
@@ -39,8 +39,9 @@ size via handle : 12
 **`try`/`finally` is not optional.** Any throw between `open` and `close` — a
 parse error, a validation failure, an aborted request — leaks the descriptor for
 the lifetime of the process. Garbage collection does *not* reliably reclaim it;
-Node emits a warning if a handle is collected unclosed, but by then you have
-already leaked.
+on 24.19.0 Node emits a warning if a handle is collected unclosed, but by then you
+have already leaked. From Node 25.0.0 (so on 26) this is no longer a warning:
+DEP0137 is End-of-Life and *"Allowing a `fs.FileHandle` object to be closed on garbage collection used to be allowed, but now throws an error."*
 
 `close()` is idempotent, so a double close is harmless:
 
@@ -197,8 +198,8 @@ count.
 too if the file is newly created.
 
 **Symptom:** `Warning: Closing file descriptor on garbage collection`
-**Cause:** A handle was collected unclosed. This is Node telling you about a leak.
-**Fix:** Close explicitly.
+**Cause:** A handle was collected unclosed. This is Node telling you about a leak. This warning is the 24.x behaviour; DEP0137 became End-of-Life in v25.0.0, so on Node 25+ the same leak *throws an error* instead of warning.
+**Fix:** Close explicitly (`try`/`finally`).
 
 **Symptom:** Reads return fewer bytes than requested
 **Cause:** Short read at end of file, or a pipe.

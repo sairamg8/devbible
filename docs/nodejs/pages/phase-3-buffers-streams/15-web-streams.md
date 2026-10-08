@@ -6,7 +6,7 @@ sidebar_position: 15
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (LTS).
+> Verified: 2026-10-08 against [webstreams.html `CompressionStream`](https://nodejs.org/api/webstreams.html). **Node 24.19.0** (LTS).
 
 **`ReadableStream`, `WritableStream` and `TransformStream` are the WHATWG
 standard, available as globals in Node since v18. You meet them whether you want
@@ -92,7 +92,8 @@ The list of places web streams show up in a Node backend:
 - **`Response` / `Request`** from undici, including streaming uploads.
 - **`Blob.stream()`** and `File.stream()`.
 - **`crypto.subtle`** adjacent APIs, and `CompressionStream` /
-  `DecompressionStream` (gzip and deflate, standard, available in Node 24).
+  `DecompressionStream` (`deflate`, `deflate-raw`, `gzip`, and `brotli`; the docs
+  history has `brotli` added in v24.7.0 and `deflate-raw` in v21.2.0 / v20.12.0).
 - **Edge/serverless runtimes** (Cloudflare Workers, Deno, Vercel Edge) where web
   streams are the *only* stream type — the portability argument.
 

@@ -6,7 +6,7 @@ sidebar_position: 7
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (LTS).
+> Verified: 2026-10-08 against [deprecations.html DEP0147 (v24)](https://nodejs.org/docs/latest-v24.x/api/deprecations.html#dep0147-fsrmdirpath--recursive-true-) and [DEP0147 (v25, End-of-Life)](https://nodejs.org/docs/latest-v25.x/api/deprecations.html). **Node 24.19.0** (LTS).
 
 **`readdir` gives you names, not information. `withFileTypes` gives you the type
 without a stat per entry, `recursive` walks the tree, and `rm`/`mkdir` with
@@ -121,7 +121,7 @@ await cp('src', 'dest', { recursive: true });       // cp -r
 
 | Modern | Replaces | Note |
 |---|---|---|
-| `rm(p, { recursive: true })` | `rmdir(p, { recursive: true })` | The `rmdir` recursive option is <strong>⚠ Deprecated</strong> (DEP0147) |
+| `rm(p, { recursive: true })` | `rmdir(p, { recursive: true })` | The `rmdir` recursive option is <strong>⚠ Deprecated</strong> (DEP0147) on 24 (runtime deprecation since v16.0.0); **End-of-Life in v25.0.0**, where the option is removed. *"That option has been removed."* |
 | `rm(p, { force: true })` | `unlink` + ENOENT handling | `force` makes a missing path a no-op |
 | `mkdir(p, { recursive: true })` | `mkdirp`, `fs-extra.ensureDir` | Built in since Node 10 |
 | `cp(src, dst, { recursive: true })` | `fs-extra.copy` | Stable since Node 22 |
@@ -210,9 +210,10 @@ overlayfs and NTFS. Sort explicitly — ordered migrations are the usual casualt
 holding a directory handle open per level.
 
 **★ What replaced `fs.rmdir(path, { recursive: true })`?**
-`fs.rm(path, { recursive: true, force: true })`. The `rmdir` recursive option is
-deprecated (DEP0147). `force` also makes a missing path a no-op, which is what
-you want in cleanup code.
+`fs.rm(path, { recursive: true, force: true })`. On Node 24 the `rmdir` recursive
+option is runtime-deprecated (DEP0147, since v16.0.0); in v25.0.0 it reached
+End-of-Life and the option was removed. `force` also makes a missing path a
+no-op, which is what you want in cleanup code.
 
 **How do you cheaply test whether a directory is empty?**
 `opendir` and read a single entry — `null` means empty. `readdir(...).length`

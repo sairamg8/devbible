@@ -6,8 +6,10 @@ sidebar_position: 6
 
 <span className="db-tier t-when">When Needed</span>
 
-> Verified: 2026-08. FFI is package-mediated on Node; pin a library before production
+> Verified: 2026-10-08 against [`node:ffi`](https://nodejs.org/api/ffi.html) and the [Node 26 changelog](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V26.md). On Node 24.19.0 FFI is package-mediated; pin a library before production
 > use {/* VERIFY: pin koffi or node-ffi-napi version if the team standardises */}.
+>
+> **Scope:** that holds for Node 24. Node 26.1.0 added a built-in `node:ffi` module, documented as *"[Stability: 1](https://nodejs.org/api/documentation.html#stability-index) - Experimental"*. It was gated behind `--experimental-ffi` at 26.1.0 (*"The API is gated behind the `--experimental-ffi` flag and, when the Permission Model is enabled, requires `--allow-ffi`."*) and the 26.9.0 changelog lists *"**ffi**: enable module by default"*; the docs now say *"It can be disabled with the `--no-experimental-ffi` flag."* This page does not teach the `node:ffi` API; read its docs before using it.
 
 **Foreign Function Interface (FFI) bindings let JavaScript call C functions in an
 existing shared library without writing a dedicated Node addon. You trade build

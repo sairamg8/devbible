@@ -10,10 +10,14 @@ sidebar_position: 0
 > ([github.com/kelektiv/node.bcrypt.js](https://github.com/kelektiv/node.bcrypt.js)) and
 > the npm registry metadata. Target: **bcrypt 6.0.0** (published 2025-05-11),
 > `engines: {"node": ">= 18"}`. Documentation-verified — **the package is not installed
-> in this checkout**, so nothing here was probed and no page carries a timing.
+> in this checkout**, so nothing here was probed and no page carries a timing. The argon2 sentence below was
+> re-verified 2026-10-08 against the Node 24.19.0
+> [`crypto` docs](https://nodejs.org/docs/latest-v24.x/api/crypto.html).
 
 **bcrypt is the password hash you will meet, not the one you would choose.** For new
-code the answer is argon2id, or scrypt if you want zero dependencies — that argument,
+code the answer is argon2id — built into `node:crypto` as `crypto.argon2()` since Node
+24.7.0, stable as of 24.19.0, so no package on Node 24 ([01b](../01b-argon2-in-node-crypto.md)) —
+or scrypt on older Node. That argument,
 with measured numbers, is [01 · Password storage](../01-password-storage.md). This topic
 exists because bcrypt is in every Node codebase written before roughly 2020, and you
 cannot migrate off it, or safely maintain it, without knowing the two things that define
