@@ -220,6 +220,17 @@ fetch-and-cache logic still has all of it — the same lifecycle triple in every
 deduplication and invalidation. That is RTK Query's territory, and it is worth scoping as an explicit
 second phase rather than being surprised by how little the first phase removed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Migrating to Modern Redux](https://redux.js.org/usage/migrating-to-modern-redux) — redux.js.org: the incremental route, old and new code coexisting (≈6k words): `configureStore`, `createSlice`, RTK Query and `createAsyncThunk` for fetching, `createListenerMiddleware` for reactive logic (the saga replacement), TypeScript for t
+- **Also good:** [Redux Fundamentals, Part 8 — Modern Redux with Redux Toolkit](https://redux.js.org/tutorials/fundamentals/part-8-modern-redux) — redux.js.org: the classic todo app rewritten step by step: store setup, slices with Immer, converting the todos reducer, thunks, `createEntityAdapter` (≈6.2k words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Testing thunks & RTK Query](../12-testing/01b-testing-thunks-and-rtk-query.md) · [Topic index](../README.md)

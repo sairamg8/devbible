@@ -162,6 +162,17 @@ libuv runs it on a thread pool thread and signals the loop on completion. Poll
 wakes and dispatches the callback, so it looks like I/O even though the OS could
 not watch it natively.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Node.js Event Loop → poll](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick#poll) — nodejs.org: poll retrieves I/O events and "will block here when appropriate" (*read*)
+- **Also good:** [libuv Design overview → The I/O loop](https://docs.libuv.org/en/v1.x/design.html#the-i-o-loop) — libuv.org: timeout is 0 with `UV_RUN_NOWAIT`, a stopped loop, no active handles, idle handles, or handles pending close; else the nearest timer (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The event loop phases](01-event-loop-phases.md) · Next → [Microtasks and macrotasks](03-microtasks-and-macrotasks.md)

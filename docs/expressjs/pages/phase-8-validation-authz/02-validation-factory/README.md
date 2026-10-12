@@ -60,6 +60,17 @@ serve both `POST` and `PATCH`.
 - **→ [Phase 6 · 09 · Webhooks](../../phase-6-rest-surface/09-webhooks.md)** — the
   documented exception to the ordering rule.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using Zod with Express](https://stevekinney.com/courses/full-stack-typescript/using-zod-with-express) — Steve Kinney: `validateBody`, `validateQuery`, `validateParams` factories: schema in, 400 with details out, parsed output replaces the request property; last modified 2026-03-09 (*read*)
+- **Also good:** [Writing middleware](https://expressjs.com/en/guide/writing-middleware/) — expressjs.com: the configurable-middleware pattern (export a function that returns the middleware) and Express 5 async rejection handling (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev topic: [Validate at the boundary](../01-validate-at-boundary/README.md) · Start → [The factory](01-the-factory.md)

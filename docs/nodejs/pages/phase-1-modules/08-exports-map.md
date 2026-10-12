@@ -252,6 +252,18 @@ Treat it as a major version.
 Because `exports` blocks it otherwise, and a lot of tooling reads a dependency's
 `package.json` to find its version or metadata.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Packages → Subpath exports](https://nodejs.org/docs/latest/api/packages.html#subpath-exports) — nodejs.org: adding `exports` blocks entry points not listed, even `package.json`, so it is a breaking change (*read*)
+- **Also good:** [Conditional exports](https://nodejs.org/docs/latest/api/packages.html#conditional-exports) — same page: maps different targets for `import` and `require` (*read*)
+- **Read this:** [Packages → Subpath imports](https://nodejs.org/docs/latest/api/packages.html#subpath-imports) — nodejs.org: `imports` entries must start with `#`; `#/` prefixes allowed from v25.4.0 / v24.14.0 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [package.json essentials](07-package-json.md) · Next → [Semver and lockfiles](09-semver-and-lockfiles.md)

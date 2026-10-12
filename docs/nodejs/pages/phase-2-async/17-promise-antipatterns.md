@@ -196,6 +196,18 @@ Only when the inner operation genuinely needs a value from an outer closure that
 cannot be threaded through the chain — and even then, `async`/`await` expresses it
 better. Nesting hides rejections from the outer `.catch`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ESLint: no-async-promise-executor](https://eslint.org/docs/latest/rules/no-async-promise-executor) — eslint.org: "Disallow using an async function as a Promise executor"; in the recommended config (*read* intro)
+- **Also good:** [MDN: Using promises → nesting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#nesting) — mdn: undated; flatten nested chains (*read*)
+- **Also good:** [ESLint: no-promise-executor-return](https://eslint.org/docs/latest/rules/no-promise-executor-return)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Error design](16-error-design.md) · Next → [Async iterators](18-async-iterators.md)

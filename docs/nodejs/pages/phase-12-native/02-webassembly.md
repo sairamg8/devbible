@@ -82,6 +82,16 @@ Only as strong as the imports you give it — design host functions carefully.
 **What should you measure before adopting Wasm?**
 That the hotspot is real and that the Wasm path wins end-to-end, not only in a microbench.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js with WebAssembly](https://nodejs.org/learn/getting-started/nodejs-with-webassembly) — nodejs.org/learn: ≈1.4k words; WebAssembly compiles from C/C++, Rust and AssemblyScript, a binary `.wasm` module plus a text format (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [node:vm](./01-node-vm.md) · Next → [V8 flags](./03-v8-flags.md)

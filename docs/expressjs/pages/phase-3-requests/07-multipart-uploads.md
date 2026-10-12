@@ -94,6 +94,17 @@ Size limits, file count, storage choice, and type filtering.
 **Where should large files live after upload?**  
 Object storage (S3-compatible), not the API container’s writable layer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [multer](https://expressjs.com/en/resources/middleware/multer/) — expressjs.com: v2.4.0, built on busboy; no `dest` means memory storage; `limits`, `fileFilter`; "Never add multer as a global middleware" (*read*)
+- **Read this:** [File Upload Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html) — OWASP: sections on extension and Content-Type allowlists, file signature (not alone), filename safety, storage location, size limits (*read* those sections)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [raw and text](06-raw-and-text.md) · Next → [Cookies and helpers](08-cookies-and-helpers.md)

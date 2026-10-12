@@ -191,6 +191,18 @@ forgets it causes drift.
 Nothing — there are no foreign keys and no cascade. Delete them explicitly, or decide
 deliberately that orphans are harmless and sweep them periodically.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Model One-to-Many Relationships with Embedded Documents](https://www.mongodb.com/docs/manual/tutorial/model-embedded-one-to-many-relationships-between-documents/) — mongodb.com: the embed side: a patron with two addresses in an array, so one read returns everything; it says embedding reduces the number of reads and does not discuss tradeoffs (*read*)
+- **Read this:** [Model One-to-Many Relationships with Document References](https://www.mongodb.com/docs/manual/tutorial/model-referenced-one-to-many-relationships-between-documents/) — mongodb.com: the reference side: publishers and books, with `publisher_id` on each book; it says to keep the id array in the parent only when the count is small with limited growth, and to put `publisher_id` on each book when the count is unbo
+- **Also good:** [6 Rules of Thumb](https://www.mongodb.com/company/blog/mongodb/6-rules-of-thumb-for-mongodb-schema-design) — the one-to-many section for the parts-in-an-array-of-ids case (not re-read)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [One-to-few](./03-one-to-few.md) ·

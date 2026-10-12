@@ -211,6 +211,17 @@ When they have different shapes, different access patterns, or different
 lifetimes. Not simply because they are different entities — data read together
 often belongs in one document.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Documents](https://www.mongodb.com/docs/manual/core/document/) — mongodb.com: structure, dot notation, the 16 MiB limit section, field order (`_id` always first — *read*)
+- **Read this:** [Databases and Collections](https://www.mongodb.com/docs/manual/core/databases-and-collections/) — mongodb.com: collections are created implicitly by `insertOne` or `createIndex` if absent (*read*), explicit creation, schema validation, the immutable collection UUID
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · BSON](./03-bson.md) · Next: [05 · MongoDB vs PostgreSQL](./05-mongodb-vs-postgresql.md) →

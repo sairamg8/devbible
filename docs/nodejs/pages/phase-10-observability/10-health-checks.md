@@ -145,6 +145,17 @@ endpoint forces you to choose between restart storms and serving on a broken pod
 Severe sustained lag can justify failing liveness (process is not making progress).
 Ordinary dependency latency should not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Health Endpoint Monitoring pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring) — learn.microsoft.com: undated; shallow checks for liveness so a dependency outage doesn't cause needless restarts, deep checks of dependencies for readiness (*read*)
+- **Also good:** [Configure Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) — kubernetes.io: the mechanics: the kubelet restarts on failed liveness and marks the Pod ready when readiness succeeds (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: Event loop lag · Next → Golden signals

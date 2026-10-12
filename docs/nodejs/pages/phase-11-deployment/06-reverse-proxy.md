@@ -98,6 +98,16 @@ The app must know the client used HTTPS via forwarded proto, not via a local TLS
 The edge proxy should overwrite/set them; the app should only accept connections from
 that edge.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Express behind proxies](https://expressjs.com/en/guide/behind-proxies/) — expressjs.com: `trust proxy` defaults to false, so the client IP is the socket address; `true` takes the left-most `X-Forwarded-For` entry; accepts subnets such as `loopback` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Environment parity](./05-environment-parity.md) · Next → [Zero-downtime deploys](./07-zero-downtime-deploys.md)

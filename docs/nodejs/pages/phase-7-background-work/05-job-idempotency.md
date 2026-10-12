@@ -216,6 +216,18 @@ calling and check it first, and put that call in its own small job so the retry
 boundary is as narrow as possible. The window cannot be fully closed without provider
 support.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Idempotent Consumer](https://microservices.io/patterns/communication-style/idempotent-consumer.html) — microservices.io: record processed message IDs in the database (a `PROCESSED_MESSAGES` table or the business table) and drop duplicates (*read*)
+- **Also good:** [Idempotent jobs](https://docs.bullmq.io/patterns/idempotent-jobs) — docs.bullmq.io: design jobs so a first-try success and a retry end in the same state; keep them atomic (*read*)
+- **Also good:** [Designing robust and predictable APIs with idempotency](https://stripe.com/blog/idempotency)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Retries and stalled jobs](./04-retries-and-stalled-jobs.md) · Next → [The transactional outbox](./06-transactional-outbox.md)

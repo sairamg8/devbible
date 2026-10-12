@@ -190,6 +190,19 @@ images over time, so a rebuild can change behaviour with no commit to blame.
 Pinning makes the build reproducible and the upgrade a visible, reviewable
 change.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node version managers](https://nodejs.org/learn/getting-started/node-version-managers) — nodejs.org: a one-minute list: asdf, fnm, mise, n, nave, nvm, nvs, volta; says some detect the project version automatically (*read*)
+- **Also good:** [package.json → engines](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#engines) — docs.npmjs.com: "advisory only" unless `engine-strict` is set; `devEngines` is the field that runs before install/ci/run (*read*)
+- **Read this:** [Evolving the Node.js Release Schedule](https://nodejs.org/en/blog/announcements/evolving-the-nodejs-release-schedule) — nodejs.org: from October 2026: one major per year (April), LTS promotion in October, every release becomes LTS, Node 27 will be LTS, an Alpha channel for early testing (*read*)
+- **Also good:** [Node.js Releases](https://nodejs.org/en/about/previous-releases) — nodejs.org: status table; v26 first released May 05, 2026; LTS guaranteed about 30 months; "Production applications should only use Active LTS or Maintenance LTS" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Globals worth knowing](06-globals.md) · Next → [Running node](08-running-node.md)

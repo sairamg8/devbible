@@ -185,6 +185,18 @@ usually enough.
 Clients branch on `rel`, exactly as they branch on error codes. Renaming one is a
 breaking change even though nothing in the schema appears to have moved.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html) — martinfowler.com: 18 Mar 2010
+- **Also good:** [REST APIs must be hypertext-driven](https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven) — roy.gbiv.com: 20 Oct 2008
+- **Also good:** [Zalando REST guidelines](https://opensource.zalando.com/restful-api-guidelines/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [PATCH and bulk](10-patch-and-bulk.md) · Index: [Phase 6](README.md)

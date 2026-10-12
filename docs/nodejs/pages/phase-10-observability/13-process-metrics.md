@@ -136,6 +136,17 @@ limit number is not always equal to the flag value.
 **Name three process metrics you want on a Node dashboard.**
 Heap used, RSS, event loop lag — then pool wait and HTTP latency.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [process.memoryUsage()](https://nodejs.org/docs/latest/api/process.html) — nodejs.org: v26.11.1; returns `rss`, `heapTotal`, `heapUsed`, `external`, `arrayBuffers` in bytes (*read*)
+- **Also good:** [Understanding and Tuning Memory](https://nodejs.org/learn/diagnostics/memory/understanding-and-tuning-memory) — nodejs.org/learn: ≈2.3k words; covers monitoring with `process.memoryUsage()` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [perf_hooks](./12-perf-hooks.md) · Next → [Prometheus metrics](./14-prometheus-metrics.md)

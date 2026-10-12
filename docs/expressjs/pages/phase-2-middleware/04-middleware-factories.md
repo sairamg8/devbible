@@ -94,6 +94,16 @@ One implementation, many schemas — `validate(bodySchema)` etc.
 **Show a bug with forgetting to call the factory.**  
 `app.use(requireHeader)` passes a function with the wrong arity/behaviour.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Writing middleware: configurable middleware](https://expressjs.com/en/guide/writing-middleware/) — expressjs.com: export a function taking options that returns the middleware (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [next semantics](03-next-semantics/README.md) · Next → [First and last](05-first-and-last.md)

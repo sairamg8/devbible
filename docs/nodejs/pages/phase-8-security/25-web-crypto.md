@@ -169,6 +169,17 @@ Not well. There is no scrypt or argon2 — `importKey(…, 'scrypt', …)` throw
 `NotSupportedError`. PBKDF2 at a high iteration count is the fallback; page 01 is the real
 answer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Web Crypto API (Node)](https://nodejs.org/api/webcrypto.html) — nodejs.org: `Crypto`, `CryptoKey`, `SubtleCrypto`, algorithm support table (*headings only*, ≈9k words)
+- **Also good:** [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) — MDN: warns the primitives are easy to misuse; secure contexts only (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The Permission Model](./24-permission-model.md) · Next → [Encryption, signing and key management](./26-encryption-and-keys.md)

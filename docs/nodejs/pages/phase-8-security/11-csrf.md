@@ -254,6 +254,17 @@ Nothing. It writes the `Set-Cookie` string you hand it, unvalidated — verified
 `sid=abc123; Path=/; HttpOnly`, with no `SameSite` and no `Secure`. Every attribute is
 yours to set.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) — OWASP: tokens, Fetch Metadata, SameSite and a section on when SameSite may be enough on its own (*read* the headings, ≈8.9k words)
+- **Also good:** [Cross-site request forgery](https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/CSRF) — MDN: shorter; tokens, fetch metadata, SameSite as defense in depth (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Path traversal](./10-path-traversal.md) · Next → [SSRF](./12-ssrf.md)

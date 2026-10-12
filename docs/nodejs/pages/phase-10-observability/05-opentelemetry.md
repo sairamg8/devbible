@@ -132,6 +132,18 @@ Put `trace_id` / `span_id` on each log line from the active context.
 **Is OpenTelemetry a replacement for pino?**
 No. Logs, metrics, and traces answer different questions.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Getting Started by Example (Node.js)](https://opentelemetry.io/docs/languages/js/getting-started/nodejs/) — opentelemetry.io: prerequisites list Node.js but the page gives no version (not confirmed); `NodeSDK` with `getNodeAutoInstrumentations()` creates a span per Express request and must be set up before application code (*read*)
+- **Also good:** [Traces](https://opentelemetry.io/docs/concepts/signals/traces/) — [Metrics](https://opentelemetry.io/docs/concepts/signals/metrics/): opentelemetry.io
+- **Also good:** [Metrics](https://opentelemetry.io/docs/concepts/signals/metrics/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What to log](./04-what-to-log.md) · Next → [Error tracking](./06-error-tracking.md)

@@ -150,6 +150,17 @@ up in the log. It is not a misconfiguration. Denylist the pattern while debuggin
 inspect the cache as state under its `reducerPath` instead — the state view answers "what is cached"
 better than the action log does.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Debugging Redux → Redux DevTools](https://redux.js.org/usage/debugging#redux-devtools) — redux.js.org: reading the action history; time travel (Jump, Skip, Reset, Revert, Commit) and why it only holds while reducers are pure — a different UI after jumping back means state outside the store or a side effect in a reducer; dispatching
+- **Also good:** [Redux DevTools extension → API → Arguments](https://github.com/reduxjs/redux-devtools/blob/main/extension/docs/API/Arguments.md) — github.com/reduxjs: the full options reference (≈2k words): `name`, `actionCreators`, `latency`, `maxAge`, `trace`, `traceLimit`, `serialize`, `actionSanitizer`, `stateSanitizer`, `predicate`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [TypeScript integration](../09-typescript-integration/01-type-inference-patterns.md) · [Topic index](../README.md) · Next → [Code splitting](../11-code-splitting/01-dynamic-reducer-injection.md)

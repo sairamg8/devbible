@@ -238,6 +238,16 @@ matters.
 `hex` if readability and copy-paste matter (64 chars), `base64url` if length
 matters (43 chars). Not plain `base64` — the `+` and `/` need escaping.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Buffers and character encodings](https://nodejs.org/api/buffer.html#buffers-and-character-encodings) — nodejs.org: UTF-8 is the default when none is given; `base64url` added v15.7.0; `latin1` alias of `binary` (*read*: the history table, the `utf8` entry, the `latin1` example)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Buffer basics](01-buffer-basics.md) · Next → [alloc vs allocUnsafe](03-alloc-vs-allocunsafe.md)

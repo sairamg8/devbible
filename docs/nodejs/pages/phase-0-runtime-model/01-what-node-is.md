@@ -169,6 +169,17 @@ Because Node is an assembly of independent C/C++ projects — V8, libuv, OpenSSL
 zlib, ares and others — each with its own release cycle. A Node upgrade is
 really an upgrade of that whole set.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to Node.js](https://nodejs.org/learn/getting-started/introduction-to-nodejs) — nodejs.org: runs V8 outside the browser, one process with no new thread per request, async I/O primitives in the stdlib (*read*)
+- **Also good:** [libuv Design overview](https://docs.libuv.org/en/v1.x/design.html) — libuv.org: handles and requests, the I/O loop, file I/O; states that libuv uses a thread pool for file I/O but network I/O stays on the loop thread (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 0](README.md) · Next → [Single-threaded JavaScript, multi-threaded I/O](02-single-thread-and-io.md)

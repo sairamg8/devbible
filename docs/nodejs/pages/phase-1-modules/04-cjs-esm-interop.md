@@ -255,6 +255,17 @@ It is a marker saying "this object is a transpiled or real ESM namespace, so the
 real default is at `.default`." Node sets it on the namespace returned by
 `require(esm)` so interop code can distinguish it from a plain CJS export object.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ESM → Interoperability with CommonJS](https://nodejs.org/docs/latest/api/esm.html#interoperability-with-commonjs) — nodejs.org: `import` of CJS gives `module.exports` as the default; `require()` of ESM only loads synchronous modules (no top-level await) (*read*)
+- **Also good:** [module.createRequire(filename)](https://nodejs.org/docs/latest/api/module.html#modulecreaterequirefilename) — nodejs.org: (*headings only*; the ESM page also says addons load via `createRequire`)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The `node:` prefix](03-node-prefix.md) · Next → [Module resolution](05-module-resolution.md)

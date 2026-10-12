@@ -153,6 +153,17 @@ convention, not an RFC.
 defeats the purpose.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Stripe API: Idempotent requests](https://docs.stripe.com/api/idempotent_requests) — docs.stripe.com: saves status and body of the first request, retries return it (500s included for v1), keys up to 255 characters, pruned after 24 hours, changed parameters with the same key error (*read*)
+- **Also good:** [The Idempotency-Key HTTP Header Field (IETF draft)](https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/) — datatracker.ietf.org: draft 07; datatracker lists it as an **expired** Internet-Draft, last updated 2026-04-18 (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Versioning](05-versioning.md) · Next → [ETag and Cache-Control](07-etag-and-cache.md)

@@ -197,6 +197,17 @@ Usually not. The queue already retries with backoff, and an internal loop both
 multiplies attempts and holds the worker slot while sleeping. Throw and let the queue
 reschedule.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Low-level error handling](https://docs.stripe.com/error-low-level) — stripe.com: GET and DELETE are idempotent; POST needs an idempotency key; treat a 500 outcome as indeterminate and do not retry with a new key (*read*)
+- **Also good:** [Timeouts, retries, and backoff with jitter](https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter) — AWS Builder Center: 2026-06-12; design APIs idempotent so they can be retried safely (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Deadline propagation](./13-deadline-propagation.md) · Next → [Exponential backoff and jitter](./15-backoff-and-jitter.md)

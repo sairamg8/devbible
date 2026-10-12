@@ -125,6 +125,18 @@ It aligns with JSON Schema, which is what makes sharing one schema between your
 validator and your spec realistic instead of approximate.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to OpenAPI](https://learn.openapis.org/introduction.html) — learn.openapis.org: an API description is a machine-readable contract; tools can use it for docs and code (*read*)
+- **Also good:** [OpenAPI Specification v3.2.1](https://spec.openapis.org/oas/latest.html) — spec.openapis.org: the reference, about 39,600 words (*headings only*)
+- **Also good:** [What Is OpenAPI?](https://swagger.io/docs/specification/v3_0/about/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [ETag and Cache-Control](07-etag-and-cache.md) · Next → [Webhooks](09-webhooks.md)

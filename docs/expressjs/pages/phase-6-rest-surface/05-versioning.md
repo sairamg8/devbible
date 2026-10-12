@@ -161,6 +161,18 @@ present the result. If a version bump forces you to fork business logic, the log
 sitting in the wrong layer.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [APIs as infrastructure: future-proofing Stripe with versioning](https://stripe.com/blog/api-versioning) — stripe.com: Aug 2017
+- **Also good:** [Web API Design Best Practices: Implement versioning](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design) — learn.microsoft.com: sections for no, URI, query string, header and media type versioning (*headings only*, the five strategies are separate headings)
+- **Also good:** [AIP-185 API Versioning](https://google.aip.dev/185)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Filter sort search](04-filter-sort-search.md) · Next → [Idempotency keys](06-idempotency-keys.md)

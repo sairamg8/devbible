@@ -255,3 +255,14 @@ attacker enumerate registered accounts by timing alone.
 ---
 
 Phase index: [Security](./README.md) · Next → [Sessions vs JWT](./02-sessions-vs-jwt.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) — OWASP: Argon2id first (min 19 MiB, 2 iterations), then scrypt, bcrypt with a 72-byte limit; why fast hashes like MD5 and SHA-1 fail (*read*)
+- **Also good:** [node-argon2 README (raw)](https://raw.githubusercontent.com/ranisalt/node-argon2/master/README.md) — github (raw): the Node binding (size checked only, *headings only*)
+
+{/* LINKMAP:END */}

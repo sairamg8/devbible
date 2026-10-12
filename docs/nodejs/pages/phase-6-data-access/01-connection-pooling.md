@@ -279,6 +279,18 @@ Both hold a connection, but a transaction also holds locks and keeps a server-si
 snapshot alive. A pool of 4 with 4 open transactions serves nothing at all — see
 [page 06](./06-transactions.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Pooling](https://node-postgres.com/features/pooling) — node-postgres.com: a pool of clients you check out and return; forgetting `release()` leaks clients until the pool is empty and callers wait forever; `pool.query` is the preferred way as it removes the leak risk (*read*)
+- **Also good:** [Pool sizing](https://node-postgres.com/guides/pool-sizing) — node-postgres.com: napkin math across instances: max connections divided by instance count (*read*)
+- **Also good:** [Connection pools](https://www.mongodb.com/docs/drivers/node/current/connect/connection-options/connection-pools/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Phase 5: [Networking, HTTP, processes](../phase-5-http-processes/) · Next → [Parameterized queries](./02-parameterized-queries.md)

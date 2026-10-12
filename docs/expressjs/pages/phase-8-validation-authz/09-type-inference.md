@@ -197,6 +197,17 @@ type-checks everything and proves nothing.
 To remove drift. The value is that a schema change breaks compilation everywhere the
 shape is consumed, in the same commit — not that the type enforces the constraints.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Zod basics](https://zod.dev/basics) — zod.dev: `z.infer`, plus `z.input` and `z.output` when a `.transform()` makes them differ (*read*)
+- **Also good:** [Using Zod with Express](https://stevekinney.com/courses/full-stack-typescript/using-zod-with-express) — Steve Kinney: notes that Zod 4 changed the `ZodType` generics (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Multi-tenant and logout](08-tenant-and-logout.md) · Index: [Phase 8](README.md)

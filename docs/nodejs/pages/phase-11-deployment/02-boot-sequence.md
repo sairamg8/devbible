@@ -96,6 +96,17 @@ Readiness probe should stay false until step 4 completes
 **What closes first on SIGTERM?**
 New traffic (readiness), then in-flight HTTP, then dependency clients.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How a boot sequence works in a Nodejs server and why you should care about it](https://devlizioso.substack.com/p/how-a-boot-sequence-works-in-a-nodejs) — devlizioso.substack.com: Feb 20, 2024 (single-author blog, Fastify/Avvio flavoured); an Express server that listens before its Mongo connection exists can answer requests with no database; Avvio's `ready` runs before `server.listen` so the client is conne
+- **Also good:** [Configure Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) — kubernetes.io: a Pod is marked ready only once the readiness probe succeeds, which is why "listening" and "ready" can be separate steps (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [12-factor config](./01-twelve-factor-config.md) · Next → [Dockerizing Node](./03-dockerizing-node.md)

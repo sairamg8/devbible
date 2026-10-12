@@ -115,6 +115,18 @@ Consume the result (accumulate to a sink the runtime cannot prove unused).
 **What should you do before writing any benchmark?**
 Know the bottleneck and the production-like scenario you are claiming to model.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [autocannon README](https://cdn.jsdelivr.net/npm/autocannon/README.md) — jsDelivr copy: an HTTP/1.1 load tool; `-c` connections (default 10), `-p` pipelining (default 1), `-d` duration (default 10 s) (*read*)
+- **Read this:** [mitata README](https://unpkg.com/mitata@1.0.34/README.md) — unpkg copy of the npm package readme (v1.0.34): a JS benchmark tool; its "writing good benchmarks" section covers dead code elimination (`do_not_optimize`) and loop invariant code motion, and it advises `node --expose-gc` and dedicated hardware (*read*)
+- **Also good:** [microbenchmarks fairy tale](https://mrale.ph/blog/2012-12-15-microbenchmarks-fairy-tale.html) — mrale.ph (V8 engineer): Dec 15, 2012; shows how loop-invariant code motion removes work from a timed loop (*read*); 2012 and V8 has changed since, so use the idea, not the numbers
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [CPU and heap profiling](./19-cpu-heap-profiling.md) · Next → [GC basics](./21-gc-basics.md)

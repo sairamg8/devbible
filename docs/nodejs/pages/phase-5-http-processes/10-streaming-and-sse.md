@@ -200,6 +200,17 @@ the request out.
 An intermediary that buffers: Nginx's `proxy_buffering`, a CDN, or compression
 middleware. Locally there is no intermediary, so it always works.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) — MDN: respond with `text/event-stream`, events end with a pair of newlines; over HTTP/1 a per-browser-and-domain limit of 6 open connections applies (*read*)
+- **Also good:** [Transfer-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Transfer-Encoding) — MDN: rarely used outside `chunked` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [HTTPS and TLS](09-https-and-tls.md) · Next → [WebSockets](11-websockets.md)

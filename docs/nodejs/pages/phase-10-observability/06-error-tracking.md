@@ -140,6 +140,16 @@ Scrubbers for headers and bodies, allowlisted contexts, user ids instead of raw 
 As early as possible at process boot, with `release` and `environment`, plus hooks for
 uncaught errors and framework request middleware.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Sentry for Node.js](https://docs.sentry.io/platforms/javascript/guides/node/) — docs.sentry.io: undated; lists error monitoring, tracing, profiling and logs as features of the Node SDK (*read* the overview only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [OpenTelemetry](./05-opentelemetry.md) · Next → [Diagnostics Channel](./07-diagnostics-channel.md)

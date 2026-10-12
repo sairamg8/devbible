@@ -155,6 +155,18 @@ wrapped every async handler in Express 4 is gone. That is a third of the bulk of
 typical old controller.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Layer your app, keep Express within its boundaries](https://raw.githubusercontent.com/goldbergyoni/nodebestpractices/master/sections/projectstructre/createlayers.md) — github (raw): entry-point responsibility is minimal: adapt payload, first validation, call logic, respond, "a few lines of code" (*read*)
+- **Also good:** [Writing middleware for use in Express apps](https://expressjs.com/en/guide/writing-middleware/) — expressjs.com: the mechanism for pulling cross-cutting work out of handlers (*headings only*)
+- **Also good:** [Service Layer](https://martinfowler.com/eaaCatalog/serviceLayer.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Domain vs transport](02-domain-vs-transport.md) · Next → [DI without a framework](04-di-without-framework.md)

@@ -212,6 +212,17 @@ Comfortably shorter than the orchestrator's grace period, so that your own force
 path runs instead of SIGKILL. If real requests need longer, raise the grace period
 rather than the timer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Shutting Down a Node Server Gracefully](https://blog.openreplay.com/graceful-node-server-shutdown/) — OpenReplay, 2026-09-11: fail readiness, wait for the load balancer, `server.close()`, close resources in dependency order, exit; forced-exit timer below `terminationGracePeriodSeconds`; shell-form `CMD` swallows SIGTERM (*read*)
+- **Also good:** [server.close()](https://nodejs.org/api/http.html#serverclosecallback) — nodejs.org: since v19.0.0 it also closes idle connections (*read*); `closeAllConnections()` for the rest
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Signals](16-signals.md) · Next → [Crash handlers](18-crash-handlers.md)

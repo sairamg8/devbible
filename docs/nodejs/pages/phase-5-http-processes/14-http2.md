@@ -184,6 +184,16 @@ h2c is legal and used between infrastructure components, but no browser will do 
 The `:authority` pseudo-header, alongside `:method`, `:path` and `:scheme`. There
 is no request line — the metadata is header fields in a binary frame.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HTTP/2](https://nodejs.org/api/http2.html) — nodejs.org: "Stability: 2 - Stable" since v10.10.0; core API and compatibility API sections (*read* the opening, ≈24.8k words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [node:dns](13-dns.md) · Next → [The process object](./15-process.md)

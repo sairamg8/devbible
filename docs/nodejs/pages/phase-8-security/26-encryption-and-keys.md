@@ -221,6 +221,17 @@ Version, key id, IV/nonce, authentication tag and the ciphertext itself. Miss th
 and you cannot change algorithm; miss the key id and you cannot rotate; miss the IV and you
 cannot decrypt at all. Prefer a KMS envelope, libsodium or JWE over a hand-rolled format.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cryptographic Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html) — OWASP: AES with at least 128-bit (ideally 256-bit) keys, secure modes, key rotation (*read*)
+- **Read this:** [Key Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html) — OWASP: generation, storage, cryptoperiods and rotation, compromise recovery (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Web Crypto API](./25-web-crypto.md) · Next → [Audit logging](./27-audit-logging.md)

@@ -262,3 +262,13 @@ shows the optimized pipeline and whether the first stage reaches an `IXSCAN`.
 
 Index: [Phase 6](./README.md) ·
 Next → [`$match` first, always](./02-match-first.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Aggregation Pipeline](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/) — mongodb.com: ≈1.7k words (*read*): a pipeline is stages in order, each stage's output feeds the next; `aggregate()` does not modify stored documents unless the pipeline has `$merge` or `$out`
+
+{/* LINKMAP:END */}

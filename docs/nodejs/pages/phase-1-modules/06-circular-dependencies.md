@@ -205,6 +205,17 @@ Because behaviour becomes dependent on evaluation order — which file was enter
 first, and where the `require` sits inside it. That makes the code fragile to
 reordering, hard to test in isolation, and impossible to reason about locally.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CommonJS → Cycles](https://nodejs.org/docs/latest/api/modules.html#cycles) — nodejs.org: a module may be returned before it finishes executing (an unfinished exports object); worked a.js / b.js example (*read*)
+- **Read this:** [MDN: JavaScript modules → Cyclic imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#cyclic_imports) — mdn: undated; cycles don't always fail, a read of an uninitialized binding throws `ReferenceError` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Module resolution](05-module-resolution.md) · Next → [package.json essentials](07-package-json.md)

@@ -119,6 +119,17 @@ Histograms aggregate cheaply across instances. Logs answer one request. You want
 **Where should `/metrics` be exposed?**
 Internal only — not on the public API hostname without protection.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [prom-client README](https://cdn.jsdelivr.net/npm/prom-client/README.md) — jsDelivr copy of the npm package readme: `collectDefaultMetrics()` adds process metrics plus Node ones such as event loop lag, active handles and GC; serve `await registry.metrics()` to scrapes; a cluster-mode section warns that a worker's registry shows only that worker
+- **Also good:** [Exposition formats](https://prometheus.io/docs/instrumenting/exposition_formats/) — prometheus.io: the text format is line oriented, one sample per line (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Process metrics](./13-process-metrics.md) · Next → [Finding the bottleneck](./15-finding-the-bottleneck.md)

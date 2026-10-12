@@ -190,6 +190,17 @@ window equal to the access token's lifetime — a deliberate trade, not a defaul
 Verifiers only need the public key, so a compromised service cannot mint tokens. With
 HS256 every verifier holds the signing secret, and every one of them is a forgery risk.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [Token Best Practices](https://auth0.com/docs/secure/tokens/token-best-practices) — Auth0 docs: sections on tokens vs cookies, refresh-token usage and limits, JWT validation (*headings only*)
+- **Also good:** [RFC 8725: JWT Best Current Practices](https://www.rfc-editor.org/rfc/rfc8725.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Password storage](./01-password-storage.md) · Next → [Where to store tokens](./03-token-storage.md)

@@ -276,6 +276,17 @@ A Transform that forwards unchanged — used to tap a pipeline (hash while writi
 to disk), to expose a stream before its source exists, or as a placeholder in
 tests.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Types of streams](https://nodejs.org/api/stream.html#types-of-streams) — nodejs.org: "four fundamental stream types": Writable, Readable, Duplex, Transform, each with examples (*read*)
+- **Also good:** [How To Use Streams](https://nodejs.org/learn/modules/how-to-use-streams) — nodejs.org Learn: Transform described as duplex with output computed from input (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Why streams exist](07-why-streams.md) · Next → [Backpressure](09-backpressure.md)

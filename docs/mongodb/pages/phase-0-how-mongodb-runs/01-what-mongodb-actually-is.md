@@ -212,6 +212,17 @@ referential integrity into "the application" only works when there is one
 application; with several writers there is no longer a single place those rules
 live.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Data Modeling in MongoDB](https://www.mongodb.com/docs/manual/data-modeling/) — mongodb.com: the Manual's own statement of the model: documents in one collection need not share fields, a field's type can differ between documents (*read*)
+- **Also good:** [Schema Validation](https://www.mongodb.com/docs/manual/core/schema-validation/) — mongodb.com: the server-side half of "there is always a schema": rules for allowed types and value ranges; after rules exist, all inserts must match, and the validation level decides how existing documents and updates are treated; the page its
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · The single-document atomicity guarantee](./02-single-document-atomicity.md) →

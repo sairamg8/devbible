@@ -259,6 +259,18 @@ it again duplicates the cache and the invalidation story. Adapters earn their pl
 state — drafts, selections, locally-created records awaiting a save — or inside `transformResponse` when
 you want id lookup within one cached response.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [createEntityAdapter](https://redux.js.org/toolkit/api/createEntityAdapter) — redux.js.org: the full API (≈4k words): `selectId`, `sortComparer`, the CRUD functions (`addOne`, `updateOne`, `upsertMany`, `setAll` …), `getInitialState`, the generated selectors, notes on applying several updates, examples
+- **Also good:** [Normalizing State Shape](https://redux.js.org/usage/structuring-reducers/normalizing-state-shape) — redux.js.org: the "why": designing a normalized state, ids plus lookup tables, relationships and join tables, normalizing nested data
+- **Also good:** [Redux Essentials, Part 6 → managing normalized state with `createEntityAdapter`](https://redux.js.org/tutorials/essentials/part-6-performance-normalization#managing-normalized-state-with-createentityadapter) — redux.js.org: the adapter introduced inside a running app, then applied slice by slice
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`createSelector`](./01-create-selector-and-reselect.md) · [Topic index](../README.md) · Next → [Middleware stack & `listenerMiddleware`](../06-middleware/01-default-middleware-and-listener-middleware.md)

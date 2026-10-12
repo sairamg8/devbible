@@ -244,6 +244,17 @@ When the code must also run in the browser, or when you are working with a plain
 `ArrayBuffer`. `DataView` takes endianness as an argument rather than baking it
 into the method name.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [buf.readUInt32BE()](https://nodejs.org/api/buffer.html#bufreaduint32beoffset) — nodejs.org: the BE/LE read and write family with offset rules; out-of-range offsets throw `ERR_OUT_OF_RANGE` (*read*)
+- **Also good:** [Endianness](https://developer.mozilla.org/en-US/docs/Glossary/Endianness) — MDN: big-endian is also called "network byte order" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [string_decoder](05-string-decoder.md) · Next → [Why streams exist](07-why-streams.md)

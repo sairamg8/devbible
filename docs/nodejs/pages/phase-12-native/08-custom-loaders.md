@@ -80,6 +80,16 @@ Phase 1 — modules and packages.
 **Main risk of custom resolve hooks?**
 Incorrect mapping or untrusted input → loading the wrong code.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [node:module — Customization hooks](https://nodejs.org/docs/latest/api/module.html) — nodejs.org: v26.11.1; synchronous hooks via `module.registerHooks()` are Stability 1.2 (release candidate) and the page encourages them over async hooks to avoid the async caveats; async hooks have `resolve` and `load` with a "Caveats of asyn
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [WASI](./07-wasi.md) · Next → [Startup snapshots](./09-startup-snapshots.md)

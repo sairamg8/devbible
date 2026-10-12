@@ -193,6 +193,16 @@ for a killed process `code` is null and `signal` names the signal. Checking only
 If nobody reads its stdout, the pipe fills and the child blocks on `write`. With
 `spawn` you must consume the streams.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Child process](https://nodejs.org/api/child_process.html) — nodejs.org: `exec` spawns a shell and buffers output to a callback; `execFile` spawns directly without a shell by default; `fork` is for Node modules (*read* the overview; ≈14k words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Crash handlers](18-crash-handlers.md) · Next → [Shell injection](20-shell-injection.md)

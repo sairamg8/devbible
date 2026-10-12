@@ -213,6 +213,18 @@ receiver without it, so the multipart payload cannot be parsed.
 undici, bundled inside Node. That is why the tuning knobs — pool size, keep-alive,
 retries — live on an undici `Dispatcher` rather than on `fetch` itself.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) — MDN: bodies of string, ArrayBuffer, FormData, URLSearchParams, ReadableStream; `response.ok` check; `Headers`, streaming the response body (*read*, ≈3.7k words)
+- **Also good:** [Using the Fetch API with Undici in Node.js](https://nodejs.org/learn/getting-started/fetch) — nodejs.org Learn: GET, POST, customizing with Undici, streaming responses (*read* a GET example, *headings only* for the rest)
+- **Also good:** [Global fetch](https://nodejs.org/api/globals.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Cookies](04-cookies.md) · Next → [Outbound timeouts](06-outbound-timeouts.md)

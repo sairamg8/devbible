@@ -229,6 +229,17 @@ Comparing values that are not secret, or that the attacker cannot retry against.
 per call the cost is negligible, so the honest default is to use it whenever a secret is
 on one side of the `===`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Security Best Practices](https://nodejs.org/learn/getting-started/security-best-practices) — nodejs.org: CWE-208 section: use `timingSafeEqual` for sensitive comparisons, scrypt for passwords (*read*)
+- **Also good:** [Crypto: timingSafeEqual](https://nodejs.org/api/crypto.html) — nodejs.org: the API entry `crypto.timingSafeEqual(a, b)` in a ≈38k-word reference (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Deserialization, open redirects, mass assignment](./15-deserialization-redirects-mass-assignment.md) · Next → [Input validation at the boundary](./17-input-validation.md)

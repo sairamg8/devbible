@@ -190,6 +190,17 @@ No. The cost is in the migration risk and the team's familiarity, not the second
 when there is another reason — dropping the transform pipeline, or unifying with a
 frontend already on Vitest.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Why Vitest](https://vitest.dev/guide/why) — vitest.dev (site showed v5.0.4): Vite-native runner, how it differs from other runners (*read*, ≈670 words)
+- **Also good:** [Getting Started (Jest)](https://jestjs.io/docs/getting-started) — jestjs.io: setup, Babel, TypeScript, ESLint (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11 · Coverage](./11-coverage.md) ·

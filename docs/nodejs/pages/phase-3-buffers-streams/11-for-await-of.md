@@ -278,6 +278,17 @@ streams (or `tee()` a web stream).
 already-limited request bodies; dangerous on unbounded input because they impose
 no size cap.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Consuming readable streams with async iterators](https://nodejs.org/api/stream.html#consuming-readable-streams-with-async-iterators) — nodejs.org: section id verified (*headings only*); the pipeline example in the same page uses `for await` over a source (*read*)
+- **Also good:** [How To Use Streams](https://nodejs.org/learn/modules/how-to-use-streams) — nodejs.org Learn: a dedicated async-iterators section (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [pipeline over pipe](10-pipeline.md) · Next → [Stream events, flowing and paused](12-stream-events-and-modes.md)

@@ -224,6 +224,18 @@ a `session` slice with an `ended` reducer key generate the identical type, and e
 Deliberately, that is a clean fan-out. Accidentally, it presents as state changing for no visible reason.
 The defence is a naming convention that keeps standalone action namespaces disjoint from slice names.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [createAction](https://redux.js.org/toolkit/api/createAction) — redux.js.org: prepare callbacks, `actionCreator.match` as a TypeScript type guard, use with `createReducer`
+- **Read this:** [Matching Utilities](https://redux.js.org/toolkit/api/matching-utilities) — redux.js.org: all seven — `isAllOf`, `isAnyOf`, `isAsyncThunkAction`, `isPending`, `isFulfilled`, `isRejected`, `isRejectedWithValue` — plus using them to cut boilerplate and as type guards
+- **Also good:** [createReducer → builder.addMatcher](https://redux.js.org/toolkit/api/createReducer#builderaddmatcher) — redux.js.org: where a matcher plugs into a reducer, beside `addCase`, `addAsyncThunk` and `addDefaultCase`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`createSlice` · selectors & creators](./01b-slice-selectors-and-creator-callback.md) · [Topic index](../README.md) · Next → [`createAsyncThunk`](../03-async-thunks/01-create-async-thunk.md)

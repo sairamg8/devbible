@@ -256,6 +256,16 @@ unlike rerun-failures or tag filtering it cannot make a broken suite look green.
 Repeat `--test-reporter` and `--test-reporter-destination` in pairs — `junit` to a
 file and `spec` to stdout.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Test runner](https://nodejs.org/api/test.html) — nodejs.org: sections "Randomizing tests execution order" and "Test tags" (added v26.2.0, Stability 1.0 - Early development); `context.workerId`; "Test instrumentation and OpenTelemetry" (*read* the tag block, *headings only* otherwise)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [13 · Testcontainers](./13-testcontainers.md) ·

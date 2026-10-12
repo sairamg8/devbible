@@ -186,6 +186,18 @@ It makes installs write exact versions instead of `^` ranges. Useful for
 applications, where every dependency change should be explicit and reviewed; less
 appropriate for libraries, where tight ranges force duplicate copies on consumers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [npm ci](https://docs.npmjs.com/cli/v11/commands/npm-ci/) — docs.npmjs.com: exits with an error if the lockfile and `package.json` do not match, rather than updating the lock; installs are "essentially frozen"; flags must match those used to create the lockfile (*read*)
+- **Read this:** [package.json → devDependencies](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#devdependencies) — docs.npmjs.com: (*headings only*; id verified)
+- **Also good:** [npx](https://docs.npmjs.com/cli/v11/commands/npx/) — docs.npmjs.com: last edited October 5, 2025; sections "npx vs npm exec" and "Examples" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Semver and lockfiles](09-semver-and-lockfiles.md) · Next → [npm, pnpm, yarn and workspaces](11-package-managers.md)

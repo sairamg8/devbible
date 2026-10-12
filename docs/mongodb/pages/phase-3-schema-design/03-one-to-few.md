@@ -189,6 +189,17 @@ When it is queried on its own — a deduplicated list of addresses for a mailing
 is shared by many parents, like a supplier referenced by thousands of products, where a change
 would otherwise mean thousands of writes.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [6 Rules of Thumb → Modeling one-to-few](https://www.mongodb.com/company/blog/mongodb/6-rules-of-thumb-for-mongodb-schema-design) — mongodb.com blog: the example is a person's addresses, embedded as an array — "a good use case for embedding" (*read*); dated 2014, modified 2022
+- **Also good:** [Model One-to-One Relationships with Embedded Documents](https://www.mongodb.com/docs/manual/tutorial/model-embedded-one-to-one-relationships-between-documents/) — mongodb.com: the Manual's embedded shape (headings only; not read)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Embed vs reference — the decision procedure](./02-embed-vs-reference.md) ·

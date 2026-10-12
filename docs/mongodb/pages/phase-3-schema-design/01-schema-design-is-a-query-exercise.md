@@ -181,6 +181,17 @@ The frequent one. A schema optimised for a nightly report at the expense of a pa
 thousands of times a minute is optimising the cheap case; the rare query can afford to do work
 that the hot path cannot.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Designing Your Schema](https://www.mongodb.com/docs/manual/data-modeling/schema-design-process/) — mongodb.com: the Manual's process page, ≈1.3k words, a four-step process: identify the workload, map relationships (link or embed), apply patterns, create indexes; the workload comes first, but it never mentions normalization or says "design f
+- **Also good:** [Data Modeling in MongoDB](https://www.mongodb.com/docs/manual/data-modeling/) — mongodb.com: its "Differences Between Relational and Document Databases" table says the document model stores data by application access patterns, and embedding avoids joins (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 3](./README.md) ·

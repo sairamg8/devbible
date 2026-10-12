@@ -198,6 +198,19 @@ So the failure is at boot rather than in a rarely-taken branch, so the values ar
 typed and coerced once, and so "who reads the environment?" has one answer you can
 lint for.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [connect-timeout](https://expressjs.com/en/resources/middleware/timeout/) — expressjs.com: emits a timeout (503) but "node will continue processing" the request; `haltOnTimedout` guard; not recommended as top-level middleware without precautions; Express 5 compatibility is **not confirmed** on the page (*read*)
+- **Also good:** [Node.js HTTP API](https://nodejs.org/api/http.html) — nodejs.org: lists `server.requestTimeout`, `server.headersTimeout`, `server.setTimeout()`, `server.timeout`; the `createServer` options show `requestTimeout` default 300000 ms and `headersTimeout` default 60000 ms (*read* those two options; t
+- **Read this:** [The Twelve-Factor App: Config](https://12factor.net/config) — 12factor.net: config in environment variables, strict separation from code, the "could we open-source it now" test (*read*)
+- **Also good:** [Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html) — OWASP: lifecycle, rotation, CI/CD, cloud sections (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [CSRF and injection surfaces](05-csrf-and-injection.md) · Index: [Phase 9](README.md)

@@ -215,6 +215,17 @@ A hard link is another name for the same inode — same filesystem only, no
 dangling possible, and the data survives until every link is removed. A symlink
 is a path pointer that can cross filesystems and can dangle.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [fs: File modes](https://nodejs.org/api/fs.html#file-modes) — nodejs.org: the `mode` bitmask from `fs.constants.S_I*` flags, e.g. `S_IRUSR 0o400` (*read*)
+- **Read this:** [entry](https://nodejs.org/api/fs.html#fspromisesrealpathpath-options)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Watching files](12-watching.md) · Next → [Virtual filesystems](14-virtual-filesystems.md)

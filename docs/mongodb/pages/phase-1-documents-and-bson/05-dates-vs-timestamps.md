@@ -171,6 +171,18 @@ Eight bytes instead of twenty-four or more, correct numeric comparison and index
 dependence on every writer using the same fixed-width UTC format. A string range works right
 up until one row is written differently, and then fails silently.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MongoDB BSON Types](https://www.mongodb.com/docs/manual/reference/bson-types/) — mongodb.com: the Timestamps section (internal type, 64 bits: 32-bit seconds + counter, "use the BSON date type" for applications) and the Date section (64-bit signed ms since the epoch, the spec calls it UTC datetime) (*read*)
+- **Also good:** [Date() and Datetime (mongosh method)](https://www.mongodb.com/docs/manual/reference/method/date/) — mongodb.com: constructing dates in mongosh; repeats that the spec's Date holds a UTC datetime as 64-bit milliseconds since the epoch (*read*) — but it calls that integer *unsigned*, while the BSON Types page and bsonspec.org say signed/int64, 
+- **Also good:** [Why MongoDB Dates Display in UTC and How to Model Local Dates Correctly](https://itime.day/articles/mongodb-date-utc) — itime.day: 2026-06-29, modified 2026-07-12, ≈890 words; a BSON Date is a signed 64-bit millisecond count identifying an instant with no zone name stored, display zone is the client's job, and a birthday-style calendar date should not be forc
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Numbers — int32, int64, double, Decimal128](./04-numbers.md) ·

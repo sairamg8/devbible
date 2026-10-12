@@ -210,6 +210,18 @@ When the caller is trusted and the payload is known-small — an internal servic
 a webhook you rate-limit ahead of. It has no size limit, so it is wrong for
 anything public.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Anatomy of an HTTP Transaction: request body](https://nodejs.org/learn/http/anatomy-of-an-http-transaction#request-body) — nodejs.org Learn: the request is a ReadableStream, listen to `'data'` and `'end'`, each chunk is a Buffer (*read*)
+- **Also good:** [Node.js Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html) — OWASP: the "Set request size limits" section names `raw-body` (*read*)
+- **Also good:** [Denial of Service of HTTP server](https://nodejs.org/learn/getting-started/security-best-practices#denial-of-service-of-http-server-cwe-400)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The HTTP server](01-http-server.md) · Next → [HTTP in practice](03-http-fundamentals.md)

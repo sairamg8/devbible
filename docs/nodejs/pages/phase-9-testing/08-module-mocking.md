@@ -205,6 +205,16 @@ No, under the default process-per-file isolation — each file has its own loade
 Scope. `t.mock.module` is reverted when the test ends; the top-level one persists for
 the rest of the file until you restore it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Test runner: Mocking](https://nodejs.org/api/test.html) — nodejs.org: `mock.fn`, `mock.method`, `mock.module(specifier)`, MockTimers, Dates (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07 · Mocking](./07-mocking.md) ·

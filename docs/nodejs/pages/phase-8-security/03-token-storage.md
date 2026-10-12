@@ -217,6 +217,18 @@ the browser enforce the first three for you.
 No. It is scoped to the tab and cleared when it closes, but it is equally readable by
 any script on the page, which is the property that matters.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HTML5 Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html) — OWASP: "Do not store session identifiers in local storage"; `HttpOnly` cookies mitigate that (*read*)
+- **Also good:** [Token Storage](https://auth0.com/docs/secure/security-guidance/data-security/token-storage) — Auth0 docs: browser in-memory vs local-storage scenarios (*headings only*)
+- **Also good:** [OAuth 2.0 for Browser-Based Applications](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-browser-based-apps)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Sessions vs JWT](./02-sessions-vs-jwt.md) · Next → Authentication vs authorization *(being written)*

@@ -207,6 +207,17 @@ short-circuit. It is the most common shape of "covered but untested".
 No. `--experimental-test-coverage` is built in, with include/exclude, per-metric
 thresholds and lcov output.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Test runner: Collecting code coverage](https://nodejs.org/api/test.html) — nodejs.org: the section and reporters (*headings only*); the section shows "Stability: 1 - Experimental", and `--experimental-test-coverage` is listed in the CLI reference
+- **Read this:** [Code Coverage Best Practices](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html) — Google Testing Blog, Aug 2020 (per URL): chasing 100% gives "a false sense of security" and wasted tests; target depends on criticality (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10 · Fixtures and factories](./10-fixtures-and-factories.md) ·

@@ -265,6 +265,22 @@ value. `node -p "process.version"` is a one-line version check.
 `node --check file.js`. Useful in a pre-commit hook or when validating generated
 code.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CLI → --watch](https://nodejs.org/docs/latest/api/cli.html#--watch) — nodejs.org: restarts on change; watches the entry point and required/imported modules; `--watch-path` turns that off for the paths given; stable since v22.0.0 / v20.13.0 (*read*)
+- **Also good:** [CLI → --env-file=file](https://nodejs.org/docs/latest/api/cli.html#--env-filefile) — nodejs.org: "no longer experimental" in v24.10.0 / v22.21.0, multi-line values from v21.7.0 / v20.12.0 (*read*)
+- **Also good:** [Run Node.js scripts from the command line](https://nodejs.org/learn/command-line/run-nodejs-scripts-from-the-command-line)
+- **Read this:** [CLI → NODE_OPTIONS=options](https://nodejs.org/docs/latest/api/cli.html#node_optionsoptions) — nodejs.org: the reference for every flag and the environment variable, one long page (*headings only* for this section; `-e` is at [#-eval-script](https://nodejs.org/docs/latest/api/cli.html#-eval-script))
+- **Read this:** [#-eval-script](https://nodejs.org/docs/latest/api/cli.html#-eval-script)
+- **Read this:** [How to use the Node.js REPL](https://nodejs.org/learn/command-line/how-to-use-the-nodejs-repl) — nodejs.org: the `_` variable, up-arrow history, dot commands such as `.editor` and `.load` (*read*)
+- **Also good:** [REPL API](https://nodejs.org/docs/latest/api/repl.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Choosing a version](07-choosing-a-version.md) · Next → [Node vs Deno vs Bun](09-node-deno-bun.md)

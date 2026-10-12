@@ -203,6 +203,17 @@ CSP without `unsafe-inline` stops injected script from running, and an `HttpOnly
 means the session credential cannot be read and carried away. Encoding is the fix; those
 two bound the failure.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) — OWASP: encode per context (HTML, attribute, JS, CSS, URL); for JSON check `Content-Type` is `application/json`, not `text/html` (*read*)
+- **Also good:** [Content Security Policy guide](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) — MDN: strict CSP, Trusted Types (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Injection](./08-injection.md) · Next → [Path traversal](./10-path-traversal.md)

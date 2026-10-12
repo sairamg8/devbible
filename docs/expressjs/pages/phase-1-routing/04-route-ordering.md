@@ -112,6 +112,17 @@ After API and static asset routes.
 **How do tests catch ordering bugs?**  
 Integration tests for every static sibling of a param route.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [Router API: `router.use()`](https://expressjs.com/en/5x/api/router/) — expressjs.com: middleware is invoked sequentially, so order defines precedence (*read*)
+- **Also good:** [Using middleware: skipping to the next route](https://expressjs.com/en/guide/using-middleware/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Router composition](03-router-composition/README.md) · Next → [Path matching on Express 5](05-path-matching-express5.md)

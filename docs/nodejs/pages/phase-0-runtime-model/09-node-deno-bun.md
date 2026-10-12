@@ -142,6 +142,18 @@ When you execute code you do not fully trust — plugins, user-supplied scripts,
 build step pulling arbitrary packages. Being able to say "network access to this
 one host, no filesystem" is a property Node cannot express at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js vs Deno vs Bun: Comparing JavaScript Runtimes](https://betterstack.com/community/guides/scaling-nodejs/nodejs-vs-deno-vs-bun/) — betterstack.com: published 2024-09-09, updated 2026-01-30; concludes switching from Node "is generally not necessary" and names maturity and ecosystem (*read* the "When to use" section)
+- **Also good:** [Deno: Node and npm compatibility](https://docs.deno.com/runtime/fundamentals/node/) — docs.deno.com: "Most Node.js code runs in Deno without modification" (*read* opening)
+- **Also good:** [Bun: Node.js compatibility](https://bun.sh/docs/runtime/nodejs-compat)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Running node](08-running-node.md) · Next → [How V8 optimizes JavaScript](10-how-v8-optimizes.md)

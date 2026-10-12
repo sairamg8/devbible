@@ -169,6 +169,17 @@ Trace ids are the standardized inter-service form with span hierarchy. A simple
 **What happens to ALS context in a BullMQ worker?**
 Nothing automatic. Store the id on the job and establish context when the job starts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Keep Express Correlation IDs with AsyncLocalStorage](https://oneuptime.com/blog/post/2026-09-11-express-async-local-storage-correlation/view) — oneuptime.com: Sep 11, 2026; middleware makes a UUID, sets an `X-Correlation-ID` header and wraps `next` in `run(store, next)`; the log function reads `getStore()` (*read*)
+- **Also good:** [Asynchronous context tracking](https://nodejs.org/docs/latest/api/async_context.html) — nodejs.org: v26.11.1; headings list `run`, `getStore`, `enterWith`, `exit`, `withScope` and a "Context loss" troubleshooting section (*headings only*, the page is the reference for the API)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [pino in practice](./02-pino-in-practice.md) · Next → [What to log](./04-what-to-log.md)

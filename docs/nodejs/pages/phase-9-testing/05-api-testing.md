@@ -240,6 +240,16 @@ were not testing anything.
 Through HTTP, since that is the only place the middleware runs. Send an oversized body
 and assert `413`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [supertest README (raw)](https://raw.githubusercontent.com/ladjs/supertest/master/README.md) — github (raw): binds the app to an ephemeral port if not listening; async/await examples (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [04 · Writing testable code](./04-testable-code.md) ·

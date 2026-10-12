@@ -212,6 +212,19 @@ in a queue, where a retry costs a job redelivery rather than a failed checkout.
 A circuit breaker — stop calling, fail fast, probe occasionally. Retrying a dead
 dependency adds load to the thing you need to recover.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Timeouts, retries, and backoff with jitter](https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter) — AWS Builder Center (redirected from the Builders' Library URL; page metadata dated 2026-06-12): if side effects repeated are undesirable, design idempotent APIs (*read* that passage)
+- **Read this:** [Idempotent requests](https://docs.stripe.com/api/idempotent_requests) — Stripe: an idempotency key makes a repeat safe after a connection error; keys prunable after 24 hours on API v1 (*read*)
+- **Also good:** [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After) — MDN: used with 503, 429 and redirects; value is a date or seconds (*read*)
+- **Also good:** [undici RetryAgent](https://raw.githubusercontent.com/nodejs/undici/main/docs/docs/api/RetryAgent.md)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Keep-alive and agents](07-keep-alive-and-agents.md) · Next → [HTTPS and TLS](09-https-and-tls.md)

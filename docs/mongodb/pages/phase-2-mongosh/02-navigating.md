@@ -159,6 +159,17 @@ sometimes a string, which is what [Phase 1](../phase-1-documents-and-bson/README
 `mongosh` is a JavaScript REPL with the driver in scope, so ad-hoc reporting like this needs no
 tooling.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Run Commands — mongosh](https://www.mongodb.com/docs/mongodb-shell/run-commands/) — mongodb.com: `use &lt;db&gt;`, `show dbs`, and that `use` followed by an insert creates the database and collection (*read*)
+- **Also good:** [mongosh Help](https://www.mongodb.com/docs/mongodb-shell/reference/access-mdb-shell-help/) — mongodb.com: how to list databases, collections and methods from the shell and get per-method help: `show dbs`, `show collections`, `db.help()`, `db.collection.help()`, `&lt;method&gt;.help()` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Connecting](./01-connecting.md) ·

@@ -220,6 +220,17 @@ No. Sockets are handled by the kernel's own notification mechanism (`epoll`,
 `kqueue`, IOCP) with no extra threads. The pool is for filesystem work,
 `dns.lookup`, parts of `crypto`, and `zlib`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Overview of Blocking vs Non-Blocking](https://nodejs.org/learn/asynchronous-work/overview-of-blocking-vs-non-blocking) — nodejs.org: defines blocking as JavaScript waiting on a non-JavaScript operation while the loop cannot continue (*read*)
+- **Also good:** [Don't Block the Event Loop (or the Worker Pool)](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org: one Event Loop plus a pool of k Workers; the thread model in one section (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What Node.js is](01-what-node-is.md) · Next → [Blocking the event loop](03-blocking-the-event-loop.md)

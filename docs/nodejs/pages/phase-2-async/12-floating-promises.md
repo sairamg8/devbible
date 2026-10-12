@@ -187,6 +187,17 @@ No — it is a detector. It tells you a promise was unhandled, usually far from 
 the bug is, and suppressing the default crash there can leave the process in an
 inconsistent state. Fix the call site.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [typescript-eslint: no-floating-promises](https://typescript-eslint.io/rules/no-floating-promises/) — typescript-eslint.io: a floating promise is created "without any code set up to handle any errors it might throw" (*read*)
+- **Also good:** [typescript-eslint: no-misused-promises](https://typescript-eslint.io/rules/no-misused-promises/) — typescript-eslint.io: (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Error handling](11-error-handling.md) · Next → [Callbacks and promisify](13-callbacks-and-promisify.md)

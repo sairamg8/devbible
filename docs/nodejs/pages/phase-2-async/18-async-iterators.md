@@ -220,6 +220,17 @@ No — it is strictly sequential, one item at a time. That is the right thing fo
 ordered or rate-limited work, but for independent items you want a bounded
 concurrency pool instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Async iteration and generators](https://javascript.info/async-iterators-generators) — javascript.info: February 4, 2022; `for await (let item of iterable)` over an object with async `next()` (*read*)
+- **Also good:** [MDN: for await...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) — mdn: undated; loops over async iterables and sync iterables; only where `await` is allowed (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Promise anti-patterns](17-promise-antipatterns.md) · Next → [AbortController](19-abortcontroller.md)

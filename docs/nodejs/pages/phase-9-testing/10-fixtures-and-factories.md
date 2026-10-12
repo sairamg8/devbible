@@ -235,6 +235,17 @@ data that the application can no longer produce cannot survive in the suite.
 A module-level counter — `SKU-1`, `SKU-2`. Unique within the run, reproducible across
 runs, and readable in a failure message.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Don't use fixtures in Cypress and unit tests — use factories](https://dev.to/dgreene1/don-t-use-fixtures-in-cypress-and-unit-tests-use-factories-5cnh) — DEV Community, 18 Sep 2020 (Dan Greene): the factory argument (*headings only* of the page text)
+- **Also good:** [Object Mother](https://martinfowler.com/bliki/ObjectMother.html) — Fowler: (*headings only*, ≈540 words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · Test doubles](./09-test-doubles.md) ·

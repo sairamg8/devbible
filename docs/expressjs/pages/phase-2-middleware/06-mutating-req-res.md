@@ -98,6 +98,17 @@ Lifecycle and testing — inject via `app.locals` or factory `deps` instead
 Each request has its own `req` object on the single JS thread; the risk is
 logical clobbering, not OS threads.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Overriding the Express API](https://expressjs.com/en/guide/overriding-express-api/) — expressjs.com: `req`/`res` inherit by prototype; extension points `express.request` and `app.request`; some properties cannot be overridden (*read*)
+- **Also good:** [Writing middleware: `requestTime`](https://expressjs.com/en/guide/writing-middleware/) — expressjs.com: a middleware adds a property to `req`; TypeScript needs declaration merging, property optional (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [First and last](05-first-and-last.md) · Next → [Built-in and third-party](07-builtin-and-third-party.md)

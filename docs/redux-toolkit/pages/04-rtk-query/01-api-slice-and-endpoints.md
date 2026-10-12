@@ -275,6 +275,17 @@ and invalidation — which is the problem RTK Query already solved declaratively
 tool for orchestration that is not a cache: a checkout that reads state, calls two services in order and
 dispatches other actions.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Redux Essentials, Part 7 — RTK Query basics](https://redux.js.org/tutorials/essentials/part-7-rtk-query-basics) — redux.js.org: the narrative route in (≈8k words): the motivation, "thinking in RTK Query caching", defining an API slice and wiring it into the store, query hooks and their result objects, query arguments as cache keys, mutation endpoints, refr
+- **Also good:** [createApi](https://redux.js.org/toolkit/rtk-query/api/createApi) — redux.js.org: the reference for every `createApi` option (`baseQuery`, `endpoints`, `tagTypes`, `keepUnusedDataFor`, the refetch options, rehydration) and every endpoint option, all three endpoint types included (`query`, `mutation`, `infiniteQ
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Cancellation, races & limits](../03-async-thunks/01b-cancellation-races-and-limits.md) · [Topic index](../README.md) · Next → [`queryFn`, transforms & infinite queries](./01b-queryfn-transforms-and-infinite-queries.md)

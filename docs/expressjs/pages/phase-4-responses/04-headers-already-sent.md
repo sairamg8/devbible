@@ -110,6 +110,16 @@ line of every error handler
 **Fix:** Keep `res` writes out of `finally`. Cleanup releases resources; it does not
 speak to the client
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [Error Handling in Express](https://expressjs.com/en/guide/error-handling/) — expressjs.com: custom handlers must delegate to the default one when `res.headersSent` is true (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Response shapes](03-response-shapes.md) · Next → [Static files](05-static-files.md)

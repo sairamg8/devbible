@@ -247,6 +247,19 @@ No. `require` returns an object; destructuring it copies values at that moment.
 If the exporting module later reassigns a primitive, importers that destructured
 never see it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modules: CommonJS modules](https://nodejs.org/docs/latest/api/modules.html) — nodejs.org: [#exports-shortcut](https://nodejs.org/docs/latest/api/modules.html#exports-shortcut) (`exports` starts as `module.exports`) and [#caching](https://nodejs.org/docs/latest/api/modules.html#caching) (*read*)
+- **Read this:** [#exports-shortcut](https://nodejs.org/docs/latest/api/modules.html#exports-shortcut)
+- **Read this:** [#caching](https://nodejs.org/docs/latest/api/modules.html#caching)
+- **Also good:** [#the-module-wrapper](https://nodejs.org/docs/latest/api/modules.html#the-module-wrapper) — same page: the module wrapper section (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [ESM](01-esm.md) · Next → [The `node:` prefix](03-node-prefix.md)

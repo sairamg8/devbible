@@ -193,6 +193,17 @@ No — multi-document transactions have existed since 4.0 across replica sets an
 sharded clusters. The real caveat is cost, and the manual's own guidance that
 they should not substitute for effective schema design.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Postgres vs MongoDB](https://www.tinybird.co/blog/postgres-vs-mongodb) — tinybird.co: dated 2026-06-08, ≈3.2k words; sections "Where Postgres wins" (joins, schema enforcement, cross-collection transactions) and "Where MongoDB wins" (variable structure, nested writes) match the trade we name; I read the passages on 
+- **Also good:** [Comparing MongoDB vs PostgreSQL](https://www.mongodb.com/resources/compare/mongodb-postgresql) — mongodb.com: terminology map, ACID in each system, query-language map — **vendor-authored**, read it for the vocabulary, not the verdict
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · Document, collection, database](./04-document-collection-database.md) · Back to [Phase 0 overview](./README.md)

@@ -221,6 +221,18 @@ combined with cookie auth and a reflected `Origin` plus
 that needs real thought is the CSP — the default keeps `'unsafe-inline'` for styles, and
 its HSTS default includes `includeSubDomains`, which is a commitment.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HTTP Headers Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html) — OWASP: `X-Content-Type-Options: nosniff`, frame options, Referrer-Policy, HSTS, CSP (*read*)
+- **Also good:** [Helmet.js](https://helmet.js.org/) — helmet.js.org: `app.use(helmet())` sets a default set of headers (*read*)
+- **Also good:** [CSP Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Rate limiting](./21-rate-limiting.md) · Next → [Supply chain](./23-supply-chain.md)

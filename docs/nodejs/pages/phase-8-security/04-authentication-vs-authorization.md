@@ -200,6 +200,17 @@ When permissions stop being expressible as "is this mine" — shared resources, 
 actions, delegated access. Name permissions after actions rather than screens so the
 model survives a redesign.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) — OWASP: least privilege, deny by default, validate permissions on every request, lookup IDs (*read* the headings)
+- **Also good:** [Access control vulnerabilities](https://portswigger.net/web-security/access-control) — PortSwigger: vertical vs horizontal, IDOR (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Where to store tokens](./03-token-storage.md) · Next → [Session management](./05-session-management.md)

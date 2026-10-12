@@ -200,6 +200,19 @@ They replace most of the reason for them. E2E still proves the pieces are deploy
 connected; contract tests prove the shapes agree, far faster and with a precise failure
 message.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How Pact works](https://docs.pact.io/getting_started/how_pact_works) — Pact docs: consumer tests, provider verification, provider states (*read*)
+- **Also good:** [Contract Test](https://martinfowler.com/bliki/ContractTest.html) — Fowler, 12 Jan 2011: short; suggests consumer-driven contracts to catch unexpected breaks (*read*)
+- **Read this:** [Pact introduction](https://docs.pact.io/) — Pact docs: describes Pact as a code-first consumer-driven contract testing tool (*read*)
+- **Also good:** [Consumer-Driven Contracts: A Service Evolution Pattern](https://martinfowler.com/articles/consumerDrivenContracts.html) — Ian Robinson, 12 Jun 2006: the original pattern; schema versioning, breaking changes (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [18 · Load testing](./18-load-testing.md) ·

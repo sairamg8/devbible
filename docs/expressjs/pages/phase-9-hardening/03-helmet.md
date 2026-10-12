@@ -165,6 +165,18 @@ IDOR routinely coexist.
 mitigates XSS. Tune the policy instead.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Helmet](https://helmet.js.org/) — helmet.js.org: default header list, CSP `directives`, `reportOnly`, per-request nonces via functions, disabling a header; COEP is not set by default (*read*)
+- **Also good:** [Security best practices](https://expressjs.com/en/advanced/best-practice-security/) — expressjs.com: "Use Helmet", reduce fingerprinting (`x-powered-by`), secure cookies; v5.x docs, undated (*read*)
+- **Read this:** [Making your website cross-origin isolated using COOP and COEP](https://web.dev/articles/coop-coep) — web.dev: what each header does; needed for cross-origin isolation, `SharedArrayBuffer`; published 2020-04-13, updated 2022-06-21 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [CORS](02-cors.md) · Next → [Rate limiting](04-rate-limiting.md)

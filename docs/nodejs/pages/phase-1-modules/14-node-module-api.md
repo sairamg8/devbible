@@ -170,6 +170,17 @@ mocking by `mock.module()` in `node:test`. Hooks earn their complexity for custo
 file formats, cross-cutting instrumentation, or resolution rules Node has no
 native equivalent for.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modules: node:module API](https://nodejs.org/docs/latest/api/module.html) — nodejs.org: [module.enableCompileCache()](https://nodejs.org/docs/latest/api/module.html#moduleenablecompilecacheoptions) uses an on-disk V8 code cache; `NODE_COMPILE_CACHE=dir` is the env form (*read*)
+- **Read this:** [module.enableCompileCache()](https://nodejs.org/docs/latest/api/module.html#moduleenablecompilecacheoptions)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Publishing a package](13-publishing.md) · Next → [Phase 1 overview](README.md)

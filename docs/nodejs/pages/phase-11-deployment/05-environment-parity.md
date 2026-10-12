@@ -93,6 +93,16 @@ Everyone installs the same tree; CI rejects drift with immutable installs.
 **Where does Node 24 fit?**
 Run the same LTS line everywhere you care about production behaviour.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [X. Dev/prod parity](https://12factor.net/dev-prod-parity) — 12factor.net: undated; three gaps (time, personnel, tools) and keeping each small, with the warning against different backing services in dev and prod (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [PID 1 and signals](./04-pid1-and-signals.md) · Next → [Reverse proxy](./06-reverse-proxy.md)

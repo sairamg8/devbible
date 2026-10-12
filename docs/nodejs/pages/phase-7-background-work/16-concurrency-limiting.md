@@ -198,6 +198,16 @@ Same principle, opposite directions. Limiting bounds work you initiate; backpres
 bounds work pushed at you. A job queue is backpressure for background work — the backlog
 sits in a datastore built to hold it rather than in your process.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [p-limit readme](https://unpkg.com/p-limit@7.3.3/readme.md) — unpkg copy of p-limit 7.3.3 (github returned 403): `pLimit(concurrency)` returns a `limit` function; `activeCount` and `pendingCount` expose the queue (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Backoff and jitter](./15-backoff-and-jitter.md) · Phase index: [Background work and resilience](./README.md)

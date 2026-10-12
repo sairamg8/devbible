@@ -225,6 +225,17 @@ soon as the stream is created, even if nothing is written. `'a'` appends.
 No. It means Node handed the bytes to the OS. Durability requires
 `fileHandle.sync()` (fsync).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [fs.createReadStream()](https://nodejs.org/api/fs.html#fscreatereadstreampath-options) — nodejs.org: the reference entry (*headings only*); the ReadStream class lists `'open'`, `'ready'` and `bytesRead` (*read* the index)
+- **Also good:** [fs.createWriteStream()](https://nodejs.org/api/fs.html#fscreatewritestreampath-options) — nodejs.org: (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [node:url](05-url.md) · Next → [Directories](07-directories.md)

@@ -116,6 +116,17 @@ Eager slows boot, speeds first request. Lazy speeds boot, moves cost to first us
 **What should you measure before optimizing boot?**
 Time to **readiness** broken into phases — not only `node -e 'import("./app.js")'`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [node:module — Module compile cache](https://nodejs.org/docs/latest/api/module.html) — nodejs.org: v26.11.1; `module.enableCompileCache()` uses `NODE_COMPILE_CACHE` if set, else a dir under `os.tmpdir()`; sections on portable and read-only caches (*read*)
+- **Also good:** [Command-line API: --build-snapshot](https://nodejs.org/docs/latest/api/cli.html) — nodejs.org: v26.11.1; building snapshots is no longer experimental (v25.4.0, v24.13.1), the blob loads with `--snapshot-blob` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Flame graphs](./22-flame-graphs.md) · Phase index: [Observability and performance](./README.md)

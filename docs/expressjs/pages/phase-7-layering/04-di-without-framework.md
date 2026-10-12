@@ -165,6 +165,17 @@ The rule: nothing else constructs anything. One exception and you are back to
 singletons.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Composition Root](https://blog.ploeh.dk/2011/07/28/CompositionRoot/) — blog.ploeh.dk: Mark Seemann, 2011-07-28
+- **Also good:** [Inversion of Control Containers and the Dependency Injection pattern](https://martinfowler.com/articles/injection.html) — martinfowler.com: constructor injection versus service locator (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Fat controllers](03-fat-controllers.md) · Next → [Jobs from routes](05-jobs-from-routes.md)

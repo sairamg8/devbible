@@ -211,6 +211,16 @@ what the response shape should be.
 Match on the structured fields: `err.code` (the SQLSTATE, e.g. `23505`) and
 `err.constraint`. Error prose changes between versions; SQLSTATEs do not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Assert](https://nodejs.org/api/assert.html) — nodejs.org: "Strict assertion mode", `deepStrictEqual`, `rejects`, `throws`, `partialDeepStrictEqual` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01 · node:test](./01-node-test-runner.md) ·

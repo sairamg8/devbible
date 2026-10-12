@@ -161,6 +161,17 @@ values with `Int32`/`Long` when the integer type is genuinely part of the contra
 Not with `$exists`, which expressions do not support — with the `$type` aggregation operator,
 checking whether the field's type is `"missing"`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [$exists](https://www.mongodb.com/docs/manual/reference/operator/query/exists/) — mongodb.com: `&#123; $exists: true &#125;` also matches fields whose value is `null`; sparse-index performance table (*read*)
+- **Read this:** [$type](https://www.mongodb.com/docs/manual/reference/operator/query/type/) — mongodb.com: ≈3k words, querying by BSON type and alias, or an array of types; on an array field it matches if any element has the type, and `"array"` matches the field itself being an array (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Logical operators](./02-logical-operators.md) ·

@@ -146,6 +146,17 @@ A transient failure becomes a long outage for every client that hits that key.
 A stampede is a pool exhaustion event. Cache fixes often show up as pool wait metrics
 dropping ([Phase 6](../phase-6-data-access/01-connection-pooling.md)).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Caching challenges and strategies](https://builder.aws.com/content/3K9TeXp6strMiJ4vhakpRD7BQWO/caching-challenges-and-strategies) — builder.aws.com (Amazon Builders' Library article; the aws.amazon.com link redirects here): undated; when to consider caching, being deliberate and empirical about size, expiration and eviction policy, and alarming on cache metrics (*read*)
+- **Also good:** [Cache stampede](https://en.wikipedia.org/wiki/Cache_stampede) — Wikipedia: undated; mitigation sections: locking, external recomputation, probabilistic early expiration (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Finding the bottleneck](./15-finding-the-bottleneck.md) · Next → [Memory leaks](./17-memory-leaks.md)

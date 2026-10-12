@@ -86,6 +86,18 @@ Literal keys under `simple`; objects under `extended`.
 **Security angle?**  
 Nested query parsing + object merge bugs → pollution; keep parsers boring.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Express 5.x API: Application](https://expressjs.com/en/5x/api/application/) — expressjs.com: `query parser` default `"simple"` (Node `querystring`); `"extended"` uses `qs`; also `false` or a custom function (*read*)
+- **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: default changed from extended to simple (*read*)
+- **Also good:** [qs README (raw)](https://raw.githubusercontent.com/ljharb/qs/main/README.md)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Size limits](03-size-limits/README.md) · Next → [Malformed bodies](05-malformed-bodies.md)

@@ -82,6 +82,17 @@ Old and new code run together in canary/rolling — incompatible schema breaks o
 **What makes rollback fast in blue/green?**
 Idle previous environment still running — if data changes are reversible.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Blue Green Deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html) — martinfowler.com: undated; test in the idle environment, switch the router, switch back to roll back (*read*)
+- **Read this:** [Canary Release](https://martinfowler.com/bliki/CanaryRelease.html) — martinfowler.com: undated; roll the change out to a small subset of users before everyone (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Semantic release](./12-semantic-release.md) · Next → [Serverless Node](./14-serverless-node.md)

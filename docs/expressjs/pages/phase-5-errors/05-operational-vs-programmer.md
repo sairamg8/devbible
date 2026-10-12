@@ -125,6 +125,18 @@ message to the client. Return a generic 500 and alert on it.
 Because the aggregate is a signal even when each one is not. A spike of 409s means
 two clients are racing; a spike of 401s from one key means a rotation went wrong.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js Error Handling Best Practices](https://sematext.com/blog/node-js-error-handling/) — Sematext, published 2 Feb 2021, modified 19 Mar 2025: defines both kinds; user-not-found must not restart the app (*read*)
+- **Also good:** [Distinguish operational vs programmer errors (raw)](https://raw.githubusercontent.com/goldbergyoni/nodebestpractices/master/sections/errorhandling/operationalvsprogrammererror.md) — github (raw), undated: after a programmer error, restart gracefully (*read*)
+- **Also good:** [Operational vs Programmer Errors](https://dev.to/moose978/nodejs-error-handling-operational-vs-programmer-errors-561i)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Mapping to HTTP](04-mapping-to-http.md) · Next → [404 and process errors](06-not-found-and-process.md)

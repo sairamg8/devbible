@@ -211,6 +211,19 @@ current clients for years. A certificate with the right `CN` and no SAN fails.
 Usually not. A proxy handles renewal without restarting the app, staples OCSP,
 terminates HTTP/2 and HTTP/3, and keeps handshake CPU off the event loop.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TLS: ALPN and SNI](https://nodejs.org/api/tls.html#alpn-and-sni) — nodejs.org: SNI lets one TLS server serve multiple hostnames; ALPN one server for several protocols (*read*)
+- **Also good:** [HTTPS](https://nodejs.org/api/https.html) — nodejs.org: "Stability: 2 - Stable"; HTTP over TLS as a separate module; `https.Agent` (*read*)
+- **Read this:** [Require client authentication](https://flaviocopes.com/courses/tls-certificates/require-client-authentication/) — flaviocopes.com (no date shown): `requestCert: true` asks each client for a certificate, `rejectUnauthorized: true` drops failures, `ca` is the trust anchor; the handler reads `getPeerCertificate()` (*read*)
+- **Also good:** [tls.createServer options: requestCert](https://nodejs.org/api/tls.html#tlscreateserveroptions-secureconnectionlistener) — nodejs.org: `requestCert`, default false: the server requests a certificate from connecting clients and tries to verify it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Outbound client discipline](08-outbound-client-discipline.md) · Next → [Streaming responses and SSE](10-streaming-and-sse.md)

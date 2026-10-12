@@ -262,6 +262,18 @@ nothing type-checks it, and nothing tells a reader which middleware supplied it 
 so a handler cannot be understood or tested without knowing the mount order above
 it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MDN: Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Type) — MDN: `charset` value is case insensitive (lowercase preferred), `boundary` required for multipart (*read*)
+- **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) — OWASP: require a supported Content-Type, else 415; keep 406 for response negotiation (*read*)
+- **Also good:** [Express 5.x API: Request](https://expressjs.com/en/5x/api/request/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The twelve getters](02-the-twelve-getters.md) · Index: [req anatomy](README.md) · Next topic → [JSON and urlencoded](../02-json-and-urlencoded/README.md)

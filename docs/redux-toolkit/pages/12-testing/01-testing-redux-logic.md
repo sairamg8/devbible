@@ -250,6 +250,16 @@ middleware stack. Building a **fresh** store per test is the recommended default
 the narrow optimisation for when you want one function's behaviour and nothing else.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Writing Tests](https://redux.js.org/usage/writing-tests) — redux.js.org: what Redux actually recommends (≈6.5k words): guiding principles (test behavior, not implementation details), test runners and the UI and network tools, a reusable `renderWithProviders`, integration tests with components and prepa
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Code splitting](../11-code-splitting/01-dynamic-reducer-injection.md) · [Topic index](../README.md) · Next → [Testing thunks & RTK Query](./01b-testing-thunks-and-rtk-query.md)

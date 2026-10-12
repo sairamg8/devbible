@@ -253,6 +253,17 @@ When the HTTP parser rejects the bytes — a malformed request line, an illegal
 header, a bad chunk. There is no request object to hand you, so you get the raw
 socket and must write the status line yourself.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Anatomy of an HTTP Transaction](https://nodejs.org/learn/http/anatomy-of-an-http-transaction) — nodejs.org Learn: create the server, method/URL/headers, status code, response headers, response body, an echo server (≈4.5k words; section list *read*, request-body passage *read*)
+- **Also good:** [http.createServer()](https://nodejs.org/api/http.html#httpcreateserveroptions-requestlistener) — nodejs.org: the option history (e.g. `httpValidation` in v26.3.0) (*read*); `'request'` fires per request, several per keep-alive connection (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Phase index: [Networking, HTTP, processes](README.md) · Next → [Request bodies](02-request-bodies.md)

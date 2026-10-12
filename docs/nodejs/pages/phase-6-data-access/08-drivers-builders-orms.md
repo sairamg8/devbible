@@ -200,6 +200,17 @@ On the failure mode you can afford: how quickly someone can find and fix a slow
 query at 3 a.m., and how much unusual SQL the workload needs. Then pick one tool
 to own schema, migrations and the pool — the expensive mistake is running two.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ORM vs Raw SQL: Which Should You Choose?](https://blog.openreplay.com/orm-or-raw-sql/) — OpenReplay blog: 2026-07-15; default to an ORM or query builder for CRUD, raw SQL for measured hot paths; the real ORM tax is N+1; Drizzle, Kysely and Knex are the middle option (*read* the takeaways and query-builder section)
+- **Also good:** [Why Drizzle?](https://orm.drizzle.team/docs/overview) — orm.drizzle.team: the SQL-like position stated by a vendor (*read* a paragraph)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [N+1 queries](./07-n-plus-1.md) · Next → [Mongoose](./09-mongoose.md)

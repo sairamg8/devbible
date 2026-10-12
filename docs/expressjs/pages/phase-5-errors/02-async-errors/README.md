@@ -54,6 +54,17 @@ and explain why a floating promise is more dangerous than a thrown one.
 - **→ [Node Phase 7 · Background work](/docs/nodejs/pages/phase-7-background-work/)**
   — where fire-and-forget work should actually live.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Error Handling in Express](https://expressjs.com/en/guide/error-handling/) — expressjs.com: handlers returning a Promise call `next(value)` on reject; callback APIs still need `next(err)` by hand (*read*)
+- **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: "Rejected promises handled" section (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev topic: [Four-arg error middleware](../01-error-middleware/README.md) · Start → [What is forwarded](01-what-is-forwarded.md)

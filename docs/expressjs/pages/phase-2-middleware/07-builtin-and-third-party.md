@@ -79,6 +79,18 @@ Maintenance, Express 5 support, surface area, and whether you need it at all.
 Overlap, misconfiguration, and dependency risk — deliberate mounts beat kitchen
 sinks.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using middleware: built-in middleware](https://expressjs.com/en/guide/using-middleware/) — expressjs.com: `express.static`, `json`, `raw`, `text`, `urlencoded` (*read*)
+- **Also good:** [Express middleware](https://expressjs.com/en/resources/middleware/) — expressjs.com: the maintained modules list (*headings only*)
+- **Also good:** [Security best practices](https://expressjs.com/en/advanced/best-practice-security/) — expressjs.com: production security advice; the dependency section was not opened, **not confirmed** (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Mutating req and res](06-mutating-req-res.md) · Index: [Phase 2](README.md)

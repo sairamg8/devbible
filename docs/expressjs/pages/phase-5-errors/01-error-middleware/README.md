@@ -57,6 +57,16 @@ line of an error handler and the reason for it.
 - **→ [Phase 4 · 02 · chunk 01](../../phase-4-responses/02-status-and-headers/01-status-as-contract.md)**
   — `res.status`'s two throws, which the mapping table exists to avoid.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Error Handling in Express](https://expressjs.com/en/guide/error-handling/) — expressjs.com: four-argument signature, default handler added at the end, stack hidden when `NODE_ENV` is `production` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 5](../README.md) · Start → [Arity and placement](01-arity-and-placement.md)

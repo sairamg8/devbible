@@ -219,6 +219,19 @@ cannot be cancelled and leaves its timer pending when abandoned.
 timers, sockets, servers. Then clear, close or `unref()` the one you did not
 expect.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Timers](https://nodejs.org/docs/latest/api/timers.html) — nodejs.org: [#timeoutunref](https://nodejs.org/docs/latest/api/timers.html#timeoutunref) and [#timers-promises-api](https://nodejs.org/docs/latest/api/timers.html#timers-promises-api); timers are ref'ed by default and keep the loop alive (*re
+- **Read this:** [#timeoutunref](https://nodejs.org/docs/latest/api/timers.html#timeoutunref)
+- **Read this:** [#timers-promises-api](https://nodejs.org/docs/latest/api/timers.html#timers-promises-api)
+- **Also good:** [Discover JavaScript Timers](https://nodejs.org/learn/asynchronous-work/discover-javascript-timers) — nodejs.org: `setTimeout` zero delay, `setInterval`, recursive `setTimeout` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [nextTick starvation](05-nexttick-starvation.md) · Next → [Promise states and chaining](07-promise-states.md)

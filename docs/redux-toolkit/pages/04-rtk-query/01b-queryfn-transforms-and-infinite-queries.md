@@ -219,6 +219,18 @@ holding pages 1–6 to display page 7 is cost with no benefit when the user can 
 entries per page are also individually cacheable and individually invalidatable, which numbered
 pagination wants and a feed does not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Customizing Queries](https://redux.js.org/toolkit/rtk-query/usage/customizing-queries) — redux.js.org: `baseQuery`, `transformResponse`, `transformErrorResponse` and `queryFn`, with worked examples: an Axios base query, a GraphQL base query, automatic re-authorization, retries, a third-party SDK, a no-op `queryFn`
+- **Read this:** [Infinite Queries](https://redux.js.org/toolkit/rtk-query/usage/infinite-queries) — redux.js.org: page params vs query args, defining the endpoint (`initialPageParam`, `getNextPageParam`, `getPreviousPageParam`, `maxPages`), the hooks, overlapping page fetches, refetching, bidirectional cursors
+- **Also good:** [Redux Essentials, Part 8 → manipulating response data](https://redux.js.org/tutorials/essentials/part-8-rtk-query-advanced#manipulating-response-data) — redux.js.org: transforming responses inside a running app, normalized vs document caches, `selectFromResult`, and a comparison of the transformation approaches
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [RTK Query](./01-api-slice-and-endpoints.md) · [Topic index](../README.md) · Next → [RTK Query Cache](./02-cache-management-and-invalidation.md)

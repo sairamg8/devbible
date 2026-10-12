@@ -161,6 +161,16 @@ function is otherwise pure.
 Subcommands, generated help and completions. Building those on `parseArgs` costs
 more than the dependency.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [util.parseArgs()](https://nodejs.org/api/util.html#utilparseargsconfig) — nodejs.org: history shows "no longer experimental" in v20.0.0, negative options in v22.4.0 and v20.16.0; the util page is "Stability: 2 - Stable" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [IPC](21-ipc.md) · Next → [cluster](23-cluster.md)

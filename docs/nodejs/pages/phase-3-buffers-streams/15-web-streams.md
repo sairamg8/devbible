@@ -265,6 +265,17 @@ It duplicates the stream into two branches, but the faster branch's data must be
 buffered until the slower one reads it — so an abandoned branch grows memory
 without bound.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Web Streams API](https://nodejs.org/api/webstreams.html) — nodejs.org: WHATWG Streams, "Stability: 2 - Stable", no longer experimental since v21.0.0 (*read*)
+- **Read this:** [stream.Readable.fromWeb / toWeb](https://nodejs.org/api/stream.html#streamreadablefromwebreadablestream-options) — nodejs.org: `Readable.fromWeb`, `Readable.toWeb`, `Writable.fromWeb`, `Writable.toWeb`, `Duplex.fromWeb` exist (*read* the index; anchor id verified)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Object mode](14-object-mode.md) · Next → [zlib — gzip and brotli](16-zlib.md)

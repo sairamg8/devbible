@@ -75,6 +75,18 @@ describe the test that proves a 500 leaks nothing.
 - **→ [PostgreSQL · errors to HTTP](../../../../postgresql/pages/phase-9-api-crud/01-repository/03-errors-to-http.md)**
   — the measured SQLSTATE table this page agrees with.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js Errors](https://nodejs.org/api/errors.html) — nodejs.org (v26.11.1 docs): error classes, system error codes, error propagation (*headings only*)
+- **Also good:** [PostgreSQL error codes](https://www.postgresql.org/docs/current/errcodes-appendix.html) — postgresql.org: SQLSTATE appendix (*headings only*)
+- **Also good:** [Error Handling in Express](https://expressjs.com/en/guide/error-handling/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev topic: [07 · Error logging](../07-error-logging.md) · Start → [The taxonomy](01-the-taxonomy.md)

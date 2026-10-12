@@ -90,6 +90,18 @@ Millions of dependents and a semver-shaped compatibility culture.
 **Is contributing required to be a senior Node engineer?**
 No — reading source helps; shipping reliable services matters more day to day.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CONTRIBUTING.md](https://cdn.jsdelivr.net/gh/nodejs/node@main/CONTRIBUTING.md) — jsDelivr copy (github.com is 403): sections on issues, pull requests, an AI use policy and the Developer's Certificate of Origin (*read*)
+- **Also good:** [Guide for first-time contributors](https://cdn.jsdelivr.net/gh/nodejs/node@main/doc/contributing/first-contributions.md) — jsDelivr copy: points to `good first issue` and `help wanted` labels (*read*)
+- **Also good:** [Pull requests](https://cdn.jsdelivr.net/gh/nodejs/node@main/doc/contributing/pull-requests.md)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Startup snapshots](./09-startup-snapshots.md) · Phase index: [Native and advanced](./README.md)

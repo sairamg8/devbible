@@ -154,6 +154,19 @@ Cookies for browsers — `httpOnly` takes credential theft out of the XSS threat
 token lives where JavaScript can reach it.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [express-session](https://expressjs.com/en/resources/middleware/session/) — expressjs.com: cookie options, `trust proxy` needed for `secure: true`, `saveUninitialized: false` for login sessions, default MemoryStore not for production, `regenerate()` after login (*read*)
+- **Also good:** [JSON Web Token Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html) — OWASP: stateless sessions need an invalidation plan; a denylist undercuts statelessness, so consider server sessions (*read*)
+- **Read this:** [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie) — MDN: `HttpOnly`, `Secure`, `SameSite` Strict/Lax/None, `Path`, `Domain`, `Max-Age`, the `__Host-` prefix (*read*)
+- **Also good:** [Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) — OWASP: cookie attribute section; leave `Domain` unset, narrow `Path`, `SameSite=Strict` preferred; renew the id after a privilege change (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Authn middleware](04-authn-middleware/README.md) · Next → [RBAC middleware](06-rbac-middleware/README.md)

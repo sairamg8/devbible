@@ -233,6 +233,17 @@ A stable error code, an appropriate status, and a correlation id. Never the stac
 trace or raw message, which leak internal structure. The full detail goes to your
 logs, findable by that id.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Errors → error.cause](https://nodejs.org/docs/latest/api/errors.html#errorcause) — nodejs.org: `cause` keeps the original error when you catch and throw a new one (*read*)
+- **Read this:** [MDN: AggregateError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError) — mdn: undated; a list of unrelated errors, thrown by `Promise.any()` when all reject (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Unhandled rejections](15-unhandled-rejections.md) · Next → [Promise anti-patterns](17-promise-antipatterns.md)

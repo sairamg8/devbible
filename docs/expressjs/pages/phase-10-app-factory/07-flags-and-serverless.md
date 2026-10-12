@@ -188,6 +188,17 @@ difference matters.
 Delete them when the feature ships, and log the resolved flag set at boot so the app's
 shape is visible. A factory with fifteen conditionals is one nobody will simplify later.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Feature Toggles (aka Feature Flags)](https://martinfowler.com/articles/feature-toggles.html) — martinfowler.com: 2017-10-09
+- **Read this:** [serverless-http README (raw)](https://raw.githubusercontent.com/dougmoscrop/serverless-http/master/README.md) — github (raw): wrap the app with `serverless(app)` and export a handler; Express listed as supported (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Shutdown and entrypoint](06-shutdown-and-entrypoint.md) · Index: [Phase 10](README.md)

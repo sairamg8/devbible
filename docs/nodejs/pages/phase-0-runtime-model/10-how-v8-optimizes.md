@@ -197,6 +197,18 @@ It sets V8's old-generation heap limit in MB. Raise it when the application
 genuinely needs a large working set — a big in-memory index, large document
 processing. Raising it to make an OOM go away just delays a leak.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [An Introduction to Speculative Optimization in V8](https://benediktmeurer.de/2017/12/13/an-introduction-to-speculative-optimization-in-v8/) — benediktmeurer.de: 13 Dec 2017; type feedback, checks in optimized code, and bailing out to the interpreter ("Deoptimization"), plus the deopt-loop risk (*read*)
+- **Also good:** [Maglev - V8's Fastest Optimizing JIT](https://v8.dev/blog/maglev) — v8.dev: 05 December 2023; Maglev sits between Sparkplug and TurboFan; "Until 2021" there were two tiers (*read* intro)
+- **Also good:** [Maps (Hidden Classes) in V8](https://v8.dev/docs/hidden-classes)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Node vs Deno vs Bun](09-node-deno-bun.md) · Index: [Phase 0](README.md)

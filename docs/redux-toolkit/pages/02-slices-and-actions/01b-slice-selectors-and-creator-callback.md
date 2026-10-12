@@ -189,6 +189,18 @@ common case. The callback adds capability: `create.asyncThunk` and `create.prepa
 own its async lifecycle in one place instead of defining a thunk outside and wiring it back through
 `extraReducers`. Choose it when a slice's thunks are genuinely its own.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [createSlice → the reducers "creator callback" notation](https://redux.js.org/toolkit/api/createSlice#the-reducers-creator-callback-notation) — redux.js.org: `create.reducer`, `create.preparedReducer` and `create.asyncThunk`, and `buildCreateSlice` for putting thunks inside a slice
+- **Read this:** [createSlice → selectors](https://redux.js.org/toolkit/api/createSlice#selectors) — redux.js.org: the `selectors` field, `slice.selectors`, `selectSlice`, `getSelectors`, `injectInto`
+- **Also good:** [Migrating to RTK 2.0 → new features](https://redux.js.org/usage/migrations/migrating-rtk-2#new-features) — redux.js.org: the maintainers' summary of both additions beside everything else RTK 2 changed, plus "future plans" for custom slice reducer creators and selector factories
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`createSlice`](./01-create-slice.md) · [Topic index](../README.md) · Next → [`createAction` & matchers](./02-create-action-and-matchers.md)

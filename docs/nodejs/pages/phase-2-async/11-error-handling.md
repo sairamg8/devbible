@@ -253,6 +253,17 @@ Yes — any value can be thrown or used as a rejection reason. Defensive code
 normalises unknown values into an `Error` at the boundary so downstream handlers
 can rely on `.message` and `.stack`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Error handling with promises](https://javascript.info/promise-error-handling) — javascript.info: June 18, 2022; the "implicit try…catch" around executors and handlers, and the `setTimeout` throw that escapes it (*read*)
+- **Also good:** [MDN: Using promises → error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#error_handling) — mdn: undated (id verified; *headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Sequential vs parallel](10-sequential-vs-parallel.md) · Next → [Floating promises](12-floating-promises.md)

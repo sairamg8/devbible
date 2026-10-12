@@ -194,6 +194,16 @@ No — there is no runtime API on Node 24, verified. The policy exists only as c
 flags, which is why it should be asserted at boot: a changed entrypoint silently removes
 it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Permissions](https://nodejs.org/api/permissions.html) — nodejs.org: `--allow-fs-read`, `--allow-fs-write`, `--allow-net`, `--allow-child-process`; added v20.0.0, stable since v23.5.0 and v22.13.0 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Supply chain](./23-supply-chain.md) · Next → Web Crypto API *(being written)*

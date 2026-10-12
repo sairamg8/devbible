@@ -228,6 +228,17 @@ It skips the pool and gives the buffer its own exactly-sized `ArrayBuffer`. Stil
 uninitialized, but safe to retain long-term and safe to hand `buffer` to APIs
 that expect to own it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What makes allocUnsafe "unsafe"?](https://nodejs.org/api/buffer.html#what-makes-bufferallocunsafe-and-bufferallocunsafeslow-unsafe) — nodejs.org: the doc's own example comment says the returned buffer "might contain old data"; `--zero-fill-buffers` forces zeroing at a measured performance cost (*read* both passages; the dedicated section itself *headings only*)
+- **Read this:** [Buffer.poolSize](https://nodejs.org/api/buffer.html#bufferpoolsize) — nodejs.org: size in bytes of pre-allocated pooled Buffers; default 65536, raised from 8192 in v26.3.0; may be modified (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Encodings](02-encodings.md) · Next → [Buffer is a Uint8Array](04-buffer-as-uint8array.md)

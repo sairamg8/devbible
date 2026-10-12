@@ -165,6 +165,17 @@ recurring chore.
 Before null and before a missing field. It is documented, it surprises people, and it matters
 whenever "no tags" is a real state in your data.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MongoDB BSON Types](https://www.mongodb.com/docs/manual/reference/bson-types/) — mongodb.com: the full table (Double 1 … Decimal128 19, MinKey −1, MaxKey 127), deprecated types flagged, `$type` and its `number` alias (*read*)
+- **Also good:** [Comparison/Sort Order](https://www.mongodb.com/docs/manual/reference/bson-type-comparison-order/) — mongodb.com: the cross-type sort order (MinKey, Null, Numbers, String, Object, Array … MaxKey); all numeric types compare as equivalent; query predicates only match values of the operand's BSON type, called type bracketing (*read*) — exactly t
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 1](./README.md) ·

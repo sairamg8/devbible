@@ -186,6 +186,18 @@ The field's type can drift toward `double` across documents, reintroducing exact
 imprecision `Decimal128` was chosen to avoid — and it does so unevenly, so some documents stay
 exact and others do not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Model Monetary Data](https://www.mongodb.com/docs/manual/tutorial/model-monetary-data/) — mongodb.com: binary floating point cannot represent exact decimal fractions, so it is unsuitable for monetary arithmetic (*read*); the numeric model (Decimal BSON type, or a scale factor) vs the non-numeric model
+- **Also good:** [How to Store Money in MongoDB: Decimal128 vs Integer Cents](https://techearl.com/store-money-mongodb) — techearl.com: 2026-05-30, ≈3.3k words; sections "Why you must never use a double", "The NumberDecimal("string") gotcha", "Keep doubles out of the application and the drivers too" — matches the Node angle; I read the gotcha section (pass a strin
+- **Also good:** [NODE-4948 (Node driver Jira)](https://jira.mongodb.org/browse/NODE-4948) — jira.mongodb.org: a Jira task in the Node driver project (user-story format, labelled node-internal): JS numbers that are integers within int32 range are serialized as int32, so an arithmetic result like 1.7 + 0.3 can be stored as int32; always usi
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`ObjectId`](./03-objectid.md) ·

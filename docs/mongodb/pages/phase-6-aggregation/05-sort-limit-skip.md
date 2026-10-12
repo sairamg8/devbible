@@ -271,6 +271,19 @@ The first is index-supported, before a `$group`, and exists to give `$first`/`$l
 discards input order, so the second `$sort` — over the small grouped result, in memory — establishes the
 order the user actually sees. They do different jobs and neither replaces the other.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [$sort](https://www.mongodb.com/docs/manual/reference/operator/aggregation/sort/) — mongodb.com: "Sort Consistency": `$sort` is not stable — documents with equal values can come back in any order, so add a unique tiebreaker (*read*)
+- **Read this:** [Aggregation Pipeline Optimization](https://www.mongodb.com/docs/manual/core/aggregation-pipeline-optimization/) — `$sort` + `$limit` coalescence, which does not apply if an intervening `$unwind` or `$group` changes the document count (*read*)
+- **Also good:** [$limit](https://www.mongodb.com/docs/manual/reference/operator/aggregation/limit/) — [$skip](https://www.mongodb.com/docs/manual/reference/operator/aggregation/skip/): mongodb.com
+- **Also good:** [$skip](https://www.mongodb.com/docs/manual/reference/operator/aggregation/skip/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The accumulators](./04b-the-accumulators.md) ·

@@ -97,6 +97,18 @@ External store (Redis); module scope is only per warm isolate.
 **When is serverless the wrong default for a Node API?**
 Long-lived WebSockets, heavy steady CPU, or DB-heavy work without a pool proxy.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Lambda execution environment lifecycle](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtime-environment.html) — docs.aws.amazon.com: objects declared outside the handler stay initialized when an environment is reused; has a cold-starts-and-latency section (*read*)
+- **Read this:** [Using Lambda with Amazon RDS](https://docs.aws.amazon.com/lambda/latest/dg/services-rds.html) — docs.aws.amazon.com: proxies are recommended for production; a database proxy pools connections so high concurrency does not exhaust them (*read*)
+- **Also good:** [How To: Reuse Database Connections in AWS Lambda](https://jeremydaly.com/reuse-database-connections-aws-lambda/) — jeremydaly.com: Sep 29, 2017, so old; the freeze-and-thaw idea behind reuse (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Blue/green and canary](./13-blue-green-canary.md) · Phase index: [Deployment and operations](./README.md)

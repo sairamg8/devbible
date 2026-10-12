@@ -166,6 +166,17 @@ downstream, no service needs a defensive `Number()` — and there is exactly one
 to fix when a rule changes.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Defining schemas → Coercion](https://zod.dev/api) — zod.dev: coercion is plain `Boolean(input)` and `Number(input)`; `z.stringbool()` parses "true", "1", "yes", "on" style strings (*read*)
+- **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: default query parser is now `simple` (was `extended`), `req.query` is a getter (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Validation factory](02-validation-factory/README.md) · Next → [Authn middleware](04-authn-middleware/README.md)

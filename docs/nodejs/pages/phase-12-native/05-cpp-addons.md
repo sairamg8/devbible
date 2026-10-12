@@ -80,6 +80,17 @@ Authors of custom runtimes, not typical MERN/PERN API developers.
 **What file extension do compiled addons use?**
 `.node` (a platform shared library).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [C++ addons](https://nodejs.org/docs/latest/api/addons.html) — nodejs.org: v26.11.1; ≈7.2k words; examples for arguments, callbacks, object factories and wrapped objects (*headings only*)
+- **Read this:** [C++ embedder API](https://nodejs.org/docs/latest/api/embedding.html) — nodejs.org: v26.11.1; a `node::Environment` has exactly one `v8::Isolate` and one `uv_loop_t` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Node-API](./04-node-api.md) · Next → [FFI](./06-ffi.md)

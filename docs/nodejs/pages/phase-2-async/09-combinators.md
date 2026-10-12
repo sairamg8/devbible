@@ -214,6 +214,17 @@ It starts all 10,000 immediately. It is a waiting primitive, not a concurrency
 limiter, so it will open every socket or connection at once and exhaust the pool,
 the file descriptor limit, or the remote service's rate limit.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Promise API](https://javascript.info/promise-api) — javascript.info: February 20, 2022; `all`, `allSettled` ("waits for all promises to settle"), `race`, `any` (*read*)
+- **Also good:** [MDN: Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) — mdn: undated; fail-fast: rejects as soon as one input rejects, others keep running (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [async and await](08-async-await.md) · Next → [Sequential vs parallel](10-sequential-vs-parallel.md)

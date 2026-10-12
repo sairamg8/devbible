@@ -217,6 +217,19 @@ Whatever you passed to `abort()`. Pass an `Error` and the cancellation carries a
 message and stack you can log, instead of an undifferentiated `AbortError` that could
 mean a timeout, a disconnect or a shutdown.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [AbortSignal.timeout()](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout_static) — MDN: aborts with a `TimeoutError`; timeout counts active, not elapsed, time (*read*)
+- **Read this:** [AbortSignal.any()](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/any_static) — MDN: the result aborts when any input aborts, with the first one's reason (*read*)
+- **Also good:** [Deadlines](https://grpc.io/docs/guides/deadlines/) — grpc.io: the idea of propagating one deadline across calls (*read*)
+- **Also good:** [Globals: AbortSignal](https://nodejs.org/api/globals.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Timeout budgets](./12-timeout-budgets.md) · Next → [Retry only safe, transient failures](./14-retry-safe-failures.md)

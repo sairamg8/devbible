@@ -163,6 +163,18 @@ Because a deep check runs every few seconds on every instance, and that is real 
 the dependency you are testing. A few seconds of staleness costs nothing.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Liveness, readiness and startup probes](https://kubernetes.io/docs/concepts/workloads/pods/probes/) — kubernetes.io: liveness restarts, readiness gates traffic; liveness should signal only unrecoverable failure; back-end availability belongs in readiness (*read*; the last 18k characters were not read)
+- **Also good:** [Health checks and graceful shutdown](https://expressjs.com/en/advanced/healthcheck-graceful-shutdown/) — expressjs.com: liveness vs readiness in two sentences, with the SIGTERM example (*read*)
+- **Read this:** [Structuring Node.js apps](https://marius.me.uk/blog/2017/12/structuring-nodejs-apps/) — marius.me.uk: 2017-12-30
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Auth in tests](04-auth-in-tests.md) · Next → [Shutdown and entrypoint](06-shutdown-and-entrypoint.md)

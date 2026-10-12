@@ -174,6 +174,19 @@ That it will see duplicates and must be idempotent. Dedupe on the provider's eve
 rather than assuming each event arrives once.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Stripe: Receive events in your webhook endpoint](https://docs.stripe.com/webhooks) — docs.stripe.com: raw body required for signatures; replay protection via a signed timestamp; default tolerance 5 minutes, never 0; track event IDs for duplicates; return 2xx before slow logic (*read*)
+- **Also good:** [Standard Webhooks specification (raw)](https://raw.githubusercontent.com/standard-webhooks/standard-webhooks/main/spec/standard-webhooks.md) — github (raw): HMAC-SHA256 or ed25519, check `webhook-timestamp` tolerance, use `webhook-id` as idempotency key (*read*)
+- **Also good:** [express.json / express.raw options](https://expressjs.com/en/5x/api/express/)
+- **Also good:** [Asynchronous Request-Reply pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/asynchronous-request-reply) — learn.microsoft.com: answer 202, hand off to a queue, point at a status endpoint (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [OpenAPI](08-openapi.md) · Next → [PATCH and bulk](10-patch-and-bulk.md)

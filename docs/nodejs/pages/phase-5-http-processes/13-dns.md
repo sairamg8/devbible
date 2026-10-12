@@ -168,6 +168,17 @@ Validating a hostname and then connecting resolves twice, and the second answer
 can differ — DNS rebinding. Resolve once, validate the address, connect to that
 address.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [DNS: Implementation considerations](https://nodejs.org/api/dns.html#implementation-considerations) — nodejs.org: `dns.lookup()` is a synchronous `getaddrinfo(3)` on libuv's threadpool, "surprising negative performance implications"; other APIs call it internally (*read*)
+- **Also good:** [libuv thread pool](https://docs.libuv.org/en/v1.x/threadpool.html) — libuv docs: pool runs file-system ops plus `getaddrinfo`; default size 4, `UV_THREADPOOL_SIZE` up to 1024 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [node:net and node:dgram](12-net-and-dgram.md) · Next → [node:http2](14-http2.md)

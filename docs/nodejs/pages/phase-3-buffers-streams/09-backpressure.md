@@ -229,6 +229,17 @@ threshold for disconnecting a slow consumer.
 `on` inside a loop adds a listener per iteration, leaking memory and tripping the
 max-listeners warning at 11. You want exactly one wake-up per stall.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Backpressuring in Streams](https://nodejs.org/learn/modules/backpressuring-in-streams) — nodejs.org Learn: `.write()` returns `false` past `highWaterMark`, the Readable pauses, `'drain'` resumes it; sections on GC drag and memory exhaustion (*read*, ≈5.4k words)
+- **Also good:** [Streams Concepts: Backpressure](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts) — MDN: the Web Streams view of the same idea, with queuing strategies (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The four stream types](08-stream-types.md) · Next → [pipeline over pipe](10-pipeline.md)

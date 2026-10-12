@@ -117,6 +117,17 @@ scrape (page 14). Do not log every sample.
 Find the sync work: CPU profiles (page 19), eliminate blocking handlers, move work
 off the request path, check GC and logging backpressure.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [perf_hooks.monitorEventLoopDelay](https://nodejs.org/docs/latest/api/perf_hooks.html) — nodejs.org: v26.11.1; returns an `ELDHistogram` (a Histogram that records event loop delay) with `enable()` and `disable()`; the page also lists `eventLoopUtilization()` (*read*)
+- **Also good:** [Don't Block the Event Loop](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org/learn: ≈6.1k words; the model of one event loop plus a worker pool, and why blocking either hurts every client (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Trace events and reports](./08-trace-events-and-reports.md) · Next → Health checks

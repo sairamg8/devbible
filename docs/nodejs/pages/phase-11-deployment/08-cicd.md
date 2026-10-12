@@ -99,6 +99,17 @@ Build in CI or a build stage; production container runs compiled output as non-r
 **Why promote an image digest instead of rebuilding for prod?**
 So production runs the exact bits that passed staging tests.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Building and testing Node.js (GitHub Actions)](https://docs.github.com/en/actions/tutorials/build-and-test-code/nodejs) — docs.github.com: a matrix strategy over `node-version` entries, `x` matching the latest minor and patch (*read*)
+- **Also good:** [actions/setup-node README](https://cdn.jsdelivr.net/gh/actions/setup-node@main/README.md) — jsDelivr copy (github.com is 403): inputs `node-version`, `node-version-file` and a package-manager `cache` option (*read* the inputs block)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Zero-downtime deploys](./07-zero-downtime-deploys.md) · Next → [Image size and hardening](./09-image-size-hardening.md)

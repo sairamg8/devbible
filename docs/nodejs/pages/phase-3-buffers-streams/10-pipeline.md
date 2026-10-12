@@ -252,6 +252,17 @@ Usually not — it is what a client disconnecting mid-download looks like. Catch
 and log at debug level, and make sure the teardown released the underlying
 resources.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [stream.pipeline()](https://nodejs.org/api/stream.html#streampipelinesource-transforms-destination-options) — nodejs.org: the `stream/promises` example puts an async generator between source and a write stream (*read* the example); the awaited promise form is `node:stream/promises`
+- **Also good:** [How To Use Streams: pipeline](https://nodejs.org/learn/modules/how-to-use-streams) — nodejs.org Learn: its `.pipe()` error example ends with the other streams not being notified, "resulting in memory leaks", and it recommends `pipeline()` instead (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Backpressure](09-backpressure.md) · Next → [Consuming with for await](11-for-await-of.md)

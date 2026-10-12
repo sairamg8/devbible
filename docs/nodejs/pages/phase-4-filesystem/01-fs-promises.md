@@ -226,6 +226,17 @@ exists.
 When the size is unbounded or user-controlled. Peak memory is file size ×
 concurrency, and strings above ~512 MB throw `ERR_STRING_TOO_LONG`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [fs: Promise example](https://nodejs.org/api/fs.html#promise-example) — nodejs.org: promise forms return a promise fulfilled on completion; the example uses `unlink` from `node:fs/promises` (*read*); the page is ≈41k words, so look up per method (`fsPromises.rm` takes `recursive` and `force`, *read*)
+- **Also good:** [Writing files with Node.js](https://nodejs.org/learn/manipulating-files/writing-files-with-nodejs) — nodejs.org Learn: write, append and flags, with a promises example (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Phase index: [Filesystem, paths and URLs](README.md) · Next → [The three flavors](02-the-three-flavors.md)

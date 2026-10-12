@@ -181,6 +181,17 @@ Every increment rewrites the whole document, so a hot counter turns a large, oth
 document into a write hotspot, with more I/O and more contention. The Manual's "written at
 different times in a write-heavy workload" is exactly this case.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Best Practices for Data Modeling in MongoDB](https://www.mongodb.com/docs/manual/data-modeling/best-practices/) — mongodb.com: "Link Related Data" and "Duplicate Data" sections, plus atomicity and small-documents considerations (*read*) a table of when to embed (queried together, updated together, archived together) and when to reference (high cardinality
+- **Also good:** [6 Rules of Thumb for MongoDB Schema Design](https://www.mongodb.com/company/blog/mongodb/6-rules-of-thumb-for-mongodb-schema-design) — mongodb.com blog: published 2014-06-11, modified 2022-11-02, ≈4.7k words: sorts one-to-N into few / many / squillions and picks a model for each (*read* the framing)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Schema design is a query exercise](./01-schema-design-is-a-query-exercise.md) ·

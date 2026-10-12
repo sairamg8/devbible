@@ -177,6 +177,21 @@ both.
 When it is large or private: issue a signed URL to object storage instead. Node
 then spends no bandwidth, no memory and no event-loop time on the transfer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js stream docs: `stream.pipeline`](https://nodejs.org/api/stream.html) — nodejs.org (v26.11.1 docs): `pipeline()` destroys the streams on error, and `close` before `end` gives `ERR_STREAM_PREMATURE_CLOSE` (*read* those passages)
+- **Also good:** [The Production Playbook for Node.js Stream Leaks](https://blog.master.dev/the-production-playbook-for-node-js-stream-leaks/) — master.dev, date not confirmed (a reader comment on the page is dated 4 June 2026): `pipeline()` tears down an upstream cursor when the client drops (*read*)
+- **Read this:** [Express 5.x API: Response](https://expressjs.com/en/5x/api/response/) — expressjs.com: `sendFile` path must be absolute unless `root` is set; with `root`, Express checks the path resolves inside it; `download` forwards options to `sendFile` (*read*)
+- **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: `hidden`/`from` options gone, `dotfiles` also covers hidden directories in the path (*read*)
+- **Read this:** [Production best practices: performance](https://expressjs.com/en/advanced/best-practice-performance/) — expressjs.com: use `compression`, but on a busy site do it at the reverse proxy instead (*read*)
+- **Also good:** [compression](https://expressjs.com/en/resources/middleware/compression/) — expressjs.com: `threshold` default 1kb, `filter(req, res)` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Cookies out](07-cookies-out.md) · Index: [Phase 4](README.md)

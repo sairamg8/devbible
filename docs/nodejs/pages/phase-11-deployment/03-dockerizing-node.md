@@ -115,6 +115,18 @@ Limits blast radius of filesystem and some remote exploits; required by many pol
 **Exec form vs shell form CMD?**
 Exec form runs Node directly as PID 1 so `SIGTERM` reaches your process.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker-node: Best Practices](https://cdn.jsdelivr.net/gh/nodejs/docker-node@main/docs/BestPractices.md) — jsDelivr copy of the Node.js Docker team's doc: has a "Non-root User" section and a multi-stage example that copies built `node_modules` without the toolchain (*read*)
+- **Also good:** [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/) — docs.docker.com: `COPY --from` brings only the final artifact into the last stage (*read*)
+- **Also good:** [Docker build cache](https://docs.docker.com/build/cache/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Boot sequence](./02-boot-sequence.md) · Next → [PID 1 and signals](./04-pid1-and-signals.md)

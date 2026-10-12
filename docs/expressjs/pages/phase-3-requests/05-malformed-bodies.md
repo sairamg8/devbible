@@ -89,6 +89,18 @@ Log the detailed message server-side with a request id.
 **Should you return the parser’s raw message to browsers?**  
 Prefer a stable public message; log detail internally.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [body-parser](https://expressjs.com/en/resources/middleware/body-parser/) — expressjs.com: parse failure: status 400, type `entity.parse.failed`; too large: 413 `entity.too.large`; verify failure: 403; length mismatch case (*read*)
+- **Also good:** [Error Handling in Express](https://expressjs.com/en/guide/error-handling/) — expressjs.com: parser errors travel the normal error path to the handler (*read*)
+- **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Query parser](04-query-parser.md) · Next → [raw and text](06-raw-and-text.md)

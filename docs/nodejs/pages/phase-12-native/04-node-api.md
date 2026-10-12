@@ -86,6 +86,17 @@ The Node-API version supported by that runtime (here, 10 on Node 24.19.0).
 **Why are prebuilds important?**
 Users and CI may lack compilers; shipping binaries per platform avoids local builds.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [C/C++ addons with Node-API](https://nodejs.org/docs/latest/api/n-api.html) — nodejs.org: v26.11.1; ≈34k words, look up only; sections on ABI stability, build tools (node-gyp, CMake.js), prebuilt binaries and a version matrix (*headings only*)
+- **Also good:** [node-addon-api README](https://cdn.jsdelivr.net/gh/nodejs/node-addon-api@main/README.md) — jsDelivr copy: header-only C++ wrapper classes over the C Node-API, with a C++ object model and exception handling (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [V8 flags](./03-v8-flags.md) · Next → [C++ addons](./05-cpp-addons.md)

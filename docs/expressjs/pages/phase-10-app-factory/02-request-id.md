@@ -161,6 +161,17 @@ prefer it if you have that toolchain. `X-Request-Id` is a convention — simpler
 understood by nothing outside your own system.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Keep Express Correlation IDs with AsyncLocalStorage](https://oneuptime.com/blog/post/2026-09-11-express-async-local-storage-correlation/view) — oneuptime: 2026-09-11
+- **Also good:** [Asynchronous context tracking](https://nodejs.org/api/async_context.html) — nodejs.org: `AsyncLocalStorage` marked Stable; HTTP server example gives each request an id via `run()` and `getStore()` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [createApp](01-create-app/README.md) · Next → [Supertest](03-supertest.md)

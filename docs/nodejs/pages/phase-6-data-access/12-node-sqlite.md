@@ -278,6 +278,18 @@ database with transactions and constraints. Not for a horizontally scaled API: i
 a file, so there are no network clients, no replicas, and no shared state between
 instances.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SQLite](https://nodejs.org/api/sqlite.html) — nodejs.org: `Stability: 1.2 - Release candidate`; `defensive` option defaults to true (history: "Enable defensive by default", v25.5.0 and v24.14.0); only under the `node:` scheme (*read*)
+- **Also good:** [Node `v26.11.1` `deps/sqlite/sqlite3.h`](https://raw.githubusercontent.com/nodejs/node/v26.11.1/deps/sqlite/sqlite3.h) — raw.githubusercontent.com: source file at the release tag; defines `SQLITE_VERSION "3.53.4"` (*read* the define)
+- **Also good:** [SQLite Release 3.53.0](https://sqlite.org/releaselog/3_53_0.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Migrations as code](./11-migrations.md) · Next → [Prisma and Drizzle](./13-prisma-drizzle.md)

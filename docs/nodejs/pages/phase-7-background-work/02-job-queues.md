@@ -234,6 +234,17 @@ does not finish or extend it, the job becomes claimable again — which is how w
 survives a crashed worker, and why a job that outlives its timeout gets processed
 twice.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Workers](https://docs.bullmq.io/guide/workers) — docs.bullmq.io: a worker is the "message" receiver; a job that completes is `completed`, a throwing job moves to `failed` (*read*)
+- **Also good:** [Queues](https://docs.bullmq.io/guide/queues/) — docs.bullmq.io: the producer side (≈730 words; *headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Sync vs background](./01-sync-vs-background.md) · Next → [Worker processes](./03-worker-processes.md)

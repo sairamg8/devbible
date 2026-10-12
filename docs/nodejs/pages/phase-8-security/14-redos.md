@@ -222,6 +222,17 @@ Grep for nested quantifiers in your own patterns and triage the ones reachable f
 input; run `npm audit` for the dependency side; and alert on event-loop lag, which is
 what the attack looks like in production.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Don't Block the Event Loop](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org: the REDOS section; names `safe-regex` and notes it will not catch every case; suggests `node-re2` (*read*)
+- **Also good:** [Regular expression Denial of Service](https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS) — OWASP: evil regex, examples (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Prototype pollution](./13-prototype-pollution.md) · Next → [Deserialization, open redirects, mass assignment](./15-deserialization-redirects-mass-assignment.md)

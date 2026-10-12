@@ -145,3 +145,14 @@ work across services for one request. You need all three; none replaces the othe
 ---
 
 Phase index: Observability and performance · Next → [pino in practice](./02-pino-in-practice.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Structured logging in production](https://docs.railway.com/guides/structured-logging-production) — docs.railway.com: undated; defines it as one single-line JSON object per log line, with the `level` field, a message and filterable attributes, using Pino for Node (*read*)
+- **Also good:** [XI. Logs](https://12factor.net/logs) — 12factor.net: undated; a process writes its event stream unbuffered to stdout and the environment collects it (*read*)
+
+{/* LINKMAP:END */}

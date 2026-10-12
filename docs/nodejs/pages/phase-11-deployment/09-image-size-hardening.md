@@ -86,6 +86,17 @@ Ephemeral debug containers / copy out logs / metrics — not `docker exec bash`.
 Usually less surface, but a broken addon that forces unsafe workarounds is worse —
 compatibility matters.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker-node README](https://cdn.jsdelivr.net/gh/nodejs/docker-node@main/README.md) — jsDelivr copy: documents the `alpine` and `slim` variants and warns that Debian (glibc) applications generally will not run under Alpine (musl), with `gcompat` as a partial workaround (*read*)
+- **Also good:** [Distroless images](https://cdn.jsdelivr.net/gh/GoogleContainerTools/distroless@main/README.md) — jsDelivr copy: only the app and its runtime dependencies, no package manager or shell (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [CI/CD](./08-cicd.md) · Next → [Process managers](./10-process-managers.md)

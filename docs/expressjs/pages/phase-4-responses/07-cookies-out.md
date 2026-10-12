@@ -119,6 +119,18 @@ package, not in Express
 **Cause:** `maxAge` given in seconds  
 **Fix:** Milliseconds — `maxAge: 900_000` for fifteen minutes
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MDN: Using HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies) — MDN: `Secure`, `HttpOnly`, `SameSite`, cookie prefixes (*read* the security opening)
+- **Also good:** [Express 5.x API: Response](https://expressjs.com/en/5x/api/response/) — expressjs.com: `res.cookie` options; `res.clearCookie` options must match the original (*read*)
+- **Also good:** [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [SPA fallback](06-spa-fallback.md) · Next → [Streaming and downloads](08-streaming-and-downloads.md)

@@ -93,6 +93,18 @@ Signatures are over the exact byte sequence, not a re-serialized object.
 **Can you use both json and raw globally?**  
 Only with careful path separation — first consumer wins the stream.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Stripe: Webhooks](https://docs.stripe.com/webhooks) — Stripe docs: "Stripe requires the raw body" and any framework manipulation breaks verification (*read*)
+- **Also good:** [Express 5.x API: express](https://expressjs.com/en/5x/api/express/) — expressjs.com: `express.raw()` yields a `Buffer` for matching Content-Type (*read*)
+- **Also good:** [body-parser](https://expressjs.com/en/resources/middleware/body-parser/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Malformed bodies](05-malformed-bodies.md) · Next → [Multipart uploads](07-multipart-uploads.md)

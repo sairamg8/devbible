@@ -234,6 +234,17 @@ selector reaching through `state.user.profile.name` runs against the cleared sta
 unmounts and throws. Guard inside the selector with optional chaining and a default rather than at the
 call site, so every consumer inherits the safety.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Redux FAQ → React Redux](https://redux.js.org/faq/react-redux#why-is-my-component-re-rendering-too-often) — redux.js.org: answers all three of our angles in one place: why a component re-renders too often (`useSelector` compares with `===`, so a selector that builds a new object or array on every call re-renders on every action; the development-mode 
+- **Also good:** [Hooks → equality comparisons and updates](https://redux.js.org/react-redux/api/hooks#equality-comparisons-and-updates) — redux.js.org: the reference: `useSelector` equality rules, `shallowEqual`, the development-mode stability and identity-function checks, stale props and "zombie children", performance notes
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Middleware stack & `listenerMiddleware`](../06-middleware/01-default-middleware-and-listener-middleware.md) · [Topic index](../README.md) · Next → [Immer internals](../08-immutability-and-immer/01-immer-internals.md)

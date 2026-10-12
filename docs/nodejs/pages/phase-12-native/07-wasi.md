@@ -80,6 +80,16 @@ They map guest paths to host directories — overly broad maps leak or overwrite
 **When does a fullstack Node API need WASI?**
 Uncommon — plugin/tooling scenarios more than CRUD services.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [WebAssembly System Interface (WASI)](https://nodejs.org/docs/latest/api/wasi.html) — nodejs.org: v26.11.1; Stability 1 Experimental, and `node:wasi` does not provide the file system sandboxing some WASI runtimes offer (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [FFI](./06-ffi.md) · Next → [Custom loaders](./08-custom-loaders.md)

@@ -182,6 +182,17 @@ so their report becomes a lookup instead of a search.
 No — `warn` or `info`. Individually they are routine; the value is in the aggregate.
 Logging them at `error` buries the 500s that need a human.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) — OWASP: which events and attributes to log, and data to exclude or mask: source code, session identifiers, access tokens, sensitive personal data (*read*)
+- **Also good:** [Error Handling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html) — OWASP: return a generic response, log details server side (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [404 and process errors](06-not-found-and-process.md) · Index: [Phase 5](README.md) · Next → [Every error that arrives](08-every-error-that-arrives/README.md)

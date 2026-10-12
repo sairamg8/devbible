@@ -254,6 +254,18 @@ For its generated queries, yes — they parameterize. The raw escape hatch every
 provides does not, unless you use its tagged-template form. That one endpoint is
 where the vulnerability lives.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Queries](https://node-postgres.com/features/queries) — node-postgres.com: concatenating parameters into query text leads to SQL injection; parameters travel separately to the server; identifiers need `pg-format` (*read*)
+- **Read this:** [NoSQL Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/NoSQL_Security_Cheat_Sheet.html) — OWASP: section "Prevent NoSQL Injection": a query object does not stop operator injection when a value is itself an object (`&#123; $ne: "" &#125;`); check the scalar type first; disallow client-controlled `$where`, `$regex`, `$expr` (*r
+- **Also good:** [How does MongoDB address SQL or Query injection?](https://www.mongodb.com/docs/manual/faq/fundamentals/) — mongodb.com: queries are BSON objects, not strings; `$where`, `mapReduce`, `$accumulator`, `$function` run server-side JavaScript (*read* that FAQ entry; it does not mention operator objects in values, so it alone understates the risk)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Connection pooling](./01-connection-pooling.md) · Next → [Driver lifecycle](./03-driver-lifecycle.md)

@@ -199,6 +199,17 @@ Forward it to every worker and stop replacing exited ones. It does not propagate
 automatically, and the `'exit'` handler will otherwise fork replacements during
 the shutdown.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cluster: How it works](https://nodejs.org/api/cluster.html#how-it-works) — nodejs.org: workers come from `child_process.fork()`; default distribution is round-robin by the primary except on Windows (*read*)
+- **Read this:** [Using multiple nodes](https://socket.io/docs/v4/using-multiple-nodes/) — Socket.IO docs (page shows "Last updated on Oct 6, 2026"): requests of a session must reach the same process: sticky sessions, disabling long-polling, or client-side balancing (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [util.parseArgs](22-parseargs.md) · Next → [worker_threads](24-worker-threads.md)

@@ -93,6 +93,17 @@ So Express can detect it as error-handling middleware.
 Very early — but after anything you need for the log line (sometimes after
 request-id middleware).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using middleware: error-handling middleware](https://expressjs.com/en/guide/using-middleware/) — expressjs.com: four arguments `(err, req, res, next)` (*read*)
+- **Also good:** [Error Handling: writing error handlers](https://expressjs.com/en/guide/error-handling/) — expressjs.com: the section on handler placement (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Middleware factories](04-middleware-factories.md) · Next → [Mutating req and res](06-mutating-req-res.md)

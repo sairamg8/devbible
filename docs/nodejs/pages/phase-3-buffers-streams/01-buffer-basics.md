@@ -263,6 +263,16 @@ It returns on the first differing byte, so comparison time leaks how much of the
 prefix matched. Use `crypto.timingSafeEqual`, which is constant-time for equal
 lengths.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Buffer](https://nodejs.org/api/buffer.html) — nodejs.org: the class reference (≈28k words): a fixed-length sequence of bytes, a `Uint8Array` subclass; `from`/`alloc`, `toString`, `subarray` and `slice` are all indexed (*read* the opening, *headings only* for the rest)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Phase index: [Buffers and streams](README.md) · Next → [Encodings](02-encodings.md)

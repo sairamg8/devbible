@@ -160,6 +160,17 @@ It is the stable, supported abstraction built on top of it. The hooks track the
 async context tree; `AsyncLocalStorage` hangs a store off that tree and gives you
 `run`/`getStore` instead of lifecycle callbacks.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Async hooks](https://nodejs.org/docs/latest/api/async_hooks.html) — nodejs.org: "Stability: 1 - Experimental. Please migrate away from this API, if you can"; `createHook` has "usability issues, safety risks, and performance implications"; use `AsyncLocalStorage` (*read*)
+- **Read this:** [Asynchronous context tracking → AsyncResource](https://nodejs.org/docs/latest/api/async_context.html#class-asyncresource) — nodejs.org: `AsyncResource.bind(fn)`, `runInAsyncScope`; sections on a Worker thread pool and EventEmitter (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [AsyncLocalStorage](20-asynclocalstorage.md) · Next → [CPU-bound work](22-cpu-bound-work.md)

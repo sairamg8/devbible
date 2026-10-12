@@ -233,6 +233,21 @@ They execute automatically on every install, on every machine that installs your
 package, which makes them both a debugging surprise and a supply-chain risk. Put
 the work in an explicit script the user runs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [npm: package.json](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/) — docs.npmjs.com: ids for [#files](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#files), [#main](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#main), [#scripts](https://docs.npmjs.com/cli/v11/configuring-npm/package-js
+- **Read this:** [#files](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#files)
+- **Read this:** [#main](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#main)
+- **Read this:** [#scripts](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#scripts)
+- **Read this:** [#engines](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#engines)
+- **Also good:** [Node packages → type](https://nodejs.org/docs/latest/api/packages.html#type) — nodejs.org: how `type` decides CJS vs ESM for `.js` (id verified; *headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Circular dependencies](06-circular-dependencies.md) · Next → [The `exports` map](08-exports-map.md)
