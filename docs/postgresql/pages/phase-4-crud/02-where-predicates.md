@@ -222,6 +222,18 @@ index, or `pg_trgm`.
 `IS DISTINCT FROM` family is the null-safe comparison family, and it is what you
 want whenever a nullable column is being compared.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.7. Pattern Matching](https://www.postgresql.org/docs/current/functions-matching.html) — postgresql.org: `LIKE`/`ILIKE` (noted as PostgreSQL-specific operators), `SIMILAR TO`, POSIX `~` regex (*read* the `ILIKE` passage; the regex part *headings only*)
+- **Also good:** [9.2. Comparison Functions and Operators](https://www.postgresql.org/docs/current/functions-comparison.html) — postgresql.org: `IS [NOT] DISTINCT FROM` returns true/false where `=` returns NULL (*read*)
+- **Also good:** [Don't Do This: BETWEEN](https://wiki.postgresql.org/wiki/Don't_Do_This)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The `SELECT` shape](01-select-shape.md) · Next → [`LIMIT` / `OFFSET`](03-limit-offset.md)

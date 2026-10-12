@@ -192,6 +192,16 @@ Shows its columns, which are key versus `INCLUDE`, the access method, and any pa
 predicate — measured on a partial index, which printed
 `predicate (status = 'open'::text)`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · `\d`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMAND-D) — postgresql.org: what `\d[S+] name` shows and what `+` adds (headings only: the `\d` text was located by id, not read to the end)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Daily meta-commands](02-daily-meta-commands.md) · Next → [Output control](04-output-control.md)

@@ -210,6 +210,16 @@ selectivity. Measured: `n_distinct = 6` for the day-truncation expression.
 When several query shapes need the derived value, or when you want it visible in the
 schema — it removes the requirement to spell the expression identically everywhere.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [11.7 Indexes on Expressions](https://www.postgresql.org/docs/current/indexes-expressional.html) — postgresql.org: `lower(col1)` index and the matching query; a `UNIQUE` variant (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Partial indexes](09-partial.md) · Next → [GIN, jsonb, arrays, FTS and trigrams](11-gin-trgm.md)

@@ -106,6 +106,18 @@ The kernel. PostgreSQL benefits from it but does not manage it as its own API.
 **Why does connection pooling not replace shared buffers?**  
 Pooling reuses **backends**; shared buffers cache **data pages**. Different layers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Resource Consumption · Memory](https://www.postgresql.org/docs/current/runtime-config-resource.html) — postgresql.org: `shared_buffers` default 128 MB, 25% of RAM as a start, and PostgreSQL also relies on the OS cache (*read*)
+- **Also good:** [Database Page Layout](https://www.postgresql.org/docs/current/storage-page-layout.html) — postgresql.org: tables and indexes are arrays of fixed pages, usually 8 kB (*read*)
+- **Also good:** [pg_buffercache](https://www.postgresql.org/docs/current/pgbuffercache.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Namespace](03-namespace.md) · Next → [WAL](05-wal.md)

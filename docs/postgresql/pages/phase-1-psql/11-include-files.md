@@ -201,6 +201,16 @@ visible.
 **Does `ON_ERROR_STOP` apply inside included files?**
 Yes — it is a session setting, so it governs the whole run including every `\ir`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · `\ir`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMAND-INCLUDE-RELATIVE) — postgresql.org: from a script, `\ir` resolves names relative to the script (*read*); `\i` is `#APP-PSQL-META-COMMAND-INCLUDE`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [\timing and \watch](10-timing-watch.md) · Next → [\conninfo \du \dp](12-who-and-privileges.md)

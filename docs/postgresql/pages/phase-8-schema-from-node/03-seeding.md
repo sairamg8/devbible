@@ -221,6 +221,17 @@ They make the database different on every run, so a test can pass today and fail
 tomorrow with no code change — and the failure is unreproducible because the input
 that caused it is gone. Pinned values make failures repeatable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [INSERT](https://www.postgresql.org/docs/current/sql-insert.html) — postgresql.org: `ON CONFLICT DO NOTHING` skips a conflicting row; `conflict_target` optional for `DO NOTHING` (*read* that passage)
+- **Also good:** [6.1. Inserting Data](https://www.postgresql.org/docs/current/dml-insert.html) — postgresql.org: more than one row in a single command (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Migrations](02-migrations.md) · Next → [Bulk insert that scales](04-bulk-insert.md)

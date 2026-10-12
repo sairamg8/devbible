@@ -237,6 +237,18 @@ An allowlist rather than the full set, and anything needing
 parameter-group change and a restart. Check `pg_available_extensions` before
 designing around one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CREATE EXTENSION](https://www.postgresql.org/docs/current/sql-createextension.html) — postgresql.org: most extensions need superuser unless marked trusted, which any user with `CREATE` on the database can install (*read*)
+- **Also good:** [Additional Supplied Modules](https://www.postgresql.org/docs/current/contrib.html) — postgresql.org: lists `pgcrypto`, `pg_stat_statements` and the rest (*headings only*)
+- **Also good:** [Supabase: Postgres Extensions](https://supabase.com/docs/guides/database/extensions)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Triggers](08-triggers.md) · Next → [Set-returning functions](10-srf.md)

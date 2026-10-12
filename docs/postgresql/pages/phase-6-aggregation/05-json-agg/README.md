@@ -49,6 +49,16 @@ and can say why `FILTER` on its own does not achieve that.
 - **[N+1 queries](/docs/nodejs/pages/phase-6-data-access/n-plus-1)** — the problem one
   shaped query solves
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.21. Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html) — postgresql.org: `jsonb_agg` includes nulls, `_strict` skips them; `jsonb_object_agg` keys cannot be null; `ORDER BY` inside the call (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Arrays and strings](01-arrays-and-strings.md)

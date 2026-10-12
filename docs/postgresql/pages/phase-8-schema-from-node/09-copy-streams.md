@@ -227,6 +227,17 @@ It skips write-ahead logging, which is a real speedup, and the data is disposabl
 an unlogged table is emptied on crash recovery, which is exactly the right semantics
 for a load buffer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [pg-copy-streams README (raw)](https://raw.githubusercontent.com/brianc/node-pg-copy-streams/master/README.md) — github (raw): `copyFrom('COPY my_table FROM STDIN')` with `stream/promises` `pipeline`; `destroy()` sends CopyFail and rolls back unless CopyDone was already sent; v7.0.0 published 2025-05-27 (*read*)
+- **Also good:** [COPY](https://www.postgresql.org/docs/current/sql-copy.html) — postgresql.org: `FROM STDIN` syntax and options (*read* the synopsis)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Writing a minimal migration runner](08-minimal-runner.md) · Next → [A local development database](10-local-dev-db.md)

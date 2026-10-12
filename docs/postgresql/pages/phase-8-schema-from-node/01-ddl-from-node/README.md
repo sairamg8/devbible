@@ -50,6 +50,17 @@ You should be able to answer these before moving to
 - **Node [Phase 6 · Parameterized queries](/docs/nodejs/pages/phase-6-data-access/parameterized-queries)**
   owns the value-vs-identifier rule in general; this topic is the DDL-specific half.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [5.1. Table Basics](https://www.postgresql.org/docs/current/ddl-basics.html) — postgresql.org: the manual's `CREATE TABLE` introduction (*read* the opening)
+- **Also good:** [CREATE TABLE](https://www.postgresql.org/docs/current/sql-createtable.html) — postgresql.org: full synopsis (*read* the synopsis and `IF NOT EXISTS`)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Issuing DDL through the driver](01-issuing-ddl.md)

@@ -252,6 +252,17 @@ Usually you do not need N. `LIMIT n+1` tells you whether a next page exists for 
 a total is genuinely required, `reltuples` from `pg_class` is an estimate that cost
 0.49 ms against 25.69 ms for the exact count, or cache the exact value.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [We need tool support for keyset pagination (no offset)](https://use-the-index-luke.com/no-offset) — use-the-index-luke.com: Markus Winand; explains drifting results and the seek method, called "even faster than offset" (*read*; undated page)
+- **Also good:** [7.6. LIMIT and OFFSET](https://www.postgresql.org/docs/current/queries-limit.html) — postgresql.org: skipped rows are still computed server-side, so a large `OFFSET` can be inefficient; `LIMIT` without `ORDER BY` gives an unpredictable subset (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`WHERE` predicates](02-where-predicates.md) · Next → [`INSERT`](04-insert.md)

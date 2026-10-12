@@ -240,6 +240,16 @@ Batched `DELETE`, despite being slower. `TRUNCATE` holds `ACCESS EXCLUSIVE` unti
 commit and blocks every reader and writer of the table; batches keep the lock
 footprint small and are interruptible.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TRUNCATE (reference)](https://www.postgresql.org/docs/current/sql-truncate.html) — postgresql.org: faster because it does not scan; `RESTART IDENTITY`; not MVCC-safe for old snapshots; transaction-safe for the data (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`MERGE`](13-merge/README.md) · Next → [Expressions and operators](15-expressions.md)

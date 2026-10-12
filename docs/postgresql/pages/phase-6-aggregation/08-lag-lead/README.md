@@ -46,6 +46,16 @@ frame while `first_value` does not.
   fixes the gap problem
 - **[CROSS JOIN](../../phase-5-joins/07-cross-join.md)** — how that spine is joined on
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.22. Window Functions](https://www.postgresql.org/docs/current/functions-window.html) — postgresql.org: `lag` with offset and default; `first_value`/`last_value` act on the window frame; `IGNORE NULLS` not implemented (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [lag and lead](01-lag-and-lead.md)

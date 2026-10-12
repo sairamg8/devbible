@@ -40,6 +40,17 @@ insert, update and delete in a single pass. It is not a drop-in replacement for
 - **[The result object](../../phase-7-pg-driver/06-result-object.md)** explains why
   `rowCount` and `command` behave the way they do here.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MERGE (reference)](https://www.postgresql.org/docs/current/sql-merge.html) — postgresql.org: `WHEN [NOT] MATCHED`, `WHEN NOT MATCHED BY SOURCE` (PG 17+), `merge_action()` in `RETURNING`; points to `INSERT ... ON CONFLICT` for concurrent inserts (*read*)
+- **Also good:** [Postgres INSERT ON CONFLICT and how it compares to MERGE](https://pganalyze.com/blog/5mins-postgres-15-merge-vs-insert-on-conflict) — pganalyze.com: 2022-03-31, written for PG 15; says concurrent inserts can make `MERGE` hit a unique violation (*read*; a spoken-style transcript, so a claim about the reasons is secondhand)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`DISTINCT` and `DISTINCT ON`](../12-distinct-on.md) · Start → [Three actions in one statement](01-three-actions.md)

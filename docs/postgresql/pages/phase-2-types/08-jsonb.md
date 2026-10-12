@@ -213,6 +213,16 @@ parameters are serialised. Calling `JSON.stringify` yourself double-encodes.
 A default GIN index supports containment and key-existence operators, not `->>` equality.
 Use `@>` or an expression index on the extracted field.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JSON Types](https://www.postgresql.org/docs/current/datatype-json.html) — postgresql.org: `jsonb` drops whitespace, key order and duplicate keys (last wins); prefer `jsonb` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [uuid](07-uuid.md) · Next → [boolean, date, interval](09-boolean-dates.md)

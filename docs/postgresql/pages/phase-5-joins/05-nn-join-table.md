@@ -264,6 +264,16 @@ Aggregate when the client wants one payload and the child sets are small. Use tw
 for paginated parents or large child sets — it is two round trips regardless of page size,
 not an N+1, and it keeps `LIMIT` semantics simple.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [2.6. Joins Between Tables](https://www.postgresql.org/docs/current/tutorial-join.html) — for the mechanics.
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Multi-table joins](04-multi-join.md) · Next → [RIGHT and FULL OUTER](06-outer-joins.md)

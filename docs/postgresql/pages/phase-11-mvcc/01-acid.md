@@ -211,6 +211,17 @@ readers follow a snapshot, so readers never block writers. Locks appear for
 Measured 112 bytes for one small row. It scales with row size and index count, which is
 why WAL volume — not just query time — is a design constraint for write-heavy tables.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [3.4 Transactions (tutorial)](https://www.postgresql.org/docs/current/tutorial-transactions.html) — postgresql.org: a transaction bundles steps into one all-or-nothing operation; atomic, and durable once acknowledged (*read*)
+- **Also good:** [13.1 Introduction (Concurrency Control)](https://www.postgresql.org/docs/current/mvcc-intro.html) — postgresql.org: the isolation side: each statement sees a snapshot (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](README.md) · Next → [BEGIN COMMIT ROLLBACK](02-begin-commit.md)

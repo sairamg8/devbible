@@ -214,6 +214,16 @@ another vacuum on the same table.
 To set the visibility map, which is what makes index-only scans possible.
 `autovacuum_vacuum_insert_threshold` (default 1000) exists for exactly this.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [24.1 Routine Vacuuming](https://www.postgresql.org/docs/current/routine-vacuuming.html) — postgresql.org: standard `VACUUM` versus `VACUUM FULL`, planner statistics, visibility map, autovacuum daemon (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Long-running transactions](12-long-transactions.md) · Next → [Idle in transaction](14-idle-in-transaction.md)

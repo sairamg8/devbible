@@ -89,6 +89,17 @@ whether the total is wrong before running it.
 - **[Multi-table joins](../04-multi-join.md)** — fan-out compounding across branches
 - **[Aggregation](../../phase-6-aggregation/README.md)** — the aggregate side of the same problem
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [2.6. Joins Between Tables](https://www.postgresql.org/docs/current/tutorial-join.html) — postgresql.org: tutorial from a first join to `LEFT OUTER JOIN` and a self join (*read* the self-join passage)
+- **Also good:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) — postgresql.org: `INNER` is the default; defines each join type by its rows (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [One row per matching pair](01-matching-pairs.md)

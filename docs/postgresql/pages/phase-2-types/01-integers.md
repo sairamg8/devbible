@@ -199,6 +199,16 @@ A width mismatch forces a cast, and a cast on the indexed side stops the index b
 Rarely. Alignment padding often absorbs the saving; it only pays on very large tables with
 several such columns packed together.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Numeric Types · Integer Types](https://www.postgresql.org/docs/current/datatype-numeric.html#DATATYPE-INT) — postgresql.org: range table: smallint -32768 to +32767, integer -2147483648 to +2147483647, bigint -9223372036854775808 to +9223372036854775807 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](README.md) · Next → [numeric vs float](02-numeric-vs-float.md)

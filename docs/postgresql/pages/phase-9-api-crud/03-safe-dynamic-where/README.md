@@ -38,6 +38,17 @@ have either a runtime error or an injection hole.
 - **Node [Phase 6 · Parameterized queries](/docs/nodejs/pages/phase-6-data-access/parameterized-queries)**
   owns the general rule; this topic is the dynamic-query-building half.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Queries → Parameterized query](https://node-postgres.com/features/queries) — node-postgres.com: values travel separately; "PostgreSQL does not support parameters for identifiers" (*read*)
+- **Also good:** [SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) — owasp.org: "Stop writing dynamic queries with string concatenation"; defense option 1 is parameterised queries (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`list` with filtering, sorting and pagination](../02-list-endpoint.md) · Start → [Building predicates and parameters](01-predicates-and-params.md)

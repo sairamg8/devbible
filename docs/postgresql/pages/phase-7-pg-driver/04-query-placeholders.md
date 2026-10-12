@@ -185,6 +185,18 @@ writes `NULL` rather than raising, which is why input validation belongs before 
 Yes. Placeholders are positional references, so repeating `$1` reuses the same value and
 sends it once.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Queries](https://node-postgres.com/features/queries) — node-postgres.com: parameters go to the server separately; identifiers cannot be parameters; JS-to-SQL conversion rules for `null`, `Date`, arrays, objects (*read*)
+- **Also good:** [Postgres Query Boost: Using ANY Instead of IN](https://www.crunchydata.com/blog/postgres-query-boost-using-any-instead-of-in) — crunchydata.com: Matt Hudson, 2022-11-18; why `ANY` over a variable-length `IN`; examples are Java, not Node (*read*)
+- **Also good:** [9.25.3. ANY / SOME (array)](https://www.postgresql.org/docs/current/functions-comparisons.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Connection configuration](03-connection-config.md) · Next → [Errors from PostgreSQL in Node](05-errors.md)

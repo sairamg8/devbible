@@ -193,6 +193,17 @@ Applying schema files, where there are no parameters and the implicit transactio
 you an all-or-nothing migration. Watch for statements that cannot run in a transaction,
 such as `CREATE INDEX CONCURRENTLY`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [32.3. Command Execution Functions](https://www.postgresql.org/docs/current/libpq-exec.html) — postgresql.org: `PQexecParams` allows at most one nonempty command, "a limitation of the underlying protocol", and a defence against injection (*read*)
+- **Also good:** [postgres.js README (raw)](https://raw.githubusercontent.com/porsager/postgres/master/README.md) — github (raw): simple queries allow several statements but no parameters; extended allow parameters but one statement (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Query timeouts](11-timeouts.md) · Next → [`pool.end`](13-pool-end.md)

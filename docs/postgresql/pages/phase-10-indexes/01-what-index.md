@@ -164,6 +164,17 @@ can be many indexes on one table. 44 MB of indexes on a 29 MB table is unremarka
 `idx_scan` in `pg_stat_user_indexes` counts how many times the planner chose it. Zero
 over a full business cycle means it is only costing you.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [11.1 Introduction (Indexes)](https://www.postgresql.org/docs/current/indexes-intro.html) — postgresql.org: the book-index analogy, and that the planner uses an index only when it thinks it is cheaper than a sequential scan (*read*)
+- **Read this:** [Over-indexing](https://postgres.ai/docs/postgres-howtos/performance-optimization/indexing/over-indexing) — postgres.ai: each new row version from INSERT or UPDATE must update every index; HOT updates can skip it for UPDATEs (*read* the first section); page shows no date
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](README.md) · Next → [B-tree indexes](02-btree.md)

@@ -101,6 +101,17 @@ superuser, not arbitrary DDL in production traffic paths.
 **What is `session_user` vs `current_user`?**  
 `session_user` is who authenticated; `current_user` can change after `SET ROLE`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Database Roles](https://www.postgresql.org/docs/current/database-roles.html) — postgresql.org: roles are separate from OS users and global to the cluster (*read*)
+- **Also good:** [Role Membership](https://www.postgresql.org/docs/current/role-membership.html) — postgresql.org: groups are roles; the `INHERIT` option decides whether privileges flow (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [WAL](05-wal.md) · Next → [Local install](07-local-install.md)

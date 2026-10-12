@@ -189,6 +189,16 @@ alongside the change it describes.
 Not if the migration drops and recreates the object — and they are not inherited by
 partitions or child tables. Re-apply them in the same migration.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [COMMENT](https://www.postgresql.org/docs/current/sql-comment.html) — postgresql.org: comments are seen with psql's `\d` family; `obj_description` and `col_description` read them (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`TEMPORARY` and `UNLOGGED` tables](16-temp-unlogged.md) · Next → [Deferrable constraints](18-deferrable.md)

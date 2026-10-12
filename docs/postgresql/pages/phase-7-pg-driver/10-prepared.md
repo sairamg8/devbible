@@ -215,6 +215,18 @@ No. Reserve it for short, hot queries. Analytical queries are dominated by execu
 dynamically built SQL has no stable text to name, and names have real costs — uniqueness,
 server memory, pooler compatibility.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Queries → Prepared statements](https://node-postgres.com/features/queries) — node-postgres.com: a `name` caches the plan per connection; parse is skipped on the second use; the author calls it premature optimisation for most queries (*read*)
+- **Also good:** [PREPARE](https://www.postgresql.org/docs/current/sql-prepare.html) — postgresql.org: a statement runs with a generic or a custom plan (*read* the notes)
+- **Also good:** [54.2. Message Flow](https://www.postgresql.org/docs/current/protocol-flow.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Overriding type parsers](09-pg-types.md) · Next → [Query timeouts](11-timeouts.md)

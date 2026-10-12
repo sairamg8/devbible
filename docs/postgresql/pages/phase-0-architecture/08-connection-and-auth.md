@@ -138,6 +138,19 @@ It embeds secrets; logs and error trackers become credential stores.
 No — it shows the server’s listen port **inside** its network namespace (often
 5432).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Database Connection Control Functions](https://www.postgresql.org/docs/current/libpq-connect.html) — postgresql.org: key/value strings and `postgresql://` URIs, parameter keywords (*read*; ids `LIBPQ-CONNSTRING`, `LIBPQ-PARAMKEYWORDS`)
+- **Read this:** [The pg_hba.conf File](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) — postgresql.org: method list: `trust` lets anyone log in as any user (*read*)
+- **Also good:** [Environment Variables](https://www.postgresql.org/docs/current/libpq-envars.html) — postgresql.org: `PGHOST` etc. mirror the connection parameters (*read*)
+- **Also good:** [The Password File](https://www.postgresql.org/docs/current/libpq-pgpass.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Local install](07-local-install.md) · Next → [Process model](09-process-model.md)

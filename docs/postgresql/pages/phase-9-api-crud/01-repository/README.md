@@ -40,6 +40,16 @@ called standalone and inside a transaction without knowing which is happening.
   layering rationale, pool sizing and the ORM comparison. This topic is the
   PostgreSQL-facing half and links out rather than re-teaching them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Suggested Code Structure](https://node-postgres.com/guides/project-structure) — node-postgres.com: one `db/index.js` exports `query` and `getClient`, so logging and leak tracing live in one place (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [The executor contract](01-the-executor-contract.md)

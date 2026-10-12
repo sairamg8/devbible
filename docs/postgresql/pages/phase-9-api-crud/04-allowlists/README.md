@@ -37,6 +37,16 @@ text you wrote yourself.
 - **Node [Phase 6 · Parameterized queries](/docs/nodejs/pages/phase-6-data-access/parameterized-queries)**
   owns the general value-vs-identifier rule.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [OWASP SQL Injection Prevention → Defense Option 3: Allow-list Input Validation](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html#defense-option-3-allow-list-input-validation) — owasp.org: for table names, column names and sort indicators that cannot be bind variables, map the input to known values (*read*; anchor id found in the page HTML)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Safe dynamic `WHERE`](../03-safe-dynamic-where/README.md) · Start → [The two failure modes](01-two-failure-modes.md)

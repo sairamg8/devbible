@@ -173,6 +173,17 @@ does the same.
 `Client`'s connection outright. Calling `end()` on a pooled client removes it from the
 pool's management and is a bug.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Pooling → Shutdown](https://node-postgres.com/features/pooling) — node-postgres.com: `pool.end()` waits for checked-out clients; later checkouts return errors (*read*)
+- **Also good:** [pg.Pool → pool.end](https://node-postgres.com/apis/pool) — node-postgres.com: `allowExitOnIdle` for scripts and tests (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [One query, one statement](12-one-statement.md) · Next → [LISTEN/NOTIFY from Node](14-listen-notify.md)

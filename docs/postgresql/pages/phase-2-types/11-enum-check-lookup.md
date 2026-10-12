@@ -202,6 +202,18 @@ workflow statuses and impossible to reproduce with text without a sort column.
 No. All three arrive in Node as strings and are sent as strings. The decision is purely
 about schema evolution.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What is better: a lookup table or an enum type?](https://www.cybertec-postgresql.com/en/lookup-table-or-enum-type/) — CYBERTEC: 2025-12-02
+- **Also good:** [Enums vs Check Constraints in Postgres](https://www.crunchydata.com/blog/enums-vs-check-constraints-in-postgres) — Crunchy Data: 2022-12-08 (headings only)
+- **Also good:** [We need to talk about ENUMs](https://boringsql.com/posts/postgresql-enums/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Arrays](10-arrays.md) · Next → [Casting](12-casting.md)

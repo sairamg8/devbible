@@ -221,6 +221,16 @@ theoretical.
 `age(relfrozenxid)` counts transactions across the whole database, not writes to that
 table. A table nobody touches still ages.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [24.1 Routine Vacuuming, "Preventing Transaction ID Wraparound Failures"](https://www.postgresql.org/docs/current/routine-vacuuming.html) — postgresql.org: 32-bit XIDs wrap after about 4 billion; vacuum every table at least once every two billion transactions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Advisory locks](15-advisory-locks.md) · [Phase index](README.md)

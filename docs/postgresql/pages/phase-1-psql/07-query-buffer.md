@@ -208,6 +208,16 @@ parentheses. They tell you exactly why psql appears stuck.
 Executing the SQL that a query generates — for example running a `format()`-built
 `COMMENT ON` or `ALTER TABLE` across many tables at once.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · Meta-Commands](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMANDS) — postgresql.org: ids `APP-PSQL-META-COMMAND-EDIT`, `-PRINT`, `-RESET`, `-G`, `-GX`, `-SEMICOLON` (ids found in the HTML; entries not read)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Scripting psql](06-scripting.md) · Next → [psql variables](08-variables.md)

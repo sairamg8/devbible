@@ -239,6 +239,16 @@ does not.
 Cold cache. Compare `shared hit` versus `read` in `EXPLAIN (ANALYZE, BUFFERS)` to see it
 directly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · `\watch`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMAND-WATCH) — postgresql.org: `interval`, `count`, `min_rows` parameters; stops on error (*read*); `\timing` is `#APP-PSQL-META-COMMAND-TIMING`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [\copy vs COPY](09-copy.md) · Next → [\i and \ir](11-include-files.md)

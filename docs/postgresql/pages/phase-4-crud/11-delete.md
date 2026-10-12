@@ -281,6 +281,17 @@ No — it is an `UPDATE` setting `deleted_at`. No cascades fire, unique constrai
 count the row, and every query needs `WHERE deleted_at IS NULL` from then on. Measured,
 orders belonging to a soft-deleted user remained visible.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [DELETE (reference)](https://www.postgresql.org/docs/current/sql-delete.html) — postgresql.org: `USING` for join-deletes, `RETURNING` (*read* the synopsis)
+- **Also good:** [6.3. Deleting Data](https://www.postgresql.org/docs/current/dml-delete.html) — postgresql.org (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`ORDER BY`](10-order-by.md) · Next → [`DISTINCT` and `DISTINCT ON`](12-distinct-on.md)

@@ -187,6 +187,18 @@ external exposure.
 No — it is a plain string in both directions. It does not validate, so a malformed value
 fails server-side with `22P02`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [A deeper look at old UUIDv4 vs new UUIDv7 in PostgreSQL 18](https://www.credativ.de/en/blog/postgresql-en/a-deeper-look-at-old-uuidv4-vs-new-uuidv7-in-postgresql-18/) — credativ: 2025-12-05
+- **Also good:** [UUID Functions](https://www.postgresql.org/docs/current/functions-uuid.html) — postgresql.org: `uuidv7([shift interval])` (*read*)
+- **Also good:** [UUID Type](https://www.postgresql.org/docs/current/datatype-uuid.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [NULL semantics](06-null.md) · Next → [jsonb vs json](08-jsonb.md)

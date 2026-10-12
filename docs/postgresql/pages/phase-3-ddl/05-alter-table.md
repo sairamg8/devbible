@@ -220,6 +220,17 @@ table, such as `VACUUM FULL`.
 One lock acquisition instead of several, and at most one rewrite pass covering all
 the changes rather than one per statement.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ALTER TABLE · Notes](https://www.postgresql.org/docs/current/sql-altertable.html) — postgresql.org: a non-volatile `DEFAULT` is stored in metadata with no rewrite; a volatile default, stored generated or identity column, or constrained domain rewrites the table (*read*)
+- **Also good:** [Modifying Tables](https://www.postgresql.org/docs/current/ddl-alter.html) — postgresql.org: add, drop, rename, change type; ids `DDL-ALTER-COLUMN-TYPE` (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`NOT NULL`, `DEFAULT`, `UNIQUE`, `CHECK`](04-constraints.md) · Next → [Modeling relationships](06-relationships.md)

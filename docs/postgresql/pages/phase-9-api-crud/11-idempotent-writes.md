@@ -258,6 +258,17 @@ is rejected rather than silently answered.
 Return `409`. The key row exists but has no `completed_at`, so there is no
 response to replay and doing the work again would defeat the purpose.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Stripe API: Idempotent requests](https://docs.stripe.com/api/idempotent_requests) — docs.stripe.com: for v1, the first response (status and body) is saved under the key and returned on retry, including 500s (*read*)
+- **Also good:** [INSERT → ON CONFLICT](https://www.postgresql.org/docs/current/sql-insert.html) — postgresql.org: `DO NOTHING` / `DO UPDATE` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Keyset pagination](./keyset/) · Next → [Passing a client through services](12-client-propagation.md)

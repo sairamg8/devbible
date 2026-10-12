@@ -41,6 +41,16 @@ and say which of the two `HAVING` forms the planner can rewrite into a `WHERE`.
 - **[Semi joins](../../phase-5-joins/03-semi-anti/01-semi-joins.md)** — usually what a
   `HAVING count(…) > 0` was really trying to say
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [2.7. Aggregate Functions](https://www.postgresql.org/docs/current/tutorial-agg.html) — postgresql.org: `HAVING` filters grouped rows, `WHERE` filters before grouping (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Filtering groups, not rows](01-groups-vs-rows.md)

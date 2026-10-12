@@ -233,6 +233,16 @@ Write the event row and `NOTIFY` in the same transaction. The outbox gives
 durability and replay; the notification just wakes the worker so it does not wait
 for its next poll. Losing the notification costs latency, not the event.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [NOTIFY](https://www.postgresql.org/docs/current/sql-notify.html) — postgresql.org: delivered only on commit, in commit order, duplicates folded; send a record key rather than the data; a full queue fails commits (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [PL/pgSQL functions](12-plpgsql.md) · Next → [Partitioning](14-partitioning.md)

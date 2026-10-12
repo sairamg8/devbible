@@ -215,6 +215,17 @@ combination. Build those in code with a parameter array, and never reintroduce
 and containers. `import.meta.url` is the module's own location, so the path is
 correct regardless of how the process started.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PgTyped: Queries in SQL files](https://pgtyped.dev/docs/sql-file-intro) — pgtyped.dev: a `.sql` file with named queries yields typed TS functions that run on a `pg` `Client`; parameters sent separately (*read*)
+- **Also good:** [postgres.js README (raw): Queries in Files](https://raw.githubusercontent.com/porsager/postgres/master/README.md) — github (raw): `sql.file(path, args, options)` as a built-in alternative (*headings only* for that section)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Bulk insert that scales](04-bulk-insert.md) · Next → [Wrapping a migration in `BEGIN`/`COMMIT`](06-tx-migration.md)

@@ -248,6 +248,16 @@ Parameterise the series endpoints, validate the span in the application, and set
 `statement_timeout`. An unbounded `generate_series` cross joined against a table is a
 denial-of-service in one line.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.2.1.1 Joined Tables → Cross join](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) — postgresql.org: N rows by M rows gives N*M rows (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [RIGHT and FULL OUTER](06-outer-joins.md) · Next → [ON vs USING vs NATURAL](08-on-using-natural.md)

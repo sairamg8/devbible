@@ -57,6 +57,17 @@ table by asking one question about its indexes.
   the join-side view of the same problem
 - **[EXPLAIN](../../phase-10-indexes/03-explain.md)** — reading the plans in chunk 03
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.21. Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html) — postgresql.org: `count(*)` counts input rows; `count(any)` counts rows where the value is not null (*read* the table)
+- **Also good:** [4.2.7 Aggregate Expressions](https://www.postgresql.org/docs/current/sql-expressions.html#SYNTAX-AGGREGATES) — postgresql.org: the `aggregate_name (DISTINCT expression)` and `FILTER` syntax (*read* the syntax)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Three different questions](01-three-questions.md)

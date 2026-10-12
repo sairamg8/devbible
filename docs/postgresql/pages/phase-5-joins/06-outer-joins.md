@@ -237,6 +237,16 @@ The merged column is `coalesce(left.col, right.col)`, so the key is non-NULL for
 present on either side — exactly what a diff or reconciliation query needs, without writing
 the `coalesce` yourself.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) — postgresql.org: `LEFT`, `RIGHT`, `FULL` all imply `OUTER` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Reading N-N relationships](05-nn-join-table.md) · Next → [CROSS JOIN](07-cross-join.md)

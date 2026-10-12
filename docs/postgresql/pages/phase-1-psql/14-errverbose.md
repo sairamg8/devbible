@@ -208,6 +208,17 @@ PostgreSQL's suggested fix.
 **How do you capture the code in a psql script?**
 The `:SQLSTATE` variable after a statement, alongside `:ERROR` and `:LAST_ERROR_MESSAGE`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · `\errverbose`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMAND-ERRVERBOSE) — postgresql.org: repeats the last error at maximum verbosity (*read*)
+- **Read this:** [PostgreSQL Error Codes](https://www.postgresql.org/docs/current/errcodes-appendix.html) — postgresql.org: test the five-character SQLSTATE, not the message text (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [.psqlrc and prompt](13-psqlrc.md) · Next → [Piping psql](15-piping.md)

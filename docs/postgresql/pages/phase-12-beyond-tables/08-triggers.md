@@ -270,6 +270,17 @@ application's source explains it. And never anything with an external side
 effect — a trigger runs inside the transaction, so an HTTP call holds the
 transaction open and cannot be rolled back. Use an outbox or `LISTEN`/`NOTIFY`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Overview of Trigger Behavior](https://www.postgresql.org/docs/current/trigger-definition.html) — postgresql.org: row-level versus statement-level; `BEFORE`, `AFTER`, `INSTEAD OF`; `TRUNCATE` is statement-level only (*read*)
+- **Also good:** [Trigger Functions (PL/pgSQL)](https://www.postgresql.org/docs/current/plpgsql-trigger.html) — postgresql.org: `NEW` and `OLD` are null in statement-level triggers (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Views](07-views.md) · Next → [Extensions](09-extensions.md)

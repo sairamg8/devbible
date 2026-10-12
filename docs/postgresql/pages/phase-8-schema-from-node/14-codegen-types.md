@@ -194,6 +194,17 @@ Type each repository function's return explicitly, keep those types in one modul
 next to the SQL, and rely on the boot-time drift check. It gets most of the benefit
 with no build-time database dependency.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PgTyped: Getting Started](https://pgtyped.dev/docs/getting-started) — pgtyped.dev: config with `transforms`, `db` connection; types inferred from the live schema, run in watch mode (*read*)
+- **Also good:** [kysely-codegen README (raw)](https://raw.githubusercontent.com/RobinBlomberg/kysely-codegen/master/README.md) — github (raw): types from a live database; `--camel-case`; `numericParser` default `string` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Schema drift](13-schema-drift.md) · Next → [Phase 9 · CRUD patterns for a real API](../phase-9-api-crud/)

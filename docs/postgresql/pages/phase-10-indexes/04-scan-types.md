@@ -172,6 +172,17 @@ those pages must be re-tested. `Heap Blocks: lossy=` confirms it happened.
 Turn off the plan type it chose, re-run `EXPLAIN (ANALYZE, BUFFERS)`, and compare
 `Execution Time` and `Buffers`. If the alternative is slower, the planner was right.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [14.1 Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — postgresql.org: worked plans for `Seq Scan`, `Index Scan` and the two-step `Bitmap Index Scan` then `Bitmap Heap Scan` with `Recheck Cond` (*read*)
+- **Also good:** [11.5 Combining Multiple Indexes](https://www.postgresql.org/docs/current/indexes-bitmap-scans.html) — postgresql.org: bitmaps ANDed and ORed in memory, rows then visited in physical order (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [EXPLAIN vs EXPLAIN ANALYZE](03-explain.md) · Next → [Why an index is not used](05-index-not-used.md)

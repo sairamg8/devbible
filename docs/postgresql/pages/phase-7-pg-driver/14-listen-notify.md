@@ -233,6 +233,18 @@ underlying table rather than counting them.
 8000 bytes, enforced with `22023 payload string too long`. Send an identifier and let the
 listener fetch the row.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [NOTIFY](https://www.postgresql.org/docs/current/sql-notify.html) — postgresql.org: payload, channel and sender PID; delivery waits until the listener's transaction ends (*read*)
+- **Also good:** [pg.Client → notification event](https://node-postgres.com/apis/client) — node-postgres.com: `client.on('notification', ...)` after `LISTEN foo` (*read*)
+- **Also good:** [LISTEN](https://www.postgresql.org/docs/current/sql-listen.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`pool.end`](13-pool-end.md) · Next → [pg-cursor streaming](15-cursors.md)

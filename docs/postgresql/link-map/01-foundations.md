@@ -16,7 +16,7 @@ All 45 are ✅ written here. *read* = passage read; *headings only* = fetched, h
 ## Phase 0 — PostgreSQL and its architecture
 
 ### T00-01 · The client/server model — Master · ✅ written `docs/postgresql/pages/phase-0-architecture/02-client-server-model.md`
-- **Read this:** [How to Manage Connections Efficiently in Postgres](https://brandur.org/postgres-connections) · brandur.org · postmaster forks a backend per connection, each starting around 5 MB, then why pools and PgBouncer follow (*read*; published 2018-10-15) · covers our angle: full
+- **Read this:** [How to Manage Connections Efficiently in Postgres, or Any Database](https://brandur.org/postgres-connections) · brandur.org · postmaster forks a backend per connection, each starting around 5 MB, then why pools and PgBouncer follow (*read*; published 2018-10-15) · covers our angle: full
 - **Also good:** [Architectural Fundamentals](https://www.postgresql.org/docs/current/tutorial-arch.html) · postgresql.org · short official statement that the server forks a new process per connection (*read*) · [Number Of Database Connections](https://wiki.postgresql.org/wiki/Number_Of_Database_Connections) · postgresql.org wiki · why throughput falls past a "knee" (*read*; last edited 2014-03-14) · fetched 2026-10-12
 - **Our delta:** the 2018 article predates PostgreSQL 18; keep the per-backend size as "order of 5 MB, grows" and measure on 18.
 
@@ -36,7 +36,7 @@ All 45 are ✅ written here. *read* = passage read; *headings only* = fetched, h
 - **Our delta:** the double-buffering story (shared buffers plus OS cache) as one picture.
 
 ### T00-05 · WAL — why every change is written twice — Understand · ✅ written `docs/postgresql/pages/phase-0-architecture/05-wal.md`
-- **Read this:** [Write-Ahead Logging · Reliability](https://www.postgresql.org/docs/current/wal-intro.html) · postgresql.org · log first, no data-page flush per commit, REDO after a crash (*read*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [Write-Ahead Logging · Reliability](https://www.postgresql.org/docs/current/wal-intro.html) · postgresql.org · log first, no data-page flush per commit, REDO after a crash (*read*) · covers our angle: full for "written twice"; **partial** for "durability, concretely" — no commit-durability setting is named on the page · fetched 2026-10-12
 - **Also good:** [Reliability](https://www.postgresql.org/docs/current/wal-reliability.html) · postgresql.org · fsync and what a durable commit needs (headings only)
 - **Our delta:** `synchronous_commit` as the knob behind "durability, concretely" is not in the page above.
 
@@ -65,7 +65,7 @@ All 45 are ✅ written here. *read* = passage read; *headings only* = fetched, h
 - **Our delta:** the table is dated: re-read it before each `> Verified:` bump.
 
 ### T00-11 · PostgreSQL vs MySQL vs SQLite — Know · ✅ written `docs/postgresql/pages/phase-0-architecture/11-vs-other-databases/` (`README.md`, `01-outdated-folklore.md`, `02-real-differences.md`)
-- **Read this:** [Appropriate Uses For SQLite](https://www.sqlite.org/whentouse.html) · sqlite.org · SQLite is not directly comparable to client/server engines; one writer at a time (*read*) · covers our angle: **partial** — SQLite side only, written by SQLite's authors · fetched 2026-10-12
+- **Read this:** [Appropriate Uses For SQLite](https://www.sqlite.org/whentouse.html) · sqlite.org · SQLite is not directly comparable to client/server engines; one writer at a time (*read*; page undated, and it quotes a 2015 traffic figure) · covers our angle: **partial** — SQLite side only, written by SQLite's authors · fetched 2026-10-12
 - **Our delta:** no neutral, current MySQL comparison was found (tried: three searches that returned only vendor and aggregator posts). The MySQL column must come from MySQL's own manual, **not confirmed**.
 
 ### T00-12 · `template0`/`template1`, the `postgres` database, what `CREATE DATABASE` copies — When Needed · ✅ written `docs/postgresql/pages/phase-0-architecture/12-templates.md`
@@ -80,11 +80,11 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 
 ### T01-01 · Connecting — Master · ✅ written `docs/postgresql/pages/phase-1-psql/01-connecting.md`
 - **Read this (1/2):** [psql · Connecting to a Database](https://www.postgresql.org/docs/current/app-psql.html) · postgresql.org · host, port, user, database from flags, URI or conninfo (*read*; options `#APP-PSQL-OPTION-DBNAME`) · covers our angle: **partial** — nothing on containers · fetched 2026-10-12
-- **Read this (2/2):** [Connection Strings](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING) · postgresql.org · URI grammar `postgresql://[user[:password]@][host][:port][/dbname]` (*read*) · fetched 2026-10-12
+- **Read this (2/2):** [Connection Strings](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING) · postgresql.org · URI form `postgresql://[userspec@][hostspec][/dbname][?paramspec]`, where `userspec` is `user[:password]` (*read*) · fetched 2026-10-12
 - **Our delta:** `podman exec -it … psql` and the `127.0.0.1` rule.
 
 ### T01-02 · The daily meta-commands — Master · ✅ written `docs/postgresql/pages/phase-1-psql/02-daily-meta-commands.md`
-- **Read this:** [psql · Meta-Commands](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMANDS) · postgresql.org · `\l`, `\c`, `\dt`, `\dn`, `\df`, `\di`, `\dv`, `\ds` each defined; ids `APP-PSQL-META-COMMAND-LIST`, `-C-LC`, `-DT`, `-DN` (*read* the command list) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [psql · Meta-Commands](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMANDS) · postgresql.org · the eight daily commands: `\l` (`#APP-PSQL-META-COMMAND-LIST`), `\c` (`-C-LC`), `\dn` (`-DN`), `\df` (`-DF-LC`); `\dt \di \dv \ds` share one group entry (`-DE`); `-DT` is `\dT`, data types, not `\dt` (ids found in the HTML; entries *read*) · covers our angle: full · fetched 2026-10-12
 - **Our delta:** the `S` and `+` suffixes and patterns (`#APP-PSQL-PATTERNS`) as one cheat table.
 
 ### T01-03 · `\d` and `\d+ table` in full — Master · ✅ written `docs/postgresql/pages/phase-1-psql/03-describe-table.md`
@@ -128,7 +128,7 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 
 ### T01-13 · `.psqlrc`, prompt, `HISTFILE`, autocomplete — Know · ✅ written `docs/postgresql/pages/phase-1-psql/13-psqlrc.md`
 - **Read this:** [psql · Files · `psqlrc`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-FILES-PSQLRC) · postgresql.org · startup file rules; prompting is `#APP-PSQL-PROMPTING`, `HISTFILE` is `#APP-PSQL-VARIABLES-HISTFILE` (headings only) · covers our angle: **partial** · fetched 2026-10-12
-- **Also good:** [Magic Tricks for Postgres psql](https://www.crunchydata.com/blog/magic-tricks-for-postgres-psql-settings-presets-cho-and-saved-queries) · Crunchy Data · worked `.psqlrc` with `\x auto`, `HISTFILE`, `PROMPT1` (*read*; undated page; one snippet carries a stray "CHECK IF THIS IS RIGHT" note) · [Customizing My Postgres Shell](https://www.citusdata.com/blog/2017/07/16/customizing-my-postgres-shell-using-psqlrc/) · Citus Data · 2017-07-16 (headings only)
+- **Also good:** [Magic Tricks for Postgres psql](https://www.crunchydata.com/blog/magic-tricks-for-postgres-psql-settings-presets-cho-and-saved-queries) · Crunchy Data · worked `.psqlrc` with `\x auto`, `HISTFILE`, `PROMPT1` (*read*; 2024-07-19; one snippet carries a stray "CHECK IF THIS IS RIGHT" note) · [Customizing My Postgres Shell](https://www.citusdata.com/blog/2017/07/16/customizing-my-postgres-shell-using-psqlrc/) · Citus Data · 2017-07-16 (headings only)
 
 ### T01-14 · `\errverbose` and `VERBOSITY verbose` — Know · ✅ written `docs/postgresql/pages/phase-1-psql/14-errverbose.md`
 - **Read this (1/2):** [psql · `\errverbose`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMAND-ERRVERBOSE) · postgresql.org · repeats the last error at maximum verbosity (*read*) · covers our angle: **partial** — nothing on Node · fetched 2026-10-12
@@ -145,12 +145,12 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 `pg` hands most types back as strings unless a parser is registered; the node-postgres [Data Types](https://node-postgres.com/features/types) page says so for unregistered types and shows uuid, json/jsonb and date/timestamp/timestamptz (*read*, fetched 2026-10-12). It does **not** name `int8` or `numeric` in the text I read, so "bigint and numeric arrive as strings" is **not confirmed** there.
 
 ### T02-01 · `integer` / `bigint` / `smallint` — Master · ✅ written `docs/postgresql/pages/phase-2-types/01-integers.md`
-- **Read this:** [Numeric Types · Integer Types](https://www.postgresql.org/docs/current/datatype-numeric.html#DATATYPE-INT) · postgresql.org · range table: smallint ±32767, integer ±2147483647, bigint ±9223372036854775807 (*read*) · covers our angle: **partial** — why identifiers are `bigint` is not argued · fetched 2026-10-12
+- **Read this:** [Numeric Types · Integer Types](https://www.postgresql.org/docs/current/datatype-numeric.html#DATATYPE-INT) · postgresql.org · range table: smallint -32768 to +32767, integer -2147483648 to +2147483647, bigint -9223372036854775808 to +9223372036854775807 (*read*) · covers our angle: **partial** — why identifiers are `bigint` is not argued · fetched 2026-10-12
 - **Our delta:** overflow behaviour and the `pg` return type for `bigint`.
 
 ### T02-02 · `numeric` vs `real`/`double precision` — Master · ✅ written `docs/postgresql/pages/phase-2-types/02-numeric-vs-float.md`
 - **Read this:** [Numeric Types](https://www.postgresql.org/docs/current/datatype-numeric.html) · postgresql.org · `numeric` is exact up to 131072 digits before the point; ids `DATATYPE-NUMERIC-DECIMAL`, `DATATYPE-FLOAT` (*read* the table, headings only for the float notes) · covers our angle: **partial** — nothing on `pg` · fetched 2026-10-12
-- **Also good:** [Working with Money in Postgres](https://www.crunchydata.com/blog/working-with-money-in-postgres) · Crunchy Data · shows `0.0001::float4` summed three times giving 0.00029999999 (*read*; undated)
+- **Also good:** [Working with Money in Postgres](https://www.crunchydata.com/blog/working-with-money-in-postgres) · Crunchy Data · 2023-10-11 · shows `0.0001::float4` summed three times giving 0.00029999999 (*read*)
 
 ### T02-03 · `text` vs `varchar(n)` vs `char(n)` — Master · ✅ written `docs/postgresql/pages/phase-2-types/03-text.md`
 - **Read this:** [Character Types](https://www.postgresql.org/docs/current/datatype-character.html) · postgresql.org · "no performance difference among these three types" apart from padding storage (*read*) · covers our angle: full · fetched 2026-10-12
@@ -195,7 +195,7 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 
 ### T02-12 · `enum` vs `CHECK` vs lookup table — Understand · ✅ written `docs/postgresql/pages/phase-2-types/11-enum-check-lookup.md`
 - **Read this:** [What is better: a lookup table or an enum type?](https://www.cybertec-postgresql.com/en/lookup-table-or-enum-type/) · CYBERTEC · 2025-12-02 · compares string plus `CHECK`, enum and lookup table, including `ALTER TYPE … RENAME VALUE` (*read* the enum part) · covers our angle: full · fetched 2026-10-12
-- **Also good:** [Enums vs Check Constraints in Postgres](https://www.crunchydata.com/blog/enums-vs-check-constraints-in-postgres) · Crunchy Data · undated (headings only) · [We need to talk about ENUMs](https://boringsql.com/posts/postgresql-enums/) · boringSQL · 2024-09-04 (headings only)
+- **Also good:** [Enums vs Check Constraints in Postgres](https://www.crunchydata.com/blog/enums-vs-check-constraints-in-postgres) · Crunchy Data · 2022-12-08 (headings only) · [We need to talk about ENUMs](https://boringsql.com/posts/postgresql-enums/) · boringSQL · 2024-09-04 (headings only)
 - **Our delta:** how each fails on change, shown from `pg`.
 
 ### T02-13 · Casting — Understand · ✅ written `docs/postgresql/pages/phase-2-types/12-casting.md`
@@ -221,6 +221,6 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 - **Also good:** [Constraints · Exclusion Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-EXCLUSION) · postgresql.org · `EXCLUDE USING gist` builds an index automatically (*read*)
 
 ### T02-18 · Modelling money — Master · ✅ written `docs/postgresql/pages/phase-2-types/17-modelling-money/` (`README.md`, `01-storing-money.md`, `02-arithmetic-and-rounding.md`, `03-ledgers-and-node.md`)
-- **Read this:** [Working with Money in Postgres](https://www.crunchydata.com/blog/working-with-money-in-postgres) · Crunchy Data · money, floats, integers and numeric compared; integer math makes 100/3 equal 33 (*read*; undated) · covers our angle: **partial** — nothing on a ledger shape · fetched 2026-10-12
-- **Also good:** [Don't Do This · money](https://wiki.postgresql.org/wiki/Don%27t_Do_This) · postgresql.org wiki · `money` follows `lc_monetary`, so changing it makes stored values wrong (*read*) · [Why Is numeric So Popular in PostgreSQL Databases?](https://www.pgedge.com/blog/why-is-numeric-so-popular-in-postgresql-databases) · pgEdge · long argument for `numeric` (headings only)
+- **Read this:** [Working with Money in Postgres](https://www.crunchydata.com/blog/working-with-money-in-postgres) · Crunchy Data · money, floats, integers and numeric compared; integer math makes 100/3 equal 33 (*read*; published 2023-10-11) · covers our angle: **partial** — nothing on a ledger shape · fetched 2026-10-12
+- **Also good:** [Don't Do This · money](https://wiki.postgresql.org/wiki/Don%27t_Do_This) · postgresql.org wiki · `money` follows `lc_monetary`, so changing it makes stored values wrong (*read*) · [Why Is numeric So Popular in PostgreSQL Databases?](https://www.pgedge.com/blog/why-is-numeric-so-popular-in-postgresql-databases) · pgEdge · 2026-09-03 · long argument for `numeric` (headings only)
 - **Our delta:** the ledger shape and rounding rule for splits.

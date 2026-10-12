@@ -217,6 +217,17 @@ contention is low. Under heavy single-row contention it is the worst option — 
 `rowCount === 0` — the `WHERE version = $2` matched nothing. Always check it; a
 successful query with zero rows affected is the failure signal.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PostgreSQL anti-patterns: read-modify-write cycles](https://www.enterprisedb.com/blog/postgresql-anti-patterns-read-modify-write-cycles) — EDB: four fixes: calculated `UPDATE`, `SELECT … FOR UPDATE`, `SERIALIZABLE`, optimistic version column; page shows no date (*read*)
+- **Also good:** [SELECT FOR UPDATE considered harmful in PostgreSQL](https://www.cybertec-postgresql.com/en/select-for-update-considered-harmful-postgresql/) — Cybertec: explains the lost-update race and why `FOR NO KEY UPDATE` is often the right lock; published 2025-06-17, modified 2026-09-22 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [READ COMMITTED](03-read-committed.md) · Next → [MVCC snapshots](05-mvcc.md)

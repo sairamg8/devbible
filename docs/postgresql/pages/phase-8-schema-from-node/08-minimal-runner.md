@@ -241,6 +241,17 @@ must exist first. That single statement carries the race documented in
 [Startup races](./01-ddl-from-node/03-startup-races.md), so take the lock before it if
 many first-runs may start at once.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [postgres-migrations README (raw): Design decisions and Concurrency](https://raw.githubusercontent.com/akheron/postgres-migrations/master/README.md) — github (raw): `migrations` table, hash check, transaction per file, advisory lock so a second runner waits; warns that advisory locks break under PgBouncer transaction pooling (*read*)
+- **Also good:** [node-pg-migrate CLI reference](https://salsita.github.io/node-pg-migrate/cli) — salsita.github.io: `--single-transaction` default, `--check-order` default true, advisory lock for redo (*read* the options)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`CREATE TABLE IF NOT EXISTS`](07-if-not-exists.md) · Next → [`COPY FROM STDIN`](09-copy-streams.md)

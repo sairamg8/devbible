@@ -41,6 +41,17 @@ once.** Get the wrapper right and everything inside it composes; get it wrong an
 - **[Phase 11 · Idle in transaction](../../phase-11-mvcc/14-idle-in-transaction.md)**
   covers the server-side consequences of the duration problem in chunk 02.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Transactions](https://node-postgres.com/features/transactions) — node-postgres.com: same client for every statement; never `pool.query` for a transaction; `BEGIN`, `COMMIT`, `ROLLBACK` in `try`/`catch`/`finally` (*read*)
+- **Also good:** [Tutorial → Transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html) — postgresql.org: the SQL-side explanation (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [The wrapper](01-the-wrapper.md)

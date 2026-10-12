@@ -268,6 +268,17 @@ join.
 `INSERT INTO t (…) SELECT … FROM generate_series(1, 1000000)` — one statement, computed
 server-side, with no round trips.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.26. Set Returning Functions](https://www.postgresql.org/docs/current/functions-srf.html) — postgresql.org: `generate_series` for integer, bigint, numeric (*read*); `step` defaults to 1
+- **Also good:** [9.3 → Random Functions](https://www.postgresql.org/docs/current/functions-math.html) — postgresql.org: `random()` returns a value from 0.0 up to, not including, 1.0; this release also has `random(min, max)` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Date/time functions](17-datetime-functions.md) · Next → [`VALUES` and `unnest`](19-values-unnest.md)

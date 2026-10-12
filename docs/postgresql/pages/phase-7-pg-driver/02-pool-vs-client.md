@@ -160,6 +160,18 @@ depth. Persistent `waitingCount > 0` means the pool is the bottleneck.
 **Does `pool.query()` guarantee two calls use the same connection?**
 No, and that is the whole reason session state cannot go through it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Pooling](https://node-postgres.com/features/pooling) — node-postgres.com: handshake costs 20-30 ms; one client runs one query at a time, first-in first-out; `pool.query` is the preferred way for a single query (*read*)
+- **Also good:** [pg.Pool API](https://node-postgres.com/apis/pool) — node-postgres.com: config defaults: `max` 10, `idleTimeoutMillis` 10000 (*read* the config block)
+- **Also good:** [Pool sizing](https://node-postgres.com/guides/pool-sizing)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Installing and wiring pg](01-install-wire.md) · Next → [Connection configuration](03-connection-config.md)

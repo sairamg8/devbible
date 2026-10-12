@@ -51,6 +51,16 @@ You are done when you can spot a correlated subquery in a plan without being tol
 - **[N+1 queries](/docs/nodejs/pages/phase-6-data-access/n-plus-1)** — the same algorithm
   with round trips attached
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.24. Subquery Expressions](https://www.postgresql.org/docs/current/functions-subquery.html) — postgresql.org: `EXISTS`, `IN`, `ANY`, single-row comparison (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Scalar and row subqueries](01-scalar-and-row.md)

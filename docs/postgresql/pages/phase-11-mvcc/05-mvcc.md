@@ -194,6 +194,16 @@ useful for batching within a single statement — nothing else.
 Nothing is undone. The version stays on disk with an `xmin` belonging to an aborted
 transaction, which makes it invisible to everyone, and VACUUM removes it later.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [13.1 Introduction (Concurrency Control)](https://www.postgresql.org/docs/current/mvcc-intro.html) — postgresql.org: each statement sees a snapshot; "reading never blocks writing and writing never blocks reading" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Lost update](04-lost-update.md) · Next → [REPEATABLE READ SERIALIZABLE](06-isolation-levels.md)

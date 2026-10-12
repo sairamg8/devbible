@@ -236,6 +236,17 @@ to a 766 ms sequential scan, GiST did it in 110 ms — for 48 MB against 13 MB.
 No. If you query one known field by equality, a B-tree on `(doc->>'field')` is far smaller
 and faster to maintain.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [65.4 GIN Indexes](https://www.postgresql.org/docs/current/gin.html) — postgresql.org: built-in operator classes table: `array_ops`, `jsonb_ops`, `jsonb_path_ops`, `tsvector_ops` (*read* the table)
+- **Read this:** [F.35 pg_trgm](https://www.postgresql.org/docs/current/pgtrgm.html) — postgresql.org: GIN and GiST trigram indexes support `LIKE`, `ILIKE`, `~`, `~*` and `=`; not as efficient as B-tree for equality (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Expression indexes](10-expression.md) · Next → [CREATE INDEX CONCURRENTLY](12-concurrently.md)

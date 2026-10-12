@@ -110,6 +110,16 @@ A host Postgres may already own 5432; non-default ports avoid collisions.
 **Does the app care that Postgres is in a container?**  
 Only about host, port, TLS, and credentials — the wire protocol is the same.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [postgres (Docker Official Image)](https://hub.docker.com/_/postgres) — hub.docker.com: env vars, compose example, and the 18 change: `PGDATA` is now version-specific and the `VOLUME` is `/var/lib/postgresql` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Roles](06-roles.md) · Next → [Connections and auth](08-connection-and-auth.md)

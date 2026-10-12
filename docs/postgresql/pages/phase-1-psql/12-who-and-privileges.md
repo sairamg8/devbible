@@ -209,6 +209,16 @@ one role to another.
 Connect as it: `psql -U app_role -c 'SELECT …'`. Measured — SELECT succeeded, DELETE
 returned `permission denied for table`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Privileges](https://www.postgresql.org/docs/current/ddl-priv.html) — postgresql.org: the aclitem format and the table of letters (`arwdDxtm`) that `\dp` prints (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [\i and \ir](11-include-files.md) · Next → [.psqlrc and prompt](13-psqlrc.md)

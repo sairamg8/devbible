@@ -176,6 +176,16 @@ Because both the error you wanted and the error you did not want are suppressed 
 the same clause. A script that cannot fail also cannot tell you that reality has
 diverged from your intent.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CREATE TABLE → IF NOT EXISTS](https://www.postgresql.org/docs/current/sql-createtable.html) — postgresql.org: no error, a notice instead, and "no guarantee" the existing relation matches (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Wrapping a migration in `BEGIN`/`COMMIT`](06-tx-migration.md) · Next → [Writing a minimal migration runner](08-minimal-runner.md)

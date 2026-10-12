@@ -141,6 +141,18 @@ shares that budget.
 No. It borrows a client from the pool, runs one query, returns the client. The
 backend process stays up for reuse.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to Manage Connections Efficiently in Postgres, or Any Database](https://brandur.org/postgres-connections) — brandur.org: postmaster forks a backend per connection, each starting around 5 MB, then why pools and PgBouncer follow (*read*; published 2018-10-15)
+- **Also good:** [Architectural Fundamentals](https://www.postgresql.org/docs/current/tutorial-arch.html) — postgresql.org: short official statement that the server forks a new process per connection (*read*)
+- **Also good:** [Number Of Database Connections](https://wiki.postgresql.org/wiki/Number_Of_Database_Connections)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [What PostgreSQL is](01-what-postgresql-is.md) · Next → [Namespace](03-namespace.md)

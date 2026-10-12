@@ -49,6 +49,17 @@ what a second window function costs.
 - **[HAVING](../03-having/README.md)** — the filter that runs *before* windows, which is why `42P20` exists
 - **[EXPLAIN](../../phase-10-indexes/03-explain.md)** — reading `WindowAgg` and its `Sort`
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [3.5. Window Functions](https://www.postgresql.org/docs/current/tutorial-window.html) — postgresql.org: `avg(salary) OVER (PARTITION BY depname)` keeps every row, unlike `GROUP BY` (*read*)
+- **Also good:** [7.2.5 Window Function Processing](https://www.postgresql.org/docs/current/queries-table-expressions.html) — postgresql.org: where windows run (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [OVER keeps the rows](01-over-vs-group-by.md)

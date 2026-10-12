@@ -197,6 +197,17 @@ Because `LIMIT` runs last and simply stops after N rows of whatever order the pl
 produced. There is no default order in SQL, so "the first 10" is undefined without an
 `ORDER BY` — and one that is not total is equally undefined.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SELECT → Description](https://www.postgresql.org/docs/current/sql-select.html) — postgresql.org: lists the steps in order: `FROM` computed, `WHERE` filters, then grouping; its "SELECT List" passage says an output name works in `ORDER BY` and `GROUP BY` but not in `WHERE` or `HAVING` (*read* both passages)
+- **Also good:** [SQL Execution Order Explained](https://www.stratascratch.com/blog/sql-execution-order-explained) — stratascratch.com: updated 2026-07-13; walks `FROM` to `LIMIT` and why a `SELECT` alias fails in `WHERE` (*read* the intro and a few steps; examples run on PostgreSQL per the page)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Parameterized queries](08-parameters.md) · Next → [`ORDER BY`](10-order-by.md)

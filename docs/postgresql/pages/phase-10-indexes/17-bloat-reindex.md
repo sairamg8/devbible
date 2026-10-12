@@ -232,6 +232,17 @@ writes. Find it with `WHERE NOT indisvalid` and drop it.
 One on a frequently-updated column — it also prevents HOT updates, so it is worth asking
 whether it should exist.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [24.2 Routine Reindexing](https://www.postgresql.org/docs/current/routine-reindex.html) — postgresql.org: empty B-tree pages are reused, but pages with a few keys left stay allocated (*read*)
+- **Also good:** [REINDEX](https://www.postgresql.org/docs/current/sql-reindex.html) — postgresql.org: synopsis shows `CONCURRENTLY` for index, table, schema, database (*headings only*; synopsis seen)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Statistics and ANALYZE](16-statistics.md) · Next → [Indexing foreign key columns](18-fk-indexes.md)

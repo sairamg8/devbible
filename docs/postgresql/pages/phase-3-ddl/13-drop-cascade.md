@@ -193,6 +193,17 @@ Teardown scripts and test fixtures. Not in a migration that is supposed to drop 
 specific object — there, a missing table means something is wrong and the error is
 the information you want.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dependency Tracking](https://www.postgresql.org/docs/current/ddl-depend.html) — postgresql.org: `RESTRICT` is the default and blocks dropping objects others depend on; `CASCADE` drops dependents (*read*)
+- **Also good:** [DROP TABLE](https://www.postgresql.org/docs/current/sql-droptable.html) — postgresql.org (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Normalization to 3NF](12-normalization.md) · Next → [Sequences as real objects](14-sequences.md)

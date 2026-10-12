@@ -1,7 +1,7 @@
 ---
 title: "Link map · PostgreSQL · Part 2 (phases 4–6)"
 sidebar_label: "02 · PostgreSQL · SQL"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Link map · PostgreSQL · Part 2 (phases 4–6)
@@ -16,7 +16,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 ## Phase 4 — CRUD and DML
 
 ### T04-01 · The `SELECT` shape — Master · ✅ written `docs/postgresql/pages/phase-4-crud/01-select-shape.md`
-- **Read this:** [2.5. Querying a Table](https://www.postgresql.org/docs/current/tutorial-select.html) · postgresql.org · tutorial split into select list, table list, qualification; short and runnable (*read* the opening) · covers our angle: **partial** — no `LIMIT`, `ORDER BY` here · fetched 2026-10-12
+- **Read this:** [2.5. Querying a Table](https://www.postgresql.org/docs/current/tutorial-select.html) · postgresql.org · tutorial split into select list, table list, qualification; short and runnable; includes `ORDER BY` and `DISTINCT` examples (*read*) · covers our angle: **partial** — no `LIMIT` here · fetched 2026-10-12
 - **Also good:** [7.1. Overview](https://www.postgresql.org/docs/current/queries-overview.html) · postgresql.org · general syntax `WITH ... SELECT ... FROM ... sort` (*read* the opening)
 
 ### T04-02 · `WHERE` predicates — Master · ✅ written `docs/postgresql/pages/phase-4-crud/02-where-predicates.md`
@@ -35,11 +35,11 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 
 ### T04-05 · `RETURNING` — Master · ✅ written `docs/postgresql/pages/phase-4-crud/05-returning.md`
 - **Read this:** [6.4. Returning Data from Modified Rows](https://www.postgresql.org/docs/current/dml-returning.html) · postgresql.org · `INSERT`, `UPDATE`, `DELETE`, `MERGE` all take `RETURNING` (*read* the opening) · covers our angle: full · fetched 2026-10-12
-- **Our delta:** the PG 18 `INSERT` synopsis shows `RETURNING WITH (OLD | NEW AS ...)`; whether it is in 18.4 exactly is **not confirmed** (docs now say 18.6).
+- **Our delta:** the same page documents `old.col` / `new.col` in `RETURNING` for `INSERT`, `UPDATE`, `DELETE` and `MERGE`. The release notes page for major 18 (`/docs/current/release-18.html`) lists "OLD and NEW support for RETURNING clauses", so it is a 18.0 feature and in 18.4 (*read*).
 
 ### T04-06 · `INSERT ... ON CONFLICT` — Master · ✅ written `docs/postgresql/pages/phase-4-crud/06-on-conflict.md`
 - **Read this:** [INSERT → ON CONFLICT Clause](https://www.postgresql.org/docs/current/sql-insert.html#SQL-ON-CONFLICT) · postgresql.org · `DO NOTHING` may omit the conflict target; `DO UPDATE` must give one; arbiter indexes by inference (*read*) · covers our angle: full · fetched 2026-10-12
-- **Our delta:** the `EXCLUDED` pseudo-table walk-through and the "same key twice in one statement" failure — neither checked on this reference page.
+- **Our delta:** the reference page names the special `excluded` table and says `DO UPDATE` will not affect a row more than once (cardinality violation error) (*read*); the worked `EXCLUDED` walk-through and the Node-side error handling are ours.
 
 ### T04-07 · `UPDATE` — Master · ✅ written `docs/postgresql/pages/phase-4-crud/07-update.md`
 - **Read this:** [UPDATE (reference)](https://www.postgresql.org/docs/current/sql-update.html) · postgresql.org · carries the `FROM from_item` join-update form and `RETURNING` (*read* the synopsis) · covers our angle: full · fetched 2026-10-12
@@ -50,9 +50,9 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 - **Our delta:** the safety rationale in SQL terms (parse and bind are separate); driver mechanics belong to Phase 7.
 
 ### T04-09 · The logical query processing order — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/09-logical-order.md`
-- **Read this:** [SELECT → Description](https://www.postgresql.org/docs/current/sql-select.html) · postgresql.org · lists the steps in order: `FROM` computed, `WHERE` filters, then grouping (*read* the Description passage) · covers our angle: **partial** — states the order, not "why an alias fails in `WHERE`" · fetched 2026-10-12
-- **Also good:** [SQL Execution Order Explained](https://www.stratascratch.com/blog/sql-execution-order-explained) · stratascratch.com · 2026-07-13; walks `FROM` to `LIMIT` and why a `SELECT` alias fails in `WHERE` (*read* the intro and a few steps; examples run on PostgreSQL per the page) · fetched 2026-10-12
-- **Our delta:** PostgreSQL accepts output names in `GROUP BY`/`ORDER BY` but not `WHERE`/`HAVING` — **not confirmed** on a page I read.
+- **Read this:** [SELECT → Description](https://www.postgresql.org/docs/current/sql-select.html) · postgresql.org · lists the steps in order: `FROM` computed, `WHERE` filters, then grouping; its "SELECT List" passage says an output name works in `ORDER BY` and `GROUP BY` but not in `WHERE` or `HAVING` (*read* both passages) · covers our angle: full · fetched 2026-10-12
+- **Also good:** [SQL Execution Order Explained](https://www.stratascratch.com/blog/sql-execution-order-explained) · stratascratch.com · updated 2026-07-13; walks `FROM` to `LIMIT` and why a `SELECT` alias fails in `WHERE` (*read* the intro and a few steps; examples run on PostgreSQL per the page)
+- **Our delta:** the StrataScratch page says no earlier clause, `GROUP BY` included, can see an alias; the PostgreSQL manual says `GROUP BY` can, so our page must keep the PostgreSQL rule.
 
 ### T04-10 · `ORDER BY` — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/10-order-by.md`
 - **Read this:** [7.5. Sorting Rows (ORDER BY)](https://www.postgresql.org/docs/current/queries-order.html) · postgresql.org · `NULLS FIRST` is default for `DESC`, `NULLS LAST` otherwise; per-column options; sort by output label (*read*) · covers our angle: full · fetched 2026-10-12
@@ -108,9 +108,9 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 - **Also good:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) · postgresql.org · `INNER` is the default; defines each join type by its rows (*read*)
 
 ### T05-02 · `LEFT JOIN` and the `WHERE` bug — Master · ✅ written `docs/postgresql/pages/phase-5-joins/02-left-join/README.md`
-- **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) · postgresql.org · defines the outer join (*read* the join-type definitions) · covers our angle: **partial** — the `ON` vs `WHERE` trap is not spelled out as a warning · fetched 2026-10-12
+- **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) · postgresql.org · defines the outer join, then shows a `LEFT JOIN` with the restriction in `ON` versus in `WHERE` and says the `ON` one is processed before the join, the `WHERE` one after, which "matters a lot with outer joins" (*read*) · covers our angle: full for the mechanism · fetched 2026-10-12
 - *Not opened:* a Pluralsight post on `ON` versus `WHERE` in PostgreSQL joins (search result only).
-- **Our delta:** the trap is the page's core; no source I read states it.
+- **Our delta:** the manual shows the two results but does not call it a bug or say the join "turns back into an inner join"; that framing is ours.
 
 ### T05-03 · Semi and anti joins; `NOT IN` NULL trap — Master · ✅ written `docs/postgresql/pages/phase-5-joins/03-semi-anti/README.md`
 - **Read this (1/2):** [9.24. Subquery Expressions](https://www.postgresql.org/docs/current/functions-subquery.html#FUNCTIONS-SUBQUERY-EXISTS) · postgresql.org · `EXISTS`, `IN`, `NOT IN` sections; `IN` yields null, not false, when a null is in play (*read*) · covers our angle: **partial** — no planner (semi/anti join) talk · fetched 2026-10-12
@@ -121,7 +121,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 - **Our delta:** formatting is our own convention; no source found.
 
 ### T05-05 · Reading an N-N relationship through its join table — Understand · ✅ written `docs/postgresql/pages/phase-5-joins/05-nn-join-table.md`
-- **Read this:** none found — tried: "PostgreSQL many-to-many join table query" (results were generic SQL or MySQL tutorials, none opened); the manual has no page on it. Fall back to [2.6. Joins Between Tables](https://www.postgresql.org/docs/current/tutorial-join.html) for the mechanics.
+- **Read this:** none found — tried: "PostgreSQL many-to-many join table query" and "many-to-many relationship junction table SQL join three tables PostgreSQL tutorial" (results were generic SQL tutorials, small blogs and mailing-list threads, none opened, so none can be Read-this); the manual has no page on it. Fall back to [2.6. Joins Between Tables](https://www.postgresql.org/docs/current/tutorial-join.html) for the mechanics.
 - **Our delta:** the whole topic — two joins through the link table, fan-out in counts, and the reverse-lookup index.
 
 ### T05-06 · `RIGHT` and `FULL OUTER JOIN` — Understand · ✅ written `docs/postgresql/pages/phase-5-joins/06-outer-joins.md`
@@ -145,7 +145,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 - **Read this:** [7.4. Combining Queries](https://www.postgresql.org/docs/current/queries-union.html) · postgresql.org · `UNION` removes duplicates like `DISTINCT` unless `ALL`; same for `INTERSECT`/`EXCEPT` (*read*) · covers our angle: **partial** — dedup *cost* is not discussed · fetched 2026-10-12
 
 ### T05-12 · Alias discipline — Understand · ✅ written `docs/postgresql/pages/phase-5-joins/12-alias-discipline.md`
-- **Read this:** [7.2.1.2 Table and Column Aliases](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-TABLE-ALIASES) · postgresql.org · id verified; section content *headings only* · covers our angle: **partial** · fetched 2026-10-12
+- **Read this:** [7.2.1.2 Table and Column Aliases](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-TABLE-ALIASES) · postgresql.org · short aliases for long names, required for self-joins, original name unusable once aliased (*read*) · covers our angle: **partial** — nothing on "qualify every column" · fetched 2026-10-12
 - **Our delta:** the "qualify every column" rule is house style.
 
 ### T05-13 · Joining on expressions and ranges — Know · ✅ written `docs/postgresql/pages/phase-5-joins/13-join-expressions.md`
@@ -171,8 +171,8 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 - **Also good:** [The FILTER clause](https://modern-sql.com/feature/filter) · modern-sql.com · standard feature; `CASE` emulation; PostgreSQL allows subqueries inside; page lists PostgreSQL 18 (*read*; undated)
 
 ### T06-05 · `string_agg`, `array_agg`, `jsonb_agg`, `jsonb_object_agg` — Understand · ✅ written `docs/postgresql/pages/phase-6-aggregation/05-json-agg/README.md`
-- **Read this:** [9.21. Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html) · postgresql.org · `jsonb_agg` includes nulls, `_strict` skips them; `jsonb_object_agg` keys cannot be null; `ORDER BY` inside the call (*read*) · covers our angle: **partial** — no API-shaping recipe, no empty-array trap · fetched 2026-10-12
-- **Our delta:** `jsonb_agg` over zero rows returns NULL (the "empty array trap") — **not confirmed** here; the manual page I read does not state it.
+- **Read this:** [9.21. Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html) · postgresql.org · `jsonb_agg` includes nulls, `_strict` skips them; `jsonb_object_agg` keys cannot be null; `ORDER BY` inside the call (*read*) · covers our angle: **partial** — no API-shaping recipe · fetched 2026-10-12
+- **Our delta:** the page says that except for `count`, aggregates return null when no rows are selected, and names `array_agg` as returning null rather than an empty array (*read*). It does not name `jsonb_agg` itself, so `jsonb_agg` over zero rows being NULL rests on the general rule: **not confirmed** by name; our page should show it with a run.
 
 ### T06-06 · Window functions: `OVER`, `PARTITION BY` — Understand · ✅ written `docs/postgresql/pages/phase-6-aggregation/06-windows-intro/README.md`
 - **Read this:** [3.5. Window Functions](https://www.postgresql.org/docs/current/tutorial-window.html) · postgresql.org · `avg(salary) OVER (PARTITION BY depname)` keeps every row, unlike `GROUP BY` (*read*) · covers our angle: full · fetched 2026-10-12
@@ -202,11 +202,11 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 - **Read this:** [9.21 → Ordered-Set Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html#FUNCTIONS-ORDEREDSET-TABLE) · postgresql.org · `percentile_cont(fraction) WITHIN GROUP (ORDER BY ...)` (*read*) · covers our angle: full · fetched 2026-10-12
 
 ### T06-14 · Frame clauses — Know · ✅ written `docs/postgresql/pages/phase-6-aggregation/14-frames/README.md`
-- **Read this:** [4.2.8 Window Function Calls](https://www.postgresql.org/docs/current/sql-expressions.html#SYNTAX-WINDOW-FUNCTIONS) · postgresql.org · frame clause syntax covering `ROWS`, `RANGE`, `GROUPS`, `EXCLUDE` (*headings only* plus keyword check) · covers our angle: **partial** — running-total example not checked · fetched 2026-10-12
-- **Also good:** [9.22 Window Functions](https://www.postgresql.org/docs/current/functions-window.html) · postgresql.org · says which functions depend on the frame (*read*)
+- **Read this:** [4.2.8 Window Function Calls](https://www.postgresql.org/docs/current/sql-expressions.html#SYNTAX-WINDOW-FUNCTIONS) · postgresql.org · frame clause syntax covering `ROWS`, `RANGE`, `GROUPS`, `EXCLUDE` (*read* the syntax) · covers our angle: **partial** — no running-total example on this page · fetched 2026-10-12
+- **Also good:** [3.5. Window Functions](https://www.postgresql.org/docs/current/tutorial-window.html) · postgresql.org · `sum(salary) OVER (ORDER BY salary)` gives running sums, and the default frame is explained (*read*) · [9.22 Window Functions](https://www.postgresql.org/docs/current/functions-window.html) · postgresql.org · says which functions depend on the frame (*read*)
 
 ### T06-15 · Recursive CTEs — Know · ✅ written `docs/postgresql/pages/phase-6-aggregation/15-recursive-cte/README.md`
 - **Read this:** [7.8.2 Recursive Queries](https://www.postgresql.org/docs/current/queries-with.html#QUERIES-WITH-RECURSIVE) · postgresql.org · includes Cycle Detection (7.8.2.2): path arrays, `UNION` vs `UNION ALL`, the `CYCLE` clause (*read*) · covers our angle: full · fetched 2026-10-12
 
 ### T06-16 · `GROUPING SETS`, `ROLLUP`, `CUBE` — When Needed · ✅ written `docs/postgresql/pages/phase-6-aggregation/16-grouping-sets/README.md`
-- **Read this:** [7.2.4 GROUPING SETS, CUBE, and ROLLUP](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-GROUPING-SETS) · postgresql.org · (*headings only*; id verified) · covers our angle: **partial** — passage not read in full · fetched 2026-10-12
+- **Read this:** [7.2.4 GROUPING SETS, CUBE, and ROLLUP](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-GROUPING-SETS) · postgresql.org · `GROUPING SETS`, `ROLLUP` and `CUBE` each shown with the equivalent expansion (*read*) · covers our angle: full · fetched 2026-10-12

@@ -221,6 +221,17 @@ names avoid this and most other reserved-word collisions for free.
 Once, in the repository layer. Aliasing in every query requires quoted aliases —
 unquoted `AS userId` folds to `userid` — and drifts out of sync as queries multiply.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [Don't Do This · upper case names](https://wiki.postgresql.org/wiki/Don%27t_Do_This) — postgresql.org wiki: section "Don't use upper case table or column names" (headings only)
+- **Also good:** [Identifiers and Key Words](https://www.postgresql.org/docs/current/sql-syntax-lexical.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Schemas as namespaces](10-schemas-tenancy.md) · Next → [Normalization to 3NF](12-normalization.md)

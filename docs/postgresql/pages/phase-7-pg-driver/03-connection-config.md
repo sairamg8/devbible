@@ -282,6 +282,18 @@ that. Node 24's `autoSelectFamily` tries both and hides the problem — measured
 forms connect here — but the literal address removes the dependency on resolver order
 entirely.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Connecting](https://node-postgres.com/features/connecting) — node-postgres.com: same `PG*` env vars as libpq/psql, defaults listed, config object, connection URI, dynamic password callback (*read* env vars and programmatic parts)
+- **Also good:** [SSL](https://node-postgres.com/features/ssl) — node-postgres.com: warns that `sslmode` in the connection string replaces the `ssl` object (*read*)
+- **Also good:** [32.15. Environment Variables](https://www.postgresql.org/docs/current/libpq-envars.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`Pool` vs `Client`](02-pool-vs-client.md) · Next → [`pool.query` and placeholders](04-query-placeholders.md)

@@ -208,6 +208,16 @@ and memory.
 An array of `Result` objects, one per statement — measured, length 2. Only possible
 without parameters, since parameterized calls reject multi-statement text.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [pg.Result](https://node-postgres.com/apis/result) — node-postgres.com: `rows`, `fields`, `command`, `rowCount` (can be `null`, e.g. `LOCK`); `rowCount` is rows processed, not rows returned (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Errors from PostgreSQL in Node](05-errors.md) · Next → [`pool.connect` and release](07-connect-release.md)

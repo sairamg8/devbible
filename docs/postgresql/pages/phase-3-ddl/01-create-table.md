@@ -195,6 +195,17 @@ Types. Constraints can be relaxed or tightened with an `ALTER` and, using
 representation rewrite the whole table under `ACCESS EXCLUSIVE` — so be liberal with
 constraints and conservative with types.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Table Basics](https://www.postgresql.org/docs/current/ddl-basics.html) — postgresql.org: the minimum `CREATE TABLE` with names and types (*read*)
+- **Also good:** [CREATE TABLE](https://www.postgresql.org/docs/current/sql-createtable.html) — postgresql.org: the full reference; ids `SQL-CREATETABLE-PARMS-LIKE`, `SQL-CREATETABLE-PARMS-DEFAULT` (*read* the synopsis)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](README.md) · Next → [Primary keys](02-primary-keys.md)

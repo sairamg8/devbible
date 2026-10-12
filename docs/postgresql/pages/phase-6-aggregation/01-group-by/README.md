@@ -152,6 +152,17 @@ whether a zero should have been a `NULL`, and which of `HashAggregate` or
   the join-side cause of a `sum()` that comes back too big
 - **[EXPLAIN](../../phase-10-indexes/03-explain.md)** — reading the plans in chunk 05
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [2.7. Aggregate Functions](https://www.postgresql.org/docs/current/tutorial-agg.html) — postgresql.org: one output row per `GROUP BY` group; `HAVING`, `FILTER` examples (*read*)
+- **Also good:** [7.2.3 GROUP BY and HAVING](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-GROUP) — postgresql.org (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Collapsing rows](01-collapsing-rows.md)

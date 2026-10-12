@@ -201,6 +201,16 @@ Filter them out — `AND deleted_at IS NULL` — in every read path. Missing it 
 deleted resources, and test data usually contains no deleted rows so nothing
 fails.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [pg.Result](https://node-postgres.com/apis/result) — node-postgres.com: an empty result is `rows.length === 0`, not an error (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`create` — INSERT RETURNING](06-create.md) · Next → [Partial updates](08-update-partial.md)

@@ -217,6 +217,18 @@ printed unexpanded.
 `\set name 'SELECT …;'` then run it as `:name`. It works because variables are textual
 substitution.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · Files · `psqlrc`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-FILES-PSQLRC) — postgresql.org: startup file rules; prompting is `#APP-PSQL-PROMPTING`, `HISTFILE` is `#APP-PSQL-VARIABLES-HISTFILE` (headings only)
+- **Also good:** [Magic Tricks for Postgres psql](https://www.crunchydata.com/blog/magic-tricks-for-postgres-psql-settings-presets-cho-and-saved-queries) — Crunchy Data: worked `.psqlrc` with `\x auto`, `HISTFILE`, `PROMPT1` (*read*; 2024-07-19; one snippet carries a stray "CHECK IF THIS IS RIGHT" note)
+- **Also good:** [Customizing My Postgres Shell](https://www.citusdata.com/blog/2017/07/16/customizing-my-postgres-shell-using-psqlrc/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [\conninfo \du \dp](12-who-and-privileges.md) · Next → [\errverbose and SQLSTATE](14-errverbose.md)

@@ -201,6 +201,17 @@ fixed; the evaluation order differs and is covered in
 explicit cast is needed so PostgreSQL can infer the parameter's type. Beyond a few
 optional filters, build the clause and its parameter array together instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [2.5. Querying a Table](https://www.postgresql.org/docs/current/tutorial-select.html) — postgresql.org: tutorial split into select list, table list, qualification; short and runnable; includes `ORDER BY` and `DISTINCT` examples (*read*)
+- **Also good:** [7.1. Overview](https://www.postgresql.org/docs/current/queries-overview.html) — postgresql.org: general syntax `WITH ... SELECT ... FROM ... sort` (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](README.md) · Next → [`WHERE` predicates](02-where-predicates.md)

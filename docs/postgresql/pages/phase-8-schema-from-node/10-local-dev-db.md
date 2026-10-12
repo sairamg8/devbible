@@ -226,6 +226,17 @@ Those environment variables are read only when the data directory is initialised
 On an existing volume the server ignores them — delete the volume or use
 `ALTER USER`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Docker Official Image `postgres` README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/postgres/README.md) — github (raw): from PostgreSQL 18 the image's `PGDATA` is version specific and the volume is `/var/lib/postgresql`; `/docker-entrypoint-initdb.d` scripts only run on an empty data directory (*read*)
+- **Also good:** [podman compose](https://docs.podman.io/en/latest/markdown/podman-compose.1.html) — docs.podman.io: a thin wrapper around an external compose provider (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`COPY FROM STDIN`](09-copy-streams.md) · Next → [Resetting between test runs](11-test-reset.md)

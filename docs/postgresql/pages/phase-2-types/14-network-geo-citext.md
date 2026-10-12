@@ -207,6 +207,18 @@ server-side with `22P02` rather than being stored.
 **Does `citext` handle accents?**
 No — it folds case only. Unicode normalisation is a separate concern.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Network Address Types](https://www.postgresql.org/docs/current/datatype-net-types.html) — postgresql.org: `inet`, `cidr`, and `inet` vs `cidr` (headings only; id `DATATYPE-INET-VS-CIDR`)
+- **Read this:** [citext](https://www.postgresql.org/docs/current/citext.html) — postgresql.org: calls `lower` when comparing; tip suggests nondeterministic collations as an alternative (*read* the intro)
+- **Also good:** [Geometric Types](https://www.postgresql.org/docs/current/datatype-geometric.html) — postgresql.org (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [bytea](13-bytea.md) · Next → [Domains and composites](15-domains-composites.md)

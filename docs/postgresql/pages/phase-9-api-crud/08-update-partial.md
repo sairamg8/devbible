@@ -255,6 +255,16 @@ removing the key — removal is `data - 'nickname'`. The API still has to decide
 what `null` means. `||` is also a shallow merge, so nested objects are replaced
 rather than merged.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.18. Conditional Expressions → COALESCE](https://www.postgresql.org/docs/current/functions-conditional.html) — postgresql.org: returns the first non-null argument (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [findById](07-find-by-id.md) · Next → [`delete` — hard vs soft](09-delete-soft-hard.md)

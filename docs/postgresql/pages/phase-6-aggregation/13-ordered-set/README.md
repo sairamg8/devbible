@@ -57,6 +57,16 @@ than an average, and name what `mode()` and `bool_and` each hide.
 - **[Subqueries](../11-subqueries/02-correlated-and-cost.md)** — `count()` 0 versus `sum()`
   `NULL`, the same asymmetry `bool_and` follows
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.21 → Ordered-Set Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html#FUNCTIONS-ORDEREDSET-TABLE) — postgresql.org: `percentile_cont(fraction) WITHIN GROUP (ORDER BY ...)` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Percentiles](01-percentiles.md)

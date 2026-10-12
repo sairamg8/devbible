@@ -227,6 +227,17 @@ discovered by a customer, often cannot be repaired because you cannot tell which
 was right, and undermines trust in everything else in the database. Normalise by
 default.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Description of the database normalization basics](https://learn.microsoft.com/en-us/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/database-normalization-description) — Microsoft Learn (previous-versions section; page metadata dated 2025-05-26): first to third normal form; calls 3NF "the highest level necessary for most applications" (*read* the intro; headings checked)
+- **Also good:** [How to Use PostgreSQL for Data Normalization](https://www.tigerdata.com/learn/how-to-use-postgresql-for-data-normalization) — Tiger Data: published 2024-12-23, modified 2026-09-07
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Naming conventions](11-naming.md) · Next → [`DROP`, `CASCADE`, `RESTRICT`](13-drop-cascade.md)

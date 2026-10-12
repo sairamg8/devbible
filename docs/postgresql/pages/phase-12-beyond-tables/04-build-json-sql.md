@@ -211,6 +211,16 @@ several independent collections in one round trip.
 One parameter regardless of row count, with column types declared in the `AS`
 list.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JSON Functions and Operators](https://www.postgresql.org/docs/current/functions-json.html) — postgresql.org: `jsonb_build_object` takes alternating keys and values; `jsonb_agg` and `jsonb_object_agg` aggregate (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Indexing jsonb](03-index-jsonb.md) · Next → [Full-text search](./full-text/)

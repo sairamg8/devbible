@@ -202,6 +202,16 @@ The value is computed once at write time and stored forever. If the function wou
 now return something different, nothing recomputes it, so the column is silently
 wrong — and no constraint or check will notice.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Generated Columns](https://www.postgresql.org/docs/current/ddl-generated-columns.html) — postgresql.org: stored columns are computed on write and take space; virtual columns are computed on read and take none (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Sequences as real objects](14-sequences.md) · Next → [`TEMPORARY` and `UNLOGGED` tables](16-temp-unlogged.md)

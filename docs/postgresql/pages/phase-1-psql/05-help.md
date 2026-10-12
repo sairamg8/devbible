@@ -176,6 +176,16 @@ settings.
 **What does `\h` show with no argument?**
 Every SQL command it has help for, which doubles as an index of the SQL surface.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · `\?` and `\h`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMAND-HELP) — postgresql.org: `\h` prints SQL syntax help; `\?` lists backslash commands (id `APP-PSQL-META-COMMAND-QUESTION-MARK`) (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Output control](04-output-control.md) · Next → [Scripting psql](06-scripting.md)

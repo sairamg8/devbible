@@ -228,6 +228,17 @@ carries the value read before the write.
 Not a `BEFORE UPDATE` one. Give the column `DEFAULT now()` as well, or add
 `BEFORE INSERT` to the trigger.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [F.41. spi → moddatetime](https://www.postgresql.org/docs/current/contrib-spi.html) — postgresql.org: a `BEFORE UPDATE` trigger storing the current time in a named column (*read*)
+- **Also good:** [PL/pgSQL Trigger Functions](https://www.postgresql.org/docs/current/plpgsql-trigger.html) — postgresql.org: the `emp_stamp` example sets `last_date` and `last_user` in `BEFORE` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Testing against a real PostgreSQL](16-testing-real-pg.md) · Next → [snake_case to camelCase](18-snake-camel.md)

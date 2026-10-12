@@ -227,6 +227,16 @@ measurement. Alias the columns or use `rowMode: 'array'`.
 Yes, and the merged column then holds `coalesce(left.col, right.col)` — worth knowing for
 `FULL OUTER JOIN … USING`, where it gives the non-NULL side automatically.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) — postgresql.org: the three forms side by side (*read* the syntax block)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [CROSS JOIN](07-cross-join.md) · Next → [Self joins](09-self-join.md)

@@ -205,6 +205,17 @@ NULLs. Measured: 3 rows versus 5 on the same fixture.
 **Do set-returning functions need `LATERAL`?**
 No — `FROM t, unnest(t.arr)` is implicitly lateral. Writing the keyword is documentation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What is Postgres LATERAL JOIN?](https://www.bytebase.com/blog/postgres-lateral-join/) — bytebase.com: 2025-10-15; top-N per group with `LEFT JOIN LATERAL ... ON true`, `LIMIT` runs per outer row, index advice (*read*)
+- **Also good:** [7.2.1.5 LATERAL Subqueries](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-LATERAL) — postgresql.org: a lateral subquery may refer to earlier `FROM` items (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Self joins](09-self-join.md) · Next → [UNION INTERSECT EXCEPT](11-set-ops.md)

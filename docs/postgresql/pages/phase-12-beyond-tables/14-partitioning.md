@@ -243,6 +243,16 @@ checking whether an index solves the actual problem. Below tens of millions of
 rows the machinery usually costs more than it returns, and thousands of partitions
 make planning itself slow.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Table Partitioning](https://www.postgresql.org/docs/current/ddl-partitioning.html) — postgresql.org: range, list, hash; pruning; the rule of thumb that a table should exceed the server's physical memory (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [LISTEN/NOTIFY](13-listen-notify.md) · Next → [Procedures](15-procedures.md)

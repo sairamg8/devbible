@@ -214,6 +214,17 @@ round-trip-bound workloads, but measured query costs in this corpus are dominate
 indexes and statement shape — a deep `OFFSET` costing 87× more than a keyset lookup dwarfs
 any driver difference.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [postgres.js README (raw)](https://raw.githubusercontent.com/porsager/postgres/master/README.md) — github (raw): tagged-template queries, prepared statements created automatically for static queries (off with `prepare: false`), `sql.begin`, `.listen`, bigint returned as a string (*read* the headings and several sections)
+- **Also good:** [`Waddler &lt;&gt; PostgreSQL`](https://waddler.drizzle.team/docs/connect-postgresql) — waddler.drizzle.team: lists differences it found: postgres.js prepares by default, `pg` allows per-query type parsers (*read* the section; vendor-adjacent, undated)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [pg-cursor streaming](15-cursors.md) · Next → [Phase 8 · Schema and data from Node](../phase-8-schema-from-node/)

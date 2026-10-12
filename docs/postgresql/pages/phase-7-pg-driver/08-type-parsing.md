@@ -236,6 +236,17 @@ By the column's type OID, sent in the row description and exposed as
 `fields[i].dataTypeID`. Parsers are registered per OID, which is also how you override
 them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Data Types](https://node-postgres.com/features/types) — node-postgres.com: anything without a registered parser comes back as a string; `uuid` is a string, `json`/`jsonb` parsed via `JSON.parse`, dates become `Date` in the process time zone; JS keeps only milliseconds (*read*)
+- **Also good:** [pg-types README (raw)](https://raw.githubusercontent.com/brianc/node-pg-types/master/README.md) — github (raw): names `int8` as returned as string because JS cannot hold 64 bits, with the `COUNT(*)` example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`pool.connect` and release](07-connect-release.md) · Next → [Overriding type parsers](09-pg-types.md)

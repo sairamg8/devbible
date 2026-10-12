@@ -227,6 +227,17 @@ be piped straight into `gzip` or another process.
 The `COPY n` line is the row count actually loaded — the only receipt, and worth asserting
 on in scripts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · `\copy`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMANDS-COPY) — postgresql.org: a frontend copy: the client reads or writes the file (*read*)
+- **Read this:** [COPY](https://www.postgresql.org/docs/current/sql-copy.html) — postgresql.org: with a file name the server reads or writes it, and the file must be accessible to the server's user (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [psql variables](08-variables.md) · Next → [\timing and \watch](10-timing-watch.md)

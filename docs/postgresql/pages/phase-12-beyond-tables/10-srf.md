@@ -233,6 +233,17 @@ When the input is already a JSON body: one parameter for any number of rows, wit
 column types declared in the `AS` list. `unnest` with parallel arrays is generally
 faster, so it wins when you are building the payload anyway.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Set Returning Functions](https://www.postgresql.org/docs/current/functions-srf.html) — postgresql.org: `generate_series` and the `unnest` examples (*read*)
+- **Also good:** [JSON Functions and Operators](https://www.postgresql.org/docs/current/functions-json.html) — postgresql.org: `jsonb_to_recordset` needs an `AS` column list (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Extensions](09-extensions.md) · Next → [Materialized views](11-matviews.md)

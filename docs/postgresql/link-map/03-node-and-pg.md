@@ -1,7 +1,7 @@
 ---
 title: "Link map · PostgreSQL · Part 3 (phases 7–9)"
 sidebar_label: "03 · PostgreSQL · Node + pg"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Link map · PostgreSQL · Part 3 (phases 7–9)
@@ -29,22 +29,22 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 
 ### T07-03 · Connection configuration — Master · ✅ written `docs/postgresql/pages/phase-7-pg-driver/03-connection-config.md`
 - **Read this:** [Connecting](https://node-postgres.com/features/connecting) · node-postgres.com · same `PG*` env vars as libpq/psql, defaults listed, config object, connection URI, dynamic password callback (*read* env vars and programmatic parts) · covers our angle: **partial** — SSL is on a separate page · fetched 2026-10-12
-- **Also good:** [SSL](https://node-postgres.com/features/ssl) · node-postgres.com · warns that `sslmode` in the connection string replaces the `ssl` object (*read*) · [34.15. Environment Variables](https://www.postgresql.org/docs/current/libpq-envars.html) · postgresql.org · the full `PG*` list (*headings only*)
+- **Also good:** [SSL](https://node-postgres.com/features/ssl) · node-postgres.com · warns that `sslmode` in the connection string replaces the `ssl` object (*read*) · [32.15. Environment Variables](https://www.postgresql.org/docs/current/libpq-envars.html) · postgresql.org · the full `PG*` list (*headings only*)
 - **Our delta:** managed-provider SSL recipe; `127.0.0.1` not `localhost` (README note); the `sslmode` override trap.
 
 ### T07-04 · `pool.query()` with `$1` placeholders — Master · ✅ written `docs/postgresql/pages/phase-7-pg-driver/04-query-placeholders.md`
 - **Read this:** [Queries](https://node-postgres.com/features/queries) · node-postgres.com · parameters go to the server separately; identifiers cannot be parameters; JS-to-SQL conversion rules for `null`, `Date`, arrays, objects (*read*) · covers our angle: **partial** — no `= ANY($1)` example · fetched 2026-10-12
-- **Also good:** [Postgres Query Boost: Using ANY Instead of IN](https://www.crunchydata.com/blog/postgres-query-boost-using-any-instead-of-in) · crunchydata.com · Matt Hudson, 2022-11-18; why `ANY` over a variable-length `IN` (*read*) · [9.25.3. ANY / SOME (array)](https://www.postgresql.org/docs/current/functions-comparisons.html) · postgresql.org · right-hand side must be an array (*read*)
+- **Also good:** [Postgres Query Boost: Using ANY Instead of IN](https://www.crunchydata.com/blog/postgres-query-boost-using-any-instead-of-in) · crunchydata.com · Matt Hudson, 2022-11-18; why `ANY` over a variable-length `IN`; examples are Java, not Node (*read*) · [9.25.3. ANY / SOME (array)](https://www.postgresql.org/docs/current/functions-comparisons.html) · postgresql.org · right-hand side must be an array (*read*)
 - **Our delta:** `WHERE id = ANY($1::int[])` with a JS array as one parameter, and an empty-array case; neither node-postgres page shows it.
 
 ### T07-05 · Errors from PostgreSQL in Node — Master · ✅ written `docs/postgresql/pages/phase-7-pg-driver/05-errors.md`
 - **Read this:** [Appendix A. PostgreSQL Error Codes](https://www.postgresql.org/docs/current/errcodes-appendix.html) · postgresql.org · class 23 lists `23505 unique_violation`, `23503 foreign_key_violation`, `23502 not_null_violation`, `23514 check_violation` (*read*) · covers our angle: **partial** — nothing on the Node `error` object · fetched 2026-10-12
-- **Also good:** [`DatabaseError` in pg-protocol (raw source)](https://raw.githubusercontent.com/brianc/node-postgres/master/packages/pg-protocol/src/messages.ts) · github (raw) · class fields `code`, `detail`, `hint`, `schema`, `table`, `column`, `dataType`, `constraint` (*read* the class) · [53.8. Error and Notice Message Fields](https://www.postgresql.org/docs/current/protocol-error-fields.html) · postgresql.org · constraint-name field only set for some error types (*read*)
+- **Also good:** [`DatabaseError` in pg-protocol (raw source)](https://raw.githubusercontent.com/brianc/node-postgres/master/packages/pg-protocol/src/messages.ts) · github (raw) · class fields `code`, `detail`, `hint`, `schema`, `table`, `column`, `dataType`, `constraint` (*read* the class) · [54.8. Error and Notice Message Fields](https://www.postgresql.org/docs/current/protocol-error-fields.html) · postgresql.org · constraint-name field only set for some error types (*read*)
 - **Our delta:** the 23505-to-409 mapping; the Node `error` object is not documented on node-postgres.com, so the field list rests on source code.
 
 ### T07-06 · The result object — Understand · ✅ written `docs/postgresql/pages/phase-7-pg-driver/06-result-object.md`
 - **Read this:** [pg.Result](https://node-postgres.com/apis/result) · node-postgres.com · `rows`, `fields`, `command`, `rowCount` (can be `null`, e.g. `LOCK`); `rowCount` is rows processed, not rows returned (*read*) · covers our angle: full · fetched 2026-10-12
-- **Our delta:** the empty-result shape (`rows: []`, `rowCount` 0) and the maintainer's caution against assuming `rows.length` equals `rowCount`.
+- **Our delta:** the empty-result shape (`rows: []`, `rowCount` 0) and the quoted caution (@sehrope, on the page) against assuming `rows.length` equals `rowCount`.
 
 ### T07-07 · `pool.connect()` and `client.release()` — Understand · ✅ written `docs/postgresql/pages/phase-7-pg-driver/07-connect-release.md`
 - **Read this:** [Pooling → Checkout, use, and return](https://node-postgres.com/features/pooling) · node-postgres.com · "You must always return the client to the pool"; a leaked client empties the pool and later checkouts wait forever (*read*) · covers our angle: full · fetched 2026-10-12
@@ -72,7 +72,7 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 - **Our delta:** the difference between a server-side abort (`statement_timeout`) and a client-side give-up (`query_timeout`), and which one frees the backend.
 
 ### T07-12 · One `query()` is one statement — Understand · ✅ written `docs/postgresql/pages/phase-7-pg-driver/12-one-statement.md`
-- **Read this:** [34.3. Command Execution Functions](https://www.postgresql.org/docs/current/libpq-exec.html) · postgresql.org · `PQexecParams` allows at most one nonempty command, "a limitation of the underlying protocol", and a defence against injection (*read*) · covers our angle: **partial** — it is the C library page, not `pg` · fetched 2026-10-12
+- **Read this:** [32.3. Command Execution Functions](https://www.postgresql.org/docs/current/libpq-exec.html) · postgresql.org · `PQexecParams` allows at most one nonempty command, "a limitation of the underlying protocol", and a defence against injection (*read*) · covers our angle: **partial** — it is the C library page, not `pg` · fetched 2026-10-12
 - **Also good:** [postgres.js README (raw)](https://raw.githubusercontent.com/porsager/postgres/master/README.md) · github (raw) · simple queries allow several statements but no parameters; extended allow parameters but one statement (*read*)
 - **Our delta:** how `pg` behaves with a multi-statement string with and without values — node-postgres.com does not say, so run it.
 
@@ -92,8 +92,8 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 - **Our delta:** the cursor holds one pooled client until closed; release it in `finally`.
 
 ### T07-16 · `pg` vs `postgres.js` — Know · ✅ written `docs/postgresql/pages/phase-7-pg-driver/16-postgres-js.md`
-- **Read this:** [postgres.js README (raw)](https://raw.githubusercontent.com/porsager/postgres/master/README.md) · github (raw) · tagged-template queries, automatic prepared statements (`prepare: true`), `sql.begin`, `.listen`, bigint returned as a string (*read* the headings and several sections) · covers our angle: **partial** — a README, not a comparison · fetched 2026-10-12
-- **Also good:** [Waddler <> PostgreSQL](https://waddler.drizzle.team/docs/connect-postgresql) · waddler.drizzle.team · lists differences it found: postgres.js prepares by default, `pg` allows per-query type parsers (*read* the section; vendor-adjacent, undated)
+- **Read this:** [postgres.js README (raw)](https://raw.githubusercontent.com/porsager/postgres/master/README.md) · github (raw) · tagged-template queries, prepared statements created automatically for static queries (off with `prepare: false`), `sql.begin`, `.listen`, bigint returned as a string (*read* the headings and several sections) · covers our angle: **partial** — a README, not a comparison · fetched 2026-10-12
+- **Also good:** [`Waddler <> PostgreSQL`](https://waddler.drizzle.team/docs/connect-postgresql) · waddler.drizzle.team · lists differences it found: postgres.js prepares by default, `pg` allows per-query type parsers (*read* the section; vendor-adjacent, undated)
 - **Our delta:** a neutral comparison — no benchmark source was fetched, so the README's "fastest" claim is **not confirmed** and must be worded as the author's claim.
 - *Checked, not chosen:* StackShare "versus" pages (index noise, no comparison content; not fetched).
 
@@ -108,7 +108,7 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 
 ### T08-02 · Migrations — Master · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/02-migrations.md`
 - **Read this:** [graphile-migrate README (raw): Why? and Opinions](https://raw.githubusercontent.com/graphile/migrate/main/README.md) · github (raw) · roll-forward only, a signed-off migration is never edited, each file wrapped in a transaction by default (*read* those sections) · covers our angle: **partial** — a tool README with a strong stance, not a neutral guide; the tracking table is not described there · fetched 2026-10-12
-- **Also good:** [postgres-migrations README (raw): Design decisions](https://raw.githubusercontent.com/akheron/postgres-migrations/master/README.md) · github (raw) · no down migrations, `migrations` table, hash check of past files, one transaction per migration (*read*) · [Evolutionary Database Design](https://martinfowler.com/articles/evodb.html) · martinfowler.com · the general practice behind versioned schema changes (*headings only*; undated in the fetch)
+- **Also good:** [postgres-migrations README (raw): Design decisions](https://raw.githubusercontent.com/akheron/postgres-migrations/master/README.md) · github (raw) · no down migrations, `migrations` table, hash check of past files, one transaction per migration (*read*) · [Evolutionary Database Design](https://martinfowler.com/articles/evodb.html) · martinfowler.com · the general practice behind versioned schema changes (*headings only*; 9,313 words, undated in the fetch)
 - **Our delta:** the four-part rule in our row (forward-only, one file per change, one transaction, a tracking table) in a single page; the tools disagree on rollbacks, say so.
 
 ### T08-03 · Seeding — Master · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/03-seeding.md`
@@ -117,7 +117,7 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 - **Our delta:** deterministic fixtures (fixed ids and timestamps, no `random()`), and re-runnable seeds via `ON CONFLICT`.
 
 ### T08-04 · Bulk insert that scales — Master · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/04-bulk-insert.md`
-- **Read this:** [Boosting Postgres INSERT Performance by 2x With UNNEST](https://www.tigerdata.com/blog/boosting-postgres-insert-performance) · tigerdata.com · James Sewell; published 2024-11-15, modified 2026-01-08; `INSERT ... UNNEST` was 2.13x faster than `VALUES` at the database layer at batch size 1000, measured with `pg_stat_statements` (*read* the results; the "Should I use UNNEST?" section *headings only*) · covers our angle: **partial** — SQL only, no Node `pg` code; vendor blog · fetched 2026-10-12
+- **Read this:** [Boosting Postgres INSERT Performance by 2x With UNNEST](https://www.tigerdata.com/blog/boosting-postgres-insert-performance) · tigerdata.com · James Blackwood-Sewell; published 2024-11-15, modified 2026-01-08; `INSERT ... UNNEST` was 2.13x faster than `VALUES` at the database layer at batch size 1000, measured with `pg_stat_statements` (*read* the results; the "Should I use UNNEST?" section *headings only*) · covers our angle: **partial** — SQL only, no Node `pg` code; vendor blog · fetched 2026-10-12
 - **Also good:** [14.4. Populating a Database](https://www.postgresql.org/docs/current/populate.html) · postgresql.org · disable autocommit, use `COPY`, drop indexes, run `ANALYZE` after (*headings only*; page metadata dated 2026-08-13)
 - **Our delta:** the Node side (one JS array per column, `::bigint[]` casts, `pg` array conversion) and **our own measurement** — a 2x claim from a vendor benchmark is not ours to repeat unmeasured.
 
@@ -170,3 +170,91 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 - **Read this:** [PgTyped: Getting Started](https://pgtyped.dev/docs/getting-started) · pgtyped.dev · config with `transforms`, `db` connection; types inferred from the live schema, run in watch mode (*read*) · covers our angle: **partial** — types per query, not per table · fetched 2026-10-12
 - **Also good:** [kysely-codegen README (raw)](https://raw.githubusercontent.com/RobinBlomberg/kysely-codegen/master/README.md) · github (raw) · types from a live database; `--camel-case`; `numericParser` default `string` (*read*)
 - **Our delta:** the types must follow the runtime: `bigint` and `numeric` are strings in `pg` (T07-08), so a generated `number` is a lie unless a parser is set. `kysely-codegen` is built for Kysely, not raw `pg`.
+
+---
+
+## Phase 9 — CRUD patterns for a real API
+
+### T09-01 · A repository module per resource — Master · ✅ written `docs/postgresql/pages/phase-9-api-crud/01-repository/README.md`
+- **Read this:** [Suggested Code Structure](https://node-postgres.com/guides/project-structure) · node-postgres.com · one `db/index.js` exports `query` and `getClient`, so logging and leak tracing live in one place (*read*) · covers our angle: **partial** — a data-access module, not a repository per resource · fetched 2026-10-12
+- **Our delta:** plain functions taking an executor (pool or client) and returning rows; layering rationale stays in Node Phase 6.
+
+### T09-02 · `list` with filtering, sorting and pagination — Master · ✅ written `docs/postgresql/pages/phase-9-api-crud/02-list-endpoint.md`
+- **Read this:** [7.6. LIMIT and OFFSET](https://www.postgresql.org/docs/current/queries-limit.html) · postgresql.org · `LIMIT` without `ORDER BY` returns an unpredictable subset; skipped rows are still computed (*read*) · covers our angle: **partial** — no endpoint design · fetched 2026-10-12
+- **Also good:** [7.5. Sorting Rows (ORDER BY)](https://www.postgresql.org/docs/current/queries-order.html) · postgresql.org · (*headings only*) · [Paging Through Results](https://use-the-index-luke.com/sql/partial-results/fetch-next-page) · use-the-index-luke.com · offset versus seek (*read*)
+- **Our delta:** one `list` function combining optional filters, an allowlisted sort, and a deterministic tie-break column.
+
+### T09-03 · Safe dynamic `WHERE` — Master · ✅ written `docs/postgresql/pages/phase-9-api-crud/03-safe-dynamic-where/README.md`
+- **Read this:** [Queries → Parameterized query](https://node-postgres.com/features/queries) · node-postgres.com · values travel separately; "PostgreSQL does not support parameters for identifiers" (*read*) · covers our angle: **partial** — no pattern for building predicates and the value array together · fetched 2026-10-12
+- **Also good:** [SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) · owasp.org · "Stop writing dynamic queries with string concatenation"; defense option 1 is parameterised queries (*read*)
+- **Our delta:** push a predicate string and a value in lock step so `$n` always equals `values.length`; no page shows it for `pg`.
+
+### T09-04 · Sort and filter allowlists — Master · ✅ written `docs/postgresql/pages/phase-9-api-crud/04-allowlists/README.md`
+- **Read this:** [OWASP SQL Injection Prevention → Defense Option 3: Allow-list Input Validation](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html#defense-option-3-allow-list-input-validation) · owasp.org · for table names, column names and sort indicators that cannot be bind variables, map the input to known values (*read*; anchor id found in the page HTML) · covers our angle: full for the principle; its code is Java · fetched 2026-10-12
+- **Our delta:** a JS `Map` from public sort keys to column expressions, plus direction `ASC`/`DESC` only; unknown key means 400, not a default.
+
+### T09-05 · Transactions in a request — Master · ✅ written `docs/postgresql/pages/phase-9-api-crud/05-transactions-request/README.md`
+- **Read this:** [Transactions](https://node-postgres.com/features/transactions) · node-postgres.com · same client for every statement; never `pool.query` for a transaction; `BEGIN`, `COMMIT`, `ROLLBACK` in `try`/`catch`/`finally` (*read*) · covers our angle: full · fetched 2026-10-12
+- **Also good:** [Tutorial → Transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html) · postgresql.org · the SQL-side explanation (*headings only*)
+- **Our delta:** a `withTransaction(fn)` wrapper; a failed `ROLLBACK` must not hide the original error.
+
+### T09-06 · `create` — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/06-create.md`
+- **Read this:** [6.4. Returning Data from Modified Rows](https://www.postgresql.org/docs/current/dml-returning.html) · postgresql.org · `RETURNING` on `INSERT` avoids an extra query (*read*) · covers our angle: **partial** — no row-to-domain mapping · fetched 2026-10-12
+- **Also good:** [Queries](https://node-postgres.com/features/queries) · node-postgres.com · example `INSERT ... RETURNING *` then reads `res.rows[0]` (*read*)
+- **Our delta:** mapping the returned row to the domain object, and the `23505` case (T07-05).
+
+### T09-07 · `findById` — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/07-find-by-id.md`
+- **Read this:** none found — tried: WebSearch "node-postgres findById not found null vs throw repository", node-postgres.com guides, PostgreSQL manual (no page decides the not-found policy)
+- **Also good:** [pg.Result](https://node-postgres.com/apis/result) · node-postgres.com · an empty result is `rows.length === 0`, not an error (*read*)
+- **Our delta:** the `null`-versus-throw decision is ours to argue; state one rule per layer.
+
+### T09-08 · `update` — partial updates — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/08-update-partial.md`
+- **Read this:** [9.18. Conditional Expressions → COALESCE](https://www.postgresql.org/docs/current/functions-conditional.html) · postgresql.org · returns the first non-null argument (*read*) · covers our angle: **partial** — nothing on why `COALESCE($2, col)` cannot set a column to `NULL` · fetched 2026-10-12
+- **Our delta:** the null-versus-absent problem: `COALESCE` keeps the old value on `NULL`, so a client cannot clear a column; a dynamic `SET` built from keys actually present (allowlisted) can. No single page covers both; web search found only mailing-list threads, not opened.
+
+### T09-09 · `delete` — hard versus soft — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/09-delete-soft-hard.md`
+- **Read this:** [Soft deletion with PostgreSQL: but with logic on the database!](https://evilmartians.com/chronicles/soft-deletion-with-postgresql-but-with-logic-on-the-database) · evilmartians.com · 2022-05-16; hard delete loses data, soft delete needs every read scoped; cascades and a hard-delete hatch (*read* the intro; rest *headings only*) · covers our angle: **partial** — Rails-flavoured, written for a database-side design · fetched 2026-10-12
+- **Also good:** [6.4. Returning Data from Modified Rows](https://www.postgresql.org/docs/current/dml-returning.html) · postgresql.org · `DELETE ... RETURNING` (*read*) · [11.8. Partial Indexes](https://www.postgresql.org/docs/current/indexes-partial.html) · postgresql.org · (*headings only*)
+- **Our delta:** soft delete versus unique constraints (a partial unique index `WHERE deleted_at IS NULL`); return the deleted row.
+
+### T09-10 · Keyset (cursor) pagination — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/10-keyset/README.md`
+- **Read this:** [Paging Through Results](https://use-the-index-luke.com/sql/partial-results/fetch-next-page) · use-the-index-luke.com · Markus Winand; the seek method with SQL row values, and the index that makes it fast (*read* the row-values passage; undated page) · covers our angle: full for the idea; PostgreSQL syntax is ours · fetched 2026-10-12
+- **Also good:** [9.25.5. Row Constructor Comparison](https://www.postgresql.org/docs/current/functions-comparisons.html) · postgresql.org · both sides need the same field count; the operator applies pairwise (*read*)
+- **Our delta:** `(created_at, id) < ($1, $2)` with a matching index, and an opaque cursor encoding.
+
+### T09-11 · Idempotent writes — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/11-idempotent-writes.md`
+- **Read this:** [Stripe API: Idempotent requests](https://docs.stripe.com/api/idempotent_requests) · docs.stripe.com · for v1, the first response (status and body) is saved under the key and returned on retry, including 500s (*read*) · covers our angle: **partial** — client-facing contract, no database design · fetched 2026-10-12
+- **Also good:** [INSERT → ON CONFLICT](https://www.postgresql.org/docs/current/sql-insert.html) · postgresql.org · `DO NOTHING` / `DO UPDATE` (*read*)
+- **Our delta:** the key table, claim-then-work in one transaction, 409 for an in-flight key. *Checked, not chosen:* IETF `draft-ietf-httpapi-idempotency-key-header-07` (datatracker page loaded; draft status **not confirmed**, the page needs JavaScript).
+
+### T09-12 · Passing a client through service functions — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/12-client-propagation.md`
+- **Read this:** [Transactions](https://node-postgres.com/features/transactions) · node-postgres.com · "You must use the same client instance for all statements within a transaction" (*read*) · covers our angle: **partial** — one function; no multi-repository service · fetched 2026-10-12
+- **Our delta:** every repository function takes the executor first; the service owns `BEGIN`/`COMMIT`. Propagation mechanics stay in Node Phase 6.
+
+### T09-13 · Optimistic concurrency — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/13-optimistic.md`
+- **Read this:** [Implementing Optimistic Locking in PostgreSQL](https://reintech.io/blog/implementing-optimistic-locking-postgresql) · reintech.io · dated July 3, 2024; `UPDATE ... WHERE id AND version`, a zero row count means missing or changed, then a follow-up read tells which (*read*; the code is Python, the byline reads "Arthur C. Codex") · covers our angle: **partial** — not Node · fetched 2026-10-12
+- **Our delta:** `rowCount === 0` handling with `pg` (T07-06) and `RETURNING version`; a retry must re-read the row.
+
+### T09-14 · `SELECT ... FOR UPDATE` in a request — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/14-for-update.md`
+- **Read this:** [13.3. Explicit Locking → Row-Level Locks](https://www.postgresql.org/docs/current/explicit-locking.html) · postgresql.org · `FOR UPDATE` blocks other updates, deletes and locks until the transaction ends; under `REPEATABLE READ` a changed row raises an error (*read*) · covers our angle: full for lock semantics · fetched 2026-10-12
+- **Our delta:** keep the lock window short (no network call between lock and write) and always order lock acquisition; Node-side timing is ours.
+
+### T09-15 · Shaping the response in SQL (`jsonb_agg`) versus JavaScript — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/15-shape-sql-vs-js.md`
+- **Read this:** [JSON — the relational database's built-in ORM?](https://blogg.knowit.no/json-the-relational-databases-built-in-orm) · blogg.knowit.no · Audun Halland, 2020-11-18 (modified 2023-06-15); N+1 versus `json_agg` nested in one query, almost no mapping code (*read*) · covers our angle: **partial** — one-sided case for SQL; no costs · fetched 2026-10-12
+- **Also good:** [9.21. Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html) · postgresql.org · `jsonb_agg` collects values including nulls into a JSON array (*read*)
+- **Our delta:** the honest trade-off the syllabus asks for (payload size, empty-array `NULL`, dates arrive as strings from `jsonb`); no benchmark source fetched.
+
+### T09-16 · Testing against a real PostgreSQL — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/16-testing-real-pg.md`
+- **Read this:** [Testcontainers for NodeJS: PostgreSQL module](https://node.testcontainers.org/modules/postgresql/) · node.testcontainers.org · `PostgreSqlContainer`, `getConnectionUri()`, snapshots (not with the `postgres` database) (*read*) · covers our angle: **partial** — module reference; per-test rollback isolation is elsewhere · fetched 2026-10-12
+- **Also good:** [Getting started with Testcontainers for Node.js](https://testcontainers.com/guides/getting-started-with-testcontainers-for-nodejs/) · testcontainers.com · `pg` plus `jest` with the PostgreSQL module (*read*) · [Database Test Isolation](https://eradman.com/posts/database-test-isolation.html) · eradman.com · wrap each test in a transaction, if one connection is used (*read*)
+- **Our delta:** per-test `BEGIN`/`ROLLBACK` on one client; written second, with Node Phase 9 once it lands.
+
+### T09-17 · `created_at`/`updated_at` — trigger versus application — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/17-timestamps-trigger.md`
+- **Read this:** [F.41. spi → moddatetime](https://www.postgresql.org/docs/current/contrib-spi.html) · postgresql.org · a `BEFORE UPDATE` trigger storing the current time in a named column (*read*) · covers our angle: **partial** — an extension, not the trade-off · fetched 2026-10-12
+- **Also good:** [PL/pgSQL Trigger Functions](https://www.postgresql.org/docs/current/plpgsql-trigger.html) · postgresql.org · the `emp_stamp` example sets `last_date` and `last_user` in `BEFORE` (*read*)
+- **Our delta:** why the trigger wins (every writer, including `psql`, is covered); `moddatetime` availability on managed hosts **not confirmed**.
+
+### T09-18 · `snake_case` to `camelCase` mapping — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/18-snake-camel.md`
+- **Read this:** none found for `pg` — node-postgres.com has no page on it; tried: WebSearch "node-postgres snake_case camelCase mapping"
+- **Also good:** [postgres.js README (raw): Data Transformation](https://raw.githubusercontent.com/porsager/postgres/master/README.md) · github (raw) · `transform: postgres.camel` converts names both ways, only from snake_case (*read*; other driver) · [PgTyped: Getting Started](https://pgtyped.dev/docs/getting-started) · pgtyped.dev · config key `camelCaseColumnNames` (*read*)
+- **Our delta:** one mapper function at the repository boundary; writes need the reverse map, so name it in the allowlist (T09-04).

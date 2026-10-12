@@ -250,6 +250,18 @@ No. `'' IS NULL` is false, and `length('')` is 0. Oracle conflates them; Postgre
 **Why did concatenation produce NULL?**
 `||` returns NULL if any operand is NULL. `concat()` and `concat_ws()` skip NULLs instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Comparison Functions and Operators](https://www.postgresql.org/docs/current/functions-comparison.html) — postgresql.org: `IS DISTINCT FROM` treats null as comparable (*read*)
+- **Read this:** [Conditional Expressions](https://www.postgresql.org/docs/current/functions-conditional.html) — postgresql.org: `COALESCE` and `NULLIF` (headings only; ids `FUNCTIONS-COALESCE-NVL-IFNULL`, `FUNCTIONS-NULLIF`)
+- **Also good:** [The NULL in your NOT IN](https://boringsql.com/posts/not-in-null/) — boringSQL: 2026-06-14
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Time zones](05-time-zones.md) · Next → [uuid](07-uuid.md)

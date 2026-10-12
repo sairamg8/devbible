@@ -200,6 +200,17 @@ Because locks are held for the transaction's whole duration, and an open transac
 holds back `VACUUM`'s cleanup horizon for the entire database. Atomicity is free;
 duration is not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Transactional DDL in PostgreSQL: A Competitive Analysis](https://wiki.postgresql.org/wiki/Transactional_DDL_in_PostgreSQL:_A_Competitive_Analysis) — postgresql.org wiki: `BEGIN; CREATE TABLE; INSERT; ROLLBACK;` leaves nothing behind (*read* the PostgreSQL example; last edited 2012-06-11)
+- **Also good:** [node-postgres Transactions](https://node-postgres.com/features/transactions) — node-postgres.com: you issue `BEGIN`/`COMMIT`/`ROLLBACK` yourself and must use the same client (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Modeling relationships](06-relationships.md) · Next → [Unique constraints vs unique indexes](08-unique-nulls.md)

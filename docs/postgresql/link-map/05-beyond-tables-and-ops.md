@@ -1,7 +1,7 @@
 ---
 title: "Link map · PostgreSQL · Part 5 (phases 12–13)"
 sidebar_label: "05 · Beyond tables, Security and Ops (12–13)"
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Link map · PostgreSQL · Part 5 — Beyond plain tables, Security and operations (phases 12–13)

@@ -244,6 +244,17 @@ several consumers need it to agree — those are things application code cannot 
 the planner. In the application for presentation formatting, where testability and
 iteration speed matter more.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.18. Conditional Expressions](https://www.postgresql.org/docs/current/functions-conditional.html) — postgresql.org: `CASE`, `COALESCE`, `NULLIF`, `GREATEST`/`LEAST` (*read* `COALESCE`; ids `FUNCTIONS-CASE`, `FUNCTIONS-COALESCE-NVL-IFNULL`, `FUNCTIONS-GREATEST-LEAST` exist)
+- **Also good:** [9.3. Mathematical Functions and Operators](https://www.postgresql.org/docs/current/functions-math.html) — postgresql.org (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`TRUNCATE` vs `DELETE`](14-truncate.md) · Next → [String functions](16-string-functions.md)

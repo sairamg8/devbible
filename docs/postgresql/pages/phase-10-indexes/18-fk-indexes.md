@@ -186,6 +186,18 @@ leftmost-prefix rule.
 A child table never joined from the parent and whose parents are never deleted or
 key-updated. `ON DELETE CASCADE` alone removes that exception.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [5.5 Constraints, section on foreign keys](https://www.postgresql.org/docs/current/ddl-constraints.html) — postgresql.org: says a referenced-column change scans the referencing table, so index it too, and a foreign key does not create that index automatically (*read*)
+- **Also good:** [PostgreSQL: Indexes and foreign keys](https://www.cybertec-postgresql.com/en/postgresql-indexes-and-foreign-keys/) — Cybertec: a cascading delete reads all 5 million child rows without the index; published 2017-07-20, modified 2024-10-08 (*read*)
+- **Also good:** [Unindexed foreign keys](https://wiki.postgresql.org/wiki/Unindexed_foreign_keys)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Index bloat and REINDEX](17-bloat-reindex.md) · [Phase 10 index](README.md)

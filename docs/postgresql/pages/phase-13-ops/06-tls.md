@@ -261,6 +261,16 @@ actual fix is passing that CA as `ssl.ca` with `rejectUnauthorized: true`.
 ssl` — per-connection truth from the server, rather than trusting each client's
 configuration.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SSL Support (libpq)](https://www.postgresql.org/docs/current/libpq-ssl.html) — postgresql.org: `verify-ca` checks the chain, `verify-full` also checks the host name; `require` validates only if a root CA file exists (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [pg_hba.conf](05-pg-hba.md) · Next → [Connection limits and PgBouncer](./07-pgbouncer/README.md)

@@ -208,6 +208,19 @@ As a `PostgresInterval` object with only the non-zero fields. Convert with
 **How big are these types?**
 `boolean` 1 byte, `date` 4, `interval` 16 (three fields: months, days, microseconds).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Logical Operators](https://www.postgresql.org/docs/current/functions-logical.html) — postgresql.org: SQL uses true, false and null as "unknown", with AND/OR/NOT truth tables (*read*)
+- **Also good:** [Boolean Type](https://www.postgresql.org/docs/current/datatype-boolean.html) — postgresql.org (headings only)
+- **Read this:** [Date/Time Types](https://www.postgresql.org/docs/current/datatype-datetime.html) — postgresql.org: input and output formats, interval input; ids `DATATYPE-INTERVAL-INPUT`, `DATATYPE-DATETIME-INPUT` (headings only)
+- **Read this:** [Date/Time Functions and Operators](https://www.postgresql.org/docs/current/functions-datetime.html) — postgresql.org: `EXTRACT`, `date_trunc`, `date_bin` (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [jsonb vs json](08-jsonb.md) · Next → [Arrays](10-arrays.md)

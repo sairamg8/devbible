@@ -57,6 +57,18 @@ rolling 7-day window that survives a day with no data, and explain `EXCLUDE GROU
 - **[generate_series](../../phase-4-crud/18-generate-series.md)** — the calendar spine for
   when missing days need to exist as rows
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [4.2.8 Window Function Calls](https://www.postgresql.org/docs/current/sql-expressions.html#SYNTAX-WINDOW-FUNCTIONS) — postgresql.org: frame clause syntax covering `ROWS`, `RANGE`, `GROUPS`, `EXCLUDE` (*read* the syntax)
+- **Also good:** [3.5. Window Functions](https://www.postgresql.org/docs/current/tutorial-window.html) — postgresql.org: `sum(salary) OVER (ORDER BY salary)` gives running sums, and the default frame is explained (*read*)
+- **Also good:** [9.22 Window Functions](https://www.postgresql.org/docs/current/functions-window.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [ROWS vs RANGE](01-rows-vs-range.md)

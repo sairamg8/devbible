@@ -205,6 +205,17 @@ Exceeding the precision raises `22003`; excess scale is rounded.
 Yes: it rounds half away from zero, and it supports `'NaN'` which — unlike IEEE `NaN` —
 compares equal to itself so that `numeric` can be sorted and indexed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Numeric Types](https://www.postgresql.org/docs/current/datatype-numeric.html) — postgresql.org: `numeric` is exact up to 131072 digits before the point; ids `DATATYPE-NUMERIC-DECIMAL`, `DATATYPE-FLOAT` (*read* the table, headings only for the float notes)
+- **Also good:** [Working with Money in Postgres](https://www.crunchydata.com/blog/working-with-money-in-postgres) — Crunchy Data: 2023-10-11
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Integer types](01-integers.md) · Next → [text vs varchar vs char](03-text.md)

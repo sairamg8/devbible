@@ -4,6 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every PostgreSQL topic there is a [link map](./link-map/README.md): the page elsewhere on the internet that explains it best, what it leaves out, and what our own page must keep saying. First pass — open for review.
+:::
+
 > Verified: 2026-08 against **PostgreSQL 18.4** from **Node 24.19.0** with **`pg`**.
 > Examples run against `postgres:18-alpine` on `127.0.0.1:55432` (never `localhost` —
 > see Node sandbox notes for the IPv6 trap).

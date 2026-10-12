@@ -56,6 +56,16 @@ faster choice.
 - **[Window functions](../06-windows-intro/README.md)** — totals alongside detail rows without collapsing
   them, which is often what a report actually wanted
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.2.4 GROUPING SETS, CUBE, and ROLLUP](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-GROUPING-SETS) — postgresql.org: `GROUPING SETS`, `ROLLUP` and `CUBE` each shown with the equivalent expansion (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Sets, ROLLUP, CUBE](01-sets-rollup-cube.md)

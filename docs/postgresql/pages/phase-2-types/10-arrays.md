@@ -207,6 +207,17 @@ SQL array, not NULL.
 `unnest()` in the `FROM` clause turns them into rows: `FROM docs, unnest(tags) AS tag GROUP
 BY tag`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Arrays](https://www.postgresql.org/docs/current/arrays.html) — postgresql.org: declaration, accessing, searching; tip: searching for elements "can be a sign of database misdesign", use a child table (*read*)
+- **Also good:** [Array Functions and Operators](https://www.postgresql.org/docs/current/functions-array.html) — postgresql.org (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [boolean, date, interval](09-boolean-dates.md) · Next → [enum vs CHECK vs lookup](11-enum-check-lookup.md)

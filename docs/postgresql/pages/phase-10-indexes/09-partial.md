@@ -199,6 +199,16 @@ implication may not be provable. Keep the index predicate as a literal in the qu
 No — index predicates must be immutable, for the same reason
 [expression indexes](10-expression.md) must be.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [11.8 Partial Indexes](https://www.postgresql.org/docs/current/indexes-partial.html) — postgresql.org: usable only if the query's `WHERE` provably implies the index predicate; no theorem prover for equivalent forms (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Index-only scans and INCLUDE](08-index-only.md) · Next → [Expression indexes](10-expression.md)

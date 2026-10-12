@@ -199,6 +199,16 @@ A partial unique index — `CREATE UNIQUE INDEX … ON t (email) WHERE deleted_a
 NULL` — so the tombstoned row no longer occupies the value. Constraints cannot be
 partial, so this must be an index.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Constraints · Unique Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-UNIQUE-CONSTRAINTS) — postgresql.org: duplicates with a null are allowed by default; `NULLS NOT DISTINCT` changes that; a unique constraint creates a unique B-tree index; partial unique index for subsets (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [DDL is transactional](07-transactional-ddl.md) · Next → [Adding a `NOT NULL` column safely](09-add-not-null.md)

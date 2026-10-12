@@ -275,6 +275,16 @@ for hot rows within a request.
 `ETag` with `If-Match`, which is the same mechanism expressed in HTTP and returns
 `412`. The integer column is the simplest always-correct option.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Implementing Optimistic Locking in PostgreSQL](https://reintech.io/blog/implementing-optimistic-locking-postgresql) — reintech.io: dated July 3, 2024; `UPDATE ... WHERE id AND version`, a zero row count means missing or changed, then a follow-up read tells which (*read*; the code is Python, the byline reads "Arthur C. Codex")
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Passing a client through services](12-client-propagation.md) · Next → [`SELECT ... FOR UPDATE`](14-for-update.md)

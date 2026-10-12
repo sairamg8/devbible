@@ -248,6 +248,16 @@ Lock them in a deterministic order, such as ascending id. Deadlocks come from tw
 transactions acquiring the same locks in opposite orders; PostgreSQL detects the
 cycle and raises `40P01`, killing one of them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [13.3. Explicit Locking → Row-Level Locks](https://www.postgresql.org/docs/current/explicit-locking.html) — postgresql.org: `FOR UPDATE` blocks other updates, deletes and locks until the transaction ends; under `REPEATABLE READ` a changed row raises an error (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Optimistic concurrency](13-optimistic.md) · Next → [Shaping in SQL vs JavaScript](15-shape-sql-vs-js.md)

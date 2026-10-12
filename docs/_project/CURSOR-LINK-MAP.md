@@ -16,8 +16,11 @@ metadata:
 | Redis | 74 | ✅ complete (verified once) | 2026-10-12 (PR #6) |
 | Node.js | 249 | ✅ complete (verified once) | 2026-10-12 (PR #7) |
 | Express | 115 | ✅ complete (verified once) | 2026-10-12 (PR #8) |
-| PostgreSQL | 142 | 🔵 running (lanes 1–4 + 5) | — |
-| TypeScript · Docker · nginx · Git · Python · JavaScript · React · Angular · Java · CSS · others | — | ⬜ not started | — |
+| PostgreSQL | 233 | ✅ complete (verified once) | 2026-10-12 (PR #9) |
+| TypeScript | ~170 | 🔵 running (4 lanes) | — |
+| Docker · nginx · Git · Python · JavaScript · React · Angular · Java · CSS · others | — | ⬜ not started | — |
+
+**"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
 
 *Complete* = every syllabus topic has a block, links 200, MDX/linkcheck clean, merged to `main`. *Verified once* = researcher + adversarial verifier; a later
 re-read of "headings only" blocks is still owed. The staged copies in `docs/_project/link-map/` are older than the site copies — **the site copy is the truth**.
