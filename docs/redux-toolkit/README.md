@@ -4,6 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every Redux Toolkit topic (written or not) there is a [link map](./link-map/README.md): the page elsewhere on the internet that explains it best, what it leaves out, and what our own page must keep saying. First pass — open for review.
+:::
+
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-09-06 against the Redux Toolkit, Reselect, Immer and React-Redux documentation for
