@@ -29,6 +29,13 @@ project.
 inlined at session start, so it cost every session and every subagent the whole file. A path
 costs one line and is read when it is needed.)
 
+🔴 **Cloud sessions: the store is the `sairamg8/claude-context` repo, cloned at
+`/home/user/claude-context`** (`/mnt/Storage/my-learning/claude/` does not exist there). A
+`SessionStart` hook (`.claude/hooks/ensure-claude-context.sh`) clones it if missing — it needs
+the session to have access, so start cloud sessions with **both** `devbible` and `claude-context`
+selected, or call `add_repo`. Global rules: `/home/user/claude-context/shared/global-claude-md/CLAUDE-ROOT.md`
+(full set: `CLAUDE-FULL.md`, same folder). Read it at the start of a cloud session.
+
 **Global hard rules live in `~/.claude/CLAUDE.md`** — it loads in every session and subagent
 and is authoritative. Why each rule exists:
 `…/claude/shared/global-claude-md/RULES-WHY.md`.
