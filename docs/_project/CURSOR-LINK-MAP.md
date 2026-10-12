@@ -15,7 +15,8 @@ metadata:
 - **Findings:** (1) the current `reference/object-id` page has no "not strict insertion order" warning — the only official source is a
   2021 forum answer; (2) `_id` immutability / default index not confirmed from the pages opened; (3) four Manual URLs 301 — canonical forms used.
 - **Also done (same day, user said "Everything" = map all 82 at this depth):** [02-mongosh-and-schema-design.md](link-map/mongodb/02-mongosh-and-schema-design.md) T12–T22. T16 (shell safety) = none found. The Manual is now 9.0-era (a banner says so); our pages say 8.0.
-- **Next:** T23+ phases 4–6 (39 written topics end at `$unwind`, which is still owed).
+- **Also done:** [03-crud-operators-aggregation.md](link-map/mongodb/03-crud-operators-aggregation.md) T23–T40 (phases 4–6) — a Manual-first pass: the only third-party hits were one SEO publisher and a Cosmos DB tutorial, none listed as Read-this. T40 `$unwind` = unwritten.
+- **Next:** T41+ phase 7 indexes onward (`04-…`). Earlier next-step line follows, now stale: phases 4–6 (39 written topics end at `$unwind`, which is still owed).
   Same method, no agents. Nothing committed yet by this note's author unless the git log says otherwise.
 
 ## Cold start — state at the end of 2026-10-05
