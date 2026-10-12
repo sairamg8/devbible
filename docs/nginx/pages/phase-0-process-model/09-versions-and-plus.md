@@ -206,6 +206,18 @@ Yes. `least_time` became open source in 1.31.0, which is mainline — it is not 
 the 1.30 stable branch. The directive's own "Appeared in version" note is the
 authority, not the fact that the page exists.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Installing NGINX Open Source](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/) — docs.nginx.com: mainline (odd middle number) every 1-2 months and recommended for production unless stability is strict; stable (even) mostly gets backports (*read*)
+- **Also good:** [nginx download](https://nginx.org/en/download.html) — nginx.org: current branches: mainline 1.31.6, stable 1.30.5, legacy 1.28.3 (*read*)
+- **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) — nginx.org: each commercial-only directive or parameter is marked "available as part of our commercial subscription" (*read* those passages)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Modules, static and dynamic](08-modules.md) · Index: [Phase 0](README.md) · Next → [The forks](10-forks.md)

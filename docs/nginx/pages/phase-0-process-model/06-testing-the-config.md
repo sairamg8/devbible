@@ -219,6 +219,16 @@ It contains the entire configuration, secrets included — credentials embedded 
 an upstream URL, tokens in `proxy_set_header`, paths to password files. Redact
 before pasting it anywhere.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Command-line parameters](https://nginx.org/en/docs/switches.html) — nginx.org: `-t` checks syntax and opens referenced files, `-T` also dumps the config (1.9.2), `-V` prints compiler and configure arguments (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Reload, restart and binary upgrade](05-reload-and-upgrade.md) · Index: [Phase 0](README.md) · Next → [Installing nginx](07-installing.md)

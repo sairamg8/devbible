@@ -235,6 +235,18 @@ Not on that line. An unbalanced brace is only detected when the parse runs out o
 input, so the real mistake is somewhere above — read upward and rely on brace
 matching.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuration file measurement units](https://nginx.org/en/docs/syntax.html) — nginx.org: size suffixes, time suffixes `ms s m h d w M y`, combined units (*read*)
+- **Read this:** [ticket 947 — missing semicolon not detected](https://trac.nginx.org/nginx/ticket/947) — nginx trac (page shows only relative ages: opened "11 years ago", maintainer reply Maxim Dounin): variable-argument directives such as `index` and `server_name` swallow the next line, so `nginx -t` passes (*read*)
+- **Also good:** [Server names](https://nginx.org/en/docs/http/server_names.html) — nginx.org: braces in a regex need quotes or nginx reports a missing `;` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Variables](04-variables.md) · Index: [Phase 1](README.md) · Next → [`map`](06-map/README.md)

@@ -210,6 +210,18 @@ The documentation is organised by module, and `nginx -V` lists what the binary
 was built with. Knowing the owning module is how you find the right doc page and
 how you check whether the directive can exist on your server at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Building nginx from sources](https://nginx.org/en/docs/configure.html) — nginx.org: `--with-...` flags, `=dynamic` variants, `--add-dynamic-module`, `--with-compat` (*read*)
+- **Also good:** [Dynamic Modules](https://docs.nginx.com/nginx/admin-guide/dynamic-modules/dynamic-modules/) — docs.nginx.com: `.so` files loaded with `load_module` (*read*; it is written around NGINX Plus packages)
+- **Also good:** [Core functionality](https://nginx.org/en/docs/ngx_core_module.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Installing nginx](07-installing.md) · Index: [Phase 0](README.md) · Next → [Mainline, stable and NGINX Plus](09-versions-and-plus.md)

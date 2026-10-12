@@ -241,6 +241,18 @@ It sets one worker per available CPU core (supported since 1.3.8/1.2.5). It is
 **not** nginx's documented default, which is `worker_processes 1;` — `auto` is
 what distribution packages and container images configure on your behalf.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Inside NGINX: How We Designed for Performance & Scale](https://blog.nginx.org/blog/inside-nginx-how-we-designed-for-performance-scale) — NGINX blog, Jun 10, 2015: master does privileged work (reading config, binding ports); workers are single-threaded and handle many connections (*read*)
+- **Also good:** [Beginner's Guide](https://nginx.org/en/docs/beginners_guide.html) — nginx.org: master reads config and maintains workers, workers process requests (*read*)
+- **Read this:** [nginx, AOSA volume 2](https://aosabook.org/en/v2/nginx.html) — Andrew Alexeev, in The Architecture of Open Source Applications (undated page; text refers to Apache 2.4 in February 2012): no process or thread per connection, a run-loop per worker, contrast with Apache's style of spawning new processes or threads for each page request (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What nginx is](01-what-nginx-is.md) · Index: [Phase 0](README.md) · Next → [Sizing the workers](03-sizing-the-workers.md)

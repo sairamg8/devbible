@@ -274,6 +274,18 @@ It depends. A misspelled *built-in* fails at startup with
 perfectly valid syntax and silently evaluates to an empty string — which is the
 more dangerous case, because nothing ever reports it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Alphabetical index of variables](https://nginx.org/en/docs/varindex.html) — nginx.org: every variable with its module (*headings only*; the descriptions of `$request_uri`, `$sent_http_`, `$host` *read* on the core module page)
+- **Also good:** [agentzh's Nginx Tutorials](https://openresty.org/download/agentzh-nginx-tutorials-en.html) — Yichun Zhang, version 2020.03.19: Nginx Variables chapters: lazy evaluation, `$arg_` groups (*read*); examples use the third-party echo module and nginx 1.7.x
+- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) — nginx.org: `$request_uri` is the full original URI with arguments; `$document_uri` is the same as `$uri` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [MIME types and `default_type`](03-include-and-files/02-mime-types.md) · Index: [Phase 1](README.md) · Next → [Units, quoting and comments](05-syntax-details.md)

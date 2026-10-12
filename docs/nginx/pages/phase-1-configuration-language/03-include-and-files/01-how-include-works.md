@@ -234,6 +234,17 @@ Because includes expand in glob order, and a `map` or `limit_req_zone` must be
 parsed before the `server` block that references it. Naming the file to sort
 first removes the ordering question entirely.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Core functionality](https://nginx.org/en/docs/ngx_core_module.html) — nginx.org: `include file | mask`, context any, included files must be valid directives (*read*)
+- **Also good:** [Creating NGINX configuration files](https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/) — docs.nginx.com: splitting into `conf.d` feature files (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [`include` and the file layout](README.md) · Next → [MIME types and `default_type`](02-mime-types.md)

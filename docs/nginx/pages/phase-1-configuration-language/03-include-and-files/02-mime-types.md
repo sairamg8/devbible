@@ -211,6 +211,16 @@ No. It maps the file extension through a hash table and never looks at the bytes
 That makes serving cheap and makes a misnamed file confidently mislabelled — which
 is why `X-Content-Type-Options: nosniff` belongs on anything user-supplied.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) — nginx.org: `default_type` defaults to `text/plain`; `types` maps case-insensitive extensions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [How `include` works](01-how-include-works.md) · Index: [`include` and the file layout](README.md) · Next → [Variables](../04-variables.md)

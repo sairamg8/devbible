@@ -9,7 +9,7 @@ sidebar_position: 3
 Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to T06-20 (caching; the three tables run on 01-05, 06-11, 12-20), T07-01 to T07-13 (compression, limits, delivery), T08-01 to T08-14 (load balancing). That is 47 rows. **None has a page of ours yet (🔲)**: `docs/nginx/pages/` holds phases 0–2 only.
 *read* = I read the passage; *headings only* = fetched, headings/size checked. Third-party links carry a date where the page shows one. No `#anchors` are given.
 
-🔴 **Version note.** nginx.org/en/download.html on 2026-10-12 lists mainline **1.31.6** and stable **1.30.5** (the syllabus pins 1.31.3 / 1.30.4). The nginx.org module pages are the live reference and carry no page date. Two syllabus details to watch: `early_hints` is documented in `ngx_http_core_module` (since 1.29.0), not on the proxy page; and the upstream page shows `sticky` with no commercial-subscription note, but the release in which it became open source is not confirmed there (the syllabus says the 1.29.x line). `queue` is still marked commercial on that page. `github.com` returns 403 to our fetcher, so READMEs are cited as `raw.githubusercontent.com` copies.
+🔴 **Version note.** nginx.org/en/download.html on 2026-10-12 lists mainline **1.31.6** and stable **1.30.5** (the syllabus pins 1.31.3 / 1.30.4). The nginx.org module pages are the live reference and carry no page date. Two syllabus details to watch: `early_hints` is documented in `ngx_http_core_module` (since 1.29.0), not on the proxy page; and the upstream page says `sticky` was commercial-only "prior to version 1.29.6" (so open source from 1.29.6, matching the syllabus's 1.29.x line), although the `sync` parameter of `sticky learn` is still marked commercial. `queue` is still marked commercial on that page. `github.com` returns 403 to our fetcher, so READMEs are cited as `raw.githubusercontent.com` copies.
 
 ---
 
@@ -77,8 +77,8 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 
 ### T06-16 · Purging on open source nginx — Understand · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · `proxy_cache_purge` is marked as part of the commercial subscription (*read*) · covers our angle: **partial** — no open-source options · fetched 2026-10-12
-- **Also good:** [ngx_cache_purge README (raw)](https://raw.githubusercontent.com/nginx-modules/ngx_cache_purge/master/README.md) · github (raw), a maintained fork of FRiCKLE's module, tested on 1.20 to 1.29; undated (*read*) · [NGINX Content Caching](https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/) · F5 docs · the Plus purge setup (*read*) · fetched 2026-10-12
-- **Our delta:** the bypass-header trick and deleting files; no page found for them.
+- **Also good:** [ngx_cache_purge README (raw)](https://raw.githubusercontent.com/nginx-modules/ngx_cache_purge/master/README.md) · github (raw), a maintained fork of FRiCKLE's module, its compatibility table lists 1.20.x, 1.26.x, 1.28.x and 1.29.x as tested; undated (*read*) · [NGINX Content Caching](https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/) · F5 docs · the Plus purge setup (*read*) · fetched 2026-10-12
+- **Our delta:** the bypass-header trick and deleting files by hand; no page found for them (the F5 page's file-removal section is the Plus `purger`).
 
 ### T06-17 · Cache-busting by filename — Understand · 🔲 not written
 - **Read this:** [Love your cache](https://web.dev/articles/love-your-cache) · web.dev, updated 2020-12-11 · hashed asset URLs with `max-age=31536000,immutable` (*read*) · covers our angle: full · fetched 2026-10-12
@@ -131,7 +131,7 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 - **Also good:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · `client_body_temp_path` (*read*) · fetched 2026-10-12
 
 ### T07-09 · `limit_rate`, `limit_rate_after` — Know · 🔲 not written
-- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · bytes per second, per connection; initial amount before throttling (*read*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · bytes per second, set per request (two connections get twice the rate); initial amount before throttling (*read*) · covers our angle: full · fetched 2026-10-12
 
 ### T07-10 · Client-side `keepalive_timeout` and `keepalive_requests` — Understand · 🔲 not written
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · defaults 75s and 1000 requests (*read*) · covers our angle: **partial** — no mobile-client behaviour · fetched 2026-10-12
@@ -169,18 +169,18 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 - **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · `keepalive 32 local;` default since 1.29.7; `keepalive_requests` 1000, `keepalive_time` 1h (*read*) · covers our angle: full · fetched 2026-10-12
 
 ### T08-06 · Session affinity in open source — Understand · 🔲 not written
-- **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · `sticky cookie`, `sticky route`, `sticky learn` (*read*) · covers our angle: **partial** — release it became open source is not confirmed, and the stateless argument is absent · fetched 2026-10-12
+- **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · `sticky cookie`, `sticky route`, `sticky learn`; "prior to version 1.29.6" it was commercial only (*read*) · covers our angle: **partial** — the stateless argument is absent · fetched 2026-10-12
 - **Also good:** [PM2 cluster mode](https://pm2.keymetrics.io/docs/usage/cluster-mode/) · PM2 docs · advice to keep the app stateless and share state via Redis or a database (*read*) · fetched 2026-10-12
 
 ### T08-07 · `ip_hash` is not session affinity — Understand · 🔲 not written
-- **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · adding or removing a server may remap most keys; `hash … consistent` (*read*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · `ip_hash` says mark a server `down` to keep the hashing; the `hash` entry says adding or removing a server may remap most keys, and `consistent` limits it (*read*) · covers our angle: full · fetched 2026-10-12
 
 ### T08-08 · `zone` — Understand · 🔲 not written
 - **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · shared memory for group config and run-time state across workers; `max_conns` is per worker without it (*read*) · covers our angle: full · fetched 2026-10-12
 
 ### T08-09 · DNS and upstreams — Master · 🔲 not written
 - **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · `resolve` needs a shared-memory zone and a `resolver` (*read*) · covers our angle: **partial** — startup-only resolution is not stated here · fetched 2026-10-12
-- **Also good:** [nginx's proxy_pass DNS caching problem](https://joshua.hu/nginx-dns-caching) · Joshua Rogers, undated page · hostnames resolved at startup; fix with `resolver` and a variable (*read*) · fetched 2026-10-12
+- **Also good:** [nginx's proxy_pass DNS caching problem](https://joshua.hu/nginx-dns-caching) · Joshua Rogers, published 2025-06-26 · hostnames resolved at startup; fix with `resolver` and a variable (*read*) · fetched 2026-10-12
 
 ### T08-10 · Zero-downtime deploys — Understand · 🔲 not written
 - **Read this:** [Controlling nginx](https://nginx.org/en/docs/control.html) · nginx.org · `HUP` starts new workers and gracefully stops old ones (*read*) · covers our angle: **partial** — no drain or weight-shift recipe · fetched 2026-10-12

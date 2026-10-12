@@ -39,6 +39,16 @@ them costs nothing, and say what an unmatched key produces when you forget
 - **Phase 10 · logs** — `access_log … if=$loggable` uses one to drop health
   checks from the log volume.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ngx_http_map_module](https://nginx.org/en/docs/http/ngx_http_map_module.html) — nginx.org: `default`, `hostnames`, regex keys, `volatile`, and variables evaluated only when used (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Units, quoting and comments](../05-syntax-details.md) · Index: [Phase 1](../README.md) · Start → [The mechanism](01-the-mechanism.md)

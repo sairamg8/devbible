@@ -241,6 +241,17 @@ As high in the tree as the value is true. In `http` for a site-wide default, in
 `server` for one virtual host, in `location` for a single endpoint that differs.
 Repeating it in many `location` blocks means it belongs a level up.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Beginner's Guide](https://nginx.org/en/docs/beginners_guide.html) — nginx.org: simple directive ends with a semicolon, block directive has braces (*read* the Configuration File's Structure section)
+- **Also good:** [Creating NGINX configuration files](https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/) — docs.nginx.com: directives, contexts (events, http, server, location) with a sample file (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 1](README.md) · Next → [Inheritance and the replace rule](02-inheritance.md)

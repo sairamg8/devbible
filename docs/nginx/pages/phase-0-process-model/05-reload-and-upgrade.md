@@ -249,6 +249,17 @@ Almost certainly not — reloads do not drop requests. A 502 means nginx could n
 reach the backend, so the backend was restarting at the same moment. The evidence
 is in the error log's upstream message, not in nginx's own lifecycle.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Controlling nginx](https://nginx.org/en/docs/control.html) — nginx.org: on HUP the master checks syntax, applies it, rolls back if that fails and keeps running on the old config (*read* the Changing Configuration passage)
+- **Also good:** [Inside NGINX](https://blog.nginx.org/blog/inside-nginx-how-we-designed-for-performance-scale) — NGINX blog, Jun 10, 2015: reload forks new workers, signals old ones to exit gracefully (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Signals and `nginx -s`](04-signals-and-control.md) · Index: [Phase 0](README.md) · Next → [`nginx -t`, `-T` and `-V`](06-testing-the-config.md)

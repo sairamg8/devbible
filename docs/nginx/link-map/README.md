@@ -1,0 +1,26 @@
+---
+title: "nginx — Link map"
+sidebar_label: "Overview"
+sidebar_position: 0
+---
+
+# nginx — the link map
+
+For every topic in the [nginx syllabus](../README.md) — written or not — the page on the internet that explains it best, with one line on why and what it leaves out.
+Every link was fetched on the date beside it (2026-10-12). **210 topics in 4 files**; written topics link to our own page.
+
+| Topics | Covers | Our page |
+|---|---|---|
+| [46 topics](01-how-nginx-works.md) | Phases 0–2 · the process model, the configuration language, how nginx picks a server and a location | partly written |
+| [60 topics](02-serving-and-proxying.md) | Phases 3–5 · static files and SPAs, reverse proxy to Node, TLS, HTTP/2 and HTTP/3 | 🔲 not written |
+| [47 topics](03-speed-and-scale.md) | Phases 6–8 · caching, compression and limits, load balancing and upstream health | 🔲 not written |
+| [57 topics](04-production.md) | Phases 9–11 · access control, rate limiting and hardening, logs and debugging, deployment | 🔲 not written |
+
+**Reading a block.** **Read this** is the best single page for the topic. **Also good** adds something the first lacks.
+**Covers our angle** says whether it matches what our syllabus row promises — *full*, or *partial* and what is missing.
+**Our delta** is what our own page keeps saying that nobody else does. *Checked, not chosen* is an alternative I opened and why it lost.
+A topic nobody explains well reads **none found** — that one is ours to own.
+
+**How far to trust a block.** *read* means the passage was read and the claim matches. *Headings only* means the page was fetched and its
+headings, size and keywords checked, but the passage was not read — treat that pick as a strong lead, not a verified answer.
+Official docs get no preference: a page wins on the explanation. Each file was written by one agent and then attacked by a second; this is still a first pass and open for review.

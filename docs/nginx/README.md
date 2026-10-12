@@ -4,6 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every nginx topic (written or not) there is a [link map](./link-map/README.md): the page elsewhere on the internet that explains it best, what it leaves out, and what our own page must keep saying. First pass — open for review.
+:::
+
 > Verified: 2026-08-14 against [nginx.org/en/docs/](https://nginx.org/en/docs/),
 > [the download page](https://nginx.org/en/download.html),
 > [nginx news 2026](https://nginx.org/2026.html) and

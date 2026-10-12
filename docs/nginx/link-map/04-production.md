@@ -1,15 +1,15 @@
 ---
 title: "Link map · nginx · Part 4"
-sidebar_label: "04 · nginx · Production"
+sidebar_label: "04 · Production"
 sidebar_position: 4
 ---
 
-# Link map · nginx · Part 4 — Production (phases 9–10)
+# Link map · nginx · Part 4 — Production (phases 9–11)
 
-Covers the topic rows of `docs/nginx/syllabus/04-production.md` for phase 9 (T09-01 to T09-25, access control, rate limiting, hardening) and phase 10 (T10-01 to T10-16, logs, metrics, debugging). Phase 11 (T11-01 to T11-16) is in `04-production-b.md`, the next file. That is 57 rows in all. **None has a page of ours yet (🔲)**: `docs/nginx/pages` holds phases 0 to 2 only.
+Covers the topic rows of `docs/nginx/syllabus/04-production.md` for phase 9 (T09-01 to T09-25, access control, rate limiting, hardening), phase 10 (T10-01 to T10-16, logs, metrics, debugging) and phase 11 (T11-01 to T11-16, deployment and operations). That is 57 rows. **None has a page of ours yet (🔲)**: `docs/nginx/pages` holds phases 0 to 2 only.
 *read* = I read the passage; *headings only* = fetched, headings/size checked. Third-party links carry a date where the page shows one. No `#anchors` are given.
 
-🔴 **Version note.** nginx.org/en/download.html on 2026-10-12 lists **stable 1.30.5** and **mainline 1.31.6**; nginx.org/2026.html dates both 2026-09-15 (a `ngx_http_v3_module` buffer-overflow fix, CVE-2026-90439). Our syllabus README still says 1.30.4 / 1.31.3, one security release behind. nginx.org module docs are unversioned (they describe mainline). `github.com` returns 403 to our fetcher, so READMEs are cited as `raw.githubusercontent.com`. docs.nginx.com pages cover NGINX Plus and open source together; the Plus-only parts are marked.
+🔴 **Version note.** nginx.org/en/download.html on 2026-10-12 lists **stable 1.30.5** and **mainline 1.31.6**; nginx.org/2026.html dates both 2026-09-15 (a `ngx_http_v3_module` buffer-overflow fix, CVE-2026-90439). Our syllabus README still says 1.30.4 / 1.31.3, one security release behind on stable and three releases behind on mainline (1.31.4 to 1.31.6). nginx.org module docs are unversioned (they describe mainline). `github.com` returns 403 to our fetcher, so READMEs are cited as `raw.githubusercontent.com`. docs.nginx.com pages cover NGINX Plus and open source together; the Plus-only parts are marked.
 
 ---
 
@@ -77,7 +77,7 @@ Covers the topic rows of `docs/nginx/syllabus/04-production.md` for phase 9 (T09
 - **Our delta:** the open-source route: `auth_request` to your own verifier, or njs.
 
 ### T09-17 · `server_tokens off` — Understand · 🔲 not written
-- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · version on error pages and the `Server` header; `build` and string forms (*read*) · covers our angle: **partial** — does not list what it leaves visible · fetched 2026-10-12
+- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · version on error pages and the `Server` header; `build` form; the explicit-string form is commercial-subscription only (*read*) · covers our angle: **partial** — does not list what it leaves visible · fetched 2026-10-12
 
 ### T09-18 · Security headers at the edge — Master · 🔲 not written
 - **Read this:** [HTTP Security Response Headers Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html) · OWASP · HSTS value `max-age=63072000; includeSubDomains; preload`, `frame-ancestors` over X-Frame-Options, `nosniff` (*read* those three; the rest *headings only*) · covers our angle: **partial** — framework-neutral; no nginx-vs-app split · fetched 2026-10-12
@@ -136,7 +136,7 @@ Covers the topic rows of `docs/nginx/syllabus/04-production.md` for phase 9 (T09
 - **Our delta:** a complete format; note `error_log` also takes a `json` parameter.
 
 ### T10-05 · `$request_id` end to end — Master · 🔲 not written
-- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · `$request_id`: 16 random bytes in hex (1.11.0); `error_log_tag request_id $request_id` (*read*) · covers our angle: **partial** — nothing on forwarding or Express · fetched 2026-10-12
+- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · `$request_id`: 16 random bytes in hex (1.11.0); `error_log_tag` (1.29.8) is marked commercial-subscription only on that page (*read*) · covers our angle: **partial** — nothing on forwarding or Express, and the error-log tag is not open source · fetched 2026-10-12
 - **Our delta:** `proxy_set_header`, echoing it in Express logs, and returning it to the client.
 
 ### T10-06 · Conditional logging — Understand · 🔲 not written
@@ -157,14 +157,14 @@ Covers the topic rows of `docs/nginx/syllabus/04-production.md` for phase 9 (T09
 - *Checked, not chosen:* guessed Netdata URLs for `111`, "too large body" and the redirection cycle returned 404; none found for those three.
 
 ### T10-10 · Log rotation and `USR1` — Understand · 🔲 not written
-- **Read this:** [Controlling nginx](https://nginx.org/en/docs/control.html) · nginx.org · `USR1` re-opens log files; `nginx -s reopen` (*read*) · covers our angle: **partial** — no logrotate recipe · fetched 2026-10-12
-- **Also good:** [Control NGINX Processes at Runtime](https://docs.nginx.com/nginx/admin-guide/basic-functionality/runtime-control/) · docs.nginx.com, modified 2026-09-03 (*headings only*)
+- **Read this:** [Controlling nginx](https://nginx.org/en/docs/control.html) · nginx.org · "Rotating Log-files" section: rename the file, then send `USR1` to re-open (*read*) · covers our angle: **partial** — no logrotate recipe and no mention of `nginx -s reopen` · fetched 2026-10-12
+- **Also good:** [Control NGINX Processes at Runtime](https://docs.nginx.com/nginx/admin-guide/basic-functionality/runtime-control/) · docs.nginx.com, modified 2026-09-03 · lists `reopen` as the `USR1` signal (*read* the signal list)
 
 ### T10-11 · `stub_status` — Understand · 🔲 not written
 - **Read this:** [ngx_http_stub_status_module](https://nginx.org/en/docs/http/ngx_http_stub_status_module.html) · nginx.org · sample output: active connections, accepts, handled, requests, Reading, Writing, Waiting (*read*) · covers our angle: **partial** — meaning of each field is on the same page; no diagnosis guidance · fetched 2026-10-12
 
 ### T10-12 · Exporting metrics to Prometheus — Know · 🔲 not written
-- **Read this:** [nginx-prometheus-exporter README (raw)](https://raw.githubusercontent.com/nginx/nginx-prometheus-exporter/main/README.md) · github (raw) · reads `stub_status`; `--nginx.scrape-uri=http://<host>:8080/stub_status` (*read*) · covers our angle: **partial** — no log-derived rates · fetched 2026-10-12
+- **Read this:** [nginx-prometheus-exporter README (raw)](https://raw.githubusercontent.com/nginx/nginx-prometheus-exporter/main/README.md) · github (raw) · reads `stub_status`; `--nginx.scrape-uri=http://<nginx>:8080/stub_status` (*read*) · covers our angle: **partial** — no log-derived rates · fetched 2026-10-12
 - **Our delta:** request and error rate from JSON logs.
 
 ### T10-13 · `ngx_otel_module` — Know · 🔲 not written
@@ -172,11 +172,85 @@ Covers the topic rows of `docs/nginx/syllabus/04-production.md` for phase 9 (T09
 - **Also good:** [Traces](https://opentelemetry.io/docs/concepts/signals/traces/) · OpenTelemetry (*headings only*)
 
 ### T10-14 · The debug log — Know · 🔲 not written
-- **Read this:** [A debugging log](https://nginx.org/en/docs/debugging_log.html) · nginx.org · `./configure --with-debug`, `error_log … debug`, `debug_connection`, memory buffer (*read*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [A debugging log](https://nginx.org/en/docs/debugging_log.html) · nginx.org · `./configure --with-debug`, `error_log … debug`, `debug_connection`, memory buffer (*read*) · covers our angle: **partial** — does not say why to switch it off again · fetched 2026-10-12
 
 ### T10-15 · Logging to syslog and from containers — Know · 🔲 not written
 - **Read this:** [Logging to syslog](https://nginx.org/en/docs/syslog.html) · nginx.org · `error_log syslog:server=…`, `access_log syslog:…`, since 1.7.1 (*read*) · covers our angle: **partial** — container stdout is not covered · fetched 2026-10-12
 
 ### T10-16 · `ngx_http_api_module` and the live dashboard (Plus) — When Needed · 🔲 not written
-- **Read this:** [ngx_http_api_module](https://nginx.org/en/docs/http/ngx_http_api_module.html) · nginx.org · "available as part of our commercial subscription" (*read*) · covers our angle: full · fetched 2026-10-12
-- **Also good:** [Live Activity Monitoring](https://docs.nginx.com/nginx/admin-guide/monitoring/live-activity-monitoring/) · docs.nginx.com (*headings only*)
+- **Read this:** [ngx_http_api_module](https://nginx.org/en/docs/http/ngx_http_api_module.html) · nginx.org · "available as part of our commercial subscription" (*read*) · covers our angle: **partial** — the REST API only; the dashboard is on the Also good page · fetched 2026-10-12
+- **Also good:** [Live Activity Monitoring](https://docs.nginx.com/nginx/admin-guide/monitoring/live-activity-monitoring/) · docs.nginx.com, modified 2026-09-02 · has a "Using the Dashboard" section (*headings only*)
+
+---
+
+## Phase 11 — Deployment and operations
+
+### T11-01 · Config layout that scales — Understand · 🔲 not written
+- **Read this:** [Create NGINX Plus and NGINX Configuration Files](https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/) · docs.nginx.com, modified 2026-10-07 · split into feature files under `/etc/nginx/conf.d` pulled in by `include` (*read*) · covers our angle: **partial** — no word on `sites-available` being a Debian convention · fetched 2026-10-12
+- **Our delta:** the `sites-available` / `sites-enabled` point; no source found that states it.
+
+### T11-02 · `nginx -t` in CI — Master · 🔲 not written
+- **Read this:** [Command-line parameters](https://nginx.org/en/docs/switches.html) · nginx.org · `-t` checks syntax, then tries to open the files the config refers to (*read*) · covers our angle: **partial** — nothing on running it inside the image · fetched 2026-10-12
+- **Also good:** [Automate Nginx conf file validation using Docker](https://dev.to/idevkamboj/validate-nginx-conf-file-using-docker-ki4) · DEV Community, 2019-12-04 · mounts the config into the `nginx` image and runs `nginx -t`; old, so check flags (*read*)
+
+### T11-03 · Reload safely — Master · 🔲 not written
+- **Read this:** [Controlling nginx](https://nginx.org/en/docs/control.html) · nginx.org · `HUP` makes the master check syntax, try the new config, roll back and keep working if that fails (*read*) · covers our angle: **partial** — the "one class of change a reload cannot apply" is not named there; not confirmed · fetched 2026-10-12
+- **Also good:** [Beginner's Guide](https://nginx.org/en/docs/beginners_guide.html) · nginx.org · starting, stopping and reloading (*headings only*)
+
+### T11-04 · nginx in a container — Master · 🔲 not written
+- **Read this:** [nginx (Docker Official Image)](https://hub.docker.com/_/nginx) · Docker Hub · custom `CMD` needs `-g daemon off;`; config by bind mount or baked in; non-root notes (*read*) · covers our angle: **partial** — log-to-stdout and Podman not found there · fetched 2026-10-12
+- **Also good:** [Deploying NGINX and NGINX Plus with Docker](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-docker/) · docs.nginx.com, modified 2026-10-07 (*headings only*)
+
+### T11-05 · nginx in Compose in front of Node — Understand · 🔲 not written
+- **Read this:** [Control startup and shutdown order in Compose](https://docs.docker.com/compose/how-tos/startup-order/) · Docker Docs · `depends_on` with `service_started` or `service_healthy` conditions (*read*) · covers our angle: **partial** — nothing on nginx DNS caching · fetched 2026-10-12
+- **Also good:** [How to Fix 'host not found in upstream' Nginx Startup Errors](https://oneuptime.com/blog/post/2025-12-16-fix-host-not-found-in-upstream-nginx/view) · OneUptime, 2025-12-16 (*headings only*)
+- *Checked, not chosen:* nginx.org `resolver` entry in ngx_http_core_module (*read*: `resolver address … [valid=time]`); directive reference only.
+- **Our delta:** the variable-in-`proxy_pass` plus `resolver` pattern for a changing container IP. Whether nginx retries inside the TTL window is not confirmed.
+
+### T11-06 · Environment-specific config with `envsubst` — Understand · 🔲 not written
+- **Read this:** [nginx (Docker Official Image)](https://hub.docker.com/_/nginx) · Docker Hub · `/etc/nginx/templates/*.template` rendered with `envsubst` into `/etc/nginx/conf.d`; `NGINX_ENVSUBST_TEMPLATE_DIR` and related variables (*read*) · covers our angle: full · fetched 2026-10-12
+
+### T11-07 · Serving the frontend from the nginx image — Understand · 🔲 not written
+- **Read this:** [React.js language-specific guide](https://docs.docker.com/guides/reactjs/) · Docker Docs, updated 2026-07-21 · multi-stage build and a custom NGINX config (*read* the intro; rest *headings only*) · covers our angle: **partial** — not our hashed-asset cache split · fetched 2026-10-12
+- **Also good:** [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/) · Docker Docs · `COPY --from` copies a built artifact into a small final image (*read*)
+
+### T11-08 · Worker and OS tuning — Understand · 🔲 not written
+- **Read this:** [Tuning NGINX for Performance](https://www.f5.com/company/blog/nginx/tuning-nginx) · F5 · Linux backlog queue, file descriptors, ephemeral ports; `worker_processes`, `worker_connections` (*read* the backlog and `worker_connections` passages) · covers our angle: **partial** — no `worker_rlimit_nofile` or systemd `LimitNOFILE`; its `limits.conf` advice does not apply to systemd services (see Also good) · fetched 2026-10-12
+- **Also good:** [NGINX worker_rlimit_nofile](https://www.netdata.cloud/guides/nginx/nginx-worker-rlimit-nofile/) · Netdata guides, undated · systemd `LimitNOFILE` floor; "A reload is not sufficient" for limit changes (*read*)
+
+### T11-09 · systemd integration — Understand · 🔲 not written
+- **Read this:** [systemd.service](https://man7.org/linux/man-pages/man5/systemd.service.5.html) · man7.org · `ExecReload=` and service types (*read* the `ExecReload` passage) · covers our angle: **partial** — generic, no nginx unit · fetched 2026-10-12
+- **Also good:** [NGINX worker_rlimit_nofile](https://www.netdata.cloud/guides/nginx/nginx-worker-rlimit-nofile/) · Netdata guides, undated · a drop-in `limits.conf` for the nginx service (*read*)
+- *Not opened:* freedesktop.org systemd man pages returned 418 to our fetcher.
+
+### T11-10 · Health checks and load-balancer probes — Understand · 🔲 not written
+- **Read this:** [How to Implement Health Checks in Nginx](https://oneuptime.com/blog/post/2026-01-25-nginx-health-checks/view) · OneUptime, 2026-01-25 · a local `location` with `access_log off; return 200` for external monitors (*read* that example) · covers our angle: **partial** — its full example shows a local `/nginx-health` and a proxied `/health` side by side but never explains the difference · fetched 2026-10-12
+- **Also good:** [HTTP load balancing](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/) · docs.nginx.com (*headings only*)
+- **Our delta:** the two-endpoint pattern (nginx-alive vs backend-alive).
+
+### T11-11 · Blue/green and canary with `split_clients` — Know · 🔲 not written
+- **Read this:** [ngx_http_split_clients_module](https://nginx.org/en/docs/http/ngx_http_split_clients_module.html) · nginx.org · hashes a string with MurmurHash2 into percentage buckets, e.g. `0.5%`, `2.0%`, `*` (*read*) · covers our angle: **partial** — an A/B example, not an upstream switch · fetched 2026-10-12
+- **Also good:** [NGINX Load Balancing](https://nginx-wiki.getpagespeed.com/config/load-balancing/) · NGINX Wiki mirror, 2025-12-05 (updated 2026-08-05) · upstream methods and server parameters (*headings only*)
+
+### T11-12 · nginx vs the alternatives — Know · 🔲 not written
+- **Read this:** [Top 5 Reverse Proxies: Which One Should You Choose?](https://sliplane.io/blog/top-5-reverse-proxies-which-one-should-you-choose) · Sliplane, 2024-10-05 (updated 2026-07-07) · Caddy for automatic HTTPS, Traefik for Docker and Kubernetes, HAProxy for load balancing (*read* the quick picks) · covers our angle: **partial** — no Envoy or cloud ALB depth · fetched 2026-10-12
+- **Also good:** [Automatic HTTPS](https://caddyserver.com/docs/automatic-https) · Caddy docs (*headings only*)
+- *Not opened:* Envoy [what is Envoy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy), [Traefik docs](https://doc.traefik.io/traefik/).
+
+### T11-13 · nginx as a Kubernetes Ingress controller — Know · 🔲 not written
+- **Read this:** [Advanced configuration with Annotations](https://docs.nginx.com/nginx-ingress-controller/configuration/ingress-resources/advanced-configuration-with-annotations/) · docs.nginx.com, F5 NGINX Ingress Controller (*headings only*) · covers our angle: **partial** — F5's controller, not the community one · fetched 2026-10-12
+- **Also good:** [Ingress NGINX Retirement: What You Need to Know](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/) · kubernetes.io, 2025-11-11 (modified 2026-01-03) · "Best-effort maintenance will continue until March 2026" (*read*)
+- **Our delta:** 🔴 the community `ingress-nginx` project is retired; the syllabus row should say which controller it means.
+
+### T11-14 · njs — When Needed · 🔲 not written
+- **Read this:** [njs scripting language](https://nginx.org/en/docs/njs/) · nginx.org · "The built-in njs JavaScript engine is deprecated since 1.0.0"; new configs should use QuickJS (*read*) · covers our angle: **partial** — no auth-glue examples · fetched 2026-10-12
+- **Also good:** [njs changes](https://nginx.org/en/docs/njs/changes.html) · nginx.org · 1.0.1 (2026-09-02, per nginx.org/2026.html) fixes an access-control bypass in `js_access` (*read*)
+
+### T11-15 · Building nginx from source — When Needed · 🔲 not written
+- **Read this:** [Building nginx from sources](https://nginx.org/en/docs/configure.html) · nginx.org · the `--with-` / `--without-` module flags and path options (*read*) · covers our angle: **partial** — third-party modules and upkeep cost not covered · fetched 2026-10-12
+- **Also good:** [Installing NGINX Open Source](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/) · docs.nginx.com, modified 2026-10-07 · has "Dynamic modules" and "Compile and install from source" sections (*headings only*)
+
+### T11-16 · A production checklist — Master · 🔲 not written
+- **Read this:** [25 NGINX Directives to Audit Before Opening a Support Ticket](https://www.netdata.cloud/academy/25-nginx-directives-to-audit/) · Netdata academy, undated · core, performance, security, proxy directive groups (*headings only*) · covers our angle: **partial** — written for support triage, not go-live · fetched 2026-10-12
+- *Checked, not chosen:* [nginx hardening checklist](https://stackharbor.com/en/knowledge-base/nginx-hardening-checklist/) (200, vendor page); gixy README (raw) shows a 2019 maintenance badge, so currency is not confirmed.
+- **Our delta:** the twenty-line audit is ours to write; pull each line from the pages above.

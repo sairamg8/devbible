@@ -264,6 +264,17 @@ inherits the parent" holds only for directives it does not set itself.
 No. Named locations cannot be nested and cannot contain nested locations. They are
 single destinations by design.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) — nginx.org: not for regular requests, only redirection; cannot be nested (*read*)
+- **Also good:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) — nginx.org: lists `X-Accel-Redirect` among special response headers (*read* briefly)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The location matching algorithm](03-location-matching/README.md) · Index: [Phase 2](README.md) · Next → [The request-processing phases](05-request-phases.md)
