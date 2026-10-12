@@ -50,7 +50,7 @@ Covers every topic row of phases 12 and 13 in `docs/postgresql/syllabus/04-perfo
 
 ### T12-09 · Extensions — Understand · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/09-extensions.md`
 - **Read this:** [CREATE EXTENSION](https://www.postgresql.org/docs/current/sql-createextension.html) · postgresql.org · most extensions need superuser unless marked trusted, which any user with `CREATE` on the database can install (*read*) · covers our angle: **partial** — one extension at a time, nothing on managed providers · fetched 2026-10-12
-- **Also good:** [Additional Supplied Modules](https://www.postgresql.org/docs/current/contrib.html) · postgresql.org · lists `pgcrypto`, `pg_stat_statements` and the rest (*headings only*) · [Supabase: Postgres Extensions](https://supabase.com/docs/guides/database/extensions) · Supabase docs · enable from the dashboard or SQL; not every extension is on by default (*read*) · fetched 2026-10-12
+- **Also good:** [Additional Supplied Modules](https://www.postgresql.org/docs/current/contrib.html) · postgresql.org · lists `pgcrypto`, `pg_stat_statements` and the rest (*headings only*) · [Supabase: Postgres Extensions](https://supabase.com/docs/guides/database/extensions) · Supabase docs · some extensions are pre-installed; enable or disable from the dashboard or SQL (*read*) · fetched 2026-10-12
 - **Our delta:** `citext`, `uuid-ossp` and `pgvector` availability per provider; no page I read lists them all.
 
 ### T12-10 · Set-returning functions in `FROM` — Understand · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/10-srf.md`
@@ -82,15 +82,15 @@ Covers every topic row of phases 12 and 13 in `docs/postgresql/syllabus/04-perfo
 
 ### T12-17 · `pgvector` — When Needed · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/17-pgvector.md`
 - **Read this:** [pgvector README (raw)](https://raw.githubusercontent.com/pgvector/pgvector/master/README.md) · github (raw) · distances (L2, inner product, cosine, L1, Hamming, Jaccard); HNSW is faster than IVFFlat at the cost of build time and memory; `hnsw.ef_search` defaults to 40 (*read*) · covers our angle: full · fetched 2026-10-12
-- **Our delta:** I did not confirm the operator symbols (`<=>` and friends) in the text; check against the README before use.
+- **Our delta:** the Node `pg` side (passing a vector as text); the README lists the operators `<->` (L2), `<#>` (negative inner product), `<=>` (cosine) and `<+>` (L1).
 
 ### T12-18 · The transactional outbox — Understand · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/18-transactional-outbox.md`
 - **Read this:** [The Transactional Outbox Pattern: Reliable Events Without Distributed Transactions](https://ndthuan.com/transactional-outbox-pattern/) · ndthuan.com, 2026-09-04 · same-transaction write, then claim unpublished rows with `SKIP LOCKED`, publish, mark (*read*) · covers our angle: **partial** — Go, not Node · fetched 2026-10-12
 - **Also good:** [Pattern: Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html) · microservices.io, undated · after a crash the message is published again, so consumers must be idempotent (*read*) · [SELECT, locking clause](https://www.postgresql.org/docs/current/sql-select.html) · postgresql.org · `FOR UPDATE ... SKIP LOCKED` in the synopsis (*headings only*) · fetched 2026-10-12
 
 ### T12-19 · Audit and history tables — Understand · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/19-audit-history-tables.md`
-- **Read this:** [Audit trigger 91plus](https://wiki.postgresql.org/wiki/Audit_trigger_91plus) · PostgreSQL wiki · what it records: change type, session user (not `SET ROLE`), timestamps, top-level statement, before/after rows (*read*) · covers our angle: **partial** — a library snippet, built on `hstore` rather than `jsonb`, and old (9.1+) · fetched 2026-10-12
-- **Also good:** [Trigger Functions (PL/pgSQL), Example 41.4](https://www.postgresql.org/docs/current/plpgsql-trigger.html) · postgresql.org · a minimal audit trigger into `emp_audit` (*read*) · [Postgres Auditing in 150 lines of SQL](https://supabase.com/blog/postgres-audit) · Supabase blog, undated · a single `jsonb` audit table (*headings only*) · fetched 2026-10-12
+- **Read this:** [Audit trigger 91plus](https://wiki.postgresql.org/wiki/Audit_trigger_91plus) · PostgreSQL wiki, last edited 4 Nov 2017 · what it records: change type, session user (not `SET ROLE`), timestamps, top-level statement, before/after rows (*read*) · covers our angle: **partial** — a library snippet, built on `hstore` rather than `jsonb`, and old (9.1+) · fetched 2026-10-12
+- **Also good:** [Trigger Functions (PL/pgSQL), Example 41.4](https://www.postgresql.org/docs/current/plpgsql-trigger.html) · postgresql.org · a minimal audit trigger into `emp_audit` (*read*) · [Postgres Auditing in 150 lines of SQL](https://supabase.com/blog/postgres-audit) · Supabase blog, 8 Mar 2022 · a single `jsonb` audit table (*headings only*) · fetched 2026-10-12
 - **Our delta:** why the app cannot be trusted to write history; the trigger answers it.
 
 ---
@@ -106,7 +106,7 @@ Covers every topic row of phases 12 and 13 in `docs/postgresql/syllabus/04-perfo
 - **Also good:** [The Password File](https://www.postgresql.org/docs/current/libpq-pgpass.html) · postgresql.org · `.pgpass` keeps passwords out of the URL (*read*) · fetched 2026-10-12
 
 ### T13-03 · The application role should not own the schema — Understand · ✅ written `docs/postgresql/pages/phase-13-ops/03-app-role-not-owner.md`
-- **Read this:** [Auditing Users and Roles in PostgreSQL](https://www.enterprisedb.com/blog/auditing-users-and-roles-postgresql) · EDB, 11 May 2019 · section "Owner is a small superuser": the role should not be superuser and should not own the objects (*read*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [Auditing Users and Roles in PostgreSQL](https://www.enterprisedb.com/blog/auditing-users-and-roles-postgresql) · EDB, 11 May 2019 · section "Owner is a small superuser": the role should not be superuser and should not own the objects, because owners can grant themselves anything (*read*) · covers our angle: **partial** — a security-audit checklist, no web-app walkthrough of a migration role versus a runtime role · fetched 2026-10-12
 - **Also good:** [Privileges](https://www.postgresql.org/docs/current/ddl-priv.html) · postgresql.org · (*read*) · fetched 2026-10-12
 
 ### T13-04 · `pg_dump` and `pg_restore` — Master · ✅ written `docs/postgresql/pages/phase-13-ops/04-pg-dump-restore/`
@@ -126,7 +126,7 @@ Covers every topic row of phases 12 and 13 in `docs/postgresql/syllabus/04-perfo
 - **Also good:** [PgBouncer configuration](https://www.pgbouncer.org/config.html) · pgbouncer.org · `pool_mode` session, transaction, statement (*read*) · [Connection settings](https://www.postgresql.org/docs/current/runtime-config-connection.html) · postgresql.org · `max_connections` defaults to about 100 (*read*) · fetched 2026-10-12
 
 ### T13-08 · Streaming replication and read replicas — Understand · ✅ written `docs/postgresql/pages/phase-13-ops/08-replication/`
-- **Read this:** [Read your own writes, off the primary](https://boringsql.com/posts/read-your-own-writes/) · boringSQL, 2026-08-31 · measured: reading the replica at once was stale in 992 of 1,000 tries; LSN tokens and `WAIT FOR` (*read*) · covers our angle: **partial** — routing and lag, not building a replica · fetched 2026-10-12
+- **Read this:** [Read your own writes, off the primary](https://boringsql.com/posts/read-your-own-writes/) · boringSQL, 2026-08-31 · measured: reading the replica at once was stale in 992 of 1,000 tries; LSN tokens and `WAIT FOR` (*read*) · covers our angle: **partial** — routing and lag, not building a replica; `WAIT FOR LSN` is a PostgreSQL 19 feature (tested by the author on 19 beta 3), not in our 18 · fetched 2026-10-12
 - **Also good:** [Log-Shipping Standby Servers](https://www.postgresql.org/docs/current/warm-standby.html) · postgresql.org · streaming replication, slots, synchronous replication (*headings only*) · [Hot Standby](https://www.postgresql.org/docs/current/hot-standby.html) · postgresql.org · read-only queries on a standby (*headings only*) · fetched 2026-10-12
 
 ### T13-09 · Monitoring — Understand · ✅ written `docs/postgresql/pages/phase-13-ops/09-monitoring/`
@@ -167,5 +167,5 @@ Covers every topic row of phases 12 and 13 in `docs/postgresql/syllabus/04-perfo
 
 ### T13-18 · The disaster drill — Know · ✅ written `docs/postgresql/pages/phase-13-ops/18-disaster-drill.md`
 - **Read this:** [How to Test PostgreSQL Backup Restoration](https://oneuptime.com/blog/post/2026-01-21-postgresql-backup-testing/view) · OneUptime, 2026-01-21 · tiered checks from file existence up to full restore, with scripts (*headings only*, then the `pg_restore -l` script *read*) · covers our angle: **partial** — vendor blog, scripts not run by us · fetched 2026-10-12
-- **Also good:** [pg_verifybackup](https://www.postgresql.org/docs/current/app-pgverifybackup.html) · postgresql.org · its checks do not cover everything; "still perform test restores" (*read*) · [amcheck](https://www.postgresql.org/docs/current/amcheck.html) · postgresql.org · (*not opened*, 200 only) · fetched 2026-10-12
+- **Also good:** [pg_verifybackup](https://www.postgresql.org/docs/current/app-pgverifybackup.html) · postgresql.org · its checks do not cover everything; "still perform test restores" (*read*) · [amcheck](https://www.postgresql.org/docs/current/amcheck.html) · postgresql.org · tools to verify table and index consistency (*headings only*) · fetched 2026-10-12
 - **Our delta:** the scheduled scratch-database restore as one script.

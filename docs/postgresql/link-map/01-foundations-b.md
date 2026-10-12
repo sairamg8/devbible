@@ -62,7 +62,7 @@ All 20 are ✅ written. *read* = passage read; *headings only* = fetched, headin
 - **Our delta:** the whole convention (plurals, `_id`, `_pkey`/`_key`/`_idx` suffixes) is our own call.
 
 ### T03-12 · Normalization to 3NF, and denormalizing on purpose — Understand · ✅ written `docs/postgresql/pages/phase-3-ddl/12-normalization.md`
-- **Read this:** [Description of the database normalization basics](https://learn.microsoft.com/en-us/office/troubleshoot/access/database-normalization-description) · Microsoft Learn · first to third normal form; calls 3NF "the highest level necessary for most applications" (*read* the intro; headings checked) · covers our angle: **partial** — nothing on denormalizing · fetched 2026-10-12
+- **Read this:** [Description of the database normalization basics](https://learn.microsoft.com/en-us/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/database-normalization-description) · Microsoft Learn (previous-versions section) · first to third normal form; calls 3NF "the highest level necessary for most applications" (*read* the intro; headings checked) · covers our angle: **partial** — nothing on denormalizing · fetched 2026-10-12
 - **Also good:** [How to Use PostgreSQL for Data Normalization](https://www.tigerdata.com/learn/how-to-use-postgresql-for-data-normalization) · Tiger Data · published 2024-12-23, modified 2026-09-07 · has a "Denormalization: When and why" part (headings only)
 
 ### T03-13 · `DROP`, `CASCADE`, `RESTRICT` — Understand · ✅ written `docs/postgresql/pages/phase-3-ddl/13-drop-cascade.md`

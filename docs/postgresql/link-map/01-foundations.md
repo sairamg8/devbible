@@ -195,7 +195,7 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 
 ### T02-12 · `enum` vs `CHECK` vs lookup table — Understand · ✅ written `docs/postgresql/pages/phase-2-types/11-enum-check-lookup.md`
 - **Read this:** [What is better: a lookup table or an enum type?](https://www.cybertec-postgresql.com/en/lookup-table-or-enum-type/) · CYBERTEC · 2025-12-02 · compares string plus `CHECK`, enum and lookup table, including `ALTER TYPE … RENAME VALUE` (*read* the enum part) · covers our angle: full · fetched 2026-10-12
-- **Also good:** [Enums vs Check Constraints in Postgres](https://www.crunchydata.com/blog/enums-vs-check-constraints-in-postgres) · Crunchy Data · undated (headings only) · [We need to talk about ENUMs](https://notso.boringsql.com/posts/postgresql-enums) · boringSQL · 2024-09-04 (headings only)
+- **Also good:** [Enums vs Check Constraints in Postgres](https://www.crunchydata.com/blog/enums-vs-check-constraints-in-postgres) · Crunchy Data · undated (headings only) · [We need to talk about ENUMs](https://boringsql.com/posts/postgresql-enums/) · boringSQL · 2024-09-04 (headings only)
 - **Our delta:** how each fails on change, shown from `pg`.
 
 ### T02-13 · Casting — Understand · ✅ written `docs/postgresql/pages/phase-2-types/12-casting.md`
