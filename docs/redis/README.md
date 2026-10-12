@@ -4,6 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every Redis topic (written or not) there is a [link map](./link-map/README.md): the page elsewhere on the internet that explains it best, what it leaves out, and what our own page must keep saying. First pass — open for review.
+:::
+
 > Verified: 2026-08-14 against [redis.io's release index](https://redis.io/docs/latest/develop/whats-new/)
 > and the npm registry. **No sandbox run** — this is an inventory, not an explanation.
 

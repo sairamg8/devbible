@@ -34,7 +34,7 @@ Two URL traps: the bitmaps page now lives at `strings/bitmaps/` (the old path re
 
 ### T02-04 · `MGET` / `MSET` — Understand · 🔲 not written
 - **Read this (1/2):** [MGET](https://redis.io/docs/latest/commands/mget/) · redis.io · returns `nil` for missing or non-string keys so it never fails; a note says behaviour differs in clustered setups (*read*) · covers our angle: **partial** — the cluster rule is only pointed at · fetched 2026-10-12
-- **Read this (2/2):** [Multi-key operations](https://redis.io/docs/latest/develop/using-commands/multi-key-operations/) · redis.io · per-configuration table; with Open Source clustering enabled `MGET`/`EXISTS` are single-slot, while `SINTER`, `SUNION`, `XREAD` and similar are single-slot in every cluster mode listed (*read* the read-only table) · covers our angle: full for the caveat · fetched 2026-10-12
+- **Read this (2/2):** [Multi-key operations](https://redis.io/docs/latest/develop/using-commands/multi-key-operations/) · redis.io · per-configuration table; with Open Source clustering enabled `MGET`/`EXISTS` are single-slot, while `SINTER`, `SUNION`, `XREAD` and similar are single-slot in every clustering-enabled mode listed (cross-slot only with clustering disabled) (*read* the read-only table) · covers our angle: full for the caveat · fetched 2026-10-12
 - **Also good:** [MSET](https://redis.io/docs/latest/commands/mset/) · redis.io · short; "atomically creates or modifies" plus the same cluster note (*read*) · fetched 2026-10-12
 
 ### T02-05 · Strings hold **bytes** — JSON, binary, size limit — Understand · 🔲 not written
@@ -74,25 +74,25 @@ Two URL traps: the bitmaps page now lives at `strings/bitmaps/` (the old path re
 
 ### T02-12 · Sorted sets — `ZADD`, `ZRANGE`, `ZRANGEBYSCORE`, `ZRANK` — Master · 🔲 not written
 - **Read this:** [Redis sorted sets](https://redis.io/docs/latest/develop/data-types/sorted-sets/) · redis.io · scores, ranges by score, rank lookups (`ZRANK`/`ZREVRANK`), lexicographical scores, updating a score (leaderboards named as the use) (*read* the overview and range sections) · covers our angle: full · fetched 2026-10-12
-- **Also good:** [ZADD](https://redis.io/docs/latest/commands/zadd/) · [ZRANGE](https://redis.io/docs/latest/commands/zrange/) · redis.io · reference (*headings only*); `ZRANGEBYSCORE` is marked deprecated as of 6.2.0 in favour of `ZRANGE ... BYSCORE` (*read* that note on its page) · fetched 2026-10-12
+- **Also good:** [ZADD](https://redis.io/docs/latest/commands/zadd/) · [ZRANGE](https://redis.io/docs/latest/commands/zrange/) · redis.io · reference (*headings only*) · [ZRANGEBYSCORE](https://redis.io/docs/latest/commands/zrangebyscore/) · redis.io · carries the notice "Deprecated as of Redis version 6.2.0", replaced by `ZRANGE` with `BYSCORE` (*read* the notice) — the sorted-sets page above still uses `ZRANGEBYSCORE` in its tutorial steps · fetched 2026-10-12
 - **Our delta:** show `ZRANGE ... BYSCORE` as the current form and `ZRANGEBYSCORE` as the legacy name the syllabus row still uses.
 
 ### T02-13 · Sorted sets as tools — leaderboards, rate limits, delay queues, time indexes — Master · 🔲 not written
-- **Read this (1/2):** [Build a Real-Time Leaderboard with Redis Sorted Sets](https://redis.io/tutorials/howtos/leaderboard/) · redis.io · Ajeet Raina, 2026-02-25; `ZADD`/`ZINCRBY` for scores, `ZREVRANGE`/`ZREVRANK`/`ZCOUNT` for top-N and rank (*read*) · covers our angle: full for leaderboards · fetched 2026-10-12
-- **Read this (2/2):** [Build 5 Rate Limiters with Redis](https://redis.io/tutorials/howtos/ratelimiting/) · redis.io · William Johnston, 2026-03-20; sliding-window log on a sorted set: `ZREMRANGEBYSCORE` prune, `ZCARD` count, `ZADD`, wrapped in one Lua `EVAL` because two concurrent requests could both pass the count; comparison table of five algorithms (*read*) · covers our angle: full for rate limits · fetched 2026-10-12
+- **Read this (1/2):** [Build a Real-Time Leaderboard with Redis Sorted Sets](https://redis.io/tutorials/howtos/leaderboard/) · redis.io · Ajeet Raina, page-dated 2026-02-25; `ZADD`/`ZINCRBY` for scores, `ZREVRANGE`/`ZREVRANK`/`ZCOUNT` for top-N and rank (*read*) · covers our angle: full for leaderboards · fetched 2026-10-12
+- **Read this (2/2):** [Build 5 Rate Limiters with Redis](https://redis.io/tutorials/howtos/ratelimiting/) · redis.io · William Johnston, page-dated 2026-03-20; sliding-window log on a sorted set: `ZREMRANGEBYSCORE` prune, `ZCARD` count, `ZADD`, wrapped in one Lua `EVAL` because two concurrent requests could both pass the count; comparison table of five algorithms (*read*) · covers our angle: full for rate limits · fetched 2026-10-12
 - **Also good:** [How to Build a Scheduled Queue in Redis](https://www.svix.com/resources/redis/scheduled-queue/) · svix.com · "Last updated on Aug 19, 2026"; score = run time, `ZRANGEBYSCORE` for due jobs, crash window between fetch and `ZREM`, atomic Lua claim (*read*) — vendor blog · [Delayed Queue Pattern](https://redis.antirez.com/fundamental/delayed-queue.md) · redis.antirez.com · same model, undated, site owner **not confirmed** (*read*) · fetched 2026-10-12
 - **Our delta:** the time-ordered index (score = epoch ms, `ZRANGE ... BYSCORE` for "last 15 minutes") has no dedicated page found; the delay-queue claim step stays ours to test.
 
 ### T02-14 · Choosing between them — Understand · 🔲 not written
 - **Read this:** [Compare data types](https://redis.io/docs/latest/develop/data-types/compare-data-types/) · redis.io · per-type structure, operations and "suitable for"; a "Choose a data type" part with decision trees for documents, collections and sequences, called rules of thumb (*read* the features and the documents tree; the other trees *headings only*) · covers our angle: **partial** — "the cost of choosing wrong" is not narrated · fetched 2026-10-12
 - **Also good:** [Redis data types](https://redis.io/docs/latest/develop/data-types/) · redis.io · the index of types (*headings only*) · fetched 2026-10-12
-- **Our delta:** the four-question gate from the syllabus (top 10, seen post, ordered jobs, last 15 minutes) as a worked table.
+- **Our delta:** the four-question gate from the syllabus (top 10, seen post, ordered jobs, last 15 minutes) as a worked table. Our own phase-0 page `docs/redis/pages/phase-0-how-redis-runs/01-what-redis-is/03-choosing-the-type.md` (part 1 topic, ✅) already walks this docs page's decision trees, so this page should link to it rather than repeat it. The docs page now also lists an Arrays type in its feature summary (*read*); which server version adds it is **not confirmed**.
 
 ---
 
 ## Phase 5 — Streams
 
-All stream blocks share one long page: [Redis Streams](https://redis.io/docs/latest/develop/data-types/streams/) (≈25k words with code tabs; sections read are named per topic).
+All stream blocks share one long page: [Redis Streams](https://redis.io/docs/latest/develop/data-types/streams/) (a very long page; the section read is named per topic).
 
 ### T02-15 · `XADD` and the entry id — Understand · 🔲 not written
 - **Read this:** [Redis Streams → Entry IDs](https://redis.io/docs/latest/develop/data-types/streams/) · redis.io · id is `millisecondsTime-sequenceNumber`; if the clock goes backward the previous time is reused so ids stay monotonic; time-in-id gives range queries by time (*read*) · covers our angle: full · fetched 2026-10-12

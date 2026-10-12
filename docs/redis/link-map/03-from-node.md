@@ -36,7 +36,7 @@ Covers all 23 topic rows of `docs/redis/syllabus/03-from-node.md`: T03-01 to T03
 ### T03-04 · Errors that must not crash the process — Master · 🔲 not written
 - **Read this:** [Error handling (node-redis)](https://redis.io/docs/latest/develop/clients/nodejs/error-handling/) · redis.io · "It is crucial to listen for error events"; without a listener the error is thrown and the process may exit; table of `ECONNREFUSED`, `ETIMEDOUT`, `ReplyError`; four patterns (fail fast, degrade, retry, log) (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [ioredis README (raw): Connection Events](https://raw.githubusercontent.com/redis/ioredis/main/README.md) · github (raw) · ioredis emits `error` silently when no listener is attached, so it does **not** crash — the opposite default (*read*) · fetched 2026-10-12
-- **Our delta:** the contrast between the two libraries' defaults, and `error` firing on every disconnect even while retrying (node-redis `client-configuration.md`, raw, *read*), so it is not a "gave up" signal.
+- **Our delta:** the contrast between the two libraries' defaults, and `error` firing on every disconnect even while retrying (node-redis `client-configuration.md`, raw, *read*), so it is not a "gave up" signal; the same file says a `terminated` event fires before the final `error` once `reconnectStrategy` gives up (*read*).
 
 ### T03-05 · Pipelining and `MULTI` — Understand · 🔲 not written
 - **Read this (1/2):** [Pipelines and transactions (node-redis)](https://redis.io/docs/latest/develop/clients/nodejs/transpipe/) · redis.io · same-tick auto-pipelining, `Promise.all()`, `multi().execAsPipeline()` versus `multi().exec()`; `WATCH` needs an isolated connection from a pool (*read*) · covers our angle: full for the client side · fetched 2026-10-12
@@ -112,7 +112,7 @@ Covers all 23 topic rows of `docs/redis/syllabus/03-from-node.md`: T03-01 to T03
 - **Our delta:** the state a denylist reintroduces, and Redis persistence settings deciding whether a revocation survives a restart — ours.
 
 ### T03-18 · Rate limiting — Master · 🔲 not written
-- **Read this:** [Build 5 Rate Limiters with Redis](https://redis.io/tutorials/howtos/ratelimiting/) · redis.io, William Johnston, published 2026-02-26, updated 2026-03-20 · fixed window (`INCR` + `EXPIRE`), sliding log (sorted set), sliding counter, token bucket, leaky bucket, each as a Lua script, with a comparison table and the boundary-burst flaw of fixed windows (*read*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [Build 5 Rate Limiters with Redis](https://redis.io/tutorials/howtos/ratelimiting/) · redis.io, William Johnston, published 2025-11-18 per the page metadata, updated 2026-03-20 · fixed window (`INCR` + `EXPIRE`), sliding log (sorted set), sliding counter, token bucket, leaky bucket, each as a Lua script, with a comparison table and the boundary-burst flaw of fixed windows (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Redis rate limiter](https://redis.io/docs/latest/develop/use-cases/rate-limiter/) · redis.io · overview; lists `rate-limiter-flexible` and `express-rate-limit` as Node options (*read*) · fetched 2026-10-12
 - **Our delta:** the tutorial runs on bun and uses Lua for all five; our page must show the plain `INCR` + `EXPIRE` race (a crash between the two leaves no expiry) before introducing a script.
 
@@ -128,7 +128,7 @@ Covers all 23 topic rows of `docs/redis/syllabus/03-from-node.md`: T03-01 to T03
 
 ### T03-21 · Redlock, honestly — Know · 🔲 not written
 - **Read this (1/2):** [How to do distributed locking](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html) · martin.kleppmann.com, 2016-02-08 · Redlock rests on timing assumptions and has no fencing tokens; "neither fish nor fowl"; use a single instance for efficiency locks, consensus for correctness (*read*) · covers our angle: full for the criticism · fetched 2026-10-12
-- **Read this (2/2):** [Is Redlock safe?](https://antirez.com/news/101) · antirez.com, the reply; Kleppmann's page dates it 2016-02-09 (page itself shows no date) · disputes the need for fencing and the system model, concedes monotonic clocks (*read*) · fetched 2026-10-12
+- **Read this (2/2):** [Is Redlock safe?](https://antirez.com/news/101) · antirez.com, the reply; the page shows no calendar date, but it says Kleppmann published "yesterday" (his post is dated 2016-02-08), so about 2016-02-09 (inferred, **not confirmed**) · disputes the need for fencing and the system model, concedes monotonic clocks (*read*) · fetched 2026-10-12
 - **Also good:** [Distributed Locks with Redis → Redlock algorithm](https://redis.io/docs/latest/develop/clients/patterns/distributed-locks/) · redis.io · the claim itself: N=5 independent masters, majority within the validity time; no monotonic clock for TTL (*read*) · fetched 2026-10-12
 - **Our delta:** "when you should not use Redis for this at all" — the consensus-system recommendation is Kleppmann's; we state it as one side of a dispute.
 
