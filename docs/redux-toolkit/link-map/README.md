@@ -7,7 +7,7 @@ sidebar_position: 0
 # Redux Toolkit — the link map
 
 For every topic in the [Redux Toolkit pages](../pages/README.md) — all written — the page on the internet that explains it best, with one line on why and what it leaves out.
-Every link was fetched on the date beside it (2026-10-05). **21 topics in 4 files.**
+Every link was fetched on the date beside it (2026-10-05) and re-checked on 2026-10-12. **21 topics in 4 files.**
 
 | Topics | Covers | Our page |
 |---|---|---|
