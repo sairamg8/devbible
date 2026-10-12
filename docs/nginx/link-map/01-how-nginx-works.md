@@ -27,7 +27,7 @@ Covers every topic row of `docs/nginx/syllabus/01-how-nginx-works.md`: T00-01 to
 - **Our delta:** which process runs as `root`, and what workers do and do not share.
 
 ### T00-03 · The event loop per worker — Understand · ✅ written `docs/nginx/pages/phase-0-process-model/02-master-and-workers.md`
-- **Read this:** [nginx, AOSA volume 2](https://aosabook.org/en/v2/nginx.html) · Andrew Alexeev, in The Architecture of Open Source Applications (undated page; text refers to Apache 2.4 in February 2012) · no process or thread per connection, a run-loop per worker, contrast with Apache spawning a copy per connection (*read*) · covers our angle: **partial** — dated Apache comparison, no prefork vs worker detail · fetched 2026-10-12
+- **Read this:** [nginx, AOSA volume 2](https://aosabook.org/en/v2/nginx.html) · Andrew Alexeev, in The Architecture of Open Source Applications (undated page; text refers to Apache 2.4 in February 2012) · no process or thread per connection, a run-loop per worker, contrast with Apache's style of spawning new processes or threads for each page request (*read*) · covers our angle: **partial** — dated Apache comparison, no prefork vs worker detail · fetched 2026-10-12
 - **Also good:** [Inside NGINX](https://blog.nginx.org/blog/inside-nginx-how-we-designed-for-performance-scale) · NGINX blog, Jun 10, 2015 · state machines driven by events (*read*) · fetched 2026-10-12
 - **Our delta:** current Apache MPMs; this page does not cover them.
 
@@ -66,7 +66,7 @@ Covers every topic row of `docs/nginx/syllabus/01-how-nginx-works.md`: T00-01 to
 ### T00-12 · Mainline vs stable — Understand · ✅ written `docs/nginx/pages/phase-0-process-model/09-versions-and-plus.md`
 - **Read this:** [Installing NGINX Open Source](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/) · docs.nginx.com · mainline (odd middle number) every 1-2 months and recommended for production unless stability is strict; stable (even) mostly gets backports (*read*) · covers our angle: **partial** — vendor view only · fetched 2026-10-12
 - **Also good:** [nginx download](https://nginx.org/en/download.html) · nginx.org · current branches: mainline 1.31.6, stable 1.30.5, legacy 1.28.3 (*read*) · fetched 2026-10-12
-- **Our delta:** 🔴 the syllabus claim that "stable" is not "the safe one" conflicts with the vendor page above, which recommends mainline for most production; our page must show the source for each side. Third-party advice (e.g. the 2020 mailing-list post surfaced in search) leans to stable — *Not opened.*
+- **Our delta:** 🔴 the syllabus claim that "stable" is not "the safe one" conflicts with the vendor page above, which recommends mainline for most production; our page must show the source for each side. No third-party comparison of the two branches was opened — *Not opened.*
 
 ### T00-13 · nginx Open Source vs NGINX Plus — Know · ✅ written `docs/nginx/pages/phase-0-process-model/09-versions-and-plus.md`
 - **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · each commercial-only directive or parameter is marked "available as part of our commercial subscription" (*read* those passages) · covers our angle: **partial** — one module, no OSS substitutes listed · fetched 2026-10-12
@@ -99,7 +99,7 @@ Covers every topic row of `docs/nginx/syllabus/01-how-nginx-works.md`: T00-01 to
 
 ### T01-04 · Variables — Master · ✅ written `docs/nginx/pages/phase-1-configuration-language/04-variables.md`
 - **Read this:** [Alphabetical index of variables](https://nginx.org/en/docs/varindex.html) · nginx.org · every variable with its module (*headings only*; the descriptions of `$request_uri`, `$sent_http_`, `$host` *read* on the core module page) · covers our angle: **partial** — a reference, no explanation of when a variable is set · fetched 2026-10-12
-- **Also good:** [agentzh's Nginx Tutorials](https://openresty.org/download/agentzh-nginx-tutorials-en.html) · Yichun Zhang, version 2020.03.19 · Nginx Variables chapters: lazy evaluation, `$arg_` groups (*read*) · fetched 2026-10-12
+- **Also good:** [agentzh's Nginx Tutorials](https://openresty.org/download/agentzh-nginx-tutorials-en.html) · Yichun Zhang, version 2020.03.19 · Nginx Variables chapters: lazy evaluation, `$arg_` groups (*read*); examples use the third-party echo module and nginx 1.7.x · fetched 2026-10-12
 - **Our delta:** `$upstream_*` timing and the 1.30-era defaults.
 
 ### T01-05 · `$uri` vs `$request_uri` vs `$document_uri` — Understand · ✅ written `docs/nginx/pages/phase-1-configuration-language/04-variables.md`
@@ -131,14 +131,14 @@ Covers every topic row of `docs/nginx/syllabus/01-how-nginx-works.md`: T00-01 to
 
 ### T01-12 · Regular expressions in nginx — Understand · ✅ written `docs/nginx/pages/phase-1-configuration-language/08-rewrite-and-return.md`
 - **Read this:** [Server names](https://nginx.org/en/docs/http/server_names.html) · nginx.org · PCRE compatible, leading `~`, named captures, braces need quoting (*read* the Regular expressions names section) · covers our angle: **partial** — server names only; `$1` captures are in the location docs · fetched 2026-10-12
-- **Also good:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · captures reusable as `$1 .. $9`; `~` and `~*` (*read*) · fetched 2026-10-12
+- **Also good:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · captures usable later in other directives, e.g. `root /sites/$2;`, plus `~` and `~*` (*read*); the `$1 .. $9` wording is on the rewrite module page · fetched 2026-10-12
 - **Our delta:** the cost of a regex in a hot path — no page found that measures it.
 
 ### T01-13 · MIME types and `default_type` — Understand · ✅ written `docs/nginx/pages/phase-1-configuration-language/03-include-and-files/02-mime-types.md`
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · `default_type` defaults to `text/plain`; `types` maps case-insensitive extensions (*read*) · covers our angle: **partial** — nothing on `include mime.types` · fetched 2026-10-12
 
 ### T01-14 · Comments, quoting, and the stray `;` — Know · ✅ written `docs/nginx/pages/phase-1-configuration-language/05-syntax-details.md`
-- **Read this:** [ticket 947 — missing semicolon not detected](https://trac.nginx.org/nginx/ticket/947) · nginx trac (age shown only as "8 years ago") · variable-argument directives such as `index` and `server_name` swallow the next line, so `nginx -t` passes (*read*) · covers our angle: **partial** — one failure mode of three; comments not covered · fetched 2026-10-12
+- **Read this:** [ticket 947 — missing semicolon not detected](https://trac.nginx.org/nginx/ticket/947) · nginx trac (page shows only relative ages: opened "11 years ago", maintainer reply Maxim Dounin) · variable-argument directives such as `index` and `server_name` swallow the next line, so `nginx -t` passes (*read*) · covers our angle: **partial** — one failure mode of three; comments not covered · fetched 2026-10-12
 - **Also good:** [Server names](https://nginx.org/en/docs/http/server_names.html) · nginx.org · braces in a regex need quotes or nginx reports a missing `;` (*read*) · fetched 2026-10-12
 - *Not opened:* a DigitalOcean syntax-error tutorial (200, date not shown).
 
@@ -171,6 +171,7 @@ Covers every topic row of `docs/nginx/syllabus/01-how-nginx-works.md`: T00-01 to
 ### T02-07 · The location matching algorithm — Master · ✅ written `docs/nginx/pages/phase-2-server-and-location/03-location-matching/01-the-algorithm.md`
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · longest prefix remembered, regexes in file order, first regex wins, else the remembered prefix (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [How nginx processes a request](https://nginx.org/en/docs/http/request_processing.html) · nginx.org · worked PHP-site example (*read*) · fetched 2026-10-12
+- **Our delta:** the current core page adds a step the syllabus lacks: predicate locations (`location $variable`, 1.31.5) are checked after regexes and before the remembered prefix.
 
 ### T02-08 · The modifiers — Master · ✅ written `docs/nginx/pages/phase-2-server-and-location/03-location-matching/01-the-algorithm.md`
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · syntax `= | ~ | ~* | ^~`; `=` ends the search at once (*read*) · covers our angle: full · fetched 2026-10-12
@@ -190,9 +191,9 @@ Covers every topic row of `docs/nginx/syllabus/01-how-nginx-works.md`: T00-01 to
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · "can be nested, with some exceptions"; `=` and named locations cannot contain nested ones (*read*) · covers our angle: **partial** — no advice on when nesting is clearer · fetched 2026-10-12
 
 ### T02-13 · The request-processing phases — Understand · ✅ written `docs/nginx/pages/phase-2-server-and-location/05-request-phases.md`
-- **Read this:** [agentzh's Nginx Tutorials](https://openresty.org/download/agentzh-nginx-tutorials-en.html) · Yichun Zhang, version 2020.03.19 · Directive Execution Order chapters: 11 phases from post-read to log, and which directives run where (*read*) · covers our angle: full · fetched 2026-10-12
-- **Also good:** [Development guide](https://nginx.org/en/docs/dev/development_guide.html) · nginx.org · official phase list (post-read, server rewrite, find config, preaccess, access, content); written for module authors (*read*) · fetched 2026-10-12
-- **Our delta:** the tutorial lists `post-access` and `try-files` as phases; our syllabus list has ten, so reconcile before writing.
+- **Read this:** [Development guide](https://nginx.org/en/docs/dev/development_guide.html) · nginx.org · official, current phase list (post-read, server rewrite, find config, rewrite, post-rewrite, preaccess, access, post-access, precontent, content, log) with the standard module registered in each (*read* the HTTP phases passage) · covers our angle: **partial** — written for module authors, and its list has `post-access` where the syllabus list has none · fetched 2026-10-12
+- **Also good:** [agentzh's Nginx Tutorials](https://openresty.org/download/agentzh-nginx-tutorials-en.html) · Yichun Zhang, version 2020.03.19 (written against nginx 1.7.x) · Directive Execution Order chapters: 11 phases with worked examples, but it names `try-files` as a phase where the official guide has `precontent` (*read*) · fetched 2026-10-12
+- **Our delta:** reconcile the syllabus list of ten with the official one of eleven before writing; a plain-language, example-led walk through the phases.
 
 ### T02-14 · Why `add_header` disappears on a 500 — Master · ✅ written `docs/nginx/pages/phase-2-server-and-location/05-request-phases.md`
 - **Read this:** [ngx_http_headers_module](https://nginx.org/en/docs/http/ngx_http_headers_module.html) · nginx.org · added only for 200, 201, 204, 206, 301, 302, 303, 304, 307, 308 unless `always` (*read*) · covers our angle: full · fetched 2026-10-12
