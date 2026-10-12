@@ -7,6 +7,16 @@ metadata:
 
 # 🔴 START HERE — the link map ("hub + delta", one place)
 
+## 2026-10-12 — MongoDB started (the user said "continue with the MongoDB link map")
+
+- **Done:** [link-map/mongodb/01-how-it-runs-and-bson.md](link-map/mongodb/01-how-it-runs-and-bson.md) — T01–T11 (phases 0–1), all 18 URLs HTTP 200.
+- **Honest depth:** Manual pages were fetched and the key claims *read*, but several "Also good" picks and the Tinybird / techearl
+  picks were checked by **headings only** — each block says so. The Manual exposes no heading ids, so no anchors for it.
+- **Findings:** (1) the current `reference/object-id` page has no "not strict insertion order" warning — the only official source is a
+  2021 forum answer; (2) `_id` immutability / default index not confirmed from the pages opened; (3) four Manual URLs 301 — canonical forms used.
+- **Next:** T12–T22 (phase 2 mongosh, phase 3 schema design) → `02-…`; then phases 4–6 (39 written topics end at `$unwind`, which is still owed).
+  Same method, no agents. Nothing committed yet by this note's author unless the git log says otherwise.
+
 ## Cold start — state at the end of 2026-10-05
 
 - **What it is:** for each topic in our *existing* syllabus, the page on the internet that explains it best —

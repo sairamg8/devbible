@@ -17,7 +17,8 @@ published and nothing in `docs/` was changed to make it. Rules, record format, r
 
 | Track | Files | State |
 |---|---|---|
-| Redux Toolkit — 21 topics, all written | [redux-toolkit/](redux-toolkit/) | pilot, in progress |
+| Redux Toolkit — 21 topics, all written | [redux-toolkit/](redux-toolkit/) | pilot, awaiting review |
+| MongoDB — 82 topics (39 written) | [mongodb/](mongodb/) | T01–T11 (phases 0–1) mapped 2026-10-12; phases 2–14 next |
 
 **Reading a block:** **Read this** is the best single page for the topic; **Also good** adds something the first lacks;
 **covers our angle** says whether it matches what our syllabus row promises (*full*, or *partial* and what is missing);
