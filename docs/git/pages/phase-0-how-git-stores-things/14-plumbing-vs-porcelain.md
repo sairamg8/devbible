@@ -159,6 +159,18 @@ Runs hooks, opens an editor for the message, applies config such as signing and
 identity, uses the index rather than a tree you supply, and moves the current
 branch. `commit-tree` creates one object and does nothing else.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Plumbing and Porcelain](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain) — Pro Git: plumbing commands are low-level and chainable in scripts, porcelain the friendlier ones (*read*)
+- **Also good:** [git](https://git-scm.com/docs/git) — git-scm.com: splits the commands into high-level (porcelain) and low-level (plumbing), with the full list of each (*read*)
+- **Also good:** [git-status](https://git-scm.com/docs/git-status)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [SHA-1, SHA-256 and object format](13-object-format.md) · [Phase index](README.md) · Next phase → [Phase 1 — The everyday loop](../../syllabus/01-how-git-works.md)

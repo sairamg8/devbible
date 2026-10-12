@@ -280,6 +280,17 @@ mentioning a genuinely new file, with no warning. The actual controls are not
 having the secret in the working tree, scanning before the commit exists, and
 rotating anything that did get committed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [gitignore](https://git-scm.com/docs/gitignore) — git-scm.com: precedence order across sources, negation with `!` and the rule that a file in an excluded directory cannot be re-included, `info/exclude`, global ignore file (*read*)
+- **Also good:** [git-check-ignore](https://git-scm.com/docs/git-check-ignore) — git-scm.com: `-v` prints the exclude pattern that matched each path, and notes a negated pattern means not excluded (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`git diff`](04-git-diff.md) · Next → [Ignoring does not untrack](06-ignoring-does-not-untrack.md)

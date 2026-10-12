@@ -282,6 +282,17 @@ inspectable. `.gitattributes` can point a diff driver at something that summaris
 the format, but the better question is usually whether the file belongs in the
 repository at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) — Pro Git: "Viewing Your Staged and Unstaged Changes": unstaged against the index, then staged against the last commit (*read*)
+- **Also good:** [git-diff](https://git-scm.com/docs/git-diff) — git-scm.com: synopsis lists bare, `--cached`, commit-versus-commit and `--no-index` forms (*read* synopsis)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`git commit`](03-git-commit.md) · Next → [`.gitignore`](05-gitignore.md)

@@ -252,6 +252,17 @@ in total safety is what produces the carelessness that runs them on an uncommitt
 afternoon. The stance that follows is to commit early and often, including work you
 are ashamed of, and to treat the reflog as a local temporary net rather than a backup.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-reflog](https://git-scm.com/docs/git-reflog) — git-scm.com: `HEAD@&#123;2&#125;` means where HEAD was two moves ago; expiry defaults to 90 days via `gc.reflogExpire` (*read*)
+- **Also good:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) — Pro Git: using `git reflog` to find a lost commit (*read* the opening of the recovery section)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The rule about rewriting shared history](08-the-golden-rule.md) · Next → [Aborting cleanly](10-aborting-cleanly.md)

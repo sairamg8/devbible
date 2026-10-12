@@ -67,7 +67,7 @@ these orders.
 | **react** | 🟡 parked, phases 12–13 open | [progress_react_phase7.md](progress_react_phase7.md) |
 | **css** | 🟡 | [progress_css_pages.md](progress_css_pages.md) |
 | **express** | 🟢 depth pass 28/28 | [progress_express_master_depth_pass.md](progress_express_master_depth_pass.md) |
-| **git** | 🟢 complete, re-scoped to 52 topics 2026-08-14 | [progress_git_pages.md](progress_git_pages.md) |
+| **git** | 🟢 complete, re-scoped to 52 topics 2026-08-14 · 🟢 link map live 2026-10-12 (191 topics, `docs/git/link-map/`) | [progress_git_pages.md](progress_git_pages.md) |
 | **link map** (all tracks) | 🔵 **5 languages live**, PostgreSQL running, one language at a time — status table in the cursor | [CURSOR-LINK-MAP.md](CURSOR-LINK-MAP.md) |
 | **next.js** | 🟢 closed 2026-09-05 at the user's 90% quote bar · 659 pages | [CURSOR-NEXTJS.md](CURSOR-NEXTJS.md) |
 

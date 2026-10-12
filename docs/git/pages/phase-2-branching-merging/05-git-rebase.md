@@ -254,6 +254,17 @@ after a rebase — so the intermediate commits carry a claim nobody has checked.
 quietly undermines the `bisect` argument often used to justify rebasing, and it is
 the strongest technical objection to doing it habitually rather than deliberately.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) — git-scm.com (Pro Git): replays each commit's diff onto the new base, `--onto`, abandoned commits become new ones (*read*)
+- **Also good:** [git-rebase](https://git-scm.com/docs/git-rebase) — git-scm.com: full option reference, "Transplant a series of commits onto a different starting point" (*read* the synopsis)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Resolving a conflict, properly](04-resolving-conflicts.md) · Next → [Rebase versus merge, decided on purpose](06-rebase-vs-merge.md)

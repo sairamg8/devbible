@@ -242,6 +242,16 @@ has pushed and the check passes. Git has no idea who has fetched, so this gap is
 closable by any flag — the only instruments are convention, announcement, and branch
 protection on the host. Use the lease always, and do not mistake it for permission.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-push](https://git-scm.com/docs/git-push) — git-scm.com: `--force-with-lease`, `--force-if-includes` in the synopsis and the lease text (*read* the lease passage)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Divergent branches](05-divergent-branches.md) · Next → [`git push` in full](07-git-push.md)

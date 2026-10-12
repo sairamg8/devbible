@@ -216,6 +216,17 @@ warning when that window closes. A pushed branch exists in a second repository w
 its own retention, and it survives your disk. "Push branches you care about" is the
 one instruction in this area that is not a Git setting.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) — Pro Git: reflog route, then `git fsck --full` dangling-commit route; both end by adding a branch at the SHA-1 (*read*)
+- **Also good:** [git-fsck](https://git-scm.com/docs/git-fsck) — git-scm.com: `--lost-found`, `--dangling` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Rewriting your own last few commits](05-rewriting-your-own-commits.md) · Next → [Undoing a merge](07-undoing-a-merge.md)

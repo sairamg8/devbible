@@ -247,6 +247,17 @@ intent, so they cannot tell you a squash-merged branch is safe to delete. The
 settlement is behavioural: delete branches at the moment they land, while you
 still know they landed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) — git-scm.com (Pro Git): a new branch is as cheap as writing 41 bytes to a file; HEAD is the pointer to the current branch (*read*)
+- **Also good:** [git-branch](https://git-scm.com/docs/git-branch) — git-scm.com: `-d` refuses unless the branch is fully merged in its upstream, or in HEAD when none is set; `-D` is shorthand for `--delete --force` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Phase 2 index](README.md) · Next → [Fast-forward versus a real merge](02-fast-forward-vs-merge.md)

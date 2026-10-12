@@ -225,6 +225,17 @@ suggests it. Taking the split seriously means **`restore` for paths, `reset` for
 commits** — which removes most of the risk and leaves `--keep` for the times you want
 `--hard`'s effect without betting your working tree on it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified) — git-scm.com (Pro Git): HEAD, index, working directory as three trees; `--soft` stops after moving the branch (*read*)
+- **Also good:** [git-reset](https://git-scm.com/docs/git-reset) — git-scm.com: `--soft | --mixed | --hard | --merge | --keep` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The undo decision table](01-the-undo-decision-table.md) · Next → [`revert` is the undo for shared history](03-revert.md)

@@ -231,6 +231,18 @@ the branch is shared, rewriting is a drafting tool you never think about; after 
 is shared, the only additive tool is `revert`. The practical line is the moment you
 open a pull request.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) — git-scm.com (Pro Git): amend, interactive rebase, fixup/squash in the todo list (*read*)
+- **Also good:** [git-rebase](https://git-scm.com/docs/git-rebase) — git-scm.com: `--autosquash`, `--update-refs` (*read* autosquash passage)
+- **Also good:** [git-commit](https://git-scm.com/docs/git-commit) — git-scm.com: `--fixup` and `--amend` in the synopsis (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Recovery with `reflog`](04-reflog-recovery.md) · Next → [Recovering a deleted branch](06-recovering-a-branch.md)

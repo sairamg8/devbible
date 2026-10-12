@@ -150,6 +150,17 @@ It is stored in plaintext in `.git/config`, which is easy to expose when sharing
 a repository or a container image. Credential helpers keep the secret out of the
 repository entirely.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-config](https://git-scm.com/docs/git-config) — git-scm.com: SCOPES section lists system, global, local, worktree and command (`-c`); `--show-origin` and `--show-scope` (*read*)
+- **Also good:** [First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) — Pro Git: gentler: `git config --list --show-origin` shows each setting and where it comes from (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The commit graph is a DAG](07-commit-graph.md) · Next → [A tour of .git/](09-git-directory-tour.md)

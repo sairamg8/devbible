@@ -235,6 +235,17 @@ locally, protected branches and required reviews on the host, and secret scannin
 CI. The one thing entirely inside your control is reading `git log '@{u}'..` before
 pushing: it is the exact list of what you are about to make everyone else's problem.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-push](https://git-scm.com/docs/git-push) — git-scm.com: default `push.default=simple`, `--delete`, `--tags`, `-u` (*read*)
+- **Also good:** [Remote Branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches) — Pro Git: `git push origin --delete serverfix` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Force-pushing safely](06-force-pushing-safely.md) · Next → [Transports and credentials](08-transports-and-credentials.md)

@@ -205,6 +205,17 @@ merged — with the double revert as the price. The cheap preventative is to loo
 before merging: `git diff main...feature` and `git log main..feature` cost two
 seconds and prevent nearly every merge anyone ends up reverting.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Advanced Merging](https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging) — git-scm.com (Pro Git): "Undoing Merges": fix the references or reverse the commit (*read* the opening)
+- **Also good:** [git-revert](https://git-scm.com/docs/git-revert) — git-scm.com: `-m` names the mainline; reverting a merge declares you never want its tree changes, so later merges bring in less (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Recovering a deleted branch](06-recovering-a-branch.md) · Next → [Undoing something already pushed](08-undoing-something-pushed.md)

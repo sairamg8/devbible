@@ -161,6 +161,18 @@ Staging writes real objects into `.git/objects`. Even with no ref pointing at
 them, `git fsck --lost-found` can recover the blobs. Content that was never
 staged exists only on disk, and `--hard` overwrites it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) — Pro Git: "Staging Modified Files": a file edited after `git add` shows as both staged and unstaged (*read*)
+- **Also good:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) — git-scm.com: THE INDEX: a flat list of file type, blob ID, stage number and path; `git ls-files --stage` shows it (*read*)
+- **Also good:** [gitformat-index](https://git-scm.com/docs/gitformat-index)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The three trees](04-three-trees.md) · Next → [Refs and HEAD](06-refs-and-head.md)

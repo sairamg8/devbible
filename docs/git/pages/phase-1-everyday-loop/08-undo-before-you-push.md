@@ -266,6 +266,18 @@ one level deep. Anything older comes from the reflog — `git reflog` lists ever
 `HEAD` movement and `HEAD@{3}` addresses them positionally. Both are local to your
 clone, and reflog entries expire (90 days by default, 30 for unreachable ones).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified) — Pro Git: table of `reset --soft/mixed/hard` and `checkout` with HEAD, Index, Workdir columns and a "WD Safe?" column (*read*)
+- **Also good:** [Undoing Things](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things) — Pro Git: covers `git restore` for unstaging and discarding (*read*)
+- **Also good:** [git-reset](https://git-scm.com/docs/git-reset)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`git switch` and `git restore`](07-switch-and-restore.md) · Next → [`git log` for the everyday case](09-git-log.md)

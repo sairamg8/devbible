@@ -271,6 +271,19 @@ The reliable route is two steps through a temporary name:
 bug source, because the same commit behaves differently on a Linux CI box than on
 the laptop that produced it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) — Pro Git: "Removing Files" (`rm --cached`) and "Moving Files": Git stores no rename metadata, works it out after the fact (*read*)
+- **Also good:** [git-diff](https://git-scm.com/docs/git-diff) — git-scm.com: `-M` and `--find-renames=n`: a delete/add pair counts as a rename above a similarity threshold (*read*)
+- **Read this:** [Stashing and Cleaning](https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning) — Pro Git: "Cleaning your Working Directory": be careful, nothing is recoverable; run `-n` first (*read*)
+- **Also good:** [git-clean](https://git-scm.com/docs/git-clean) — git-scm.com: `-x` also removes ignored files; `-n`, `-d`, `-f`, `-i` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`git stash`](11-git-stash.md) · Next → [Phase 1 index](README.md)

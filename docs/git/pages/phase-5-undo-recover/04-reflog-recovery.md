@@ -231,6 +231,20 @@ only because you have not typed `--hard` yet. Two habits follow — commit early
 often, and push the branches you care about, since a pushed branch is the only copy
 that survives your disk.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) — git-scm.com (Pro Git): recovery by adding a branch that points to a SHA-1 (*read*)
+- **Also good:** [git-config](https://git-scm.com/docs/git-config) — git-scm.com: `gc.reflogExpire` defaults to 90 days, `gc.reflogExpireUnreachable` to 30 days (*read*)
+- **Also good:** [git-reflog](https://git-scm.com/docs/git-reflog) — git-scm.com: `expire` subcommand (*headings only*)
+- **Read this:** [git-gc](https://git-scm.com/docs/git-gc) — git-scm.com: `--prune` default 2 weeks via `gc.pruneExpire`; `gc.reflogExpire` 90 days (*read*)
+- **Also good:** [git-prune](https://git-scm.com/docs/git-prune) — git-scm.com (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`revert` is the undo for shared history](03-revert.md) · Next → [Rewriting your own last few commits](05-rewriting-your-own-commits.md)

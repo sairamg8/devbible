@@ -234,6 +234,17 @@ landed. It is worth knowing which button your team presses — merge, squash, or
 rebase-and-merge — because that choice governs your history far more than any local
 `merge.ff` setting.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) — git-scm.com (Pro Git): the "Fast-forward" output, then a three-way merge with a new snapshot and commit (*read*)
+- **Also good:** [git-merge](https://git-scm.com/docs/git-merge) — git-scm.com: `--ff`, `--no-ff`, `--ff-only` described together (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [A branch is a moving pointer](01-a-branch-is-a-pointer.md) · Next → [The three-way merge and the merge base](03-three-way-merge.md)

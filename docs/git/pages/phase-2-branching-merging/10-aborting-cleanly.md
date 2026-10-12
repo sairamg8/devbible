@@ -237,6 +237,18 @@ the commit" is somebody's afternoon. The mitigation is behavioural and small:
 the exact flag, and `git reflog` plus `reset --hard` as the fallback that works when
 the specific flags do not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-merge](https://git-scm.com/docs/git-merge) — git-scm.com: `git merge --abort` tries to reconstruct the pre-merge state, with a caveat when uncommitted changes existed (*read*)
+- **Also good:** [git-rebase](https://git-scm.com/docs/git-rebase) — git-scm.com: synopsis `--continue | --skip | --abort | --quit` (*read*)
+- **Also good:** [git-cherry-pick](https://git-scm.com/docs/git-cherry-pick)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`git reflog` as the safety net](09-reflog.md) · Next → [Phase 2 index](README.md)

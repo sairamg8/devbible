@@ -275,6 +275,17 @@ otherwise. The undo is also the same: `git reset --hard ORIG_HEAD`, which Git se
 before the rebase starts, or the pre-rebase tip from `git reflog`. Both work because
 the original commits remain in the object store until garbage collection.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) — git-scm.com (Pro Git): the todo list legend: `pick`, `reword`, `edit`, `squash`, `fixup`, `drop`, `break` (*read*)
+- **Also good:** [git-rebase](https://git-scm.com/docs/git-rebase) — git-scm.com: `--autosquash` with `fixup!` / `squash!` / `amend!` messages; the `break` command (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Rebase versus merge](06-rebase-vs-merge.md) · Next → [The rule about rewriting shared history](08-the-golden-rule.md)

@@ -190,6 +190,17 @@ by the deployment.
 Count its `parent` lines: two or more means a merge, one is ordinary, none is a
 root commit. `git cat-file -p <sha>` shows them directly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) — git-scm.com: blob, tree, commit and tag object, each with its fields and an example from `git cat-file -p`; tree entries carry the filename and mode (*read*)
+- **Also good:** [Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects) — Pro Git: hands-on: a blob stores content, not the filename; trees solve that (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [A commit is a snapshot](02-commit-is-a-snapshot.md) · Next → [The three trees](04-three-trees.md)

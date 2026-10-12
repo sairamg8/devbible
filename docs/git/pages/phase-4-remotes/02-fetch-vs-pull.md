@@ -222,6 +222,17 @@ have modified. `git pull --autostash` automates the stash-and-reapply, and
 `rebase.autoStash true` makes that the default; both are reasonable, with the
 caveat that reapplying can itself conflict.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-pull](https://git-scm.com/docs/git-pull) — git-scm.com: pull = fetch plus integrate; four integration options (`--ff-only`, `--rebase`, `--no-rebase`, `--squash`) (*read*)
+- **Also good:** [Working with Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) — Pro Git: fetch only downloads, does not merge (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [A remote is a named URL](01-a-remote-is-a-url.md) · Next → [Remote-tracking branches](03-remote-tracking-branches.md)

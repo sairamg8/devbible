@@ -232,6 +232,17 @@ credential sitting in a readable file. The alternatives are keyring-backed —
 one config line. It is worth knowing which one you are using before you paste a
 token that grants write access to everything you can see.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Working with Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) — git-scm.com (Pro Git): `git remote -v`, adding, `git remote rename`, more than one remote (*read*)
+- **Also good:** [git-remote](https://git-scm.com/docs/git-remote) — git-scm.com: full synopsis: add, rename, remove, set-url, prune (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Phase 4 index](README.md) · Next → [`fetch` versus `pull`](02-fetch-vs-pull.md)
