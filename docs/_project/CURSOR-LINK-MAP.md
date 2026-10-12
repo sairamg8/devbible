@@ -17,7 +17,11 @@ metadata:
 - **Also done (same day, user said "Everything" = map all 82 at this depth):** [02-mongosh-and-schema-design.md](link-map/mongodb/02-mongosh-and-schema-design.md) T12–T22. T16 (shell safety) = none found. The Manual is now 9.0-era (a banner says so); our pages say 8.0.
 - **Also done:** [03-crud-operators-aggregation.md](link-map/mongodb/03-crud-operators-aggregation.md) T23–T40 (phases 4–6) — a Manual-first pass: the only third-party hits were one SEO publisher and a Cosmos DB tutorial, none listed as Read-this. T40 `$unwind` = unwritten.
 - **Also done:** [04-indexes-driver-mongoose.md](link-map/mongodb/04-indexes-driver-mongoose.md) T41–T58 (phases 7–9, all unwritten — the not-written side). T50 `db()`/`collection()` = none confirmed; T46 concurrent-upsert fix not found. Mongoose docs are v9.11.1.
-- **Next:** T59+ phase 10 transactions onward (`05-…`). Stale line follows: Earlier next-step line follows, now stale: phases 4–6 (39 written topics end at `$unwind`, which is still owed).
+- **Also done:** [05-transactions-to-storefront.md](link-map/mongodb/05-transactions-to-storefront.md) T59–T82 (phases 10–14). **MongoDB is fully mapped: 82/82 topics in 5 files.**
+  Findings: (1) the Manual's own FAQ says the working set need **not** fit RAM — our "performance cliff" framing needs that nuance (T70); (2) no page gives the sharding
+  "scaling ladder" (T68), the Express-specific NoSQL-injection angle (T76), or the storefront assembly (T77–T82); (3) `express-mongo-sanitize` GitHub/npm answer 403 — unverified, not listed;
+  (4) many blocks are *headings only* — a verify pass reading those passages is owed before any of this goes on the site.
+- **Next:** wait for the user: review the format (Redux pilot + MongoDB), pick the next track and depth. Stale line follows: Earlier next-step line follows, now stale: phases 4–6 (39 written topics end at `$unwind`, which is still owed).
   Same method, no agents. Nothing committed yet by this note's author unless the git log says otherwise.
 
 ## Cold start — state at the end of 2026-10-05
