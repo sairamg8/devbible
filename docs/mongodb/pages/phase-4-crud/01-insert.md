@@ -169,6 +169,17 @@ failures back onto your own data even when `ordered: false` has reordered the ac
 The write ran with write concern disabled, so the server never confirmed it. You cannot claim
 the data is stored; for anything that matters, leave write concern on.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [db.collection.insertMany()](https://www.mongodb.com/docs/manual/reference/method/db.collection.insertmany/) — mongodb.com: "If `ordered` is true and an insert fails, the server does not continue"; with `false` it continues, and may reorder for speed (*read*)
+- **Also good:** [Create Documents](https://www.mongodb.com/docs/manual/tutorial/insert-documents/) — mongodb.com: the gentler tutorial route; static text covers collection creation and the auto-generated `_id` when omitted (*read*); the code examples sit in language tabs not in the fetched HTML
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 4](./README.md) ·

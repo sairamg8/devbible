@@ -181,6 +181,17 @@ When it is anchored at the start — `/^abc/` gives a bounded index range. Unanc
 case-insensitive patterns generally cannot, so they scan; the usual fixes are a normalised
 lowercase field, a collation, or a real text search index.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Read Documents](https://www.mongodb.com/docs/manual/tutorial/query-documents/) — mongodb.com: the tutorial on filter shape (≈1.5k words)
+- **Also good:** [db.collection.find()](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/) — mongodb.com: full reference, ≈7.4k words — look up, do not read through; its `query` parameter is the selection filter and an empty document returns everything (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`insertOne` / `insertMany`](./01-insert.md) ·

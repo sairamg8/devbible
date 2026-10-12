@@ -200,6 +200,17 @@ explicit sort.
 The full shard key must appear in the filter; otherwise the operation is rejected, because the
 server cannot decide which shard the new document belongs to.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [db.collection.updateOne()](https://www.mongodb.com/docs/manual/reference/method/db.collection.updateone/) — mongodb.com: the update argument is either an update-operator document or an aggregation pipeline (`$addFields`/`$set`, `$project`/`$unset`, `$replaceRoot`/`$replaceWith`); a replacement document goes to `replaceOne` (*read*)
+- **Also good:** [Error: the update operation document must contain atomic operators](https://www.mongodb.com/community/forums/t/error-the-update-operation-document-must-contain-atomic-operators/224439) — mongodb.com forums: question dated 2023-05-01, the shell error for exactly this mistake (opening post *read*; the answer was not)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Projection](./04-projection.md) ·

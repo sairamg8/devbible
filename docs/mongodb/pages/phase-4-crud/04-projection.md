@@ -163,6 +163,17 @@ and `$slice` takes a positional window. For every matching element you need an a
 Documents containing only a `customer` subdocument holding `name` — the structure is preserved
 and everything else is trimmed away, including `_id` because it was explicitly suppressed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [db.collection.find() → projection](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/) — mongodb.com: the projection table: `1`/`true` includes, `0`/`false` excludes; a projection cannot mix include and exclude except `_id: 0`; `_id` is returned unless suppressed (*read*)
+- **Also good:** [Project Fields to Return from Query](https://www.mongodb.com/docs/manual/tutorial/project-fields-from-query-results/) — mongodb.com: ≈1.4k words (*read*): by default all fields return, and projection limits the data MongoDB sends to the application; the include/exclude examples sit in language tabs not in the fetched text
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`findOne`](./03-findone.md) ·

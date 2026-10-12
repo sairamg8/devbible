@@ -217,6 +217,18 @@ is right depends on whether "absent" and "empty" mean different things in your d
 No — overlapping paths conflict and the update is rejected, including cases where one operator's
 path passes through another's. Each path should be written by exactly one operator per update.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Update Operators](https://www.mongodb.com/docs/manual/reference/mql/update/) — mongodb.com: the index of `$set`, `$unset`, `$inc`, `$mul`, `$rename`, `$min`, `$max`, `$currentDate`, `$setOnInsert` with one-line descriptions (*read*, `$mul`/`$rename`/`$setOnInsert`)
+- **Also good:** [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) — [$currentDate](https://www.mongodb.com/docs/manual/reference/operator/update/currentdate/): mongodb.com
+- **Also good:** [$currentDate](https://www.mongodb.com/docs/manual/reference/operator/update/currentdate/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`updateOne` / `updateMany`](./05-update.md) ·

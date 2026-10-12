@@ -45,9 +45,15 @@ def parse_blocks(track_dir: Path):
             paths = []
             for p in PATH.findall(head):
                 if p.startswith("…/"):
-                    if last_dir is None:
-                        continue
-                    paths.append(f"{last_dir}/{p[2:]}")
+                    suffix = p[2:]
+                    hits = [str(h.relative_to(ROOT)) for h in (track_dir / "pages").rglob("*.md")
+                            if str(h).endswith("/" + suffix)]
+                    if len(hits) == 1:
+                        paths.append(hits[0])
+                    elif last_dir is not None and (ROOT / last_dir / suffix).exists():
+                        paths.append(f"{last_dir}/{suffix}")
+                    else:
+                        print(f"UNRESOLVED {p} ({len(hits)} matches) in {f.name}")
                 else:
                     paths.append(p)
                     last_dir = str(Path(p).parent)

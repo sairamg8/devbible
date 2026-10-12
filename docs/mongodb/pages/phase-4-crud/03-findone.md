@@ -157,6 +157,17 @@ covered query, which makes it about as cheap as the question deserves.
 Because MongoDB has no schema to read. One real document shows the field names and the actual
 BSON types, which is the fastest orientation available on an unfamiliar collection.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [db.collection.findOne()](https://www.mongodb.com/docs/manual/reference/method/db.collection.findone/) — mongodb.com: returns a document, not a cursor; with 0 matches it returns null, and with 2+ matches it returns the first in natural order for a collection scan, so use a `sort` option for a consistent pick (*read*)
+- **Also good:** [Explain() error for findOne query](https://www.mongodb.com/community/forums/t/explain-error-for-findone-query/271834) — mongodb.com forums: question dated 2024-03-19; a community answer says `findOne()` is shorthand for `find().limit(1)` with the same optimisation and execution, and `explain()` belongs to the cursor so it cannot be called on `findOne` (*read*; a commu
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`find` and the query document](./02-find-and-the-query-document.md) ·
