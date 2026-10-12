@@ -174,6 +174,16 @@ no ordinary string has, so an arbitrary `string` is not assignable to it. It
 exists only in the type system and is created deliberately at a validated
 boundary.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) — typescriptlang.org: "Intersection Types" and "Interface Extension vs. Intersection" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`null` and `undefined`](./10-null-and-undefined.md) · Next → [Call and construct signatures](./12-call-and-construct-signatures.md)

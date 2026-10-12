@@ -51,6 +51,18 @@ refused rather than that the right one works.
   confusingly similar name.** This one tests *your types*; that one is about keeping
   *test code* honestly typed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Vitest: Testing Types](https://vitest.dev/guide/testing-types) — vitest.dev: `*.test-d.ts`, `expectTypeOf`/`assertType`, runs `tsc --noEmit`, and the `@ts-expect-error` assertion example (*read*)
+- **Also good:** [tsd README](https://raw.githubusercontent.com/tsdjs/tsd/main/readme.md) — `expectType` is strict, `expectError` (*read*): [expectTypeOf API](https://vitest.dev/api/expect-typeof)
+- **Also good:** [expectTypeOf API](https://vitest.dev/api/expect-typeof)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 12 index](../README.md) · Start → [01 · A test whose runner is the compiler](./01-a-test-whose-runner-is-the-compiler.md)

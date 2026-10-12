@@ -149,6 +149,17 @@ is a config conversation.
 Breaking changes and `lib.d.ts` updates. The library declaration changes are what
 produce errors in files you never touched.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Announcing TypeScript 6.0](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/) — Microsoft devblogs, 2026-03-23: "last release based on the current JavaScript codebase"; section "Preparing for TypeScript 7.0" (*read*)
+- **Also good:** [Announcing TypeScript 7.0](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/) — Microsoft devblogs, 2026-07-08: links the Beta and RC posts under "Read next" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Project layout](./11-project-layout.md) · Next → [The Playground and `@ts-check`](./13-playground-and-ts-check.md)

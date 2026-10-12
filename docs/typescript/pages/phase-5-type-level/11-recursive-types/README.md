@@ -73,6 +73,17 @@ which one you get depends on whether the recursive call is the branch's entire r
 - **→ [13 · Tuple manipulation](../13-tuple-manipulation/README.md)** — the variadic patterns the accumulator
   conversion is built from.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 4.5 → Tail-Recursion Elimination on Conditional Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-5.html#tail-recursion-elimination-on-conditional-types) — typescriptlang.org: says TypeScript has heuristics so it does not go off the rails on infinitely deep types, then presents tail-recursion elimination (*read* the opening only)
+- **Also good:** [TypeScript 4.1 → Recursive Conditional Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-1.html#recursive-conditional-types) — typescriptlang.org: the `Awaited`-style unwrap motivation (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](../README.md) · Next → [01 · The two limits](./01-the-two-limits.md)

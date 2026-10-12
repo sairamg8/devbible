@@ -233,6 +233,17 @@ When the variants do not actually differ in shape — then it is ceremony around
 plain literal union. And when one union is encoding two independent decisions, at
 which point it should be split or nested.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: its "Discriminated unions" section (*headings only*)
+- **Also good:** [TypeScript Discriminated Unions for Frontend Developers](https://www.totaltypescript.com/discriminated-unions-are-a-devs-best-friend) — Matt Pocock, 2023-03-29 (updated 2023-08-01): "bag of optionals" versus a discriminated union, destructuring (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`instanceof` narrowing](./04-instanceof-narrowing.md) · Next → [Exhaustiveness with `never`](./06-exhaustiveness.md)

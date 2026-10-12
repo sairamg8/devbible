@@ -242,6 +242,17 @@ Both make the parameter optional for callers. Inside the body the first is
 `string | undefined` and the second is `string`, because the default has already
 been applied.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) — typescriptlang.org: function type expressions, optional parameters and callbacks, rest parameters (*headings only*)
+- **Also good:** [Function types are weird in TypeScript](https://www.totaltypescript.com/function-types-are-weird-in-typescript) — Matt Pocock, 2023-04-11: fewer-parameter functions are assignable (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`type` vs `interface`](./07-type-vs-interface.md) · Next → [Structural typing](./09-structural-typing.md)

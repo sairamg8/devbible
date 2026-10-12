@@ -54,6 +54,17 @@ only if the constraint is `readonly` all the way down.
   modifier-placement diagnostics discussed in chunk 02, and sit on the opposite
   list.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Const type parameters bring 'as const' to functions](https://www.totaltypescript.com/const-type-parameters) — Matt Pocock, 2023-04-11 (updated 2023-05-29): `&lt;const T&gt;` makes `&#123; foo: 'bar' &#125;` infer the literal `bar` with no `as const` at the call (*read*)
+- **Also good:** [TypeScript 5.0 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html) — typescriptlang.org: "const Type Parameters", `readonly string[]` constraint example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 3 index](../README.md) · Next → [01 · What `const` inference does](./01-what-const-inference-does.md)

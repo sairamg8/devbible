@@ -264,6 +264,17 @@ The variable, or `satisfies` on the expression. Annotating the parameter fixes
 one symptom and leaves everything else in the expression uncontextualised;
 annotating the receiving position supplies context to the whole thing at once.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Type Inference](https://www.typescriptlang.org/docs/handbook/type-inference.html) — typescriptlang.org: "Best common type" and "Contextual Typing" (the `window.onmousedown` example) (*read*)
+- **Also good:** [How To Pass Types To Functions](https://www.totaltypescript.com/passing-types-to-functions) — Matt Pocock, 2024-02-22: type arguments versus inference (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · Generic classes](./09-generic-classes.md) · Next → [11 · `infer` in conditional types](./11-infer-in-conditional-types.md)

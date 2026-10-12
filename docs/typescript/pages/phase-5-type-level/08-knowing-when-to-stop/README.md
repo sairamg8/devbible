@@ -83,6 +83,16 @@ input is closed; check it when the data comes from outside.**
 - **→ [10 · Deriving one function's type from another](../10-deriving-function-types/README.md)**
   — chunk 11's case 2 in full: wrappers, decorators and adapters.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Hyper-Typing](https://pscanf.com/s/341/) — pscanf.com (Paolo Scanferla): 2025-05-05
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](../README.md) · Next → [01 · The error is the interface](./01-the-error-is-the-interface.md)

@@ -243,6 +243,18 @@ The flag reports declarations whose type it cannot infer. It says nothing about
 inherited by propagation from an upstream boundary. Catching those needs
 type-aware lint rules (`no-unsafe-*`) or a coverage tool.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Seven Sources of Unsoundness](https://effectivetypescript.com/2021/05/06/unsoundness/) — Effective TypeScript, 2021-05-06: `any` is the first source; built-ins like `JSON.parse` return it, so it cannot be avoided entirely (*read*; the Zod and JSON Schema suggestion sits in its Type Assertions section)
+- **Also good:** [any type](https://www.totaltypescript.com/concepts/any-type) — Total TypeScript: `any` versus `unknown`, with the runtime-error example (*read*)
+- **Also good:** [no-unsafe-assignment](https://typescript-eslint.io/rules/no-unsafe-assignment/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](./README.md) · Next → **04 · Reading a TypeScript error** *(not written yet)*

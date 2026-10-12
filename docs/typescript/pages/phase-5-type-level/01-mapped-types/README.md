@@ -68,6 +68,16 @@ union (topic 03) and `ReturnType` needs `infer` (topic 06).
 - **→ [04 · Key remapping with `as`](../04-key-remapping.md)** — renaming and filtering
   keys, and the homomorphism it costs you.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mapped Types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html) — typescriptlang.org: key loop, and adding/removing `readonly` and `?` by prefixing `-` or `+` (*read* Mapping Modifiers)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](../README.md) · Next → [01 · The loop](./01-the-loop.md)

@@ -58,6 +58,16 @@ type parameter is not optional.
 - **→ Phase 8 (TypeScript in React)** — a form library's `register('email')` is
   this signature; so is a table's `sortBy` prop.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) — typescriptlang.org: `getProperty&lt;Type, Key extends keyof Type&gt;(obj, key)` and the error for `"m"` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [04 · `keyof`](../04-keyof/README.md) · Next → [06 · Indexed access types](../06-indexed-access-types.md)

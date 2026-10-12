@@ -200,6 +200,17 @@ points at and no more, so every coverage caveat still applies — and because a 
 that reused everything looks exactly like one that checked everything, introducing
 caching is a reason to re-test the gate by breaking something on purpose.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Docker: Build cache](https://docs.docker.com/build/cache/) — docs.docker.com: each instruction is a layer; a changed layer invalidates all after it (*read*)
+- **Also good:** [TSConfig Option: incremental](https://www.typescriptlang.org/tsconfig/incremental.html) — `.tsbuildinfo` files next to the output; safe to delete; `tsBuildInfoFile` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [08 · `skipLibCheck` as a performance lever](./08-skiplibcheck-as-a-performance-lever.md) · [Phase 12 index](./README.md)

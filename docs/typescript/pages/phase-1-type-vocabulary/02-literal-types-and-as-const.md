@@ -230,6 +230,17 @@ type — a config object that has to match a schema while still remembering that
 `mode` is exactly `'fast'`. An annotation would widen it; `as const` alone would
 not check it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) — typescriptlang.org: "Literal Types" and "Literal Inference"; `as const` converts the whole object to literals (*read*)
+- **Also good:** ['as const' Annotations](https://www.totaltypescript.com/concepts/as-const) — Total TypeScript: deeply readonly, compile-time only, unlike `Object.freeze` which is top-level; arrays become readonly tuples (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Primitives and inference](./01-primitives-and-inference.md) · Next → [Arrays and tuples](./03-arrays-and-tuples.md)

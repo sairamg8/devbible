@@ -246,6 +246,17 @@ No. `undefined` is a type with one value; `void` describes a return position
 whose value is not part of the contract. `let x: void = undefined` is legal, but
 `void` is not usable as a general-purpose value type.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) — typescriptlang.org: section "Other Types to Know About": `void`, `object`, `unknown`, `never`, `Function` (*headings only*)
+- **Also good:** [The `any` type](https://www.totaltypescript.com/concepts/any-type) — Total TypeScript: `any` switches checking off; `unknown` needs a check first (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Union types](./05-union-types.md) · Next → [`type` vs `interface`](./07-type-vs-interface.md)

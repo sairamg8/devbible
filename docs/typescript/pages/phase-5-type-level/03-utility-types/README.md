@@ -74,6 +74,16 @@ Gotchas sections in chunks 02 to 04 are for.
   versions of the shallow shapers, and what they cost.
 - **→ [14 · `NoInfer<T>`](../14-noinfer.md)** — the fence from chunk 05, in full.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html) — typescriptlang.org: one section per utility, `Partial` through `NoInfer`, plus `Awaited` and the string types (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](../README.md) · Next → [01 · The map](./01-the-map.md)

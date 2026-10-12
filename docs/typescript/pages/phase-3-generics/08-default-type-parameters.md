@@ -245,6 +245,16 @@ Because adding a type parameter is a breaking change for every consumer, while
 adding a *defaulted* one is not. An over-parameterised-looking signature is often
 history rather than design.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) — typescriptlang.org: section "Generic Parameter Defaults" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07 · The `typeof` type operator](./07-typeof-type-operator.md) · Next → [09 · Generic classes](./09-generic-classes.md)

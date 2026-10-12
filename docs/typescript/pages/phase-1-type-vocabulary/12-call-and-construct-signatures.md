@@ -210,6 +210,16 @@ When the *return* type depends on which argument shape was used. If the return
 type is the same, a union parameter or an optional parameter is simpler and
 participates in inference, which overloads do not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) — typescriptlang.org: "Call Signatures", "Construct Signatures", "Function Overloads", "Overload Signatures and the Implementation Signature", "Writing Good Overloads" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Intersection types](./11-intersection-types.md) · Next → [`enum` vs union vs `const` object](./13-enum-vs-union.md)

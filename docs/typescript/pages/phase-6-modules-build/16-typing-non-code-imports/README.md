@@ -73,3 +73,15 @@ sidebar_position: 0
 ---
 
 **This closes phase 6.** ← [Phase 6 index](../README.md) · Start → [01 · The three mechanisms](./01-the-three-mechanisms.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Vite — Features → Client Types](https://vite.dev/guide/features#client-types) — vite.dev: add `vite/client` to `compilerOptions.types`; only listed packages become global; recommended since TS 5.9 (*read*)
+- **Also good:** [Assets and Module Declarations](https://stevekinney.com/courses/react-typescript/assets-and-module-declarations) — Steve Kinney: modified 2025-09-06
+- **Also good:** [TSConfig: resolveJsonModule](https://www.typescriptlang.org/tsconfig/resolveJsonModule.html)
+
+{/* LINKMAP:END */}

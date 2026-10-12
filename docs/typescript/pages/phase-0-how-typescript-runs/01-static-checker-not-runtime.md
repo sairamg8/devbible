@@ -212,6 +212,17 @@ Node erases the types and executes the JavaScript underneath, never checking
 anything. `tsc` checks the types and, unless told otherwise, writes JavaScript
 out. Both accept the same file; only one of them will tell you it is wrong.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Basics](https://www.typescriptlang.org/docs/handbook/2/basic-types.html) — typescriptlang.org: static type-checking, "Erased Types", "Emitting with Errors", `tsc` (*read* the headings and the erased-types passage)
+- **Also good:** [No, TypeScript Types Don't Exist At Runtime](https://www.totaltypescript.com/typescript-types-dont-exist-at-runtime) — Matt Pocock, 2024-03-25: types, assertions and parameters all vanish in the emitted JavaScript (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 0 index](./README.md) · Next → [Erasure and what survives it](./02-erasure.md)

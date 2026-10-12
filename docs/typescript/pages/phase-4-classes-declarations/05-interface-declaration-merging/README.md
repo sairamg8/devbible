@@ -41,6 +41,16 @@ the same mistake is `TS2300`.
 - **→ [06 · Global augmentation](../06-global-augmentation.md)** — `declare global` on its
   own terms, which is where the global-scope hazard in chunk 02 gets its remedy.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Declaration Merging → Merging Interfaces](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces) — typescriptlang.org: same-name interfaces combine; lists disallowed merges (classes cannot merge with classes or variables) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 4 index](../README.md) · Next → [01 · What merges with what](./01-what-merges-with-what.md)

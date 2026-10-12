@@ -103,6 +103,18 @@ It is sometimes right — but it is a cost, and this topic is mostly the invoice
 - **→ Node.js · Modules** — TypeScript *models* what Node will do here; Node
   *does* it. Every failure in this topic is that model being wrong.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Declaration Files: Publishing](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html) — typescriptlang.org: including declarations, dependencies, red flags, `typesVersions` (*headings only*, `typesVersions` passage *read*)
+- **Also good:** [publint rules](https://publint.dev/rules) — publint.dev: the `EXPORTS_TYPES_INVALID_FORMAT` rule says `.d.ts` follows the ESM/CJS context since TS 5.0 (*read*); [Masquerading as CJS](https://raw.githubusercontent.com/arethetypeswrong/arethetypeswrong.github.io/main/docs/problems/FalseCJ
+- **Also good:** [Masquerading as CJS](https://raw.githubusercontent.com/arethetypeswrong/arethetypeswrong.github.io/main/docs/problems/FalseCJS.md)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Start → [01 · The one rule](./01-the-one-rule.md)

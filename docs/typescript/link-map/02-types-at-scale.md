@@ -1,7 +1,7 @@
 ---
 title: "Link map · TypeScript · Part 2 (phases 4–6)"
 sidebar_label: "02 · Types at scale"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Link map · TypeScript · Part 2 (phases 4–6)

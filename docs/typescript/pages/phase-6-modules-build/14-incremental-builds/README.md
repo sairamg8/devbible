@@ -76,6 +76,17 @@ sidebar_position: 0
 - **→ Phase 12 · Tooling, performance and testing** *(not written yet)* — the
   measurement this topic deliberately does not make.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig: incremental](https://www.typescriptlang.org/tsconfig/incremental.html) — typescriptlang.org: `.tsbuildinfo` files hold the project graph, are not used at runtime and can be deleted (*read*)
+- **Also good:** [Performance (TypeScript wiki, raw)](https://raw.githubusercontent.com/wiki/microsoft/TypeScript/Performance.md) — github (raw): "Incremental Project Emit" section (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Start → [01 · What is in a `.tsbuildinfo`](./01-what-is-in-a-tsbuildinfo.md)

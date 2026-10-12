@@ -208,6 +208,16 @@ That is the widely-documented rule and it did **not** reproduce on 7.0.2 — bot
 an interface and a type alias accepted a plain `let` symbol as a key. Treat it as
 version-dependent, and still prefer `const` so the binding cannot be reassigned.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Symbols](https://www.typescriptlang.org/docs/handbook/symbols.html) — typescriptlang.org: `unique symbol` is a subtype of `symbol`, only allowed on `const` declarations and readonly static properties (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`object`, `Object` and `{}`](./16-object-Object-braces.md) · [Phase 1 index](./README.md) · Next phase → [Phase 2 — Narrowing](../../syllabus/01-type-system.md)

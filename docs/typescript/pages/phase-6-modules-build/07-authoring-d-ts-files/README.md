@@ -87,6 +87,17 @@ so you know where to look rather than assuming something is missing:
   declaration emit is a large share of a slow build, and the flags here are the
   levers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Declaration Reference](https://www.typescriptlang.org/docs/handbook/declaration-files/by-example.html) — typescriptlang.org: declaring objects, overloads, interfaces, classes, globals by example (*headings only*)
+- **Also good:** [Declaration Files: Deep Dive](https://www.typescriptlang.org/docs/handbook/declaration-files/deep-dive.html) — typescriptlang.org: types, values, namespaces and their combinations (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Start → [01 · What a `.d.ts` actually is](./01-what-a-declaration-file-is.md)

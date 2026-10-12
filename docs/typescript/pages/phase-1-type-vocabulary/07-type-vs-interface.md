@@ -195,6 +195,17 @@ single name to print — that is the grain of truth behind the claim.
 declaration. An intersection just combines, so `{ x: string } & { x: number }`
 gives `x: never` — a type nothing satisfies, discovered later and further away.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Type vs Interface: Which Should You Use?](https://www.totaltypescript.com/type-vs-interface-which-should-you-use) — Matt Pocock, 2023-07-31 (updated 2023-12-18): declaration merging, `extends` versus `&`, index signatures, and a default-to-`type` stance (*read* the summary)
+- **Also good:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) — typescriptlang.org: section "Differences Between Type Aliases and Interfaces" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`any`, `unknown`, `never`, `void`](./06-any-unknown-never-void.md) · Next → [Function types](./08-function-types.md)

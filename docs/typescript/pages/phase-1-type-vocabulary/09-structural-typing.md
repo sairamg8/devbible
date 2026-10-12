@@ -210,6 +210,17 @@ its class.
 Bottom-up. The innermost "Type 'A' is not assignable to type 'B'" names the real
 mismatch; the outer lines are the property path the compiler walked to reach it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Type Compatibility](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) — typescriptlang.org: "based on structural subtyping", contrasted with nominal typing (*read* the opening)
+- **Also good:** [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) — typescriptlang.org: "Excess Property Checks", and the workaround of assigning to a variable first (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Function types](./08-function-types.md) · Next → [`null` and `undefined`](./10-null-and-undefined.md)

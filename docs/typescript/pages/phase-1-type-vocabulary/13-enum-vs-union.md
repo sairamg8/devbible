@@ -198,6 +198,17 @@ Nominally — two enums with identical members are not assignable to each other.
 That is unusual for TypeScript and occasionally useful, but string-literal unions
 being structural is what makes them easy to pass around.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Enums](https://www.typescriptlang.org/docs/handbook/enums.html) — typescriptlang.org: runtime shape, reverse mappings (string members get none), `const enum` inlined, and "Objects vs Enums" with `as const` (*read*)
+- **Also good:** [Why I Don't Like Enums](https://www.totaltypescript.com/why-i-dont-like-typescript-enums) — Matt Pocock, 2024-08-14: numeric enums give 6 keys for 3 members; nominal-typing complaint (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Call and construct signatures](./12-call-and-construct-signatures.md) · Next → [`readonly` and immutability](./14-readonly-and-immutability.md)

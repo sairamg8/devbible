@@ -258,6 +258,16 @@ module constant instead. Reserve augmentation for platform globals, bundler
 defines, extension hooks and test harnesses — things something outside your
 module graph genuinely provides.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Declaration Merging → Global augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#global-augmentation) — typescriptlang.org: `declare global` written from inside a module, with the `Array` example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05 · Interface declaration merging](./05-interface-declaration-merging/README.md) · Next → [07 · Branded / nominal types](./07-branded-nominal-types.md)

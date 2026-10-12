@@ -168,6 +168,18 @@ time, comparing compiler versions to find which release changed a behaviour, and
 inspecting the emitted JavaScript. Also the only shareable, runnable form of a
 bug report.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JS Projects Utilizing TypeScript](https://www.typescriptlang.org/docs/handbook/intro-to-js-ts.html) — typescriptlang.org: JSDoc type hints and the `@ts-check` heading: add it on the first line of a `.js` file (*read*)
+- **Also good:** [Type Checking JavaScript Files](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html) — typescriptlang.org: how checking differs in `.js` files (*read* the opening); [TypeScript Playground](https://www.typescriptlang.org/play/) (*headings only*, an app)
+- **Also good:** [TypeScript Playground](https://www.typescriptlang.org/play/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Release cadence](./12-release-cadence.md) · [Phase 0 index](./README.md) · Next phase → [Phase 1 — The type vocabulary](../../syllabus/01-type-system.md)

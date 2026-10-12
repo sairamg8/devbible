@@ -67,6 +67,16 @@ and inherits nothing at all about what to do with the objects that are not plain
 - **← [Phase 10 · `exactOptionalPropertyTypes`](../../phase-10-strictness/05-exactoptionalpropertytypes/README.md)**
   — the flag that decides what a deep-optional property actually means.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [type-fest `PartialDeep` source (raw)](https://raw.githubusercontent.com/sindresorhus/type-fest/main/source/partial-deep.d.ts) — github (raw): a maintained deep helper with `recurseIntoArrays` and `allowUndefinedInNonTupleArrays` options, which shows what a naive version leaves out (*read* the doc comments)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](../README.md) · Next → [01 · The naive version](./01-the-naive-version.md)

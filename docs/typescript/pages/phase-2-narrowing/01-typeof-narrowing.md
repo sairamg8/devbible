@@ -207,6 +207,16 @@ Yes — the check removes the member from the type in the negative branch too, s
 `string | number` becomes `number` in the `else` of a `typeof v === 'string'`
 check. Early returns exploit this without nesting.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: section "typeof type guards": the returned strings, and the `null` example where `typeof strs === "object"` still leaves `null` possible (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 2 index](./README.md) · Next → [Truthiness and equality narrowing](./02-truthiness-and-equality.md)

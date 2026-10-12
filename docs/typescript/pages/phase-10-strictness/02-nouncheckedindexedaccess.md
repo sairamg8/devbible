@@ -229,6 +229,17 @@ Nothing, other than a config that now claims a guarantee the code does not have.
 The unchecked accesses are unchanged and the warnings are gone, and each `!`
 reads to a future reader as a considered decision rather than a skipped one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig Option: noUncheckedIndexedAccess](https://www.typescriptlang.org/tsconfig/noUncheckedIndexedAccess.html) — typescriptlang.org: index-signature example: `env.NODE_ENV` goes from `string` to `string | undefined` (*read*)
+- **Also good:** [The Seven Sources of Unsoundness in TypeScript](https://effectivetypescript.com/2021/05/06/unsoundness/) — Effective TypeScript, 2021-05-06: "Object and array lookups": no bounds checking, so `xs[3]` is typed as present (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](./README.md) · Next → **03 · Containing `any`** *(not written yet)*

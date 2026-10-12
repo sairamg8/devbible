@@ -151,6 +151,18 @@ Because it turns the annotation requirement into a rule enforced as you write,
 rather than something discovered when the declaration build runs. That removes both
 the recurring surprise and the inference that made the emit expensive.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 5.5 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html) — typescriptlang.org: the "Isolated Declarations" section, co-authored by Rob Palmer, feature built with Bloomberg and Google (*read* the opening)
+- **Also good:** [TSConfig Option: isolatedDeclarations](https://www.typescriptlang.org/tsconfig/isolatedDeclarations.html) — annotate exports so other tools can generate declarations (*read*): [Publishing](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html) (*headings only*)
+- **Also good:** [Publishing](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [10 · Monorepo orchestration](./10-monorepo-orchestration.md) · [Phase 12 index](./README.md)

@@ -59,6 +59,17 @@ will ever write is that line with a different pattern.
 - **→ [13 · Tuple manipulation](../13-tuple-manipulation/README.md)** — variadic patterns like
   `[...infer Rest, infer Last]`, which chunk 01 previews.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Conditional Types → Inferring Within Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types) — typescriptlang.org: `infer` to pull out a type, with `ReturnType` as the example (*read*)
+- **Also good:** [Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html) — typescriptlang.org: `ReturnType`, `Parameters`, `InstanceType`, `Awaited` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](../README.md) · Next → [01 · Pattern matching](./01-pattern-matching.md)

@@ -276,6 +276,17 @@ Their value types are unioned into one property, silently. It is legal and
 occasionally intended, but it usually means the remap expression is losing
 information — a prefix or conditional that funnels several keys to one name.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mapped Types → Key Remapping via as](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#key-remapping-via-as) — typescriptlang.org: rename keys with template literals and `Capitalize`, and filter keys out by producing `never` via `Exclude` (*read*)
+- **Also good:** [TypeScript 4.1 → Key Remapping in Mapped Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-1.html#key-remapping-in-mapped-types) — typescriptlang.org: the introduction of `as` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](./README.md) · Prev: [03 · The built-in utility types](./03-utility-types/README.md) · Next → [05 · Distributive conditional types](./05-distributive-conditionals.md)

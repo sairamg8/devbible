@@ -176,6 +176,16 @@ No — it narrows `obj`. To narrow the key you need a type predicate returning
 checks own properties only. For narrowing declared properties the difference
 rarely matters; for untrusted parsed data it does.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: section "The in operator narrowing" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Truthiness and equality](./02-truthiness-and-equality.md) · Next → [`instanceof` narrowing](./04-instanceof-narrowing.md)

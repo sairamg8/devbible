@@ -60,6 +60,18 @@ The tell that it has not landed: *"we don't need `tsc`, the build would fail."*
 - **→ 09 · Caching TypeScript in CI and Docker** *(not written yet)* — `.tsbuildinfo`
   and layer caching in depth; chunk 04 takes only what makes the gate affordable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Vite: Features, TypeScript](https://vite.dev/guide/features.html) — vite.dev: "Transpile Only": Vite does NOT perform type checking; run `tsc --noEmit` separately (*read*)
+- **Also good:** [esbuild: Content Types](https://esbuild.github.io/content-types/) — esbuild does no type checking, run `tsc -noEmit` in parallel (*read*): [TSConfig Option: noEmit](https://www.typescriptlang.org/tsconfig/noEmit.html)
+- **Also good:** [TSConfig Option: noEmit](https://www.typescriptlang.org/tsconfig/noEmit.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 12 index](../README.md) · Start → [01 · The green build that proves nothing](./01-the-green-build-that-proves-nothing.md)

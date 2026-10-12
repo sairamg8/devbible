@@ -46,6 +46,17 @@ say immediately what is wrong with it.
 - **→ [13 · When not to write a generic](../13-when-not-to-write-a-generic/README.md)** — the
   return-position-only parameter, which this topic names and that one dissects.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) — typescriptlang.org: "Generic Functions": Inference, Constraints, Specifying Type Arguments (*headings only*)
+- **Also good:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) — typescriptlang.org: "Hello World of Generics" and "Working with Generic Type Variables" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 3 index](../README.md) · Next → [02 · Constraints](../02-constraints/README.md)

@@ -240,6 +240,16 @@ Nothing — `null` and `undefined` are assignable everywhere, so there is nothin
 to strip. Every `!` in such a codebase is decoration, which is why enabling
 `strict` later surfaces so much at once.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) — typescriptlang.org: section "Non-null Assertion Operator (Postfix !)" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [12 · `unknown` in `catch`](./12-unknown-in-catch.md) · [Phase 2 index](./README.md) · Next → [Phase 3 · Generics](../phase-3-generics/README.md)

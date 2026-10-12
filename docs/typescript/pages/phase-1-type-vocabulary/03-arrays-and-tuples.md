@@ -210,6 +210,16 @@ Almost always past two or three members. Position-encoded meaning stops being
 readable, and adding a field to a tuple silently changes what every index means,
 while adding a property to an object breaks nothing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) — typescriptlang.org: "The Array Type", "The ReadonlyArray Type", "Tuple Types" with optional and rest elements (*read* the tuple passages)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Literal types and `as const`](./02-literal-types-and-as-const.md) · Next → [Object types](./04-object-types.md)

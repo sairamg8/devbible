@@ -219,6 +219,18 @@ to report, so `TS2532` ("Object is possibly 'undefined'") becomes `TS18048`
 ("'x' is possibly 'undefined'"). The same trick moves contextual-typing errors
 out of a call site and onto the callback where the mistake actually is.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Understanding Errors](https://www.typescriptlang.org/docs/handbook/2/understanding-errors.html) — typescriptlang.org, shows "Last updated: Oct 05, 2026": each sub-message answers a "why?" about the line above it; the worked example ends at `string` versus `number` (*read*)
+- **Also good:** [How to Read & Troubleshoot TypeScript Errors](https://dev.to/nevulo/how-to-read-troubleshoot-typescript-errors-1l6f) — Nevulo, dev.to, 2022-02-27: each indentation level goes into more detail; overload errors list one failure per overload (*read* the indentation passage)
+- **Also good:** [Solving TypeScript Errors](https://www.totaltypescript.com/tutorials/solving-typescript-errors)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](./README.md) · Next → [05 · `exactOptionalPropertyTypes`](./05-exactoptionalpropertytypes/README.md)

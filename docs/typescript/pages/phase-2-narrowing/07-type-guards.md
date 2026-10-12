@@ -210,6 +210,17 @@ A predicate returning `k is keyof T`. The `in` operator narrows the object on th
 right, never the key on the left, so this is the only way to convince the
 compiler that a `string` is a valid key.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: section "Using type predicates" (*headings only*)
+- **Also good:** [Type Predicate Inference: The TS 5.5 Feature No One Expected](https://www.totaltypescript.com/type-predicate-inference) — Matt Pocock, 2024-03-17: inferred predicates, and whether `filter(Boolean)` works (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Exhaustiveness](./06-exhaustiveness.md) · Next → [`as` assertions](./08-as-assertions/README.md)

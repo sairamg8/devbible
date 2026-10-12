@@ -65,6 +65,17 @@ reaching for `strictNullChecks: false` to quiet a migration.
 - **→ 12 · Assertion discipline** *(not written yet)* — the `!` count as the real
   measure of a strictness migration.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig Option: strict](https://www.typescriptlang.org/tsconfig/strict.html) — typescriptlang.org: `strict` enables the whole strict family; future versions may add checks under it (*read*)
+- **Also good:** [How to Incrementally Migrate an Angular Project to TypeScript Strict Mode](https://www.bitovi.com/blog/how-to-incrementally-migrate-an-angular-project-to-typescript-strict-mode) — Bitovi, 2022-06-22: explains each flag in the TS 4.7.3 strict set with code (*read*; Angular examples, flag list predates `strictBuiltinIteratorReturn`)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](../README.md) · Start → [01 · What `strict` actually is](./01-what-strict-actually-is.md)

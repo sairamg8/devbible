@@ -67,6 +67,16 @@ the alternative was an overload per input length.
   `instantiateMappedTupleType` preserves labels and element flags, which is why a tuple
   survives a mapped type.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 4.0 → Variadic Tuple Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-0.html#variadic-tuple-types) — typescriptlang.org: spreading generic tuples, a `tail`-style signature, and the `partialCall` example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](../README.md) · Next → [01 · The accessors](./01-the-accessors.md)

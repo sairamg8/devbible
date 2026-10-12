@@ -276,6 +276,18 @@ Inferring one `infer` name from several property positions yields a union; from
 several parameter positions it yields an intersection. That is covariance versus
 contravariance, and it is the mechanism behind `UnionToIntersection`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) — typescriptlang.org: section "Variance Annotations": covariance and contravariance with `Producer`/`Consumer`, `in`/`out`/`in out` annotations and when they have no effect (*read*)
+- **Also good:** [Type Compatibility](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) — typescriptlang.org: "Function Parameter Bivariance" (*headings only*); [TSConfig: strictFunctionTypes](https://www.typescriptlang.org/tsconfig/strictFunctionTypes.html) (*headings only*)
+- **Also good:** [TSConfig: strictFunctionTypes](https://www.typescriptlang.org/tsconfig/strictFunctionTypes.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [13 · When *not* to write a generic](./13-when-not-to-write-a-generic/README.md) · Up → [Phase 3 · Generics](./README.md)

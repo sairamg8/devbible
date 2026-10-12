@@ -87,6 +87,18 @@ uncounted population of `!`.
   — one is a guarantee the compiler enforces, the other a waiver that asserts
   nothing. Chunk 03 takes the general rule; that page owns the class-field case.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Type Assertions](https://www.totaltypescript.com/concepts/type-assertions) — Total TypeScript: assertions "let you lie to TypeScript"; `as` has limits (*read*)
+- **Also good:** [no-unsafe-type-assertion](https://typescript-eslint.io/rules/no-unsafe-type-assertion/) — typescript-eslint: forbids assertions that narrow a type (*read*)
+- **Also good:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](../README.md) · Start → [01 · Three ways to make a claim](./01-three-ways-to-make-a-claim.md)

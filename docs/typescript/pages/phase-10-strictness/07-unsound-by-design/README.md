@@ -82,6 +82,18 @@ those improve the code independently of soundness.
 - **→ 12 · Assertion discipline** *(not written yet)* — holes 1–3 as a process
   problem rather than a type-system one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Seven Sources of Unsoundness in TypeScript](https://effectivetypescript.com/2021/05/06/unsoundness/) — Effective TypeScript, 2021-05-06: any, assertions, lookups, bad definitions, array variance, refinements not invalidated by calls (*read*)
+- **Also good:** [TypeScript FAQ](https://raw.githubusercontent.com/wiki/microsoft/TypeScript/FAQ.md) — microsoft/TypeScript wiki: method bivariance is allowed unsoundly, with a "Why Method Bivariance?" section (*read*)
+- **Also good:** [Design Goals](https://raw.githubusercontent.com/wiki/microsoft/TypeScript/TypeScript-Design-Goals.md)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](../README.md) · Start → [01 · What unsound means](./01-what-unsound-means.md)

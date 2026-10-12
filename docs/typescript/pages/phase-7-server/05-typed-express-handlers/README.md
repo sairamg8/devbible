@@ -72,6 +72,17 @@ validation anywhere, which reads as safe and is not.
 - **→ 11 · DTOs vs domain types vs row types** *(dropped 2026-08-15)* — why the
   response type is not the domain type.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Adding Types to Express](https://stevekinney.com/courses/full-stack-typescript/adding-types-to-express) — Steve Kinney: shows `Request&lt;P, ResBody, ReqBody, ReqQuery, Locals&gt;` with the defaults and calls the `any` slots "danger zones"; last modified 2026-01-07 (*read*)
+- **Also good:** [DefinitelyTyped `express-serve-static-core`](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/express-serve-static-core/index.d.ts) — github (raw): `ParamsDictionary` and `RequestHandler` with `ReqBody = any` defaults (*read* the declarations)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 7 index](../README.md) · Start → [01 · The five generics](./01-the-five-generics.md)

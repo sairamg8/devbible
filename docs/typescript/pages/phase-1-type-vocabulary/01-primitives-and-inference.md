@@ -259,6 +259,17 @@ another?**
 `items[0]` include `undefined` — the honest signature, and the one that forces
 callers to handle an empty array.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) — typescriptlang.org: primitives, annotations on variables, "types are inferred from the initializer" (*read*)
+- **Also good:** [How let and const Work In TypeScript](https://www.totaltypescript.com/let-and-const) — Matt Pocock, 2024-02-23: `let albumGenre = "rock"` infers `string` and fails against a literal union (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 1 index](./README.md) · Next → [Literal types and `as const`](./02-literal-types-and-as-const.md)

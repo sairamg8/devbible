@@ -58,6 +58,17 @@ compiler in the runtime image, and it is still extremely common.
   the `Error.stack` latency caveat: a service that treats expected outcomes as
   thrown errors pays source-map resolution on its normal path.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js — Modules: TypeScript](https://nodejs.org/api/typescript.html) — nodejs.org: type stripping is stable; inline types become whitespace so source maps are unnecessary for line numbers; refuses `.ts` under `node_modules` (*read* the Source maps section)
+- **Also good:** [Node.js CLI — `--enable-source-maps`](https://nodejs.org/api/cli.html) — nodejs.org: caches source maps and reports stack traces against the original source, best effort; overriding `Error.prepareStackTrace` can defeat it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 7 index](../README.md) · Start → [01 · What actually ships](./01-what-actually-ships.md)

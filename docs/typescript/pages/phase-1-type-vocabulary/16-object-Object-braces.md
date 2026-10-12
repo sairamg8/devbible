@@ -171,6 +171,17 @@ As a generic constraint meaning "defined": `function f<T extends {}>(v: T | null
 uses it to exclude `null` and `undefined` from `T`. That is the one place it is
 the clearest tool.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Empty Object Type in TypeScript](https://www.totaltypescript.com/the-empty-object-type-in-typescript) — Matt Pocock, 2023-06-20 (updated 2024-04-02): `&#123;&#125;` accepts everything except `null` and `undefined`; suggests `Record&lt;string, never&gt;` for an empty object (*read*)
+- **Also good:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) — typescriptlang.org: the `object` heading under "Other Types to Know About" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Recursive types](./15-recursive-types.md) · Next → [`symbol` and `unique symbol`](./17-symbols.md)

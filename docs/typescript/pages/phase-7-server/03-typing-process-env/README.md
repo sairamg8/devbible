@@ -68,6 +68,17 @@ The tell that it has not landed: an `env.d.ts` full of required `string`s, and
   generalised. The syllabus calls env *"the boundary everyone forgets is a
   boundary"*.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js — `process.env`](https://nodejs.org/api/process.html) — nodejs.org: what the object holds; assigning a non-string implicitly converts to a string (deprecated) so `env.test = undefined` gives the string `'undefined'` (*read*)
+- **Also good:** [T3 Env — Introduction](https://env.t3.gg/docs/introduction) — env.t3.gg: why they moved validated env into a library (*read*, about 700 words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 7 index](../README.md) · Start → [01 · What it actually is](./01-what-process-env-actually-is.md)

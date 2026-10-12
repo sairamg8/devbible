@@ -72,6 +72,17 @@ best test of whether you actually absorbed that rule.
 - **→ Phase 6 · 11 · Publishing a typed package** *(not written yet, lane D)* —
   why a published `.d.ts` containing an alias is broken for every consumer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig: paths](https://www.typescriptlang.org/tsconfig/paths.html) — typescriptlang.org: states it does not change how import paths are emitted, so another tool must apply the mapping at runtime or bundling (*read*)
+- **Also good:** [Node.js — Packages](https://nodejs.org/api/packages.html) — nodejs.org: a "Subpath imports" section, the runtime-side answer (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Next → [01 · What `paths` does](./01-what-paths-does.md)

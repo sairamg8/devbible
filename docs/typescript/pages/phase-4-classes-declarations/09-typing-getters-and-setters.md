@@ -181,6 +181,17 @@ to an accessor later without touching any call site. And a getter that does real
 work should be a method instead, because property syntax makes expensive work
 look free.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 5.1 → Unrelated Types for Getters and Setters](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-1.html) — typescriptlang.org: says 4.3 allowed a getter and setter to have different types, with a `Serializer` example (*read*); what 5.1 itself changed is not confirmed from the passage I read
+- **Also good:** [Classes → Getters / Setters](https://www.typescriptlang.org/docs/handbook/2/classes.html#getters--setters) — typescriptlang.org: accessor basics (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [08 · `readonly` and definite assignment](./08-readonly-and-definite-assignment.md) · Next → [10 · `this` types and polymorphic `this`](./10-this-types.md)

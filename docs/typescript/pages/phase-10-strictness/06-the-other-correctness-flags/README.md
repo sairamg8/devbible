@@ -84,6 +84,17 @@ behaviour change with no compile-time signal at all — and it costs a keyword.
 - **→ 11 · typescript-eslint type-aware rules** *(not written yet)* — where the
   unused-code pair arguably belongs, and the rules that go further than `TS6205`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig Option: noImplicitOverride](https://www.typescriptlang.org/tsconfig/noImplicitOverride.html) — typescriptlang.org: the renamed-base-method example: without the flag nothing warns; with it the missing `override` errors (*read*)
+- **Also good:** [TSConfig reference](https://www.typescriptlang.org/tsconfig/) — typescriptlang.org: the single page that lists all six flags (found in the HTML, *headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](../README.md) · Start → [01 · `noImplicitOverride`](./01-noimplicitoverride.md)

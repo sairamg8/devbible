@@ -50,6 +50,17 @@ the day someone adds a new union member.
 - **→ Phase 9 (Types at the boundary)** — `satisfies` is erased, so it validates
   nothing that arrives at runtime. That is a validator's job.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 4.9 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html) — typescriptlang.org: "The satisfies Operator": validate against a type "without changing the resulting type" (*read*)
+- **Also good:** [Clarifying the `satisfies` Operator](https://www.totaltypescript.com/clarifying-the-satisfies-operator) — Matt Pocock, 2023-03-13 (updated 2023-05-29): colon annotation versus `satisfies`: the type wins versus the value wins (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · Assertion functions](../09-assertion-functions/README.md) · Next → [11 · Narrowing you lose](../11-narrowing-lost/README.md)

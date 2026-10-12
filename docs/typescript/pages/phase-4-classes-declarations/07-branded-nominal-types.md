@@ -259,6 +259,16 @@ re-asserting after `JSON.parse` — plus error messages that now spell out the
 intersection. Brand where a mix-up is genuinely costly: IDs across tables, units,
 sanitised versus raw HTML. Not for tidiness.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Branded Types](https://www.learningtypescript.com/articles/branded-types) — Learning TypeScript (Josh Goldberg): 2024-08-15
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06 · Global augmentation](./06-global-augmentation.md) · Next → [08 · `readonly` members and definite assignment](./08-readonly-and-definite-assignment.md)

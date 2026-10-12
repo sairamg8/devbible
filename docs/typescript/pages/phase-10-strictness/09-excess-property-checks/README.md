@@ -79,6 +79,17 @@ check exists to produce.
 - **→ 12 · Assertion discipline** *(not written yet)* — the `as` that silences
   this check is the same `as` that silences everything else.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) — typescriptlang.org: section "Excess Property Checks": object literals get special treatment when assigned or passed as arguments (*read*)
+- **Also good:** [Understanding Errors](https://www.typescriptlang.org/docs/handbook/2/understanding-errors.html) — typescriptlang.org: "Extra Properties" example: an object literal gives 2353, "Object literal may only specify known properties" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](../README.md) · Start → [01 · Freshness](./01-freshness.md)

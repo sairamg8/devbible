@@ -194,6 +194,17 @@ Whenever something else produces the JavaScript — a bundler, or the runtime
 stripping types. Then `tsc` is purely the checker, which is the arrangement in
 [03 · The three ways to run TypeScript](./03-three-ways-to-run.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig Reference](https://www.typescriptlang.org/tsconfig/) — typescriptlang.org: every option with its default; very long, ≈19k words by our text extraction (*headings only*, plus the strict family list *read*)
+- **Also good:** [What is a tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) — typescriptlang.org: `files`, `include`, `exclude`, `extends`, tsconfig bases (*read* the include/exclude section)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`strict`](./05-strict.md) · Next → [TypeScript 7 is a different compiler](./07-typescript-7-native-compiler.md)

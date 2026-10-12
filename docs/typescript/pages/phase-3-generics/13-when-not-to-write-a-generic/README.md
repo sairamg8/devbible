@@ -56,6 +56,17 @@ If you take nothing else from this topic:
 - **→ Phase 9 (Types at the boundary)** — where "return `unknown` and validate"
   becomes the design of a whole layer rather than one signature.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) — typescriptlang.org: "Guidelines for Writing Good Generic Functions": "Push Type Parameters Down", "Use Fewer Type Parameters", "Type Parameters Should Appear Twice" (a parameter used in one place relates nothing, so reconsider it) (*read*)
+- **Also good:** [There Is No Such Thing As A Generic](https://www.totaltypescript.com/no-such-thing-as-a-generic) — Matt Pocock, 2023-07-20 (updated 2023-10-05): type arguments, type parameters and generic types (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 3 index](../README.md) · Next → [01 · The rule and the three guidelines](./01-the-rule-and-the-guidelines.md)

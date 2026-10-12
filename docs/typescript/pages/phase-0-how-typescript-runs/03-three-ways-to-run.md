@@ -203,6 +203,17 @@ From `tsc` — usually a separate `tsc --emitDeclarationOnly` step, or a bundler
 plugin that shells out to the compiler. Transpilers cannot generate declarations
 because that requires type information they never compute.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Running TypeScript Natively](https://nodejs.org/learn/typescript/run-natively) — nodejs.org: type stripping, no flags on v22.18+ for erasable-only code, "Node.js does not type check", `npx tsc --noEmit` (*read*)
+- **Also good:** [esbuild — TypeScript](https://esbuild.github.io/content-types/) — esbuild: "does not do any type checking so you will still need to run tsc -noEmit"; enums and namespaces are converted (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Erasure](./02-erasure.md) · Next → [Strip-only mode and erasableSyntaxOnly](./04-strip-only-and-erasable-syntax.md)

@@ -87,6 +87,17 @@ Everything in this topic is a consequence of that sentence.
 - **← [Phase 0 · How TypeScript runs](../../phase-0-how-typescript-runs/README.md)**
   — the erasure model these settings operate inside.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modules — Choosing Compiler Options](https://www.typescriptlang.org/docs/handbook/modules/guides/choosing-compiler-options.html) — typescriptlang.org: per-situation settings: bundler, compiled for Node, `ts-node`, `tsx`, browser, library; dual-emit notes (*headings only*, `tsx` and library passages *read*)
+- **Also good:** [Modules — Reference](https://www.typescriptlang.org/docs/handbook/modules/reference.html) — typescriptlang.org: every `module` and `moduleResolution` value, including `node16`/`nodenext`, `bundler`, `node10` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Next → [01 · The two questions](./01-the-two-questions.md)

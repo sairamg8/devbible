@@ -86,6 +86,17 @@ sidebar_position: 0
 - **→ Phase 12 · Tooling, performance and testing** *(not written yet)* — the
   build-time measurement this topic deliberately does not make.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Project References](https://www.typescriptlang.org/docs/handbook/project-references.html) — typescriptlang.org: `composite`, `declarationMap`, build mode `tsc -b`, caveats, guidance (*headings only*)
+- **Also good:** [TSConfig: composite](https://www.typescriptlang.org/tsconfig/composite.html) — typescriptlang.org: constraints `composite` enforces for `--build` (*read* the lead)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Start → [01 · What `tsc -b` does](./01-what-tsc-b-does.md)

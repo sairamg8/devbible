@@ -90,6 +90,16 @@ any documentation:
 - **Deliberately not here:** the elision rules and import-form rewriting, which
   are `verbatimModuleSyntax`'s and belong to topic 02.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig: isolatedModules](https://www.typescriptlang.org/tsconfig/isolatedModules.html) — typescriptlang.org: why single-file transpilers such as Babel need it, (*read* the lead)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Next → [01 · The one-file compiler](./01-the-one-file-compiler.md)

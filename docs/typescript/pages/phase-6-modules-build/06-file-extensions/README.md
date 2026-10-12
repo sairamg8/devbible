@@ -83,6 +83,17 @@ parser hint, and is the most-Googled piece of `.tsx` syntax there is. Chunk 04.
   which belong to **Phase 6 · 16 · Typing non-code imports** *(not written yet,
   lane D)*.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 5.7 → Path Rewriting for Relative Paths](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-7.html#path-rewriting-for-relative-paths) — typescriptlang.org: `rewriteRelativeImportExtensions` rewrites relative `.ts`, `.tsx`, `.mts`, `.cts` paths to their JS extensions (*read*)
+- **Also good:** [TSConfig: allowImportingTsExtensions](https://www.typescriptlang.org/tsconfig/allowImportingTsExtensions.html) — typescriptlang.org: reference entry (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Next → [01 · The extension table](./01-the-extension-table.md)

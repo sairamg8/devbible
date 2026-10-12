@@ -1,7 +1,7 @@
 ---
 title: "Link map · TypeScript · Part 3 (phases 7–9)"
 sidebar_label: "03 · In the stack"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Link map · TypeScript · Part 3 (phases 7–9)
@@ -9,7 +9,7 @@ sidebar_position: 3
 Covers every topic row of `docs/typescript/syllabus/03-in-the-stack.md`: T07-01 to T07-15 (TypeScript on the server), T08-01 to T08-14 (TypeScript in React), T09-01 to T09-15 (types at the boundary). That is 44 rows, matching the syllabus header.
 Only T07-01 to T07-05 have pages of ours (✅). The other Phase 7 rows and all of Phases 8 and 9 were dropped on 2026-08-15 and are 🔲 not written; the syllabus keeps them as a record, so this map is reading material for a future reopening. *read* = I read the passage; *headings only* = fetched, headings/size checked. Third-party links carry a date where the page shows one. `#anchors` appear only where the id was seen in the page HTML (none used here).
 
-🔴 **Version note.** Our syllabus targets **TypeScript 7.0.2**. npm on 2026-10-12: `typescript` `latest` 7.0.2, `rc` 7.0.1-rc, `next` 7.1.0-dev, `beta` 6.0.0-beta; `@types/node` 26.6.5, `@types/express` 5.0.6, `@types/pg` 8.23.1, `express` 5.3.0, `zod` 4.6.6, `mongoose` 9.11.1, `react` and `@types/react` 19.3.0. The handbook lists release notes up to 6.0 and `typescript-7-0.html` returns 404, so 7.0 notes are not confirmed there. The 6.0 notes (read) say `strict` is now `true` by default, `module` defaults to `esnext`, `target` floats to the current ES year (es2025 at the time), `types` defaults to `[]`, and `moduleResolution node10` and `baseUrl` are deprecated. Node's TypeScript page (read) shows type stripping stable from v25.2 and v24.12, v26.0.0 removing `--experimental-transform-types`, and Node ignoring `tsconfig.json`. `github.com` returns 403 to our fetcher, so GitHub-hosted sources are cited as `raw.githubusercontent.com`.
+🔴 **Version note.** Our syllabus targets **TypeScript 7.0.2**. npm on 2026-10-12: `typescript` `latest` 7.0.2, `rc` 7.0.1-rc, `next` 7.1.0-dev, `beta` 6.0.0-beta; `@types/node` 26.6.5, `@types/express` 5.0.6, `@types/pg` 8.23.1, `express` 5.3.0, `zod` 4.6.6, `mongoose` 9.11.1, `react` and `@types/react` 19.3.0. The handbook lists release notes up to 6.0 and `typescript-7-0.html` returns 404, so 7.0 notes are not confirmed there. The [6.0 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-6-0.html) (read) say `strict` is now `true` by default, `module` defaults to `esnext`, `target` floats to the current ES year (es2025 at the time), `types` defaults to `[]`, and `moduleResolution node10` and `baseUrl` are deprecated. Node's TypeScript page (read) shows type stripping stable from v25.2 and v24.12, v26.0.0 removing `--experimental-transform-types`, and Node ignoring `tsconfig.json`. `github.com` returns 403 to our fetcher, so GitHub-hosted sources are cited as `raw.githubusercontent.com`.
 
 ---
 
@@ -17,8 +17,8 @@ Only T07-01 to T07-05 have pages of ours (✅). The other Phase 7 rows and all o
 
 ### T07-01 · `tsconfig.json` for a Node 24 service — Master · ✅ written `docs/typescript/pages/phase-7-server/01-tsconfig-for-a-node-service/README.md`
 - **Read this:** [Modules — Choosing Compiler Options](https://www.typescriptlang.org/docs/handbook/modules/guides/choosing-compiler-options.html) · typescriptlang.org · "compiling and running in Node.js" template: `module: nodenext` (implies `moduleResolution`, `esModuleInterop`, `target: esnext`) plus `verbatimModuleSyntax`; says to set `target`, `lib`, `strict` yourself (*read* the Node passage) · covers our angle: **partial** — no `@types/node` or `noEmit` story · fetched 2026-10-12
-- **Also good:** [Node.js — Running TypeScript natively](https://nodejs.org/api/typescript.html) · nodejs.org · type stripping does no type checking and Node ignores `tsconfig.json` (*read*); [TSConfig: erasableSyntaxOnly](https://www.typescriptlang.org/tsconfig/erasableSyntaxOnly.html) · typescriptlang.org · the flag that mirrors Node's strip-only limits (*read* the lead) · fetched 2026-10-12
-- **Our delta:** 🔴 6.0 flips `strict` and `target` defaults and `types` to `[]` (read), so `@types/node` must be listed; the exact consequence is not confirmed.
+- **Also good:** [Node.js — Modules: TypeScript](https://nodejs.org/api/typescript.html) · nodejs.org · type stripping does no type checking and Node ignores `tsconfig.json` (*read*); [TSConfig: erasableSyntaxOnly](https://www.typescriptlang.org/tsconfig/erasableSyntaxOnly.html) · typescriptlang.org · the flag that mirrors Node's strip-only limits (*read* the lead) · fetched 2026-10-12
+- **Our delta:** 🔴 the 6.0 notes (read) flip `strict` and `target` defaults and make `types` default to `[]`, so projects "will likely need" `"types": ["node"]`; `"types": ["*"]` restores the old enumeration. Whether 7.0 keeps these defaults is not confirmed (no 7.0 notes page).
 
 ### T07-02 · Shipping TypeScript to production — Master · ✅ written `docs/typescript/pages/phase-7-server/02-shipping-to-production/README.md`
 - **Read this:** [Node.js — Modules: TypeScript](https://nodejs.org/api/typescript.html) · nodejs.org · type stripping is stable; inline types become whitespace so source maps are unnecessary for line numbers; refuses `.ts` under `node_modules` (*read* the Source maps section) · covers our angle: **partial** — the `tsc` build path is not covered · fetched 2026-10-12
@@ -27,12 +27,12 @@ Only T07-01 to T07-05 have pages of ours (✅). The other Phase 7 rows and all o
 
 ### T07-03 · Typing `process.env` — Master · ✅ written `docs/typescript/pages/phase-7-server/03-typing-process-env/README.md`
 - **Read this:** [Node.js — `process.env`](https://nodejs.org/api/process.html) · nodejs.org · what the object holds; assigning a non-string implicitly converts to a string (deprecated) so `env.test = undefined` gives the string `'undefined'` (*read*) · covers our angle: **partial** — nothing on TypeScript or `ProcessEnv` · fetched 2026-10-12
-- **Also good:** [T3 Env — Introduction](https://env.t3.gg/docs/introduction) · env.t3.gg · why they moved validated env into a library (*read*, 713 words) · fetched 2026-10-12
+- **Also good:** [T3 Env — Introduction](https://env.t3.gg/docs/introduction) · env.t3.gg · why they moved validated env into a library (*read*, about 700 words) · fetched 2026-10-12
 - **Our delta:** none found for "augmenting `ProcessEnv` versus parsing once"; the argument is ours. The `ProcessEnv` merge itself is a declaration-merging case (see T07-06).
 
 ### T07-04 · `catch (e: unknown)` — Master · ✅ written `docs/typescript/pages/phase-7-server/04-catch-e-unknown/README.md`
 - **Read this:** [TypeScript 4.4 → `useUnknownInCatchVariables`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-4.html) · typescriptlang.org · any value can be thrown, so catch variables default to `unknown` under `--strict` (*read* that section) · covers our angle: **partial** — no custom error classes or bundling guard · fetched 2026-10-12
-- **Also good:** [MDN — Error: cause](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause) · MDN · re-throwing with the original error kept; the caught value may not be an Error (*read*); [Narrowing → `instanceof`](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) · typescriptlang.org · prototype-chain check (*read*) · fetched 2026-10-12
+- **Also good:** [MDN — Error: cause](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause) · MDN · re-throwing with the original error kept; `cause` can be any type, so do not assume it is an `Error` (*read*); [Narrowing → `instanceof`](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) · typescriptlang.org · prototype-chain check (*read*) · fetched 2026-10-12
 - **Our delta:** the guard that survives bundling (duplicate class copies defeat `instanceof`): no page found.
 
 ### T07-05 · Typed Express handlers — Master · ✅ written `docs/typescript/pages/phase-7-server/05-typed-express-handlers/README.md`
@@ -41,7 +41,7 @@ Only T07-01 to T07-05 have pages of ours (✅). The other Phase 7 rows and all o
 - **Our delta:** why the typed body is a promise the compiler cannot keep; the course shows the types but its validation chapters are separate pages.
 
 ### T07-06 · Augmenting `Express.Request` — Master · 🔲 not written (the `req.user` case lives in `docs/typescript/pages/phase-4-classes-declarations/01-module-augmentation/`)
-- **Read this:** [Overriding the Express API](https://expressjs.com/en/guide/overriding-express-api/) · expressjs.com · declaration merging on the `Express` namespace in a `.d.ts` that is part of the project; no `tsconfig.json` change unless a custom `include` does not cover it; example adds `user?: User` and ends with `export {}` (*read*) · covers our angle: **full** · fetched 2026-10-12
+- **Read this:** [Overriding the Express API](https://expressjs.com/en/guide/overriding-express-api/) · expressjs.com · declaration merging on the `Express` namespace in a `.d.ts` that is part of the project; no `tsconfig.json` change unless a custom `include` does not cover it; example adds `user?: User` and ends with `export {}` (*read*) · covers our angle: **partial** — the `include` caveat is one sentence, with no demonstration of the silent failure · fetched 2026-10-12
 - **Also good:** [Declaration Merging → Module Augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html) · typescriptlang.org · the import-then-`declare module` form (*read* the opening of the section) · fetched 2026-10-12
 - **Our delta:** the silent "not in `include`" failure is named by Express only as a caveat; our page owns the demonstration.
 
@@ -61,16 +61,16 @@ Only T07-01 to T07-05 have pages of ours (✅). The other Phase 7 rows and all o
 - **Our delta:** why the wrapper is now unneeded and what return type the router sees: not confirmed on any page.
 
 ### T07-10 · Typed configuration loading — Understand · 🔲 not written
-- **Read this:** [T3 Env — Introduction](https://env.t3.gg/docs/introduction) · env.t3.gg · schema-validated env as a library, with the pitfall that a bundler may not include the env object (*read*) · covers our angle: **partial** — Next.js/bundler flavour, not a plain Node service · fetched 2026-10-12
+- **Read this:** [T3 Env — Introduction](https://env.t3.gg/docs/introduction) · env.t3.gg · schema-validated env as a library; warns that frameworks such as Next.js tree-shake env variables not accessed on `process.env` (*read*) · covers our angle: **partial** — Next.js/bundler flavour, not a plain Node service · fetched 2026-10-12
 - **Also good:** [Type Safety and Runtime Validation](https://stevekinney.com/courses/full-stack-typescript/type-safety-vs-runtime-validation) · Steve Kinney · data from "configuration files" is a boundary that needs a runtime schema; modified 2026-10-05 (*read*) · fetched 2026-10-12
 - **Our delta:** fail-fast at startup and one exported `config`: no page found that argues it for Express.
 
 ### T07-11 · DTOs vs domain types vs row types — Understand · 🔲 not written
-- **Read this:** [Use DTOs to Enforce a Layer of Indirection](https://khalilstemmler.com/articles/enterprise-typescript-nodejs/use-dtos-to-enforce-a-layer-of-indirection/) · Khalil Stemmler · 2021-02-24 · domain objects, DTOs and raw Sequelize objects with a mapper between them (*read*) · covers our angle: **partial** — Sequelize era, not `pg` rows; no column-leak example checked · fetched 2026-10-12
+- **Read this:** [Use DTOs to Enforce a Layer of Indirection](https://khalilstemmler.com/articles/enterprise-typescript-nodejs/use-dtos-to-enforce-a-layer-of-indirection/) · Khalil Stemmler · last updated 2021-02-24 · domain objects, DTOs and raw Sequelize objects with a mapper between them (*read*) · covers our angle: **partial** — Sequelize era, not `pg` rows; no column-leak example checked · fetched 2026-10-12
 - **Our delta:** the column-leak failure (`password_hash` in a response) is ours; the post has a "Disadvantages to this approach" heading I did not read closely.
 
 ### T07-12 · Typing the service and repository layer — Understand · 🔲 not written
-- **Read this:** [Exploring the repository pattern with TypeScript and Node](https://blog.logrocket.com/exploring-repository-pattern-typescript-node) · LogRocket (no date seen) · a repository decouples data access from business logic and enforces dependency inversion (*read* the benefits passage) · covers our angle: **partial** — no transactions · fetched 2026-10-12
+- **Read this:** [Exploring the repository pattern with TypeScript and Node](https://blog.logrocket.com/exploring-repository-pattern-typescript-node) · LogRocket · 2022-10-20 · a repository decouples data access from business logic and enforces dependency inversion (*read* the benefits passage) · covers our angle: **partial** — no transactions · fetched 2026-10-12
 - **Also good:** [node-postgres — Transactions](https://node-postgres.com/features/transactions) · node-postgres.com · BEGIN/COMMIT/ROLLBACK yourself, and one client for every statement (*read*); [Suggested Code Structure](https://node-postgres.com/guides/project-structure) · node-postgres.com · a single `db` module that the app imports instead of `pg` (*read*) · fetched 2026-10-12
 - **Our delta:** typing a transaction-carrying function: none found.
 
@@ -79,7 +79,7 @@ Only T07-01 to T07-05 have pages of ours (✅). The other Phase 7 rows and all o
 - **Also good:** [Narrowing → Exhaustiveness checking](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) · typescriptlang.org · assign to `never` in a `default` so a missed case errors (*read*); [Global Error Types in Express](https://stevekinney.com/courses/full-stack-typescript/global-error-types-express) · Steve Kinney · an `ErrorCode` enum plus `AppError` subclasses; modified 2025-04-16 (*read*) · fetched 2026-10-12
 
 ### T07-14 · Typing MongoDB and Mongoose — Understand · 🔲 not written
-- **Read this:** [Mongoose — Schemas in TypeScript](https://mongoosejs.com/docs/typescript/schemas.html) · mongoosejs.com · raw document interface, no automatic check that it matches the schema, `inferRawDocType` for the `lean()` and `toObject()` result (*read*) · covers our angle: **full** for lean and inference limits (docs are Mongoose v9.11.1) · fetched 2026-10-12
+- **Read this:** [Mongoose — Schemas in TypeScript](https://mongoosejs.com/docs/typescript/schemas.html) · mongoosejs.com · raw document interface, no automatic check that it matches the schema, `InferRawDocType` for the `lean()` and `toObject()` result (*read*) · covers our angle: **full** for lean and inference limits (docs are Mongoose v9.11.1) · fetched 2026-10-12
 - **Also good:** [Mongoose — TypeScript Support](https://mongoosejs.com/docs/typescript.html) · mongoosejs.com · use `Types.ObjectId` in the document interface and `ObjectId` in the schema (*read*) · fetched 2026-10-12
 
 ### T07-15 · Sharing types with the client — Understand · 🔲 not written
@@ -98,14 +98,15 @@ Every Phase 8 row is 🔲 not written (phase dropped). React 19.3 docs are curre
 - **Also good:** [Function Components](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/function_components/) · React TypeScript Cheatsheet · `React.FC` is "mostly a stylistic choice, otherwise discouraged" with current types (*read*) · fetched 2026-10-12
 
 ### T08-02 · `useState` — Master · 🔲 not written
-- **Read this:** [React — Using TypeScript → useState](https://react.dev/learn/typescript) · react.dev · inference from the initial value; explicit generic when the state is a union (*read*) · covers our angle: **partial** — the `T | null` case is shown through a status-union example, not named · fetched 2026-10-12
+- **Read this:** [Hooks → useState](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/hooks/) · React TypeScript Cheatsheet · inference for simple values; `useState<User | null>(null)` for null-ish initial values; a `{} as User` assertion shown with its risk (*read*) · covers our angle: **full** except the status-union alternative · fetched 2026-10-12
+- **Also good:** [React — Using TypeScript → useState](https://react.dev/learn/typescript) · react.dev · inference from the initial value; explicit generic for a union, including a status-union object (*read*) · fetched 2026-10-12
 
 ### T08-03 · `useRef` — Master · 🔲 not written
-- **Read this:** [Hooks — useRef](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/hooks/) · React TypeScript Cheatsheet · `useRef` returns `RefObject<T>`, initial value required, DOM refs take the element generic with `null` (*read*) · covers our angle: **full** except the null-narrowing dance · fetched 2026-10-12
+- **Read this:** [Hooks — useRef](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/hooks/) · React TypeScript Cheatsheet · `useRef` returns `RefObject<T>`, initial value required, DOM refs take the element generic with `null`, `.current` may be null so check before use, plus a separate mutable-value ref option (*read*) · covers our angle: **full** · fetched 2026-10-12
 - **Also good:** [React — useRef](https://react.dev/reference/react/useRef) · react.dev · reference page (*headings only*) · fetched 2026-10-12
 
 ### T08-04 · Event types — Master · 🔲 not written
-- **Read this:** [React — Using TypeScript → DOM Events](https://react.dev/learn/typescript) · react.dev · `React.ChangeEventHandler<HTMLInputElement>` on a `useCallback`; points at `@types/react` for the full list (*read*) · covers our angle: **partial** — no "find the type from the handler" method · fetched 2026-10-12
+- **Read this:** [React — Using TypeScript → DOM Events](https://react.dev/learn/typescript) · react.dev · `React.ChangeEventHandler<HTMLInputElement>` on a `useCallback`; says to hover the handler to see the event type, with `React.SyntheticEvent` as the base (*read*) · covers our angle: **partial** — only `ChangeEvent` is shown; no `FormEvent` or `MouseEvent` example · fetched 2026-10-12
 - **Also good:** [Forms and Events](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events/) · React TypeScript Cheatsheet · `FormEvent<HTMLInputElement>` versus typing the handler on the left, `currentTarget.value` (*read*; examples are class components) · fetched 2026-10-12
 
 ### T08-05 · `useReducer` with a discriminated union of actions — Understand · 🔲 not written
@@ -113,8 +114,8 @@ Every Phase 8 row is 🔲 not written (phase dropped). React 19.3 docs are curre
 - **Also good:** [React — Using TypeScript → useReducer](https://react.dev/learn/typescript) · react.dev · state types inferred from the initial state, optional type argument (*read*) · fetched 2026-10-12
 
 ### T08-06 · `useContext` — Understand · 🔲 not written
-- **Read this:** [Context](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/context/) · React TypeScript Cheatsheet · `createContext<T | null>(null)` when there is no sensible default; React 19 renders the context object directly (*read*) · covers our angle: **partial** — the narrowing custom hook is for our page · fetched 2026-10-12
-- **Also good:** [React — Using TypeScript → useContext](https://react.dev/learn/typescript) · react.dev (*read*) · fetched 2026-10-12
+- **Read this:** [Context](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/context/) · React TypeScript Cheatsheet · `createContext<T | null>(null)` when there is no sensible default, plus a custom hook that throws if the provider is missing so consumers never check null; React 19 renders the context object directly (*read*) · covers our angle: **full** · fetched 2026-10-12
+- **Also good:** [React — Using TypeScript → useContext](https://react.dev/learn/typescript) · react.dev · the same `| null` default and a throwing hook, recommended there (*read*) · fetched 2026-10-12
 
 ### T08-07 · Generic components — Understand · 🔲 not written
 - **Read this:** [Useful Patterns by Use Case → Generic Components](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/patterns_by_usecase/) · React TypeScript Cheatsheet · generic functions applied to props, plus a "Props: Render Props" section (*read* the generics passage, rest *headings only*) · covers our angle: **partial** — constrained item types and `Table<Row>` for our page · fetched 2026-10-12
@@ -123,18 +124,18 @@ Every Phase 8 row is 🔲 not written (phase dropped). React 19.3 docs are curre
 - **Read this:** [Useful Patterns by Use Case → Type Narrowing based on Props](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/patterns_by_usecase/) · React TypeScript Cheatsheet · a Button that is either `button` or `a` props, and "Props: One or the other but not both" (*read* the narrowing passage, the rest *headings only*) · covers our angle: **partial** · fetched 2026-10-12
 
 ### T08-09 · Typing custom hooks — Understand · 🔲 not written
-- **Read this:** [Hooks → Custom Hooks](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/hooks/) · React TypeScript Cheatsheet · tuple return with `as const` versus asserting the return type (*read*) · covers our angle: **full** · fetched 2026-10-12
+- **Read this:** [Hooks → Custom Hooks](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/hooks/) · React TypeScript Cheatsheet · tuple return with `as const` versus asserting the return type; notes the React team prefers objects past two values (*read*) · covers our angle: **partial** — the object-return option gets one sentence · fetched 2026-10-12
 
 ### T08-10 · `ComponentProps<typeof X>` — Understand · 🔲 not written
 - **Read this:** [API Reference — `ComponentProps<ElementType>`](https://react-typescript-cheatsheet.netlify.app/docs/reference/componentprops/) · React TypeScript Cheatsheet · constructs the props type of an element or component (*read*) · covers our angle: **partial** — short · fetched 2026-10-12
 - **Also good:** [Useful Patterns → Wrapping/Mirroring](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/patterns_by_usecase/) · React TypeScript Cheatsheet · extend `ComponentPropsWithoutRef<'button'>` (*read*) · fetched 2026-10-12
 
 ### T08-11 · Refs across the boundary — Understand · 🔲 not written
-- **Read this:** [React 19 → ref as a prop](https://react.dev/blog/2024/12/05/react-19) · react.dev · function components receive `ref` as a prop; `forwardRef` to be deprecated later (*read*) · covers our angle: **partial** — nothing on typing · fetched 2026-10-12
-- **Also good:** [forwardRef/createRef](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forward_and_create_ref/) · React TypeScript Cheatsheet · React 19 recommended form with `ComponentPropsWithRef` (*read*); [React — forwardRef](https://react.dev/reference/react/forwardRef) · react.dev · marked Deprecated (*read* the lead) · fetched 2026-10-12
+- **Read this:** [forwardRef/createRef](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forward_and_create_ref/) · React TypeScript Cheatsheet · ref as a prop typed with `ComponentPropsWithRef` (recommended for React 19+), then the legacy `forwardRef` form for React 18 and earlier (*read*) · covers our angle: **full** · fetched 2026-10-12
+- **Also good:** [React 19 → ref as a prop](https://react.dev/blog/2024/12/05/react-19) · react.dev · function components receive `ref` as a prop; `forwardRef` to be deprecated later (*read*; nothing on typing); [React — forwardRef](https://react.dev/reference/react/forwardRef) · react.dev · marked Deprecated (*read* the lead) · fetched 2026-10-12
 
 ### T08-12 · `ReactNode` vs `ReactElement` vs `JSX.Element` — Understand · 🔲 not written
-- **Read this:** [Basic Type Example](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example/) · React TypeScript Cheatsheet · a quoted note that `createElement` always returns `JSX.Element` while `ReactNode` is every possible component return value (*read*) · covers our angle: **full** · fetched 2026-10-12
+- **Read this:** [Basic Type Example](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example/) · React TypeScript Cheatsheet · a quoted note that `createElement` always returns `React.JSX.Element` while `ReactNode` is the set of all possible component return values (*read*) · covers our angle: **partial** — `ReactElement` is not on this page · fetched 2026-10-12
 - **Also good:** [React — Using TypeScript → Children](https://react.dev/learn/typescript) · react.dev · `ReactNode` is broad, `ReactElement` is JSX only (*read*) · fetched 2026-10-12
 
 ### T08-13 · Typing forms — Understand · 🔲 not written
@@ -151,7 +152,7 @@ Every Phase 8 row is 🔲 not written (phase dropped). React 19.3 docs are curre
 Every Phase 9 row is 🔲 not written (phase dropped).
 
 ### T09-01 · Static types stop at the network — Master · 🔲 not written
-- **Read this:** [Type Safety and Runtime Validation](https://stevekinney.com/courses/full-stack-typescript/type-safety-vs-runtime-validation) · Steve Kinney · compile-time checks versus data from user input, APIs and config at runtime; modified 2026-10-05 (*read*) · covers our angle: **full** · fetched 2026-10-12
+- **Read this:** [Type Safety and Runtime Validation](https://stevekinney.com/courses/full-stack-typescript/type-safety-vs-runtime-validation) · Steve Kinney · types are erased, so compile-time checks cannot protect against data from user input, APIs and config at runtime; modified 2026-10-05 (*read*) · covers our angle: **partial** — conceptual, no annotated-`fetch` example · fetched 2026-10-12
 - **Also good:** [MDN — Response: json()](https://developer.mozilla.org/en-US/docs/Web/API/Response/json) · MDN · resolves to "anything that can be represented by JSON" (*read*) · fetched 2026-10-12
 
 ### T09-02 · Parse, don't validate — Master · 🔲 not written
@@ -163,8 +164,8 @@ Every Phase 9 row is 🔲 not written (phase dropped).
 - **Also good:** [Valibot — Introduction](https://valibot.dev/guides/introduction/) · valibot.dev · modular, dependency-free schema library (*read* the lead) · fetched 2026-10-12
 
 ### T09-04 · `unknown` at the door, never `any` — Master · 🔲 not written
-- **Read this:** [Avoiding anys with Linting and TypeScript](https://typescript-eslint.io/blog/avoiding-anys/) · typescript-eslint · prefer `unknown`; `JSON.parse()`, `.json()` and `Storage` are typed `any`, and `ts-reset` switches them to `unknown` (*read*) · covers our angle: **full** · fetched 2026-10-12
-- **Also good:** [no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/) · typescript-eslint · the rule with a fixer to `unknown` (*headings only*) · fetched 2026-10-12
+- **Read this:** [Avoiding anys with Linting and TypeScript](https://typescript-eslint.io/blog/avoiding-anys/) · typescript-eslint · prefer `unknown`; `JSON.parse()`, `.json()` and `Storage` are typed `any`, and `ts-reset` switches them to `unknown` (*read*) · covers our angle: **partial** — the `any` policy, but no parse-at-the-edge step · fetched 2026-10-12
+- **Also good:** [no-explicit-any](https://typescript-eslint.io/rules/no-explicit-any/) · typescript-eslint · the rule, with editor suggestions and an opt-in `fixToUnknown` auto-fix option (*headings only*, options block read) · fetched 2026-10-12
 
 ### T09-05 · JSON does not round-trip your types — Master · 🔲 not written
 - **Read this:** [MDN — JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) · MDN · a `BigInt` throws; `undefined` in an array becomes `null`; a `Date` becomes an ISO string; `Map` and `Set` become `{}` (*read*) · covers our angle: **full** for the five hazards · fetched 2026-10-12

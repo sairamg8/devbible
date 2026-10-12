@@ -271,6 +271,16 @@ member must be reimplemented. The compiler suspects a mistake and says so:
 `TS2720` suggests `extends` explicitly. Private members make it impossible
 anyway, since they compare by declaration site.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Classes → Class Heritage](https://www.typescriptlang.org/docs/handbook/2/classes.html#class-heritage) — typescriptlang.org: `implements` checks a class satisfies an interface; `extends` inherits; its Cautions say `implements` is only a check and does not change the class type (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03 · Parameter properties](./03-parameter-properties.md) · Next → [05 · Interface declaration merging](./05-interface-declaration-merging/README.md)
