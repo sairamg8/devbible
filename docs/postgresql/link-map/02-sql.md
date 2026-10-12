@@ -35,7 +35,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 
 ### T04-05 · `RETURNING` — Master · ✅ written `docs/postgresql/pages/phase-4-crud/05-returning.md`
 - **Read this:** [6.4. Returning Data from Modified Rows](https://www.postgresql.org/docs/current/dml-returning.html) · postgresql.org · `INSERT`, `UPDATE`, `DELETE`, `MERGE` all take `RETURNING` (*read* the opening) · covers our angle: full · fetched 2026-10-12
-- **Our delta:** the `OLD`/`NEW` aliases are in the PG 18 `INSERT` synopsis; confirm against the 18.4 target and show the version note (not re-checked on this page).
+- **Our delta:** the PG 18 `INSERT` synopsis shows `RETURNING WITH (OLD | NEW AS ...)`; whether it is in 18.4 exactly is **not confirmed** (docs now say 18.6).
 
 ### T04-06 · `INSERT ... ON CONFLICT` — Master · ✅ written `docs/postgresql/pages/phase-4-crud/06-on-conflict.md`
 - **Read this:** [INSERT → ON CONFLICT Clause](https://www.postgresql.org/docs/current/sql-insert.html#SQL-ON-CONFLICT) · postgresql.org · `DO NOTHING` may omit the conflict target; `DO UPDATE` must give one; arbiter indexes by inference (*read*) · covers our angle: full · fetched 2026-10-12
@@ -87,7 +87,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 
 ### T04-18 · `generate_series` and numeric functions — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/18-generate-series.md`
 - **Read this:** [9.26. Set Returning Functions](https://www.postgresql.org/docs/current/functions-srf.html) · postgresql.org · `generate_series` for integer, bigint, numeric (*read*); `step` defaults to 1 · covers our angle: full for series · fetched 2026-10-12
-- **Also good:** [9.3 → Random Functions](https://www.postgresql.org/docs/current/functions-math.html) · postgresql.org · `random()` is 0.0 <= x < 1.0; this release adds `random(min, max)` (*read*)
+- **Also good:** [9.3 → Random Functions](https://www.postgresql.org/docs/current/functions-math.html) · postgresql.org · `random()` returns a value from 0.0 up to, not including, 1.0; this release also has `random(min, max)` (*read*)
 
 ### T04-19 · `VALUES` and `unnest` — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/19-values-unnest.md`
 - **Read this (1/2):** [7.7. VALUES Lists](https://www.postgresql.org/docs/current/queries-values.html) · postgresql.org · a "constant table" with no on-disk table (*read* the opening) · covers our angle: **partial** · fetched 2026-10-12
@@ -109,8 +109,8 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 
 ### T05-02 · `LEFT JOIN` and the `WHERE` bug — Master · ✅ written `docs/postgresql/pages/phase-5-joins/02-left-join/README.md`
 - **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) · postgresql.org · defines the outer join (*read* the join-type definitions) · covers our angle: **partial** — the `ON` vs `WHERE` trap is not spelled out as a warning · fetched 2026-10-12
-- **Also good:** [Using ON Versus WHERE Clauses ... in PostgreSQL Joins](https://www.pluralsight.com/resources/blog/guides/using-on-versus-where-clauses-to-combine-and-filter-data-in-postgresql-joins) · pluralsight.com · *Not opened* (appeared in search only)
-- **Our delta:** the trap is the page's core; no source I read states it. 
+- *Not opened:* a Pluralsight post on `ON` versus `WHERE` in PostgreSQL joins (search result only).
+- **Our delta:** the trap is the page's core; no source I read states it.
 
 ### T05-03 · Semi and anti joins; `NOT IN` NULL trap — Master · ✅ written `docs/postgresql/pages/phase-5-joins/03-semi-anti/README.md`
 - **Read this (1/2):** [9.24. Subquery Expressions](https://www.postgresql.org/docs/current/functions-subquery.html#FUNCTIONS-SUBQUERY-EXISTS) · postgresql.org · `EXISTS`, `IN`, `NOT IN` sections; `IN` yields null, not false, when a null is in play (*read*) · covers our angle: **partial** — no planner (semi/anti join) talk · fetched 2026-10-12
