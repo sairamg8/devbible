@@ -19,6 +19,10 @@ Python pages will link there rather than reteach it. Data science and ML are
 **out of scope** — named where relevant (pandas/polars, numpy) at recognition
 level only.
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every Python topic (written or not) there is a [link map](./link-map/README.md): the page elsewhere on the internet that explains it best, what it leaves out, and what our own page must keep saying. First pass — open for review.
+:::
+
 ## Version facts
 
 | | |
