@@ -7,6 +7,13 @@ metadata:
 
 # 🔴 START HERE — the link map ("hub + delta", one place)
 
+## 2026-10-12 (evening) — one language at a time, agents, merged to main
+
+User order: *pick one language at a time, deploy the agents you need, merge everything to main*. Pattern per language: N lanes (one per syllabus part), each a
+`[medium]` researcher then a `[high]` verifier (max 5 alive), then overview + `_category_.json` + a tip pointer in the track README, `linkcheck` + `mdxcheck`, PR, merge.
+**Live on the site (PRs #3–#7):** MongoDB 82 (validated), Redux Toolkit 21 (validated), Redis 74, Node.js 249. **Next:** Express (running), then python / postgresql / typescript / docker / nginx / git.
+Still owed per track: a re-read of the "headings only" blocks (listed in each file) and re-validation when versions move. Central rules live in the `claude-context` repo.
+
 ## 2026-10-12 (later) — MongoDB map published and validated
 
 - PR #3 merged to `main` (link maps on the site: `docs/mongodb/link-map/`, `docs/redux-toolkit/link-map/`).
