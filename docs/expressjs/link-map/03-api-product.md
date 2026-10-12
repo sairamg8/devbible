@@ -17,7 +17,7 @@ Covers all 22 topic rows of `docs/expressjs/syllabus/03-api-product.md`: T06-01 
 
 ### T06-01 · REST resource modeling — Master · ✅ written `docs/expressjs/pages/phase-6-rest-surface/01-rest-resources/`
 - **Read this:** [Web API Design Best Practices](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design) · learn.microsoft.com · nouns not verbs, plural collection URIs, `/customers` and `/customers/5` hierarchy, and a section on keeping relationships simple (*read*; about 7,000 words) · covers our angle: **partial** — thin on when RPC-style routes are honest · fetched 2026-10-12
-- **Also good:** [AIP-122 Resource names](https://google.aip.dev/122) · google.aip.dev · collection identifiers must be plural; names alternate collection and ID segments (*read*) · [AIP-136 Custom methods](https://google.aip.dev/136) · google.aip.dev · Google's page on action-style methods outside the standard five (*headings only*, only its title and contents checked) · fetched 2026-10-12
+- **Also good:** [AIP-122 Resource names](https://google.aip.dev/122) · google.aip.dev · collection identifiers must be plural; names alternate collection and ID segments (*read*) · [AIP-136 Custom methods](https://google.aip.dev/136) · google.aip.dev · Google's page on custom methods for actions that are hard to express with the standard Get, List, Create, Update and Delete methods (*read* the lead) · fetched 2026-10-12
 - **Our delta:** the "when RPC-style routes are honest" rule and how the Express router mounts a nested relation URL; neither source is Express-aware.
 
 ### T06-02 · HTTP semantics and status mapping — Master · ✅ `docs/expressjs/pages/phase-6-rest-surface/02-status-mapping/`
@@ -26,7 +26,7 @@ Covers all 22 topic rows of `docs/expressjs/syllabus/03-api-product.md`: T06-01 
 - **Our delta:** the Express calls that produce each status (`res.status(201).location(...)`, `res.sendStatus`) and the 409 versus 412 choice; MDN's Status page (*read* for 201/204/409) is the quick lookup.
 
 ### T06-03 · Pagination at the API layer — Master · ✅ `docs/expressjs/pages/phase-6-rest-surface/03-pagination/`
-- **Read this:** [Evolving API Pagination at Slack](https://slack.engineering/evolving-api-pagination-at-slack/) · slack.engineering · Aug 2017, updated Jun 2020 · walks no pagination, offset (items repeat when data is added), then cursors, with the trade-offs (*read*) · covers our angle: **partial** — no `limit` caps, total-count cost or Link headers · fetched 2026-10-12
+- **Read this:** [Evolving API Pagination at Slack](https://slack.engineering/evolving-api-pagination-at-slack/) · slack.engineering · Aug 2017, updated Jun 2020 · walks no pagination, offset (items repeat when data is added), then cursors, with the trade-offs (*read*) · covers our angle: **partial** — gives no server-side cap on `limit` and no Link headers; the total-count cost is only touched on (cursors avoid computing it) · fetched 2026-10-12
 - **Also good:** [AIP-158 Pagination](https://google.aip.dev/158) · google.aip.dev · tokens must be opaque; `total_size` is optional and may be an estimate (*read*) · [We need tool support for keyset pagination](https://use-the-index-luke.com/no-offset) · use-the-index-luke.com · why `OFFSET` still reads skipped rows, and the seek method (*read*) · fetched 2026-10-12
 - **Our delta:** `limit` cap and default in the handler, the `total` trade-off, and `res.links()` for optional `Link` headers (Express 5.x response API, *read*). Stripe's API pagination page (`starting_after`, `has_more`) is a good live example (*read*).
 
@@ -36,12 +36,12 @@ Covers all 22 topic rows of `docs/expressjs/syllabus/03-api-product.md`: T06-01 
 - **Our delta:** an explicit map of allowed fields and operators in code, built from `req.query` with Express 5's query parser (value shapes: string, array, nested object), never spread into the query. Microsoft's design page notes sorting can hurt caching (*read*).
 
 ### T06-05 · Search endpoints — Understand · ✅ `docs/expressjs/pages/phase-6-rest-surface/04-filter-sort-search.md`
-- **Read this:** [Don't Block the Event Loop](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) · nodejs.org · REDoS, JSON DoS, task partitioning and offloading (*headings only*; long guide) · covers our angle: **partial** — nothing about full-text versus filter design · fetched 2026-10-12
+- **Read this:** [Don't Block the Event Loop](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) · nodejs.org · REDoS, JSON DoS, task partitioning and offloading (*read* the partitioning and offloading section; the rest headings only; long guide) · covers our angle: **partial** — nothing about full-text versus filter design · fetched 2026-10-12
 - **Also good:** [Stripe Search API](https://docs.stripe.com/search) · docs.stripe.com · a separate `/search` endpoint with a query language; data is searchable in under a minute, so read-after-write needs the list API (*read*) · fetched 2026-10-12
 - **Our delta:** full-text versus filter is not argued by any single page found (tried: "search endpoint API design" style searches, Zalando, Microsoft, Google AIPs). Our page keeps: use the store's index, cap result size, time-box scans, and say that search is eventually consistent when it is. "Debounce expectations" is client-side and **not confirmed** by any source read.
 
 ### T06-06 · API versioning strategies — Understand · ✅ `docs/expressjs/pages/phase-6-rest-surface/05-versioning.md`
-- **Read this:** [APIs as infrastructure: future-proofing Stripe with versioning](https://stripe.com/blog/api-versioning) · stripe.com · Aug 2017 · dated versions, compatibility with every version since 2011, and how changes are gated (*read* the opening) · covers our angle: **partial** — one company's model, not a URL-versus-header-versus-media-type comparison · fetched 2026-10-12
+- **Read this:** [APIs as infrastructure: future-proofing Stripe with versioning](https://stripe.com/blog/api-versioning) · stripe.com · Aug 2017 · dated versions, compatibility with every version since 2011, and breaking changes wrapped in "version change modules" (*read*) · covers our angle: **partial** — one company's model, not a URL-versus-header-versus-media-type comparison · fetched 2026-10-12
 - **Also good:** [Web API Design Best Practices: Implement versioning](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design) · learn.microsoft.com · sections for no, URI, query string, header and media type versioning (*headings only*, the five strategies are separate headings) · [AIP-185 API Versioning](https://google.aip.dev/185) · google.aip.dev · major version only, first part of the URI path (*read*) · fetched 2026-10-12
 - **Our delta:** mounting a versioned router (`app.use('/v1', ...)`) and the deprecation signal; no source read gives the Express mount.
 
@@ -77,7 +77,7 @@ Covers all 22 topic rows of `docs/expressjs/syllabus/03-api-product.md`: T06-01 
 
 ### T06-13 · HATEOAS / hypermedia — When Needed · ✅ `docs/expressjs/pages/phase-6-rest-surface/11-hypermedia.md`
 - **Read this:** [Richardson Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html) · martinfowler.com · 18 Mar 2010 · level 3 adds hypermedia controls ("HATEOAS") to level 2 resources and verbs (*read*) · covers our angle: **partial** — explains the idea, not when the cost pays off · fetched 2026-10-12
-- **Also good:** [REST APIs must be hypertext-driven](https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven) · roy.gbiv.com · 20 Oct 2008 · Fielding's argument that API without hypermedia is RPC (*read* the opening) · [Zalando REST guidelines](https://opensource.zalando.com/restful-api-guidelines/) · opensource.zalando.com · must use maturity level 2, may use level 3 (*headings only*, in the contents list) · fetched 2026-10-12
+- **Also good:** [REST APIs must be hypertext-driven](https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven) · roy.gbiv.com · 20 Oct 2008 · Fielding's argument that an API not driven by hypertext cannot be called REST (*read* the opening) · [Zalando REST guidelines](https://opensource.zalando.com/restful-api-guidelines/) · opensource.zalando.com · must use maturity level 2, may use level 3 (*headings only*, in the contents list) · fetched 2026-10-12
 - **Our delta:** the "when links earn their complexity" judgement is ours; `res.links()` is the Express hook for `Link` header relations.
 
 ### T06-14 · Bulk endpoints and partial updates — Know · ✅ `docs/expressjs/pages/phase-6-rest-surface/10-patch-and-bulk.md`
@@ -122,7 +122,7 @@ Covers all 22 topic rows of `docs/expressjs/syllabus/03-api-product.md`: T06-01 
 
 ### T07-07 · Transaction middleware — Know · ✅ `docs/expressjs/pages/phase-7-layering/07-transaction-middleware.md`
 - **Read this:** [Unit of Work](https://martinfowler.com/eaaCatalog/unitOfWork.html) · martinfowler.com · tracks changes in a business transaction and coordinates writing them out (*read* the lead) · covers our angle: **partial** — the concept, nothing on per-request HTTP middleware · fetched 2026-10-12
-- **Also good:** [Service Layer](https://martinfowler.com/eaaCatalog/serviceLayer.html) · martinfowler.com · says the service layer controls transactions, which argues against doing it per request (*read*) · fetched 2026-10-12
+- **Also good:** [Service Layer](https://martinfowler.com/eaaCatalog/serviceLayer.html) · martinfowler.com · says the service layer controls transactions; that this argues against a per-request wrapper is our inference, not the page's (*read*) · fetched 2026-10-12
 - **Our delta:** none found that explains begin/commit/rollback middleware for Express (tried: general searches). The mechanism stays in Node Phase 6; our page keeps the thin-wrapper warning and error-path rollback.
 
 ### T07-08 · DTO mapping at the edge — Know · ✅ `docs/expressjs/pages/phase-7-layering/06-folders-and-dtos.md`
