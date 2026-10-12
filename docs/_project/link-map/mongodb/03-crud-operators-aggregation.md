@@ -43,7 +43,7 @@ listed as "Also good". Manual links carry no `#anchors` (the Manual exposes no h
 
 ### T28 · Field update operators — Master · ✅ `…/06-field-update-operators.md`
 - **Read this:** [Update Operators](https://www.mongodb.com/docs/manual/reference/mql/update/) · mongodb.com · the index of `$set`, `$unset`, `$inc`, `$mul`, `$rename`, `$min`, `$max`, `$currentDate`, `$setOnInsert` with one-line descriptions (*read*, `$mul`/`$rename`/`$setOnInsert`) · covers our angle: full for the list · fetched 2026-10-12
-- **Also good:** [$inc](https://www.mongodb.com/docs/manual/reference/mql/update/inc/) · [$currentDate](https://www.mongodb.com/docs/manual/reference/mql/update/currentDate/) · mongodb.com · per-operator references (headings only) · fetched 2026-10-12
+- **Also good:** [$inc](https://www.mongodb.com/docs/manual/reference/operator/update/inc/) · [$currentDate](https://www.mongodb.com/docs/manual/reference/operator/update/currentdate/) · mongodb.com · per-operator references (headings only) · fetched 2026-10-12
 
 ## Phase 5 — Query operators
 
