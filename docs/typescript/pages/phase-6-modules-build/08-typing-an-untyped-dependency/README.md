@@ -97,6 +97,17 @@ TS7016
   — why `@ts-expect-error` beats `@ts-ignore` for anything you expect to become
   unnecessary.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modules — Reference → Ambient modules](https://www.typescriptlang.org/docs/handbook/modules/reference.html#ambient-modules) — typescriptlang.org: `declare module` for a module with no file, and wildcard names (*read*)
+- **Also good:** [Declaration Files: Consumption](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html) — typescriptlang.org: downloading `@types` packages, and that a package shipping its own types needs none (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Start → [01 · Reading the symptom](./01-reading-the-symptom.md)

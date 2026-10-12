@@ -259,6 +259,16 @@ No — same character, different operators. The declaration-site one is a defini
 assignment assertion; the postfix one in an expression is the non-null assertion.
 Both overrule the compiler, which is the only thing they have in common.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Classes → Fields](https://www.typescriptlang.org/docs/handbook/2/classes.html#fields) — typescriptlang.org: `strictPropertyInitialization`, error 2564, the definite assignment assertion `name!: string`, and `readonly` fields assignable only in the constructor (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07 · Branded / nominal types](./07-branded-nominal-types.md) · Next → [09 · Typing getters and setters](./09-typing-getters-and-setters.md)

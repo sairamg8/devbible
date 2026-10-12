@@ -268,6 +268,16 @@ conditional — and every conditional you add makes downstream error messages
 worse, since a mismatch reports the whole expanded type rather than the line that
 was wrong.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) — typescriptlang.org: section "Inferring within conditional types": `Flatten` (element type) and `GetReturnType` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10 · Inference sites and contextual typing](./10-inference-sites-and-contextual-typing.md) · Next → [12 · `const` type parameters](./12-const-type-parameters/README.md)

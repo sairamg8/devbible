@@ -17,7 +17,7 @@ metadata:
 | Node.js | 249 | ✅ complete (verified once) | 2026-10-12 (PR #7) |
 | Express | 115 | ✅ complete (verified once) | 2026-10-12 (PR #8) |
 | PostgreSQL | 233 | ✅ complete (verified once) | 2026-10-12 (PR #9) |
-| TypeScript | ~170 | 🔵 running (4 lanes) | — |
+| TypeScript | 187 | ✅ complete (verified once) | 2026-10-12 (PR #10) |
 | Docker · nginx · Git · Python · JavaScript · React · Angular · Java · CSS · others | — | ⬜ not started | — |
 
 **"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).

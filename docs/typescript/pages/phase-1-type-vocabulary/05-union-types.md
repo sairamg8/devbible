@@ -217,6 +217,17 @@ makes illegal states unrepresentable and each branch fully typed.
 (`Array.find`), a conditional expression unions its branches, and any
 `| null`-returning API produces one. That is the type system reporting reality.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) — typescriptlang.org: "Defining a Union Type" and "Working with Union Types": an operation is allowed only if valid for every member (*read*)
+- **Also good:** [Union Types](https://www.totaltypescript.com/concepts/union-types) — Total TypeScript: examples including literal unions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Object types](./04-object-types.md) · Next → [`any`, `unknown`, `never`, `void`](./06-any-unknown-never-void.md)

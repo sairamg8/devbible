@@ -69,6 +69,18 @@ that has silently dropped everything else).
   — the runtime half: what is actually in the artefact, source maps,
   `--enable-source-maps`, and readable stack traces on both paths.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modules — Choosing Compiler Options](https://www.typescriptlang.org/docs/handbook/modules/guides/choosing-compiler-options.html) — typescriptlang.org: "compiling and running in Node.js" template: `module: nodenext` (implies `moduleResolution`, `esModuleInterop`, `target: esnext`) plus `verbatimModuleSyntax`; says to set `target`, `lib`, `strict` yourself (*read* the Node passage
+- **Also good:** [Node.js — Modules: TypeScript](https://nodejs.org/api/typescript.html) — nodejs.org: type stripping does no type checking and Node ignores `tsconfig.json` (*read*); [TSConfig: erasableSyntaxOnly](https://www.typescriptlang.org/tsconfig/erasableSyntaxOnly.html)
+- **Also good:** [TSConfig: erasableSyntaxOnly](https://www.typescriptlang.org/tsconfig/erasableSyntaxOnly.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 7 index](../README.md) · Start → [01 · Decision 1 — who compiles](./01-who-compiles.md)

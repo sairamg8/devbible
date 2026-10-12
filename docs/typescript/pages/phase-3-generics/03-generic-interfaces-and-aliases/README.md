@@ -55,6 +55,17 @@ can explain from its declaration why `Omit<User, 'nmae'>` compiles.
 - **→ Phase 5 (Type-level programming)** — where the alias-only forms
   (conditional, mapped, template literal) become the whole subject.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) — typescriptlang.org: section "Generic Types" (*headings only*)
+- **Also good:** [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) — typescriptlang.org: "Generic Object Types" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02 · Constraints](../02-constraints/README.md) · Next → [04 · `keyof`](../04-keyof/README.md)

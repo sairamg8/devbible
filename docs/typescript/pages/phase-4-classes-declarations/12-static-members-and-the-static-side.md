@@ -237,6 +237,16 @@ tree-shakeable, easier to mock and free of the `Function` collisions; an unused
 static on a used class stays in the bundle. Keep statics for factories and
 constants where the class name is doing real work at the call site.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Classes → Static Members](https://www.typescriptlang.org/docs/handbook/2/classes.html#static-members) — typescriptlang.org: static members, special static names, `static` blocks with access to private fields (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11 · Abstract classes](./11-abstract-classes.md) · Next → [13 · Decorators](./13-decorators.md)

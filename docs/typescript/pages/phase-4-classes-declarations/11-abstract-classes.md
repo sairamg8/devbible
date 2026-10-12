@@ -229,6 +229,16 @@ No — `TS2513`. There is no implementation to reach. If you want a default that
 subclasses can extend, give the base a concrete method instead of an abstract
 one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Classes → abstract Classes and Members](https://www.typescriptlang.org/docs/handbook/2/classes.html#abstract-classes-and-members) — typescriptlang.org: abstract members, error 2515, and the "Abstract Construct Signatures" subsection on accepting a constructor of an abstract-derived class (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10 · `this` types](./10-this-types.md) · Next → [12 · Static members and the static side](./12-static-members-and-the-static-side.md)

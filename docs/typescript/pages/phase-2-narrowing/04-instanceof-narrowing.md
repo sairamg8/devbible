@@ -197,6 +197,16 @@ in e`, declared as a predicate returning `e is Error`. In Node,
 Yes — subclasses satisfy their base class, so a base-class branch placed first
 captures everything. Always check the most specific type first.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: section "instanceof narrowing" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The `in` operator](./03-in-operator-narrowing.md) · Next → [Discriminated unions](./05-discriminated-unions.md)

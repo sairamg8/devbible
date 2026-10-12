@@ -152,6 +152,16 @@ as a ratchet that does not decrease. A boundary module at 70% is a finding; a
 repository at 94% is a number. And never compare against another project — the
 figure is largely a function of your dependencies.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [type-coverage README](https://raw.githubusercontent.com/plantain-00/type-coverage/master/README.md) — plantain-00: `--strict` treats `any` in type arguments and assertions as uncovered (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [12 · Validating published types](./12-validating-published-types.md) · [Phase 12 index](./README.md)

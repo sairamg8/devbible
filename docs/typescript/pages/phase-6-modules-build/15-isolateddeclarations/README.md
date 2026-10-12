@@ -82,6 +82,17 @@ sidebar_position: 0
 - **→ Phase 12 · Tooling, performance and testing** *(not written yet)* — where
   the emit-toolchain speed question actually belongs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 5.5 → Isolated Declarations](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html) — typescriptlang.org: errors when exports are not annotated enough for other tools to emit declarations without a type-checker (*read*)
+- **Also good:** [TSConfig: isolatedDeclarations](https://www.typescriptlang.org/tsconfig/isolatedDeclarations.html) — typescriptlang.org: one-line reference (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Start → [01 · What it requires, and why](./01-what-it-requires-and-why.md)

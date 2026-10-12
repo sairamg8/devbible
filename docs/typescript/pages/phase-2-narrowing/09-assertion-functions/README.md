@@ -56,6 +56,17 @@ an assertion is wrong and a type guard is right.
 - **→ Phase 9 (Types at the boundary)** — where assertion functions should
   *not* be used, and what replaces them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 3.7 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html) — typescriptlang.org: "assertion signatures": the `assert` form, `asserts val is T`, and the comparison to type predicates (*read*)
+- **Also good:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: section "Assertion functions" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [08 · `as` assertions](../08-as-assertions/README.md) · Next → [10 · `satisfies`](../10-satisfies/README.md)

@@ -97,6 +97,17 @@ project references throughout
 - **→ Phase 12 · Tooling, performance and testing** *(not written yet)* — the
   build-time comparison this topic deliberately does not make.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [You might not need TypeScript project references](https://turborepo.dev/blog/you-might-not-need-typescript-project-references) — Turborepo blog (Jared Palmer; no date seen): "internal packages" import source directly, with caveats (*read* the caveats)
+- **Also good:** [Turborepo — TypeScript guide](https://turborepo.dev/docs/guides/tools/typescript) — turborepo.dev: compiled packages, go-to-definition across packages, subpath imports over `paths` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Start → [01 · The question](./01-the-question-and-the-compilers-answer.md)

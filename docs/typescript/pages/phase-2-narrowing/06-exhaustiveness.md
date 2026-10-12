@@ -218,6 +218,16 @@ When the set is genuinely open — locales, third-party event names, feature fla
 There a real `default` that handles the unknown value as data is correct, and
 forcing exhaustiveness just produces churn.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: sections "The never type" and "Exhaustiveness checking" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Discriminated unions](./05-discriminated-unions.md) · Next → [Type guards](./07-type-guards.md)

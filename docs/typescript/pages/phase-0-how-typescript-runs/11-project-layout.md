@@ -225,6 +225,18 @@ alone are handled by `include`.
 Module system — `"type": "module"` with `module: nodenext` — and the paths in
 `main`/`types`/`exports` must point at what `outDir` actually produces.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What is a tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) — typescriptlang.org: `include`/`exclude` examples and bases (*read*); its examples are dated (`module: commonjs`, `@tsconfig/node12`, `outFile`)
+- **Also good:** [TypeScript 6.0 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-6-0.html) — typescriptlang.org: `rootDir` now defaults to `.`, so output can land in `./dist/src/index.js` (*read*); [5.9 notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-9.html) cover the minimal `tsc --init` (*read*)
+- **Also good:** [5.9 notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-9.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Checking vs transpiling](./10-checking-vs-transpiling.md) · Next → [Release cadence and upgrades](./12-release-cadence.md)

@@ -162,6 +162,16 @@ Helping the library ship its own types, so the declarations live beside the
 implementation and change with it. A `@types` package is a community layer over a
 gap; closing the gap is worth more than maintaining the layer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [DefinitelyTyped README](https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/README.md) — make a pull request, Definition Owners, and "bundle the generated declaration files" if the library is written in TypeScript (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [14 · AST tooling after TS 7](./14-ast-tooling-after-ts7.md) · [Phase 12 index](./README.md)

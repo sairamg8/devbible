@@ -75,6 +75,17 @@ Because the failure it prevents is silent, and it has three separate faces:
 - **→ Phase 6 · 05 · `isolatedModules`** *(not written yet)* — the weaker sibling,
   and the parts it catches that this flag does not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig: verbatimModuleSyntax](https://www.typescriptlang.org/tsconfig/verbatimModuleSyntax.html) — typescriptlang.org: explains import elision first, then the flag (*read* the opening only)
+- **Also good:** [Modules — Reference](https://www.typescriptlang.org/docs/handbook/modules/reference.html) — typescriptlang.org: "Type-only imports and exports" section (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Next → [01 · Import elision](./01-import-elision.md)

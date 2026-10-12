@@ -243,6 +243,18 @@ matches how JavaScript itself behaves; `null` usually arrives from JSON or SQL.
 It matters beyond style because `JSON.stringify` drops `undefined` and keeps
 `null`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) — typescriptlang.org: "null and undefined" with `strictNullChecks` off and on (*read*)
+- **Also good:** [TSConfig: strictNullChecks](https://www.typescriptlang.org/tsconfig/strictNullChecks.html) — typescriptlang.org: the flag reference (*headings only*); [exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig/exactOptionalPropertyTypes.html) for the absent-versus-undefined split
+- **Also good:** [exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig/exactOptionalPropertyTypes.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Structural typing](./09-structural-typing.md) · Next → [Intersection types](./11-intersection-types.md)

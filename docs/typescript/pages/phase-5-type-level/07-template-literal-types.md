@@ -249,6 +249,16 @@ with the product of the unions — and error messages that print every member. B
 are the same readability problem the phase keeps returning to: the type is only
 worth it if the failure it produces is readable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Template Literal Types](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html) — typescriptlang.org: string unions in types, inference with template literals, `Uppercase`/`Lowercase`/`Capitalize`/`Uncapitalize` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](./README.md) · Prev: [06 · Extracting with `infer`](./06-infer/README.md) · Next → [08 · Knowing when to stop](./08-knowing-when-to-stop/README.md)

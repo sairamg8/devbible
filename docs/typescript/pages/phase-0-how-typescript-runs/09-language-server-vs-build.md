@@ -171,6 +171,17 @@ It is not in the program CI builds — no `include` glob matches it and nothing
 included imports it. The editor checked it because you opened it. Broaden
 `include` or delete the file.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Transpiling TypeScript (VS Code)](https://code.visualstudio.com/docs/typescript/typescript-transpiling) — code.visualstudio.com: section "Compiler versus language service": VS Code's language service is separate from your installed compiler; "Using newer TypeScript versions" and the workspace version (*read*)
+- **Also good:** [Announcing TypeScript 7.0](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/) — Microsoft devblogs, 2026-07-08: "Editor Experience": a dedicated VS Code extension, and a command to revert to the TS 6.0 language server (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Where types come from](./08-where-types-come-from.md) · Next → [Checking is not transpiling](./10-checking-vs-transpiling.md)

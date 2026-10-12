@@ -88,6 +88,17 @@ who emits the JavaScript you actually run?
 - **→ 11 · Publishing a typed package** *(not written yet)* — testing your
   package as a consumer would compile it, with interop both on and off.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modules — ESM/CJS Interoperability](https://www.typescriptlang.org/docs/handbook/modules/appendices/esm-cjs-interop.html) — typescriptlang.org: `import *` transpiling to `require`, the spec problem, then `allowSyntheticDefaultImports` and `esModuleInterop`, and the "double default" problem in Node (*read* the opening)
+- **Also good:** [TSConfig: esModuleInterop](https://www.typescriptlang.org/tsconfig/esModuleInterop.html) — typescriptlang.org: by default CommonJS/AMD/UMD modules are treated like ES6 modules; the flag changes that (*read* the lead)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Start → [01 · What a default import means](./01-what-a-default-import-means.md)

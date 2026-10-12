@@ -72,6 +72,17 @@ before choosing a fix.**
   `--generateTrace`, `incremental` and project references. **Measurement lives there; this topic
   is about what to look for and what it will cost you to fix.**
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Performance (TypeScript wiki, raw)](https://raw.githubusercontent.com/wiki/microsoft/TypeScript/Performance.md) — github (raw): "Writing Easy-to-Compile Code" (interfaces over intersections, annotations, naming complex types), `extendedDiagnostics`, performance tracing (*headings only*, with the incremental section read)
+- **Also good:** [Dealing with the "excessively deep" error](https://kysely.dev/docs/recipes/excessively-deep-types) — Kysely docs: shows `error TS2589` in a library and a fix by asserting a simpler output type (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](../README.md) · Next → [01 · The three budgets](./01-the-three-budgets.md)

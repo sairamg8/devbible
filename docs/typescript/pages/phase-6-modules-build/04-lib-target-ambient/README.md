@@ -95,6 +95,16 @@ detects whether the DOM lib is loaded.
   (chunk 08 names the hazard and stops), and declaration authoring, which is
   topic 07's.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig: lib](https://www.typescriptlang.org/tsconfig/lib.html) — typescriptlang.org: default libs follow `target`; reasons to change them include dropping `dom` for non-browser programs and polyfilled APIs (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Next → [01 · Two different jobs](./01-two-different-jobs.md)

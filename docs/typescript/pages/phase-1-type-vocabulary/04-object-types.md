@@ -241,6 +241,17 @@ gives real `has`/`delete`, avoids prototype-key surprises, and does not claim
 every possible key is present the way an index signature does without
 `noUncheckedIndexedAccess`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) — typescriptlang.org: optional and `readonly` properties, index signatures and the rule that all properties must match the index type (*read*)
+- **Also good:** [Object Types](https://www.totaltypescript.com/concepts/object-types) — Total TypeScript: short concept page (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Arrays and tuples](./03-arrays-and-tuples.md) · Next → [Union types](./05-union-types.md)

@@ -50,6 +50,16 @@ query-string `string` into a key is a guard rather than an `as`.
 - **→ Phase 5 (Type-level programming)** — `[K in keyof T]` is where every mapped
   type starts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Keyof Type Operator](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html) — typescriptlang.org: the `keyof` operator, short page of ≈230 words (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03 · Generic interfaces and type aliases](../03-generic-interfaces-and-aliases/README.md) · Next → [05 · The `getProp` pattern](../05-getprop-pattern/README.md)

@@ -66,6 +66,16 @@ keeps genericity.
 - **→ [08 · Knowing when to stop](../08-knowing-when-to-stop/README.md)** — shape 4 is where its
   tests bite: a re-typing adapter used three times should be two hand-written signatures.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Utility Types → Parameters](https://www.typescriptlang.org/docs/handbook/utility-types.html#parameterstype) — typescriptlang.org: `Parameters&lt;Type&gt;` and `ReturnType&lt;Type&gt;` examples (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](../README.md) · Next → [01 · The wrapper signature](./01-the-wrapper-signature.md)

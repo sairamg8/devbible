@@ -164,6 +164,16 @@ Only once the input declarations are right. It multiplies whatever correctness y
 already have — so a wrong input set that produced occasional stale greens on one
 machine produces them for the whole team at once.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Turborepo: TypeScript guide](https://turborepo.dev/docs/guides/tools/typescript) — turborepo.dev: a `check-types` task running `tsc --noEmit`, cached and parallel; Project References not recommended (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [09 · Caching TypeScript in CI and Docker](./09-caching-in-ci-and-docker.md) · [Phase 12 index](./README.md)

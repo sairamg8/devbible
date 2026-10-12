@@ -73,6 +73,16 @@ mapping. `ReturnType` needs `infer`, which is topic 06.
 - **→ [09 · Type-level performance](../09-type-level-performance/README.md)** — `TS2589`, `TS2321` and
   what makes a checker slow.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) — typescriptlang.org: `T extends U ? X : Y`, constraints, `infer`, distribution (*headings only* plus the distribution and `infer` passages *read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](../README.md) · Next → [01 · The question it asks](./01-the-question.md)

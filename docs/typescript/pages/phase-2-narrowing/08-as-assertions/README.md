@@ -40,6 +40,17 @@ own codebase where an assertion is load-bearing.
 - **→ Phase 9 (Types at the boundary)** — where an assertion is at its most
   expensive, because the wrongness arrives from outside your codebase.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Type Assertions](https://www.totaltypescript.com/concepts/type-assertions) — Total TypeScript: the `as` keyword, its limits, and the double `as unknown as X` reset (*read*)
+- **Also good:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) — typescriptlang.org: section "Type Assertions" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Type guards](../07-type-guards.md) · Next → [01 · What an assertion actually is](./01-what-an-assertion-is.md)

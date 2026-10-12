@@ -201,6 +201,18 @@ At boundaries — function parameters, exported function returns, and anything
 crossing a module or network edge. Inside a function, inference is usually more
 precise than what you would write.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Consumption](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html) — typescriptlang.org: `npm install --save-dev @types/lodash`; not needed when the package ships its own declaration file (*read*)
+- **Also good:** [TSConfig: types](https://www.typescriptlang.org/tsconfig/types.html) — typescriptlang.org: before 6.0 all visible `@types` packages load; from 6.0 `types` defaults to `[]` (*read*); [typeRoots](https://www.typescriptlang.org/tsconfig/typeRoots.html) lists only packages under the roots (*read*)
+- **Also good:** [typeRoots](https://www.typescriptlang.org/tsconfig/typeRoots.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [TypeScript 7](./07-typescript-7-native-compiler.md) · Next → [The language server is not the build](./09-language-server-vs-build.md)

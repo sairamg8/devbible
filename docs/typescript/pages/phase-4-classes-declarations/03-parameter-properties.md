@@ -267,6 +267,17 @@ erasable-only syntax. Also when a class has enough state that hiding it in the
 constructor signature costs more readability than the boilerplate did. In a
 DI-framework codebase that compiles properly, they are usually the right call.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Classes → Parameter Properties](https://www.typescriptlang.org/docs/handbook/2/classes.html#parameter-properties) — typescriptlang.org: a constructor argument prefixed with `public`/`private`/`protected`/`readonly` becomes a field (*read*)
+- **Also good:** [Node.js — Running TypeScript natively](https://nodejs.org/api/typescript.html) — nodejs.org: lists parameter properties among syntax that needs transformation and fails in strip-only mode (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02 · Access modifiers](./02-access-modifiers/README.md) · Next → [04 · `implements` vs `extends`](./04-implements-vs-extends.md)

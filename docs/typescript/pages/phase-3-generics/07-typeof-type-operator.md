@@ -275,6 +275,18 @@ when it is a published contract or has more than one implementation, since
 deriving couples every consumer to one object's shape and makes a rename a silent
 breaking change.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Typeof Type Operator](https://www.typescriptlang.org/docs/handbook/2/typeof-types.html) — typescriptlang.org: the operator and its "Limitations" (*headings only*)
+- **Also good:** [Indexed Access Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html) — typescriptlang.org: `typeof MyArray[number]` on an array literal (*read*); [This Crazy Syntax Lets You Get An Array Element's Type](https://www.totaltypescript.com/get-the-type-of-an-array-element)
+- **Also good:** [This Crazy Syntax Lets You Get An Array Element's Type](https://www.totaltypescript.com/get-the-type-of-an-array-element)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06 · Indexed access types](./06-indexed-access-types.md) · Next → [08 · Default type parameters](./08-default-type-parameters.md)

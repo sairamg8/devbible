@@ -236,6 +236,17 @@ replacement, and stacked decorators apply bottom-up. `withRetry(fn)` is visible
 and needs no compiler feature. Decorators win where a framework needs a
 declarative, discoverable surface.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 5.0 → Decorators](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html) — typescriptlang.org: standard decorators valid without a flag; `--experimentalDecorators` remains "for the foreseeable future" and is type-checked and emitted differently (*read*)
+- **Also good:** [Decorators (experimental)](https://www.typescriptlang.org/docs/handbook/decorators.html) — typescriptlang.org: carries a note that it describes the experimental stage 2 implementation (*read* the note)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [12 · Static members](./12-static-members-and-the-static-side.md) · Next → [14 · Mixins](./14-mixins/README.md)

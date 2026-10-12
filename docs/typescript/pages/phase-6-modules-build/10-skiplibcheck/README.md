@@ -107,6 +107,16 @@ what is this build FOR?
   performance question belongs there**, and it is why no timing figure appears
   anywhere in this topic.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig: skipLibCheck](https://www.typescriptlang.org/tsconfig/skipLibCheck.html) — typescriptlang.org: skips checking declaration files, trading time for accuracy (*read* the lead)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 6 index](../README.md) · Start → [01 · What it actually skips](./01-what-it-actually-skips.md)

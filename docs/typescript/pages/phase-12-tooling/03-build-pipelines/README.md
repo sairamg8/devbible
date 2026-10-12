@@ -51,6 +51,17 @@ you removed it.
 - **→ Phase 6 · 15 · `isolatedDeclarations`** — the flag that exists to make
   declaration emit cheap, by removing the inference this topic explains.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [esbuild: Content Types, TypeScript](https://esbuild.github.io/content-types/) — parses and discards annotations, no type checking; features needing type information differ (*read*)
+- **Also good:** [Vite: Features](https://vite.dev/guide/features.html) — Oxc Transformer only transpiles; `isolatedModules` must be true (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 12 index](../README.md) · Start → [01 · Four jobs, not one](./01-four-jobs-not-one.md)

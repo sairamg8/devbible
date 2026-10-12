@@ -200,6 +200,17 @@ messages, so it is worth reaching for deliberately rather than by default.
 mutate data declared immutable. Widen the parameter, or copy the array if the
 function genuinely mutates.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) — typescriptlang.org: "The ReadonlyArray Type" and "readonly Tuple Types"; error 4104 when assigning `readonly string[]` to a mutable type (*read*)
+- **Also good:** ['as const' Annotations](https://www.totaltypescript.com/concepts/as-const) — Total TypeScript: `as const` on arrays gives readonly tuples (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`enum` vs union](./13-enum-vs-union.md) · Next → [Recursive type aliases](./15-recursive-types.md)

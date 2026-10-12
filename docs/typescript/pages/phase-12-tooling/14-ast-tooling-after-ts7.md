@@ -150,6 +150,17 @@ Where the tool does something only the compiler API can do, it is worth the cost
 Where a lint rule or a declaration-reading build step would serve, that is work
 moved somewhere the churn is somebody else's job.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Announcing TypeScript 7.0](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/) — July 8th, 2026: tools embedding TypeScript can only rely on 6.0 for now; side-by-side `@typescript/typescript6` (*read*)
+- **Also good:** [ts-morph: Setup](https://ts-morph.com/setup/) — the `Project` class and `tsConfigFilePath` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [13 · Measuring type coverage](./13-measuring-type-coverage.md) · [Phase 12 index](./README.md)

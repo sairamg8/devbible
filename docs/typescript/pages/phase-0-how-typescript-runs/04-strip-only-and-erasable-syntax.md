@@ -202,6 +202,17 @@ No. It disappears by *inlining* its values into every call site, which is a
 transform, and it is also incompatible with `isolatedModules` and single-file
 transpilers. Use the `as const` object.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modules: TypeScript](https://nodejs.org/api/typescript.html) — nodejs.org (v26.11.1): history table (enabled by default 23.6/22.18, stable 25.2/24.12), enums, parameter properties and namespaces with runtime code error, `ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX` (*read*)
+- **Also good:** [TSConfig: erasableSyntaxOnly](https://www.typescriptlang.org/tsconfig/erasableSyntaxOnly.html) — typescriptlang.org: lists the banned constructs: enum, runtime namespace, parameter properties, `import =`, `export =` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The three ways to run TypeScript](./03-three-ways-to-run.md) · Next → [`strict` and the flags it turns on](./05-strict.md)

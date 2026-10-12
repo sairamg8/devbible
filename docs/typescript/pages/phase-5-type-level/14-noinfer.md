@@ -265,6 +265,17 @@ call wanted a different signature, but it is worth checking rather than assuming
 - **→ [15 · Union → intersection and other identities](./15-union-to-intersection.md)** — the
   other place inference behaviour is exploited deliberately.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 5.4 → The NoInfer Utility Type](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-4.html) — typescriptlang.org: the `createStreetLight` example and the note that a type parameter used once is a code smell (*read*)
+- **Also good:** [Utility Types → NoInfer](https://www.typescriptlang.org/docs/handbook/utility-types.html#noinfertype) — typescriptlang.org: reference entry (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [13 · Tuple manipulation](./13-tuple-manipulation/README.md) ·

@@ -200,6 +200,17 @@ checked — `isSourceOfProjectReferenceRedirect` is another branch of the same O
 their effects overlap rather than add. Measure the combination you actually intend
 to ship.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig Option: skipLibCheck](https://www.typescriptlang.org/tsconfig/skipLibCheck.html) — typescriptlang.org: saves time at the expense of accuracy; duplicate copies of a library's types are the common trigger (*read*)
+- **Also good:** [Performance wiki](https://raw.githubusercontent.com/wiki/microsoft/TypeScript/Performance.md) — `skipDefaultLibCheck` versus `skipLibCheck`; both can hide `.d.ts` conflicts (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [07 · Editor performance](./07-editor-performance.md) · [Phase 12 index](./README.md)

@@ -71,6 +71,17 @@ virtue is that it expires.
 - **→ 12 · Assertion discipline** *(not written yet)* — where these three metrics
   become one practice.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 3.9 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html) — typescriptlang.org: `@ts-expect-error` suppresses an error and reports if there is none to suppress (*read*)
+- **Also good:** [ban-ts-comment](https://typescript-eslint.io/rules/ban-ts-comment/) — typescript-eslint: directives reduce the effectiveness of TypeScript; can require descriptions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](../README.md) · Start → [01 · The three directives](./01-the-three-directives.md)

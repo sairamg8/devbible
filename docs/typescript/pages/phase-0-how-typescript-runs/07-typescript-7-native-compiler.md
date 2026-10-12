@@ -226,6 +226,17 @@ conversation. Tooling — lint plugins, codemods, custom transformers, anything
 importing `typescript` — carries the real risk, because the API it used is no
 longer at the package root.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Announcing TypeScript 7.0](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/) — Microsoft devblogs, 2026-07-08: native Go port, 8x–12x faster full builds as the post states, no API in 7.0, `@typescript/typescript6` npm alias for tools that import `typescript` (e.g. typescript-eslint), editor extension (*read*)
+- **Also good:** [Announcing TypeScript 6.0](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/) — Microsoft devblogs, 2026-03-23: the transition release: options deprecated in 6.0 are removed in 7.0, `ignoreDeprecations` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [tsconfig.json anatomy](./06-tsconfig-anatomy.md) · Next → [Where types come from](./08-where-types-come-from.md)

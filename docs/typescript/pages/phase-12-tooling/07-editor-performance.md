@@ -197,6 +197,18 @@ failures CI would report a few minutes later, at the cost of a second resident
 program. On a constrained machine it is the first thing to give up, and giving it up
 costs you nothing in coverage — only in latency.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript Performance wiki](https://raw.githubusercontent.com/wiki/microsoft/TypeScript/Performance.md) — "Misconfigured include and exclude", disabling editor plugins (*read*)
+- **Also good:** [Announcing TypeScript 7.0](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/) — LSP-based language server; VS Code first-error time about 17.5 s to under 1.3 s, vendor-reported (*read*): [Scaling TypeScript](https://stevekinney.com/courses/enterprise-ui/scaling-typescript)
+- **Also good:** [Scaling TypeScript](https://stevekinney.com/courses/enterprise-ui/scaling-typescript)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [06 · Diagnosing a slow compile](./06-diagnosing-a-slow-compile/README.md) · [Phase 12 index](./README.md)

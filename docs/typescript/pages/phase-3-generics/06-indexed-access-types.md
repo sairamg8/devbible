@@ -259,6 +259,17 @@ Because `Cfg['db']` includes `| undefined`, and a union without `host` on every
 member cannot be indexed by `'host'`. There is no optional chaining for types;
 use `NonNullable<Cfg['db']>['host']`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Indexed Access Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html) — typescriptlang.org: `Person["age"]`, unions and `keyof` as the index, and `number` as an index to get an array's element type (`typeof MyArray[number]`), ≈400 words (*read*)
+- **Also good:** [This Crazy Syntax Lets You Get An Array Element's Type](https://www.totaltypescript.com/get-the-type-of-an-array-element) — Matt Pocock, 2024-09-02: "Extracting Types From Arrays" and indexed access (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05 · The `getProp` pattern](./05-getprop-pattern/README.md) · Next → [07 · The `typeof` type operator](./07-typeof-type-operator.md)

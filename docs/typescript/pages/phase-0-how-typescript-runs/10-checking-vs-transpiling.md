@@ -185,6 +185,17 @@ Imports and exports are emitted exactly as written, so type-only imports must sa
 `import type`. It removes the compiler's guesswork about which imports have
 runtime meaning — the same guesswork a single-file transpiler cannot perform.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Features — TypeScript (Vite)](https://vite.dev/guide/features.html) — vite.dev: "Vite only performs transpilation on .ts files and does NOT perform type checking"; explains why the two jobs differ (*read*)
+- **Also good:** [esbuild — TypeScript](https://esbuild.github.io/content-types/) — esbuild: "will still need to run tsc -noEmit in parallel" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Editor vs build](./09-language-server-vs-build.md) · Next → [Project layout](./11-project-layout.md)

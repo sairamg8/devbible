@@ -242,6 +242,16 @@ path where it costs work at every step.
 - **→ [16 · Higher-kinded types](./16-higher-kinded-types.md)** — the other recognition topic: what
   TypeScript cannot express at all, rather than what it can express awkwardly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript: Union to intersection type](https://oida.dev/typescript-union-to-intersection/) — oida.dev (Stefan Baumgartner): 2020-06-29
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [14 · `NoInfer<T>`](./14-noinfer.md) · [Phase 5 index](./README.md) ·

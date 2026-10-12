@@ -83,6 +83,16 @@ pattern.
 - **→ [Phase 6 · `isolatedDeclarations`](../../phase-6-modules-build/15-isolateddeclarations/README.md)** — the flag that makes
   the mixin factory unbuildable, and the trade it is asking you to make.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mixins](https://www.typescriptlang.org/docs/handbook/mixins.html) — typescriptlang.org: constructor-returning-class pattern, constrained mixins, alternative pattern, constraints (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 4 index](../README.md) · Next → [01 · The pattern](./01-the-pattern.md)

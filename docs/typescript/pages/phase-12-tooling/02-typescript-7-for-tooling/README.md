@@ -56,6 +56,17 @@ TypeScript."*
   transformers in depth. **This topic decides whether you have a problem; that one
   is what to do about it.**
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Announcing TypeScript 7.0](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/) — Microsoft, July 8th, 2026: no API shipped, 7.1 expected; `@typescript/typescript6` gives `tsc6` side by side; typescript-eslint is named as needing the 6.0 package and Volar "can only currently rely on" 6.0 (*read*)
+- **Also good:** [Announcing TypeScript 6.0](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/) — March 23rd, 2026: the transition release (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 12 index](../README.md) · Start → [01 · Which of your tools actually reach in](./01-which-tools-actually-reach-in.md)

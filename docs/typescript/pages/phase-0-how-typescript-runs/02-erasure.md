@@ -257,6 +257,17 @@ Not usually — that is the point. Annotations leave no trace. The exceptions ar
 the non-erasable constructs, whose emitted shape (the enum IIFE, constructor
 field assignments) is recognisable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [No, TypeScript Types Don't Exist At Runtime](https://www.totaltypescript.com/typescript-types-dont-exist-at-runtime) — Matt Pocock, 2024-03-25: section "Enums, Namespaces and Parameter Properties" shows what does emit (*read* the intro, headings checked)
+- **Also good:** [Enums](https://www.typescriptlang.org/docs/handbook/enums.html) — typescriptlang.org: "Enums at runtime", reverse mappings, `const enum` inlining; page footer shows "Last updated: Oct 05, 2026" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Checker, not a runtime](./01-static-checker-not-runtime.md) · Next → [The three ways to run TypeScript](./03-three-ways-to-run.md)

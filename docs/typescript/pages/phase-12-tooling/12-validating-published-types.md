@@ -171,6 +171,18 @@ No. These tools answer whether the types can be found and read, not whether they
 right. Correctness is what the declaration build and type tests are for, and reading
 a resolution check as a correctness check is a common and expensive conflation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [arethetypeswrong README](https://raw.githubusercontent.com/arethetypeswrong/arethetypeswrong.github.io/main/README.md) — detects problems in `node10`, `node16`, `bundler` modes, e.g. "Masquerading as CJS" (*read*)
+- **Also good:** [publint rules](https://publint.dev/rules) — publint v0.3.25: rules grouped by severity (*read* the opening)
+- **Also good:** [publint README](https://raw.githubusercontent.com/publint/publint/master/README.md)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [11 · Declaration emit](./11-declaration-emit.md) · [Phase 12 index](./README.md)

@@ -223,6 +223,16 @@ A type predicate about the receiver rather than an argument, so a base class can
 narrow to a subclass — `if (fso.isFile()) { fso.content }`. Useful when the
 alternative would be exposing a discriminant field just for narrowing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Classes → this Types](https://www.typescriptlang.org/docs/handbook/2/classes.html#this-types) — typescriptlang.org: `this` as a type referring dynamically to the current class, with the `Box.set` example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · Typing getters and setters](./09-typing-getters-and-setters.md) · Next → [11 · Abstract classes and abstract construct signatures](./11-abstract-classes.md)

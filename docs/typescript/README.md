@@ -4,6 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every TypeScript topic there is a [link map](./link-map/README.md): the page elsewhere on the internet that explains it best, what it leaves out, and what our own page must keep saying. First pass — open for review.
+:::
+
 > Verified: 2026-08 against **TypeScript 7.0.2** (`npm view typescript version`) on
 > **Node 24.19.0** (LTS). Every version fact in the table below came from a
 > command run on this machine, not from memory.

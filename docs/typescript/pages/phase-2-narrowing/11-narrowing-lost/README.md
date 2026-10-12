@@ -66,6 +66,17 @@ capture rather than a `!`.
   callbacks that outlive the render they were created in, which is why this is
   the single most-hit page of the phase in React code.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 5.4 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-4.html) — typescriptlang.org: "Preserved Narrowing in Closures Following Last Assignments" (*read* the opening)
+- **Also good:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: "Control flow analysis" and "Assignments" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10 · `satisfies`](../10-satisfies/README.md) · Next → [12 · `unknown` in `catch`](../12-unknown-in-catch.md)

@@ -42,6 +42,16 @@ enforces.**
 - **→ [07 · Branded / nominal types](../07-branded-nominal-types.md)** — the deliberate use of
   declaration-site privacy.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Classes → Member Visibility](https://www.typescriptlang.org/docs/handbook/2/classes.html#member-visibility) — typescriptlang.org: `public`/`protected`/`private`, cross-instance private access allowed, caveat that they are enforced only during type checking (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 4 index](../README.md) · Next → [01 · Soft private and hard private](./01-soft-private-and-hard-private.md)

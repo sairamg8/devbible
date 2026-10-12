@@ -60,6 +60,16 @@ the file has to be one the compiler reads.
 - **→ Phase 7 (TypeScript on the server)** — `req.user` in a real middleware
   chain.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Declaration Merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) — typescriptlang.org: the `Observable` example: import, then `declare module "./observable"` with an interface to add `map` (*read*); states two limits: no new top-level declarations in an augmentation, and default exports cannot be augmented
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 4 index](../README.md) · Next → [01 · What merging and augmentation are](./01-what-merging-and-augmentation-are.md)

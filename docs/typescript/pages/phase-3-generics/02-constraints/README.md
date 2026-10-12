@@ -49,6 +49,17 @@ thinking about it, and name the case `NoInfer<T>` was added for.
 - **→ [14 · Variance](../14-variance.md)** — why `(...args: never[]) => unknown`
   is the right bound for "any function".
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) — typescriptlang.org: section "Generic Constraints" (*headings only*)
+- **Also good:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) — typescriptlang.org: "Constraints" and "Working with Constrained Values" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01 · Generic functions and inference](../01-generic-functions-and-inference/README.md) · Next → [03 · Generic interfaces and type aliases](../03-generic-interfaces-and-aliases/README.md)

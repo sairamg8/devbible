@@ -80,6 +80,17 @@ flag and gains nothing from it.
 - **→ 12 · Assertion discipline** *(not written yet)* — the `as` count as the
   measure of whether this migration was done or merely declared.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig Option: exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig/exactOptionalPropertyTypes.html) — typescriptlang.org: the `colorThemeOverride` example and `"x" in settings` behaving differently for absent versus `undefined` (*read*)
+- **Also good:** [TypeScript 4.4 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-4.html) — typescriptlang.org: the `Person` / `age: undefined` example and the runtime-error risk (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](../README.md) · Start → [01 · Absent vs undefined](./01-absent-versus-undefined.md)

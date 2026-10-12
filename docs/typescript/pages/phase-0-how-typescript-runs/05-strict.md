@@ -225,6 +225,17 @@ No. It is separate and off by default, though `tsc --init` enables it. It makes
 `arr[0]` and `record[key]` return `T | undefined`, which finds a large class of
 real bugs and is the flag most likely to be argued about in review.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TSConfig: strict](https://www.typescriptlang.org/tsconfig/strict.html) — typescriptlang.org: strict enables the whole strict-mode family; future versions may add checks under it (*read*)
+- **Also good:** [Announcing TypeScript 6.0](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/) — Microsoft devblogs, 2026-03-23: "strict is now true by default" (*read* the defaults passage)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Strip-only mode](./04-strip-only-and-erasable-syntax.md) · Next → [tsconfig.json anatomy](./06-tsconfig-anatomy.md)

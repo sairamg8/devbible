@@ -234,6 +234,16 @@ Because `boolean` is an alias for `true | false`, so a distributing conditional
 sees a two-member union and answers for each. The result `"yes" | "no"` — or
 `true | false` displayed as `boolean` — is distribution, not a bug.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Conditional Types → Distributive Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types) — typescriptlang.org: `ToArray` over a union, and the `ToArrayNonDist` version that wraps both sides in brackets (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 5 index](./README.md) · Prev: [04 · Key remapping with `as`](./04-key-remapping.md) · Next → [06 · Extracting with `infer`](./06-infer/README.md)

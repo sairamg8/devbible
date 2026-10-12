@@ -46,6 +46,18 @@ the explanation.
 - **→ 07 · Editor performance** *(not written yet)* — the same program, a different
   process.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript Performance wiki](https://raw.githubusercontent.com/wiki/microsoft/TypeScript/Performance.md) — microsoft/TypeScript wiki: `--extendedDiagnostics`, `explainFiles`, interfaces over intersections, naming complex types (*read*)
+- **Also good:** [Performance Tracing](https://raw.githubusercontent.com/wiki/microsoft/TypeScript/Performance-Tracing.md) — `generateTrace` introduced in 4.1; output may change (*read*): [Scaling TypeScript](https://stevekinney.com/courses/enterprise-ui/scaling-typescript)
+- **Also good:** [Scaling TypeScript](https://stevekinney.com/courses/enterprise-ui/scaling-typescript)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 12 index](../README.md) · Start → [01 · Measure before you guess](./01-measure-before-you-guess.md)

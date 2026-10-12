@@ -223,6 +223,16 @@ belongs in recognising it rather than in constructing it.
   other recognition topic: things the language *can* express awkwardly, where this one is
   something it cannot express at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Encoding HKTs in TS4.1](https://dev.to/effect/encoding-hkts-in-ts4-1-1fn2) — DEV (Effect/Matechs): 2020-10-01
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [15 · Union → intersection and other identities](./15-union-to-intersection.md) ·

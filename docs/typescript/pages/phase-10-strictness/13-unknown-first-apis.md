@@ -218,6 +218,17 @@ data from outside the program. An `unknown`-first boundary removes the position
 those assertions occupy — there is no longer a place to write `as User`, because the
 only thing that produces a `User` is the function that checked.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 3.0 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html) — typescriptlang.org: "New unknown top type": the type-safe counterpart of `any`, no operations until narrowed (*read*)
+- **Also good:** [any type](https://www.totaltypescript.com/concepts/any-type) — Total TypeScript: `greet(name: unknown)` narrowed with `typeof` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [12 · Assertion discipline](./12-assertion-discipline/README.md) · [Phase 10 index](./README.md)

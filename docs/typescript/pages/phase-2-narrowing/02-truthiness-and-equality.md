@@ -205,6 +205,16 @@ true for an empty array.
 `??` versus `||`. `??` falls back only on `null`/`undefined`; `||` falls back on
 every falsy value, which is the same bug in a different syntax.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: sections "Truthiness narrowing" and "Equality narrowing"; lists `0`, `NaN` and the empty string as falsy and warns a truthy wrapper may mishandle the empty-string case (*read* the truthiness section, equality section *headings onl
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`typeof` narrowing](./01-typeof-narrowing.md) · Next → [The `in` operator](./03-in-operator-narrowing.md)

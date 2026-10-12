@@ -108,6 +108,18 @@ already argued for on their own merits.
 - **→ 12 · Assertion discipline** *(not written yet)* — `no-unsafe-type-assertion`
   and the `as` count belong there; chunk 09 links rather than restates.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Linting with Type Information](https://typescript-eslint.io/getting-started/typed-linting/) — typescript-eslint, v8.71.1 shown: rules use TypeScript's type-checking APIs, so they analyse the whole project and are slower (*read*)
+- **Also good:** [no-floating-promises](https://typescript-eslint.io/rules/no-floating-promises/) — a floating Promise is created without code to handle its errors (*read*): [Performance](https://typescript-eslint.io/troubleshooting/typed-linting/performance/)
+- **Also good:** [Performance](https://typescript-eslint.io/troubleshooting/typed-linting/performance/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 10 index](../README.md) · Start → [01 · What type-aware means](./01-what-type-aware-means.md)

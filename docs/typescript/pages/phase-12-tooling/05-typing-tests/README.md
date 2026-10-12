@@ -54,6 +54,17 @@ everywhere and the tests absorb silently.
 - **→ [04 · Testing types](../04-testing-types/README.md)** — the other direction,
   and the reason to read the two topic names carefully.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Vitest: vi API, `vi.mocked`](https://vitest.dev/api/vi) — vitest.dev: type helper; `partial` and `deep` options type partial mock values (*read*)
+- **Also good:** [TypeScript 4.9 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html) — `satisfies` checks without widening (*read* the intro)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 12 index](../README.md) · Start → [01 · Fixtures that cannot lie](./01-fixtures-that-cannot-lie.md)

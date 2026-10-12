@@ -222,6 +222,16 @@ Compile time and error-message quality. A mismatch inside a recursive type
 produces a long nested message describing the whole path, which is why naming the
 intermediate types is worth doing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript 3.7 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html) — typescriptlang.org: "(More) Recursive Type Aliases": the `Json` type and `VirtualNode` tuple examples (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`readonly` and immutability](./14-readonly-and-immutability.md) · Next → [`object`, `Object` and `{}`](./16-object-Object-braces.md)
