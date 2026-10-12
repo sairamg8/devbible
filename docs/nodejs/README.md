@@ -4,6 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every Node.js topic there is a [link map](./link-map/README.md): the page elsewhere on the internet that explains it best, what it leaves out, and what our own page must keep saying. First pass — open for review.
+:::
+
 > Verified: 2026-08 against the Node.js v26.7.0 API index.
 
 The complete topic inventory for Node.js, tiered for **mastery in fullstack

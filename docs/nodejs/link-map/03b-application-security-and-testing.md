@@ -16,7 +16,7 @@ Covers every topic row of phases 8 and 9 in `docs/nodejs/syllabus/03-application
 ## Phase 8 — Security
 
 ### T08-01 · Password storage — Master · ✅ written `docs/nodejs/pages/phase-8-security/01-password-storage.md`
-- **Read this:** [Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) · OWASP · Argon2id first (min 19 MiB, 2 iterations), then scrypt, bcrypt with a 72-byte limit; why fast hashes like MD5 and SHA-1 fail (*read*) · covers our angle: full
+- **Read this:** [Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) · OWASP · Argon2id first (min 19 MiB, 2 iterations), then scrypt, bcrypt with a 72-byte limit; why fast hashes like MD5 and SHA-1 fail (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [node-argon2 README (raw)](https://raw.githubusercontent.com/ranisalt/node-argon2/master/README.md) · github (raw) · the Node binding (size checked only, *headings only*) · fetched 2026-10-12
 - **Our delta:** which of the three ships in Node core versus needs a native addon; the numbers above are OWASP's minimums, not ours.
 
@@ -31,7 +31,7 @@ Covers every topic row of phases 8 and 9 in `docs/nodejs/syllabus/03-application
 - **Our delta:** the XSS-versus-CSRF trade-off table; link to the CSRF page.
 
 ### T08-04 · Authorization vs. authentication — Master · ✅ `…/04-authentication-vs-authorization.md`
-- **Read this:** [Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) · OWASP · least privilege, deny by default, validate permissions on every request, lookup IDs (*read* the headings) · covers our angle: full
+- **Read this:** [Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) · OWASP · least privilege, deny by default, validate permissions on every request, lookup IDs (*read* the headings) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Access control vulnerabilities](https://portswigger.net/web-security/access-control) · PortSwigger · vertical vs horizontal, IDOR (*headings only*) · fetched 2026-10-12
 
 ### T08-05 · Session management — Understand · ✅ `…/05-session-management.md`
@@ -40,7 +40,7 @@ Covers every topic row of phases 8 and 9 in `docs/nodejs/syllabus/03-application
 
 ### T08-06 · OAuth 2.0 / OIDC flows — Know · ✅ `…/06-oauth-oidc.md`
 - **Read this:** [Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce) · Auth0 docs · `code_verifier`, `code_challenge`, then ID token and access token (*read*) · covers our angle: **partial** — vendor-flavoured, SDK does the work · fetched 2026-10-12
-- **Also good:** [OAuth2 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html) · OWASP · implicit grant marked deprecated; `state` as CSRF protection (*read*) · [How OpenID Connect Works](https://openid.net/developers/how-connect-works/) · OpenID Foundation, page dated 2023-07-20 · OIDC is built on OAuth 2.0 (*read*) · fetched 2026-10-12
+- **Also good:** [OAuth2 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html) · OWASP · implicit grant marked deprecated; `state` as CSRF protection (*read*) · [How OpenID Connect Works](https://openid.net/developers/how-connect-works/) · OpenID Foundation, published 2023-02-14, modified 2023-07-20 per page metadata · OIDC is built on OAuth 2.0 (*read*) · fetched 2026-10-12
 - **Checked, not chosen:** [RFC 9700](https://datatracker.ietf.org/doc/html/rfc9700) (≈18k words, *headings only*, reference not tutorial); [oauth.net/2](https://oauth.net/2/) (link hub).
 - **Our delta:** a hand-written flow in Node without a vendor SDK.
 
@@ -67,7 +67,7 @@ Covers every topic row of phases 8 and 9 in `docs/nodejs/syllabus/03-application
 - **Also good:** [Cross-site request forgery](https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/CSRF) · MDN · shorter; tokens, fetch metadata, SameSite as defense in depth (*read*) · fetched 2026-10-12
 
 ### T08-12 · SSRF — Understand · ✅ `…/12-ssrf.md`
-- **Read this:** [SSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html) · OWASP · case 1 (allowlist possible) vs case 2 (any destination); IMDSv2; deny-list as last resort (*read*) · covers our angle: full
+- **Read this:** [SSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html) · OWASP · case 1 (allowlist possible) vs case 2 (any destination); IMDSv2; deny-list as last resort (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [What is SSRF?](https://portswigger.net/web-security/ssrf) · PortSwigger · filter bypasses, blind SSRF (*headings only*) · fetched 2026-10-12
 
 ### T08-13 · Prototype pollution — Understand · ✅ `…/13-prototype-pollution.md`
@@ -174,7 +174,7 @@ Covers every topic row of phases 8 and 9 in `docs/nodejs/syllabus/03-application
 
 ### T09-07 · Mocking, timers, `mock.module()` — Understand · ✅ `…/07-mocking.md`, `…/08-module-mocking.md`
 - **Read this:** [Test runner: Mocking](https://nodejs.org/api/test.html) · nodejs.org · `mock.fn`, `mock.method`, `mock.module(specifier)`, MockTimers, Dates (*headings only*) · covers our angle: full for the API · fetched 2026-10-12
-- **Our delta:** the CLI reference lists `--experimental-test-module-mocks`, so module mocking is still behind a flag. Its stability line was **not confirmed** in my fetch (the same page does show "Stability: 1.0 - Early development" for test tags).
+- **Our delta:** the CLI reference lists `--experimental-test-module-mocks`, so module mocking is still behind a flag. The `mock.module(specifier[, options])` entry shows added v22.3.0, v20.18.0 and "Stability: 1.0 - Early development" (re-read by the verifier). Mock timers and `mock.fn` carry no such line in the text I read.
 - *Checked, not chosen:* none found for ESM module mocking beyond the official page.
 
 ### T09-08 · Test doubles and over-mocking — Understand · ✅ `…/09-test-doubles.md`
@@ -186,7 +186,7 @@ Covers every topic row of phases 8 and 9 in `docs/nodejs/syllabus/03-application
 - **Also good:** [Object Mother](https://martinfowler.com/bliki/ObjectMother.html) · Fowler · (*headings only*, ≈540 words) · fetched 2026-10-12
 
 ### T09-10 · Coverage — Understand · ✅ `…/11-coverage.md`
-- **Read this (1/2):** [Test runner: Collecting code coverage](https://nodejs.org/api/test.html) · nodejs.org · the section and reporters (*headings only*); `--experimental-test-coverage` is listed in the CLI reference · covers our angle: full for the how · fetched 2026-10-12
+- **Read this (1/2):** [Test runner: Collecting code coverage](https://nodejs.org/api/test.html) · nodejs.org · the section and reporters (*headings only*); the section shows "Stability: 1 - Experimental", and `--experimental-test-coverage` is listed in the CLI reference · covers our angle: full for the how · fetched 2026-10-12
 - **Read this (2/2):** [Code Coverage Best Practices](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html) · Google Testing Blog, Aug 2020 (per URL) · chasing 100% gives "a false sense of security" and wasted tests; target depends on criticality (*read*) · fetched 2026-10-12
 
 ### T09-11 · Vitest / Jest — Understand · ✅ `…/12-vitest-and-jest.md`
