@@ -9,7 +9,7 @@ sidebar_position: 4
 Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-production-and-depth.md`: T10-01 to T10-16, T11-01 to T11-16 and T12-01 to T12-12. That is 44 rows. **All 44 have a page of ours (✅)**; the path shown is the topic's folder README or its single page.
 *read* = I read the passage; *headings only* = fetched, headings/size checked. Third-party links carry a date where the page shows one. `#anchors` are not used.
 
-🔴 **Version note.** Our README targets Engine 29.7.2, Compose v5.4.0, Podman 6.1.0. The Docker Engine 29 release notes now list **29.9.0, dated 2026-10-08** (29.8.2 on 2026-09-30), so the README is behind by at least two minors. The Podman release notes (raw copy) still start at 6.1.0, and 6.0 lists the removals the syllabus names: BoltDB (auto-migrated to SQLite), Intel macOS, Windows 10, cgroups v1; it also lists iptables and CNI removal. I did not re-verify Compose or BuildKit numbers. `github.com` returns 403 to our fetcher, so READMEs are cited as `raw.githubusercontent.com` copies. Docker Hub pull limits read on 2026-10-12: 100 per 6 hours per IPv4 address or IPv6 /64 when unauthenticated, 200 for a Personal account, unlimited for paid plans.
+🔴 **Version note.** Our README targets Engine 29.7.2, Compose v5.4.0, Podman 6.1.0. The Docker Engine 29 release notes now list **29.9.0, dated 2026-10-08** (29.8.2 on 2026-09-30), so the README is behind by at least two minors. The Podman release notes (raw copy) still start at 6.1.0, and 6.0 lists the removals the syllabus names: BoltDB (auto-migrated to SQLite), Intel macOS, Windows 10, cgroups v1; it also lists iptables, CNI and slirp4netns removal. I did not re-verify Compose or BuildKit numbers. `github.com` returns 403 to our fetcher, so READMEs are cited as `raw.githubusercontent.com` copies. Docker Hub pull limits read on 2026-10-12: 100 per 6 hours per IPv4 address or IPv6 /64 when unauthenticated, 200 for a Personal account, unlimited for paid plans.
 
 ---
 
@@ -22,7 +22,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 
 ### T10-02 · Graceful shutdown — Master · ✅ written `docs/docker/pages/phase-10-production/02-graceful-shutdown/README.md`
 - **Read this:** [docker container stop](https://docs.docker.com/reference/cli/docker/container/stop/) · Docker docs · SIGTERM first, SIGKILL after the grace period; `STOPSIGNAL` or `--stop-signal` change the first signal; `-t` sets the wait (*read*) · covers our angle: **partial** — no application-side handler or connection draining · fetched 2026-10-12
-- **Also good:** [Shutdown gracefully](https://raw.githubusercontent.com/goldbergyoni/nodebestpractices/master/sections/docker/graceful-shutdown.md) · Node.js Best Practices · why SIGTERM handling is the app's job; short, mentions a 30 second Kubernetes grace period (*read*) · fetched 2026-10-12
+- **Also good:** [Shutdown gracefully](https://raw.githubusercontent.com/goldbergyoni/nodebestpractices/master/sections/docker/graceful-shutdown.md) · Node.js Best Practices · why SIGTERM handling is the app's job; short; says Kubernetes sends SIGTERM with a 30 second grace period; Dockerfile examples use `node:12-slim`, so dated (*read*) · fetched 2026-10-12
 - **Also good:** [How to Handle Docker Container Graceful Shutdown and Signal Handling](https://oneuptime.com/blog/post/2026-01-16-docker-graceful-shutdown-signals/view) · OneUptime, dated 2026-01-16 in the URL · Node `server.close()` plus forced-exit timer, shell-form PID 1 trap, `stop_grace_period` (*read*) · fetched 2026-10-12
 - **Our delta:** idle keep-alive sockets, load-balancer drain order, and a stop timeout longer than the work in flight.
 
@@ -60,7 +60,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 - **Our delta:** liveness versus readiness as concepts for a plain Docker host, where nothing acts on "unhealthy" by itself (not confirmed on either page).
 
 ### T10-10 · Hardening at run time — Understand · ✅ written `docs/docker/pages/phase-10-production/10-hardening/README.md`
-- **Read this:** [Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html) · OWASP · set a user, limit capabilities, `--security-opt=no-new-privileges`, read-only filesystem, rootless mode, secrets (*read* rules 4 and 8, rest *headings only*) · covers our angle: **full** for the four switches; Podman not covered · fetched 2026-10-12
+- **Read this:** [Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html) · OWASP · set a user, limit capabilities, `--security-opt=no-new-privileges`, read-only filesystem, rootless mode, secrets (*read* rules 4 and 8, rest *headings only*) · covers our angle: **full** for the four switches; Podman appears only as a one-line "alternative to Docker" note (*read*) · fetched 2026-10-12
 - **Also good:** [docker container run](https://docs.docker.com/reference/cli/docker/container/run/) · Docker docs · `--read-only`, `--cap-drop`, `--security-opt="no-new-privileges=true"` in the reference (*read*) · fetched 2026-10-12
 
 ### T10-11 · Observing — Know · ✅ written `docs/docker/pages/phase-10-production/11-observing.md`
@@ -121,7 +121,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 - **Read this:** [podman unshare](https://docs.podman.io/en/latest/markdown/podman-unshare.1.html) · Podman docs · launches a process in a new user namespace, defaulting to `$SHELL` (*read*) · covers our angle: **partial** — man page, no worked `chown` on a volume · fetched 2026-10-12
 
 ### T11-07 · `--userns` modes — Understand · ✅ written `docs/docker/pages/phase-11-podman-in-depth/07-userns-modes.md`
-- **Read this:** [Rootless Podman user namespace modes](https://www.redhat.com/en/blog/rootless-podman-user-namespace-modes) · Red Hat blog, published 2023-01-11, modified 2025-11-21 · default, `keep-id`, `auto`, `nomap` with a bind-mount ownership example (*read*) · covers our angle: **full** · fetched 2026-10-12
+- **Read this:** [Rootless Podman user namespace modes](https://www.redhat.com/en/blog/rootless-podman-user-namespace-modes) · Red Hat blog, page header shows January 25, 2023; page metadata says published 2023-01-11, modified 2025-11-21 · default, `keep-id`, `auto`, `nomap` with a bind-mount ownership example (*read*) · covers our angle: **full** · fetched 2026-10-12
 - **Also good:** [podman run → `--userns`](https://docs.podman.io/en/latest/markdown/podman-run.1.html) · Podman docs · the reference (*headings only*, 130 KB page) · fetched 2026-10-12
 
 ### T11-08 · `podman pod create` / `ps` / `rm` — Understand · ✅ written `docs/docker/pages/phase-11-podman-in-depth/08-pod-commands.md`
@@ -151,7 +151,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 - **Also good:** [Using Podman instead of Docker (Testcontainers for Go)](https://golang.testcontainers.org/system_requirements/using_podman/) · testcontainers.org · socket discovery from `DOCKER_HOST`, rootless or rootful (*read*) · fetched 2026-10-12
 
 ### T11-14 · Podman 6 breaking changes — Understand · ✅ written `docs/docker/pages/phase-11-podman-in-depth/14-podman-6-breaking-changes.md`
-- **Read this:** [Podman release notes (raw)](https://raw.githubusercontent.com/containers/podman/main/RELEASE_NOTES.md) · containers/podman · 6.0 removes BoltDB (auto-migration to SQLite), Intel Macs, Windows 10, cgroups v1, iptables and CNI (*read* the 6.0 list; 6.1.0 is the top entry) · covers our angle: **full**, plus two removals our row omits · fetched 2026-10-12
+- **Read this:** [Podman release notes (raw)](https://raw.githubusercontent.com/containers/podman/main/RELEASE_NOTES.md) · containers/podman · 6.0 removes BoltDB (auto-migration to SQLite), Intel Macs, Windows 10, cgroups v1, iptables, CNI and slirp4netns (*read* the 6.0 list; 6.1.0 is the top entry) · covers our angle: **full**, plus three removals our row omits · fetched 2026-10-12
 
 ### T11-15 · `podman machine` — Know · ✅ written `docs/docker/pages/phase-11-podman-in-depth/15-podman-machine.md`
 - **Read this:** [podman machine](https://docs.podman.io/en/latest/markdown/podman-machine.1.html) · Podman docs · Podman on macOS and Windows requires a VM; subcommands manage it (*read*) · covers our angle: **partial** — nothing on CPU, memory or disk the VM holds · fetched 2026-10-12
@@ -170,14 +170,14 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 
 ### T12-02 · Building images in CI — Understand · ✅ written `docs/docker/pages/phase-12-delivery-and-ci/02-building-in-ci.md`
 - **Read this:** [Cache management with GitHub Actions](https://docs.docker.com/build/ci/github-actions/cache/) · Docker docs · inline, registry (`cache-from`/`cache-to`) and other cache exporters in a workflow (*read*) · covers our angle: **full** for the cache mechanics · fetched 2026-10-12
-- **Also good:** [Cache storage backends](https://docs.docker.com/build/cache/backends/) · Docker docs · the backend list (*headings only*) · fetched 2026-10-12
+- **Also good:** [Cache storage backends](https://docs.docker.com/build/cache/backends/) · Docker docs · the backend list; the default `docker` driver supports inline, local, registry and gha only with the containerd image store enabled (*read* that passage, rest *headings only*) · fetched 2026-10-12
 
 ### T12-03 · One image, three environments — Master · ✅ written `docs/docker/pages/phase-12-delivery-and-ci/03-one-image-three-environments/README.md`
 - **Read this:** [V. Build, release, run](https://12factor.net/build-release-run) · The Twelve-Factor App · strict separation of build and run stages (*read*, short) · covers our angle: **partial** — no digest promotion · fetched 2026-10-12
 - **Our delta:** promoting one digest; no page found for it (tried: "promote same image digest staging production docker").
 
 ### T12-04 · Registry authentication in CI — Know · ✅ written `docs/docker/pages/phase-12-delivery-and-ci/04-registry-auth-in-ci.md`
-- **Read this:** [OpenID Connect](https://docs.github.com/en/actions/concepts/security/openid-connect) · GitHub Docs · workflows exchange short-lived tokens instead of stored secrets (*read* overview) · covers our angle: **partial** — cloud providers; Docker Hub support not confirmed · fetched 2026-10-12
+- **Read this:** [OpenID Connect](https://docs.github.com/en/actions/concepts/security/openid-connect) · GitHub Docs · workflows exchange short-lived tokens directly from your cloud provider (*read* overview) · covers our angle: **partial** — cloud providers; Docker Hub support not confirmed · fetched 2026-10-12
 - **Also good:** [Docker access tokens](https://docs.docker.com/security/access-tokens/) · Docker docs · the token-based alternative to passwords (*headings only*) · fetched 2026-10-12
 
 ### T12-05 · Testing with containers — Understand · ✅ written `docs/docker/pages/phase-12-delivery-and-ci/05-testing-with-containers.md`

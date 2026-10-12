@@ -9,18 +9,18 @@ sidebar_position: 1
 Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-containers-work.md`: T00-01 to T00-14, T01-01 to T01-16 and T02-01 to T02-15. **All 45 rows have a page of ours (✅).**
 *read* = I read the passage; *headings only* = fetched, headings/size checked. Third-party links carry a date where the page shows one. `#anchors` appear only where the heading id was seen in the page HTML.
 
-🔴 **Version note.** Our README targets Docker Engine 29.7.2, Compose v5.4.0, Podman 6.1.0 (5.8.4 on this machine). The Podman release notes (raw copy) confirm that Podman 6 removed cgroups v1, BoltDB (auto-migrated to SQLite), iptables and CNI; I did not re-verify the Docker or Podman patch numbers. `github.com` returns 403 to our fetcher, so READMEs are cited as `raw.githubusercontent.com` copies. `docs.docker.com/registry/` now redirects to a retired page; the registry docs live at distribution.github.io.
+🔴 **Version note.** Our README targets Docker Engine 29.7.2, Compose v5.4.0, Podman 6.1.0 (5.8.4 on this machine). The Podman release notes (raw copy) list 6.1.0 as the newest entry and confirm that Podman 6 removed cgroups v1, BoltDB (auto-migrated to SQLite), iptables and CNI. The Docker Engine 29 release notes (docs.docker.com/engine/release-notes/29/) list **29.9.0, dated 2026-10-08**, so the README's 29.7.2 is behind by two minors; the other patch numbers were not re-verified. `github.com` returns 403 to our fetcher, so READMEs are cited as `raw.githubusercontent.com` copies. `docs.docker.com/registry/` now redirects to a retired page; the registry docs live at distribution.github.io.
 
-🔴 **Syllabus drift found.** T02-13 says "`overlay2` for Docker". The Docker storage-driver page says the **containerd image store is the default for Engine 29.0 and later**, with `overlay2` the classic driver. The page should say so.
+🔴 **Syllabus drift found.** T02-13 says "`overlay2` for Docker". The Docker storage-driver page says Engine 29.0 and later uses the **containerd image store by default for fresh installations**; an upgraded daemon keeps the classic drivers such as `overlay2`. The page should say both.
 
 ---
 
 ## Phase 0 — What a container actually is
 
 ### T00-01 · A container is a process — Master · ✅ written `docs/docker/pages/phase-0-what-a-container-is/01-a-container-is-a-process.md`
-- **Read this:** [What even is a container: namespaces and cgroups](https://jvns.ca/blog/2016/10/10/what-even-is-a-container/) · Julia Evans, 10 Oct 2016 · short walk through namespaces, cgroups and seccomp-bpf, ending in "what are containers?" (*read* the headings, ≈900 words) · covers our angle: **partial** — 2016, no root filesystem or OCI, no rootless
+- **Read this:** [What even is a container: namespaces and cgroups](https://jvns.ca/blog/2016/10/10/what-even-is-a-container/) · Julia Evans, 10 Oct 2016 · short walk through namespaces, cgroups and seccomp-bpf, ending in "what are containers?" (*read* the headings, ≈900 words) · covers our angle: **partial** — 2016, no root filesystem or OCI, no rootless · fetched 2026-10-12
 - **Also good:** [What is Docker?](https://docs.docker.com/get-started/docker-overview/) · Docker docs, modified 2026-09-07 · "The underlying technology": namespaces give the isolated workspace (*read*) · fetched 2026-10-12
-- **Our delta:** "there is no container object in the kernel" is our framing; neither page says it in those words (not confirmed). Fetched 2026-10-12.
+- **Our delta:** "there is no container object in the kernel" is our framing; neither page says it in those words (not confirmed).
 
 ### T00-02 · Namespaces — Master · ✅ written `docs/docker/pages/phase-0-what-a-container-is/02-namespaces.md`
 - **Read this:** [namespaces(7)](https://man7.org/linux/man-pages/man7/namespaces.7.html) · Linux man-pages · table of every type with its flag, including Time (`/proc/PID/ns/time` since Linux 5.6) (*read* the table) · covers our angle: **partial** — reference, no "which symptom is which namespace" · fetched 2026-10-12
@@ -62,8 +62,8 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 
 ### T00-10 · seccomp, AppArmor and SELinux — Understand · ✅ written `docs/docker/pages/phase-0-what-a-container-is/10-seccomp-apparmor-selinux.md`
 - **Read this:** [Seccomp security profiles for Docker](https://docs.docker.com/engine/security/seccomp/) · Docker docs · default profile disables about 44 of 300+ syscalls, an allowlist (*read*) · covers our angle: **partial** — no AppArmor or SELinux · fetched 2026-10-12
-- **Also good:** [AppArmor security profiles](https://docs.docker.com/engine/security/apparmor/) · Docker docs · auto-generated `docker-default` profile (*read*) · [Bind mounts: configure the SELinux label](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label) · Docker docs · `z` and `Z` relabel the host path (*read*) · fetched 2026-10-12
-- **Checked, not chosen:** [Red Hat on user namespaces and SELinux](https://www.redhat.com/en/blog/user-namespaces-selinux-rootless-containers) · published 2020-06-04, modified 2025-11-20 (*headings only*; page is mostly site navigation in our fetcher).
+- **Also good:** [AppArmor security profiles](https://docs.docker.com/engine/security/apparmor/) · Docker docs · auto-generated `docker-default` profile (*read*) · [Bind mounts: configure the SELinux label](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label) · Docker docs · `z` marks content shared between containers, `Z` private; both change labels on the host path (*read*) · fetched 2026-10-12
+- **Checked, not chosen:** [Red Hat on user namespaces and SELinux](https://www.redhat.com/en/blog/user-namespaces-selinux-rootless-containers) · page dated June 25, 2020 (*headings only*; page is mostly site navigation in our fetcher).
 - **Our delta:** the "permission denied on a file you can see" diagnosis ladder.
 
 ### T00-11 · Rootless containers — Understand · ✅ written `docs/docker/pages/phase-0-what-a-container-is/11-rootless.md`
@@ -133,8 +133,9 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 - **Read this:** [Running containers: default entrypoint](https://docs.docker.com/engine/containers/run/#default-entrypoint) · Docker docs · `--entrypoint` overwrites the image entrypoint; a trailing command is appended to it (*read*) · covers our angle: **partial** — no recipe for an image with no shell · fetched 2026-10-12
 
 ### T01-12 · --restart policies — Understand · ✅ written `docs/docker/pages/phase-1-running-containers/12-restart-policies.md`
-- **Read this:** [Start containers automatically](https://docs.docker.com/engine/containers/start-containers-automatically/) · Docker docs, modified 2026-08-16 · `no`, `on-failure`, `always`, `unless-stopped`; restart policy versus process manager (*read*) · covers our angle: **partial** — Docker only · fetched 2026-10-12
-- **Our delta:** Podman without a daemon. The podman-run page I read documents a different `--restart`-style health action, so the policy claim is not confirmed.
+- **Read this:** [Start containers automatically](https://docs.docker.com/engine/containers/start-containers-automatically/) · Docker docs, modified 2026-08-16 · `no`, `on-failure`, `always`, `unless-stopped`; restart policy versus process manager (*read*) · covers our angle: **partial** — Docker only; the Podman side is under Also good · fetched 2026-10-12
+- **Also good:** [podman run: `--restart`](https://docs.podman.io/en/latest/markdown/podman-run.1.html#restart-policy) · Podman docs · same flag with `no`, `on-failure`, `always`, `unless-stopped`; `podman-restart.service` restarts containers after a reboot, and inside systemd units use `Restart=` instead (*read*) · fetched 2026-10-12
+- **Our delta:** that Podman needs no daemon for this is our framing; the Podman page ties reboot restarts to a systemd unit (the daemonless claim itself is not confirmed here).
 
 ### T01-13 · Reclaiming disk — Understand · ✅ written `docs/docker/pages/phase-1-running-containers/13-reclaiming-disk.md`
 - **Read this:** [Prune unused Docker objects](https://docs.docker.com/engine/manage-resources/pruning/) · Docker docs, modified 2026-08-13 · images, containers, volumes, networks, build cache, everything (*headings only*) · covers our angle: **partial** · fetched 2026-10-12
@@ -180,7 +181,7 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 - **Read this:** [docker image history](https://docs.docker.com/reference/cli/docker/image/history/) · Docker docs · options, `--format`, `--platform` (*headings only*) · covers our angle: **partial** — no worked "find the 400 MB layer" · fetched 2026-10-12
 
 ### T02-07 · The image config — Understand · ✅ written `docs/docker/pages/phase-2-images-and-registries/07-image-config.md`
-- **Read this:** [OCI image config (raw)](https://raw.githubusercontent.com/opencontainers/image-spec/main/config.md) · github (raw) · `ExposedPorts` is a set of defaults, merged at run time (*read*) · covers our angle: full — it defines `Env`, `Entrypoint`, `Cmd`, `User`, `WorkingDir`, `Labels` · fetched 2026-10-12
+- **Read this:** [OCI image config (raw)](https://raw.githubusercontent.com/opencontainers/image-spec/main/config.md) · github (raw) · `ExposedPorts` is a set of defaults, merged at run time (*read*) · covers our angle: **partial** — defines `Env`, `Entrypoint`, `Cmd`, `User`, `WorkingDir`, `Labels`, `ExposedPorts`, but it is the OCI spec, not what `docker inspect` prints · fetched 2026-10-12
 - **Also good:** [docker container inspect](https://docs.docker.com/reference/cli/docker/container/inspect/) · Docker docs (*headings only*) · fetched 2026-10-12
 
 ### T02-08 · Registries and rate limits — Understand · ✅ written `docs/docker/pages/phase-2-images-and-registries/08-registries.md`
@@ -193,7 +194,7 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 
 ### T02-10 · Multi-arch and the manifest list — Understand · ✅ written `docs/docker/pages/phase-2-images-and-registries/10-multi-arch.md`
 - **Read this:** [Multi-platform builds](https://docs.docker.com/build/building/multi-platform/) · Docker docs, modified 2026-04-16 · multi-platform images hold a manifest list pointing to one manifest per platform (*read*) · covers our angle: **partial** — no `exec format error` · fetched 2026-10-12
-- **Also good:** [OCI image index (raw)](https://raw.githubusercontent.com/opencontainers/image-spec/main/image-index.md) · github (raw) · the spec's name for a manifest list (*headings only*) · fetched 2026-10-12
+- **Also good:** [OCI image index (raw)](https://raw.githubusercontent.com/opencontainers/image-spec/main/image-index.md) · github (raw) · the OCI image index: a higher-level manifest pointing to image manifests for one or more platforms (*read* the opening) · fetched 2026-10-12
 - **Checked, not chosen:** community posts on `exec format error` from a web search (oneuptime.com, moby issue 44291); not opened.
 
 ### T02-11 · save/load vs export/import — Know · ✅ written `docs/docker/pages/phase-2-images-and-registries/11-save-load-export-import.md`
@@ -206,12 +207,12 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 - **Also good:** [podman pull](https://docs.podman.io/en/latest/markdown/podman-pull.1.html) · Podman docs · a short name with no alias makes Podman prompt for the registry (*read*) · fetched 2026-10-12
 
 ### T02-13 · Where layers live on disk — Know · ✅ written `docs/docker/pages/phase-2-images-and-registries/13-storage-on-disk.md`
-- **Read this:** [Select a storage driver](https://docs.docker.com/engine/storage/drivers/select-storage-driver/) · Docker docs, modified 2026-03-09 · containerd image store is the default for Engine 29.0 and later; `overlay2` is the classic driver (*read*) · covers our angle: **partial** — Docker side only · fetched 2026-10-12
+- **Read this:** [Select a storage driver](https://docs.docker.com/engine/storage/drivers/select-storage-driver/) · Docker docs, modified 2026-03-09 · containerd image store is the default for fresh installs of Engine 29.0 and later; upgraded daemons keep the classic drivers such as `overlay2` (*read*) · covers our angle: **partial** — Docker side only · fetched 2026-10-12
 - **Also good:** [containers-storage.conf(5) (raw)](https://raw.githubusercontent.com/containers/storage/main/docs/containers-storage.conf.5.md) · github (raw) · the `driver` option for Podman (*read*) · fetched 2026-10-12
-- **Our delta:** correct the "`overlay2` for Docker" line (see the drift note above).
+- **Our delta:** correct the "`overlay2` for Docker" line: fresh Engine 29 installs use the containerd image store, upgraded ones may still run `overlay2` (see the drift note above).
 
 ### T02-14 · Your own registry and a pull-through cache — Know · ✅ written `docs/docker/pages/phase-2-images-and-registries/14-your-own-registry.md`
-- **Read this:** [Mirror the Docker Hub library](https://docs.docker.com/docker-hub/image-library/mirror/) · Docker docs · a local mirror avoids each daemon fetching from the internet; run a registry as a pull-through cache (*read* the use-case) · covers our angle: **partial** — running a general registry is elsewhere · fetched 2026-10-12
+- **Read this:** [Mirror the Docker Hub library](https://docs.docker.com/docker-hub/image-library/mirror/) · Docker docs · a local mirror avoids each daemon fetching from the internet; run a registry as a pull-through cache (*read*) · covers our angle: **partial** — running a general registry is elsewhere · fetched 2026-10-12
 - **Also good:** [About Registry](https://distribution.github.io/distribution/about/) · CNCF Distribution docs · image naming, use cases, requirements (*headings only*) · fetched 2026-10-12
 
 ### T02-15 · Image signing — Know · ✅ written `docs/docker/pages/phase-2-images-and-registries/15-image-signing.md`

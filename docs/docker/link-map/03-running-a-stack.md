@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Link map · Docker · Part 3 (phases 6–9)
 
-Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 to T06-12 phase 6 (storage), T07-01 to T07-14 phase 7 (networking), T08-01 to T08-17 phase 8 (Compose), T09-01 to T09-14 phase 9 (the MERN/PERN stack). That is 57 rows. Each has a page of ours (✅); where one page folder carries a row, the path is the folder README.
+Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 to T06-12 phase 6 (storage), T07-01 to T07-14 phase 7 (networking), T08-01 to T08-17 phase 8 (Compose), T09-01 to T09-14 phase 9 (the MERN/PERN stack, in the `-b` file). That is 57 rows; phase 9 (T09-01 to T09-14) sits in the continuation file `03-running-a-stack-b.md`, split to stay under the 300-line cap. Each has a page of ours (✅); where one page folder carries a row, the path is the folder README.
 *read* = I read the passage; *headings only* = fetched, headings/size checked. Third-party links carry a date where the page shows one. No `#anchors` are given.
 
 🔴 **Version note (2026-10-12).** The Docker Engine 29 release notes (page modified 2026-10-07) list **29.9.0** as newest; the syllabus README says 29.7.2, so it is behind. That release's notes name BuildKit v0.34.0 and RootlessKit 3.2.0. podman.io shows **Podman 6.1.3** as latest stable; the README says 6.1.0. The Compose release-notes page returns 403 to our fetcher, so the current Compose version is **not confirmed**. `github.com` also returns 403, so READMEs are cited as `raw.githubusercontent.com` copies.
@@ -92,9 +92,10 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 - **Our delta:** reach `db:5432`, never the published `8001`; no `-p` needed for container-to-container.
 
 ### T07-03 · `localhost` inside a container is the container — Master · ✅ written `docs/docker/pages/phase-7-networking/03-localhost-is-the-container.md`
-- **Read this:** [How to connect to localhost within a Docker container](https://www.howtogeek.com/devops/how-to-connect-to-localhost-within-a-docker-container) · How-To Geek · `localhost` and `127.0.0.1` resolve to the container, `host.docker.internal` to the host; published 2021-09-14 (*read*) · covers our angle: **partial** — about reaching the host, not the `DB_HOST=postgres` Compose fix; a 2021 article · fetched 2026-10-12
-- **Also good:** [Networking in Compose](https://docs.docker.com/compose/how-tos/networking/) · docs.docker.com · the service-name replacement for `localhost` (*read*) · fetched 2026-10-12
-- **Our delta:** the `DB_HOST=postgres` rule is ours; no official page states the "localhost is the container" rule in one line (not confirmed).
+- **Read this:** [Networking in Compose](https://docs.docker.com/compose/how-tos/networking/) · docs.docker.com · each service is reachable by its service name through an internal DNS server, with no IP addresses needed (*read*) · covers our angle: **partial** — the fix (`DB_HOST=postgres`) is shown, the "localhost is the container" rule is not stated · fetched 2026-10-12
+- **Also good:** [Docker Desktop networking how-tos](https://docs.docker.com/desktop/features/networking/networking-how-tos/) · docs.docker.com · `host.docker.internal` is the name for the host, which implies `localhost` is not it (*read*) · fetched 2026-10-12
+- *Checked, not chosen:* a How-To Geek article (2021) states the rule plainly, but curl could not fetch it with a 200 from here, so it is not linked.
+- **Our delta:** the rule itself and the `DB_HOST=postgres` versus `localhost` pair are ours; no fetchable official page states the rule in one line (not confirmed).
 
 ### T07-04 · Publishing ports — Understand · ✅ written `docs/docker/pages/phase-7-networking/04-publishing-ports.md`
 - **Read this:** [Port publishing and mapping](https://docs.docker.com/engine/network/port-publishing/) · docs.docker.com · `-p` creates firewall rules mapping a host address and port to the container; `-p 8080:80` listens on any host address; modified 2025-09-12 (*read*) · covers our angle: full · fetched 2026-10-12
@@ -115,8 +116,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 ### T07-07 · Reaching the host from inside — Understand · ✅ written `docs/docker/pages/phase-7-networking/07-reaching-the-host.md`
 - **Read this:** [Docker Desktop networking how-tos](https://docs.docker.com/desktop/features/networking/networking-how-tos/) · docs.docker.com · `host.docker.internal` resolves to the host, with a curl example; modified 2026-09-29 (*read*) · covers our angle: **partial** — Desktop only; the Linux caveat is missing · fetched 2026-10-12
 - **Also good:** [podman-run · host-gateway](https://docs.podman.io/en/latest/markdown/podman-run.1.html) · docs.podman.io · Podman adds `host.containers.internal` and `host.docker.internal` to `/etc/hosts`, and pasta uses `--map-guest-addr` (*read*) · fetched 2026-10-12
-- **Also good:** [How to connect to localhost within a Docker container](https://www.howtogeek.com/devops/how-to-connect-to-localhost-within-a-docker-container) · How-To Geek · on Linux, enable the name with `--add-host`; published 2021-09-14 (*read*) · fetched 2026-10-12
-- **Our delta:** the Linux `host-gateway` value; the Docker docs page for `--add-host` was not read in full.
+- **Our delta:** the Linux caveat (`--add-host=host.docker.internal:host-gateway`) comes from web search results only; no fetchable page confirmed it, so it is not confirmed.
 
 ### T07-08 · Rootless networking — Understand · ✅ written `docs/docker/pages/phase-7-networking/08-rootless-networking.md`
 - **Read this:** [Podman basic networking (raw)](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/basic_networking.md) · containers/podman · rootless containers default to pasta, rootful to netavark; bridge, host and none setups (*read*) · covers our angle: **partial** — nothing on source IPs in logs or throughput · fetched 2026-10-12
