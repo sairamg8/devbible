@@ -40,7 +40,7 @@ Covers all 26 topic rows of `docs/expressjs/syllabus/01-foundations.md`: T00-01 
 - **Our delta:** which defaults to change and why; `env` and `case sensitive routing` are in the same table but were not separately checked, so **not confirmed** here.
 
 ### T00-06 · Express 5 vs 4 — Understand · ✅ `docs/expressjs/pages/phase-0-express-basics/06-express-5-vs-4.md`
-- **Read this:** [Upgrade to Express v5](https://expressjs.com/en/guide/migrating-5/) · expressjs.com · removed `app.del`, `req.param(name)`, `res.json(obj, status)`; rejected promises forwarded to error middleware; `req.query` now a getter and default parser "simple"; path syntax from path-to-regexp v8, with `()[]?+!` reserved (*read*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [Upgrade to Express v5](https://expressjs.com/en/guide/migrating-5/) · expressjs.com · removed `app.del`, `req.param(name)`, `res.json(obj, status)`; rejected promises forwarded to error middleware; `req.query` now a getter and default parser "simple"; path syntax changes (wildcards need names, `?` becomes braces), with `()[]?+!` reserved; the page does not name path-to-regexp v8, the routing guide does (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Introducing Express v5](https://expressjs.com/en/blog/2024-10-15-v5-release/) · expressjs.com blog, 2024-10-15 · sections on Node support, path matching, promises, body parser (*headings only*) · fetched 2026-10-12
 - **Our delta:** a check-list ordered by what breaks first on upgrade; the guide lists codemods, we should say which to run.
 
@@ -65,8 +65,8 @@ Covers all 26 topic rows of `docs/expressjs/syllabus/01-foundations.md`: T00-01 
 
 ### T01-02 · Route params, query strings, wildcards — Master · ✅ `docs/expressjs/pages/phase-1-routing/02-params-and-query/`
 - **Read this:** [Routing: route parameters](https://expressjs.com/en/guide/routing/) · expressjs.com · `:name`, `*splat` (value is an array), optional segments in braces, `/{*splat}` also matches `/` (*read*) · covers our angle: full for params and wildcards, **partial** for query · fetched 2026-10-12
-- **Also good:** [Request API: `req.query`](https://expressjs.com/en/5x/api/request/) · expressjs.com · shape is user-controlled, so every value is untrusted and must be validated (*read*) · [path-to-regexp Readme (raw)](https://raw.githubusercontent.com/pillarjs/path-to-regexp/master/Readme.md) · github (raw) · the grammar, v8.4.2 (*read*) · fetched 2026-10-12
-- **Our delta:** the null prototype on `req.params` for string routes, and `req.query` as a getter that re-parses (both from the migration guide and source, not from the routing guide).
+- **Also good:** [Request API: `req.query`](https://expressjs.com/en/5x/api/request/) · expressjs.com · shape is user-controlled, so every value is untrusted and must be validated (*read*) · [path-to-regexp Readme (raw)](https://raw.githubusercontent.com/pillarjs/path-to-regexp/master/Readme.md) · github (raw) · the grammar (*read*); latest on npm is 8.4.2 · fetched 2026-10-12
+- **Our delta:** the null prototype on `req.params` for string routes, and `req.query` as a getter and `req.params` with a null prototype for string paths (both from the migration guide, *read*, not from the routing guide). That the getter re-parses on each access is **not confirmed**, the source was not opened.
 
 ### T01-03 · `express.Router()` composition — Master · ✅ `docs/expressjs/pages/phase-1-routing/03-router-composition/`
 - **Read this:** [Routing: `express.Router`](https://expressjs.com/en/guide/routing/) · expressjs.com · a router module with its own middleware, mounted with `app.use` (*read*) · covers our angle: full for the basic pattern · fetched 2026-10-12
@@ -76,15 +76,15 @@ Covers all 26 topic rows of `docs/expressjs/syllabus/01-foundations.md`: T00-01 
 ### T01-04 · Nested routers and multi-level prefixes — Understand · ✅ `docs/expressjs/pages/phase-1-routing/03-router-composition/02-mergeparams-and-isolation.md`
 - **Read this:** [pillarjs/router README (raw): Router options](https://raw.githubusercontent.com/pillarjs/router/master/README.md) · github (raw) · `mergeParams` merges the parent `req.params`, default false (*read*) · covers our angle: **partial** — nothing on how prefixes concatenate · fetched 2026-10-12
 - **Also good:** [Application API: `app.mountpath`](https://expressjs.com/en/5x/api/application/) · expressjs.com · a sub-app's mount path, a string or array (*read*) · fetched 2026-10-12
-- **Our delta:** the four URL properties under a mount and the `restore` isolation, from source.
+- **Our delta:** the four URL properties under a mount and the `restore` isolation. **Not confirmed** here: the router source was not opened for this map.
 
 ### T01-05 · Route ordering pitfalls — Understand · ✅ `docs/expressjs/pages/phase-1-routing/04-route-ordering.md`
 - **Read this:** none found — tried: "Express route order matters /:id before static", "Express route ordering" on expressjs.com and search; the hits were blog and course pages (codefinity, gurubase, leyaa), not opened.
-- **Also good:** [Using middleware: skipping to the next route](https://expressjs.com/en/guide/using-middleware/) · expressjs.com · `next('route')` hands control to the next matching route (*read*) · fetched 2026-10-12
-- **Our delta:** the whole topic: static before param, catch-all last, with runnable proof. No official page states the rule.
+- **Also good:** [Router API: `router.use()`](https://expressjs.com/en/5x/api/router/) · expressjs.com · middleware is invoked sequentially, so order defines precedence (*read*) · [Using middleware: skipping to the next route](https://expressjs.com/en/guide/using-middleware/) · expressjs.com · `next('route')` hands control to the next matching route (*read*) · fetched 2026-10-12
+- **Our delta:** the whole topic: static before param, catch-all last, with runnable proof. The Router API page states the order rule for middleware only; no page shows the `/:id` before `/export` case.
 
 ### T01-06 · Express 5 path-to-regexp changes — Understand · ✅ `docs/expressjs/pages/phase-1-routing/05-path-matching-express5.md`
-- **Read this:** [Upgrade to Express v5: path route matching syntax](https://expressjs.com/en/guide/migrating-5/) · expressjs.com · the before and after table; reserved characters `()[]?+!` need `\`; names are identifiers or quoted (*read*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [Upgrade to Express v5: path route matching syntax](https://expressjs.com/en/guide/migrating-5/) · expressjs.com · the before and after code examples; reserved characters `()[]?+!` need `\`; names are identifiers or quoted (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [path-to-regexp Readme (raw): Errors](https://raw.githubusercontent.com/pillarjs/path-to-regexp/master/Readme.md) · github (raw) · "Unexpected ?" and "Unexpected (" errors with the fixes (*read*) · fetched 2026-10-12
 - **Our delta:** regex literals are still legal route paths in 5 (routing guide, *read*), so "regex routes need rewriting" is only true for string patterns. Say so.
 

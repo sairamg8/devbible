@@ -64,7 +64,7 @@ Docs pages carry no date, so only the fetch date is given. `github.com` and `npm
 ### T03-10 · Upload validation — Understand · ✅ written `docs/expressjs/pages/phase-3-requests/07-multipart-uploads.md`
 - **Read this:** [File Upload Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html) · OWASP · sections on extension and Content-Type allowlists, file signature (not alone), filename safety, storage location, size limits (*read* those sections) · covers our angle: **partial** — Java examples, no Multer wiring · fetched 2026-10-12
 - **Also good:** [multer](https://expressjs.com/en/resources/middleware/multer/) · expressjs.com · `fileFilter`, `limits`, `file.mimetype` and `originalname` fields (*read*) · fetched 2026-10-12
-- **Our delta:** the multer page gives no warning that `mimetype` is client-supplied; the object-store boundary is ours.
+- **Our delta:** the multer page says `file.originalname` is always client-supplied and untrusted, but says nothing similar about `mimetype` (OWASP does: the Content-Type is user-provided and trivial to spoof); the object-store boundary is ours.
 
 ### T03-11 · Reading cookies — Know · ✅ written `docs/expressjs/pages/phase-3-requests/08-cookies-and-helpers.md`
 - **Read this:** [cookie-parser](https://expressjs.com/en/resources/middleware/cookie-parser/) · expressjs.com · v1.4.7; fills `req.cookies`; a secret enables signed cookies; array of secrets tried in order (*read*) · covers our angle: full · fetched 2026-10-12
@@ -105,8 +105,8 @@ Docs pages carry no date, so only the fetch date is given. `github.com` and `npm
 
 ### T04-06 · Streaming a response from a handler — Understand · ✅ written `docs/expressjs/pages/phase-4-responses/08-streaming-and-downloads.md`
 - **Read this:** [Node.js stream docs: `stream.pipeline`](https://nodejs.org/api/stream.html) · nodejs.org (v26.11.1 docs) · `pipeline()` destroys the streams on error, and `close` before `end` gives `ERR_STREAM_PREMATURE_CLOSE` (*read* those passages) · covers our angle: **partial** — Node level, no Express handler · fetched 2026-10-12
-- **Also good:** [The Production Playbook for Node.js Stream Leaks](https://blog.master.dev/the-production-playbook-for-node-js-stream-leaks/) · master.dev (Frontend Masters), date not confirmed · `pipeline()` tears down an upstream cursor when the client drops (*read*) · fetched 2026-10-12
-- **Our delta:** do not forward `ERR_STREAM_PREMATURE_CLOSE` to the error handler once headers are sent (the Sentry and Express pages above); cross-link Node streams.
+- **Also good:** [The Production Playbook for Node.js Stream Leaks](https://blog.master.dev/the-production-playbook-for-node-js-stream-leaks/) · master.dev, date not confirmed (a reader comment on the page is dated 4 June 2026) · `pipeline()` tears down an upstream cursor when the client drops (*read*) · fetched 2026-10-12
+- **Our delta:** the mid-stream failure case is ours: the Express error-handling guide says to delegate to the default handler when `res.headersSent` is true (T04-05), but neither it nor the Sentry page mentions streams or `ERR_STREAM_PREMATURE_CLOSE` (not confirmed on any page read); cross-link Node streams.
 
 ### T04-07 · `res.sendFile` / `res.download` — Know · ✅ written `docs/expressjs/pages/phase-4-responses/08-streaming-and-downloads.md`
 - **Read this:** [Express 5.x API: Response](https://expressjs.com/en/5x/api/response/) · expressjs.com · `sendFile` path must be absolute unless `root` is set; with `root`, Express checks the path resolves inside it; `download` forwards options to `sendFile` (*read*) · covers our angle: full · fetched 2026-10-12
