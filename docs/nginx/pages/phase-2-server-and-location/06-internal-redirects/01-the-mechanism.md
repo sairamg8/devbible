@@ -181,6 +181,16 @@ ordinary locations and from the rewrite phase for named ones. Skipping the
 server-rewrite stage means less of the pipeline re-runs, which is part of why a
 named location is the safer fallback target.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ngx_http_rewrite_module](https://nginx.org/en/docs/http/ngx_http_rewrite_module.html) — nginx.org: `redirect` is 302, `permanent` is 301; `last` vs `break` shown in a `/download/` example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Internal redirects](README.md) · Next → [Cycles, SPAs and debugging](02-cycles-and-debugging.md)

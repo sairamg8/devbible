@@ -40,6 +40,17 @@ turn on `proxy_intercept_errors` for `/api/`.
 - **Phase 4 · reverse proxy** — the argument about intercepting upstream errors
   belongs to the API design there.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) — nginx.org: `error_page code ... [= [response]] uri`, named-location fallback (*read*)
+- **Also good:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) — nginx.org: `proxy_intercept_errors` is off by default; responses of 300 and above are then passed on (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Internal redirects](../06-internal-redirects/README.md) · Index: [Phase 2](../README.md) · Start → [The directive and its forms](01-the-directive.md)

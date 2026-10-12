@@ -255,6 +255,17 @@ application.
 **internal redirect** to `/index.php`, and nginx searches locations again with the
 new URI — this time the `\.php$` regex matches.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) — nginx.org: longest prefix remembered, regexes in file order, first regex wins, else the remembered prefix (*read*)
+- **Also good:** [How nginx processes a request](https://nginx.org/en/docs/http/request_processing.html) — nginx.org: worked PHP-site example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [The location matching algorithm](README.md) · Next → [The asymmetry, in practice](02-the-asymmetry.md)

@@ -207,6 +207,17 @@ They do the same thing to nginx — the unit's `ExecReload` calls the binary —
 systemd tracks the process it started. Signalling nginx directly for stops and
 starts leaves systemd's state out of sync with reality.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Controlling nginx](https://nginx.org/en/docs/control.html) — nginx.org: table of TERM/INT, QUIT, HUP, USR1, USR2, WINCH and what each does (*read*)
+- **Also good:** [Command-line parameters](https://nginx.org/en/docs/switches.html) — nginx.org: `-s` accepts stop, quit, reopen, reload (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Sizing the workers](03-sizing-the-workers.md) · Index: [Phase 0](README.md) · Next → [Reload, restart and binary upgrade](05-reload-and-upgrade.md)

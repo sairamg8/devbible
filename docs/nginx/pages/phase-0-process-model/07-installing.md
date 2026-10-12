@@ -206,6 +206,17 @@ are the common ones — or a build option the packages omit. The cost is that yo
 own security patching yourself, and the stable branch shipped four security
 releases between May and July 2026.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Installing NGINX Open Source](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/) — docs.nginx.com: OS repo "suitable for learning or testing", official repo recommended for production, source builds, containers (*read*)
+- **Also good:** [nginx: Linux packages](https://nginx.org/en/linux_packages.html) — nginx.org: supported distributions and repo setup for stable and mainline (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`nginx -t`, `-T` and `-V`](06-testing-the-config.md) · Index: [Phase 0](README.md) · Next → [Modules, static and dynamic](08-modules.md)

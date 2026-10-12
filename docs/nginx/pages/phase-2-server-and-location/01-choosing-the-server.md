@@ -264,6 +264,17 @@ Two `server` blocks on the same socket declare the same name. nginx warns and
 keeps the first one it read, silently ignoring the other — usually a retired
 config file that still matches the include glob.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How nginx processes a request](https://nginx.org/en/docs/http/request_processing.html) — nginx.org: tests IP and port against `listen` first, then Host against `server_name` of those blocks (*read*)
+- **Read this:** [Server names](https://nginx.org/en/docs/http/server_names.html) — nginx.org: exact, longest `*.` wildcard, longest trailing wildcard, first regex in file order (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 2](README.md) · Next → [The default server and host-header safety](02-default-server.md)

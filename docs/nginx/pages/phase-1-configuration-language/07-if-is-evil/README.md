@@ -39,6 +39,17 @@ file-existence condition without hesitating.
 - **Phase 2 · server and location selection** — the mechanisms that make most
   `if` conditions unnecessary.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [If is Evil... when used in location context](https://nginx-wiki.getpagespeed.com/config/if-is-evil/) — nginx wiki mirror (getpagespeed), published 2025-12-05, modified 2026-08-05: only `return` and `rewrite ... last` are fully safe; use `try_files`, `return`, or `rewrite ... last` (*read*)
+- **Also good:** [ngx_http_rewrite_module](https://nginx.org/en/docs/http/ngx_http_rewrite_module.html) — nginx.org: `if` is allowed in server and location, and the request is assigned the configuration inside it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`map`](../06-map/README.md) · Index: [Phase 1](../README.md) · Start → [What `if` actually is](01-what-if-does.md)

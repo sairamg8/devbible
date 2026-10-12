@@ -260,6 +260,17 @@ legitimate SPA routes get a 404.
 build artefact that was not deployed, or an extra config file that matches the
 include glob only in that environment.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) — nginx.org: limit reached gives 500 and "rewrite or internal redirection cycle" in the error log (*read*)
+- **Also good:** [ngx_http_rewrite_module](https://nginx.org/en/docs/http/ngx_http_rewrite_module.html) — nginx.org: a loop repeats at most 10 times; switch `last` to `break` in the location (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The mechanism](01-the-mechanism.md) · Index: [Internal redirects](README.md) · Next → [`error_page`](../07-error-page/README.md)

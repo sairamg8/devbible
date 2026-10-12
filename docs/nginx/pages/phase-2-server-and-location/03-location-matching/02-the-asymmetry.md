@@ -269,6 +269,16 @@ must not be intercepted; then regexes, most specific first, because that group i
 the only order-dependent one; then ordinary prefixes in whatever order reads best;
 then `location /` as the fallback.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How nginx processes a request](https://nginx.org/en/docs/http/request_processing.html) — nginx.org: "first matching expression stops the search", prefix choice is by length (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The algorithm and the modifiers](01-the-algorithm.md) · Index: [The location matching algorithm](README.md) · Next → [Named locations, `internal` and nesting](../04-named-and-internal.md)

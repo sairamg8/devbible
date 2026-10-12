@@ -42,6 +42,17 @@ turns a backend 404 into a 200, and read
 - **Phase 3 · static files** — `try_files` and the SPA fallback are this
   mechanism applied.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) — nginx.org: `try_files` falls back to an internal redirect to its last parameter (*read*)
+- **Also good:** [agentzh's Nginx Tutorials](https://openresty.org/download/agentzh-nginx-tutorials-en.html) — Yichun Zhang, 2020.03.19: internal redirection via `rewrite` shown with variables (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The request-processing phases](../05-request-phases.md) · Index: [Phase 2](../README.md) · Start → [The mechanism](01-the-mechanism.md)

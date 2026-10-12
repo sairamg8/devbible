@@ -205,6 +205,17 @@ and belongs in the application.
 It proxies raw TCP and UDP rather than HTTP — Postgres, Redis, MQTT, or SNI-based
 routing without terminating TLS. Most fullstack deployments never need it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [nginx.org home](https://nginx.org/) — nginx.org: one-sentence definition: HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP and mail proxy (*read*)
+- **Also good:** [Inside NGINX: How We Designed for Performance & Scale](https://blog.nginx.org/blog/inside-nginx-how-we-designed-for-performance-scale) — NGINX blog, Jun 10, 2015: why the architecture, not the feature list, is the point (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 0](README.md) · Next → [The master and its workers](02-master-and-workers.md)

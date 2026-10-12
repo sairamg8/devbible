@@ -224,6 +224,17 @@ limits, but treat the message as a symptom rather than a verdict.
 container capped at half a core still starts 64 workers, each with its own
 memory and connection pool. Set the number explicitly there.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Core functionality](https://nginx.org/en/docs/ngx_core_module.html) — nginx.org: `worker_connections` counts all connections including proxied ones and cannot exceed the open-file limit set by `worker_rlimit_nofile` (*read*)
+- **Read this:** [Connection processing methods](https://nginx.org/en/docs/events.html) — nginx.org: epoll on Linux 2.6+, kqueue on FreeBSD/OpenBSD/NetBSD/macOS, and nginx normally picks the best method itself (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The master and its workers](02-master-and-workers.md) · Index: [Phase 0](README.md) · Next → [Signals and `nginx -s`](04-signals-and-control.md)

@@ -262,6 +262,17 @@ Because the listed percentages rarely total 100, and anything outside them falls
 through to an empty string rather than to a sensible default. `*` is the
 remainder bucket and should always be the last entry.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ngx_http_geo_module](https://nginx.org/en/docs/http/ngx_http_geo_module.html) — nginx.org: CIDR prefixes and ranges, `default`, `proxy` for trusted X-Forwarded-For (*read*)
+- **Read this:** [ngx_http_split_clients_module](https://nginx.org/en/docs/http/ngx_http_split_clients_module.html) — nginx.org: hashes a string with MurmurHash2 into percentage buckets, example for A/B tests (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`rewrite`, `return` and regular expressions](08-rewrite-and-return.md) · Index: [Phase 1](README.md) · Syllabus → [Part 1 — How nginx works](../../syllabus/01-how-nginx-works.md)

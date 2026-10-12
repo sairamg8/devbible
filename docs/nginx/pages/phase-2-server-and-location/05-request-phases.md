@@ -241,6 +241,18 @@ overwrote its effect, or it ran before the thing it was meant to influence. Or a
 configuration level below it redefined the same multi-valued directive and
 discarded the inherited set. Those two account for most of it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Development guide](https://nginx.org/en/docs/dev/development_guide.html) — nginx.org: official, current phase list (post-read, server rewrite, find config, rewrite, post-rewrite, preaccess, access, post-access, precontent, content, log) with the standard module registered in each (*read* the HTTP phases passage)
+- **Also good:** [agentzh's Nginx Tutorials](https://openresty.org/download/agentzh-nginx-tutorials-en.html) — Yichun Zhang, version 2020.03.19 (written against nginx 1.7.x): Directive Execution Order chapters: 11 phases with worked examples, but it names `try-files` as a phase where the official guide has `precontent` (*read*)
+- **Read this:** [ngx_http_headers_module](https://nginx.org/en/docs/http/ngx_http_headers_module.html) — nginx.org: added only for 200, 201, 204, 206, 301, 302, 303, 304, 307, 308 unless `always` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Named locations, `internal` and nesting](04-named-and-internal.md) · Index: [Phase 2](README.md) · Next → [Internal redirects](06-internal-redirects/README.md)

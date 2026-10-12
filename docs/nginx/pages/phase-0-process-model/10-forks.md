@@ -182,6 +182,18 @@ Active health checks. Open source has only passive checks (`max_fails` /
 Angie and NGINX Plus both offer active probing — though in a containerised
 deployment the orchestrator usually already does it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Nginx web server forked as Freenginx](https://www.theregister.com/software/2024/02/16/nginx-web-server-forked-as-freenginx/793091) — The Register, 2024-02-16: why Maxim Dounin forked, and Angie's earlier fork (*read*)
+- **Also good:** [OpenResty](https://openresty.org/en/) — openresty.org: "Scalable Web Platform by Extending NGINX with Lua" (*read*)
+- **Also good:** [Angie vs nginx](https://en.angie.software/news/articles/shodstva-i-razlichiya-angie-i-nginx/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Mainline, stable and NGINX Plus](09-versions-and-plus.md) · Index: [Phase 0](README.md) · Syllabus → [Part 1 — How nginx works](../../syllabus/01-how-nginx-works.md)
