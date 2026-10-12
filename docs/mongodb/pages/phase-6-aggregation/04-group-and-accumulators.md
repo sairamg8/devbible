@@ -246,6 +246,16 @@ viable at scale.
 Because the field is now `_id.customer`. The composite key is a subdocument under `_id`, and the
 original top-level names are not part of the output.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) — mongodb.com: ≈4.5k words; the accumulator list including `$push` ("an array of expression values for documents in each group"); `$group` does not order its output (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`$project` vs `$addFields` / `$set`](./03-project-vs-addfields.md) ·

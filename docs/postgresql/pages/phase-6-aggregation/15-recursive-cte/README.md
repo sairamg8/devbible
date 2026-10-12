@@ -49,6 +49,16 @@ cycle with the trade-off of each.
 - **[Indexes](../../phase-10-indexes/README.md)** — why the parent column needs one: the recursive
   term joins on it once per iteration
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.8.2 Recursive Queries](https://www.postgresql.org/docs/current/queries-with.html#QUERIES-WITH-RECURSIVE) — postgresql.org: includes Cycle Detection (7.8.2.2): path arrays, `UNION` vs `UNION ALL`, the `CYCLE` clause (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Walking a tree](01-walking-a-tree.md)

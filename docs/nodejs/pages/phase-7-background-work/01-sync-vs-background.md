@@ -186,3 +186,14 @@ work is done.
 ---
 
 Phase index: [Background work and resilience](./README.md) · Next → [Job queues from Node](./02-job-queues.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Keeping your API fast](https://www.inngest.com/docs/patterns/jobs/keeping-your-api-fast) — inngest.com: a handler that returns in under a second hands everything else to a transport, a worker, retry semantics and idempotency (*read* "What this requires"; vendor docs)
+- **Also good:** [Webhooks](https://docs.stripe.com/webhooks) — stripe.com: the receiver should return 2xx before any complex logic that might time out (*read* one passage)
+
+{/* LINKMAP:END */}

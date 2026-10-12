@@ -252,6 +252,16 @@ was neither insertion nor id order.
 No. PostgreSQL, SQLite and MariaDB have it; SQL Server uses `OUTPUT`, Oracle
 `RETURNING INTO`. Code that must be portable across engines cannot rely on it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [6.4. Returning Data from Modified Rows](https://www.postgresql.org/docs/current/dml-returning.html) — postgresql.org: `INSERT`, `UPDATE`, `DELETE`, `MERGE` all take `RETURNING` (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`INSERT`](04-insert.md) · Next → [`ON CONFLICT`](06-on-conflict.md)

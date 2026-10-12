@@ -276,6 +276,17 @@ do not apply — which is what makes a view useful as a permission boundary and
 dangerous if you assumed otherwise. `security_invoker = true` (PG 15+) switches
 to the caller's privileges.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CREATE VIEW](https://www.postgresql.org/docs/current/sql-createview.html) — postgresql.org: automatically updatable views and `WITH CHECK OPTION` (*read*)
+- **Also good:** [Views (tutorial)](https://www.postgresql.org/docs/current/tutorial-views.html) — postgresql.org: a 300-word first example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [pg_trgm similarity](06-pg-trgm.md) · Next → [Triggers](08-triggers.md)

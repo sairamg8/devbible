@@ -249,6 +249,17 @@ user-driven containment filters, plus expression indexes on the two or three key
 carrying real traffic. You pay the GIN size once for flexibility and very little
 for the hot path.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JSON Types, section "jsonb Indexing"](https://www.postgresql.org/docs/current/datatype-json.html) — postgresql.org: default GIN class versus `jsonb_path_ops` (no key-exists operators, supports `@&gt;`, `@?`, `@@`) (*read*)
+- **Also good:** [CREATE INDEX](https://www.postgresql.org/docs/current/sql-createindex.html) — postgresql.org: the expression-index syntax (*headings only*; synopsis seen)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [When a column beats JSON](02-column-vs-json.md) · Next → [Building JSON in SQL](04-build-json-sql.md)

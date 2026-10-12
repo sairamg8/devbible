@@ -219,6 +219,18 @@ immediately. It costs nothing.
 One per process, per database. Legitimate exceptions are a replica pool, a dedicated
 non-pooled `Client` for `LISTEN`, and short-lived pools in scripts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Welcome / Introduction](https://node-postgres.com/) — node-postgres.com: `npm install pg`; supports current and LTS Node plus bun, deno, Cloudflare Workers (*read*)
+- **Also good:** [ESM](https://node-postgres.com/features/esm) — node-postgres.com: ESM support since v8.15.x; named import `import &#123; Client &#125; from 'pg'` now works, the old default-import form still does (*read*)
+- **Also good:** [Pooling](https://node-postgres.com/features/pooling)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](README.md) · Next → [`Pool` vs `Client`](02-pool-vs-client.md)

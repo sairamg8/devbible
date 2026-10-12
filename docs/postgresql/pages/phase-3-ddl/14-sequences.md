@@ -200,6 +200,17 @@ Lifecycle only: an owned sequence is dropped with its table, as `serial` and
 identity sequences are — measured, 0 sequences left after `DROP TABLE`. It does not
 restrict who may call `nextval`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CREATE SEQUENCE · Notes](https://www.postgresql.org/docs/current/sql-createsequence.html) — postgresql.org: "nextval and setval calls are never rolled back", so no gapless numbers (*read*)
+- **Also good:** [Sequence Manipulation Functions](https://www.postgresql.org/docs/current/functions-sequence.html) — postgresql.org: `nextval` is atomic across sessions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`DROP`, `CASCADE`, `RESTRICT`](13-drop-cascade.md) · Next → [Generated columns](15-generated-columns.md)

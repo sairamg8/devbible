@@ -226,6 +226,16 @@ From blast radius: minutes for banking, weeks for low-risk consumer apps. "Remem
 should be a separate long-lived token that mints short sessions, not a session with a
 long TTL.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) — OWASP: renew the ID after a privilege change, idle and absolute timeouts, logout (*read* the headings, ≈9k words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Authz vs authn](./04-authentication-vs-authorization.md) · Next → [OAuth 2.0 and OIDC](./06-oauth-oidc.md)

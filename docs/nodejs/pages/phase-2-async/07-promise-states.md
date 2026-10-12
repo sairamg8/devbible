@@ -216,6 +216,18 @@ outcome with that error.
 With no handler attached it becomes an unhandled rejection, which terminates the
 process by default in modern Node.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Promises chaining](https://javascript.info/promise-chaining) — javascript.info: April 6, 2023; "Returning promises allows us to build chains of asynchronous actions" (*read*)
+- **Also good:** [MDN: Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) — mdn: undated; [#nesting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#nesting) shows flattening a nested chain (*read*)
+- **Also good:** [#nesting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#nesting)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Timers](06-timers.md) · Next → [Async and await](08-async-await.md)

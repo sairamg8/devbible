@@ -111,6 +111,17 @@ New objects start young and cheap to collect; survivors age into a larger, costl
 **What is the first fix for GC thrashing?**
 Allocate less and retain less — not only raising the heap flag.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Understanding and Tuning Memory](https://nodejs.org/learn/diagnostics/memory/understanding-and-tuning-memory) — nodejs.org/learn: New Space for short-lived objects, survivors promoted to Old Space, and `--max-old-space-size` caps the Old Space (*read*)
+- **Also good:** [Trash talk: the Orinoco garbage collector](https://v8.dev/blog/trash-talk) — v8.dev: Jan 3, 2019; how V8's GC went from stop-the-world to mostly parallel and concurrent (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Benchmarking](./20-benchmarking.md) · Next → [Flame graphs](./22-flame-graphs.md)

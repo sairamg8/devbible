@@ -209,6 +209,16 @@ Longer than p99 job duration, with the internal drain timeout below it. If jobs
 legitimately take longer than any reasonable grace period, checkpoint their progress so
 a restart resumes instead of repeating.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Graceful shutdown](https://docs.bullmq.io/guide/workers/graceful-shutdown) — docs.bullmq.io: `await worker.close()` stops new jobs and waits for current ones; it has no timeout of its own; if it fails, pending jobs become stalled (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Time on the server](./10-time-on-the-server.md) · Next → [Timeout budgets](./12-timeout-budgets.md)

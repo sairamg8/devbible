@@ -192,6 +192,18 @@ The edge handles volume; the app handles precision — user identity, route cost
 attempts.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [express-rate-limit configuration](https://express-rate-limit.mintlify.app/reference/configuration) — express-rate-limit docs: `windowMs`, `limit`, `keyGenerator` (default client IP, `ipv6Subnet` applied), `skip`, `standardHeaders`, `handler`, `store` (*read*)
+- **Also good:** [Troubleshooting proxy issues](https://express-rate-limit.mintlify.app/guides/troubleshooting-proxy-issues) — express-rate-limit docs: without `trust proxy` every client shares the proxy IP; IP:PORT lists can reset limits (*read*)
+- **Also good:** [Security best practices](https://expressjs.com/en/advanced/best-practice-security/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Helmet](03-helmet.md) · Next → [CSRF and injection surfaces](05-csrf-and-injection.md)

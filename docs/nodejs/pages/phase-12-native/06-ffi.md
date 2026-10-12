@@ -79,6 +79,16 @@ Yes — it is executing native code in-process; trust the binary source.
 **How do you keep the event loop free during heavy FFI?**
 Do not run long calls on the main thread; use workers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [FFI](https://nodejs.org/docs/latest/api/ffi.html) — nodejs.org: v26.11.1; `node:ffi` added v26.1.0, Stability 1 Experimental; loads dynamic libraries and calls symbols, and the page calls the API unsafe (a bad pointer or signature can crash the process) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [C++ addons](./05-cpp-addons.md) · Next → [WASI](./07-wasi.md)

@@ -206,6 +206,17 @@ Generate it from the live schema in CI after migrations, and commit it — so th
 schema change shows up as a diff in review. Better still, diff a freshly migrated
 scratch database against production, which needs no maintained list at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [node-pg-migrate CLI reference](https://salsita.github.io/node-pg-migrate/cli) — salsita.github.io: `--check-order` verifies the migration order before running (*read*)
+- **Also good:** [kysely-codegen README (raw)](https://raw.githubusercontent.com/RobinBlomberg/kysely-codegen/master/README.md)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Migration tools](12-migration-tools.md) · Next → [Generating TypeScript types](14-codegen-types.md)

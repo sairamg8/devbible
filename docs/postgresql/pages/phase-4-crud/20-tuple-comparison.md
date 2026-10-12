@@ -228,6 +228,17 @@ when that changes. Encode it server-side. Note base64 is encoding, not encryptio
 never put anything sensitive in it, and validate the decoded values before binding
 them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.25. Row and Array Comparisons → Row Constructor Comparison](https://www.postgresql.org/docs/current/functions-comparisons.html#ROW-WISE-COMPARISON) — postgresql.org: pairwise comparison with an operator; composite comparison is row-wise (*read*)
+- **Also good:** [use-the-index-luke: no offset](https://use-the-index-luke.com/no-offset) — use-the-index-luke.com: the keyset recipe (*read*; undated)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`VALUES` and `unnest`](19-values-unnest.md) · Next → [Phase 5 · Joins and set operations](../phase-5-joins/)

@@ -203,6 +203,17 @@ short-circuited by `condition` with `dispatchConditionRejection` enabled. Neithe
 state — a cancelled request is an expected outcome. Treating them as failures is what produces error
 toasts every time a user navigates away mid-load.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [createAsyncThunk → cancellation](https://redux.js.org/toolkit/api/createAsyncThunk#cancellation) — redux.js.org: canceling before execution (`condition`), canceling while running (the abort signal), checking cancellation status, telling a cancel from an error
+- **Also good:** [RTK Query overview → motivation](https://redux.js.org/toolkit/rtk-query/overview#motivation) — redux.js.org: the maintainers' account of what hand-written thunk fetching leaves to you: loading state, duplicate requests, optimistic updates, cache lifetimes
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`createAsyncThunk`](./01-create-async-thunk.md) · [Topic index](../README.md) · Next → [RTK Query](../04-rtk-query/01-api-slice-and-endpoints.md)

@@ -227,6 +227,17 @@ Not accepting them. Store files under generated identifiers, keep the original
 name as metadata, and have users address files by ID — which also gets you
 ownership checks.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Preventing Path Traversal Attacks in Node.js](https://blog.openreplay.com/prevent-path-traversal-nodejs/) — OpenReplay, 2026-04-29: `path.normalize()` and `path.join()` are not security tools; use `path.resolve()` plus a `startsWith` check that includes `path.sep` (a base of `/uploads` would pass `/uploads-other/`); `path.relative()` for stricter checks; symli
+- **Also good:** [Path Traversal](https://community.owasp.org/attacks/Path_Traversal) — OWASP Community: the attack in general terms (`../` sequences, absolute paths); advice to prefer working without user input and to use indexes instead of file names (*read*); no Node code
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [node:path](03-path.md) · Next → [node:url](05-url.md)

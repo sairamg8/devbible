@@ -223,6 +223,18 @@ The directory containing the entry; the full path is
 `path.join(entry.parentPath, entry.name)`. It replaced the deprecated
 `entry.path`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [fsPromises.readdir()](https://nodejs.org/api/fs.html#fspromisesreaddirpath-options) — nodejs.org: `withFileTypes` (since v10.11.0) and `recursive` (since v20.1.0, v18.17.0) options (*read*)
+- **Read this:** [mkdir](https://nodejs.org/api/fs.html#fspromisesmkdirpath-options)
+- **Also good:** [Working with folders in Node.js](https://nodejs.org/learn/manipulating-files/working-with-folders-in-nodejs) — nodejs.org Learn: check, create, read, rename, remove (*read* the mkdir section)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [File streams](06-file-streams.md) · Next → [stat and existence](08-stat-and-existence.md)

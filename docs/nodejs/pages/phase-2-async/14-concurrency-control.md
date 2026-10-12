@@ -191,6 +191,16 @@ With `Promise.all` over the workers, the first rejection propagates and the
 remaining work is abandoned partway. If you need every item attempted, catch
 inside the per-item function and collect failures, or use `allSettled`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [p-limit readme (v7.3.3)](https://cdn.jsdelivr.net/npm/p-limit@7.3.3/readme.md) — jsDelivr copy of the npm readme: `pLimit(n)` wrapped around `Promise.all` so only n run at once; minimum 1 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Callbacks and promisify](13-callbacks-and-promisify.md) · Next → [Unhandled rejections](15-unhandled-rejections.md)

@@ -145,6 +145,17 @@ or a maintenance routine driven by a scheduler with no application in the path. 
 an application server owns the transaction, it is almost never the right tool —
 which is why this sits at *Learn When Needed*.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CREATE PROCEDURE](https://www.postgresql.org/docs/current/sql-createprocedure.html) — postgresql.org: a `SECURITY DEFINER` procedure cannot run `COMMIT` or `ROLLBACK` (*read*)
+- **Also good:** [CREATE FUNCTION](https://www.postgresql.org/docs/current/sql-createfunction.html) — postgresql.org: (*read* the synopsis)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Partitioning](14-partitioning.md) · Next → [Foreign data wrappers](16-fdw.md)

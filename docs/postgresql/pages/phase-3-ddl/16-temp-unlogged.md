@@ -201,6 +201,16 @@ Rarely. Both directions rewrite the table, and `SET LOGGED` writes the entire ta
 to WAL at once — usually costing more than the load saved, and potentially
 saturating replication.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CREATE TABLE · UNLOGGED](https://www.postgresql.org/docs/current/sql-createtable.html#SQL-CREATETABLE-UNLOGGED) — postgresql.org: not written to WAL, so faster, but truncated after a crash and not replicated (*read*); temporary tables are `#SQL-CREATETABLE-TEMPORARY` (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Generated columns](15-generated-columns.md) · Next → [`COMMENT ON`](17-comments.md)

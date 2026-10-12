@@ -195,6 +195,17 @@ At the edge — when rendering for a user, or when bucketing a report by their c
 Everything in between stores and compares instants in UTC. Which means the user's
 timezone is data you have to capture; it cannot be recovered later.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Date/Time Types](https://www.postgresql.org/docs/current/datatype-datetime.html) — postgresql.org: `timestamp with time zone` is stored as UTC and converted to the session zone on output; the original zone is not kept (*read*)
+- **Also good:** [10 Date-and-Time Bugs](https://dev.to/luke_bowers/10-date-and-time-bugs-i-still-see-in-production-and-how-to-avoid-them-31ke) — DEV Community: 2025-07-28; cron jobs drift by an hour at DST, so run in UTC or use a zone-aware scheduler (*read* that bullet; thin, and the post promotes its own API)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Outbound side-effects](./09-outbound-side-effects.md) · Next → [Graceful worker shutdown](./11-graceful-shutdown.md)

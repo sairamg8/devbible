@@ -196,6 +196,17 @@ Hashed, like passwords, and marked single-use. They are credentials with the sam
 as the second factor, and they are the reason a lost phone does not become a support
 ticket that bypasses MFA entirely.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Multifactor Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html) — OWASP: TOTP as the common soft token, when to require MFA, reset procedure (*read*)
+- **Also good:** [RFC 6238: TOTP](https://www.rfc-editor.org/rfc/rfc6238.html) — IETF, May 2011: the algorithm, extending HOTP with time (*read* the abstract)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [OAuth 2.0 and OIDC](./06-oauth-oidc.md) · Next → [Injection](./08-injection.md)

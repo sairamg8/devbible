@@ -178,6 +178,17 @@ Image and video conversion, `git` commands built from branch names, archive
 extraction, PDF tooling, and admin "network tools" pages — anywhere a program is
 invoked with a name a user chose.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [child_process.exec()](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) — nodejs.org: "Never pass unsanitized user input" — shell metacharacters can trigger arbitrary commands (*read*)
+- **Also good:** [OS Command Injection Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html) — OWASP: avoid OS commands; parameterization with input validation; examples are Java, .NET, PHP, none for Node (*read* the contents)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [child_process](19-child-process.md) · Next → [IPC](21-ipc.md)

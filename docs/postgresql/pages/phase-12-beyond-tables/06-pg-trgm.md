@@ -283,6 +283,16 @@ missed a one-character typo (score 0.571); lowering it to 0.55 found the row and
 matched exactly one extra row in total. Tune it against your data by measuring
 both the hit and the noise.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [pg_trgm](https://www.postgresql.org/docs/current/pgtrgm.html) — postgresql.org: trigram indexes also support `LIKE`, `ILIKE`, `~`, `~*` and `=` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Full-text search](./full-text/) · Next → [Views](07-views.md)

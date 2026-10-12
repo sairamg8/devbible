@@ -109,6 +109,17 @@ product/request distributed tracing.
 Most fullstack work is served by logs, metrics, OTel, and profilers. These flags matter
 for deep runtime incidents, not everyday feature delivery.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Diagnostic report](https://nodejs.org/docs/latest/api/report.html) — nodejs.org: v26.11.1; `--report-on-fatalerror` writes a report when the runtime dies on a fatal error such as out of memory; also `--report-uncaught-exception` and `--report-on-signal` (*read*)
+- **Read this:** [Trace events](https://nodejs.org/docs/latest/api/tracing.html) — nodejs.org: v26.11.1; enabled by `--trace-event-categories` or the `node:trace_events` module, with categories such as `node.async_hooks` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Diagnostics Channel](./07-diagnostics-channel.md) · Next → [Event loop lag](./09-event-loop-lag.md)

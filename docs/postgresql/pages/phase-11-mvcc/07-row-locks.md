@@ -211,6 +211,17 @@ many rows costs no shared memory. `pg_locks` shows table-level locks and waiters
 Lock in a deterministic order — `ORDER BY id` in every code path that takes the locks.
 See [Deadlocks](11-deadlocks.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [13.3 Explicit Locking, section "Row-Level Locks"](https://www.postgresql.org/docs/current/explicit-locking.html) — postgresql.org: the four row lock modes and their conflict table (*read* the contents, modes seen in the text)
+- **Also good:** [SELECT FOR UPDATE considered harmful in PostgreSQL](https://www.cybertec-postgresql.com/en/select-for-update-considered-harmful-postgresql/) — Cybertec: `UPDATE` takes `FOR NO KEY UPDATE`, but `FOR UPDATE` when it modifies a column of a (non-partial, non-expression) unique index; published 2025-06-17, modified 2026-09-22 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [REPEATABLE READ SERIALIZABLE](06-isolation-levels.md) · Next → [SKIP LOCKED](08-skip-locked.md)

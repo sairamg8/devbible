@@ -247,6 +247,17 @@ It is the seam that makes everything downstream infer. Annotating the reducer's 
 `builder.addCase` narrow the action inside the handler. It is deliberately thin — the value is in where
 it is applied, not in what it contains.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Usage with TypeScript](https://redux.js.org/usage/usage-with-typescript) — redux.js.org: the standard RTK project setup (≈3.2k words): defining `RootState` and `AppDispatch`, typed hooks with `.withTypes()` (added in React Redux 9.1.0; kept in their own file to avoid circular imports), typing slices, reducers, middlew
+- **Also good:** [Redux Toolkit → Usage with TypeScript](https://redux.js.org/toolkit/usage/usage-with-typescript) — redux.js.org: per-API typing (≈5k words): the `configureStore` state and dispatch types, `Tuple` with `.concat()` / `.prepend()` and without `getDefaultMiddleware`, `createSlice` (`extraReducers`, thunks inside a slice), `createAsyncThunk` (typ
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Immer internals](../08-immutability-and-immer/01-immer-internals.md) · [Topic index](../README.md) · Next → [Redux DevTools](../10-devtools-and-debugging/01-redux-devtools.md)

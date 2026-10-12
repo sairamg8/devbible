@@ -165,6 +165,17 @@ broken. Contract-test the mocks, or run the critical paths against a real depend
 a container.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [supertest README (raw)](https://raw.githubusercontent.com/ladjs/supertest/master/README.md) — github (raw): pass an Express app and it binds a free port; `.expect()` on status, body, headers; async/await; no test framework needed (*read*)
+- **Read this:** [How to Mock External APIs in Node.js Tests](https://oneuptime.com/blog/post/2026-01-06-nodejs-mock-external-apis-tests/view) — oneuptime: 2026-01-06
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Request id middleware](02-request-id.md) · Next → [Auth in tests](04-auth-in-tests.md)

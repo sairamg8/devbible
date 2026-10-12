@@ -216,6 +216,16 @@ transaction.
 Overloads. Each row is a distinct signature, and "function does not exist" usually means
 the argument types do not match any of them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · Meta-Commands](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMANDS) — postgresql.org: the eight daily commands: `\l` (`#APP-PSQL-META-COMMAND-LIST`), `\c` (`-C-LC`), `\dn` (`-DN`), `\df` (`-DF-LC`); `\dt \di \dv \ds` share one group entry (`-DE`); `-DT` is `\dT`, data types, not `\dt` (ids found in the HTML; entrie
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Connecting with psql](01-connecting.md) · Next → [\d and \d+ in full](03-describe-table.md)

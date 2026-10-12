@@ -208,6 +208,18 @@ call. Requests beyond the cap queue instead of piling onto the dependency.
 The connection is only returned when the body stream completes. An unread body
 never completes, so the connection is held for the life of the process.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Class: http.Agent](https://nodejs.org/api/http.html#class-httpagent) — nodejs.org: an Agent manages connection persistence and reuse; it keeps a queue per host and port (*read* the opening and constructor options)
+- **Also good:** [Connection management in HTTP/1.x](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x) — MDN: short-lived vs persistent connections; `Connection` and `Keep-Alive` as hop-by-hop headers (*read*)
+- **Also good:** [undici Agent](https://raw.githubusercontent.com/nodejs/undici/main/docs/docs/api/Agent.md)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Outbound timeouts](06-outbound-timeouts.md) · Next → [Outbound client discipline](08-outbound-client-discipline.md)

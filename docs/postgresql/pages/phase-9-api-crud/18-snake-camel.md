@@ -232,6 +232,17 @@ exist`. Fine for a fixed `SELECT` list, awkward for a dynamically built one.
 With a lookup map, not an algorithm — the reverse transformation is not reliable,
 and you need the allowlist anyway to keep identifiers out of the SQL.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [postgres.js README (raw): Data Transformation](https://raw.githubusercontent.com/porsager/postgres/master/README.md) — github (raw): `transform: postgres.camel` converts names both ways, only from snake_case (*read*; other driver)
+- **Also good:** [PgTyped: Getting Started](https://pgtyped.dev/docs/getting-started)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [created_at and updated_at](17-timestamps-trigger.md) · Next → [Phase index](README.md)

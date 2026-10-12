@@ -193,6 +193,20 @@ index.
 Not with `$size`, which takes an exact number. Either maintain a count field alongside the array
 and index it, or use `$expr` with `$size` and accept that it cannot use an index.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [$eq → Match an Array Value](https://www.mongodb.com/docs/manual/reference/operator/query/eq/) — mongodb.com: with an array value the field must match the array exactly **or contain an element that matches it exactly**, and element order matters; the `&#123; tags: "B" &#125;` form matches any array containing that element, shown as equiva
+- **Read this:** [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/) — mongodb.com: the tutorial; the examples sit in language tabs and the fetched text has none, so neither half is confirmed here (*read*; demoted)
+- **Also good:** [$elemMatch](https://www.mongodb.com/docs/manual/reference/operator/query/elemmatch/) — [Query an Array of Embedded Documents](https://www.mongodb.com/docs/manual/tutorial/query-array-of-documents/): mongodb.com
+- **Also good:** [Query an Array of Embedded Documents](https://www.mongodb.com/docs/manual/tutorial/query-array-of-documents/)
+- **Also good:** [$all](https://www.mongodb.com/docs/manual/reference/operator/query/all/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`$expr`](./05-expr.md) ·

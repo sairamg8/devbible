@@ -273,6 +273,18 @@ database — `CREATE DATABASE ... TEMPLATE` measured at 156 ms, fine per file �
 own schema. Sharing tables across parallel files corrupts them in a way row-count
 assertions do not catch.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Testcontainers for NodeJS: PostgreSQL module](https://node.testcontainers.org/modules/postgresql/) — node.testcontainers.org: `PostgreSqlContainer`, `getConnectionUri()`, snapshots (not with the `postgres` database) (*read*)
+- **Also good:** [Getting started with Testcontainers for Node.js](https://testcontainers.com/guides/getting-started-with-testcontainers-for-nodejs/) — testcontainers.com: `pg` plus `jest` with the PostgreSQL module (*read*)
+- **Also good:** [Database Test Isolation](https://eradman.com/posts/database-test-isolation.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Shaping in SQL vs JavaScript](15-shape-sql-vs-js.md) · Next → [created_at and updated_at](17-timestamps-trigger.md)

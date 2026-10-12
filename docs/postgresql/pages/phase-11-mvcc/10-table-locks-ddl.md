@@ -187,6 +187,17 @@ rewritten.
 A global value affects ordinary queries that legitimately wait for row locks. Migrations
 are the case where failing fast is better than waiting.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [13.3 Explicit Locking, section "Table-Level Locks"](https://www.postgresql.org/docs/current/explicit-locking.html) — postgresql.org: lock modes and the conflict table; `ROW EXCLUSIVE` taken by `UPDATE`, `DELETE`, `INSERT`, `MERGE` (*read*)
+- **Read this:** [ALTER TABLE](https://www.postgresql.org/docs/current/sql-altertable.html) — postgresql.org: `ACCESS EXCLUSIVE` unless a subform says otherwise; several subcommands take the strictest (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Savepoints](09-savepoints.md) · Next → [Deadlocks](11-deadlocks.md)

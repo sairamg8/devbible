@@ -215,6 +215,17 @@ Not across a DST boundary in a local zone — one keeps the wall-clock time, the
 `ALTER TABLE t ALTER COLUMN c TYPE timestamptz USING c AT TIME ZONE 'UTC'` — naming the zone
 the existing values were written in. It rewrites the table.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Don't Do This · timestamp](https://wiki.postgresql.org/wiki/Don%27t_Do_This) — postgresql.org wiki: `timestamptz` stores a point in time (microseconds since 2000-01-01 UTC), not a zone (*read*; last edited 2024-11-21)
+- **Also good:** [Date/Time Types](https://www.postgresql.org/docs/current/datatype-datetime.html) — postgresql.org: "stored internally in UTC", shown in `TimeZone` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [text vs varchar vs char](03-text.md) · Next → [Time zones](05-time-zones.md)

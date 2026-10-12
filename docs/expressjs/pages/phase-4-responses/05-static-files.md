@@ -97,6 +97,19 @@ authoritative — an `/assets` mount where a miss really is a 404.
 It is ordinary middleware. Mounted before your API, a file whose name collides with
 a route path wins; mounted after, the routes win. Order is the only thing deciding it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Serving static files in Express](https://expressjs.com/en/starter/static-files/) — expressjs.com: mount path as virtual prefix, multiple directories, use an absolute path (*read*)
+- **Also good:** [Express 5.x API: express](https://expressjs.com/en/5x/api/express/) — expressjs.com: `dotfiles` default `"ignore"`, `fallthrough` default true, `etag` weak, `index` (*read*)
+- **Read this:** [MDN: HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) — MDN: `Cache-Control: max-age=31536000, immutable` for versioned URLs avoids reload revalidation (*read*)
+- **Also good:** [serve-static](https://expressjs.com/en/resources/middleware/serve-static/) — expressjs.com: `maxAge`, `immutable` (needs `maxAge`), `etag`, `cacheControl` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Headers already sent](04-headers-already-sent.md) · Next → [SPA fallback](06-spa-fallback.md)

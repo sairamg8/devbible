@@ -229,6 +229,17 @@ For anything unit-testable, and on CI runners without a container runtime — a 
 service container is the alternative there. A long-lived local container with a reset
 script is also reasonable for a small project.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Getting started with Testcontainers for Node.js](https://testcontainers.com/guides/getting-started-with-testcontainers-for-nodejs/) — testcontainers.com: PostgreSQL via Docker with `pg` and `@testcontainers/postgresql`; uses Jest (*read*)
+- **Also good:** [Testcontainers for NodeJS](https://node.testcontainers.org/) — node.testcontainers.org: project home (*headings only*, ≈240 words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [12 · Vitest and Jest](./12-vitest-and-jest.md) ·

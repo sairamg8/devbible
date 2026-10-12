@@ -68,6 +68,17 @@ before authentication.
 - **→ [Phase 10 · 04 · Auth in tests](../../phase-10-app-factory/04-auth-in-tests.md)**
   — issuing real tokens for the deny-path suite.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [express-jwt README (raw)](https://raw.githubusercontent.com/auth0/express-jwt/master/README.md) — github (raw): Bearer parsing, invalid token throws, a handler maps `UnauthorizedError` to 401; decoded payload lands on `req.auth` (v6 used `req.user`) (*read*)
+- **Also good:** [Writing middleware](https://expressjs.com/en/guide/writing-middleware/) — expressjs.com: attaching a property to `req` and calling `next()`; async middleware errors reach the error handler in Express 5 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev topic: [03 · Coercion traps](../03-coercion-traps.md) · Start → [One question only](01-one-question-only.md)

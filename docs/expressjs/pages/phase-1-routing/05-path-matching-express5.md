@@ -101,6 +101,17 @@ Official Express 5 migration guide + a boot test of your route table.
 **Is this the same as middleware order bugs?**  
 No — those fail at request time. Invalid paths fail before listen.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Upgrade to Express v5: path route matching syntax](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: the before and after code examples; reserved characters `()[]?+!` need `\`; names are identifiers or quoted (*read*)
+- **Also good:** [path-to-regexp Readme (raw): Errors](https://raw.githubusercontent.com/pillarjs/path-to-regexp/master/Readme.md) — github (raw): "Unexpected ?" and "Unexpected (" errors with the fixes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Route ordering](04-route-ordering.md) · Next → [router.param](06-router-param.md)

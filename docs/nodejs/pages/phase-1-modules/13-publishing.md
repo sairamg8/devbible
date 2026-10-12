@@ -197,6 +197,18 @@ is stable in 24.15, so CommonJS consumers are served without a second build. Shi
 both only for a wide public library that must support older Node, and accept the
 dual package hazard that comes with it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Publishing a package](https://nodejs.org/learn/modules/publishing-a-package) — nodejs.org: ≈5k words on CJS/ESM source and distribution choices and the "Dual Package Hazard" (two instances of one package in a runtime) (*read* the hazard section)
+- **Also good:** [Generating provenance statements](https://docs.npmjs.com/generating-provenance-statements/) — docs.npmjs.com: a GitHub Actions example with `id-token: write` (*read*)
+- **Also good:** [Scoped public packages](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [TypeScript without a build step](12-typescript-natively.md) · Next → [The `node:module` API](14-node-module-api.md)

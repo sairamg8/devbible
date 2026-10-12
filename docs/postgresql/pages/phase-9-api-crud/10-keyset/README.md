@@ -40,6 +40,17 @@ depth in a 500 000-row table.
 - **[Phase 10 · Indexes](../../phase-10-indexes/README.md)** explains why the index column
   order has to match the `ORDER BY`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Paging Through Results](https://use-the-index-luke.com/sql/partial-results/fetch-next-page) — use-the-index-luke.com: Markus Winand; the seek method with SQL row values, and the index that makes it fast (*read* the row-values passage; undated page)
+- **Also good:** [9.25.5. Row Constructor Comparison](https://www.postgresql.org/docs/current/functions-comparisons.html) — postgresql.org: both sides need the same field count; the operator applies pairwise (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [The tuple comparison](01-the-tuple-comparison.md)

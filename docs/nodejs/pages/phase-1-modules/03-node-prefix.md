@@ -153,6 +153,17 @@ The prefix is an unambiguous signal that the specifier is a Node built-in, so th
 bundler can externalise it or fail with a useful message instead of searching for
 a package that does not exist.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CommonJS → Built-in modules with mandatory node: prefix](https://nodejs.org/docs/latest/api/modules.html#built-in-modules-with-mandatory-node-prefix) — nodejs.org: some built-ins must carry `node:` so new core names cannot clash with userland packages (*read*)
+- **Also good:** [CommonJS → Built-in modules](https://nodejs.org/docs/latest/api/modules.html#built-in-modules) — same page: the `node:` prefix "bypasses the require cache", so `require('node:http')` always returns the built-in; this supports "unshadowable" (*read*; id verified)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [CommonJS](02-commonjs.md) · Next → [CJS ↔ ESM interop](04-cjs-esm-interop.md)

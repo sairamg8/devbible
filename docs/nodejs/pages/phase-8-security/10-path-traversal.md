@@ -179,6 +179,16 @@ Path traversal delivered through an archive: an entry named `../../etc/cron.d/x`
 the extraction directory when written naively. Validate every entry's resolved path
 against the destination root before writing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Path Traversal](https://community.owasp.org/attacks/Path_Traversal) — OWASP: the attack, request variations, avoidance; advice to normalize input before file I/O (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [XSS and encoding](./09-xss.md) · Next → [CSRF](./11-csrf.md)

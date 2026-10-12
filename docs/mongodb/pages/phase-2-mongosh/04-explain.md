@@ -207,6 +207,18 @@ only what you need can change a query's cost class.
 you see the plan and the scan cost first — which on production is the difference between a
 targeted update and an accidental collection scan.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Interpret Explain Plan Results](https://www.mongodb.com/docs/manual/tutorial/analyze-query-plan/) — mongodb.com: a worked `find().explain("executionStats")`: `winningPlan` stage `COLLSCAN` vs the counters `nReturned`, `totalKeysExamined`, `totalDocsExamined` (*read*)
+- **Read this:** [cursor.explain()](https://www.mongodb.com/docs/manual/reference/method/cursor.explain/) — mongodb.com: the three verbosity modes — `queryPlanner` (default), `executionStats`, `allPlansExecution` (*read*)
+- **Also good:** [Explain Results](https://www.mongodb.com/docs/manual/reference/explain-results/) — mongodb.com: the field-by-field reference, ≈6.5k words — look things up, do not read it through (headings only; not read in full)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Cursors](./03-cursors.md) ·

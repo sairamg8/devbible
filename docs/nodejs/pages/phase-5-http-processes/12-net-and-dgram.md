@@ -182,6 +182,18 @@ StatsD metrics, DNS queries, syslog forwarding — anywhere a dropped message is
 cheaper than a delayed one, and where the volume makes per-message acknowledgement
 too expensive.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [net: Class net.Socket](https://nodejs.org/api/net.html#class-netsocket) — nodejs.org: a TCP socket or IPC endpoint, extends `stream.Duplex` (*read*); `net.createServer` `highWaterMark` option since v20.1.0 (*read*)
+- **Read this:** [UDP/datagram sockets](https://nodejs.org/api/dgram.html) — nodejs.org: `dgram.createSocket(type)` and options form (*headings only*, ≈6k words)
+- **Read this:** [How to Handle Binary Protocols Over TCP in Node.js](https://oneuptime.com/blog/post/2026-01-25-binary-protocols-tcp-nodejs/view) — OneUptime, 2026-01-25: framing options (length-prefixed 4-byte header, delimiter, fixed length) and partial reads (*read*, TypeScript, ≈3k words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [WebSockets](11-websockets.md) · Next → [node:dns](13-dns.md)

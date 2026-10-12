@@ -232,6 +232,18 @@ filename character. Windows accepts both separators; POSIX does not.
 Resolve both to absolute form first, and on Windows case-fold as well. Raw string
 comparison fails on trailing slashes, doubled separators and separator style.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [path.resolve()](https://nodejs.org/api/path.html#pathresolvepaths) — nodejs.org: segments are processed right to left until an absolute path forms; `path.join()` joins with the platform separator and normalizes (*read* both entries; `basename`, `extname`, `parse` ids verified, *headings only*)
+- **Also good:** [Node.js File Paths](https://nodejs.org/learn/manipulating-files/nodejs-file-paths) — nodejs.org Learn: `resolve` with a base, `normalize` of `..` and `//`; says neither checks that the path exists (*read*)
+- **Read this:** [Windows vs. POSIX](https://nodejs.org/api/path.html#windows-vs-posix) — nodejs.org: `node:path` assumes Windows-style paths when running on Windows; `path.posix` and `path.win32` expose each flavor (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The three flavors](02-the-three-flavors.md) · Next → [Path traversal](04-path-traversal.md)

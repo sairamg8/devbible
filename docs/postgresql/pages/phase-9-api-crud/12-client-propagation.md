@@ -224,6 +224,16 @@ that participation in a transaction is no longer visible at the call site, and t
 usual `?? pool` fallback reintroduces silent autocommit when the async context is
 lost. If you use it, make the missing-store case throw.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Transactions](https://node-postgres.com/features/transactions) — node-postgres.com: "You must use the same client instance for all statements within a transaction" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Idempotent writes](11-idempotent-writes.md) · Next → [Optimistic concurrency](13-optimistic.md)

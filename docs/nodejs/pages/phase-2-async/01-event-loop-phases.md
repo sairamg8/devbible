@@ -193,6 +193,18 @@ and `unref()` excludes a handle from the count.
 Blocked in the poll phase, waiting on the kernel for socket activity — consuming
 no CPU. See [the poll phase](02-poll-phase.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Node.js Event Loop](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick) — nodejs.org: [#phases-overview](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick#phases-overview): pending callbacks, "idle, prepare: only used internally", poll, check, close (*read*)
+- **Read this:** [#phases-overview](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick#phases-overview)
+- **Also good:** [libuv Design overview → The I/O loop](https://docs.libuv.org/en/v1.x/design.html#the-i-o-loop) — libuv.org: the loop iteration as libuv defines it (*read* timeout rules)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Phase 2 overview](README.md) · Next → [The poll phase](02-poll-phase.md)

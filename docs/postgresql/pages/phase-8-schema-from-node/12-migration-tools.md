@@ -171,6 +171,18 @@ Diff engines produce *correct* SQL, not necessarily *safe* SQL. A column type ch
 can trigger a full table rewrite under `ACCESS EXCLUSIVE`, which is fine on a
 thousand rows and an outage on ten million.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [graphile-migrate README (raw)](https://raw.githubusercontent.com/graphile/migrate/main/README.md) — github (raw): states its opinions plainly: SQL-written, roll-forward only, no stack coupling, roles outside migrations (*read* Why? and Opinions)
+- **Also good:** [node-pg-migrate: Getting Started](https://salsita.github.io/node-pg-migrate/getting-started) — salsita.github.io: JS/TS migration files with a `pgm` builder, `up` and `down` (*read*)
+- **Also good:** [Prisma: Understanding Migrations (v7)](https://www.prisma.io/docs/orm/v7/prisma-migrate/understanding-prisma-migrate/mental-model)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Resetting between test runs](11-test-reset.md) · Next → [Schema drift](13-schema-drift.md)

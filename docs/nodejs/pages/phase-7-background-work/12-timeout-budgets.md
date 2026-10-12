@@ -199,6 +199,17 @@ No. Every request still pays the full timeout, so at load the process fills with
 waiting requests. Timeouts bound a call; a circuit breaker stops making the call at
 all after repeated failures.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Timeouts, retries, and backoff with jitter](https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter) — AWS Builder Center: published 2026-06-12, last modified 2026-06-15; pick a timeout from a downstream latency percentile, with caveats for internet latency (*read*)
+- **Read this:** [Deadlines](https://grpc.io/docs/guides/deadlines/) — grpc.io: a deadline is a point in time past which a client will not wait; propagation converts it to a timeout with elapsed time deducted (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Graceful worker shutdown](./11-graceful-shutdown.md) · Next → [Deadline propagation](./13-deadline-propagation.md)

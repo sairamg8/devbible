@@ -187,6 +187,17 @@ The syntax has no separator for multiple cookies — attributes are already
 The browser refuses the cookie unless it is `Secure`, has `Path=/` and has no
 `Domain`. It makes the hardening unforgeable by a subdomain.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies) — MDN: `Secure`, `HttpOnly`, and `SameSite` for cross-site requests; values visible to and changeable by the user (*read*)
+- **Also good:** [Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#httponly-attribute) — OWASP: per-attribute sections for Secure, HttpOnly, SameSite, prefixes (*headings only*, ≈9k words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [HTTP in practice](03-http-fundamentals.md) · Next → [fetch](05-fetch.md)

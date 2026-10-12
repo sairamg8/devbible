@@ -153,6 +153,20 @@ never in the query at all. It also fails closed — an unknown field is ignored 
 than passed through.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [NoSQL Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/NoSQL_Security_Cheat_Sheet.html) — OWASP: do not pass client objects through as filters; disallow client-controlled operators such as `$where`; validate expected scalar types first; its `"$` string check is called a denylist, not an allowlist (*read*)
+- **Also good:** [AIP-132 Standard methods: List](https://google.aip.dev/132) — google.aip.dev: `order_by` as a comma-separated field list with `desc` suffix; filters and page size on the list request (*read*)
+- **Also good:** [AIP-160 Filtering](https://google.aip.dev/160)
+- **Read this:** [Don't Block the Event Loop](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org: REDoS, JSON DoS, task partitioning and offloading (*read* the partitioning and offloading section; the rest headings only; long guide)
+- **Also good:** [Stripe Search API](https://docs.stripe.com/search) — docs.stripe.com: a separate `/search` endpoint with a query language; data is searchable in under a minute, so read-after-write needs the list API (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Pagination](03-pagination/README.md) · Next → [Versioning](05-versioning.md)

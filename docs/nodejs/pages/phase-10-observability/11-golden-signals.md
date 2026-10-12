@@ -109,6 +109,16 @@ Saturation explains *why* you are about to miss them.
 No. That is unbounded cardinality. Logs and traces carry identity; metrics carry
 aggregates.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) — sre.google (SRE book): defines latency, traffic, errors and saturation, and says to focus on these four if you can measure only four (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: Health checks · Next → perf_hooks

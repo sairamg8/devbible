@@ -183,6 +183,18 @@ must then be vacuumed, or when queries reliably filter on the partition key so t
 planner can prune. Below tens of millions of rows a good index usually wins, and
 partitioning adds planning overhead plus the recurring job of creating partitions.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Inheritance](https://www.postgresql.org/docs/current/ddl-inherit.html) — postgresql.org: links inheritance to partitioning, with a caveats section `DDL-INHERIT-CAVEATS` (*read* the partition mention)
+- **Read this:** [Table Partitioning](https://www.postgresql.org/docs/current/ddl-partitioning.html) — postgresql.org: declarative partitioning and "Partitioning Using Inheritance" as separate sections (headings only; ids `DDL-PARTITIONING-DECLARATIVE`, `DDL-PARTITIONING-USING-INHERITANCE`)
+- **Also good:** [Don't Do This · table inheritance](https://wiki.postgresql.org/wiki/Don%27t_Do_This) — postgresql.org wiki (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Deferrable constraints](18-deferrable.md) · Next → [Phase 4 · CRUD and DML](../phase-4-crud/)

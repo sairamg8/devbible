@@ -186,6 +186,20 @@ It lends your domain's credibility to a phishing link, and it undermines flows �
 OAuth in particular — that treat redirect URIs as a trust boundary.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) — OWASP: tokens still essential for cookie-authenticated apps; signed double-submit recommended; custom headers for APIs; `SameSite` is defence in depth, not a replacement (*read*)
+- **Also good:** [csurf README (raw)](https://raw.githubusercontent.com/expressjs/csurf/master/README.md) — github (raw): the repository is archived and "no longer actively maintained"; names no replacement (*read*)
+- **Read this:** [Security best practices: Prevent open redirects](https://expressjs.com/en/advanced/best-practice-security/) — expressjs.com: Express code that parses `req.query.url` and checks its host before `res.redirect` or `res.location`; v5.x docs, undated (*read* the section)
+- **Also good:** [Unvalidated Redirects and Forwards Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) — OWASP: avoid user-supplied destinations, map ids server-side, allowlist approved destinations, reject userinfo, intermediate page; no Express code (*read*)
+- **Also good:** [Express 5.x API: Response](https://expressjs.com/en/5x/api/response/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Rate limiting](04-rate-limiting.md) · Next → [Timeouts and secrets at edge](06-timeouts-and-secrets.md)

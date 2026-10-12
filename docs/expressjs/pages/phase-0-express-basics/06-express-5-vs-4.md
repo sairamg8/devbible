@@ -149,6 +149,17 @@ No for this bible — target 5.x. Legacy 4.x apps need a deliberate migration pl
 **Where do you look for the full migration list?**  
 The official Express 5 migration guide — not blog posts from 2019.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Upgrade to Express v5](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: removed `app.del`, `req.param(name)`, `res.json(obj, status)`; rejected promises forwarded to error middleware; `req.query` now a getter and default parser "simple"; path syntax changes (wildcards need names, `?` becomes braces), 
+- **Also good:** [Introducing Express v5](https://expressjs.com/en/blog/2024-10-15-v5-release/) — expressjs.com blog, 2024-10-15: sections on Node support, path matching, promises, body parser (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Application settings](05-application-settings.md) · Next → [When not to use Express](07-when-not-to-use-express.md)

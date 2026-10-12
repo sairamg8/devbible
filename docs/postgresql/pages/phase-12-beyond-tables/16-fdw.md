@@ -211,6 +211,17 @@ remote team cannot rename a column without breaking you, and your query's failur
 modes become theirs — with no timeout, retry or circuit breaker that a service call
 would give you.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [postgres_fdw](https://www.postgresql.org/docs/current/postgres-fdw.html) — postgresql.org: access to data on external PostgreSQL servers (≈5,900 words, *headings only*)
+- **Also good:** [dblink](https://www.postgresql.org/docs/current/contrib-dblink-function.html) — postgresql.org: (*headings only*, 835 words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Procedures](15-procedures.md) · Next → [pgvector](17-pgvector.md)

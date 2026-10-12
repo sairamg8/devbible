@@ -191,6 +191,17 @@ the listener runs in it.
 sets it for the remainder of the current async context with no visible boundary,
 which leaks easily. Prefer `run()`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Asynchronous context tracking → AsyncLocalStorage](https://nodejs.org/docs/latest/api/async_context.html#class-asynclocalstorage) — nodejs.org: `run(store, callback)`: store reachable inside the callback only; a [#troubleshooting-context-loss](https://nodejs.org/docs/latest/api/async_context.html#troubleshooting-context-loss) section (*read* `run`)
+- **Read this:** [#troubleshooting-context-loss](https://nodejs.org/docs/latest/api/async_context.html#troubleshooting-context-loss)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [AbortController](19-abortcontroller.md) · Next → [async_hooks](21-async-hooks.md)

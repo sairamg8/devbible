@@ -162,6 +162,17 @@ Because an empty array sorts before null and before a missing field, and missing
 null. It is documented ordering rather than a defect, and it usually means the listing needs an
 explicit filter.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Comparison Query Predicate Operators](https://www.mongodb.com/docs/manual/reference/mql/query-predicates/comparison/) — mongodb.com: all eight operators listed (*read*: `$in`, `$lt`, `$lte`, `$ne`, `$nin`); it defers cross-BSON-type comparison to the comparison-order page (*read*)
+- **Read this:** [Comparison/Sort Order](https://www.mongodb.com/docs/manual/reference/bson-type-comparison-order/) — mongodb.com: the cross-type order (MinKey, Null, Numbers, String, Object, Array, and so on up to MaxKey); a note says comparison query operators only compare values of the matching BSON type (type bracketing); for sort comparison the page says
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 5](./README.md) ·

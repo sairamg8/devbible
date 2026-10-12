@@ -247,6 +247,17 @@ The per-`MongoClient` connection pool size, default 100. Since the client is the
 pool, one per process is correct, and the default must be multiplied by your
 process count when comparing against the server's connection limit.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Pooling → Shutdown](https://node-postgres.com/features/pooling) — node-postgres.com: `pool.end()` waits for checked-out clients to return, then closes clients and timers; checking out after it returns errors (*read*)
+- **Also good:** [MongoClient](https://www.mongodb.com/docs/drivers/node/current/connect/mongoclient/) — mongodb.com: the driver calls `connect()` itself on first CRUD call; examples close the client in a `finally` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Parameterized queries](./02-parameterized-queries.md) · Next → [PostgreSQL from Node](./04-postgresql-from-node.md)

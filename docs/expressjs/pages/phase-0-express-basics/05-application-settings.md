@@ -157,6 +157,18 @@ them; the router reads "unset" as off. The docs list their default as `N/A
 It affects IP and protocol derived from `X-Forwarded-*` — cookies’ `secure`
 behaviour and rate-limit keys often depend on it too.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Application API: settings table](https://expressjs.com/en/5x/api/application/) — expressjs.com: `query parser` default `"simple"`; `strict routing` default undefined; `x-powered-by` default true; sub-apps inherit several settings (*read*)
+- **Also good:** [Express behind proxies](https://expressjs.com/en/guide/behind-proxies/) — expressjs.com: what `trust proxy` changes (*read* the intro)
+- **Also good:** [Security best practices](https://expressjs.com/en/advanced/best-practice-security/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Creating an app](04-creating-an-app.md) · Next → [Express 5 vs 4](06-express-5-vs-4.md)

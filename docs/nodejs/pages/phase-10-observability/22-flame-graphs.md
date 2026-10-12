@@ -108,6 +108,18 @@ The handler is waiting on I/O; CPU samples do not accumulate on the await.
 No — on-demand / canary. Continuous profiling is a product decision with overhead and
 PII policies.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Flame Graphs](https://www.brendangregg.com/flamegraphs.html) — brendangregg.com: undated; the x-axis is the stack population sorted alphabetically (not time), the y-axis is stack depth, wider frames appeared in more samples (*read*)
+- **Also good:** [clinic README](https://cdn.jsdelivr.net/npm/clinic/README.md) — jsDelivr copy: `clinic doctor`, then `clinic bubbleprof` for I/O issues; benchmark with autocannon or wrk (*read*)
+- **Also good:** [0x README](https://unpkg.com/0x@6.0.0/README.md)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [GC basics](./21-gc-basics.md) · Next → [Startup time](./23-startup-time.md)

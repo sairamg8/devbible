@@ -239,6 +239,16 @@ often beats one object per row.
 1, and object mode is on. It is deliberately lazy so wrapping a paged API in a
 generator does not prefetch.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object mode](https://nodejs.org/api/stream.html#object-mode) — nodejs.org: Node-created streams handle strings, Buffers, TypedArrays and DataViews only; object mode is chosen at construction and switching later is not safe; `highWaterMark` then counts objects (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Transform streams](./transform-streams/) · Next → [Web Streams](15-web-streams.md)

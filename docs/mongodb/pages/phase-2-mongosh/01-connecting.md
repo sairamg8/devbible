@@ -166,6 +166,18 @@ It lets the driver retry a write once after a transient error such as a failover
 drivers default it to true, and it is one of the reasons a rolling restart is usually invisible
 to an application.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Connection Strings](https://www.mongodb.com/docs/manual/reference/connection-string/) — mongodb.com: the formats, with `mongodb+srv://` described as simplifying connection by auto-including the seed list (*read*)
+- **Read this:** [Connect to a Deployment — mongosh](https://www.mongodb.com/docs/mongodb-shell/connect/) — mongodb.com: sections for Atlas (a `mongodb+srv://` template run with `--apiVersion` and `--username`, password then prompted), local default and non-default port, remote host, authentication, replica set, TLS, switching deployments (*read* th
+- **Also good:** [Connection String Options](https://www.mongodb.com/docs/manual/reference/connection-string-options/) — mongodb.com: the option reference: `retryWrites` (drivers default true), `authSource` (defaults to the named default db, else `admin`), `replicaSet`, `appName` (shows in logs and profiler), `tls`, `maxPoolSize` (default 100) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 2](./README.md) ·

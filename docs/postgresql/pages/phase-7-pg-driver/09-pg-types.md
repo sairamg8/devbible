@@ -229,6 +229,18 @@ cannot represent decimal fractions exactly. The override is measured to work (`'
 Look its OID up in `pg_type` at startup, since OIDs for custom types are assigned per
 database, then register a parser for that value. Never hard-code the number.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [pg-types README (raw)](https://raw.githubusercontent.com/brianc/node-pg-types/master/README.md) — github (raw): `setTypeParser(20, ...)` to get numbers from `int8`; `null` is never parsed; find OIDs via `pg_type` (*read*)
+- **Also good:** [Queries → Types](https://node-postgres.com/features/queries) — node-postgres.com: per-query `types` override via `getTypeParser` (*read*)
+- **Also good:** [pg.Types](https://node-postgres.com/apis/types)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Type parsing](08-type-parsing.md) · Next → [Prepared statements](10-prepared.md)

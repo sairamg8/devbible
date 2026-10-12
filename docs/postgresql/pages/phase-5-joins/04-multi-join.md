@@ -250,6 +250,16 @@ When naming the intermediate result makes the statement legible, or when you nee
 than once. Since PostgreSQL 12 a non-recursive CTE is inlined, so it is not an optimisation
 fence unless declared `MATERIALIZED`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) — postgresql.org: without parentheses `JOIN`s nest left to right; parentheses control order (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Semi and anti joins](semi-anti/) · Next → [Reading N-N relationships](05-nn-join-table.md)

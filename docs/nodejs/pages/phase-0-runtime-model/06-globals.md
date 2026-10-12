@@ -239,6 +239,17 @@ Because that is the signal orchestrators send to ask for a clean shutdown before
 force-killing with `SIGKILL`. Without a handler the process dies instantly and
 in-flight requests are dropped on every single deploy.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js Globals](https://nodejs.org/docs/latest/api/globals.html) — nodejs.org: `global` is marked Legacy ("Use globalThis instead"); `__dirname` / `__filename` entries only say they "may appear to be global but is not" and point to the modules page (*read*)
+- **Also good:** [Modules: ECMAScript modules](https://nodejs.org/docs/latest/api/esm.html) — nodejs.org: `import.meta.dirname` added v21.2.0 / v20.11.0, no longer experimental from v24.0.0 / v22.16.0; only on `file:` modules (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Node vs the browser](05-node-vs-browser.md) · Next → [Choosing a version](07-choosing-a-version.md)

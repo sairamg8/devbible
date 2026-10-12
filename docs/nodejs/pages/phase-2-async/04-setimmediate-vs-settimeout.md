@@ -146,6 +146,17 @@ between chunks. `setTimeout(fn, 0)` adds at least 1ms of dead time per chunk, an
 No. It runs in the check phase of the current lap — after poll, after any I/O
 callbacks. The name is misleading; think of it as "after the current phase."
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Node.js Event Loop → setImmediate() vs setTimeout()](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick#setimmediate-vs-settimeout) — nodejs.org: order in the main module is non-deterministic; inside an I/O callback `immediate` always runs first (*read*)
+- **Also good:** [Understanding setImmediate()](https://nodejs.org/learn/asynchronous-work/understanding-setimmediate) — nodejs.org: (*headings only*, ≈1.3k words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Microtasks and macrotasks](03-microtasks-and-macrotasks.md) · Next → [nextTick starvation](05-nexttick-starvation.md)

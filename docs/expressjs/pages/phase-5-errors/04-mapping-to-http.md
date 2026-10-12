@@ -156,6 +156,18 @@ Three fields — `statusCode`, `code`, `expose` — carry everything the handler
 A hierarchy adds a taxonomy to maintain and `instanceof` checks that fail across
 duplicate module instances, in exchange for nothing the handler reads.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MDN: HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status) — MDN: reference for 400 to 503 (*read* the 409 entry; *headings only* elsewhere)
+- **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) — OWASP: "HTTP Return Code" table of security-relevant codes (*read*)
+- **Read this:** [http-errors README (raw)](https://raw.githubusercontent.com/jshttp/http-errors/master/README.md) — github (raw): `status`/`statusCode` default 500, `expose` defaults to false when status is 500 or above, `createError(...)` forms (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Error response contract](03-error-contract/README.md) · Next → [Operational vs programmer](05-operational-vs-programmer.md)

@@ -137,6 +137,17 @@ or advanced tools (FDW) later.
 Default schema where objects land if you never create your own; convenient and
 easy to overcrowd.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Managing Databases · Overview](https://www.postgresql.org/docs/current/manage-ag-overview.html) — postgresql.org: states the full hierarchy cluster, database, schema, table and which objects are cluster-wide (*read*)
+- **Read this:** [Schemas](https://www.postgresql.org/docs/current/ddl-schemas.html) — postgresql.org: schema creation, the public schema and the search path (headings only; ids `DDL-SCHEMAS-PATH`, `DDL-SCHEMAS-PUBLIC`)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Client/server model](02-client-server-model.md) · Next → [Shared buffers](04-shared-buffers.md)

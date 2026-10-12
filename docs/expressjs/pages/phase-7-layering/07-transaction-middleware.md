@@ -201,6 +201,17 @@ where per-request really is the correct granularity.
 Node Phase 6. Express only decides where the boundary sits and how the handle gets
 to the code that needs it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Unit of Work](https://martinfowler.com/eaaCatalog/unitOfWork.html) — martinfowler.com: tracks changes in a business transaction and coordinates writing them out (*read* the lead)
+- **Also good:** [Service Layer](https://martinfowler.com/eaaCatalog/serviceLayer.html) — martinfowler.com: says the service layer controls transactions; that this argues against a per-request wrapper is our inference, not the page's (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Folders and DTOs](06-folders-and-dtos.md) · Index: [Phase 7](README.md)

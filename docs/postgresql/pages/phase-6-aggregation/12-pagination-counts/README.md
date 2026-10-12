@@ -47,6 +47,18 @@ You are done when you can explain why `count(*) OVER ()` defeats `LIMIT`, write 
 - **[List endpoints](../../phase-9-api-crud/02-list-endpoint.md)** — the API shape this
   feeds
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PostgreSQL count(*) made fast](https://www.cybertec-postgresql.com/en/postgresql-count-made-fast/) — cybertec-postgresql.com: 2019-04-03, modified 2024-03-05; why it is slow, index-only scan, aggregate table, and an `EXPLAIN`-based estimate function (*read* the estimate section)
+- **Also good:** [Count estimate](https://wiki.postgresql.org/wiki/Count_estimate) — wiki.postgresql.org: `pg_class.reltuples` estimate; edited 17 Nov 2024 (*read*)
+- **Also good:** [Slow Counting](https://wiki.postgresql.org/wiki/Slow_Counting)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [What "total" costs](01-what-total-costs.md)

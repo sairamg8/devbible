@@ -247,6 +247,17 @@ Almost certainly because `store.ts` still imports the slice to build the reducer
 static dependency of the entry point no matter how the routes are code-split. Injection only pays off if
 the slice module is reachable *exclusively* from the lazily-imported feature.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [combineSlices](https://redux.js.org/toolkit/api/combineSlices) — redux.js.org: `withLazyLoadedSlices` (declare slices added later so they appear in the inferred state type, with a declaration-merging pattern); `inject`, called on the reducer — `rootReducer.inject(slice)` returns a new reducer, dispatches not
+- **Also good:** [Code Splitting](https://redux.js.org/usage/code-splitting) — redux.js.org: the basic principle with `replaceReducer`, then RTK's `combineSlices` and `createDynamicMiddleware` (≈2.1k words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Redux DevTools](../10-devtools-and-debugging/01-redux-devtools.md) · [Topic index](../README.md) · Next → [Testing Redux logic](../12-testing/01-testing-redux-logic.md)

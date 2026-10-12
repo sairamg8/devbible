@@ -164,6 +164,18 @@ Ask whether a failure should have failed the request. If yes, await it — it is
 of the response's truth. If no, it is a job.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Asynchronous Request-Reply pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/asynchronous-request-reply) — learn.microsoft.com: validate first, 400 if invalid; return 202 with a `Location` status endpoint and `Retry-After`; offload to a queue (*read*)
+- **Also good:** [Don't Block the Event Loop](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org: why slow work must not sit on the request path (*headings only*)
+- **Also good:** [Stripe: Receive events](https://docs.stripe.com/webhooks)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [DI without a framework](04-di-without-framework.md) · Next → [Folders and DTOs](06-folders-and-dtos.md)

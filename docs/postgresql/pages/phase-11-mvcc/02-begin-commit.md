@@ -200,6 +200,17 @@ common cause of pool exhaustion in `pg` code.
 Only with a `.catch()` of its own. If the connection is already dead it throws, and an
 unguarded cleanup would mask the original error.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [node-postgres: Transactions](https://node-postgres.com/features/transactions) — node-postgres.com: run `BEGIN`/`COMMIT`/`ROLLBACK` yourself; use the same client for every statement; never `pool.query` for a transaction (*read*)
+- **Also good:** [3.4 Transactions (tutorial)](https://www.postgresql.org/docs/current/tutorial-transactions.html) — postgresql.org: the SQL side (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [ACID in PostgreSQL](01-acid.md) · Next → [READ COMMITTED](03-read-committed.md)

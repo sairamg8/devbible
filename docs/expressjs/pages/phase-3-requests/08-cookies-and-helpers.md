@@ -75,6 +75,17 @@ No — not into `req.cookies` without middleware.
 Signed values use a server secret to detect modification; still visible to the
 client unless `httpOnly` and not encrypted by default.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [cookie-parser](https://expressjs.com/en/resources/middleware/cookie-parser/) — expressjs.com: v1.4.7; fills `req.cookies`; a secret enables signed cookies; array of secrets tried in order (*read*)
+- **Also good:** [Express 5.x API: Request](https://expressjs.com/en/5x/api/request/) — expressjs.com: `req.cookies` defaults to `&#123;&#125;` with the middleware, signed ones go to `req.signedCookies` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Multipart uploads](07-multipart-uploads.md) · Index: [Phase 3](README.md)

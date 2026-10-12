@@ -244,6 +244,18 @@ Separate pool connections are separate sessions with separate snapshots, so a
 concurrent write can make `total` inconsistent with the page returned. Running both
 on one checked-out client inside a transaction gives them the same snapshot.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.6. LIMIT and OFFSET](https://www.postgresql.org/docs/current/queries-limit.html) — postgresql.org: `LIMIT` without `ORDER BY` returns an unpredictable subset; skipped rows are still computed (*read*)
+- **Also good:** [7.5. Sorting Rows (ORDER BY)](https://www.postgresql.org/docs/current/queries-order.html) — postgresql.org: (*headings only*)
+- **Also good:** [Paging Through Results](https://use-the-index-luke.com/sql/partial-results/fetch-next-page)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [A repository module per resource](./repository/) · Next → [Safe dynamic `WHERE`](./safe-dynamic-where/)

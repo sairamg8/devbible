@@ -81,6 +81,17 @@ They are coupled to the exact Node binary/version.
 **What should you measure before adopting snapshots?**
 Boot phases — do not snapshot your way around a slow network dependency.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Command-line API: --build-snapshot](https://nodejs.org/docs/latest/api/cli.html) — nodejs.org: v26.11.1; the snapshot build is no longer experimental (v25.4.0, v24.13.1), writes a blob at exit that loads with `--snapshot-blob` (*read*)
+- **Also good:** [V8: Startup Snapshot API](https://nodejs.org/docs/latest/api/v8.html) — nodejs.org: v26.11.1; lists `addSerializeCallback`, `addDeserializeCallback`, `setDeserializeMainFunction`, `isBuildingSnapshot` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Custom loaders](./08-custom-loaders.md) · Next → [Contributing to Node](./10-contributing-to-node.md)

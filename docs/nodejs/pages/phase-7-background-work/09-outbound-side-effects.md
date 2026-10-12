@@ -198,6 +198,17 @@ and never redirect-followed; the payload needs signing with a timestamp so it ca
 forged or replayed; and receivers need an event id so they can deduplicate the
 retries you will inevitably send.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Implementing Webhook Retries](https://hookdeck.com/webhooks/guides/webhook-retry-best-practices) — Hookdeck: 2026-02-11, modified 2026-07-03; backoff, jitter, response-code rules, DLQ, endpoint disabling, idempotency (*read* DLQ section; rest *headings only*; written by a vendor of this product)
+- **Also good:** [Keeping your API fast](https://www.inngest.com/docs/patterns/jobs/keeping-your-api-fast) — inngest.com: notifications and third-party calls belong off the request path (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Scheduled and recurring jobs](./08-scheduled-jobs.md) · Next → [Time on the server](./10-time-on-the-server.md)

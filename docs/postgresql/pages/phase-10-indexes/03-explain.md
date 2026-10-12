@@ -181,6 +181,17 @@ plans for one query; meaningless as an absolute or across queries.
 is included by default with `ANALYZE`. See
 [`EXPLAIN (ANALYZE, BUFFERS)`](07-explain-buffers.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [14.1 Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — postgresql.org: plan tree, cost numbers, and "EXPLAIN ANALYZE actually runs the query", with the roll-back-a-write example (*read*)
+- **Also good:** [EXPLAIN (command reference)](https://www.postgresql.org/docs/current/sql-explain.html) — postgresql.org: every option; `ANALYZE` defaults to false (*read* the option list)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [B-tree indexes](02-btree.md) · Next → [Seq vs index vs bitmap](04-scan-types.md)

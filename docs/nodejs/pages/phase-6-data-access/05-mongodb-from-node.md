@@ -261,6 +261,17 @@ When you have many independent writes: it is one round trip instead of one per
 document, and `ordered: false` lets the server complete the rest after a failure
 and report all errors together.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MongoClient](https://www.mongodb.com/docs/drivers/node/current/connect/mongoclient/) — mongodb.com: one `MongoClient` is a pool of connections, so most apps need a single instance across requests (*read*)
+- **Also good:** [Specify Connection Options](https://www.mongodb.com/docs/drivers/node/current/connect/connection-options/) — mongodb.com: timeouts, closing sockets, keepAlive (≈3.2k words; *headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [PostgreSQL from Node](./04-postgresql-from-node.md) · Next → [Transactions](./06-transactions.md)

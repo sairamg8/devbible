@@ -252,6 +252,17 @@ multi-statement report consistent.
 At the first statement, not at `BEGIN`. An idle `BEGIN` holds no snapshot yet — which is
 also why it does not block [VACUUM](12-long-transactions.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [13.2 Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html) — postgresql.org: the two levels, serialization anomaly defined (*read*)
+- **Read this:** [13.5 Serialization Failure Handling](https://www.postgresql.org/docs/current/mvcc-serialization-failure-handling.html) — postgresql.org: applications must retry; SQLSTATE `40001`; deadlock failures may also be retried (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [MVCC snapshots](05-mvcc.md) · Next → [Row locks FOR UPDATE](07-row-locks.md)

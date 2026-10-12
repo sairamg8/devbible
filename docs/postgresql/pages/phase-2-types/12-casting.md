@@ -192,6 +192,17 @@ exact integer.
 When the server cannot infer the type — inside `COALESCE`, `CASE`, or a bare function
 argument. Casting a parameter is always safe; casting a column is not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Type Conversion](https://www.postgresql.org/docs/current/typeconv.html) — postgresql.org: implicit conversions "can affect the results of a query"; tailor with explicit conversion (*read* the intro)
+- **Also good:** [Type Casts](https://www.postgresql.org/docs/current/sql-expressions.html#SQL-SYNTAX-TYPE-CASTS) — postgresql.org: `::` and `CAST` (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [enum vs CHECK vs lookup](11-enum-check-lookup.md) · Next → [bytea](13-bytea.md)

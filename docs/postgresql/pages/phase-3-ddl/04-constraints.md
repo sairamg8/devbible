@@ -234,6 +234,17 @@ Every nullable column adds a three-valued-logic branch to every query reading it
 `WHERE status != 'archived'` silently excludes NULL rows. Nullability should be a
 justified decision rather than the default.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html) — postgresql.org: check, not-null, unique, primary and foreign keys, exclusion, each with examples (*read*; ids `DDL-CONSTRAINTS-CHECK-CONSTRAINTS`, `DDL-CONSTRAINTS-NOT-NULL`)
+- **Also good:** [Default Values](https://www.postgresql.org/docs/current/ddl-default.html) — postgresql.org (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`MATCH` and column subsets](03c-match-and-column-subsets.md) · Next → [`ALTER TABLE`](05-alter-table.md)

@@ -249,6 +249,16 @@ correct — the callback overhead exceeds the work.
 Because it is fast, which is the attacker's advantage — 3.68 µs per guess. Password
 hashing wants a deliberately expensive, memory-hard function: scrypt or argon2, page 01.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Crypto](https://nodejs.org/api/crypto.html) — nodejs.org: the class reference (≈38k words): Hash, Hmac, KeyObject, `timingSafeEqual` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [HTTPS, HSTS and cookie flags](./19-https-hsts-cookies.md) · Next → [Rate limiting](./21-rate-limiting.md)

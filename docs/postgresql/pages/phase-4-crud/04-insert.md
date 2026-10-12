@@ -247,6 +247,17 @@ left `last_value` at 6. Contiguity is not something an identity column promises.
 Omitting it and passing `DEFAULT` both apply the column default. Passing `NULL` stores
 null, overriding the default. They differ unless the default is itself null.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [6.1. Inserting Data](https://www.postgresql.org/docs/current/dml-insert.html) — postgresql.org: whole rows only, multi-row `VALUES`, `INSERT ... SELECT` (*read* the opening)
+- **Also good:** [INSERT (reference)](https://www.postgresql.org/docs/current/sql-insert.html) — postgresql.org: the full grammar, incl. `OVERRIDING` and the PG 18 `RETURNING WITH (OLD | NEW ...)` form (*read* the synopsis)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`LIMIT` / `OFFSET`](03-limit-offset.md) · Next → [`RETURNING`](05-returning.md)

@@ -250,6 +250,18 @@ round trip is lossless. `timestamp` stores a wall-clock reading with no zone, so
 same stored value means different instants to different readers and there is no way
 to recover which was meant.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.9. Date/Time Functions and Operators](https://www.postgresql.org/docs/current/functions-datetime.html) — postgresql.org: `date_trunc`, `age`, `extract`, current-time functions; `transaction_timestamp()` is the start of the current transaction (*read*)
+- **Also good:** [9.8. Data Type Formatting Functions](https://www.postgresql.org/docs/current/functions-formatting.html) — postgresql.org (*headings only*): [Don't Do This](https://wiki.postgresql.org/wiki/Don't_Do_This)
+- **Also good:** [Don't Do This](https://wiki.postgresql.org/wiki/Don't_Do_This)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [String functions](16-string-functions.md) · Next → [`generate_series`](18-generate-series.md)

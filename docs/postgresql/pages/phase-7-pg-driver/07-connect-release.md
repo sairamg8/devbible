@@ -237,6 +237,18 @@ Watch `waitingCount` against `idleCount`. Both a leak and an undersized pool sho
 a leak also shows `idleCount` pinned at 0 with `totalCount` at `max` while throughput
 falls. Fix leaks and slow queries before raising `max`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Pooling → Checkout, use, and return](https://node-postgres.com/features/pooling) — node-postgres.com: "You must always return the client to the pool"; a leaked client empties the pool and later checkouts wait forever (*read*)
+- **Also good:** [pg.Pool → releasing clients](https://node-postgres.com/apis/pool) — node-postgres.com: `release(destroy?)` — a truthy value destroys the client instead of reusing it (*read*)
+- **Also good:** [Transactions](https://node-postgres.com/features/transactions)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The result object](06-result-object.md) · Next → [Type parsing](08-type-parsing.md)

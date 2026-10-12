@@ -66,6 +66,17 @@ sentence, and describe the test whose absence lets IDOR ship.
 - **→ [PostgreSQL · RLS](../../../../postgresql/pages/phase-13-ops/14-rls/README.md)**
   — the same predicate, enforced by the table.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [IDOR Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html) — OWASP: scope the lookup by owner (`findByIdAndOwnerId` style) or verify ownership after fetching; if existence is sensitive, scope the lookup and give both cases the same public response such as 404 (*read* the mitigation and fix section
+- **Also good:** [Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) — OWASP: "ensure lookup IDs are not accessible even when guessed" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev topic: [06 · RBAC middleware](../06-rbac-middleware/README.md) · Start → [The bug that survives review](01-the-bug-that-survives-review.md)

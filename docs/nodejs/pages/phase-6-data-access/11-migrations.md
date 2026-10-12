@@ -280,6 +280,19 @@ Yes — indexes, renames, backfills and validators are all schema changes. The
 difference is there is no transactional DDL, so each migration must be written to be
 safely re-runnable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [node-pg-migrate](https://salsita.github.io/node-pg-migrate/) — salsita.github.io: pending migrations run in one transaction under an advisory lock, with an order check; `up --dry-run` prints the SQL (*read* that section; ≈560 words, a tool landing page)
+- **Read this:** [Using the expand and contract pattern for schema changes](https://www.prisma.io/dataguide/types/relational/expand-and-contract-pattern) — Prisma's Data Guide: a multi-step process to move clients to a new structure without taking the system offline; seven steps from "build and deploy the new schema" to "remove the original structure" (*read* the intro and step list; ≈3.4k words, undated
+- **Also good:** [Migrations](https://knexjs.org/guide/migrations.html) — knexjs.org: CLI, transactions in migrations, a "Notes about locks" section (*headings only*)
+- **Also good:** [How migrations work](https://www.prisma.io/docs/orm/migrations/how-migrations-work)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The repository pattern](./10-repository-pattern.md) · Next → [`node:sqlite`](./12-node-sqlite.md)

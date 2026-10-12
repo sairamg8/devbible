@@ -197,6 +197,16 @@ and the xmin horizon. A slow upstream becomes a database-wide cleanup stall.
 `idle_in_transaction_session_timeout`. It bounds the failure mode you cannot fix from the
 database side — an application that opened a transaction and wandered off.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Four reasons why VACUUM won't remove dead rows](https://www.cybertec-postgresql.com/en/reasons-why-vacuum-wont-remove-dead-rows/) — Cybertec: the xmin horizon, a `pg_stat_activity` query on `backend_xmin`, and the other holders (slots, prepared transactions, standby feedback); published 2018-03-14, modified 2024-03-05 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Deadlocks](11-deadlocks.md) · Next → [VACUUM and bloat](13-vacuum.md)

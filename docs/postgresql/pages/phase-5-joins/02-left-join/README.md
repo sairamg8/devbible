@@ -38,6 +38,16 @@ belonging in `ON` or `WHERE` without thinking, and when you can explain why
 - **[NULL semantics](../../phase-2-types/06-null.md)** — the three-valued logic every trap
   here reduces to
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) — postgresql.org: defines the outer join, then shows a `LEFT JOIN` with the restriction in `ON` versus in `WHERE` and says the `ON` one is processed before the join, the `WHERE` one after, which "matters a lot with outer joins" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [The guarantee and its NULLs](01-null-extension.md)

@@ -177,6 +177,16 @@ instance, shared memory, and transfers instead of copies. Startup is comparable,
 so speed is not the argument. Child process for running another program, or when
 crash isolation is the point.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Child process: Event 'message'](https://nodejs.org/api/child_process.html#event-message) — nodejs.org: fires when a child uses `process.send()`; a parsed JSON object or primitive (*read*); `subprocess.send()` entry id verified
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Shell injection](20-shell-injection.md) · Next → [util.parseArgs](22-parseargs.md)

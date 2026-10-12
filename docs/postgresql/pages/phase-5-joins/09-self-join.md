@@ -230,6 +230,16 @@ Window function. `lag()` needs one scan and defines "previous" by ordering; a se
 Materialised path (`ltree` or a text column) and closure tables. Both make reads a single
 indexed lookup and make subtree moves expensive — the opposite trade to the adjacency list.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [2.6. Joins Between Tables](https://www.postgresql.org/docs/current/tutorial-join.html) — postgresql.org: defines "self join" with the `weather` example comparing a row to others (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [ON vs USING vs NATURAL](08-on-using-natural.md) · Next → [LATERAL](10-lateral.md)

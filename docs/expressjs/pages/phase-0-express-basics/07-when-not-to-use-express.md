@@ -97,6 +97,20 @@ safely; you still need Node underneath.
 A major line you tested — e.g. Express 5.x — and the Node engine you run in
 production (24 LTS here).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Fastify benchmarks](https://fastify.dev/benchmarks/) — fastify.dev, updated 2026-10-01: lists Express 5.2.1 at 27,474 req/s against Fastify 5.12.5 at 50,373, and calls it an "illustrative comparison" (*read*)
+- **Also good:** [Hono motivation](https://hono.dev/docs/concepts/motivation) — hono.dev: built on Web Standard APIs so one app runs on several runtimes (*read*)
+- **Also good:** [Hono benchmarks](https://hono.dev/docs/concepts/benchmarks)
+- **Read this:** [`lib/application.js` (raw)](https://raw.githubusercontent.com/expressjs/express/master/lib/application.js) — github (raw): `app.init`, `defaultConfiguration`, `app.handle`, `app.listen`; requires `router`
+- **Also good:** [Express Readme (raw)](https://raw.githubusercontent.com/expressjs/express/master/Readme.md) — github (raw): install, philosophy, project team (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Express 5 vs 4](06-express-5-vs-4.md) · Index: [Phase 0](README.md)

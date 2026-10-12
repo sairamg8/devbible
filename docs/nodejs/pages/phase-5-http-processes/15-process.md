@@ -198,6 +198,17 @@ Any non-zero one, chosen deliberately and failing at boot. `78` (`EX_CONFIG`) is
 common convention, and the value matters less than crashing immediately rather
 than failing later on an uncommon path.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [process.exitCode](https://nodejs.org/api/process.html#processexitcode-1) — nodejs.org: accepts an integer or an integer string since v20.0.0 (*read*); `process.argv` and `process.cwd()` entries (*read*)
+- **Read this:** [process: Exit codes](https://nodejs.org/api/process.html#exit-codes) — nodejs.org: 0 when nothing is pending; 1 Uncaught Fatal Exception; 2 reserved by Bash; 3 internal parse error (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [node:http2](14-http2.md) · Next → [Signals](16-signals.md)

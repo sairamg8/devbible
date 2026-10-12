@@ -115,6 +115,17 @@ When the process is idle on the loop and waiting on network or disk.
 **What is the cost of optimizing the wrong layer?**
 Time burned, complexity added, and the original saturation still pages you at 3 a.m.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Profiling Node.js Applications](https://nodejs.org/learn/getting-started/profiling) — nodejs.org/learn: ≈2.5k words; a worked case: run with `--prof`, then process the tick file (`isolate-0x...-v8.log`) with the bundled tick processor (*read*)
+- **Also good:** [Poor Performance (Overview)](https://nodejs.org/learn/diagnostics/poor-performance) — nodejs.org/learn: ≈1k words (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Prometheus metrics](./14-prometheus-metrics.md) · Next → [Caching strategy](./16-caching-strategy.md)

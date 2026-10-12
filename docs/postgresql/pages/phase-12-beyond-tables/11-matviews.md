@@ -244,6 +244,17 @@ A summary table maintained incrementally by triggers. More machinery and always
 current, because it updates counters on write rather than recomputing the whole
 result.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [REFRESH MATERIALIZED VIEW](https://www.postgresql.org/docs/current/sql-refreshmaterializedview.html) — postgresql.org: `CONCURRENTLY` needs a UNIQUE index of plain columns and an already populated view; one refresh at a time (*read*)
+- **Also good:** [Materialized Views](https://www.postgresql.org/docs/current/rules-materializedviews.html) — postgresql.org: how they differ from views (*headings only*, 915 words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Set-returning functions](10-srf.md) · Next → [PL/pgSQL functions](12-plpgsql.md)

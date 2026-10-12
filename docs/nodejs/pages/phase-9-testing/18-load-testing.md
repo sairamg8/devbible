@@ -186,6 +186,17 @@ make the run exit non-zero so CI can gate on it.
 Memory back near baseline and handle counts stable. A run that ends 300 MB above
 baseline has found a leak, which is the thing a soak test exists to surface.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [autocannon README (raw)](https://raw.githubusercontent.com/mcollina/autocannon/master/README.md) — github (raw): an HTTP/1.1 benchmarking tool written in Node, with pipelining and HTTPS (*read*)
+- **Also good:** [Grafana k6 docs](https://grafana.com/docs/k6/latest/) — grafana.com: JavaScript-scripted load testing (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [17 · Property-based and mutation testing](./17-property-and-mutation.md) ·

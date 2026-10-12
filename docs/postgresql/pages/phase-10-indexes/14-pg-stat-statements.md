@@ -197,6 +197,16 @@ watch `dealloc` in `pg_stat_statements_info`.
 **How would you detect N+1 with it?**
 A statement with a very high `calls` count and `rows / calls` of about 1.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [F.32 pg_stat_statements](https://www.postgresql.org/docs/current/pgstatstatements.html) — postgresql.org: must be in `shared_preload_libraries`, restart needed; `calls`, `total_exec_time` columns (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Unused and duplicate indexes](13-unused-indexes.md) · Next → [GiST, BRIN and hash](15-gist-brin-hash.md)

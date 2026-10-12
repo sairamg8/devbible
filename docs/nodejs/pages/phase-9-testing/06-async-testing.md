@@ -253,6 +253,17 @@ just the far side of it.
 test, which triggers the late-activity failure. `allSettled` waits for every one and
 lets you assert on the mix of outcomes.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Test runner](https://nodejs.org/api/test.html) — nodejs.org: includes an "Extraneous asynchronous activity" section (*headings only*)
+- **Also good:** [Assert: rejects](https://nodejs.org/api/assert.html) — nodejs.org: `assert.rejects(asyncFn[, error][, message])` listed (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05 · API testing](./05-api-testing.md) ·

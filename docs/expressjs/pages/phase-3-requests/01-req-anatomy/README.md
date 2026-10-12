@@ -56,6 +56,17 @@ parser runs.
 - **→ [Phase 9 · 01 · `trust proxy`](../../phase-9-hardening/01-trust-proxy/README.md)** —
   the setting six of the twelve getters depend on.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Express 5.x API: Request](https://expressjs.com/en/5x/api/request/) — expressjs.com: every property and method; `req.body` is `undefined` until a parser runs, `req.cookies` needs cookie-parser, and docs warn `req.query` and `req.body` are untrusted (*read*)
+- **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: `req.body` now `undefined`, `req.query` is a getter, `req.host` keeps the port, `req.param()` removed (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 3](../README.md) · Start → [Two objects in one](01-two-objects-in-one.md)

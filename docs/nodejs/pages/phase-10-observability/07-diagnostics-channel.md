@@ -126,6 +126,16 @@ is a Node primitive often used underneath instrumentations.
 When you own a reusable module and want consumers to hook business events without you
 depending on their metrics stack.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Diagnostics Channel](https://nodejs.org/docs/latest/api/diagnostics_channel.html) — nodejs.org: v26.11.1; the module is Stable (since v19.2.0 / v18.13.0), named channels carry arbitrary messages; `tracingChannel()` is marked Stable from v26.8.0; `boundedChannel()` is listed (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Error tracking](./06-error-tracking.md) · Next → [Trace events and reports](./08-trace-events-and-reports.md)

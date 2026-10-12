@@ -211,6 +211,17 @@ as a superuser — the usual explanation for "it works in psql but not in the ap
 It names the platform. A musl build sorts text differently from glibc, which explains
 ordering differences between a local container and production.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · Connecting to a Database](https://www.postgresql.org/docs/current/app-psql.html) — postgresql.org: host, port, user, database from flags, URI or conninfo (*read*; options `#APP-PSQL-OPTION-DBNAME`)
+- **Read this:** [Connection Strings](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING) — postgresql.org: URI form `postgresql://[userspec@][hostspec][/dbname][?paramspec]`, where `userspec` is `user[:password]` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](README.md) · Next → [Daily meta-commands](02-daily-meta-commands.md)

@@ -113,6 +113,16 @@ Tests import the app without binding a port; production controls boot order
 Yes — multiple listeners or mount one app on another path — but one API process
 usually has one root `app`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Application API: `app.listen()`](https://expressjs.com/en/5x/api/application/) — expressjs.com: documents `http.createServer(app).listen(80)` and `https.createServer(options, app).listen(443)` next to `app.listen` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The request lifecycle](03-request-lifecycle/README.md) · Next → [Application settings](05-application-settings.md)

@@ -108,6 +108,18 @@ Old and new code may run together — migrations must be compatible with both br
 **What is maxSurge for?**
 Allowing extra new pods during rollout so capacity does not dip.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/) — kubernetes.io: updates without downtime need several instances; by default at most one Pod is unavailable and one extra is created during the update (*read*)
+- **Also good:** [Pod Lifecycle](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/) — kubernetes.io: default `terminationGracePeriodSeconds` is 30 seconds and a `preStop` hook runs inside that window (*read*)
+- **Also good:** [IX. Disposability](https://12factor.net/disposability)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Reverse proxy](./06-reverse-proxy.md) · Next → [CI/CD](./08-cicd.md)

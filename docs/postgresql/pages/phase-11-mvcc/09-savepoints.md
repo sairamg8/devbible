@@ -188,6 +188,16 @@ with savepoints, so an inner "commit" is just a `RELEASE`.
 When a single statement can express the recovery — `ON CONFLICT DO NOTHING` beats a
 savepoint plus a caught `23505` on both round trips and overhead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SAVEPOINT](https://www.postgresql.org/docs/current/sql-savepoint.html) — postgresql.org: `ROLLBACK TO`, `RELEASE`, only inside a transaction block (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [SKIP LOCKED](08-skip-locked.md) · Next → [Table locks and DDL](10-table-locks-ddl.md)

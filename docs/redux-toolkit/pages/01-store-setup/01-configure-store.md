@@ -263,6 +263,18 @@ exists and an initial fetch can still populate it, but the middleware is what im
 reference-counting, cache lifetime, tag invalidation, polling and the focus/reconnect listeners — so
 everything that makes RTK Query worth using silently does nothing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [configureStore](https://redux.js.org/toolkit/api/configureStore) — redux.js.org: the whole RTK 2 call: `reducer`, the `middleware` callback and `Tuple`, `devTools`, `preloadedState`, `enhancers`, with a basic and a full example
+- **Also good:** [getDefaultMiddleware → included default middleware](https://redux.js.org/toolkit/api/getDefaultMiddleware#included-default-middleware) — redux.js.org: what the default stack holds in development vs production, and the array it returns
+- **Also good:** [Redux Toolkit setup with Next.js](https://redux.js.org/usage/nextjs) — redux.js.org: the per-request store factory (`makeStore`), providing it, loading initial data — the only official page on the SSR store factory I found
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](../README.md) · Next → [`createSlice`](../02-slices-and-actions/01-create-slice.md)

@@ -228,6 +228,16 @@ relationship itself.
 NULL marks a root node — a row with no parent. Making it `NOT NULL` would require
 every row to have a parent, which no tree can satisfy.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Constraints · Foreign Keys](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-FK) — postgresql.org: "more than one foreign key constraint" implements many-to-many, with a products and orders example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`ALTER TABLE`](05-alter-table.md) · Next → [DDL is transactional](07-transactional-ddl.md)

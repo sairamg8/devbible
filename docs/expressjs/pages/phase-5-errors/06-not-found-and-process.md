@@ -135,6 +135,17 @@ have no request associated with them and belong to Node's process-level handlers
 Log with the full stack and exit. Continuing means serving requests from a process
 whose state is unknown — the supervisor restarting you is the safer outcome.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Express FAQ: How do I handle 404 responses?](https://expressjs.com/en/starter/faq/) — expressjs.com: a 404 is not an error; add a final middleware below all routes (*read*)
+- **Read this:** [Node.js process docs](https://nodejs.org/api/process.html) — nodejs.org (v26.11.1 docs): `uncaughtException` is "a crude mechanism" for last resort, and the process is in an undefined state (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Operational vs programmer](05-operational-vs-programmer.md) · Index: [Phase 5](README.md)

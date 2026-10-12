@@ -183,6 +183,17 @@ It matches `evil-example.com` and `example.com.attacker.net`. Origins are compar
 whole strings, including scheme and port.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) — MDN: what triggers a preflight, `Authorization` header preflights, no `*` with credentials, `Vary: Origin`, `Access-Control-Max-Age` (*read*)
+- **Also good:** [cors middleware](https://expressjs.com/en/resources/middleware/cors/) — expressjs.com: string, array, RegExp and function origins, `credentials`, `preflightContinue`; a Common Misconceptions section says CORS is not access control; its RegExp example `/example\.com$/` is anchored only at the end (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [trust proxy](01-trust-proxy/README.md) · Next → [Helmet](03-helmet.md)

@@ -177,6 +177,18 @@ Containment and similarity queries — `jsonb @>`, array overlap, `LIKE '%x%'`,
 full-text — which need [GIN](11-gin-trgm.md), and very large append-only tables where
 [BRIN](15-gist-brin-hash.md) gives 99% of the benefit for 0.04% of the size.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [11.2 Index Types](https://www.postgresql.org/docs/current/indexes-types.html) — postgresql.org: B-tree handles equality and range; `LIKE 'foo%'` is indexable but `LIKE '%bar'` is not; non-C locales need a special operator class for the prefix case (*read* the B-tree section)
+- **Also good:** [11.4 Indexes and ORDER BY](https://www.postgresql.org/docs/current/indexes-ordering.html) — postgresql.org: sort order and `ASC`/`DESC` (*headings only*)
+- **Also good:** [65.1 B-Tree Indexes](https://www.postgresql.org/docs/current/btree.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [What an index is](01-what-index.md) · Next → [EXPLAIN vs EXPLAIN ANALYZE](03-explain.md)

@@ -245,6 +245,18 @@ Types only. It pre-binds the `RootState` generic so input selectors infer their 
 per-selector annotation. It is easy to mistake for a caching option because it arrived in the same
 release as the memoizer change, but it has no runtime effect at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Deriving Data with Selectors](https://redux.js.org/usage/deriving-data-selectors) — redux.js.org: the maintainers' guide (≈5.5k words): selector basics, why memoize, how `createSelector` behaves and where it stops helping, a "Reselect 5" section (`weakMapMemoize` is now the default — one cache per distinct argument set, no siz
+- **Also good:** [weakMapMemoize → design tradeoffs](https://redux.js.org/reselect/api/weakMapMemoize#design-tradeoffs) — redux.js.org: what the new default costs: strict reference equality on arguments, garbage collection frees only object and function arguments, primitive arguments stay cached until `.clearCache()`, bounded with `maxSize` as of 5.3.0
+- **Also good:** [How Does Reselect Work?](https://redux.js.org/reselect/introduction/how-does-reselect-work) — redux.js.org: cascading memoization and how it differs from ordinary memoization, in about 950 words
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Optimistic & manual cache updates](../04-rtk-query/02b-optimistic-and-manual-cache-updates.md) · [Topic index](../README.md) · Next → [`createEntityAdapter`](./02-create-entity-adapter.md)

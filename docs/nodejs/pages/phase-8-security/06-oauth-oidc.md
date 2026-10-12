@@ -207,6 +207,18 @@ No. Mint your own session so your application controls expiry, rotation and revo
 ([page 05](./05-session-management.md)) rather than depending on the provider on every
 request.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce) — Auth0 docs: `code_verifier`, `code_challenge`, then ID token and access token (*read*)
+- **Also good:** [OAuth2 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html) — OWASP: implicit grant marked deprecated; `state` as CSRF protection (*read*)
+- **Also good:** [How OpenID Connect Works](https://openid.net/developers/how-connect-works/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Session management](./05-session-management.md) · Next → [MFA and TOTP](./07-mfa-totp.md)

@@ -212,6 +212,16 @@ is the worst place for a secret. Personal data gets a pseudonymous actor id with
 mapping and a policy-driven retention period, decided before the first record, because an
 immutable log cannot be edited later.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) — OWASP: which events to log, attributes, data to exclude; protect logs from tampering (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Encryption, signing and key management](./26-encryption-and-keys.md) · Next → [bcrypt](./28-bcrypt/README.md)

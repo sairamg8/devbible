@@ -140,6 +140,16 @@ No. It times *this* process. APM/OTel correlates across services and stores hist
 **Where does event loop lag fit?**
 Same module: `monitorEventLoopDelay` — see page 09.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Performance measurement APIs](https://nodejs.org/docs/latest/api/perf_hooks.html) — nodejs.org: v26.11.1; supports the Web High Resolution Time, Performance Timeline and User Timing APIs; opening example uses `PerformanceObserver` with `getEntries()` (*read*); `performance.mark`, `measure`, `now` appear in the headings
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: Golden signals · Next → Process metrics

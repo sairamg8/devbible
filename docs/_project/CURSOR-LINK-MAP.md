@@ -7,6 +7,24 @@ metadata:
 
 # 🔴 START HERE — the link map ("hub + delta", one place)
 
+## Link-map status per language (update the moment a language completes)
+
+| Language | Topics | State | Live since |
+|---|---|---|---|
+| MongoDB | 82 | ✅ complete + validated | 2026-10-12 (PRs #3, #4) |
+| Redux Toolkit | 21 | ✅ complete + validated | 2026-10-12 (PRs #3, #5) |
+| Redis | 74 | ✅ complete (verified once) | 2026-10-12 (PR #6) |
+| Node.js | 249 | ✅ complete (verified once) | 2026-10-12 (PR #7) |
+| Express | 115 | ✅ complete (verified once) | 2026-10-12 (PR #8) |
+| PostgreSQL | 233 | ✅ complete (verified once) | 2026-10-12 (PR #9) |
+| TypeScript | ~170 | 🔵 running (4 lanes) | — |
+| Docker · nginx · Git · Python · JavaScript · React · Angular · Java · CSS · others | — | ⬜ not started | — |
+
+**"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
+
+*Complete* = every syllabus topic has a block, links 200, MDX/linkcheck clean, merged to `main`. *Verified once* = researcher + adversarial verifier; a later
+re-read of "headings only" blocks is still owed. The staged copies in `docs/_project/link-map/` are older than the site copies — **the site copy is the truth**.
+
 ## 2026-10-12 (evening) — one language at a time, agents, merged to main
 
 User order: *pick one language at a time, deploy the agents you need, merge everything to main*. Pattern per language: N lanes (one per syllabus part), each a

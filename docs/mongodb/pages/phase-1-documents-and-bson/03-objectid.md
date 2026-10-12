@@ -186,6 +186,17 @@ carries a timestamp, and its time-ordered prefix keeps index inserts at the righ
 random UUIDv4 scatters them — and if you must store a UUID, store it as `binData`, not as a
 36-character string.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ObjectId() (mongosh method)](https://www.mongodb.com/docs/manual/reference/method/objectid/) — mongodb.com: 12 bytes = 4-byte seconds timestamp + 5-byte random value per client process + 3-byte counter initialised randomly (*read*)
+- **Also good:** [Community thread: ObjectId and absolute insertion order](https://www.mongodb.com/community/forums/t/objectid-guarantees-absolute-insertion-order-if-just-one-replica-set-and-no-sharding-throughout-lifetime/16902) — mongodb.com forums: question dated 2021-03-03; the answer says ObjectIds from one second have no predictable order and offers a capped collection for strict insertion order, with its restrictions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`_id`](./02-the-id-field.md) ·

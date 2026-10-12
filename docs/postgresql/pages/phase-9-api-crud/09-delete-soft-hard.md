@@ -240,6 +240,18 @@ It makes the operation idempotent. A retried request matches nothing and returns
 `rowCount: 0` rather than resetting `deleted_at` to a later timestamp — which would
 corrupt any retention window measured from it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Soft deletion with PostgreSQL: but with logic on the database!](https://evilmartians.com/chronicles/soft-deletion-with-postgresql-but-with-logic-on-the-database) — evilmartians.com: 2022-05-16; hard delete loses data, soft delete needs every read scoped; cascades and a hard-delete hatch (*read* the intro; rest *headings only*)
+- **Also good:** [6.4. Returning Data from Modified Rows](https://www.postgresql.org/docs/current/dml-returning.html) — postgresql.org: `DELETE ... RETURNING` (*read*)
+- **Also good:** [11.8. Partial Indexes](https://www.postgresql.org/docs/current/indexes-partial.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Partial updates](08-update-partial.md) · Next → [Keyset pagination](./keyset/)

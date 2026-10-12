@@ -195,6 +195,17 @@ By latency expectation. Receipts and password resets on a fast queue, exports an
 video on a bulk one, each with its own workers — otherwise a backlog of slow work
 starves the work users are waiting on.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Concurrency](https://12factor.net/concurrency) — 12factor.net: "Scale out via the process model" is the section title (*read* the opening; ≈520 words)
+- **Also good:** [Going to production](https://docs.bullmq.io/guide/going-to-production) — docs.bullmq.io: ≈1.9k words (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Job queues](./02-job-queues.md) · Next → [Retries, attempts and stalled jobs](./04-retries-and-stalled-jobs.md)

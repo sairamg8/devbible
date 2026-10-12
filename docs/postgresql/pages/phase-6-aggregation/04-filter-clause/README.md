@@ -54,6 +54,17 @@ that differs from `sum(CASE … ELSE 0)`.
   aggregations out of one scan
 - **[Window functions](../06-windows-intro/README.md)** — `FILTER` works there as well
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [2.7. Aggregate Functions](https://www.postgresql.org/docs/current/tutorial-agg.html) — postgresql.org: `count(*) FILTER (WHERE temp_lo &lt; 45)` per-aggregate filter next to `HAVING` (*read*)
+- **Also good:** [The FILTER clause](https://modern-sql.com/feature/filter) — modern-sql.com: standard feature; `CASE` emulation; PostgreSQL allows subqueries inside; page lists PostgreSQL 18 (*read*; undated)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Conditional aggregation](01-conditional-aggregation.md)

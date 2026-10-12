@@ -211,6 +211,19 @@ When a measured client pattern needs it. They cost per-request statuses, clean
 authorisation, useful cache keys and one-line-per-operation logs — real losses that
 should be paid for by a real gain.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PATCH method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/PATCH) — MDN: page modified 2026-06-22
+- **Read this:** [RFC 7396 JSON Merge Patch](https://www.rfc-editor.org/info/rfc7396/) — rfc-editor.org: Oct 2014
+- **Also good:** [RFC 6902 JSON Patch](https://www.rfc-editor.org/info/rfc6902/) — rfc-editor.org: Apr 2013
+- **Also good:** [Zalando REST guidelines](https://opensource.zalando.com/restful-api-guidelines/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Webhooks](09-webhooks.md) · Next → [Hypermedia](11-hypermedia.md)

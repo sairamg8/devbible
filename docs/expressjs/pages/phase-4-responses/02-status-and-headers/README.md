@@ -61,6 +61,18 @@ resource that exists, and what happens if you set a header after the first write
 - **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership/README.md)** —
   why cross-tenant access answers 404.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Express 5.x API: Response](https://expressjs.com/en/5x/api/response/) — expressjs.com: `res.status`, `res.set`, `res.headersSent` (*read* the method list and `res.sendStatus`)
+- **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) — OWASP: "don't just use 200 for success or 404 for error" (*read*)
+- **Also good:** [MDN: HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev topic: [res methods](../01-res-methods/README.md) · Start → [Status as contract](01-status-as-contract.md)

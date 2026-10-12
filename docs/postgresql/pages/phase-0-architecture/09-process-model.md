@@ -97,6 +97,16 @@ managed by the service/container).
 **Why can `pg_stat_activity` show non-client backends?**  
 Background workers share the view; filter on `backend_type` or `datname`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Glossary](https://www.postgresql.org/docs/current/glossary.html) — postgresql.org: defines instance, postmaster, backend, auxiliary processes (autovacuum launcher, background writer, checkpointer, WAL writer) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Connections and auth](08-connection-and-auth.md) · Next → [Version policy](10-version-policy.md)

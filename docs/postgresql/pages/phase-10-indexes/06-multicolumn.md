@@ -194,6 +194,16 @@ single-column indexes, but that costs extra scans and provides no ordering.
 **Do you need `(a,b)` and `(b,a)`?**
 Almost never. Measured, adding the mirror gained nothing and doubled the write cost.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [11.3 Multicolumn Indexes](https://www.postgresql.org/docs/current/indexes-multicolumn.html) — postgresql.org: the exact rule: equality on leading columns plus an inequality on the first non-equality column limit the scan (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Why an index is not used](05-index-not-used.md) · Next → [EXPLAIN ANALYZE BUFFERS](07-explain-buffers.md)

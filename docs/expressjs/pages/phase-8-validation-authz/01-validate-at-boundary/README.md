@@ -61,6 +61,17 @@ for.
 - **→ [Phase 9 · 05 · CSRF and injection](../../phase-9-hardening/05-csrf-and-injection.md)**
   — escaping as an output concern, not an input one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Input Validation Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) — OWASP: allowlist vs denylist, "parse safely, then validate", structured data, common pitfalls (*read* headings and strategy sections)
+- **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) — OWASP: input validation section: check length, range, format, type; size limit with 413; unsupported Content-Type gets 415 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 8](../README.md) · Start → [What untrusted means](01-what-untrusted-means.md)

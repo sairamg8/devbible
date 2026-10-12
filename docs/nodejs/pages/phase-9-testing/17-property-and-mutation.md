@@ -240,6 +240,17 @@ generator's range and confirm the property fails when you break the code deliber
 No. Equivalent mutants cannot be killed, and mutations of logging are not worth
 killing. Read the survivors and ask whether killing each would be a real test.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [fast-check: Introduction](https://fast-check.dev/docs/introduction/) — fast-check.dev: runs assertions over hundreds of generated cases and shrinks failures to a minimal input (*read*)
+- **Read this:** [What is mutation testing?](https://stryker-mutator.io/docs/) — Stryker: why coverage alone does not show test quality (*read*, ≈660 words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [16 · ESLint, Prettier and Biome](./16-lint-and-format.md) ·

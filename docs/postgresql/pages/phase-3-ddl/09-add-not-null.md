@@ -197,6 +197,17 @@ Only pre-existing rows that violate it, since the `NOT VALID` constraint already
 blocks new violations. A `23514` there means the backfill was incomplete — re-run it
 and validate again.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ALTER TABLE · Notes and `SET NOT NULL`](https://www.postgresql.org/docs/current/sql-altertable.html) — postgresql.org: non-volatile default means no rewrite; `SET NOT NULL` scans unless a valid `CHECK` proves no NULLs (or `NOT VALID` is used) (*read*)
+- **Also good:** [A Missing Link in Postgres 11: Fast Column Creation with Defaults](https://www.brandur.org/postgres-default) — brandur.org: 2018-08-28
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Unique constraints vs unique indexes](08-unique-nulls.md) · Next → [Schemas as namespaces](10-schemas-tenancy.md)

@@ -191,6 +191,17 @@ write path forgets to update it, so writes should funnel through one place and a
 reconciliation should exist. Counting on demand is exact but costs a query per parent, which is
 what makes it awkward for lists.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Avoid Unbounded Arrays](https://www.mongodb.com/docs/manual/data-modeling/design-antipatterns/unbounded-arrays/) — mongodb.com: an unlimited array can push a document past the 16 MB BSON limit and hurt index performance; the fix is subsetting and referencing (*read*)
+- **Also good:** [6 Rules of Thumb → one-to-squillions](https://www.mongodb.com/company/blog/mongodb/6-rules-of-thumb-for-mongodb-schema-design) — the original statement of the pattern (*read* the framing)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [One-to-many](./04-one-to-many.md) ·

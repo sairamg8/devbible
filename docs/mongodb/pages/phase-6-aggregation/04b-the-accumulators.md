@@ -277,6 +277,16 @@ result must never be indexed into positionally.
 Not for behaviour or speed — both count documents in the group. `$count` reads more clearly; `{$sum: 1}`
 is the older idiom you will meet in existing code.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [$group](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/) — mongodb.com: ≈4.5k words; the accumulator list including `$push` ("an array of expression values for documents in each group"); `$group` does not order its output (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`$group` — the stage](./04-group-and-accumulators.md) ·

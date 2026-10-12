@@ -209,6 +209,16 @@ Repeating the expression is also fine — the planner evaluates it once either w
 It is `bigint`, whose range exceeds JS's safe integers, so the driver preserves precision
 by returning text. Cast to `int` when the value is known to be small.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.2.1.2 Table and Column Aliases](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-TABLE-ALIASES) — postgresql.org: short aliases for long names, required for self-joins, original name unusable once aliased (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [UNION INTERSECT EXCEPT](11-set-ops.md) · Next → [Joining on expressions](13-join-expressions.md)

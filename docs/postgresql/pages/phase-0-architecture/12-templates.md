@@ -99,6 +99,18 @@ A known-clean template when `template1` has been modified.
 Almost never. Provisioning is an admin path; runtime is DML (+ limited DDL via
 migrations with a migrator role).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Template Databases](https://www.postgresql.org/docs/current/manage-ag-templatedbs.html) — postgresql.org: `CREATE DATABASE` copies `template1`; `template0` is the pristine copy (*read*)
+- **Also good:** [Creating a Database](https://www.postgresql.org/docs/current/manage-ag-createdb.html) — postgresql.org: the initial `postgres` database (*read*)
+- **Also good:** [CREATE DATABASE](https://www.postgresql.org/docs/current/sql-createdatabase.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [vs other databases](11-vs-other-databases/README.md) · [Phase 0 index](README.md)

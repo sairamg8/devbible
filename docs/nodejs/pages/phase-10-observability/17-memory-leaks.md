@@ -113,6 +113,17 @@ All JS heap is gone. If the curve returns, the bug is still in the code path.
 **Leak vs large cache?**
 A cache with a cap is a policy. An unbounded Map is a leak with a product name.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using Heap Snapshot](https://nodejs.org/learn/diagnostics/memory/using-heap-snapshot) — nodejs.org/learn: load a snapshot into Chrome DevTools to check retainer size and compare several snapshots; warns the main thread stops while it is taken and it can double heap use; routes: `--heapsnapshot-signal=SIGUSR2`, `writeHeapSnapshot` (*re
+- **Also good:** [Using Heap Profiler](https://nodejs.org/learn/diagnostics/memory/using-heap-profiler) — nodejs.org/learn: allocation timeline and sampling heap profiler, for allocations over time (*read* the intro)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Caching strategy](./16-caching-strategy.md) · Next → [Common leak sources](./18-common-leak-sources.md)

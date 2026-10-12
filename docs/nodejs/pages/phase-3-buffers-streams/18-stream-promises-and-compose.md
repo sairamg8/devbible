@@ -243,6 +243,18 @@ Node range in a library.
 One — Node special-cases strings and Buffers rather than iterating them
 character by character. Other iterables are iterated per element.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [stream.compose()](https://nodejs.org/api/stream.html#streamcomposestreams) — nodejs.org: history says "Marking the API stable" in v26.2.0 (*read*); `readable.compose`, `readable.map/filter/forEach/toArray` are in the index, and `readable.map` shows "Stability: 1 - Experimental" (*read*)
+- **Read this:** [Iterable Streams](https://nodejs.org/api/stream_iter.html) — nodejs.org: the v26 index lists an "Iterable Streams API" page: `node:stream/iter`, "Stability: 1 - Experimental", behind `--experimental-stream-iter`, built on iterables with no base classes (*read* the opening, ≈10.7k words)
+- **Also good:** [Streams Promises API](https://nodejs.org/api/stream.html#streams-promises-api) — nodejs.org: `require('node:stream/promises')` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Custom Readable and Writable](17-custom-readable-writable.md) · Next → [High water marks and tuning](19-highwatermark-tuning.md)

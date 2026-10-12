@@ -258,6 +258,16 @@ In the repository's mapper, once per aggregate. Doing it in the SQL with `as` al
 also works; doing it ad hoc at call sites is how both spellings end up in the
 codebase.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Repository](https://martinfowler.com/eaaCatalog/repository.html) — martinfowler.com: mediates between domain and data mapping using a collection-like interface (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Mongoose](./09-mongoose.md) · Next → [Migrations as code](./11-migrations.md)

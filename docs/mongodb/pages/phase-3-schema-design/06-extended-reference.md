@@ -179,6 +179,17 @@ Index the copied id so the update is targeted, estimate the fan-out at design ti
 with a million orders means a million-document update — and if the number is unacceptable,
 either do not copy the field or accept staleness and refresh lazily.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Building with Patterns: The Extended Reference Pattern](https://www.mongodb.com/company/blog/building-with-patterns-the-extended-reference-pattern) — mongodb.com blog: published 2019-03-07, ≈1.3k words, one sample use case (*read*) duplicate only the few frequently displayed fields, best for rarely changing values; the cost is deciding which copies to update and when; duplication can also preser
+- **Also good:** [Schema Design Patterns](https://www.mongodb.com/docs/manual/data-modeling/design-patterns/) — mongodb.com: the Manual's current pattern index; it lists six patterns (computed values, group data, polymorphic, schema versioning, archive, single collection) and **the extended reference pattern is not on it** (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [One-to-squillions](./05-one-to-squillions.md) ·

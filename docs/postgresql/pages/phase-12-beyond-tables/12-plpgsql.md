@@ -240,6 +240,17 @@ the language.
 error with that SQLSTATE, so the same mapping that handles constraint violations
 handles it. Without an explicit code everything is `P0001`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PL/pgSQL Overview](https://www.postgresql.org/docs/current/plpgsql-overview.html) — postgresql.org: grouping queries inside the server saves client/server round trips (*read*)
+- **Also good:** [CREATE FUNCTION](https://www.postgresql.org/docs/current/sql-createfunction.html) — postgresql.org: `RETURNS TABLE (...)` syntax, volatility, `SECURITY DEFINER` (*read* the synopsis)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Materialized views](11-matviews.md) · Next → [LISTEN/NOTIFY](13-listen-notify.md)

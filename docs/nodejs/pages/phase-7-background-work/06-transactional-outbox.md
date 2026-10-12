@@ -227,6 +227,18 @@ Delete published rows past a retention window, and put a partial index on
 Yes, with `for update skip locked` on the claim, exactly as with a job queue. Combined
 with a derived `jobId`, a duplicate publish is a no-op.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html) — microservices.io: problem "How to atomically update the database and send messages"; store the message in the same transaction, a separate process sends it (*read*)
+- **Also good:** [Transactional outbox pattern](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html) — AWS Prescriptive Guidance: defines the dual write problem (*read* the intent)
+- **Also good:** [Solving the Dual-Write Problem](https://www.confluent.io/blog/dual-write-problem/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Job idempotency](./05-job-idempotency.md) · Next → [Dead-letter queues](./07-dead-letter-queues.md)

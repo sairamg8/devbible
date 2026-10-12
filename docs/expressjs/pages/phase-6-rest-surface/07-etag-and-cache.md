@@ -178,6 +178,21 @@ the write itself, with zero rows affected treated as a 412.
 | Public catalog | `public, max-age=…` carefully |
 | Static hashed assets | long `max-age` + immutable (Phase 4) |
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HTTP conditional requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Conditional_requests) — MDN: `If-None-Match` (weak) and `If-Match` (strong) validators, cache revalidation with 304, and optimistic locking against lost updates (*read*)
+- **Also good:** [ETag header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag) — MDN: page modified 2025-07-28
+- **Also good:** [Application settings: etag](https://expressjs.com/en/5x/api/application/)
+- **Read this:** [HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) — MDN: private versus shared caches; personalised content in a shared cache can leak to other users (*read*)
+- **Also good:** [Cache-Control header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) — MDN: directive table including `private`, `no-store`, `no-cache`, `s-maxage` (*read*)
+- **Also good:** [RFC 9111 HTTP Caching](https://www.rfc-editor.org/info/rfc9111/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Idempotency keys](06-idempotency-keys.md) · Next → [OpenAPI](08-openapi.md)

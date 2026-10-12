@@ -233,6 +233,17 @@ rows badly (several one-to-many relations at once), or when the aggregation shap
 makes the query unreadable for a marginal gain. Batching is the general fix; joins
 are the optimisation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Query optimization](https://www.prisma.io/docs/orm/v7/prisma-client/queries/advanced/query-optimization-performance) — prisma.io: defines n+1 as one extra query per looped result; shows the loop anti-pattern and fixes with `include`, an `in` filter and `relationLoadStrategy: "join"` (*read*; Prisma 7 docs)
+- **Also good:** [Understanding N+1 Database Queries](https://www.scoutapm.com/blog/understanding-n1-database-queries) — Scout Monitoring: published 2024-12-23, modified 2026-04-27; what, why, fixes, detection, and when it is acceptable (*headings only*; Rails, Django and Elixir examples, vendor blog)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Transactions](./06-transactions.md) · Next → [Drivers, query builders and ORMs](./08-drivers-builders-orms.md)

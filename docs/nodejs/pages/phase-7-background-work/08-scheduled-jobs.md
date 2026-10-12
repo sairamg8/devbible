@@ -203,6 +203,18 @@ logs and failure alerts without scheduling code.
 So a slow run does not compound the delay and a throwing run does not stop the
 schedule entirely.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Job Schedulers](https://docs.bullmq.io/guide/job-schedulers/) — docs.bullmq.io: `upsertJobScheduler` with `every` or a cron `pattern`; `tz: 'UTC'` for cron in UTC (*read*)
+- **Also good:** [Prevent overlapping cron jobs](https://www.nodecron.com/prevent-overlapping-cron-jobs.html) — node-cron docs: `noOverlap` skips a tick while the previous run is active (*read*)
+- **Also good:** [Timezones & DST](https://www.nodecron.com/timezones-and-dst.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Dead-letter queues](./07-dead-letter-queues.md) · Next → [Outbound side-effects as jobs](./09-outbound-side-effects.md)

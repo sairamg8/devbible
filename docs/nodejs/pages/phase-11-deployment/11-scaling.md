@@ -89,6 +89,16 @@ Lag/saturation and request load — not CPU alone for I/O-bound services.
 **Vertical vs horizontal in one line?**
 Bigger machine vs more machines; Node often needs more processes either way for multi-core.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cluster](https://nodejs.org/docs/latest/api/cluster.html) — nodejs.org: v26.11.1; Stable; the default distribution is round-robin from the primary (except on Windows); says to use `worker_threads` when process isolation is not needed (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Process managers](./10-process-managers.md) · Next → [Semantic release](./12-semantic-release.md)

@@ -183,6 +183,17 @@ The pool is internal, runs C/C++ operations only, and you never see it.
 and you talk to them by passing messages. Use workers for *your* CPU-bound code;
 the pool is not available to it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [libuv Thread pool work scheduling](https://docs.libuv.org/en/v1.x/threadpool.html) — libuv.org: used for file system operations plus getaddrinfo and getnameinfo; default size 4, set by `UV_THREADPOOL_SIZE`, absolute maximum 1024 (raised from 128 in libuv 1.30.0) (*read*)
+- **Also good:** [Don't Block the Event Loop → Worker Pool](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org: lists the Node APIs: `dns.lookup()` and `dns.lookupService()`, all `fs` except FSWatcher and the explicit sync ones, `crypto.pbkdf2/scrypt/randomBytes/randomFill/generateKeyPair`, and "All zlib APIs except those that are explicitl
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Blocking the event loop](03-blocking-the-event-loop.md) · Next → [Node vs the browser](05-node-vs-browser.md)

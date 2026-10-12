@@ -236,6 +236,16 @@ Nothing is reported; the text is left as-is. In SQL that usually surfaces as
 **How do you check the number of rows a statement affected?**
 The `:ROW_COUNT` variable, set after each statement.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · SQL Interpolation](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-INTERPOLATION) — postgresql.org: the three colon forms, `:&#123;?name&#125;` to test a variable (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Query buffer and editor](07-query-buffer.md) · Next → [\copy vs COPY](09-copy.md)

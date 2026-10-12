@@ -239,6 +239,16 @@ buffering the whole result.
 When you need per-row error handling, retries, or types — roughly the point where a second
 `awk` appears in the pipeline.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · Options](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-OPTION-NO-ALIGN) — postgresql.org: `-A`, `-t`, `-F`, `--csv` for machine-readable output; stdin works as in the heredoc example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [\errverbose and SQLSTATE](14-errverbose.md) · [Phase index](README.md)

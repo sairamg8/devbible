@@ -266,6 +266,16 @@ exact search.
 Below a few tens of thousands of vectors. Exact search read 50 000 rows in 88 ms
 and is exactly correct — no build time, no index storage, no recall question.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [pgvector README (raw)](https://raw.githubusercontent.com/pgvector/pgvector/master/README.md) — github (raw): distances (L2, inner product, cosine, L1, Hamming, Jaccard); HNSW is faster than IVFFlat at the cost of build time and memory; `hnsw.ef_search` defaults to 40 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Foreign data wrappers](16-fdw.md) · Next → [The transactional outbox](18-transactional-outbox.md)

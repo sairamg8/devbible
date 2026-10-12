@@ -187,6 +187,18 @@ Node decides a rejection is unhandled at the end of the current turn. A handler
 attached in a later tick triggers `rejectionHandled`, but the process has already
 reported — and by default exited. Attach handlers when the promise is created.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [process → Event: 'unhandledRejection'](https://nodejs.org/docs/latest/api/process.html#event-unhandledrejection) — nodejs.org: an unhandled `'unhandledRejection'` is raised as an uncaught exception; [Warning: Using 'uncaughtException' correctly](https://nodejs.org/docs/latest/api/process.html#warning-using-uncaughtexception-correctly): a "crude mechanism 
+- **Read this:** [Warning: Using 'uncaughtException' correctly](https://nodejs.org/docs/latest/api/process.html#warning-using-uncaughtexception-correctly)
+- **Also good:** [CLI → --unhandled-rejections=mode](https://nodejs.org/docs/latest/api/cli.html#--unhandled-rejectionsmode) — nodejs.org: "v15.0.0 Changed default mode to throw" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Concurrency control](14-concurrency-control.md) · Next → [Error design](16-error-design.md)

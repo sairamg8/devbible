@@ -196,6 +196,19 @@ only when the client sends often.
 The connection closed without a close frame — a drop, not a clean shutdown. It is
 the code you will see for network failures, and it cannot be sent deliberately.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Global WebSocket](https://nodejs.org/api/globals.html#class-websocket) — nodejs.org: added v21.0.0, v20.10.0; "No longer experimental" since v22.4.0; unflagged since v22.0.0 (*read*)
+- **Read this:** [ws README](https://raw.githubusercontent.com/websockets/ws/master/README.md) — ws (raw GitHub copy; github.com and npmjs.com are 403): the server side; does not work in the browser, which must use native `WebSocket` (*read*)
+- **Also good:** [Choose Between SSE and WebSockets](https://docs.railway.com/guides/sse-vs-websockets) — Railway docs, 2026-03-30 (page metadata): comparison table: SSE server to client, auto-reconnect built in, text only; WebSockets bidirectional, binary, manual reconnect (*read*, vendor guide)
+- **Also good:** [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Streaming and SSE](10-streaming-and-sse.md) · Next → [node:net and node:dgram](12-net-and-dgram.md)

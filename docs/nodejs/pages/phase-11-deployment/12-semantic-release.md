@@ -84,6 +84,17 @@ No — it automates policy you must still design.
 **What is a false patch?**
 A release labeled PATCH that changes behaviour consumers relied on — a SemVer violation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Semantic Versioning 2.0.0](https://semver.org/) — semver.org: MAJOR for incompatible API changes, MINOR for compatible features, PATCH for compatible fixes (*read*)
+- **Read this:** [semantic-release docs](https://semantic-release.gitbook.io/semantic-release) — semantic-release.gitbook.io: automates releases from a formalized commit message convention, integrates with CI (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Scaling](./11-scaling.md) · Next → [Blue/green and canary](./13-blue-green-canary.md)

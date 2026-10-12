@@ -264,6 +264,19 @@ pid-based names are guessable.
 Temp files from a `SIGKILL`ed process. A long-running service needs a boot-time
 sweeper with a grace period, so it does not delete an in-flight upload.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [write-file-atomic README](https://cdn.jsdelivr.net/npm/write-file-atomic@8.0.0/README.md) — npm package v8.0.0 (jsDelivr copy; npmjs.com and github.com return 403): writes a temporary file, renames it over the target, unlinks the temp file on any error, queues concurrent writes to one file; `fsync` defaults to true (*read*, ≈470 words)
+- **Also good:** [fsPromises.rename()](https://nodejs.org/api/fs.html#fspromisesrenameoldpath-newpath) — nodejs.org: the primitive (*headings only*)
+- **Read this:** [busboy README](https://raw.githubusercontent.com/mscdex/busboy/master/README.md) — busboy (raw GitHub copy; github.com is 403): `limits.fileSize` default Infinity; on hitting it the file stream gets `truncated: true` and emits `'limit'` (*read*)
+- **Also good:** [Node.js Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html) — OWASP: the "Set request size limits" section: unbounded bodies can exhaust memory or fill disk; limit with `raw-body` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [File handles](09-file-handles.md) · Next → [node:os](11-os.md)

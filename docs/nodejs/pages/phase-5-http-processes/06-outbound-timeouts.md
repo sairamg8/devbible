@@ -182,6 +182,17 @@ idempotency keys.
 Because the caller's deadline is the real budget. Work done after the caller has
 given up is pure load with no consumer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [AbortSignal.timeout()](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout_static) — MDN: aborts with a `TimeoutError` DOMException; combine signals with `AbortSignal.any()` (*read*)
+- **Also good:** [Node globals: AbortSignal.timeout()](https://nodejs.org/api/globals.html#static-method-abortsignaltimeoutdelay) — nodejs.org: section id verified (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [fetch](05-fetch.md) · Next → [Keep-alive and agents](07-keep-alive-and-agents.md)

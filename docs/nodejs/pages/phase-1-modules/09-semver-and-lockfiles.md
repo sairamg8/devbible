@@ -205,6 +205,18 @@ Update the direct parent if a fixed version exists. If it does not, `overrides` 
 `package.json` pins the nested dependency to a patched version — accepting that
 you have overridden what the parent declared it works with.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Semantic Versioning 2.0.0](https://semver.org/) — semver.org: the MAJOR.MINOR.PATCH rules (*read* summary)
+- **Also good:** [About semantic versioning](https://docs.npmjs.com/about-semantic-versioning/) — docs.npmjs.com: last edited October 23, 2023; `~1.0.4` patch range, `^1.0.4` minor range (*read*)
+- **Also good:** [package-lock.json](https://docs.npmjs.com/cli/v11/configuring-npm/package-lock-json/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The `exports` map](08-exports-map.md) · Next → [npm day to day](10-npm-day-to-day.md)

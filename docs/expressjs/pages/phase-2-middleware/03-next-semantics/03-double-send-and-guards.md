@@ -236,6 +236,17 @@ respond except the 404 and the error handler, and `return` every terminal call.
 Guards are then only needed for the cases structure cannot reach: streams,
 timeouts and error handlers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Writing middleware](https://expressjs.com/en/guide/writing-middleware/) — expressjs.com: ending the request-response cycle is one of the four jobs; a middleware that does not end it must call `next()` (*read*)
+- **Also good:** [Error Handling](https://expressjs.com/en/guide/error-handling/) — expressjs.com: the failure when `next(err)` arrives after the response has started (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The hang](02-the-hang.md) · Index: [`next` semantics](README.md) · Next topic → [Middleware factories](../04-middleware-factories.md)

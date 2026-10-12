@@ -165,6 +165,16 @@ Whatever you decided from the `SELECT` may be stale by the time the write applie
 Yes, if the report is several statements. Each gets its own snapshot, so the parts can
 disagree. One statement, or `REPEATABLE READ`, fixes it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [13.2 Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html) — postgresql.org: Read Committed is the default; a `SELECT` sees only data committed before that query began; the anomaly definitions and the isolation table (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [BEGIN COMMIT ROLLBACK](02-begin-commit.md) · Next → [Lost update](04-lost-update.md)

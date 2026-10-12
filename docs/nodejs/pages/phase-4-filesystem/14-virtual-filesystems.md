@@ -187,6 +187,16 @@ filesystem module as a dependency, so tests pass `memfs` and production passes
 works when run normally. The assets are not on the filesystem, so `readFile`
 fails.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Virtual File System](https://nodejs.org/api/vfs.html) — nodejs.org: `node:vfs`, added v26.4.0, "Stability: 1 - Experimental"; a `node:fs`-like API for tests, fixtures and embedded assets (*read* the opening, ≈4.2k words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Permissions and symlinks](13-permissions-and-symlinks.md) · Phase index → [Filesystem, paths and URLs](README.md)

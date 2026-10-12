@@ -58,6 +58,17 @@ an empty JSON body parses to, and which `err.type` codes body-parser emits.
 - **→ [Phase 8 · 01 · Validate at the boundary](../../phase-8-validation-authz/01-validate-at-boundary/README.md)**
   — the schema that has to reject the `{}` the parser accepts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Express 5.x API: express](https://expressjs.com/en/5x/api/express/) — expressjs.com: `express.json()` and `express.urlencoded()` options with defaults: `strict` true, `type` `application/json`, `extended` false; only requests whose Content-Type matches `type` are parsed (*read*)
+- **Also good:** [body-parser](https://expressjs.com/en/resources/middleware/body-parser/) — expressjs.com: the module behind them, with its error table (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev topic: [req anatomy](../01-req-anatomy/README.md) · Start → [The four gates](01-the-four-gates.md)

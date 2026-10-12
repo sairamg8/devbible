@@ -201,6 +201,17 @@ write the server's own response into the cache with `upsertQueryData`. You still
 refetch, so it costs one round trip rather than two, while never displaying a value the server has not
 agreed to.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Manual Cache Updates](https://redux.js.org/toolkit/rtk-query/usage/manual-cache-updates) — redux.js.org: `updateQueryData` and `upsertQueryData`, then the optimistic, pessimistic and general-update recipes built on `onQueryStarted`, including undoing a patch when the request fails
+- **Also good:** [Redux Essentials, Part 8 → optimistic updates for reactions](https://redux.js.org/tutorials/essentials/part-8-rtk-query-advanced#optimistic-updates-for-reactions) — redux.js.org: the same pattern inside a running app, followed by streaming updates with `onCacheEntryAdded`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [RTK Query Cache](./02-cache-management-and-invalidation.md) · [Topic index](../README.md) · Next → [`createSelector`](../05-selectors-and-normalization/01-create-selector-and-reselect.md)

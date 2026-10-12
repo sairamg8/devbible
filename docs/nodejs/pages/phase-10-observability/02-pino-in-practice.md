@@ -174,6 +174,18 @@ and aggregators.
 `base`: process-lifetime facts (service name, version). Child: per-request or per-job
 facts. Do not put request ids in `base`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [pino docs/redaction.md](https://cdn.jsdelivr.net/gh/pinojs/pino@main/docs/redaction.md) — jsDelivr copy of pinojs/pino: `redact.paths` with a custom `censor`; paths use `a.b.c`, `a[*].b` and `*` wildcards and are case sensitive; non-wildcard paths add about 2% to `JSON.stringify` while wildcards cost more (*read*)
+- **Also good:** [pino docs/child-loggers.md](https://cdn.jsdelivr.net/gh/pinojs/pino@main/docs/child-loggers.md) — jsDelivr copy: a child logger pins `"module":"foo"` onto every line from one module (*read*)
+- **Also good:** [pino docs/api.md](https://cdn.jsdelivr.net/gh/pinojs/pino@main/docs/api.md)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Structured logging](./01-structured-logging.md) · Next → [Correlation IDs](./03-correlation-ids.md)

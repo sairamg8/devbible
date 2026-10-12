@@ -218,6 +218,16 @@ connection setting, and the catalog stays one size. Schema-per-tenant when tenan
 are few, large, and need visibly separate data — accepting that migrations become a
 per-tenant loop.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Schemas](https://www.postgresql.org/docs/current/ddl-schemas.html) — postgresql.org: creating a schema, the public schema, the search path, privileges, usage patterns (*read* the intro; ids `DDL-SCHEMAS-PATH`, `DDL-SCHEMAS-PATTERNS`)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Adding a `NOT NULL` column safely](09-add-not-null.md) · Next → [Naming conventions](11-naming.md)

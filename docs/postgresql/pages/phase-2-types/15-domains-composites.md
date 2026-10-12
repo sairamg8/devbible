@@ -200,6 +200,17 @@ Unpack the fields in SQL, or `SELECT to_jsonb(col)` — `pg` does parse `jsonb`.
 Prefixed columns (`billing_street`, `billing_city`) with real constraints, a child table if
 there can be several, or `jsonb` if the shape is genuinely unknown.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CREATE DOMAIN](https://www.postgresql.org/docs/current/sql-createdomain.html) — postgresql.org: (headings only)
+- **Read this:** [Composite Types](https://www.postgresql.org/docs/current/rowtypes.html) — postgresql.org: declaring, constructing, accessing (headings only; ids `ROWTYPES-DECLARING`, `ROWTYPES-ACCESSING`)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Network, geometric, citext](14-network-geo-citext.md) · Next → [Range types](16-ranges.md)

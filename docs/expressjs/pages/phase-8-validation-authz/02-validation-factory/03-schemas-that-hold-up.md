@@ -246,6 +246,17 @@ The **output key set** of the happy path. That is what catches a schema which
 quietly started letting an extra field through — the failure that a
 success/failure assertion cannot see.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Defining schemas](https://zod.dev/api) — zod.dev: primitives, string formats, objects, optionals, enums; labelled Zod 4, "latest version" (*headings only* plus the coercion and `stringbool` passages *read*)
+- **Also good:** [Using Zod with Express](https://stevekinney.com/courses/full-stack-typescript/using-zod-with-express) — Steve Kinney: schemas wired to body, params and query; last modified 2026-03-09; examples use Zod 3 conventions with v4 notes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Mounting and order](02-mounting-and-order.md) · Index: [Validation factory](README.md) · Next topic → [Coercion traps](../03-coercion-traps.md)

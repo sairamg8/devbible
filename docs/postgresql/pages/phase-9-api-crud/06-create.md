@@ -219,6 +219,17 @@ per column, so the parameter count is fixed no matter how many rows. A generated
 `201 Created` with a `Location` header pointing at the new resource, and the
 created resource as the body — which is exactly what `RETURNING` gives you.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [6.4. Returning Data from Modified Rows](https://www.postgresql.org/docs/current/dml-returning.html) — postgresql.org: `RETURNING` on `INSERT` avoids an extra query (*read*)
+- **Also good:** [Queries](https://node-postgres.com/features/queries) — node-postgres.com: example `INSERT ... RETURNING *` then reads `res.rows[0]` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Transactions in a request](./transactions-request/) · Next → [findById](07-find-by-id.md)

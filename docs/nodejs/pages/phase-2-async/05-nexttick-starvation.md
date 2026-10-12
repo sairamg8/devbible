@@ -173,6 +173,17 @@ Only when it is bounded and small — a handful of iterations to defer work past
 current stack. Anything driven by queue depth or retries should use
 `setImmediate`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Node.js Event Loop → process.nextTick](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick#processnexttick) — nodejs.org: recursive `process.nextTick()` "starve" I/O by keeping the loop from reaching poll (*read*)
+- **Also good:** [Understanding process.nextTick()](https://nodejs.org/learn/asynchronous-work/understanding-processnexttick) — nodejs.org: (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [setImmediate vs setTimeout](04-setimmediate-vs-settimeout.md) · Next → [Timers](06-timers.md)

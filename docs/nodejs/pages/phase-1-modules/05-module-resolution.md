@@ -192,6 +192,18 @@ It runs the resolution algorithm and returns the resolved filename without loadi
 the module — useful for diagnosing which copy of a package is actually being
 picked up, and for cache-key work.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CommonJS → All together](https://nodejs.org/docs/latest/api/modules.html#all-together) — nodejs.org: pseudocode of `require(X)`: core module, relative path, `node_modules` lookup (*read* opening)
+- **Read this:** [ESM → Resolution algorithm](https://nodejs.org/docs/latest/api/esm.html#resolution-algorithm) — nodejs.org: the ESM_RESOLVE specification; [#mandatory-file-extensions](https://nodejs.org/docs/latest/api/esm.html#mandatory-file-extensions) says relative specifiers need the extension and directory indexes must be fully specified (*read*)
+- **Read this:** [#mandatory-file-extensions](https://nodejs.org/docs/latest/api/esm.html#mandatory-file-extensions)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [CJS ↔ ESM interop](04-cjs-esm-interop.md) · Next → [Circular dependencies](06-circular-dependencies.md)

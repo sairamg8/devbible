@@ -228,6 +228,18 @@ recorded no samples at all. Missing data is the signal.
 Use the asynchronous API. `crypto.scrypt`, `pbkdf2` and the async bcrypt bindings run
 on the libuv thread pool rather than the event loop; only the `*Sync` variants block.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Don't Block the Event Loop (or the Worker Pool)](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org: why a slow callback stalls every client sharing the loop; REDOS is a named section (*read* intro)
+- **Read this:** [Comparing Node.js concurrency models](https://nodejs.org/learn/concurrency/comparing-nodejs-concurrency-models) — nodejs.org: child process, worker threads, cluster, with a worker CPU-bound example (*headings only*, ≈2.9k words)
+- **Also good:** [worker_threads](https://nodejs.org/docs/latest/api/worker_threads.html) — nodejs.org: workers "are useful for performing CPU-intensive JavaScript operations", not I/O (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [async_hooks](21-async-hooks.md) · Next → *(end of Phase 2)*

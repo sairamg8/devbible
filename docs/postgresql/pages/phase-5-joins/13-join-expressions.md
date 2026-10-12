@@ -215,6 +215,16 @@ A generated stored column plus a plain index when the expression is used repeate
 visible in `\d`, cannot drift from the query text, and supports index-only scans. An
 expression index when you want no extra storage and only one query needs it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) — postgresql.org: `ON` takes any boolean expression (*read* the `ON` definition)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Alias discipline](12-alias-discipline.md) · [Phase index](README.md)

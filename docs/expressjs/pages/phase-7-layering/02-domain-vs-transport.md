@@ -165,6 +165,17 @@ Assert on the exact response keys, not just the values you care about. A test th
 checks `body.id === 42` passes happily while `password_hash` sits beside it.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Layer your app, keep Express within its boundaries](https://raw.githubusercontent.com/goldbergyoni/nodebestpractices/master/sections/projectstructre/createlayers.md) — github (raw): domain layer "accepts protocol-agnostic payload", plain objects in and out (*read*)
+- **Also good:** [Presentation Domain Separation](https://martinfowler.com/bliki/PresentationDomainSeparation.html) — martinfowler.com: 9 Oct 2003
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [CSR wiring](01-controller-service-repository/README.md) · Next → [Fat controllers](03-fat-controllers.md)

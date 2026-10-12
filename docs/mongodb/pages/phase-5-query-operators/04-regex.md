@@ -162,6 +162,16 @@ stemming, multiple fields or relevance ranking. A regex answers "does this strin
 characters", which is a different question, and forcing it to behave like search is where the
 performance goes.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [$regex](https://www.mongodb.com/docs/manual/reference/operator/query/regex/) — mongodb.com: Index Use section: case-sensitive queries can scan the index; a "prefix expression" allows a range scan; **case-insensitive indexes do not help `$regex` because it is not collation-aware** (*read*); the `m` option and anchors (*re
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Element operators — `$exists` and `$type`](./03-element-operators.md) ·

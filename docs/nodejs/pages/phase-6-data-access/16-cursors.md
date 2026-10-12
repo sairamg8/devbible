@@ -244,6 +244,17 @@ The stream destroys the underlying cursor and the connection is usable again —
 verified after breaking out at 10 rows of 500 000. You still have to
 `client.release()` yourself, in a `finally`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [pg-cursor](https://node-postgres.com/apis/cursor) — node-postgres.com: reads through large result sets without loading them all; `cursor.read(rowCount)` and `close()` (*read*; ≈490 words)
+- **Also good:** [Access Data From a Cursor](https://www.mongodb.com/docs/drivers/node/current/crud/query/cursor/) — mongodb.com: async iteration, stream API, batching; warns not to mix cursor paradigms on one cursor (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Read replicas](./15-read-replicas.md) · Phase index: [Data access](./README.md) · Next phase → Background work and resilience *(not yet written)*

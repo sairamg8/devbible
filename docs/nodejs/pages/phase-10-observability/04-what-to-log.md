@@ -156,6 +156,16 @@ When an access log or metric already covers success traffic.
 Minimization means not putting sensitive fields on the object. Redaction strips fields
 that slipped through. You want both; minimization first.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) — OWASP: undated; its "Data to exclude" list names access tokens, authentication passwords, database connection strings, encryption keys, and session ids (consider hashing) and sensitive PII (*read*); also has "Which events to log" and "Ev
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Correlation IDs](./03-correlation-ids.md) · Next → [OpenTelemetry](./05-opentelemetry.md)

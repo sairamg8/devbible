@@ -245,6 +245,16 @@ at commit points, not per write.
 Whenever one operation will do. `readFile`, `writeFile` and `createReadStream`
 open and close for you and cannot leak.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Class: FileHandle](https://nodejs.org/api/fs.html#class-filehandle) — nodejs.org: an unclosed handle tries to close itself and emits a process warning, but the page says not to rely on it (*read*); `filehandle.close()` waits for pending operations (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [stat and existence](08-stat-and-existence.md) · Next → [Atomic writes and temp files](10-atomic-writes-and-temp-files.md)

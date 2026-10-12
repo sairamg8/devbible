@@ -229,6 +229,17 @@ You are done with Phase 0's core when you can explain, out loud, why the
 `for` loop above stalls every request and the database query does not — and
 name three ways to fix it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Don't Block the Event Loop (or the Worker Pool)](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org: what runs on the loop vs the pool, then what to avoid (REDOS is a named section) (*read* intro and API list)
+- **Also good:** [Overview of Blocking vs Non-Blocking](https://nodejs.org/learn/asynchronous-work/overview-of-blocking-vs-non-blocking) — nodejs.org: sections "Comparing Code" and "Dangers of Mixing Blocking and Non-Blocking Code" (*read* first section)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [One thread, many I/O](02-single-thread-and-io.md) · Next → [The libuv thread pool](04-libuv-thread-pool.md)

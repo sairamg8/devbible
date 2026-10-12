@@ -235,6 +235,18 @@ When you have no second system. A job table polled with `SKIP LOCKED` is already
 transactional and needs no relay. The outbox earns its complexity only when events
 must leave PostgreSQL for a broker.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Transactional Outbox Pattern: Reliable Events Without Distributed Transactions](https://ndthuan.com/transactional-outbox-pattern/) — ndthuan.com, 2026-09-04: same-transaction write, then claim unpublished rows with `SKIP LOCKED`, publish, mark (*read*)
+- **Also good:** [Pattern: Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html) — microservices.io, undated: after a crash the message is published again, so consumers must be idempotent (*read*)
+- **Also good:** [SELECT, locking clause](https://www.postgresql.org/docs/current/sql-select.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [pgvector](17-pgvector.md) · Next → [Audit and history tables](19-audit-history-tables.md)

@@ -194,6 +194,17 @@ avoids the padding semantics.
 Collation comes from the database/column, and the C library provides it. A musl-based
 Alpine image and a glibc-based Debian one order the same strings differently.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Character Types](https://www.postgresql.org/docs/current/datatype-character.html) — postgresql.org: "no performance difference among these three types" apart from padding storage (*read*)
+- **Also good:** [Don't Do This](https://wiki.postgresql.org/wiki/Don%27t_Do_This) — postgresql.org wiki: sections "Don't use char(n)" and "Don't use varchar(n) by default" (*read* the varchar section; page last edited 2024-11-21)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [numeric vs float](02-numeric-vs-float.md) · Next → [timestamptz vs timestamp](04-timestamptz.md)

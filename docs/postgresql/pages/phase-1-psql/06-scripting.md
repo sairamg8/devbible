@@ -232,6 +232,16 @@ So a developer's `.psqlrc` cannot alter formatting or settings the script depend
 On long backfills, where holding every lock for the duration is worse than partial
 progress. Use many small idempotent transactions instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · Exit Status and `ON_ERROR_STOP`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-VARIABLES-ON-ERROR-STOP) — postgresql.org: exit code 3 when a script errors with `ON_ERROR_STOP` set, 2 for a bad connection in a non-interactive session; `-1` wraps a script in one transaction (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [\? and \h](05-help.md) · Next → [Query buffer and editor](07-query-buffer.md)

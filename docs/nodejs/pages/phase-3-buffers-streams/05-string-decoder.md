@@ -244,6 +244,16 @@ Transform that buffers an incomplete tail, typically by splitting on newlines.
 Any trailing partial sequence is dropped silently — the last character of the
 stream disappears.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [String decoder](https://nodejs.org/api/string_decoder.html) — nodejs.org: short page (≈900 words): preserves multi-byte UTF-8/UTF-16 characters; incomplete bytes are held until the next `write()` or `end()`; the example writes a Euro sign over three calls (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Buffer is a Uint8Array](04-buffer-as-uint8array.md) · Next → [Binary data and endianness](06-binary-data-and-endianness.md)

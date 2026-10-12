@@ -245,6 +245,17 @@ Ownership. A query that emits the API payload couples the schema to the contract
 so the query changes whenever the response does and cannot serve two endpoints with
 different shapes.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JSON — the relational database's built-in ORM?](https://blogg.knowit.no/json-the-relational-databases-built-in-orm) — blogg.knowit.no: Audun Halland, 2020-11-18 (modified 2023-06-15); N+1 versus `json_agg` nested in one query, almost no mapping code (*read*)
+- **Also good:** [9.21. Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html) — postgresql.org: `jsonb_agg` collects values including nulls into a JSON array (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`SELECT ... FOR UPDATE`](14-for-update.md) · Next → [Testing against a real PostgreSQL](16-testing-real-pg.md)

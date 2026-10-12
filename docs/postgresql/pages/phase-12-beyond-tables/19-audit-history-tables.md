@@ -218,6 +218,18 @@ Fine for "this table changed", useless for a per-row trail.
 `current_setting('app.user_id', true)`, set by the application with `SET LOCAL` in the
 same transaction. Plain `SET` is unsafe behind a transaction pooler.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Audit trigger 91plus](https://wiki.postgresql.org/wiki/Audit_trigger_91plus) — PostgreSQL wiki, last edited 4 Nov 2017: what it records: change type, session user (not `SET ROLE`), timestamps, top-level statement, before/after rows (*read*)
+- **Also good:** [Trigger Functions (PL/pgSQL), Example 41.4](https://www.postgresql.org/docs/current/plpgsql-trigger.html) — postgresql.org: a minimal audit trigger into `emp_audit` (*read*)
+- **Also good:** [Postgres Auditing in 150 lines of SQL](https://supabase.com/blog/postgres-audit)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The transactional outbox](18-transactional-outbox.md) · [Phase 12 index](README.md)

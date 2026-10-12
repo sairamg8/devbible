@@ -219,6 +219,20 @@ work.
 Because the signal may already be aborted when you receive it. The `abort` event
 fires once, and a listener attached afterwards never runs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node globals → Class: AbortController](https://nodejs.org/docs/latest/api/globals.html#class-abortcontroller) — nodejs.org: the Node-side class and `abortController.signal` (*headings only*)
+- **Also good:** [MDN: AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) — mdn: undated; "allows you to abort one or more Web requests"; widely available since March 2019 (*read*)
+- **Read this:** [Node globals → AbortSignal.any(signals)](https://nodejs.org/docs/latest/api/globals.html#static-method-abortsignalanysignals) — nodejs.org: aborts when any given signal aborts; added v20.3.0 / v18.17.0; [timeout(delay)](https://nodejs.org/docs/latest/api/globals.html#static-method-abortsignaltimeoutdelay) added v17.3.0 / v16.14.0 (*read*)
+- **Read this:** [timeout(delay)](https://nodejs.org/docs/latest/api/globals.html#static-method-abortsignaltimeoutdelay)
+- **Also good:** [MDN: AbortSignal.any()](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/any_static) — mdn: undated; widely available since March 2024 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Async iterators](18-async-iterators.md) · Next → [AsyncLocalStorage](20-asynclocalstorage.md)

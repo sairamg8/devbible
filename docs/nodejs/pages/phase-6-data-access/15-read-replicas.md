@@ -252,6 +252,18 @@ Not by itself. It is a warm copy; promoting it is an operational procedure with 
 own data-loss window on asynchronous replication. Real HA needs automatic failover
 and a decision about synchronous commit.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Read-Your-Writes Consistency](https://arpitbhayani.me/blogs/read-your-write-consistency/) — Arpit Bhayani: 2021-09-22; replication lag is the root cause; fixes: synchronous replication, pinning a user to the primary, fragmented pinning, primary fallback (*read*)
+- **Also good:** [Hot Standby](https://www.postgresql.org/docs/current/hot-standby.html) — postgresql.org: PostgreSQL 18; standby queries and conflicts (*read* two passages)
+- **Also good:** [Read replicas](https://orm.drizzle.team/docs/read-replicas)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Retry and backoff](./14-retry-backoff.md) · Next → [Streaming large result sets](./16-cursors.md)

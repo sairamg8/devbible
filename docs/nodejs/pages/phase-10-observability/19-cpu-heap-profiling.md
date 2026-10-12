@@ -118,6 +118,17 @@ The Inspector protocol allows debugging and code evaluation — treat it like ro
 **Do profiles write continuously during the run with `--cpu-prof`?**
 They sample during the run and **write the file on exit** for the CLI flag workflow.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Command-line API: --cpu-prof, --heap-prof](https://nodejs.org/docs/latest/api/cli.html) — nodejs.org: v26.11.1; both flag families are stable since v22.4.0 / v20.16.0; output is a `.cpuprofile` or `.heapprofile` file, with `-dir` and `-name` options (*read*)
+- **Also good:** [Inspector](https://nodejs.org/docs/latest/api/inspector.html) — nodejs.org: v26.11.1; ≈3.2k words (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Common leak sources](./18-common-leak-sources.md) · Next → [Benchmarking](./20-benchmarking.md)

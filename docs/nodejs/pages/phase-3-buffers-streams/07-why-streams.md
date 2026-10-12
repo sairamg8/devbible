@@ -203,6 +203,16 @@ out on long exports.
 No. Chunks are byte-count-driven (64 KB by default) and split lines, JSON
 records and multi-byte characters arbitrarily. Consumers must reassemble.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How To Use Streams](https://nodejs.org/learn/modules/how-to-use-streams) — nodejs.org Learn: opens on large data causing performance bottlenecks and memory exhaustion (*read* the intro); sections on types, `pipeline`, async iterators, object mode, Web Streams interop (*headings only*, ≈6.5k words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Binary data and endianness](06-binary-data-and-endianness.md) · Next → [The four stream types](08-stream-types.md)

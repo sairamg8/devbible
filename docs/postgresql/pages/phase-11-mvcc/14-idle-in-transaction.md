@@ -211,6 +211,17 @@ transaction' ORDER BY state_change;`
 An HTTP call or other slow work inside the transaction, and missing `release()` in a
 `finally` block.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [idle_in_transaction_session_timeout: Terminating idle transactions](https://www.cybertec-postgresql.com/en/idle_in_transaction_session_timeout-terminating-idle-transactions-in-postgresql/) — Cybertec: why long transactions cause bloat, then the timeout; published 2018-04-09, modified 2024-10-08 (*read* the bloat part)
+- **Also good:** [19.11 Client Connection Defaults](https://www.postgresql.org/docs/current/runtime-config-client.html) — postgresql.org: the setting definition; zero (default) disables it; prepared transactions are not subject to it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [VACUUM and bloat](13-vacuum.md) · Next → [Advisory locks](15-advisory-locks.md)

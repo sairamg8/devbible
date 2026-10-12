@@ -180,6 +180,17 @@ counting.
 On the arrival rate and the age of the oldest unreviewed entry. Absolute depth becomes
 noise that people stop seeing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using dead-letter queues in Amazon SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html) — AWS: isolating unconsumed messages helps debugging; examine logs, then redrive (*read*; ≈810 words)
+- **Also good:** [Implementing Webhook Retries](https://hookdeck.com/webhooks/guides/webhook-retry-best-practices) — Hookdeck: 2026-02-11, modified 2026-07-03; silently discarding a failed event is the worst outcome (*read* that section; vendor)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The transactional outbox](./06-transactional-outbox.md) · Next → [Scheduled and recurring jobs](./08-scheduled-jobs.md)

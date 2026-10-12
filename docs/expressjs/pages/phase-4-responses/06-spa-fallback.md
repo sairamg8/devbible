@@ -115,6 +115,17 @@ mistyped endpoint returns a JSON 404 instead of an HTML page a client cannot par
 An array of path segments. Code ported from Express 4's `req.params[0]` string will
 quietly produce `"a,b"` where it used to produce `"a/b"`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: wildcard must be named, use `/*splat` not `/*`; `/&#123;*splat&#125;` also matches the root (*read*)
+- **Also good:** [Serving static files in Express](https://expressjs.com/en/starter/static-files/) — expressjs.com: the `express.static` half (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Static files](05-static-files.md) · Next → [Cookies out](07-cookies-out.md)

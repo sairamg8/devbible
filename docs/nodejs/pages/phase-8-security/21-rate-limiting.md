@@ -248,6 +248,17 @@ acceptable is failing open silently — alert on the limiter's own errors.
 `RateLimit-Limit`, `-Remaining` and `-Reset` on normal responses let clients pace
 themselves. Use 429, not 403 — it tells the client to wait rather than to give up.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [rate-limiter-flexible README (raw)](https://raw.githubusercontent.com/animir/node-rate-limiter-flexible/master/README.md) — github (raw): protects from DoS and brute force; backends include Redis, Mongo, Postgres, memory, cluster (*read*)
+- **Also good:** [express-rate-limit README (raw)](https://raw.githubusercontent.com/express-rate-limit/express-rate-limit/main/readme.md) — github (raw): middleware, built-in memory store plus external stores (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`node:crypto`](./20-node-crypto.md) · Next → [Security headers and CSP](./22-security-headers.md)

@@ -229,6 +229,18 @@ The handshake is; the encryption is not. Measured 6.75 ms per fresh TLS 1.2 conn
 5.58 ms on 1.3, and 3.82 ms resumed. That is an argument for keep-alive and session
 reuse, never against TLS.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Strict-Transport-Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) — MDN: `max-age`, `includeSubDomains`, `preload` (*read*)
+- **Read this:** [Using HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies) — MDN: `HttpOnly`, `SameSite`, `__Host-` prefix rules (*read*)
+- **Also good:** [Transport Layer Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html) — OWASP: protocols, ciphers, certificates (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Secrets handling](./18-secrets.md) · Next → [`node:crypto`](./20-node-crypto.md)

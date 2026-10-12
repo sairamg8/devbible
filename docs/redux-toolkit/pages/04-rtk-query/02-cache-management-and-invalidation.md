@@ -236,6 +236,18 @@ into an instant render. The cost is requests for data that may never be shown, s
 that correlates with intent — hover or focus on a link — plus `ifOlderThan` so an already-warm entry is
 not refetched on every pass of the mouse.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cache Behavior](https://redux.js.org/toolkit/rtk-query/usage/cache-behavior) — redux.js.org: the default behavior (subscription reference counting), `keepUnusedDataFor`, `refetchOnMountOrArgChange`, refetch on focus and reconnect, invalidating by tag, and the stated tradeoffs (no normalized or de-duplicated cache)
+- **Read this:** [Automated Re-fetching](https://redux.js.org/toolkit/rtk-query/usage/automated-refetching) — redux.js.org: tags, `providesTags`, `invalidatesTags`, general vs specific tag behavior, and recipes (abstract tag IDs, providing errors to the cache, abstracting common provides/invalidates code)
+- **Also good:** [Redux Essentials, Part 8 → editing posts](https://redux.js.org/tutorials/essentials/part-8-rtk-query-advanced#editing-posts) — redux.js.org: the same ideas as a story: cache subscription lifetimes, then invalidating one specific item rather than the whole list
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`queryFn`, transforms & infinite queries](./01b-queryfn-transforms-and-infinite-queries.md) · [Topic index](../README.md) · Next → [Optimistic & manual cache updates](./02b-optimistic-and-manual-cache-updates.md)

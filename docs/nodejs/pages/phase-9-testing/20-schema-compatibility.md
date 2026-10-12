@@ -189,6 +189,16 @@ When the change is a restructure that cannot be expressed as adding alongside th
 shape. Versioning costs two code paths and two test suites, so it is not the answer to
 a rename.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [AIP-180: Backwards compatibility](https://google.aip.dev/180) — Google API Improvement Proposals: adding, removing or renaming, changing types, semantic changes (*read* the headings)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [19 · Contract testing](./19-contract-testing.md) ·

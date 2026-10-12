@@ -88,6 +88,17 @@ Small VM hosts without an orchestrator, needing simple multi-app supervision.
 The supervisor that owns the lifecycle — kubelet, systemd, or your process manager —
 once only.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PM2 cluster mode](https://pm2.keymetrics.io/docs/usage/cluster-mode/) — pm2.keymetrics.io: `instances: "max"` with `exec_mode: "cluster"` starts as many processes as possible (*read*)
+- **Also good:** [Building good containers](https://cdn.jsdelivr.net/gh/nodeshift/nodejs-reference-architecture@main/docs/development/building-good-containers.md) — jsDelivr copy: lists "use a process manager" as a container recommendation, for PID 1 reasons (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Image size and hardening](./09-image-size-hardening.md) · Next → [Scaling](./11-scaling.md)

@@ -49,6 +49,16 @@ question about the data.
   it won instead
 - **[Window frames](../14-frames/README.md)** — why ranking functions ignore the frame clause
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.22. Window Functions](https://www.postgresql.org/docs/current/functions-window.html) — postgresql.org: reference table; `ntile` splits a partition into as-equal-as-possible buckets (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [The four functions](01-the-four-functions.md)

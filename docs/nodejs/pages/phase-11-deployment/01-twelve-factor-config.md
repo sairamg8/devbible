@@ -113,3 +113,14 @@ Before any dependency connect and before listening — boot sequence page 02.
 ---
 
 Phase index: [Deployment and operations](./README.md) · Next → [Boot sequence](./02-boot-sequence.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [III. Config](https://12factor.net/config) — 12factor.net: undated; config is everything that varies between deploys and belongs in the environment; the litmus test is whether the codebase could be open-sourced without leaking credentials (*read*)
+- **Also good:** [Node.js, the difference between development and production](https://nodejs.org/learn/getting-started/nodejs-the-difference-between-development-and-production) — nodejs.org/learn: opens by saying Node has no separate development and production modes, with a section on why `NODE_ENV` is an antipattern (*read* the opening)
+
+{/* LINKMAP:END */}

@@ -227,6 +227,17 @@ guarantee for throughput — say which you are trading.
 Because a well-chosen primary key never changes. Needing it is a sign the key is
 natural and mutable, which is an argument for a surrogate key instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Constraints · Foreign Keys](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-FK) — postgresql.org: declaring a foreign key "does not automatically create an index on the referencing columns" (*read*)
+- **Also good:** [CREATE TABLE · REFERENCES](https://www.postgresql.org/docs/current/sql-createtable.html#SQL-CREATETABLE-PARMS-REFERENCES) — postgresql.org: ids for each action, e.g. `SQL-CREATETABLE-PARMS-REFERENCES-REFACT-CASCADE`, `-SET-NULL`, `-RESTRICT` (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Primary keys](02-primary-keys.md) · Next → [`REFERENCES` vs `FOREIGN KEY`](03b-references-and-foreign-key.md)

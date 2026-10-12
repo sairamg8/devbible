@@ -223,6 +223,18 @@ discards anything you write. Same for 304 and for any response to HEAD.
 It tells shared caches which request headers the response depends on, so they key
 their entries by those headers instead of by URL alone.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview) — MDN: HTTP is stateless but not sessionless; the list of controllable features (*read*)
+- **Read this:** [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) — MDN: `Access-Control-Allow-Origin` opt-in; the preflight request (*read*, ≈4.8k words)
+- **Also good:** [Content negotiation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Content_negotiation) — MDN: server-driven negotiation; 406 and 415 as fallbacks (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Request bodies](02-request-bodies.md) · Next → [Cookies](04-cookies.md)

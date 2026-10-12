@@ -175,6 +175,17 @@ Choosing between them is really deciding whether absence counts.
 Documents where none of its branches is true, including documents missing the fields entirely.
 It is exact for "neither of these", and like other negations it cannot use an index to seek.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [$and](https://www.mongodb.com/docs/manual/reference/operator/query/and/) — mongodb.com: explicit `$and`, with the note that a comma-separated list is an implicit AND (*read*)
+- **Also good:** [Logical Query Predicate Operators](https://www.mongodb.com/docs/manual/reference/mql/query-predicates/logical/) — mongodb.com: the four operators on one page (*read*: an index list with one-line descriptions)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Comparison operators](./01-comparison-operators.md) ·

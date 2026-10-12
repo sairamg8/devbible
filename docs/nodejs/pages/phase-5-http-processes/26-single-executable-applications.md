@@ -173,6 +173,16 @@ You copy that platform's Node binary and inject into it, so in practice you buil
 on the target OS and architecture, or inside its container image. There is no
 cross-compilation the way Bun and Deno provide it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Single executable applications](https://nodejs.org/api/single-executable-applications.html) — nodejs.org: "Stability: 1.1 - Active development"; built-in generation with `--build-sea` since v25.5.0; assets and a VFS for assets (*read* the opening; ids verified)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Shared memory](25-shared-memory.md) · Phase index: [Networking, HTTP, processes](README.md)

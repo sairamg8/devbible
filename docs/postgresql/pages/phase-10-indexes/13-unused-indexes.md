@@ -213,6 +213,17 @@ Yes, two. Adding another index on `email` is pure duplication.
 **How do you drop an index safely on a live system?**
 `DROP INDEX CONCURRENTLY` — the plain form takes an `ACCESS EXCLUSIVE` lock.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to find unused indexes](https://postgres.ai/docs/postgres-howtos/performance-optimization/indexing/how-to-find-unused-indexes) — postgres.ai: `idx_scan = 0 and not indisunique`, check `stats_reset` first (about a month of data), check replicas, drop with `DROP INDEX CONCURRENTLY`; page shows no date (*read*)
+- **Also good:** [27.2 The Cumulative Statistics System](https://www.postgresql.org/docs/current/monitoring-stats.html) — postgresql.org: the `idx_scan` column definitions (*read* the column list)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [CREATE INDEX CONCURRENTLY](12-concurrently.md) · Next → [pg_stat_statements](14-pg-stat-statements.md)

@@ -266,6 +266,16 @@ spread, or reassigning `state.items` to a new array. Structural sharing only pre
 not touch, and rebuilding touches everything. Mutating the single element gives new references to that
 element and its ancestors only, which is what the memoisation downstream is relying on.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [Immer → Pitfalls](https://immerjs.github.io/immer/pitfalls/) — immerjs.github.io: the official list of what Immer will not draft or cannot handle: exotic objects, classes, data that did not originate in the state, drafts that are not referentially equal, never returning `undefined` explicitly
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [React-Redux hooks](../07-react-redux-integration/01-hooks-api.md) · [Topic index](../README.md) · Next → [TypeScript integration](../09-typescript-integration/01-type-inference-patterns.md)

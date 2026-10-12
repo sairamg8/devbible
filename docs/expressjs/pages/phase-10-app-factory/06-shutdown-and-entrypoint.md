@@ -168,6 +168,19 @@ The drain delay from the load balancer's health-check interval; the hard deadlin
 your slowest legitimate request. Both are values you look up, not tune by feel.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Health checks and graceful shutdown](https://expressjs.com/en/advanced/healthcheck-graceful-shutdown/) — expressjs.com: on SIGTERM stop accepting requests, finish in-flight ones, clean up, then exit; `server.close()` example (*read*)
+- **Also good:** [Node.js HTTP: server.close](https://nodejs.org/api/http.html#serverclosecallback) — nodejs.org: `close()` stops new connections; since 19.0.0 it also closes idle connections; `closeAllConnections()` is forceful (*read*)
+- **Read this:** [supertest README (raw)](https://raw.githubusercontent.com/ladjs/supertest/master/README.md) — github (raw): if the server is not listening it is bound to an ephemeral port, which is why tests need no `listen` (*read*)
+- **Also good:** [AVA endpoint testing recipe (raw)](https://raw.githubusercontent.com/avajs/ava/main/docs/recipes/endpoint-testing.md) — github (raw): example imports `app` from `./app.js` and wraps it in a server (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Health and boot](05-health-and-boot.md) · Index: [Phase 10](README.md)

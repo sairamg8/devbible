@@ -200,6 +200,17 @@ A sort or hash spilled past `work_mem` onto disk.
 With `ANALYZE` in PostgreSQL 18, yes. Write it explicitly anyway — it costs nothing and
 works on every version.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [14.1 Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — postgresql.org: plans with `Buffers: shared hit=… read=…` lines and `rows=` estimate versus actual (*read*)
+- **Also good:** [EXPLAIN (command reference)](https://www.postgresql.org/docs/current/sql-explain.html) — postgresql.org: hit, read, dirtied, written defined (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Multicolumn indexes](06-multicolumn.md) · Next → [Index-only scans and INCLUDE](08-index-only.md)

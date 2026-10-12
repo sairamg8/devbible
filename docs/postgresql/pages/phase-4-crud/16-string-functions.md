@@ -251,6 +251,16 @@ collation sorted uppercase names before lowercase ones.
 `unnest(string_to_array(s, ','))`, or `regexp_split_to_table` for a pattern.
 `split_part` extracts a single field by 1-based position.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.4. String Functions and Operators](https://www.postgresql.org/docs/current/functions-string.html) — postgresql.org: `concat_ws`, `format` (printf-like), `split_part` (*read* examples)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Expressions and `CASE`](15-expressions.md) · Next → [Date/time functions](17-datetime-functions.md)

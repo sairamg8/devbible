@@ -259,6 +259,17 @@ Never analyzed — unknown, not zero.
 **Does `ANALYZE` lock the table?**
 Only `SHARE UPDATE EXCLUSIVE`; reads and writes continue.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [14.2 Statistics Used by the Planner](https://www.postgresql.org/docs/current/planner-stats.html) — postgresql.org: `pg_statistic` and `pg_stats`, single-column and extended statistics (*read*)
+- **Also good:** [CREATE STATISTICS](https://www.postgresql.org/docs/current/sql-createstatistics.html) — postgresql.org: `ndistinct`, `dependencies`, `mcv` kinds; correlated-columns example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [GiST, BRIN and hash](15-gist-brin-hash.md) · Next → [Index bloat and REINDEX](17-bloat-reindex.md)

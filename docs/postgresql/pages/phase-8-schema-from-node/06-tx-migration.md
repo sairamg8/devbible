@@ -221,6 +221,18 @@ A long-running transaction holds its locks and holds back `VACUUM`'s cleanup hor
 for the whole database. Change the schema in a short transaction, then backfill in
 batches with their own transactions.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Postgres vs. MySQL: DDL Transaction Difference](https://www.bytebase.com/blog/postgres-vs-mysql-ddl-transaction/) — bytebase.com: published 2025-05-27; PostgreSQL DDL can sit in transaction blocks and roll back as one unit, except database and tablespace operations (*read*; vendor blog written for PostgreSQL 17)
+- **Also good:** [CREATE INDEX](https://www.postgresql.org/docs/current/sql-createindex.html) — postgresql.org: a plain `CREATE INDEX` works in a transaction block; `CONCURRENTLY` cannot (*read*)
+- **Also good:** [Transactional DDL in PostgreSQL: A Competitive Analysis](https://wiki.postgresql.org/wiki/Transactional_DDL_in_PostgreSQL:_A_Competitive_Analysis)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [SQL in `.sql` files](05-sql-files.md) · Next → [`CREATE TABLE IF NOT EXISTS`](07-if-not-exists.md)

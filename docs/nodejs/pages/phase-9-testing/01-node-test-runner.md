@@ -255,6 +255,16 @@ Measured: two 300 ms tests took 0.80 s serially and 0.50 s concurrently.
 `--test-reporter=junit --test-reporter-destination=results.xml`. The flag can be
 repeated to emit a human-readable report at the same time.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Test runner](https://nodejs.org/api/test.html) — nodejs.org: subtests, `describe`/`it`, skipping, watch mode, global setup, running from the CLI (*headings only*, long reference)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Phase 8 · Audit logging](../phase-8-security/27-audit-logging.md) ·

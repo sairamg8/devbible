@@ -56,6 +56,17 @@ noise. Bare resources match pure REST textbooks and OpenAPI components cleanly.
 **★ Why standardize error JSON?**  
 Clients parse one schema; you can add `code` without breaking UIs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Zalando RESTful API Guidelines](https://opensource.zalando.com/restful-api-guidelines/) — Zalando: rule: always return JSON objects as top-level structures, including collections, for future extension (*read* the rule)
+- **Also good:** [Where to Put Response Metadata: Envelope or HTTP Headers?](https://dev.to/tiguchi/where-to-put-response-metadata---envelope-or-http-headers-4ai9) — Thomas Werner, 15 Dec 2018: the opposite view: metadata in headers (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Status and headers](02-status-and-headers/README.md) · Next → [Headers already sent](04-headers-already-sent.md)

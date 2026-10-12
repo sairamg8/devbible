@@ -196,6 +196,17 @@ rather than to history.
 Very high throughput, fan-out to multiple consumer groups, or jobs unrelated to your
 data. A table wins when enqueue must be transactional with the business write.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SELECT, "The Locking Clause"](https://www.postgresql.org/docs/current/sql-select.html) — postgresql.org: skipped rows give "an inconsistent view of the data"; fine for queue-like tables, not general work (*read*)
+- **Also good:** [Postgres 9.5 feature highlight - SKIP LOCKED](https://paquier.xyz/postgresql-2/postgres-9-5-feature-highlight-skip-locked-row-level/) — Paquier: short demo of rows being skipped; dated 10 Oct 2014 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Row locks FOR UPDATE](07-row-locks.md) · Next → [Savepoints](09-savepoints.md)

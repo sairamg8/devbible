@@ -145,6 +145,17 @@ failure; `{ordered: false}` continues and reports all errors.
 In standard collections, yes. Time series collections are the documented exception — they do
 not require a unique `_id`, because MongoDB does not index it there.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Documents → The _id Field](https://www.mongodb.com/docs/manual/core/document/) — mongodb.com: every document in a standard collection requires a unique `_id`; it is always the first field; the server creates a unique index on `_id` at collection creation; `_id` is reserved as the primary key and immutable; any type except 
+- **Also good:** [Single Field Indexes](https://www.mongodb.com/docs/manual/core/indexes/index-types/index-single/) — mongodb.com: the index chapter, its opening says every collection has an index on `_id` by default (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The BSON types, completely](./01-the-bson-types.md) ·

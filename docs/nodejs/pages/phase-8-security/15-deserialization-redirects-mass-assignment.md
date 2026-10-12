@@ -233,6 +233,18 @@ downstream mistake cannot produce an absolute off-site location.
 No. It is a deep copy: it does not run constructors, and it does not strip anything —
 verified, it preserves an own `__proto__` property. Sanitising is a separate step.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Deserialization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html) — OWASP: alternative formats, only deserialize signed data (*read* the headings)
+- **Read this:** [Unvalidated Redirects and Forwards](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) — OWASP: safe vs dangerous redirects, validating URLs (*read* the headings)
+- **Read this:** [Mass Assignment Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html) — OWASP: has a NodeJS + Mongoose section with allow-listing and block-listing (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [ReDoS](./14-redos.md) · Next → [Timing attacks](./16-timing-attacks.md)

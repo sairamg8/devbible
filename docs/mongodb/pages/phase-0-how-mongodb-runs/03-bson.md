@@ -220,6 +220,16 @@ Use `Decimal128` or integer minor units.
 `mongoexport` writes Extended JSON, which is human-readable but converts types;
 `mongodump` writes BSON and preserves them. Backups need `mongodump`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MongoDB BSON Types](https://www.mongodb.com/docs/manual/reference/bson-types/) — mongodb.com: the types BSON adds over JSON, with numeric ids and `$type` aliases (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · Single-document atomicity](./02-single-document-atomicity.md) · Next: 04 · Document, collection, database →

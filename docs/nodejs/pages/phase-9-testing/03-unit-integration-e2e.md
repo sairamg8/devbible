@@ -186,6 +186,17 @@ Most tests unit, one integration test per repository and per external boundary, 
 handful of e2e on the flows that cost money if broken. Treat it as a time budget rather
 than a ratio to hit.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) — martinfowler.com, 26 Feb 2018 (Ham Vocke): unit, integration, contract, UI and e2e layers; warns against the "ice-cream cone" (*read*, ≈12.7k words)
+- **Also good:** [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details) — Kent C. Dodds, 17 Aug 2020: false negatives and false positives from coupling to internals (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02 · node:assert](./02-node-assert.md) ·

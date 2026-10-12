@@ -235,6 +235,16 @@ When the test is about the request rather than the response mapping — headers,
 timeouts, aborts. A stub returns whatever you tell it, so it cannot show that your
 timeout handling works. Use a real ephemeral server.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Test runner: Mocking](https://nodejs.org/api/test.html) — nodejs.org: `mock.fn`, `mock.method`, `mock.module(specifier)`, MockTimers, Dates (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06 · Async testing](./06-async-testing.md) ·

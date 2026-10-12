@@ -203,6 +203,17 @@ one-to-many relationship. `DISTINCT` masks it by sorting or hashing the entire
 result; fixing the join — aggregating, or using `EXISTS` — removes both the
 duplicates and the work.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SELECT → DISTINCT Clause](https://www.postgresql.org/docs/current/sql-select.html#SQL-DISTINCT) — postgresql.org: "first row" of each group is unpredictable unless `ORDER BY` fixes it; `DISTINCT ON` follows `ORDER BY` rules (*read*)
+- **Also good:** [7.3. Select Lists](https://www.postgresql.org/docs/current/queries-select-lists.html) — postgresql.org: section 7.3.3 `DISTINCT` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`DELETE`](11-delete.md) · Next → [`MERGE`](13-merge/README.md)

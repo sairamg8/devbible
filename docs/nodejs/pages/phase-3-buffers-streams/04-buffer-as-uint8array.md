@@ -222,6 +222,16 @@ Because a buffer under 32 KB is a window into a shared 64 KB pool slab. Using
 In code that must also run outside Node. Buffer is a Node global; `Uint8Array`
 plus `TextDecoder` is the portable equivalent.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Buffers and TypedArrays](https://nodejs.org/api/buffer.html#buffers-and-typedarrays) — nodejs.org: since v3.0.0 `Buffer` inherits `Uint8Array`, all TypedArray methods apply, with subtle incompatibilities, the first being `slice` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [alloc vs allocUnsafe](03-alloc-vs-allocunsafe.md) · Next → [string_decoder](05-string-decoder.md)

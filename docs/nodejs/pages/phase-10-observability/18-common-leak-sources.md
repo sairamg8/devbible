@@ -126,6 +126,18 @@ So the large allocation can be GC'd while the timer still runs.
 Growing `Map` / `Array` / `SomeEmitter` retainer paths to module scope or long-lived
 singletons.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to Optimize Node.js Memory Usage and Prevent Memory Leaks](https://oneuptime.com/blog/post/2026-01-06-nodejs-memory-optimization-prevent-leaks/view) — oneuptime.com: Jan 06, 2026 (vendor blog); a "Common Memory Leak Patterns" list with a leak and a fix each for an unbounded global cache, event listener accumulation, closures capturing large scopes and forgotten `setInterval` timers, plus strea
+- **Also good:** [Memory management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Memory_management) — MDN: undated; reachability is what keeps objects alive, circular references discussed, `WeakMap` and `WeakSet` as tools (*read*); the theory, none of the four sources catalogued
+- **Also good:** [Events: emitter.setMaxListeners](https://nodejs.org/docs/latest/api/events.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Memory leaks](./17-memory-leaks.md) · Next → [CPU and heap profiling](./19-cpu-heap-profiling.md)

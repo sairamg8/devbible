@@ -203,6 +203,18 @@ Mostly not — `fs/promises`, `dns/promises`, `timers/promises`, `stream/promise
 and `readline/promises` exist as separate implementations. `child_process.exec` is
 the common exception where `promisify` is still the answer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [util.promisify(original)](https://nodejs.org/docs/latest/api/util.html#utilpromisifyoriginal) — nodejs.org: takes an error-first callback function, returns a promise version; [util.callbackify](https://nodejs.org/docs/latest/api/util.html#utilcallbackifyoriginal) is the reverse (*read*)
+- **Read this:** [util.callbackify](https://nodejs.org/docs/latest/api/util.html#utilcallbackifyoriginal)
+- **Also good:** [JavaScript Asynchronous Programming and Callbacks](https://nodejs.org/learn/asynchronous-work/javascript-asynchronous-programming-and-callbacks) — nodejs.org: (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Floating promises](12-floating-promises.md) · Next → [Concurrency control](14-concurrency-control.md)

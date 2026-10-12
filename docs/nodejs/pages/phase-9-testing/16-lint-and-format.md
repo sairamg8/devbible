@@ -214,6 +214,18 @@ or use one tool that owns both jobs.
 It is the cheapest layer of the same work. Anything a linter catches on every file in
 milliseconds is something no test has to be written for.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuration Files](https://eslint.org/docs/latest/use/configure/configuration-files) — ESLint: `eslint.config.js` and its variants, configuration objects, files and ignores (*read*, ≈6.4k words)
+- **Also good:** [Biome quick start](https://biomejs.dev/installation/quick-start/) — biomejs.dev: one tool for lint and format, migrating from ESLint and Prettier (*headings only*)
+- **Also good:** [Prettier docs](https://prettier.io/docs/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [15 · Snapshot testing](./15-snapshot-testing.md) ·

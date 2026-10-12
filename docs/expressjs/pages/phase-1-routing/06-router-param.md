@@ -112,6 +112,17 @@ Yes — same idea at application scope. Prefer router scope to limit blast radiu
 **Is `param` required for REST?**  
 No — explicit loads in handlers are fine and often clearer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Router API: `router.param()`](https://expressjs.com/en/5x/api/router/) — expressjs.com: callback `(req, res, next, value, name)`; takes one name, not an array; the `:user` loading example (*read*)
+- **Also good:** [pillarjs/router README (raw): `router.param`](https://raw.githubusercontent.com/pillarjs/router/master/README.md) — github (raw): the callback may return a Promise, rejection goes to `next` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Path matching on Express 5](05-path-matching-express5.md) · Next → [app.route and hosts](07-app-route-and-hosts.md)

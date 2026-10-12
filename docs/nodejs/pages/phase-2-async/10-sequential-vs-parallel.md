@@ -194,6 +194,17 @@ Dependency chains, rate-limited APIs, writes that must be ordered, and anything
 where holding all the results at once costs too much memory. It is also useless
 for CPU-bound work, since there is only one thread.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ESLint: no-await-in-loop](https://eslint.org/docs/latest/rules/no-await-in-loop) — eslint.org: an `await` per element "may indicate" lost parallelism; refactor to create all promises first (*read*)
+- **Also good:** [MDN: async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) — mdn: undated; its sequentialStart example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Promise combinators](09-combinators.md) · Next → [Error handling with async/await](11-error-handling.md)

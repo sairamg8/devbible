@@ -103,6 +103,17 @@ No — minors carry security and bug fixes with low upgrade risk.
 **How do you read `180004`?**  
 Major 18, minor 4 (`server_version_num`).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Versioning Policy](https://www.postgresql.org/support/versioning/) — postgresql.org: table of current minors and final-release dates; 18 runs to 2030-11-14 (*read*)
+- **Read this:** [Release 18](https://www.postgresql.org/docs/current/release-18.html) — postgresql.org: release date 2025-09-25, overview and migration notes (*read* intro; ids `RELEASE-18-HIGHLIGHTS`, `RELEASE-18-MIGRATION`)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Process model](09-process-model.md) · Next → [vs other databases](11-vs-other-databases/README.md)

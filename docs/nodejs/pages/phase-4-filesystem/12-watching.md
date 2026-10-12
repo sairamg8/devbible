@@ -220,6 +220,17 @@ a restart or an explicit `SIGHUP` re-read.
 The inotify watch limit, not disk space — one watch per directory, so a recursive
 watch over a big tree exhausts the per-user maximum.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [fs.watch() caveats](https://nodejs.org/api/fs.html#fswatchfilename-options-listener) — nodejs.org: "not 100% consistent across platforms"; on Windows no events if the watched directory is moved; uses inotify on Linux and kqueue/FSEvents on macOS; `fs.watchFile()` is stat polling, slower and less reliable (*read*)
+- **Also good:** [chokidar README](https://raw.githubusercontent.com/paulmillr/chokidar/main/README.md) — chokidar (raw GitHub copy): its "Why?" section says raw `fs.watch` reports many changes as `rename` and can fire twice (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [node:os](11-os.md) · Next → [Permissions and symlinks](13-permissions-and-symlinks.md)

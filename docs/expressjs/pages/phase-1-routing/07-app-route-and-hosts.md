@@ -169,6 +169,19 @@ string. Logging `req.path` alone is why prefixes go missing from logs.
 **Is `route()` required?**  
 No — purely organizational sugar.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Routing: `app.route()`](https://expressjs.com/en/guide/routing/) — expressjs.com: chained handlers per method on one path (*read* the example)
+- **Also good:** [pillarjs/router README (raw): `router.route`](https://raw.githubusercontent.com/pillarjs/router/master/README.md) — github (raw): `Router.Route` and `route.all` (*headings only*)
+- **Read this:** [vhost README (raw)](https://raw.githubusercontent.com/expressjs/vhost/master/README.md) — github (raw): `vhost(hostname, handle)`, string with `*` or RegExp, called like standard middleware (*read*)
+- **Also good:** [Request API: `req.hostname`](https://expressjs.com/en/5x/api/request/) — expressjs.com: from the `Host` header, or `X-Forwarded-Host` when `trust proxy` is not false; the client can set it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [router.param](06-router-param.md) · Index: [Phase 1](README.md)

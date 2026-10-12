@@ -185,6 +185,21 @@ Pinning the package manager and its version per project via the `packageManager`
 field, so everyone uses the same one without a global install. It ships with Node
 but must be enabled once per machine.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [pnpm: Motivation](https://pnpm.io/motivation) — pnpm.io: npm and Yarn Classic hoist to the root, so code can reach undeclared dependencies; pnpm uses a content-addressable store and a non-flat layout (*read*)
+- **Also good:** [Symlinked node_modules structure](https://pnpm.io/symlinked-node-modules-structure) — pnpm.io: (*read* opening)
+- **Also good:** [pnpm vs npm](https://pnpm.io/pnpm-vs-npm)
+- **Read this:** [npm: workspaces](https://docs.npmjs.com/cli/v11/using-npm/workspaces/) — docs.npmjs.com: a set of features for managing several packages from one root package (*read* intro)
+- **Also good:** [pnpm workspaces](https://pnpm.io/workspaces) — pnpm.io: [Yarn workspaces](https://yarnpkg.com/features/workspaces)
+- **Also good:** [Yarn workspaces](https://yarnpkg.com/features/workspaces)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [npm day to day](10-npm-day-to-day.md) · Next → [TypeScript without a build step](12-typescript-natively.md)

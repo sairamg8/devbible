@@ -220,6 +220,16 @@ How many rows still needed a heap visit. Non-zero means the visibility map is st
 No — `*` pulls columns that are not in the index, forcing the heap visit. Naming columns
 is what enables the optimisation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [11.9 Index-Only Scans and Covering Indexes](https://www.postgresql.org/docs/current/indexes-index-only-scans.html) — postgresql.org: checks the visibility map bit per heap page, falls back to the heap if unset; `INCLUDE` payload columns (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [EXPLAIN ANALYZE BUFFERS](07-explain-buffers.md) · Next → [Partial indexes](09-partial.md)

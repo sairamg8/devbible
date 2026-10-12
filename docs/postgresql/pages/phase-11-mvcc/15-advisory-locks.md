@@ -234,6 +234,17 @@ space again.
 The connection dies and the lock is released — no TTL, no reaper. That is a real
 advantage over an external lock service.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [13.3 Explicit Locking, section "Advisory Locks"](https://www.postgresql.org/docs/current/explicit-locking.html) — postgresql.org: application-defined, not enforced by the system; faster than a table flag, no bloat, cleaned up at session end (*read*)
+- **Also good:** [9.28 System Administration Functions](https://www.postgresql.org/docs/current/functions-admin.html) — postgresql.org: `pg_advisory_lock` family (*read* the function table)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Idle in transaction](14-idle-in-transaction.md) · Next → [XID wraparound](16-xid-wraparound.md)

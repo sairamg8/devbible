@@ -239,6 +239,17 @@ genuinely becomes optional.
 It makes `tsc` reject non-erasable constructs, so the incompatibility is caught at
 check time rather than as a runtime `ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modules: TypeScript](https://nodejs.org/docs/latest/api/typescript.html) — nodejs.org: history: enabled by default v23.6.0 / v22.18.0, warning-free v24.3.0 / v22.18.0, "now stable" v25.2.0 / v24.12.0; Node refuses TS inside `node_modules`; path aliases not transformed (*read*)
+- **Also good:** [Running TypeScript Natively](https://nodejs.org/learn/typescript/run-natively) — nodejs.org: enums, parameter properties, runtime namespaces need a runner or transpile step; running a `.ts` file "is not the same as running tsc" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [npm, pnpm, yarn and workspaces](11-package-managers.md) · Next → [Publishing a package](13-publishing.md)

@@ -155,6 +155,19 @@ domain-to-wire next to the routes. They should be pure shape translations; a
 conditional inside one is usually escaped business logic.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Structure your solution by components](https://raw.githubusercontent.com/goldbergyoni/nodebestpractices/master/sections/projectstructre/breakintcomponents.md) — github (raw): one self-contained folder per business component; others use only its public interface (*read*)
+- **Also good:** [Layer your app, keep Express within its boundaries](https://raw.githubusercontent.com/goldbergyoni/nodebestpractices/master/sections/projectstructre/createlayers.md) — github (raw): layers inside each component (*read*)
+- **Read this:** [Data Transfer Object](https://martinfowler.com/eaaCatalog/dataTransferObject.html) — martinfowler.com: carries data between processes; an assembler maps between DTO and domain objects on the server (*read*)
+- **Also good:** [OWASP API3:2023 Broken Object Property Level Authorization](https://api-security.owasp.org/editions/2023/en/0xa3-broken-object-property-level-authorization/) — api-security.owasp.org: covers APIs returning all of an object's properties and users changing properties they should not (the old mass assignment) (*read* the description)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Jobs from routes](05-jobs-from-routes.md) · Next → [Transaction middleware](07-transaction-middleware.md)

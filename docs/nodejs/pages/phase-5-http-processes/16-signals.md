@@ -184,6 +184,18 @@ app keeps serving is what closes the gap.
 Checking whether a process exists and you may signal it — signal 0 performs the
 permission and existence check without delivering anything.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [process: Signal events](https://nodejs.org/api/process.html#signal-events) — nodejs.org: signal names are the event names; not available on Worker threads (*read*)
+- **Read this:** [docker stop](https://docs.docker.com/reference/cli/docker/container/stop/) — Docker: the main process gets SIGTERM, then SIGKILL after a grace period (*read*)
+- **Also good:** [Pod lifecycle: termination](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination) — Kubernetes: TERM to each container's main process, with a grace period (*read*; page modified 2026-07-27 per metadata; anchor id verified)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The process object](15-process.md) · Next → [Graceful shutdown](17-graceful-shutdown.md)

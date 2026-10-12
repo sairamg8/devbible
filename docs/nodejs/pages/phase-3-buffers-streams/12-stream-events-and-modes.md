@@ -237,6 +237,17 @@ discard a body, `resume()` it; to abandon it, `destroy()` it.
 When you need an exact number of bytes — a fixed-size protocol header — since
 `read(n)` returns exactly `n` bytes or `null`, which the iterator cannot express.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Writable events: drain, finish](https://nodejs.org/api/stream.html#event-drain) — nodejs.org: `'drain'` after a `write()` returned false; `'finish'` after `end()` and a full flush (*read* both)
+- **Read this:** [Two reading modes](https://nodejs.org/api/stream.html#two-reading-modes) — nodejs.org: flowing and paused, separate from object mode (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Consuming with for await](11-for-await-of.md) · Next → [Transform streams](./transform-streams/)

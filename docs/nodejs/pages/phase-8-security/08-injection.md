@@ -222,6 +222,18 @@ Least privilege. An application role without DDL rights cannot drop a table; a
 non-root process cannot read arbitrary files. Injection defence is layered, and the
 database role is the layer people forget.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html) — OWASP: rule 1 validate input, rule 2 use a safe API, rule 3 escape in context (*read* the headings)
+- **Also good:** [NoSQL injection](https://portswigger.net/web-security/nosql-injection) — PortSwigger: `$where`, `$ne`, `$regex` operators, a prevention section (*read*)
+- **Also good:** [OS command injection](https://portswigger.net/web-security/os-command-injection)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [MFA and TOTP](./07-mfa-totp.md) · Next → XSS and output encoding

@@ -200,6 +200,17 @@ a hung shutdown cannot keep a broken process alive.
 It only fires when the event loop empties naturally — not after `process.exit()`
 and not after a fatal error, which are exactly the cases cleanup is for.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Warning: Using 'uncaughtException' correctly](https://nodejs.org/api/process.html#warning-using-uncaughtexception-correctly) — nodejs.org: "crude mechanism" for last-resort use, not On Error Resume Next; the app is in an undefined state (*read*)
+- **Read this:** [entry](https://nodejs.org/api/process.html#event-unhandledrejection)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Graceful shutdown](17-graceful-shutdown.md) · Next → [child_process](19-child-process.md)

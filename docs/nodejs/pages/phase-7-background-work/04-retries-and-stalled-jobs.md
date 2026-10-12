@@ -210,6 +210,18 @@ appears empty while work is outstanding usually has everything in `delayed` or
 `locked_until` on the row, set at claim time along with `attempts`. Expired locks are
 claimable again, and the incremented `attempts` is how a poison job is spotted.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Retrying failing jobs](https://docs.bullmq.io/guide/retrying-failing-jobs) — docs.bullmq.io: `attempts` above 1 turns retries on; without a back-off, a retry is immediate (*read*)
+- **Also good:** [Stalled jobs](https://docs.bullmq.io/guide/workers/stalled-jobs) — docs.bullmq.io: a worker that cannot renew its lock marks the job stalled, it goes back to waiting; keep the event loop free (*read*)
+- **Also good:** [Visibility timeout](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Worker processes](./03-worker-processes.md) · Next → [Job idempotency](./05-job-idempotency.md)

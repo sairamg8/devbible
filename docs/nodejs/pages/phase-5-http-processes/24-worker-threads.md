@@ -202,6 +202,18 @@ bounds both, and turns a spike into queueing rather than into thread thrash.
 No. `fs` work from every thread shares the same libuv thread pool, so the ceiling
 is unchanged.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Worker threads](https://nodejs.org/api/worker_threads.html) — nodejs.org: "Stability: 2 - Stable"; useful for CPU-intensive JavaScript, not much for I/O (*read*)
+- **Also good:** [piscina README](https://raw.githubusercontent.com/piscinajs/piscina/current/README.md) — piscina (raw GitHub copy): "the node.js worker pool" (*read* the opening, ≈5k words)
+- **Also good:** [Don't Block the Event Loop (or the Worker Pool)](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop#offloading)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [cluster](23-cluster.md) · Next → [Shared memory](25-shared-memory.md)

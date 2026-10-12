@@ -210,6 +210,16 @@ side behind your back.
 No. The `ORDER BY` applies to the union's output columns, so the column must be selected —
 or you wrap the whole union in an outer query.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.4. Combining Queries](https://www.postgresql.org/docs/current/queries-union.html) — postgresql.org: `UNION` removes duplicates like `DISTINCT` unless `ALL`; same for `INTERSECT`/`EXCEPT` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [LATERAL](10-lateral.md) · Next → [Alias discipline](12-alias-discipline.md)

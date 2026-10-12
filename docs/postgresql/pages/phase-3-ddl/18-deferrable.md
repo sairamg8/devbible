@@ -196,6 +196,18 @@ collision is tolerated and only the final state is checked. Without it you must 
 one row to a temporary out-of-range value first. Note this needs a constraint — a
 bare unique index cannot be deferred.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Foreign keys in PostgreSQL: Circular dependencies](https://www.cybertec-postgresql.com/en/foreign-keys/) — CYBERTEC: published 2024-06-04, modified 2026-05-07
+- **Also good:** [Deferrable SQL Constraints in Depth](https://begriffs.com/posts/2017-08-27-deferrable-sql-constraints.html) — begriffs.com: 2017-08-27
+- **Also good:** [CREATE TABLE · DEFERRABLE](https://www.postgresql.org/docs/current/sql-createtable.html#SQL-CREATETABLE-PARMS-DEFERRABLE)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`COMMENT ON`](17-comments.md) · Next → [Table inheritance](19-inheritance.md)

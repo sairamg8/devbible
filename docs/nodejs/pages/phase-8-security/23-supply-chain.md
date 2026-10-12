@@ -245,6 +245,19 @@ it reports issues in build-only tooling that carry no runtime risk. Run it at
 `--audit-level=high`, pair it with `audit signatures` and a cooldown, and treat "0
 vulnerabilities" as one data point.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Auditing package dependencies](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities/) — npm docs: running and acting on `npm audit` (*headings only*)
+- **Read this:** [Generating provenance statements](https://docs.npmjs.com/generating-provenance-statements/) — npm docs: Sigstore, publishing with provenance from GitHub Actions or GitLab, verifying (*headings only*)
+- **Also good:** [Security Best Practices](https://nodejs.org/learn/getting-started/security-best-practices) — nodejs.org: "Malicious Third-Party Modules" threat (*headings only*)
+- **Also good:** [Dependency Graph SBOM Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Dependency_Graph_SBOM_Cheat_Sheet.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Security headers and CSP](./22-security-headers.md) · Next → [The Permission Model](./24-permission-model.md)

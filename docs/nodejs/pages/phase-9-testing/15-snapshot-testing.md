@@ -207,6 +207,16 @@ and produces a misleading diff.
 Not on 24.19.0 — `t.assert.snapshot()` works out of the box. Only
 `--test-update-snapshots` is needed, and only when writing them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Test runner: Snapshot testing](https://nodejs.org/api/test.html) — nodejs.org: the section exists; the CLI lists `--test-update-snapshots` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [14 · Runner flags](./14-runner-flags.md) ·

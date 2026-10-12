@@ -245,6 +245,18 @@ them is functional, not reliability.
 **Which SQLSTATE does an exclusion violation raise?**
 `23P01`, distinct from the `23505` of a unique violation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [11.2 Index Types](https://www.postgresql.org/docs/current/indexes-types.html) — postgresql.org: one section per type; hash handles only simple equality (*read* the hash section)
+- **Also good:** [65.5 BRIN Indexes](https://www.postgresql.org/docs/current/brin.html) — postgresql.org: built for very large tables whose columns correlate with physical location (*read*)
+- **Also good:** [65.6 Hash Indexes](https://www.postgresql.org/docs/current/hash-index.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [pg_stat_statements](14-pg-stat-statements.md) · Next → [Statistics and ANALYZE](16-statistics.md)

@@ -212,6 +212,17 @@ No — it is what makes mocking mostly unnecessary. Injection replaces a depende
 through the public signature; mocking reaches around it. The first is checked by the
 type system and visible at the call site, the second is not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dependency Injection in Javascript and Testing](https://blog.kartones.net/post/dependency-injection-in-javascript-and-testing/) — Kartones Blog: the module-import style vs injected collaborators, with a Node `fs` example (*read*)
+- **Also good:** [Inversion of Control Containers and the Dependency Injection pattern](https://martinfowler.com/articles/injection.html) — Fowler, 23 Jan 2004: the canonical text (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03 · Unit, integration, e2e](./03-unit-integration-e2e.md) ·

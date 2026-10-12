@@ -213,6 +213,18 @@ that drifts, so keep it small and cover the real thing with one integration test
 `t.mock.method(obj, 'name')` with two arguments: the original still runs, and calls are
 recorded on `obj.name.mock`. A third argument makes it a stub instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Test Double](https://martinfowler.com/bliki/TestDouble.html) — Fowler: dummy, fake, stub, mock vocabulary after Meszaros (*read*, ≈350 words)
+- **Also good:** [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html) — Fowler, 2 Jan 2007: classical vs mockist testing (*headings only*)
+- **Also good:** [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [08 · Module mocking](./08-module-mocking.md) ·

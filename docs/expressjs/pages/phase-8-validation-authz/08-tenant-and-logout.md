@@ -177,6 +177,20 @@ When instant revocation matters — admin tooling, financial operations, anythin
 "logged out" must mean immediately. Every JWT revocation mechanism reintroduces the
 lookup the token was chosen to avoid.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Multi-Tenant Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Multi_Tenant_Security_Cheat_Sheet.html) — OWASP: section 1 says to treat client-supplied tenant ids as selectors only; good example reads the id from verified token claims, bad one from an `X-Tenant-ID` header (*read* section 1)
+- **Read this:** [Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) — OWASP: logout must invalidate the session on the server; clearing the cookie alone is not enough; idle and absolute timeouts (*read*)
+- **Also good:** [express-session](https://expressjs.com/en/resources/middleware/session/) — expressjs.com: `req.session.destroy()` ends the session (*read*)
+- **Also good:** [JSON Web Token Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html)
+- **Read this:** [express-jwt README (raw)](https://raw.githubusercontent.com/auth0/express-jwt/master/README.md) — github (raw): `credentialsRequired: false` continues when no token is present, with an example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Ownership checks](07-ownership/README.md) · Next → [Type inference](09-type-inference.md)

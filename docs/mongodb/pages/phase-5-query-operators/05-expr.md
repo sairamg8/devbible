@@ -180,6 +180,16 @@ When the predicate only involves one field and a constant — `{$expr: {$eq: ["$
 needs grouping, joining or computed output, in which case you want an aggregation pipeline rather
 than an expression inside a find.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [$expr](https://www.mongodb.com/docs/manual/reference/operator/query/expr/) — mongodb.com: "compare fields from the same document", with a movies example comparing two rating fields (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`$regex`](./04-regex.md) ·

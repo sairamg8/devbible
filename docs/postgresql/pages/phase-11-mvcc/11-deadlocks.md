@@ -209,6 +209,16 @@ particular transaction. Both sides need the retry loop.
 Foreign key checks take row locks on parents, and `ON CONFLICT` takes index locks.
 Ordinary inserts are enough to deadlock if two sessions do them in opposite orders.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [13.3 Explicit Locking, section "Deadlocks"](https://www.postgresql.org/docs/current/explicit-locking.html) — postgresql.org: automatic detection aborts one transaction; which one is "difficult to predict"; acquire locks in a consistent order (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Table locks and DDL](10-table-locks-ddl.md) · Next → [Long-running transactions](12-long-transactions.md)

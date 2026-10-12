@@ -62,6 +62,17 @@ why middleware can never check ownership.
 - **→ [Phase 10 · 04 · Auth in tests](../../phase-10-app-factory/04-auth-in-tests.md)**
   — issuing per-role tokens for the matrix.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) — OWASP: least privilege, deny by default, check on every request, prefer attribute or relationship based control over plain RBAC, test authorization (*read* the least-privilege and deny-by-default passages; the rest *headings only*)
+- **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) — OWASP: 401 is missing or bad credentials; 403 is authenticated but lacking permission (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev topic: [05 · Cookies and sessions wire-up](../05-cookies-sessions-wireup.md) · Start → [The second question](01-the-second-question.md)

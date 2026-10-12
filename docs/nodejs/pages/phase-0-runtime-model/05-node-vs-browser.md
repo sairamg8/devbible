@@ -140,6 +140,16 @@ Code written against the shared standard surface only — `fetch`, `URL`,
 `AbortController`, `TextEncoder`, Web Crypto, streams — so the same module works
 on the server and in the browser without a shim.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Differences between Node.js and the Browser](https://nodejs.org/learn/getting-started/differences-between-nodejs-and-the-browser) — nodejs.org: no `document`, `window` or Web Platform APIs like cookies; Node supports both CommonJS and ES modules, the browser only `import` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The libuv thread pool](04-libuv-thread-pool.md) · Next → [Globals worth knowing](06-globals.md)

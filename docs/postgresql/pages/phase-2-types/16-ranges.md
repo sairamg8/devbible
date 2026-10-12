@@ -223,6 +223,17 @@ literal.
 When nothing needs overlap semantics. Two `timestamptz` columns are simpler to read and index
 conventionally.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Range Types](https://www.postgresql.org/docs/current/rangetypes.html) — postgresql.org: built-in range and multirange types, bounds, indexing, and a "Constraints on Ranges" part (headings only; id `RANGETYPES-CONSTRAINT`)
+- **Also good:** [Constraints · Exclusion Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-EXCLUSION) — postgresql.org: `EXCLUDE USING gist` builds an index automatically (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Domains and composites](15-domains-composites.md) · [Phase index](README.md)

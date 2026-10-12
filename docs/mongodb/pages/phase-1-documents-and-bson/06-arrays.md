@@ -215,6 +215,17 @@ missing field fails `$exists` and sorts as null; explicit null passes `$exists` 
 null. Choose one representation for "none" and enforce it, because queries written for one do
 not work for the others.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Query an Array](https://www.mongodb.com/docs/manual/tutorial/query-arrays/) — mongodb.com: ≈1.3k words: exact-array match is order-sensitive, `$all` ignores order, a bare value matches if any element equals it, and `$elemMatch` is needed so one element meets all conditions (*read*)
+- **Read this:** [Multikey Indexes](https://www.mongodb.com/docs/manual/core/indexes/index-types/index-multikey/) — mongodb.com: indexing an array field makes it multikey automatically, with one index entry per distinct array value, each pointing back to the same document; unique multikey allows repeats within one document (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Dates vs Timestamps](./05-dates-vs-timestamps.md) ·

@@ -202,6 +202,17 @@ Doubling from 100 ms reaches 200 seconds by attempt 12. Without a cap, a job tha
 retries a dozen times effectively stops retrying, and a request-path retry blows any
 budget.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Exponential Backoff And Jitter](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/) — AWS Architecture Blog: Marc Brooker, 2015-03-04, updated 2023-05-03; backoff first, then jitter to break up synchronized clients (*read* the opening; sections Adding Backoff and Adding Jitter *headings only*)
+- **Also good:** [Retrying failing jobs](https://docs.bullmq.io/guide/retrying-failing-jobs) — docs.bullmq.io: the `jitter` option on a backoff, as a fraction of the delay (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Retry only what is safe](./14-retry-safe-failures.md) · Next → [Concurrency limiting](./16-concurrency-limiting.md)

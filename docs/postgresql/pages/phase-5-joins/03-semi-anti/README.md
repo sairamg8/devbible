@@ -39,6 +39,17 @@ and when you can explain — from the expansion of the predicate, not from memor
   which a semi join cannot give you
 - **[FK indexes](../../phase-10-indexes/18-fk-indexes.md)** — the index these depend on
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [9.24. Subquery Expressions](https://www.postgresql.org/docs/current/functions-subquery.html#FUNCTIONS-SUBQUERY-EXISTS) — postgresql.org: `EXISTS`, `IN`, `NOT IN` sections; `IN` yields null, not false, when a null is in play (*read*)
+- **Read this:** [Don't Do This → Don't use NOT IN](https://wiki.postgresql.org/wiki/Don't_Do_This) — wiki.postgresql.org: `NOT IN (1,null)` always returns 0 rows; rewrite as `NOT EXISTS`; edited 21 Nov 2024 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Semi joins: EXISTS and IN](01-semi-joins.md)

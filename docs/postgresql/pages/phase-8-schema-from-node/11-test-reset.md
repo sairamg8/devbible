@@ -225,6 +225,18 @@ Transaction rollback isolates for free. Otherwise give each worker its own schem
 `TRUNCATE` strategy across parallel files cannot work — one file's reset destroys
 another's fixtures.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Database Test Isolation](https://eradman.com/posts/database-test-isolation.html) — eradman.com: Eric Radman; four options (transaction, truncate and reload, copy via template, restore point) with trade-offs (*read*; undated page)
+- **Also good:** [22.3. Template Databases](https://www.postgresql.org/docs/current/manage-ag-templatedbs.html) — postgresql.org: `CREATE DATABASE ... TEMPLATE` copies a database (*headings only*)
+- **Also good:** [TRUNCATE](https://www.postgresql.org/docs/current/sql-truncate.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [A local development database](10-local-dev-db.md) · Next → [Migration tools](12-migration-tools.md)

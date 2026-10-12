@@ -87,6 +87,17 @@ Heap limit is V8's; cgroup kills on RSS. Both must be sized together.
 **Is --trace-gc a production default?**
 No — diagnostic only.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Command-line API (V8 options)](https://nodejs.org/docs/latest/api/cli.html) — nodejs.org: v26.11.1; a V8 options section lists `--max-old-space-size`, `--max-semi-space-size`, `--jitless`, `--stack-trace-limit`, and `--v8-options` prints the rest (*read* the headings and flag list)
+- **Also good:** [V8: v8.setFlagsFromString](https://nodejs.org/docs/latest/api/v8.html) — nodejs.org: v26.11.1; changing flags at runtime (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [WebAssembly](./02-webassembly.md) · Next → [Node-API](./04-node-api.md)

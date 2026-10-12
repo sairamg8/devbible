@@ -258,6 +258,18 @@ They multiply. Mongo's default server selection already spends its
 a 2000 ms setting. Bound each attempt and bound the total, or "5 retries" becomes a
 minute-long request.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Exponential Backoff And Jitter](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/) — AWS Architecture Blog: Marc Brooker, 2015-03-04, updated 2023-05-03; sections Introducing OCC, Adding Backoff, Adding Jitter (*read* the opening; rest *headings only*)
+- **Also good:** [Retryable Writes](https://www.mongodb.com/docs/manual/core/retryable-writes/) — mongodb.com: drivers retry a write once after network errors or when no healthy primary is found; more than once only with `timeoutMS` (*read*)
+- **Also good:** [PostgreSQL error codes](https://www.postgresql.org/docs/current/errcodes-appendix.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Prisma and Drizzle](./13-prisma-drizzle.md) · Next → [Read replicas](./15-read-replicas.md)

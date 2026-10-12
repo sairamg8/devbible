@@ -229,6 +229,17 @@ to `:orgId` says nothing about whether `:projectId` belongs to that org, because
 both come from the caller. Scope the lookup by the full chain instead of checking
 the first segment.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [pillarjs/router README (raw): Router options](https://raw.githubusercontent.com/pillarjs/router/master/README.md) — github (raw): `mergeParams` merges the parent `req.params`, default false (*read*)
+- **Also good:** [Application API: `app.mountpath`](https://expressjs.com/en/5x/api/application/) — expressjs.com: a sub-app's mount path, a string or array (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Mounting a router](01-mounting-a-router.md) · Index: [Router composition](README.md) · Next → [Composition at scale](03-composition-at-scale.md)

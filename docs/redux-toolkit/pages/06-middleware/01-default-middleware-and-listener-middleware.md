@@ -243,6 +243,16 @@ analytics or socket middleware. The `middleware` callback runs once, so anything
 the initial bundle. Prepending a dynamic middleware and calling `addMiddleware` from the feature module
 is the middleware half of what `rootReducer.inject` does for reducers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [Side Effects Approaches → why listeners for reactive logic](https://redux.js.org/usage/side-effects-approaches#why-listeners-for-reactive-logic) — redux.js.org: the maintainers' comparison of thunks, sagas, observables, listeners and RTK Query, with a recommendation per job — the case for listeners in place of sagas
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`createEntityAdapter`](../05-selectors-and-normalization/02-create-entity-adapter.md) · [Topic index](../README.md) · Next → [React-Redux hooks](../07-react-redux-integration/01-hooks-api.md)

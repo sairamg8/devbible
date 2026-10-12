@@ -52,6 +52,18 @@ limit does nothing about.
 - **→ [Phase 9 · 06 · Timeouts](../../phase-9-hardening/06-timeouts-and-secrets.md)**
   — the control for slow clients, and why a timeout is not a cancellation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Express 5.x API: express](https://expressjs.com/en/5x/api/express/) — expressjs.com: `limit` default `"100kb"` (number or `bytes` string), `parameterLimit` default 1000 for urlencoded (*read*)
+- **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) — OWASP: set a request size limit and reject with 413 (*read*)
+- **Also good:** [body-parser](https://expressjs.com/en/resources/middleware/body-parser/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev topic: [JSON and urlencoded](../02-json-and-urlencoded/README.md) · Start → [Two paths to 413](01-two-paths-to-413.md)

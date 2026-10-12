@@ -255,6 +255,17 @@ column still used the index. The mismatch problems come from casts written by ha
 No, a diagnostic. It reprices sequential scans rather than forbidding them, and if the
 forced plan is slower you have learned the planner was right.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Why isn't Postgres using my index?](https://www.pgmustard.com/blog/why-isnt-postgres-using-my-index) — pgMustard: splits causes into "cannot use" (function, datatype mismatch, operator not supported) and "thinks it is slower" (small table, many rows returned, LIMIT, bad row estimates, config); published 2021-09-28, page metadata modified 2025
+- **Also good:** [11.12 Examining Index Usage](https://www.postgresql.org/docs/current/indexes-examine.html) — postgresql.org: "Always run ANALYZE first"; `enable_seqscan` as a diagnostic (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Seq vs index vs bitmap](04-scan-types.md) · Next → [Multicolumn indexes](06-multicolumn.md)

@@ -274,6 +274,18 @@ No. Socket failures surface as Node errnos like `ECONNREFUSED`, and a client-sid
 `query_timeout` rejects with a plain message and no `code`. Validate the shape before
 treating `code` as a SQLSTATE.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Appendix A. PostgreSQL Error Codes](https://www.postgresql.org/docs/current/errcodes-appendix.html) — postgresql.org: class 23 lists `23505 unique_violation`, `23503 foreign_key_violation`, `23502 not_null_violation`, `23514 check_violation` (*read*)
+- **Also good:** [`DatabaseError` in pg-protocol (raw source)](https://raw.githubusercontent.com/brianc/node-postgres/master/packages/pg-protocol/src/messages.ts) — github (raw): class fields `code`, `detail`, `hint`, `schema`, `table`, `column`, `dataType`, `constraint` (*read* the class)
+- **Also good:** [54.8. Error and Notice Message Fields](https://www.postgresql.org/docs/current/protocol-error-fields.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`pool.query` and placeholders](04-query-placeholders.md) · Next → [The result object](06-result-object.md)

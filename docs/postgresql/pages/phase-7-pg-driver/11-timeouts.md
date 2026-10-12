@@ -217,6 +217,17 @@ Set `query_timeout` slightly *above* `statement_timeout`, so the server's cancel
 fires first and you get an informative `57014` rather than an opaque read timeout with a
 statement still running.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [pg.Client config](https://node-postgres.com/apis/client) — node-postgres.com: config comments define `statement_timeout`, `query_timeout`, `lock_timeout`, `connectionTimeoutMillis`, `idle_in_transaction_session_timeout`; defaults "no timeout" (*read* the config block)
+- **Also good:** [19.11. Client Connection Defaults](https://www.postgresql.org/docs/current/runtime-config-client.html) — postgresql.org: `statement_timeout` aborts a statement running past the limit (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Prepared statements](10-prepared.md) · Next → [One query, one statement](12-one-statement.md)

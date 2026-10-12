@@ -233,6 +233,16 @@ No — with an expression index on exactly that key it is close: measured 1.13 m
 against 0.71 ms. The gap is not in equality, it is in everything else — ranges,
 sorting, joins, constraints and storage.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JSON Types, section "Designing JSON Documents"](https://www.postgresql.org/docs/current/datatype-json.html) — postgresql.org: JSON can be "considerably more flexible" than the relational model, and both can coexist (*read* the opening of the section)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [jsonb operators](./jsonb-operators/) · Next → [Indexing jsonb](03-index-jsonb.md)

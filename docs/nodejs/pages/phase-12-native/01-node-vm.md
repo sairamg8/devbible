@@ -102,3 +102,13 @@ Timeouts focus on the synchronous run; scheduled work may continue afterward.
 ---
 
 Phase index: [Native and advanced](./README.md) · Next → [WebAssembly](./02-webassembly.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [VM (executing JavaScript)](https://nodejs.org/docs/latest/api/vm.html) — nodejs.org: v26.11.1; the page states the module "is not a security mechanism" and not to run untrusted code with it (*read*)
+
+{/* LINKMAP:END */}

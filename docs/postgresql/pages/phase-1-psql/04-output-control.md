@@ -210,6 +210,16 @@ Most likely the pager. `\pset pager off` disables it.
 **How do you see all current formatting settings?**
 `\pset` with no arguments prints them all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [psql · `\pset`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMAND-PSET) — postgresql.org: every format option; `--csv` equals `\pset format csv` (*read* the `--csv` entry)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [\d and \d+ in full](03-describe-table.md) · Next → [\? and \h](05-help.md)

@@ -57,6 +57,17 @@ usually leaks.
 - **→ [Phase 10 · 02 · Request id](../../phase-10-app-factory/02-request-id.md)** —
   the one field that makes a terse error acceptable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [RFC 9457: Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc9457.html) — IETF, July 2023: standard error body: members `type`, `status`, `title`, `detail`, `instance`, plus extension members (*headings only*)
+- **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) — OWASP: generic messages, no call stacks to the client (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev topic: [Async errors on Express 5](../02-async-errors/README.md) · Start → [The envelope](01-the-envelope.md)

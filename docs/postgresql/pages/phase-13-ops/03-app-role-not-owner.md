@@ -220,6 +220,17 @@ That table has a different owner — created by hand rather than by the migratio
 role — so the `FOR ROLE`-keyed default privileges never applied. Check
 `pg_tables.tableowner`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Auditing Users and Roles in PostgreSQL](https://www.enterprisedb.com/blog/auditing-users-and-roles-postgresql) — EDB, 11 May 2019: section "Owner is a small superuser": the role should not be superuser and should not own the objects, because owners can grant themselves anything (*read*)
+- **Also good:** [Privileges](https://www.postgresql.org/docs/current/ddl-priv.html) — postgresql.org: (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Secrets](secrets/) · Next → [pg_dump and pg_restore](pg-dump-restore/)

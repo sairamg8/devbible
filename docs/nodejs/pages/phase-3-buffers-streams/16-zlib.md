@@ -272,6 +272,16 @@ dynamic content. Level 9 belongs in a build step.
 The input is already compressed, or it is small enough that gzip's ~20-byte
 header and framing dominate. Skip compression for media types and tiny bodies.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Zlib](https://nodejs.org/api/zlib.html) — nodejs.org: page marked "Stability: 2 - Stable"; gzip, deflate, Brotli, and Zstd; the stream example is `pipeline(source, gzip, destination, cb)` with `createGzip()`, then a promise form (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Web Streams](15-web-streams.md) · Next → [Custom Readable and Writable](17-custom-readable-writable.md)

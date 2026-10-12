@@ -277,6 +277,22 @@ work and the wrong tool for anything on a hot import path.
 Not with a static `import` — it is hoisted and unconditional by design. Use
 `await import()` inside the branch instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modules: ECMAScript modules](https://nodejs.org/docs/latest/api/esm.html) — nodejs.org: sections [#mandatory-file-extensions](https://nodejs.org/docs/latest/api/esm.html#mandatory-file-extensions), [#import-expressions](https://nodejs.org/docs/latest/api/esm.html#import-expressions) and [#top-level-await](https://nod
+- **Read this:** [#mandatory-file-extensions](https://nodejs.org/docs/latest/api/esm.html#mandatory-file-extensions)
+- **Read this:** [#import-expressions](https://nodejs.org/docs/latest/api/esm.html#import-expressions)
+- **Read this:** [#top-level-await](https://nodejs.org/docs/latest/api/esm.html#top-level-await)
+- **Also good:** [MDN: JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) — mdn: undated; sections [#dynamic_module_loading](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) and [#top_level_await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+- **Also good:** [#dynamic_module_loading](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)
+- **Also good:** [#top_level_await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Phase 1 overview](README.md) · Next → [CommonJS](02-commonjs.md)

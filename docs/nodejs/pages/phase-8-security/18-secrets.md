@@ -268,6 +268,17 @@ Two values valid at once during the overlap, reading the value at use rather tha
 capturing it at import, a schedule so the first rotation is not during an incident, and
 expiry so credentials retire without a cleanup list.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Command-line options](https://nodejs.org/api/cli.html) — nodejs.org: lists `--env-file` and `--env-file-if-exists` (*headings only*, huge reference)
+- **Read this:** [Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html) — OWASP: lifecycle, rotation, auditing; container env-var warning (*read*, ≈10k words)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Input validation](./17-input-validation.md) · Next → [HTTPS, HSTS and cookie flags](./19-https-hsts-cookies.md)

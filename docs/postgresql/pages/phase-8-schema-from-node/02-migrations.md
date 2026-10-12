@@ -237,6 +237,18 @@ role does not need `CREATE`/`ALTER` privileges, and so a long lock does not bloc
 old instances that are still serving traffic. Startup migration also multiplies the
 concurrency problem by the replica count.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [graphile-migrate README (raw): Why? and Opinions](https://raw.githubusercontent.com/graphile/migrate/main/README.md) — github (raw): roll-forward only, a signed-off migration is never edited, each file wrapped in a transaction by default (*read* those sections)
+- **Also good:** [postgres-migrations README (raw): Design decisions](https://raw.githubusercontent.com/akheron/postgres-migrations/master/README.md) — github (raw): no down migrations, `migrations` table, hash check of past files, one transaction per migration (*read*)
+- **Also good:** [Evolutionary Database Design](https://martinfowler.com/articles/evodb.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Creating tables from Node](./ddl-from-node/) · Next → [Seeding](03-seeding.md)

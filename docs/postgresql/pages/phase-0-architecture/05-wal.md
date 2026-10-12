@@ -115,6 +115,17 @@ makes it durable.
 Prefer sensible transaction size: not one commit per cell update in a loop, and
 not multi-minute transactions that hold resources (Phase 11).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Write-Ahead Logging · Reliability](https://www.postgresql.org/docs/current/wal-intro.html) — postgresql.org: log first, no data-page flush per commit, REDO after a crash (*read*)
+- **Also good:** [Reliability](https://www.postgresql.org/docs/current/wal-reliability.html) — postgresql.org: fsync and what a durable commit needs (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Shared buffers](04-shared-buffers.md) · Next → [Roles](06-roles.md)

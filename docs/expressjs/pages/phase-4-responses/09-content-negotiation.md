@@ -183,6 +183,18 @@ It matches, and the first key in your `res.format` object wins. Order the object
 deliberately rather than assuming a client that expressed no preference wants
 your richest representation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MDN: Content negotiation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Content_negotiation) — MDN: server-driven negotiation: `Accept`, `Accept-Encoding`, `Accept-Language`, and the `Vary` header (*headings only*)
+- **Also good:** [Express 5.x API: Response](https://expressjs.com/en/5x/api/response/) — expressjs.com: `res.format()` negotiates on `Accept` with a default handler (*read*)
+- **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Streaming and downloads](08-streaming-and-downloads.md) · Index: [Phase 4](README.md)

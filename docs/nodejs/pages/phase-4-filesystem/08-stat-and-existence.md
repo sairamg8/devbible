@@ -227,6 +227,17 @@ boot. Not before an operation; the Node docs explicitly advise against that.
 `mtime` resolution can be coarser than the interval between writes, so two
 different contents can share a timestamp. Size catches most of the rest.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js file stats](https://nodejs.org/learn/manipulating-files/nodejs-file-stats) — nodejs.org Learn: `isFile()`, `isDirectory()`, `isSymbolicLink()`, `size` (*read*)
+- **Also good:** [fs.exists()](https://nodejs.org/api/fs.html#fsexistspath-callback) — nodejs.org: "Deprecated in: v1.0.0" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Directories](07-directories.md) · Next → [File handles](09-file-handles.md)

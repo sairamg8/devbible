@@ -229,6 +229,16 @@ Because that index *is* the conflict-detection mechanism. Without it the databas
 has no way to know a row conflicts — `42P10`. This is the same reason application
 pre-checks cannot be made correct.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [INSERT → ON CONFLICT Clause](https://www.postgresql.org/docs/current/sql-insert.html#SQL-ON-CONFLICT) — postgresql.org: `DO NOTHING` may omit the conflict target; `DO UPDATE` must give one; arbiter indexes by inference (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`RETURNING`](05-returning.md) · Next → [`UPDATE`](07-update.md)

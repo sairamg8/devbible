@@ -60,6 +60,17 @@ write comes from.
 - **→ [Phase 9 · 05 · CSRF and injection](../../phase-9-hardening/05-csrf-and-injection.md)**
   — the open redirect `res.location` does not protect against.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Express 5.x API: Response](https://expressjs.com/en/5x/api/response/) — expressjs.com: `res.send` by body type (strings as HTML, objects and arrays as JSON, Buffers binary); `res.sendStatus` sends the status text as body (*read*)
+- **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: `res.json(obj, status)` and `res.send(status)` signatures removed; chain `res.status(n).json(obj)` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 4](../README.md) · Start → [What `res.send` does](01-what-res-send-does.md)

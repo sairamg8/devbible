@@ -112,6 +112,17 @@ problems you re-implement poorly if you own the files yourself.
 Native types beyond plain rows (`jsonb`, arrays, custom types) without giving up
 relational integrity.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What Is PostgreSQL?](https://www.postgresql.org/docs/current/intro-whatis.html) — postgresql.org: calls it an object-relational DBMS descended from POSTGRES 4.2 at Berkeley (*read*)
+- **Also good:** [PostgreSQL License](https://www.postgresql.org/about/licence/) — postgresql.org: "a liberal Open Source license, similar to the BSD or MIT" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 0](README.md) · Next → [Client/server model](02-client-server-model.md)

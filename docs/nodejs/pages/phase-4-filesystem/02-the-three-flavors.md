@@ -190,6 +190,17 @@ load with `readFileSync` per render, and `console.log` when stdout is a file.
 `--cpu-prof` and look for `fs.readFileSync` frames, or event loop delay
 monitoring; the syllabus covers both in Phase 10. Statically, grep for `Sync(`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [fs: Synchronous example](https://nodejs.org/api/fs.html#synchronous-example) — nodejs.org: sync calls block the event loop until done; exceptions are thrown immediately (*read*); the callback form reserves the first argument for the error (*read*)
+- **Also good:** [fs: Performance Considerations](https://nodejs.org/api/fs.html#performance-considerations) — nodejs.org: `fs.readFile()` reads into memory one chunk at a time so the event loop can turn (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [node:fs/promises](01-fs-promises.md) · Next → [node:path](03-path.md)

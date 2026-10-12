@@ -35,7 +35,7 @@ these orders.
 | a version bump · *"is X still current"* | `.agents/skills/devbible-currency/SKILL.md` | no |
 | how many pages / how much is done | **[progress_corpus_audit_20260905.md](progress_corpus_audit_20260905.md)** — distrust any count written before it | no |
 | *"version coverage"* · *"up to which version"* · *"compare LTS"* · *"free content map"* | **[CURSOR-VERSION-COVERAGE.md](CURSOR-VERSION-COVERAGE.md)** — every track: official LTS syllabus × our pages × free content (LINK/KEEP/WRITE). ⏹️ **stopped 2026-09-24** — batch 1 audits done, verify owed; batch 2 next on the user's word | no |
-| *"link map"* · *"best article per topic"* · *"hub + delta"* · *"study map"* | **[CURSOR-LINK-MAP.md](CURSOR-LINK-MAP.md)** — 🔴 2026-10-05: our syllabus is the spine, link the best page anywhere, **no agents**; pilot Redux Toolkit ✅ 21/21 mapped 2026-10-05, awaiting the user's review (staged, not on the site) | no |
+| *"link map"* · *"best article per topic"* · *"hub + delta"* · *"study map"* | **[CURSOR-LINK-MAP.md](CURSOR-LINK-MAP.md)** — our syllabus is the spine, link the best page anywhere. 🔴 2026-10-12: user ordered *agents, one language at a time, merge to main*; per-language status table is in the cursor | no |
 | *"free resources gap"* · *"w3schools vs devbible"* | [CURSOR-FREE-RESOURCES-GAP.md](CURSOR-FREE-RESOURCES-GAP.md) — folded into the link-map row above | no |
 
 ## The tracks
@@ -68,6 +68,7 @@ these orders.
 | **css** | 🟡 | [progress_css_pages.md](progress_css_pages.md) |
 | **express** | 🟢 depth pass 28/28 | [progress_express_master_depth_pass.md](progress_express_master_depth_pass.md) |
 | **git** | 🟢 complete, re-scoped to 52 topics 2026-08-14 | [progress_git_pages.md](progress_git_pages.md) |
+| **link map** (all tracks) | 🔵 **5 languages live**, PostgreSQL running, one language at a time — status table in the cursor | [CURSOR-LINK-MAP.md](CURSOR-LINK-MAP.md) |
 | **next.js** | 🟢 closed 2026-09-05 at the user's 90% quote bar · 659 pages | [CURSOR-NEXTJS.md](CURSOR-NEXTJS.md) |
 
 🔴 **A split track's chunk mechanics are NOT in this table** — how the user starts a chunk,

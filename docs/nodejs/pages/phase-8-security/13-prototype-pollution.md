@@ -235,6 +235,17 @@ Runtime hardening, not a fix. `--disable-proto=throw` makes the access an error 
 to abort the merge. Freezing prevents the write, but silently in sloppy mode. Neither
 covers `constructor.prototype`, and both can break dependencies.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Prototype Pollution Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html) — OWASP: use `Map`/`Set`, `Object.create(null)`, freeze/seal, `--disable-proto=delete` (flagged as defense in depth) (*read*)
+- **Also good:** [Prototype pollution](https://portswigger.net/web-security/prototype-pollution) — PortSwigger: sources, sinks, gadgets (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [SSRF](./12-ssrf.md) · Next → [ReDoS](./14-redos.md)

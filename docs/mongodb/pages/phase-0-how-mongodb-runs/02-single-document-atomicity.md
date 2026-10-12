@@ -194,6 +194,17 @@ keeping each atomic operation inside a single document.
 No. Atomicity is about the visibility of a partial change; durability is governed
 by the write concern and journaling, which are separate settings.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Atomicity and Transactions](https://www.mongodb.com/docs/manual/core/write-operations-atomicity/) — mongodb.com: single-document writes are atomic; `updateMany` is atomic per document but not as a whole; distributed transactions cost more and are "not a replacement for effective schema design", so denormalized embedded data stays the norm (*
+- **Also good:** [MongoDB vs PostgreSQL → ACID transactions in each system](https://www.mongodb.com/resources/compare/mongodb-postgresql) — mongodb.com: the vendor's own framing: a document write is atomic because the data is clustered, so transactions are only needed across documents (*read*) — vendor page, no date found
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · What MongoDB actually is](./01-what-mongodb-actually-is.md) · Next: [03 · BSON](./03-bson.md) →

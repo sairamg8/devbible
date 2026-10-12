@@ -154,6 +154,16 @@ failures reproducible — but it must unlock nothing real, and production must f
 without its own value.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [supertest README (raw)](https://raw.githubusercontent.com/ladjs/supertest/master/README.md) — github (raw): `request.agent(app)` persists cookies (mocha example); `.set()` sets request headers (examples use `Accept`) and `.auth()` sends basic credentials; a Bearer `Authorization` header is not shown (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Supertest](03-supertest.md) · Next → [Health and boot](05-health-and-boot.md)

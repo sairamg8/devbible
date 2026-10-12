@@ -217,6 +217,16 @@ idle-in-transaction sessions that never touch the table.
 **Is checking the statement returned successfully enough?**
 No. Verify `indisvalid` afterwards; that is the only reliable signal.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CREATE INDEX, section "Building Indexes Concurrently"](https://www.postgresql.org/docs/current/sql-createindex.html) — postgresql.org: two table scans, waits for older transactions; a failed build leaves an "invalid" index that still costs update overhead (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [GIN and trigrams](11-gin-trgm.md) · Next → [Unused and duplicate indexes](13-unused-indexes.md)

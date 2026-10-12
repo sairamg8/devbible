@@ -54,6 +54,16 @@ referenced twice — without guessing.
 - **[The result object](../../phase-7-pg-driver/06-result-object.md)** — why `SELECT *`
   through a long CTE chain can lose columns in the driver
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [7.8.3 CTE Materialization](https://www.postgresql.org/docs/current/queries-with.html#QUERIES-WITH-CTE-MATERIALIZATION) — postgresql.org: merged into the parent when referenced once, not more; `MATERIALIZED`/`NOT MATERIALIZED` override (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](../README.md) · Start → [Naming a subquery](01-naming-a-subquery.md)

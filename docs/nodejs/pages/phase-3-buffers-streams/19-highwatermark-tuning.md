@@ -201,6 +201,16 @@ transform is the limit.
 Makes every `write()` return `false`, forcing strict lockstep with `'drain'`. It
 means "buffer nothing", not "buffer everything".
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Buffering](https://nodejs.org/api/stream.html#buffering) — nodejs.org: `highWaterMark` is bytes for normal streams, objects in object mode (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [stream/promises and compose](18-stream-promises-and-compose.md) · Phase index → [Buffers and streams](README.md)

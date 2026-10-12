@@ -201,6 +201,17 @@ Yes — it is wrapped and still resumes on the microtask queue, so it costs one
 microtask tick. `await null` is a common idiom for yielding to microtasks
 specifically.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Async functions and await](https://javascript.info/async-await) — javascript.info: March 24, 2025; an `async` function always returns a promise; `await` waits for it, with an error-handling section (*read*)
+- **Also good:** [MDN: async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) — mdn: undated; a call returns a new Promise; includes a sequentialStart example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Promise states and chaining](07-promise-states.md) · Next → [Promise combinators](09-combinators.md)

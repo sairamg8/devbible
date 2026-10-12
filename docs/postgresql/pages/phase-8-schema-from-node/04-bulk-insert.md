@@ -244,6 +244,17 @@ Because each autocommitted statement commits, and every commit must flush the
 write-ahead log to durable storage. One transaction pays that latency once instead
 of 10 000 times — measured as a 7.9× improvement with no other change.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Boosting Postgres INSERT Performance by 2x With UNNEST](https://www.tigerdata.com/blog/boosting-postgres-insert-performance) — tigerdata.com: James Blackwood-Sewell; published 2024-11-15, modified 2026-01-08; `INSERT ... UNNEST` was 2.13x faster than `VALUES` at the database layer at batch size 1000, measured with `pg_stat_statements` (*read* the results; the "Should I 
+- **Also good:** [14.4. Populating a Database](https://www.postgresql.org/docs/current/populate.html) — postgresql.org: disable autocommit, use `COPY`, drop indexes, run `ANALYZE` after (*headings only*; page metadata dated 2026-08-13)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Seeding](03-seeding.md) · Next → [SQL in `.sql` files](05-sql-files.md)

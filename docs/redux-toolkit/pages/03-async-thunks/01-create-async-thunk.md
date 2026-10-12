@@ -250,6 +250,17 @@ build a store with a fake client without mocking module resolution. Type it thro
 the `ThunkApiConfig` generic.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [createAsyncThunk](https://redux.js.org/toolkit/api/createAsyncThunk) — redux.js.org: the complete reference (≈5k words): payload creator and `thunkAPI`, the options incl. `condition`, the pending/fulfilled/rejected lifecycle, `unwrap`, `rejectWithValue`, cancellation
+- **Also good:** [Redux Essentials, Part 5 — async logic and data fetching](https://redux.js.org/tutorials/essentials/part-5-async-logic) — redux.js.org: the narrative walk-through: why async needs middleware, writing thunks, loading-state fields, `createAsyncThunk` with `extraReducers`, dispatching from components and checking the result; ends with the `create.asyncThunk` form (th
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`createAction` & matchers](../02-slices-and-actions/02-create-action-and-matchers.md) · [Topic index](../README.md) · Next → [Cancellation, races & limits](./01b-cancellation-races-and-limits.md)

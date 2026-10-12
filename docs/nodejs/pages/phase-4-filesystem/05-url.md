@@ -257,6 +257,16 @@ something downstream uses the last value is a genuine bypass pattern.
 `URL.canParse(input)` to test, or `URL.parse(input)` (Node 22+) which returns
 `null` instead of throwing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [url.fileURLToPath()](https://nodejs.org/api/url.html#urlfileurltopathurl-options) — nodejs.org: the file-URL to path function, with a `windows` option (v22.1.0, v20.13.0) (*read*); `URL` and `URLSearchParams` are globals since v10.0.0 (*read*, ids `class-url`, `class-urlsearchparams`)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Path traversal](04-path-traversal.md) · Next → [File streams](06-file-streams.md)

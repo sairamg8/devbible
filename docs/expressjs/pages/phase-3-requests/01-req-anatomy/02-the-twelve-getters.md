@@ -216,6 +216,18 @@ Not for anything security-relevant. It only checks
 forge. Use `req.accepts` for negotiation and a token plus an `Origin` check for
 CSRF.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Express behind proxies](https://expressjs.com/en/guide/behind-proxies/) — expressjs.com: `trust proxy` default false (IP from socket); `true` takes the left-most `X-Forwarded-For`; match the setting to your proxy setup (*read*)
+- **Also good:** [MDN: X-Forwarded-For](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Forwarded-For) — MDN: warns of security risk from improper use (*headings only*)
+- **Also good:** [Express 5.x API: Request](https://expressjs.com/en/5x/api/request/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Two objects in one](01-two-objects-in-one.md) · Index: [req anatomy](README.md) · Next → [Reading headers and content](03-reading-headers-and-content.md)

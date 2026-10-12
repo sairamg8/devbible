@@ -179,6 +179,17 @@ encoded by hand.
 A `MessageChannel`: transfer one port to each worker. They then communicate
 directly, which keeps the main thread's event loop free.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [worker_threads page: sharing](https://nodejs.org/api/worker_threads.html) — nodejs.org: unlike `child_process` or `cluster`, threads share memory by transferring `ArrayBuffer`s or sharing `SharedArrayBuffer`s (*read*); `MessageChannel` id verified
+- **Also good:** [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics) — MDN: static methods for atomic operations, used with `SharedArrayBuffer` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [worker_threads](24-worker-threads.md) · Next → [Single Executable Applications](26-single-executable-applications.md)

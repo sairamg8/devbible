@@ -57,6 +57,18 @@ cookies vanish without an error.
 - **→ [Phase 4 · 07 · Cookies out](../../phase-4-responses/07-cookies-out.md)** —
   setting the cookie that never arrives.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Express behind proxies](https://expressjs.com/en/guide/behind-proxies/) — expressjs.com: values (`true`, hop count, subnets, function); effect on `req.ip`, `req.protocol`, `req.hostname`; spoofing warning for `true` and for hop counts with uneven paths (*read*)
+- **Also good:** [Troubleshooting proxy issues](https://express-rate-limit.mintlify.app/guides/troubleshooting-proxy-issues) — express-rate-limit docs: a `/ip` test route and raise the number until it matches your public IP; wrong value makes the limiter global (*read*)
+- **Also good:** [express-session](https://expressjs.com/en/resources/middleware/session/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 9](../README.md) · Start → [The setting and the header](01-the-setting-and-the-header.md)

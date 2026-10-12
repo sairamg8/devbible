@@ -177,6 +177,17 @@ object storage, with a deletion queue to reconcile the two.
 `octet_length()`. It matches `length()` for `bytea`, but the habit matters for text columns
 where they differ.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Binary Data Types](https://www.postgresql.org/docs/current/datatype-binary.html) — postgresql.org: hex and escape formats (headings only; ids `DATATYPE-BINARY-BYTEA-HEX-FORMAT`)
+- **Also good:** [BinaryFilesInDB](https://wiki.postgresql.org/wiki/BinaryFilesInDB) — postgresql.org wiki: "When should files be stored in the database?" (headings only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Casting](12-casting.md) · Next → [Network, geometric, citext](14-network-geo-citext.md)

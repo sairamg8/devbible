@@ -195,6 +195,17 @@ time.
 `COPY … TO STDOUT` with `pg-copy-streams` — no row objects are constructed at all, so it
 is faster and lighter than either approach here.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cursor](https://node-postgres.com/apis/cursor) — node-postgres.com: `new Cursor(text, values)`, `read(rowCount)`, `close()`; reads a large result without holding it all in memory (*read*)
+- **Also good:** [pg-query-stream README (raw)](https://raw.githubusercontent.com/brianc/node-postgres/master/packages/pg-query-stream/README.md) — github (raw): readable object stream over a server cursor; does not work with native bindings (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [LISTEN/NOTIFY from Node](14-listen-notify.md) · Next → [pg vs postgres.js](16-postgres-js.md)

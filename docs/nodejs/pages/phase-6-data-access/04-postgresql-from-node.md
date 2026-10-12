@@ -277,6 +277,17 @@ It is human-facing text: localised, version-dependent, and it includes values.
 `err.code` is the stable SQLSTATE contract, and `err.constraint` tells you which
 constraint fired.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [pg.Pool](https://node-postgres.com/apis/pool) — node-postgres.com: config reference: `max` default 10, `idleTimeoutMillis` default 10000, `connectionTimeoutMillis` default 0 (no timeout) (*read*)
+- **Also good:** [Queries](https://node-postgres.com/features/queries) — node-postgres.com: placeholders, query config object, prepared statements, row mode, type parsing (*read* the parameterized section; rest headings)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Driver lifecycle](./03-driver-lifecycle.md) · Next → [MongoDB from Node](./05-mongodb-from-node.md)
