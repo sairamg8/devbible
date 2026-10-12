@@ -216,6 +216,17 @@ volume at that path in every container, so the hardening is partial and nothing
 warns you. `docker image inspect --format '{{json .Config.Volumes}}'` shows the
 declarations; mount something deliberate at each one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Docker Security Cheat Sheet · Rule 8](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html) — OWASP: `--read-only` combined with `--tmpfs` for temporary writes, Compose equivalent; notes it does not make the API read-only (*read*)
+- **Also good:** [podman-run · --read-only](https://docs.podman.io/en/latest/markdown/podman-run.1.html) — docs.podman.io: `--read-only-tmpfs` defaults to true, mounting tmpfs on `/dev`, `/dev/shm`, `/run`, `/tmp`, `/var/tmp` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [SELinux `:z` and `:Z`](07-selinux-z-and-Z.md) · Index: [Phase 6](README.md) · Next → [`--userns=keep-id`](09-userns-keep-id.md)

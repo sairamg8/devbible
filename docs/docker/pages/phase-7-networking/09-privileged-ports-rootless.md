@@ -201,6 +201,18 @@ interfaces macvlan cannot reach. All of them come from the container's traffic
 being handled outside the kernel's privileged path — the subject of the previous
 page.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Podman rootless.md (raw)](https://raw.githubusercontent.com/containers/podman/main/rootless.md) — containers/podman: ports below 1024 need `CAP_NET_BIND_SERVICE`; set `net.ipv4.ip_unprivileged_port_start` or use a proxy or redirect (*read*)
+- **Also good:** [Podman troubleshooting (raw)](https://raw.githubusercontent.com/containers/podman/main/troubleshooting.md) — containers/podman: the exact pasta "Permission denied" error for `-p 80:80`, and the same failure with `--network=host` (*read* that section; the rest *headings only*, 74k characters)
+- **Also good:** [Rootless mode troubleshooting](https://docs.docker.com/engine/security/rootless/troubleshoot/) — docs.docker.com: Docker's rootless mode, same limit, defers to an "Exposing privileged ports" section (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Rootless networking](08-rootless-networking.md) · Index: [Phase 7](README.md) · Next → [`--network=host`](10-network-host.md)

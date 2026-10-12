@@ -201,6 +201,17 @@ subnets into smaller pools to support more networks — and prune networks left
 behind by finished jobs. The default pool sizes are generous per network, which
 is what exhausts the space.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [dockerd reference](https://docs.docker.com/reference/cli/dockerd/) — docs.docker.com: `default-address-pools` in `daemon.json` sets the base and size for new networks; modified 2026-10-02 (*read* the config example; the rest *headings only*)
+- **Also good:** [Use IPv6 networking](https://docs.docker.com/engine/daemon/ipv6/) — docs.docker.com: `docker network create --ipv6 --subnet ...` and the Compose `enable_ipv6` form (*read*; modified 2026-04-13)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Podman's stack: netavark and aardvark-dns](12-netavark-and-aardvark.md) · Index: [Phase 7](README.md) · Next → [Overlay networks and multi-host](14-overlay-and-multi-host.md)

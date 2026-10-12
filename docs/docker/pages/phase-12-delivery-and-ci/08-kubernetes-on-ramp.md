@@ -175,6 +175,18 @@ Deployment, DaemonSet, Job, PVC, ConfigMap and Secret all work. Just remember
 cluster-level fields are ignored rather than rejected there, so local success is
 a smoke test rather than validation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Translate a Docker Compose file to Kubernetes resources](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/) — kubernetes.io: Kompose converts a Compose file (*read* contents, headings)
+- **Also good:** [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) — kubernetes.io (*headings only*)
+- **Also good:** [Pods](https://kubernetes.io/docs/concepts/workloads/pods/) — kubernetes.io (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [When Compose stops being enough](07-when-compose-stops-being-enough.md) · Index: [Phase 12](README.md) · Next → [09 · Rolling updates and rollback by hand](09-rolling-updates-by-hand.md)

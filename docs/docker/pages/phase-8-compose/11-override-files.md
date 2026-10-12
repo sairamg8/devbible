@@ -232,6 +232,16 @@ profile when whole services should be present in one situation and absent in ano
 Using an override to disable a service means fighting the merge rules with `!reset`,
 where a profile says it in one word.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Merge Compose files](https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/) — docs.docker.com: `compose.override.yaml` read by default; single-value options replaced, multi-value options such as `ports` combined; modified 2026-06-22 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Environment and interpolation](10-environment-and-interpolation.md) · Index: [Phase 8](README.md) · Next → [Profiles](12-profiles.md)

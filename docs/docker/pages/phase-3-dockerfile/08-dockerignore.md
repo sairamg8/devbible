@@ -193,6 +193,17 @@ In a large or mixed repository. `*` followed by `!` lines for exactly what the
 build needs means nothing new can reach the image accidentally; the trade is that
 a newly-needed file fails the build until you add it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Build context · .dockerignore files](https://docs.docker.com/build/concepts/context/#dockerignore-files) — docs.docker.com: file lives at the context root, patterns removed from the context before sending, faster builds with a remote builder (*read*)
+- **Also good:** [Building best practices · Exclude with .dockerignore](https://docs.docker.com/build/building/best-practices/#exclude-with-dockerignore) — docs.docker.com: `.gitignore`-style patterns, `*.md` example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [ENV versus ARG](07-env-vs-arg.md) · Index: [Phase 3](README.md) · Next → [USER](09-user.md)

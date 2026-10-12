@@ -153,6 +153,17 @@ cannot see it" without leaking information about private repositories. The
 message covers both, and for a public pull it almost always means the name is
 wrong.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker image tag](https://docs.docker.com/reference/cli/docker/image/tag/) — Docker docs: `[HOST[:PORT]/]NAMESPACE/REPOSITORY[:TAG]`; omitted host means Docker Hub (*read*)
+- **Also good:** [OCI distribution spec (raw)](https://raw.githubusercontent.com/opencontainers/distribution-spec/main/spec.md) — github (raw): the registry protocol (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 2](README.md) · Next → [Tags move, digests do not](02-tags-vs-digests.md)

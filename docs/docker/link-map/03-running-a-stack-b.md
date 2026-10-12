@@ -16,7 +16,7 @@ Continues `03-running-a-stack.md` (split to stay under the 300-line cap). Covers
 ## Phase 9 — The MERN/PERN stack in containers
 
 ### T09-01 · Containerising a Node/Express API — Master · ✅ written `docs/docker/pages/phase-9-mern-pern-stack/01-node-api-dockerfile/README.md`
-- **Read this:** [Node.js language-specific guide](https://docs.docker.com/guides/nodejs/) · docs.docker.com · a multi-stage Dockerfile with `npm ci`, cache and bind mounts, a build stage and a minimal runner; modified 2026-09-07 (*read* the Dockerfile; the rest *headings only*, 78k characters) · covers our angle: **partial** — uses Docker Hardened Images, and the signal-handling and non-root detail was not checked in the guide's runner stage · fetched 2026-10-12
+- **Read this:** [Node.js language-specific guide](https://docs.docker.com/guides/nodejs/) · docs.docker.com · a multi-stage Dockerfile (builder, production-deps and runner stages) using cache and bind mounts; it runs `npm install`, with `npm ci` only as a commented-out upgrade; modified 2026-09-07 (*read* the Dockerfile; the rest *headings only*, 78k characters) · covers our angle: **partial** — uses Docker Hardened Images, and the signal-handling and non-root detail was not checked in the guide's runner stage · fetched 2026-10-12
 - **Also good:** [Docker and Node.js Best Practices (raw)](https://raw.githubusercontent.com/nodejs/docker-node/main/docs/BestPractices.md) · nodejs/docker-node · `NODE_ENV=production`; Node as PID 1 ignores `SIGINT`, so use `--init` or Tini; the `node` user has uid 1000 (*read*) · fetched 2026-10-12
 - **Our delta:** the `CMD ["node", ...]` exec form and graceful shutdown handler are ours; the public `node` image's `node` user versus the Hardened Images user.
 
@@ -54,8 +54,8 @@ Continues `03-running-a-stack.md` (split to stay under the 300-line cap). Covers
 ### T09-08 · MongoDB in a container — Understand · ✅ written `docs/docker/pages/phase-9-mern-pern-stack/08-mongodb-in-a-container/README.md`
 - **Read this:** [mongo image README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/mongo/README.md) · docker-library/docs · data lives in `/data/db`; mount a volume or host directory there; flags pass through to `mongod` (*read*) · covers our angle: **partial** — no replica-set recipe for Docker · fetched 2026-10-12
 - **Also good:** [Convert a standalone to a replica set](https://www.mongodb.com/docs/manual/tutorial/convert-standalone-to-replica-set/) · mongodb.com · `rs.initiate()` once, `rs.conf()`, `rs.status()` (*read*) · fetched 2026-10-12
-- **Also good:** [Change streams](https://www.mongodb.com/docs/manual/changeStreams/) · mongodb.com · available for replica sets and sharded clusters (*read*) · fetched 2026-10-12
-- **Our delta:** a single-node replica set in Compose, with a healthcheck that waits for it. Transactions: the [transactions page](https://www.mongodb.com/docs/manual/core/transactions/) names replica sets and sharded clusters but does not say a standalone fails (not confirmed).
+- **Also good:** [Change streams](https://www.mongodb.com/docs/manual/changestreams/) · mongodb.com · available for replica sets and sharded clusters (*read*) · fetched 2026-10-12
+- **Our delta:** a single-node replica set in Compose, with a healthcheck that waits for it. Transactions: the MongoDB transactions manual page names replica sets and sharded clusters but does not say a standalone fails (not confirmed; page not linked).
 
 ### T09-09 · Redis in a container — Know · ✅ written `docs/docker/pages/phase-9-mern-pern-stack/09-redis-in-a-container.md`
 - **Read this:** [Redis persistence](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/) · redis.io · RDB snapshots, AOF write log, none ("sometimes used when caching"), or both; modified 2026-09-30 (*read*) · covers our angle: **partial** — not Docker specific · fetched 2026-10-12
@@ -63,13 +63,13 @@ Continues `03-running-a-stack.md` (split to stay under the 300-line cap). Covers
 - **Our delta:** whether a cache should persist at all, and the volume path.
 
 ### T09-10 · Migrations and seeds — Understand · ✅ written `docs/docker/pages/phase-9-mern-pern-stack/10-migrations-and-seeds.md`
-- **Read this:** [Use init containers in Compose](https://docs.docker.com/compose/how-tos/init-containers/) · docs.docker.com · `pre_start` runs a migration in an ephemeral container after the database is healthy, before the app starts; compares it with a one-shot service plus `service_completed_successfully`; modified 2026-08-19 (*read*) · covers our angle: **partial** — a Django example, no Node tool · fetched 2026-10-12
+- **Read this:** [Use init containers in Compose](https://docs.docker.com/compose/how-tos/init-containers/) · docs.docker.com · `pre_start` runs a migration in an ephemeral container after the database is healthy, before the app starts; compares it with a one-shot service plus `service_completed_successfully`; modified 2026-08-19 (*read*) · covers our angle: **partial** — a `manage.py migrate` example, no Node tool · fetched 2026-10-12
 - **Also good:** [docker compose run](https://docs.docker.com/reference/cli/docker/compose/run/) · docs.docker.com · one-off commands with `--rm` (*headings only*) · fetched 2026-10-12
 - **Our delta:** the minimum Compose version for `pre_start` is not on the page (not confirmed); a Node tool's migrate command is ours.
 
 ### T09-11 · Debugging Node inside a container — Understand · ✅ written `docs/docker/pages/phase-9-mern-pern-stack/11-debugging-node.md`
-- **Read this:** [Debugging Node.js](https://nodejs.org/en/learn/getting-started/debugging) · nodejs.org · `--inspect` listens on `127.0.0.1:9229` by default; binding to `0.0.0.0` lets anyone who can reach it run code (*read*) · covers our angle: **partial** — no Docker publishing · fetched 2026-10-12
-- **Also good:** [Node.js language-specific guide](https://docs.docker.com/guides/nodejs/) · docs.docker.com · `--inspect=0.0.0.0:9229` in the dev script, attach from VS Code or Chrome DevTools; source maps for TypeScript (*read*) · fetched 2026-10-12
+- **Read this:** [Debugging Node.js](https://nodejs.org/learn/getting-started/debugging) · nodejs.org · `--inspect` listens on `127.0.0.1:9229` by default; binding to `0.0.0.0` lets anyone who can reach it run code (*read*) · covers our angle: **partial** — no Docker publishing · fetched 2026-10-12
+- **Also good:** [Node.js language-specific guide](https://docs.docker.com/guides/nodejs/) · docs.docker.com · `--inspect=0.0.0.0:9229` in the dev script, attach from VS Code or Chrome DevTools; its launch config sets `sourceMaps` (*read*) · fetched 2026-10-12
 - **Our delta:** publish `127.0.0.1:9229:9229` only (host side), never in prod.
 
 ### T09-12 · A React/Vite frontend — Understand · ✅ written `docs/docker/pages/phase-9-mern-pern-stack/12-react-vite-frontend.md`

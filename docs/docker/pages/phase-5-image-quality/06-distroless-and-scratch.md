@@ -242,6 +242,18 @@ No. It removes software you were not using, so there is less to be vulnerable an
 less for an attacker to use after a compromise — and it makes scan reports much
 shorter. Your own code and dependencies are unaffected.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Distroless README (raw)](https://raw.githubusercontent.com/GoogleContainerTools/distroless/main/README.md) — GoogleContainerTools: `static-debian13` about 2 MiB, `debug` and `nonroot` tags, image list (*read*)
+- **Also good:** [Docker Hardened Images](https://docs.docker.com/dhi/) — docs.docker.com: free Community tier (Apache 2.0), distroless variants, non-root by default, SLSA Build Level 3 provenance; modified 2026-07-23 (*read*)
+- **Also good:** [Building minimal container images](https://edu.chainguard.dev/chainguard/containers/building-and-modifying/building-minimal-containers/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Alpine and musl](05-alpine-and-musl.md) · Index: [Phase 5](README.md) · Next → [Vulnerability scanning](07-vulnerability-scanning.md)

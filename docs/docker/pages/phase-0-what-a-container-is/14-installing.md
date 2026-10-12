@@ -167,6 +167,18 @@ the host filesystem.
 Yes, with separate image and container stores. Images pulled by one are not
 visible to the other; `skopeo copy` moves them if needed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Install Docker Engine](https://docs.docker.com/engine/install/) — Docker docs, modified 2026-09-11: per-platform procedures, release channels, support, licensing (*headings only*)
+- **Also good:** [Docker Desktop license agreement](https://docs.docker.com/subscription-billing/desktop-license/) — Docker docs, modified 2026-09-28: free for fewer than 250 employees AND under $10 million revenue, personal, education, non-commercial open source (*read*)
+- **Also good:** [Podman installation](https://podman.io/docs/installation)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Containers vs VMs vs serverless](13-containers-vs-vms.md) · Index: [Phase 0](README.md) · Start Phase 1 → [Running containers](../phase-1-running-containers/README.md)

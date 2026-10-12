@@ -171,6 +171,17 @@ The ones that change the filesystem — `RUN`, `COPY`, `ADD`. `ENV`, `WORKDIR`,
 `LABEL`, `EXPOSE`, `USER`, `CMD` and `ENTRYPOINT` modify the image configuration
 rather than adding filesystem layers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Understanding the image layers](https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/) — Docker docs, modified 2026-01-21: build an image and watch layers stack (*read* the headings, ≈1.5k words)
+- **Also good:** [Storage drivers](https://docs.docker.com/engine/storage/drivers/) — Docker docs: multiple containers share an image (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [pull, push, images, tag and rmi](03-pull-push-tag.md) · Index: [Phase 2](README.md) · Next → [Choosing a base image](05-choosing-a-base-image.md)

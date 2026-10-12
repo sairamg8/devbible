@@ -161,6 +161,16 @@ The digest is the content hash, so it names exactly one set of bytes and the
 registry cannot substitute others. A tag is a mutable pointer that can be moved
 to a different image at any time.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Open Container Initiative overview](https://opencontainers.org/about/overview/) — opencontainers.org: three specs: runtime, image, distribution (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [OverlayFS and copy-up](07-overlayfs.md) · Index: [Phase 0](README.md) · Next → [Capabilities](09-capabilities.md)

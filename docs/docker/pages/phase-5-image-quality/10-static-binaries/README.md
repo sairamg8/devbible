@@ -33,6 +33,17 @@ topic is the linking question underneath it, in two parts.
 **Read 01 first** — part 02's argument about Node depends on the distinction 01
 draws between a linking property and a packaging one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Building minimal container images](https://edu.chainguard.dev/chainguard/containers/building-and-modifying/building-minimal-containers/) — Chainguard, 28 Sep 2026: `CGO_ENABLED=0`, no C library in the static image, scratch lacks CA certs, time zones, `/tmp` (*read*)
+- **Also good:** [Go language-specific guide](https://docs.docker.com/guides/golang/) — docs.docker.com: Dockerfile with `CGO_ENABLED=0 GOOS=linux go build` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Supply-chain risk](../09-supply-chain-risk.md) · Index: [Phase 5](../README.md) · Next → [SBOMs and provenance](../11-sbom-and-provenance.md)

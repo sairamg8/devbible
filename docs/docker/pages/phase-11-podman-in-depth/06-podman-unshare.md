@@ -229,6 +229,16 @@ creating a user namespace for file work. It is how you reach a rootless
 container's IP directly from the host, which otherwise does not work because
 that address only exists inside the network namespace.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman unshare](https://docs.podman.io/en/latest/markdown/podman-unshare.1.html) — Podman docs: launches a process in a new user namespace, defaulting to `$SHELL` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Where Podman will bite you](05-where-podman-bites/README.md) · Index: [Phase 11](README.md) · Next → [07 · `--userns`: `keep-id`, `nomap`, `auto`](07-userns-modes.md)

@@ -149,6 +149,16 @@ element containing a space asks the kernel to execute a binary literally named
 Time a `docker stop`. A consistent ten seconds means `SIGTERM` is going nowhere —
 either shell form, or an entrypoint script missing `exec "$@"`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · Shell and exec form](https://docs.docker.com/reference/dockerfile/#shell-and-exec-form) — docs.docker.com: exec form, shell form, choosing another shell; the `ENTRYPOINT` section says shell form runs under `/bin/sh -c`, is not PID 1 and does not get `SIGTERM` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [CMD versus ENTRYPOINT](05-cmd-vs-entrypoint.md) · Index: [Phase 3](README.md) · Next → [ENV versus ARG](07-env-vs-arg.md)

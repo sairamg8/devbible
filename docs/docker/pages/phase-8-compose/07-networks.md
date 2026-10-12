@@ -248,6 +248,16 @@ notes it is not required for basic service-to-service communication. It predates
 user-defined networks and there is no reason to use it in new work — `aliases`
 under a network does the same job more clearly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Networking in Compose](https://docs.docker.com/compose/how-tos/networking/) — docs.docker.com: one default bridge network per app, service-name DNS, custom and external networks, extra hosts, debugging; modified 2026-08-16 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Healthchecks in Compose](06-healthchecks/README.md) · Index: [Phase 8](README.md) · Next → [Volumes in Compose](08-volumes.md)

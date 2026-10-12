@@ -204,6 +204,16 @@ Yes — values are substituted before the instruction is compared, so changing o
 invalidates that instruction and everything after it. Consume commit- and
 version-derived arguments late in the file.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Build variables](https://docs.docker.com/build/building/variables/) — docs.docker.com: build arguments parameterise the Dockerfile, environment variables persist into the container; modified 2026-08-04 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Cache import and export](12-cache-import-export.md) · Index: [Phase 4](README.md) · Next → [`docker build` vs `podman build` vs `buildah`](14-docker-vs-podman-vs-buildah.md)

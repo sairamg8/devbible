@@ -69,6 +69,17 @@ under Docker.
 - [13 · Docker CLI compatibility](../13-docker-cli-compatibility.md) — the API
   socket in anger, for Testcontainers and friends
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman(1)](https://docs.podman.io/en/latest/markdown/podman.1.html) — Podman docs: "a fully featured container engine that is a simple daemonless tool" (*read* description)
+- **Also good:** [podman system service](https://docs.podman.io/en/latest/markdown/podman-system-service.1.html) — Podman docs: the API service is optional and can be socket-activated on demand (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Start → [01 · What runs instead of a daemon](01-what-runs-instead.md)

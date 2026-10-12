@@ -176,6 +176,17 @@ A process gaining privileges through `execve()` — principally via setuid
 binaries. It closes a standard escalation path inside the container at almost no
 compatibility cost.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Running containers: runtime privilege and Linux capabilities](https://docs.docker.com/engine/containers/run/#runtime-privilege-and-linux-capabilities) — Docker docs, modified 2026-05-13: `--cap-add`, `--cap-drop`, `--privileged` gives access to devices; table of default capabilities (*read*)
+- **Also good:** [capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html) — Linux man-pages: `CAP_SYS_ADMIN` is overloaded, with later splits such as `CAP_BPF` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The OCI specifications](08-oci-specs.md) · Index: [Phase 0](README.md) · Next → [seccomp, AppArmor and SELinux](10-seccomp-apparmor-selinux.md)

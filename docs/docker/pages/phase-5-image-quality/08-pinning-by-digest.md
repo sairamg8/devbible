@@ -194,6 +194,17 @@ The manifest **list** digest, not a per-platform manifest's — otherwise every
 architecture gets the one image you pinned. Read it from the registry with
 `docker buildx imagetools inspect --raw`, which needs no pull.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Renovate · Docker](https://docs.renovatebot.com/docker/) — renovatebot.com: "pin your Docker images to an exact digest"; tags are not immutable; digest updating (*read*)
+- **Also good:** [Building best practices · Pin base image versions](https://docs.docker.com/build/building/best-practices/#pin-base-image-versions) — docs.docker.com: tag-plus-digest form, and that pinning opts out of automatic fixes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Vulnerability scanning](07-vulnerability-scanning.md) · Index: [Phase 5](README.md) · Next → [Supply-chain risk](09-supply-chain-risk.md)

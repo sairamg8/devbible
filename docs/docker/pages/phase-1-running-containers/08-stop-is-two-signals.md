@@ -162,6 +162,17 @@ Longer than your longest expected in-flight operation. Ten seconds is a default,
 not an analysis; a queue worker processing minute-long jobs needs far more, and
 setting it shorter simply chooses to cut work off.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker container stop](https://docs.docker.com/reference/cli/docker/container/stop/) — Docker docs: `SIGTERM`, then `SIGKILL` after a grace period; `STOPSIGNAL` or `--stop-signal` changes the first (*read*)
+- **Also good:** [docker container attach](https://docs.docker.com/reference/cli/docker/container/attach/) — Docker docs: PID 1 ignores signals with the default action (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The container lifecycle](07-lifecycle.md) · Index: [Phase 1](README.md) · Next → [Exit codes](09-exit-codes.md)

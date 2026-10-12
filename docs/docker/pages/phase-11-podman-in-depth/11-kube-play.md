@@ -191,6 +191,17 @@ A Quadlet `.kube` unit pointing at the YAML file, so systemd owns the lifecycle
 with the same dependency and restart handling as a `.container` unit. Running
 `kube play` by hand is for iterating, not for deployment.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman kube play](https://docs.podman.io/en/latest/markdown/podman-kube-play.1.html) — Podman docs: creates containers, pods and volumes from Kubernetes YAML (*read* intro, rest *headings only*)
+- **Also good:** [podman kube generate](https://docs.podman.io/en/latest/markdown/podman-kube-generate.1.html) — Podman docs: generates Pod YAML from containers, pods or volumes (*read* intro)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`podman auto-update`](10-auto-update.md) · Index: [Phase 11](README.md) · Next → [12 · Buildah and Skopeo](12-buildah-and-skopeo.md)

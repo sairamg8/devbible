@@ -250,6 +250,16 @@ No. Only the `--parents` variant needs care: Buildah ignores the `# syntax=`
 directive, so newer Dockerfile features depend on the installed Buildah version
 rather than on a pinned frontend.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optimize cache usage in builds · Order your layers](https://docs.docker.com/build/cache/optimize/#order-your-layers) — docs.docker.com: copy `package.json` and the lockfile, install, then copy source; before/after Dockerfiles (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Instruction ordering](02-instruction-ordering.md) · Index: [Phase 4](README.md) · Next → [Multi-stage builds](04-multi-stage-builds.md)

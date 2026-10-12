@@ -191,6 +191,18 @@ packages from a live mirror, the mirror is outside your control. The realistic
 goal is that every input is pinned or recorded, so any difference between two
 builds is explicable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reproducible builds with GitHub Actions](https://docs.docker.com/build/ci/github-actions/reproducible-builds/) — docs.docker.com: sets `SOURCE_DATE_EPOCH` to 0 or to the Git commit timestamp; modified 2026-02-05 (*read*)
+- **Also good:** [SOURCE_DATE_EPOCH](https://reproducible-builds.org/docs/source-date-epoch/) — reproducible-builds.org: the standard variable (*read*)
+- **Also good:** [Build cache invalidation](https://docs.docker.com/build/cache/invalidation/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The build context](15-the-build-context.md) · Index: [Phase 4](README.md) · Next phase → [Phase 5 · Image quality, size and supply chain](../phase-5-image-quality/README.md)

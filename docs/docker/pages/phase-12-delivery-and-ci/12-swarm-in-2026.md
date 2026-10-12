@@ -167,6 +167,17 @@ which engine your CLI is pointed at ([10](10-docker-context.md)), the costs
 nobody labels ([11](11-cost-realities.md)), and choosing a platform on ecosystem
 grounds as much as technical ones ([12](12-swarm-in-2026.md)).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Swarm mode](https://docs.docker.com/engine/swarm/) — Docker docs: Swarm mode is built into the Engine; Classic Swarm is no longer actively developed (*read* intro)
+- **Also good:** [Is Docker Swarm Still Safe in 2026?](https://www.virtualizationhowto.com/2026/03/is-docker-swarm-still-safe-in-2026/) — Virtualization Howto, March 23, 2026: no major features lately; says Mirantis committed to support through 2030 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Cost realities](11-cost-realities.md) · Index: [Phase 12](README.md) · Up: [Docker & Podman pages](../README.md)

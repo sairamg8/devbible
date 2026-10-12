@@ -232,6 +232,17 @@ backpressure to every container. The engine's dual-logging cache keeps
 `docker logs` working, and disabling it means losing local visibility exactly
 when the remote system is what has failed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JSON File logging driver](https://docs.docker.com/engine/logging/drivers/json-file/) — Docker docs: `max-size` and `max-file` example for `daemon.json`; values must be strings; file-based storage warning (*read*)
+- **Also good:** [Configure logging drivers](https://docs.docker.com/engine/logging/configure/) — Docker docs: driver list including `journald`; blocking versus non-blocking `mode` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Restart policies as supervision](07-restart-as-supervision.md) · Index: [Phase 10](README.md) · Next → [Healthchecks in production](09-healthchecks-in-production.md)

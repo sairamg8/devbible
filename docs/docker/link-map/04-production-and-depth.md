@@ -1,7 +1,7 @@
 ---
 title: "Link map · Docker and Podman · Part 4 (phases 10–12)"
 sidebar_label: "04 · Docker · Production and depth (10–12)"
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Link map · Docker and Podman · Part 4 — Production and depth (phases 10–12)

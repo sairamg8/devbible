@@ -42,6 +42,16 @@ environment rather than per build.
 - **[Phase 8 · 11 · Override files](../../phase-8-compose/11-override-files.md)** —
   Compose's way of varying the *run*, not the image.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [V. Build, release, run](https://12factor.net/build-release-run) — The Twelve-Factor App: strict separation of build and run stages (*read*, short)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Building images in CI](../02-building-in-ci.md) · Index: [Phase 12](../README.md) · Start → [Build once, promote the digest](01-build-once-promote.md)

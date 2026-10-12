@@ -49,6 +49,18 @@ the file moves.
   **[16 · include and extends](../16-include-and-extends.md)** are the two ways one
   logical file becomes several.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Version and name top-level elements](https://docs.docker.com/reference/compose-file/version-and-name/) — docs.docker.com: `version` is kept for backward compatibility, informative only, and warns that it is obsolete if used; Compose always validates against the newest schema (*read*; modified 2025-07-09)
+- **Also good:** [Compose file reference](https://docs.docker.com/reference/compose-file/) — docs.docker.com: the top-level elements; modified 2026-05-28 (*headings only*)
+- **Also good:** [compose-spec.io](https://compose-spec.io/) — Compose Specification site: the open spec itself (*headings only*, a short landing page)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What Compose is](../01-what-compose-is.md) · Index: [Phase 8](../README.md) · Start → [The Specification and the file](01-the-spec-and-the-file.md)

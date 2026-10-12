@@ -173,6 +173,16 @@ never see them. `firewalld` is integrated with better (Docker creates a `docker`
 zone), but the safe habit either way is to bind `127.0.0.1` rather than to rely
 on the host firewall.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Port publishing and mapping](https://docs.docker.com/engine/network/port-publishing/) — Docker docs: published ports are reachable from outside the host; `-p 127.0.0.1:8080:80` limits them to the host; behaviour changed in releases before 28.0.0 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [exec versus run](04-exec-vs-run.md) · Index: [Phase 1](README.md) · Next → [Environment variables](06-environment.md)

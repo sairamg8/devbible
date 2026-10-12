@@ -254,6 +254,17 @@ value works?**
 A trailing newline. Editors add one, and the value read from the file is one
 character longer than the value that was typed. Trim on read.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Secrets in Compose](https://docs.docker.com/compose/how-tos/use-secrets/) — Docker docs: secrets mount as files at `/run/secrets/&lt;name&gt;`, Linux containers only (*read*)
+- **Also good:** [Environment variables in Compose](https://docs.docker.com/compose/how-tos/environment-variables/) — Docker docs: where to set them, precedence, interpolation (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Logs go to stdout and stderr](04-logs-to-stdout/README.md) · Index: [Phase 10](README.md) · Next → [The production failure catalogue](06-failure-catalogue/README.md)

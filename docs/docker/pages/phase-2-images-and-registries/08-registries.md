@@ -157,6 +157,17 @@ Not hard — they all implement the OCI distribution spec, so it is a retag and 
 credentials. What differs is auth mechanism, rate limits, retention policy and
 cost, not the protocol.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Docker Hub pull usage and limits](https://docs.docker.com/docker-hub/usage/pulls/) — Docker docs, modified 2026-09-03: per 6 hours: unauthenticated 100 per IPv4 address or IPv6 /64, Personal 200, Pro, Team and Business unlimited; a multi-arch pull counts once per architecture (*read*)
+- **Also good:** [What is a registry?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-registry/) — Docker docs (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The image config](07-image-config.md) · Index: [Phase 2](README.md) · Next → [Authentication](09-authentication.md)

@@ -139,6 +139,16 @@ No filesystem layer — it changes the image config. It can create a directory a
 side effect, which does affect the filesystem, but the instruction itself is
 metadata.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · WORKDIR](https://docs.docker.com/reference/dockerfile/#workdir) — docs.docker.com: applies to later `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, `ADD`; created if missing; relative paths stack (`/a/b/c` example) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [COPY versus ADD](03-copy-vs-add.md) · Index: [Phase 3](README.md) · Next → [CMD versus ENTRYPOINT](05-cmd-vs-entrypoint.md)

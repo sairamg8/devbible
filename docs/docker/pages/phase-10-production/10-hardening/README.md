@@ -65,6 +65,17 @@ and what it does not, and say why `--privileged` is not a stronger version of
   — where the
   posture stops being a command line and becomes a template
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html) — OWASP: set a user, limit capabilities, `--security-opt=no-new-privileges`, read-only filesystem, rootless mode, secrets (*read* rules 4 and 8, rest *headings only*)
+- **Also good:** [docker container run](https://docs.docker.com/reference/cli/docker/container/run/) — Docker docs: `--read-only`, `--cap-drop`, `--security-opt="no-new-privileges=true"` in the reference (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Start → [01 · The four switches](01-the-four-switches.md)

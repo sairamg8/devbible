@@ -214,6 +214,18 @@ come from the Podman CLI, from `.pod` Quadlet units, or from Kubernetes YAML via
 `podman kube play`. Mixing the two models over one stack is not worth the
 trouble — pick one per project.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman pod create](https://docs.podman.io/en/latest/markdown/podman-pod-create.1.html) — Podman docs: options and exit policy (*headings only* plus the infra and exit-policy passages *read*)
+- **Also good:** [podman pod ps](https://docs.podman.io/en/latest/markdown/podman-pod-ps.1.html) — Podman docs (*headings only*)
+- **Also good:** [podman network create](https://docs.podman.io/en/latest/markdown/podman-network-create.1.html) — Podman docs: the alternative to a pod (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`--userns` modes](07-userns-modes.md) · Index: [Phase 11](README.md) · Next → [09 · Quadlet vs `podman generate systemd`](09-quadlet-vs-generate-systemd.md)

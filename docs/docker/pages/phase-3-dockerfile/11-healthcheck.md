@@ -182,6 +182,16 @@ It is driven by systemd timers rather than a daemon loop, so the timer must exis
 for periodic checks to run and behaviour differs under rootless without
 lingering. `podman inspect` confirms what is actually happening.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · HEALTHCHECK](https://docs.docker.com/reference/dockerfile/#healthcheck) — docs.docker.com: defaults interval 30s, timeout 30s, start-period 0s, start-interval 5s, retries 3; status `starting`/`healthy`/`unhealthy` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [EXPOSE publishes nothing](10-expose.md) · Index: [Phase 3](README.md) · Next → [LABEL and image metadata](12-label-and-metadata.md)

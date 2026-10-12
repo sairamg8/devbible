@@ -188,6 +188,17 @@ git repository — or to override an image reference at build time with
 `docker-image://`, which is useful in CI and a bad default because the Dockerfile
 stops describing what was built.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Multi-stage builds · Use an external image as a stage](https://docs.docker.com/build/building/multi-stage/#use-an-external-image-as-a-stage) — docs.docker.com: `COPY --from=nginx:latest ...`, the client pulls the image if needed (*read*)
+- **Also good:** [Dockerfile reference · COPY --from](https://docs.docker.com/reference/dockerfile/#copy---from) — docs.docker.com: (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`--target` to stop at a stage](06-target.md) · Index: [Phase 4](README.md) · Next → [BuildKit](08-buildkit.md)

@@ -75,6 +75,17 @@ If you read nothing else, read these — each one fails **silently**:
 - **[Phase 10 · Running containers in production](../../phase-10-production/README.md)**
   takes the same file to a server, where nobody is watching it start.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js language-specific guide](https://docs.docker.com/guides/nodejs/) — docs.docker.com: one `compose.yaml` with an app, Postgres, `depends_on` `service_healthy`, a password secret, a named data volume and `develop.watch` (*read* the Compose file)
+- **Also good:** [Docker Compose startup order](https://docs.docker.com/compose/how-tos/startup-order/) — docs.docker.com: API, Postgres and Redis with a healthy-database gate (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Secrets in dev vs prod](../06-secrets-dev-vs-prod.md) · Index: [Phase 9](../README.md) · Start → [The file and its shape](01-the-file.md)

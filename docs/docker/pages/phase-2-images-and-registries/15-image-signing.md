@@ -165,6 +165,17 @@ Pin by digest and use identifiable publishers — most of the practical benefit,
 for almost no cost. Then sign in CI with keyless cosign, verify at deploy with
 the identity pinned, and enforce last, after auditing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cosign signing overview](https://docs.sigstore.dev/cosign/signing/overview/) — Sigstore docs: keyless signing ties an OIDC identity to an artifact via a short-lived certificate and a transparency log entry (*read*)
+- **Also good:** [Content trust in Docker](https://docs.docker.com/engine/security/trust/) — Docker docs: Docker Content Trust is "being retired"; the Notary v1 service shuts down on 8 Dec 2026 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Running your own registry](14-your-own-registry.md) · Index: [Phase 2](README.md) · Start Phase 3 → [The Dockerfile](../phase-3-dockerfile/README.md)

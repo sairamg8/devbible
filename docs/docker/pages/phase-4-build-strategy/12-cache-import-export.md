@@ -196,6 +196,18 @@ The same `--cache-from` / `--cache-to` flags against a repository, plus
 `--cache-ttl` for age limits. The catch is that both flags are ignored unless
 `--layers` is specified.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [GitHub Actions cache](https://docs.docker.com/build/cache/backends/gha/) — docs.docker.com: `--cache-to type=gha`, `--cache-from type=gha`, scope, `mode`, v2 cache service, API throttling; availability "Experimental"; modified 2026-09-28 (*read*)
+- **Also good:** [Cache storage backends](https://docs.docker.com/build/cache/backends/) — docs.docker.com: registry, S3, Azure, local, inline; modified 2026-02-21 (*headings only*)
+- **Also good:** [Optimize cache usage · Use an external cache](https://docs.docker.com/build/cache/optimize/#use-an-external-cache)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`buildx` and platforms](11-buildx-and-platforms.md) · Index: [Phase 4](README.md) · Next → [Build args versus runtime env](13-build-args-vs-runtime-env.md)

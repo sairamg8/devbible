@@ -226,6 +226,17 @@ the CLI, there are Podman-only options such as `o=noquota` and image-backed
 volumes, and — the practical one — a rootless user usually cannot mount an NFS
 or CIFS share at all, so the volume creates fine and the first container fails.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Volumes · Share data between machines](https://docs.docker.com/engine/storage/volumes/) — docs.docker.com: NFS, CIFS/Samba and block-storage examples, drivers abstract the storage system from the app (*read*)
+- **Also good:** [Docker volume plugins](https://docs.docker.com/engine/extend/plugins_volume/) — docs.docker.com: the `VolumeDriver` API; modified 2026-04-09 (*read* the intro; endpoints *headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Backing up and restoring a volume](10-backup-and-restore.md) · Index: [Phase 6](README.md) · Next → [Bind-mount performance on macOS and Windows](12-bind-mount-performance.md)

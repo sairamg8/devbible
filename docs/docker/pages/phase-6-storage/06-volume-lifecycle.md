@@ -258,6 +258,17 @@ and `-v /path` with no source — including the `- /app/node_modules` shadowing
 idiom. `--rm` cleans up the ones belonging to that container, which is why they
 pile up faster under Compose than under `docker run --rm`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Volumes](https://docs.docker.com/engine/storage/volumes/) — docs.docker.com: create and manage, anonymous volumes get removed with `--rm`, each container makes its own anonymous volume, remove all volumes (*read*)
+- **Also good:** [docker volume prune](https://docs.docker.com/reference/cli/docker/volume/prune/) — docs.docker.com: by default removes only anonymous unused volumes; `--all` also removes named ones (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [File ownership and UID mismatch](05-uid-mismatch/README.md) · Index: [Phase 6](README.md) · Next → [SELinux `:z` and `:Z`](07-selinux-z-and-Z.md)

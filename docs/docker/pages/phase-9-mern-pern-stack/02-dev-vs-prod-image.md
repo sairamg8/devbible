@@ -220,6 +220,17 @@ readable and they also hand your source to anyone who can pull the image. The
 usual answer is to generate them, upload them to the error tracker, and keep them
 out of the image.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/) — docs.docker.com: named stages, `--target`, stop at a stage; modified 2024-09-10 (*read*)
+- **Also good:** [Node.js language-specific guide](https://docs.docker.com/guides/nodejs/) — docs.docker.com: the "Use containers for Node.js development" section: updated Docker assets for dev, local database, watch, debug (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Containerising a Node/Express API](01-node-api-dockerfile/README.md) · Index: [Phase 9](README.md) · Next → [PostgreSQL in a container](03-postgres-in-a-container/README.md)

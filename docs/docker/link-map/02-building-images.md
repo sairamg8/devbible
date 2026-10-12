@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Link map · Docker · Part 2 (phases 3–5)
 
-Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 to T03-18 phase 3 (the Dockerfile), T04-01 to T04-16 phase 4 (build strategy), T05-01 to T05-12 phase 5 (image quality). That is 46 rows. Each has a page of ours (✅), except where one page carries two rows: T03-17 (`MAINTAINER`) sits on the LABEL page.
+Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 to T03-18 phase 3 (the Dockerfile), T04-01 to T04-16 phase 4 (build strategy), T05-01 to T05-12 phase 5 (image quality). That is 46 rows. Every row has a page of ours (✅); one page carries two rows: T03-17 (`MAINTAINER`) sits on the LABEL page.
 *read* = I read the passage; *headings only* = fetched, headings/size checked. Third-party links carry a date where the page shows one. `#anchors` are given only where the heading id was seen in the page HTML.
 
 🔴 **Version note (2026-10-12).** The Docker Engine 29 release notes list **29.9.0, dated 2026-10-08**; the syllabus README says 29.7.2, so it is behind by two minors. The Dockerfile reference was last modified 2026-10-08. The Podman version is **not confirmed**: docs.podman.io/en/latest shows no version number and github.com returns 403. `github.com` returns 403 to our fetcher, so READMEs are cited as `raw.githubusercontent.com` copies.
@@ -19,16 +19,16 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T03-01 · `FROM` — Understand · ✅ written `docs/docker/pages/phase-3-dockerfile/01-from.md`
 - **Read this:** [Dockerfile reference · FROM](https://docs.docker.com/reference/dockerfile/#from) · docs.docker.com · syntax, how `ARG` and `FROM` interact, multiple `FROM`s start stages (*read*) · covers our angle: **partial** — nothing on base image as attack surface · fetched 2026-10-12
 - **Also good:** [Building best practices · Choose the right base image](https://docs.docker.com/build/building/best-practices/#choose-the-right-base-image) · docs.docker.com · trusted source, keep it small, separate build and production bases (*read*) · fetched 2026-10-12
-- **Our delta:** inherited `USER` and `ENTRYPOINT` from the base; the best-practices FROM entry recommends Alpine, which our Phase 5 page weighs against glibc.
+- **Our delta:** inherited `USER` and `ENTRYPOINT` from the base; the best-practices base-image entry says "keep it small" but names no distro (it uses `alpine` only in the pinning example); the Alpine-versus-glibc trade is weighed on our Phase 5 page.
 
 ### T03-02 · `RUN` — Master · ✅ written `docs/docker/pages/phase-3-dockerfile/02-run.md`
 - **Read this:** [Building best practices · RUN](https://docs.docker.com/build/building/best-practices/#run) · docs.docker.com · `apt-get update && install` in one `RUN`, `rm -rf /var/lib/apt/lists/*`, `set -o pipefail`, heredoc alternative (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Dockerfile reference · RUN](https://docs.docker.com/reference/dockerfile/#run) · docs.docker.com · forms, cache invalidation for `RUN`, the `--mount` family (*headings only*) · fetched 2026-10-12
-- **Our delta:** why a later `rm` cannot shrink an earlier layer (the page says the lists clean-up reduces size because it is in the same statement).
+- **Our delta:** why a later `rm` cannot shrink an earlier layer: the page says the lists clean-up reduces size "since the apt cache isn't stored in a layer" but does not spell out the separate-`RUN` case.
 
 ### T03-03 · `COPY` vs `ADD` — Master · ✅ written `docs/docker/pages/phase-3-dockerfile/03-copy-vs-add.md`
-- **Read this:** [Dockerfile reference · ADD](https://docs.docker.com/reference/dockerfile/#add) · docs.docker.com · `ADD` sources (URL, git, archives), `--checksum`, `--keep-git-dir`, `--unpack`; `COPY` is a sibling section (*headings only*) · covers our angle: **partial** — no "prefer COPY" argument on the sections I could check · fetched 2026-10-12
-- **Also good:** [Building best practices · ADD or COPY](https://docs.docker.com/build/building/best-practices/#add-or-copy) · docs.docker.com · the recommendation itself (*headings only*; heading id seen, body not read) · fetched 2026-10-12
+- **Read this:** [Dockerfile reference · ADD](https://docs.docker.com/reference/dockerfile/#add) · docs.docker.com · `ADD` sources (URL, git, archives), `--checksum`, `--keep-git-dir`, `--unpack`; `COPY` is a sibling section (*read* the option table and `--checksum`/`--keep-git-dir` text) · covers our angle: **partial** — no "prefer COPY" argument in the reference · fetched 2026-10-12
+- **Also good:** [Building best practices · ADD or COPY](https://docs.docker.com/build/building/best-practices/#add-or-copy) · docs.docker.com · `COPY` for files between stages, `ADD` for remote URLs and auto-extract, bind mount instead of a temporary `COPY` (*read*) · fetched 2026-10-12
 - **Our delta:** `COPY --chown`/`--chmod` and ownership under `USER`; use `COPY` unless remote URL or auto-extract is wanted.
 
 ### T03-04 · `WORKDIR` — Understand · ✅ written `docs/docker/pages/phase-3-dockerfile/04-workdir.md`
@@ -36,7 +36,7 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 - **Our delta:** each `RUN` is its own shell, so `cd` ends with it (follows from the `WORKDIR` scope above, not stated there).
 
 ### T03-05 · `CMD` vs `ENTRYPOINT` — Master · ✅ written `docs/docker/pages/phase-3-dockerfile/05-cmd-vs-entrypoint.md`
-- **Read this:** [Dockerfile reference · Understand how CMD and ENTRYPOINT interact](https://docs.docker.com/reference/dockerfile/#understand-how-cmd-and-entrypoint-interact) · docs.docker.com · the interaction table; shell-form `ENTRYPOINT` ignores `CMD` and run arguments (*read* the ENTRYPOINT text; table *headings only*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [Dockerfile reference · Understand how CMD and ENTRYPOINT interact](https://docs.docker.com/reference/dockerfile/#understand-how-cmd-and-entrypoint-interact) · docs.docker.com · the interaction table; shell-form `ENTRYPOINT` ignores `CMD` and run arguments (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Building best practices · CMD](https://docs.docker.com/build/building/best-practices/#cmd) · docs.docker.com · use `CMD ["executable", "param"]` for services (*read*) · fetched 2026-10-12
 - **Our delta:** the "ENTRYPOINT is the program, CMD its default arguments" model and `--entrypoint` override are ours.
 
@@ -45,9 +45,9 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 - **Our delta:** the Node-specific consequence (`node server.js` and `docker stop` waiting out its timeout) is ours; the page names `docker stop` and `SIGTERM` but not Node.
 
 ### T03-07 · `ENV` vs `ARG` — Master · ✅ written `docs/docker/pages/phase-3-dockerfile/07-env-vs-arg.md`
-- **Read this:** [Build variables](https://docs.docker.com/build/building/variables/) · docs.docker.com · similarities and differences, scoping (global `ARG` is not visible in a stage until redeclared), pre-defined args; points to secret mounts for secrets (*read*) · covers our angle: **partial** — `docker history` exposure not confirmed in the passages I read · fetched 2026-10-12
+- **Read this:** [Build variables](https://docs.docker.com/build/building/variables/) · docs.docker.com · similarities and differences, scoping (global `ARG` is not visible in a stage until redeclared), pre-defined args; warns args "may persist" in provenance and image history, points to secret mounts (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Dockerfile reference · ARG](https://docs.docker.com/reference/dockerfile/#arg) · docs.docker.com · scope, predefined ARGs, impact on build caching (*headings only*) · fetched 2026-10-12
-- **Our delta:** why an `ARG` secret is readable in `docker history`; use T04-05.
+- **Our delta:** the page says only that build args "may persist" in the image history; the `docker history` demonstration is ours. Secrets: T04-05.
 
 ### T03-08 · `.dockerignore` — Master · ✅ written `docs/docker/pages/phase-3-dockerfile/08-dockerignore.md`
 - **Read this:** [Build context · .dockerignore files](https://docs.docker.com/build/concepts/context/#dockerignore-files) · docs.docker.com · file lives at the context root, patterns removed from the context before sending, faster builds with a remote builder (*read*) · covers our angle: **partial** — no `.env`/`.git` leak argument · fetched 2026-10-12
@@ -69,7 +69,8 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T03-12 · `LABEL` and OCI annotation keys — Know · ✅ written `docs/docker/pages/phase-3-dockerfile/12-label-and-metadata.md`
 - **Read this:** [OCI image annotations (raw)](https://raw.githubusercontent.com/opencontainers/image-spec/main/annotations.md) · opencontainers/image-spec · defines `org.opencontainers.image.source`, `.revision`, `.version`, `.vendor`, `.licenses` (*read*) · covers our angle: **partial** — spec, no Dockerfile syntax · fetched 2026-10-12
 - **Also good:** [Dockerfile reference · LABEL](https://docs.docker.com/reference/dockerfile/#label) · docs.docker.com · syntax and quoting (*headings only*) · fetched 2026-10-12
-- **Our delta:** setting `revision` from `git rev-parse` through a build arg. A related page, [Annotations](https://docs.docker.com/build/metadata/annotations/), is manifest-level and *headings only*.
+- **Our delta:** setting `revision` from `git rev-parse` through a build arg.
+- *Checked, not chosen:* [Annotations](https://docs.docker.com/build/metadata/annotations/) · docs.docker.com · manifest-level, not image config labels (*headings only*).
 
 ### T03-13 · `VOLUME` in a Dockerfile — Know · ✅ written `docs/docker/pages/phase-3-dockerfile/13-volume.md`
 - **Read this:** [Dockerfile reference · VOLUME](https://docs.docker.com/reference/dockerfile/#volume) · docs.docker.com · creates a mount point, data at that path in the image seeds the new volume, notes on specifying volumes (*read*) · covers our angle: **partial** — "usually should not be there" is not argued · fetched 2026-10-12
@@ -89,11 +90,11 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 - **Also good:** [Dockerfile reference · SHELL](https://docs.docker.com/reference/dockerfile/#shell) · docs.docker.com · (*headings only*) · fetched 2026-10-12
 
 ### T03-17 · `MAINTAINER` is deprecated — Know · ✅ written `docs/docker/pages/phase-3-dockerfile/12-label-and-metadata.md` (shared with T03-12)
-- **Read this:** [Dockerfile reference · MAINTAINER (deprecated)](https://docs.docker.com/reference/dockerfile/#maintainer-deprecated) · docs.docker.com · the heading marks it deprecated, `LABEL` is the replacement (*headings only*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [Dockerfile reference · MAINTAINER (deprecated)](https://docs.docker.com/reference/dockerfile/#maintainer-deprecated) · docs.docker.com · the section is marked deprecated and says `LABEL` is the more flexible replacement (*read*) · covers our angle: full · fetched 2026-10-12
 
 ### T03-18 · `ONBUILD` — When Needed · ✅ written `docs/docker/pages/phase-3-dockerfile/17-onbuild.md`
-- **Read this:** [Dockerfile reference · ONBUILD](https://docs.docker.com/reference/dockerfile/#onbuild) · docs.docker.com · trigger runs in the downstream build as if inserted right after `FROM`; has a limitations section (*read*) · covers our angle: full · fetched 2026-10-12
-- **Also good:** [Building best practices · ONBUILD](https://docs.docker.com/build/building/best-practices/#onbuild) · docs.docker.com · (*headings only*) · fetched 2026-10-12
+- **Read this:** [Dockerfile reference · ONBUILD](https://docs.docker.com/reference/dockerfile/#onbuild) · docs.docker.com · trigger runs in the downstream build as if inserted right after `FROM`; has a limitations section (*read*) · covers our angle: **partial** — no "why they surprise everyone" argument · fetched 2026-10-12
+- **Also good:** [Building best practices · ONBUILD](https://docs.docker.com/build/building/best-practices/#onbuild) · docs.docker.com · separate tag for `ONBUILD` images; `ADD`/`COPY` in `ONBUILD` fails if the downstream context lacks the file (*read*) · fetched 2026-10-12
 
 ---
 
@@ -146,7 +147,7 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T04-12 · Cache import/export — Know · ✅ written `docs/docker/pages/phase-4-build-strategy/12-cache-import-export.md`
 - **Read this:** [GitHub Actions cache](https://docs.docker.com/build/cache/backends/gha/) · docs.docker.com · `--cache-to type=gha`, `--cache-from type=gha`, scope, `mode`, v2 cache service, API throttling; availability "Experimental"; modified 2026-09-28 (*read*) · covers our angle: **partial** — one backend of several · fetched 2026-10-12
 - **Also good:** [Cache storage backends](https://docs.docker.com/build/cache/backends/) · docs.docker.com · registry, S3, Azure, local, inline; modified 2026-02-21 (*headings only*) · [Optimize cache usage · Use an external cache](https://docs.docker.com/build/cache/optimize/#use-an-external-cache) · docs.docker.com · (*read*) · fetched 2026-10-12
-- **Our delta:** Podman's equivalents `--cache-from`/`--cache-to` are ignored unless `--layers` is set (podman-build page, *read*).
+- **Our delta:** Podman's `--cache-from` is ignored unless `--layers` is set (podman-build page, *read*; the `--cache-to` entry does not repeat that note).
 
 ### T04-13 · Build args vs runtime env — Understand · ✅ written `docs/docker/pages/phase-4-build-strategy/13-build-args-vs-runtime-env.md`
 - **Read this:** [Build variables](https://docs.docker.com/build/building/variables/) · docs.docker.com · build arguments parameterise the Dockerfile, environment variables persist into the container; modified 2026-08-04 (*read*) · covers our angle: **partial** — the "baked-in value cannot change without rebuild" warning is ours · fetched 2026-10-12
@@ -170,14 +171,14 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 
 ### T05-01 · Where size actually goes — Understand · ✅ written `docs/docker/pages/phase-5-image-quality/01-where-size-goes.md`
 - **Read this:** [Building best practices](https://docs.docker.com/build/building/best-practices/) · docs.docker.com · small base, separate build and runtime stages, no unnecessary packages; modified 2026-09-04 (*read*) · covers our angle: **partial** — no numbers · fetched 2026-10-12
-- **Also good:** [Choosing the best Node.js Docker image](https://snyk.io/blog/choosing-the-best-node-js-docker-image/) · Snyk, 29 Sep 2022 · size and CVE comparison of Node tags; figures are from 2022 and will have moved (*read* the alpine and distroless sections) · fetched 2026-10-12
+- **Also good:** [Choosing the best Node.js Docker image](https://snyk.io/blog/choosing-the-best-node-js-docker-image/) · Snyk, Sep 2022 (editor's note 31 Aug 2023) · size and CVE comparison of Node tags; figures are dated and will have moved (*read* the alpine and distroless sections) · fetched 2026-10-12
 
 ### T05-02 · The classic mistakes — Master · ✅ written `docs/docker/pages/phase-5-image-quality/02-classic-mistakes.md`
 - **Read this:** [Building best practices · RUN](https://docs.docker.com/build/building/best-practices/#run) · docs.docker.com · `apt` lists removal, `--no-install-recommends` (*read*) · covers our angle: **partial** — nothing on `npm` cache, `.git`, `node_modules` or secrets in layers · fetched 2026-10-12
 - **Also good:** [Build secrets](https://docs.docker.com/build/building/secrets/) · docs.docker.com · the fix for secrets in an early layer (*read*) · fetched 2026-10-12
 
 ### T05-03 · Least privilege in the image — Master · ✅ written `docs/docker/pages/phase-5-image-quality/03-least-privilege.md`
-- **Read this:** [Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html) · OWASP · rule 2 set a user, rule 3 limit capabilities, rule 8 `--read-only` with `--tmpfs`, rule 11 rootless (*read* rules 2 and 8; the rest *headings only*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html) · OWASP · rule 2 set a user, rule 3 limit capabilities, rule 8 `--read-only` with `--tmpfs`, rule 11 rootless (*read* rules 2, 3 and 8; rule 11 *headings only*) · covers our angle: full · fetched 2026-10-12
 
 ### T05-04 · Measuring — Understand · ✅ written `docs/docker/pages/phase-5-image-quality/04-measuring.md`
 - **Read this:** [dive README (raw)](https://raw.githubusercontent.com/wagoodman/dive/main/README.md) · github (raw) · layer-by-layer contents, added/removed files, an experimental "image efficiency" score for wasted space (*read*) · covers our angle: **partial** — a third-party tool, not `docker history`; it is described as an experimental metric · fetched 2026-10-12
@@ -185,8 +186,8 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 - **Our delta:** why a deleted file in a later layer still counts: our own explanation.
 
 ### T05-05 · Alpine and musl — Understand · ✅ written `docs/docker/pages/phase-5-image-quality/05-alpine-and-musl.md`
-- **Read this:** [docker-node README (raw)](https://raw.githubusercontent.com/nodejs/docker-node/main/README.md) · nodejs/docker-node · `node:alpine` has no `git`/`bash`; `gcompat` for glibc binaries; musl builds are Experimental tier, tested for amd64 only (*read*) · covers our angle: **partial** — nothing on DNS or performance · fetched 2026-10-12
-- **Also good:** [Choosing the best Node.js Docker image](https://snyk.io/blog/choosing-the-best-node-js-docker-image/) · Snyk, 29 Sep 2022 · alpine at 167MB, 64MB under slim at the time (*read*) · fetched 2026-10-12
+- **Read this:** [docker-node README (raw)](https://raw.githubusercontent.com/nodejs/docker-node/main/README.md) · nodejs/docker-node · `node:alpine` has no `git`/`bash`; `gcompat` for glibc binaries; `amd64` musl builds are listed under the Experimental tier (*read*) · covers our angle: **partial** — nothing on DNS or performance · fetched 2026-10-12
+- **Also good:** [Choosing the best Node.js Docker image](https://snyk.io/blog/choosing-the-best-node-js-docker-image/) · Snyk, Sep 2022 (editor's note 31 Aug 2023) · alpine at 167MB, 64MB under slim at the time (*read*) · fetched 2026-10-12
 - *Checked, not chosen:* Alpine wiki "Comparison with other distros" (wiki.alpinelinux.org) (403 to our fetcher).
 
 ### T05-06 · Distroless and `scratch` — Understand · ✅ written `docs/docker/pages/phase-5-image-quality/06-distroless-and-scratch.md`

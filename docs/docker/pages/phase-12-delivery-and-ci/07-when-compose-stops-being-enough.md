@@ -192,6 +192,16 @@ cause downtime, a person deciding which service runs where, a host failure
 paging someone to move things by hand, teams coordinating deploys in chat. One is
 a nuisance; three is a threshold.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [When to Use Docker Compose vs. Kubernetes](https://earthly.dev/blog/dockercompose-vs-k8s/) — Earthly blog, date not shown: contents list: scalability, reliability, self-healing versus quick local setup (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Deploying without an orchestrator](06-deploying-without-an-orchestrator.md) · Index: [Phase 12](README.md) · Next → [08 · Kubernetes on-ramp](08-kubernetes-on-ramp.md)

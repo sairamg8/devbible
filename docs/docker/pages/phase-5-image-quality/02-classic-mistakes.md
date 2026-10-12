@@ -263,6 +263,17 @@ In a single-stage build the un-pruned tree is already in an earlier layer, so th
 image keeps the bytes. Build in one stage and install production dependencies
 fresh in the runtime stage.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Building best practices · RUN](https://docs.docker.com/build/building/best-practices/#run) — docs.docker.com: `apt` lists removal, `--no-install-recommends` (*read*)
+- **Also good:** [Build secrets](https://docs.docker.com/build/building/secrets/) — docs.docker.com: the fix for secrets in an early layer (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Where size actually goes](01-where-size-goes.md) · Index: [Phase 5](README.md) · Next → [Least privilege in the image](03-least-privilege.md)

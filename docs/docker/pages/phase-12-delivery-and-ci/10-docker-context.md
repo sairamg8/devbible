@@ -147,6 +147,16 @@ No. It moves the pointer, not the credential — the SSH key, socket permission 
 network path still has to exist on the other machine. Which is also the reason a
 context that *does* work is exactly as sensitive as the engine it points at.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Docker contexts](https://docs.docker.com/engine/manage-resources/contexts/) — Docker docs: `docker context use`, and `DOCKER_HOST`/`DOCKER_CONTEXT` or `--context` override the active context (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Rolling updates and rollback by hand](09-rolling-updates-by-hand.md) · Index: [Phase 12](README.md) · Next → [11 · Cost realities](11-cost-realities.md)

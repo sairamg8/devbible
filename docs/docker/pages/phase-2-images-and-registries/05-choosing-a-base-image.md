@@ -163,6 +163,17 @@ Official images are curated, rebuilt when their bases are patched, and
 documented. A community image means trusting that publisher with everything your
 service does, on every rebuild, indefinitely.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Building best practices: choose the right base image](https://docs.docker.com/build/building/best-practices/#choose-the-right-base-image) — Docker docs: (*headings only*)
+- **Also good:** [Distroless README (raw)](https://raw.githubusercontent.com/GoogleContainerTools/distroless/main/README.md) — github (raw): images with only your application and its runtime dependencies (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Layers](04-layers.md) · Index: [Phase 2](README.md) · Next → [Reading docker history](06-history.md)

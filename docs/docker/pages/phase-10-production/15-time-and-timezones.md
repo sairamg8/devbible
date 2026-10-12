@@ -189,6 +189,16 @@ a glibc image's locale-specific sorting and formatting. Anything that must be
 stable should be sorted and formatted explicitly rather than inherited from the
 base image.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to Set Container Timezone in Docker](https://oneuptime.com/blog/post/2026-01-16-docker-container-timezone/view) — OneUptime, Jan 16, 2026: default UTC, `TZ` env var, tzdata must be installed on Alpine and Ubuntu (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Running containers under systemd](14-under-systemd.md) · Index: [Phase 10](README.md) · Next → [Zero-downtime restarts without an orchestrator](16-zero-downtime-restarts.md)

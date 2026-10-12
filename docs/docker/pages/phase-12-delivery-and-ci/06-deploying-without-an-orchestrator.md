@@ -192,6 +192,17 @@ or deploys by `git pull`, and production drifts from anything in version control
 Deploying an image by digest with the host configuration under review is what
 keeps it honest.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Use Compose in production](https://docs.docker.com/compose/how-tos/production/) — Docker docs: production overrides, `restart` policy, "Running Compose on a single server" (*read* headings and intro)
+- **Also good:** [podman-systemd.unit(5)](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html) — Podman docs: the Quadlet option (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Testing with containers](05-testing-with-containers.md) · Index: [Phase 12](README.md) · Next → [07 · When Compose stops being enough](07-when-compose-stops-being-enough.md)

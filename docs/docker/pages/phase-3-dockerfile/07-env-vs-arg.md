@@ -208,6 +208,17 @@ Predefined build args describing the target and build platforms, used to
 cross-compile natively in a multi-platform build instead of running the toolchain
 under QEMU emulation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Build variables](https://docs.docker.com/build/building/variables/) — docs.docker.com: similarities and differences, scoping (global `ARG` is not visible in a stage until redeclared), pre-defined args; warns args "may persist" in provenance and image history, points to secret mounts (*read*)
+- **Also good:** [Dockerfile reference · ARG](https://docs.docker.com/reference/dockerfile/#arg) — docs.docker.com: scope, predefined ARGs, impact on build caching (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Exec form versus shell form](06-exec-vs-shell-form.md) · Index: [Phase 3](README.md) · Next → [.dockerignore](08-dockerignore.md)

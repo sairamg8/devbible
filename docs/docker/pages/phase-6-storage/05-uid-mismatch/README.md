@@ -44,6 +44,17 @@ the right fix without trying three.
 - [09 · `--userns=keep-id`](../09-userns-keep-id.md) is chunk 03's second fix in
   full.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Understanding rootless Podman's user namespace modes](https://www.redhat.com/en/blog/rootless-podman-user-namespace-modes) — Red Hat blog: table of host UID versus container UID for default, `keep-id`, `auto`, `nomap`; page shows January 25, 2023; metadata published 2023-01-11, modified 2025-11-21 (*read*)
+- **Also good:** [Podman rootless tutorial (raw)](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/rootless_tutorial.md) — containers/podman: `/etc/subuid` and `/etc/subgid` ranges, `podman unshare ls -ldn` to see mapped owners, 65534 means unmapped (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Bind mounts in development](../04-bind-mounts-in-development/README.md) · Index: [Phase 6](../README.md) · Start → [A UID is just a number](01-a-uid-is-just-a-number.md)

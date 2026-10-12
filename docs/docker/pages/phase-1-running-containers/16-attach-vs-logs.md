@@ -122,6 +122,17 @@ Only when you need PID 1's own stdin — an interactive REPL running as the main
 process. Otherwise `exec -it` is better: it creates a separate process, so
 nothing you type can signal the main one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker container attach](https://docs.docker.com/reference/cli/docker/container/attach/) — Docker docs: detach with CTRL-p CTRL-q when run with `-i -t`; `--sig-proxy` makes CTRL-c a SIGINT to the container (*read*)
+- **Also good:** [docker container logs](https://docs.docker.com/reference/cli/docker/container/logs/) — Docker docs: `-f`, `--follow` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [docker cp](15-docker-cp.md) · Index: [Phase 1](README.md) · Start Phase 2 → [Images, layers and registries](../phase-2-images-and-registries/README.md)

@@ -185,6 +185,17 @@ cgroups v1 support was removed, BoltDB support was dropped in favour of SQLite
 with automatic migration, and Intel macOS and Windows 10 hosts are no longer
 supported. On a current Linux distribution the first two are invisible.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [conmon README (raw)](https://raw.githubusercontent.com/containers/conmon/main/README.md) — github (raw): conmon sits between a container manager (Podman, CRI-O) and an OCI runtime (runc, crun) (*read*)
+- **Also good:** [Podman README (raw)](https://raw.githubusercontent.com/containers/podman/main/README.md) — github (raw): "No manager daemon" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The runtime stack, Docker](05-runtime-stack-docker.md) · Index: [Phase 0](README.md) · Next → [OverlayFS and copy-up](07-overlayfs.md)

@@ -39,6 +39,18 @@ storage bugs in this phase.
 - **[Phase 3 · `VOLUME`](../../phase-3-dockerfile/13-volume.md)** is where
   anonymous volumes come from.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Volumes](https://docs.docker.com/engine/storage/volumes/) — docs.docker.com: when to use volumes, lifecycle, named versus anonymous, populate-from-image, read-only, drivers, backup (*read*; modified 2026-07-21)
+- **Also good:** [Bind mounts](https://docs.docker.com/engine/storage/bind-mounts/) — docs.docker.com: host path mounted in, files already in the target directory are obscured (*read*)
+- **Also good:** [tmpfs mounts](https://docs.docker.com/engine/storage/tmpfs/) — docs.docker.com: Linux only, not shareable between containers, counts toward the container memory limit (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The container filesystem is disposable](../01-filesystem-is-disposable.md) · Index: [Phase 6](../README.md) · Start → [The three types, and named volumes](01-named-volumes.md)

@@ -178,6 +178,16 @@ Not fully. Linux engines yes; Docker Desktop from 4.34 with the feature enabled;
 Windows containers not at all. Anything that must run on every teammate's
 machine is better off with a published port.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Host network driver](https://docs.docker.com/engine/network/drivers/host/) — docs.docker.com: no isolation, no own IP, a port 80 bind is port 80 on the host; `-p` and `-P` are ignored with a warning; lists performance as a use case; Linux Engine and Desktop 4.34+; modified 2026-08-16 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Privileged ports rootless](09-privileged-ports-rootless.md) · Index: [Phase 7](README.md) · Next → [Debugging the network](11-debugging-the-network.md)

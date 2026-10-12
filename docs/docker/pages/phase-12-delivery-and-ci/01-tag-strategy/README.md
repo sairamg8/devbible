@@ -42,6 +42,16 @@ rollback you have actually tested.
 - **[Phase 10 · 16 · Zero-downtime restarts](../../phase-10-production/16-zero-downtime-restarts.md)** —
   the restart dance a rollback depends on.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Manage tags and labels with GitHub Actions](https://docs.docker.com/build/ci/github-actions/manage-tags-labels/) — Docker docs: `docker/metadata-action` with `type=sha`, `type=semver`, `type=ref,event=branch` (*read* the example workflow)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Phase 12 index](../README.md) · Start → [What a tag actually is](01-what-a-tag-is.md)

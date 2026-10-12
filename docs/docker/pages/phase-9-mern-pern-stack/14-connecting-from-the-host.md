@@ -211,6 +211,18 @@ exactly one entry and it should belong to the proxy. Everything else that needs 
 access uses `exec`, and anything genuinely needed for development lives in the
 override file, which production never loads.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [postgres image README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/postgres/README.md) — docker-library/docs: connecting with `psql` from a second container on the same network (*read*)
+- **Also good:** [Port publishing and mapping](https://docs.docker.com/engine/network/port-publishing/) — docs.docker.com: `-p 192.168.1.100:8080:80` binds one host address; plain `-p` listens on any (*read*)
+- **Also good:** [psql](https://www.postgresql.org/docs/current/app-psql.html) — postgresql.org: connection options `-h`, `-p`, `-U`, `-d` (*headings only*, 127k characters)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Nginx in front of the API](13-nginx-in-front.md) · Index: [Phase 9](README.md) · Next → [Phase 10 · Running containers in production](../phase-10-production/README.md)

@@ -169,6 +169,17 @@ shared across every container using that image. Copy-up breaks that sharing for
 the copied file, which is one more reason to keep hot files off the union
 filesystem.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [OverlayFS storage driver](https://docs.docker.com/engine/storage/drivers/overlayfs-driver/) — Docker docs: `copy_up` copies the entire file, even if only a small part changes (*read*)
+- **Also good:** [Overlay Filesystem](https://docs.kernel.org/filesystems/overlayfs.html) — kernel.org: lower, upper, copy up, metacopy (*read* the copy-up passage)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The runtime stack, Podman](06-runtime-stack-podman.md) · Index: [Phase 0](README.md) · Next → [The OCI specifications](08-oci-specs.md)

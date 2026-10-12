@@ -140,6 +140,16 @@ Piping data into a container from a script: `echo "SELECT 1;" | docker exec -i d
 psql`. Input is needed, a terminal is not, and it works in an environment with no
 TTY.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker container run](https://docs.docker.com/reference/cli/docker/container/run/) — Docker docs: `-i` keeps STDIN open even if not attached (*read* the option table)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Exit codes](09-exit-codes.md) · Index: [Phase 1](README.md) · Next → [Overriding ENTRYPOINT and CMD](11-overriding-entrypoint.md)

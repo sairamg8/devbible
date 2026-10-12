@@ -267,6 +267,17 @@ under `~/.local/share/containers/storage/`, which means your own scripts and
 your home-directory quota can affect them without root, and that rootful
 `sudo podman` uses a completely separate store under `/var/lib/containers/`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Persisting container data](https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/) — docs.docker.com: each container gets its own file changes, deleted with the container; restarting a database should not mean an empty one (*read*)
+- **Also good:** [Storage drivers](https://docs.docker.com/engine/storage/drivers/) — docs.docker.com: the thin writable "container layer" holds every change and does not persist after the container is deleted (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 6](README.md) · Next → [Volumes, bind mounts and tmpfs](02-volumes-bind-mounts-tmpfs/README.md)

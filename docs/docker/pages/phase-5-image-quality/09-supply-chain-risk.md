@@ -195,6 +195,17 @@ Not the risk model. It adds one surface: short-name resolution is configured per
 host, so an unqualified reference can resolve differently on different machines.
 Fully qualify every image reference.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Trusted content](https://docs.docker.com/docker-hub/image-library/trusted-content/) — docs.docker.com: Official Images, Verified Publisher, Docker-Sponsored OSS, Hardened Images; modified 2026-09-09 (*read* the Official Images passage)
+- **Also good:** [Docker Security Cheat Sheet · Rule 13](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html) — OWASP: provenance, SBOM, signing, trusted registry, secure deployment (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Pinning base images by digest](08-pinning-by-digest.md) · Index: [Phase 5](README.md) · Next → [Static binaries](10-static-binaries/README.md)

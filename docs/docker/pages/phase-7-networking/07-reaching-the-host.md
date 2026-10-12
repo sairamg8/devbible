@@ -226,6 +226,17 @@ discovery on a shared network, which is portable, works in CI and does not
 depend on what happens to be installed on one developer's machine. Reaching out
 to the host is a bridge during migration, not a destination.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Docker Desktop networking how-tos](https://docs.docker.com/desktop/features/networking/networking-how-tos/) — docs.docker.com: `host.docker.internal` resolves to the host, with a curl example; modified 2026-09-29 (*read*)
+- **Also good:** [podman-run · host-gateway](https://docs.podman.io/en/latest/markdown/podman-run.1.html) — docs.podman.io: Podman adds `host.containers.internal` and `host.docker.internal` to `/etc/hosts`, and pasta uses `--map-guest-addr` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`network create` and friends](06-network-commands.md) · Index: [Phase 7](README.md) · Next → [Rootless networking](08-rootless-networking.md)

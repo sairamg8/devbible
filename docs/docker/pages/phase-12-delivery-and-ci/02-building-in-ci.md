@@ -218,6 +218,17 @@ only moves images can use Skopeo with no engine installed at all. The one rule i
 to pin whichever builder you choose, so a runner-image update does not silently
 change your build.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cache management with GitHub Actions](https://docs.docker.com/build/ci/github-actions/cache/) — Docker docs: inline, registry (`cache-from`/`cache-to`) and other cache exporters in a workflow (*read*)
+- **Also good:** [Cache storage backends](https://docs.docker.com/build/cache/backends/) — Docker docs: the backend list; the default `docker` driver supports inline, local, registry and gha only with the containerd image store enabled (*read* that passage, rest *headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Tag strategy](01-tag-strategy/README.md) · Index: [Phase 12](README.md) · Next → [03 · One image, three environments](03-one-image-three-environments/README.md)

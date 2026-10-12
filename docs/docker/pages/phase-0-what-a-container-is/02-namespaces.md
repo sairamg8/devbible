@@ -211,6 +211,17 @@ UID mapping: root inside maps to an unprivileged UID outside. It is the
 foundation of rootless containers, and it means a container escape lands as a
 normal user rather than as root — a genuine reduction in blast radius.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [namespaces(7)](https://man7.org/linux/man-pages/man7/namespaces.7.html) — Linux man-pages: table of every type with its flag, including Time (`/proc/PID/ns/time` since Linux 5.6) (*read* the table)
+- **Also good:** [user_namespaces(7)](https://man7.org/linux/man-pages/man7/user_namespaces.7.html) — Linux man-pages: UID mapping (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [A container is a process](01-a-container-is-a-process.md) · Index: [Phase 0](README.md) · Next → [cgroups v2](03-cgroups.md)

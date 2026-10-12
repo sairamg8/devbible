@@ -190,6 +190,18 @@ No. It makes the kernel kill it sooner. Limits bound the blast radius of a leak;
 they are not a tuning mechanism, and treating them as one produces a service that
 restarts on a timer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Resource constraints](https://docs.docker.com/engine/containers/resource_constraints/) — Docker docs, modified 2026-08-16: `--memory`, `--memory-swap`, `--cpus` change the container's cgroup settings; risks of running out of memory (*read*)
+- **Also good:** [Control Group v2](https://docs.kernel.org/admin-guide/cgroup-v2.html) — kernel.org: the authoritative file reference (*headings only*)
+- **Also good:** [Podman RELEASE_NOTES.md (raw)](https://raw.githubusercontent.com/containers/podman/main/RELEASE_NOTES.md)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Namespaces](02-namespaces.md) · Index: [Phase 0](README.md) · Next → [The image is not the container](04-image-vs-container.md)

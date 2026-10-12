@@ -220,6 +220,17 @@ stored twice with two independent rotation policies. Either set the container's 
 driver to `journald` and read everything with `journalctl -u`, or keep the driver
 and read with `docker logs` — but pick one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman-systemd.unit(5)](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html) — Podman docs: Quadlet unit types, `[Install]` with `WantedBy=default.target` (*read* intro and Install section)
+- **Also good:** [Start containers automatically → process manager](https://docs.docker.com/engine/containers/start-containers-automatically/) — Docker docs: using systemd with Docker, and why not to mix it with restart policies (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Disk growth](13-disk-growth.md) · Index: [Phase 10](README.md) · Next → [Time, timezones and locales](15-time-and-timezones.md)

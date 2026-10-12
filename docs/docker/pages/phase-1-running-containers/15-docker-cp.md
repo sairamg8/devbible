@@ -135,6 +135,16 @@ Ownership. `cp` preserves permission bits but the UID it writes as often does no
 match the non-root user the process runs as — and under rootless Podman the user
 namespace remaps it again. Fix with `chown`, or mount the file instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker container cp](https://docs.docker.com/reference/cli/docker/container/cp/) — Docker docs: copies between a container and the local filesystem, both ways (*read* the usage)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [user, workdir, hostname and add-host](14-user-workdir-hostname.md) · Index: [Phase 1](README.md) · Next → [attach versus logs -f](16-attach-vs-logs.md)

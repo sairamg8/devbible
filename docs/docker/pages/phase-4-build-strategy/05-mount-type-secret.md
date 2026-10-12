@@ -229,6 +229,17 @@ Yes — the same `RUN --mount=type=secret` syntax and a `--secret
 id=…[,src=…][,env=…][,type=file|env]` flag, mounted at `/run/secrets/id` by
 default, plus `--ssh` for the agent case.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Build secrets](https://docs.docker.com/build/building/secrets/) — docs.docker.com: secret mounts exist only for the build instruction; SSH mounts; modified 2026-05-19 (*read*)
+- **Also good:** [podman build](https://docs.podman.io/en/latest/markdown/podman-build.1.html) — docs.podman.io: `--secret=id=mysecret,src=.mysecret` used with the same `RUN --mount=type=secret` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Multi-stage builds](04-multi-stage-builds.md) · Index: [Phase 4](README.md) · Next → [`--target` to stop at a stage](06-target.md)

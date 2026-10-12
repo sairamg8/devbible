@@ -159,6 +159,17 @@ symptom.
 `ENTRYPOINT []` in your Dockerfile, or `--entrypoint ""` at run time. Otherwise
 your `CMD` is passed to the base's entrypoint as arguments.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · Understand how CMD and ENTRYPOINT interact](https://docs.docker.com/reference/dockerfile/#understand-how-cmd-and-entrypoint-interact) — docs.docker.com: the interaction table; shell-form `ENTRYPOINT` ignores `CMD` and run arguments (*read*)
+- **Also good:** [Building best practices · CMD](https://docs.docker.com/build/building/best-practices/#cmd) — docs.docker.com: use `CMD ["executable", "param"]` for services (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [WORKDIR](04-workdir.md) · Index: [Phase 3](README.md) · Next → [Exec form versus shell form](06-exec-vs-shell-form.md)

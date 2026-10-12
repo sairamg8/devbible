@@ -236,6 +236,17 @@ retention that keeps more than the most recent copy, a record of the software
 version that wrote it, and encryption if it leaves the machine. A tarball beside
 the volume is none of those things.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Volumes · Back up, restore, or migrate data volumes](https://docs.docker.com/engine/storage/volumes/) — docs.docker.com: throwaway container with `--volumes-from`, a host directory at `/backup`, `tar` the data (*read*)
+- **Also good:** [PostgreSQL · SQL Dump](https://www.postgresql.org/docs/current/backup-dump.html) — postgresql.org: `pg_dump` output regenerates the database as of the dump (*read*; the page is the version 18 docs)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`--userns=keep-id`](09-userns-keep-id.md) · Index: [Phase 6](README.md) · Next → [Volume drivers and network storage](11-volume-drivers.md)

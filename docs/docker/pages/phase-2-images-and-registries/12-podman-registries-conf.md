@@ -159,6 +159,17 @@ redirected to another; `blocked = true` refuses pulls matching the prefix.
 `short-name-mode = "enforcing"` prompts in a terminal and errors without one.
 Fully qualify image references in anything automated.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [containers-registries.conf(5) (raw)](https://raw.githubusercontent.com/containers/image/main/docs/containers-registries.conf.5.md) — github (raw): `unqualified-search-registries` tried in order; `short-name-mode` and aliases (*read*)
+- **Also good:** [podman pull](https://docs.podman.io/en/latest/markdown/podman-pull.1.html) — Podman docs: a short name with no alias makes Podman prompt for the registry (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [save/load versus export/import](11-save-load-export-import.md) · Index: [Phase 2](README.md) · Next → [Where layers live on disk](13-storage-on-disk.md)

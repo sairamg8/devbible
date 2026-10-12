@@ -73,6 +73,17 @@ reproducing it.
 - [13 · Docker CLI compatibility](../13-docker-cli-compatibility.md) — the
   socket and `DOCKER_HOST` in detail
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Shortcomings of rootless Podman](https://raw.githubusercontent.com/containers/podman/main/rootless.md) — containers/podman: no ports below 1024 without the sysctl, UID limits, device nodes (*read*)
+- **Also good:** [loginctl(1)](https://man7.org/linux/man-pages/man1/loginctl.1.html) — Linux man-pages: `enable-linger` spawns a user manager at boot and keeps it after logout (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Start → [01 · It ran yesterday](01-it-ran-yesterday.md)

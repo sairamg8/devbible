@@ -53,6 +53,17 @@ that image and that configuration.
 - **[03 · up and down](../03-up-and-down/README.md)** is what applies a change to
   any of these keys — `up -d`, never `restart`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Services top-level element](https://docs.docker.com/reference/compose-file/services/) — docs.docker.com: every attribute (`image`, `build`, `command`, `environment`, `ports`, `volumes`, `restart`, `healthcheck` and more); modified 2026-08-16 (*headings only*; `container_name`, `healthcheck` and `depends_on` passages *read*)
+- **Also good:** [Compose Application Model](https://docs.docker.com/compose/intro/compose-application-model/) — docs.docker.com: services as computing components, with networks and volumes beside them (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [up, down and the lifecycle](../03-up-and-down/README.md) · Index: [Phase 8](../README.md) · Start → [What runs](01-what-runs.md)

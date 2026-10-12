@@ -74,6 +74,16 @@ Five lines in that block are the topic, and each has a failure mode with a name:
 - **[PostgreSQL](../../../../postgresql/README.md)** is the database itself —
   this page is only about running it in a container.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [postgres image README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/postgres/README.md) — docker-library/docs: `POSTGRES_*` variables, `/docker-entrypoint-initdb.d` scripts run only when the data directory is empty, and the PostgreSQL 18 `PGDATA` change (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Dev image vs prod image](../02-dev-vs-prod-image.md) · Index: [Phase 9](../README.md) · Start → [The data directory](01-the-data-directory.md)

@@ -141,6 +141,16 @@ Only if you ask. It is `--opt encrypted` at network creation, and the
 documentation notes it is not supported for Windows containers. Assuming
 encryption by default is the mistake worth avoiding.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Overlay network driver](https://docs.docker.com/engine/network/drivers/overlay/) — docs.docker.com: distributed network across daemon hosts; hosts must be in a swarm; ports 2377/tcp and 4789/udp open; modified 2026-08-16 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Custom subnets, IPv6 and the VPN clash](13-subnets-ipv6-and-vpn.md) · Index: [Phase 7](README.md) · Next phase → **Phase 8 — Compose** *(chunk C)*

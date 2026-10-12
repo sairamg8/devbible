@@ -241,6 +241,17 @@ storage left by unclean shutdowns and is a repair tool, not routine. And rootles
 storage lives under the user's home directory, so it consumes a home-directory or
 per-user quota, which is typically much smaller than the system partition.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Prune unused Docker objects](https://docs.docker.com/engine/manage-resources/pruning/) — Docker docs: dangling versus unused images, containers, volumes, networks, build cache (*read* images section, rest *headings only*)
+- **Also good:** [docker system prune](https://docs.docker.com/reference/cli/docker/system/prune/) — Docker docs: `--volumes` adds anonymous volumes to the prune; volumes are skipped by default (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Debugging a container you cannot shell into](12-debugging-without-a-shell.md) · Index: [Phase 10](README.md) · Next → [Running containers under systemd](14-under-systemd.md)

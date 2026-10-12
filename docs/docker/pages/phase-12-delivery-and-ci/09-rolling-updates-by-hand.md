@@ -188,6 +188,16 @@ Sticky state — in-memory sessions, WebSockets, long polls, in-flight uploads.
 Switching traffic away from a process discards whatever only it held. The fix is
 moving that state out of the process, not lengthening the drain window.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [Apply rolling updates to a service](https://docs.docker.com/engine/swarm/swarm-tutorial/rolling-update/) — Docker docs: what `--update-delay` automates in Swarm (*read* the policy passage)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Kubernetes on-ramp](08-kubernetes-on-ramp.md) · Index: [Phase 12](README.md) · Next → [10 · `docker context`](10-docker-context.md)

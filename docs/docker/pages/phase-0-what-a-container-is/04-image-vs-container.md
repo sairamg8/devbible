@@ -186,6 +186,17 @@ That the fix will vanish the next time the container is replaced, and that the
 next deploy will silently revert it. The change belongs in the image, in a
 mounted config, or in an environment variable. Exec is for diagnosis.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Storage drivers](https://docs.docker.com/engine/storage/drivers/) — Docker docs: writes go to a thin writable container layer, deleted with the container; many containers share one image (*read*)
+- **Also good:** [What is an image?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/) — Docker docs: images are immutable and made of layers (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [cgroups v2](03-cgroups.md) · Index: [Phase 0](README.md) · Next → [The runtime stack, Docker](05-runtime-stack-docker.md)

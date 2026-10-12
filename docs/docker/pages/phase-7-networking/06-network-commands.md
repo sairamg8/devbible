@@ -273,6 +273,17 @@ Docker refuses to remove a network with containers attached and `-f` does not
 change that fact. Podman's `--force` *"removes all containers that use the named
 network"*, stopping running ones first. Same flag, different blast radius.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Bridge network driver · Manage a user-defined bridge](https://docs.docker.com/engine/network/drivers/bridge/) — docs.docker.com: create, connect to and disconnect from a user-defined bridge, with IPv6 options (*read*)
+- **Also good:** [podman network connect](https://docs.podman.io/en/latest/markdown/podman-network-connect.1.html) — docs.podman.io: the Podman equivalent (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Network drivers](05-network-drivers.md) · Index: [Phase 7](README.md) · Next → [Reaching the host from inside](07-reaching-the-host.md)

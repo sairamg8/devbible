@@ -269,6 +269,17 @@ every request. It also interacts badly with libraries that override
 `Error.prepareStackTrace`. Turning it on is usually worth it for readable
 production stack traces; turning it on without knowing either caveat is not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Debugging Node.js](https://nodejs.org/learn/getting-started/debugging) — nodejs.org: `--inspect` listens on `127.0.0.1:9229` by default; binding to `0.0.0.0` lets anyone who can reach it run code (*read*)
+- **Also good:** [Node.js language-specific guide](https://docs.docker.com/guides/nodejs/) — docs.docker.com: `--inspect=0.0.0.0:9229` in the dev script, attach from VS Code or Chrome DevTools; its launch config sets `sourceMaps` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Migrations and seeds](10-migrations-and-seeds.md) · Index: [Phase 9](README.md) · Next → [A React/Vite frontend](12-react-vite-frontend.md)

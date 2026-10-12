@@ -45,6 +45,18 @@ amount of container configuration substitutes for it.
   the reference behind the `mongosh` exit-code trap.
 - **[MongoDB](../../../../mongodb/README.md)** is the track this containerises.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [mongo image README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/mongo/README.md) — docker-library/docs: data lives in `/data/db`; mount a volume or host directory there; flags pass through to `mongod` (*read*)
+- **Also good:** [Convert a standalone to a replica set](https://www.mongodb.com/docs/manual/tutorial/convert-standalone-to-replica-set/) — mongodb.com: `rs.initiate()` once, `rs.conf()`, `rs.status()` (*read*)
+- **Also good:** [Change streams](https://www.mongodb.com/docs/manual/changestreams/) — mongodb.com: available for replica sets and sharded clusters (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The whole stack in one file](../07-the-whole-stack/README.md) · Index: [Phase 9](../README.md) · Start → [Running one](01-running-one.md)

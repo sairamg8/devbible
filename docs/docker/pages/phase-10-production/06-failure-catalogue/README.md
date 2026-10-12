@@ -69,6 +69,17 @@ application code — and you can name which failures leave no exit code at all.
   [11 · Observing](../11-observing.md) · [13 · Disk growth](../13-disk-growth.md) ·
   [15 · Time, timezones and locales](../15-time-and-timezones.md)
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Docker exit code 137: OOMKilled or SIGKILL?](https://www.netdata.cloud/guides/docker/docker-exit-code-137/) — Netdata: 137 is only "got SIGKILL"; causes table: cgroup OOM, external SIGKILL, stop timeout, host OOM, child OOM with `OOMKilled: false` and `memory.events` (*read*)
+- **Also good:** [Usage and limits: pulls](https://docs.docker.com/docker-hub/usage/pulls/) — Docker docs: the rate-limit numbers above (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Start → [01 · Triage, and the failures that kill the container](01-triage-and-the-container-died.md)

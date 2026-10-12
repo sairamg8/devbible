@@ -169,6 +169,16 @@ intact. Useful for consistent snapshots or to halt a runaway container without
 losing its state. Unlike `stop` it sends no signal, so the application never
 knows.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker container pause](https://docs.docker.com/reference/cli/docker/container/pause/) — Docker docs: suspends all processes in the container (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Environment variables](06-environment.md) · Index: [Phase 1](README.md) · Next → [Stop is two signals](08-stop-is-two-signals.md)

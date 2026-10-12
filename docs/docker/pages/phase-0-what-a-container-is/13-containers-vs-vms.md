@@ -146,6 +146,16 @@ Swap the OCI runtime for Kata Containers or gVisor. The image, Dockerfile and
 Compose file are unchanged, because the runtime is a replaceable component behind
 the OCI runtime specification.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What is a container?](https://www.docker.com/resources/what-container/) — docker.com: containers virtualize the OS, VMs the hardware (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Why "works on my machine" stops](12-works-on-my-machine.md) · Index: [Phase 0](README.md) · Next → [Installing an engine](14-installing.md)

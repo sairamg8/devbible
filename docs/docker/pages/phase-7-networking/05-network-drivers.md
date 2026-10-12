@@ -249,6 +249,18 @@ with no access to the host's interfaces, so the driver cannot attach to a parent
 NIC. Podman documents this directly. If containers must appear on the LAN, that
 is a rootful deployment.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Networking overview · Drivers](https://docs.docker.com/engine/network/) — docs.docker.com: the built-in driver table: bridge, host, none, overlay, ipvlan, macvlan (*read*)
+- **Also good:** [Macvlan network driver](https://docs.docker.com/engine/network/drivers/macvlan/) — docs.docker.com: gives each container its own MAC address so it appears on the physical network (*read* the intro)
+- **Also good:** [None network driver](https://docs.docker.com/engine/network/drivers/none/) — docs.docker.com: only the loopback device (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Publishing ports](04-publishing-ports.md) · Index: [Phase 7](README.md) · Next → [`network create` and friends](06-network-commands.md)

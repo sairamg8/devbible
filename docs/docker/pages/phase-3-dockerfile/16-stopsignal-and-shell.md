@@ -154,6 +154,17 @@ No. Exec form does not invoke a shell, so `SHELL` is irrelevant to it — includ
 to an exec-form `CMD`, which is why it has no bearing on PID 1 or signal
 handling.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · STOPSIGNAL](https://docs.docker.com/reference/dockerfile/#stopsignal) — docs.docker.com: default `SIGTERM`, applies to `docker stop` only, not Ctrl+C, overridable with `--stop-signal` (*read*)
+- **Also good:** [Dockerfile reference · SHELL](https://docs.docker.com/reference/dockerfile/#shell) — docs.docker.com: (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The syntax directive](15-syntax-directive.md) · Index: [Phase 3](README.md) · Next → [ONBUILD](17-onbuild.md)

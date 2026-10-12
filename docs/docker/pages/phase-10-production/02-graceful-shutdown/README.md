@@ -65,6 +65,18 @@ deploy shut down cleanly, ignored the signal, or ran out of time.
   [09 · Healthchecks in production](../09-healthchecks-in-production.md) ·
   [16 · Zero-downtime restarts](../16-zero-downtime-restarts.md)
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker container stop](https://docs.docker.com/reference/cli/docker/container/stop/) — Docker docs: SIGTERM first, SIGKILL after the grace period; `STOPSIGNAL` or `--stop-signal` change the first signal; `-t` sets the wait (*read*)
+- **Also good:** [Shutdown gracefully](https://raw.githubusercontent.com/goldbergyoni/nodebestpractices/master/sections/docker/graceful-shutdown.md) — Node.js Best Practices: why SIGTERM handling is the app's job; short; says Kubernetes sends SIGTERM with a 30 second grace period; Dockerfile examples use `node:12-slim`, so dated (*read*)
+- **Also good:** [How to Handle Docker Container Graceful Shutdown and Signal Handling](https://oneuptime.com/blog/post/2026-01-16-docker-graceful-shutdown-signals/view) — OneUptime, dated 2026-01-16 in the URL: Node `server.close()` plus forced-exit timer, shell-form PID 1 trap, `stop_grace_period` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Start → [01 · The deadline](01-the-deadline.md)

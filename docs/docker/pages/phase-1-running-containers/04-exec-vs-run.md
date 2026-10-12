@@ -153,6 +153,16 @@ You cannot from inside. Debug from the host with `nsenter` against the
 container's PID, or start a debug container that shares the target's namespaces.
 This is the trade you accept with distroless images.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker container exec](https://docs.docker.com/reference/cli/docker/container/exec/) — Docker docs: runs a new command in a running container (*read* the description)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [ps, inspect, logs and stats](03-ps-inspect-logs-stats.md) · Index: [Phase 1](README.md) · Next → [Publishing ports](05-publishing-ports.md)

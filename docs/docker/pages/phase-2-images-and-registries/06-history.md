@@ -146,6 +146,16 @@ It shows the instruction, not the files it produced, so it cannot tell you which
 package accounts for the size. Squashed or re-imported images lose history
 entirely. It narrows the problem to one instruction, which is usually enough.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker image history](https://docs.docker.com/reference/cli/docker/image/history/) — Docker docs: options, `--format`, `--platform` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Choosing a base image](05-choosing-a-base-image.md) · Index: [Phase 2](README.md) · Next → [The image config](07-image-config.md)

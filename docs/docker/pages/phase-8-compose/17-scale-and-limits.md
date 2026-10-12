@@ -211,6 +211,17 @@ Podman — give restart-across-reboot, dependency ordering and real logging with
 a cluster. Reaching for Kubernetes because `--scale` did not load-balance is
 skipping a step that solves most of the actual problem.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Services · container_name](https://docs.docker.com/reference/compose-file/services/) — docs.docker.com: Compose does not scale a service beyond one container if `container_name` is set (*read*)
+- **Also good:** [docker compose up · --scale](https://docs.docker.com/reference/cli/docker/compose/up/) — docs.docker.com: `--scale` overrides the Compose file's scale setting (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`include` and `extends`](16-include-and-extends.md) · Index: [Phase 8](README.md) · Next → [Phase 9 · The MERN/PERN stack in containers](../phase-9-mern-pern-stack/README.md)

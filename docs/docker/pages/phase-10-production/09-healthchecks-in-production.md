@@ -202,6 +202,17 @@ execute at all, so "never marked unhealthy" is not evidence of health.
 use `kill` or `stop` rather than `restart` inside a systemd unit, so there is one
 supervisor.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Liveness, readiness and startup probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) — kubernetes.io: the three probe kinds and what the kubelet does with each (*read* liveness and readiness passages)
+- **Also good:** [Dockerfile reference](https://docs.docker.com/reference/dockerfile/) — Docker docs: the `HEALTHCHECK` instruction (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Log drivers and rotation](08-log-drivers-and-rotation.md) · Index: [Phase 10](README.md) · Next → [Hardening at run time](10-hardening/README.md)

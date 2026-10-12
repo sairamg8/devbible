@@ -63,6 +63,17 @@ idle.
 - [Phase 11 · 04 · Quadlet](../../phase-11-podman-in-depth/04-quadlet/README.md) — the same stop, wearing systemd's
   clothes
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Tini README](https://raw.githubusercontent.com/krallin/tini/master/README.md) — krallin/tini: zombie reaping, signal forwarding, "default signal handlers work" for your process, and that `--init` already ships Tini (*read*)
+- **Also good:** [docker container run → Specify an init process](https://docs.docker.com/reference/cli/docker/container/run/) — Docker docs: `--init` makes an init the PID 1 so zombies are reaped (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Start → [01 · What the kernel does to PID 1](01-what-the-kernel-does.md)

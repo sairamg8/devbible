@@ -226,6 +226,17 @@ nothing and the build silently targets the wrong architecture.
 It defaults to the bundled builder for backwards compatibility even though it is
 an alias for `docker buildx build`. Use `docker buildx build` or `--builder`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Multi-platform builds](https://docs.docker.com/build/building/multi-platform/) — docs.docker.com: `--platform linux/amd64,linux/arm64`, three strategies, QEMU "can be much slower"; modified 2026-04-16 (*read*)
+- **Also good:** [Builders](https://docs.docker.com/build/builders/) — docs.docker.com: build drivers (`docker`, `docker-container`, others), `docker build` is an alias of `docker buildx build` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`RUN --mount=type=bind`](10-mount-type-bind.md) · Index: [Phase 4](README.md) · Next → [Cache import and export](12-cache-import-export.md)

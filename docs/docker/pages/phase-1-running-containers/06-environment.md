@@ -153,6 +153,18 @@ Build once and configure with environment variables. Environment-specific
 `-e NAME` with no `=` copies the current value from the calling shell. Useful,
 and easy to mistake for setting it empty.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Running containers: environment variables](https://docs.docker.com/engine/containers/run/#environment-variables) — Docker docs: overriding image defaults (*headings only*)
+- **Also good:** [Overriding container defaults](https://docs.docker.com/get-started/docker-concepts/running-containers/overriding-container-defaults/) — Docker docs, modified 2025-12-03: section on setting environment variables (*headings only*); `-e` and `--env-file` are listed in the [run option table](https://docs.docker.com/reference/cli/docker/container/run/) (*read*)
+- **Also good:** [run option table](https://docs.docker.com/reference/cli/docker/container/run/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Publishing ports](05-publishing-ports.md) · Index: [Phase 1](README.md) · Next → [The container lifecycle](07-lifecycle.md)

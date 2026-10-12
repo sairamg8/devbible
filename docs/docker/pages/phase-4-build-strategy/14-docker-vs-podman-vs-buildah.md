@@ -161,6 +161,17 @@ caches when `--layers` is on, which is the default. The real difference is that
 Buildah's remote-cache flags are ignored when `--layers` is off, and that Buildah
 offers `--cache-ttl`, which Docker has no equivalent for.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman build](https://docs.podman.io/en/latest/markdown/podman-build.1.html) — docs.podman.io: Containerfile uses Dockerfile syntax; `podman buildx build` is an alias and "not all buildx build features are available"; default image format `oci`; `--sbom` presets (*read*)
+- **Also good:** [Builders](https://docs.docker.com/build/builders/) — docs.docker.com: the Docker side of the alias (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Build args versus runtime env](13-build-args-vs-runtime-env.md) · Index: [Phase 4](README.md) · Next → [The build context](15-the-build-context.md)

@@ -247,6 +247,17 @@ per-container way to opt back out — required if you want `--privileged`. Podma
 makes it a per-container choice with six modes, and rootless it is on by default
 rather than something you configure.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Rootless Podman user namespace modes](https://www.redhat.com/en/blog/rootless-podman-user-namespace-modes) — Red Hat blog, page header shows January 25, 2023; page metadata says published 2023-01-11, modified 2025-11-21: default, `keep-id`, `auto`, `nomap` with a bind-mount ownership example (*read*)
+- **Also good:** [podman run → `--userns`](https://docs.podman.io/en/latest/markdown/podman-run.1.html) — Podman docs: the reference (*headings only*, 130 KB page)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`podman unshare`](06-podman-unshare.md) · Index: [Phase 11](README.md) · Next → [08 · `podman pod create`, `ps`, `rm`](08-pod-commands.md)

@@ -212,6 +212,18 @@ proxy is not acceptable, or when the throughput of a user-mode stack is
 measurably not enough. Those are real reasons; "it was easier" is not, because
 rootless removes an entire class of host compromise.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Podman basic networking (raw)](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/basic_networking.md) — containers/podman: rootless containers default to pasta, rootful to netavark; bridge, host and none setups (*read*)
+- **Also good:** [Podman 5.3 changes for improved networking with pasta](https://blog.podman.io/2024/10/podman-5-3-changes-for-improved-networking-experience-with-pasta/) — Podman blog: since Podman 5.0 pasta replaces slirp4netns as the default, and works differently (*read*; 2024-10-25)
+- **Also good:** [Rootless mode troubleshooting](https://docs.docker.com/engine/security/rootless/troubleshoot/) — docs.docker.com: Docker's rootless `-p` does not propagate source IP addresses by default (*read*; modified 2026-09-01)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Reaching the host from inside](07-reaching-the-host.md) · Index: [Phase 7](README.md) · Next → [Privileged ports rootless](09-privileged-ports-rootless.md)

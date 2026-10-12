@@ -37,7 +37,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 - **Our delta:** the anonymous-volume fix for `node_modules`; no page found that names the trap in one place.
 
 ### T06-05 · File ownership and UID mismatch — Master · ✅ written `docs/docker/pages/phase-6-storage/05-uid-mismatch/README.md`
-- **Read this:** [Understanding rootless Podman's user namespace modes](https://www.redhat.com/en/blog/rootless-podman-user-namespace-modes) · Red Hat blog · table of host UID versus container UID for default, `keep-id`, `auto`, `nomap`; published 2023-01-11, updated 2025-11-21 (*read*) · covers our angle: **partial** — no worked file-ownership example on a bind mount · fetched 2026-10-12
+- **Read this:** [Understanding rootless Podman's user namespace modes](https://www.redhat.com/en/blog/rootless-podman-user-namespace-modes) · Red Hat blog · table of host UID versus container UID for default, `keep-id`, `auto`, `nomap`; page shows January 25, 2023; metadata published 2023-01-11, modified 2025-11-21 (*read*) · covers our angle: **partial** — no worked file-ownership example on a bind mount · fetched 2026-10-12
 - **Also good:** [Podman rootless tutorial (raw)](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/rootless_tutorial.md) · containers/podman · `/etc/subuid` and `/etc/subgid` ranges, `podman unshare ls -ldn` to see mapped owners, 65534 means unmapped (*read*) · fetched 2026-10-12
 - **Our delta:** why a file shows as `165536` on the host; neither page works that arithmetic through for a bind mount.
 
@@ -49,7 +49,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 ### T06-07 · SELinux `:z` and `:Z` — Understand · ✅ written `docs/docker/pages/phase-6-storage/07-selinux-z-and-Z.md`
 - **Read this:** [podman-run · Volume mounts](https://docs.podman.io/en/latest/markdown/podman-run.1.html) · docs.podman.io · `:z` marks content shared between containers, `:Z` private to one; both relabel the files (*read* the volume passage; the rest *headings only*, 130k characters) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Bind mounts · Configure the SELinux label](https://docs.docker.com/engine/storage/bind-mounts/) · docs.docker.com · same two options; warns it changes the host path itself, with effects beyond Docker (*read*) · fetched 2026-10-12
-- **Also good:** [Dealing with user namespaces and SELinux on rootless containers](https://www.redhat.com/en/blog/user-namespaces-selinux-rootless-containers) · Red Hat blog · `container_t` versus `container_file_t` and why a volume mount breaks it; published 2020-06-04, updated 2025-11-20 (*read*) · fetched 2026-10-12
+- **Also good:** [Dealing with user namespaces and SELinux on rootless containers](https://www.redhat.com/en/blog/user-namespaces-selinux-rootless-containers) · Red Hat blog · `container_t` versus `container_file_t` and why a volume mount breaks it; page shows June 25, 2020; metadata published 2020-06-04, modified 2025-11-20 (*read*) · fetched 2026-10-12
 - **Our delta:** never `:Z` on a home directory or shared path; the page gives the shared-versus-private rule only.
 
 ### T06-08 · `--read-only` root filesystem plus tmpfs — Know · ✅ written `docs/docker/pages/phase-6-storage/08-read-only-rootfs.md`
@@ -58,7 +58,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 - **Our delta:** the Docker/Podman difference (Podman adds those tmpfs mounts for you) and what a Node app breaks first.
 
 ### T06-09 · `--userns=keep-id` (Podman) — Understand · ✅ written `docs/docker/pages/phase-6-storage/09-userns-keep-id.md`
-- **Read this:** [Understanding rootless Podman's user namespace modes](https://www.redhat.com/en/blog/rootless-podman-user-namespace-modes) · Red Hat blog · `keep-id` maps your user to the same UID inside, shown with `podman top`; 2023-01-11, updated 2025-11-21 (*read*) · covers our angle: **partial** — little on bind-mount ownership · fetched 2026-10-12
+- **Read this:** [Understanding rootless Podman's user namespace modes](https://www.redhat.com/en/blog/rootless-podman-user-namespace-modes) · Red Hat blog · `keep-id` maps your user to the same UID inside, shown with `podman top`; page shows January 25, 2023; metadata published 2023-01-11, modified 2025-11-21 (*read*) · covers our angle: **partial** — little on bind-mount ownership · fetched 2026-10-12
 - **Also good:** [Podman rootless tutorial (raw)](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/rootless_tutorial.md) · containers/podman · a container with a non-root `USER` must use `--userns=keep-id` when mounting volumes (*read*) · fetched 2026-10-12
 - **Our delta:** `keep-id:uid=...,gid=...` (listed in podman-run, *read*) for images whose user is not your UID.
 
@@ -106,7 +106,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 - **Read this:** [Networking overview · Drivers](https://docs.docker.com/engine/network/) · docs.docker.com · the built-in driver table: bridge, host, none, overlay, ipvlan, macvlan (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Macvlan network driver](https://docs.docker.com/engine/network/drivers/macvlan/) · docs.docker.com · gives each container its own MAC address so it appears on the physical network (*read* the intro) · fetched 2026-10-12
 - **Also good:** [None network driver](https://docs.docker.com/engine/network/drivers/none/) · docs.docker.com · only the loopback device (*read*) · fetched 2026-10-12
-- **Our delta:** the one-sentence-each table; the ipvlan page ([IPvlan](https://docs.docker.com/engine/network/drivers/ipvlan/)) was *headings only*.
+- **Our delta:** the one-sentence-each table; the Docker IPvlan driver page was fetched (200) but *headings only*, so it is not linked.
 
 ### T07-06 · `network create` / `ls` / `inspect` / `connect` / `disconnect` — Understand · ✅ written `docs/docker/pages/phase-7-networking/06-network-commands.md`
 - **Read this:** [Bridge network driver · Manage a user-defined bridge](https://docs.docker.com/engine/network/drivers/bridge/) · docs.docker.com · create, connect to and disconnect from a user-defined bridge, with IPv6 options (*read*) · covers our angle: **partial** — `inspect` output is not explained field by field · fetched 2026-10-12
@@ -128,7 +128,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 - **Read this:** [Podman rootless.md (raw)](https://raw.githubusercontent.com/containers/podman/main/rootless.md) · containers/podman · ports below 1024 need `CAP_NET_BIND_SERVICE`; set `net.ipv4.ip_unprivileged_port_start` or use a proxy or redirect (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Podman troubleshooting (raw)](https://raw.githubusercontent.com/containers/podman/main/troubleshooting.md) · containers/podman · the exact pasta "Permission denied" error for `-p 80:80`, and the same failure with `--network=host` (*read* that section; the rest *headings only*, 74k characters) · fetched 2026-10-12
 - **Also good:** [Rootless mode troubleshooting](https://docs.docker.com/engine/security/rootless/troubleshoot/) · docs.docker.com · Docker's rootless mode, same limit, defers to an "Exposing privileged ports" section (*read*) · fetched 2026-10-12
-- **Our delta:** the 8080-and-proxy answer for dev, and the sysctl persistence file.
+- **Our delta:** the 8080-and-proxy answer for dev; the troubleshooting page does show the `/etc/sysctl.d` persistence file.
 
 ### T07-10 · `--network=host` — Know · ✅ written `docs/docker/pages/phase-7-networking/10-network-host.md`
 - **Read this:** [Host network driver](https://docs.docker.com/engine/network/drivers/host/) · docs.docker.com · no isolation, no own IP, a port 80 bind is port 80 on the host; `-p` and `-P` are ignored with a warning; lists performance as a use case; Linux Engine and Desktop 4.34+; modified 2026-08-16 (*read*) · covers our angle: full · fetched 2026-10-12
@@ -159,17 +159,17 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 
 ### T08-01 · What Compose is — Understand · ✅ written `docs/docker/pages/phase-8-compose/01-what-compose-is.md`
 - **Read this:** [How Compose works](https://docs.docker.com/compose/intro/compose-application-model/) · docs.docker.com · a YAML Compose file configures the services, and the Compose CLI creates and starts them; the file follows the Compose Specification; modified 2026-05-28 (*read*) · covers our angle: **partial** — no "reconciles reality to the file" explanation · fetched 2026-10-12
-- **Also good:** [History and development of Compose](https://docs.docker.com/compose/intro/history/) · docs.docker.com · supported CLI versions are now Compose v2 and v5, both defined by the Specification; v1 is gone (*read*; modified 2026-03-12) · fetched 2026-10-12
+- **Also good:** [History and development of Compose](https://docs.docker.com/compose/intro/history/) · docs.docker.com · supported CLI versions are now Compose v2 and v5, both defined by the Specification; v1 is not listed as supported (*read*; modified 2026-03-12) · fetched 2026-10-12
 - **Our delta:** the reconcile model (`up` compares file with running state) and the hyphenated `docker-compose` being dead.
 
 ### T08-02 · `compose.yaml` and the Compose Specification — Master · ✅ written `docs/docker/pages/phase-8-compose/02-compose-yaml-and-the-spec/README.md`
-- **Read this:** [Version and name top-level elements](https://docs.docker.com/reference/compose-file/version-and-name/) · docs.docker.com · `version` is kept for backward compatibility, informative only, and warns that it is obsolete if used; Compose always validates against the newest schema (*read*; modified 2025-07-09) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [Version and name top-level elements](https://docs.docker.com/reference/compose-file/version-and-name/) · docs.docker.com · `version` is kept for backward compatibility, informative only, and warns that it is obsolete if used; Compose always validates against the newest schema (*read*; modified 2025-07-09) · covers our angle: **partial** — the `version:` rule only; the `compose.yaml` filename is not argued · fetched 2026-10-12
 - **Also good:** [Compose file reference](https://docs.docker.com/reference/compose-file/) · docs.docker.com · the top-level elements; modified 2026-05-28 (*headings only*) · fetched 2026-10-12
 - **Also good:** [compose-spec.io](https://compose-spec.io/) · Compose Specification site · the open spec itself (*headings only*, a short landing page) · fetched 2026-10-12
 - **Our delta:** `compose.yaml` over `docker-compose.yml` as the preferred filename: the pages read here do not argue it, so our page owns it.
 
 ### T08-03 · `up` / `down` / `-d` / `--build` — Master · ✅ written `docs/docker/pages/phase-8-compose/03-up-and-down/README.md`
-- **Read this:** [docker compose down](https://docs.docker.com/reference/cli/docker/compose/down/) · docs.docker.com · removes containers, networks defined in the file and the default network; `-v` is the volumes flag; external networks and volumes are never removed (*read*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [docker compose down](https://docs.docker.com/reference/cli/docker/compose/down/) · docs.docker.com · removes containers, networks defined in the file and the default network; `-v` is the volumes flag; external networks and volumes are never removed (*read*) · covers our angle: **partial** — describes `-v` but does not warn that it deletes the dev database · fetched 2026-10-12
 - **Also good:** [docker compose up](https://docs.docker.com/reference/cli/docker/compose/up/) · docs.docker.com · changed services are recreated with mounted volumes preserved; `--no-recreate`, `--force-recreate`, `--scale`, `--wait` (*read*) · fetched 2026-10-12
 - **Our delta:** `down -v` deleting the dev database is our headline; the reference lists the flag without warning.
 
@@ -215,14 +215,14 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 
 ### T08-13 · `develop.watch` — Know · ✅ written `docs/docker/pages/phase-8-compose/13-develop-watch.md`
 - **Read this:** [Use Compose Watch](https://docs.docker.com/compose/how-tos/file-watch/) · docs.docker.com · `sync`, `rebuild`, `sync+restart`; the `ignore` list for `node_modules/`; modified 2026-08-19 (*read*) · covers our angle: full · fetched 2026-10-12
-- **Also good:** [Develop top-level element](https://docs.docker.com/reference/compose-file/develop/) · docs.docker.com · `rebuild` runs `up --build` for the service; dangling images removed after each rebuild; modified 2026-06-18 (*read*) · fetched 2026-10-12
+- **Also good:** [Develop top-level element](https://docs.docker.com/reference/compose-file/develop/) · docs.docker.com · `rebuild` rebuilds the image and recreates the service; `sync+restart` needs Compose 2.23.0 or later; modified 2026-06-18 (*read*) · fetched 2026-10-12
 - **Our delta:** file ownership under `sync` is ours.
 
 ### T08-14 · Day-to-day commands — Understand · ✅ written `docs/docker/pages/phase-8-compose/14-day-to-day-commands/README.md`
 - **Read this:** [docker compose](https://docs.docker.com/reference/cli/docker/compose/) · docs.docker.com · the command index with global flags (*headings only*) · covers our angle: **partial** — an index, not a workflow · fetched 2026-10-12
 - **Also good:** [docker compose config](https://docs.docker.com/reference/cli/docker/compose/config/) · docs.docker.com · prints the model after interpolation and merging (*headings only*, option table checked) · fetched 2026-10-12
 - **Also good:** [docker compose run](https://docs.docker.com/reference/cli/docker/compose/run/) · docs.docker.com · `--rm` and one-off commands (*headings only*) · fetched 2026-10-12
-- **Our delta:** the `logs -f` / `exec` / `run --rm` / `ps` / `top` routine; also [exec](https://docs.docker.com/reference/cli/docker/compose/exec/) and [logs](https://docs.docker.com/reference/cli/docker/compose/logs/) were *headings only*.
+- **Our delta:** the `logs -f` / `exec` / `run --rm` / `ps` / `top` routine; the Docker reference pages for `compose exec` and `compose logs` were fetched but *headings only*, so they are not linked.
 
 ### T08-15 · `podman compose` and `podman-compose` — Understand · ✅ written `docs/docker/pages/phase-8-compose/15-podman-compose.md`
 - **Read this:** [podman-compose (man page)](https://docs.podman.io/en/latest/markdown/podman-compose.1.html) · docs.podman.io · `podman compose` is a thin wrapper around an external provider (`docker-compose` or `podman-compose`) pointed at the Podman socket (*read*) · covers our angle: **partial** — which provider is picked first, and divergences, are not on the page · fetched 2026-10-12

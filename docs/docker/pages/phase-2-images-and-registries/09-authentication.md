@@ -175,6 +175,16 @@ Its default authfile is under `${XDG_RUNTIME_DIR}`, which is per-session, so a
 systemd service or cron job does not share it. Use `--authfile` with an explicit
 path for anything automated.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker login](https://docs.docker.com/reference/cli/docker/login/) — Docker docs: without a credential store, credentials sit in `config.json` base64-encoded, "less secure"; credential helpers (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Registries and rate limits](08-registries.md) · Index: [Phase 2](README.md) · Next → [Multi-arch images](10-multi-arch.md)
