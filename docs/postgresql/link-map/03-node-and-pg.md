@@ -96,3 +96,77 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 - **Also good:** [Waddler <> PostgreSQL](https://waddler.drizzle.team/docs/connect-postgresql) · waddler.drizzle.team · lists differences it found: postgres.js prepares by default, `pg` allows per-query type parsers (*read* the section; vendor-adjacent, undated)
 - **Our delta:** a neutral comparison — no benchmark source was fetched, so the README's "fastest" claim is **not confirmed** and must be worded as the author's claim.
 - *Checked, not chosen:* StackShare "versus" pages (index noise, no comparison content; not fetched).
+
+---
+
+## Phase 8 — Schema and data from Node
+
+### T08-01 · Creating tables from Node — Master · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/01-ddl-from-node/README.md`
+- **Read this:** [5.1. Table Basics](https://www.postgresql.org/docs/current/ddl-basics.html) · postgresql.org · the manual's `CREATE TABLE` introduction (*read* the opening) · covers our angle: **partial** — nothing on issuing DDL through a driver or when that is lazy · fetched 2026-10-12
+- **Also good:** [CREATE TABLE](https://www.postgresql.org/docs/current/sql-createtable.html) · postgresql.org · full synopsis (*read* the synopsis and `IF NOT EXISTS`)
+- **Our delta:** `pool.query` happily runs DDL (it is just text); the legitimate cases (migrations, test setup) versus table creation at app boot, with the startup-race argument.
+
+### T08-02 · Migrations — Master · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/02-migrations.md`
+- **Read this:** [graphile-migrate README (raw): Why? and Opinions](https://raw.githubusercontent.com/graphile/migrate/main/README.md) · github (raw) · roll-forward only, a signed-off migration is never edited, each file wrapped in a transaction by default (*read* those sections) · covers our angle: **partial** — a tool README with a strong stance, not a neutral guide; the tracking table is not described there · fetched 2026-10-12
+- **Also good:** [postgres-migrations README (raw): Design decisions](https://raw.githubusercontent.com/akheron/postgres-migrations/master/README.md) · github (raw) · no down migrations, `migrations` table, hash check of past files, one transaction per migration (*read*) · [Evolutionary Database Design](https://martinfowler.com/articles/evodb.html) · martinfowler.com · the general practice behind versioned schema changes (*headings only*; undated in the fetch)
+- **Our delta:** the four-part rule in our row (forward-only, one file per change, one transaction, a tracking table) in a single page; the tools disagree on rollbacks, say so.
+
+### T08-03 · Seeding — Master · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/03-seeding.md`
+- **Read this:** [INSERT](https://www.postgresql.org/docs/current/sql-insert.html) · postgresql.org · `ON CONFLICT DO NOTHING` skips a conflicting row; `conflict_target` optional for `DO NOTHING` (*read* that passage) · covers our angle: **partial** — multi-row `VALUES` and deterministic fixtures are not explained here · fetched 2026-10-12
+- **Also good:** [6.1. Inserting Data](https://www.postgresql.org/docs/current/dml-insert.html) · postgresql.org · more than one row in a single command (*read* the opening)
+- **Our delta:** deterministic fixtures (fixed ids and timestamps, no `random()`), and re-runnable seeds via `ON CONFLICT`.
+
+### T08-04 · Bulk insert that scales — Master · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/04-bulk-insert.md`
+- **Read this:** [Boosting Postgres INSERT Performance by 2x With UNNEST](https://www.tigerdata.com/blog/boosting-postgres-insert-performance) · tigerdata.com · James Sewell; published 2024-11-15, modified 2026-01-08; `INSERT ... UNNEST` was 2.13x faster than `VALUES` at the database layer at batch size 1000, measured with `pg_stat_statements` (*read* the results; the "Should I use UNNEST?" section *headings only*) · covers our angle: **partial** — SQL only, no Node `pg` code; vendor blog · fetched 2026-10-12
+- **Also good:** [14.4. Populating a Database](https://www.postgresql.org/docs/current/populate.html) · postgresql.org · disable autocommit, use `COPY`, drop indexes, run `ANALYZE` after (*headings only*; page metadata dated 2026-08-13)
+- **Our delta:** the Node side (one JS array per column, `::bigint[]` casts, `pg` array conversion) and **our own measurement** — a 2x claim from a vendor benchmark is not ours to repeat unmeasured.
+
+### T08-05 · SQL in `.sql` files, not template literals — Understand · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/05-sql-files.md`
+- **Read this:** [PgTyped: Queries in SQL files](https://pgtyped.dev/docs/sql-file-intro) · pgtyped.dev · a `.sql` file with named queries yields typed TS functions that run on a `pg` `Client`; parameters sent separately (*read*) · covers our angle: **partial** — it sells a code generator; the plain `node:fs` loading and reviewability case is ours · fetched 2026-10-12
+- **Also good:** [postgres.js README (raw): Queries in Files](https://raw.githubusercontent.com/porsager/postgres/master/README.md) · github (raw) · `sql.file(path, args, options)` as a built-in alternative (*headings only* for that section)
+- **Our delta:** a 10-line loader with `fs.readFile`, cached at start-up, and the diff-review argument. `pgtyped` last npm publish 2025-03-15 (`@pgtyped/cli` 2.4.3); maintenance status **not confirmed**.
+
+### T08-06 · Wrapping a migration in `BEGIN`/`COMMIT` — Understand · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/06-tx-migration.md`
+- **Read this:** [Postgres vs. MySQL: DDL Transaction Difference](https://www.bytebase.com/blog/postgres-vs-mysql-ddl-transaction/) · bytebase.com · published 2025-05-27; PostgreSQL DDL can sit in transaction blocks and roll back as one unit, except database and tablespace operations (*read*; vendor blog written for PostgreSQL 17) · covers our angle: **partial** — nothing on migration files or the tracking row · fetched 2026-10-12
+- **Also good:** [CREATE INDEX](https://www.postgresql.org/docs/current/sql-createindex.html) · postgresql.org · a plain `CREATE INDEX` works in a transaction block; `CONCURRENTLY` cannot (*read*) · [Transactional DDL in PostgreSQL: A Competitive Analysis](https://wiki.postgresql.org/wiki/Transactional_DDL_in_PostgreSQL:_A_Competitive_Analysis) · wiki.postgresql.org · last edited 2012-06-11, shows a table gone after `ROLLBACK` on PostgreSQL 8.3.7 (*read*; old, concept only)
+- **Our delta:** a failed migration leaves nothing behind (run it to show); the escape hatch for `CONCURRENTLY` (graphile-migrate and postgres-migrations both mark such files).
+
+### T08-07 · `CREATE TABLE IF NOT EXISTS` — Understand · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/07-if-not-exists.md`
+- **Read this:** [CREATE TABLE → IF NOT EXISTS](https://www.postgresql.org/docs/current/sql-createtable.html) · postgresql.org · no error, a notice instead, and "no guarantee" the existing relation matches (*read*) · covers our angle: full for the "why it is not a migration system" point · fetched 2026-10-12
+- **Our delta:** show a table with a changed column surviving `IF NOT EXISTS` unchanged; the notice appears on `client.on('notice')`.
+
+### T08-08 · A minimal migration runner in Node — Understand · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/08-minimal-runner.md`
+- **Read this:** [postgres-migrations README (raw): Design decisions and Concurrency](https://raw.githubusercontent.com/akheron/postgres-migrations/master/README.md) · github (raw) · `migrations` table, hash check, transaction per file, advisory lock so a second runner waits; warns that advisory locks break under PgBouncer transaction pooling (*read*) · covers our angle: full as a design reference · fetched 2026-10-12
+- **Also good:** [node-pg-migrate CLI reference](https://salsita.github.io/node-pg-migrate/cli) · salsita.github.io · `--single-transaction` default, `--check-order` default true, advisory lock for redo (*read* the options)
+- **Our delta:** our own 40-line runner; "when to stop and adopt one" is our judgement. Repository activity of `postgres-migrations` **not confirmed**.
+
+### T08-09 · `COPY FROM STDIN` via `pg-copy-streams` — Understand · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/09-copy-streams.md`
+- **Read this:** [pg-copy-streams README (raw)](https://raw.githubusercontent.com/brianc/node-pg-copy-streams/master/README.md) · github (raw) · `copyFrom('COPY my_table FROM STDIN')` with `stream/promises` `pipeline`; `destroy()` sends CopyFail and rolls back unless CopyDone was already sent; v7.0.0 published 2025-05-27 (*read*) · covers our angle: full for the Node side · fetched 2026-10-12
+- **Also good:** [COPY](https://www.postgresql.org/docs/current/sql-copy.html) · postgresql.org · `FROM STDIN` syntax and options (*read* the synopsis)
+- **Our delta:** error handling and client release around the stream; `COPY` cannot use `ON CONFLICT`.
+
+### T08-10 · A local development database in Podman/Docker — Understand · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/10-local-dev-db.md`
+- **Read this:** [Docker Official Image `postgres` README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/postgres/README.md) · github (raw) · from PostgreSQL 18 the image's `PGDATA` is version specific and the volume is `/var/lib/postgresql`; `/docker-entrypoint-initdb.d` scripts only run on an empty data directory (*read*) · covers our angle: **partial** — a Docker compose example, nothing on Podman or a reset script · fetched 2026-10-12
+- **Also good:** [podman compose](https://docs.podman.io/en/latest/markdown/podman-compose.1.html) · docs.podman.io · a thin wrapper around an external compose provider (*read*)
+- **Our delta:** the compose file with `127.0.0.1:55432`, a named volume mounted at the new PG 18 location, and the reset script (`down -v`, `up`, migrate, seed).
+
+### T08-11 · Resetting to a known state between test runs — Understand · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/11-test-reset.md`
+- **Read this:** [Database Test Isolation](https://eradman.com/posts/database-test-isolation.html) · eradman.com · Eric Radman; four options (transaction, truncate and reload, copy via template, restore point) with trade-offs (*read*; undated page) · covers our angle: **partial** — not Node, and our row names drop-and-migrate rather than template copy · fetched 2026-10-12
+- **Also good:** [22.3. Template Databases](https://www.postgresql.org/docs/current/manage-ag-templatedbs.html) · postgresql.org · `CREATE DATABASE ... TEMPLATE` copies a database (*headings only*) · [TRUNCATE](https://www.postgresql.org/docs/current/sql-truncate.html) · postgresql.org · (*headings only*)
+- **Our delta:** the two strategies in our row, timed on our schema; identity restart (`RESTART IDENTITY`) so ids are deterministic.
+
+### T08-12 · `node-pg-migrate`, `graphile-migrate`, Prisma Migrate — Know · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/12-migration-tools.md`
+- **Read this:** [graphile-migrate README (raw)](https://raw.githubusercontent.com/graphile/migrate/main/README.md) · github (raw) · states its opinions plainly: SQL-written, roll-forward only, no stack coupling, roles outside migrations (*read* Why? and Opinions) · covers our angle: **partial** — one of the three tools · fetched 2026-10-12
+- **Also good:** [node-pg-migrate: Getting Started](https://salsita.github.io/node-pg-migrate/getting-started) · salsita.github.io · JS/TS migration files with a `pgm` builder, `up` and `down` (*read*) · [Prisma: Understanding Migrations (v7)](https://www.prisma.io/docs/orm/v7/prisma-migrate/understanding-prisma-migrate/mental-model) · prisma.io · Prisma schema is the source of truth; SQL history plus a migrations table in the database (*read* the tracking section)
+- **Our delta:** what each assumes (DSL vs SQL vs schema file; down migrations or not); Prisma docs have moved between layouts, so the URL may change.
+
+### T08-13 · Schema drift — failing fast at boot — Know · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/13-schema-drift.md`
+- **Read this:** none found — tried: WebSearch "PostgreSQL schema drift detection check database schema matches migrations CI", "node check schema at startup"; results were tool READMEs (pgmold, dbdiff, Bytebase), none explaining a boot-time check from Node
+- **Also good:** [node-pg-migrate CLI reference](https://salsita.github.io/node-pg-migrate/cli) · salsita.github.io · `--check-order` verifies the migration order before running (*read*) · [kysely-codegen README (raw)](https://raw.githubusercontent.com/RobinBlomberg/kysely-codegen/master/README.md) · github (raw) · `--verify` checks generated types are up to date (*read* the option)
+- **Our delta:** the boot check is ours to write: compare the migrations table against the files on disk, optionally a catalog query. Neither tool detects drift made outside migrations.
+- *Not opened:* pgmold (docs.rs), dbdiff, Bytebase drift pages — search hits only.
+
+### T08-14 · Generating TypeScript types from the schema — Know · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/14-codegen-types.md`
+- **Read this:** [PgTyped: Getting Started](https://pgtyped.dev/docs/getting-started) · pgtyped.dev · config with `transforms`, `db` connection; types inferred from the live schema, run in watch mode (*read*) · covers our angle: **partial** — types per query, not per table · fetched 2026-10-12
+- **Also good:** [kysely-codegen README (raw)](https://raw.githubusercontent.com/RobinBlomberg/kysely-codegen/master/README.md) · github (raw) · types from a live database; `--camel-case`; `numericParser` default `string` (*read*)
+- **Our delta:** the types must follow the runtime: `bigint` and `numeric` are strings in `pg` (T07-08), so a generated `number` is a lie unless a parser is set. `kysely-codegen` is built for Kysely, not raw `pg`.
