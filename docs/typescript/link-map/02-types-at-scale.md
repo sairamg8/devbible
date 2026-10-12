@@ -9,7 +9,7 @@ sidebar_position: 2
 Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-01 to T04-14 (classes and declaration merging), T05-01 to T05-16 (type-level programming), T06-01 to T06-16 (modules, declarations and the build). That is 46 rows, matching the syllabus header. All 46 have a page of ours (✅); folder topics point at their `README.md`.
 *read* = I read the passage; *headings only* = fetched, headings/size checked. Third-party links carry a date where the page shows one. `#anchors` appear only where the id was seen in the page HTML.
 
-🔴 **Version note.** Our syllabus targets **TypeScript 7.0.2** (the native port). npm on 2026-10-12: `latest` 7.0.2, `rc` 7.0.1-rc, `next` 7.1.0-dev, `beta` 6.0.0-beta. The handbook at typescriptlang.org lists "What's New" up to **6.0** and has no 7.0 page that I saw, so 7.0 release notes are not confirmed there. The 6.0 notes (read) say 6.0 is a transition release: it deprecates `moduleResolution node` (node10), `baseUrl`, `classic`, `esModuleInterop: false`, and `amd`/`umd`/`system`; sets `types` to `[]` and `rootDir` to `.` by default; and says deprecated options are removed in 7.0. Type-system pages below (classes, mapped, conditional) are unaffected; Phase 6 blocks note where 6.0/7.0 matters. `github.com` returns 403 to our fetcher, so GitHub-hosted docs are cited as `raw.githubusercontent.com`. `tsgo.dev` did not respond.
+🔴 **Version note.** Our syllabus targets **TypeScript 7.0.2** (the native port). npm on 2026-10-12: `latest` 7.0.2, `rc` 7.0.1-rc, `next` 7.1.0-dev, `beta` 6.0.0-beta. The handbook at typescriptlang.org lists "What's New" up to **6.0** and has no 7.0 page that I saw, so 7.0 release notes are not confirmed there. The 6.0 notes (read) say 6.0 is a transition release: it deprecates `moduleResolution node` (node10), `baseUrl`, `classic`, `esModuleInterop: false`, and `amd`/`umd`/`systemjs` module values; sets `types` to `[]` and `rootDir` to `.` by default; and says deprecated options are removed in 7.0. Type-system pages below (classes, mapped, conditional) are unaffected; Phase 6 blocks note where 6.0/7.0 matters. `github.com` returns 403 to our fetcher, so GitHub-hosted docs are cited as `raw.githubusercontent.com`. `tsgo.dev` did not respond.
 
 ---
 
@@ -20,7 +20,7 @@ Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-0
 - **Our delta:** the `req.user` end-to-end case, and the "file is not in `include`" failure mode.
 
 ### T04-02 · Access modifiers — Understand · ✅ written `docs/typescript/pages/phase-4-classes-declarations/02-access-modifiers/README.md`
-- **Read this:** [Classes → Member Visibility](https://www.typescriptlang.org/docs/handbook/2/classes.html#member-visibility) · typescriptlang.org · `public`/`protected`/`private`, cross-instance private access allowed, caveat that they are enforced only during type checking (*read*) · covers our angle: **partial** — `#private` runtime hardness is not the page's focus · fetched 2026-10-12
+- **Read this:** [Classes → Member Visibility](https://www.typescriptlang.org/docs/handbook/2/classes.html#member-visibility) · typescriptlang.org · `public`/`protected`/`private`, cross-instance private access allowed, caveat that they are enforced only during type checking (*read*) · covers our angle: **partial** — its Caveats section does say `#` private fields stay private after compilation (*read*), but there is no "when the difference matters" decision guide · fetched 2026-10-12
 - **Our delta:** soft vs hard private decision table, and bracket-notation escape.
 
 ### T04-03 · Parameter properties — Understand · ✅ written `docs/typescript/pages/phase-4-classes-declarations/03-parameter-properties.md`
@@ -54,7 +54,7 @@ Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-0
 - **Our delta:** validation on write.
 
 ### T04-10 · `this` types and polymorphic `this` — Know · ✅ written `docs/typescript/pages/phase-4-classes-declarations/10-this-types.md`
-- **Read this:** [Classes → this Types](https://www.typescriptlang.org/docs/handbook/2/classes.html#this-types) · typescriptlang.org · `this` as a type referring dynamically to the current class, with the `Box.set` example (*read*) · covers our angle: **partial** — fluent builder through a subclass chain is for our page · fetched 2026-10-12
+- **Read this:** [Classes → this Types](https://www.typescriptlang.org/docs/handbook/2/classes.html#this-types) · typescriptlang.org · `this` as a type referring dynamically to the current class, with the `Box.set` example (*read*) · covers our angle: **partial** — shows `set` returning the subclass type once (`ClearableBox`); a longer fluent builder chain is for our page · fetched 2026-10-12
 - **Our delta:** subclass type kept through a chain.
 
 ### T04-11 · Abstract classes and abstract construct signatures — Know · ✅ written `docs/typescript/pages/phase-4-classes-declarations/11-abstract-classes.md`

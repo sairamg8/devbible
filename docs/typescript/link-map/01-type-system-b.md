@@ -18,10 +18,10 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 ### T02-01 · `typeof` narrowing — Master · ✅ written `docs/typescript/pages/phase-2-narrowing/01-typeof-narrowing.md`
 - **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) · typescriptlang.org · section "typeof type guards": the returned strings, and the `null` example where `typeof strs === "object"` still leaves `null` possible (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** none found that adds to the Handbook page.
-- **Our delta:** none.
+- **Our delta:** the page lists eight `typeof` strings (including `bigint` and `function`); the syllabus row says "six results", which the page does not support.
 
 ### T02-02 · Truthiness and equality narrowing — Master · ✅ written `docs/typescript/pages/phase-2-narrowing/02-truthiness-and-equality.md`
-- **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) · typescriptlang.org · sections "Truthiness narrowing" and "Equality narrowing" (*headings only*) · covers our angle: **partial** — the empty-string and zero trap is not confirmed on the headings · fetched 2026-10-12
+- **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) · typescriptlang.org · sections "Truthiness narrowing" and "Equality narrowing"; lists `0`, `NaN` and the empty string as falsy and warns a truthy wrapper may mishandle the empty-string case (*read* the truthiness section, equality section *headings only*) · covers our angle: **partial** — the zero case is only in the falsy list, with no worked example · fetched 2026-10-12
 - **Also good:** none found.
 - **Our delta:** the empty-string/zero trap that removes the wrong branch.
 
@@ -100,7 +100,7 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 - **Our delta:** the worked data-structure examples.
 
 ### T03-04 · `keyof` — Master · ✅ written `docs/typescript/pages/phase-3-generics/04-keyof/README.md`
-- **Read this:** [Keyof Type Operator](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html) · typescriptlang.org · the `keyof` operator, ≈700 words (*headings only*) · covers our angle: **partial** — "entry point to every advanced type" is our framing · fetched 2026-10-12
+- **Read this:** [Keyof Type Operator](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html) · typescriptlang.org · the `keyof` operator, short page of ≈230 words (*read*) · covers our angle: **partial** — "entry point to every advanced type" is our framing · fetched 2026-10-12
 - **Also good:** none found.
 - **Our delta:** the framing.
 
@@ -110,13 +110,13 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 - **Our delta:** none.
 
 ### T03-06 · Indexed access types — `T[K]` — Understand · ✅ written `docs/typescript/pages/phase-3-generics/06-indexed-access-types.md`
-- **Read this:** [Indexed Access Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html) · typescriptlang.org · ≈900 words (*headings only*) · covers our angle: **partial** — `T[number]` on arrays not confirmed · fetched 2026-10-12
+- **Read this:** [Indexed Access Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html) · typescriptlang.org · `Person["age"]`, unions and `keyof` as the index, and `number` as an index to get an array's element type (`typeof MyArray[number]`), ≈400 words (*read*) · covers our angle: **partial** — tuples are not shown · fetched 2026-10-12
 - **Also good:** [This Crazy Syntax Lets You Get An Array Element's Type](https://www.totaltypescript.com/get-the-type-of-an-array-element) · Matt Pocock, 2024-09-02 · "Extracting Types From Arrays" and indexed access (*headings only*) · fetched 2026-10-12
-- **Our delta:** `T[number]`.
+- **Our delta:** `T[number]` on tuples.
 
 ### T03-07 · The `typeof` type operator — Understand · ✅ written `docs/typescript/pages/phase-3-generics/07-typeof-type-operator.md`
-- **Read this:** [Typeof Type Operator](https://www.typescriptlang.org/docs/handbook/2/typeof-types.html) · typescriptlang.org · the operator and its "Limitations" (*headings only*) · covers our angle: **partial** — `typeof x[number]` from a `const` array not confirmed · fetched 2026-10-12
-- **Also good:** [This Crazy Syntax Lets You Get An Array Element's Type](https://www.totaltypescript.com/get-the-type-of-an-array-element) · Matt Pocock, 2024-09-02 (*headings only*) · fetched 2026-10-12
+- **Read this:** [Typeof Type Operator](https://www.typescriptlang.org/docs/handbook/2/typeof-types.html) · typescriptlang.org · the operator and its "Limitations" (*headings only*) · covers our angle: **partial** — `typeof x[number]` is not on this page · fetched 2026-10-12
+- **Also good:** [Indexed Access Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html) · typescriptlang.org · `typeof MyArray[number]` on an array literal (*read*); [This Crazy Syntax Lets You Get An Array Element's Type](https://www.totaltypescript.com/get-the-type-of-an-array-element) · Matt Pocock, 2024-09-02 (*headings only*) · fetched 2026-10-12
 - **Our delta:** deriving a union from a `const` array.
 
 ### T03-08 · Default type parameters — Understand · ✅ written `docs/typescript/pages/phase-3-generics/08-default-type-parameters.md`
@@ -135,7 +135,7 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 - **Our delta:** the failure places.
 
 ### T03-11 · `infer` in conditional types — Understand · ✅ written `docs/typescript/pages/phase-3-generics/11-infer-in-conditional-types.md`
-- **Read this:** [Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) · typescriptlang.org · section "Inferring within conditional types" (*headings only*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) · typescriptlang.org · section "Inferring within conditional types": `Flatten` (element type) and `GetReturnType` (*read*) · covers our angle: **partial** — resolved promise types (`Awaited`) are not on the page · fetched 2026-10-12
 - **Also good:** none found.
 - **Our delta:** none.
 
@@ -145,11 +145,11 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 - **Our delta:** the silent no-op cases.
 
 ### T03-13 · When *not* to write a generic — Understand · ✅ written `docs/typescript/pages/phase-3-generics/13-when-not-to-write-a-generic/README.md`
-- **Read this:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) · typescriptlang.org · "Guidelines for Writing Good Generic Functions": "Push Type Parameters Down", "Use Fewer Type Parameters" (*read*) · covers our angle: **partial** — "a type parameter used once is a disguised `any`" is not confirmed as worded · fetched 2026-10-12
+- **Read this:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) · typescriptlang.org · "Guidelines for Writing Good Generic Functions": "Push Type Parameters Down", "Use Fewer Type Parameters", "Type Parameters Should Appear Twice" (a parameter used in one place relates nothing, so reconsider it) (*read*) · covers our angle: **partial** — the "disguised `any`" wording is ours, not the page's · fetched 2026-10-12
 - **Also good:** [There Is No Such Thing As A Generic](https://www.totaltypescript.com/no-such-thing-as-a-generic) · Matt Pocock, 2023-07-20 (updated 2023-10-05) · type arguments, type parameters and generic types (*headings only*) · fetched 2026-10-12
 - **Our delta:** the disguised-`any` argument and the dismantling worked example.
 
 ### T03-14 · Variance — Know · ✅ written `docs/typescript/pages/phase-3-generics/14-variance.md`
-- **Read this:** [TypeScript 4.7 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-7.html) · typescriptlang.org · "Optional Variance Annotations for Type Parameters": `Getter` and `Setter` examples of `in`/`out` (*read* the opening) · covers our angle: **partial** — no method bivariance or `strictFunctionTypes` · fetched 2026-10-12
+- **Read this:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) · typescriptlang.org · section "Variance Annotations": covariance and contravariance with `Producer`/`Consumer`, `in`/`out`/`in out` annotations and when they have no effect (*read*) · covers our angle: **partial** — no method-parameter bivariance or `strictFunctionTypes` · fetched 2026-10-12
 - **Also good:** [Type Compatibility](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) · typescriptlang.org · "Function Parameter Bivariance" (*headings only*); [TSConfig: strictFunctionTypes](https://www.typescriptlang.org/tsconfig/strictFunctionTypes.html) (*headings only*) · fetched 2026-10-12
-- **Our delta:** method-parameter bivariance.
+- **Our delta:** method-parameter bivariance. *Checked, not chosen:* [TypeScript 4.7 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-7.html), where `in`/`out` were introduced (*read* the opening); the Handbook section is the current reference.

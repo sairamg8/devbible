@@ -34,7 +34,7 @@ Covers every topic row of phases 0 and 1 in `docs/typescript/syllabus/01-type-sy
 ### T00-04 · Node's strip-only mode and `erasableSyntaxOnly` — Master · ✅ written `docs/typescript/pages/phase-0-how-typescript-runs/04-strip-only-and-erasable-syntax.md`
 - **Read this:** [Modules: TypeScript](https://nodejs.org/api/typescript.html) · nodejs.org (v26.11.1) · history table (enabled by default 23.6/22.18, stable 25.2/24.12), enums, parameter properties and namespaces with runtime code error, `ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX` (*read*) · covers our angle: **partial** — its sample tsconfig sets `erasableSyntaxOnly`, but it does not explain the compile-error angle · fetched 2026-10-12
 - **Also good:** [TSConfig: erasableSyntaxOnly](https://www.typescriptlang.org/tsconfig/erasableSyntaxOnly.html) · typescriptlang.org · lists the banned constructs: enum, runtime namespace, parameter properties, `import =`, `export =` (*read*) · fetched 2026-10-12
-- **Our delta:** the flag as "runtime failure becomes compile error". The TS 5.8 notes carry the same motivation (*read*).
+- **Our delta:** the flag as "runtime failure becomes compile error". The [TS 5.8 notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-8.html) carry the same motivation: Node 23.6 unflagged strip-types, and the listed constructs are not supported (*read* the `--erasableSyntaxOnly` section).
 
 ### T00-05 · `strict` and the flags it turns on — Master · ✅ written `docs/typescript/pages/phase-0-how-typescript-runs/05-strict.md`
 - **Read this:** [TSConfig: strict](https://www.typescriptlang.org/tsconfig/strict.html) · typescriptlang.org · strict enables the whole strict-mode family; future versions may add checks under it (*read*) · covers our angle: **partial** — the member flags are only listed on the full TSConfig reference · fetched 2026-10-12
@@ -42,7 +42,7 @@ Covers every topic row of phases 0 and 1 in `docs/typescript/syllabus/01-type-sy
 - **Our delta:** 🔴 the 6.0 default flip: a bare tsconfig is now strict on 6.x and 7.x, still non-strict below 6.0.
 
 ### T00-06 · `tsconfig.json` anatomy — Understand · ✅ written `docs/typescript/pages/phase-0-how-typescript-runs/06-tsconfig-anatomy.md`
-- **Read this:** [TSConfig Reference](https://www.typescriptlang.org/tsconfig/) · typescriptlang.org · every option with its default; ≈22k words (*headings only*, plus the strict family list *read*) · covers our angle: **partial** — a reference, not "which fields you actually set" · fetched 2026-10-12
+- **Read this:** [TSConfig Reference](https://www.typescriptlang.org/tsconfig/) · typescriptlang.org · every option with its default; very long, ≈19k words by our text extraction (*headings only*, plus the strict family list *read*) · covers our angle: **partial** — a reference, not "which fields you actually set" · fetched 2026-10-12
 - **Also good:** [What is a tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) · typescriptlang.org · `files`, `include`, `exclude`, `extends`, tsconfig bases (*read* the include/exclude section) · fetched 2026-10-12
 - **Our delta:** the set-versus-ceremony split. [The TSConfig Cheat Sheet](https://www.totaltypescript.com/tsconfig-cheat-sheet) (Matt Pocock, 2023-09-13, updated 2024-08-05, *headings only*) predates the 6.0 default changes.
 
@@ -67,7 +67,7 @@ Covers every topic row of phases 0 and 1 in `docs/typescript/syllabus/01-type-sy
 - **Our delta:** where `tsc --noEmit` sits in CI; [TSConfig: isolatedModules](https://www.typescriptlang.org/tsconfig/isolatedModules.html) (*headings only*) is the flag that keeps single-file tools safe.
 
 ### T00-11 · Project layout — Understand · ✅ written `docs/typescript/pages/phase-0-how-typescript-runs/11-project-layout.md`
-- **Read this:** [What is a tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) · typescriptlang.org · `include`/`exclude` examples and bases (*read*) · covers our angle: **partial** — no `outDir`/`rootDir` text, no publishing · fetched 2026-10-12
+- **Read this:** [What is a tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) · typescriptlang.org · `include`/`exclude` examples and bases (*read*); its examples are dated (`module: commonjs`, `@tsconfig/node12`, `outFile`) · covers our angle: **partial** — no `outDir`/`rootDir` text, no publishing · fetched 2026-10-12
 - **Also good:** [TypeScript 6.0 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-6-0.html) · typescriptlang.org · `rootDir` now defaults to `.`, so output can land in `./dist/src/index.js` (*read*); [5.9 notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-9.html) cover the minimal `tsc --init` (*read*) · fetched 2026-10-12
 - **Our delta:** why `outDir` and `include` fight, and what `npm publish` ships: not found on one page. [TSConfig: outDir](https://www.typescriptlang.org/tsconfig/outDir.html) and [rootDir](https://www.typescriptlang.org/tsconfig/rootDir.html) are short references (*headings only*).
 
@@ -106,7 +106,7 @@ Covers every topic row of phases 0 and 1 in `docs/typescript/syllabus/01-type-sy
 - **Our delta:** what an index signature costs you under `noUncheckedIndexedAccess` (Phase 10).
 
 ### T01-05 · Union types — Master · ✅ written `docs/typescript/pages/phase-1-type-vocabulary/05-union-types.md`
-- **Read this:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) · typescriptlang.org · "Defining a Union Type" and "Working with Union Types": only members common to every branch are usable until you narrow (*headings only*) · covers our angle: full · fetched 2026-10-12
+- **Read this:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) · typescriptlang.org · "Defining a Union Type" and "Working with Union Types": an operation is allowed only if valid for every member (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Union Types](https://www.totaltypescript.com/concepts/union-types) · Total TypeScript · examples including literal unions (*read*) · fetched 2026-10-12
 - **Our delta:** none.
 
@@ -131,7 +131,7 @@ Covers every topic row of phases 0 and 1 in `docs/typescript/syllabus/01-type-sy
 - **Our delta:** why a literal errors while the same value in a variable passes.
 
 ### T01-10 · `null` and `undefined` under `strictNullChecks` — Master · ✅ written `docs/typescript/pages/phase-1-type-vocabulary/10-null-and-undefined.md`
-- **Read this:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) · typescriptlang.org · "null and undefined" with `strictNullChecks` off and on (*headings only*) · covers our angle: **partial** — optional property versus `| undefined` not confirmed · fetched 2026-10-12
+- **Read this:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) · typescriptlang.org · "null and undefined" with `strictNullChecks` off and on (*read*) · covers our angle: **partial** — optional property versus `| undefined` not confirmed · fetched 2026-10-12
 - **Also good:** [TSConfig: strictNullChecks](https://www.typescriptlang.org/tsconfig/strictNullChecks.html) · typescriptlang.org · the flag reference (*headings only*); [exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig/exactOptionalPropertyTypes.html) for the absent-versus-undefined split · fetched 2026-10-12
 - **Our delta:** optional versus `| undefined`.
 
