@@ -7,6 +7,14 @@ metadata:
 
 # 🔴 START HERE — the link map ("hub + delta", one place)
 
+## 🔴 RESUME HERE — session progress saved 2026-10-12 (afternoon)
+
+- **Live on the site (merged to `main`, deploys green unless noted):** MongoDB 82, Redux Toolkit 21, Redis 74, Node.js 249, Express 115, PostgreSQL 233, TypeScript 187, Docker & Podman 192 (deploy #263 ✅), nginx 210 (PR #12, deploy #264 building at 12:43 UTC). **Git** (~177, 5 lanes) was running when this was saved.
+- **User orders in force:** one language at a time; deploy the agents needed; merge everything to `main`; max 5 agents alive; announce each agent's effort before launching; **default model** for all agents (Opus only on request, e.g. a sensitive topic or a spot audit); "Further reading" links go on existing pages **additively** (nothing removed); finish Git, then stop for this session.
+- **Per-language recipe:** (1) read `docs/<track>/syllabus/*.md` for parts/phases; (2) copy `scratchpad/git-linkmap.js`-style script (not in the repo; its prompt rules are in this file's history and in the PR descriptions) — lanes = syllabus parts, each a `[medium]` researcher then a `[high]` verifier; (3) when done: `link-map/README.md` + `_category_.json` + tip pointer in the track README; (4) `python3 scripts/linkmap-inject.py <track>`; (5) `node scripts/linkcheck.mjs docs/<track>` + `mdxcheck.py --no-rawtag`; (6) flip the status row; (7) commit explicit paths, PR, merge with the full 40-char `expectedHeadSha`.
+- **Not started, in this order:** Python, JavaScript, React, Angular, Java, CSS, then the rest. Also owed: re-read the "headings only" blocks in every map; split the pages the injector skipped for the 300-line cap (~28 pages); Next.js/Vite/webpack/etc. have no map yet.
+- **Central rules** live in the `sairamg8/claude-context` repo (attached read-only this session, so nothing was written there).
+
 ## Link-map status per language (update the moment a language completes)
 
 | Language | Topics | State | Live since |
