@@ -9,7 +9,7 @@ sidebar_position: 3
 Covers every topic row of `docs/python/syllabus/03-application.md` for phase 9 (the web service, T09-01 to T09-14) and phase 10 (data, files and integrations, T10-01 to T10-13). That is 27 rows, numbered in table order. Part 3a holds phases 7–8, part 3c holds phase 11. No page of ours exists yet for these phases, so every row is 🔲.
 *read* = I read the passage that carries the claim; *headings only* = fetched, title and headings checked. Every link was re-fetched with a browser User-Agent on 2026-10-12 and returned HTTP 200. Third-party links carry a date where the page shows one. No `#anchors` are given.
 
-🔴 **Version note.** docs.python.org `/3/` pages were titled Python 3.15.0 on 2026-10-12. FastAPI's JWT tutorial now uses `pwdlib` with Argon2 (18 hits for pwdlib, 2 for bcrypt), so older passlib-based tutorials are stale. psycopg docs were 3.3.7.dev1, SQLAlchemy docs are the 2.0 series, Alembic 1.20.0, Django's `/en/stable/` redirects to 6.1, Flask stable is 3.1.x.
+🔴 **Version note.** docs.python.org `/3/` pages were titled Python 3.15.0 on 2026-10-12. FastAPI's JWT tutorial now uses `pwdlib` with Argon2 (18 hits for pwdlib, 2 for bcrypt), so older passlib-based tutorials are stale. psycopg docs were 3.3.7.dev1, SQLAlchemy docs are the 2.0 series, Alembic 1.20.0, In the 3.15 docs the built-in functions page moved from `library/functions.html` to `builtins/functions.html` (the old URL redirects); the new one is cited. Pydantic docs moved to pydantic.dev/docs/validation (old docs.pydantic.dev URLs redirect). Django's `/en/stable/` redirects to 6.1, Flask stable is 3.1.x.
 Not fetchable: `realpython.com` (Cloudflare challenge, 403, on re-check; its picks were replaced), `github.com` (403; orjson is cited through raw.githubusercontent.com instead, see T10-03), `pypi.org` (bot challenge), `uvicorn.org` (proxy tunnel failure; the serving topic uses FastAPI's pages instead).
 
 ---
@@ -26,8 +26,8 @@ Not fetchable: `realpython.com` (Cloudflare challenge, 403, on re-check; its pic
 - **Our delta:** one page tying path, query, body and response together; see also the Path Parameters and Query Parameters pages on the same site.
 
 ### T09-03 · Pydantic v2 — Master · 🔲 not written
-- **Read this:** [Models](https://docs.pydantic.dev/latest/concepts/models/) · docs.pydantic.dev · `BaseModel` and validation entry points (*read*) · covers our angle: **partial** — validators, serialization and settings are on sibling pages · fetched 2026-10-12
-- **Also good:** [Validators](https://docs.pydantic.dev/latest/concepts/validators/) · docs.pydantic.dev · `field_validator` and `model_validator` (*read*) · fetched 2026-10-12
+- **Read this:** [Models](https://pydantic.dev/docs/validation/latest/concepts/models/) · pydantic.dev · `BaseModel` and validation entry points (*read*) · covers our angle: **partial** — validators, serialization and settings are on sibling pages · fetched 2026-10-12
+- **Also good:** [Validators](https://pydantic.dev/docs/validation/latest/concepts/validators/) · pydantic.dev · `field_validator` and `model_validator` (*read*) · fetched 2026-10-12
 - **Our delta:** Pydantic as the guard for all external data, not just HTTP; serialization control (the Serialization page) and settings.
 
 ### T09-04 · Dependency injection with `Depends` — Understand · 🔲 not written
@@ -85,7 +85,7 @@ Not fetchable: `realpython.com` (Cloudflare challenge, 403, on re-check; its pic
 - **Our delta:** the walk-through; Real Python's pathlib tutorial returned 403 on re-check and is not linked.
 
 ### T10-02 · Files properly: encoding, newline, atomic writes — Understand · 🔲 not written
-- **Read this:** [Built-in functions, open](https://docs.python.org/3/library/functions.html) · docs.python.org · `encoding` and `newline` parameters (*read*) · covers our angle: **partial** — nothing on atomic temp-and-rename · fetched 2026-10-12
+- **Read this:** [Built-in functions, open](https://docs.python.org/3/builtins/functions.html) · docs.python.org · `encoding` and `newline` parameters (*read*) · covers our angle: **partial** — nothing on atomic temp-and-rename · fetched 2026-10-12
 - **Also good:** [tempfile](https://docs.python.org/3/library/tempfile.html) · docs.python.org · the temp-file half of an atomic write (*headings only*) · fetched 2026-10-12
 - **Our delta:** the Windows default-encoding bug and `os.replace` as the rename step.
 

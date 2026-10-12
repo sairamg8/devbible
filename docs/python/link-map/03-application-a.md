@@ -49,7 +49,7 @@ Not fetchable: `realpython.com` (Cloudflare challenge, 403, on re-check; its pic
 - **Our delta:** what the error looks like when no wheel matches your platform, and the fix.
 
 ### T07-08 · Config and secrets — Understand · 🔲 not written
-- **Read this:** [Settings Management (pydantic-settings)](https://docs.pydantic.dev/latest/concepts/pydantic_settings/) · docs.pydantic.dev · typed settings from environment variables and a dotenv file (*read*) · covers our angle: **partial** — nothing on why `.env` is for development only · fetched 2026-10-12
+- **Read this:** [Settings Management (pydantic-settings)](https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings/) · pydantic.dev · typed settings from environment variables and a dotenv file (*read*) · covers our angle: **partial** — nothing on why `.env` is for development only · fetched 2026-10-12
 - **Also good:** [The Twelve-Factor App, Config](https://12factor.net/config) · 12factor.net · the principle: configuration lives in the environment (*read*) · fetched 2026-10-12
 - **Our delta:** `.env` in dev only, and what production injects instead.
 

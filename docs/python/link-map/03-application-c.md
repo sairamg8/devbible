@@ -37,8 +37,8 @@ Not fetchable: `github.com` (403, so the popular FastAPI best-practices repo can
 
 ### T11-05 · Layering a FastAPI service — Master · 🔲 not written
 - **Read this:** [Bigger Applications, Multiple Files](https://fastapi.tiangolo.com/tutorial/bigger-applications/) · fastapi.tiangolo.com · `APIRouter` and the folder structure (*read*) · covers our angle: **partial** — routers only; no service or repository layer · fetched 2026-10-12
-- **Also good:** [Repository Pattern](https://www.cosmicpython.com/book/chapter_02_repository.html) · Percival and Gregory, Architecture Patterns with Python (online book, page updated 2023-11-24) · a repository abstraction over SQLAlchemy, faked in tests (*read*) · fetched 2026-10-12
-- **Also good:** [Flask API and Service Layer](https://www.cosmicpython.com/book/chapter_04_service_layer.html) · same book · the service layer owns orchestration and the `session.commit()` (*read*) · fetched 2026-10-12
+- **Also good:** [Repository Pattern](https://www.cosmicpython.com/book/chapter_02_repository) · Percival and Gregory, Architecture Patterns with Python (online book, page updated 2023-11-24) · a repository abstraction over SQLAlchemy, faked in tests (*read*) · fetched 2026-10-12
+- **Also good:** [Flask API and Service Layer](https://www.cosmicpython.com/book/chapter_04_service_layer) · same book · the service layer owns orchestration and the `session.commit()` (*read*) · fetched 2026-10-12
 - **Our delta:** the same three layers in FastAPI (the book uses Flask), and why a router never contains a `select()`.
 - *Not opened:* the zhanymkanov FastAPI best-practices repository (github.com returned 403, not fetchable — unverified).
 
@@ -62,7 +62,7 @@ Not fetchable: `github.com` (403, so the popular FastAPI best-practices repo can
 - **Read this:** [We need tool support for keyset pagination](https://use-the-index-luke.com/no-offset) · use-the-index-luke.com, 2014-08-06, updated 2023-09-08 · why offset pages are slow and drift, and what seek replaces them with (*read*) · covers our angle: **partial** — SQL concept only, no SQLAlchemy code · fetched 2026-10-12
 - **Also good:** [SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) · OWASP · Defense Option 3: table names, column names and sort order indicators cannot be bind variables, so map user input to legal values (*read*) · fetched 2026-10-12
 - **Our delta:** keyset pagination in SQLAlchemy 2.0, the response envelope, and sort whitelisting as ORDER BY injection defence.
-- *Checked, not chosen:* [Paginate Results](https://www.cockroachlabs.com/docs/stable/pagination) · CockroachDB docs · vendor-specific.
+- *Checked, not chosen:* [Paginate Results](https://docs.cockroachlabs.com/docs/stable/pagination) · CockroachDB docs · vendor-specific.
 
 ### T11-10 · Update, PUT vs PATCH — Master · 🔲 not written
 - **Read this:** [Body, Updates](https://fastapi.tiangolo.com/tutorial/body-updates/) · fastapi.tiangolo.com · PUT versus PATCH and `exclude_unset` in one short page (*read*) · covers our angle: **partial** — no optimistic concurrency · fetched 2026-10-12
