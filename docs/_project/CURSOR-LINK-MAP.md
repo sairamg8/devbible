@@ -7,6 +7,13 @@ metadata:
 
 # 🔴 START HERE — the link map ("hub + delta", one place)
 
+## 2026-10-12 (later) — MongoDB map published and validated
+
+- PR #3 merged to `main` (link maps on the site: `docs/mongodb/link-map/`, `docs/redux-toolkit/link-map/`).
+- Validation workflow (5 lanes, `[medium]` validator + `[high]` verifier each, 10 agents): most headings-only picks now *read*; 12 overreaching claims
+  corrected (e.g. T22 update cost, T29 null-in-comparison scope, T73 readWrite, T60 staff attribution). 11 "headings only" marks remain, by design. **The site copy is now the truth**; the staged copy in `link-map/mongodb/` here is older.
+- Next: validate Redux Toolkit the same way, then pick the next language to map (one at a time).
+
 ## 2026-10-12 — MongoDB started (the user said "continue with the MongoDB link map")
 
 - **Done:** [link-map/mongodb/01-how-it-runs-and-bson.md](link-map/mongodb/01-how-it-runs-and-bson.md) — T01–T11 (phases 0–1), all 18 URLs HTTP 200.
