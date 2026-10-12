@@ -269,6 +269,17 @@ attestation-manifest`, with platform `unknown/unknown` specifically so runtimes
 do not try to execute them. Podman writes signatures to a sigstore directory
 derived from its `registries.d` configuration.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [cosign README (raw)](https://raw.githubusercontent.com/sigstore/cosign/main/README.md) — sigstore: sign by digest (`@sha256:`), not by tag; keyless signing may record an email in a public log (*read*)
+- **Also good:** [Cosign signing overview](https://docs.sigstore.dev/cosign/signing/overview/) — docs.sigstore.dev: root of trust, identity tokens, signing and verifying process (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [SBOMs and provenance](11-sbom-and-provenance.md) · Index: [Phase 5](README.md) · Next phase → [Phase 6 · Storage: volumes, mounts and data](../phase-6-storage/README.md)

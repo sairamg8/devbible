@@ -271,6 +271,17 @@ application layers, so the binary is unchanged and only its surroundings differ.
 That is safer than a fat production image and more repeatable than a one-off
 sidecar.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker debug](https://docs.docker.com/reference/cli/docker/debug/) — Docker docs: debug shell into slim containers and images with no shell, without changing the image (*read* intro)
+- **Also good:** [nsenter(1)](https://man7.org/linux/man-pages/man1/nsenter.1.html) — Linux man-pages: run a program in another process's namespaces (*read* description)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Observing](11-observing.md) · Index: [Phase 10](README.md) · Next → [Disk growth](13-disk-growth.md)

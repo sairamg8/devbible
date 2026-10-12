@@ -250,6 +250,16 @@ No. It is a property of the Dockerfile. The only engine caveat is that Podman
 must be caching intermediate layers at all (`--layers`, on by default) for the
 ordering to buy anything.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optimize cache usage in builds · Order your layers](https://docs.docker.com/build/cache/optimize/#order-your-layers) — docs.docker.com: "a change causes a rebuild for steps that follow"; modified 2026-07-22 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [How the layer cache decides](01-how-the-cache-decides.md) · Index: [Phase 4](README.md) · Next → [The dependency-install pattern](03-dependency-install-pattern.md)

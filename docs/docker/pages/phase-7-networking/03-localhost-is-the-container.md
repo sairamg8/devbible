@@ -183,6 +183,17 @@ started with `--network=container:<other>`. They then also share the port space,
 so they cannot both bind the same port. That is the model Kubernetes pods use,
 and it is the exception that proves the rule.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Networking in Compose](https://docs.docker.com/compose/how-tos/networking/) — docs.docker.com: each service is reachable by its service name through an internal DNS server, with no IP addresses needed (*read*)
+- **Also good:** [Docker Desktop networking how-tos](https://docs.docker.com/desktop/features/networking/networking-how-tos/) — docs.docker.com: `host.docker.internal` is the name for the host, which implies `localhost` is not it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Service discovery](02-service-discovery.md) · Index: [Phase 7](README.md) · Next → [Publishing ports](04-publishing-ports.md)

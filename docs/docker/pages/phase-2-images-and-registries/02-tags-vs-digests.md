@@ -148,6 +148,16 @@ You stop receiving upstream patches automatically. Handle it with Renovate or
 Dependabot raising a pull request when the tag moves, so updates arrive
 deliberately with a review, rather than silently or not at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Building best practices: pin base image versions](https://docs.docker.com/build/building/best-practices/#pin-base-image-versions) — Docker docs, modified 2026-09-04: tags are mutable; `FROM alpine:3.21@sha256:…` pins; the cost is opting out of automated security fixes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Image references](01-image-references.md) · Index: [Phase 2](README.md) · Next → [pull, push, images, tag, rmi](03-pull-push-tag.md)

@@ -190,6 +190,18 @@ It removes a host-wide protection to solve a per-mount labelling problem that ha
 a two-character fix. On Fedora and RHEL, SELinux is a significant part of what
 limits a container escape.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Seccomp security profiles for Docker](https://docs.docker.com/engine/security/seccomp/) — Docker docs: default profile disables about 44 of 300+ syscalls, an allowlist (*read*)
+- **Also good:** [AppArmor security profiles](https://docs.docker.com/engine/security/apparmor/) — Docker docs: auto-generated `docker-default` profile (*read*)
+- **Also good:** [Bind mounts: configure the SELinux label](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Capabilities](09-capabilities.md) · Index: [Phase 0](README.md) · Next → [Rootless containers](11-rootless.md)

@@ -174,6 +174,16 @@ bypass the script's setup.
 `--entrypoint ""` with the command after the image name. Useful for images that
 wrap everything in a launcher you want out of the way.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Running containers: default entrypoint](https://docs.docker.com/engine/containers/run/#default-entrypoint) — Docker docs: `--entrypoint` overwrites the image entrypoint; a trailing command is appended to it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Interactive and TTY](10-interactive-and-tty.md) · Index: [Phase 1](README.md) · Next → [Restart policies](12-restart-policies.md)

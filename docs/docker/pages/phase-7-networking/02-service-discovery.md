@@ -249,6 +249,17 @@ attached — that is the usual answer. Then `getent hosts <name>` and
 `cat /etc/resolv.conf` from *inside* the container, because a lookup on the host
 proves nothing about the container's resolver.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Networking in Compose](https://docs.docker.com/compose/how-tos/networking/) — docs.docker.com: each service registers its name with an internal DNS server; the default network is enough for most development; modified 2026-08-16 (*read*)
+- **Also good:** [Bridge network driver](https://docs.docker.com/engine/network/drivers/bridge/) — docs.docker.com: the same name resolution outside Compose (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The default bridge vs a user-defined bridge](01-default-vs-user-defined-bridge.md) · Index: [Phase 7](README.md) · Next → [`localhost` inside a container is the container](03-localhost-is-the-container.md)

@@ -139,6 +139,17 @@ They were written to a path already declared as a `VOLUME`, and changes to a
 declared volume path in later build steps are discarded. Declare it after the
 writes, or leave it out.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · VOLUME](https://docs.docker.com/reference/dockerfile/#volume) — docs.docker.com: creates a mount point, data at that path in the image seeds the new volume, notes on specifying volumes (*read*)
+- **Also good:** [Building best practices · VOLUME](https://docs.docker.com/build/building/best-practices/#volume) — docs.docker.com: intended use (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [LABEL and image metadata](12-label-and-metadata.md) · Index: [Phase 3](README.md) · Next → [Heredocs](14-heredocs.md)

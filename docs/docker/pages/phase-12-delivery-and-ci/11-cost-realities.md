@@ -172,6 +172,17 @@ IPv4 address or IPv6 /64 subnet, so a shared CI egress address spends one pool
 across everyone using it — and the failure looks like your pipeline's fault.
 Authenticating makes the limit yours.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Usage and limits: pulls](https://docs.docker.com/docker-hub/usage/pulls/) — Docker docs: pull-rate tiers and what counts as a pull (*read*)
+- **Also good:** [Cache management with GitHub Actions](https://docs.docker.com/build/ci/github-actions/cache/) — Docker docs: cache as a build-time lever (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`docker context`](10-docker-context.md) · Index: [Phase 12](README.md) · Next → [12 · Docker Swarm in 2026](12-swarm-in-2026.md)

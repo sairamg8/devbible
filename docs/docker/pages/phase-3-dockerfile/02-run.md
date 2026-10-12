@@ -178,6 +178,17 @@ No — group by purpose, not by count. Chain steps whose intermediate files must
 not persist; keep independent steps separate so a change to one does not
 invalidate the other's cache.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Building best practices · RUN](https://docs.docker.com/build/building/best-practices/#run) — docs.docker.com: `apt-get update && install` in one `RUN`, `rm -rf /var/lib/apt/lists/*`, `set -o pipefail`, heredoc alternative (*read*)
+- **Also good:** [Dockerfile reference · RUN](https://docs.docker.com/reference/dockerfile/#run) — docs.docker.com: forms, cache invalidation for `RUN`, the `--mount` family (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [FROM](01-from.md) · Index: [Phase 3](README.md) · Next → [COPY versus ADD](03-copy-vs-add.md)

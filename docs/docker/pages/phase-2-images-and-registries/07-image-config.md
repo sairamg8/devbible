@@ -149,6 +149,17 @@ it, and registries such as GHCR use `org.opencontainers.image.source` to link a
 package to its repository. It costs one instruction and saves an archaeology
 session later.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [OCI image config (raw)](https://raw.githubusercontent.com/opencontainers/image-spec/main/config.md) — github (raw): `ExposedPorts` is a set of defaults, merged at run time (*read*)
+- **Also good:** [docker container inspect](https://docs.docker.com/reference/cli/docker/container/inspect/) — Docker docs (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Reading docker history](06-history.md) · Index: [Phase 2](README.md) · Next → [Registries and rate limits](08-registries.md)

@@ -255,6 +255,17 @@ Speed comes from ordering and from cache reuse; size comes from staging.
 image. Prefer `AS <name>`: indices shift when a stage is inserted, silently
 copying from the wrong place.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/) — docs.docker.com: several `FROM`s, copy artefacts between stages, name stages; modified 2024-09-10 (*read*)
+- **Also good:** [Building best practices · Use multi-stage builds](https://docs.docker.com/build/building/best-practices/#use-multi-stage-builds) — docs.docker.com: also builds stages in parallel (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The dependency-install pattern](03-dependency-install-pattern.md) · Index: [Phase 4](README.md) · Next → [`RUN --mount=type=secret`](05-mount-type-secret.md)

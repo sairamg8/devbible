@@ -161,6 +161,17 @@ Under `containers/<id>/<id>-json.log` in the storage root, from the default
 deleting the file while the container runs does not free the space, because the
 process still holds the descriptor.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Select a storage driver](https://docs.docker.com/engine/storage/drivers/select-storage-driver/) — Docker docs, modified 2026-03-09: containerd image store is the default for fresh installs of Engine 29.0 and later; upgraded daemons keep the classic drivers such as `overlay2` (*read*)
+- **Also good:** [containers-storage.conf(5) (raw)](https://raw.githubusercontent.com/containers/storage/main/docs/containers-storage.conf.5.md) — github (raw): the `driver` option for Podman (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Podman's registries.conf](12-podman-registries-conf.md) · Index: [Phase 2](README.md) · Next → [Running your own registry](14-your-own-registry.md)

@@ -165,6 +165,16 @@ frontend feature and the parser directive is how the frontend is selected.
 **How do you stop variable expansion inside a heredoc?**
 Quote the delimiter: `<<'EOF'`. Unquoted, the shell expands `$VAR` as usual.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · Here-Documents](https://docs.docker.com/reference/dockerfile/#here-documents) — docs.docker.com: `RUN &lt;&lt;EOT bash`, shebang interpreters, inline files via `COPY` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [VOLUME in a Dockerfile](13-volume.md) · Index: [Phase 3](README.md) · Next → [The syntax directive](15-syntax-directive.md)

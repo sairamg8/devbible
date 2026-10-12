@@ -222,6 +222,17 @@ assume a daemon-driven loop, and no reliance on extensions you have not verified
 on both. The parts that will not port are engine-level, not file-level, which is
 why the fix is usually in how the stack is deployed rather than in the YAML.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman-compose (man page)](https://docs.podman.io/en/latest/markdown/podman-compose.1.html) — docs.podman.io: `podman compose` is a thin wrapper around an external provider (`docker-compose` or `podman-compose`) pointed at the Podman socket (*read*)
+- **Also good:** [podman-compose README (raw)](https://raw.githubusercontent.com/containers/podman-compose/main/README.md) — containers/podman-compose: a Python implementation of the Compose Spec on Podman, rootless and daemonless; needs a network backend with DNS (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Day-to-day commands](14-day-to-day-commands/README.md) · Index: [Phase 8](README.md) · Next → [`include` and `extends`](16-include-and-extends.md)

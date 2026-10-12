@@ -220,6 +220,16 @@ Docker already drops all but an allowlist, so container-root is far from host-ro
 `--cap-drop=ALL` should be the starting point, with `NET_BIND_SERVICE` the one
 common addition, better avoided by listening above 1024.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html) — OWASP: rule 2 set a user, rule 3 limit capabilities, rule 8 `--read-only` with `--tmpfs`, rule 11 rootless (*read* rules 2, 3 and 8; rule 11 *headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The classic mistakes](02-classic-mistakes.md) · Index: [Phase 5](README.md) · Next → [Measuring](04-measuring.md)

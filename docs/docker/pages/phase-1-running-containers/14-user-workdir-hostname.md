@@ -145,6 +145,17 @@ Desktop provides the name already; Podman's equivalent is
 The username has to exist in the container's `/etc/passwd`; a UID never has to.
 Numeric IDs work in every image, including minimal ones with no user database.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker container run](https://docs.docker.com/reference/cli/docker/container/run/) — Docker docs: `--add-host` takes host:ip; option table, plus `workdir` example heading (*read* the table)
+- **Also good:** [Running containers: user](https://docs.docker.com/engine/containers/run/#user) — Docker docs (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Reclaiming disk space](13-reclaiming-disk.md) · Index: [Phase 1](README.md) · Next → [docker cp](15-docker-cp.md)

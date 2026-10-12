@@ -157,6 +157,18 @@ Direct registry-to-registry and registry-to-archive copying with no daemon and n
 local image store, plus `skopeo inspect` to read an image's config and digest
 from the registry without pulling it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker container export](https://docs.docker.com/reference/cli/docker/container/export/) — Docker docs: exports a container's filesystem as a tar archive; volumes are not included (*read*)
+- **Also good:** [docker image import](https://docs.docker.com/reference/cli/docker/image/import/) — Docker docs: creates a filesystem image from a tarball; `--change` can set CMD and ENTRYPOINT (*read*)
+- **Also good:** [docker image save](https://docs.docker.com/reference/cli/docker/image/save/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Multi-arch images](10-multi-arch.md) · Index: [Phase 2](README.md) · Next → [Podman's registries.conf](12-podman-registries-conf.md)

@@ -166,6 +166,16 @@ No — it transfers incrementally, sending only changed files and skipping unuse
 ones. A cold builder still reads everything, and excluded files never enter the
 calculation at all, so `.dockerignore` still matters.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Build context](https://docs.docker.com/build/concepts/context/) — docs.docker.com: local directory, stdin, tarballs, git repositories, empty context, named contexts; modified 2026-02-21 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`docker build` vs `podman build` vs `buildah`](14-docker-vs-podman-vs-buildah.md) · Index: [Phase 4](README.md) · Next → [Reproducible builds](16-reproducible-builds.md)

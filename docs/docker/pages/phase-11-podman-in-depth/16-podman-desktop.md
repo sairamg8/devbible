@@ -190,6 +190,16 @@ tools ([12](12-buildah-and-skopeo.md)), the removals in Podman 6
 ([14](14-podman-6-breaking-changes.md)) and the VM on macOS and Windows
 ([15](15-podman-machine.md)) — follows from those four facts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Podman Desktop introduction](https://podman-desktop.io/docs/intro) — podman-desktop.io: official docs entry; nav lists containers, pods, Compose, Kubernetes contexts (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`podman machine`](15-podman-machine.md) · Index: [Phase 11](README.md) · Next → [Phase 12 — Delivery, CI and orchestration](../phase-12-delivery-and-ci/README.md)

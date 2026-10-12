@@ -198,6 +198,17 @@ Apt installs recommended packages by default, and in a container they are almost
 never wanted. It is one flag for a consistent saving with no behavioural risk to
 the packages you actually asked for.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Building best practices](https://docs.docker.com/build/building/best-practices/) — docs.docker.com: small base, separate build and runtime stages, no unnecessary packages; modified 2026-09-04 (*read*)
+- **Also good:** [Choosing the best Node.js Docker image](https://snyk.io/blog/choosing-the-best-node-js-docker-image/) — Snyk, Sep 2022 (editor's note 31 Aug 2023): size and CVE comparison of Node tags; figures are dated and will have moved (*read* the alpine and distroless sections)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 5](README.md) · Next → [The classic mistakes](02-classic-mistakes.md)

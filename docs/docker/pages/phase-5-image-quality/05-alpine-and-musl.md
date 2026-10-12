@@ -200,6 +200,17 @@ Ones that do not depend on the libc: a static Go or Rust binary, or a small
 shell-tooling image. It suits a Node or Python service least when that service
 has native dependencies with no musl builds published.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker-node README (raw)](https://raw.githubusercontent.com/nodejs/docker-node/main/README.md) — nodejs/docker-node: `node:alpine` has no `git`/`bash`; `gcompat` for glibc binaries; `amd64` musl builds are listed under the Experimental tier (*read*)
+- **Also good:** [Choosing the best Node.js Docker image](https://snyk.io/blog/choosing-the-best-node-js-docker-image/) — Snyk, Sep 2022 (editor's note 31 Aug 2023): alpine at 167MB, 64MB under slim at the time (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Measuring](04-measuring.md) · Index: [Phase 5](README.md) · Next → [Distroless and `scratch`](06-distroless-and-scratch.md)

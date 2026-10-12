@@ -236,6 +236,16 @@ do. What it prevents is the bind-mount class: a missing or misspelled host path
 becomes an error instead of an empty directory, and the mount type is stated
 rather than inferred.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Bind mounts · Syntax](https://docs.docker.com/engine/storage/bind-mounts/) — docs.docker.com: `--mount` is preferred; `--volume` silently creates a missing host directory, `--mount` errors instead (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Volumes, bind mounts and tmpfs](02-volumes-bind-mounts-tmpfs/README.md) · Index: [Phase 6](README.md) · Next → [Bind mounts in development](04-bind-mounts-in-development/README.md)

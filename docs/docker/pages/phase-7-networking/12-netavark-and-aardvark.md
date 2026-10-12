@@ -198,6 +198,17 @@ aardvark-dns or a network without DNS enabled. If it fails both ways, name
 resolution is irrelevant and the problem is the interface, the firewall, the
 port or the listener.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CNI deprecation and removal from Podman 5.0](https://blog.podman.io/2023/11/cni-deprecation-and-removal-from-podman-5-0/) — Podman blog: CNI replaced by netavark and aardvark-dns, dropped from upstream builds at 5.0; 2023-11-06 (*read*)
+- **Also good:** [netavark README (raw)](https://raw.githubusercontent.com/containers/netavark/main/README.md) — containers/netavark: rootless support, IPv4/IPv6, DNS via aardvark-dns (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Debugging the network](11-debugging-the-network.md) · Index: [Phase 7](README.md) · Next → [Custom subnets, IPv6 and the VPN clash](13-subnets-ipv6-and-vpn.md)

@@ -203,6 +203,18 @@ buildx build` or `--builder`.
 content mounted into a specific operation separately from the layer that
 operation produces — so a `RUN` can read something that never lands in the image.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [BuildKit](https://docs.docker.com/build/buildkit/) — docs.docker.com: LLB, content-addressable graph, caching model rewritten, cache exportable to a registry; modified 2026-04-02 (*read* the LLB passage)
+- **Also good:** [Multi-stage builds · Differences between legacy builder and BuildKit](https://docs.docker.com/build/building/multi-stage/#differences-between-legacy-builder-and-buildkit) — docs.docker.com: BuildKit builds only the stages the target needs (*read*)
+- **Also good:** [Builders](https://docs.docker.com/build/builders/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`COPY --from`](07-copy-from.md) · Index: [Phase 4](README.md) · Next → [`RUN --mount=type=cache`](09-mount-type-cache.md)

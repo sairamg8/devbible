@@ -234,6 +234,17 @@ as its cache directory.
 No — the mount is local to the builder, so a new runner starts empty. Carrying
 cache between machines is cache export/import, a different mechanism.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · RUN --mount=type=cache](https://docs.docker.com/reference/dockerfile/#run---mounttypecache) — docs.docker.com: options `id`, `sharing`, `from`, `mode`, `uid`; contents persist without invalidating the instruction cache; build must work with any cache contents (*read*)
+- **Also good:** [Optimize cache usage · Use cache mounts](https://docs.docker.com/build/cache/optimize/#use-cache-mounts) — docs.docker.com: rebuilt layer downloads only new packages (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [BuildKit](08-buildkit.md) · Index: [Phase 4](README.md) · Next → [`RUN --mount=type=bind`](10-mount-type-bind.md)

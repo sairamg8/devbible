@@ -238,6 +238,18 @@ variable and mounting the result at `/run/secrets/<name>`. The one real limitati
 is that secrets are supported on Linux containers only, because delivery is a
 single-file bind mount.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Use secrets in Compose](https://docs.docker.com/compose/how-tos/use-secrets/) — docs.docker.com: secrets avoid the exposure risk of environment variables; a service gets only the secrets it is granted; modified 2026-08-13 (*read*)
+- **Also good:** [Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html) — OWASP: lifecycle and principles for secrets (*headings only*, 67k characters)
+- **Also good:** [Node.js language-specific guide](https://docs.docker.com/guides/nodejs/) — docs.docker.com: a worked `POSTGRES_PASSWORD_FILE=/run/secrets/db-password` stack (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Hot reload inside a container](05-hot-reload/README.md) · Index: [Phase 9](README.md) · Next → [The whole stack in one file](07-the-whole-stack/README.md)

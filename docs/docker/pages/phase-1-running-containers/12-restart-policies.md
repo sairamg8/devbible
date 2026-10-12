@@ -141,6 +141,17 @@ Read `docker logs` — the loop is masking a startup failure. The policy is work
 as designed; the container is not. In development, `on-failure:N` stops the loop
 and preserves the evidence.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Start containers automatically](https://docs.docker.com/engine/containers/start-containers-automatically/) — Docker docs, modified 2026-08-16: `no`, `on-failure`, `always`, `unless-stopped`; restart policy versus process manager (*read*)
+- **Also good:** [podman run: `--restart`](https://docs.podman.io/en/latest/markdown/podman-run.1.html#restart-policy) — Podman docs: same flag with `no`, `on-failure`, `always`, `unless-stopped`; `podman-restart.service` restarts containers after a reboot, and inside systemd units use `Restart=` instead (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Overriding ENTRYPOINT and CMD](11-overriding-entrypoint.md) · Index: [Phase 1](README.md) · Next → [Reclaiming disk space](13-reclaiming-disk.md)

@@ -194,6 +194,16 @@ Docker. Named volumes survive where they previously would not, so a cleanup
 script reclaims less than it used to. That is the safe direction, but it is still
 a changed assumption worth checking.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Podman release notes (raw)](https://raw.githubusercontent.com/containers/podman/main/RELEASE_NOTES.md) — containers/podman: 6.0 removes BoltDB (auto-migration to SQLite), Intel Macs, Windows 10, cgroups v1, iptables, CNI and slirp4netns (*read* the 6.0 list; 6.1.0 is the top entry)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Docker CLI compatibility](13-docker-cli-compatibility.md) · Index: [Phase 11](README.md) · Next → [15 · `podman machine`](15-podman-machine.md)

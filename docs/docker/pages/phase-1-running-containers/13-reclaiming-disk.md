@@ -152,6 +152,17 @@ rather than escalating flags blindly.
 A scheduled `docker buildx prune --filter until=168h`, keeping a week of cache.
 Time-filtered pruning preserves what is actively in use, unlike a blanket `-a`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Prune unused Docker objects](https://docs.docker.com/engine/manage-resources/pruning/) — Docker docs, modified 2026-08-13: images, containers, volumes, networks, build cache, everything (*headings only*)
+- **Also good:** [docker system prune](https://docs.docker.com/reference/cli/docker/system/prune/) — Docker docs: stopped containers, unused networks, dangling images, build cache; `--volumes` adds anonymous volumes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Restart policies](12-restart-policies.md) · Index: [Phase 1](README.md) · Next → [user, workdir, hostname, add-host](14-user-workdir-hostname.md)

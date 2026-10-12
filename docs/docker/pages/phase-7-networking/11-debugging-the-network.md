@@ -213,6 +213,17 @@ filesystem, is lost on redeploy, and it grows the image if anyone commits the
 change. A sidecar sharing the namespace answers the same question with none of
 that.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [netshoot README (raw)](https://raw.githubusercontent.com/nicolaka/netshoot/master/README.md) — nicolaka/netshoot: `--net container:&lt;name&gt;` shares a target's namespace; `nsenter` route for bridge namespaces needs `--privileged` (*read*)
+- **Also good:** [podman-unshare](https://docs.podman.io/en/latest/markdown/podman-unshare.1.html) — docs.podman.io: run a command inside the rootless user namespace (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`--network=host`](10-network-host.md) · Index: [Phase 7](README.md) · Next → [Podman's stack: netavark and aardvark-dns](12-netavark-and-aardvark.md)

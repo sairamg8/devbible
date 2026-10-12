@@ -105,6 +105,17 @@ chunks, and each has a failure mode you can name:
   **[graceful shutdown](../../phase-10-production/02-graceful-shutdown/README.md)**
   are the production consequences of the last two lines of this Dockerfile.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js language-specific guide](https://docs.docker.com/guides/nodejs/) — docs.docker.com: a multi-stage Dockerfile (builder, production-deps and runner stages) using cache and bind mounts; it runs `npm install`, with `npm ci` only as a commented-out upgrade; modified 2026-09-07 (*read* the Dockerfile; the rest *heading
+- **Also good:** [Docker and Node.js Best Practices (raw)](https://raw.githubusercontent.com/nodejs/docker-node/main/docs/BestPractices.md) — nodejs/docker-node: `NODE_ENV=production`; Node as PID 1 ignores `SIGINT`, so use `--init` or Tini; the `node` user has uid 1000 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: **Phase 8 · `--scale` and the honest limits** — [index](../../phase-8-compose/17-scale-and-limits.md) · Index: [Phase 9](../README.md) · Start → [The build](01-the-build.md)

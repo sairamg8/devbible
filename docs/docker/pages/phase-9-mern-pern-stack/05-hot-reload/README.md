@@ -49,6 +49,18 @@ afternoon disappears.
 - [Topic 12 · A React/Vite frontend](../12-react-vite-frontend.md) takes the browser half
   further.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Use Compose Watch](https://docs.docker.com/compose/how-tos/file-watch/) — docs.docker.com: `sync` and `rebuild` actions, ignore `node_modules/`; modified 2026-08-19 (*read*)
+- **Also good:** [Node.js CLI](https://nodejs.org/api/cli.html) — nodejs.org: lists `--watch`, `--watch-path`, `--watch-preserve-output` (*headings only*; the option text was not read)
+- **Also good:** [Bind mounts](https://docs.docker.com/engine/storage/bind-mounts/) — docs.docker.com: the shadowing rule behind the `node_modules` fix (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Waiting for the database](../04-waiting-for-the-database/README.md) · Index: [Phase 9](../README.md) · Start → [Getting the file in](01-getting-the-file-in.md)

@@ -52,6 +52,16 @@ first time anything moves underneath it.
   **[restart policies as supervision](../../phase-10-production/07-restart-as-supervision.md)**
   are what this looks like on a server.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Control startup and shutdown order in Compose](https://docs.docker.com/compose/how-tos/startup-order/) — docs.docker.com: `service_healthy` with a `pg_isready` check; says the app should also re-establish connections itself (*read*; modified 2025-12-03)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [PostgreSQL in a container](../03-postgres-in-a-container/README.md) · Index: [Phase 9](../README.md) · Start → [The startup gate](01-the-startup-gate.md)

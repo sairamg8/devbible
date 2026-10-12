@@ -194,6 +194,17 @@ defence is layered: drop capabilities, enable seccomp, run non-root, run
 rootless, and keep the host kernel patched. For genuinely hostile workloads,
 reach for hardware-backed isolation instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What even is a container: namespaces and cgroups](https://jvns.ca/blog/2016/10/10/what-even-is-a-container/) — Julia Evans, 10 Oct 2016: short walk through namespaces, cgroups and seccomp-bpf, ending in "what are containers?" (*read* the headings, ≈900 words)
+- **Also good:** [What is Docker?](https://docs.docker.com/get-started/docker-overview/) — Docker docs, modified 2026-09-07: "The underlying technology": namespaces give the isolated workspace (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 0](README.md) · Next → [Namespaces](02-namespaces.md)

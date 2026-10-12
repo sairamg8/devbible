@@ -196,6 +196,17 @@ mismatch with the image's expected UID, needing the `uid=` sub-option; and
 non-portability, since it exists only under rootless Podman. Apply it to
 services with bind-mounted source, not to a database sitting on a named volume.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Understanding rootless Podman's user namespace modes](https://www.redhat.com/en/blog/rootless-podman-user-namespace-modes) — Red Hat blog: `keep-id` maps your user to the same UID inside, shown with `podman top`; page shows January 25, 2023; metadata published 2023-01-11, modified 2025-11-21 (*read*)
+- **Also good:** [Podman rootless tutorial (raw)](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/rootless_tutorial.md) — containers/podman: a container with a non-root `USER` must use `--userns=keep-id` when mounting volumes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`--read-only` and `tmpfs`](08-read-only-rootfs.md) · Index: [Phase 6](README.md) · Next → [Backing up and restoring a volume](10-backup-and-restore.md)

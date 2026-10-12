@@ -62,6 +62,17 @@ CPU without reaching for "add more replicas".
   [11 · Observing](../11-observing.md) ·
   [14 · Running containers under systemd](../14-under-systemd.md)
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Resource constraints](https://docs.docker.com/engine/containers/resource_constraints/) — Docker docs: memory limits, OOME risk on the host, `--cpus` as CFS period and quota (*read*)
+- **Also good:** [docker container run](https://docs.docker.com/reference/cli/docker/container/run/) — Docker docs: `--pids-limit` (-1 for unlimited) and `--oom-kill-disable` in the option table (*read* the option table)
+
+{/* LINKMAP:END */}
+
 ---
 
 Start → [01 · Memory — the limit that kills](01-memory-the-limit-that-kills.md)

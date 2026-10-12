@@ -177,6 +177,17 @@ Because it applies to your instructions too. If the base ends as a non-root user
 your `RUN apt-get install` runs as that user and fails. Set `USER root` for the
 install and drop back to a non-root user at the end.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · FROM](https://docs.docker.com/reference/dockerfile/#from) — docs.docker.com: syntax, how `ARG` and `FROM` interact, multiple `FROM`s start stages (*read*)
+- **Also good:** [Building best practices · Choose the right base image](https://docs.docker.com/build/building/best-practices/#choose-the-right-base-image) — docs.docker.com: trusted source, keep it small, separate build and production bases (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 3](README.md) · Next → [RUN](02-run.md)

@@ -189,6 +189,17 @@ Keeping the previous image on the host, referring to it by digest rather than by
 tag that may have moved, and performing the rollback with the same four steps as
 the deployment so it is rehearsed rather than improvised.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker-rollout README](https://raw.githubusercontent.com/wowu/docker-rollout/main/README.md) — wowu/docker-rollout: scales a Compose service to twice the instances, waits for ready, removes the old ones (*read*)
+- **Also good:** [Use Compose in production](https://docs.docker.com/compose/how-tos/production/) — Docker docs: deploying changes on a single server (*read* headings and intro)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Time, timezones and locales](15-time-and-timezones.md) · Index: [Phase 10](README.md) · Next phase → [Phase 11 — Podman in depth](../phase-11-podman-in-depth/README.md)

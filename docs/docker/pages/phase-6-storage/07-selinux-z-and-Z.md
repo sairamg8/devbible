@@ -236,6 +236,18 @@ short. Podman's `--mount` does, via `relabel=shared` and `relabel=private`. On
 Docker with SELinux, either use `-v` for that mount or set the label out of band
 with `semanage`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman-run · Volume mounts](https://docs.podman.io/en/latest/markdown/podman-run.1.html) — docs.podman.io: `:z` marks content shared between containers, `:Z` private to one; both relabel the files (*read* the volume passage; the rest *headings only*, 130k characters)
+- **Also good:** [Bind mounts · Configure the SELinux label](https://docs.docker.com/engine/storage/bind-mounts/) — docs.docker.com: same two options; warns it changes the host path itself, with effects beyond Docker (*read*)
+- **Also good:** [Dealing with user namespaces and SELinux on rootless containers](https://www.redhat.com/en/blog/user-namespaces-selinux-rootless-containers) — Red Hat blog: `container_t` versus `container_file_t` and why a volume mount breaks it; page shows June 25, 2020; metadata published 2020-06-04, modified 2025-11-20 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Volume lifecycle](06-volume-lifecycle.md) · Index: [Phase 6](README.md) · Next → [`--read-only` and `tmpfs`](08-read-only-rootfs.md)

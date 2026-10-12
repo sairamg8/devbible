@@ -265,6 +265,17 @@ It attaches the watcher to a stack that is already running instead of building
 and starting services first — useful when the stack was brought up with a
 different set of files or flags and you only want the file-watching half.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Use Compose Watch](https://docs.docker.com/compose/how-tos/file-watch/) — docs.docker.com: `sync`, `rebuild`, `sync+restart`; the `ignore` list for `node_modules/`; modified 2026-08-19 (*read*)
+- **Also good:** [Develop top-level element](https://docs.docker.com/reference/compose-file/develop/) — docs.docker.com: `rebuild` rebuilds the image and recreates the service; `sync+restart` needs Compose 2.23.0 or later; modified 2026-06-18 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`profiles`](12-profiles.md) · Index: [Phase 8](README.md) · Next → [Day-to-day commands](14-day-to-day-commands/README.md)

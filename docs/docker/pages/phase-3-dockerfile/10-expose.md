@@ -125,6 +125,16 @@ tooling reads it as a hint. One line, no harm — provided it stays accurate.
 `EXPOSE`d port to randomly chosen host ports — useful for throwaway testing,
 never for deployment.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · EXPOSE](https://docs.docker.com/reference/dockerfile/#expose) — docs.docker.com: says plainly it does not publish a port, it is documentation; `-p` publishes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [USER](09-user.md) · Index: [Phase 3](README.md) · Next → [HEALTHCHECK](11-healthcheck.md)

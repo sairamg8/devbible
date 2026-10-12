@@ -257,6 +257,17 @@ is `podman unshare chown`, or `--userns=keep-id` so the container's user is your
 host user. The wrong fix is `sudo chown`, which changes ownership in the host's
 namespace and breaks it from the container's side instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Volumes top-level element](https://docs.docker.com/reference/compose-file/volumes/) — docs.docker.com: named volume declaration, `external`, `driver`, `name`; modified 2026-05-14 (*read*)
+- **Also good:** [Volumes (Docker Engine)](https://docs.docker.com/engine/storage/volumes/) — docs.docker.com: "Use a volume with Docker Compose" and "Start a service with volumes" sections (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Networks in Compose](07-networks.md) · Index: [Phase 8](README.md) · Next → [The project name](09-project-name.md)

@@ -180,6 +180,17 @@ No. Rootless already maps container root to an unprivileged host user, but
 `USER` is defence in depth and keeps the image correct regardless of which engine
 runs it. The two controls are independent.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · USER](https://docs.docker.com/reference/dockerfile/#user) — docs.docker.com: applies to later `RUN` and runtime `ENTRYPOINT`/`CMD`; a user without a primary group runs with the root group (*read*)
+- **Also good:** [Docker Security Cheat Sheet · Rule 2, set a user](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html) — OWASP: `useradd` then `USER`, or `-u` at run time (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [.dockerignore](08-dockerignore.md) · Index: [Phase 3](README.md) · Next → [EXPOSE](10-expose.md)

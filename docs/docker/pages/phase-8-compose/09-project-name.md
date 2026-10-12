@@ -193,6 +193,16 @@ another.
 granularity — and it finds projects whose source directory has been deleted, which
 `docker compose ps` from the wrong directory never will.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Specify a project name](https://docs.docker.com/compose/how-tos/project-name/) — docs.docker.com: defaults to the directory name of the Compose file; several ways to override it, with an order of precedence; modified 2026-02-21 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Volumes in Compose](08-volumes.md) · Index: [Phase 8](README.md) · Next → [Environment and interpolation](10-environment-and-interpolation.md)

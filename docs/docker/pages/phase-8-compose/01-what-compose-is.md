@@ -281,6 +281,17 @@ external provider, defaulting to `docker-compose` if it is installed and
 installed changes the behaviour you get, so pin it deliberately rather than
 relying on what happens to be on the machine.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How Compose works](https://docs.docker.com/compose/intro/compose-application-model/) — docs.docker.com: a YAML Compose file configures the services, and the Compose CLI creates and starts them; the file follows the Compose Specification; modified 2026-05-28 (*read*)
+- **Also good:** [History and development of Compose](https://docs.docker.com/compose/intro/history/) — docs.docker.com: supported CLI versions are now Compose v2 and v5, both defined by the Specification; v1 is not listed as supported (*read*; modified 2026-03-12)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 8](README.md) · Next → [compose.yaml and the Compose Specification](02-compose-yaml-and-the-spec/README.md)

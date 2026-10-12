@@ -267,6 +267,16 @@ It downgrades a missing or unstarted dependency from an error to a warning. It i
 for genuinely optional services — typically ones gated behind a profile that is not
 enabled in this run.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Control startup and shutdown order in Compose](https://docs.docker.com/compose/how-tos/startup-order/) — docs.docker.com: Compose waits for "running", not "ready"; the fix is `condition: service_healthy` with a `healthcheck`, plus `service_completed_successfully`; modified 2025-12-03 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The services block](04-services-block/README.md) · Index: [Phase 8](README.md) · Next → [Healthchecks in Compose](06-healthchecks/README.md)

@@ -172,6 +172,18 @@ Each row shows the image's total size including shared layers, so images built o
 a common base are counted many times over. `docker system df` reports actual
 consumption.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker image ls](https://docs.docker.com/reference/cli/docker/image/ls/) — Docker docs: untagged (dangling) images are hidden unless `-a` (*read*)
+- **Also good:** [docker image rm](https://docs.docker.com/reference/cli/docker/image/rm/) — Docker docs: removes and un-tags (*read*)
+- **Also good:** [docker image prune](https://docs.docker.com/reference/cli/docker/image/prune/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Tags move, digests do not](02-tags-vs-digests.md) · Index: [Phase 2](README.md) · Next → [Layers](04-layers.md)

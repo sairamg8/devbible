@@ -203,6 +203,17 @@ No — a volume lives inside the VM's own disk, so it never crosses the sharing
 boundary. That is why "database on a volume, source on a narrow bind mount" is a
 performance rule on macOS and Windows as much as a correctness one on Linux.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Change your Docker Desktop settings](https://docs.docker.com/desktop/settings-and-maintenance/settings/) — docs.docker.com: VirtioFS versus gRPC FUSE on Mac; the page claims up to 98% less time on file operations and says VirtioFS is the only option under Docker VMM; modified 2026-09-29 (*read*)
+- **Also good:** [Use Compose Watch](https://docs.docker.com/compose/how-tos/file-watch/) — docs.docker.com: many small files cause high I/O load on some setups, so sync instead (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Volume drivers and network storage](11-volume-drivers.md) · Index: [Phase 6](README.md) · Next phase → [Phase 7 · Networking](../phase-7-networking/README.md)

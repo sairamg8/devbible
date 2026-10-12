@@ -70,6 +70,17 @@ name which documented shortcoming it is before reading the error message.
 - [14 · Podman 6 breaking changes](../14-podman-6-breaking-changes.md) — why
   dropping cgroups v1 was possible
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Basic setup and use of Podman in a rootless environment](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/rootless_tutorial.md) — containers/podman: `/etc/subuid` and `/etc/subgid` ranges, `podman system migrate`, pasta networking (*read*)
+- **Also good:** [user_namespaces(7)](https://man7.org/linux/man-pages/man7/user_namespaces.7.html) — Linux man-pages: the mapping rules (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Start → [01 · The namespace you are always in](01-the-namespace-you-are-in.md)

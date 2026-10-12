@@ -184,6 +184,16 @@ Because it only targets the services enabled in that invocation. A container fro
 profile you did not name survives and reappears as an orphan. Pass the profile, or
 use `--remove-orphans`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using profiles with Compose](https://docs.docker.com/compose/how-tos/profiles/) — docs.docker.com: `--profile` or `COMPOSE_PROFILES`, several profiles at once; modified 2026-02-21 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Override files](11-override-files.md) · Index: [Phase 8](README.md) · Next → [develop.watch](13-develop-watch.md)

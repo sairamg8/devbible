@@ -186,6 +186,17 @@ does.
 The build context, at its root. `from=` changes it to a stage, a named context or
 an image; `source=` selects a subpath.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · RUN --mount=type=bind](https://docs.docker.com/reference/dockerfile/#run---mounttypebind) — docs.docker.com: bind is the default type, mounts context directories read-only (*read* the type list)
+- **Also good:** [Optimize cache usage · Use bind mounts](https://docs.docker.com/build/cache/optimize/#use-bind-mounts) — docs.docker.com: avoids an extra layer (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`RUN --mount=type=cache`](09-mount-type-cache.md) · Index: [Phase 4](README.md) · Next → [`buildx` and platforms](11-buildx-and-platforms.md)

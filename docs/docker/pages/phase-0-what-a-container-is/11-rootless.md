@@ -190,6 +190,17 @@ socket is root on the host" problem rather than mitigating it.
 mode puts the daemon *and* the containers in a user namespace, so there is no
 root daemon at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Podman rootless tutorial (raw)](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/rootless_tutorial.md) — github (raw): `/etc/subuid` and `/etc/subgid` ranges; `root` in the container is your user on the host (*read*)
+- **Also good:** [Rootless mode](https://docs.docker.com/engine/security/rootless/) — Docker docs, modified 2026-06-07: needs `newuidmap`/`newgidmap` and at least 65,536 subordinate IDs (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [seccomp, AppArmor and SELinux](10-seccomp-apparmor-selinux.md) · Index: [Phase 0](README.md) · Next → [Why "works on my machine" stops](12-works-on-my-machine.md)

@@ -180,6 +180,18 @@ policy. The policy is masking a failure, so the real information is in
 reads `/proc/meminfo`, which is not namespaced and reports the host. `stats` is
 correct.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker container ls](https://docs.docker.com/reference/cli/docker/container/ls/) — Docker docs: `docker ps` is an alias; `-a` shows all (*read*)
+- **Also good:** [docker container logs](https://docs.docker.com/reference/cli/docker/container/logs/) — Docker docs: `-f`, `--since`, `--tail` (*read*)
+- **Also good:** [docker container inspect](https://docs.docker.com/reference/cli/docker/container/inspect/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Foreground, detached and cleanup](02-detached-and-cleanup.md) · Index: [Phase 1](README.md) · Next → [exec versus run](04-exec-vs-run.md)

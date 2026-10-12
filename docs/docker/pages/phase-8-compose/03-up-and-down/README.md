@@ -49,6 +49,17 @@ why the defaults are worth knowing precisely rather than by habit.
   is the same distinction one level down: stopping ends the process, removing
   destroys the container.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker compose down](https://docs.docker.com/reference/cli/docker/compose/down/) — docs.docker.com: removes containers, networks defined in the file and the default network; `-v` is the volumes flag; external networks and volumes are never removed (*read*)
+- **Also good:** [docker compose up](https://docs.docker.com/reference/cli/docker/compose/up/) — docs.docker.com: changed services are recreated with mounted volumes preserved; `--no-recreate`, `--force-recreate`, `--scale`, `--wait` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [compose.yaml and the Spec](../02-compose-yaml-and-the-spec/README.md) · Index: [Phase 8](../README.md) · Start → [`up` and what it recreates](01-up.md)

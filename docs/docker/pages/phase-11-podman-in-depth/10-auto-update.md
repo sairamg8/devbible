@@ -190,6 +190,16 @@ job there, so the equivalents are external tools. Podman's version exists becaus
 Podman's deployment story is systemd, and systemd is already supervising the
 unit it needs to restart.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman auto-update](https://docs.podman.io/en/latest/markdown/podman-auto-update.1.html) — Podman docs: `registry` policy via label or `AutoUpdate=`, `--rollback` default true when the restarted unit fails (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Quadlet vs `podman generate systemd`](09-quadlet-vs-generate-systemd.md) · Index: [Phase 11](README.md) · Next → [11 · `podman kube play` / `generate kube`](11-kube-play.md)

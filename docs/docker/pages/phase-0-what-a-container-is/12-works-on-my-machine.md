@@ -124,6 +124,16 @@ Because it exports the filesystem only. The `Entrypoint`, `Cmd`, `Env`, `User`
 and the rest live in the image *config*, which `save` preserves and `export`
 does not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What is a container?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/) — Docker docs: self-contained, isolated processes with no reliance on host dependencies (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Rootless containers](11-rootless.md) · Index: [Phase 0](README.md) · Next → [Containers vs VMs vs serverless](13-containers-vs-vms.md)

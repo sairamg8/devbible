@@ -197,6 +197,17 @@ live on the Libpod layer instead. The compatibility layer implements Docker's
 v1.40 API and nothing beyond it, which is a deliberate boundary rather than a
 gap.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman system service](https://docs.podman.io/en/latest/markdown/podman-system-service.1.html) — Podman docs: `systemctl --user start podman.socket`, `DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock`, Docker v1.40 compatibility layer (*read*)
+- **Also good:** [Using Podman instead of Docker (Testcontainers for Go)](https://golang.testcontainers.org/system_requirements/using_podman/) — testcontainers.org: socket discovery from `DOCKER_HOST`, rootless or rootful (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Buildah and Skopeo](12-buildah-and-skopeo.md) · Index: [Phase 11](README.md) · Next → [14 · Podman 6 breaking changes](14-podman-6-breaking-changes.md)

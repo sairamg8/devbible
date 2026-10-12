@@ -197,6 +197,17 @@ containerd owns image pull and storage (snapshots) and the container lifecycle;
 exists so other systems — Kubernetes among them — can use containerd without
 Docker.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [containerd vs. Docker](https://www.docker.com/blog/containerd-vs-docker/) — Docker blog, 27 Mar 2024, modified 2024-11-13: containerd delegates to runc "using a shim process" (*read*)
+- **Also good:** [What is Docker?](https://docs.docker.com/get-started/docker-overview/) — Docker docs: daemon, client, registries, objects (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The image is not the container](04-image-vs-container.md) · Index: [Phase 0](README.md) · Next → [The runtime stack, Podman](06-runtime-stack-podman.md)

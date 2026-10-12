@@ -140,6 +140,17 @@ mention.
 No. They fire once, in the immediate child, and are cleared afterwards. An image
 built from that child does not re-run them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · ONBUILD](https://docs.docker.com/reference/dockerfile/#onbuild) — docs.docker.com: trigger runs in the downstream build as if inserted right after `FROM`; has a limitations section (*read*)
+- **Also good:** [Building best practices · ONBUILD](https://docs.docker.com/build/building/best-practices/#onbuild) — docs.docker.com: separate tag for `ONBUILD` images; `ADD`/`COPY` in `ONBUILD` fails if the downstream context lacks the file (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [STOPSIGNAL and SHELL](16-stopsignal-and-shell.md) · Index: [Phase 3](README.md) · Start Phase 4 → [Build strategy: cache, multi-stage, BuildKit](../phase-4-build-strategy/README.md)

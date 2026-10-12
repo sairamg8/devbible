@@ -139,6 +139,17 @@ and the pull is served locally.
 No volume at `/var/lib/registry`, so everything pushed lives in the container's
 writable layer and is lost when the container is replaced.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mirror the Docker Hub library](https://docs.docker.com/docker-hub/image-library/mirror/) — Docker docs: a local mirror avoids each daemon fetching from the internet; run a registry as a pull-through cache (*read*)
+- **Also good:** [About Registry](https://distribution.github.io/distribution/about/) — CNCF Distribution docs: image naming, use cases, requirements (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Where layers live on disk](13-storage-on-disk.md) · Index: [Phase 2](README.md) · Next → [Image signing](15-image-signing.md)

@@ -279,6 +279,17 @@ backfill, switch reads, drop later — where every intermediate state is safe to
 at. The rollback that genuinely works is restoring a backup, which is why the
 backup is the thing worth testing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Use init containers in Compose](https://docs.docker.com/compose/how-tos/init-containers/) — docs.docker.com: `pre_start` runs a migration in an ephemeral container after the database is healthy, before the app starts; compares it with a one-shot service plus `service_completed_successfully`; modified 2026-08-19 (*read*)
+- **Also good:** [docker compose run](https://docs.docker.com/reference/cli/docker/compose/run/) — docs.docker.com: one-off commands with `--rm` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Redis in a container](09-redis-in-a-container.md) · Index: [Phase 9](README.md) · Next → [Debugging Node inside a container](11-debugging-node.md)

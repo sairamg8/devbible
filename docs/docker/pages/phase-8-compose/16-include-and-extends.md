@@ -245,6 +245,17 @@ Compose sees the document, so there are no merge rules and no resource-import
 restriction to remember. `extends` is for when the base lives in another file,
 which anchors cannot reach.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Include](https://docs.docker.com/compose/how-tos/multiple-compose-files/include/) — docs.docker.com: pulls in another Compose file; conflicting resources are an error, customised with an override file; modified 2026-05-28 (*read*)
+- **Also good:** [Extend](https://docs.docker.com/compose/how-tos/multiple-compose-files/extends/) — docs.docker.com: reuse a service from another file; paths relative to the base file; not supported with `docker stack deploy`; modified 2026-05-28 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`podman compose` and `podman-compose`](15-podman-compose.md) · Index: [Phase 8](README.md) · Next → [`--scale` and the honest limits](17-scale-and-limits.md)

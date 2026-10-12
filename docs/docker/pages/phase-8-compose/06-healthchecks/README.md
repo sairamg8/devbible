@@ -46,6 +46,17 @@ getting the check right.
 - [Phase 10 · Healthchecks in production](../../phase-10-production/09-healthchecks-in-production.md) is where a check
   becomes a restart or an eviction rather than a colour in `ps`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Control startup order · Postgres example](https://docs.docker.com/compose/how-tos/startup-order/) — docs.docker.com: `pg_isready -U $$&#123;POSTGRES_USER&#125; -d $$&#123;POSTGRES_DB&#125;` with `interval: 10s`, `retries: 5`, `start_period: 30s`, `timeout: 10s` on `postgres:18` (*read*)
+- **Also good:** [Services · healthcheck](https://docs.docker.com/reference/compose-file/services/) — docs.docker.com: `test`, `interval`, `timeout`, `retries`, `start_period`, `start_interval`, `disable: true`; same defaults as the Dockerfile instruction (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [depends_on](../05-depends-on.md) · Index: [Phase 8](../README.md) · Start → [The keys](01-the-keys.md)

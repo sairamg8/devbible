@@ -165,6 +165,17 @@ No — `podman build` uses Buildah, which does not fetch frontend images. The
 directive is accepted and ignored. Buildah implements many BuildKit features
 natively but lags on the newest ones, so test if the file must build under both.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Custom Dockerfile syntax](https://docs.docker.com/build/buildkit/frontend/) — docs.docker.com: the Dockerfile frontend, official releases, stable and labs channels; page last modified 2024-09-02 (*headings only*)
+- **Also good:** [Dockerfile reference · Parser directives](https://docs.docker.com/reference/dockerfile/#parser-directives) — docs.docker.com: `syntax`, `escape`, `check` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Heredocs](14-heredocs.md) · Index: [Phase 3](README.md) · Next → [STOPSIGNAL and SHELL](16-stopsignal-and-shell.md)

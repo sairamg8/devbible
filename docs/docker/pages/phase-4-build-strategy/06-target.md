@@ -206,6 +206,16 @@ informative than the log.
 The same `--target` flag, plus `--skip-unused-stages` (default true) that makes
 the stage-skipping explicit.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Multi-stage builds · Stop at a specific build stage](https://docs.docker.com/build/building/multi-stage/#stop-at-a-specific-build-stage) — docs.docker.com: `docker build --target`, debug, test and production stage use cases (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`RUN --mount=type=secret`](05-mount-type-secret.md) · Index: [Phase 4](README.md) · Next → [`COPY --from`](07-copy-from.md)

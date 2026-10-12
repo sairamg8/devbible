@@ -253,6 +253,18 @@ included *inside* `http` — so the directive has nowhere to go. Either replace
 that non-WebSocket requests also carry it. The image's template mechanism does not
 change this; it writes into `conf.d` too.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [NGINX reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) — docs.nginx.com: `proxy_pass` inside a `location`, passing headers, buffering; modified 2026-07-02 (*read*)
+- **Also good:** [nginx image README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/nginx/README.md) — docker-library/docs: `/etc/nginx/templates/*.template` with `envsubst`, a Compose example (*read*)
+- **Also good:** [Beginner's guide](https://nginx.org/en/docs/beginners_guide.html) — nginx.org: serving static files and proxying, config structure (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [A React/Vite frontend](12-react-vite-frontend.md) · Index: [Phase 9](README.md) · Next → [Connecting from the host](14-connecting-from-the-host.md)

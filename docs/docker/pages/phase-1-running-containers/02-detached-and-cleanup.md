@@ -166,6 +166,17 @@ No — it sends `SIGKILL` with no grace period, so the process cannot flush or
 close cleanly. Use `docker stop` (which sends `SIGTERM` first) and then
 `docker rm`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Running containers: foreground and background](https://docs.docker.com/engine/containers/run/#foreground-and-background) — Docker docs: `--detach`, `--attach`, `--tty`, `--interactive`; three ways to identify a container (*read*)
+- **Also good:** [docker container run](https://docs.docker.com/reference/cli/docker/container/run/) — Docker docs: `--rm` removes the container and its anonymous volumes (*read* the option table)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The anatomy of docker run](01-docker-run-anatomy.md) · Index: [Phase 1](README.md) · Next → [ps, inspect, logs, stats](03-ps-inspect-logs-stats.md)

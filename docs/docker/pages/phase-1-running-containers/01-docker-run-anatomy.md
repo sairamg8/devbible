@@ -166,6 +166,17 @@ and, on many setups, past the host firewall. `-p 127.0.0.1:8080:3000` binds
 loopback only. For a database or an admin port, that difference is the whole
 security posture.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Running containers: general form](https://docs.docker.com/engine/containers/run/#general-form) — Docker docs, modified 2026-05-13: image references, options, commands and arguments (*read* the headings, ≈9k words)
+- **Also good:** [docker container run](https://docs.docker.com/reference/cli/docker/container/run/) — Docker docs: full option table (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 1](README.md) · Next → [Foreground, detached and cleanup](02-detached-and-cleanup.md)

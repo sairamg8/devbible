@@ -228,6 +228,17 @@ and rootless networking runs through a user-space stack, so the source address
 seen by the container may be the gateway rather than the real client, depending
 on the mode. Both matter for anything that logs or filters by IP.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Port publishing and mapping](https://docs.docker.com/engine/network/port-publishing/) — docs.docker.com: `-p` creates firewall rules mapping a host address and port to the container; `-p 8080:80` listens on any host address; modified 2025-09-12 (*read*)
+- **Also good:** [Docker with iptables](https://docs.docker.com/engine/network/firewall-iptables/) — docs.docker.com: remote hosts reach a container only through a published port, and rules go in the `DOCKER-USER` chain (*read*; modified 2026-08-12)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`localhost` inside a container is the container](03-localhost-is-the-container.md) · Index: [Phase 7](README.md) · Next → [Network drivers](05-network-drivers.md)

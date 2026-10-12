@@ -64,6 +64,17 @@ anything.
   [11 · Observing](../11-observing.md) · [13 · Disk growth](../13-disk-growth.md) ·
   [15 · Time, timezones and locales](../15-time-and-timezones.md)
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [XI. Logs](https://12factor.net/logs) — The Twelve-Factor App: the app writes its event stream unbuffered to stdout and never manages log files (*read*, short)
+- **Also good:** [View container logs](https://docs.docker.com/engine/logging/) — Docker docs: `docker logs` shows the command's STDOUT and STDERR (*read* intro)
+
+{/* LINKMAP:END */}
+
 ---
 
 Start → [01 · The contract](01-the-contract.md)

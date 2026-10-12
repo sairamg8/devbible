@@ -264,6 +264,17 @@ is precisely the behaviour you want to test against, because it is what happens 
 every deploy anyway. It also removes fork pauses and disk I/O from a service whose
 whole job is latency.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Redis persistence](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/) — redis.io: RDB snapshots, AOF write log, none ("sometimes used when caching"), or both; modified 2026-09-30 (*read*)
+- **Also good:** [redis image README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/redis/README.md) — docker-library/docs: `redis-server --save 60 1` for persistent storage; points to the persistence page (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [MongoDB in a container](08-mongodb-in-a-container/README.md) · Index: [Phase 9](README.md) · Next → [Migrations and seeds](10-migrations-and-seeds.md)

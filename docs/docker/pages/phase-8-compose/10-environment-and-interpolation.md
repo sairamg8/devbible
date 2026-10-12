@@ -220,6 +220,18 @@ For local development it is the accepted convention, provided it is in `.gitigno
 matters belongs in a real secret mechanism — and if one has leaked, rotate it,
 because deleting the file does not unpublish it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Environment variables precedence](https://docs.docker.com/compose/how-tos/environment-variables/envvars-precedence/) — docs.docker.com: the ordered list, highest first, starting with `docker compose run -e`; modified 2026-06-22 (*read*)
+- **Also good:** [Set environment variables](https://docs.docker.com/compose/how-tos/environment-variables/set-environment-variables/) — docs.docker.com: `environment`, `env_file`, and the project `.env`; modified 2026-05-28 (*read*)
+- **Also good:** [Interpolation](https://docs.docker.com/compose/how-tos/environment-variables/variable-interpolation/) — docs.docker.com: `$&#123;VAR&#125;` forms and defaults; modified 2026-06-19 (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The project name](09-project-name.md) · Index: [Phase 8](README.md) · Next → [Override files](11-override-files.md)

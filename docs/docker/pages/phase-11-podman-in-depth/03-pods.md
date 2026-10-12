@@ -200,6 +200,17 @@ which is most stacks. Then a user-defined network gives you DNS by name,
 independent ports and independent lifecycles. A pod is for things that scale,
 restart and fail together.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman pod create](https://docs.podman.io/en/latest/markdown/podman-pod-create.1.html) — Podman docs: infra container, exit policy (`stop` used by kube play and Quadlet), per-pod options (*read* those passages, rest *headings only*)
+- **Also good:** [podman pod](https://docs.podman.io/en/latest/markdown/podman-pod.1.html) — Podman docs: "groups of containers, called pods" and the subcommand list (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Rootless by default](02-rootless-by-default/README.md) · Index: [Phase 11](README.md) · Next → [04 · Quadlet](04-quadlet/README.md)

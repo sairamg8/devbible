@@ -248,6 +248,18 @@ is populated from the image because it starts empty. The trap is that it is stic
 it persists across recreations, so a new dependency will not appear until the
 anonymous volumes are renewed with `-V` or removed with `down -v`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Containerize a React.js application](https://docs.docker.com/guides/reactjs/) — docs.docker.com: multi-stage build into a custom Nginx config, non-root `nginx` user; modified 2026-07-21 (*read* the runner stage)
+- **Also good:** [Vite · Env variables and modes](https://vite.dev/guide/env-and-mode) — vite.dev: `VITE_` variables are replaced into the client code at build time and are public (*read*)
+- **Also good:** [Vite · Deploying a static site](https://vite.dev/guide/static-deploy) — vite.dev: build and preview, host options (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Debugging Node inside a container](11-debugging-node.md) · Index: [Phase 9](README.md) · Next → [Nginx in front of the API](13-nginx-in-front.md)

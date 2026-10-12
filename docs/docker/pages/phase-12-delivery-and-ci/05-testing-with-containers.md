@@ -198,6 +198,17 @@ and third-party services you do not control, where an image is only as accurate
 as whoever published it. Containers are for dependencies whose *behaviour* is
 what you are testing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Getting started with Testcontainers for Node.js](https://testcontainers.com/guides/getting-started-with-testcontainers-for-nodejs/) — testcontainers.com: integration tests against a real PostgreSQL container (*read* intro)
+- **Also good:** [Use Docker service containers](https://docs.github.com/en/actions/tutorials/use-containerized-services/use-docker-service-containers) — GitHub Docs: CI service containers (*read* intro)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Registry authentication in CI](04-registry-auth-in-ci.md) · Index: [Phase 12](README.md) · Next → [06 · Deploying without an orchestrator](06-deploying-without-an-orchestrator.md)

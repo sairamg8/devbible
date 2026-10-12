@@ -63,6 +63,18 @@ variable is set" arguments.
   and **[page 11 · Override files](../11-override-files.md)** are the two topics
   `config` exists to settle.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker compose](https://docs.docker.com/reference/cli/docker/compose/) — docs.docker.com: the command index with global flags (*headings only*)
+- **Also good:** [docker compose config](https://docs.docker.com/reference/cli/docker/compose/config/) — docs.docker.com: prints the model after interpolation and merging (*headings only*, option table checked)
+- **Also good:** [docker compose run](https://docs.docker.com/reference/cli/docker/compose/run/) — docs.docker.com: `--rm` and one-off commands (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`develop.watch`](../13-develop-watch.md) · Index: [Phase 8](../README.md) · Start → [Reading a running stack](01-reading-the-stack.md)

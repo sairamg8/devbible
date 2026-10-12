@@ -40,6 +40,18 @@ dependency.
 - **[Phase 3 · `.dockerignore`](../../phase-3-dockerfile/08-dockerignore.md)** —
   the same `node_modules` question, one build stage earlier.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Bind mounts](https://docs.docker.com/engine/storage/bind-mounts/) — docs.docker.com: mounting over a non-empty directory obscures what the image put there, which "can be surprising" (*read*)
+- **Also good:** [Use Compose Watch](https://docs.docker.com/compose/how-tos/file-watch/) — docs.docker.com: sync instead of bind-mount; ignore `node_modules/` for speed and because compiled artifacts differ by host OS (*read*)
+- **Also good:** [Sharing local files with containers](https://docs.docker.com/get-started/docker-concepts/running-containers/sharing-local-files/) — docs.docker.com: volume versus bind mount, live edit loop (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`-v` short syntax vs `--mount`](../03-v-vs-mount.md) · Index: [Phase 6](../README.md) · Start → [The development loop](01-the-development-loop.md)

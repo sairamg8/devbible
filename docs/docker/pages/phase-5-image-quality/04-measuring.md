@@ -206,6 +206,17 @@ Create a large file in one `RUN` and delete it in the next, then look at
 `docker history`: the creating layer keeps its full size and the deleting layer
 is nearly empty, while the file is absent from the filesystem view.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [dive README (raw)](https://raw.githubusercontent.com/wagoodman/dive/main/README.md) — github (raw): layer-by-layer contents, added/removed files, an experimental "image efficiency" score for wasted space (*read*)
+- **Also good:** [docker image history](https://docs.docker.com/reference/cli/docker/image/history/) — docs.docker.com: `--format`, `--platform` (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Least privilege in the image](03-least-privilege.md) · Index: [Phase 5](README.md) · Next → [Alpine and musl](05-alpine-and-musl.md)

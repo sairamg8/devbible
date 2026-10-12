@@ -191,6 +191,16 @@ That the images, containers and volumes inside it go too. Anything you need
 should already be in a registry or a backup — local image storage is not
 somewhere to keep the only copy of something.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman machine](https://docs.podman.io/en/latest/markdown/podman-machine.1.html) — Podman docs: Podman on macOS and Windows requires a VM; subcommands manage it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Podman 6 breaking changes](14-podman-6-breaking-changes.md) · Index: [Phase 11](README.md) · Next → [16 · Podman Desktop](16-podman-desktop.md)

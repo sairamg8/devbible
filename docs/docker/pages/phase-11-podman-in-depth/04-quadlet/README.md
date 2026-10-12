@@ -69,6 +69,16 @@ survives a reboot, and explain what the generator produced and when.
 - [10 · `podman auto-update`](../10-auto-update.md) — what `AutoUpdate=registry`
   turns on
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman-systemd.unit(5)](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html) — Podman docs: lists `.artifact`, `.build`, `.container`, `.image`, `.kube`, `.network`, `.pod`, `.volume`; `[Install]` keys; `AutoUpdate=` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Start → [01 · What Quadlet is](01-what-quadlet-is.md)

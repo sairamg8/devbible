@@ -205,6 +205,17 @@ already exists. New work should be a `.container` file.
 not the engine's `--restart` — and `systemd.service(5)`'s own default is `no`, so
 the generated unit is making a choice on your behalf.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [podman generate systemd](https://docs.podman.io/en/latest/markdown/podman-generate-systemd.1.html) — Podman docs: marked DEPRECATED, recommends Quadlet, "no plans to remove", urgent bug fixes only (*read*)
+- **Also good:** [podman-systemd.unit(5)](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html) — Podman docs: the replacement (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Pod commands](08-pod-commands.md) · Index: [Phase 11](README.md) · Next → [10 · `podman auto-update`](10-auto-update.md)

@@ -200,6 +200,17 @@ No — they all work with OCI-compliant images and share the same local storage 
 credential files. That is the point of the split: three programs, one set of
 artefacts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Skopeo README](https://raw.githubusercontent.com/containers/skopeo/main/README.md) — containers/skopeo: copy images between registries without privilege, inspect remote images (*read* intro)
+- **Also good:** [Buildah](https://buildah.io/) — buildah.io: "a tool that facilitates building OCI container images" (*read* top, rest *headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`podman kube play` / `generate kube`](11-kube-play.md) · Index: [Phase 11](README.md) · Next → [13 · Docker CLI compatibility](13-docker-cli-compatibility.md)

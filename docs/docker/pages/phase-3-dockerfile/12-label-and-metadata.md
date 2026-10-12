@@ -176,6 +176,18 @@ metadata layer is affected.
 No filesystem layer; they modify the image configuration. They are inherited from
 the base image, and setting the same key overrides the inherited value.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [OCI image annotations (raw)](https://raw.githubusercontent.com/opencontainers/image-spec/main/annotations.md) — opencontainers/image-spec: defines `org.opencontainers.image.source`, `.revision`, `.version`, `.vendor`, `.licenses` (*read*)
+- **Also good:** [Dockerfile reference · LABEL](https://docs.docker.com/reference/dockerfile/#label) — docs.docker.com: syntax and quoting (*headings only*)
+- **Read this:** [Dockerfile reference · MAINTAINER (deprecated)](https://docs.docker.com/reference/dockerfile/#maintainer-deprecated) — docs.docker.com: the section is marked deprecated and says `LABEL` is the more flexible replacement (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [HEALTHCHECK](11-healthcheck.md) · Index: [Phase 3](README.md) · Next → [VOLUME in a Dockerfile](13-volume.md)

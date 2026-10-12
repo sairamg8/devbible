@@ -18,7 +18,9 @@ metadata:
 | Express | 115 | ✅ complete (verified once) | 2026-10-12 (PR #8) |
 | PostgreSQL | 233 | ✅ complete (verified once) | 2026-10-12 (PR #9) |
 | TypeScript | 187 | ✅ complete (verified once) | 2026-10-12 (PR #10) |
-| Docker · nginx · Git · Python · JavaScript · React · Angular · Java · CSS · others | — | ⬜ not started | — |
+| Docker & Podman | 192 | ✅ complete (verified once) | 2026-10-12 (PR #11) |
+| nginx | ~157 | 🔵 running (4 lanes) | — |
+| Git · Python · JavaScript · React · Angular · Java · CSS · others | — | ⬜ not started | — |
 
 **"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
 
@@ -29,7 +31,7 @@ re-read of "headings only" blocks is still owed. The staged copies in `docs/_pro
 
 User order: *pick one language at a time, deploy the agents you need, merge everything to main*. Pattern per language: N lanes (one per syllabus part), each a
 `[medium]` researcher then a `[high]` verifier (max 5 alive), then overview + `_category_.json` + a tip pointer in the track README, `linkcheck` + `mdxcheck`, PR, merge.
-**Live on the site (PRs #3–#7):** MongoDB 82 (validated), Redux Toolkit 21 (validated), Redis 74, Node.js 249. **Next:** Express (running), then python / postgresql / typescript / docker / nginx / git.
+**Live on the site:** see the status table above (PRs #3–#11). **Next:** nginx (running), then git / python / javascript / react / angular / java / css.
 Still owed per track: a re-read of the "headings only" blocks (listed in each file) and re-validation when versions move. Central rules live in the `claude-context` repo.
 
 ## 2026-10-12 (later) — MongoDB map published and validated

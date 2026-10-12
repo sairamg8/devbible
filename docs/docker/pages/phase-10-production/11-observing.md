@@ -225,6 +225,18 @@ period, so a service that bursts can be throttled repeatedly while its average
 utilisation looks moderate — `docker stats` cannot show that, and adding replicas
 will not fix it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [docker container stats](https://docs.docker.com/reference/cli/docker/container/stats/) — Docker docs: `--no-stream`, `--format "&#123;&#123; json . &#125;&#125;"`, columns for memory usage/limit and PIDs (*read*)
+- **Also good:** [cAdvisor README](https://raw.githubusercontent.com/google/cadvisor/master/README.md) — google/cadvisor: per-container usage daemon, run as a container (*read* intro)
+- **Also good:** [Runtime metrics](https://docs.docker.com/engine/containers/runmetrics/) — Docker docs: says its detailed examples use the cgroup v1 layout (*headings only* plus that note)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Hardening at run time](10-hardening/README.md) · Index: [Phase 10](README.md) · Next → [Debugging a container you cannot shell into](12-debugging-without-a-shell.md)

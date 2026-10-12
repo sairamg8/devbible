@@ -169,6 +169,17 @@ answer.
 `docker buildx imagetools inspect <ref>`, which prints the manifest list and its
 entries. Under Podman, `podman manifest inspect`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Multi-platform builds](https://docs.docker.com/build/building/multi-platform/) — Docker docs, modified 2026-04-16: multi-platform images hold a manifest list pointing to one manifest per platform (*read*)
+- **Also good:** [OCI image index (raw)](https://raw.githubusercontent.com/opencontainers/image-spec/main/image-index.md) — github (raw): the OCI image index: a higher-level manifest pointing to image manifests for one or more platforms (*read* the opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Authentication](09-authentication.md) · Index: [Phase 2](README.md) · Next → [save/load versus export/import](11-save-load-export-import.md)

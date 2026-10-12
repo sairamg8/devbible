@@ -153,6 +153,17 @@ No, by design — the context is the boundary. That is why secrets outside it
 cannot be copied in, and why `RUN --mount=type=secret` exists for build-time
 credentials.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dockerfile reference · ADD](https://docs.docker.com/reference/dockerfile/#add) — docs.docker.com: `ADD` sources (URL, git, archives), `--checksum`, `--keep-git-dir`, `--unpack`; `COPY` is a sibling section (*read* the option table and `--checksum`/`--keep-git-dir` text)
+- **Also good:** [Building best practices · ADD or COPY](https://docs.docker.com/build/building/best-practices/#add-or-copy) — docs.docker.com: `COPY` for files between stages, `ADD` for remote URLs and auto-extract, bind mount instead of a temporary `COPY` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [RUN](02-run.md) · Index: [Phase 3](README.md) · Next → [WORKDIR](04-workdir.md)

@@ -207,6 +207,17 @@ falls back to reading Docker's file if its own has nothing valid, but Docker doe
 not read Podman's. And because `$XDG_RUNTIME_DIR` is per user and session-scoped,
 a login in a shell may not be visible to a service running as another account.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [OpenID Connect](https://docs.github.com/en/actions/concepts/security/openid-connect) — GitHub Docs: workflows exchange short-lived tokens directly from your cloud provider (*read* overview)
+- **Also good:** [Docker access tokens](https://docs.docker.com/security/access-tokens/) — Docker docs: the token-based alternative to passwords (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [One image, three environments](03-one-image-three-environments/README.md) · Index: [Phase 12](README.md) · Next → [05 · Testing with containers](05-testing-with-containers.md)

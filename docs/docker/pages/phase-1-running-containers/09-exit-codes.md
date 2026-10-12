@@ -161,6 +161,17 @@ Because the container never started. 125 is the engine refusing — bad flags, p
 conflict, missing volume — so there was no process to produce output. The CLI's
 error message is the whole story.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Running containers: exit status](https://docs.docker.com/engine/containers/run/#exit-status) — Docker docs: 125 is the daemon, 126 not invokable, 127 not found, anything else is the command's own code (*read*)
+- **Also good:** [podman run: exit status](https://docs.podman.io/en/latest/markdown/podman-run.1.html) — Podman docs: same 125 scheme, "error is with Podman itself" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Stop is two signals](08-stop-is-two-signals.md) · Index: [Phase 1](README.md) · Next → [Interactive and TTY](10-interactive-and-tty.md)

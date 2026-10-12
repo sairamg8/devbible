@@ -228,6 +228,17 @@ rather than Docker's embedded resolver (page 12) — and in pods, where containe
 share a network namespace and reach each other on `localhost`. The portable
 habit on both engines is to create a named network.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Bridge network driver](https://docs.docker.com/engine/network/drivers/bridge/) — docs.docker.com: user-defined bridges give automatic DNS by name or alias; the default bridge reaches by IP only, `--link` is legacy; modified 2026-02-21 (*read*)
+- **Also good:** [Networking overview](https://docs.docker.com/engine/network/) — docs.docker.com: containers with no `--network` join the default bridge; custom networks get their own DNS handling (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 7](README.md) · Next → [Service discovery](02-service-discovery.md)

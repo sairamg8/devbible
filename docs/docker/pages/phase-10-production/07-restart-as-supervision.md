@@ -209,6 +209,16 @@ cold cache, a slower host — the window can outlast the retries and the failure
 appears suddenly and inexplicably. The fix belongs in the application's
 connection handling, not in the restart policy.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Start containers automatically](https://docs.docker.com/engine/containers/start-containers-automatically/) — Docker docs: `no`, `on-failure[:max-retries]`, `always`, `unless-stopped`; warns not to combine restart policies with a host process manager (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The production failure catalogue](06-failure-catalogue/README.md) · Index: [Phase 10](README.md) · Next → [Log drivers and rotation](08-log-drivers-and-rotation.md)
