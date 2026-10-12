@@ -4,6 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every MongoDB topic (written or not) there is a [link map](./link-map/README.md): the page elsewhere on the internet that explains it best, what it leaves out, and what our own page must keep saying. First pass — open for review.
+:::
+
 :::caution 🟠 Claim stale — phase 0 written, the rest free
 
 **Owner:** session `6f020813` (no longer running) · **Syllabus written:**
