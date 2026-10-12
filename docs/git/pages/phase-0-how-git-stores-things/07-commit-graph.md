@@ -156,6 +156,17 @@ The branch that was merged *in*; the first parent is the branch you were on.
 That ordering is what `--first-parent` exploits to read a trunk history without
 every feature branch's internal commits.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Git for Computer Scientists](https://eagain.net/articles/git-for-computer-scientists/) — Tommi Virtanen (eagain.net): objects as a DAG, commits with 0..n parents, refs as movable post-it notes; page shows no date (*read*)
+- **Also good:** [gitglossary](https://git-scm.com/docs/gitglossary) — git-scm.com: defines the commit graph as the DAG formed by commits and branch tips (*read* that entry)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Refs and HEAD](06-refs-and-head.md) · Next → [Config layers and precedence](08-config-layers.md)

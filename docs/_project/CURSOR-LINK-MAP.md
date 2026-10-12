@@ -9,7 +9,7 @@ metadata:
 
 ## 🔴 RESUME HERE — session progress saved 2026-10-12 (afternoon)
 
-- **Live on the site (merged to `main`, deploys green unless noted):** MongoDB 82, Redux Toolkit 21, Redis 74, Node.js 249, Express 115, PostgreSQL 233, TypeScript 187, Docker & Podman 192 (deploy #263 ✅), nginx 210 (PR #12, deploy #264 building at 12:43 UTC). **Git** (~177, 5 lanes) was running when this was saved.
+- **Live on the site (merged to `main`, deploys green unless noted):** MongoDB 82, Redux Toolkit 21, Redis 74, Node.js 249, Express 115, PostgreSQL 233, TypeScript 187, Docker & Podman 192 (deploy #263 ✅), nginx 210 (PR #12, deploy #264 building at 12:43 UTC). **Git** 191 (PR #13) finished after a relaunch (the first run was killed by an interrupting message at 12:42).
 - **User orders in force:** one language at a time; deploy the agents needed; merge everything to `main`; max 5 agents alive; announce each agent's effort before launching; **default model** for all agents (Opus only on request, e.g. a sensitive topic or a spot audit); "Further reading" links go on existing pages **additively** (nothing removed); finish Git, then stop for this session.
 - **Per-language recipe:** (1) read `docs/<track>/syllabus/*.md` for parts/phases; (2) copy `scratchpad/git-linkmap.js`-style script (not in the repo; its prompt rules are in this file's history and in the PR descriptions) — lanes = syllabus parts, each a `[medium]` researcher then a `[high]` verifier; (3) when done: `link-map/README.md` + `_category_.json` + tip pointer in the track README; (4) `python3 scripts/linkmap-inject.py <track>`; (5) `node scripts/linkcheck.mjs docs/<track>` + `mdxcheck.py --no-rawtag`; (6) flip the status row; (7) commit explicit paths, PR, merge with the full 40-char `expectedHeadSha`.
 - **Not started, in this order:** Python, JavaScript, React, Angular, Java, CSS, then the rest. Also owed: re-read the "headings only" blocks in every map; split the pages the injector skipped for the 300-line cap (~28 pages); Next.js/Vite/webpack/etc. have no map yet.
@@ -28,7 +28,7 @@ metadata:
 | TypeScript | 187 | ✅ complete (verified once) | 2026-10-12 (PR #10) |
 | Docker & Podman | 192 | ✅ complete (verified once) | 2026-10-12 (PR #11) |
 | nginx | 210 | ✅ complete (verified once) | 2026-10-12 (PR #12) |
-| Git | ~177 | 🔵 running (5 lanes) | — |
+| Git | 191 | ✅ complete (verified once) | 2026-10-12 (PR #13) |
 | Python · JavaScript · React · Angular · Java · CSS · others | — | ⬜ not started | — |
 
 **"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
@@ -40,7 +40,7 @@ re-read of "headings only" blocks is still owed. The staged copies in `docs/_pro
 
 User order: *pick one language at a time, deploy the agents you need, merge everything to main*. Pattern per language: N lanes (one per syllabus part), each a
 `[medium]` researcher then a `[high]` verifier (max 5 alive), then overview + `_category_.json` + a tip pointer in the track README, `linkcheck` + `mdxcheck`, PR, merge.
-**Live on the site:** see the status table above (PRs #3–#11). **Next:** Git (running), then python / javascript / react / angular / java / css.
+**Live on the site:** see the status table above (PRs #3–#11). **Next:** python / javascript / react / angular / java / css.
 Still owed per track: a re-read of the "headings only" blocks (listed in each file) and re-validation when versions move. Central rules live in the `claude-context` repo.
 
 ## 2026-10-12 (later) — MongoDB map published and validated

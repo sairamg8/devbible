@@ -156,6 +156,17 @@ No atomic switch between versions, no real rollback, no build step, a
 `.git` directory exposed in the deploy root, and breakage when files are edited
 on the server. Build an artefact and ship that.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Removing sensitive data from a repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) — GitHub Docs: first revoke or rotate a leaked secret; clones and forks keep the commits (*read*)
+- **Also good:** [About large files on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github) — GitHub Docs: 50 MiB warning, 100 MiB block, Git LFS; says Git is not designed for large SQL files (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Loose objects and packfiles](11-loose-objects-and-packfiles.md) · Next → [SHA-1, SHA-256 and object format](13-object-format.md)

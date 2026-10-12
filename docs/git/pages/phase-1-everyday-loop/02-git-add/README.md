@@ -46,6 +46,17 @@ without looking up the syntax.
 - **Forward to `.gitignore` (topic 05)** — the rules that make `add` skip a file,
   and `check-ignore -v` for finding out which rule did it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-add](https://git-scm.com/docs/git-add) — git-scm.com: synopsis shows `-A`, `-u`, `-p`, `-i`, `-N`, pathspec forms (*read* synopsis and description)
+- **Also good:** [Interactive Staging](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging) — Pro Git: "Staging Patches": stage one of two changes in the same file (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Phase 1 index](../README.md) · Start → [What `add` does](01-what-add-does.md)

@@ -4,6 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every Git topic there is a [link map](./link-map/README.md): the page elsewhere on the internet that explains it best, what it leaves out, and what our own page must keep saying. First pass — open for review.
+:::
+
 > Verified: 2026-08 against **git 2.55.0** (`git --version`) on this machine.
 > Every version fact in the table below was produced by
 > `sandbox/git-p0/ex1-version-facts.sh`, which runs in a throwaway repository

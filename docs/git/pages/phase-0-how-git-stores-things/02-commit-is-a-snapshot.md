@@ -177,6 +177,17 @@ Compare tree hashes: `git rev-parse main^{tree}` and
 `git rev-parse feature^{tree}`. Identical hashes prove byte-identical content —
 a stronger and cheaper check than reading a diff.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F) — Pro Git: "Snapshots, Not Differences": other systems store file-based changes, Git stores a series of snapshots (*read*)
+- **Also good:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) — git-scm.com: a commit names the tree of the whole directory; Git does not store the diff, `git show` computes it from the parent (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What Git actually is](01-what-git-is.md) · Next → [The four object types](03-object-types.md)

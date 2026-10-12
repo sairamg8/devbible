@@ -235,6 +235,17 @@ ignored. Because it is untracked, an ignore rule takes effect immediately with n
 the complete fix. Confirm with `git check-ignore -v` that the rule you added is the
 one deciding it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [gitignore](https://git-scm.com/docs/gitignore) — git-scm.com: NOTES: files already tracked are not affected; use `git rm --cached` then add to `.gitignore` (*read*)
+- **Also good:** [Removing sensitive data from a repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) — GitHub Docs: the "not enough on its own" half: rotate the secret first (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`.gitignore`](05-gitignore.md) · Next → [`git switch` and `git restore`](07-switch-and-restore.md)

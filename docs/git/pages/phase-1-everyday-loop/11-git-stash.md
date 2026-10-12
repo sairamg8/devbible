@@ -256,6 +256,17 @@ whenever you want. Stash is for minutes to hours; anything longer deserves a
 branch. In the meantime, `git status --show-stash` keeps the pile from becoming
 invisible.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Stashing and Cleaning](https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning) — Pro Git: stash list, apply, `--include-untracked`, `--all`; notes `stash save` is deprecated for `stash push` (*read*)
+- **Also good:** [git-stash](https://git-scm.com/docs/git-stash) — git-scm.com: synopsis: `push -m`, `-u`, `-a`, `-S`, `branch`, `show` (*read* synopsis)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Commit messages](10-commit-messages.md) · Next → [Removing and moving files](12-removing-and-moving.md)

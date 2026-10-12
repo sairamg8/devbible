@@ -184,6 +184,17 @@ costs nothing to anyone else: no force-push, no divergence, no colleague pulling
 duplicates. A rewrite of shared history buys tidier output and spends other people's
 afternoons. That trade is what makes the extra commit cheap.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Undoing Things](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things) — git-scm.com (Pro Git): amend, unstaging, discarding changes (*read*)
+- **Also good:** [git-reset](https://git-scm.com/docs/git-reset) — git-scm.com: "Undo a commit and redo" and other recipes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Phase 5 index](README.md) · Next → [`reset` in terms of the three trees](02-reset-in-depth.md)

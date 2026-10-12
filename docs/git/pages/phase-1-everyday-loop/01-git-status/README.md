@@ -61,6 +61,17 @@ checking, which of the three trees each file is in — and when your instinct be
 - **Forward to Phase 9** — `core.untrackedCache` and `core.fsmonitor` are covered
   here as `status` levers and there as repository-wide performance work.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-status](https://git-scm.com/docs/git-status) — git-scm.com: short format `XY` two-letter code, `--porcelain` versions, untracked files and performance (*read* those sections; rest *headings only*)
+- **Also good:** [Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) — Pro Git: "Checking the Status of Your Files" and "Short Status" with `-s` output (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Phase 1 index](../README.md) · Start → [The three sections](01-the-three-sections.md)

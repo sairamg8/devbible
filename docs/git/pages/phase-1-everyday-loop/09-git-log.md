@@ -246,6 +246,17 @@ you why the line arrived. It is also the strongest practical argument for small
 commits with real messages: the output is only an explanation if each step had one
 intent.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Viewing the Commit History](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) — Pro Git: `--oneline`, graph output, and "Limiting Log Output" (*read* limiting section, which includes the path filter; rest *headings only*)
+- **Also good:** [git-log](https://git-scm.com/docs/git-log) — git-scm.com: full option reference (~109k characters, *headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Undo before you push](08-undo-before-you-push.md) · Next → [Commit messages](10-commit-messages.md)

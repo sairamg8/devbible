@@ -222,6 +222,17 @@ rather than silent, which is worth doing, but the underlying fix is structural.
 Most of what looks like a Git problem here is a workflow problem wearing Git's error
 message.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-pull](https://git-scm.com/docs/git-pull) — git-scm.com: options for reconciling divergent histories and `pull.rebase` / `pull.ff` configuration (*read*)
+- **Also good:** [git-config](https://git-scm.com/docs/git-config) — git-scm.com: `pull.ff` entry (*read*; very large page)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Upstream tracking](04-upstream-tracking.md) · Next → [Force-pushing safely](06-force-pushing-safely.md)

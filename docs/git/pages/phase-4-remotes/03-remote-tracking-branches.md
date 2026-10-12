@@ -212,6 +212,18 @@ origin/<branch>` is the clean repair; if you do, `git rebase --onto` replays onl
 your own work onto the new upstream. It is the receiving end of the rule against
 rewriting shared history.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Remote Branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches) — git-scm.com (Pro Git): "local references that you can't move"; Git moves them on network communication (*read*)
+- **Also good:** [git-fetch](https://git-scm.com/docs/git-fetch) — git-scm.com: `-p --prune` removes remote-tracking refs gone from the remote (*read*)
+- **Also good:** [git-config](https://git-scm.com/docs/git-config) — git-scm.com: `fetch.prune` entry (*read*; very large page)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`fetch` versus `pull`](02-fetch-vs-pull.md) · Next → [Upstream tracking](04-upstream-tracking.md)

@@ -179,6 +179,17 @@ For the most recent commit, `git commit --amend --reset-author`. For a range,
 either a rewrite (Phase 11) or a `.mailmap`, which corrects how names are
 displayed without touching a single commit.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) — Pro Git: `user.name` and `user.email`, that every commit bakes them in; `init.defaultBranch` since 2.28 (*read*)
+- **Also good:** [git-config](https://git-scm.com/docs/git-config) — git-scm.com: the Includes section: `include` and `includeIf` pull in another file, conditionally for `includeIf` (*read* that passage)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [A tour of .git/](09-git-directory-tour.md) · Next → [Loose objects and packfiles](11-loose-objects-and-packfiles.md)

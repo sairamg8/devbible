@@ -238,6 +238,17 @@ free and reversible by you alone; rewriting a shared one is expensive and revers
 only by everyone else doing work, and its cost scales with how many people hold the
 branch, which is the one number you cannot measure from your terminal.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) — git-scm.com (Pro Git): section "The Perils of Rebasing": do not rebase commits that exist outside your repository and that people may have based work on (*read*)
+- **Also good:** [git-rebase](https://git-scm.com/docs/git-rebase) — git-scm.com: section "Recovering from upstream rebase" (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Interactive rebase](07-interactive-rebase.md) · Next → [`git reflog` as the safety net](09-reflog.md)

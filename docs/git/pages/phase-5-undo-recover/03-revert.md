@@ -207,6 +207,16 @@ duplicate commits as the failure mode. So the trade is local tidiness against ot
 people's time — a few extra lines against colleagues — and the tidiness budget is
 better spent on branches nobody has seen.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-revert](https://git-scm.com/docs/git-revert) — git-scm.com: records a new commit that reverses an earlier one; `-m` mainline (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`reset` in terms of the three trees](02-reset-in-depth.md) · Next → [Recovery with `reflog`](04-reflog-recovery.md)

@@ -161,6 +161,16 @@ a to-do list of filenames.
 `git restore --staged <path>` — it copies HEAD's version into the index and
 leaves the working tree alone. The older spelling is `git reset HEAD <path>`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified) — Pro Git: HEAD, Index, Working Directory as three trees, with a role for each; a command-by-command table of what moves (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The four object types](03-object-types.md) · Next → [The index is a real file](05-the-index.md)

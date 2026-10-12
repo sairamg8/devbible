@@ -243,6 +243,17 @@ common ancestors, `git merge-base --all` lists them, and the default strategy
 merges those bases into a synthetic one — which is where a result can be surprising
 in a way no single diff explains.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-merge-base](https://git-scm.com/docs/git-merge-base) — git-scm.com: finds the best common ancestor(s) for a three-way merge; defines "better" ancestor; `--is-ancestor`, `--fork-point` modes (*read* the opening)
+- **Also good:** [Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) — Pro Git: "three snapshots used in a typical merge" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Fast-forward versus a real merge](02-fast-forward-vs-merge.md) · Next → [Resolving a conflict, properly](04-resolving-conflicts.md)

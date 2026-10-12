@@ -210,6 +210,17 @@ origin/<branch>`, or `git rebase --onto origin/<branch> <old-tip> <branch>` if t
 have unique local work. The knowledge that a rewrite happened is the entire
 difference, and it can only come from you.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-revert](https://git-scm.com/docs/git-revert) — git-scm.com: the shared-history undo (*read*)
+- **Also good:** [About protected branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) — GitHub Docs: settings list including require linear history and lock branch (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Undoing a merge](07-undoing-a-merge.md) · Next → [Phase 5 index](README.md)

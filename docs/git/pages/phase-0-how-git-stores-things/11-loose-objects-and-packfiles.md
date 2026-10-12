@@ -169,6 +169,17 @@ Rarely. It discards existing delta choices and recomputes them at high CPU cost
 for a usually marginal gain. Routine `gc --auto`, or scheduled `git maintenance`,
 is the normal answer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Packfiles](https://git-scm.com/book/en/v2/Git-Internals-Packfiles) — Pro Git: loose format, then `git gc` packs them; also packing happens on push; a delta stores a second object against the first (*read*)
+- **Also good:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) — Pro Git: auto gc runs when there are too many loose objects or packfiles (*read* the Maintenance passage)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Identity and first-run setup](10-identity-setup.md) · Next → [What Git is not](12-what-git-is-not.md)

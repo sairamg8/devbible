@@ -146,6 +146,17 @@ No. It is one layer among system, global, local, worktree and `-c`. The fresh
 file has only four keys; everything else comes from higher layers or built-in
 defaults.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [gitrepository-layout](https://git-scm.com/docs/gitrepository-layout) — git-scm.com: entry per item: `objects`, `refs`, `HEAD`, `index`, `logs`, `hooks` (*read* objects and logs entries)
+- **Also good:** [Plumbing and Porcelain](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain) — Pro Git: introduces the chapter that walks through `.git` contents (*read* the intro)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Config layers and precedence](08-config-layers.md) · Next → [Identity and first-run setup](10-identity-setup.md)

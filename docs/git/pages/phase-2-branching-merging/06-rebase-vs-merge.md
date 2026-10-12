@@ -202,6 +202,16 @@ manual's RECOVERING FROM UPSTREAM REBASE section covers. That a whole documentat
 section exists for this is the best evidence for the rule that produced the mess:
 do not rewrite what other people have.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) — git-scm.com (Pro Git): section "Rebase vs. Merge": history as record versus history as story, no single winner (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`git rebase`](05-git-rebase.md) · Next → [Interactive rebase](07-interactive-rebase.md)

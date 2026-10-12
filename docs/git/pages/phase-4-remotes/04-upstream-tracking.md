@@ -231,6 +231,17 @@ not intend — Git will not ask, because the config already answered. The two de
 are cheap: `git branch -vv` when you are unsure what tracks what, and
 `git push --dry-run` when the answer matters.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [gitrevisions](https://git-scm.com/docs/gitrevisions) — git-scm.com: defines `@&#123;upstream&#125;` / `@&#123;u&#125;` and `@&#123;push&#125;` (*read* both entries)
+- **Also good:** [Remote Branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches) — Pro Git: tracking branches, `@&#123;u&#125;`, and ahead/behind counts via `git branch -vv`, cached since the last fetch (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Remote-tracking branches](03-remote-tracking-branches.md) · Next → [Divergent branches](05-divergent-branches.md)

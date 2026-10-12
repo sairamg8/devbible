@@ -280,6 +280,19 @@ committed, which catches both the accidental extra file and the vague subject. A
 a format genuinely matters, a `commit-msg` hook enforces it rather than asking
 people to remember.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to Write a Git Commit Message](https://cbea.ms/git-commit/) — Chris Beams, 2014-08-31: seven rules: 50 characters, imperative mood, wrap body at 72, explain what and why (*read*)
+- **Also good:** [SubmittingPatches](https://git-scm.com/docs/SubmittingPatches) — git-scm.com: the Git project's own rule: describe changes in imperative mood (*read*)
+- **Also good:** [git-commit](https://git-scm.com/docs/git-commit)
+- **Read this:** [Contributing to a Project](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) — Pro Git: "Commit Guidelines": make each commit a logically separate changeset; split a weekend's work with the staging area (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`git log`](09-git-log.md) · Next → [`git stash`](11-git-stash.md)

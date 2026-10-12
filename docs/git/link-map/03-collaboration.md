@@ -9,7 +9,7 @@ sidebar_position: 3
 Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04-16 (remotes and syncing), T05-01 to T05-16 (undo, recover, rewrite) and T06-01 to T06-15 (team workflow, parked). That is 47 rows. Phase 4 rows 1–7 and 10 have a page of ours (✅, row 9 folded into row 3); phase 5 rows 1–8 have one (✅, rows 10 folded in row 4); every other row is 🔲.
 *read* = I read the passage; *headings only* = fetched, headings/size checked. Third-party links carry a date where the page shows one. No `#anchors` are given.
 
-🔴 **Version note.** Our syllabus is verified against git 2.55.0; the git-scm.com docs pages showed changes up to **2.56.0** on 2026-10-12. Manual pages and Pro Git (2nd edition) show no page date, so only the fetch date is given. Pro Git predates `--force-with-lease` and `git backfill`, so those are cited from the manual. `github.com` returns 403 to our fetcher, so the filter-repo README is cited as a `raw.githubusercontent.com` copy. The `git pull` manual says `--ff-only` is the default when no reconciling method is set; our syllabus row says a bare pull fails. Check that on the page before quoting either.
+🔴 **Version note.** Our syllabus is verified against git 2.55.0; the git-scm.com docs pages showed changes up to **2.56.0** on 2026-10-12. Manual pages and Pro Git (2nd edition) show no page date, so only the fetch date is given. Pro Git predates `--force-with-lease` and `git backfill`, so those are cited from the manual. `github.com` returns 403 to our fetcher, so the filter-repo README is cited as a `raw.githubusercontent.com` copy. The `git pull` manual says `--ff-only` is the default when no reconciling method is set, which fails on divergence; our syllabus row quotes a `fatal:` text that no manual page carries, so quote the error from a run, not from a page.
 
 ---
 
@@ -18,7 +18,7 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 ### T04-01 · A remote is a named URL, nothing more — Master · ✅ written `docs/git/pages/phase-4-remotes/01-a-remote-is-a-url.md`
 - **Read this:** [Working with Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) · git-scm.com (Pro Git) · `git remote -v`, adding, `git remote rename`, more than one remote (*read*) · covers our angle: **partial** — `upstream` as a convention is not spelled out · fetched 2026-10-12
 - **Also good:** [git-remote](https://git-scm.com/docs/git-remote) · git-scm.com · full synopsis: add, rename, remove, set-url, prune (*headings only*) · fetched 2026-10-12
-- **Our delta:** `origin` and `upstream` are names, not keywords.
+- **Our delta:** `origin` and `upstream` are names, not keywords; Pro Git makes the `origin` half in a note on its Remote Branches page.
 
 ### T04-02 · `fetch` versus `pull` — Master · ✅ written `docs/git/pages/phase-4-remotes/02-fetch-vs-pull.md`
 - **Read this:** [git-pull](https://git-scm.com/docs/git-pull) · git-scm.com · pull = fetch plus integrate; four integration options (`--ff-only`, `--rebase`, `--no-rebase`, `--squash`) (*read*) · covers our angle: **full** · fetched 2026-10-12
@@ -26,19 +26,19 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 - **Our delta:** the fetch-then-look habit as a rule.
 
 ### T04-03 · Remote-tracking branches — Master · ✅ written `docs/git/pages/phase-4-remotes/03-remote-tracking-branches.md`
-- **Read this:** [Remote Branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches) · git-scm.com (Pro Git) · "local references that you can't move"; Git moves them on network communication (*read*) · covers our angle: **partial** — staleness is shown by diagram rather than stated; no pruning · fetched 2026-10-12
+- **Read this:** [Remote Branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches) · git-scm.com (Pro Git) · "local references that you can't move"; Git moves them on network communication (*read*) · covers our angle: **partial** — stale-until-fetch is stated, but no pruning · fetched 2026-10-12
 - **Also good:** [git-fetch](https://git-scm.com/docs/git-fetch) · git-scm.com · `-p --prune` removes remote-tracking refs gone from the remote (*read*) · fetched 2026-10-12
 - **Our delta:** why it can be stale without warning.
 
 ### T04-04 · Upstream tracking — Master · ✅ written `docs/git/pages/phase-4-remotes/04-upstream-tracking.md`
-- **Read this:** [gitrevisions](https://git-scm.com/docs/gitrevisions) · git-scm.com · defines `@{upstream}` / `@{u}` and `@{push}` (*read* both entries) · covers our angle: **partial** — no "ahead 2, behind 3" derivation · fetched 2026-10-12
-- **Also good:** [Remote Branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches) · Pro Git · tracking branches and `git pull` knowing what to fetch (*read*) · fetched 2026-10-12
-- **Our delta:** how `git status` computes ahead and behind.
+- **Read this:** [gitrevisions](https://git-scm.com/docs/gitrevisions) · git-scm.com · defines `@{upstream}` / `@{u}` and `@{push}` (*read* both entries) · covers our angle: **partial** — no "ahead 2, behind 3" derivation on this page · fetched 2026-10-12
+- **Also good:** [Remote Branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches) · Pro Git · tracking branches, `@{u}`, and ahead/behind counts via `git branch -vv`, cached since the last fetch (*read*) · fetched 2026-10-12
+- **Our delta:** how `git status` computes ahead and behind; Pro Git shows the counts for `git branch -vv`, not `status`.
 
 ### T04-05 · Divergent branches — Master · ✅ written `docs/git/pages/phase-4-remotes/05-divergent-branches.md`
 - **Read this:** [git-pull](https://git-scm.com/docs/git-pull) · git-scm.com · options for reconciling divergent histories and `pull.rebase` / `pull.ff` configuration (*read*) · covers our angle: **partial** — the exact `fatal:` text is not on the page · fetched 2026-10-12
 - **Also good:** [git-config](https://git-scm.com/docs/git-config) · git-scm.com · `pull.ff` entry (*read*; very large page) · fetched 2026-10-12
-- **Our delta:** the error text and which default to set; the `--ff-only` default wording above is not confirmed to match.
+- **Our delta:** the error text and which default to set; the git-pull manual calls `--ff-only` the default when no method is set, and the `fatal:` wording is on neither git-pull nor git-config.
 
 ### T04-06 · Force-pushing safely — Master · ✅ written `docs/git/pages/phase-4-remotes/06-force-pushing-safely.md`
 - **Read this:** [git-push](https://git-scm.com/docs/git-push) · git-scm.com · `--force-with-lease`, `--force-if-includes` in the synopsis and the lease text (*read* the lease passage) · covers our angle: **partial** — why lease alone is not enough is only partly argued · fetched 2026-10-12
@@ -53,8 +53,8 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 - **Also good:** [git-fetch](https://git-scm.com/docs/git-fetch) · git-scm.com · refspec in the synopsis (*headings only*) · fetched 2026-10-12
 
 ### T04-09 · Pruning — Understand · ✅ written (folded into T04-03) `docs/git/pages/phase-4-remotes/03-remote-tracking-branches.md`
-- **Read this:** [git-fetch](https://git-scm.com/docs/git-fetch) · git-scm.com · `-p --prune`, tags exception (*read*) · covers our angle: **partial** — `fetch.prune` is on git-config, not here · fetched 2026-10-12
-- **Also good:** [git-config](https://git-scm.com/docs/git-config) · git-scm.com · `fetch.prune` entry (*read*) · fetched 2026-10-12
+- **Read this:** [git-fetch](https://git-scm.com/docs/git-fetch) · git-scm.com · `-p --prune` with its tags exception, plus a PRUNING section covering `git remote prune` and `fetch.prune` (*read*) · covers our angle: **full** · fetched 2026-10-12
+- **Also good:** [git-config](https://git-scm.com/docs/git-config) · git-scm.com · `fetch.prune` entry (*read*; very large page) · fetched 2026-10-12
 
 ### T04-10 · Transports and credentials — Understand · ✅ written `docs/git/pages/phase-4-remotes/08-transports-and-credentials.md`
 - **Read this:** [Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) · GitHub Docs · `ssh-keygen -t ed25519`, agent setup (*read* the key command) · covers our angle: **partial** — SSH only; no tokens or helpers · fetched 2026-10-12
@@ -68,9 +68,8 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 - **Also good:** [Contributing to a Project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) · Pro Git · forking a project you cannot push to (*read*) · fetched 2026-10-12
 
 ### T04-12 · Shallow clones — Understand · 🔲 not written
-- **Read this:** [git-clone](https://git-scm.com/docs/git-clone) · git-scm.com · `--depth` in the synopsis (*read* synopsis only) · covers our angle: **partial** — what breaks (blame, describe) is not stated by what I opened · fetched 2026-10-12
-- **Also good:** [Get up to speed with partial clone and shallow clone](https://github.blog/open-source/git/get-up-to-speed-with-partial-clone-and-shallow-clone/) · GitHub Blog · Derrick Stolee, 2020-12-21, updated 2021-04-28 (*read* the blobless passage) · fetched 2026-10-12
-- **Also good:** [git-fetch](https://git-scm.com/docs/git-fetch) · git-scm.com · `--unshallow` (*read*) · fetched 2026-10-12
+- **Read this:** [Get up to speed with partial clone and shallow clone](https://github.blog/open-source/git/get-up-to-speed-with-partial-clone-and-shallow-clone/) · GitHub Blog · Derrick Stolee, 2020-12-21, updated 2021-04-28 · shallow boundary; `merge-base` and `log` give different results; shallow fetches cost more (*read* the shallow section) · covers our angle: **partial** — `blame` and `describe` are not named; `--unshallow` is not there · fetched 2026-10-12
+- **Also good:** [git-clone](https://git-scm.com/docs/git-clone) · git-scm.com · `--depth=<depth>` truncates history (*read* the option) · [git-fetch](https://git-scm.com/docs/git-fetch) · git-scm.com · `--unshallow` converts a shallow repository to a complete one (*read*) · fetched 2026-10-12
 
 ### T04-13 · Partial clone — Know · 🔲 not written
 - **Read this:** [git-backfill](https://git-scm.com/docs/git-backfill) · git-scm.com · blobless clone via `--filter=blob:none`; blame becomes slow; backfill downloads missing objects (*read* the description) · covers our angle: **full** · fetched 2026-10-12
@@ -80,14 +79,14 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 ### T04-14 · Signing — Know · 🔲 not written
 - **Read this:** [About commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification) · GitHub Docs · GPG, SSH or S/MIME signed commits are marked verified; vigilant mode off by default (*read*) · covers our angle: **partial** — what "Verified" does not prove is not argued · fetched 2026-10-12
 - **Also good:** [Signing Your Work](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work) · Pro Git · GPG signing and verifying (*headings only*) · fetched 2026-10-12
-- **Our delta:** SSH signing via `gpg.format` is on the git-tag and git-config pages, not in Pro Git; `commit.gpgsign` not checked.
+- **Our delta:** SSH signing via `gpg.format` is on the git-tag and git-config pages, not in Pro Git (its signing chapter covers GPG only); `commit.gpgSign` is a git-config entry, also named in git-commit.
 
 ### T04-15 · Bare and mirror repositories — Know · 🔲 not written
 - **Read this:** [git-clone](https://git-scm.com/docs/git-clone) · git-scm.com · `--bare` has no working tree; `--mirror` maps all refs and sets a refspec for `git remote update` (*read*) · covers our angle: **partial** — hosting your own is not covered · fetched 2026-10-12
 - **Also good:** [Getting Git on a Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server) · Pro Git · exporting a repo into a bare repository (*read*) · fetched 2026-10-12
 
 ### T04-16 · `git bundle` — Know · 🔲 not written
-- **Read this:** [Bundling](https://git-scm.com/book/en/v2/Git-Tools-Bundling) · git-scm.com (Pro Git) · transferring Git data without a network (*read* the opening) · covers our angle: **partial** — no review-by-email case · fetched 2026-10-12
+- **Read this:** [Bundling](https://git-scm.com/book/en/v2/Git-Tools-Bundling) · git-scm.com (Pro Git) · transferring Git data without a network (*read* the opening) · covers our angle: **full** — no network, offsite security limits, and emailing updates are all named · fetched 2026-10-12
 - **Also good:** [git-bundle](https://git-scm.com/docs/git-bundle) · git-scm.com · bundle format and examples (*headings only*) · fetched 2026-10-12
 
 ---
@@ -118,7 +117,7 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 - **Also good:** [git-commit](https://git-scm.com/docs/git-commit) · git-scm.com · `--fixup` and `--amend` in the synopsis (*headings only*) · fetched 2026-10-12
 
 ### T05-06 · Recovering a deleted branch — Understand · ✅ written `docs/git/pages/phase-5-undo-recover/06-recovering-a-branch.md`
-- **Read this:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) · Pro Git · find the lost commit, then add a branch at its SHA-1 (*read*) · covers our angle: **partial** — `fsck` side is thin · fetched 2026-10-12
+- **Read this:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) · Pro Git · reflog route, then `git fsck --full` dangling-commit route; both end by adding a branch at the SHA-1 (*read*) · covers our angle: **full** · fetched 2026-10-12
 - **Also good:** [git-fsck](https://git-scm.com/docs/git-fsck) · git-scm.com · `--lost-found`, `--dangling` (*headings only*) · fetched 2026-10-12
 
 ### T05-07 · Undoing a merge — Understand · ✅ written `docs/git/pages/phase-5-undo-recover/07-undoing-a-merge.md`
@@ -131,38 +130,38 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 - **Our delta:** communicating a rewrite; no page found that states it.
 
 ### T05-09 · Dangling objects and `git fsck` — Understand · 🔲 not written
-- **Read this:** [git-fsck](https://git-scm.com/docs/git-fsck) · git-scm.com · checks connectivity; `--lost-found`, `--unreachable`, `--no-reflogs` (*read* options) · covers our angle: **partial** — reference, no walkthrough · fetched 2026-10-12
-- **Also good:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) · Pro Git (*headings only*) · fetched 2026-10-12
+- **Read this:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) · git-scm.com (Pro Git) · `git fsck --full` listing dangling blobs, trees and a commit, then recovering with a branch (*read*) · covers our angle: **partial** — no `--lost-found` · fetched 2026-10-12
+- **Also good:** [git-fsck](https://git-scm.com/docs/git-fsck) · git-scm.com · `--lost-found`, `--unreachable`, `--no-reflogs`, `--dangling` options (*read* options) · fetched 2026-10-12
 
 ### T05-10 · `gc`, `prune` and expiry windows — Understand · ✅ written (folded into T05-04) `docs/git/pages/phase-5-undo-recover/04-reflog-recovery.md`
 - **Read this:** [git-gc](https://git-scm.com/docs/git-gc) · git-scm.com · `--prune` default 2 weeks via `gc.pruneExpire`; `gc.reflogExpire` 90 days (*read*) · covers our angle: **partial** — `--aggressive` effects not read · fetched 2026-10-12
 - **Also good:** [git-prune](https://git-scm.com/docs/git-prune) · git-scm.com (*headings only*) · fetched 2026-10-12
 
 ### T05-11 · Stash recovery and stash conflicts — Understand · 🔲 not written (moved to `docs/git/pages/phase-1-everyday-loop/11-git-stash.md`)
-- **Read this:** [git-stash](https://git-scm.com/docs/git-stash) · git-scm.com · a conflicted apply is not removed from the stash list; resolve, then `git stash drop` (*read*) · covers our angle: **partial** — finding a dropped stash is not covered by what I read · fetched 2026-10-12
-- **Also good:** [Stashing and Cleaning](https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning) · Pro Git · applying on a different branch (*headings only*) · fetched 2026-10-12
+- **Read this:** [git-stash](https://git-scm.com/docs/git-stash) · git-scm.com · a conflicted apply is not removed from the stash list; a section on recovering dropped stash entries with `git fsck --unreachable` (*read*) · covers our angle: **full** · fetched 2026-10-12
+- **Also good:** [Stashing and Cleaning](https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning) · Pro Git · a stash can be applied on a different branch (*read*) · fetched 2026-10-12
 
 ### T05-12 · Removing a secret from history — Understand · 🔲 not written
-- **Read this:** [Removing sensitive data from a repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) · GitHub Docs · the hosting side of cleanup (*headings only*) · covers our angle: **partial** — credential rotation order not confirmed · fetched 2026-10-12
+- **Read this:** [Removing sensitive data from a repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) · GitHub Docs · "first step" is to revoke or rotate the secret; then rewrite with filter-repo, update the host, coordinate other clones (*read*) · covers our angle: **full** — GitHub-specific host steps · fetched 2026-10-12
 - **Also good:** [git-filter-repo README (raw)](https://raw.githubusercontent.com/newren/git-filter-repo/main/README.md) · github (raw) · the tool the procedure uses (*headings only*) · fetched 2026-10-12
 
 ### T05-13 · The rewrite tools — Know · 🔲 not written
 - **Read this:** [git-filter-branch](https://git-scm.com/docs/git-filter-branch) · git-scm.com · says filter-branch is not recommended and points to `git filter-repo` (*read*) · covers our angle: **partial** — filter-repo itself is not on git-scm.com · fetched 2026-10-12
 - **Also good:** [git-filter-repo README (raw)](https://raw.githubusercontent.com/newren/git-filter-repo/main/README.md) · github (raw) (*headings only*) · fetched 2026-10-12
-- **Also good:** [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) · rtyley.github.io · strips big blobs and replaces text, "faster" than filter-branch (*read*) · fetched 2026-10-12
+- **Also good:** [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) · rtyley.github.io · strips big blobs and replaces text, says it is faster than filter-branch (*read*; no page date) · fetched 2026-10-12
 
 ### T05-14 · Squashing a branch before merge — Know · 🔲 not written
-- **Read this:** [About pull request merges](https://docs.github.com/en/pull-requests/reference/pull-request-merges) · GitHub Docs · merge, squash and rebase options compared (*read* the intro) · covers our angle: **partial** — the local routes are elsewhere · fetched 2026-10-12
+- **Read this:** [Pull request merges](https://docs.github.com/en/pull-requests/reference/pull-request-merges) · GitHub Docs · merge, squash and rebase options compared (*read* the intro) · covers our angle: **partial** — the local routes are elsewhere · fetched 2026-10-12
 - **Also good:** [git-merge](https://git-scm.com/docs/git-merge) · git-scm.com · `--squash` in the synopsis (*headings only*) · fetched 2026-10-12
 - **Also good:** [Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) · Pro Git · squashing in interactive rebase (*read*) · fetched 2026-10-12
 
 ### T05-15 · `ORIG_HEAD`, `MERGE_HEAD`, `CHERRY_PICK_HEAD` — Know · 🔲 not written
-- **Read this:** none found — tried: "ORIG_HEAD MERGE_HEAD CHERRY_PICK_HEAD" against git-scm.com manuals. gitrevisions only lists these names among pseudo-refs; git-reset and git-update-ref mention `ORIG_HEAD` in passing; gitrepository-layout gave no match.
-- *Checked, not chosen:* [gitrevisions](https://git-scm.com/docs/gitrevisions) · lists the names, no explanation.
-- *Not opened:* the `git-cherry-pick` body for `CHERRY_PICK_HEAD` use.
+- **Read this:** [gitrevisions](https://git-scm.com/docs/gitrevisions) · git-scm.com · one-paragraph definitions of `ORIG_HEAD`, `MERGE_HEAD`, `CHERRY_PICK_HEAD` and the other pseudo-refs (*read*) · covers our angle: **partial** — definitions only; no inspect-or-abort walkthrough · fetched 2026-10-12
+- **Also good:** [git-reset](https://git-scm.com/docs/git-reset) · git-scm.com · "Undo a merge or pull": `git reset --hard ORIG_HEAD` (*read*) · [git-merge](https://git-scm.com/docs/git-merge) · git-scm.com · `MERGE_HEAD` is set on a conflicted merge; `--abort` equals `reset --merge` when it is present (*read*) · fetched 2026-10-12
+- *Checked, not chosen:* [git-cherry-pick](https://git-scm.com/docs/git-cherry-pick) · sets `CHERRY_PICK_HEAD` on a conflicted pick (*read* that passage); single-ref, so no better than gitrevisions.
 
 ### T05-16 · Recovering from a bad `rebase --onto` — Know · 🔲 not written
-- **Read this:** [git-rebase](https://git-scm.com/docs/git-rebase) · git-scm.com · `--onto` and `ORIG_HEAD`-style recovery (*headings only*) · covers our angle: **partial** — reflog reading is on the reflog pages · fetched 2026-10-12
+- **Read this:** [git-rebase](https://git-scm.com/docs/git-rebase) · git-scm.com · `ORIG_HEAD` is set when a rebase starts but may not survive it; the previous tip is `@{1}` in the branch reflog; separate TRANSPLANTING A TOPIC BRANCH WITH --ONTO section (*read* the note) · covers our angle: **partial** — no worked bad-`--onto` recovery · fetched 2026-10-12
 - **Also good:** [git-reflog](https://git-scm.com/docs/git-reflog) · git-scm.com (*headings only*) · fetched 2026-10-12
 
 ---
@@ -170,16 +169,16 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 ## Phase 6 — Team workflow and code review (parked 2026-08-14; all 🔲)
 
 ### T06-01 · The workflow families — Master · 🔲 not written
-- **Read this:** [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html) · martinfowler.com · mainline, feature branching, release and hotfix branches; 28 May 2020 (*headings only*; very long) · covers our angle: **partial** — no GitHub flow section confirmed · fetched 2026-10-12
+- **Read this:** [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html) · martinfowler.com · mainline, feature, release and hotfix branches, plus Git-flow, GitHub Flow and Trunk-Based Development sections; 28 May 2020 (*headings only*; very long) · covers our angle: **full** by its contents list; no section read · fetched 2026-10-12
 - **Also good:** [Trunk Based Development](https://trunkbaseddevelopment.com/) · trunkbaseddevelopment.com · overview of the trunk model (*headings only*) · fetched 2026-10-12
 - **Also good:** [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/) · nvie.com · git-flow origin, 2010, with a "Note of reflection" dated 2020-03-05 (*read*) · fetched 2026-10-12
 
 ### T06-02 · The pull request as the unit of work — Master · 🔲 not written
 - **Read this:** [Small CLs](https://google.github.io/eng-practices/review/developer/small-cls.html) · Google eng-practices · small changes reviewed faster (*read*) · covers our angle: **partial** — PR description and draft PRs are not covered · fetched 2026-10-12
-- **Also good:** [Creating a pull request](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request) · GitHub Docs (*headings only*) · fetched 2026-10-12
+- **Also good:** [Creating a pull request](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request) · GitHub Docs · title and description step, draft pull requests via the UI or `gh pr create --draft` (*read*) · fetched 2026-10-12
 
 ### T06-03 · Merge, squash or rebase-merge — Master · 🔲 not written
-- **Read this:** [About pull request merges](https://docs.github.com/en/pull-requests/reference/pull-request-merges) · GitHub Docs · merge commits, squash merges, rebases (*read* the intro) · covers our angle: **partial** — effect on bisect and revert not confirmed · fetched 2026-10-12
+- **Read this:** [Pull request merges](https://docs.github.com/en/pull-requests/reference/pull-request-merges) · GitHub Docs · merge commits, squash merges, rebases (*read* the intro) · covers our angle: **partial** — effect on bisect and revert not confirmed · fetched 2026-10-12
 - **Also good:** [Merge methods](https://docs.gitlab.com/user/project/merge_requests/methods/) · GitLab Docs (*headings only*) · fetched 2026-10-12
 
 ### T06-04 · Tags and releases — Master · 🔲 not written
@@ -188,7 +187,8 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 - **Also good:** [About releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) · GitHub Docs (*headings only*) · fetched 2026-10-12
 
 ### T06-05 · Keeping a branch reviewable — Understand · 🔲 not written
-- **Read this:** none found — tried: "rebase vs merge main into feature branch review" on git-scm.com, GitHub Docs, Google eng-practices. Closest: [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html) (28 May 2020, *headings only*), which covers integration frequency, not the reviewer's changes-since-last-review view.
+- **Read this:** [Contributing to a Project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) · git-scm.com (Pro Git) · section "Keeping up with Upstream": rebase or merge the target into a PR branch, and avoid force-pushing over an open PR (*read*) · covers our angle: **partial** — argues from history cleanliness, not the reviewer's changes-since-last-review view · fetched 2026-10-12
+- *Checked, not chosen:* [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html) · Fowler, 28 May 2020 (*headings only*) · integration frequency, not the reviewer's view.
 
 ### T06-06 · Branch naming and lifetime — Understand · 🔲 not written
 - **Read this:** [Patterns for Managing Source Code Branches](https://martinfowler.com/articles/branching-patterns.html) · martinfowler.com · 28 May 2020 · "Healthy Branch" and integration frequency (*headings only*) · covers our angle: **partial** — no naming convention · fetched 2026-10-12
@@ -222,7 +222,8 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 - **Also good:** [git-cherry-pick](https://git-scm.com/docs/git-cherry-pick) · git-scm.com (*headings only*) · fetched 2026-10-12
 
 ### T06-14 · Changelogs — Know · 🔲 not written
-- **Read this:** [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/) · keepachangelog.com (*headings only*) · covers our angle: **partial** — hand-written side only · fetched 2026-10-12
+- **Read this:** [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/) · keepachangelog.com · hand-written format and a section arguing against commit-log dumps (*read*) · covers our angle: **partial** — generated changelogs are not covered · fetched 2026-10-12
 
 ### T06-15 · The working agreement — Know · 🔲 not written
-- **Read this:** none found — tried: "git team working agreement merge style branch naming" against Pro Git, GitHub Docs, Google eng-practices. Closest: [gitworkflows](https://git-scm.com/docs/gitworkflows) (git.git's own integration branches, *headings only*), which describes one project's rules, not a checklist.
+- **Read this:** none found — tried: "git team working agreement merge style branch naming" against Pro Git, GitHub Docs, Google eng-practices.
+- *Checked, not chosen:* [gitworkflows](https://git-scm.com/docs/gitworkflows) · git-scm.com (*headings only*) · git.git's own integration branches, one project's rules rather than a checklist.

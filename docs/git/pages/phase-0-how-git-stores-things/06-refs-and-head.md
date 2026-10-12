@@ -172,6 +172,17 @@ It reads `.git/HEAD`, follows the symbolic ref to a branch, and writes the new
 commit's hash into that branch file. Detached HEAD skips the middle step, so
 only HEAD advances.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) — git-scm.com: REFERENCES section: `refs/heads`, `refs/tags`, `refs/remotes`, HEAD as symbolic reference, "detached HEAD state" when it holds a commit ID (*read*)
+- **Also good:** [Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References) — Pro Git: shows the files on disk, `cat .git/HEAD`, and when HEAD becomes a raw hash (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The index is a real file](05-the-index.md) · Next → [The commit graph is a DAG](07-commit-graph.md)

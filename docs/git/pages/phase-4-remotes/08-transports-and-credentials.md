@@ -226,6 +226,18 @@ Username` is the credential helper's. `ssh -T git@<host>` tests authentication w
 Git involved and splits the problem in half in one command; most of the time the
 answer is an expired token or a key that is not loaded in the agent.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) — GitHub Docs: `ssh-keygen -t ed25519`, agent setup (*read* the key command)
+- **Also good:** [Credential Storage](https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage) — Pro Git: default no caching; `cache` in memory 15 minutes; `store` plain text on disk (*read*)
+- **Also good:** [The Protocols](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols) — Pro Git: SSH versus HTTP (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`git push` in full](07-git-push.md) · Next → [Phase 4 index](README.md)

@@ -137,6 +137,18 @@ The object type, a space, the content length in bytes, a NUL, then the content.
 The type and length prefix are part of why a generic SHA-1 collision does not
 translate into a usable Git attack.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [git-init](https://git-scm.com/docs/git-init) — git-scm.com: `--object-format` takes `sha1` or (if enabled) `sha256`, `sha1` default; states no interoperability between SHA-256 and SHA-1 repositories at present (*read*)
+- **Also good:** [hash-function-transition](https://git-scm.com/docs/hash-function-transition) — git-scm.com: design document: SHA-256 picked as successor in late 2018; `extensions.objectFormat` and `compatObjectFormat` (*read* in part)
+- **Also good:** [BreakingChanges](https://git-scm.com/docs/BreakingChanges)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What Git is not](12-what-git-is-not.md) · Next → [Plumbing versus porcelain](14-plumbing-vs-porcelain.md)
