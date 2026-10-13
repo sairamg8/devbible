@@ -248,6 +248,17 @@ from the call site. A bare tuple's arity is checked only at runtime, so adding a
 field silently breaks every caller. A `NamedTuple` or dataclass lets callers use
 attribute names and makes adding a field backwards-compatible.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PEP 3132 — Extended Iterable Unpacking](https://peps.python.org/pep-3132/) — peps.python.org: the `first, *rest` rule and the `a, *b, c = seq` form (*read*)
+- **Beyond the docs:** [Asterisks in Python: what they are and how to use them](https://treyhunner.com/2018/10/asterisks-in-python-what-they-are-and-how-to-use-them/) — Trey Hunner, 2018-10-11: `*` and `**` in calls, `first, *remaining = fruits`, and the literal forms from 3.5
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [EAFP vs LBYL](../12-eafp-vs-lbyl/README.md) · Index: [Unpacking](README.md) · Next → [Starred unpacking](02-starred-unpacking.md)

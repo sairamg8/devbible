@@ -125,6 +125,19 @@ PEP 749 defines four formats in `annotationlib.Format`: `VALUE` (1, evaluated ru
 **Q: What happens when you access the legacy `__annotations__` dictionary on a function in Python 3.14?**
 Accessing `func.__annotations__` invokes `func.__annotate__(1)` to evaluate the annotations into real Python types. The resulting dictionary is then cached on `func.__dict__["__annotations__"]` so that repeated accesses incur no re-evaluation overhead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [annotationlib](https://docs.python.org/3/library/annotationlib.html) — Python docs: the 3.14 module for inspecting annotations under deferred evaluation; contrasts stringified annotations (`from __future__ import annotations`) with deferred evaluation, default in 3.14 (*read*)
+- **Also good:** [Annotations Best Practices](https://docs.python.org/3/howto/annotations.html) — Python docs: says to use `annotationlib.get_annotations()` (3.14+) rather than reading `__annotations__` directly (*read*)
+- **Also good:** [PEP 649](https://peps.python.org/pep-0649/)
+- **Beyond the docs:** [What is PEP 649?](https://pydevtools.com/handbook/explanation/what-is-pep-649/) — pydevtools handbook, page shows "Last updated on August 29, 2026": says the future import was the standard fix for forward references and on 3.14 PEP 649 handles this by default
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [annotationlib and runtime reflection](02-annotationlib-and-runtime-reflection.md)

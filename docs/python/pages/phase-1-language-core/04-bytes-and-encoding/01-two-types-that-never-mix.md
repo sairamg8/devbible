@@ -254,6 +254,17 @@ The argument type selects the result type: a `str` argument yields `str`
 names, a `bytes` argument yields raw `bytes` names. The `bytes` form is how you
 handle filenames that are not valid in the filesystem encoding.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Unicode HOWTO](https://docs.python.org/3/howto/unicode.html) — docs.python.org: text versus bytes, encodings and errors (*headings only*)
+- **Beyond the docs:** [Pragmatic Unicode, or, How do I stop the pain?](https://nedbatchelder.com/text/unipain) — Ned Batchelder, created 2012-03-10, PyCon 2012: the Unicode sandwich: bytes on the outside, Unicode on the inside, decode early and encode late; in Python 3 mixing the two fails immediately
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Strings](../03-strings/README.md) · Index: [`bytes` vs `str`](README.md) · Next → [Encode and decode](02-encode-and-decode.md)

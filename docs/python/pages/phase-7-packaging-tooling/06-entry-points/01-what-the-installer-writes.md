@@ -255,6 +255,18 @@ Not the installer — the specification says install tools *"are not responsible
 **Why can a wheel with a broken script entry build successfully?**
 Because the backend and the installer validate different things. uv_build checks that script names are well-formed and forbids `[project.entry-points.console_scripts]`, but its source carries a TODO to validate object references, so `module.function` without a colon passes. The installer must generate a call, so it requires the callable part — pip raises `MissingCallableSuffix`, uv reports an invalid console script. Catch it in CI by installing the built wheel into a clean environment and running the command ([12](12-when-the-command-fails.md)).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Entry points specification](https://packaging.python.org/en/latest/specifications/entry-points/) — Python Packaging User Guide: the format; a `console_scripts` entry point makes the installer create a command-line wrapper for each function (*read*)
+- **Also good:** [Writing your pyproject.toml](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/) — Python Packaging User Guide: "To install a command as part of your package, declare it in the `[project.scripts]` table" (*read*)
+- **Beyond the docs:** [Python Apps the Right Way: entry points and scripts](https://chriswarrick.com/blog/2014/09/15/python-apps-the-right-way-entry_points-and-scripts/) — Chris Warrick, 2014-09-15 (updated 2017-08-03): the `name = module.with:function` form and `gui_scripts`; written for `setup.py`, so translate to `[project.scripts]`; does not cover how the wrapper is built
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [01b · entry_points.txt](01b-entry-points-txt.md)

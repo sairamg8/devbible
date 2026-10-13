@@ -253,6 +253,17 @@ issue; genuine alphabetical order for non-ASCII text needs locale-aware
 collation, which the standard library only exposes through process-global
 `locale` state.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [string — Common string operations](https://docs.python.org/3/library/string.html) — docs.python.org: holds the format specification mini-language that f-strings use (*headings only*)
+- **Beyond the docs:** [Python f-strings Are More Powerful Than You Might Think](https://dev.to/martinheinz/python-f-strings-are-more-powerful-than-you-might-think-2oop) — Martin Heinz, DEV Community, 2022-04-04: worked format-spec examples (centring, leading zeros) and the `=` debugging specifier from 3.8
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Numbers](../02-numbers/README.md) · Index: [Strings](README.md) · Next → [Building strings and interning](01b-building-and-interning.md)

@@ -192,6 +192,19 @@ Python automatically deletes `e` at the end of the `except` block (equivalent to
 **Q: How does CPython decide whether a variable in a function is local or global?**
 During compilation, CPython's symbol table pass inspects the AST of the function. Any identifier that appears on the left of an assignment (`=`, `+=`), as an `import` target, as a `for` loop target, or as a function/class definition is classified as local (`co_varnames`), unless explicitly declared with `global` or `nonlocal`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Execution model](https://docs.python.org/3/reference/executionmodel.html) — Language reference: the formal rules for names, scopes and binding (*read* the Resolution of names section)
+- **Also good:** [Common Gotchas](https://docs.python-guide.org/writing/gotchas/) — The Hitchhiker's Guide to Python: late-binding closures: "the values of variables used in closures are looked up at the time the inner function is called" (*read*)
+- **Also good:** [Programming FAQ](https://docs.python.org/3/faq/programming.html)
+- **Beyond the docs:** [Enclosing scope in Python](https://www.pythonmorsels.com/enclosing-scope/) — Trey Hunner, Python Morsels, 2025-06-03: walks LEGB and says `nonlocal` assigns to an enclosing scope while `global` always assigns to the global one; enclosing scope matters only with a closure
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [global vs nonlocal](02-mutating-enclosing-state-global-vs-nonlocal.md)

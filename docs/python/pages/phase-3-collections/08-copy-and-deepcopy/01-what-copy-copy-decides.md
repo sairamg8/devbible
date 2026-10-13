@@ -245,6 +245,17 @@ Functions and builtin functions are in the atomic set, and any type that is a su
 **When would you see `copy.Error`?**
 Almost never. It is raised only when an object has neither `__reduce_ex__` nor `__reduce__`, and `object` supplies both. The failures people actually meet are `TypeError`s raised by the default reduce machinery for objects such as locks and generators.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [copy](https://docs.python.org/3/library/copy.html) — Python docs: shallow versus deep ("only relevant for compound objects"), and the `__copy__` and `__deepcopy__` hooks (*read*)
+- **Beyond the docs:** [copy — Duplicate Objects](https://pymotw.com/3/copy/index.html) — Doug Hellmann, PyMOTW 3, last updated 2018-03-18: "The memo dictionary is used to keep track of the values that have been copied already, so as to avoid infinite recursion", with a cyclic graph example
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [01b · Atomic types and identity](01b-atomic-types-and-identity.md)

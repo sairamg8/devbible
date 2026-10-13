@@ -264,6 +264,18 @@ list, a universal `uv.lock` instead of a per-machine snapshot, and an *exact* sy
 undeclared packages instead of an install that only ever adds. A team that adopts uv purely for
 speed keeps every reproducibility problem it had, just encountered sooner.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Working on projects](https://docs.astral.sh/uv/guides/projects/) — uv docs: `uv lock` creates the lockfile, `uv sync` updates `.venv`, and every `uv run` checks the lockfile against `pyproject.toml` first (*read*)
+- **Also good:** [uv documentation](https://docs.astral.sh/uv/) — Astral: the index to the rest; opens as "an extremely fast Python package and project manager" (*read* the opening)
+- **Also good:** [venv — Creation of virtual environments](https://docs.python.org/3/library/venv.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Next → [01b · The project uv sees](01b-the-project-uv-sees.md)

@@ -236,6 +236,18 @@ then a read. `sys.path` length, filesystem type, container layering, and whether
 `__pycache__` is warm all change the result. A read-only filesystem never
 caches bytecode, so it is permanently cold.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PEP 810 — Explicit lazy imports](https://peps.python.org/pep-0810/) — peps.python.org: the `lazy` keyword for Python 3.15; `lazy import` inside a function, class or try block is a SyntaxError (*read*)
+- **Also good:** [What is PEP 810?](https://pydevtools.com/handbook/explanation/what-is-pep-810/) — pydevtools handbook: short explainer: accepted by the Steering Council on 3 November 2025 for 3.15 (*read*)
+- **Beyond the docs:** [Python lazy imports](https://www.danilchenko.dev/posts/python-lazy-imports/) — Maksim Danilchenko, 2026-07-24: measures with `python -X importtime`, then a 3.12 CLI importing boto3 goes from 394 ms to 48 ms with the import deferred (one machine, best of 15 runs); `lazy import` is top-level only, and the pre-3.15 workarounds are listed
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Python vs Node for a backend](../10-python-vs-node/README.md) · Index: [Startup and import cost](README.md) · Next → [What you can actually do about it](02-what-you-can-actually-do.md)

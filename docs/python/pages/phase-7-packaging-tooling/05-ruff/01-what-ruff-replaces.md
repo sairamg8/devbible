@@ -252,6 +252,19 @@ and `W` codes that a formatter does not make redundant. Outside those conditions
 depends on whether each plugin you use has been re-implemented, and on whether you relied on
 flake8's INI configuration, which ruff does not read.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuring Ruff](https://docs.astral.sh/ruff/configuration/) — Astral: config in `pyproject.toml`, `ruff.toml` or `.ruff.toml`, with `select` and `extend-select` under the lint table (*read*)
+- **Also good:** [The Ruff Linter](https://docs.astral.sh/ruff/linter/) — Astral (*headings only*): [The Ruff Formatter](https://docs.astral.sh/ruff/formatter/)
+- **Also good:** [The Ruff Formatter](https://docs.astral.sh/ruff/formatter/)
+- **Beyond the docs:** [How to replace Black, isort, flake8, and pyupgrade with Ruff](https://pydevtools.com/handbook/how-to/how-to-replace-black-isort-flake8-pyupgrade-with-ruff/) — pydevtools handbook: swaps the old hooks for the ruff pre-commit hooks and splits CI into a `ruff check` run and a `ruff format --check` run; advises not enabling rules nobody will fix today; Tim Hopper; page shows a 2026-09-07 update date
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Next → [01b · check and format are two tools](01b-check-and-format-are-two-tools.md)

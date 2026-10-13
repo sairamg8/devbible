@@ -230,6 +230,17 @@ All six share one precedence level, below every arithmetic, shifting and bitwise
 operator and above `not`/`and`/`or`. Two consequences: `a + 1 == b * 2` needs no
 parentheses, and `x & 1 == 0` groups as `(x & 1) == 0`, unlike C.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Expressions — Comparisons](https://docs.python.org/3/reference/expressions.html) — docs.python.org: `x &lt; y &lt;= z` is equivalent to `x &lt; y and y &lt;= z`, except that `y` is evaluated only once (*read*)
+- **Beyond the docs:** [Python Internals — Exploring Chained Comparison Operators](https://arpitbhayani.me/blogs/chained-operators-python/) — Arpit Bhayani, page metadata 2021-04-28: `a &lt; b &lt; c` is `(a &lt; b) and (b &lt; c)` with the middle operand evaluated once; the `dis` output shows how the jump gives the short-circuit; the bytecode shown is from an older release (`DUP_TOP`, `ROT_THREE`)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Truthiness](../05-truthiness/README.md) · Index: [Comparisons](README.md) · Next → [Consistency rules and runtime dispatch](01b-consistency-and-dispatch.md)

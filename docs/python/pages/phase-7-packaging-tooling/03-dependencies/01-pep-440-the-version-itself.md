@@ -259,6 +259,18 @@ sorts *"immediately following the corresponding release"*. So the post-release w
 follow-up is *why anyone is asking*: usually because a deployment picked up a re-upload and
 nobody could tell whether that was an upgrade. It was.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Managing dependencies](https://docs.astral.sh/uv/concepts/projects/dependencies/) — uv docs: dependencies, extras and dependency groups in a uv project (*read* the opening)
+- **Also good:** [Dependency Groups](https://packaging.python.org/en/latest/specifications/dependency-groups/) — Python Packaging User Guide: the `[dependency-groups]` spec: a table of user-defined keys, each a list of requirements (*read*)
+- **Beyond the docs:** [Stop Lying to Your Dependency Resolver](https://mergify.com/blog/stop-lying-to-your-dependency-resolver-the-real-rules-for-python-dependency-management) — Mehdi Abaakouk, Mergify, 2025-12-15: applications need deterministic versions from a lockfile while libraries need compatibility ranges, the "apps lock, libraries range" split
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [02 · Local versions and the `+` label](02-local-versions-and-the-plus-label.md)

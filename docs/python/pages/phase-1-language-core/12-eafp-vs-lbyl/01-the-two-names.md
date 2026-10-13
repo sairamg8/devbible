@@ -218,6 +218,17 @@ raise `KeyError` from a line guarded by a test that passed; `d.get(k, default)` 
 single-threaded test says nothing about equivalence under load — which is why this is a
 semantic choice wearing a style label.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Glossary — EAFP](https://docs.python.org/3/glossary.html) — docs.python.org: the one-paragraph definition of EAFP, with LBYL beside it (*read*)
+- **Beyond the docs:** [Idiomatic Python: EAFP versus LBYL](https://devblogs.microsoft.com/python/idiomatic-python-eafp-versus-lbyl/) — Brett Cannon, 2016-06-29: EAFP signals that a key is normally present; keep the `try` narrow and put follow-up work in `else`; LBYL is acceptable when it reads more clearly
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [Why Python leans EAFP](01b-why-python-leans-eafp.md)

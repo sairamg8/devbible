@@ -217,6 +217,19 @@ No, and conflating the two is the common error. `pyproject.toml` replaced `setup
 **★ Why can't a tool add its own key to `[project]` if it would be useful?**
 PEP 621 forbids it outright — *"No tools may add fields to this table which are not defined by this PEP or subsequent PEPs."* The reason is that `[project]` maps onto core metadata, which is a published, versioned wire format read by installers that have never heard of your tool. An unknown key in `[project]` is not extensibility; it is metadata that some backends will silently drop and others will reject, with no way for a reader to tell which happened. `[tool]` is the extension point precisely because nothing downstream interprets it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Writing your pyproject.toml](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/) — Python Packaging User Guide: the `[project]` table, `[project.scripts]`, `[project.optional-dependencies]`; dependency groups are not covered (*read*)
+- **Also good:** [PEP 621 – Storing project metadata in pyproject.toml](https://peps.python.org/pep-0621/) — python.org: how to write a project's core metadata in `pyproject.toml` (*read* the abstract)
+- **Also good:** [PEP 517](https://peps.python.org/pep-0517/)
+- **Beyond the docs:** [Why Should I Choose pyproject.toml over requirements.txt for managing dependencies?](https://pydevtools.com/handbook/explanation/pyproject-vs-requirements/) — pydevtools handbook: says PEP 621 made `setup.py` unnecessary for new projects and that requirements.txt still suits a script that only needs `requests`; Tim Hopper; page shows a 2026-09-07 update date
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Next → [02 · The frontend/backend split](02-pep-517-the-frontend-backend-split.md)

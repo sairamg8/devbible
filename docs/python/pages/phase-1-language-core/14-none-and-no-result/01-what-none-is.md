@@ -250,6 +250,16 @@ overrides have been written into `config` — probably a shared dict someone els
 is holding. The non-mutating spellings are `{**config, **overrides}` or
 `config | overrides`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Built-in Constants](https://docs.python.org/3/builtins/constants.html) — docs.python.org: what `None` is (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Unpacking](../13-unpacking/README.md) · Index: [`None` and the no-result contract](README.md) · Next → [Picking a no-result contract](02-picking-a-contract.md)

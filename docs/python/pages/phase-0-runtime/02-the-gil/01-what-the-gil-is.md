@@ -261,6 +261,18 @@ standard-library module in 3.14. The cost is that sub-interpreters do not share
 objects, so communication looks more like message passing between processes
 than like shared memory between threads.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Python support for free threading](https://docs.python.org/3/howto/free-threading-python.html) — docs.python.org: the how-to for the free-threaded build and what changes for Python code (*headings only*)
+- **Also good:** [PEP 779 — Criteria for supported status for free-threaded Python](https://peps.python.org/pep-0779/) — peps.python.org: the criteria behind the move from experimental (phase I, 3.13) to officially supported but optional (phase II, 3.14) (*read*)
+- **Beyond the docs:** [What is the GIL?](https://pydevtools.com/handbook/explanation/what-is-the-gil/) — Tim Hopper, Python Developer Tooling Handbook, page says last updated 2026-09-10: blocking I/O releases the GIL so I/O-bound threads help; the default build still has the GIL on every supported version; the free-threaded build is opt-in, for example `python3.14t`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [The GIL](README.md) · Next → [The GIL is not thread safety](02-the-gil-is-not-thread-safety.md)

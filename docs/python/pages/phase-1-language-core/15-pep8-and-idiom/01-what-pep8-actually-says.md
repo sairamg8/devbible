@@ -235,6 +235,17 @@ hygiene, and the semantic recommendations — `is None` rather than `== None`, n
 comparing booleans to `True`, and the mutable-default rule. Anything about
 whitespace should have been handled before the diff existed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PEP 8 — Style Guide for Python Code](https://peps.python.org/pep-0008/) — peps.python.org: the style guide itself (*headings only*)
+- **Beyond the docs:** [What is PEP 8?](https://pydevtools.com/handbook/explanation/what-is-pep-8/) — Tim Hopper, Python Developer Tooling Handbook, page says last updated 2026-09-07: Ruff enforces PEP 8 through its pycodestyle rules; the naming conventions; a single leading underscore is internal by convention only
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`None` and the "no result" contract](../14-none-and-no-result/README.md) · Index: [PEP 8 and idiom](README.md) · Next → [What "pythonic" actually means](02-what-pythonic-means.md)

@@ -283,6 +283,17 @@ It holds the start and end source locations an instruction covers, which is what
 lets tracebacks underline the exact subexpression that raised rather than
 pointing at the whole line.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [dis — Disassembler for Python bytecode](https://docs.python.org/3/library/dis.html) — docs.python.org: output format, `python -m dis`, and the warning that bytecode changes between versions (*read*)
+- **Beyond the docs:** [Python behind the scenes #1: how the CPython VM works](https://tenthousandmeters.com/blog/python-behind-the-scenes-1-how-the-cpython-vm-works/) — Victor Skvortsov, 2020-08-31: takes one small function, shows its bytes and the standard `dis` output, and explains what `LOAD_FAST`, `LOAD_CONST` and `RETURN_VALUE` do on the stack; its opcodes (`BINARY_ADD`) are from an older release, so the instruction name
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Startup and import cost](../11-startup-and-import-cost/README.md) · Index: [Bytecode inspection with `dis`](README.md) · Next → [What it is actually good for](02-what-it-is-good-for.md)

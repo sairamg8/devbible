@@ -110,6 +110,17 @@ Because Python function calls are implemented using native C function calls in t
 **Q: What is the relationship between `sys.setrecursionlimit` and the operating system thread stack?**
 `sys.setrecursionlimit` configures only the logical depth counter inside CPython's interpreter loop; it does not allocate additional operating system stack memory. If the Python recursion limit is set higher than the physical capacity of the OS stack, stack overflow occurs before Python reaches its logical limit.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [sys](https://docs.python.org/3/library/sys.html) — Python docs: `getrecursionlimit` and `setrecursionlimit`: the limit protects the C stack from overflow (*read*)
+- **Also good:** [A thing I learned about Python recursion](https://nedbatchelder.com/blog/201812/a_thing_i_learned_about_python_recursion) — Ned Batchelder, 2018-12-20: the stack is 1000 frames by default, and a generator comprehension inside `sum()` costs a second frame per level (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [TCO absence and iteration](02-tail-call-optimization-and-iteration.md)

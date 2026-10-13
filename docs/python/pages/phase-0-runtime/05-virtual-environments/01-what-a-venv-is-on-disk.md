@@ -239,6 +239,18 @@ points at the environment, and `site` builds the site-packages path from
 `sys.prefix`. The environment being "active" has nothing to do with it — what
 matters is which interpreter `pip` is running under.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [venv — Creation of virtual environments](https://docs.python.org/3/library/venv.html) — docs.python.org: how a venv is created and the `pyvenv.cfg` file it places in the environment, with a `home` key (*read*)
+- **Also good:** [Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html) — docs.python.org: the tutorial chapter, with creating and activating (*read*)
+- **Beyond the docs:** [How virtual environments work](https://snarky.ca/how-virtual-environments-work/) — Brett Cannon, 2023-03-12: the directory layout, symlinked interpreter, the `pyvenv.cfg` entries, how `site` reads it at startup, and that activation only adjusts `PATH`, `VIRTUAL_ENV` and the prompt
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Virtual environments](README.md) · Next → [How the interpreter finds it](02-how-the-interpreter-finds-it.md)

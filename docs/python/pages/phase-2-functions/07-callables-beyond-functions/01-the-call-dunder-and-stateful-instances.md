@@ -150,6 +150,18 @@ Choose a callable class when the state needs to be inspected externally (via pub
 **Q: Can a callable class instance be serialized with `pickle`?**
 Yes, provided the class is defined at the top level of an importable module and its internal instance attributes are picklable. Unlike closures, which frequently fail serialization due to unpicklable code objects and cell references, standard callable class instances serialize without issue.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Data model](https://docs.python.org/3/reference/datamodel.html) — Language reference: callable types and `__call__` (*headings only*)
+- **Also good:** [Descriptor HowTo Guide](https://docs.python.org/3/howto/descriptor.html) — Python docs: how functions stored in class dictionaries become bound methods through the descriptor protocol (*read* the Functions and methods section)
+- **Beyond the docs:** [Callables: Python's "functions" are sometimes classes](https://www.pythonmorsels.com/class-function-and-callable/) — Trey Hunner, Python Morsels, 2022-05-25: "Adding a `__call__` method to any class will make instances of that class callable"
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [Bound methods and self](02-bound-methods-and-the-reality-of-self.md)

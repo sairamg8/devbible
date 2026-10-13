@@ -230,6 +230,17 @@ When an editable install works by putting a directory on `sys.path`, everything 
 **How does the working directory interact with the layout when you run tests?**
 For `python -m pytest`, the current directory is prepended to `sys.path`. Run from the root of a flat project, that makes the checkout's package win over the installed one; run from the root of a src project, it finds nothing and the installed package is used. So in a flat project the correctness of a CI run depends on the directory the job started in and on how pytest was invoked; in a src project it does not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [src layout vs flat layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/) — Python Packaging User Guide: the working directory comes first on the import path, so a same-named package there shadows the installed copy; the src layout keeps the installed copy in use (*read*)
+- **Beyond the docs:** [src layout vs flat layout](https://pydevtools.com/handbook/explanation/src-layout-vs-flat-layout/) — pydevtools handbook: in a flat layout tests run against raw source, so packaging bugs pass locally and surface only for users; Tim Hopper; page shows a 2026-09-07 update date
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Overview](README.md) · Next → [02 · sys.path zero](02-sys-path-zero.md)
