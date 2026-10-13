@@ -227,6 +227,7 @@ Use `Decimal128` or integer minor units.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [MongoDB BSON Types](https://www.mongodb.com/docs/manual/reference/bson-types/) — mongodb.com: the types BSON adds over JSON, with numeric ids and `$type` aliases (*read*)
+- **Beyond the docs:** [BSON](https://en.wikipedia.org/wiki/BSON) — Wikipedia: a worked hex example of `&#123;"hello": "world"&#125;` showing the length prefix and end marker, plus an Efficiency section that says BSON can use more space than JSON because of length prefixes and explicit array indices — the si
 
 {/* LINKMAP:END */}
 

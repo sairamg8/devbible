@@ -182,6 +182,7 @@ plan produced, and that can change with the plan, the data or the indexes.
 
 - **Read this:** [Iterate a Cursor in mongosh](https://www.mongodb.com/docs/manual/tutorial/iterate-a-cursor/) — mongodb.com: a cursor returns documents in batches; mongosh shows 20 per iteration by default, changed with `displayBatchSize`; `toArray()` returns all as an array (*read*)
 - **Also good:** [cursor.batchSize()](https://www.mongodb.com/docs/manual/reference/method/cursor.batchsize/) — mongodb.com: the server-side batch knob, distinct from the shell's display batch; initial batch is the lesser of 101 documents or 16 MiB, later batches up to 16 MiB, and `mongos` does not forward it to shards (*read*)
+- **Beyond the docs:** [How to Use Cursors in MongoDB to Iterate Over Large Result Sets](https://oneuptime.com/blog/post/2026-03-31-mongodb-cursors-iterate/view) — oneuptime.com / Nawaz Dhandala: frames the cursor as a server-side pointer fed by `getMore` calls, then covers the idle timeout, `noCursorTimeout()` and `toArray()` memory risk, which the Manual's iterate page does not cover
 
 {/* LINKMAP:END */}
 
