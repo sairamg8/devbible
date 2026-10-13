@@ -20,6 +20,7 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 ### T03-01 · `root` vs `alias` — Master · 🔲 not written
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · `alias` replaces the matched location (`/i/top.gif` becomes `/data/w3/images/top.gif`); regex-location rules (*read* the `alias` entry) · covers our angle: **partial** — the trailing-slash trap is not spelled out as a bug · fetched 2026-10-12
 - **Also good:** [X-Accel and X-Sendfile](https://nginx-wiki.getpagespeed.com/config/examples/x-accel/) · NGINX Wiki (GetPageSpeed-hosted community docs), 2025-12-05 (updated 2026-08-05) · has "Using alias" and "Using root" sections (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [NGINX Alias vs Root: End the Confusion Once and For All](https://www.getpagespeed.com/server-setup/nginx/nginx-alias-vs-root) · GetPageSpeed, 2026-01-26 (revisited 2026-06-07) · spells out the missing-slash `alias` bug with a concrete trace (`/srv/downloads` plus `report.pdf` becomes `/srv/downloadsreport.pdf`), which the official page only implies · fetched 2026-10-13 (*read*)
 - **Our delta:** the missing-slash `alias` bug, with a before/after request trace.
 
 ### T03-02 · `try_files` — Master · 🔲 not written
@@ -35,6 +36,7 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 ### T03-04 · Serving a built React/Vite bundle (hashed vs `index.html`) — Master · 🔲 not written
 - **Read this:** [Prevent unnecessary network requests with the HTTP Cache](https://web.dev/articles/http-cache) · web.dev · versioned URLs get a year-long `max-age`, `immutable` as extra, unversioned URLs need revalidation (*read*) · covers our angle: **partial** — no Vite, no nginx config · fetched 2026-10-12
 - **Also good:** [HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · MDN · `max-age=31536000, immutable` and why it stops reload revalidation (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [How to Configure Nginx for Production React SPAs](https://oneuptime.com/blog/post/2026-01-15-configure-nginx-production-react-spa/view) · OneUptime / Nawaz Dhandala, 2026-01-15 · a worked table of hashed bundles (1 year, immutable) against `index.html` (no-cache); note its `error_page 404 /index.html` turns missing files into the shell, which we avoid · fetched 2026-10-13 (*read*)
 - *Checked, not chosen:* [Vite: Deploying a Static Site](https://vite.dev/guide/static-deploy.html) · fetched, no nginx or hashed-asset caching text found.
 - **Our delta:** the nginx `location` split between `/assets/` and `index.html`.
 
@@ -56,14 +58,17 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 ### T03-08 · `sendfile`, `tcp_nopush`, `tcp_nodelay` — Understand · 🔲 not written
 - **Read this:** [Serving Static Content](https://docs.nginx.com/nginx/admin-guide/web-server/serving-static-content/) · docs.nginx.com · has "Optimize Performance for Serving Content" with Enable sendfile, tcp_nopush, tcp_nodelay (*headings only*) · covers our angle: full (by headings) · fetched 2026-10-12
 - **Also good:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · `tcp_nopush` only takes effect with `sendfile`; header and file start in one packet (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [NGINX sendfile, tcp_nopush, and tcp_nodelay Explained](https://www.getpagespeed.com/server-setup/nginx/nginx-sendfile-tcp-nopush-tcp-nodelay) · GetPageSpeed / Danila Vershinin, 2026-01-27 (updated 2026-06-07) · explains why the trio is combined and that on Linux nginx switches between TCP_CORK and TCP_NODELAY during a request; some performance figures are unsourced · fetched 2026-10-13 (*read*)
 - **Our delta:** why the trio is quoted together; defaults (`sendfile off`, read there).
 
 ### T03-09 · `open_file_cache` — Know · 🔲 not written
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · caches descriptors, sizes, mtimes, directory existence; `max`, `inactive` (*read* the first half) · covers our angle: **partial** — validity-window text not read · fetched 2026-10-12
+- **Beyond the docs:** [Nginx's Open file cache](https://easyengine.io/tutorials/nginx/open-file-cache/) · EasyEngine, undated · plain walk through `max`, `inactive`, `open_file_cache_valid`, `min_uses` and `errors`, stressing that only metadata is cached; its prose and sample `min_uses` disagree · fetched 2026-10-13 (*read*)
 - **Our delta:** the staleness window after a deploy.
 
 ### T03-10 · Pre-compressed assets — Understand · 🔲 not written
 - **Read this:** [ngx_http_gzip_static_module](https://nginx.org/en/docs/http/ngx_http_gzip_static_module.html) · nginx.org · `gzip_static on|off|always`, checks for a `.gz` beside the file (*read*) · covers our angle: **partial** — `.br` needs a separate module, not covered · fetched 2026-10-12
+- **Beyond the docs:** [Pre-compress static assets with Brotli and Gzip](https://linux-audit.com/web/how-to-pre-compress-static-assets) · Linux Audit / Michael Boelen, last updated 2025-03-12 · shows the compress-ahead idea with `gzip_static` and `brotli_static` and a `curl` check for Brotli, covering the `.br` module gap the official page leaves out · fetched 2026-10-13 (*read*)
 - **Our delta:** Vite emitting `.gz` and `.br`; mtime advice on the page.
 
 ### T03-11 · Range requests and `$slice` — Know · 🔲 not written
@@ -100,6 +105,7 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 
 ### T04-03 · `proxy_pass` in regex locations and with variables — Understand · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · in regex and named locations the replaced part cannot be determined, so give no URI; a variable address needs a `resolver` for names (*read*) · covers our angle: **partial** — runtime DNS consequences not read · fetched 2026-10-12
+- **Beyond the docs:** [nginx's proxy_pass DNS caching problem](https://joshua.hu/nginx-dns-caching) · joshua.hu / Joshua Rogers, 2025-06-26 · shows that a literal hostname is resolved once and a variable plus `resolver` honours the TTL, and mentions the `resolve` parameter in `upstream` since 1.27.3 · fetched 2026-10-13 (*read*)
 - **Our delta:** the resolver and caching of DNS at startup.
 
 ### T04-04 · Proxying to a Unix socket — Know · 🔲 not written
@@ -108,6 +114,7 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 ### T04-05 · `proxy_set_header Host $host` — Master · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · documented default is `Host $proxy_host` (*read*) · covers our angle: **partial** — no Express viewpoint · fetched 2026-10-12
 - **Also good:** [Host](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Host) · MDN (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [How to Understand $host vs $http_host in Nginx](https://oneuptime.com/blog/post/2025-12-16-nginx-host-vs-http-host/view) · OneUptime / Nawaz Dhandala, 2025-12-16 · compares `$host` and `$http_host` from the backend point of view (port kept, case kept, can be empty); it does not cover `$proxy_host` · fetched 2026-10-13 (*read*)
 
 ### T04-06 · `X-Forwarded-For`, `-Proto`, `-Host` — Master · 🔲 not written
 - **Read this:** [X-Forwarded-For](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Forwarded-For) · MDN · syntax `<client>, <proxy>`, each proxy appends (*read*) · covers our angle: **partial** — no nginx variables · fetched 2026-10-12
@@ -119,15 +126,18 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 
 ### T04-08 · `ngx_http_realip_module` — Master · 🔲 not written
 - **Read this:** [ngx_http_realip_module](https://nginx.org/en/docs/http/ngx_http_realip_module.html) · nginx.org · `set_real_ip_from`, `real_ip_header` (default `X-Real-IP`), `real_ip_recursive`, `$realip_remote_addr` (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Restoring Real Visitor IPs with Cloudflare and Nginx](https://kbeezie.com/cloudflare-real-ip-nginx) · KBeezie, 2026-05-11 (updated 2026-05-21) · a full `set_real_ip_from` setup behind a CDN, including the `limit_req_zone` ordering trap and which variable to key limits on · fetched 2026-10-13 (*read*)
 
 ### T04-09 · The forwarded-header trust chain — Master · 🔲 not written
 - **Read this:** [X-Forwarded-For](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Forwarded-For) · MDN · security section: unforgeable only for entries added by trusted proxies; misuse allows rate-limiter avoidance (*read*) · covers our angle: **partial** — nginx and Express not named · fetched 2026-10-12
 - **Also good:** [Express behind proxies](https://expressjs.com/en/guide/behind-proxies/) · expressjs.com · warning that the last trusted proxy must overwrite the three headers (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Do You Trust Your X-Forwarded-For Header?](https://www.stackhawk.com/blog/do-you-trust-your-x-forwarded-for-header/) · StackHawk / Brandon Ward and Scott Gerlach, 2023-04-18 · a post-mortem of a rate-limit bypass: proxies append, trust grows right to left, so read from the right · fetched 2026-10-13 (*read*)
 - *Checked, not chosen:* express-rate-limit error pages, they only redirect to its wiki.
 
 ### T04-10 · The `Forwarded` header (RFC 7239) — Know · 🔲 not written
 - **Read this:** [Forwarded](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Forwarded) · MDN · `by`, `for`, `host`, `proto`; names `X-Forwarded-*` as the de-facto alternative (*read*) · covers our angle: **partial** — "why the old ones won" is not argued · fetched 2026-10-12
 - **Also good:** [RFC 7239](https://datatracker.ietf.org/doc/html/rfc7239) · IETF, June 2014 (*read* the abstract) · fetched 2026-10-12
+- **Beyond the docs:** [Why are X-Forwarded-For and Forwarded Headers Useful?](https://pinggy.io/blog/x_forwarded_for_and_forwarded_headers/) · Pinggy blog, updated 2026-09-07 · side-by-side of the de facto header and RFC 7239 with a `realip` recipe; it argues adoption, not history · fetched 2026-10-13 (*read*)
 
 ### T04-11 · `proxy_hide_header`, `proxy_pass_header` — Understand · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · by default `Date`, `Server`, `X-Pad`, `X-Accel-...` are not passed on; hide adds, pass_header permits (*read*) · covers our angle: **partial** — `X-Powered-By` not named · fetched 2026-10-12
@@ -138,14 +148,17 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 
 ### T04-13 · `proxy_redirect` — Understand · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · rewrites `Location` and `Refresh`; `default`, `off`, replacement forms (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [How to Rewrite URLs in Proxy Responses in Nginx](https://oneuptime.com/blog/post/2025-12-16-rewrite-urls-proxy-responses-nginx/view) · OneUptime / Nawaz Dhandala, 2025-12-16 · worked configs for `proxy_redirect` with sub-path and gateway cases, plus `sub_filter` for when a header rewrite is not enough · fetched 2026-10-13 (*read*)
 
 ### T04-14 · `proxy_cookie_path`, `_domain`, `_flags` — Know · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · `proxy_cookie_flags` since 1.19.3 sets `secure`, `httponly`, `samesite` (*read* flags, domain/path headings only) · covers our angle: **partial** · fetched 2026-10-12
 - **Also good:** [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie) · MDN (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [How to Rewrite URLs in Proxy Responses in Nginx](https://oneuptime.com/blog/post/2025-12-16-rewrite-urls-proxy-responses-nginx/view) · OneUptime / Nawaz Dhandala, 2025-12-16 · has a section with `proxy_cookie_domain`, `proxy_cookie_path` and `proxy_cookie_flags` examples for a backend under a sub-path · fetched 2026-10-13 (*read*)
 
 ### T04-15 · Upstream keep-alive default since 1.29.7 — Master · 🔲 not written
 - **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · `keepalive 32 local;` default, cache active and not shared between locations since 1.29.7 (*read*) · covers our angle: **partial** — `Connection` header change is on the proxy page · fetched 2026-10-12
 - **Also good:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · `proxy_http_version` default 1.1 since 1.29.7, 1.0 before; value 2 since 1.29.4 (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [NGINX Upstream Keepalive: Connection Pooling Guide](https://www.getpagespeed.com/server-setup/nginx/nginx-upstream-keepalive) · GetPageSpeed / Danila Vershinin, 2026-01-26 (revisited 2026-06-07) · per-worker pools, sizing formula and a troubleshooting checklist; it still describes the pre-1.29.7 `proxy_http_version 1.1` setup and has no Node timeout advice · fetched 2026-10-13 (*read*)
 - **Our delta:** the 1.28-and-older side of the line. See the version note about `Connection`.
 
 ### T04-16 · Keep-alive timeouts vs Node's — Understand · 🔲 not written
@@ -155,6 +168,7 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 
 ### T04-17 · The four timeouts — Understand · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · `proxy_connect_timeout` 60s (cannot usually exceed 75s), `proxy_read_timeout` 60s between two reads (*read*) · covers our angle: **partial** — `proxy_send_timeout` and `send_timeout` not read · fetched 2026-10-12
+- **Beyond the docs:** [Why Increasing NGINX proxy_read_timeout Can Hide the Real 504 Cause](https://oneuptime.com/blog/post/2026-07-28-nginx-proxy-read-timeout-hides-504-cause/view) · OneUptime / Nawaz Dhandala, 2026-07-28 · lists the four proxy timeouts and shows a `log_format` with `$upstream_connect_time`, `$upstream_header_time` and `$upstream_response_time`, plus a table reading those timing patterns; it does not map each timeout directive to its 504 · fetched 2026-10-13 (*read*)
 - **Our delta:** which timeout maps to which 504.
 
 ### T04-18 · `proxy_buffering` — Master · 🔲 not written
@@ -162,12 +176,14 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 
 ### T04-19 · `proxy_buffers`, `proxy_buffer_size`, temp files — Understand · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · `proxy_buffers` default `8 4k|8k` (*read* that entry) · covers our angle: **partial** — other three directives and the warning text not read · fetched 2026-10-12
+- **Beyond the docs:** [Tuning proxy_buffer_size in NGINX](https://www.getpagespeed.com/server-setup/nginx/tuning-proxy_buffer_size-in-nginx) · GetPageSpeed / Danila Vershinin, 2018-07-07 (revised 2020-07-09) · how to measure real header size and size `proxy_buffer_size`, `proxy_busy_buffers_size` and `proxy_buffers` against each other · fetched 2026-10-13 (*read*)
 
 ### T04-20 · `proxy_request_buffering` — Understand · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · default `on`, the whole body is read before the request goes upstream (*read*) · covers our angle: **partial** — cost of turning it off not read · fetched 2026-10-12
 
 ### T04-21 · `proxy_next_upstream` — Understand · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · default `error timeout`; list incl. `http_502`, `non_idempotent`, `off` (*read* the list) · covers our angle: **partial** — the `_tries` and `_timeout` text and the danger paragraph not read · fetched 2026-10-12
+- **Beyond the docs:** [nginx-1.9.13: no longer retry non-idempotent upstream requests by default](https://ma.ttias.be/nginx-1-9-13-no-longer-retry-non-idempotent-upstream-requests-default/) · ma.ttias.be / Mattias Geniar, 2016-03-29 (updated 2026-06-06) · the duplicate-POST danger behind `non_idempotent`, which the module page only lists · fetched 2026-10-13 (*read*)
 
 ### T04-22 · Reading 502 vs 504 vs 499 — Understand · 🔲 not written
 - **Read this:** [nginx 499 status code](https://www.netdata.cloud/guides/nginx/nginx-499-client-closed-connection/) · Netdata guide, undated · sections: what it means, causes, quick checks, fixes (*headings only*) · covers our angle: **partial** — 499 only · fetched 2026-10-12
@@ -176,6 +192,7 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 
 ### T04-23 · `proxy_intercept_errors` — Understand · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · default `off`; responses at or above 300 go to `error_page` when on (*read*) · covers our angle: **partial** — "when not to" is ours · fetched 2026-10-12
+- **Beyond the docs:** [Nginx: Serve error pages from reverse proxy, not from upstream server](https://www.claudiokuenzler.com/blog/738/nginx-serve-error-pages-from-reverse-proxy-instead-upstream-server) · Claudio Kuenzler, 2017-09-21 · a short working config: intercept 5xx but let the backend keep serving its own 404 · fetched 2026-10-13 (*read*)
 
 ### T04-24 · `proxy_ignore_client_abort` and 499 — Know · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · default `off`; whether the upstream connection closes when the client leaves (*read*) · covers our angle: **partial** · fetched 2026-10-12
@@ -184,6 +201,7 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 ### T04-25 · WebSocket proxying — Master · 🔲 not written
 - **Read this:** [WebSocket proxying](https://nginx.org/en/docs/http/websocket.html) · nginx.org · `Upgrade` is hop-by-hop; `map $http_upgrade $connection_upgrade`; 60s idle close, `proxy_read_timeout` (*read*) · covers our angle: **partial** — see the version note: the page's first example uses a literal `Connection "upgrade"` · fetched 2026-10-12
 - **Also good:** [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) · IETF (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Nginx WebSocket Proxy: Config, SSL & Load Balancing](https://websocket.org/guides/infrastructure/nginx/) · WebSocket.org / Matthew O'Riordan, 2024-09-02 (updated 2026-03-14) · the `map` for mixed HTTP and WebSocket locations and why idle sockets die at 60 seconds, with an app-level ping advice · fetched 2026-10-13 (*read*)
 
 ### T04-26 · Server-Sent Events — Understand · 🔲 not written
 - **Read this:** [How to Configure Server-Sent Events Through Nginx](https://oneuptime.com/blog/post/2025-12-16-server-sent-events-nginx/view) · OneUptime, 2025-12-16 · `proxy_buffering off`, `proxy_cache off`, `X-Accel-Buffering: no`, long read timeout, Node backend (*read*) · covers our angle: full · fetched 2026-10-12
@@ -211,28 +229,35 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 ### T05-01 · The TLS server block — Master · 🔲 not written
 - **Read this:** [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html) · nginx.org · `ssl` on `listen`, certificate and key paths (*read* the opening) · covers our angle: **partial** · fetched 2026-10-12
 - **Also good:** [ngx_http_v2_module](https://nginx.org/en/docs/http/ngx_http_v2_module.html) · `http2 on|off`, default `off`, since 1.25.1 (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Deprecated HTTP/2 Directive in NGINX 1.25.1+](https://spinupwp.com/doc/deprecated-http2-directive-nginx/) · SpinupWP, undated · the old `listen ... http2` against `http2 on;` migration, and the mixed-fleet caveat for older nginx · fetched 2026-10-13 (*read*)
 
 ### T05-02 · Certificate chain order — Master · 🔲 not written
 - **Read this:** [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html) · nginx.org · "SSL certificate chains": server certificate must appear before the chain in the combined file (*read*) · covers our angle: **partial** — the curl symptom is ours · fetched 2026-10-12
+- **Beyond the docs:** [Install a certificate chain](https://flaviocopes.com/courses/nginx/install-a-certificate-chain/) · flaviocopes.com nginx course, undated · leaf-first order and the `cert.pem` against `fullchain.pem` symptom (browsers may still show a padlock while curl and API clients fail with "unable to get local issuer certificate") · fetched 2026-10-13 (*read*)
 
 ### T05-03 · HTTP to HTTPS redirect — Understand · 🔲 not written
 - **Read this:** [TLS configuration](https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/TLS) · MDN · port 80 should only redirect to the same resource on HTTPS, which lets HSTS take over (*read*) · covers our angle: **partial** — no nginx `return 301` · fetched 2026-10-12
+- **Beyond the docs:** [Redirect HTTP to HTTPS](https://flaviocopes.com/courses/nginx/redirect-http-to-https/) · flaviocopes.com nginx course, undated · a small port-80 block with the ACME path first, a fixed canonical host instead of `$host`, and a `default_server` for unknown hosts · fetched 2026-10-13 (*read*)
 
 ### T05-04 · `ssl_protocols`, `ssl_ciphers` — Understand · 🔲 not written
 - **Read this:** [ngx_http_ssl_module](https://nginx.org/en/docs/http/ngx_http_ssl_module.html) · nginx.org · `ssl_protocols TLSv1.2 TLSv1.3`, `ssl_ciphers HIGH:!aNULL:!MD5`, `ssl_prefer_server_ciphers off` defaults (*read*) · covers our angle: **partial** — the TLS 1.3 reasoning is ours · fetched 2026-10-12
 - **Also good:** [TLSRef Server-Side TLS](https://docs.tlsref.org/server-side-tls.html) · TLSRef (where Mozilla's SSL config generator now points) · Modern profile: TLS 1.3 only, ECDSA P-256 certificates; Intermediate also offered (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [NGINX TLS 1.3 Hardening: A+ SSL Configuration Guide](https://www.getpagespeed.com/server-setup/nginx/nginx-tls-1-3-hardening) · GetPageSpeed / Danila Vershinin, 2026-01-21 (revisited 2026-09-02) · Modern against Intermediate profiles, why `ssl_ciphers` is not needed for TLS 1.3, and the post-quantum `ssl_ecdh_curve` startup trap · fetched 2026-10-13 (*read*)
 
 ### T05-05 · Session resumption — Understand · 🔲 not written
 - **Read this:** [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html) · nginx.org · shared cache, about 4000 sessions per megabyte, 5 minute default (*read*) · covers our angle: **partial** · fetched 2026-10-12
 - **Also good:** [ngx_http_ssl_module](https://nginx.org/en/docs/http/ngx_http_ssl_module.html) · `ssl_session_cache` default `none`, `ssl_session_tickets` default `on` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Botching Forward Secrecy: The sad state of server-side TLS Session Resumption implementations](https://timtaubert.de/blog/2014/11/the-sad-state-of-server-side-tls-session-resumption-implementations/) · Tim Taubert, 2014-11-17 · the forward-secrecy case against session tickets that neither nginx page makes; written in 2014, so check its "never rotated" claim against current nginx · fetched 2026-10-13 (*read*)
 - **Our delta:** the forward-secrecy case against tickets is not on either page.
 
 ### T05-06 · Certificates with ACME (Certbot) — Master · 🔲 not written
 - **Read this:** [Certbot User Guide](https://eff-certbot.readthedocs.io/en/stable/using.html) · EFF · `--webroot` with `--webroot-path`, `--nginx`, `--deploy-hook` after a successful renewal (*read*) · covers our angle: **partial** — nginx reload hook recipe not shown · fetched 2026-10-12
 - **Also good:** [Challenge Types](https://letsencrypt.org/docs/challenge-types/) · Let's Encrypt (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Let's Encrypt: Reload Nginx after Renewing Certificates](https://www.guyrutenberg.com/2017/01/01/lets-encrypt-reload-nginx-after-renewing-certificates/) · Guy Rutenberg, 2017-01-01 · the missing reload recipe: a deploy hook in `renewal-hooks/deploy` running configtest then reload, and why `--renew-hook` was replaced · fetched 2026-10-13 (*read*)
 
 ### T05-07 · `ngx_http_acme_module` — Understand · 🔲 not written
 - **Read this:** [ngx_http_acme_module](https://nginx.org/en/docs/http/ngx_http_acme_module.html) · nginx.org · `acme_issuer`, `acme_certificate`, `acme_shared_zone`, `state_path` (*read*) · covers our angle: **partial** — "dynamic module" claim not confirmed on the page · fetched 2026-10-12
+- **Beyond the docs:** [NGINX ACME Module: Let's Encrypt SSL Without Certbot](https://www.getpagespeed.com/server-setup/nginx/nginx-acme-module) · GetPageSpeed / Danila Vershinin, 2026-06-29 (revised 2026-07-27) · an end-to-end setup and the limits (no `dns-01`, so no wildcards; port 80 must be reachable); it also states `tls-alpn-01` support, so check against the module page · fetched 2026-10-13 (*read*)
 
 ### T05-08 · HSTS — Understand · 🔲 not written
 - **Read this:** [Strict-Transport-Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) · MDN · `max-age`, `includeSubDomains`, `preload` (*read*) · covers our angle: **partial** · fetched 2026-10-12
@@ -246,6 +271,7 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 ### T05-10 · HTTP/3 and QUIC — Know · 🔲 not written
 - **Read this:** [Support for QUIC and HTTP/3](https://nginx.org/en/docs/quic.html) · nginx.org · since 1.25.0; OpenSSL 3.5.1+ recommended; `quic` listen with `reuseport`; needs TLS 1.3 (*read*) · covers our angle: **partial** · fetched 2026-10-12
 - **Also good:** [ngx_http_v3_module](https://nginx.org/en/docs/http/ngx_http_v3_module.html) · example has `listen 8443 quic reuseport;`, `listen 8443 ssl;`, `add_header Alt-Svc` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [How to Implement HTTP/3 (QUIC) in Nginx](https://oneuptime.com/blog/post/2026-01-25-nginx-http3-quic/view) · OneUptime / Nawaz Dhandala, 2026-01-25 · covers the UDP 443 firewall rules and `Alt-Svc` that the official pages leave out; one log variable in it looks non-standard · fetched 2026-10-13 (*read*)
 - **Our delta:** the UDP firewall rule is not on either page (not confirmed). Per nginx.org/2026.html a v3 buffer overflow was fixed in 1.30.5 / 1.31.6.
 
 ### T05-11 · `ssl_reject_handshake on` — Understand · 🔲 not written
@@ -262,6 +288,7 @@ Mozilla's SSL config generator has moved: ssl-config.mozilla.org now points to T
 
 ### T05-14 · Client certificates / mTLS — When Needed · 🔲 not written
 - **Read this:** [ngx_http_ssl_module](https://nginx.org/en/docs/http/ngx_http_ssl_module.html) · nginx.org · `ssl_verify_client on|off|optional|optional_no_ca`, result in `$ssl_client_verify` (*read*) · covers our angle: **partial** — service-to-service use is ours · fetched 2026-10-12
+- **Beyond the docs:** [Mastering Mutual TLS (mTLS) with Nginx: A Deep Dive](https://jmrp.io/blog/001-secure-nginx-client-certificates/) · jmrp.io / José Manuel Requena Plens, 2025-12-16 (updated 2026-09-22) · the four `ssl_verify_client` modes, forwarding the client DN with headers cleared first so clients cannot spoof them, and CRL revocation · fetched 2026-10-13 (*read*)
 
 ### T05-15 · Newer TLS knobs — When Needed · 🔲 not written
 - **Read this:** [ngx_http_ssl_module](https://nginx.org/en/docs/http/ngx_http_ssl_module.html) · nginx.org · `ssl_certificate_compression` (1.29.1, OpenSSL 3.2+), `ssl_ech_file` (1.29.4, OpenSSL 4.0+), `ssl_conf_command` (*read*) · covers our angle: full · fetched 2026-10-12

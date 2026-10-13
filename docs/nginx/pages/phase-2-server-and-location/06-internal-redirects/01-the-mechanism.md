@@ -188,6 +188,7 @@ named location is the safer fallback target.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [ngx_http_rewrite_module](https://nginx.org/en/docs/http/ngx_http_rewrite_module.html) — nginx.org: `redirect` is 302, `permanent` is 301; `last` vs `break` shown in a `/download/` example (*read*)
+- **Beyond the docs:** [Break vs Last in nginx rewrites](https://adyxax.org/blog/2021/04/15/break-vs-last-in-nginx-rewrites) — Julien Dessaux, adyxax.org (2021-04-15): curl-tested configs showing how `last` and `break` differ inside and outside a location
 
 {/* LINKMAP:END */}
 

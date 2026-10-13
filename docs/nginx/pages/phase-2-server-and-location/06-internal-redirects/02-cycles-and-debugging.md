@@ -268,6 +268,7 @@ include glob only in that environment.
 
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) — nginx.org: limit reached gives 500 and "rewrite or internal redirection cycle" in the error log (*read*)
 - **Also good:** [ngx_http_rewrite_module](https://nginx.org/en/docs/http/ngx_http_rewrite_module.html) — nginx.org: a loop repeats at most 10 times; switch `last` to `break` in the location (*read*)
+- **Beyond the docs:** [nginx rewrite or internal redirection cycle](https://rocketeersapp.com/nginx-rewrite-or-internal-redirection-cycle) — Mark van Eijk, Rocketeers (Jun 23, 2026): the usual real cause (a looping `try_files` fallback or wrong `root`) with fix recipes, which the core page lacks
 
 {/* LINKMAP:END */}
 

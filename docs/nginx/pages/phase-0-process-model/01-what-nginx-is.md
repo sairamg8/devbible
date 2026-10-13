@@ -213,6 +213,7 @@ routing without terminating TLS. Most fullstack deployments never need it.
 
 - **Read this:** [nginx.org home](https://nginx.org/) — nginx.org: one-sentence definition: HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP and mail proxy (*read*)
 - **Also good:** [Inside NGINX: How We Designed for Performance & Scale](https://blog.nginx.org/blog/inside-nginx-how-we-designed-for-performance-scale) — NGINX blog, Jun 10, 2015: why the architecture, not the feature list, is the point (*read*)
+- **Beyond the docs:** [How to Configure Nginx as a Reverse Proxy for Node.js Applications](https://betterstack.com/community/guides/scaling-nodejs/nodejs-reverse-proxy-nginx) — Ayooluwa Isaiah, Better Stack (updated Jan 28, 2026): a Node-first walkthrough of why a reverse proxy sits in front (TLS offload, compression, caching, load balancing), which the nginx.org definition does not give
 
 {/* LINKMAP:END */}
 

@@ -249,6 +249,7 @@ what distribution packages and container images configure on your behalf.
 
 - **Read this:** [Inside NGINX: How We Designed for Performance & Scale](https://blog.nginx.org/blog/inside-nginx-how-we-designed-for-performance-scale) — NGINX blog, Jun 10, 2015: master does privileged work (reading config, binding ports); workers are single-threaded and handle many connections (*read*)
 - **Also good:** [Beginner's Guide](https://nginx.org/en/docs/beginners_guide.html) — nginx.org: master reads config and maintains workers, workers process requests (*read*)
+- **Beyond the docs:** [How NGINX actually works in production: a mental model for operators](https://www.netdata.cloud/guides/nginx/how-nginx-works-in-production/) — Netdata guides (no author or date shown): operator framing of master vs workers: one blocking operation stalls every connection on that worker, and a failed reload can leave stale config running unnoticed
 - **Read this:** [nginx, AOSA volume 2](https://aosabook.org/en/v2/nginx.html) — Andrew Alexeev, in The Architecture of Open Source Applications (undated page; text refers to Apache 2.4 in February 2012): no process or thread per connection, a run-loop per worker, contrast with Apache's style of spawning new processes or threads for each page request (*read*)
 
 {/* LINKMAP:END */}

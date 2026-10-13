@@ -46,6 +46,7 @@ them costs nothing, and say what an unmatched key produces when you forget
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [ngx_http_map_module](https://nginx.org/en/docs/http/ngx_http_map_module.html) — nginx.org: `default`, `hostnames`, regex keys, `volatile`, and variables evaluated only when used (*read*)
+- **Beyond the docs:** [NGINX map Directive: Guide to Conditional Variables](https://www.getpagespeed.com/server-setup/nginx/nginx-map-directive) — Danila Vershinin, GetPageSpeed (Jan 27, 2026; revisited Jun 3, 2026): example-led use of `map` as the replacement for chains of `if`, with the point that maps are compiled to hash tables at config load
 
 {/* LINKMAP:END */}
 

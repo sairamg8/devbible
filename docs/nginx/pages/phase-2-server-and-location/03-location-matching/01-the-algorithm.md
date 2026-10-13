@@ -263,6 +263,7 @@ new URI — this time the `\.php$` regex matches.
 
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) — nginx.org: longest prefix remembered, regexes in file order, first regex wins, else the remembered prefix (*read*)
 - **Also good:** [How nginx processes a request](https://nginx.org/en/docs/http/request_processing.html) — nginx.org: worked PHP-site example (*read*)
+- **Beyond the docs:** [Untangling the nginx location block matching algorithm](https://artfulrobot.uk/blog/untangling-nginx-location-block-matching-algorithm/) — Rich Lott, Artful Robot (22 May 2018): worked examples including the case the official page only hints at: regexes nested inside the longest matching prefix are tried before top-level regexes
 
 {/* LINKMAP:END */}
 

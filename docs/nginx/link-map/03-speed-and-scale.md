@@ -18,10 +18,12 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 ### T06-01 · `proxy_cache_path` — Master · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · full syntax: `levels`, `use_temp_path`, `keys_zone`, `inactive`, `max_size`, `min_free` (*read*) · covers our angle: **partial** — a reference, no shared-memory versus disk walkthrough · fetched 2026-10-12
 - **Also good:** [A Guide to Caching with NGINX](https://blog.nginx.org/blog/nginx-caching-guide) · NGINX blog, Jul 23, 2015 · worked `proxy_cache_path` with `use_temp_path=off` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [How to configure reverse proxy caching with Nginx](https://dzx.fr/blog/how-to-configure-reverse-proxy-caching-with-nginx/) · dzx.fr, 28 Oct 2021 · walks through `keys_zone` sizing (about 8000 keys per 1M), `levels` and `inactive` with a full working setup, which the reference page lists without explaining · fetched 2026-10-13 (*read*)
 
 ### T06-02 · `proxy_cache` and `proxy_cache_valid` — Master · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · both directives and the header rules that override `proxy_cache_valid` (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [A Guide to Caching with NGINX](https://blog.nginx.org/blog/nginx-caching-guide) · NGINX blog, Jul 23, 2015 · (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [How to configure reverse proxy caching with Nginx](https://dzx.fr/blog/how-to-configure-reverse-proxy-caching-with-nginx/) · dzx.fr, 28 Oct 2021 · a worked `proxy_cache_valid` example per status code, showing what gets cached by default · fetched 2026-10-13 (*read*)
 
 ### T06-03 · `proxy_cache_key` — Understand · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · default `$scheme$proxy_host$request_uri` (*read*) · covers our angle: **partial** — no cardinality discussion · fetched 2026-10-12
@@ -36,6 +38,7 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 ### T06-05 · Cache manager and cache loader — Understand · 🔲 not written
 - **Read this:** [NGINX Content Caching](https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/) · F5 docs · manager trims past `max_size`; loader runs once after start and fills the shared zone (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · the `manager_*` and `loader_*` parameters of `proxy_cache_path` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Inner workings of nginx cache manager](https://mailman.nginx.org/pipermail/nginx/2018-November/057223.html) · Maxim Dounin, nginx mailing list, 29 Nov 2018 · the maintainer explains that the LRU order lives only in memory, so after a restart the manager evicts mostly arbitrary items until entries are accessed again · fetched 2026-10-13 (*read*)
 
 ### T06-06 · Which upstream headers nginx obeys — Master · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · `Set-Cookie` blocks caching, `Vary: *` blocks it, other `Vary` values key the entry, `X-Accel-Expires` outranks the directive (*read*) · covers our angle: full · fetched 2026-10-12
@@ -48,6 +51,7 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 ### T06-08 · `proxy_no_cache` vs `proxy_cache_bypass` — Master · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · one defines when a response is not saved, the other when it is not taken from cache (*read*) · covers our angle: **partial** — does not say you need both · fetched 2026-10-12
 - **Also good:** [NGINX Content Caching](https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/) · F5 docs · has a "Limit or Disable Caching" section (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [How to configure reverse proxy caching with Nginx](https://dzx.fr/blog/how-to-configure-reverse-proxy-caching-with-nginx/) · dzx.fr, 28 Oct 2021 · states the contrast plainly: bypass skips the lookup but still saves the response, no_cache skips both · fetched 2026-10-13 (*read*)
 
 ### T06-09 · Never cache an authenticated response — Master · 🔲 not written
 - **Read this:** [HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · MDN · private versus shared caches; `public` makes a response storable even with `Authorization` (*read*; page shows last modified Aug 14, 2026) · covers our angle: **partial** — HTTP rules, not the nginx directives · fetched 2026-10-12
@@ -60,6 +64,7 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 ### T06-11 · `Vary` done right — Understand · 🔲 not written
 - **Read this:** [Vary](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Vary) · MDN · `Vary: *` implies uncacheable; header builds the cache key (*read*) · covers our angle: **partial** — hit-rate cost of `User-Agent` or `Cookie` is not confirmed there · fetched 2026-10-12
 - **Also good:** [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html) · nginx.org · `gzip_vary` adds `Vary: Accept-Encoding` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [The Vary HTTP response header explained](https://www.ctrl.blog/entry/http-vary-explained) · Daniel Aleksandersen, Ctrl blog, 27 Dec 2016 · says the more headers a response varies on, the more cache variants must be kept and the less effective caching is, and warns about forgetting Cookie (information leakage) or User-Agent; a short read, not nginx-specific · fetched 2026-10-13 (*read*)
 
 ### T06-12 · `proxy_cache_use_stale` — Master · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · the full parameter list incl. `updating`, `http_429` (*read*) · covers our angle: full · fetched 2026-10-12
@@ -78,6 +83,7 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 ### T06-16 · Purging on open source nginx — Understand · 🔲 not written
 - **Read this:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) · nginx.org · `proxy_cache_purge` is marked as part of the commercial subscription (*read*) · covers our angle: **partial** — no open-source options · fetched 2026-10-12
 - **Also good:** [ngx_cache_purge README (raw)](https://raw.githubusercontent.com/nginx-modules/ngx_cache_purge/master/README.md) · github (raw), a maintained fork of FRiCKLE's module, its compatibility table lists 1.20.x, 1.26.x, 1.28.x and 1.29.x as tested; undated (*read*) · [NGINX Content Caching](https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/) · F5 docs · the Plus purge setup (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [ngx_cache_purge: closing the gap with Varnish](https://getpagespeed.com/server-setup/ngx_cache_purge-closing-the-gap-with-varnish) · Danila Vershinin, GetPageSpeed, 12 May 2019 (updated 2 Nov 2024) · shows PURGE requests, access control and wildcard purging with the third-party module on open source nginx; vendor site that also sells packages · fetched 2026-10-13 (*read*)
 - **Our delta:** the bypass-header trick and deleting files by hand; no page found for them (the F5 page's file-removal section is the Plus `purger`).
 
 ### T06-17 · Cache-busting by filename — Understand · 🔲 not written
@@ -106,22 +112,27 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 
 ### T07-02 · `gzip_comp_level`, `gzip_min_length`, `gzip_vary`, `gzip_proxied` — Understand · 🔲 not written
 - **Read this:** [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html) · nginx.org · defaults: level 1, min length 20, `gzip_vary off`, `gzip_proxied off` (*read*) · covers our angle: **partial** — no advice on which level is worth the CPU · fetched 2026-10-12
+- **Beyond the docs:** [nginx gzip compression](https://www.getpagespeed.com/server-setup/nginx/nginx-gzip-compression) · Danila Vershinin, GetPageSpeed, 25 Jan 2026 · argues for level 6 with a timing comparison against level 9, and covers `gzip_vary` and `gzip_proxied any`; vendor site that also sells packages · fetched 2026-10-13 (*read*)
 
 ### T07-03 · `gzip_static` — Understand · 🔲 not written
 - **Read this:** [ngx_http_gzip_static_module](https://nginx.org/en/docs/http/ngx_http_gzip_static_module.html) · nginx.org · `on | off | always` checks for precompressed files (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Serving precompressed static sites using NGINX to save disk space](https://blog.llandsmeer.com/tech/2019/08/29/precompression.html) · Lennart Landsmeer, The Weekend Writeup, 29 Aug 2019 · a small worked `gzip_static always` plus `gunzip on` setup, with the requirement that the original file must exist beside the `.gz` · fetched 2026-10-13 (*read*)
 
 ### T07-04 · Brotli and zstd — Know · 🔲 not written
 - **Read this:** [ngx_brotli README (raw)](https://raw.githubusercontent.com/google/ngx_brotli/master/README.md) · github (raw), undated · build with `--add-dynamic-module`; `brotli_static` (*read*) · covers our angle: **partial** — no ratio comparison, zstd absent · fetched 2026-10-12
 - **Also good:** [zstd-nginx-module README (raw)](https://raw.githubusercontent.com/tokers/zstd-nginx-module/master/README.md) · github (raw), undated · states the module is experimental (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Choosing Between gzip, Brotli and Zstandard Compression](https://paulcalvano.com/2024-03-19-choosing-between-gzip-brotli-and-zstandard-compression) · Paul Calvano, 19 Mar 2024 · measured ratio and speed comparison of all three, which the module READMEs do not give · fetched 2026-10-13 (*read*)
 - **Our delta:** gzip versus brotli versus zstd ratios for text; none confirmed on these pages.
 
 ### T07-05 · Never compress what is already compressed — Understand · 🔲 not written
 - **Read this:** [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html) · nginx.org · `gzip_types` is an allowlist of MIME types (*read*) · covers our angle: **partial** — never says why images and `.woff2` should stay out · fetched 2026-10-12
+- **Beyond the docs:** [nginx gzip compression](https://www.getpagespeed.com/server-setup/nginx/nginx-gzip-compression) · Danila Vershinin, GetPageSpeed, 25 Jan 2026 · says why JPEG, PNG, video and archives stay out of `gzip_types` (wasted CPU, files can grow); it lists `font/woff2` without comment, so do not copy that line · fetched 2026-10-13 (*read*)
 - **Our delta:** the content-type list and the CPU argument.
 
 ### T07-06 · `client_max_body_size` — Master · 🔲 not written
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · default `1m`, over the limit gives 413 (*read*) · covers our angle: **partial** — the Node side is elsewhere · fetched 2026-10-12
 - **Also good:** [body-parser](https://expressjs.com/en/resources/middleware/body-parser/) · Express docs · `limit` defaults to `100kb` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [nginx 413 Request Entity Too Large: client_max_body_size explained](https://www.netdata.cloud/guides/nginx/nginx-413-request-entity-too-large/) · Netdata guide, undated · covers context precedence, `proxy_request_buffering` and the other layers (app server, ingress, CDN) that can return 413 first · fetched 2026-10-13 (*read*)
 
 ### T07-07 · Client body and header buffers and timeouts — Understand · 🔲 not written
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · `client_body_buffer_size`, `client_body_timeout` 60s, `client_header_timeout` 60s (408), `large_client_header_buffers` (*read*) · covers our angle: **partial** — status 494 not found on this page, not confirmed · fetched 2026-10-12
@@ -139,12 +150,14 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 ### T07-11 · Early Hints (103) — Know · 🔲 not written
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) · nginx.org · `early_hints`, since 1.29.0; upstream 103 responses are passed on as is (*read*) · covers our angle: **partial** — gRPC backends are not confirmed there, and no cost discussion · fetched 2026-10-12
 - **Also good:** [Early Hints](https://developer.chrome.com/docs/web-platform/early-hints) · Chrome for Developers, updated 2026-07-10 · preconnect/preload benefits (*read*) · [103 Early Hints](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/103) · MDN · advises HTTP/2 or later (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [nginx early hints](https://www.getpagespeed.com/server-setup/nginx/nginx-early-hints) · Danila Vershinin, GetPageSpeed, 11 Aug 2026 · explains that nginx only forwards an upstream 103 (proxy_pass and grpc_pass, not FastCGI), the buffer-size 502 trap, and a benchmark showing the gain depends on origin think time; vendor site that also sells packages · fetched 2026-10-13 (*read*)
 
 ### T07-12 · `ngx_http_sub_module` — When Needed · 🔲 not written
 - **Read this:** [ngx_http_sub_module](https://nginx.org/en/docs/http/ngx_http_sub_module.html) · nginx.org · `sub_filter`, `sub_filter_once`, `sub_filter_types` (*read*) · covers our angle: **partial** — no argument against using it · fetched 2026-10-12
 
 ### T07-13 · `ngx_http_mirror_module` — When Needed · 🔲 not written
 - **Read this:** [ngx_http_mirror_module](https://nginx.org/en/docs/http/ngx_http_mirror_module.html) · nginx.org · `mirror` and `mirror_request_body`; mirror responses are ignored (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Nginx mirroring tips and tricks](https://dev.to/dzeban/nginx-mirroring-tips-and-tricks-17c2) · Alex Dzyoba, DEV, 25 Jan 2019 · shows a slow mirror backend stalling the original requests and using `split_clients` to mirror only a share of traffic · fetched 2026-10-13 (*read*)
 
 ---
 
@@ -156,6 +169,7 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 ### T08-02 · Balancing methods — Master · 🔲 not written
 - **Read this:** [Using nginx as HTTP load balancer](https://nginx.org/en/docs/http/load_balancing.html) · nginx.org · round-robin default, `least_conn`, `ip_hash`, weights (*read*) · covers our angle: **partial** — `hash` and `random` are not on it · fetched 2026-10-12
 - **Also good:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · `hash key [consistent]`, `random [two]` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [nginx load balancing](https://www.getpagespeed.com/server-setup/nginx/nginx-load-balancing) · Danila Vershinin, GetPageSpeed, 23 Jan 2026 · a "when to use" list per method (round robin, least_conn, ip_hash, consistent hash, random two); vendor site that also sells packages · fetched 2026-10-13 (*read*)
 - **Our delta:** choosing by workload.
 
 ### T08-03 · `server` parameters — Understand · 🔲 not written
@@ -164,9 +178,11 @@ Covers every topic row of `docs/nginx/syllabus/03-speed-and-scale.md`: T06-01 to
 ### T08-04 · Passive health checks only — Master · 🔲 not written
 - **Read this:** [Using nginx as HTTP load balancer](https://nginx.org/en/docs/http/load_balancing.html) · nginx.org · `max_fails` default 1; active checks listed as NGINX Plus (*read*) · covers our angle: **partial** — no open-source alternative to active probes · fetched 2026-10-12
 - **Also good:** [ngx_http_upstream_hc_module](https://nginx.org/en/docs/http/ngx_http_upstream_hc_module.html) · nginx.org · the Plus `health_check` directive, to recognise it (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [nginx load balancing](https://www.getpagespeed.com/server-setup/nginx/nginx-load-balancing) · Danila Vershinin, GetPageSpeed, 23 Jan 2026 · explains `max_fails` and `fail_timeout` as the passive check, with the defaults of 1 and 10s · fetched 2026-10-13 (*read*)
 
 ### T08-05 · `keepalive` in the upstream block — Understand · 🔲 not written
 - **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · `keepalive 32 local;` default since 1.29.7; `keepalive_requests` 1000, `keepalive_time` 1h (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [nginx upstream keepalive](https://www.getpagespeed.com/server-setup/nginx/nginx-upstream-keepalive) · Danila Vershinin, GetPageSpeed, 26 Jan 2026 · adds a pool-sizing formula and the symptom of an undersized pool (many SYN_SENT sockets), beyond the directive reference · fetched 2026-10-13 (*read*)
 
 ### T08-06 · Session affinity in open source — Understand · 🔲 not written
 - **Read this:** [ngx_http_upstream_module](https://nginx.org/en/docs/http/ngx_http_upstream_module.html) · nginx.org · `sticky cookie`, `sticky route`, `sticky learn`; "prior to version 1.29.6" it was commercial only (*read*) · covers our angle: **partial** — the stateless argument is absent · fetched 2026-10-12
