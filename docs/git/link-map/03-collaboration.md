@@ -23,6 +23,7 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 ### T04-02 · `fetch` versus `pull` — Master · ✅ written `docs/git/pages/phase-4-remotes/02-fetch-vs-pull.md`
 - **Read this:** [git-pull](https://git-scm.com/docs/git-pull) · git-scm.com · pull = fetch plus integrate; four integration options (`--ff-only`, `--rebase`, `--no-rebase`, `--squash`) (*read*) · covers our angle: **full** · fetched 2026-10-12
 - **Also good:** [Working with Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) · Pro Git · fetch only downloads, does not merge (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Git from the inside out](https://maryrosecook.com/blog/post/git-from-the-inside-out) · Mary Rose Cook · walks through fetch as copying objects and moving remote-tracking refs plus `FETCH_HEAD` while local branches stay put, then pull as fetch plus merge, on a worked example · fetched 2026-10-13 (*read*)
 - **Our delta:** the fetch-then-look habit as a rule.
 
 ### T04-03 · Remote-tracking branches — Master · ✅ written `docs/git/pages/phase-4-remotes/03-remote-tracking-branches.md`
@@ -42,6 +43,7 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 
 ### T04-06 · Force-pushing safely — Master · ✅ written `docs/git/pages/phase-4-remotes/06-force-pushing-safely.md`
 - **Read this:** [git-push](https://git-scm.com/docs/git-push) · git-scm.com · `--force-with-lease`, `--force-if-includes` in the synopsis and the lease text (*read* the lease passage) · covers our angle: **partial** — why lease alone is not enough is only partly argued · fetched 2026-10-12
+- **Beyond the docs:** [Git: Force push safely with --force-with-lease and --force-if-includes](https://adamj.eu/tech/2023/10/31/git-force-push-safely/) · Adam Johnson, 2023-10-31 · shows that a fetched-but-unintegrated commit still passes the lease and that `--force-if-includes` closes that gap, which the manual only hints at · fetched 2026-10-13 (*read*)
 - **Our delta:** the fetched-but-never-integrated case.
 
 ### T04-07 · `git push` in full — Understand · ✅ written `docs/git/pages/phase-4-remotes/07-git-push.md`
@@ -79,6 +81,7 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 ### T04-14 · Signing — Know · 🔲 not written
 - **Read this:** [About commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification) · GitHub Docs · GPG, SSH or S/MIME signed commits are marked verified; vigilant mode off by default (*read*) · covers our angle: **partial** — what "Verified" does not prove is not argued · fetched 2026-10-12
 - **Also good:** [Signing Your Work](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work) · Pro Git · GPG signing and verifying (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Signing Git Commits with Your SSH Key](https://dev.to/calebhearth/signing-git-commits-with-your-ssh-key-2p4l) · Caleb Hearth, 2022-08-31 (first published 2021-11-15) · covers the SSH route Pro Git omits: `gpg.format ssh`, the allowed signers file, and uploading the key as a signing key · fetched 2026-10-13 (*read*)
 - **Our delta:** SSH signing via `gpg.format` is on the git-tag and git-config pages, not in Pro Git (its signing chapter covers GPG only); `commit.gpgSign` is a git-config entry, also named in git-commit.
 
 ### T04-15 · Bare and mirror repositories — Know · 🔲 not written
@@ -96,11 +99,13 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 ### T05-01 · The undo decision table — Master · ✅ written `docs/git/pages/phase-5-undo-recover/01-the-undo-decision-table.md`
 - **Read this:** [Undoing Things](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things) · git-scm.com (Pro Git) · amend, unstaging, discarding changes (*read*) · covers our angle: **partial** — no pushed-commit or merge rows; its unstage advice uses `git reset HEAD` · fetched 2026-10-12
 - **Also good:** [git-reset](https://git-scm.com/docs/git-reset) · git-scm.com · "Undo a commit and redo" and other recipes (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Oh Shit, Git!?!](https://ohshitgit.com/) · Katie Sylor-Miller · trouble-first recipes (reflog, amend, revert an old commit, undo one file, reset to the remote) in plain language, with warnings about shared commits · fetched 2026-10-13 (*read*)
 - **Our delta:** the single table, trouble to command.
 
 ### T05-02 · `reset` in terms of the three trees — Master · ✅ written `docs/git/pages/phase-5-undo-recover/02-reset-in-depth.md`
 - **Read this:** [Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified) · git-scm.com (Pro Git) · HEAD, index, working directory as three trees; `--soft` stops after moving the branch (*read*) · covers our angle: **full** · fetched 2026-10-12
 - **Also good:** [git-reset](https://git-scm.com/docs/git-reset) · git-scm.com · `--soft | --mixed | --hard | --merge | --keep` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html) · Mark Lodato · diagrams of what reset moves (branch, stage, working directory) for a commit target, with and without `--hard`/`--soft`, and for filenames; a picture-first view next to Pro Git's prose · fetched 2026-10-13 (*read* the Reset section)
 
 ### T05-03 · `revert` is the undo for shared history — Master · ✅ written `docs/git/pages/phase-5-undo-recover/03-revert.md`
 - **Read this:** [git-revert](https://git-scm.com/docs/git-revert) · git-scm.com · records a new commit that reverses an earlier one; `-m` mainline (*read*) · covers our angle: **partial** — no rewrite-versus-revert guidance · fetched 2026-10-12
@@ -115,6 +120,7 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 - **Read this:** [Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) · git-scm.com (Pro Git) · amend, interactive rebase, fixup/squash in the todo list (*read*) · covers our angle: **partial** — `commit --fixup` with `--autosquash` is only in the manuals · fetched 2026-10-12
 - **Also good:** [git-rebase](https://git-scm.com/docs/git-rebase) · git-scm.com · `--autosquash`, `--update-refs` (*read* autosquash passage) · fetched 2026-10-12
 - **Also good:** [git-commit](https://git-scm.com/docs/git-commit) · git-scm.com · `--fixup` and `--amend` in the synopsis (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Smoother rebases with auto-squashing Git commits](https://andrewlock.net/smoother-rebases-with-auto-squashing-git-commits) · Andrew Lock, 2023-04-18 · a worked `commit --fixup` then `rebase -i --autosquash` flow, including `amend!`, `fixup -C` and `rebase.autosquash`, which Pro Git leaves out · fetched 2026-10-13 (*read*)
 
 ### T05-06 · Recovering a deleted branch — Understand · ✅ written `docs/git/pages/phase-5-undo-recover/06-recovering-a-branch.md`
 - **Read this:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) · Pro Git · reflog route, then `git fsck --full` dangling-commit route; both end by adding a branch at the SHA-1 (*read*) · covers our angle: **full** · fetched 2026-10-12
@@ -140,6 +146,7 @@ Covers every topic row of `docs/git/syllabus/02-collaboration.md`: T04-01 to T04
 ### T05-11 · Stash recovery and stash conflicts — Understand · 🔲 not written (moved to `docs/git/pages/phase-1-everyday-loop/11-git-stash.md`)
 - **Read this:** [git-stash](https://git-scm.com/docs/git-stash) · git-scm.com · a conflicted apply is not removed from the stash list; a section on recovering dropped stash entries with `git fsck --unreachable` (*read*) · covers our angle: **full** · fetched 2026-10-12
 - **Also good:** [Stashing and Cleaning](https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning) · Pro Git · a stash can be applied on a different branch (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [How to recover from a git mistake](https://opensource.com/article/17/8/recover-dropped-data-stash) · Jose Guilherme Vanz, opensource.com, 2017-08-18 · a real dropped-stash story: `git fsck --unreachable`, `git show` to find it, `git stash apply <id>`, and the warning that gc ends the chance · fetched 2026-10-13 (*read*)
 
 ### T05-12 · Removing a secret from history — Understand · 🔲 not written
 - **Read this:** [Removing sensitive data from a repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) · GitHub Docs · "first step" is to revoke or rotate the secret; then rewrite with filter-repo, update the host, coordinate other clones (*read*) · covers our angle: **full** — GitHub-specific host steps · fetched 2026-10-12

@@ -187,6 +187,7 @@ displayed without touching a single commit.
 
 - **Read this:** [First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) — Pro Git: `user.name` and `user.email`, that every commit bakes them in; `init.defaultBranch` since 2.28 (*read*)
 - **Also good:** [git-config](https://git-scm.com/docs/git-config) — git-scm.com: the Includes section: `include` and `includeIf` pull in another file, conditionally for `includeIf` (*read* that passage)
+- **Beyond the docs:** [Automatically keeping Git identities distinct between accounts](https://sep.com/blog/automatically-keeping-git-identities-distinct-between-accounts/) — Aaron Alexander, SEP, 2019-01-03 (updated 2026-01-29): a worked `includeIf "gitdir:..."` setup with one identity file per folder, which the Pro Git page lacks
 
 {/* LINKMAP:END */}
 

@@ -180,6 +180,7 @@ only HEAD advances.
 
 - **Read this:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) — git-scm.com: REFERENCES section: `refs/heads`, `refs/tags`, `refs/remotes`, HEAD as symbolic reference, "detached HEAD state" when it holds a commit ID (*read*)
 - **Also good:** [Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References) — Pro Git: shows the files on disk, `cat .git/HEAD`, and when HEAD becomes a raw hash (*read*)
+- **Beyond the docs:** [git branches: intuition & reality](https://jvns.ca/blog/2023/11/23/branches-intuition-reality/) — Julia Evans, 2023-11-23: a branch is a tiny text file holding a commit ID, and Git keeps no record of where a branch came from; does not cover detached HEAD
 
 {/* LINKMAP:END */}
 

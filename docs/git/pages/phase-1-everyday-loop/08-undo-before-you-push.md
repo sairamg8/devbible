@@ -275,6 +275,7 @@ clone, and reflog entries expire (90 days by default, 30 for unreachable ones).
 - **Read this:** [Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified) — Pro Git: table of `reset --soft/mixed/hard` and `checkout` with HEAD, Index, Workdir columns and a "WD Safe?" column (*read*)
 - **Also good:** [Undoing Things](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things) — Pro Git: covers `git restore` for unstaging and discarding (*read*)
 - **Also good:** [git-reset](https://git-scm.com/docs/git-reset)
+- **Beyond the docs:** [How to reset, revert, and return to previous states in Git](https://opensource.com/article/18/6/git-reset-revert-rebase-commands) — Brent Laster, Opensource.com, 2018-06-19: frames `reset --soft`, `--mixed` and `--hard` by how far each reaches across the three areas, and recovery via `ORIG_HEAD` and the reflog; predates `git restore`
 
 {/* LINKMAP:END */}
 

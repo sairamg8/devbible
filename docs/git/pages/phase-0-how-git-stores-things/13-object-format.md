@@ -146,6 +146,7 @@ translate into a usable Git attack.
 - **Read this:** [git-init](https://git-scm.com/docs/git-init) — git-scm.com: `--object-format` takes `sha1` or (if enabled) `sha256`, `sha1` default; states no interoperability between SHA-256 and SHA-1 repositories at present (*read*)
 - **Also good:** [hash-function-transition](https://git-scm.com/docs/hash-function-transition) — git-scm.com: design document: SHA-256 picked as successor in late 2018; `extensions.objectFormat` and `compatObjectFormat` (*read* in part)
 - **Also good:** [BreakingChanges](https://git-scm.com/docs/BreakingChanges)
+- **Beyond the docs:** [Whatever happened to SHA-256 support in Git?](https://lwn.net/Articles/898522/) — Jonathan Corbet, LWN.net, 2022-06-23: why the move stalled: no SHA-1 interoperability and no hosting support; written in 2022, so check the manual for today's state
 
 {/* LINKMAP:END */}
 

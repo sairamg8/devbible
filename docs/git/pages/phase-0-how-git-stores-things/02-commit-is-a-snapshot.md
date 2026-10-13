@@ -185,6 +185,7 @@ a stronger and cheaper check than reading a diff.
 
 - **Read this:** [What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F) — Pro Git: "Snapshots, Not Differences": other systems store file-based changes, Git stores a series of snapshots (*read*)
 - **Also good:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) — git-scm.com: a commit names the tree of the whole directory; Git does not store the diff, `git show` computes it from the parent (*read*)
+- **Beyond the docs:** [Commits are snapshots, not diffs](https://github.blog/open-source/git/commits-are-snapshots-not-diffs/) — Derrick Stolee, GitHub Blog, 2020-12-17: shows why cherry-pick and rebase make new commits with new IDs, which the diff mental model hides
 
 {/* LINKMAP:END */}
 

@@ -249,6 +249,7 @@ protection on the host. Use the lease always, and do not mistake it for permissi
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [git-push](https://git-scm.com/docs/git-push) — git-scm.com: `--force-with-lease`, `--force-if-includes` in the synopsis and the lease text (*read* the lease passage)
+- **Beyond the docs:** [Git: Force push safely with --force-with-lease and --force-if-includes](https://adamj.eu/tech/2023/10/31/git-force-push-safely/) — Adam Johnson, 2023-10-31: shows that a fetched-but-unintegrated commit still passes the lease and that `--force-if-includes` closes that gap, which the manual only hints at
 
 {/* LINKMAP:END */}
 

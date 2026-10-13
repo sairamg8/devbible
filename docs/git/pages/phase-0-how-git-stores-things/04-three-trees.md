@@ -168,6 +168,7 @@ leaves the working tree alone. The older spelling is `git reset HEAD <path>`.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified) — Pro Git: HEAD, Index, Working Directory as three trees, with a role for each; a command-by-command table of what moves (*read*)
+- **Beyond the docs:** [A Tale of Three Trees](https://www.infoq.com/presentations/A-Tale-of-Three-Trees/) — Scott Chacon (Pro Git author), InfoQ talk from Strange Loop, 2011-11-09: the same HEAD, index, work tree model told as a talk, with `reset` as the worked example; 2011, so predates `git restore`
 
 {/* LINKMAP:END */}
 

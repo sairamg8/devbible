@@ -18,30 +18,36 @@ Covers every topic row of `docs/git/syllabus/01-how-git-works.md` in phase 0 (T0
 ### T00-01 · Git is a content-addressed object store — Master · ✅ written `docs/git/pages/phase-0-how-git-stores-things/01-what-git-is.md`
 - **Read this:** [Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects) · Pro Git · calls Git a content-addressable filesystem with a key-value store at its core, then shows `hash-object` returning the key (*read*) · covers our angle: **partial** — SHA-1 only; branches, tags and HEAD as labels are on the References page · fetched 2026-10-12
 - **Also good:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) · git-scm.com · short official page: objects never change, each ID is a hash of type and contents (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/) · John Wiegley · builds up from blob to tree to commit and branches, then the index and reset, so the object store comes first, the order our page uses; page shows no date · fetched 2026-10-13 (*headings only*)
 - **Our delta:** the "labels pointing into it" half (branches, tags, HEAD) and why nothing else makes sense first.
 
 ### T00-02 · A commit is a snapshot, not a diff — Master · ✅ written `docs/git/pages/phase-0-how-git-stores-things/02-commit-is-a-snapshot.md`
 - **Read this:** [What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F) · Pro Git · "Snapshots, Not Differences": other systems store file-based changes, Git stores a series of snapshots (*read*) · covers our angle: **partial** — does not separate the model from packfile delta compression · fetched 2026-10-12
 - **Also good:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) · git-scm.com · a commit names the tree of the whole directory; Git does not store the diff, `git show` computes it from the parent (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Commits are snapshots, not diffs](https://github.blog/open-source/git/commits-are-snapshots-not-diffs/) · Derrick Stolee, GitHub Blog, 2020-12-17 · shows why cherry-pick and rebase make new commits with new IDs, which the diff mental model hides · fetched 2026-10-13 (*read*)
 - **Our delta:** delta compression is a packfile detail, not the model (see T00-11).
 
 ### T00-03 · The four object types — Master · ✅ written `docs/git/pages/phase-0-how-git-stores-things/03-object-types.md`
 - **Read this:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) · git-scm.com · blob, tree, commit and tag object, each with its fields and an example from `git cat-file -p`; tree entries carry the filename and mode (*read*) · covers our angle: **partial** — never says outright that a blob has no filename (the tree entry carries it); page first appears in the 2.53.0 changelog · fetched 2026-10-12
 - **Also good:** [Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects) · Pro Git · hands-on: a blob stores content, not the filename; trees solve that (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [A Deep Dive into Git Internals: Blobs, Trees, and Commits](https://dev.to/__whyd_rf/a-deep-dive-into-git-internals-blobs-trees-and-commits-1doc) · Vahid Ghadiri, DEV Community, 2025-07-07 · runs `hash-object`, `cat-file` and `ls-tree` and states that a blob holds content only, with no name or permissions · fetched 2026-10-13 (*read*)
 - **Our delta:** the explicit "what each object does not contain" framing, a blob has no filename.
 
 ### T00-04 · The three trees — Master · ✅ written `docs/git/pages/phase-0-how-git-stores-things/04-three-trees.md`
 - **Read this:** [Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified) · Pro Git · HEAD, Index, Working Directory as three trees, with a role for each; a command-by-command table of what moves (*read*) · covers our angle: **full** · fetched 2026-10-12
+- **Beyond the docs:** [A Tale of Three Trees](https://www.infoq.com/presentations/A-Tale-of-Three-Trees/) · Scott Chacon (Pro Git author), InfoQ talk from Strange Loop, 2011-11-09 · the same HEAD, index, work tree model told as a talk, with `reset` as the worked example; 2011, so predates `git restore` · fetched 2026-10-13 (*headings only*)
 - **Our delta:** choosing the command by naming the two trees it moves between.
 
 ### T00-05 · The index is a real file — Master · ✅ written `docs/git/pages/phase-0-how-git-stores-things/05-the-index.md`
 - **Read this:** [Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) · Pro Git · "Staging Modified Files": a file edited after `git add` shows as both staged and unstaged (*read*) · covers our angle: **partial** — does not show `.git/index` as a file or that `add` copies bytes in · fetched 2026-10-12
 - **Also good:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) · git-scm.com · THE INDEX: a flat list of file type, blob ID, stage number and path; `git ls-files --stage` shows it (*read*) · [gitformat-index](https://git-scm.com/docs/gitformat-index) · git-scm.com · the binary layout of the index file (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Git Guts: The staging index](https://awasu.com/weblog/git-guts/staging-index/) · Taka, Awasu weblog, 2022-01-07 · the index holds the whole working tree with your changes applied, not only the changes, and walks the file header, sorted entries and checksum · fetched 2026-10-13 (*read*)
 - **Our delta:** inspecting `.git/index` itself, and that `git add` copies the bytes in.
 
 ### T00-06 · Refs and HEAD — Master · ✅ written `docs/git/pages/phase-0-how-git-stores-things/06-refs-and-head.md`
 - **Read this:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) · git-scm.com · REFERENCES section: `refs/heads`, `refs/tags`, `refs/remotes`, HEAD as symbolic reference, "detached HEAD state" when it holds a commit ID (*read*) · covers our angle: **partial** — no "a branch is a file" on disk (that is the Git References page) and does not call detached HEAD normal · fetched 2026-10-12
 - **Also good:** [Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References) · Pro Git · shows the files on disk, `cat .git/HEAD`, and when HEAD becomes a raw hash (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [git branches: intuition & reality](https://jvns.ca/blog/2023/11/23/branches-intuition-reality/) · Julia Evans, 2023-11-23 · a branch is a tiny text file holding a commit ID, and Git keeps no record of where a branch came from; does not cover detached HEAD · fetched 2026-10-13 (*read*)
 - **Our delta:** detached HEAD framed as a normal state, not an error.
 
 ### T00-07 · The commit graph is a DAG, not a timeline — Master · ✅ written `docs/git/pages/phase-0-how-git-stores-things/07-commit-graph.md`
@@ -56,16 +62,19 @@ Covers every topic row of `docs/git/syllabus/01-how-git-works.md` in phase 0 (T0
 ### T00-09 · A tour of `.git/` — Understand · ✅ written `docs/git/pages/phase-0-how-git-stores-things/09-git-directory-tour.md`
 - **Read this:** [gitrepository-layout](https://git-scm.com/docs/gitrepository-layout) · git-scm.com · entry per item: `objects`, `refs`, `HEAD`, `index`, `logs`, `hooks` (*read* objects and logs entries) · covers our angle: **partial** — a reference, not a guided tour; does not say which parts are safe to read while learning · fetched 2026-10-12
 - **Also good:** [Plumbing and Porcelain](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain) · Pro Git · introduces the chapter that walks through `.git` contents (*read* the intro) · fetched 2026-10-12
+- **Beyond the docs:** [Exploring the .git Directory](https://www.git-tower.com/blog/exploring-the-git-directory) · Bruno Brito, Tower blog, updated February 2026 · goes through `HEAD`, `config`, `index`, `objects`, `refs`, `hooks` and `logs` one by one in plain language · fetched 2026-10-13 (*read*)
 - **Our delta:** the "safe to read / do not hand-edit" judgement.
 
 ### T00-10 · Identity and first-run setup — Understand · ✅ written `docs/git/pages/phase-0-how-git-stores-things/10-identity-setup.md`
 - **Read this:** [First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) · Pro Git · `user.name` and `user.email`, that every commit bakes them in; `init.defaultBranch` since 2.28 (*read*) · covers our angle: **partial** — no `Author identity unknown` failure text, no per-repo identity for work and personal commits · fetched 2026-10-12
 - **Also good:** [git-config](https://git-scm.com/docs/git-config) · git-scm.com · the Includes section: `include` and `includeIf` pull in another file, conditionally for `includeIf` (*read* that passage) · fetched 2026-10-12
+- **Beyond the docs:** [Automatically keeping Git identities distinct between accounts](https://sep.com/blog/automatically-keeping-git-identities-distinct-between-accounts/) · Aaron Alexander, SEP, 2019-01-03 (updated 2026-01-29) · a worked `includeIf "gitdir:..."` setup with one identity file per folder, which the Pro Git page lacks · fetched 2026-10-13 (*read*)
 - **Our delta:** the exact failure message and a per-repo or conditional-include recipe.
 
 ### T00-11 · Loose objects, packfiles and delta compression — Understand · ✅ written `docs/git/pages/phase-0-how-git-stores-things/11-loose-objects-and-packfiles.md`
 - **Read this:** [Packfiles](https://git-scm.com/book/en/v2/Git-Internals-Packfiles) · Pro Git · loose format, then `git gc` packs them; also packing happens on push; a delta stores a second object against the first (*read*) · covers our angle: **full** · fetched 2026-10-12
 - **Also good:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) · Pro Git · auto gc runs when there are too many loose objects or packfiles (*read* the Maintenance passage) · fetched 2026-10-12
+- **Beyond the docs:** [Git's database internals I: packed object store](https://github.blog/open-source/git/gits-database-internals-i-packed-object-store/) · Derrick Stolee, GitHub Blog, 2022-08-29 · pack index, fanout table and offset deltas, with a 19KB tree stored as a 50-byte delta and the `pack.depth` limit · fetched 2026-10-13 (*read*)
 - **Our delta:** why repo size is not the sum of file sizes.
 
 ### T00-12 · What Git is not — Understand · ✅ written `docs/git/pages/phase-0-how-git-stores-things/12-what-git-is-not.md`
@@ -77,11 +86,13 @@ Covers every topic row of `docs/git/syllabus/01-how-git-works.md` in phase 0 (T0
 ### T00-13 · Object format: SHA-1 today, SHA-256 available — Know · ✅ written `docs/git/pages/phase-0-how-git-stores-things/13-object-format.md`
 - **Read this:** [git-init](https://git-scm.com/docs/git-init) · git-scm.com · `--object-format` takes `sha1` or (if enabled) `sha256`, `sha1` default; states no interoperability between SHA-256 and SHA-1 repositories at present (*read*) · covers our angle: **full** · fetched 2026-10-12
 - **Also good:** [hash-function-transition](https://git-scm.com/docs/hash-function-transition) · git-scm.com · design document: SHA-256 picked as successor in late 2018; `extensions.objectFormat` and `compatObjectFormat` (*read* in part) · [BreakingChanges](https://git-scm.com/docs/BreakingChanges) · git-scm.com · under Git 3.0: default hash for new repositories planned to change from `sha1` to `sha256`; no release date planned (*read* that passage) · fetched 2026-10-12
+- **Beyond the docs:** [Whatever happened to SHA-256 support in Git?](https://lwn.net/Articles/898522/) · Jonathan Corbet, LWN.net, 2022-06-23 · why the move stalled: no SHA-1 interoperability and no hosting support; written in 2022, so check the manual for today's state · fetched 2026-10-13 (*read*)
 - **Our delta:** 🔴 the SHA-256 default is planned for Git 3.0, not shipped; the `sha1` default holds today.
 
 ### T00-14 · Plumbing versus porcelain — Know · ✅ written `docs/git/pages/phase-0-how-git-stores-things/14-plumbing-vs-porcelain.md`
 - **Read this:** [Plumbing and Porcelain](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain) · Pro Git · plumbing commands are low-level and chainable in scripts, porcelain the friendlier ones (*read*) · covers our angle: **partial** — does not say why scripts should target plumbing or how to find the plumbing behind a porcelain command · fetched 2026-10-12
 - **Also good:** [git](https://git-scm.com/docs/git) · git-scm.com · splits the commands into high-level (porcelain) and low-level (plumbing), with the full list of each (*read*) · [git-status](https://git-scm.com/docs/git-status) · git-scm.com · `--porcelain` output stays stable across versions and user config, for scripts (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [A Plumber's Guide to Git](https://alexwlchan.net/a-plumbers-guide-to-git/) · Alex Chan (alexwlchan), updated 2018-03-13 · a sink analogy for the split, then a workshop that uses plumbing commands to look inside `.git` · fetched 2026-10-13 (*read*)
 - **Our delta:** the script-stability argument and how to find the plumbing behind a porcelain command.
 
 ---
@@ -121,11 +132,13 @@ Covers every topic row of `docs/git/syllabus/01-how-git-works.md` in phase 0 (T0
 ### T01-08 · Undo before you push — Master · ✅ written `docs/git/pages/phase-1-everyday-loop/08-undo-before-you-push.md`
 - **Read this:** [Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified) · Pro Git · table of `reset --soft/mixed/hard` and `checkout` with HEAD, Index, Workdir columns and a "WD Safe?" column (*read*) · covers our angle: **partial** — predates `git restore`, so no `restore --staged` row · fetched 2026-10-12
 - **Also good:** [Undoing Things](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things) · Pro Git · covers `git restore` for unstaging and discarding (*read*) · [git-reset](https://git-scm.com/docs/git-reset) · git-scm.com · the manual: `--soft`, `--mixed`, `--hard`, `--merge`, `--keep` (*read* synopsis) · fetched 2026-10-12
+- **Beyond the docs:** [How to reset, revert, and return to previous states in Git](https://opensource.com/article/18/6/git-reset-revert-rebase-commands) · Brent Laster, Opensource.com, 2018-06-19 · frames `reset --soft`, `--mixed` and `--hard` by how far each reaches across the three areas, and recovery via `ORIG_HEAD` and the reflog; predates `git restore` · fetched 2026-10-13 (*read*)
 - **Our delta:** our effect table adds the `restore` rows.
 
 ### T01-09 · `git log` for the everyday case — Understand · ✅ written `docs/git/pages/phase-1-everyday-loop/09-git-log.md`
 - **Read this:** [Viewing the Commit History](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) · Pro Git · `--oneline`, graph output, and "Limiting Log Output" (*read* limiting section, which includes the path filter; rest *headings only*) · covers our angle: **partial** — no `--decorate` on this page · fetched 2026-10-12
 - **Also good:** [git-log](https://git-scm.com/docs/git-log) · git-scm.com · full option reference (~109k characters, *headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Power 'git log' graphing](https://zwischenzugs.com/2016/06/04/power-git-log-graphing/) · Ian Miell, zwischenzugs, 2016-06-04 · builds up `--graph`, `--all`, `--decorate`, `--oneline` and `--topo-order` one flag at a time into a single alias · fetched 2026-10-13 (*read*)
 
 ### T01-10 · Commit message craft — Understand · ✅ written `docs/git/pages/phase-1-everyday-loop/10-commit-messages.md`
 - **Read this:** [How to Write a Git Commit Message](https://cbea.ms/git-commit/) · Chris Beams, 2014-08-31 · seven rules: 50 characters, imperative mood, wrap body at 72, explain what and why (*read*) · covers our angle: **partial** — no trailer lines · fetched 2026-10-12
@@ -135,6 +148,7 @@ Covers every topic row of `docs/git/syllabus/01-how-git-works.md` in phase 0 (T0
 ### T01-11 · What belongs in one commit — Understand · ✅ written (folded into `docs/git/pages/phase-1-everyday-loop/10-commit-messages.md`)
 - **Read this:** [Contributing to a Project](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) · Pro Git · "Commit Guidelines": make each commit a logically separate changeset; split a weekend's work with the staging area (*read*) · covers our angle: **partial** — nothing on bisect or revert-alone, the atomic test · fetched 2026-10-12
 - **Also good:** [SubmittingPatches](https://git-scm.com/docs/SubmittingPatches) · git-scm.com · "Make separate commits for logically separate changes" (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Writing High Quality, Well Scoped, Commits](https://jeffreyfreeman.me/blog/writing-high-quality-well-scoped-commits/) · Jeffrey Phillips Freeman, 2025-04-28 · the one-sentence size test, why a commit mixing concerns is hard to revert alone, and why commits that break the build mislead `git bisect` · fetched 2026-10-13 (*read*)
 - **Our delta:** the builds/passes/does-one-thing/revertable test and the bisect payoff.
 
 ### T01-12 · `git stash` — Understand · ✅ written `docs/git/pages/phase-1-everyday-loop/11-git-stash.md`
@@ -143,6 +157,7 @@ Covers every topic row of `docs/git/syllabus/01-how-git-works.md` in phase 0 (T0
 
 ### T01-13 · The file state machine — Understand · 🔲 not written (the status chunks `docs/git/pages/phase-1-everyday-loop/01-git-status/01-the-three-sections.md` cover related ground, but none lays out the state machine)
 - **Read this:** [Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) · Pro Git · "The lifecycle of the status of your files" figure and the tracked/untracked/staged/modified walk-through (*read*) · covers our angle: **partial** — no ignored state · fetched 2026-10-12
+- **Beyond the docs:** [Git, the many parts: five categories of files](https://jessitron.com/2012/12/09/git-the-many-parts-five-categories-of-files/) · Jessitron (Jessica Kerr), 2012-12-09 (updated 2019-05-26) · sorts files into five categories beyond the usual three places, with untracked and ignored status as the new ones; says a file ignored after commit ends up both modified and ignored · fetched 2026-10-13 (*read*)
 - **Our delta:** the ignored state and the transitions with no obvious command.
 
 ### T01-14 · `git rm`, `git mv`, and rename detection — Understand · ✅ written `docs/git/pages/phase-1-everyday-loop/12-removing-and-moving.md`

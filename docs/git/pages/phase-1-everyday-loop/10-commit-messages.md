@@ -290,6 +290,7 @@ people to remember.
 - **Also good:** [SubmittingPatches](https://git-scm.com/docs/SubmittingPatches) — git-scm.com: the Git project's own rule: describe changes in imperative mood (*read*)
 - **Also good:** [git-commit](https://git-scm.com/docs/git-commit)
 - **Read this:** [Contributing to a Project](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project) — Pro Git: "Commit Guidelines": make each commit a logically separate changeset; split a weekend's work with the staging area (*read*)
+- **Beyond the docs:** [Writing High Quality, Well Scoped, Commits](https://jeffreyfreeman.me/blog/writing-high-quality-well-scoped-commits/) — Jeffrey Phillips Freeman, 2025-04-28: the one-sentence size test, why a commit mixing concerns is hard to revert alone, and why commits that break the build mislead `git bisect`
 
 {/* LINKMAP:END */}
 

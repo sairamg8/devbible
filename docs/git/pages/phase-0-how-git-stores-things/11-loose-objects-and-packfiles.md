@@ -177,6 +177,7 @@ is the normal answer.
 
 - **Read this:** [Packfiles](https://git-scm.com/book/en/v2/Git-Internals-Packfiles) — Pro Git: loose format, then `git gc` packs them; also packing happens on push; a delta stores a second object against the first (*read*)
 - **Also good:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) — Pro Git: auto gc runs when there are too many loose objects or packfiles (*read* the Maintenance passage)
+- **Beyond the docs:** [Git's database internals I: packed object store](https://github.blog/open-source/git/gits-database-internals-i-packed-object-store/) — Derrick Stolee, GitHub Blog, 2022-08-29: pack index, fanout table and offset deltas, with a 19KB tree stored as a 50-byte delta and the `pack.depth` limit
 
 {/* LINKMAP:END */}
 

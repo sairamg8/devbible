@@ -230,6 +230,7 @@ caveat that reapplying can itself conflict.
 
 - **Read this:** [git-pull](https://git-scm.com/docs/git-pull) — git-scm.com: pull = fetch plus integrate; four integration options (`--ff-only`, `--rebase`, `--no-rebase`, `--squash`) (*read*)
 - **Also good:** [Working with Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) — Pro Git: fetch only downloads, does not merge (*read*)
+- **Beyond the docs:** [Git from the inside out](https://maryrosecook.com/blog/post/git-from-the-inside-out) — Mary Rose Cook: walks through fetch as copying objects and moving remote-tracking refs plus `FETCH_HEAD` while local branches stay put, then pull as fetch plus merge, on a worked example
 
 {/* LINKMAP:END */}
 

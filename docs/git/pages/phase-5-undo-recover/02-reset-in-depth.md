@@ -233,6 +233,7 @@ commits** — which removes most of the risk and leaves `--keep` for the times y
 
 - **Read this:** [Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified) — git-scm.com (Pro Git): HEAD, index, working directory as three trees; `--soft` stops after moving the branch (*read*)
 - **Also good:** [git-reset](https://git-scm.com/docs/git-reset) — git-scm.com: `--soft | --mixed | --hard | --merge | --keep` (*read*)
+- **Beyond the docs:** [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html) — Mark Lodato: diagrams of what reset moves (branch, stage, working directory) for a commit target, with and without `--hard`/`--soft`, and for filenames; a picture-first view next to Pro Git's prose
 
 {/* LINKMAP:END */}
 

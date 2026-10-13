@@ -209,6 +209,7 @@ do not rewrite what other people have.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) — git-scm.com (Pro Git): section "Rebase vs. Merge": history as record versus history as story, no single winner (*read*)
+- **Beyond the docs:** [git rebase: what can go wrong?](https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/) — Julia Evans, jvns.ca (2023-11-06): reader-reported costs of rebase (repeated conflicts, harder review, lost metadata) against merge and squash-and-merge, e.g. a merge is simpler to revert; gives a practitioner's view where Pro Git stays neutral
 
 {/* LINKMAP:END */}
 

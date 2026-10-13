@@ -260,6 +260,7 @@ are ashamed of, and to treat the reflog as a local temporary net rather than a b
 
 - **Read this:** [git-reflog](https://git-scm.com/docs/git-reflog) — git-scm.com: `HEAD@&#123;2&#125;` means where HEAD was two moves ago; expiry defaults to 90 days via `gc.reflogExpire` (*read*)
 - **Also good:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) — Pro Git: using `git reflog` to find a lost commit (*read* the opening of the recovery section)
+- **Beyond the docs:** [Git Reflog: A Guide to Recovering Lost Commits](https://www.thisdot.co/blog/git-reflog-a-guide-to-recovering-lost-commits) — Jamie Kuppens, This Dot Labs (2022-11-14, updated 2023-02-13): a worked recovery after a badly resolved rebase, reading the reflog and resetting to the old hash, plus `ORIG_HEAD`; the page itself flags that it may be out of date
 
 {/* LINKMAP:END */}
 
