@@ -249,6 +249,16 @@ consumes a credential and enforces an authorization policy. Every one of those o
 responsibilities belongs to the authorization server, and blurring the line is how
 resource servers acquire a login page and a client secret they have no business holding.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [OAuth 2.0 Resource Server JWT](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html) — Spring Security reference: `issuer-uri` autoconfiguration, key rotation and the `JwtAuthenticationConverter`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [issuer-uri](02-issuer-uri.md)

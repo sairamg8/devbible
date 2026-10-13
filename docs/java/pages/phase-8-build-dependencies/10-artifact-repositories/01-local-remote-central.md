@@ -277,3 +277,14 @@ namespace even if you never publish anything.
 ---
 
 Index: [Artifact repositories](README.md) · Next → [Internal proxies, `settings.xml` and dependency confusion](02-proxies-settings-confusion.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to Repositories](https://maven.apache.org/guides/introduction/introduction-to-repositories.html) — Apache Maven: exactly two types, local and remote; Central is the default; internal remotes are company servers; credentials go in `settings.xml` by repository id (*read*)
+- **Also good:** [Publishing by using the Maven plugin](https://central.sonatype.org/publish/publish-portal-maven/) — Sonatype Central: add `central-publishing-maven-plugin` with extensions true, store the Portal user token in `settings.xml`, run `mvn deploy` (*read*)
+
+{/* LINKMAP:END */}

@@ -250,3 +250,15 @@ but its meaning in practice is set by ergonomics, so "the default" depends on wh
 collector is running — and the only reliable way to know is `-XX:+PrintFlagsFinal`.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HotSpot Virtual Machine Garbage Collection Tuning Guide (JDK 25)](https://docs.oracle.com/en/java/javase/25/gctuning/) — Oracle (*fetched, not read*)
+- **Also good:** [JEP 474: ZGC: Generational Mode by Default](https://openjdk.org/jeps/474) — OpenJDK (*fetched, not read*): [JEP 439: Generational ZGC](https://openjdk.org/jeps/439)
+- **Also good:** [JEP 439: Generational ZGC](https://openjdk.org/jeps/439)
+
+{/* LINKMAP:END */}

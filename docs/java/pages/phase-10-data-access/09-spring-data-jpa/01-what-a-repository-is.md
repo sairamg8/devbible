@@ -259,3 +259,15 @@ mechanism behind "my custom `save` is not being called", which is almost always
 a fragment that was never wired in rather than an ordering problem.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Spring Data JPA reference](https://docs.spring.io/spring-data/jpa/reference/) — Spring Data project: repositories, derived queries, `@Query` (*fetched, not read*)
+- **Also good:** [Projections](https://docs.spring.io/spring-data/jpa/reference/repositories/projections.html) — Spring Data JPA reference (*fetched, not read*)
+- **Beyond the docs:** [Offset and Keyset Pagination with Spring Data JPA](https://thorben-janssen.com/offset-and-keyset-pagination-with-spring-data-jpa/) — Thorben Janssen: offset slows as the offset grows because skipped rows are still processed; keyset uses a predicate instead; page shows no date. It says Spring Data JPA has no keyset support out of the box and builds one on Hibernate's native API,
+
+{/* LINKMAP:END */}

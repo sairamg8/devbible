@@ -189,6 +189,19 @@ positionally, nests arbitrarily, and inside `switch` combines with sealed
 hierarchies for compiler-checked case analysis — the use-site half of the
 ADT story.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`Record`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Record.html) — Javadoc: mandated members and why you would write an explicit canonical constructor: validation, defensive copies, normalisation (*read*)
+- **Also good:** [JEP 395: Records](https://openjdk.org/jeps/395) — OpenJDK, "transparent carriers for immutable data" (*read*): [Using Records to Model Immutable Data (dev.java)](https://dev.java/learn/language/oop/records/)
+- **Also good:** [Using Records to Model Immutable Data (dev.java)](https://dev.java/learn/language/oop/records/)
+- **Beyond the docs:** [Why Java's Records Are Better\* Than Lombok's @Data and Kotlin's Data Classes](https://nipafx.dev/java-record-semantics/) — Nicolai Parlog (nipafx), 2021-05-05: argues that boilerplate removal is a side effect and the point is the semantics: records are transparent carriers of shallowly immutable data, which is why they allow no extra fields, no inheritance, and require an accessor per co
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Records](README.md) · Next → [Records in practice](02-records-in-practice.md)

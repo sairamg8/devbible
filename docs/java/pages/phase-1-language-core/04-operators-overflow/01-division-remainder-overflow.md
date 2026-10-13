@@ -186,6 +186,18 @@ positive infinity. They only differ when the mathematical quotient is
 negative (`/` vs `floorDiv`) or fractional (`ceilDiv` vs both). Pagination
 wants `ceilDiv`; cyclic math wants `floorDiv`+`floorMod`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Operators (JLS chapter 15)](https://docs.oracle.com/javase/specs/jls/se25/html/jls-15.html) — Oracle: 15.17.2 and 15.17.3: integer division rounds toward 0 and the remainder follows the dividend's sign; the "integer operators do not indicate overflow" statement is in JLS 4.2.2 (chapter 4), not here (*read*)
+- **Also good:** [`Math`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Math.html) — Javadoc: `addExact` and friends (*read*)
+- **Beyond the docs:** [NUM00-J. Detect or prevent integer overflow](https://cmu-sei.github.io/secure-coding-standards/sei-cert-oracle-coding-standard-for-java/rules/numeric-types-and-operations-num/num00-j/) — SEI CERT Oracle Coding Standard for Java: says Java's integer operators silently wrap without signalling overflow, and compares precondition testing, upcasting and `Math.addExact`, which throws `ArithmeticException` (it lists `absExact` from Java 15 and `divideExact` from
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Overview](README.md) · Next → [Promotion, casts and compound assignment](02-promotion-casts-compound.md)

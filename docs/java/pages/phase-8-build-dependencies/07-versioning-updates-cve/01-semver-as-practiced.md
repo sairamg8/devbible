@@ -276,6 +276,19 @@ schedule, one PR per dependency, and a human who reads the changelog. Bots are
 good at producing that shape — the mistake is removing the human, not using
 the bot.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Semantic Versioning 2.0.0](https://semver.org/) — semver.org: MAJOR for breaking API changes, MINOR for compatible features, PATCH for compatible fixes (*read*)
+- **Also good:** [OWASP dependency-check Maven plugin](https://jeremylong.github.io/DependencyCheck/dependency-check-maven/) — Jeremy Long: analyzes dependencies, writes an HTML report and can fail the build at a CVSS threshold; the first run downloads NVD data and is slow (*read*)
+- **Also good:** [Versions Maven Plugin](https://www.mojohaus.org/versions/versions-maven-plugin/)
+- **Also good:** [Dependabot version updates](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-version-updates)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Versioning, updates and CVE scanning](README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [CVE scanning and SBOMs](02-cve-scanning-and-sboms.md)

@@ -195,6 +195,17 @@ with program order (JLS §17.4.3). That is what licenses ordinary
 interleaving reasoning. With even one data race, the model permits
 counter-intuitive outcomes that no interleaving explains.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Race Conditions and Critical Sections](https://jenkov.com/tutorials/java-concurrency/race-conditions-and-critical-sections.html) — Jakob Jenkov, last update 2020-10-28: a `Counter.add()` lost-update example for read-modify-write and a `containsKey` then `remove` example for check-then-act (*read*)
+- **Also good:** [Synchronization methods](https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html) — The Java Tutorials: thread interference and memory consistency errors as the two failure kinds (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Race conditions](README.md) · Next → [The shapes](02-the-shapes.md)

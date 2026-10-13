@@ -172,6 +172,18 @@ class writes its own. The keywords are meaningless on them; what looks
 like "overriding a constructor" is just declaring one with the same
 parameter list.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Overriding and Hiding Methods](https://docs.oracle.com/javase/tutorial/java/IandI/override.html) — Oracle Java Tutorial: override rules and `@Override` (*read*)
+- **Also good:** [Interfaces and Inheritance (Java Tutorial)](https://docs.oracle.com/javase/tutorial/java/IandI/index.html) — Oracle, the lesson index (*read*)
+- **Beyond the docs:** [Why extends is evil](https://www.infoworld.com/article/2160788/why-extends-is-evil.html) — Allen Holub, InfoWorld, 2003-08-01: the fragile base class: a stack subclass that tracks the maximum stack size broke when the base class changed `push_many()` to a block transfer instead of calling `push()`; Holub argues against `extends` almost entirely, which is 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Overview](README.md) · Next → [Overriding vs hiding — the exact rules](02-overriding-rules-hiding.md)

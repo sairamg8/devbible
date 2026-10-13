@@ -176,6 +176,16 @@ When it encodes an invariant that overriding would break — template-method
 steps, security checks. Sparingly: if you find yourself policing subclasses
 with `final`, composition usually models the constraint better.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Variables (JLS chapter 4)](https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html) — Oracle: 4.12.4 `final` variables and definite assignment (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`static`](11-static/README.md) · Next → [`null` and `NullPointerException`](13-null-and-npe/README.md)

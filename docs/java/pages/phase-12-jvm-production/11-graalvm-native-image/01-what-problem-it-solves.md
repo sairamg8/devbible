@@ -134,3 +134,15 @@ Because the win is per-process, not per-request. Footprint and start-up are paid
 Packaging. Layered jars, `jarmode`, JRE base images, distroless, `jlink`, non-root users and image size are topic 10's, and a native build changes almost none of that reasoning — you still need a base image, you still should not run as root, and image size still matters. The only packaging fact that is native-image-specific is that the runtime layer disappears, which is why the Paketo native builder can use a `-tiny` run image with no JVM in it.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Native Image reference](https://www.graalvm.org/latest/reference-manual/native-image/) — GraalVM (*fetched, not read*)
+- **Also good:** [Introducing GraalVM Native Images (Spring Boot)](https://docs.spring.io/spring-boot/reference/packaging/native-image/introducing-graalvm-native-images.html) — Spring Boot reference (*fetched, not read*): [Runtime efficiency with Spring](https://spring.io/blog/2023/10/16/runtime-efficiency-with-spring/)
+- **Also good:** [Runtime efficiency with Spring](https://spring.io/blog/2023/10/16/runtime-efficiency-with-spring/)
+
+{/* LINKMAP:END */}

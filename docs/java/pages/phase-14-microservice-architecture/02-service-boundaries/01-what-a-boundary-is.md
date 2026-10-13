@@ -228,6 +228,17 @@ needs cross-team review, the codebase drifts into two half-consistent styles, an
 is accountable when it breaks. If two teams must own one service, that is evidence you
 have found either one boundary too few or one team too many.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Bounded Context](https://martinfowler.com/bliki/BoundedContext.html) — Martin Fowler: the DDD idea behind a boundary
+- **Also good:** [Microservices](https://martinfowler.com/articles/microservices.html) — Martin Fowler and James Lewis: componentization and business capabilities
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](README.md) · Next → [Bounded context](02-bounded-context.md)

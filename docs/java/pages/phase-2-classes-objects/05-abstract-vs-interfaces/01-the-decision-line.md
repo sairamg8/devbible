@@ -199,6 +199,18 @@ implementing that interface, and let classes that can't extend it
 implement the interface directly (composing a helper if they want the
 plumbing).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Abstract Methods and Classes](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html) — Oracle Java Tutorial: includes the "Abstract Classes Compared to Interfaces" section (*read*)
+- **Also good:** [Defining an Interface](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html) — Oracle Java Tutorial: default, static methods (*read*)
+- **Also good:** [Interfaces (JLS chapter 9)](https://docs.oracle.com/javase/specs/jls/se25/html/jls-9.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Abstract classes vs interfaces](README.md) · Next → [Default methods and the diamond](02-default-methods-and-the-diamond.md)

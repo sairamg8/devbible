@@ -270,3 +270,13 @@ the mitigation is not to argue with the framework but to make the JVM terminate 
 `-XX:+ExitOnOutOfMemoryError` calls `os::_exit(3)` before the catch block ever runs.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Eclipse Memory Analyzer (MAT)](https://eclipse.dev/mat/) — Eclipse project: the heap-dump analyzer: retained sizes, an automatic leak-suspects report, and who keeps objects from being collected; the front page does not mention the dominator tree (*read*)
+
+{/* LINKMAP:END */}

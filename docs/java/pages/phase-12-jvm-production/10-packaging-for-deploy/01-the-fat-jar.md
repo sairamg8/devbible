@@ -180,3 +180,15 @@ throughput, and anyone justifying it on throughput grounds has the right answer 
 reason.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Efficient Container Images (Spring Boot)](https://docs.spring.io/spring-boot/reference/packaging/container-images/efficient-images.html) — Spring Boot reference: layered jars (*fetched, not read*)
+- **Also good:** [JEP 483: Ahead-of-Time Class Loading and Linking](https://openjdk.org/jeps/483) — OpenJDK (*fetched, not read*): [Creating Docker images with Spring Boot 2.3.0.M1](https://spring.io/blog/2020/01/27/creating-docker-images-with-spring-boot-2-3-0-m1/)
+- **Also good:** [Creating Docker images with Spring Boot 2.3.0.M1](https://spring.io/blog/2020/01/27/creating-docker-images-with-spring-boot-2-3-0-m1/)
+
+{/* LINKMAP:END */}

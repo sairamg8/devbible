@@ -225,6 +225,17 @@ for a debug log, unacceptable for anything load-bearing.
 record carrying both values and collect that. All keep mutation inside the
 collector protocol.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [java.util.stream package summary — Stateless behaviors, Side-effects](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/stream/package-summary.html) — Java SE 25 API docs: the `Set` plus `map` example that gives nondeterministic results in parallel, and the preferred pattern of `filter` then `toList()` instead of `forEach` into a list (*read*)
+- **Also good:** [Parallelism (The Java Tutorials)](https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html) — The Java Tutorials: the `map(e -&gt; &#123; parallelStorage.add(e); return e; &#125;)` example and the interference example that throws `ConcurrentModificationException` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [← Prev: Parallel streams](09-parallel-streams.md) · [Next → `toList()` vs `collect(toList())`](11-tolist-vs-collectors.md)

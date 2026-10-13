@@ -226,6 +226,17 @@ translated* — but note modern application code leans unchecked even there
 up as `catch` blocks with business logic, or as `Result` plumbed through
 five layers that only the top one inspects.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Exceptional performance](https://shipilev.net/blog/2014/exceptional-performance/) — Aleksey Shipilev, last updated 2016-02-02: the stack trace is captured at construction and its cost grows with call-stack depth (about 83 µs at depth 1024 against 2 µs at depth 0 on JDK 7u40); a stackless or preallocated exception is far cheaper; rule of thumb around 10 to
+- **Also good:** [Optional](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Optional.html) — Java SE 25 API docs: the return type for "no result" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Checked exceptions inside lambdas](06-checked-exceptions-lambdas.md) · Next → [Where the global handler lives](08-global-handler.md)

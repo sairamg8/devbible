@@ -138,6 +138,16 @@ Value classes (money, ids, DTOs) have distinguishing state — override.
 Stateless services and singletons are distinguished by *role*, not state —
 the default identity form is fine and the override would say nothing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`Object`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html) — Javadoc: `toString` recommendation: a concise but informative representation that is easy to read (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [equals and hashCode](06-equals-hashcode/README.md) · Next → [Records](08-records/README.md)

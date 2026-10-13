@@ -200,6 +200,19 @@ that makes duplicate *inherited* fields a bug.
 Textual order — they interleave. The compiler concatenates them top-to-bottom
 into every non-delegating constructor ahead of its body.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Initializing Fields](https://docs.oracle.com/javase/tutorial/java/javaOO/initial.html) — Oracle Java Tutorial: static and instance initializer blocks and field initializers (*read*)
+- **Also good:** [Creation of New Class Instances (JLS 12.5)](https://docs.oracle.com/javase/specs/jls/se25/html/jls-12.html) — Oracle: the exact order (*read*)
+- **Also good:** [Providing Constructors](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html)
+- **Beyond the docs:** [MET05-J. Ensure that constructors do not call overridable methods](https://cmu-sei.github.io/secure-coding-standards/sei-cert-oracle-coding-standard-for-java/rules/methods-met/met05-j/) — SEI CERT Oracle Coding Standard for Java: quotes JLS 12.5: Java does not alter method dispatch while an object is being created, so an overriding method can run before the subclass is initialized and use uninitialized data; a constructor should call only static, final or 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Class anatomy](README.md) · Next → [Constructors and chaining](02-constructors-and-chaining.md)

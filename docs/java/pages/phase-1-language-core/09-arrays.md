@@ -203,6 +203,18 @@ It is a final field baked into the array type by the JLS, not a method —
 unlike `String.length()` and `Collection.size()`. Historical inconsistency;
 memorize it once.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Creating Arrays in Your Programs (dev.java)](https://dev.java/learn/language/constructs/basics/arrays/) — dev.java (*read*)
+- **Also good:** [Arrays (JLS chapter 10)](https://docs.oracle.com/javase/specs/jls/se25/html/jls-10.html) — Oracle: 10.5 states the `ArrayStoreException` rule with an example (*read*)
+- **Beyond the docs:** [Stringifying Java Arrays](https://www.infoworld.com/article/2160708/stringifying-java-arrays.html) — Dustin Marx, InfoWorld, 2010-11-30: `Arrays.toString` shows one level only (nested arrays print as `[Ljava.lang.Object;@...`), `deepToString` goes deep, both return "null" for a null array; covers only the printing half of our row
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Control flow and `switch` expressions](08-control-flow-switch/README.md) · Next → [Methods: overloading, varargs, pass-by-value](10-methods.md)

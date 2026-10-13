@@ -196,6 +196,17 @@ promote to the old generation and add pressure where collection is
 expensive — plus reset bugs. Pooling survives only where the resource itself
 is dear: connections, threads, large buffers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HotSpot Virtual Machine Garbage Collection Tuning Guide: Introduction](https://docs.oracle.com/en/java/javase/25/gctuning/introduction-garbage-collection-tuning.html) — Oracle: when the choice of collector matters and why GC cost grows with core count (throughput and pause time) (*read*)
+- **Beyond the docs:** [Understanding Classic Java Garbage Collection](https://www.infoq.com/articles/understand-classic-java-garbage-collection/) — Ben Evans, InfoQ, 2020-05-06: the generational hypothesis (short-lived temporary objects vs the long-lived working set) behind the young and old split, tracing from GC roots, concurrent vs parallel vs stop-the-world; "classic" means it describes the older coll
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [JIT compilation](07-jit-compilation.md) · Next → [Version managers](09-version-managers.md)

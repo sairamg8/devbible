@@ -197,6 +197,18 @@ coder byte, halving memory for Latin-1 content. Observable behaviour:
 nothing — it is the canonical example of an internal representation change
 hidden behind an immutable API.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`String`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html) — Javadoc: `intern`, `equals`, `formatted` (*read*)
+- **Also good:** [Strings (dev.java)](https://dev.java/learn/language/constructs/numbers-strings/strings/) — dev.java, creating strings and immutability, `equals` among the methods (*read*)
+- **Beyond the docs:** [JVM Anatomy Quark 10: String.intern()](https://shipilev.net/jvm/anatomy-quarks/10-string-intern/) — Aleksey Shipilëv, last updated 2019-03-03: how the native string table works, why `intern()` is slower than a hand-written deduplicator, and "do not use `String.intern()` without thinking very hard about it"; advanced, assumes you know what the pool is
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Strings](README.md) · Next → [Building and formatting](02-building-and-formatting.md)

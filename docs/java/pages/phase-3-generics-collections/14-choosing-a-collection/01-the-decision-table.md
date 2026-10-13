@@ -158,6 +158,17 @@ screens can sort two ways.
 other choice into a visible signal — a `TreeMap` in a diff *means
 something* — and reviewers read collection types as design intent.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Implementations (The Java Tutorials)](https://docs.oracle.com/javase/tutorial/collections/implementations/index.html) — The Java Tutorials: the interface-by-implementation table, "clearly the one to use for most applications" for `HashSet`, `ArrayList` and `HashMap`, shared traits (not synchronized, fail-fast, nulls allowed) and "when in doubt, measure" (*read*; JDK 8
+- **Also good:** [Outline of the Collections Framework](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/doc-files/coll-reference.html) — Java SE 25 API docs: one-line outline of every implementation, wrappers and concurrent classes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Choosing a collection](README.md) · Next → [Worked scenarios](02-worked-scenarios.md)

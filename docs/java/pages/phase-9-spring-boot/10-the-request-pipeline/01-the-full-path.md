@@ -253,6 +253,16 @@ call `registry.addInterceptor(...)` in a `WebMvcConfigurer`. They are two
 independent orderings in two different registries, and no `@Order` on an
 interceptor bean affects the second one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Interceptors](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-config/interceptors.html) — Spring Framework reference: `HandlerInterceptor` registration and its place after the DispatcherServlet (*fetched, not read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Filters](02-filters.md)

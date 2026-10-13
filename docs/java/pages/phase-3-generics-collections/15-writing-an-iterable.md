@@ -154,6 +154,18 @@ An internal-iteration shortcut (`thing.forEach(x -> ...)`) without writing
 the loop; the default just runs the enhanced for internally (documented).
 Override only when the structure can iterate itself faster.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Iterable](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Iterable.html) — Java SE 25 API docs: the contract for use in for-each, `forEach` as an enhanced for loop over `this` (*read*)
+- **Also good:** [Iterator](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Iterator.html) — Java SE 25 API docs: `remove` is optional, once per `next()`, default throws `UnsupportedOperationException` (*read*)
+- **Beyond the docs:** [Implement Iterable Interface to work with for-each loops in Java](https://techiedelight.com/implement-iterable-interface-for-each-loops/) — Techie Delight: starts with a class that implements only `Iterator` (no for-each), then fixes it by implementing `Iterable` and returning a fresh iterator each call; a short basics example, no author or date shown
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Choosing a collection](14-choosing-a-collection/README.md) · [Next → Legacy types](16-legacy-types.md)

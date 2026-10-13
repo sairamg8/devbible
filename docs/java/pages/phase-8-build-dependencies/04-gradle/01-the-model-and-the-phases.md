@@ -212,6 +212,17 @@ and outputs, so it can prove which tasks are independent. Maven parallelises
 at module level (`-T`) because the lifecycle, not a graph, defines what
 happens inside a module — there is no finer structure to exploit.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Gradle Basics](https://docs.gradle.org/current/userguide/gradle_basics.html) — Gradle User Manual (current, 9.8.1 on the fetch date): projects, tasks, build scripts, dependencies, project layout and the wrapper (*read*)
+- **Also good:** [Build Cache](https://docs.gradle.org/current/userguide/build_cache.html) — Gradle User Manual: the cache stores task outputs locally or remotely for reuse when inputs match, while up-to-date checks only reuse the previous build in the same workspace (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Gradle](README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [The DSL and the script](02-the-dsl-and-the-script.md)

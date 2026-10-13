@@ -146,6 +146,19 @@ None — no reflection, no boxing, no indirection. It is a purely syntactic
 feature of `javac` (topic on what `javac` does: almost everything here,
 nothing at run time).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Local Variable Type Inference: Style Guidelines](https://openjdk.org/projects/amber/guides/lvti-style-guide) — Stuart Marks, OpenJDK Amber, March 2018: seven numbered guidelines, for example choose informative names, minimise scope, use `var` when the initializer is clear (*read*)
+- **Also good:** [LVTI FAQ](https://openjdk.org/projects/amber/guides/lvti-faq) — OpenJDK Amber (*read*): [Using the Var Type Identifier](https://dev.java/learn/language/constructs/basics/using-var/)
+- **Also good:** [Using the Var Type Identifier](https://dev.java/learn/language/constructs/basics/using-var/)
+- **Beyond the docs:** [First Contact With 'var' In Java 10](https://nipafx.dev/java-10-var-type-inference/) — Nicolai Parlog (nipafx), 2017-11-16: what the compiler infers from the initializer, where `var` is allowed and why not for fields and methods, and the point that an IDE can show the inferred type but a code review cannot; written for Java 10
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Autoboxing and the integer cache](02-autoboxing-integer-cache/README.md) · Next → [Operators, division and overflow](04-operators-overflow/README.md)

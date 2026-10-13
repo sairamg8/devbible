@@ -280,3 +280,13 @@ fails, rather than investigated. That is the failure mode worth naming in review
 ugliness, but that the test has lost the ability to be wrong in a way anyone would notice.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object Mother](https://martinfowler.com/bliki/ObjectMother.html) — Martin Fowler, 2006-10-24: a factory for standard example objects; names the coupling cost of many tests sharing exact data (*read*)
+
+{/* LINKMAP:END */}

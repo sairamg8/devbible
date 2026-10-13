@@ -208,6 +208,17 @@ to end-of-stream, not to end-of-message. Bounded config files: fine.
 Anything sized by the outside world: stream it (`transferTo`, chunked
 reads) or enforce a limit with `readNBytes`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JEP 400 and the Default Charset](https://inside.java/2021/10/04/the-default-charset-jep400/) — Naoto Sato, Inside Java, 2021-10-04: from JDK 18 UTF-8 is the default on every platform; a `FileReader` without a charset used to decode differently on Windows and macOS; `-Dfile.encoding=COMPAT` restores the old behavior; `System.out` still follows the host (*read*)
+- **Beyond the docs:** [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/) — Joel Spolsky, 2003-10-08: bytes versus code points, why a string without a known encoding makes no sense, and wrong-encoding garbling; language-neutral, no Java
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Path and Files](02-path-and-files.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [`HttpClient`](04-httpclient.md)

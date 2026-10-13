@@ -142,6 +142,18 @@ still run. The cost is that the library contains historical layers, and
 "it's in the JDK" is not a currency signal; the Javadoc's deprecation and
 "since" metadata is.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Module `java.base`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/module-summary.html) — Javadoc: every exported package with a one-line description (*read*)
+- **Also good:** [Java SE 25 API index](https://docs.oracle.com/en/java/javase/25/docs/api/index.html) — Javadoc (*headings only*): [dev.java learn](https://dev.java/learn/)
+- **Also good:** [dev.java learn](https://dev.java/learn/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Version managers](09-version-managers.md) · Next → [The module system (JPMS)](11-module-system.md)

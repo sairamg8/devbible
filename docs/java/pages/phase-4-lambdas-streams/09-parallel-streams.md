@@ -225,6 +225,17 @@ No — both produce a parallel pipeline; `parallel()` just flips the mode on
 an existing stream (the whole pipeline executes in the mode set when the
 terminal starts; the last `parallel()`/`sequential()` call wins).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [When to use parallel streams](https://gee.cs.oswego.edu/dl/html/StreamParallelGuidance.html) — Doug Lea with contributions from Brian Goetz, Paul Sandoz, Aleksey Shipilev, Heinz Kabutz and others, dated 1 September 2014 and marked as a draft: independent per-element work, a splittable source, and roughly N times Q of 10,000 or more; `ArrayList` and arrays split well, `LinkedList` does not; avoid small workloads and blocking I/O (*read*)
+- **Also good:** [Parallelism (The Java Tutorials)](https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html) — The Java Tutorials: side effects, interference, stateful lambdas (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Streams vs loops](08-streams-vs-loops.md) · Next → [Stateful lambdas and side effects](10-stateful-lambdas.md)

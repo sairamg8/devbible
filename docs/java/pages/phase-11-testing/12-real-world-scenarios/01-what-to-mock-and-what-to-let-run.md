@@ -251,3 +251,14 @@ Whenever the thing under test is expressed in SQL or in mapping. A mocked reposi
 Yes, but narrowly: when the type is a stable, specified part of the platform and the alternative is genuinely unusable — and even then it is a trade, not a free move. A more honest framing is that there is almost always a real substitute you have overlooked: `Clock.fixed` instead of a mocked `Clock`, `@TempDir` instead of a mocked filesystem, an in-process HTTP stub instead of a mocked HTTP client, the vendor's own test double if it ships one. The question to ask is "what does the library itself recommend for testing?" — for HTTP clients, Spring's own answer is a mock web server, which is the subject of [03b](03b-wiremock-and-mockwebserver.md).
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Test Doubles (Software Engineering at Google, ch. 13)](https://abseil.io/resources/swe-book/html/ch13.html) — Andrew Trenk and Dillon Bly, edited by Tom Manshreck: early mocking-framework enthusiasm produced costly, bug-poor tests; prefer real implementations when fast and deterministic, and fakes over stubbing (*read*)
+- **Also good:** [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html) — Martin Fowler, 2007-01-02 (*read*)
+
+{/* LINKMAP:END */}

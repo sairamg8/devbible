@@ -209,3 +209,14 @@ anyone assumed: catastrophic regex backtracking, formatting in a hot loop, or an
 `equals` called from inside a collection lookup.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JDK Flight Recorder (dev.java)](https://dev.java/learn/jvm/jfr/) — dev.java, Oracle: what JFR records and how to start it (*fetched, unverified*: the page is script-rendered, my fetcher returned no body text, so the description is the researcher's and was not checked)
+- **Beyond the docs:** [Flame Graphs](https://www.brendangregg.com/flamegraphs.html) — Brendan Gregg, who created them: the x-axis is stack population sorted alphabetically, not time, so a wider frame appeared in more samples; y-axis is stack depth (*read*)
+
+{/* LINKMAP:END */}

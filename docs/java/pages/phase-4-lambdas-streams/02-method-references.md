@@ -234,6 +234,17 @@ receiver lookup, ambiguous overloads, and chained calls — in each, the
 reference is either impossible or *less* readable, and readability is the
 only reason references exist.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Method References](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html) — The Java Tutorials: the four kinds with the equivalent lambda for the arbitrary-object form: `(a, b) -&gt; a.compareToIgnoreCase(b)` (*read*)
+- **Also good:** [State of the Lambda](https://cr.openjdk.org/~briangoetz/lambda/lambda-state-final.html) — OpenJDK, September 2013: method references as lambdas that name an existing method, with `Person::getName` as the example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Lambdas and functional interfaces](01-lambdas-functional-interfaces/README.md) · Next → [The stream pipeline](03-stream-pipeline/README.md)

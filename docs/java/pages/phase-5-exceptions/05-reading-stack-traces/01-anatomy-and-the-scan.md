@@ -181,6 +181,18 @@ or altered (`Unknown Source`); instrumentation/AOP weaving shifting lines;
 or an inlined/synthetic frame from a lambda or bridge method. Verify the
 artifact version first — it's the usual answer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reading a stack trace properly](https://codingthewheel.com/articles/reading-a-stack-trace/) — Coding the Wheel: find the first frame in your own code, read the message, and in a "Caused by" chain the last one is the root cause; a general skill with Java examples, also covers Python and Node.js; no author or date shown
+- **Also good:** [Chained Exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/chained.html) — The Java Tutorials: `getCause`, `initCause`, and a `getStackTrace()` loop over `StackTraceElement` (*read*)
+- **Also good:** [StackTraceElement](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/StackTraceElement.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Reading a stack trace fast](README.md) · Next → [The pathologies](02-the-pathologies.md)

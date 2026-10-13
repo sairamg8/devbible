@@ -250,3 +250,15 @@ absolutely have a big ball of mud spread across fourteen repositories —
 **12 · The distributed monolith** *(not written yet)* is that page.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Monolith First](https://martinfowler.com/bliki/MonolithFirst.html) — Martin Fowler, 2015-06-03: build a monolith first because boundaries are hard to predict early (*read*)
+- **Also good:** [Spring Modulith](https://docs.spring.io/spring-modulith/reference/) — Spring: module boundaries inside one deployable
+- **Beyond the docs:** [Microservice Trade-Offs](https://martinfowler.com/articles/microservice-trade-offs.html) — Martin Fowler: what microservices buy and cost, with distribution and eventual consistency listed as the main costs
+
+{/* LINKMAP:END */}

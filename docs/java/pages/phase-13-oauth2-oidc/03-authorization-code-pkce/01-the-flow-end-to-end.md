@@ -228,6 +228,20 @@ client into a public one and gives up the binding that stops another client rede
 codes; removing PKCE reopens code injection. The interesting part of this question is that
 one of the three is conditionally redundant and two are not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PKCE](https://oauth.net/2/pkce/) — oauth.net: the extension in brief, with links to the RFC
+- **Also good:** [RFC 7636, PKCE](https://datatracker.ietf.org/doc/html/rfc7636) — IETF: the verifier/challenge definition
+- **Also good:** [RFC 9700, OAuth 2.0 Security Best Current Practice](https://datatracker.ietf.org/doc/html/rfc9700)
+- **Also good:** [Authorization Code Flow with Proof Key for Code Exchange (PKCE)](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce)
+- **Beyond the docs:** [Protecting Apps with PKCE](https://www.oauth.com/oauth2-servers/pkce/) — OAuth 2.0 Simplified (Parecki's book site): the client makes a per-request secret and reuses it at the code exchange, so a stolen code is useless; recommends PKCE for every client type; page shows no date
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [Why a code at all](01b-why-a-code-at-all.md)

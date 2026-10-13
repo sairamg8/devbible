@@ -286,3 +286,14 @@ a cluster-coherence problem the moment there are two instances. None of that is 
 of it arrives with the annotation and none of it is visible in the diff.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cache Abstraction](https://docs.spring.io/spring-framework/reference/integration/cache.html) — Spring Framework reference: `@Cacheable`, `@CacheEvict` (*fetched, not read*)
+- **Beyond the docs:** [Using a cache](https://www.jhipster.tech/using-cache) — JHipster docs: do not use Spring Cache and the Hibernate second-level cache for the same objects; Spring Cache for aggregates or DTOs, Hibernate for entities; page shows "Last updated on Feb 10, 2017"
+
+{/* LINKMAP:END */}

@@ -216,6 +216,18 @@ argues for at the class level.
    restart, not months later on a JDK upgrade. `HashMap` merely doesn't
    promise order; the immutable factories actively scramble it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [List — Unmodifiable Lists](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html) — Java SE 25 API docs: `List.of` and `List.copyOf`: mutators throw `UnsupportedOperationException`, no nulls, value-based (*read*)
+- **Also good:** [Collection — Unmodifiable Collections and View Collections](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collection.html) — Java SE 25 API docs: "unmodifiable is not necessarily immutable", and an unmodifiable view's backing collection can still change (*read*)
+- **Beyond the docs:** [Stop Mixing Up Unmodifiable Views and Immutable Lists](https://dev.to/amanshaw4511/stop-mixing-up-unmodifiable-views-and-immutable-lists-39jg) — Aman, DEV Community, 2025-12-24: a short example where `unmodifiableList` follows a later `add` on the source but `List.copyOf` does not; its thread-safety remark is the author's, not checked against the docs
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Iteration and `ConcurrentModificationException`](11-concurrent-modification/README.md) · Index: [Phase 3 — Generics and collections](README.md) · Next → [`Collections` and `Arrays` utilities](13-collections-arrays-utilities.md)

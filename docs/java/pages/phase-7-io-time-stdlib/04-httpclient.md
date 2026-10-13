@@ -205,6 +205,17 @@ Follow a redirect from HTTPS to plain HTTP — a downgrade that would leak
 what the original secure request carried. `NORMAL` follows everything
 else automatically; `NEVER` (the default) hands every 3xx back to you.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to the Java HTTP Client](https://openjdk.org/groups/net/httpclient/intro.html) — OpenJDK Net group: `send` blocks, `sendAsync` returns a `CompletableFuture`, per-request timeout in the builder, body handlers and publishers (*read*)
+- **Also good:** [HttpClient](https://docs.oracle.com/en/java/javase/25/docs/api/java.net.http/java/net/http/HttpClient.html) — Oracle, Java SE 25 API: if no connect timeout is set on the builder, `connectTimeout()` returns an empty `Optional`; the page does not state the request-timeout default, which lives in `HttpRequest.Builder.timeout` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Streams, buffers and charsets](03-streams-buffers-charsets.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [JSON with Jackson](05-json-jackson/README.md)

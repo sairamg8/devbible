@@ -264,6 +264,17 @@ constraints then serve two masters: JPA reads some of them for schema
 generation, so a `@Size` you tighten for the API can alter DDL. The DTO is one
 extra class and it buys all three back.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Java Bean Validation](https://docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html) — Spring Framework reference: wiring Bean Validation into Spring (*fetched, not read*)
+- **Beyond the docs:** [Validation with Spring Boot — the Complete Guide](https://reflectoring.io/bean-validation-with-spring-boot/) — Tom Hombergs, Reflectoring, updated 2021-08-05: `@Valid` versus `@Validated`, a custom validator, and handling validation errors in controllers (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Validation](README.md) · Phase: [Phase 9 — Spring Boot and the web](../README.md) · Next → [The constraints themselves](02-the-constraints.md)

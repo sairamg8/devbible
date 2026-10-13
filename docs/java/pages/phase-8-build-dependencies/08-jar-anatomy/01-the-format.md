@@ -235,6 +235,18 @@ restrictions for an executable jar without a command-line flag.
 `Add-Opens`/`Add-Exports` and `Launcher-Agent-Class` belong on the same
 list, and `Sealed` constrains where a package's classes may come from.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Working with Manifest Files](https://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html) — The Java Tutorials: `Main-Class` sets the entry point and `Class-Path` adds other jars (*read*)
+- **Also good:** [Apache Maven Shade Plugin](https://maven.apache.org/plugins/maven-shade-plugin/) — Apache Maven: packages the artifact with its dependencies into an uber-jar and can rename (relocate) packages (*read*)
+- **Beyond the docs:** [Creating self-contained executable JARs](https://dev.to/nfrankel/creating-self-contained-executable-jars-388d) — Nicolas Fränkel, DEV Community, 2021-01-10 (footer says first published 2020-01-10 on his blog): compares the Assembly plugin, the Shade plugin with resource transformers for `spring.factories` and Log4j2 data, and Spring Boot's nested `BOOT-INF/lib`; shading itself gets only a brief quote
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Jar anatomy](README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [Fat jars: three strategies](02-fat-jars.md)

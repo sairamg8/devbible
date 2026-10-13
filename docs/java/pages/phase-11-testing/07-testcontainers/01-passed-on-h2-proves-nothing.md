@@ -231,3 +231,15 @@ mitigation is asymmetric too: you can tolerate an environment that produces fals
 but an environment that can produce false greens has to be replaced rather than worked
 around, because there is no amount of discipline that makes a silent failure visible.
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PostgreSQL module](https://java.testcontainers.org/modules/databases/postgres/) — Testcontainers for Java (*fetched, not read*)
+- **Also good:** [Testcontainers support (Spring Boot)](https://docs.spring.io/spring-boot/reference/testing/testcontainers.html) — Spring Boot reference: `@ServiceConnection` (*fetched, not read*)
+- **Beyond the docs:** [Testcontainers with Spring Boot: setup with as little overhead as possible](https://maciejwalkowiak.com/blog/testcontainers-spring-boot-setup/) — Maciej Walkowiak, 2023-02-22: compares `@DynamicPropertySource`, an initializer and a composed annotation, and shows starting containers once and in parallel to avoid per-class startup cost; does not cover `@ServiceConnection` or the Testcontainers reuse featu
+
+{/* LINKMAP:END */}

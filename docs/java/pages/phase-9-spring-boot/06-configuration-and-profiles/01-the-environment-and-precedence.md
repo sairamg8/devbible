@@ -236,6 +236,18 @@ An instance identifier used as a distributed-lock owner, a cache namespace or a
 persistence seed must come from something stable such as the platform-supplied
 hostname, not from `${random.uuid}`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Externalized Configuration](https://docs.spring.io/spring-boot/reference/features/external-config.html) — Spring Boot reference: the property-source order, binding, `@ConfigurationProperties` (*fetched, not read*)
+- **Also good:** [Profiles](https://docs.spring.io/spring-boot/reference/features/profiles.html) — Spring Boot reference (*fetched, not read*)
+- **Beyond the docs:** [Configuration Properties in Spring Boot](https://reflectoring.io/spring-boot-configuration-properties/) — Tom Hombergs, Reflectoring, 2019-03-18: type-safe binding, activating the class, unknown or unconvertible properties, validation at startup; does not cover profiles or constructor binding (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Configuration and profiles](README.md) · Phase: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Config data: files, locations and imports](02-config-data-files-and-imports.md)

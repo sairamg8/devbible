@@ -168,6 +168,18 @@ long exact = orders.stream().mapToLong(Order::totalCents)
    `LongStream.average()` returning `OptionalDouble` forces the
    empty-stream decision at the call site. Two APIs, same honesty question.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [IntStream](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/stream/IntStream.html) — Java SE 25 API docs: `sum()` is documented as `reduce(0, Integer::sum)`; `boxed()` and `mapToObj` are the way back to object streams (*read*)
+- **Also good:** [Reduction (The Java Tutorials)](https://docs.oracle.com/javase/tutorial/collections/streams/reduction.html) — The Java Tutorials: `mapToInt(...).sum()` beside `reduce(0, (a, b) -&gt; a + b)`, and why `reduce` suits single values while `collect` mutates a container (*read*; JDK 8 era)
+- **Beyond the docs:** [Java Stream Performance — Your Ideas](https://nipafx.dev/java-stream-performance-your-ideas/) — Nicolai Parlog, 2015-09-18: benchmarks show the dominant factor is primitives versus objects, and a reader's claim that `mapToInt` before `max` is about twice as fast is checked against the post's own numbers, which show roughly 1.6x; the author reports unre
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Collectors](05-collectors/README.md) · Index: [Phase 4 — Lambdas, streams and Optional](README.md) · [Next → `Optional` used correctly](07-optional/README.md)

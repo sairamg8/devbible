@@ -177,6 +177,17 @@ The month index: `Calendar` months are 0-based, `java.time` months are
 1-based. `LocalDate.of(year, month + 1, day)` — or better, avoid the
 field-by-field seam entirely with `calendar.toInstant().atZone(...)`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [java.time package summary](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/time/package-summary.html) — Oracle, Java SE 25 API: `Instant` is essentially a numeric timestamp, `LocalDateTime` has no time-zone, `ZonedDateTime` has one; `Instant` is closest to `Date`, `ZonedDateTime` to `GregorianCalendar` (*read*)
+- **Beyond the docs:** [Storing UTC is not a silver bullet](https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/) — Jon Skeet, 2019-03-27: the counter-case to "store an `Instant`": for future events keep the local time plus zone ID and derive the instant, since zone rules can change; machine-generated timestamps are fine as instants
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [java.time](README.md) · Index: [java.time](README.md) · Next → [Machine vs calendar time](02-machine-vs-calendar-time.md)

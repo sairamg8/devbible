@@ -212,6 +212,17 @@ The integer the OS reports to the parent — 0 for success by convention.
 `main` returning normally exits 0; `System.exit(n)` sets it explicitly.
 Shell scripts, CI gates and restart policies branch on it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`System`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/System.html) — Javadoc: `getProperty`, `getenv` and the standard property list (*read*)
+- **Also good:** [A Deep Dive into JVM Start-up](https://inside.java/2025/01/28/jvm-start-up/) — Billy Korando, Inside Java, 2025-01-28: traces what HotSpot does from the `java` command to printing Hello World on JDK 23: initialization, class loading, linking, GC selection, the CDS archive (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Packages and the classpath](05-packages-classpath/README.md) · Next → [JIT compilation](07-jit-compilation.md)

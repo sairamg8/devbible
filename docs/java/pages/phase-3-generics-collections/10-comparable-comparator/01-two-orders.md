@@ -164,6 +164,18 @@ used doesn't throw — it just returns garbage indices.
    record deserves a natural order you implement it yourself (usually by
    delegating to `Integer.compare`/`thenComparing` chains over components).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Comparator](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Comparator.html) — Java SE 25 API docs: the sign and transitivity rules, "consistent with equals", `comparing`, `thenComparing` and `nullsFirst` (*read*)
+- **Also good:** [Comparable](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Comparable.html) — Java SE 25 API docs: natural ordering, the signum and transitivity rules, "consistent with equals" and `BigDecimal` (4.0 vs 4.00) as the standing exception (*read*)
+- **Beyond the docs:** [Tidbits #2 from JCrete 2022 — TimSort](https://horstmann.com/unblog/2022-07-25/index.html) — Cay Horstmann: TimSort can detect an ordering that is not a total order and throws that exception; shows a pathological comparator, a JDK bug fixed in Java 9, and recommends `Comparator.comparing` over handwritten ones; the page shows no date (t
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Comparable vs Comparator](README.md) · Next → [Building comparators](02-building-comparators.md)

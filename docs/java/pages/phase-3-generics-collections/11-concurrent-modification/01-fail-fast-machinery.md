@@ -169,6 +169,18 @@ concurrent iteration belongs to the concurrent collections in
    `iterator()`/`hasNext()`/`next()`; the hidden iterator carries the same
    `expectedModCount` check as an explicit one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ArrayList](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/ArrayList.html) — Java SE 25 API docs: fail-fast iterators throw unless the change goes through the iterator's own `remove` or `add`; best-effort only, "to detect bugs"; `set` is not structural (*read*)
+- **Also good:** [ConcurrentModificationException](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/ConcurrentModificationException.html) — Java SE 25 API docs: the exception "does not always indicate" another thread; one thread can trigger it; fail-fast is best-effort and "should be used only to detect bugs" (*read*)
+- **Beyond the docs:** [Solving ConcurrentModificationException in Java](https://debugly.pages.dev/blog/posts/concurrentmodificationexception-java-guide/) — Debugly blog, 2025-12-15 (no author shown): the `modCount` check on each `next()`, then `it.remove()`, `removeIf` (preferred), backward index loop and collect-then-`removeAll`; says the exception often has nothing to do with threads
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Iteration and `ConcurrentModificationException`](README.md) · Next → [The safe patterns](02-safe-patterns.md)

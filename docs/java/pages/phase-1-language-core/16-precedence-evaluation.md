@@ -203,6 +203,17 @@ When both operands' side effects must occur regardless of the first's result
 — e.g. two validations that each record errors. It's rare enough that it
 deserves a comment; default to `&&`/`||`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Evaluation Order (JLS chapter 15)](https://docs.oracle.com/javase/specs/jls/se25/html/jls-15.html) — Oracle: 15.7: operands are evaluated left to right, and argument lists too (15.7.4) (*read*)
+- **Also good:** [Operator Precedence in Java](https://introcs.cs.princeton.edu/java/11precedence/) — Princeton introcs: a precedence table written for Java 11 and the note that the JLS has no explicit table, it is inferred from the grammar (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Naming and idiom](15-naming-idiom.md) · Next → [Phase 2 — Classes and objects](../phase-2-classes-objects/README.md)

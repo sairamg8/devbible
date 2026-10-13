@@ -280,3 +280,15 @@ concept of direct buffers or of the native allocator underneath everything. It i
 answer to "what does JVMS define"; it is the wrong answer to "why is my pod being killed".
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Troubleshooting Guide for JDK 25](https://docs.oracle.com/en/java/javase/25/troubleshoot/) — Oracle: diagnosing memory problems and native memory (*fetched, not read*)
+- **Beyond the docs:** [JVM Anatomy Quark #12: Native Memory Tracking](https://shipilev.net/jvm/anatomy-quarks/12-native-memory-tracking/) — Aleksey Shipilëv, last updated 2019-09-03: turns on `-XX:NativeMemoryTracking=summary` for a tiny-heap Hello World and shows the rest of the process split into GC, class (metaspace), thread, code and internal memory, and what shrinking each one costs; a JDK 12 to 13 era po
+- **Also good:** [JVM Anatomy Quarks](https://shipilev.net/jvm/anatomy-quarks/) — Aleksey Shipilëv: the series index of 30 entries; others cover TLAB allocation and GC design (judged from titles only, *headings only*)
+
+{/* LINKMAP:END */}

@@ -218,6 +218,17 @@ They removed the last common excuse for extending-for-reuse: shared
 behaviour can live on the interface itself, so "I extended it to inherit
 helpers" no longer justifies implementation coupling.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Interfaces and Inheritance (Java Tutorial)](https://docs.oracle.com/javase/tutorial/java/IandI/index.html) — Oracle (*read*)
+- **Beyond the docs:** [Why extends is evil](https://www.infoworld.com/article/2160788/why-extends-is-evil.html) — Allen Holub, InfoWorld, 2003-08-01: argues for programming to interfaces and, for a stack built on `ArrayList`, encapsulating the data structure instead of subclassing; pairs with T02-03, same article, different half
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Designing immutable classes](12-immutable-design/README.md) · Next → [Object lifecycle](14-object-lifecycle.md)

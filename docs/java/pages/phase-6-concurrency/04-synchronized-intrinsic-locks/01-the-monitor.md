@@ -187,6 +187,17 @@ into a queue for the whole service. Exception: when the I/O *is* the
 guarded resource (one shared connection), in which case own it with a
 dedicated worker instead ([confinement](../03-race-conditions/03-the-cures.md)).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Intrinsic Locks and Synchronization](https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html) — The Java Tutorials: every object has an intrinsic lock, and it is reentrant (*read*)
+- **Beyond the docs:** [LCK00-J. Use private final lock objects to synchronize classes that may interact with untrusted code](https://cmu-sei.github.io/secure-coding-standards/sei-cert-oracle-coding-standard-for-java/rules/locking-lck/lck00-j/) — SEI CERT Oracle Coding Standard for Java: why `synchronized (this)` and synchronized methods let outside code hold your lock, and what the private final lock buys; the page shows no date
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [`synchronized` and intrinsic locks](README.md) · Next → [Visibility and happens-before](02-visibility-and-happens-before.md)

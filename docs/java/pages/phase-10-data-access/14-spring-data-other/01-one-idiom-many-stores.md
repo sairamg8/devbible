@@ -281,3 +281,14 @@ count cheaply?**
 The types are shared across modules precisely so this choice is available everywhere.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Redis Repositories](https://docs.spring.io/spring-data/redis/reference/repositories.html) — Spring Data Redis reference (*fetched, not read*)
+- **Read this:** [MongoDB Repositories](https://docs.spring.io/spring-data/mongodb/reference/repositories.html)
+
+{/* LINKMAP:END */}

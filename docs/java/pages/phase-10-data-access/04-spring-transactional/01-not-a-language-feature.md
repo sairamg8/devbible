@@ -279,3 +279,15 @@ second is far worse, because it works.
 ---
 
 Index: [04 · Spring @Transactional](README.md) · Next → [2 · The proxy](02-the-proxy.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using @Transactional](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html) — Spring Framework reference: in proxy mode only external calls are intercepted, so self-invocation gives no transaction; method visibility rules; `aspectj` mode as the escape (*read*)
+- **Also good:** [Proxying Mechanisms](https://docs.spring.io/spring-framework/reference/core/aop/proxying.html) — Spring Framework reference (*fetched, not read*)
+- **Beyond the docs:** [Spring Transaction Management: @Transactional In-Depth](https://www.marcobehler.com/guides/spring-transaction-management-transactional-in-depth) — Marco Behler, last updated 2022-06-03: proxy types, the self-invocation pitfall and all seven propagation modes; the rollback section is a placeholder ("will be handled in the next revision") and `readOnly` appears only in a comment reply, so neither of those two point
+
+{/* LINKMAP:END */}

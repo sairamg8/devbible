@@ -177,6 +177,18 @@ sources) and the longest patch runway; 21 → 25 is a routine hop. Against:
 nothing structural — only scheduling. The anti-pattern is skipping *two* LTS
 lines later under CVE pressure instead of one now under calm.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Oracle Java SE Support Roadmap](https://www.oracle.com/java/technologies/java-se-support-roadmap.html) — Oracle: the vendor's own Premier Support dates per release (JDK 25 until September 2030, Extended Support until September 2033, in the table I read) and the free-use licence terms for Oracle JDK 25 (*read*)
+- **Also good:** [JDK project page](https://openjdk.org/projects/jdk/) — OpenJDK: every release from 10 to 28 with its GA date (JDK 27 GA 2026/09/15, 28 in development), each linking to its JEP list (*read*)
+- **Beyond the docs:** [Java Version and LTS Timeline](https://hidekazu-konishi.com/entry/java_version_and_lts_timeline.html) — Hidekazu Konishi, personal site, first published 2026-07-26, updated 2026-10-12: release history plus a per-distribution support table (Temurin, Corretto, Red Hat, Microsoft) with sources linked, and the point that "end of life" depends on which build you run; its forward-looking LTS claims are the author's re
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [JDK vs JRE vs JVM](02-jdk-jre-jvm.md) · Index: [Phase 0 — The platform and the JVM](README.md)

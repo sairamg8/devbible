@@ -172,6 +172,19 @@ conditions, boolean combinations — rather than on one value's finite cases.
 The switch's advantages (exhaustiveness, per-case arms) only exist when
 there is a closed set of cases to enumerate.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Branching with Switch Expressions (dev.java)](https://dev.java/learn/language/constructs/basics/switch-expression/) — dev.java: arrow labels, `yield`, and enum exhaustiveness, including the default the compiler adds that throws `IncompatibleClassChangeError` if a constant is added later (*read*)
+- **Also good:** [JEP 361: Switch Expressions](https://openjdk.org/jeps/361) — OpenJDK (*read*): [Control Flow Statements](https://dev.java/learn/language/constructs/basics/controlling-flow/)
+- **Also good:** [Control Flow Statements](https://dev.java/learn/language/constructs/basics/controlling-flow/)
+- **Beyond the docs:** [Definitive Guide To Switch Expressions In Java 13](https://nipafx.dev/java-13-switch-expressions/) — Nicolai Parlog (nipafx), 2019-08-16: arrows mean no fall-through, `yield` supplies a block's value, and an enum switch without `default` gets a compiler-added throwing default to guard against later constants; written for the Java 13 preview, so it needs `--enable-pr
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Control flow and the modern switch](README.md) · Next → [Patterns, null and the legacy switch](02-patterns-null-and-legacy.md)

@@ -187,6 +187,17 @@ Nothing visible — `PrintStream` catches the `IOException` and sets an error fl
 **★ A grader pipes a file to your program; it worked when you typed input manually but now throws. Most likely causes?**
 EOF semantics (typed sessions never hit EOF mid-protocol; a file does — missing `hasNext` guards), a trailing-newline difference on the last line, or a locale/charset mismatch between the file and the scanner. All three are the same lesson: piped input exercises boundaries interactive input hides.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Scanner](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Scanner.html) — Oracle, Java SE 25 API: tokens split on whitespace by default (`useDelimiter` changes it); `nextLine()` returns the rest of the current line (*read* the first 100,000 of 102,012 characters)
+- **Beyond the docs:** [Be Careful with Scanner Methods in Java](https://therenegadecoder.com/code/be-careful-with-scanner-methods-in-java/) — Jeremy Grifski, The Renegade Coder, published 2019-02-11, updated 2020-05-26: `nextInt()` leaves the newline, so the next `nextLine()` returns an empty string; fix with an extra `nextLine()` or parse a whole line
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [ProcessBuilder](10-processbuilder.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [NIO channels and selectors](12-nio-channels-selectors.md)

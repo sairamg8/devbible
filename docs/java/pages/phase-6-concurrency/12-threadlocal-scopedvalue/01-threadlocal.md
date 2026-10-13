@@ -216,6 +216,17 @@ values can only be cleared by code running *on* the leaking thread, which
 is why cleanup must be structural (`finally`, filters, executor wrappers)
 rather than an admin task.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JEP 506: Scoped Values](https://openjdk.org/jeps/506) — OpenJDK: Release 25, Closed / Delivered; thread-locals can be changed at any time, may hold data too long and are costly to pass to child threads, so scoped values are write-once with a bounded lifetime (*read* the header and motivation)
+- **Beyond the docs:** [Scoped Values in Java](https://www.happycoders.eu/java/scoped-values/) — Sven Woltmann, HappyCoders, last updated 2026-09-30: a comparison table plus the point that a forgotten `remove()` is a classic leak in a thread pool while a scoped value is released when its block ends; finalized in 25
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Overview](README.md) · Index: [ThreadLocal and ScopedValue](README.md) · Next → [`ScopedValue` — the 25-era replacement](02-scopedvalue.md)

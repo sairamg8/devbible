@@ -156,6 +156,19 @@ entirely, leaving only targeted `--add-opens`/`--add-exports`. This pair is
 why "it ran on 11 but crashes on 17" almost always ends at a dependency
 upgrade.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JEP 261: Module System](https://openjdk.org/jeps/261) — OpenJDK: the design goals and the rules, including how module paths differ from class paths (*read*)
+- **Also good:** [Project Jigsaw quick start](https://openjdk.org/projects/jigsaw/quick-start) — OpenJDK, a worked `module-info.java` example (*read*): [`jlink`](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jlink.html)
+- **Also good:** [`jlink`](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jlink.html)
+- **Beyond the docs:** [Code-First Java Module System Tutorial](https://nipafx.dev/java-module-system-tutorial/) — Nicolai Parlog (nipafx), 2017-10-03: `module-info.java`, `requires`, `exports`, `opens`, `uses`/`provides`, and module path vs class path with plain JARs becoming automatic modules; written for Java 9, and it does not cover `jlink` or `--add-opens`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The standard library layout](10-stdlib-layout.md) · Next → [Java vs Kotlin vs the JVM ecosystem](12-java-vs-kotlin.md)

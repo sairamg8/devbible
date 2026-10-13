@@ -174,6 +174,17 @@ industry responded by standardizing on OpenJDK builds (AdoptOpenJDK, now
 Temurin). Oracle later introduced NFTC (17+), making Oracle JDK free in
 production again — but the migration to vendor-neutral builds mostly stuck.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Adoptium FAQ](https://adoptium.net/docs/faq/) — Eclipse Adoptium: Temurin is free under GPLv2 with the Classpath Exception, each release passed the Java compatibility kit (it links a TCK affidavit) and the AQAvit suite; release frequency and support are on a separate page it links (*read*)
+- **Beyond the docs:** [Choosing the Right OpenJDK Distribution for Production](https://foojay.io/today/which-java-runtime-should-you-use-in-production-comparing-openjdk-distributions/) — Catherine Edelveis, Foojay, 2026-04-18: compares eight distributions (Temurin, Liberica, Zulu, Corretto, Semeru, Red Hat, SapMachine, Microsoft) on TCK status and who sells support, which is the CVE-time question our row raises; the author is a developer advocate at Bel
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What Java is](01-what-java-is/README.md) · Index: [Phase 0 — The platform and the JVM](README.md)

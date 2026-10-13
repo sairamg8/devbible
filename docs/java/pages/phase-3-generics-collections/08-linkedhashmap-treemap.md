@@ -213,6 +213,18 @@ When the order you need is insertion/access order, not sort order — and
 whenever O(1) beats O(log n). `TreeMap` only wins when the *comparator's*
 order or range navigation is the requirement.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [LinkedHashMap](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/LinkedHashMap.html) — Java SE 25 API docs: the access-order constructor, which accesses count (`get`, `put`, `merge` and others), `removeEldestEntry` with a `MAX_ENTRIES` sample, and that a `get` in access-order is a structural modification (*read*)
+- **Also good:** [NavigableMap](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/NavigableMap.html) — Java SE 25 API docs: `lowerKey`, `floorKey`, `ceilingKey`, `higherKey`, the range views `subMap`, `headMap`, `tailMap` with inclusive or exclusive bounds, and `descendingMap` (*read*)
+- **Beyond the docs:** [LRU Cache From LinkedHashMap (Issue 246)](https://javaspecialists.eu/archive/Issue246-LRU-Cache-From-LinkedHashMap.html) — Heinz Kabutz, The Java Specialists' Newsletter, 2017-02-28: builds the LRU cache as a subclass: `true` as the access-order argument, `removeEldestEntry` returns true past the maximum, with a five-entry demo of what is evicted
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [HashMap internals](07-hashmap-internals.md) · Next → [Queues and deques](09-queues-deques.md)

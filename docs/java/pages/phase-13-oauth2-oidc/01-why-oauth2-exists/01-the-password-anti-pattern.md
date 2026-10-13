@@ -217,6 +217,18 @@ password credentials grant "MUST NOT be used" precisely because it "insecurely e
 credentials of the resource owner to the client". First-party status changes who you are
 trusting; it does not change any of the five mechanical failures.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [RFC 6749, The OAuth 2.0 Authorization Framework](https://datatracker.ietf.org/doc/html/rfc6749) — IETF: the introduction lists the problems of third parties storing the owner's password, which the spec was written to remove
+- **Also good:** [OAuth 2.0](https://oauth.net/2/) — oauth.net: short map of the spec family and extensions
+- **Beyond the docs:** [Background](https://www.oauth.com/oauth2-servers/background/) — OAuth 2.0 Simplified (Aaron Parecki's book site): opens with the pre-OAuth habit of handing a third-party app your password (the Twitter-stats-app example) and why those apps stored passwords in plain text; page shows no date
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [Authorization ≠ authentication](02-authorization-is-not-authentication.md)

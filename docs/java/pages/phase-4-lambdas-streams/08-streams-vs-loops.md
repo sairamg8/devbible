@@ -204,6 +204,16 @@ the loop column applies. Leave it when conversion needs capture tricks,
 exception wrappers, or index gymnastics — the conversion cost is
 permanent reader cost, and "it's more modern" isn't a reason.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Java streams vs for loop](https://jdriven.com/blog/2019/10/loop/) — Ties van de Ven, JDriven blog, 2019-10-14: loops win on small lists, parallel streams add overhead, and he argues maintenance cost outweighs hardware cost; his conclusion leans toward streams (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`Optional` used correctly](07-optional/README.md) · Next → [Parallel streams](09-parallel-streams.md)

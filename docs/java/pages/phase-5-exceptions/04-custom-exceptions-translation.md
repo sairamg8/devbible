@@ -273,6 +273,17 @@ reason without reproduction. Never secrets, tokens, card data or PII:
 messages outlive the request in logs with broader access than the data
 store the secrets came from.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Throwable — cause and `initCause`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Throwable.html) — Java SE 25 API docs: a cause is attached by constructor or `initCause`, with a `LowLevelException` to `HighLevelException` example (*read*)
+- **Beyond the docs:** [Effective Java: Throw exceptions appropriate to the abstraction](https://dev.to/kylec32/effective-java-throw-exceptions-appropriate-to-the-abstraction-1d4e) — Kyle Carter, DEV Community, 2021-09-09 (edited 2023-09-07): a summary of the Effective Java item: translate to a type that fits the abstraction, chain the cause, and do not silently log and ignore; a book summary, not the book
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [try-with-resources](03-try-with-resources/README.md) · Next → [Reading a stack trace fast](05-reading-stack-traces/README.md)

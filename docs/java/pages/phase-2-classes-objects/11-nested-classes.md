@@ -215,6 +215,17 @@ No. Nested enums, records and interfaces are implicitly static — the
 language forbids the outer-instance-holding variant for them, so they never
 have the lifetime problem.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Nested Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html) — Oracle Java Tutorial: static nested vs inner, local and anonymous (*read*)
+- **Beyond the docs:** [Avoid memory leaks in inner classes](https://www.infoworld.com/article/2255920/avoid-memory-leaks-in-inner-classes.html) — Jeff Friesen, InfoWorld, 2020-02-20: uses `javap` to show the synthetic `this$0` field holding the outer instance, then an example that exhausts memory as each inner object pins a large array; caution: I compiled its empty `EnclosedClass` with JDK 21 and `javap` show
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Enums](10-enums/README.md) · Index: [Phase 2 — Classes and objects](README.md) · Next → [Designing immutable classes](12-immutable-design/README.md)

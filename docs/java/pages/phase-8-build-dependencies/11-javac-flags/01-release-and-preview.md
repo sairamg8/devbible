@@ -235,3 +235,13 @@ version rather than about Java.
 ---
 
 Index: [`javac` flags that matter](README.md) · Next → [Parameter names and debug info](02-parameters-and-debug-info.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [javac](https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html) — Oracle, JDK 25 tool reference: `--release` compiles to that release's language rules and class files against that release's APIs; `-parameters` stores formal parameter names for reflection; `--enable-preview` goes with `-source` or `--release` (*read* those thr
+
+{/* LINKMAP:END */}

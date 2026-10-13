@@ -244,6 +244,17 @@ expecting a `sub` that identifies a person will get either a client identifier o
 It is the clearest demonstration that "resource owner" is a role that may be absent, rather
 than a synonym for "user".
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [RFC 6749, The OAuth 2.0 Authorization Framework](https://datatracker.ietf.org/doc/html/rfc6749) — IETF: section 1.1 defines the four roles: resource owner, resource server, client and authorization server
+- **Beyond the docs:** [OAuth 2 Simplified](https://aaronparecki.com/oauth-2-simplified/) — Aaron Parecki: explains the roles (client, resource server, resource owner) and the grant types in plain language; the page says it was updated from its July 2012 original to current best practice, and it now describes PKCE and the implicit flow
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [Confidential vs public](02-confidential-and-public-clients.md)

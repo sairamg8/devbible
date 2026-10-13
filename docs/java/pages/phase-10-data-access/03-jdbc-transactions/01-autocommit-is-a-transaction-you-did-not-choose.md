@@ -198,3 +198,15 @@ it, the mechanism is a savepoint, not a second `setAutoCommit(false)`.
 ---
 
 Index: [Transactions at the JDBC level](README.md) · Next → [2 · commit, rollback, the shape](02-commit-rollback-and-the-shape-that-survives.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using Transactions](https://docs.oracle.com/javase/tutorial/jdbc/basics/transactions.html) — Oracle Java Tutorials: `setAutoCommit(false)`, commit, rollback (*fetched, not read*)
+- **Also good:** [Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html) — PostgreSQL documentation: the real anomalies per level in Postgres (*fetched, not read*)
+- **Beyond the docs:** [Postgres transaction isolation levels](https://malisper.me/postgres-transaction-isolation-levels/) — malisper, 2017-06-21 (updated 2019-04-20): Repeatable Read prevents lost updates by aborting one of two conflicting UPDATEs; suggests `SELECT ... FOR UPDATE` under Read Committed instead
+
+{/* LINKMAP:END */}

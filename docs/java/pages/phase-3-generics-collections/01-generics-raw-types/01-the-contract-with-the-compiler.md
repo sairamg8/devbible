@@ -165,6 +165,17 @@ Yes — `Map<K, V>` — and yes: a nested generic class introduces parameters
 alongside the outer's (inner classes see the outer's parameters; static
 nested classes don't, same rule as all statics).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Raw Types and Unchecked Warnings](https://docs.oracle.com/javase/tutorial/java/generics/rawTypes.html) — The Java Tutorials: defines a raw type, shows assigning a raw type to a parameterized one gives an unchecked warning, and says raw types push errors to run time (*read*)
+- **Beyond the docs:** [Java — Don't use raw types](https://dev.to/doppelmutzi/java-dont-use-raw-types-jn0) — Sebastian Weber, DEV Community, 2021-12-17: shows a helper taking a raw `List` that slips an `Integer` into a `List&lt;String&gt;` with only warnings, then fails later, which is the "bug factory" in concrete form
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Generics and raw types](README.md) · Next → [Raw types — the bug factory](02-raw-types-the-bug-factory.md)

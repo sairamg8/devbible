@@ -261,6 +261,18 @@ transfers items thread-to-thread without buffering. `newCachedThreadPool`
 uses it to give each arriving task to a free thread immediately or spawn
 one — the "queue" enforces that work never waits behind other work.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ConcurrentHashMap](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html) — Oracle, Java SE 25 API: `computeIfAbsent`: the mapping function must not modify the map, and should be short and simple because other updates may block (*read* the first 100,000 characters of a 127,000-character page; the `IllegalStateException` for a de
+- **Also good:** [Blocking Queues](https://jenkov.com/tutorials/java-concurrency/blocking-queues.html) — Jakob Jenkov, last update 2020-01-15: a hand-written blocking queue with `wait` and `notifyAll`; the producer-consumer use is on a separate linked page (*read*)
+- **Beyond the docs:** [Avoid Recursion in ConcurrentHashMap.computeIfAbsent()](https://blog.jooq.org/avoid-recursion-in-concurrenthashmap-computeifabsent/) — Lukas Eder, jOOQ blog, 2015-03-04: a memoized Fibonacci that never halts, though the Javadoc promised an `IllegalStateException`; tested on JDK 1.8.0_40 early access, so re-check on 25
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Atomics](10-atomics.md) · Index: [Phase 6 — Concurrency](README.md) · Next → [`ThreadLocal` and `ScopedValue`](12-threadlocal-scopedvalue/README.md)

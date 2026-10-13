@@ -201,6 +201,17 @@ the undefined case.
 look for: the schedule becomes a testable value, with overflow handled in
 the step function rather than discovered in production.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Stream](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/stream/Stream.html) — Java SE 25 API docs: `iterate` in both forms (the three-argument one stops when `hasNext` fails), `generate` (infinite, unordered), `takeWhile` and `dropWhile` as the longest-prefix operations on ordered streams (*read*)
+- **Beyond the docs:** [Java 9 Additions to Stream](https://nipafx.dev/java-9-stream/) — Nicolai Parlog, 2016-06-20: `takeWhile` returns the longest prefix that passes, `dropWhile` is the opposite, behaviour on unordered streams, and the three-argument `iterate` (`Stream.iterate(1, i -&gt; i &lt;= 10, i -&gt; 2 * i)`)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`toList()` vs `Collectors.toList()`](11-tolist-vs-collectors.md) · Next → [Stream gatherers](13-stream-gatherers.md)

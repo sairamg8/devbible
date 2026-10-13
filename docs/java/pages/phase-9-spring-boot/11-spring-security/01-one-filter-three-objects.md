@@ -196,6 +196,18 @@ start out holding the previous caller's identity — a privilege escalation with
 no attacker involved. `FilterChainProxy` does the clearing in a `finally`, which
 is why it has to be the outermost security component.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Servlet Security: The Big Picture](https://docs.spring.io/spring-security/reference/servlet/architecture.html) — Spring Security reference: `DelegatingFilterProxy`, `FilterChainProxy`, `SecurityFilterChain` (*fetched, not read*)
+- **Also good:** [OAuth 2.0 Resource Server JWT](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html) — Spring Security reference: the stateless JWT resource-server setup (*fetched, not read*)
+- **Also good:** [Spring Security without the WebSecurityConfigurerAdapter](https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Spring Security, the working subset](README.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [The filters that matter](02-the-filters-that-matter.md)

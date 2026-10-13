@@ -183,6 +183,17 @@ you are hand-rolling a worse `PriorityQueue`.
    allocation). `LinkedList`'s remaining niche is O(1) removal *via a
    `ListIterator` you're already holding* mid-list, which queue use doesn't do.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ArrayDeque](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/ArrayDeque.html) — Java SE 25 API docs: "likely to be faster than `Stack` when used as a stack, and faster than `LinkedList` when used as a queue"; null elements are prohibited (*read*)
+- **Also good:** [PriorityQueue](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/PriorityQueue.html) — Java SE 25 API docs: heap-based, O(log n) `offer` and `poll`, constant-time `peek`, and the iterator "does not return the elements in any particular order" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [← Prev: `LinkedHashMap` and `TreeMap`](08-linkedhashmap-treemap.md) · Index: [Phase 3 — Generics and collections](README.md) · Next → [`Comparable` vs `Comparator`](10-comparable-comparator/README.md)

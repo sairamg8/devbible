@@ -264,3 +264,15 @@ longer exercises its real behaviour — invariants in its constructor, logic in 
 so a bug there is now invisible to this test.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mockito API](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html) — Mockito project: the class Javadoc doubles as the manual; the address redirects to the Javadoc index of the latest release (5.24.0 when checked), so open the `Mockito` class from there (*fetched, not read*)
+- **Also good:** [Stubs vs Mocks](https://enterprisecraftsmanship.com/posts/stubs-vs-mocks/) — Enterprise Craftsmanship (*fetched, not read*)
+- **Beyond the docs:** [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html) — Martin Fowler, 2007-01-02: the five test doubles (dummy, fake, stub, spy, mock) and classical versus mockist TDD (*read*)
+
+{/* LINKMAP:END */}

@@ -184,6 +184,18 @@ operations — those were broken all along — and fix them with the right
 phase-6 tool (`ConcurrentHashMap`, `CopyOnWriteArrayList`, or a lock at
 the operation level), not with another synchronized wrapper.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Vector](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Vector.html) — Java SE 25 API docs: retrofitted to `List` in 1.2; "Unlike the new collection implementations, `Vector` is synchronized. If a thread-safe implementation is not needed, it is recommended to use `ArrayList`" (*read*)
+- **Also good:** [Hashtable](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Hashtable.html) — [Stack](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Stack.html): Java SE 25 API docs
+- **Also good:** [Stack](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Stack.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Writing an Iterable](15-writing-an-iterable.md)

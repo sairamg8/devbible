@@ -249,3 +249,15 @@ and by then the mapping is spread across the codebase.
 ---
 
 Index: [Relationships and fetch types](README.md) · Next → [2 · The owning side](02-the-owning-side.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Hibernate ORM User Guide](https://docs.jboss.org/hibernate/orm/current/userguide/html_single/Hibernate_User_Guide.html) — Hibernate project: associations and fetching sections (*fetched, not read*)
+- **Also good:** [Eager fetching is a code smell](https://vladmihalcea.com/eager-fetching-is-a-code-smell/) — Vlad Mihalcea (*fetched, not read*)
+- **Beyond the docs:** [The best way to map a @OneToMany relationship](https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/) — Vlad Mihalcea, 2017-03-29: the child's `@ManyToOne` side controls the association, the parent's collection is `mappedBy`, and helper methods keep both sides in sync
+
+{/* LINKMAP:END */}

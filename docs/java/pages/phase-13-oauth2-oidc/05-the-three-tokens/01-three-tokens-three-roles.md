@@ -265,6 +265,18 @@ be used as unique identifiers. Propagating identity between your own services is
 **12 · Token relay across microservices** *(not written yet)*; the stable-identifier
 argument is **07 · OpenID Connect** *(not written yet)*.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ID Tokens vs Access Tokens](https://oauth.net/id-tokens-vs-access-tokens/) — oauth.net: access tokens are for the API to inspect, ID tokens describe the login for the client to read, and ID tokens should never be sent to an API; page shows no date (*read*)
+- **Also good:** [RFC 7662, Token Introspection](https://datatracker.ietf.org/doc/html/rfc7662) — IETF: the opaque-token side
+- **Also good:** [Refresh Token Rotation](https://auth0.com/docs/secure/tokens/refresh-tokens/refresh-token-rotation)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [Opaque by contract](02-the-access-token-is-opaque-by-contract.md)
