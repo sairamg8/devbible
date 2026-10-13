@@ -257,6 +257,7 @@ the narrow optimisation for when you want one function's behaviour and nothing e
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Writing Tests](https://redux.js.org/usage/writing-tests) — redux.js.org: what Redux actually recommends (≈6.5k words): guiding principles (test behavior, not implementation details), test runners and the UI and network tools, a reusable `renderWithProviders`, integration tests with components and prepa
+- **Beyond the docs:** [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details) — Kent C. Dodds (2020-08-17): the clearest argument for the guide's "test behavior, not implementation" principle, with the false-negative (refactor breaks the test) and false-positive cases spelled out
 
 {/* LINKMAP:END */}
 

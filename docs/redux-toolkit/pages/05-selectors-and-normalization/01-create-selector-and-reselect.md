@@ -254,6 +254,7 @@ release as the memoizer change, but it has no runtime effect at all.
 - **Read this:** [Deriving Data with Selectors](https://redux.js.org/usage/deriving-data-selectors) — redux.js.org: the maintainers' guide (≈5.5k words): selector basics, why memoize, how `createSelector` behaves and where it stops helping, a "Reselect 5" section (`weakMapMemoize` is now the default — one cache per distinct argument set, no siz
 - **Also good:** [weakMapMemoize → design tradeoffs](https://redux.js.org/reselect/api/weakMapMemoize#design-tradeoffs) — redux.js.org: what the new default costs: strict reference equality on arguments, garbage collection frees only object and function arguments, primitive arguments stay cached until `.clearCache()`, bounded with `maxSize` as of 5.3.0
 - **Also good:** [How Does Reselect Work?](https://redux.js.org/reselect/introduction/how-does-reselect-work) — redux.js.org: cascading memoization and how it differs from ordinary memoization, in about 950 words
+- **Beyond the docs:** [Idiomatic Redux: Using Reselect Selectors for Encapsulation and Performance](https://blog.isquaredsoftware.com/2017/12/idiomatic-redux-using-reselect-selectors/) — Mark Erikson, Blog (Mark's Dev Blog): argues for selectors first as encapsulation of state shape, then memoization, and shows why one shared selector fails when components pass different props (written in 2017 and describes a cache size of 1, so those remarks predate 
 
 {/* LINKMAP:END */}
 
