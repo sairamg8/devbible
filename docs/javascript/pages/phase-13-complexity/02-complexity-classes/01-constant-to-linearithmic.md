@@ -192,6 +192,18 @@ property lookups through getters) is multiplied. Precompute the sort key per ele
 log₂(1,000,000) ≈ 20 and log₂(1,000,000,000) ≈ 30. A thousand times more data costs ten more
 steps — which is why logarithmic algorithms effectively stop caring about input size.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Data Structures and Algorithms in JavaScript, Big O examples](https://github.com/amejiarosario/dsa.js/blob/master/book/content/part01/big-o-examples.asc) — Adrian Mejia (dsa.js, 7.8k stars): one named example per class from O(1) to O(n!): array-is-empty, recursive binary search, merge sort ("halves about log n times, merging costs about n each level"), all subsets for O(2 to the n) ("every time the input grows by one,
+- **Also good:** [Know Thy Complexities!](https://www.bigocheatsheet.com/) — Eric Rowell: the growth chart from O(1) to O(n!) plus operation tables for arrays, hash tables, trees and sorts; a reference, not an explanation (*read*)
+- **Beyond the docs:** [A beginner's guide to Big O notation](https://robbell.io/2009/06/a-beginners-guide-to-big-o-notation/) — Rob Bell, June 2009: the O(N squared) and O(2 to the N) cases with a duplicate check and recursive Fibonacci; no O(log n) or O(n log n) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · O(n²) and worse](./02-quadratic-and-worse.md)

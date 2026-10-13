@@ -177,6 +177,20 @@ trustworthy evidence.
 The console API is specified (WHATWG Console) but rendering is not, and MDN notes
 implementations *"may differ between runtimes."*
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Console API reference](https://developer.chrome.com/docs/devtools/console/api) — Chrome for Developers: `table`, `time`, `group`, `trace`
+- **Also good:** [Memory panel overview](https://developer.chrome.com/docs/devtools/memory) — Chrome for Developers: [Coverage: find unused JavaScript and CSS](https://developer.chrome.com/docs/devtools/coverage)
+- **Also good:** [Coverage: find unused JavaScript and CSS](https://developer.chrome.com/docs/devtools/coverage)
+- **Also good:** [console](https://developer.mozilla.org/en-US/docs/Web/API/console)
+- **Beyond the docs:** [Hidden Gems in Chrome DevTools](https://blog.openreplay.com/hidden-gems-chrome-devtools/) — OpenReplay blog: Coverage, request blocking and other panels in a short tour
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · The panels](./02-the-panels.md)

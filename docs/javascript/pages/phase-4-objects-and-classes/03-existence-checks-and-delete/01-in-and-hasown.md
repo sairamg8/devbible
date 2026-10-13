@@ -227,6 +227,19 @@ object?**
 null-prototype and the shadowing problem by not looking the method up on the object
 at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object.hasOwn()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) — MDN: recommended over `hasOwnProperty` because it works on null-prototype objects and on objects that override `hasOwnProperty` (*read*)
+- **Also good:** [delete operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete) — MDN: return values, non-configurable failures, array holes; says nothing about speed (*read*)
+- **Also good:** [Fast properties in V8](https://v8.dev/blog/fast-properties)
+- **Beyond the docs:** [3 Ways to Check If an Object Has a Property/Key in JavaScript](https://dmitripavlutin.com/check-if-object-has-property-javascript/) — Dmitri Pavlutin, updated 2023-01-25: compares `hasOwnProperty`, the `in` operator (which also sees inherited properties such as `toString`) and comparing with `undefined`, with a summary; written before `Object.hasOwn`, so it covers three of our four checks
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [`undefined`, holes and brand checks](./02-undefined-holes-and-brand-checks.md)

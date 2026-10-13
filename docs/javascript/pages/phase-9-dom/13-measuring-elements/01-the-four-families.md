@@ -209,6 +209,18 @@ returns their union, which covers empty space at line ends.
 `ResizeObserver`. Its entries are delivered after layout, so reading them forces nothing — but note
 `contentRect` is the **content** box; use `borderBoxSize` to compare with a bounding rect.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Determining the dimensions of elements](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) — MDN: `offsetWidth` is layout width, `getBoundingClientRect` is rendered width (a `scale(0.5)` box reads 50 versus 100) (*read*)
+- **Also good:** [Element.getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) — MDN (*headings only*): [Element size and scrolling](https://javascript.info/size-and-scroll)
+- **Also good:** [Element size and scrolling](https://javascript.info/size-and-scroll)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Viewports and device pixels](./02-viewports-and-device-pixels.md)

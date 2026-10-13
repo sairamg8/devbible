@@ -174,6 +174,19 @@ Interoperating with APIs that use flag bitmasks (Node `fs` constants, DOM
 `compareDocumentPosition`, WebGL), hashing, and colour packing. For your own
 domain flags, a `Set` of strings is usually clearer at application scale.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Bitwise AND (&)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) — MDN: reference for `&` *(MDN: 200, title and lead passage read)*
+- **Read this:** [Bitwise NOT (~)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT)
+- **Read this:** [Unsigned right shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+- **Beyond the docs:** [A guide to JavaScript bitwise operators](https://blog.logrocket.com/guide-javascript-bitwise-operators/) — Glad Chinda, LogRocket, Apr 13, 2023: operands become signed 32-bit two's complement; bit masks to turn bits on, off and toggle, a config-flags section, and `&gt;&gt;&gt;` as an unsigned result; it never mentions `~~`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [13 · break, continue, labels](./13-break-continue-labels.md) · [Phase index](./) · Next: [15 · Comma, void, in, delete](./15-comma-void-in-delete.md) →

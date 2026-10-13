@@ -197,6 +197,18 @@ reach for it.
 `fill` writes one evaluated value into every slot, which is right for primitives and wrong for
 objects. `Array.from({ length: n }, fn)` calls `fn` per index, so each element is distinct.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array.prototype.flat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) — MDN: default depth 1, `Infinity` in an example, and holes removed while flattening (*read*)
+- **Also good:** [Array.prototype.includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) — MDN: `NaN` is equal to itself; the page does not compare with `indexOf`, which is only in See also (*read*)
+- **Beyond the docs:** [Array.prototype.flat and flatMap](https://v8.dev/features/array-flat-flatmap) — Mathias Bynens, V8 blog, 2019-06-11: default depth 1, `Infinity` for full flatten, and `flatMap` as a slightly more efficient `map` then `flat`; says nothing about holes
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [13 · Non-mutating array counterparts](./13-non-mutating-counterparts.md) · [Phase index](./README.md) · Next: **15 · Regular expressions — the syntax** *(not written yet)* →

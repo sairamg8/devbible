@@ -212,6 +212,18 @@ On its own element with `bubbles: true`, so `event.target` identifies the instan
 can use one delegated listener. A `document`-level bus loses that identity and delivers everything
 to everyone.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [DOM events](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events) — MDN: "Creating and dispatching events": `new CustomEvent(name, &#123; detail &#125;)`, subclassing `Event`, bubbling, dynamic dispatch (*read*)
+- **Also good:** [Dispatching custom events](https://javascript.info/dispatch-events) — javascript.info: `CustomEvent` and `detail`, `dispatchEvent`, the `bubbles` default, `isTrusted`, and that nested dispatch is synchronous (*headings only*)
+- **Also good:** [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Decoupling components](./02-decoupling-components.md) →

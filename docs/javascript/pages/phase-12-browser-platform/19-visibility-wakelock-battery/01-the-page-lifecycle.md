@@ -152,6 +152,21 @@ user is not looking at your page.
 Re-read the current state once, rather than replaying an hour of queued updates — and recompute
 anything time-based from timestamps rather than from tick counts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) — MDN
+- **Also good:** [Screen Wake Lock API](https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API) — MDN: [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock)
+- **Also good:** [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock)
+- **Also good:** [Battery Status API](https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API)
+- **Also good:** [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api)
+- **Beyond the docs:** [How to Detect When a Browser Tab Becomes Inactive](https://blog.openreplay.com/detect-browser-tab-inactive/) — OpenReplay blog, 2026-05-25: a `visibilitychange` handler that stops and restarts a polling `setInterval`, and the note that browsers throttle rather than stop timers in hidden tabs; visibility only, nothing on Wake Lock or Battery
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Wake Lock and Battery](./02-wake-lock-and-battery.md) →

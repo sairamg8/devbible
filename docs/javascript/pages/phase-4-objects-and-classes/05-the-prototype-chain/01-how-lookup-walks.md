@@ -215,6 +215,17 @@ They read the same internal slot, but `__proto__` is a **deprecated accessor
 inherited from `Object.prototype`**, so it is absent on null-prototype objects.
 `Object.getPrototypeOf` is the standard function and works on everything.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) — MDN: lookup order, own properties shadowing inherited ones, `__proto__` accessor as deprecated vs `Object.getPrototypeOf`, and the `&#123; __proto__: x &#125;` literal as standard (*read*)
+- **Beyond the docs:** [Prototypal inheritance](https://javascript.info/prototype-inheritance) — javascript.info, 2022-05-06: explains `[[Prototype]]` as the hidden slot and `__proto__` as only a getter and setter for it, then walks lookup; writes act on the object itself
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [`prototype` vs `[[Prototype]]`](./02-prototype-vs-the-slot.md)

@@ -210,6 +210,18 @@ Roughly a square-root reduction in the frontier — b^(d/2) twice instead of b^d
 known target, a reversible graph, and expanding the smaller frontier each step, so it is a
 "can you do better?" answer rather than a default.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Breadth First Search](https://cp-algorithms.com/graph/breadth-first-search.html) — cp-algorithms: shortest paths in unweighted and 0-1 graphs, shortest cycles (*read*)
+- **Also good:** [Graph Traversal](https://usaco.guide/silver/graph-traversal) — USACO Guide: BFS visits nodes in order of distance; components and two-colouring (*read*)
+- **Beyond the docs:** [Introduction to the A* Algorithm](https://www.redblobgames.com/pathfinding/a-star/introduction.html) — Amit Patel, Red Blob Games: BFS drawn as a frontier expanding evenly on a map, the clearest picture of why it finds shortest unweighted paths
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Grids and state spaces](./02-grids-and-state-spaces.md)

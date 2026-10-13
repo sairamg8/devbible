@@ -238,6 +238,17 @@ usual reason to convert to bottom-up. And it does not fix an exponential **state
 When the state is a small dense integer range — an array indexed directly is simpler and faster.
 `Map` is for sparse state spaces or non-integer keys.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dynamic Programming (chapter 3)](https://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf) — Jeff Erickson: explains memoization (the name has no R) as the optimisation that stores results and cuts the running time (*read*, via local text extraction)
+- **Also good:** [Introduction to DP](https://usaco.guide/gold/intro-dp) — USACO Guide: pull DP versus push DP (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Choosing the key and converting](./02-keys-and-conversion.md)

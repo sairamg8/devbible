@@ -175,6 +175,17 @@ that flows through the program and fails somewhere else.
 No. Fetching, parsing and linking all succeed. Only evaluation can fail, and only if something is
 read too early.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) — MDN guide: "Cyclic imports": works only if a binding is not read before initialization, otherwise a `ReferenceError` (*read*)
+- **Beyond the docs:** [Breaking down circular dependencies in JavaScript](https://www.bryanbraun.com/2025/03/29/breaking-down-circular-dependencies-javascript/) — Bryan Braun, 2025-03-29: steps through an `a.js` and `b.js` loop ending in "Cannot access 'a' before initialization"; ESM bindings are live and can start uninitialized; advises removing cycles and lists madge and eslint-plugin-import
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Diagnosing and fixing](./02-diagnosing-and-fixing.md) →

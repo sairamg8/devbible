@@ -235,6 +235,18 @@ represents *"the eventual completion or failure"* of a single operation.
 Nothing on the second call. The state machine has already transitioned, and MDN notes that
 *"further resolving or rejecting it has no effect"*.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) — MDN: pending, fulfilled, rejected; "resolved" means locked in to another promise's eventual state, which is different from fulfilled (*read*)
+- **Also good:** [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) — MDN guide: every `then()` returns a new promise; callbacks never run synchronously, even on an already-resolved promise (*read*)
+- **Beyond the docs:** [Promise](https://javascript.info/promise-basics) — javascript.info, last updated December 11, 2024: the executor, internal state and result, "settled once only", and that `finally` takes no argument and passes the previous result through
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · `then`, `catch` and `finally`](./02-then-catch-finally.md)

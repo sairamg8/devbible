@@ -191,6 +191,17 @@ base type and behaviour you did not opt into; composition exposes exactly the AP
 When `Set` or `Map` already does the job. Write one when there is an invariant to protect, a
 different notion of identity, or a stable API you want to keep while the storage changes.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) — MDN: "Defining an iterable with a class" (a `SimpleClass` with a private field and `[Symbol.iterator]()`) and "Defining an iterable with a generator" (*read*)
+- **Beyond the docs:** [JavaScript iterators and iterables](https://blog.appsignal.com/2019/07/16/javascript-iterators-and-iterables) — Adam Yeats, AppSignal, 2019-07-16: builds a LinkedList with a hand-written iterator, then replaces it with a generator method `*[Symbol.iterator]()` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [The details that make it feel native](./02-details-that-feel-native.md)

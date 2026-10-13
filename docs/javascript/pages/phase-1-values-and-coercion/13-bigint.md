@@ -187,6 +187,17 @@ converts it to a string.
 `1n == 1` is `true`, because loose equality compares mathematical value across
 those two types.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [BigInt: arbitrary-precision integers in JavaScript](https://v8.dev/features/bigint) — V8 blog, Mathias Bynens, 2018-05-01: why doubles run out, why `1 + 1n` throws, and which type to pick for which API (*read*)
+- **Beyond the docs:** [BigInt](https://javascript.info/bigint) — javascript.info: explicit `BigInt()` and `Number()` conversion, relational operators working across types, `1 == 1n` true and `1 === 1n` false, and why there is no general polyfill (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [12 · Symbol](./12-symbol.md) · [Phase index](./) · Next: [14 · Value equality in practice](./14-value-equality.md) →

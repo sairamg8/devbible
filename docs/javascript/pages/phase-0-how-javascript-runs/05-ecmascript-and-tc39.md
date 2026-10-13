@@ -204,6 +204,17 @@ polyfill, and some things (like `Proxy`) can be neither.
 Because it is Stage 3 and not present in the runtime — measured absent on Node
 24.19.0. It is the right long-term answer and the wrong thing to ship today.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The TC39 Process](https://tc39.es/process-document/) — TC39: stages 0, 1, 2, 2.7, 3, 4, the Stage 4 criteria (two implementations passing Test262), and the yearly July ratification (*read*)
+- **Also good:** [Specification: ECMA-262](https://tc39.es/ecma262/) — TC39: the living spec, titled as the 2027 edition on the fetch date (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · Strict mode](./04-strict-mode.md) · [Phase index](./) · Next: [06 · The hosts you write for](./06-hosts-and-globals.md) →

@@ -253,6 +253,18 @@ and MDN warns it is not exposed as a control in the accessibility tree. Use `<bu
 `<body>` — including immediately after the focused element is removed from the DOM, which is why
 element removal needs a focus-restoration step.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Focusing: focus/blur](https://javascript.info/focus-blur) — javascript.info: `focus()`/`blur()`, `tabindex` to make any element focusable, and `focusin`/`focusout` (*headings only*)
+- **Also good:** [ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) — MDN: `aria-live` polite/assertive, create the region before updating it; does not cover focus management (*read*)
+- **Also good:** [Keyboard focus](https://web.dev/learn/accessibility/focus)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Managing focus](./02-managing-focus.md) →

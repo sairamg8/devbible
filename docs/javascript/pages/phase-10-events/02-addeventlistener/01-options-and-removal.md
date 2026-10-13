@@ -211,6 +211,17 @@ entirely and covers any number of listeners and targets.
 Always, for genuinely single-shot events — there is no window for a second event and nothing
 to forget. Combine it with `{ signal }` so it is also cleaned up if it never fires.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [EventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) — MDN: options `once`, `capture`, `passive`, `signal`; anonymous functions are never identical, so they cannot be removed (*read*)
+- **Also good:** [EventTarget.removeEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener) — MDN: the removal side (*fetched, not read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

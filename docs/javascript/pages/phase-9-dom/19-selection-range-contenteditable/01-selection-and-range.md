@@ -212,6 +212,18 @@ Re-derive the position after the change instead.
 `selection.getRangeAt(0).getBoundingClientRect()` — a range has geometry, and `getClientRects()`
 gives one rect per line for a wrapped selection.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Selection](https://developer.mozilla.org/en-US/docs/Web/API/Selection) — MDN: one selection object per document via `getSelection()`, `anchorNode`, `getRangeAt()`; `contenteditable` only in the glossary (*read*)
+- **Also good:** [Range](https://developer.mozilla.org/en-US/docs/Web/API/Range) — MDN (*headings only*): [Selection and Range](https://javascript.info/selection-range)
+- **Also good:** [Selection and Range](https://javascript.info/selection-range)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · contenteditable](./02-contenteditable.md) →

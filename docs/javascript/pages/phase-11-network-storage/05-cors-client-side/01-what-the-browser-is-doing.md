@@ -198,6 +198,19 @@ required.
 They are describing different things: the exchange succeeded (network tab), and the browser
 refused to expose the result to your script (console). Both are true.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) — MDN: simple versus preflighted requests, credentials and the wildcard rule
+- **Also good:** [Fetch Standard](https://fetch.spec.whatwg.org/) — WHATWG: the normative CORS protocol; large (*headings only*)
+- **Also good:** [CORS errors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors) — MDN: starts from the console message, notes that JavaScript cannot see why a CORS request failed, and lists what the client can do
+- **Beyond the docs:** [How to Debug Any CORS Error](https://httptoolkit.com/blog/how-to-debug-cors-errors/) — HTTP Toolkit blog: walks from the console message to the Network tab and the missing header, which is the "read the console error" skill in our row
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Simple versus preflighted](./02-simple-vs-preflighted.md)

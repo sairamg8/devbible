@@ -204,6 +204,17 @@ for that.
 No. Every string method returns a **new** string, so none of them can be used to edit in
 place, and no defensive copying is ever needed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) — MDN: instance-method index; each method has its own page (*fetched, not read*)
+- **Beyond the docs:** [Strings](https://javascript.info/string) — javascript.info, 2024-01-17: covers `slice`, `substring` and `at` in detail, with `trim` and `repeat` only named in the summary; it does not cover `split`, `padStart` or `replaceAll`, so it fills only the first third of the row
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Trimming, padding and replacing](./02-trimming-padding-replacing.md)

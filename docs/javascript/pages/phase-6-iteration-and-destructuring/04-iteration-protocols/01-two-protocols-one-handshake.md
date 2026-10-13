@@ -281,6 +281,17 @@ accident.
 `NodeList` yes — MDN lists it as iterable, so `for...of` and spread both work.
 `HTMLCollection` is only array-**like**: no `Symbol.iterator`, so use `Array.from`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) — MDN: "The iterable protocol" then "The iterator protocol", error handling, and class and generator examples (*read*)
+- **Beyond the docs:** [Iterables](https://javascript.info/iterable) — javascript.info, 2024-05-10: builds a `range` object with `Symbol.iterator` returning `next()` results, then calls the iterator by hand (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Making your own object iterable](./02-making-your-own-object-iterable.md)

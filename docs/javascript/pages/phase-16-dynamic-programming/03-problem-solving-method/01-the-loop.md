@@ -208,6 +208,16 @@ outcome.
 Offer the trade you did not take — "there is an O(n) version if we can spend the memory". It turns
 a solved problem into a considered one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to DP](https://usaco.guide/gold/intro-dp) — USACO Guide: suggests writing a slower solution first for partial credit, the nearest thing found to the brute-force-then-optimise loop (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · A worked run](./02-a-worked-run.md)

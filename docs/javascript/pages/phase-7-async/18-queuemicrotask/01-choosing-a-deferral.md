@@ -188,6 +188,17 @@ user needs to see the current state first. Anything more specific needs a stated
 For genuinely optional work — prefetch, analytics, cache warming — with a `timeout` so it is not
 postponed forever.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using microtasks in JavaScript with queueMicrotask()](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) — MDN: "When to use microtasks"; recursive scheduling can block the event loop because the queue drains completely (*read*)
+- **Beyond the docs:** [Picking the Right Tool for Maneuvering JavaScript's Event Loop](https://dev.to/alexmacarthur/picking-the-right-tool-for-maneuvering-javascripts-event-loop-5e6j) — Alex MacArthur, DEV post 2023-06-02 (blog 2023-04-21): compares `setTimeout`, `queueMicrotask`, `requestAnimationFrame` and `requestIdleCallback` side by side; notes Safari lacked `requestIdleCallback` at the time
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Microtask hazards](./02-microtask-hazards.md) →

@@ -197,6 +197,18 @@ class of problem.
 It includes the captured text in the output array alongside the pieces — `"a1b".split(/(\d)/)` gives
 `["a", "1", "b"]`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [RegExp.prototype.exec](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) — MDN: the `lastIndex` loop warnings: do not put the literal in the `while` condition, keep the `g` flag, step manually on zero-length matches (*read*)
+- **Also good:** [String.prototype.matchAll](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) — MDN: clones the regex, so `lastIndex` is untouched; needs the `g` flag or it throws `TypeError` (*read*)
+- **Beyond the docs:** [ReDoS and catastrophic backtracking](https://snyk.io/blog/redos-and-catastrophic-backtracking/) — Tim Kadlec, Snyk, 2017-01-17: `/A(B|C+)+D/` on a 30-character failing string takes about 1.8 s versus 52 ms; fixes include bounding repetition and a lookahead-plus-backreference trick
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · Replacing, and what goes wrong](./02-replacing-and-what-goes-wrong.md) →

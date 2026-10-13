@@ -201,6 +201,17 @@ generator's `finally` run?**
 Yes. `return()` is forwarded down the delegation chain, so each delegate is closed and its
 `finally` runs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [yield*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*) — MDN: delegating to generators and other iterables, and the value of the `yield*` expression itself (*read*)
+- **Beyond the docs:** [Generators: Generator composition](https://javascript.info/generators) — javascript.info, 2022-08-30: its "Generator composition" section delegates to other generators with `yield*` to join digit, uppercase and lowercase sequences without storing intermediates (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Composing generators](./02-composing-generators.md)

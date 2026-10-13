@@ -252,6 +252,19 @@ nested inside. A `var` of the same name in the body is a separate binding.
 Measured: `scopes('param')` returned `['body', 'param']` — the default's closure
 kept the parameter, the body kept its own.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) — MDN: reference for defaults *(MDN: 200, title and lead passage read)*
+- **Read this:** [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- **Read this:** [The arguments object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+- **Beyond the docs:** [Function basics](https://javascript.info/function-basics) — javascript.info, page dated July 4, 2026: a default applies when the argument is strictly `undefined` and is evaluated on every call without it; contrasts `||` and `??`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · Next → [Rest, destructuring and `arguments`](./02-rest-destructuring-arguments.md)

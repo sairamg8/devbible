@@ -226,6 +226,17 @@ endpoint, an open redirect or a vulnerable library becomes a way to load attacke
 from a permitted source. Nonce-based policies with `'strict-dynamic'` avoid trusting whole
 domains.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) — MDN: directives and what inline script needs
+- **Beyond the docs:** [Mitigate cross-site scripting (XSS) with a strict Content Security Policy](https://web.dev/articles/strict-csp) — web.dev (Google): a nonce-based policy with `strict-dynamic`, and why host allowlists are weak
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Overview](./README.md) · Next → [2 · Nonces, hashes and `strict-dynamic`](./02-nonces-and-strict-dynamic.md)

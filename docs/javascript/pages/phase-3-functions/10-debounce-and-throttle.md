@@ -159,6 +159,17 @@ rate. Real rate limiting belongs on the server.
 [Phase 17 · 03](../phase-17-machine-coding/03-debounce-throttle/README.md) — with `cancel`/`flush`,
 leading and trailing edges, the clock-jump guard, and the return-value problem.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Debouncing and Throttling Explained Through Examples](https://css-tricks.com/debouncing-throttling-explained-examples/) — David Corbacho, CSS-Tricks, April 6, 2016: debounce groups a burst into one call, trailing edge by default with a leading option; throttle runs at most once every X ms, which suits infinite scroll (*read*)
+- **Also good:** [Lodash documentation](https://lodash.com/docs/) — lodash: the `debounce` and `throttle` entries, with `leading` and `trailing` options (*read*; no anchor given)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [09 · Higher-order functions](./09-higher-order-functions.md) · [Phase index](./README.md)

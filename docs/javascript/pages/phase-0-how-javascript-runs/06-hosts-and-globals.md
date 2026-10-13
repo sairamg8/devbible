@@ -204,6 +204,17 @@ One name for the global object across every host — `window` in a browser, `sel
 in a worker, `global` in Node. Before it existed, portable library code had to
 sniff all three, and the sniffing broke under bundlers and strict CSP.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [globalThis](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) — MDN: `window` is main-thread only, `self` works in workers, `global` is Node only, `globalThis` works everywhere (*read*)
+- **Beyond the docs:** [Introducing the Standards-Compliant Workers API](https://blog.cloudflare.com/standards-compliant-workers-api/) — James M Snell, Cloudflare blog, 2022-11-14: lists the web APIs shared by Node, Deno, Bun and Workers (the Minimum Common API) and the globals runtimes are expected to offer; edge-runtime view (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05 · ECMAScript and TC39](./05-ecmascript-and-tc39.md) · [Phase index](./) · Next: [07 · Loading scripts](./07-loading-scripts.md) →

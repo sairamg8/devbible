@@ -202,6 +202,17 @@ No — it prevents reassigning the binding. `Object.freeze` freezes one level of
 **Why is `{a:1} === {a:1}` false?**
 Object equality is identity. They are two distinct objects, so they are not the same reference.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Memory management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Memory_management) — MDN guide: memory life cycle, references, mark-and-sweep (*read*)
+- **Beyond the docs:** [Garbage collection](https://javascript.info/garbage-collection) — javascript.info, last updated October 14, 2022: reachability from roots, the interlinked `John` and `Ann` example where mutual references do not keep objects alive, and mark-and-sweep as spreading paint from the roots
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Cost is retention](./02-cost-is-retention.md) →

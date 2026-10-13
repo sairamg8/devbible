@@ -184,6 +184,17 @@ or detect the capability you actually need.
 A non-gesture equivalent — buttons, keyboard shortcuts, or a menu. Gestures are undiscoverable and
 unreachable for keyboard and many motor-impaired users.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Touch events](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events) — MDN: multi-touch tracking with `changedTouches` and `Touch.identifier`; tells you to use pointer events to support touch and mouse together (*read*)
+- **Also good:** [Pointer events](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events) — MDN (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [Phase 10 index](../README.md) →

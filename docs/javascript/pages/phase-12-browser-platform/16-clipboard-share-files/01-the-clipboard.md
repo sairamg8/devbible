@@ -180,6 +180,19 @@ into a plain editor produces nothing useful.
 The write happened outside the transient activation window — typically an `await` between the click
 and the clipboard call, or a copy triggered by a timer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API) — MDN
+- **Also good:** [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API) — MDN: [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
+- **Also good:** [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
+- **Beyond the docs:** [Unblocking clipboard access](https://web.dev/articles/async-clipboard) — web.dev (Google): `writeText`, `write` with `ClipboardItem`, and the permission model
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Sharing](./02-web-share.md) →

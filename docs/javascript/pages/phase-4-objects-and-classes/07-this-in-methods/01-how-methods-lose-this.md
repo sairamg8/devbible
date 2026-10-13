@@ -270,6 +270,17 @@ No. It is an ordinary function reachable through the object, and nothing travels
 it when you extract it. Assigning `bird.sayHi = car.sayHi` and calling it gives
 `this === bird` — which is method borrowing, a deliberate feature of the same rule.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) — MDN: `this` is set by how the function is called; an extracted method gets `undefined` in strict mode (classes are always strict); `bind` fixes it once; arrow functions take `this` from the enclosing scope (*read*)
+- **Beyond the docs:** [Function binding](https://javascript.info/bind) — javascript.info, 2025-04-13: the `setTimeout(user.sayHi, 1000)` case, with the wrapper and `bind` fixes and why the wrapper breaks if `user` is reassigned before the timer fires
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [The fixes, and which to choose](./02-the-fixes.md)

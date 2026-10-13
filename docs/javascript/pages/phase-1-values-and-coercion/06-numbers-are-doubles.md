@@ -239,6 +239,17 @@ No exception. `1/0` is `Infinity`, `-1/0` is `-Infinity`, `0/0` is `NaN`. All
 three propagate silently through later arithmetic, so a single bad input can
 produce `NaN` far from where it entered.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) — MDN: 64-bit double layout, `Number.EPSILON` as the mantissa precision, and the safe-integer range; the `MAX_SAFE_INTEGER + 1 === MAX_SAFE_INTEGER + 2` example is on the separate `Number.MAX_SAFE_INTEGER` page (*read* both)
+- **Beyond the docs:** [The Floating-Point Guide: Basic Answers](https://floating-point-gui.de/basic/) — floating-point-gui.de (no author or date shown): why `0.1 + 0.2` misses (binary cannot represent 0.1 exactly); its sibling pages cover comparison with a tolerance and store-money-as-integer-cents with the drawbacks (*read* the Basic, Comparison and On Using Integers pages)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05 · null vs undefined](./05-null-vs-undefined.md) · [Phase index](./) · Next: [07 · `const` does not mean immutable](./07-const-is-not-immutable.md) →

@@ -200,6 +200,19 @@ entries in their state, or provide an explicit in-app link instead of a syntheti
 Not with the classic API — a traversal is not cancellable and `beforeunload` does not cover it.
 The Navigation API's `navigate` event is the first mechanism that can intercept it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) — MDN: `pushState`, `popstate`
+- **Also good:** [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api) — Chrome for Developers: the `navigate` event; [Navigation API](https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API)
+- **Also good:** [Navigation API](https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API)
+- **Beyond the docs:** [Building Client-Side Routing with the History API](https://blog.openreplay.com/build-client-side-routing-history-api/) — OpenReplay blog: a small router, showing that `pushState` does not fire `popstate`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Building a router](./02-building-a-router.md) →

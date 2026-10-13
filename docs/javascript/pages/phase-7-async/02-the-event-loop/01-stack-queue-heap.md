@@ -194,6 +194,18 @@ are drained before the task queue is pulled.
 Because V8 does not implement proper tail calls, despite the specification defining them.
 The stack is finite and every call pushes a context. Use iteration or a trampoline.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JavaScript execution model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model) — MDN (the old Event loop page, now retitled): heap, job queue and stack of execution contexts; each job runs to completion; the queue is first-in first-out (*read*)
+- **Also good:** [Using microtasks in JavaScript with queueMicrotask()](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) — MDN: tasks versus microtasks and when each runs (*read*)
+- **Beyond the docs:** [Event loop: microtasks and macrotasks](https://javascript.info/event-loop) — javascript.info, last updated May 17, 2024: the loop as one cycle (oldest macrotask, all microtasks, render if needed), with the point that the DOM is painted only after the task completes and a zero-delay `setTimeout` split lets progress render while `queueMicrotask` does 
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

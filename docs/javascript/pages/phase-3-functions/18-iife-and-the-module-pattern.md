@@ -271,6 +271,19 @@ To pin each global's identity at load time regardless of what else on the page r
 give the minifier short local names, and to state the file's dependencies in one visible line —
 the three things `import` now does properly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) — MDN glossary *(MDN: 200, title and lead passage read)*: [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+- **Read this:** [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+- **Also good:** [The old var](https://javascript.info/var) — javascript.info, page dated Nov 13, 2022: `var` has no block scope, so older code used an IIFE for private variables; "nowadays there's no reason to write such code"
+- **Beyond the docs:** [Scope and Closures, ch. 8: The Module Pattern](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/ch8.md) — Kyle Simpson, You Don't Know JS Yet (2nd ed.): the IIFE module is a singleton unless wrapped in a factory; ES modules are file-based, private by default and strict; fetched as the raw file from the same repo path
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [17 · Closure and default-parameter gotchas](./17-closure-and-default-gotchas/README.md) · [Phase index](./README.md) · Next: **19 · Function properties** *(not written yet)* →

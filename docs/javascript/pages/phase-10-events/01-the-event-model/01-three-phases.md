@@ -207,6 +207,17 @@ Prefer having the ancestor filter on `e.target`.
 No, and they are independent. `preventDefault` cancels the browser's default action; the event
 keeps travelling. `stopPropagation` stops the travel; the default action still happens.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Event bubbling](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) — MDN: sections on bubbling, event capture, delegation, and `target` versus `currentTarget` (*read*)
+- **Also good:** [Bubbling and capturing](https://javascript.info/bubbling-and-capturing) — javascript.info: capturing, target and bubbling phases mapped to `eventPhase` values 1, 2, 3 (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

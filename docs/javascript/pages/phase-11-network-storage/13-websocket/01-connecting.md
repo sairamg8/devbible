@@ -280,6 +280,18 @@ must own the reference.
 **When does `ws.protocol` have a value?** Only after `open`, and only if the server chose
 one of the sub-protocols you offered — at most one per connection.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [WebSockets API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) — MDN: the API, with warnings about backpressure
+- **Also good:** [WebSocket](https://javascript.info/websocket) — javascript.info: handshake, framing and close codes
+- **Beyond the docs:** [How to Implement Reconnection Logic for WebSockets](https://oneuptime.com/blog/post/2026-01-27-websocket-reconnection/view) — OneUptime blog: exponential backoff with jitter and heartbeats, the two pieces our row names; I read the sections on both, not every example
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Overview](./README.md) · Next → [2 · Messaging](./02-messaging.md)

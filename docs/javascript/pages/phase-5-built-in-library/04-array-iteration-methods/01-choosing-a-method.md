@@ -244,6 +244,17 @@ It works — returning `true` stops the iteration — but it is a `for...of` wit
 in disguise. Use `some` when you want the **boolean**; use the loop when you want the
 control flow.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array methods](https://javascript.info/array-methods) — javascript.info, 2023-12-31: ends with a task-grouped cheat sheet for choosing, and covers `find`, `findIndex`, `findLastIndex`, `filter`, `map`; `some` and `every` appear only in the summary; it has no `findLast` (*read*)
+- **Also good:** [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) — MDN: the "Iterative methods" section (*read* the headings)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Callbacks, holes and async](./02-callbacks-holes-and-async.md)

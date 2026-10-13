@@ -214,6 +214,17 @@ When the array is local to the function you are writing — an accumulator you j
 created — or in a hot loop where the extra allocation matters. When the array came from
 a caller or from application state, build a new one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array.prototype.push](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) — MDN: the mutating end-operation; its See also links `pop`, `shift`, `unshift`, `splice` (*read*)
+- **Beyond the docs:** [Queues in JavaScript](https://dev.to/alaindet/queues-in-javascript-42a6) — Alain D'Ettorre, DEV Community, 2025-05-01: says `shift` is linear time, benchmarks 200,000 operations against a double-array queue and a linked list (single-array dequeue about 4,972 ms against 3.85 ms for the list), and calls it fine only for small queues
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [`splice`](./02-splice.md)

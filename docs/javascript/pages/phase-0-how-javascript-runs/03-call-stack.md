@@ -236,6 +236,17 @@ When depth is bounded and small by construction and the recursive form is
 markedly clearer — a fixed-depth config merge, a binary-search tree whose height
 is logarithmic. If depth is a function of untrusted input, iterate.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Call stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack) — MDN: push on call, pop on return, and a stack overflow error when the space runs out (*read*)
+- **Beyond the docs:** [JavaScript Call Stack](https://www.javascripttutorial.net/javascript-call-stack/) — javascripttutorial.net (no author or date shown): steps through an `add` and `average` example and an unbounded recursion that overflows the stack (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · Parse, compile, execute](./02-parse-compile-execute.md) · [Phase index](./) · Next: [04 · Strict mode](./04-strict-mode.md) →

@@ -234,6 +234,18 @@ Two things. It is function-scoped, so a `var` inside `if` or `for` leaks to the
 whole function — which is the classic loop-closure bug. And it initialises to
 `undefined`, so using it too early is silently wrong instead of loudly wrong.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) — MDN: says the interpreter only appears to move declarations, that the term is not normative in the spec, and shows the TDZ "taint" of a whole block (*read*)
+- **Also good:** [Blazingly fast parsing, part 2: lazy parsing](https://v8.dev/blog/preparser) — V8 blog, Toon Verwaest and Marja Hölttä, 2019-04-15: the preparser skips inner functions and still tracks variable declarations (*read*)
+- **Beyond the docs:** [JavaScript Execution Context and Hoisting](https://www.freecodecamp.org/news/javascript-execution-context-and-hoisting/) — Tapas Adhikary, freeCodeCamp, 2021-04-27: walks the creation phase and execution phase per context, so hoisting reads as a consequence (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · Engine, runtime, spec](./01-engine-runtime-spec.md) · [Phase index](./) · Next: [03 · Execution contexts and the call stack](./03-call-stack.md) →

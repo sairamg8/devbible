@@ -210,6 +210,17 @@ Cap the depth and drop from the bottom — noting that dropping from the front o
 Because nesting is last-opened-first-closed by definition. Parsers, JSON readers and tag matchers
 are all the bracket problem in different clothing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type) — ): Wikipedia
+- **Beyond the docs:** [Monotonic stack](https://labuladong.gitbook.io/algo-en/data-structures/monotonic-stack) — labuladong: next greater element from a line-of-people picture, O(n) because each element is pushed and popped once; extended to LeetCode 496, 739 and the circular 503; **Java code** (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Monotonic stacks](./02-monotonic-stacks.md)

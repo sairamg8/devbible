@@ -224,6 +224,17 @@ Rarely. MDN: there is *"no guarantee of when the callback will be called, or if 
 called at all"*, and it exists *"solely for optimization of memory usage in long-running
 programs"*. Never for required cleanup.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Memory management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Memory_management) — MDN guide: leaks are objects that stay reachable unintentionally; `WeakMap` and `WeakSet` hold keys weakly (*read*)
+- **Beyond the docs:** [Fixing memory leaks in web applications](https://nolanlawson.com/2020/02/19/fixing-memory-leaks-in-web-applications/) — Nolan Lawson, 2020-02-19: event listeners as the most common cause, then timers, observers, never-settling promises, global stores and unbounded DOM growth; does not use the term "detached DOM"
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · The four leaks](./02-the-four-leaks.md)

@@ -188,6 +188,18 @@ containing whitespace (`InvalidCharacterError`).
 Yes — it is a view of the `class` attribute, so reading it always reflects the current attribute,
 and mutating it rewrites the attribute.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) — MDN: `add`, `remove`, `replace`, `toggle`; the `force` second argument to `toggle` is shown only in an example comment (*read*)
+- **Also good:** [CSSStyleDeclaration.setProperty()](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty) — MDN: the route for custom properties (*headings only*)
+- **Also good:** [Styles and classes](https://javascript.info/styles-and-classes)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Inline styles, custom properties and computed values](./02-styles-and-custom-properties.md)

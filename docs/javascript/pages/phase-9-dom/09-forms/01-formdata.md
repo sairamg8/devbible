@@ -208,6 +208,19 @@ carries the multipart boundary; supplying it without the boundary makes the body
 Build the object yourself: `fromEntries` for scalars, `getAll` for plurals, explicit conversion
 for numbers and dates — then `JSON.stringify`. Everything out of a form is a string.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using FormData objects](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects) — MDN: `new FormData(form)` from a form element, sent with `fetch`, only named inputs included, plus a gotchas section (*read*)
+- **Also good:** [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData) — MDN: method list (`get`, `getAll`, `set`, `append`, `entries`); no form-element example on this page (*read*)
+- **Also good:** [Constraint validation](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation)
+- **Also good:** [Form properties and methods](https://javascript.info/form-elements)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Constraint validation](./02-constraint-validation.md)

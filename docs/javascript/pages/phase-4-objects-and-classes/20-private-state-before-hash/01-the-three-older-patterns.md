@@ -208,6 +208,18 @@ Prototype sharing. The methods must be created inside the factory to capture the
 instance carries its own copies — and the value is harder to inspect while debugging, because it is
 a scope variable rather than a field.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Private elements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) — MDN: `#` names are enforced by the language and cannot be reached by brackets; ties them to the old `_privateField` convention (*read*)
+- **Also good:** [Private and protected properties and methods](https://javascript.info/private-protected-properties-methods) — javascript.info, 2021-06-18: the underscore convention is not enforced by the language, and `#` is; support was thin then, so read for the contrast
+- **Beyond the docs:** [Implementing Private and Protected Members in JavaScript](https://philipwalton.com/articles/implementing-private-and-protected-members-in-javascript/) — Philip Walton, 2014-04-09: underscore convention that "can never really be trusted" without enforcement, closure-held private data, and `WeakMap` as a later improvement; written before `#`, and it does not cover Symbols
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · `#` today, and choosing](./02-hash-today-and-choosing.md) →

@@ -273,6 +273,18 @@ Broadcast a `{type:'auth:logout'}` message **and** clear the persisted session, 
 immediately and a tab opened later starts logged out. The clear is the source of truth; the message
 is only how it arrives sooner.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Broadcast Channel API](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) — MDN
+- **Also good:** [Web Locks API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Locks_API) — MDN: locks released when a tab closes
+- **Beyond the docs:** [Cross-tab Synchronization with the Web Locks API](https://www.sitepen.com/blog/cross-tab-synchronization-with-the-web-locks-api) — SitePen, Umar Hansa, 2018-08-14: what a lock request is, the queueing, and release on completion or when the tab closes or crashes; from the API's early days and Web Locks only, so it does not cover `BroadcastChannel`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Web Locks](./02-web-locks.md) →

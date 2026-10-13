@@ -165,6 +165,18 @@ it is evidence the object *was* collected.
 **What is the cheapest possible leak diagnosis?**
 Counting: increment on create, decrement on destroy, and watch the count across identical cycles.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Record heap snapshots](https://developer.chrome.com/docs/devtools/memory-problems/heap-snapshots) — Chrome for Developers, last updated 2024-02-09: taking a snapshot, the Comparison view, the Retainers section, and "Uncover DOM leaks" for detached subtrees; names a Chrome 123 setting, so menus may have moved (*read*)
+- **Also good:** [Fixing memory leaks in web applications](https://nolanlawson.com/2020/02/19/fixing-memory-leaks-in-web-applications/) — Nolan Lawson, 2020-02-19: repeat the scenario a set number of times, sort by object count, follow retainer chains (*read*)
+- **Beyond the docs:** [Taming The Unicorn: Easing JavaScript Memory Profiling In Chrome DevTools](https://addyosmani.com/blog/taming-the-unicorn-easing-javascript-memory-profiling-in-devtools/) — Addy Osmani, 2013-04-11: the three-snapshot technique credited to the Gmail team, retaining trees, detached DOM in red; the panel names are from 2013, so verify against current DevTools
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Reading a snapshot](./02-reading-a-snapshot.md) →

@@ -234,6 +234,18 @@ It already carries the filters, sort and cursor, and it keeps working when the A
 how it encodes them. Rebuilding the URL is where "every page came back identical" bugs come
 from.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Async iteration and generators](https://javascript.info/async-iterators-generators) — javascript.info, 2022-02-04: the `fetchCommits` pagination example: the next URL comes from the `Link` header, each commit is yielded, and the caller stops with `break` (*read*)
+- **Beyond the docs:** [ES2018 real-life simple usage of async iteration: get paginated data from REST APIs](https://dev.to/exacs/es2018-real-life-simple-usage-of-async-iteration-get-paginated-data-from-rest-apis-3i2e) — Carlos Saito, DEV Community, 2018-09-24 (edited 2018-10-02): follows the GitHub Link header for the next URL, yields each page, and stops when none remains
+- **Also good:** [How to paginate the AWS JS SDK using async generators](https://advancedweb.hu/how-to-paginate-the-aws-js-sdk-using-async-generators/) — Tamas Sallai, 2019-07-30: a generic `getPaginatedResults` over marker-based APIs; it still collects an array, so it does not show the streaming benefit (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Making it production-worthy](./02-making-it-production-worthy.md)

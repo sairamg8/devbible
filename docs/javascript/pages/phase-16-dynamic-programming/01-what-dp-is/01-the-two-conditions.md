@@ -180,6 +180,18 @@ count means DP has not helped.
 No. It reduces the number of *distinct* calls, not the recursion **depth**. A memoized solution
 over a deep input still overflows; only converting to a loop fixes that.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dynamic Programming (chapter 3)](https://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf) — Jeff Erickson: starts from Fibonacci and shows the repeated subproblems, then the recurrence-first design method (*read*, via local text extraction)
+- **Also good:** [Introduction to DP](https://usaco.guide/gold/intro-dp) — USACO Guide: breaks a problem into reusable subproblems; Frog 1 contrasts exponential recursion with O(N) DP (*read*)
+- **Beyond the docs:** [Dynamic Programming: From Novice to Advanced](https://www.topcoder.com/thrive/articles/Dynamic%20Programming:%20From%20Novice%20to%20Advanced) — Dumitru, Topcoder tutorials, page dated October 31, 2018: starts from "what is a state" with a minimum-coins example and builds up by worked examples rather than theory (*read*, opening)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Spotting the state](./02-spotting-the-state.md)

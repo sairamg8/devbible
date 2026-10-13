@@ -244,6 +244,18 @@ runtime and you still hand-write the dispatch, which TypeScript does not verify.
 It is unreadable at the call site — `render(true)` says nothing — and it does not extend when a
 third mode appears. A string union in an options object reads and grows.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Even More Useful JavaScript Function Patterns - Function Overloading](https://www.barbarianmeetscoding.com/blog/mastering-the-arcane-art-of-javascript-mancy-for-c-sharp-developers-chapter-5-more-useful-function-patterns-function-overloading/) — Jaime González García, Barbarian Meets Coding, May 26, 2015: four emulations: inspect `arguments`, an options object, ES2015 default arguments, and a functional dispatch helper; a 2015 article (*read*)
+- **Also good:** [Default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) — MDN *(MDN: 200, title and lead passage read)*
+- **Beyond the docs:** [JavaScript Method Overloading](https://johnresig.com/blog/javascript-method-overloading/) — John Resig, November 13, 2007: an `addMethod` helper that dispatches on `fn.length`, the number of declared parameters, so overloads differ by argument count; a 2007 technique that predates default and rest parameters
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [15 · Pure functions and side effects](./15-pure-functions.md) · [Phase index](./README.md) · [17 · Closure and default-parameter gotchas](./17-closure-and-default-gotchas/README.md) →

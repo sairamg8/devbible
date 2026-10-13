@@ -197,6 +197,17 @@ import, then invoke outside the `try`.
 Import attributes: they state what the module must be. A mismatched response is rejected rather
 than executed, which is a security property, not a convenience.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [import()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) — MDN: returns a promise for the module namespace object; rejects if loading, linking or evaluation fails (*read*)
+- **Beyond the docs:** [Dynamic imports](https://javascript.info/modules-dynamic-imports) — javascript.info, last updated February 8, 2020: `await import(path)` with destructured named exports and the `default` property for default exports
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Code splitting in practice](./02-code-splitting.md) →

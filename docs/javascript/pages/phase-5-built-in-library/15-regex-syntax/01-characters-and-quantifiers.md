@@ -196,6 +196,19 @@ The string literal consumes the backslash, so the pattern is just `d`. Use `"\\d
 Most metacharacters are literal inside `[...]`, so `[.+*?]` matches those actual characters. Only
 `]`, `\`, a leading `^`, and a hyphen in a range position need care.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions) — MDN Guide: an overview with a summary table and the flags section; quantifiers, classes, assertions and groups are summarised and linked to sub-guides (*read* the headings)
+- **Also good:** [Assertions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) — MDN Guide: positive and negative lookahead and lookbehind with examples (*read*)
+- **Also good:** [Groups and backreferences](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+- **Beyond the docs:** [Regular expressions](https://javascript.info/regular-expressions) — javascript.info: a 17-chapter part: patterns and flags, character classes, anchors, quantifiers, greedy and lazy, capturing groups, backreferences, alternation, lookahead and lookbehind, catastrophic backtracking, sticky flag, methods; I read the 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · Groups, alternation and lookaround](./02-groups-and-lookaround.md) →

@@ -204,6 +204,18 @@ immediately after removal.
 Because the native element is focusable, keyboard-operable, announced, and reachable by voice
 control, for free. ARIA only relabels; it never adds behaviour.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Keyboard focus](https://web.dev/learn/accessibility/focus) — web.dev Learn Accessibility: tab order and focus management
+- **Also good:** [prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) — MDN
+- **Beyond the docs:** [Accessibility improvements to client-side routing in Gatsby](https://www.gatsbyjs.com/blog/2020-02-10-accessible-client-side-routing-improvements/) — Gatsby blog, 2020-02-10: the ARIA live region that announces a route change and why, from user testing; framework-specific, from 2020
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · User preferences and testing](./02-preferences-and-testing.md) →

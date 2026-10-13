@@ -199,6 +199,18 @@ already coalesce much of this, and the thing that actually freezes a page is a l
 number of `append` calls. That is
 [02 · Not freezing the page](./02-not-freezing-the-page.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment) — MDN: a minimal document object outside the live tree; inserting it moves its nodes and leaves it empty (*read*)
+- **Also good:** [The template element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template) — MDN: `content` is a `DocumentFragment`; clone it with `document.importNode(template.content, true)` (*read*)
+- **Beyond the docs:** [DOM DocumentFragments](https://johnresig.com/blog/dom-documentfragments/) — John Resig, 2008-07-21: reports 2-3x faster insertion by batching in a fragment, with a per-browser timing table; commenters dispute the benchmark (a detached `span` did about as well). 2008 numbers, so treat as the idea, not a benchmark
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Not freezing the page](./02-not-freezing-the-page.md)

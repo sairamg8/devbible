@@ -203,6 +203,18 @@ expectation.
 Give itself an accessible name, contain its own scrolling, animate out of the top layer, or cope
 with a trigger that no longer exists when it closes.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The dialog element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog) — MDN: `showModal()` versus `show()`, `close()`, `::backdrop`; says the browser makes everything outside a modal dialog inert, and never uses the phrase "focus trap" (*read*)
+- **Also good:** [Popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API) — MDN (*headings only*): [inert](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert)
+- **Also good:** [inert](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · The Popover API](./02-the-popover-api.md) →

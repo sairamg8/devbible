@@ -189,6 +189,18 @@ When you need text or comment nodes, or document-order traversal with a filter C
 express — a sanitiser, a highlighter, a word count. Even then, `createTreeWalker` is the platform
 answer rather than a hand-rolled recursion.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Element.closest()](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest) — MDN: starts at the element itself, returns `null` when nothing matches (*read*)
+- **Also good:** [Anatomy of the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM) — MDN: `parentElement` versus `parentNode`, `children` versus `childNodes` (*read*)
+- **Beyond the docs:** [DOM traversals](https://zellwk.com/blog/dom-traversals/) — Zell Liew, 2018-04-11: up (`parentElement`, `closest`), down (`children`) and sideways (`nextElementSibling`); uses only the element-only siblings and never explains the node-versus-element split
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · `closest`, `matches` and `:scope`](./02-closest-matches-and-scope.md)

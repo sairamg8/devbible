@@ -192,6 +192,17 @@ callers unwrap it.
 Within one realm, yes. Across realms or two copies of a module, check `err.name` or the shape of
 `err.errors` instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [AggregateError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError) — MDN: wraps several errors in one, `errors` property, Baseline since September 2020 (*read*)
+- **Also good:** [Promise.any()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any) — MDN: the built-in producer, errors in input order (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 8 index](./README.md) · Prev → [15 · CommonJS in a modern world](./15-commonjs-today/README.md)

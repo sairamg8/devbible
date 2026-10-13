@@ -216,6 +216,17 @@ one term for a descending key.
 default is UTF-16 code-unit order, which puts every capital before every lowercase
 letter and mis-sorts accented characters.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) — MDN: default UTF-16 string order, comparator contract, stability since ES2019, in-place mutation with a `toSorted` pointer (*read*)
+- **Beyond the docs:** [Sorting complex arrays in JavaScript](https://johnkavanagh.co.uk/articles/sorting-complex-arrays-in-javascript/) — John Kavanagh, 2025-08-20: a comparator that sorts by age then name (the multi-key case MDN lacks), says `sort` has been stable since ES2019, and shows capitals sorting before lowercase by default
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Stability, mutation and `toSorted`](./02-stability-and-mutation.md)

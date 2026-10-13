@@ -149,6 +149,19 @@ and needs no isolation.
 Put the isolated code on its own origin or page, and leave the main application un-isolated. The
 cost is a boundary; the alternative is auditing every third party you load.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SharedArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) — MDN: needs a secure, cross-origin isolated context
+- **Also good:** [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics) — MDN: [A guide to enable cross-origin isolation](https://web.dev/articles/cross-origin-isolation-guide)
+- **Also good:** [A guide to enable cross-origin isolation](https://web.dev/articles/cross-origin-isolation-guide)
+- **Beyond the docs:** [Make your website cross-origin isolated using COOP and COEP](https://web.dev/articles/coop-coep) — web.dev (Google): the two headers, what COEP blocks, and checking `crossOriginIsolated`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Shared memory and `Atomics`](./02-shared-memory-and-atomics.md) →

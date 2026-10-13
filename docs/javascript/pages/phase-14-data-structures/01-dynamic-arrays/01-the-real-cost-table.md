@@ -198,6 +198,18 @@ When the final length is known and large — it avoids the repeated grow-and-cop
 `Array.from({length: n})` rather than `new Array(n)` if you are going to iterate it, so it is
 packed rather than holey.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dynamic array](https://en.wikipedia.org/wiki/Dynamic_array) — Wikipedia: geometric expansion makes append amortised constant; index access Θ(1); inserting at the start Θ(n) (*read*)
+- **Also good:** [Array.prototype.shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) — MDN: "shifts all values to the left by 1"; no complexity stated, the cost follows from that description (*read*)
+- **Beyond the docs:** [V8 Deep Dives: Understanding Array Internals](https://dev.to/puzpuzpuz/v8-deep-dives-understanding-array-internals-3jdf) — Andrei Pechkurov, 2021-03-16: growth rule, packed versus holey, dictionary mode, with benchmarks; does not cover `unshift`; **V8 8.9** (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Copying, slicing and the modern methods](./02-copying-and-modern-methods.md)

@@ -195,6 +195,17 @@ classification. Wrap only when you are deliberately translating at a boundary.
 **What must never go on an error object?**
 Secrets and whole payloads. Errors are logged and shipped to third parties; carry ids instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) — MDN: "Custom error types" example; subclasses must forward `options` to `super(message, options)` for `cause` to work (*read*)
+- **Beyond the docs:** [Custom errors, extending Error](https://javascript.info/custom-errors) — javascript.info, last updated August 7, 2023: extending `Error`, resetting `name`, wrapping low-level errors in one `ReadError` type; stores the original in `this.cause` by hand, which predates the built-in `cause` option
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Cause chains and boundaries](./02-cause-chains-and-boundaries.md) →

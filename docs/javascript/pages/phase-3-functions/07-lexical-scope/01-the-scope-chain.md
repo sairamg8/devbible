@@ -234,6 +234,18 @@ Measured: `SyntaxError` in strict mode, works in sloppy.
 No. The chain is one-directional, outward only. Measured:
 `ReferenceError: hidden is not defined`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope) — MDN glossary: definition page *(MDN: 200, title and lead passage read)*
+- **Read this:** [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- **Beyond the docs:** [Scope and Closures, ch. 3: The Scope Chain](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/ch3.md) — Kyle Simpson, You Don't Know JS Yet (2nd ed.): lookup, shadowing, and illegal shadowing: a `var` cannot cross a `let` of the same name in an enclosing block, but a function boundary lifts the limit; fetched as the raw file from the same repo path
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · Next → [`var`, `let` and `const`](./02-var-let-const.md)

@@ -213,6 +213,18 @@ Both are fine. `getElementById` is marginally faster and states the intent, but 
 essentially never the deciding factor here — the real cost is re-querying inside a loop, which
 you fix by hoisting the query out.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Selection and traversal on the DOM tree](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree) — MDN: `getElementById`, `querySelector`/`querySelectorAll`, `matches`/`closest`, and a "Live and static collections" section (*read*)
+- **Also good:** [Searching: getElement*, querySelector*](https://javascript.info/searching-elements-dom) — javascript.info: a live-collections section with a length-changes demo (*read*)
+- **Beyond the docs:** [Static versus live NodeLists and HTMLCollections in vanilla JavaScript](https://gomakethings.com/articles/static-versus-live-nodelists-and-htmlcollections-in-vanilla-javascript/) — Go Make Things, 2022-07-25: `querySelectorAll` is a snapshot, `getElementsByTagName` and `children` update; the demos are linked CodePens (no loop-bug walk-through in the text)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

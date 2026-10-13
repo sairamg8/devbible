@@ -247,6 +247,18 @@ wrong answer rather than a failure.
 Only heuristically — the absence of an own `prototype`. That also matches class
 methods and `async` functions, so there is no correct general test.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — MDN: reference for arrows *(MDN: 200, title and lead passage read)*
+- **Also good:** [Arrow functions revisited](https://javascript.info/arrow-functions) — javascript.info, page dated Feb 1, 2021: no `this`, no `arguments`, cannot be called with `new`, no `super`
+- **Beyond the docs:** [When Not to use an Arrow Function](https://wesbos.com/arrow-function-no-no) — Wes Bos, Sept 10, 2016: four wrong uses: click handlers, object methods, prototype methods, and code that reads `arguments`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · Next → [Syntax, and when not to use one](./02-syntax-and-when-not-to.md)

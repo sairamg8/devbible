@@ -261,6 +261,17 @@ prototype pollution. Use `Object.create(null)` or a `Map` for anything keyed by 
 Every `Object.prototype` method. There is no `toString`, so implicit string coercion throws, and
 tooling displays it differently. That is the price of a genuinely empty dictionary.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Property accessors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) — MDN: every key is a string or Symbol and other values are coerced; its examples show `object[1]` reading `"1"` and two different objects colliding on `"[object Object]"` (*read*)
+- **Also good:** [3 Ways To Access Object Properties in JavaScript](https://dmitripavlutin.com/access-object-properties-javascript/) — Dmitri Pavlutin, updated 2023-01-25: clear dot vs bracket guidance (dot needs a valid identifier, bracket takes dynamic names) plus destructuring; does not explain key stringification or collisions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · Object literals](./01-object-literals/README.md) · [Phase index](./README.md) · [03 · Existence checks and `delete`](./03-existence-checks-and-delete/README.md) →

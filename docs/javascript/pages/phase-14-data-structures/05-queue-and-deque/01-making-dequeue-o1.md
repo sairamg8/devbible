@@ -218,6 +218,18 @@ make deliberately.
 When n is small and bounded by something other than load — a handful of UI animations. The
 distinction is whether the size is decided by the developer or by production traffic.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Circular buffer](https://en.wikipedia.org/wiki/Circular_buffer) — Wikipedia: a fixed buffer used as if joined end to end; indexes wrap by modulo capacity; equal indexes are ambiguous between full and empty, fixed by keeping a count or leaving one slot free (*read*)
+- **Also good:** [Array.prototype.shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) — MDN: why `shift` is a poor dequeue: every remaining element moves (*read*)
+- **Beyond the docs:** [double-ended-queue (deque)](https://github.com/petkaantonov/deque) — Petka Antonov: a circular-buffer deque with O(1) at both ends; its README says arrays take linear time for `shift`, that V8 has a shortcut for small arrays yet the deque is still about 4x faster, and shows 19.23 ops/sec for an array against abou
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Deques and the two-stack queue](./02-deques-and-two-stacks.md)

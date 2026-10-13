@@ -224,6 +224,18 @@ Name it. Assign to a well-named `const` — `canCheckout`, `isExpired` — inste
 inlining a pile of negations. It becomes greppable, individually testable, and
 visible by name in the debugger.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Conditional (ternary) operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) — MDN: reference for the ternary *(MDN: 200, title and lead passage read)*
+- **Read this:** [if...else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- **Beyond the docs:** [Conditional branching: if, '?'](https://javascript.info/ifelse) — javascript.info, page dated Dec 7, 2022: chained `?` equals `if..else if..else`, split across lines, and use `?` to return a value rather than to pick which code runs
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [07 · Comparison](./07-comparison.md) · [Phase index](./) · Next: [09 · switch](./09-switch.md) →

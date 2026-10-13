@@ -196,6 +196,17 @@ forcing `Array.prototype.flatten` to be renamed `flat`.
 The parser reads `5.` as the beginning of a decimal literal, so the method
 access has nothing to attach to. `(5).toFixed(2)` or `5..toFixed(2)` work.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [no-new-wrappers](https://eslint.org/docs/latest/rules/no-new-wrappers) — ESLint: says that a wrapper object is created and then destroyed behind a method call on a primitive, that `typeof new String("x")` is `"object"`, and that `new Boolean(false)` is truthy because every object is (*read*)
+- **Beyond the docs:** [Methods of primitives](https://javascript.info/primitives-methods) — javascript.info: walks the temporary object wrapper created for a method call and discarded after, why `null` and `undefined` have none, and why `new Number(1)` is discouraged (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [14 · Value equality](./14-value-equality.md) · [Phase index](./) · Next: [16 · `Object.is`, `-0` and `Infinity`](./16-object-is-and-zero.md) →

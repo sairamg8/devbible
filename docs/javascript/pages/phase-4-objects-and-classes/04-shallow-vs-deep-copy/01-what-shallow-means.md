@@ -212,6 +212,18 @@ Their own constructors: `new Map(oldMap)`, `new Date(oldDate)`. Spread does not
 work because their contents live in internal slots rather than own enumerable
 properties — `{ ...new Map(…) }` is `{}`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [structuredClone()](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone) — MDN: deep copy that preserves circular references; throws `DataCloneError` for non-serializable parts (*read*)
+- **Also good:** [Object references and copying](https://javascript.info/object-copy) — javascript.info, 2022-10-01: references vs copies, `Object.assign` shallow, `structuredClone` for nested (*read*)
+- **Beyond the docs:** [Deep-copying in JavaScript using structuredClone](https://web.dev/articles/structured-clone) — Surma, web.dev, updated 2021-12-16: walks the options in order: spread is a shallow copy, the JSON round trip mishandles built-ins such as `Map`, `Set`, `Date`, `RegExp` and discards functions, and `structuredClone` returns a plain object (it drops the prototype cha
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [`structuredClone`](./02-structuredclone.md)

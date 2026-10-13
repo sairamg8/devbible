@@ -187,6 +187,18 @@ change the origin used by `localStorage`, `IndexedDB`, `BroadcastChannel` or `Sh
 framed?** `Content-Security-Policy: frame-ancestors` or `X-Frame-Options`, both response
 headers. A JavaScript frame-busting check is not a defence.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Window: postMessage()](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) — MDN: check `event.origin`, pin the target origin
+- **Also good:** [Same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy) — MDN
+- **Beyond the docs:** [Testing Web Messaging](https://wstg.owasp.org/v4.2/4-Web_Application_Security_Testing/11-Client-side_Testing/11-Testing_Web_Messaging/) — OWASP Web Security Testing Guide, v4.2: the attacker's view of a missing origin check, with vulnerable handlers
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Overview](./README.md) · Next → [2 · `postMessage`](./02-postmessage.md)

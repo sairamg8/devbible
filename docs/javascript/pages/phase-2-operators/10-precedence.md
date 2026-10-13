@@ -230,6 +230,18 @@ surprise.
 `flags & MASK === 0`. Equality binds tighter than `&`, so it parses as
 `flags & (MASK === 0)`. Write `(flags & MASK) !== 0`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) — MDN: the precedence and associativity table *(MDN: 200, title and lead passage read)*
+- **Also good:** [SyntaxError: cannot use ?? unparenthesized within || and && expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized) — MDN *(MDN: 200, title and lead passage read)*
+- **Beyond the docs:** [Nullish coalescing operator '??'](https://javascript.info/nullish-coalescing-operator) — javascript.info, page dated April 23, 2023: `1 && 2 ?? 3` is a syntax error and `(1 && 2) ?? 3` gives `2`; `height ?? 100 * width ?? 50` groups as `height ?? (100 * width) ?? 50`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [09 · switch](./09-switch.md) · [Phase index](./) · Next: [11 · Expressions vs statements](./11-expressions-vs-statements.md) →

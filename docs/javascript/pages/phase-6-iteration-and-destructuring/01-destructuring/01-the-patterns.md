@@ -243,6 +243,17 @@ No. In `const { b: { c } } = obj`, `b` is only a path — only `c` is bound. Wri
 `[a, b] = [b, a]` — the right-hand array is fully evaluated before any assignment, so no
 temporary is needed. It extends to any rotation, such as `[a, b, c] = [c, a, b]`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) — MDN: arrays, objects, nesting, defaults, renaming, rest, function parameters, swapping (*read* the headings)
+- **Beyond the docs:** [Destructuring assignment](https://javascript.info/destructuring-assignment) — javascript.info, 2026-02-26: arrays, objects, defaults, renaming, rest, nesting, function parameters, and the swap trick, in lesson order (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Destructuring in parameters and loops](./02-in-parameters-and-loops.md)

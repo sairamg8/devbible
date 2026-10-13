@@ -192,6 +192,18 @@ Because the returned function keeps referencing the outer call's variables after
 returned. That is the closure, and it is the mechanism behind `debounce`, `memoize`, `once` and
 every middleware signature.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Higher-order Functions](https://eloquentjavascript.net/05_higher_order.html) — Eloquent JavaScript, Marijn Haverbeke: "Functions that operate on other functions, either by taking them as arguments or by returning them", with `greaterThan(n)` and `noisy(f)`; the page shows no date (*read*)
+- **Also good:** [First-class Function](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function) — MDN glossary *(MDN: 200, title and lead passage read)*: [Callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+- **Also good:** [Callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [08 · Hoisting and the TDZ](./08-hoisting-and-tdz/README.md) · [Phase index](./README.md)

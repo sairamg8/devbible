@@ -219,6 +219,17 @@ and nearly complete. Cancelling is stronger; ignoring composes better with cachi
 **What is the smallest general defence?**
 A monotonic counter per screen region: increment on start, compare before every write.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect) — react.dev: has a "Fetching data" section that explains out-of-order responses and fixes them with an `ignore` flag set in the effect cleanup (*read*)
+- **Beyond the docs:** [Handling race conditions when fetching data in React with useEffect](https://maxrozen.com/race-conditions-fetching-data-react-with-useeffect) — Max Rozen, no date shown: why responses arrive out of order, a cleanup flag that ignores stale results, and `AbortController` as the second fix
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · The other UI races](./02-the-other-races.md) →

@@ -200,6 +200,18 @@ accent (NFD); they render the same and are not `===`. Normalise both with
 units, which places all uppercase before lowercase and misorders accented
 characters for every locale.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [String: length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) — MDN: `length` counts UTF-16 code units, splitting with the string iterator counts characters (code points), and `Intl.Segmenter` counts graphemes (*read*)
+- **Also good:** [Intl.Segmenter.prototype.segment()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) — MDN: the grapheme-granularity example (*read*)
+- **Beyond the docs:** [JavaScript has a Unicode problem](https://mathiasbynens.be/notes/javascript-unicode) — Mathias Bynens, 2013-10-20: astral code points, why `'💩'.length` is 2, and the ES6 fixes (`codePointAt`, `for...of`, the `u` flag); 2013, so it predates `Intl.Segmenter` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [09 · Explicit conversion](./09-explicit-conversion.md) · [Phase index](./) · Next: [11 · `NaN`](./11-nan.md) →

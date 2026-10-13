@@ -249,6 +249,18 @@ prototype exists to avoid. Measure before treating it as a problem.
 A module. Module bodies execute once and the exports are shared by every importer, so an exported
 object *is* a singleton with no pattern required — and no class needed for a single instance.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object.create()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) — MDN: `Object.create(null)` is the same as `&#123; __proto__: null &#125;` (*read*)
+- **Also good:** [Object.create(null)](https://davidwalsh.name/object-create-null) — David Walsh, 2017-09-06: short post on `Object.create(null)` as an ultra-vanilla dictionary next to `Object.create(&#123;&#125;)`; the comments (not the post) raise the missing `hasOwnProperty` and suggest `Map`; predates `Object.hasOwn` (*read*)
+- **Beyond the docs:** [Prototype methods, objects without __proto__](https://javascript.info/prototype-methods) — javascript.info, 2025-02-10: a user-supplied `"__proto__"` key is silently ignored on a normal object, `Object.create(null)` gives a pure dictionary, the cost is no `toString`, and `Map` is the other route
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · `Object.create` and null-prototype dictionaries](./02-object-create-and-dictionaries.md) →

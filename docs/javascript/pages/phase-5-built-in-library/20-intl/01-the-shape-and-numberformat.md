@@ -283,6 +283,17 @@ you actually got.
 `{ notation: "compact" }`, with `compactDisplay: "long"` for "1.2 thousand". It localises,
 which a hand-written `K`/`M`/`B` chain does not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) — MDN: index of every Intl constructor, including `Collator` and `Segmenter` (*read*)
+- **Beyond the docs:** [The Power Of The Intl API](https://www.smashingmagazine.com/2025/08/power-intl-api-guide-browser-native-internationalization/) — Fuqiao Xue, Smashing Magazine, 2025-08-08: covers `NumberFormat`, `DateTimeFormat`, `RelativeTimeFormat`, `ListFormat`, `PluralRules` and `DisplayNames`; it has nothing on `Collator` or `Segmenter`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · Dates and relative time](./02-dates-and-relative-time.md) →

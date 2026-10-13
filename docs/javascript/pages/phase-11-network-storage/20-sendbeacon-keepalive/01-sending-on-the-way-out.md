@@ -137,6 +137,18 @@ on mobile and can disqualify the page from the back/forward cache.
 not once at the end — so the handler must be idempotent or send only what has changed since
 the last send.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Navigator: sendBeacon()](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) — MDN: send on `visibilitychange`, not `unload`
+- **Also good:** [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api) — Chrome for Developers: why `unload` is unreliable
+- **Beyond the docs:** [Sending Background Data with the Beacon API](https://blog.openreplay.com/sending-background-data-beacon-api/) — OpenReplay blog: when to use `sendBeacon` versus `fetch` with `keepalive`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Overview](./README.md) · [Phase 11](../README.md)

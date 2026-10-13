@@ -211,6 +211,18 @@ When every branch simply maps a key to a value. The lookup is shorter, has no
 It cannot fall through by accident, and it removes a line per case. `break` is
 only necessary when the `switch` is not the last thing the function does.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) — MDN: reference for `switch`, `case` and `default` *(MDN: 200, title and lead passage read)*
+- **Also good:** [no-case-declarations](https://eslint.org/docs/latest/rules/no-case-declarations) — ESLint docs: a `let`, `const`, `function` or `class` in a `case` is visible across the whole `switch` block but initialised only when its case runs; wrap the clause in braces (*read*)
+- **Beyond the docs:** [The switch statement](https://javascript.info/switch) — javascript.info, page dated April 25, 2022: comparison is strict, cases can share a block, and a missing `break` runs on into the next case without checks
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [08 · Conditionals](./08-conditionals.md) · [Phase index](./) · Next: [10 · Precedence](./10-precedence.md) →

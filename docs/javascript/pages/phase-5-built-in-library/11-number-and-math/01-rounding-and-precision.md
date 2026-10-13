@@ -212,6 +212,17 @@ They agree on positives and differ on negatives: `trunc` drops the decimals (`-2
 It coerces to a 32-bit signed integer, so any value beyond about 2.1 billion wraps to a wrong,
 often negative, result. `Math.trunc` has no such cliff.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Math.random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) — MDN: `getRandomInt` and an inclusive variant, and a warning that `Math.round` makes a non-uniform distribution (*read*)
+- **Also good:** [Number.prototype.toFixed](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) — MDN: returns a string; `(2.55).toFixed(1)` gives `'2.5'` because the nearest float is lower (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · Parsing, checking and the helpers](./02-parsing-checking-helpers.md) →

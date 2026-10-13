@@ -211,6 +211,18 @@ Not through a default — both trigger it, which is the point and is what makes 
 through wrappers. If you genuinely need the difference, you need `arguments.length` or a rest
 parameter, and you should first ask why a caller passing `undefined` deserves different treatment.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/) — Dan Abramov, Overreacted, March 9, 2019: each render has its own props and state; an interval with an empty dependency array keeps the first render's `count`, fixed by the dependency array or `setCount(c =&gt; c + 1)` (*read*)
+- **Also good:** [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures) — MDN *(MDN: 200, title and lead passage read)*
+- **Beyond the docs:** [Be Aware of Stale Closures when Using React Hooks](https://dmitripavlutin.com/react-hooks-stale-closures/) — Dmitri Pavlutin, page shows "Updated March 17, 2023": a `setInterval` in `useEffect` with empty dependencies logs the first render's `count` forever; fixes are the dependency array, `setCount(count =&gt; count + 1)`, or a ref
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Next → 17.2 · Merging, forwarding and identity](./02-merging-forwarding-and-identity.md)

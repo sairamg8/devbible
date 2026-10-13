@@ -174,6 +174,19 @@ Keyboard support and screen-reader semantics, unless you rebuild them: focus man
 and arrow keys, and labels that announce the current state. Captions via `<track>` are content and
 should never be dropped.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MediaDevices: getUserMedia()](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) — MDN
+- **Also good:** [Canvas tutorial](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial) — MDN
+- **Beyond the docs:** [The definitive guide to getUserMedia()](https://flaviocopes.com/getusermedia/) — Flavio Copes, updated 2026-08-10: has sections on stopping every track (clearing `srcObject` or removing the element does not release the camera) and on muting with `enabled` instead; it is the release-the-camera point of our delta
+- **Also good:** [getUserMedia sample](https://webrtc.github.io/samples/src/content/getusermedia/gum/) — WebRTC samples: a minimal working demo; its script (`js/main.js`) assigns the stream to `video.srcObject`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Capture](./02-capture.md) →

@@ -188,6 +188,17 @@ objects are truthy.
 `ToBoolean` on a string is "is the length zero?". A single space has length 1.
 Use `str.trim() !== ''` when whitespace-only should count as empty.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) — MDN: everything is truthy except the falsy list, and `[]` is truthy (*read*)
+- **Beyond the docs:** [Type Conversions](https://javascript.info/type-conversions) — javascript.info: the boolean rule: `"0"` and a whitespace-only string are `true` because a non-empty string always is (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · Equality](./03-equality.md) · [Phase index](./) · Next: [05 · `null` vs `undefined`](./05-null-vs-undefined.md) →

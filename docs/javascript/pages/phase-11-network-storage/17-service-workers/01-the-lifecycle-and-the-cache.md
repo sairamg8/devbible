@@ -201,6 +201,18 @@ consumed once — returning it to the page and writing it to the cache are two c
 network-first with a cached fallback for documents and dynamic data. Cache-first HTML is how
 users get stranded on an old build.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) — MDN: install, activate, fetch events
+- **Also good:** [The service worker lifecycle](https://web.dev/articles/service-worker-lifecycle) — web.dev: why a new worker waits, which is the stale-worker trap
+- **Beyond the docs:** [The offline cookbook](https://jakearchibald.com/2014/offline-cookbook/) — Jake Archibald, 2014: names each caching strategy, including stale-while-revalidate; 2014, so the lifecycle detail should be checked against MDN
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Overview](./README.md) · [Phase 11](../README.md)

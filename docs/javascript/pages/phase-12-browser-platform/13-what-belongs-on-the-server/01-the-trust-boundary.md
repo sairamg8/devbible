@@ -164,6 +164,18 @@ touched it. Filtering is a server responsibility; the client renders what it is 
 Any response header — CSP, HSTS, `nosniff`, `frame-ancestors`, cookie flags, CORS. They are set by
 the server by definition, which is why front-end-only security is never complete.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [A01:2021 Broken Access Control](https://top10.owasp.org/2021/A01_2021-Broken_Access_Control/index.html) — OWASP Top 10: access control only works in trusted server-side code (*read*)
+- **Also good:** [Input Validation Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) — OWASP: client-side validation is bypassable and is for feedback only (*read*)
+- **Also good:** [Web Parameter Tampering](https://community.owasp.org/attacks/Web_Parameter_Tampering) — OWASP Community: the attack that changes price, quantity or permissions held in hidden fields, cookies or query strings, which is the concrete case for server-side checks
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Getting it right in practice](./02-getting-it-right.md) →

@@ -220,6 +220,18 @@ When your own code made the change — react where the change happens instead. I
 do not control, and `subtree: true` on a busy region is expensive enough that it should be a
 deliberate choice.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mutation observer](https://javascript.info/mutation-observer) — javascript.info: config options (`childList`, `subtree`, `attributes`), the record properties, `disconnect`/`takeRecords`, and a "Dynamic highlight demo" (*headings only*)
+- **Also good:** [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) — MDN: constructor, one-line `disconnect`/`takeRecords` and an example; the option list and record shape live on the linked `observe()` and `MutationRecord` pages, not here (*read*)
+- **Also good:** [MutationObserver.observe()](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/observe)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · When to use it](./02-when-to-use-it.md) →

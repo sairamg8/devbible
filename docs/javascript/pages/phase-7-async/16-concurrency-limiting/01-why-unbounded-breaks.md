@@ -180,6 +180,16 @@ No. It bounds what runs, not what is queued. A million queued items still sit in
 They multiply the burst unless the retry lives inside the task. One slot should cover an item and
 all of its attempts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Promise concurrency limit](https://techearl.com/javascript-promise-concurrency-limit) — Ishan Karunaratne, TechEarl, 2026-06-02: a fixed number of workers share one cursor and pull the next index, results stored by index, so output keeps input order (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · The bounded pool](./02-the-bounded-pool.md) →

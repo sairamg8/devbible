@@ -180,6 +180,17 @@ Source order, as the object is constructed — so side effects in the key expres
 happen predictably left to right. MDN's example uses `++i` three times and gets
 `foo1`, `foo2`, `foo3` with matching values.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) — MDN: shorthand property names and computed property names with examples (*read*)
+- **Beyond the docs:** [Property order is predictable in JavaScript objects since ES2015](https://www.stefanjudis.com/today-i-learned/property-order-is-predictable-in-javascript-objects-since-es2015/) — Stefan Judis, published 2018-10-17, updated 2024-07-07: states that integer-index keys come first, sorted numerically, which is the one rule the MDN page leaves out
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Methods, accessors and spread](./02-methods-accessors-and-spread.md)

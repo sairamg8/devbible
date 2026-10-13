@@ -241,6 +241,18 @@ It carries why the abort happened — the standard `AbortError` `DOMException` b
 whatever value you pass to `abort()`. That is how two different cancellations in the same
 code path stay distinguishable downstream.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [AbortSignal.timeout()](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout_static) — MDN: a signal that aborts after a delay, with a `TimeoutError`
+- **Also good:** [Fetch: Abort](https://javascript.info/fetch-abort) — javascript.info: `AbortController` with `fetch`, step by step
+- **Beyond the docs:** [Cancelling In-Flight Fetch Requests with AbortController](https://blog.openreplay.com/cancelling-in-flight-fetch-abortcontroller/) — OpenReplay blog: the `useEffect` cleanup that aborts on unmount; does not cover `AbortSignal.timeout`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · Cancellation as a lifecycle](./02-cancellation-as-a-lifecycle.md) →

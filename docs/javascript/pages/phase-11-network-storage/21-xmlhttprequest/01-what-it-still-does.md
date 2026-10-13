@@ -143,6 +143,18 @@ timers — until the response arrives. The legacy use case, sending data at unlo
 `AbortController`, and `xhr.timeout` becomes `AbortSignal.timeout()` — with the caveat that
 the two produce differently-named `DOMException`s, `AbortError` and `TimeoutError`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) — MDN: `upload` and `progress` events
+- **Also good:** [XMLHttpRequest](https://javascript.info/xmlhttprequest) — javascript.info: lists upload progress as a thing `fetch` cannot do
+- **Beyond the docs:** [Has fetch() caught up with XMLHttpRequest in JavaScript?](https://waspdev.com/articles/2025-10-10/has-fetch-caught-up-with-xhr) — WaspDev blog, 2025-10-10: tests what `fetch` still lacks; recent, so it matches our "why upload progress is the reason" claim
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Overview](./README.md) · [Phase 11](../README.md)

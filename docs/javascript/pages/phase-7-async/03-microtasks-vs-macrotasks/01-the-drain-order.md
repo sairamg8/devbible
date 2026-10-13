@@ -248,6 +248,17 @@ and rendering happens between tasks.
 Neither queue — it is a separate callback list run as part of the **rendering step**, just
 before layout and paint. That is why visual updates belong there rather than in a timer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) — Jake Archibald, 2015-08-17: the canonical ordering exercise: `script start`, `script end`, `promise1`, `promise2`, then the `setTimeout` callback; notes that some browsers of the time got it wrong (*read*)
+- **Also good:** [Using microtasks in JavaScript with queueMicrotask()](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) — MDN: microtasks drain completely, including ones added while draining, before the loop moves on (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

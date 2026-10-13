@@ -166,6 +166,20 @@ the thing to try first.
 Doing less: virtualising, paginating, indexing once, and letting `content-visibility` skip
 off-screen rendering.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Scheduler: yield()](https://developer.mozilla.org/en-US/docs/Web/API/Scheduler/yield) — MDN: feature-detect before use
+- **Also good:** [Optimize long tasks](https://web.dev/articles/optimize-long-tasks) — web.dev: splitting work, with `scheduler.yield()` and its fallbacks
+- **Also good:** [Use scheduler.yield() to break up long tasks](https://developer.chrome.com/blog/use-scheduler-yield)
+- **Also good:** [requestIdleCallback](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback)
+- **Beyond the docs:** [How to Yield to the Main Thread to Improve INP](https://www.corewebvitals.io/pagespeed/yield-to-main-thread) — CoreWebVitals.io, Arjen Karel (a web performance consultancy), last update 2026-03-04: lists the older ways to yield with the limit of each (a `setTimeout` task goes to the back of the queue) and a `yieldToMain()` helper that falls back to `setTimeout`, which is our fallback-chain delta; the page says Safari lacks `
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [13 · What belongs on the server](./13-what-belongs-on-the-server/README.md) · [Phase index](./README.md) · [15 · Cross-tab coordination](./15-cross-tab-coordination/README.md) →

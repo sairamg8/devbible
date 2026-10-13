@@ -257,6 +257,17 @@ Typed arrays sort numerically by default, whereas `Array.prototype.sort` compare
 stringified values and would put `10` before `9`. It is one of the few places the typed
 version has the friendlier default.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JavaScript typed arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Typed_arrays) — MDN Guide: buffers, views, `DataView`, multiple views on the same data; endianness is covered inside the `DataView` section, not as its own heading (*read* the headings)
+- **Beyond the docs:** [TypedArray or DataView: Understanding byte order](https://hacks.mozilla.org/2017/01/typedarray-or-dataview-understanding-byte-order/) — Martin Splitt, Mozilla Hacks, 2017-01-04: typed arrays use host byte order (usually little-endian) while `DataView` defaults to big-endian
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · `DataView`, endianness and where they show up](./02-dataview-and-endianness.md) →

@@ -207,6 +207,17 @@ whose component has gone still holds its targets and its closure.
 The element is not rendered, so its boxes are zero. Wait for the observer to report a non-zero
 size instead of drawing on mount.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) — MDN
+- **Beyond the docs:** [How to fix ResizeObserver loop completed with undelivered notifications](https://trackjs.com/javascript-errors/resizeobserver-loop-completed-with-undelivered-notifications/) — TrackJS: explains when the warning is harmless and when your callback resizes what it observes
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · The loop, timing and cost](./02-the-loop-and-timing.md) →

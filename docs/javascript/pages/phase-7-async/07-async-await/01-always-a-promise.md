@@ -229,6 +229,18 @@ every later line and to a debugger — rather than threaded through handler argu
 Generators. MDN: *"the behavior of `async`/`await` is similar to combining generators and
 promises"* — the function suspends and resumes, and the awaited promise decides when.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) — MDN: always returns a new promise, non-promise returns are wrapped, so `p === asyncReturn()` is `false` (*read*)
+- **Also good:** [await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await) — MDN: `await` suspends only the surrounding async function; even a non-promise value resumes in a later microtask (*read*)
+- **Beyond the docs:** [The Difference Between Async/Await and Generators](https://thecodebarbarian.com/the-difference-between-async-await-and-generators) — Valeri Karpov, 2018-05-03: shows the rough conversion (`co.wrap(function*)` and `yield` for `async` and `await`); written for the `co` era, so the "desugars to" idea is clear but the details are dated
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Exactly where it suspends](./02-where-it-suspends.md)

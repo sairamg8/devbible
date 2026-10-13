@@ -237,6 +237,17 @@ the wall clock and can move backwards when the system clock is corrected.
 time. Wrap it — `new Date(Date.UTC(...))` — to get a `Date`. It still has zero-indexed
 months and the 0–99 year rule.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) — MDN: date-only forms are read as UTC and date-time forms as local, zero-indexed months, two-digit years, DST gaps and overlaps (*read*)
+- **Beyond the docs:** [The Hidden Traps in JavaScript's Date API](https://hackernoon.com/the-hidden-traps-in-javascripts-date-api) — Gabor Koos, HackerNoon, 2026-07-23: zero-indexed months, date-only ISO read as UTC, a 23-hour DST day (the 25-hour case is stated but not shown), `setMonth` rolling January 31 to March 3
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · Parsing, and the one-day bug](./02-parsing-and-the-one-day-bug.md) →

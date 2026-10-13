@@ -151,6 +151,20 @@ No — measured `describe.bind(user) === describe.bind(user)` is `false`. A new
 function object every time, which is why binding inline in
 `addEventListener`/`removeEventListener` pairs never removes the listener.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Function.prototype.call()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) — MDN: reference for `call` *(MDN: 200, title and lead passage read)*
+- **Read this:** [apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+- **Read this:** [bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+- **Also good:** [Decorators and forwarding, call/apply](https://javascript.info/call-apply-decorators) — javascript.info, page dated June 8, 2022: `call` and `apply` set `this`, `[].join.call(arguments)` borrows a method, and a caching decorator is built on them
+- **Beyond the docs:** [Function binding](https://javascript.info/bind) — javascript.info, page dated April 13, 2025: `setTimeout(user.sayHi, 1000)` loses `this`; `bind` returns a new function and "A function cannot be re-bound"; `mul.bind(null, 2)` is partial application
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · Next → [What `bind` does](./02-what-bind-does.md)

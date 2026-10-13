@@ -192,6 +192,17 @@ It deliberately forces a reflow so the engine registers the class removal before
 otherwise both writes coalesce in one task and the animation never restarts. `getAnimations()` and
 the Web Animations API are the modern alternatives.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What forces layout/reflow. The comprehensive list.](https://gist.github.com/paulirish/5d52fb081b3570c81e3a) — Paul Irish (gist), body says "Updated slightly April 2020": the property and method list that forces layout, grouped by API (element, window, document, forms, mouse offsets, `getComputedStyle`, `Range`, SVG, contenteditable); a short appendix recommends batching reads and writes (*read*)
+- **Also good:** [Avoid large, complex layouts and layout thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) — web.dev, last updated 2025-05-07: a loop that reads then writes per iteration is a read-write cycle; the fix is to read once before the loop (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Fixing it](./02-fixing-it.md)

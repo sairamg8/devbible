@@ -228,6 +228,17 @@ propagates silently.
 `Math.max(...arr)` on an empty array returns `-Infinity` rather than throwing or
 returning `0`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object.is()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is) — MDN: differs from `===` only on signed zeros and `NaN`, and does no coercion (*read*)
+- **Also good:** [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) — MDN: the four-way table with SameValueZero, which `includes`, `Map` and `Set` use (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [15 · Object wrappers](./15-object-wrappers.md) · [Phase index](./) · Next: [17 · Numeric literals](./17-numeric-literals.md) →

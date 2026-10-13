@@ -181,6 +181,17 @@ Either is correct. The new methods read better and cannot be misread as the muta
 they are ES2023 — check the target environments. The spread-copy idiom works everywhere and is not
 deprecated.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array.prototype.toSorted](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted) — MDN: "the copying version of the `sort()` method"; empty slots sort as `undefined`; See also links `toReversed`, `toSpliced`, `with` (*read*)
+- **Beyond the docs:** [ES2023 new array copying methods](https://www.sonarsource.com/blog/es2023-new-array-copying-methods-javascript/) — Phil Nash, Sonar blog, 2023-05-10: all four methods and why they exist: the old way needed a manual copy before every mutation
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [12 · String searching](./12-string-searching/README.md) · [Phase index](./README.md) · Next: **14 · `flat`, `flatMap`, `fill`, `copyWithin`** *(not written yet)* →

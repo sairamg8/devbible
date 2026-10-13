@@ -4,6 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every JavaScript topic there is a [link map](./link-map/README.md): the primary docs plus, where one exists, the best non-official explanation — what it covers and what our own page must keep saying. First pass — open for review.
+:::
+
 The complete topic inventory for JavaScript, tiered for **mastery in fullstack
 application development**. **19 phases, 337 topics**, split into 5 parts to stay
 under the 300-line file cap.

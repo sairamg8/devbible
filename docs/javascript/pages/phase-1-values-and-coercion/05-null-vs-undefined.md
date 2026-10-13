@@ -195,6 +195,17 @@ The distinction matters most in a `PATCH` body, where `undefined` should mean
 "leave alone" and `null` should mean "set to empty" — and `JSON.stringify`'s
 behaviour makes exactly that encoding work.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Nullish coalescing](https://v8.dev/features/nullish-coalescing) — V8 blog, Justin Ridgewell, 2019-09-17: `||` falls back on every falsy value, `??` only on null and undefined, and destructuring defaults fire only for `undefined` (*read*)
+- **Also good:** [JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Data_structures) — MDN: definitions of both primitives (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · Truthiness](./04-truthiness.md) · [Phase index](./) · Next: [06 · Numbers are doubles](./06-numbers-are-doubles.md) →

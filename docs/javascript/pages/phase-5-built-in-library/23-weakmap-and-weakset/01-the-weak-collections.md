@@ -262,6 +262,17 @@ at a known lifecycle point.
 `#private` class fields. They are unreachable by any reflection, need no module-scope map,
 and cost no lookup per access. The `WeakMap` version survives only in code predating them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) — MDN: private-members, metadata and caching examples; `WeakRef` and `FinalizationRegistry` are only linked out to the memory-management guide (*read*)
+- **Beyond the docs:** [Weak references and finalizers](https://v8.dev/features/weak-references) — V8 team, v8.dev, 2019-07-09 (updated 2020-06-19): `WeakRef` and `FinalizationRegistry` fixing a listener leak, with "don't place important logic in the code path of a finalizer"; also explains `WeakMap` and `WeakSet`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · `WeakRef` and `FinalizationRegistry`](./02-weakref-and-finalizationregistry.md) →

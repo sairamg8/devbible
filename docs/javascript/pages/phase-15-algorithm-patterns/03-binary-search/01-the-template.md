@@ -205,6 +205,18 @@ inside that half's range. Not "is the target bigger than mid".
 `nums[lo] === nums[mid]` makes the sorted half ambiguous, so the only safe move is to shrink by
 one — O(n) worst case.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Binary Search](https://cp-algorithms.com/num_methods/binary_search.html) — cp-algorithms: lower bound as the first element greater or equal to k, upper bound as the first greater than k, plus search on an arbitrary predicate such as an average (*read*)
+- **Also good:** [Binary Search](https://usaco.guide/silver/binary-search) — USACO Guide: binary search on the answer needs a monotonic boolean function (*read*)
+- **Beyond the docs:** [Binary search](https://csa.gigamonkeys.com/slides/binary-search/) — Gigamonkeys CS slides: states the half-open invariant (if the target is present, its index i satisfies low at most i, and i is below high), shows each branch keeping it, and explains the overflow bug in the textbook midpoint; Java code, no lower or uppe
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Searching over an answer](./02-searching-over-an-answer.md)

@@ -213,6 +213,18 @@ everything except that key.
 `1` — measured. Rest parameters and parameters with defaults are excluded from
 the arity count, which matters for libraries that inspect it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) — MDN: reference for spread *(MDN: 200, title and lead passage read)*
+- **Read this:** [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- **Beyond the docs:** [Rest parameters and spread syntax](https://javascript.info/rest-parameters-spread) — javascript.info, page dated Oct 18, 2022: rest must be last in the parameter list, and spread copies arrays and objects; the page never says the copy is shallow
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05 · Loops](./05-loops.md) · [Phase index](./) · Next: [07 · Comparison](./07-comparison.md) →

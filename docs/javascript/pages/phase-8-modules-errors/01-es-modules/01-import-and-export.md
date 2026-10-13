@@ -244,6 +244,18 @@ an expression that returns a promise.
 **Does `export *` re-export the default?**
 No — named exports only. Use `export { default as X } from "./x.js"`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) — MDN guide: named versus default exports, import maps, top-level `await`, hoisted imports, cyclic imports (*read*, including the cyclic-imports and top-level `await` sections)
+- **Also good:** [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) — MDN reference: named, default, namespace and side-effect forms, plus `with` import attributes; also covers hoisting and live bindings (*read*)
+- **Beyond the docs:** [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) — Lin Clark, Mozilla Hacks, 2018-03-28: CommonJS copies values while ES modules share one memory location (live bindings), and loading splits into construction, instantiation and evaluation; predates top-level `await`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Module specifiers and the graph](./02-specifiers-and-the-graph.md)

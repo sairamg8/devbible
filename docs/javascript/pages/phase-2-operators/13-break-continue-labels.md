@@ -199,6 +199,21 @@ labelled `break`, which is the second legitimate use for labels.
 Only if the `switch` is inside a loop, and it continues that loop. Outside a
 loop it is a `SyntaxError`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Labeled statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label) — MDN: reference for labels *(MDN: 200, title and lead passage read)*
+- **Read this:** [break](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break)
+- **Read this:** [continue](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue)
+- **Also good:** [Loops: while and for](https://javascript.info/while-for) — javascript.info, page dated June 19, 2022: labels let `break` or `continue` target an outer loop; they cannot jump to arbitrary places and `continue` needs a loop
+- **Beyond the docs:** [How to Break and Continue in Nested Loops in JavaScript](https://www.dannyguo.com/blog/how-to-break-and-continue-in-nested-loops-in-javascript) — Danny Guo, April 17, 2022: short, uses `break chunkLoop;` and `continue chunkLoop;`; labels only, no function-return or flag alternative
+- **Beyond the docs:** [JavaScript Labels](https://davidwalsh.name/javascript-labels)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [12 · ASI](./12-asi.md) · [Phase index](./) · Next: [14 · Bitwise](./14-bitwise.md) →

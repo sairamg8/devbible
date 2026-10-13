@@ -206,6 +206,18 @@ that can cancel scrolling (`wheel`, `touchstart`). `scroll` reports a scroll tha
 The content box — no padding or border. `borderBoxSize` is what compares with
 `getBoundingClientRect()`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) — MDN: asynchronous intersection with a root; the example loads more items when a footer scrolls into view (*read*)
+- **Also good:** [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) — MDN (*headings only*): [Element: scroll event](https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll_event)
+- **Also good:** [Element: scroll event](https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll_event)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Visibility and lifecycle](./02-visibility-and-lifecycle.md) →

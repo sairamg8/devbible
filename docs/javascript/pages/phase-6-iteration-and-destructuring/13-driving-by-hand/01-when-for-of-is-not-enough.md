@@ -190,6 +190,17 @@ it.
 Assume the iterator is closed and stop. MDN allows retrying but advises against relying on
 it — if `next()` threw, cleanup has generally already happened.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) — MDN: "Errors during iteration": if you call `next()` by hand, assume the iterator is closed after an error; `return()` runs only on early exit (*read*)
+- **Beyond the docs:** [Iterables: calling an iterator explicitly](https://javascript.info/iterable) — javascript.info, 2024-05-10: loops `str[Symbol.iterator]()` with `next()` by hand, and says this lets you pause, do other work, and resume (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Multi-iterator algorithms](./02-multi-iterator-algorithms.md)

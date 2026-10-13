@@ -251,6 +251,18 @@ recursion of the same shape.
 Nothing extra — the depth is the total number of calls, so it overflows exactly as fast as direct
 recursion. The one real trap is the temporal dead zone with `const` arrow functions.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Recursion and stack](https://javascript.info/recursion) — javascript.info, page dated Oct 1, 2022: execution context stack, a depth limit that the page puts around 10000 as a safe assumption, base case, and tail-call optimisation that is "not yet supported everywhere" and works only in simple cases; it does not name V8
+- **Also good:** [InternalError: too much recursion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion) — MDN *(MDN: 200, title and lead passage read)*
+- **Beyond the docs:** [ECMAScript 6 Proper Tail Calls in WebKit](https://webkit.org/blog/6240/ecmascript-6-proper-tail-calls-in-webkit/) — Michael Saboff, WebKit blog, May 23, 2016: what a proper tail call buys (the caller's stack space is reused, deep recursion no longer overflows), that it applies only in strict mode, and how JavaScriptCore keeps debugging usable; it describes WebKit only and does not discu
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [13 · Memoization](./13-memoization.md) · [Phase index](./README.md) · **15 · Pure functions and side effects** *(not written yet)* →

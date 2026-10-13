@@ -278,6 +278,18 @@ that number is what you *asked for*, not what happened.
 Yes — the spec keeps one map of active timers, so the ids are interchangeable. Write the
 matching call anyway; the mismatch looks like a mistake.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Window: requestAnimationFrame()](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame) — MDN: paused in background tabs
+- **Also good:** [Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) — Jake Archibald: Posted 2015-08-17
+- **Beyond the docs:** [Heavy throttling of chained JS timers beginning in Chrome 88](https://developer.chrome.com/blog/timer-throttling-in-chrome-88) — Chrome for Developers: the conditions for hidden-tab throttling, and a pointer to animation APIs; I read the opening, Chrome-only
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Frames and `requestAnimationFrame`](./02-frames.md) →

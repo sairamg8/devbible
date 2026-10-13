@@ -236,6 +236,17 @@ that signal, which makes a controller the natural teardown handle for a componen
 No. It is cooperative: only APIs that honour the signal stop, and nothing can interrupt a
 synchronous block.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) — MDN: `AbortSignal.timeout()` rejects with `TimeoutError`, `AbortSignal.any()` combines signals, `throwIfAborted()`, `reason`, and an "implementing an abortable API" example (*read*)
+- **Beyond the docs:** [Aborting a signal: how to cancel an asynchronous task in JavaScript](https://ckeditor.com/blog/Aborting-a-signal-how-to-cancel-an-asynchronous-task-in-JavaScript/) — Tomasz Jakut, CKEditor blog, 2020-03-10: a function that accepts a signal, checks `aborted` first because no event fires for an already-aborted signal, and clears its timer in the abort listener; predates `AbortSignal.timeout` and `any`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Composing and propagating signals](./02-composing-signals.md) →

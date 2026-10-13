@@ -185,6 +185,17 @@ have no such wrapper.
 **Is `require.cache` the same cache as `import` uses?**
 No — Node documents them as separate, which is how one module ends up loaded twice.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modules: CommonJS modules](https://nodejs.org/api/modules.html) — nodejs.org: `exports` is a shortcut to `module.exports`; cache by resolved filename; a circular `require()` returns an unfinished `exports`; `require()` of ESM throws `ERR_REQUIRE_ASYNC_MODULE` with top-level `await` (*read*)
+- **Beyond the docs:** [Introduction to CommonJS](https://flaviocopes.com/commonjs/) — Flavio Copes, page shows "Updated Jul 18, 2026": why `exports = x` exports nothing, `.cjs` or `"type": "commonjs"`, and a recommendation to set the module type explicitly
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · Next → [02 · Interop, both ways](./02-interop-both-ways.md)

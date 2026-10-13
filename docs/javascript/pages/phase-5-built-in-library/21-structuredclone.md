@@ -202,6 +202,18 @@ It moves ownership of a transferable — an `ArrayBuffer`, a `MessagePort`, an
 payloads that turns a full copy into a pointer handover, which is the whole reason to
 prefer it at a worker boundary.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [structuredClone()](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone) — MDN: the `transfer` option and `DataCloneError`; it does not list what is cloneable, it links out (*read*)
+- **Also good:** [The structured clone algorithm](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) — MDN: supported types (`Map`, `Set`, `Date`, typed arrays, errors), cycles handled by a visited map, and what fails: functions, DOM nodes, the prototype chain, property descriptors (*read*)
+- **Beyond the docs:** [Deep-copying in JavaScript using structuredClone](https://web.dev/articles/structured-clone) — Surma, web.dev, last updated 2021-12-16: JSON round trip throws on cycles and drops functions while `structuredClone` handles cycles and built-ins; it cannot clone functions, DOM nodes or class prototypes
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [20 · `Intl`](./20-intl/README.md) · [Phase index](./README.md) · Next: **22 · Array-likes and iterables** *(not written yet)* →

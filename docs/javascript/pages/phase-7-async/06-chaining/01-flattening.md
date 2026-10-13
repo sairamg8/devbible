@@ -223,6 +223,17 @@ with an already-fulfilled promise. Equivalent to writing the `.then` chain by ha
 The concise arrow body returns implicitly; the braced one returns `undefined`. It is the
 same rule, and it is why concise bodies are the safer default in a chain.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) — MDN guide: "chaining" and the mistake of not returning the inner promise, so the next `then` receives `undefined`; one `catch` at the end covers every step; nesting narrows a `catch` (*read*)
+- **Beyond the docs:** [Promises chaining](https://javascript.info/promise-chaining) — javascript.info, last updated April 6, 2023: returning a value hands it to the next handler, returning a promise makes later handlers wait, and a thenable is treated the same way
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Error propagation](./02-error-propagation.md)

@@ -178,6 +178,17 @@ Capture-phase logging and `elementsFromPoint` are real APIs, but belong behind a
 Something is on top of it — a leftover full-screen overlay, an oversized sticky header, or a
 pseudo-element. `document.elementsFromPoint()` names the whole stack at that coordinate.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Console Utilities API reference](https://developer.chrome.com/docs/devtools/console/utilities) — Chrome for Developers: `getEventListeners(object)` and `monitorEvents` both documented (*read*)
+- **Also good:** [Pause your code with breakpoints](https://developer.chrome.com/docs/devtools/javascript/breakpoints) — Chrome for Developers: event-listener breakpoints (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [Phase 10 index](../README.md) →

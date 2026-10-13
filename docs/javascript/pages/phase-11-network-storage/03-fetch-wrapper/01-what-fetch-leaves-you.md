@@ -196,6 +196,17 @@ It returned `204 No Content`. `res.json()` on an empty body throws. Return `null
 Because the 404 was a *successful* fetch. The first thing that actually throws is the parser
 meeting an HTML error page, three layers away from the missing `ok` check.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) — MDN: checking `ok`, headers and aborting, the pieces a wrapper combines
+- **Beyond the docs:** [Safe Data Fetching in Modern JavaScript](https://www.builder.io/blog/safe-data-fetching) — Builder.io blog: a `ResponseError` class that carries the failed response so `catch` can read status and body; also recommends a library, which our page does not
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · URLs, parsing and the client surface](./02-urls-and-parsing.md)

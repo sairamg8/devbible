@@ -201,6 +201,19 @@ far less code. It survives for `readAsDataURL`, which is still the shortest rout
 embeddable data URL, and for its `progress` event when reading a very large local file.
 `FileReaderSync` exists in workers, which is where heavy local processing belongs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) — MDN: slices and readers
+- **Also good:** [URL.createObjectURL()](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL_static) — MDN: [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
+- **Also good:** [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
+- **Beyond the docs:** [Blob](https://javascript.info/blob) — javascript.info: explains the URL-to-Blob mapping the browser holds and why `revokeObjectURL` frees memory
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · Object URLs, and reading without reading](./02-object-urls.md) →

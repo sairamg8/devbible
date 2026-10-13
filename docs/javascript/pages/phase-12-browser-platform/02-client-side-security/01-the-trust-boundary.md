@@ -173,6 +173,19 @@ Because the observable behaviour — the requests, the endpoints, the values —
 DevTools no matter what the source looks like. Obfuscation raises effort slightly and changes
 nothing about what is possible.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) — OWASP: output encoding by context, with dangerous sinks such as `innerHTML`
+- **Also good:** [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html) — OWASP: [Web security](https://developer.mozilla.org/en-US/docs/Web/Security)
+- **Also good:** [Web security](https://developer.mozilla.org/en-US/docs/Web/Security)
+- **Beyond the docs:** [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types) — web.dev (Google): makes sinks like `innerHTML` reject plain strings
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Other windows and frames](./02-windows-and-frames.md)

@@ -201,6 +201,19 @@ body. It is a deliberate restriction, not a failure.
 They are values: a wrapper builds requests, a service worker answers with constructed responses, and
 tests return `Response.json(...)` instead of running a server.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) — MDN: the constructor and the `bodyUsed` property
+- **Also good:** [Response.clone()](https://developer.mozilla.org/en-US/docs/Web/API/Response/clone) — MDN: clone before reading; throws if the body is already used
+- **Also good:** [Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers)
+- **Beyond the docs:** [What happens when you read a response?](https://jakearchibald.com/2014/reading-responses/) — Jake Archibald, 2014-08-12: the design argument for one-shot bodies and for calling `clone()` before reading; written against an early draft (its `response.body.asJSON()` no longer exists), so take the reasoning, not the code
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [Phase 11 index](../README.md) →

@@ -189,6 +189,18 @@ the child cannot know who else is listening.
 Distinguishing user-generated events from ones created with `dispatchEvent`. A useful
 diagnostic — **not** a security control.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Event.currentTarget](https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget) — MDN: versus `target`, with a parent/child click example (*read*)
+- **Also good:** [Event.stopImmediatePropagation()](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopImmediatePropagation) — MDN (*headings only*): [Event.preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+- **Also good:** [Event.preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

@@ -170,6 +170,18 @@ as JSON produces `Unexpected token '<'`.
 Rarely used directly — mainly service workers intercepting a form submission, where the request body
 is multipart or urlencoded and needs parsing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using readable streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams) — MDN: `response.body.getReader()` and reading chunks
+- **Also good:** [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) — MDN: `json`, `text`, `blob`, `arrayBuffer`, `formData`
+- **Beyond the docs:** [Fetch: Download progress](https://javascript.info/fetch-progress) — javascript.info: a `reader.read()` loop that counts received bytes, and the rule that you cannot use both a reader and a body method on one response
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Streaming a body](./02-streaming-a-body.md) →

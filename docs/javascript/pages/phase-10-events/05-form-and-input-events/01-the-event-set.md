@@ -191,6 +191,18 @@ warns it does not fire for every modification.
 Because validating mid-typing marks a half-written email as invalid and, with a live region,
 announces it. `focusout` validates once the user has finished with the field.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Element: input event](https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event) — MDN: `input` fires as the user edits, `change` when the value is committed; programmatic `value` changes fire neither (*read*)
+- **Also good:** [beforeinput](https://developer.mozilla.org/en-US/docs/Web/API/Element/beforeinput_event) — MDN (*headings only*): [Events: change, input, cut, copy, paste](https://javascript.info/events-change-input)
+- **Also good:** [Events: change, input, cut, copy, paste](https://javascript.info/events-change-input)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · A controlled input by hand](./02-a-controlled-input.md) →

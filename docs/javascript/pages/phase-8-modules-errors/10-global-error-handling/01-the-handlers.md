@@ -250,6 +250,18 @@ Worker or a cross-origin iframe, which have their own global scopes.
 First — before any application code — so start-up failures are captured, and the handler must
 never throw.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Window: error event](https://developer.mozilla.org/en-US/docs/Web/API/Window/error_event) — MDN: `onerror` receives five arguments and must return `true` to cancel console output; the `error` event gets an `ErrorEvent` (*read*)
+- **Also good:** [Window: unhandledrejection event](https://developer.mozilla.org/en-US/docs/Web/API/Window/unhandledrejection_event) — MDN: promise rejections with no handler (*read*)
+- **Beyond the docs:** [Client JavaScript reporting: window.onerror](https://blog.sentry.io/client-javascript-reporting-window-onerror/) — Ben Vinegar, Sentry blog, updated 2025-09-24: the five arguments, a generic `Script error.` message for some cross-origin cases (the full `Error` object is the useful argument), and a hand-written `fetch` reporter; calls manual reporting "mostly obsolete" in favour of Sentry'
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Shipping errors to a reporter](./02-shipping-to-a-reporter.md) →

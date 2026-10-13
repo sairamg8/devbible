@@ -182,6 +182,18 @@ Out of range: `charAt` returns an empty string, bracket access returns `undefine
 because a `??` fallback fires on `undefined` and not on `""`. `at()` is the modern option and
 supports negative indices.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [String.prototype.includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) — MDN: case-sensitive substring test; See also links `indexOf`, `startsWith`, `endsWith` (*read*)
+- **Also good:** [String.prototype.localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) — MDN: delegates to `Intl.Collator`; use a collator for large arrays (*read*)
+- **Beyond the docs:** [Locale Aware Sorting in JavaScript](https://elijahmanor.com/byte/js-locale-sort) — Elijah Manor, 2022-03-28: default sort puts accented ñop last; `localeCompare` fixes it, with `Intl.Collator` for big sets
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · Comparing and sorting human text](./02-comparing-and-sorting.md) →
