@@ -225,6 +225,18 @@ counts. Where the size is genuinely unknown, push the boundary lower so less mov
 keep the fallback simple: one that suspends escalates to the parent boundary, costing you
 both the design and the granularity.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Suspense](https://react.dev/reference/react/Suspense) — react.dev: nested boundaries as a loading sequence, with "Don't put a Suspense boundary around every component. Suspense boundaries should not be more granular than the loading sequence that you want the user to experience" (*read*)
+- **Also good:** [New Suspense SSR Architecture in React 18](https://github.com/reactwg/react-18/discussions/37) — Dan Abramov, React 18 Working Group, 2021-06-05: more boundaries give finer control; sketches the shell-first streaming idea (*read*)
+- **Beyond the docs:** [Designing Loading UI in React](https://certificates.dev/blog/designing-loading-ui-in-react) — Aurora Scharff, certificates.dev, 2026-07-16: wrap only the slow part, size the skeleton to the content, and nest a lower boundary inside an upper one when height is unpredictable so nothing is pushed down (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Async transitions](09-async-transitions.md) ·

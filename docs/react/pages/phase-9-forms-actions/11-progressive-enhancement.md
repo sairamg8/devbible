@@ -203,6 +203,18 @@ benefit theoretical. It earns its place on public high-traffic pages, sign-up an
 flows where a dropped submission is lost revenue, and anywhere with an accessibility or
 regulatory obligation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [form](https://react.dev/reference/react-dom/components/form) — react.dev: a Server Function passed to `action` submits without JavaScript or before the bundle loads; showing an error in that case needs a Client Component form, a Server Function and `useActionState` (*read*)
+- **Also good:** [useActionState](https://react.dev/reference/react/useActionState) — react.dev: the `permalink` argument: if the action is a Server Function and the form is submitted before the bundle loads, the browser navigates to the permalink; the same form must render there with the same action; no effect once the page 
+- **Beyond the docs:** [Progressively Enhance Handling Your Forms With React.js Server Actions](https://techhub.iodigital.com/articles/progressively-enhance-handling-your-forms-with-react-js-server-actions) — Dave Bitter, iO Digital, 2024-03-08: what a plain HTML form does without a handler, and the `use server` function in its own file passed to `action`; written for Next.js 14 and it mentions neither `useActionState` nor `useFormState`, so check details (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Errors in actions](10-errors-in-actions.md) ·

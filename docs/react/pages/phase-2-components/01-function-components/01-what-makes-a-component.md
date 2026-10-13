@@ -261,6 +261,18 @@ attribute you passed plus `children`. You must not mutate it — props are
 immutable by contract, and the parent is the only thing that can supply new ones
 ([topic 06](../06-props-are-read-only.md)).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Your First Component](https://react.dev/learn/your-first-component) — react.dev: "you must never nest their definitions"; a component defined inside another is "very slow and causes bugs" (*read*)
+- **Also good:** [static-components](https://react.dev/reference/eslint-plugin-react-hooks/lints/static-components) — react.dev: a nested component is a new type each render, so state and DOM are destroyed; define at module level (*read*)
+- **Beyond the docs:** [Don't call a React function component](https://kentcdodds.com/blog/dont-call-a-react-function-component) — Kent C. Dodds, 2019-12-08: calling a component as a plain function attaches its hooks to the caller, giving "Rendered fewer hooks than expected"
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Function components](README.md) · Next → [Component identity and the nesting rule](02-identity-and-nesting.md)

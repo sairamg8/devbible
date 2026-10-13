@@ -223,6 +223,17 @@ Its function identity changes each render, so React detaches the previous
 callback (calling it with `null`) and attaches the new one. Stabilise it with
 `useCallback`, or return a cleanup function from the ref in React 19.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Render and Commit](https://react.dev/learn/render-and-commit) — react.dev: trigger, render, commit; render must be a pure calculation and React touches the DOM only if the output differs (*read*)
+- **Beyond the docs:** [A (Mostly) Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/) — Mark Erikson, 2020-05-17 (updated October 2022 for React 18): separate Render and Commit phases, a reconciliation section, the parent-re-renders-children default, and the statement that under concurrent rendering React may render a component several times and throw the output away
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The element](02-the-element.md) · Index: [Phase 0](README.md) · Next → [Reconciliation](04-reconciliation.md)

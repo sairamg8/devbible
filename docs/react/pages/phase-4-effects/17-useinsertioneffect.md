@@ -154,6 +154,16 @@ after the DOM has been updated — so the DOM cannot be relied on either. Those 
 consequences of being first, and together they are why the hook is safe to hand a
 library and useless to an application.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useInsertionEffect](https://react.dev/reference/react/useInsertionEffect) — react.dev: a hook for CSS-in-JS library authors that inserts `style` tags before layout effects fire; no state updates inside, refs not attached yet, does not run on the server; has a section on why it beats injecting during render or in `us
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Subscribing to an external store](16-external-store.md) · Index: [Phase 4](README.md) · Next → [Skipping the first run](18-skipping-the-first-run.md)

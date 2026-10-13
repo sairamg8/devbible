@@ -248,6 +248,19 @@ keeps the shape a component depends on out of your data layer's hands. Avoid
 `JSON.parse(JSON.stringify(…))`: it is lossy where the boundary is not, and it turns your
 dates into strings for nothing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) — Next.js docs: "Crossing the boundary": code crosses through imports, data through props and must be serializable; passing a function such as `onClick` throws; a Server Function crosses as a reference (*read*)
+- **Also good:** [`'use server'`](https://react.dev/reference/rsc/use-server) — react.dev: the list of argument types that are not supported (React elements, class instances, non-global symbols, events) (*read*)
+- **Also good:** [`'use client'`](https://react.dev/reference/rsc/use-client)
+- **Beyond the docs:** [React for Two Computers](https://overreacted.io/react-for-two-computers/) — Dan Abramov, 2025-04-09: builds the idea that what travels between machines is data describing a call, not live functions; serializability is implicit in the argument rather than stated as a rule, and the post is long and conceptual (*read*, first 100k of
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`'use server'`](04-use-server.md) ·

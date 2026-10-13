@@ -201,6 +201,17 @@ No. Initial state is read once at the first render in that position however it
 is computed. If the value should follow a prop, derive it instead of storing it,
 or remount with `key`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useState](https://react.dev/reference/react/useState) — react.dev: "Avoiding recreating the initial state": pass `createInitialTodos`, not `createInitialTodos()` (*read*)
+- **Beyond the docs:** [useState lazy initialization and function updates](https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates) — Kent C. Dodds, 2020-08-03: you only pay the cost when the function is called, on the first render (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What triggers a re-render](08-what-triggers-a-re-render.md) · Index: [Phase 3](README.md) · Next → [Structuring state](10-structuring-state.md)

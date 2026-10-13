@@ -197,6 +197,19 @@ Because locale- and timezone-sensitive formatting differs between a developer ma
 and that produces failures that look mysterious and are trivially explained. `TZ=UTC` plus an
 explicit locale removes the whole class.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Timer Mocks](https://jestjs.io/docs/timer-mocks) — Jest docs: `useFakeTimers`, `runAllTimers`, `advanceTimersByTime`; `runAllTimers` throws after 100,000 timers on recursive timers (*read*)
+- **Also good:** [Mocking timers](https://vitest.dev/guide/mocking/timers) — Vitest docs: `vi.useFakeTimers()` and `vi.advanceTimersByTime` (*read*)
+- **Also good:** [`act`](https://react.dev/reference/react/act)
+- **Beyond the docs:** [Test Isolation with React](https://kentcdodds.com/blog/test-isolation-with-react) — Kent C. Dodds, 2018-07-02: rendering once at module level makes tests share mutable state, so skipping one breaks later ones; render per test (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Testing Server Components](13-testing-server-components.md) ·

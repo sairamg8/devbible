@@ -187,3 +187,16 @@ device like your users have, and CPU throttling.
 ---
 
 Index: [Phase 6](README.md) · Next → [`memo`](02-memo.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Why React Re-Renders](https://www.joshwcomeau.com/react/why-react-re-renders/) — Josh W. Comeau, 2022-08-16 (updated 2025-12-03): every re-render starts with a state change, then the parent-renders-children rule, pure components, context, and profiling with the DevTools (*read*)
+- **Also good:** [Render and Commit](https://react.dev/learn/render-and-commit) — react.dev: what a render is and when React does one: the initial render, or a state update in the component or an ancestor (*read*)
+- **Also good:** [React Developer Tools](https://react.dev/learn/react-developer-tools)
+- **Beyond the docs:** [A (Mostly) Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/) — Mark Erikson, 2020-05-17: a long reference on rendering, with context and React-Redux effects; written before React 18 and the Compiler (*read*)
+
+{/* LINKMAP:END */}

@@ -205,6 +205,18 @@ It hides the cause. Something real is slow — usually an un-mocked network call
 — and the higher timeout only makes the eventual failure slower to arrive. Mock the network,
 control the timers, and keep the timeout at the default so a genuine regression is loud.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Async Utilities](https://testing-library.com/docs/dom-testing-library/api-async/) — Testing Library docs: `findBy` is `getBy` plus `waitFor`; `waitFor` retries until the callback stops throwing; `waitForElementToBeRemoved` throws if the element is already gone (*read*)
+- **Also good:** [`act`](https://react.dev/reference/react/act) — react.dev: needs `IS_REACT_ACT_ENVIRONMENT`; recommends React Testing Library because its helpers are already wrapped; does not explain the "not wrapped in act" warning or fake timers (*read*)
+- **Beyond the docs:** [Fix the "not wrapped in act(...)" warning](https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning) — Kent C. Dodds, 2020-02-03: the warning means a component updated when the test did not expect it; a passing test can hide a UI that never settles, fixed by asserting on the end state (the "Saving" text disappearing); RTL async utilities are already wrapped 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Async testing and what `act()` means](README.md) ·

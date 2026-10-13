@@ -270,6 +270,17 @@ Because the observer holds a reference to the node it observes. Without
 reachable, so neither can be collected — and the callback keeps running against a
 component that no longer exists.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Making setInterval Declarative with React Hooks](https://overreacted.io/making-setinterval-declarative-with-react-hooks/) — Dan Abramov, 2019-02-04: the interval is set once and calls the newest callback stored in a ref; 2019, and `useEffectEvent` is the newer route (*read*)
+- **Also good:** [useEffect](https://react.dev/reference/react/useEffect) — react.dev: "Listening to a global browser event" and "Tracking element visibility" recipes (`IntersectionObserver` with `disconnect()` in cleanup) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Effect ordering](13-effect-ordering.md) · Index: [Phase 4](README.md) · Next → [Effects and refs together](15-effects-and-refs.md)

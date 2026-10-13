@@ -216,6 +216,17 @@ change re-renders less of the tree. That is a real effect and it is the argument
 behind pushing state down. Splitting without moving state changes nothing —
 React re-renders the whole subtree either way.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Thinking in React](https://react.dev/learn/thinking-in-react) — react.dev: one concern per component, align with the data model; whether to split a table header is "a matter of preference" (*read*)
+- **Beyond the docs:** [Colocation](https://kentcdodds.com/blog/colocation) — Kent C. Dodds, 2019-06-17: "place code as close to where it's relevant as possible"; aimed at files and state in general, not only components
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`ref` as a prop](09-ref-as-a-prop.md) · Index: [Phase 2](README.md) · Next → [Portals](11-portals.md)

@@ -219,6 +219,17 @@ depends on — a timeout id, a WebSocket, a third-party player instance, a previ
 value kept only for comparison inside a handler. Those are the two legitimate uses
 the `useRef` reference describes, and neither involves avoiding something.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Referencing Values with Refs](https://react.dev/learn/referencing-values-with-refs) — react.dev: if a value does not affect rendering choose a ref, otherwise state; refs are an escape hatch (*read*)
+- **Beyond the docs:** [Don't Misuse useRef in React](https://dev.to/a1guy/dont-misuse-useref-in-react-the-practical-guide-you-actually-need-5aj6) — a1guy, DEV Community, 2025-08-17: a whole article on misuse: mutating the box does not tell React to re-render (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useImperativeHandle`](07-useimperativehandle.md) · Index: [Phase 5](README.md) · Next → [`useState` vs `useReducer`](09-usestate-vs-usereducer.md)

@@ -174,6 +174,16 @@ a boundary activation, which React handles as a documented path with no mismatch
 reconcile. Same expression, opposite outcome — and it is a good test of whether someone
 understands why mismatches happen.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [New Suspense SSR Architecture in React 18](https://github.com/reactwg/react-18/discussions/37) — Dan Abramov (gaearon), React Working Group, 2021-06-05: hydration per Suspense boundary, and a click on an unhydrated part makes React hydrate it synchronously during the capture phase (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Streaming SSR with Suspense](06-streaming-ssr.md) ·

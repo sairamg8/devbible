@@ -215,6 +215,16 @@ development build is roughly 1.1 MB against 195 kB.
 port. Same-origin in development, so no CORS configuration and no URL differences
 between environments.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Sunsetting Create React App](https://react.dev/blog/2025/02/14/sunsetting-create-react-app) — react.dev: CRA deprecated for new apps; frameworks (Next.js, React Router, Expo) preferred, Vite, Parcel or Rsbuild for special cases (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What changed in React 19](09-what-changed-in-19.md) · Index: [Phase 0](README.md) · Next → [The React Compiler](11-the-compiler.md)

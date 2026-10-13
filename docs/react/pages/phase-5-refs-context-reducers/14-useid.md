@@ -220,6 +220,17 @@ opaque: the format is not documented and not a contract — React 19.2 changed i
 from `:r:` / `«r»` to `_r_` so that generated ids are valid in CSS selectors and
 View Transition names, which broke anything that had assumed the old shape.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useId](https://react.dev/reference/react/useId) — react.dev: ids for accessibility attributes, and not for list keys (*headings only*)
+- **Beyond the docs:** [The Definitive React 19 useId Guide](https://dev.to/a1guy/the-definitive-react-19-useid-guide-patterns-pitfalls-and-pro-tips-40ia) — Ali Aslam (a1guy), DEV Community, 2025-08-18: shows duplicate ids when the same form is rendered twice, and why a random id mismatches between server and client at hydration; its `:r0:` examples predate the 19.2 prefix change (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The default context value](13-default-context-value.md) · Index: [Phase 5](README.md) · Next → [`useSyncExternalStore`](15-usesyncexternalstore.md)

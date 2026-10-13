@@ -197,6 +197,19 @@ Jest's module system is CommonJS by default, so ESM in `node_modules` is not tra
 throws "Cannot use import statement outside a module". The fix is a `transformIgnorePatterns`
 entry for that package. Vitest, being ESM-native, does not have the problem.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Getting Started](https://vitest.dev/guide/) — Vitest docs, v5.0.4: requires Vite 6.4.0 or newer and Node 22.12.0 or newer (*read*)
+- **Also good:** [Comparisons with Other Test Runners](https://vitest.dev/guide/comparisons.html) — Vitest docs: Vitest shares `vite.config.js` where Jest needs a separate pipeline; the Jest section says nothing on ESM or jsdom, and the page is written by the Vitest project (*read*)
+- **Also good:** [Jest Getting Started](https://jestjs.io/docs/getting-started)
+- **Also good:** [Vitest environments](https://vitest.dev/guide/environment)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Mocking the API with MSW](06-mocking-the-api/README.md) ·

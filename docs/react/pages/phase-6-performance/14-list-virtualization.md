@@ -182,6 +182,17 @@ your data, and index keys become far more damaging: virtualized rows mount and
 unmount constantly as you scroll, so state attached to a position rather than an item
 gets corrupted aggressively rather than in rare reorder cases.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TanStack Virtual: Introduction](https://tanstack.com/virtual/latest/docs/introduction) — TanStack: a headless UI utility for virtualizing long lists in React and other frameworks, with a ten-thousand-row example (*read*)
+- **Also good:** [Virtualize large lists with react-window](https://web.dev/articles/virtualize-long-lists-react-window) — Jason Miller and Houssein Djirdeh, web.dev (Google), last updated 2019-04-29: defines list virtualization, or windowing, as rendering only what is visible; covers react-window only and is old (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Moving state down and lifting content up](13-moving-state-down.md) · Index: [Phase 6](README.md) · Next → [Expensive initial mount](15-expensive-initial-mount.md)

@@ -213,6 +213,18 @@ The docs say it is optional today but that **in the future some features may
 require the compiler** to fully work. That is worth knowing when weighing adoption:
 the direction of travel is toward it being assumed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React Compiler v1.0](https://react.dev/blog/2025/10/07/react-compiler-1) — react.dev: the stable release post: a build-time tool that optimizes through automatic memoization (*read*)
+- **Also good:** [React Compiler Introduction](https://react.dev/learn/react-compiler/introduction) — react.dev: what it does and how it replaces manual memoization (*read*)
+- **Beyond the docs:** [React Compiler: An Introduction, Pros, Cons & When to Use It](https://www.debugbear.com/blog/react-compiler) — Anna Monus, DebugBear, 2026-01-28 (updated 2026-04-15): prints the compiled output of a small component, with a cache array and each JSX element memoized on its own, then lists pros and cons, including that the DevTools badge only says the compiler processed a component (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The memoization trap](06-the-memoization-trap.md) · Index: [Phase 6](README.md) · Next → [Installing and configuring the Compiler](08-installing-the-compiler.md)

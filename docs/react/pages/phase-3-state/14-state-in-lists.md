@@ -220,6 +220,18 @@ measurement found it deduplicated after the first offending list with a given
 parent tag — so its absence is not evidence that the remaining lists are keyed
 correctly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Rendering Lists](https://react.dev/learn/rendering-lists) — react.dev: a stable `key` from data, not the array index, which breaks on reorder, insert or delete (*read*)
+- **Also good:** [Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state) — react.dev: state belongs to a position and identity in the tree (*read*)
+- **Beyond the docs:** [Index as a key is an anti-pattern](https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/) — Robin Pokorny, 2015-10-11: explains that with an unchanged index key React assumes the DOM element is the same component as before, so a push or removal mid-list can "display wrong data"; the text does not name component state or inputs, and 2015 means clas
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The update queue](13-the-update-queue.md) · Index: [Phase 3](README.md) · Next → [Preserving and resetting state](15-preserving-and-resetting.md)

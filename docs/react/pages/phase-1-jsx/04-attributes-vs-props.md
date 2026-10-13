@@ -265,6 +265,16 @@ what ends up in the DOM. For host elements React maps one to the other; for
 your own components there is no mapping at all, and nothing reaches the DOM
 unless you forward it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Common components](https://react.dev/reference/react-dom/components/common) — react.dev: `className`, `htmlFor`, `aria-*` identical to HTML, `data-*` supported, `style` camelCase (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What can be rendered](03-what-can-be-rendered.md) · Index: [Phase 1](README.md) · Next → [Capitalization](05-capitalization.md)

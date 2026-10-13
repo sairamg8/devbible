@@ -266,6 +266,18 @@ row of a long list is a consumer. A re-render that produces identical output cos
 a function call and a diff that finds nothing — profile before splitting a context
 five ways.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useContext](https://react.dev/reference/react/useContext) — react.dev: the section on optimizing re-renders when passing objects and functions through a provider (*read*)
+- **Also good:** [A (Mostly) Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/) — Mark Erikson, 2020-05-17: has a "Context and Rendering Behavior" section with a "Context Updates and Render Optimizations" example next to the general rules of what re-renders; written for React 16 to 18, before the Compiler (*read*)
+- **Beyond the docs:** [How to write performant React apps with Context](https://www.developerway.com/posts/how-to-write-performant-react-apps-with-context) — Nadia Makarevich, Developer Way, 2022-02-07: starts from a form that re-renders everything through one provider, then splits state from the API and splits the state further so consumers stop re-rendering; written before React 19 and the Compiler (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`createContext` and `useContext`](04-createcontext-usecontext.md) · Index: [Phase 5](README.md) · Next → [Ref callbacks](06-ref-callbacks.md)

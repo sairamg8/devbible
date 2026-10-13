@@ -204,6 +204,18 @@ caught — so an action's throw is covered — but an ordinary event handler's i
 promise started inside an action and never awaited escapes entirely as an unhandled
 rejection.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useActionState](https://react.dev/reference/react/useActionState) — react.dev: a "Handling errors" section: known errors returned as state and rendered inline, unknown errors thrown so the nearest Error Boundary shows its fallback and queued Actions are cancelled (*read*)
+- **Also good:** [react-error-boundary](https://github.com/bvaughn/react-error-boundary) — Brian Vaughn, GitHub README: in React 19, errors thrown inside a function passed to `startTransition` are caught by the nearest boundary; `useErrorBoundary` covers event-handler and async errors (*read*)
+- **Beyond the docs:** [Error Handling](https://nextjs.org/docs/app/getting-started/error-handling) — Next.js docs, version 16.4.0, last updated 2026-10-06: expected errors are returned as values and shown through `useActionState`; unexpected errors are thrown to error boundaries; unhandled errors inside `startTransition` bubble to the nearest boundary (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Form reset semantics](09-form-reset.md) ·

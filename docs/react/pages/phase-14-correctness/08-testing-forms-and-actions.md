@@ -244,6 +244,17 @@ Returned as state for expected failures. The docs say a thrown error cancels que
 and surfaces at the nearest Error Boundary — appropriate for something exceptional, not for
 "the email address is missing".
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`&lt;form&gt;`](https://react.dev/reference/react-dom/components/form) — react.dev: action functions receive `FormData` and run in a Transition; pending state via `useFormStatus`; a thrown error goes to the nearest error boundary (*read*)
+- **Also good:** [`useActionState`](https://react.dev/reference/react/useActionState) — react.dev: `isPending`, returned errors versus thrown errors (*read*); no testing content
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Jest or Vitest](07-jest-or-vitest.md) ·

@@ -260,6 +260,18 @@ the common shape. Call the handler with the next value rather than an event when
 there is no real DOM event, and name it for what happened rather than for what
 the parent should do about it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Sharing State Between Components](https://react.dev/learn/sharing-state-between-components) — react.dev: controlled gets key values from props, uncontrolled owns its state; real components mix both (*read*)
+- **Also good:** [input](https://react.dev/reference/react-dom/components/input) — react.dev: an input cannot switch modes; use `value ?? ''` rather than null or undefined (*read*)
+- **Beyond the docs:** [Controlled and uncontrolled form inputs in React don't have to be complicated](https://goshacmd.com/controlled-vs-uncontrolled-inputs-react/) — Gosha Spark, 2016-11-07: when to pick each (instant validation, formatting, dynamic inputs vs simple forms) and how to migrate from uncontrolled to controlled later; does not cover the controlled-to-uncontrolled switch warning, which stays on the react.de
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Controlled vs uncontrolled](README.md) · Next → [The switch warning, and supporting both](02-the-switch-warning.md)

@@ -183,6 +183,17 @@ in the client graph. The payload catches leaked *data* — a value passed as a p
 read inside a Server Component and passed down appears in the payload and never in the
 bundle.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) — Next.js docs: the RSC Payload is "a serialized description of the UI" carrying references to Client Components; the server graph emits references and serialized props (*read*)
+- **Beyond the docs:** [RSC From Scratch. Part 1: Server Components](https://github.com/reactwg/server-components/discussions/5) — Dan Abramov, React Working Group, 2023-06-02: builds a server that sends a JSX tree to the client, starting from a PHP-style blog; the tree is sent with `JSON.stringify` and a custom replacer (not streamed, not Flight rows), and Part 2 was unwritten when read (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The December 2025 advisories](12-december-2025-advisories.md) ·

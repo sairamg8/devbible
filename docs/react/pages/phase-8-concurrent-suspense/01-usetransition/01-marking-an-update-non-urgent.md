@@ -235,6 +235,18 @@ blocking the urgent one — the input stays live — but the table still takes e
 to render. If the goal was a faster table, profile it: the memoization, the row count or
 the virtualization is still the answer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useTransition](https://react.dev/reference/react/useTransition) — react.dev: sections on pending visual state with `isPending`, preventing unwanted loading indicators, a Suspense-enabled router, and the troubleshooting entry on why an input update inside a transition does not work (*read*)
+- **Also good:** [New feature: startTransition](https://github.com/reactwg/react-18/discussions/41) — Ricky Hanlon, React 18 Working Group, 2021-06-08: why a transition differs from a timeout: it starts at once and urgent input can interrupt it (*read*)
+- **Beyond the docs:** [Don't Stop Me Now: How to Use React useTransition() hook](https://dmitripavlutin.com/react-usetransition/) — Dmitri Pavlutin, 2021-06-23: a worked example where typing stays urgent and a heavy list highlight is the transition; it describes `isPending` as the pending flag but its example never renders it; written for React 18, so no async functions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [`startTransition` and `useTransition`](README.md) ·

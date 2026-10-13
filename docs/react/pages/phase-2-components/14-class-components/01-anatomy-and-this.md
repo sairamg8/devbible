@@ -275,6 +275,17 @@ It re-renders a component without a state change. Almost never the right answer:
 it means state is being kept somewhere React cannot observe, and the fix is
 usually to put that value in state or a store rather than to force renders.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Component](https://react.dev/reference/react/Component) — react.dev: mount, update, unmount methods map to `useEffect`; `getDerivedStateFromError` and `componentDidCatch` have no hook form (*read*)
+- **Beyond the docs:** [How Are Function Components Different from Classes?](https://overreacted.io/how-are-function-components-different-from-classes/) — Dan Abramov, Overreacted, 2019-03-03: a class reads `this.props` at call time and React mutates `this`, so a delayed callback can see newer props, while a function component captures its render's values; binding in the constructor does not fix it
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Class components](README.md) · Next → [The lifecycle, and the hook each one maps to](02-lifecycle-and-hooks.md)

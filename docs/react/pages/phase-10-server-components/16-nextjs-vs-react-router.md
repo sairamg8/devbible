@@ -174,6 +174,17 @@ rule is the module graph: a value is exposed if the file reading it is in the cl
 directly or transitively. `server-only` turns a wrong import into a build error, and that
 works regardless of framework.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React Server Components in React Router](https://reactrouter.com/how-to/react-server-components) — React Router docs: RSC is experimental, in Framework and Data Mode, with `ServerComponent` route exports (*read*)
+- **Also good:** [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) — Next.js docs, the other side (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Data fetching in RSC](15-data-fetching-in-rsc.md) ·

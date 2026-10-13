@@ -256,6 +256,18 @@ fallback offers a retry that resets it, or the boundary is remounted with a chan
 which discards the errored state. Without one of those the error is terminal until reload,
 which is much of why `react-error-boundary` exists.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [use](https://react.dev/reference/react/use) — react.dev: a rejected promise goes to the nearest Error Boundary; the example nests the boundary outside Suspense; do not wrap `use` in try-catch; the example also shows a retry through `resetKeys` and `startTransition` (*read*)
+- **Also good:** [Component](https://react.dev/reference/react/Component) — react.dev: `componentDidCatch` and `static getDerivedStateFromError`, and the statement that there is currently no way to write an Error Boundary as a function component (*read*)
+- **Beyond the docs:** [react-error-boundary](https://github.com/bvaughn/react-error-boundary) — Brian Vaughn (repository owner bvaughn), GitHub README: `resetKeys` to recover when state changes, `useErrorBoundary` for async and event-handler errors, and a note that errors thrown inside a transition's function reach the nearest boundary; it does not mention Suspense (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Tearing](15-tearing.md) ·

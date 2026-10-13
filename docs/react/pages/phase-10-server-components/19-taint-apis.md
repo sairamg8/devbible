@@ -236,6 +236,18 @@ caught without you. Tainting exists for the **serializable-but-secret** case —
 just a string, a row that is just an object — and belongs at the data access layer, where
 tainting once protects every caller.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`experimental_taintObjectReference`](https://react.dev/reference/react/experimental_taintObjectReference) — react.dev: experimental, not for production; protects only an unchanged object, and "Do not rely on just tainting for security" (*read*)
+- **Also good:** [`experimental_taintUniqueValue`](https://react.dev/reference/react/experimental_taintUniqueValue) — react.dev: registers a unique secret; derived values such as uppercased or base64 copies are not tainted (*read*)
+- **Also good:** [How to Think About Security in Next.js](https://nextjs.org/blog/security-nextjs-server-components-actions)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Server Components without a framework](18-without-a-framework.md) ·

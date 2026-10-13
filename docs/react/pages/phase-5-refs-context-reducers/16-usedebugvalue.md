@@ -135,6 +135,16 @@ Because the function is not being treated as a custom Hook. A function only coun
 as one if its name starts with `use`, which is also what permits it to call other
 Hooks. A misnamed helper gets neither.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useDebugValue](https://react.dev/reference/react/useDebugValue) — react.dev: adds a label to a custom hook in React DevTools, with an optional format function (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useSyncExternalStore`](15-usesyncexternalstore.md) · Index: [Phase 5](README.md)

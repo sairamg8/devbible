@@ -191,6 +191,16 @@ CSS for the positioning.
 Because a different DOM node was passed during an update, which the reference says causes the
 portal content to be recreated. Keep the target stable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`createPortal`](https://react.dev/reference/react-dom/createPortal) — react.dev: portals into a page that is only partly React, with browser-API examples (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 11](README.md) ·

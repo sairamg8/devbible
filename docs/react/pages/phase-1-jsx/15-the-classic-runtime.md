@@ -202,6 +202,17 @@ and `unmountComponentAtNode`.
 Leave the JSX untransformed for another tool — Babel, SWC or the bundler — to
 handle. A file compiled that way and never passed downstream ships literal JSX.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@babel/plugin-transform-react-jsx](https://babeljs.io/docs/babel-plugin-transform-react-jsx) — Babel: `runtime` classic vs automatic, `importSource`, and the per-file pragmas `@jsxRuntime`, `@jsxImportSource`, `@jsx`, `@jsxFrag` (*read*)
+- **Also good:** [Introducing the New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) — legacy React blog: classic needs React in scope; `importSource` for other libraries (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Whitespace and text](14-whitespace-and-text.md) · Index: [Phase 1](README.md) · Next → [Phase 2 — Components, props and composition](../phase-2-components/README.md)

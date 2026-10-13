@@ -123,6 +123,16 @@ render less. Deferring keeps the cost and only moves it, so it is the fourth thi
 try, not the first. It does compose with the others: a virtualized list fed a
 deferred query is reasonable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useDeferredValue](https://react.dev/reference/react/useDeferredValue) — react.dev: deferring a value so a search box stays responsive while a list catches up (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Bundle size](16-bundle-size.md) · Index: [Phase 6](README.md)

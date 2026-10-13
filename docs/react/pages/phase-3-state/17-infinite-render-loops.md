@@ -240,6 +240,18 @@ a value. If the handler sets state, that is setting state during render, which
 re-renders, which calls it again. Pass `handleClick`, or wrap it in an arrow when
 you need to supply arguments.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useState](https://react.dev/reference/react/useState) — react.dev: Troubleshooting "Too many re-renders": usually a handler called during render, as in `onClick=&#123;handleClick()&#125;` (*read*)
+- **Also good:** [useEffect](https://react.dev/reference/react/useEffect) — react.dev: Troubleshooting "My Effect keeps re-running in an infinite cycle": the Effect updates state, and that state change changes the Effect's dependencies (*read* that section)
+- **Beyond the docs:** [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/) — Dan Abramov, 2019-03-09: loops from an effect with no dependency array or a dependency that changes every render, with the fix at the source of the changing value; 2019 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Updating state during render](16-updating-state-during-render.md) · Index: [Phase 3](README.md) · Next → Phase 4 (not yet written)

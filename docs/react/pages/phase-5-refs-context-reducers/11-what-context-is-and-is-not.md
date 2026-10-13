@@ -196,6 +196,17 @@ component that reads context can only render inside a matching provider, which m
 it harder to test in isolation or reuse elsewhere. Both are worth paying for
 genuinely ambient data and rarely worth it for one branch of the tree.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Why React Context is Not a "State Management" Tool](https://blog.isquaredsoftware.com/2021/01/context-redux-differences/) — Mark Erikson, 2021-01-18: Context is a form of dependency injection, a transport mechanism that does not manage anything; the state management is your own `useState` or `useReducer` (*read*)
+- **Also good:** [Passing Data Deeply with Context](https://react.dev/learn/passing-data-deeply-with-context) — react.dev: the use cases the docs name: the current theme, the logged-in user (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Reducer patterns](10-reducer-patterns.md) · Index: [Phase 5](README.md) · Next → [Context plus reducer](12-context-plus-reducer.md)

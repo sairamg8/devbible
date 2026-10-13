@@ -256,6 +256,16 @@ inside — `[roomId, serverUrl]` — and the object's identity is irrelevant. De
 the object itself is the most common reason a correctly-named hook still re-subscribes
 on every render.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks) — react.dev: a Deep Dive on keeping custom hooks focused on concrete high-level use cases, with `useMediaQuery` and `useSocket` as good names and `useMount` as a bad one (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Designing a hook's API](README.md) ·

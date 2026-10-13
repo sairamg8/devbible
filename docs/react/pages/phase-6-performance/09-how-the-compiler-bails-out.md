@@ -206,6 +206,16 @@ components that cannot be compiled. Once a codebase has been through the linter,
 failing the build on a violation keeps coverage from regressing. During adoption the
 opposite is right — skip rather than break the build.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Debugging and Troubleshooting](https://react.dev/learn/react-compiler/debugging) — react.dev: the compiler skips code that might break the Rules of React rather than risk changing behavior, and how to tell compiler errors from runtime issues (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Installing and configuring the Compiler](08-installing-the-compiler.md) · Index: [Phase 6](README.md) · Next → [`eslint-plugin-react-hooks`](10-eslint-plugin-react-hooks.md)

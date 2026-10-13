@@ -169,6 +169,18 @@ Property matchers — `expect.any(String)`, `expect.any(Date)` — or control th
 the clock and the id generator for the test. Otherwise the snapshot fails on every run and gets
 updated reflexively, which trains the team to ignore it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Snapshot Testing](https://jestjs.io/docs/snapshot-testing) — Jest docs: Best Practices: treat snapshots as code, keep them short and focused, and "fight against the habit of regenerating snapshots" (*read*)
+- **Also good:** [Snapshot](https://vitest.dev/guide/snapshot) — Vitest docs: `toMatchInlineSnapshot`; in CI mismatches and missing snapshots fail the run (*read*)
+- **Beyond the docs:** [Effective Snapshot Testing](https://kentcdodds.com/blog/effective-snapshot-testing) — Kent C. Dodds, 2017-10-30: snapshots over "more than a few dozen lines" suffer maintenance problems; keep them small and prefer explicit assertions; written for Jest-era tooling and does not cover inline snapshots (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Roles are the query surface](11-roles-as-the-query-surface.md) ·

@@ -208,6 +208,16 @@ It occupies a position in the React tree but does not add depth in a way that
 resets children when it stays a fragment. Swapping a fragment for a `<div>` at
 the same position is a type change and does destroy the subtree's state.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Fragment](https://react.dev/reference/react/Fragment) — react.dev: shorthand `&lt;&gt;` cannot take a `key`; import `Fragment` for keyed lists; state survives some Fragment-to-element swaps one level deep (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Lists and keys](07-lists-and-keys.md) · Index: [Phase 1](README.md) · Next → [children](09-children.md)

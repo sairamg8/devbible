@@ -245,6 +245,17 @@ What crosses is a **reference**, not the function. Server Function references ar
 on the serializable list, and the framework creates the reference and passes it through. The
 body never leaves the server — calling the reference is what performs the network request.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`'use server'`](https://react.dev/reference/rsc/use-server) — react.dev: says the directive is for Server Functions and lists the serializable-argument types (*read*)
+- **Beyond the docs:** [What Does "use client" Do?](https://overreacted.io/what-does-use-client-do/) — Dan Abramov, 2025-04-25: `'use server'` is the opposite door, from client to server, an import that becomes an HTTP call; read it for the symmetry with `'use client'` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`'use client'`](03-use-client.md) ·

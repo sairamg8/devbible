@@ -210,6 +210,16 @@ commit, and `useInsertionEffect`'s position relative to the DOM mutation is
 explicitly unspecified. Two effects that must agree should share state or be one
 effect.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React Internals: Which useEffect runs first?](https://blog.master.dev/react-internals-which-useeffect-runs-first/) — Teng Wei Herr, Frontend Masters blog, 2025-04-28: child effects run before parent effects because of depth-first traversal in the commit phase (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useLayoutEffect`](12-uselayouteffect.md) · Index: [Phase 4](README.md) · Next → [Timers, listeners and observers](14-timers-listeners-observers.md)

@@ -225,3 +225,13 @@ where it goes.
 ---
 
 Index: [You might not need an effect](README.md) · Next → [Chains of effects](02-chains-of-effects.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect) — react.dev: twelve cases from derived state to chains of computations, each with the replacement (*read* the headings and the fetching and external-store sections)
+
+{/* LINKMAP:END */}

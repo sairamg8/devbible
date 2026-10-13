@@ -231,6 +231,17 @@ things in sync", which is exactly the trap — every stored derivation becomes
 something each action must remember to update. Compute it during render instead and
 the reducer only holds what genuinely cannot be derived.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useReducer](https://react.dev/reference/react/useReducer) — react.dev: the lazy `init` argument and the stability of `dispatch` (*read*)
+- **Beyond the docs:** [The bullet proof useReducer, Typescript (2/2)](https://dev.to/pffigueiredo/the-bullet-proof-usereducer-typescript-22-2kcj) — Pedro Figueiredo, DEV Community, 2022-04-06: types the states as a discriminated union on a `status` property so TypeScript narrows them; says nothing on the lazy `init` argument or `dispatch` stability (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useState` vs `useReducer`](09-usestate-vs-usereducer.md) · Index: [Phase 5](README.md) · Next → [What context is and is not](11-what-context-is-and-is-not.md)

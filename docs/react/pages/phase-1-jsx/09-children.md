@@ -282,6 +282,17 @@ A fragment counts as one child no matter how many elements it holds, and
 `Children.count` flattens nested arrays. Two callers writing visually identical
 JSX can produce different counts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Passing Props to a Component](https://react.dev/learn/passing-props-to-a-component) — react.dev: nested content arrives as `children`, a "hole" the parent fills with JSX (*read*)
+- **Also good:** [Composition vs Inheritance](https://legacy.reactjs.org/docs/composition-vs-inheritance.html) — legacy React docs: `children` for containment, plain props such as `left` and `right` for several slots (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Fragments](08-fragments.md) · Index: [Phase 1](README.md) · Next → [Spreading props](10-spreading-props.md)

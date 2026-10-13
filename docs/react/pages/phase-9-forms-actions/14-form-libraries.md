@@ -167,6 +167,19 @@ Start with the built-ins and add a library when you hit one of the four things i
 adds. The reverse order is how a two-field sign-in form acquires a schema, a resolver and a
 controller wrapper.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Get Started](https://react-hook-form.com/get-started) — React Hook Form: sections Installation, Quickstart, Register fields, Apply validation, Integrating an existing form and Schema Validation (headings read from the page text; WebFetch was refused, so *headings only*)
+- **Read this:** [Overview](https://tanstack.com/form/latest/docs/overview)
+- **Also good:** [React Form Validation](https://www.robinwieruch.de/react-form-validation/) — Robin Wieruch, 2024-12-16: suggests a library for complex rules or real-time validation but says simple forms may not need one (*read*)
+- **Beyond the docs:** [React Hook Form vs. React 19: Should you still use RHF in 2025?](https://dev.to/logrocket/react-hook-form-vs-react-19-should-you-still-use-rhf-in-2025-4701) — Vijit Ail for LogRocket (updated by Isaac Okoro), posted on DEV Community 2025-04-30: RHF keeps field arrays (`useFieldArray`), Yup or Zod schema validation and fewer re-renders, and says it suits multi-step workflows without showing one; it does not compare TanStack Form (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [⚠ `useFormState`](13-useformstate.md) ·

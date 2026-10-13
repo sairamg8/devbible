@@ -201,6 +201,17 @@ React folds the queue with your reducer; `setCount(c => c + 1)` is the same thin
 with an inline anonymous one. Seeing that makes the updater form stop looking
 like a special case.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Queueing a Series of State Updates](https://react.dev/learn/queueing-a-series-of-state-updates) — react.dev: queued updaters applied in order during the next render (*read*)
+- **Beyond the docs:** [Build your own React](https://pomb.us/build-your-own-react/) — Rodrigo Pombo, 2019-11-13: builds fibers and a work loop, then `useState` with an action queue on the hook, applied on the next render; a simplified model of an older React (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Render order](12-render-order.md) · Index: [Phase 3](README.md) · Next → [State in lists](14-state-in-lists.md)

@@ -143,6 +143,17 @@ functions to implement.
 No. It is deprecated in React 19, though still published. It tested React's
 internal tree rather than what the user sees; React Testing Library replaces it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [react-reconciler README](https://github.com/facebook/react/tree/main/packages/react-reconciler) — facebook/react: a host config object passed to `Reconciler`; mutation vs persistence mode; notes the API changes often (*read*)
+- **Beyond the docs:** [How to Create a Custom React Renderer](https://www.thisdot.co/blog/how-to-create-a-custom-react-renderer) — Matthew Pagan, This Dot, 2021-09-24 (updated 2023-02-14): rebuilds a small react-dom with `createInstance` and `appendChild`; site says it may be out of date, so check method names against the README
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [DevTools and the Profiler](12-devtools-and-profiler.md) · Index: [Phase 0](README.md) · Next → [React vs the alternatives](14-react-vs-alternatives.md)

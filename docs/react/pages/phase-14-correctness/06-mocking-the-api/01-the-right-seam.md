@@ -178,6 +178,18 @@ component passes the arguments the real function requires. The mock accepts any 
 returns whatever it was told to, so it verifies the component's rendering and nothing about
 its integration.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MSW introduction](https://mswjs.io/docs/) — MSW docs: intercepts at the network level in browser and Node; the same mocks reused across development, testing, Storybook and demos (*read*)
+- **Also good:** [MSW philosophy](https://mswjs.io/docs/philosophy) — MSW docs: "API mocking deserves a layer of its own in your application"; handlers describe the server's behaviour (*read*)
+- **Beyond the docs:** [Stop mocking fetch](https://kentcdodds.com/blog/stop-mocking-fetch) — Kent C. Dodds, 2020-06-03: mocking `fetch` means "re-implementing your entire backend... everywhere in your tests"; MSW handlers are written once, overridden per test with `server.use()`, and the same handlers serve development (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Mocking the API with MSW](README.md) ·

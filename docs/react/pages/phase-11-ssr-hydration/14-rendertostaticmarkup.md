@@ -166,6 +166,16 @@ component into a DOM node and read the HTML from there instead.
 Because `useId` still runs. If two independently rendered fragments end up on the same page,
 distinct prefixes keep their generated ids from colliding.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`renderToStaticMarkup`](https://react.dev/reference/react-dom/server/renderToStaticMarkup) — react.dev: "output cannot be hydrated"; for static pages and emails (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 11](README.md) ·

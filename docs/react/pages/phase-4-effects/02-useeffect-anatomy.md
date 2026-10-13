@@ -250,6 +250,17 @@ React warns about it. And passing a variable instead of a literal defeats the
 lint rule that would otherwise tell you which dependencies are missing — which is
 the main protection against the effect silently reading stale values.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useEffect](https://react.dev/reference/react/useEffect) — react.dev: reference: setup, cleanup, dependencies, caveats, usage and troubleshooting sections (*read* the headings and the fetching and cleanup sections)
+- **Beyond the docs:** [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/) — Dan Abramov, 2019-03-09: builds the model up from "each render has its own effect" (*read* the render-snapshot passage only)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What an effect is for](01-what-an-effect-is-for.md) · Index: [Phase 4](README.md) · Next → [The dependency array is not a preference](03-the-dependency-array.md)

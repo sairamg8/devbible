@@ -191,6 +191,20 @@ whatever the action returned, which persists until the next submission — so a 
 message can end up sitting above an empty form indefinitely, or a stale error can linger.
 Returning a clean state on success is what keeps them in step.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [form](https://react.dev/reference/react-dom/components/form) — react.dev: "After the `action` function succeeds, all uncontrolled field elements in the form are reset" (*read*)
+- **Also good:** [React v19](https://react.dev/blog/2024/12/05/react-19) — react.dev: the only react.dev text found that names `requestFormReset` ("If you need to reset the form manually, you can call the new `requestFormReset` React DOM API") (*read*)
+- **Also good:** [React 19.3](https://react.dev/blog/2026/09/09/react-19-3)
+- **Also good:** [Automatically reset forms after action finishes](https://github.com/facebook/react/pull/28804)
+- **Beyond the docs:** [allow opting out of automatic form reset when Form Actions are used](https://github.com/facebook/react/issues/29034) — facebook/react issue opened 2024-05-09, still open on 2026-10-13: maintainers' workarounds (an `onSubmit` handler plus `startTransition`, `requestFormReset` inside a transition for libraries, or return the submitted values and use them as `defaultValue`) and the complaint "It's easy to reset a f
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Multiple actions in one form](08-multiple-actions.md) ·

@@ -260,3 +260,15 @@ is no external system on either side, the effect itself is likely unnecessary.
 ---
 
 Index: [Cleanup](README.md) · Next → [Cleanup recipes](02-cleanup-recipes.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects) — react.dev: "Step 3: Add cleanup if needed" is the one dedicated cleanup section in the official docs (*read* the headings)
+- **Also good:** [useEffect](https://react.dev/reference/react/useEffect) — react.dev: cleanup runs with the old values before each re-run with changed dependencies, and once after unmount; Troubleshooting "My cleanup logic runs even though my component didn't unmount" (*read*)
+- **Beyond the docs:** [Understanding the React useEffect cleanup function](https://blog.logrocket.com/understanding-react-useeffect-cleanup-function) — Chimezie Innocent, LogRocket, 2024-12-02: when cleanup runs on re-render versus unmount, with the docs sentence quoted (*read*)
+
+{/* LINKMAP:END */}

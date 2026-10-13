@@ -207,6 +207,17 @@ because React may call the component before bailing out — so the counter repor
 calls that produced no visible render. The DevTools Profiler reports commits and
 reasons, which is what the question is actually about.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useState](https://react.dev/reference/react/useState) — react.dev: the caveat under the `set` function: an `Object.is`-identical value skips re-rendering the component and its children; no heading of its own; the caveat adds that "in some cases React may still need to call your component before s
+- **Beyond the docs:** [Things to know about useState](https://tkdodo.eu/blog/things-to-know-about-use-state) — TkDodo, 2021-02-13: a section on the update bailout and `Object.is`; shorter than the reference but states it plainly (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Structuring state](10-structuring-state.md) · Index: [Phase 3](README.md) · Next → [Render order](12-render-order.md)

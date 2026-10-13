@@ -217,6 +217,16 @@ is nothing to wait for.
 No — they share one ordering system. Stylesheets with the same precedence go together whichever
 of the three produced them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`&lt;link&gt;`](https://react.dev/reference/react-dom/components/link) — react.dev: `precedence` ranks stylesheets in the head, the rendering component suspends while the stylesheet loads, and links with the same `href` are de-duplicated (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 11](README.md) ·

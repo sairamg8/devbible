@@ -175,6 +175,17 @@ file exporting a provider and `useThing` hooks, the check is three lines in one
 place and every consumer inherits it — which is another reason that arrangement is
 worth adopting before the app grows.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [createContext](https://react.dev/reference/react/createContext) — react.dev: the default value is used only when there is no matching provider above, and is a last-resort fallback (*read*)
+- **Beyond the docs:** [How to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively) — Kent C. Dodds, 2021-06-05: creates the context with no initial value and has the `useCount` hook throw "must be used within a CountProvider" when the value is undefined (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Context plus reducer](12-context-plus-reducer.md) · Index: [Phase 5](README.md) · Next → [`useId`](14-useid.md)

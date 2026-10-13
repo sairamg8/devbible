@@ -230,6 +230,17 @@ cycle, cleanup semantics, client-only execution, and the object-identity
 dependency trap. The only difference is timing relative to paint. The identity
 trap is worse here, though, because every unnecessary re-run blocks a frame.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useLayoutEffect](https://react.dev/reference/react/useLayoutEffect) — react.dev: fires after DOM commit but before repaint, so updates in it show without flicker (*read*)
+- **Beyond the docs:** [useEffect vs useLayoutEffect](https://kentcdodds.com/blog/useeffect-vs-uselayouteffect) — Kent C. Dodds, 2020-12-01: use it to measure then mutate, or when a visible flicker would occur; otherwise default to `useEffect` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Removing dependencies legitimately](11-removing-dependencies/README.md) · Index: [Phase 4](README.md) · Next → [Effect ordering](13-effect-ordering.md)

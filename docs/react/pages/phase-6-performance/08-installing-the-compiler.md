@@ -225,6 +225,17 @@ Setting it to `'none'` makes bail-outs silent and per-function, which is the
 behaviour you want during adoption — no speed-up on that component, never a broken
 build.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Installation](https://react.dev/learn/react-compiler/installation) — react.dev: `babel-plugin-react-compiler` as a dev dependency, a pointer to the options reference for targeting React versions below 19, and per-build-tool setup (*read*)
+- **Also good:** [Incremental Adoption](https://react.dev/learn/react-compiler/incremental-adoption) — react.dev: adopting file by file (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The React Compiler v1.0](07-the-react-compiler.md) · Index: [Phase 6](README.md) · Next → [How the Compiler bails out](09-how-the-compiler-bails-out.md)

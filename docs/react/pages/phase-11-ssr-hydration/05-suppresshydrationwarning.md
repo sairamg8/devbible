@@ -164,6 +164,18 @@ Often, yes — `useSyncExternalStore` takes a server snapshot as its third argum
 server renders the snapshot and the client subscribes to the live value with no mismatch and
 no double render of the subtree. It is the cleanest answer for media queries and similar.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`hydrateRoot`](https://react.dev/reference/react-dom/client/hydrateRoot) — react.dev: `suppressHydrationWarning` "only works one level deep" and React will not patch mismatched text; the `isClient` Effect pattern "makes hydration slower because your components have to render twice" (*read*)
+- **Also good:** [Text content does not match server-rendered HTML](https://nextjs.org/docs/messages/react-hydration-error) — Next.js docs: `suppressHydrationWarning` "only works one level deep" and React will not patch mismatched text (*read*)
+- **Beyond the docs:** [The Perils of Hydration](https://www.joshwcomeau.com/react/the-perils-of-rehydration/) — Josh W. Comeau: the two-pass render with a `hasMounted` flag, and its cost to time-to-interactive (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`hydrateRoot`](04-hydrateroot.md) ·

@@ -215,6 +215,16 @@ Verbs, not nodes. react.dev's second example exposes a single
 an outcome and the component decides how to achieve it. That keeps the internals
 free to change, which is exactly what handing over a raw DOM node gives away.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useImperativeHandle](https://react.dev/reference/react/useImperativeHandle) — react.dev: exposing a custom object through a ref instead of the raw node, with a note that props such as an open flag are usually better than an imperative handle (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Ref callbacks](06-ref-callbacks.md) · Index: [Phase 5](README.md) · Next → [When a ref is the wrong tool](08-when-a-ref-is-wrong.md)

@@ -172,6 +172,16 @@ Often not. The complaint is frequently layout shift or a screen of identical ske
 rather than the sequence, and both are fixed by fallback design and boundary placement,
 which work today.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Render children passed to "backwards" SuspenseList in reverse mount order](https://github.com/facebook/react/pull/35021) — Sebastian Markbåge, facebook/react pull request, merged 2025-10-31: the new `backwards` mounting order, and that `unstable_legacy-backwards` keeps the old behavior (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [⚠ `<ViewTransition>` and friends](17-view-transitions.md) ·

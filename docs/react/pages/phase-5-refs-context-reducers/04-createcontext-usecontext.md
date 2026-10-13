@@ -268,6 +268,19 @@ is a new identity every render and re-renders every consumer. Wrap the object in
 `useMemo` and any functions inside it in `useCallback`, as the reference's `AuthContext`
 example does — and treat that as the floor rather than the complete solution.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useContext](https://react.dev/reference/react/useContext) — react.dev: reading a context and the provider/consumer model, with a section on optimizing re-renders when passing objects and functions (*read*)
+- **Also good:** [createContext](https://react.dev/reference/react/createContext) — react.dev: the context object, the default value, and the provider (*read*)
+- **Also good:** [Passing Data Deeply with Context](https://react.dev/learn/passing-data-deeply-with-context)
+- **Beyond the docs:** [How to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively) — Kent C. Dodds, 2021-06-05: builds a provider and a consumer hook from scratch around a reducer, and says an app should have multiple logically separated contexts; written before React 19, so it uses the explicit Provider element
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useReducer`](03-usereducer.md) · Index: [Phase 5](README.md) · Next → [The context re-render problem](05-context-re-render-problem.md)

@@ -211,6 +211,17 @@ anything worth losing. Where that is not possible — uncontrolled inputs, for
 instance — keep the tree shapes of the two branches identical, and use `key`
 when you genuinely want the reset.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state) — react.dev: state is tied to position in the render tree, not to the JSX markup (*read*)
+- **Beyond the docs:** [Understanding React's key prop](https://kentcdodds.com/blog/understanding-reacts-key-prop) — Kent C. Dodds, 2019-11-11: changing `key` unmounts the old instance and mounts a new one (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [State in lists](14-state-in-lists.md) · Index: [Phase 3](README.md) · Next → [Updating state during render](16-updating-state-during-render.md)

@@ -206,6 +206,17 @@ That it is coupled to three contexts. A shared wrapper makes the test writable, 
 awkwardness is a design signal worth acting on — the test is reporting the hook's real
 dependency surface.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React Testing Library API](https://testing-library.com/docs/react-testing-library/api/) — Testing Library docs: has a `renderHook` section with its options and result, and the `wrapper` option (*read*)
+- **Beyond the docs:** [How to test custom React hooks](https://kentcdodds.com/blog/how-to-test-custom-react-hooks) — Kent C. Dodds, 2020-03-22: test through a small example component first, and use `renderHook` for hooks that wait on async work, rerender with new props or unmount (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Testing forms and Actions](08-testing-forms-and-actions.md) ·

@@ -228,6 +228,17 @@ had the same job and the same reputation, and most of its real-world uses were
 the copy-a-prop-into-state antipattern, which is better fixed by deriving the
 value instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useState](https://react.dev/reference/react/useState) — react.dev: "Storing information from previous renders": compare `prevCount` with `count` and set state during render (*read*)
+- **Also good:** [Hooks FAQ, "How do I implement getDerivedStateFromProps?"](https://legacy.reactjs.org/docs/hooks-faq.html) — legacy.reactjs.org: the older docs' version of the same pattern: update state right during rendering, and React re-runs the component immediately after the first render (*read* that section)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Preserving and resetting state](15-preserving-and-resetting.md) · Index: [Phase 3](README.md) · Next → [Infinite render loops](17-infinite-render-loops.md)

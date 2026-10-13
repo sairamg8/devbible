@@ -202,6 +202,17 @@ Error boundaries and `Suspense`, because they hide the failures tests exist to c
 provider the component does not actually read. Each one costs time in every test and can mask
 a real error.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React Testing Library setup](https://testing-library.com/docs/react-testing-library/setup/) — Testing Library docs: the "Custom Render" section wraps components in global providers through the `wrapper` option and re-exports everything from RTL (*read*)
+- **Also good:** [React Testing Library API](https://testing-library.com/docs/react-testing-library/api/) — Testing Library docs: the `wrapper` option for `render` and `renderHook`; with `initialProps` the props are not passed to the wrapper (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Testing hooks](09-testing-hooks.md) ·

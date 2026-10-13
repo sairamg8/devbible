@@ -214,6 +214,17 @@ Module scope, not a mount effect. Work that happens once per application load �
 initialising an SDK, checking a token — is not a component concern; putting it in
 an effect makes it run per component instance and twice in development.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects) — react.dev: effects run code after rendering to sync with an external system such as a browser API, network or third-party widget (*read*)
+- **Beyond the docs:** [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/) — Dan Abramov, 2019-03-09: each render has its own props and state, so effects and handlers keep that render's values; 2019, before StrictMode's double mount (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 4](README.md) · Next → [`useEffect` anatomy](02-useeffect-anatomy.md)

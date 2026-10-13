@@ -276,6 +276,18 @@ and loading state, which the documented example deliberately omits. Six concerns
 Reaching that list is the point at which writing it yourself stops being the
 cheaper option.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect) — react.dev: "Fetching data": fetch for what is on screen, add cleanup to avoid races, prefer framework or cache (*read*)
+- **Also good:** [Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects) — react.dev: the `ignore` flag example and the note on TanStack Query, SWR (*read*)
+- **Beyond the docs:** [Why You Want React Query](https://tkdodo.eu/blog/why-you-want-react-query) — TkDodo, 2023-11-07: counts the bugs in a 10-line fetch effect: races, no loading state, stale data, StrictMode double fire; "Data Fetching is simple. Async State Management is not." (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [You might not need an effect](06-you-might-not-need-an-effect/README.md) · Index: [Phase 4](README.md) · Next → [Race conditions](08-race-conditions.md)

@@ -228,6 +228,19 @@ It does not control it. Checkboxes are controlled by `checked` (or `defaultCheck
 `value` on a checkbox is the string submitted when it is ticked, which is a different
 concept. The checkbox will simply ignore your state, and nothing warns you.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [input](https://react.dev/reference/react-dom/components/input) — react.dev: controlling an input with state, the "uncontrolled input to be controlled" error and checkbox troubleshooting (*read*)
+- **Also good:** [select](https://react.dev/reference/react-dom/components/select) — react.dev: multiple selection takes an array of strings, and controlling a select with a state variable (*read*)
+- **Also good:** [textarea](https://react.dev/reference/react-dom/components/textarea)
+- **Beyond the docs:** [Forms in React Interviews](https://greatfrontend.com/react-interview-playbook/react-forms) — Yangshun Tay, GreatFrontend React Interview Playbook, no date shown: controlled examples where a checkbox binds `checked`, radios compare `checked` to state, and a select binds `value`; file uploads are listed as a use for uncontrolled forms in a table, with no file input example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Controlled inputs](README.md) ·

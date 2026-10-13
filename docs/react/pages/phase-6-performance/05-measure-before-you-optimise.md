@@ -222,6 +222,18 @@ phase — the signature of an effect that sets state, and therefore of the effec
 chains react.dev names as the cause of most React performance problems. It points
 you at Phase 4 rather than at memoization.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Profiler](https://react.dev/reference/react/Profiler) — react.dev: the `Profiler` component and its `onRender` callback (*read*)
+- **Also good:** [React Performance tracks](https://react.dev/reference/dev-tools/react-performance-tracks) — react.dev: the 19.2 tracks in the browser performance panel (*headings only*)
+- **Beyond the docs:** [Fix the slow render before you fix the re-render](https://kentcdodds.com/blog/fix-the-slow-render-before-you-fix-the-re-render) — Kent C. Dodds, 2019-09-09: separates render, reconciliation and commit, then argues that a slow render is a likelier culprit than an unnecessary re-render and says to profile and fix it first; predates the Compiler (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useCallback`](04-usecallback.md) · Index: [Phase 6](README.md) · Next → [The memoization trap](06-the-memoization-trap.md)

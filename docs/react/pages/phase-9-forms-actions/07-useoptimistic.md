@@ -213,6 +213,18 @@ comment, a like, a reorder.
 shows the *expected result*, rendered as if it had already happened. The first is a progress
 indicator; the second is what makes the app feel instant.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useOptimistic](https://react.dev/reference/react/useOptimistic) — react.dev: optimistic delete with error recovery ("the item automatically reappears"), a reducer for multiple action types, and the "outside a Transition or Action" warning, including how the final value depends on the `value` argument (*rea
+- **Also good:** [React 19: From server functions to optimistic updates](https://www.heise.de/en/background/React-19-From-server-functions-to-optimistic-updates-10190523.html?seite=2) — heise online, no date shown: the setter is used inside a transition and the real state returns when it ends (*read*)
+- **Beyond the docs:** [React useOptimistic: Optimistic UI Patterns That Actually Work (2026)](https://dev.to/stacknotice/react-useoptimistic-optimistic-ui-patterns-that-actually-work-2026-5460) — Carlos Oliva Pascual, DEV Community, posted Jul 13 (year not shown on the page): must run inside `startTransition`; rollback is automatic but the user still needs error feedback (a try/catch toast); when not to use it. Moderate depth: it does not explain how the rollback works (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useFormStatus`](06-useformstatus.md) ·

@@ -219,6 +219,17 @@ The HTML template, for whitespace inside the root, and the parsed DOM, for nesti
 browser repaired. Both produce mismatches whose warning points somewhere that looks
 blameless.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Text content does not match server-rendered HTML](https://nextjs.org/docs/messages/react-hydration-error) — Next.js docs: lists the causes (bad tag nesting, `window` checks, `Date`, extensions, CSS-in-JS, CDN rewriting, iOS auto-links) with three fixes (*read*)
+- **Beyond the docs:** [The Perils of Hydration](https://www.joshwcomeau.com/react/the-perils-of-rehydration/) — Josh W. Comeau: why a `typeof window` branch breaks hydration, with a `useHasMounted` hook and `ClientOnly` wrapper (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [CSR vs SSR vs SSG vs streaming vs RSC](01-csr-ssr-ssg-streaming-rsc.md) ·

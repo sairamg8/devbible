@@ -240,6 +240,18 @@ have traded a re-render for a wrong answer. Passing the value is what makes re-c
 on change automatic, and custom hooks always receive the latest props and state because
 they re-run with the component.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useEffectEvent](https://react.dev/reference/react/useEffectEvent) — react.dev: Effect Events read the latest values without re-synchronizing the Effect, with a section on using Effect Events in custom Hooks (*read*)
+- **Also good:** [Separating Events from Effects](https://react.dev/learn/separating-events-from-effects) — react.dev: the learn page behind it (*read*)
+- **Beyond the docs:** [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/) — Dan Abramov, 2019-03-09: its "Don't Lie to React About Dependencies" section shows what goes wrong when an effect reads a value that is left out of the array; written before `useEffectEvent`, so it offers other fixes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Hooks that wrap effects](README.md) ·

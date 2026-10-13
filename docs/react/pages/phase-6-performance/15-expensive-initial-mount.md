@@ -217,6 +217,18 @@ priority, in the gaps after visible work is done — so it does not compete with
 initial mount and the screen is ready when opened. They compose: `lazy` decides what
 ships, `Activity` decides when it renders.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Activity](https://react.dev/reference/react/Activity) — react.dev: has a usage section on pre-rendering content that is likely to become visible (*read*)
+- **Also good:** [hydrateRoot](https://react.dev/reference/react-dom/client/hydrateRoot) — react.dev: hydrating server HTML (*headings only*)
+- **Beyond the docs:** [React 19.2. Further Advances INP Optimization](https://calendar.perfplanet.com/2025/react-19-2-further-advances-inp-optimization/) — Michal Matuška, Web Performance Calendar, 2025-12-10: ties a larger DOM and more components to hydration work and a slower UI, then introduces `Activity` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [List virtualization](14-list-virtualization.md) · Index: [Phase 6](README.md) · Next → [Bundle size](16-bundle-size.md)

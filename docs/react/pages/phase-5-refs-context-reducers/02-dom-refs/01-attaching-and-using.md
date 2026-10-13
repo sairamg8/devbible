@@ -177,3 +177,15 @@ belongs in state.
 ---
 
 Index: [DOM refs](README.md) · Next → [Crossing component boundaries](02-crossing-boundaries.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Manipulating the DOM with Refs](https://react.dev/learn/manipulating-the-dom-with-refs) — react.dev: attaching a ref, focusing, scrolling, measuring, and when React lets you touch the DOM; `myRef.current` is `null` until React puts the node there (*read*)
+- **Also good:** [useRef](https://react.dev/reference/react/useRef) — react.dev: the reference page: changing `ref.current` does not re-render the component (*read*)
+- **Beyond the docs:** [Avoiding useEffect with callback refs](https://tkdodo.eu/blog/avoiding-use-effect-with-callback-refs) — Dominik Dorfmeister (TkDodo), 2022-08-14 (last update 2024-12-08): shows focusing an input after render through an effect and then a callback ref as the alternative; leans on callback refs, which is the T05-06 topic (*read*)
+
+{/* LINKMAP:END */}

@@ -242,6 +242,19 @@ lower — with the documented values `reset`, `low`, `medium`, `high`. It is req
 preinited stylesheet goes into effect immediately, so its position in the cascade has to be
 decided at the call site rather than guessed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`preload`](https://react.dev/reference/react-dom/preload) — react.dev: a hint to download a resource early; on the server it only takes effect while rendering a component; repeated calls with the same `href` count once (*read*)
+- **Also good:** [`preinit`](https://react.dev/reference/react-dom/preinit) — react.dev: eagerly fetches and evaluates a script or stylesheet (*read*)
+- **Also good:** [`preconnect`](https://react.dev/reference/react-dom/preconnect)
+- **Also good:** [`prefetchDNS`](https://react.dev/reference/react-dom/prefetchDNS)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [11 · Resource preloading](README.md) ·

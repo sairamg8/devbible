@@ -197,3 +197,15 @@ that does not wait sees fallbacks. React's answer is to pipe in `onAllReady` for
 
 Index: [Phase 11](README.md) ·
 Next → [Hydration mismatches](02-hydration-mismatches.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) — Next.js docs: "Rendering environments": "Server-rendered" describes how HTML was produced, "Server Component" where code runs (*read*)
+- **Also good:** [The Perils of Hydration](https://www.joshwcomeau.com/react/the-perils-of-rehydration/) — Josh W. Comeau, published 2020-03-02, updated 2025-12-03: CSR versus SSR versus build-time generation, and hydration, which "is not the same thing as a render" (*read*)
+- **Beyond the docs:** [Rendering on the Web](https://web.dev/articles/rendering-on-the-web) — Addy Osmani and Jason Miller, web.dev, published 2019-02-06, updated 2026-01-05: the clearest side-by-side of CSR, SSR, static rendering and streaming with rehydration, in TTFB, FCP and TBT/INP terms; it predates RSC, so it covers four of the five terms and some framework examples are dated (*read*)
+
+{/* LINKMAP:END */}

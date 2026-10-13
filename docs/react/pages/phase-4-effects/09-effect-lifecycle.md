@@ -235,6 +235,16 @@ breaking the rules. The array is not a hint — it is the input React uses to de
 whether to re-synchronize, so a disagreement with the linter means the code needs
 restructuring, not that the warning needs silencing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Lifecycle of Reactive Effects](https://react.dev/learn/lifecycle-of-reactive-effects) — react.dev: an effect starts and stops synchronizing, repeatedly, separately from mount and unmount (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Race conditions](08-race-conditions.md) · Index: [Phase 4](README.md) · Next → [`useEffectEvent`](10-useeffectevent.md)

@@ -182,6 +182,18 @@ No. The docs explicitly say to mix and match, and that you can use `useState` an
 legitimate axis. Since the two are equivalent, choosing per component based on where
 update bugs actually occur is both cheaper and reversible.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Extracting State Logic into a Reducer](https://react.dev/learn/extracting-state-logic-into-a-reducer) — react.dev: has a "Comparing useState and useReducer" section: code size, readability, debugging, testing (*read*)
+- **Also good:** [Should I useState or useReducer?](https://kentcdodds.com/blog/should-i-usestate-or-usereducer) — Kent C. Dodds, 2020-03-09: opens on why there are two ways to do the same thing and which trade-offs decide between them, then works one example for each; I read the opening and the start of the examples (*read*)
+- **Beyond the docs:** [useState vs useReducer](https://tkdodo.eu/use-state-vs-use-reducer) — Dominik Dorfmeister (TkDodo), 2021-09-26 (last update 2022-04-23): reducers shine when several parts of state update from different actions, as in a wizard where step two depends on step one (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [When a ref is the wrong tool](08-when-a-ref-is-wrong.md) · Index: [Phase 5](README.md) · Next → [Reducer patterns](10-reducer-patterns.md)

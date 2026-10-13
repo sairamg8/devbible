@@ -231,6 +231,18 @@ Component, which reads it with `use` and suspends. The server streams, the clien
 fallback, and there is no client-side waterfall. The one constraint is that the resolved
 value must be serializable to cross the boundary.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [use](https://react.dev/reference/react/use) — react.dev: "promises created during render are recreated on every render", the module-level cache example, and the rejected-promise to Error Boundary pairing (*read*)
+- **Also good:** [React 19 `use` Hook Deep Dive](https://dev.to/a1guy/react-19-use-hook-deep-dive-using-promises-directly-in-your-components-1plp) — Ali Aslam, DEV Community, 2025-08-19 (edited 2025-08-21): shows the inline `use(fetch(...))` mistake and a module-level `Map` cache (*read*)
+- **Beyond the docs:** [The use() Hook](https://stevekinney.com/courses/react-performance/the-use-hook) — Steve Kinney, course page, last modified 2025-09-28: `use` does not cache; create promises up front so independent ones start together and avoid a waterfall. Its `useMemo` suggestion (a `Map` cache is offered as the alternative) is weaker than the docs' cache advice (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What can actually suspend](03-what-can-suspend.md) ·

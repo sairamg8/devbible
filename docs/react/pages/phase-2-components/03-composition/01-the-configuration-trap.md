@@ -270,6 +270,17 @@ Almost nothing. JSX builds a descriptor object; the component function is not
 invoked until React renders that element. The cost is one object allocation, not
 a render.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Composition vs Inheritance](https://legacy.reactjs.org/docs/composition-vs-inheritance.html) — legacy React docs: `children` for containment, several element props as slots (*read*)
+- **Beyond the docs:** [Inversion of Control](https://kentcdodds.com/blog/inversion-of-control) — Kent C. Dodds, 2019-11-18: "make your abstraction do less stuff": replace an `items` option with composed children, and a `closeOnSelection` option with a caller-supplied `stateReducer`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Composition over configuration](README.md) · Next → [Slots, children and the context hole](02-slots-and-children.md)

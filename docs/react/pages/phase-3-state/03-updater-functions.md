@@ -247,6 +247,18 @@ handler and nothing asynchronous is involved. `setOpen(o => !o)` is never wrong
 and survives the code later being moved into a callback, which is why most
 codebases standardise on it for toggles.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Queueing a Series of State Updates](https://react.dev/learn/queueing-a-series-of-state-updates) — react.dev: updaters are queued and run in order, each receiving the previous result (*read*)
+- **Also good:** [useState](https://react.dev/reference/react/useState) — react.dev: "Updating state based on the previous state" (*read*)
+- **Beyond the docs:** [useState lazy initialization and function updates](https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates) — Kent C. Dodds, 2020-08-03: a one-rule version: any time new state depends on previous state, use a function update
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [State is a snapshot](02-state-is-a-snapshot.md) · Index: [Phase 3](README.md) · Next → [Automatic batching](04-automatic-batching.md)

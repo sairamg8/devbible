@@ -232,6 +232,17 @@ Not for a hook whose consumers are developers calling it directly — there the 
 value *is* the contract. It is a violation when the hook is an internal detail of your own
 components, because then its real contract is what those components render.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Guiding Principles](https://testing-library.com/docs/guiding-principles/) — Testing Library docs: "The more your tests resemble the way your software is used, the more confidence they can give you." (*read*)
+- **Beyond the docs:** [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details) — Kent C. Dodds, 2020-08-17: tests tied to internal state break on harmless refactors (false negatives) and pass while the app is broken (false positives), shown with an accordion whose handler is unwired (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [What to test, and what not to](README.md) ·

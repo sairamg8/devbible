@@ -247,6 +247,17 @@ Yes, `babel-plugin-react-compiler@1.0.0` since October 2025. It supports React
 17 and up; for 17 and 18 you also need `react-compiler-runtime` and a `target`
 option, because `react/compiler-runtime` ships inside React 19.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React Compiler](https://react.dev/learn/react-compiler) — react.dev: index of introduction, installation, incremental adoption, debugging, configuration; the page itself has no code or detail, the substance is on the subpages (*read*)
+- **Beyond the docs:** [React Compiler Internals](https://gitnation.com/contents/react-compiter-internals) — Lydia Hallie, React Summit 2025, 2025-06-13: 23-minute talk through HIR, SSA, reactive analysis, scope discovery and code generation, and the limits when rules are broken; given at release-candidate stage (*read* the abstract, did not watch)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Starting a project](10-starting-a-project.md) · Index: [Phase 0](README.md) · Next → [DevTools and the Profiler](12-devtools-and-profiler.md)

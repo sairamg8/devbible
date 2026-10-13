@@ -240,6 +240,17 @@ their position in the component's hook list. `use` is exempt because its resourc
 identifies itself. Any hook that stores something per call still needs a slot, and a slot
 still needs a stable index.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [use](https://react.dev/reference/react/use) — react.dev: reading a promise or context, callable in a condition or loop (*headings only*)
+- **Beyond the docs:** [You Can't Use Hooks Conditionally… or Can You?](https://gitnation.com/contents/you-cant-use-hooks-conditionally-or-can-you) — Charlotte Isambert, React Summit 2023 (page dated 2023-06-02): a conference talk, so a video page; its abstract explains why `useContext` is exempt from the top-level rule, and the page's FAQ discusses the proposed `use` hook, which was not stable in 2023 (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Conditional hooks and the correct restructure](09-conditional-hooks.md) ·

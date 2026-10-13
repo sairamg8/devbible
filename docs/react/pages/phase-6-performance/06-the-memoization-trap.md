@@ -210,6 +210,18 @@ Chains of updates originating from Effects that make components render over and 
 is why the first thing to check in a profile is how many commits a single
 interaction produced.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [memo](https://react.dev/reference/react/memo) — react.dev: the "Minimizing props changes" guidance (*headings only*)
+- **Also good:** [How to useMemo and useCallback: you can remove most of them](https://www.developerway.com/posts/how-to-use-memo-use-callback) — Nadia Makarevich, Developer Way, 2022-06-13: shows a memoized component that still re-renders because one prop is not memoized (*read*)
+- **Beyond the docs:** [Before You memo()](https://overreacted.io/before-you-memo/) — Dan Abramov, 2021-02-23: two fixes that need no memoization: move state down, and lift content up by passing it as `children` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Measure before you optimise](05-measure-before-you-optimise.md) · Index: [Phase 6](README.md) · Next → [The React Compiler v1.0](07-the-react-compiler.md)

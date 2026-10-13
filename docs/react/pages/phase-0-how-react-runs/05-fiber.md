@@ -185,6 +185,17 @@ slow.
 On its fiber, as a linked list of hook records, keyed by call order — which is
 exactly why hooks cannot be called conditionally.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [react-fiber-architecture](https://github.com/acdlite/react-fiber-architecture) — Andrew Clark, GitHub: a fiber is a unit of work and a virtual stack frame; current and work-in-progress fibers are each other's `alternate`. States it is not an official document; says nothing about a work loop (*read*)
+- **Beyond the docs:** [Inside Fiber: an in-depth overview of the new reconciliation algorithm in React](https://www.ag-grid.com/blog/inside-fiber-an-in-depth-overview-of-the-new-reconciliation-algorithm-in-react) — Max Koretskyi, 2018-11-27: walks `workLoop`, `performUnitOfWork`, `beginWork`, the alternate link and the effects list, which is the vocabulary of a stack trace; React 16 era
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Reconciliation](04-reconciliation.md) · Index: [Phase 0](README.md) · Next → [createRoot](06-createroot.md)

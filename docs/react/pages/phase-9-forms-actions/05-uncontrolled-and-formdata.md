@@ -194,6 +194,18 @@ controls are not submitted at all.
 render, since it reads the DOM. And if you need it on every change, that is the signal the
 field wanted to be controlled in the first place.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [input](https://react.dev/reference/react-dom/components/input) — react.dev: "Reading the input values when submitting a form": `new FormData(e.target)`, `Object.fromEntries(formData.entries())`, and each input needs a `name` (*read*)
+- **Also good:** [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData) — MDN: the browser API itself: constructor, `get`, `getAll`, `entries` (*read*)
+- **Beyond the docs:** [You May Not Need Controlled Form Components](https://swyx.io/no-controlled-forms) — swyx, 2020-03-09: read and set fields by `name` and use the Constraint Validation API; it never mentions `FormData` and predates Actions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Validation](04-validation.md) ·

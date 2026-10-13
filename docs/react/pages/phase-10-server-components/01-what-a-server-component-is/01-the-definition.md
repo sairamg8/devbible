@@ -207,6 +207,17 @@ Nothing — and that is the point to make in an interview. RSC removes the endpo
 existed *only* to feed your own browser. Anything with another consumer still needs a real
 API, and Server Functions are themselves endpoints with the same authorization obligations.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Server Components](https://react.dev/reference/rsc/server-components) — react.dev: the official definition: components rendered "before bundling, in an environment separate from your client app or SSR server", at build time or per request (*read*)
+- **Beyond the docs:** [Making Sense of React Server Components](https://www.joshwcomeau.com/react/server-components/) — Josh W. Comeau, published 2023-09-06, updated 2025-05-09: explains that Server Component code is not in the bundle and never hydrates, and that Client Components also render on the server, which the name hides
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [What a Server Component is](README.md) ·

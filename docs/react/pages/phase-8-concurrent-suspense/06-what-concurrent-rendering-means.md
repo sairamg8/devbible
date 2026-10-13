@@ -213,6 +213,18 @@ and mark slow updates as transitions so React has something to prioritise agains
 is nothing to configure and no supported way to observe the scheduling — code that
 branched on whether a render was interrupted would be impure by construction.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Keeping Components Pure](https://react.dev/learn/keeping-components-pure) — react.dev: purity and side effects as the contract that makes re-running a render safe; it says rendering can happen at any time and in any order, and "If some data changes in the middle of rendering a deep component tree, React can restart 
+- **Also good:** [Concurrent React for Library Maintainers](https://github.com/reactwg/react-18/discussions/70) — Ricky Hanlon, React 18 Working Group, 2021-07-07: what concurrent rendering asks of libraries that read external mutable state (*read*)
+- **Beyond the docs:** [Concurrent React and Scheduling](https://stevekinney.com/courses/react-performance/concurrent-react-scheduling) — Steve Kinney, course page, last modified 2025-09-28: interruptible work and priority; it uses a simplified five-level priority list and does not cover discarded renders or purity (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Request waterfalls](05-request-waterfalls.md) ·

@@ -212,6 +212,18 @@ inputs are excluded — so pass `useDeferredValue(query)` to the results instead
 both staleness signals, `isPending` and `query !== deferredQuery`, into one indicator,
 since the user does not care which mechanism made the content stale.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [New feature: startTransition](https://github.com/reactwg/react-18/discussions/41) — Ricky Hanlon, React 18 Working Group, 2021-06-08: urgent updates reflect direct interaction such as typing and clicking; transitions move the UI between views (*read*)
+- **Also good:** [useTransition](https://react.dev/reference/react/useTransition) — react.dev: troubleshooting entries "React doesn't treat my state update as a Transition" and "My state updates in Transitions are out of order" (*read*)
+- **Beyond the docs:** [Don't Stop Me Now: How to Use React useTransition() hook](https://dmitripavlutin.com/react-usetransition/) — Dmitri Pavlutin, 2021-06-23: "By default, all updates in React are considered urgent", typing stays urgent, heavy list work becomes the transition (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What concurrent rendering means](06-what-concurrent-rendering-means.md) ·

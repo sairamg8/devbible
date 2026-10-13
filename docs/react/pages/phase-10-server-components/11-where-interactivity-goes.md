@@ -211,6 +211,17 @@ Data fetched in Server Components where it is used, each independent region behi
 Suspense boundary, heavy rendering on the server, and small client leaves for the parts that
 own state — with server content passed through any interactive wrapper as `children`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Making Sense of React Server Components](https://www.joshwcomeau.com/react/server-components/) — Josh W. Comeau: moves state into a small separate Client Component so the parent stays a Server Component (*read*)
+- **Also good:** [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) — Next.js docs: `&lt;details&gt;` and a form with a Server Function need no Client Component (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Composition rules](10-composition-rules.md) ·

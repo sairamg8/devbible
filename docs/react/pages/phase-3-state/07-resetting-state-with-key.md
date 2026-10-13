@@ -247,6 +247,18 @@ preserve the right state across reorders; as a reset, a changing key tells React
 this is a different thing. Both are promises about identity, resolved by the
 same reconciliation rule.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state) — react.dev: the key section: a changed key destroys the old state and creates a fresh one (*read*)
+- **Beyond the docs:** [You Probably Don't Need Derived State](https://legacy.reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html) — Brian Vaughn, React blog, 2018-06-07: "fully uncontrolled component with a key" as the recommended reset, against copying props to state; written for class components, so the lifecycle code is dated
+- **Also good:** [Understanding React's key prop](https://kentcdodds.com/blog/understanding-reacts-key-prop) — Kent C. Dodds, 2019-11-11: a changed key unmounts and remounts, removing all state (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Derived state](06-derived-state.md) · Index: [Phase 3](README.md) · Next → [What triggers a re-render](08-what-triggers-a-re-render.md)

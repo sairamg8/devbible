@@ -207,6 +207,16 @@ rules. `flat['recommended-latest']` adds bleeding-edge experimental compiler rul
 useful while actively adopting the Compiler and wanting the newest diagnostics, but
 not what you pin a team to, since the rules can change.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [eslint-plugin-react-hooks](https://react.dev/reference/eslint-plugin-react-hooks) — react.dev: lists the rules in the `recommended` preset, including `exhaustive-deps` and `rules-of-hooks` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [How the Compiler bails out](09-how-the-compiler-bails-out.md) · Index: [Phase 6](README.md) · Next → [Do you still write `useMemo`?](11-do-you-still-write-usememo.md)

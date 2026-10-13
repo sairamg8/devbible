@@ -276,6 +276,17 @@ and Server Functions on top of this mechanism, and those handle request ordering
 which a hand-rolled version does not. `useOptimistic` covers immediate feedback. Phase 9
 is those abstractions; this page is the machinery under them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useTransition](https://react.dev/reference/react/useTransition) — react.dev: async Actions inside `startTransition`, plus a troubleshooting entry showing a second `startTransition` wrapped around the `setState` after an `await` (it blames the lost async context, which AsyncContext is expected to fix) (*rea
+- **Beyond the docs:** [Smooth Async Transitions in React 19](https://blog.openreplay.com/react-19-async-transitions/) — OpenReplay Team, 2026-02-17: pass an async function to `startTransition` and React tracks pending state; it is hedged about updates after an `await` (they "may not always be included", wrap them again only if they must stay non-urgent), which is weaker than t
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useDeferredValue`](08-usedeferredvalue.md) ·

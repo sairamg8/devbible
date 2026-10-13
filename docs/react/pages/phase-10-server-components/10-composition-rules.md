@@ -210,6 +210,17 @@ security consequences, not just ergonomics.
 A React component, or a serializable value to pass as a prop. Anything else throws. Shared
 helpers belong in a neutral module that neither graph claims.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) — Next.js docs: a Server Component importing a Client Component gets a client reference; static members such as `Menu.Item` break across the boundary (*read*)
+- **Also good:** [Making Sense of React Server Components](https://www.joshwcomeau.com/react/server-components/) — Josh W. Comeau: "Client Components can only import other Client Components" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Calling Server Functions from the client](09-calling-server-functions.md) ·
