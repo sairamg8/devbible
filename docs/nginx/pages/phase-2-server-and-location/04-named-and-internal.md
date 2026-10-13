@@ -272,6 +272,7 @@ single destinations by design.
 
 - **Read this:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) — nginx.org: not for regular requests, only redirection; cannot be nested (*read*)
 - **Also good:** [ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html) — nginx.org: lists `X-Accel-Redirect` among special response headers (*read* briefly)
+- **Beyond the docs:** [Nested locations blocks in NGINX configuration](https://upsun.com/blog/nginx-config-nested-locations-blocks) — Michael Sharp, Upsun (13 Feb 2024): which nestings are allowed (no `=` parents, no prefix inside regex) and what `^~` does to nested regexes
 
 {/* LINKMAP:END */}
 

@@ -219,6 +219,7 @@ how you check whether the directive can exist on your server at all.
 - **Read this:** [Building nginx from sources](https://nginx.org/en/docs/configure.html) — nginx.org: `--with-...` flags, `=dynamic` variants, `--add-dynamic-module`, `--with-compat` (*read*)
 - **Also good:** [Dynamic Modules](https://docs.nginx.com/nginx/admin-guide/dynamic-modules/dynamic-modules/) — docs.nginx.com: `.so` files loaded with `load_module` (*read*; it is written around NGINX Plus packages)
 - **Also good:** [Core functionality](https://nginx.org/en/docs/ngx_core_module.html)
+- **Beyond the docs:** [Compiling and using dynamic nginx modules](https://lipanski.com/posts/nginx-dynamic-modules) — Florin Lipan (undated): a worked build of a third-party dynamic module, including why `--with-compat` (1.11.5) matters and that nginx must have been built with it
 
 {/* LINKMAP:END */}
 

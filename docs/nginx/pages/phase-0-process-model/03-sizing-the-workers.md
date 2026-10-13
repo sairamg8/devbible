@@ -231,6 +231,7 @@ memory and connection pool. Set the number explicitly there.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Core functionality](https://nginx.org/en/docs/ngx_core_module.html) — nginx.org: `worker_connections` counts all connections including proxied ones and cannot exceed the open-file limit set by `worker_rlimit_nofile` (*read*)
+- **Beyond the docs:** [NGINX worker_rlimit_nofile: setting file descriptor limits correctly](https://www.netdata.cloud/guides/nginx/nginx-worker-rlimit-nofile/) — Netdata guides (no author or date shown): turns the limits into a sizing floor and states that a proxied request uses two connections; it sizes per worker, so the connections times workers arithmetic is still ours
 - **Read this:** [Connection processing methods](https://nginx.org/en/docs/events.html) — nginx.org: epoll on Linux 2.6+, kqueue on FreeBSD/OpenBSD/NetBSD/macOS, and nginx normally picks the best method itself (*read*)
 
 {/* LINKMAP:END */}

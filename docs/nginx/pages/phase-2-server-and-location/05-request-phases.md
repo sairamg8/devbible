@@ -250,6 +250,7 @@ discarded the inherited set. Those two account for most of it.
 - **Read this:** [Development guide](https://nginx.org/en/docs/dev/development_guide.html) — nginx.org: official, current phase list (post-read, server rewrite, find config, rewrite, post-rewrite, preaccess, access, post-access, precontent, content, log) with the standard module registered in each (*read* the HTTP phases passage)
 - **Also good:** [agentzh's Nginx Tutorials](https://openresty.org/download/agentzh-nginx-tutorials-en.html) — Yichun Zhang, version 2020.03.19 (written against nginx 1.7.x): Directive Execution Order chapters: 11 phases with worked examples, but it names `try-files` as a phase where the official guide has `precontent` (*read*)
 - **Read this:** [ngx_http_headers_module](https://nginx.org/en/docs/http/ngx_http_headers_module.html) — nginx.org: added only for 200, 201, 204, 206, 301, 302, 303, 304, 307, 308 unless `always` (*read*)
+- **Beyond the docs:** [Nginx add_header not working, headers not showing up or disappearing in response](https://www.claudiokuenzler.com/blog/1177/nginx-add-header-not-working-headers-not-showing-response-always) — Claudio Kuenzler (Feb 8, 2022; updated Apr 22, 2022): troubleshooting-first account of a header vanishing on a 404 and the `always` fix
 
 {/* LINKMAP:END */}
 

@@ -214,6 +214,7 @@ releases between May and July 2026.
 
 - **Read this:** [Installing NGINX Open Source](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/) — docs.nginx.com: OS repo "suitable for learning or testing", official repo recommended for production, source builds, containers (*read*)
 - **Also good:** [nginx: Linux packages](https://nginx.org/en/linux_packages.html) — nginx.org: supported distributions and repo setup for stable and mainline (*read*)
+- **Beyond the docs:** [Installing and configuring nginx on Debian and Ubuntu](https://www.kernelhost.com/en/blog/install-nginx-on-debian-ubuntu) — KernelHost (Jul 26, 2026): side-by-side table of the distro package vs the nginx.org package (user www-data vs nginx, sites-enabled and snippets only in the distro build), which the vendor install guide does not compare
 
 {/* LINKMAP:END */}
 
