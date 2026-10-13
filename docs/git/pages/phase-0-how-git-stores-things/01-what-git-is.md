@@ -194,6 +194,7 @@ directories, regardless of how many commits each took to get there.
 
 - **Read this:** [Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects) — Pro Git: calls Git a content-addressable filesystem with a key-value store at its core, then shows `hash-object` returning the key (*read*)
 - **Also good:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) — git-scm.com: short official page: objects never change, each ID is a hash of type and contents (*read*)
+- **Beyond the docs:** [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/) — John Wiegley: builds up from blob to tree to commit and branches, then the index and reset, so the object store comes first, the order our page uses; page shows no date
 
 {/* LINKMAP:END */}
 

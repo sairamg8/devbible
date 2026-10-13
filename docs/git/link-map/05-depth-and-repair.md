@@ -24,6 +24,7 @@ Covers every topic row of `docs/git/syllabus/04-depth-and-repair.md`: T10-01 to 
 - **Read this:** [git-ls-tree](https://git-scm.com/docs/git-ls-tree) · git-scm.com · lists a tree like `ls -a`; output has mode, type, object, path (*read* description) · covers our angle: **partial** — the index side is in another page · fetched 2026-10-12
 - **Also good:** [git-ls-files](https://git-scm.com/docs/git-ls-files) · git-scm.com · `-s`/`--stage` shows what the index holds (*headings only* plus options read) · fetched 2026-10-12
 - **Also good:** [git-rev-parse](https://git-scm.com/docs/git-rev-parse) · git-scm.com · turns names into object ids (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Bug Repellent: How does git add work under the hood?](https://blog.safia.rocks/2018/03/28/how-does-git-add-work-under-the-hood/) · Safia Abdalla · follows `git add` through the source, then uses `ls-files --stage` and `cat-file` to show the index holds a path plus a blob id, which makes the index-versus-tree link concrete · fetched 2026-10-13 (*read*)
 - **Our delta:** compare `ls-files -s` with `status` for the same state.
 
 ### T10-03 · Building a commit by hand — Understand · 🔲 not written
@@ -57,11 +58,13 @@ Covers every topic row of `docs/git/syllabus/04-depth-and-repair.md`: T10-01 to 
 - **Read this:** [reftable](https://git-scm.com/docs/reftable) · git-scm.com · the format spec: motivation, comparison with JGit RefTree, stacked tables updated by atomic rename of `tables.list` (*read* passages) · covers our angle: **partial** — a format spec, not a how-to · fetched 2026-10-12
 - **Also good:** [git-init](https://git-scm.com/docs/git-init) · git-scm.com · `--ref-format` and `init.defaultRefFormat` choose the backend at init (*read*) · fetched 2026-10-12
 - **Also good:** [git-pack-refs](https://git-scm.com/docs/git-pack-refs) · git-scm.com · why one file per ref hurts with hundreds of refs (*read* description) · fetched 2026-10-12
+- **Beyond the docs:** [A beginner's guide to the Git reftable format](https://about.gitlab.com/blog/a-beginners-guide-to-the-git-reftable-format/) · Patrick Steinhardt, GitLab blog (May 30, 2024) · walks through the table layout, stacked tables, auto-compaction and the stub `HEAD`, which is the how-it-behaves story the format spec leaves out · fetched 2026-10-13 (*read*)
 - **Our delta:** the loose and `packed-refs` baseline, then what reftable changes. `git refs migrate --ref-format=<format>` and `git refs verify` (git-scm.com/docs/git-refs, *read*) are listed for the migration step. Related text: `docs/git/pages/phase-0-how-git-stores-things/06-refs-and-head.md` has a "Two storage backends" section.
 
 ### T10-09 · The index file format — Know · 🔲 not written
 - **Read this:** [racy-git](https://git-scm.com/docs/racy-git) · git-scm.com · defines "racily clean" entries and how Git compares file mtime with the index timestamp (*read*) · covers our angle: **partial** — the entry layout is in the format page · fetched 2026-10-12
 - **Also good:** [Index file format](https://git-scm.com/docs/gitformat-index) · git-scm.com · entry fields and extensions, including the sparse index (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [The git index race condition](https://crypto.stanford.edu/~blynn/gg/race.html) · Ben Lynn (Git Magic companion) · explains racily clean entries with a small proof of why matching stat data is only trusted when the hash was taken after the mtime · fetched 2026-10-13 (*read*)
 - **Our delta:** why `status` rehashes a file it did not need to.
 
 ### T10-10 · What `gc` does — Know · 🔲 not written
@@ -79,12 +82,14 @@ Covers every topic row of `docs/git/syllabus/04-depth-and-repair.md`: T10-01 to 
 ### T10-12 · `replace` refs and grafts — Know · 🔲 not written
 - **Read this:** [Replace](https://git-scm.com/book/en/v2/Git-Tools-Replace) · git-scm.com (Pro Git) · a worked history-grafting case, and sharing a replacement by pushing the ref (*read* passages) · covers our angle: **partial** — "grafts" as a legacy mechanism is not explained · fetched 2026-10-12
 - **Also good:** [git-replace](https://git-scm.com/docs/git-replace) · git-scm.com · caveat: replace objects or grafts turn off the commit-graph (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Grafting earlier history with Git](https://www.atlassian.com/blog/development/grafting-earlier-history-with-git) · Nicola Paolucci, Atlassian (Aug 5, 2015) · covers the old grafts file against `git replace` and a hands-on legacy-to-restarted join, which fills our gap on grafts as a legacy mechanism · fetched 2026-10-13 (*read*)
 - **Our delta:** the one modern use, stitching two histories, and the commit-graph cost.
 
 ### T10-13 · Object stores shared between clones — When Needed · 🔲 not written
 - **Read this:** [git-worktree](https://git-scm.com/docs/git-worktree) · git-scm.com · several working trees attached to one repository, so one object store (*read* description) · covers our angle: **partial** — no `alternates` · fetched 2026-10-12
 - **Also good:** [gitrepository-layout](https://git-scm.com/docs/gitrepository-layout) · git-scm.com · documents `objects/info/alternates` and `http-alternates` (*read*) · fetched 2026-10-12
 - **Also good:** [git-clone](https://git-scm.com/docs/git-clone) · git-scm.com · `--reference` example for borrowing objects from a local directory (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Git worktrees explained](https://blog.openreplay.com/git-worktrees-explained/) · OpenReplay Team (Sep 2, 2026) · states plainly that worktrees share one object database and refs while a second clone doubles disk use; conceptual only, with no `alternates` · fetched 2026-10-13 (*read*)
 - **Our delta:** why a worktree is cheap and a clone is not.
 
 ### T10-14 · Reading Git's own documentation — Understand · 🔲 not written
@@ -129,6 +134,7 @@ Covers every topic row of `docs/git/syllabus/04-depth-and-repair.md`: T10-01 to 
 - **Read this:** [Advanced Merging](https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging) · git-scm.com (Pro Git) · the subtree-merge section, with its drawbacks (*read* passage) · covers our angle: **partial** — `--allow-unrelated-histories` and the merge-base outcome are elsewhere · fetched 2026-10-12
 - **Also good:** [About Git subtree merges](https://docs.github.com/en/get-started/using-git/about-git-subtree-merges) · GitHub Docs · the subtree strategy steps (*read*) · fetched 2026-10-12
 - **Also good:** [git-read-tree](https://git-scm.com/docs/git-read-tree) · git-scm.com · `--prefix` reads a tree under a directory (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Combine Git repositories with unrelated histories](https://jeffkreeftmeijer.com/git-combine/) · Jeff Kreeftmeijer (Aug 9, 2021) · short worked example: add a remote, fetch, merge with `--allow-unrelated-histories`, then read the combined log; says nothing about the merge base · fetched 2026-10-13 (*read*)
 - **Our delta:** where the merge base ends up.
 
 ### T11-07 · Splitting a directory into its own repository — Know · 🔲 not written
@@ -176,11 +182,13 @@ Covers every topic row of `docs/git/syllabus/04-depth-and-repair.md`: T10-01 to 
 ### T12-01 · "Your branch and 'origin/main' have diverged" — Master · 🔲 not written
 - **Read this:** [git-pull](https://git-scm.com/docs/git-pull) · git-scm.com · quotes the message ("have 2 and 3 different commits each") and explains upstream tracking; four integration options (*read*) · covers our angle: **partial** — no picking a reconciliation by situation · fetched 2026-10-12
 - **Also good:** [Remote Branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches) · Pro Git · how remote-tracking refs move (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [How to fix "you have divergent branches"](https://www.git-tower.com/learn/git/faq/you-have-divergent-branches) · Tower Git FAQ · shows how to look at both sides with `git log HEAD..origin/main` and `origin/main..HEAD` before choosing merge, rebase or ff-only, which is the pick-on-purpose step the manual skips · fetched 2026-10-13 (*read*)
 - **Our delta:** read ahead and behind counts, then choose merge or rebase on purpose. Related text: `docs/git/pages/phase-4-remotes/05-divergent-branches.md`.
 
 ### T12-02 · "Updates were rejected because the remote contains work that you do not have" — Master · 🔲 not written
 - **Read this:** [Dealing with non-fast-forward errors](https://docs.github.com/en/get-started/using-git/dealing-with-non-fast-forward-errors) · GitHub Docs · fetch then merge, or `git pull` (*read*) · covers our angle: **partial** — does not say why `--force` is almost never right · fetched 2026-10-12
 - **Also good:** [git-push](https://git-scm.com/docs/git-push) · git-scm.com · `--force-with-lease` and non-fast-forward behaviour (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Git: Force push safely with --force-with-lease and --force-if-includes](https://adamj.eu/tech/2023/10/31/git-force-push-safely/) · Adam Johnson (Oct 31, 2023) · says why a plain force push silently removes a teammate's commits, and why the lease alone is weak because a fetch counts even if you never looked · fetched 2026-10-13 (*read*)
 - **Our delta:** when a force is genuinely right, with lease. Related text: `docs/git/pages/phase-4-remotes/06-force-pushing-safely.md`.
 
 ### T12-03 · "Your local changes to the following files would be overwritten" — Master · 🔲 not written
@@ -195,6 +203,7 @@ Covers every topic row of `docs/git/syllabus/04-depth-and-repair.md`: T10-01 to 
 ### T12-05 · Detached HEAD, and the commits made in it — Master · 🔲 not written
 - **Read this:** [git-checkout](https://git-scm.com/docs/git-checkout) · git-scm.com · the "detached HEAD" section: create a branch at the commit, or recover its name via `git reflog` if you moved away (*read*) · covers our angle: **full** · fetched 2026-10-12
 - **Also good:** [git-switch](https://git-scm.com/docs/git-switch) · git-scm.com · `--detach`, and `git switch -c` to keep the work (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [detached HEAD explained](https://raw.githubusercontent.com/sitaramc/git-notes/master/articles/detached-head.mkd) · sitaramc git-notes (no date or byline on the page; the text calls itself historical) · builds the idea from a linked-list analogy to symbolic refs, then shows saving commits with a new branch or finding them again through the reflog; cited from raw.githubusercontent.com because github.com returns 403 to our fetcher · fetched 2026-10-13 (*read*)
 - **Our delta:** recognise it from `status`. Related text: `docs/git/pages/phase-0-how-git-stores-things/06-refs-and-head.md` has "HEAD attached and detached".
 
 ### T12-06 · A conflict in a lockfile or a generated file — Master · 🔲 not written
@@ -219,6 +228,7 @@ Covers every topic row of `docs/git/syllabus/04-depth-and-repair.md`: T10-01 to 
 ### T12-10 · "I ran `reset --hard` and lost work" — Understand · 🔲 not written
 - **Read this:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) · Pro Git · does `reset --hard` to lose two commits, then recovers via the reflog (*read*) · covers our angle: **partial** — never-staged edits are not discussed · fetched 2026-10-12
 - **Also good:** [Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified) · Pro Git · the table of what `--hard` touches (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Git Titanium Armor: recovering from various disasters](https://www.atlassian.com/blog/git/git-titanium-armor-recovering-from-various-disasters) · Nicola Paolucci, Atlassian (Apr 15, 2013) · includes the case the Pro Git chapter skips: staged but never committed work lost to `reset --hard`, hunted down by looking for recently created loose objects under `.git/objects` and reading them with `git show` · fetched 2026-10-13 (*read*)
 - **Our delta:** expiry (90 and 30 days, T10-06) bounds recovery; never-staged edits are not recoverable (a search result says so; not confirmed on a primary page). Related text: `docs/git/pages/phase-5-undo-recover/04-reflog-recovery.md` has "What is never recoverable" and "The clock".
 
 ### T12-11 · "I pushed a secret" — Understand · 🔲 not written
@@ -229,6 +239,7 @@ Covers every topic row of `docs/git/syllabus/04-depth-and-repair.md`: T10-01 to 
 ### T12-12 · A stash that seems to have vanished — Understand · 🔲 not written
 - **Read this:** [git-stash](https://git-scm.com/docs/git-stash) · git-scm.com · finding unreachable stash commits with `git fsck --unreachable` piped to `git log --grep=WIP`; failed apply leaves the entry on conflict (*read*) · covers our angle: **partial** — no reflog route · fetched 2026-10-12
 - **Also good:** [git-fsck](https://git-scm.com/docs/git-fsck) · git-scm.com · dangling commit definition (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [How to recover from a git mistake](https://opensource.com/article/17/8/recover-dropped-data-stash) · Jose Guilherme Vanz, opensource.com (Aug 18, 2017) · one worked example of a dropped stash found with `git fsck --unreachable` and `git show`; the comments note that stash entries live in the reflog, which is our missing route · fetched 2026-10-13 (*read*)
 - **Our delta:** finding the commit by reflog is not sourced. Related text: `docs/git/pages/phase-1-everyday-loop/11-git-stash.md` mentions the `fsck --unreachable` route in its gotchas.
 
 ### T12-13 · A rebase that has gone wrong midway — Understand · 🔲 not written

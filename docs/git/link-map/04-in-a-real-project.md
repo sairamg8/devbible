@@ -25,11 +25,13 @@ Covers every topic row of `docs/git/syllabus/03-in-a-real-project.md`: T07-01 to
 - **Read this:** [Removing sensitive data from a repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) · GitHub Docs · for a secret, the first step is to revoke or rotate it; rewriting history has side effects (*read*) · covers our angle: **partial** — no `.env` / `.env.example` pattern and no "private repo is not a vault" argument · fetched 2026-10-12
 - **Also good:** [Config (twelve-factor)](https://12factor.net/config) · 12factor.net · config files checked into a repo are easy to commit by mistake (*read*) · fetched 2026-10-12
 - **Also good:** [About push protection](https://docs.github.com/en/code-security/concepts/secret-security/push-protection) · GitHub Docs · blocks pushes containing secrets (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [.env Files and the Art of Not Committing Secrets](https://blog.openreplay.com/env-files-art-not-committing-secrets/) · OpenReplay Team · 2025-07-12 · shows the committed `.env.example` template with blank values that the GitHub page lacks; it does not cover history removal or rotation · fetched 2026-10-13 (*read*)
 - **Our delta:** rotate first, then the Phase 5 removal; the `.env.example` convention. Related text: `docs/git/pages/phase-1-everyday-loop/06-ignoring-does-not-untrack.md` (`git rm --cached .env`).
 
 ### T07-03 · Lockfiles are committed, always — Master · 🔲 not written
 - **Read this:** [package-lock.json](https://docs.npmjs.com/cli/v11/configuring-npm/package-lock-json/) · docs.npmjs.com · the file is meant to be committed so teammates, deployments and CI install identical trees (*read*) · covers our angle: **partial** — npm only, no "works on my machine" diagnosis · fetched 2026-10-12
 - **Also good:** [yarn.lock](https://classic.yarnpkg.com/en/docs/yarn-lock) · classic.yarnpkg.com · "Check into source control", same exact tree on every machine (*read*; Yarn 1 docs) · fetched 2026-10-12
+- **Beyond the docs:** [What is package-lock.json and how a lockfile works for Yarn and npm](https://snyk.io/blog/what-is-package-lock-json/) · Liran Tal, Snyk · 2019-03-14 · explains why a semver range drifts without a lockfile and why `npm ci` in CI needs one, covering npm and Yarn together · fetched 2026-10-13 (*read*)
 - **Our delta:** the uncommitted-lockfile story behind most "works on my machine" reports.
 
 ### T07-04 · Resolving a lockfile conflict — Understand · 🔲 not written
@@ -39,6 +41,7 @@ Covers every topic row of `docs/git/syllabus/03-in-a-real-project.md`: T07-01 to
 
 ### T07-05 · Generated versus authored files — Understand · 🔲 not written
 - **Read this:** [Customizing how changed files appear on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-files/customizing-how-changed-files-appear-on-github) · GitHub Docs · `linguist-generated` in `.gitattributes` keeps files out of default diffs and language stats (*read* the opening) · covers our angle: **partial** — an attribute, not the test for whether a generated file belongs in the repo · fetched 2026-10-12
+- **Beyond the docs:** [Why I don't commit generated files to master](https://kentcdodds.com/blog/why-i-dont-commit-generated-files-to-master) · Kent C. Dodds · 2015-10-05 · the review-cost argument (noisy diffs, overwritten contributor edits) that the GitHub attribute page does not make; the author says he no longer uses the workaround it proposes · fetched 2026-10-13 (*read*)
 - **Checked, not chosen:** a web search found no general page on that test; one project's guideline (Gobo Eiffel) came up and was *not opened*.
 - **Our delta:** the belongs-in-the-repo test and the review cost of tracking output.
 
@@ -58,16 +61,19 @@ Covers every topic row of `docs/git/syllabus/03-in-a-real-project.md`: T07-01 to
 
 ### T07-09 · `git worktree` — Understand · 🔲 not written
 - **Read this:** [git-worktree](https://git-scm.com/docs/git-worktree) · git-scm.com · main versus linked worktrees; a branch checked out elsewhere is refused unless `--force`; `list`, `remove`, `prune` (*read*) · covers our angle: **partial** — reference style, no PR-review walk-through · fetched 2026-10-12
+- **Beyond the docs:** [Review Pull Requests with git worktrees](https://waylonwalker.com/review-pull-requests-with-git-worktrees/) · Waylon Walker · 2022-05-04 · the PR-review walk-through with `git worktree add` from a remote branch that the manual lacks · fetched 2026-10-13 (*read*)
 - **Our delta:** reviewing a PR while your own work stays untouched.
 
 ### T07-10 · Monorepo layout — Understand · 🔲 not written
 - **Read this:** [Monorepos in Git](https://www.atlassian.com/git/tutorials/monorepos) · Atlassian · published 2025-12-15, modified 2026-01-14 · what a monorepo costs Git at scale and what to do about it (*read* parts) · covers our angle: **partial** — generic, nothing on ignore rules, hooks or CI paths for `web/` and `api/` · fetched 2026-10-12
 - **Also good:** [monorepo.tools](https://monorepo.tools/) · Nrwl/Nx-maintained · what a monorepo is and what tooling should provide (*headings only*) · fetched 2026-10-12
 - **Also good:** [npm workspaces](https://docs.npmjs.com/cli/v11/using-npm/workspaces/) · docs.npmjs.com · the tooling half of the decision (*not opened*, fetch only returned 200) · fetched 2026-10-12
+- **Beyond the docs:** [Monorepo vs Polyrepo: How to Choose](https://sourcegraph.com/blog/monorepo-vs-polyrepo) · Matt Tanner, Sourcegraph · 2026-06-29 · side-by-side trade-offs (atomic changes, tooling cost, access control); vendor blog, so read the code-intelligence claims with that in mind · fetched 2026-10-13 (*read*)
 
 ### T07-11 · Sparse checkout — Understand · 🔲 not written
 - **Read this:** [git-sparse-checkout](https://git-scm.com/docs/git-sparse-checkout) · git-scm.com · cone mode, `--sparse-index`, and why non-cone patterns are not recommended (*read*) · covers our angle: **partial** — nothing on tooling that expects the whole tree · fetched 2026-10-12
 - **Also good:** [Bring your monorepo down to size with sparse-checkout](https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/) · GitHub Blog · 2020-01-17 (modified 2022-05-16) · `init --cone`, `set <dirs>`, `disable` (*read*); note the current manual marks `init` as deprecated, so use `set` · fetched 2026-10-12
+- **Beyond the docs:** [How to Use "Sparse Checkout" to Manage Large Git Repositories](https://www.git-tower.com/learn/git/faq/git-sparse-checkout) · Tower · no page date · pairs sparse checkout with a blobless partial clone and says sparse checkout alone saves no disk; it still shows `init --cone`, which the current manual marks deprecated · fetched 2026-10-13 (*read*)
 
 ### T07-12 · Large files and Git LFS — Know · 🔲 not written
 - **Read this:** [Git LFS](https://git-lfs.com/) · git-lfs.com · text pointers in Git, contents on a server; `git lfs track`; tracking does not convert existing files (*read*) · covers our angle: **partial** — no history-bloat or migration-cost discussion · fetched 2026-10-12
@@ -102,6 +108,7 @@ Covers every topic row of `docs/git/syllabus/03-in-a-real-project.md`: T07-01 to
 ### T08-02 · `pre-commit` with lint-staged — Master · 🔲 not written
 - **Read this:** [lint-staged README](https://raw.githubusercontent.com/lint-staged/lint-staged/main/README.md) · github (raw) · runs linters on staged files; set up a `pre-commit` hook, with Husky as a popular choice (*read*) · covers our angle: **partial** — no argument about full-suite hooks training people to bypass · fetched 2026-10-12
 - **Also good:** [Husky: Get started](https://typicode.github.io/husky/get-started.html) · typicode.github.io · `husky init` creates a `pre-commit` script and updates the `prepare` script (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Prevent Bad Commits with Husky and lint-staged](https://betterstack.com/community/guides/scaling-nodejs/husky-and-lint-staged/) · Stanley Ulili, Better Stack · updated 2025-06-10 · end-to-end walk-through with ESLint, Prettier and `husky init` on staged files only · fetched 2026-10-13 (*read*)
 
 ### T08-03 · What CI must re-check regardless — Master · 🔲 not written
 - **Read this:** [About protected branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) · GitHub Docs · required status checks must pass before merging into a protected branch (*read* that passage) · covers our angle: **partial** — GitHub mechanism only, not the list of tests, lint, build, secret scan · fetched 2026-10-12
@@ -120,6 +127,7 @@ Covers every topic row of `docs/git/syllabus/03-in-a-real-project.md`: T07-01 to
 ### T08-06 · `commit-msg` and commitlint — Understand · 🔲 not written
 - **Read this:** [commitlint: Getting started](https://commitlint.js.org/guides/getting-started.html) · commitlint.js.org · install `@commitlint/cli` and `@commitlint/config-conventional` (*read*) · covers our angle: **partial** — wiring to a `commit-msg` hook and the emergency escape hatch are **not confirmed** in what I read · fetched 2026-10-12
 - **Also good:** [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) · conventionalcommits.org · the `type[optional scope]: description` format, tied to SemVer (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [How to Write Good Commit Messages with Commitlint](https://www.freecodecamp.org/news/how-to-use-commitlint-to-write-good-commit-messages/) · Anish De, freeCodeCamp · 2021-11-12 · shows the Husky `commit-msg` wiring that commitlint's getting-started page leaves out; it uses the older `husky add` command · fetched 2026-10-13 (*read*)
 - **Our delta:** related text: `docs/git/pages/phase-1-everyday-loop/10-commit-messages.md` says a `commit-msg` hook can enforce a format.
 
 ### T08-07 · `pre-push` as the last cheap gate — Understand · 🔲 not written
@@ -138,6 +146,7 @@ Covers every topic row of `docs/git/syllabus/03-in-a-real-project.md`: T07-01 to
 - **Read this:** [Viewing and understanding files](https://docs.github.com/en/repositories/working-with-files/using-files/viewing-and-understanding-files) · GitHub Docs · sections "Ignore commits in the blame view" and "Bypassing `.git-blame-ignore-revs`" (*headings only*) · covers our angle: **partial** — host side only · fetched 2026-10-12
 - **Also good:** [git-config](https://git-scm.com/docs/git-config) · git-scm.com · `blame.ignoreRevsFile`: ignore revisions listed in the file, one unabbreviated object name per line (*read*) · fetched 2026-10-12
 - **Also good:** [git-blame](https://git-scm.com/docs/git-blame) · git-scm.com · `--ignore-rev` and `--ignore-revs-file` options (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Exclude linting & formatting commits when running Git blame](https://tekin.co.uk/2020/09/ignore-linting-and-formatting-commits-when-running-git-blame) · Tekin Süleyman · 2020-09-17 · walks the formatter-commit problem end to end and notes each collaborator must set `blame.ignoreRevsFile` locally · fetched 2026-10-13 (*read*)
 
 ### T08-11 · Server-side hooks — Know · 🔲 not written
 - **Read this:** [An Example Git-Enforced Policy](https://git-scm.com/book/en/v2/Customizing-Git-An-Example-Git-Enforced-Policy) · Pro Git · a server-side `update` hook that runs once per pushed branch (*read* that passage) · covers our angle: **partial** — Ruby example, no `pre-receive` walk-through · fetched 2026-10-12
@@ -145,6 +154,7 @@ Covers every topic row of `docs/git/syllabus/03-in-a-real-project.md`: T07-01 to
 
 ### T08-12 · Merge queues — Know · 🔲 not written
 - **Read this:** [Managing a merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) · GitHub Docs · required checks run against the latest target branch plus the pull requests already queued (*read*) · covers our angle: **partial** — GitHub only; GitLab merge trains not checked · fetched 2026-10-12
+- **Beyond the docs:** [What is a merge queue, and does your team need one?](https://graphite.com/blog/what-is-a-merge-queue) · Pranathi Peri, Graphite · 2023-07-17 · explains semantic merge conflicts with a concrete example and why up-to-date branch rules cause rebase churn; vendor blog · fetched 2026-10-13 (*read*)
 
 ### T08-13 · Release automation — Know · 🔲 not written
 - **Read this:** [semantic-release README](https://raw.githubusercontent.com/semantic-release/semantic-release/master/README.md) · github (raw) · derives the next version from commit messages, generates a changelog, publishes (*read*) · covers our angle: **partial** — no tag-creation detail read; `release-please` was 403 (github.com), so not used · fetched 2026-10-12
@@ -183,6 +193,7 @@ Covers every topic row of `docs/git/syllabus/03-in-a-real-project.md`: T07-01 to
 
 ### T09-06 · Aliases — Understand · 🔲 not written
 - **Read this:** [Git Aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) · Pro Git · `git config --global alias.co checkout` and similar (*read*) · and `!` prefix to run an external command, e.g. `alias.visual '!gitk'` (*read*) · covers our angle: **partial** — no advice on which handful are worth defining and no shell-alias versus Git-alias comparison · fetched 2026-10-12
+- **Beyond the docs:** [8 Git aliases that make me more efficient](https://opensource.com/article/20/11/git-aliases) · Ricardo Gerardi, Opensource.com · 2020-11-30 · a concrete short list of worth-defining aliases and why Git aliases beat shell aliases · fetched 2026-10-13 (*read*)
 
 ### T09-07 · Credential caching — Understand · 🔲 not written
 - **Read this:** [Credential Storage](https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage) · Pro Git · default is no caching; `cache` keeps credentials in memory (default 900 seconds); `store` writes plain text to `~/.git-credentials` (*read*) · also covers the macOS `osxkeychain` helper and the Windows Credential Manager · covers our angle: **partial** — the shell-history point is not covered · fetched 2026-10-12
@@ -201,6 +212,7 @@ Covers every topic row of `docs/git/syllabus/03-in-a-real-project.md`: T07-01 to
 
 ### T09-10 · `scalar` — Know · 🔲 not written
 - **Read this:** [scalar](https://git-scm.com/docs/scalar) · git-scm.com · `scalar clone`, `register`, `run`, `reconfigure`; a RECOMMENDED CONFIG VALUES section (*headings only*, synopsis read) · covers our angle: **partial** — the config values and the "do you need it" judgement were not read · fetched 2026-10-12
+- **Beyond the docs:** [Introducing Scalar: Git at scale for everyone](https://devblogs.microsoft.com/devops/introducing-scalar/) · Derrick Stolee, Microsoft DevBlogs · 2020-02-12 · the motivation for Scalar's config and background maintenance; written for the original .NET tool, so the manual is current · fetched 2026-10-13 (*read*)
 - **Our delta:** which of its settings a normal-size repository can skip.
 
 ### T09-11 · Better diffs at the terminal — Know · 🔲 not written
@@ -215,4 +227,5 @@ Covers every topic row of `docs/git/syllabus/03-in-a-real-project.md`: T07-01 to
 
 ### T09-13 · When to split a repository — Know · 🔲 not written
 - **Read this:** [Monorepos in Git](https://www.atlassian.com/git/tutorials/monorepos) · Atlassian · published 2025-12-15, modified 2026-01-14 · section "Identify boundaries and split your repository" calls it the most radical workaround (*read* that passage) · covers our angle: **partial** — the "usually tooling, not surgery" argument is ours · fetched 2026-10-12
+- **Beyond the docs:** [Monorepo vs Polyrepo: How to Choose](https://sourcegraph.com/blog/monorepo-vs-polyrepo) · Matt Tanner, Sourcegraph · 2026-06-29 · weighs team size, coupling and tooling budget before choosing a layout; vendor blog · fetched 2026-10-13 (*read*)
 - **Checked, not chosen:** blog comparisons of monorepo and many repos came up in search (itnext, kodus, last9); none was opened.

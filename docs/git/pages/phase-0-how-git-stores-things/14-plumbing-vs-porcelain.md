@@ -168,6 +168,7 @@ branch. `commit-tree` creates one object and does nothing else.
 - **Read this:** [Plumbing and Porcelain](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain) — Pro Git: plumbing commands are low-level and chainable in scripts, porcelain the friendlier ones (*read*)
 - **Also good:** [git](https://git-scm.com/docs/git) — git-scm.com: splits the commands into high-level (porcelain) and low-level (plumbing), with the full list of each (*read*)
 - **Also good:** [git-status](https://git-scm.com/docs/git-status)
+- **Beyond the docs:** [A Plumber's Guide to Git](https://alexwlchan.net/a-plumbers-guide-to-git/) — Alex Chan (alexwlchan), updated 2018-03-13: a sink analogy for the split, then a workshop that uses plumbing commands to look inside `.git`
 
 {/* LINKMAP:END */}
 

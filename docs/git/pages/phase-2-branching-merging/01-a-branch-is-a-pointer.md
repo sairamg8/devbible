@@ -255,6 +255,7 @@ still know they landed.
 
 - **Read this:** [Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) — git-scm.com (Pro Git): a new branch is as cheap as writing 41 bytes to a file; HEAD is the pointer to the current branch (*read*)
 - **Also good:** [git-branch](https://git-scm.com/docs/git-branch) — git-scm.com: `-d` refuses unless the branch is fully merged in its upstream, or in HEAD when none is set; `-D` is shorthand for `--delete --force` (*read*)
+- **Beyond the docs:** [git branches: intuition & reality](https://jvns.ca/blog/2023/11/23/branches-intuition-reality/) — Julia Evans, jvns.ca (2023-11-23): contrasts the everyday "offshoot" mental model with git's real one, a branch as a reference to a commit with no stored link to a parent branch, so it explains why commands need the relationship spelled out
 
 {/* LINKMAP:END */}
 

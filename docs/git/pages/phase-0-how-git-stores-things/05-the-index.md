@@ -170,6 +170,7 @@ staged exists only on disk, and `--hard` overwrites it.
 - **Read this:** [Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) — Pro Git: "Staging Modified Files": a file edited after `git add` shows as both staged and unstaged (*read*)
 - **Also good:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) — git-scm.com: THE INDEX: a flat list of file type, blob ID, stage number and path; `git ls-files --stage` shows it (*read*)
 - **Also good:** [gitformat-index](https://git-scm.com/docs/gitformat-index)
+- **Beyond the docs:** [Git Guts: The staging index](https://awasu.com/weblog/git-guts/staging-index/) — Taka, Awasu weblog, 2022-01-07: the index holds the whole working tree with your changes applied, not only the changes, and walks the file header, sorted entries and checksum
 
 {/* LINKMAP:END */}
 

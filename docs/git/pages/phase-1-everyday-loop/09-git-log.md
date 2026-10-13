@@ -254,6 +254,7 @@ intent.
 
 - **Read this:** [Viewing the Commit History](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) — Pro Git: `--oneline`, graph output, and "Limiting Log Output" (*read* limiting section, which includes the path filter; rest *headings only*)
 - **Also good:** [git-log](https://git-scm.com/docs/git-log) — git-scm.com: full option reference (~109k characters, *headings only*)
+- **Beyond the docs:** [Power 'git log' graphing](https://zwischenzugs.com/2016/06/04/power-git-log-graphing/) — Ian Miell, zwischenzugs, 2016-06-04: builds up `--graph`, `--all`, `--decorate`, `--oneline` and `--topo-order` one flag at a time into a single alias
 
 {/* LINKMAP:END */}
 

@@ -246,6 +246,7 @@ branch, which is the one number you cannot measure from your terminal.
 
 - **Read this:** [Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) — git-scm.com (Pro Git): section "The Perils of Rebasing": do not rebase commits that exist outside your repository and that people may have based work on (*read*)
 - **Also good:** [git-rebase](https://git-scm.com/docs/git-rebase) — git-scm.com: section "Recovering from upstream rebase" (*headings only*)
+- **Beyond the docs:** [git rebase: what can go wrong?](https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/) — Julia Evans, jvns.ca (2023-11-06): why force-pushing a shared branch loses work for collaborators, with her personal rules and `--force-with-lease` and reflog as safety nets
 
 {/* LINKMAP:END */}
 

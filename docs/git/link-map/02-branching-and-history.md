@@ -18,6 +18,7 @@ Covers every topic row of phases 2 and 3 in `docs/git/syllabus/01-how-git-works.
 ### T02-01 · A branch is a moving pointer — Master · ✅ written `docs/git/pages/phase-2-branching-merging/01-a-branch-is-a-pointer.md`
 - **Read this:** [Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) · git-scm.com (Pro Git) · a new branch is as cheap as writing 41 bytes to a file; HEAD is the pointer to the current branch (*read*) · covers our angle: **partial** — no `-d` versus `-D` · fetched 2026-10-12
 - **Also good:** [git-branch](https://git-scm.com/docs/git-branch) · git-scm.com · `-d` refuses unless the branch is fully merged in its upstream, or in HEAD when none is set; `-D` is shorthand for `--delete --force` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [git branches: intuition & reality](https://jvns.ca/blog/2023/11/23/branches-intuition-reality/) · Julia Evans, jvns.ca (2023-11-23) · contrasts the everyday "offshoot" mental model with git's real one, a branch as a reference to a commit with no stored link to a parent branch, so it explains why commands need the relationship spelled out · fetched 2026-10-13 (*read*)
 - **Our delta:** a worked failing `-d` example; the Pro Git page has no `-d` / `-D` text and git-branch gives the rule without one.
 
 ### T02-02 · Fast-forward versus a real merge — Master · ✅ written `docs/git/pages/phase-2-branching-merging/02-fast-forward-vs-merge.md`
@@ -33,6 +34,7 @@ Covers every topic row of phases 2 and 3 in `docs/git/syllabus/01-how-git-works.
 ### T02-04 · Resolving a conflict, properly — Master · ✅ written `docs/git/pages/phase-2-branching-merging/04-resolving-conflicts.md`
 - **Read this:** [git-merge](https://git-scm.com/docs/git-merge) · git-scm.com · section "How conflicts are presented": `merge.conflictStyle` set to `diff3` or `zdiff3` adds the common-ancestor text (*read*) · covers our angle: **partial** — no `--ours` / `--theirs` guidance, not confirmed · fetched 2026-10-12
 - **Also good:** [Advanced Merging](https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging) · Pro Git · `git merge --abort`, `git diff --ours`, `diff3` markers (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Git: Improve conflict display with the zdiff3 style](https://adamj.eu/tech/2023/12/29/git-conflict-display-zdiff3/) · Adam Johnson, adamj.eu (2023-12-29) · shows default markers next to zdiff3 output, with the common-base section and lines identical on both sides moved out of the conflict, which the manual only describes in prose · fetched 2026-10-13 (*read*)
 - **Our delta:** re-running the tests before `--continue`; `zdiff3` is documented only in the manual.
 
 ### T02-05 · `git rebase` — Master · ✅ written `docs/git/pages/phase-2-branching-merging/05-git-rebase.md`
@@ -41,20 +43,24 @@ Covers every topic row of phases 2 and 3 in `docs/git/syllabus/01-how-git-works.
 
 ### T02-06 · Rebase versus merge, decided on purpose — Master · ✅ written `docs/git/pages/phase-2-branching-merging/06-rebase-vs-merge.md`
 - **Read this:** [Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) · git-scm.com (Pro Git) · section "Rebase vs. Merge": history as record versus history as story, no single winner (*read*) · covers our angle: **partial** — no per-branch-type rules, no bisect argument · fetched 2026-10-12
+- **Beyond the docs:** [git rebase: what can go wrong?](https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/) · Julia Evans, jvns.ca (2023-11-06) · reader-reported costs of rebase (repeated conflicts, harder review, lost metadata) against merge and squash-and-merge, e.g. a merge is simpler to revert; gives a practitioner's view where Pro Git stays neutral · fetched 2026-10-13 (*read*)
 - **Our delta:** the per-branch-type table; this is a policy topic and the Pro Git text is deliberately neutral.
 
 ### T02-07 · Interactive rebase — Master · ✅ written `docs/git/pages/phase-2-branching-merging/07-interactive-rebase.md`
 - **Read this:** [Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) · git-scm.com (Pro Git) · the todo list legend: `pick`, `reword`, `edit`, `squash`, `fixup`, `drop`, `break` (*read*) · covers our angle: **partial** — no `--autosquash` (the word does not appear on the page) · fetched 2026-10-12
 - **Also good:** [git-rebase](https://git-scm.com/docs/git-rebase) · git-scm.com · `--autosquash` with `fixup!` / `squash!` / `amend!` messages; the `break` command (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Auto-squashing Git Commits](https://thoughtbot.com/blog/autosquashing-git-commits) · George Brocklehurst, thoughtbot (2015-06-15, updated 2025-04-13) · the `commit --fixup` then `rebase --interactive --autosquash` loop as one workflow, with `rebase.autosquash` and `:/text` commit lookup · fetched 2026-10-13 (*read*)
 - **Our delta:** `commit --fixup` plus `--autosquash` as one workflow.
 
 ### T02-08 · The rule about rewriting shared history — Master · ✅ written `docs/git/pages/phase-2-branching-merging/08-the-golden-rule.md`
 - **Read this:** [Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) · git-scm.com (Pro Git) · section "The Perils of Rebasing": do not rebase commits that exist outside your repository and that people may have based work on (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [git-rebase](https://git-scm.com/docs/git-rebase) · git-scm.com · section "Recovering from upstream rebase" (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [git rebase: what can go wrong?](https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/) · Julia Evans, jvns.ca (2023-11-06) · why force-pushing a shared branch loses work for collaborators, with her personal rules and `--force-with-lease` and reflog as safety nets · fetched 2026-10-13 (*read*)
 
 ### T02-09 · `git reflog` as the safety net — Master · ✅ written `docs/git/pages/phase-2-branching-merging/09-reflog.md`
 - **Read this:** [git-reflog](https://git-scm.com/docs/git-reflog) · git-scm.com · `HEAD@{2}` means where HEAD was two moves ago; expiry defaults to 90 days via `gc.reflogExpire` (*read*) · covers our angle: **partial** — reference, no recovery walkthrough · fetched 2026-10-12
 - **Also good:** [Maintenance and Data Recovery](https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery) · Pro Git · using `git reflog` to find a lost commit (*read* the opening of the recovery section) · fetched 2026-10-12
+- **Beyond the docs:** [Git Reflog: A Guide to Recovering Lost Commits](https://www.thisdot.co/blog/git-reflog-a-guide-to-recovering-lost-commits) · Jamie Kuppens, This Dot Labs (2022-11-14, updated 2023-02-13) · a worked recovery after a badly resolved rebase, reading the reflog and resetting to the old hash, plus `ORIG_HEAD`; the page itself flags that it may be out of date · fetched 2026-10-13 (*read*)
 - **Our delta:** the unreachable-entry expiry window is separate from the 90-day default; see the manual's `--expire-unreachable`.
 
 ### T02-10 · Aborting cleanly — Understand · ✅ written `docs/git/pages/phase-2-branching-merging/10-aborting-cleanly.md`
@@ -86,11 +92,13 @@ Covers every topic row of phases 2 and 3 in `docs/git/syllabus/01-how-git-works.
 
 ### T02-16 · Stacked branches and `rebase.updateRefs` — Know · 🔲 not written
 - **Read this:** [git-rebase](https://git-scm.com/docs/git-rebase) · git-scm.com · `--update-refs` force-updates branches pointing at rebased commits, skips branches checked out in a worktree; `rebase.updateRefs` sets it by default (*read*) · covers our angle: **partial** — option text only, no stacked-branch walkthrough · fetched 2026-10-12
+- **Beyond the docs:** [Git: Rebase stacked branches with --update-refs](https://adamj.eu/tech/2022/10/15/how-to-rebase-stacked-git-branches/) · Adam Johnson, adamj.eu (2022-10-15) · worked two-branch stack rebased in one go, `update-ref` lines in the todo list, and the `rebase.updateRefs` caveat of unintended branches such as main · fetched 2026-10-13 (*read*)
 - **Checked, not chosen:** [Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) (Pro Git; covers a branch off a branch with `--onto`, but not `--update-refs`).
 - **Our delta:** a worked chain of three dependent branches.
 
 ### T02-17 · `git replay` — When Needed · 🔲 not written
 - **Read this:** [git-replay](https://git-scm.com/docs/git-replay) · git-scm.com · still titled "EXPERIMENTAL" on 2026-10-12; `--onto`, `--advance`, `--revert`, `--contained`; leaves working tree and index untouched, works on bare repos (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Highlights from Git 2.44](https://github.blog/open-source/git/highlights-from-git-2-44/) · Taylor Blau, GitHub Blog (2024-02-23) · why `git replay` exists: rebase is hard to move onto the merge-ort backend, and replay works in bare repos and across several branches · fetched 2026-10-13 (*read*)
 - **Our delta:** none beyond the experimental warning; recheck the label each release.
 
 ---
@@ -110,19 +118,23 @@ Phase 3 is parked in the 2026-08-14 re-scope, so every row below is 🔲. The li
 ### T03-03 · `git log` beyond `--oneline` — Master · 🔲 not written
 - **Read this:** [Viewing the Commit History](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) · git-scm.com (Pro Git) · `--stat`, `--pretty=format:`, `--graph` (*read*) · covers our angle: **partial** — no `--first-parent` · fetched 2026-10-12
 - **Also good:** [git-log](https://git-scm.com/docs/git-log) · git-scm.com · `--first-parent` follows only the first parent at a merge; best for topic-branch overview (*read*; ≈18k words) · fetched 2026-10-12
+- **Beyond the docs:** [Git of the day #9: git log --first-parent](https://georgegarside.com/blog/technology/git-of-the-day-9-git-log-first-parent) · George Garside (2024-01-11) · shows `--first-parent --oneline --graph` collapsing a pull-request history to one line per merge, and the catch that it relies on merges keeping the first parent meaningful · fetched 2026-10-13 (*read*)
 
 ### T03-04 · `git bisect` — Master · 🔲 not written
 - **Read this:** [git-bisect](https://git-scm.com/docs/git-bisect) · git-scm.com · `start` / `bad` / `good`, `skip`, `git bisect run <cmd>` (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Debugging with Git](https://git-scm.com/book/en/v2/Git-Tools-Debugging-with-Git) · Pro Git · `git bisect start HEAD v1.0` then `git bisect run test-error.sh` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Using git bisect, the detective tool for debugging](https://dev.to/joeattardi/using-git-bisect-the-detective-tool-for-debugging-21p8) · Joe Attardi, DEV Community (2024-10-04) · manual walkthrough, the good/bad mix-up trap, and the `bisect run` exit-code contract (0 good, 1-127 bad, 125 skip) · fetched 2026-10-13 (*read*)
 - **Checked, not chosen:** [git-bisect-lk2009](https://git-scm.com/docs/git-bisect-lk2009) (a long bisect overview article, *headings only*; background, not a how-to).
 
 ### T03-05 · Searching history by content — Understand · 🔲 not written
 - **Read this:** [Searching](https://git-scm.com/book/en/v2/Git-Tools-Searching) · git-scm.com (Pro Git) · `git log -S` pickaxe, `-G` for a regex, `-L` line history (*read*) · covers our angle: **partial** — `--grep` for messages is not on this page · fetched 2026-10-12
 - **Also good:** [git-log](https://git-scm.com/docs/git-log) · git-scm.com · `-S` counts occurrences, `-G` matches patch text; a worked contrast (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Git Commit Archeology: Digging In With Grep And Pickaxe](https://dev.to/stephencweiss/git-commit-archeology-digging-in-with-grep-and-pickaxe-52e0) · Stephen Charles Weiss, DEV Community (2020-03-13) · plain-language contrast of `-S` (occurrence count changes) and `-G` (changed line matches), with the manual's own counter-example · fetched 2026-10-13 (*read*)
 
 ### T03-06 · `git blame` used fairly — Understand · 🔲 not written
 - **Read this:** [Debugging with Git](https://git-scm.com/book/en/v2/Git-Tools-Debugging-with-Git) · git-scm.com (Pro Git) · `git blame -L 69,82`, and `-C` to find copied code (*read*) · covers our angle: **partial** — no `-w` or ignore-revs file · fetched 2026-10-12
 - **Also good:** [git-blame](https://git-scm.com/docs/git-blame) · git-scm.com · synopsis lists `-w`, `-L`, `-C`, `--ignore-rev`, `--ignore-revs-file` (*headings only*; the `.git-blame-ignore-revs` file name not confirmed) · fetched 2026-10-12
+- **Beyond the docs:** [Exclude linting & formatting commits when running Git blame](https://tekin.co.uk/2020/09/ignore-linting-and-formatting-commits-when-running-git-blame) · Tekin Suleyman, tekin.co.uk (2020-09-17) · the `.git-blame-ignore-revs` file, `--ignore-revs-file` since Git 2.23, `blame.ignoreRevsFile`, and that the config is per clone · fetched 2026-10-13 (*read*)
 
 ### T03-07 · Following a file through time — Understand · 🔲 not written
 - **Read this:** [git-log](https://git-scm.com/docs/git-log) · git-scm.com · `--follow` continues past renames and works only for a single file (*read*) · covers our angle: **partial** — rename-detection limits not covered · fetched 2026-10-12
@@ -137,6 +149,7 @@ Phase 3 is parked in the 2026-08-14 re-scope, so every row below is 🔲. The li
 
 ### T03-10 · `git range-diff` — Understand · 🔲 not written
 - **Read this:** [git-range-diff](https://git-scm.com/docs/git-range-diff) · git-scm.com · "Compare two commit ranges (e.g. two versions of a branch)" (*read*) · covers our angle: **partial** — no force-push review walkthrough · fetched 2026-10-12
+- **Beyond the docs:** [How to do patch-based review with git range-diff](https://blog.gitbutler.com/interdiff-review-with-git-range-diff) · Scott Chacon, GitButler blog · a three-commit series revised into a second version, with the `<`, `>`, `!`, `=` markers explained and why a plain diff of tips misses reorders and message edits · fetched 2026-10-13 (*read*)
 - **Our delta:** reviewing a force-pushed PR.
 
 ### T03-11 · Filtering by author, date and path — Understand · 🔲 not written

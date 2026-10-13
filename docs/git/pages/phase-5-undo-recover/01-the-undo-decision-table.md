@@ -192,6 +192,7 @@ afternoons. That trade is what makes the extra commit cheap.
 
 - **Read this:** [Undoing Things](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things) — git-scm.com (Pro Git): amend, unstaging, discarding changes (*read*)
 - **Also good:** [git-reset](https://git-scm.com/docs/git-reset) — git-scm.com: "Undo a commit and redo" and other recipes (*read*)
+- **Beyond the docs:** [Oh Shit, Git!?!](https://ohshitgit.com/) — Katie Sylor-Miller: trouble-first recipes (reflog, amend, revert an old commit, undo one file, reset to the remote) in plain language, with warnings about shared commits
 
 {/* LINKMAP:END */}
 

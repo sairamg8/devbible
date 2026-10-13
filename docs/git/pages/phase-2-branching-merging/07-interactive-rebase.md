@@ -283,6 +283,7 @@ the original commits remain in the object store until garbage collection.
 
 - **Read this:** [Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) — git-scm.com (Pro Git): the todo list legend: `pick`, `reword`, `edit`, `squash`, `fixup`, `drop`, `break` (*read*)
 - **Also good:** [git-rebase](https://git-scm.com/docs/git-rebase) — git-scm.com: `--autosquash` with `fixup!` / `squash!` / `amend!` messages; the `break` command (*read*)
+- **Beyond the docs:** [Auto-squashing Git Commits](https://thoughtbot.com/blog/autosquashing-git-commits) — George Brocklehurst, thoughtbot (2015-06-15, updated 2025-04-13): the `commit --fixup` then `rebase --interactive --autosquash` loop as one workflow, with `rebase.autosquash` and `:/text` commit lookup
 
 {/* LINKMAP:END */}
 

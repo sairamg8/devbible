@@ -240,6 +240,7 @@ open a pull request.
 - **Read this:** [Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) — git-scm.com (Pro Git): amend, interactive rebase, fixup/squash in the todo list (*read*)
 - **Also good:** [git-rebase](https://git-scm.com/docs/git-rebase) — git-scm.com: `--autosquash`, `--update-refs` (*read* autosquash passage)
 - **Also good:** [git-commit](https://git-scm.com/docs/git-commit) — git-scm.com: `--fixup` and `--amend` in the synopsis (*headings only*)
+- **Beyond the docs:** [Smoother rebases with auto-squashing Git commits](https://andrewlock.net/smoother-rebases-with-auto-squashing-git-commits) — Andrew Lock, 2023-04-18: a worked `commit --fixup` then `rebase -i --autosquash` flow, including `amend!`, `fixup -C` and `rebase.autosquash`, which Pro Git leaves out
 
 {/* LINKMAP:END */}
 

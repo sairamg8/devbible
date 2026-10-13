@@ -198,6 +198,7 @@ root commit. `git cat-file -p <sha>` shows them directly.
 
 - **Read this:** [gitdatamodel](https://git-scm.com/docs/gitdatamodel) — git-scm.com: blob, tree, commit and tag object, each with its fields and an example from `git cat-file -p`; tree entries carry the filename and mode (*read*)
 - **Also good:** [Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects) — Pro Git: hands-on: a blob stores content, not the filename; trees solve that (*read*)
+- **Beyond the docs:** [A Deep Dive into Git Internals: Blobs, Trees, and Commits](https://dev.to/__whyd_rf/a-deep-dive-into-git-internals-blobs-trees-and-commits-1doc) — Vahid Ghadiri, DEV Community, 2025-07-07: runs `hash-object`, `cat-file` and `ls-tree` and states that a blob holds content only, with no name or permissions
 
 {/* LINKMAP:END */}
 

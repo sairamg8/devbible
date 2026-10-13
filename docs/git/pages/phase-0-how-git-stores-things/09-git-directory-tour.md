@@ -154,6 +154,7 @@ defaults.
 
 - **Read this:** [gitrepository-layout](https://git-scm.com/docs/gitrepository-layout) — git-scm.com: entry per item: `objects`, `refs`, `HEAD`, `index`, `logs`, `hooks` (*read* objects and logs entries)
 - **Also good:** [Plumbing and Porcelain](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain) — Pro Git: introduces the chapter that walks through `.git` contents (*read* the intro)
+- **Beyond the docs:** [Exploring the .git Directory](https://www.git-tower.com/blog/exploring-the-git-directory) — Bruno Brito, Tower blog, updated February 2026: goes through `HEAD`, `config`, `index`, `objects`, `refs`, `hooks` and `logs` one by one in plain language
 
 {/* LINKMAP:END */}
 
