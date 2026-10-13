@@ -214,6 +214,7 @@ Not on 24.19.0 — `t.assert.snapshot()` works out of the box. Only
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Test runner: Snapshot testing](https://nodejs.org/api/test.html) — nodejs.org: the section exists; the CLI lists `--test-update-snapshots` (*headings only*)
+- **Beyond the docs:** [Effective Snapshot Testing](https://kentcdodds.com/blog/effective-snapshot-testing) — Kent C. Dodds, October 30th, 2017: keep snapshots small, use them for messages and generated output, normalize with serializers; the practical advice the API page lacks
 
 {/* LINKMAP:END */}
 

@@ -121,6 +121,7 @@ A cache with a cap is a policy. An unbounded Map is a leak with a product name.
 
 - **Read this:** [Using Heap Snapshot](https://nodejs.org/learn/diagnostics/memory/using-heap-snapshot) — nodejs.org/learn: load a snapshot into Chrome DevTools to check retainer size and compare several snapshots; warns the main thread stops while it is taken and it can double heap use; routes: `--heapsnapshot-signal=SIGUSR2`, `writeHeapSnapshot` (*re
 - **Also good:** [Using Heap Profiler](https://nodejs.org/learn/diagnostics/memory/using-heap-profiler) — nodejs.org/learn: allocation timeline and sampling heap profiler, for allocations over time (*read* the intro)
+- **Beyond the docs:** [How to Debug Memory Leaks in JavaScript](https://blog.openreplay.com/debug-memory-leaks-javascript/) — blog.openreplay.com / OpenReplay Team: Nov 17, 2025; explains the Retainers panel (follow the chain from GC roots to see why an object stays alive, distance from the root as references to break), snapshot comparison by positive Delta and Retained Size; browser-flavoure
 
 {/* LINKMAP:END */}
 

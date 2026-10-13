@@ -211,6 +211,7 @@ is unchanged.
 - **Read this:** [Worker threads](https://nodejs.org/api/worker_threads.html) — nodejs.org: "Stability: 2 - Stable"; useful for CPU-intensive JavaScript, not much for I/O (*read*)
 - **Also good:** [piscina README](https://raw.githubusercontent.com/piscinajs/piscina/current/README.md) — piscina (raw GitHub copy): "the node.js worker pool" (*read* the opening, ≈5k words)
 - **Also good:** [Don't Block the Event Loop (or the Worker Pool)](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop#offloading)
+- **Beyond the docs:** [Learning to Swim with Piscina, the node.js worker pool](https://nearform.com/insights/learning-to-swim-with-piscina-the-node-js-worker-pool/) — James Snell and Anna Henningsen, NearForm, 4 June 2020: starts from a user spawning thousands of workers and explains thread churn, queue limits, why already-async work gains nothing from a worker, and capping the queue for backpressure; the reference page gives none of this guidance
 
 {/* LINKMAP:END */}
 

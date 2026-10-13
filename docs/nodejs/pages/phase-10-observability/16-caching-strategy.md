@@ -154,6 +154,7 @@ dropping ([Phase 6](../phase-6-data-access/01-connection-pooling.md)).
 
 - **Read this:** [Caching challenges and strategies](https://builder.aws.com/content/3K9TeXp6strMiJ4vhakpRD7BQWO/caching-challenges-and-strategies) — builder.aws.com (Amazon Builders' Library article; the aws.amazon.com link redirects here): undated; when to consider caching, being deliberate and empirical about size, expiration and eviction policy, and alarming on cache metrics (*read*)
 - **Also good:** [Cache stampede](https://en.wikipedia.org/wiki/Cache_stampede) — Wikipedia: undated; mitigation sections: locking, external recomputation, probabilistic early expiration (*headings only*)
+- **Beyond the docs:** [Cache Stampede: When TTL Expiry Becomes a Self-Inflicted DDoS](https://codemia.io/archive/cache-stampede-protection) — codemia.io: Jan 10, 2026; explains the stampede, then singleflight (one request rebuilds under a short lock, others wait or get the old value), TTL jitter and probabilistic early refresh as three complementary fixes, which the Read-this page 
 
 {/* LINKMAP:END */}
 

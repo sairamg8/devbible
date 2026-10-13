@@ -216,6 +216,7 @@ a restart resumes instead of repeating.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Graceful shutdown](https://docs.bullmq.io/guide/workers/graceful-shutdown) — docs.bullmq.io: `await worker.close()` stops new jobs and waits for current ones; it has no timeout of its own; if it fails, pending jobs become stalled (*read*)
+- **Beyond the docs:** [Shutting Down a Node Server Gracefully](https://blog.openreplay.com/graceful-node-server-shutdown/) — OpenReplay Team: Sep 11, 2026; ordered shutdown (fail readiness, drain, close workers, then the DB pool last) with a forced-exit timer below the orchestrator grace period; covers the SIGTERM wiring the BullMQ page leaves out; vendor blog
 
 {/* LINKMAP:END */}
 
