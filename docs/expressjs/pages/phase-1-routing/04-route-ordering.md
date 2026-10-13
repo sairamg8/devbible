@@ -120,6 +120,7 @@ Integration tests for every static sibling of a param route.
 
 - **Also good:** [Router API: `router.use()`](https://expressjs.com/en/5x/api/router/) — expressjs.com: middleware is invoked sequentially, so order defines precedence (*read*)
 - **Also good:** [Using middleware: skipping to the next route](https://expressjs.com/en/guide/using-middleware/)
+- **Beyond the docs:** [Routes and responses (route order)](https://flaviocopes.com/courses/express/design-route-order/) — Flavio Copes, Express course: first registered match wins with no specificity scoring; shows `/`, `/new`, `/:id` in order with a catch-all 404 last, plus a test that fails when `/:id` is moved above `/new`; no author or date shown on the page
 
 {/* LINKMAP:END */}
 

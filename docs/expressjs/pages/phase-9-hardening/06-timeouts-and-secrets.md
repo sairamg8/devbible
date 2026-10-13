@@ -206,8 +206,10 @@ lint for.
 
 - **Read this:** [connect-timeout](https://expressjs.com/en/resources/middleware/timeout/) — expressjs.com: emits a timeout (503) but "node will continue processing" the request; `haltOnTimedout` guard; not recommended as top-level middleware without precautions; Express 5 compatibility is **not confirmed** on the page (*read*)
 - **Also good:** [Node.js HTTP API](https://nodejs.org/api/http.html) — nodejs.org: lists `server.requestTimeout`, `server.headersTimeout`, `server.setTimeout()`, `server.timeout`; the `createServer` options show `requestTimeout` default 300000 ms and `headersTimeout` default 60000 ms (*read* those two options; t
+- **Beyond the docs:** [A Complete Guide to Timeouts in Node.js](https://betterstack.com/community/guides/scaling-nodejs/nodejs-timeouts/) — Better Stack, Ayooluwa Isaiah, updated 2026-01-14: shows `req.setTimeout()` per route and that a `Promise.race()` timeout rejects the caller without stopping the work, so pass an `AbortSignal` (`AbortSignal.timeout()` for `fetch`)
 - **Read this:** [The Twelve-Factor App: Config](https://12factor.net/config) — 12factor.net: config in environment variables, strict separation from code, the "could we open-source it now" test (*read*)
 - **Also good:** [Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html) — OWASP: lifecycle, rotation, CI/CD, cloud sections (*headings only*)
+- **Beyond the docs:** [Validating Environment Variables in Node.js with Zod](https://dev.to/roshan_ican/validating-environment-variables-in-nodejs-with-zod-2epn) — DEV Community, roshan_ican, 2025-05-22: parses `process.env` with a Zod schema before the app runs and exits with code 1 on failure, which is the fail-boot step the 12-factor page leaves out (short community post, Zod API not checked against 4.x)
 
 {/* LINKMAP:END */}
 

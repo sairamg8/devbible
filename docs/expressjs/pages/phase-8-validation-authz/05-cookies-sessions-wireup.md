@@ -162,8 +162,10 @@ token lives where JavaScript can reach it.
 
 - **Read this:** [express-session](https://expressjs.com/en/resources/middleware/session/) — expressjs.com: cookie options, `trust proxy` needed for `secure: true`, `saveUninitialized: false` for login sessions, default MemoryStore not for production, `regenerate()` after login (*read*)
 - **Also good:** [JSON Web Token Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html) — OWASP: stateless sessions need an invalidation plan; a denylist undercuts statelessness, so consider server sessions (*read*)
+- **Beyond the docs:** [JWTs vs. sessions: which authentication approach is right for you?](https://stytch.com/blog/jwts-vs-sessions-which-is-right-for-you/) — Stytch, Lydia Gorham, 2023-01-23: plain side-by-side of revocation (sessions are deleted server-side, JWTs cannot be invalidated before expiry) and per-request lookup cost (a database read per session request vs local JWT validation), which the express-session pag
 - **Read this:** [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie) — MDN: `HttpOnly`, `Secure`, `SameSite` Strict/Lax/None, `Path`, `Domain`, `Max-Age`, the `__Host-` prefix (*read*)
 - **Also good:** [Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) — OWASP: cookie attribute section; leave `Domain` unset, narrow `Path`, `SameSite=Strict` preferred; renew the id after a privilege change (*read*)
+- **Beyond the docs:** [Cookie Security Flags: How to Secure Cookies with HttpOnly, Secure, and SameSite](https://www.acunetix.com/blog/web-security-zone/cookie-security-flags/) — Acunetix, Zbigniew Banach, 2026-05-21: walks each flag with an insecure vs secure `res.cookie` example and says flags reduce risk but do not replace XSS and CSRF defences
 
 {/* LINKMAP:END */}
 

@@ -134,6 +134,7 @@ validator and your spec realistic instead of approximate.
 - **Read this:** [Introduction to OpenAPI](https://learn.openapis.org/introduction.html) — learn.openapis.org: an API description is a machine-readable contract; tools can use it for docs and code (*read*)
 - **Also good:** [OpenAPI Specification v3.2.1](https://spec.openapis.org/oas/latest.html) — spec.openapis.org: the reference, about 39,600 words (*headings only*)
 - **Also good:** [What Is OpenAPI?](https://swagger.io/docs/specification/v3_0/about/)
+- **Beyond the docs:** [Creating an API with Express.js using OpenAPI](https://bump.sh/blog/express-api-openapi/) — Bump.sh, Jerry Ejonavi, 07/20/2023: an Express walkthrough with `express-openapi` that derives the spec from per-route files, then publishes it
 
 {/* LINKMAP:END */}
 

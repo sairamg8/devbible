@@ -187,6 +187,7 @@ then spends no bandwidth, no memory and no event-loop time on the transfer.
 - **Also good:** [The Production Playbook for Node.js Stream Leaks](https://blog.master.dev/the-production-playbook-for-node-js-stream-leaks/) — master.dev, date not confirmed (a reader comment on the page is dated 4 June 2026): `pipeline()` tears down an upstream cursor when the client drops (*read*)
 - **Read this:** [Express 5.x API: Response](https://expressjs.com/en/5x/api/response/) — expressjs.com: `sendFile` path must be absolute unless `root` is set; with `root`, Express checks the path resolves inside it; `download` forwards options to `sendFile` (*read*)
 - **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: `hidden`/`from` options gone, `dotfiles` also covers hidden directories in the path (*read*)
+- **Beyond the docs:** [Prevent Path Traversal in Node.js](https://blog.openreplay.com/prevent-path-traversal-nodejs/) — OpenReplay Team, 29 Apr 2026: why `path.join` is not a defense and how a resolve-then-prefix check with `path.sep` stops `/uploads-other` passing for `/uploads` (does not cover the `root` option)
 - **Read this:** [Production best practices: performance](https://expressjs.com/en/advanced/best-practice-performance/) — expressjs.com: use `compression`, but on a busy site do it at the reverse proxy instead (*read*)
 - **Also good:** [compression](https://expressjs.com/en/resources/middleware/compression/) — expressjs.com: `threshold` default 1kb, `filter(req, res)` (*read*)
 

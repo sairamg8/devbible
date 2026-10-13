@@ -174,6 +174,7 @@ mitigates XSS. Tune the policy instead.
 - **Read this:** [Helmet](https://helmet.js.org/) — helmet.js.org: default header list, CSP `directives`, `reportOnly`, per-request nonces via functions, disabling a header; COEP is not set by default (*read*)
 - **Also good:** [Security best practices](https://expressjs.com/en/advanced/best-practice-security/) — expressjs.com: "Use Helmet", reduce fingerprinting (`x-powered-by`), secure cookies; v5.x docs, undated (*read*)
 - **Read this:** [Making your website cross-origin isolated using COOP and COEP](https://web.dev/articles/coop-coep) — web.dev: what each header does; needed for cross-origin isolation, `SharedArrayBuffer`; published 2020-04-13, updated 2022-06-21 (*read*)
+- **Beyond the docs:** [COEP COOP CORP CORS CORB - CRAP that's a lot of new stuff!](https://scotthelme.co.uk/coop-and-coep/) — Scott Helme, 2021-01-18: untangles how COEP, COOP, CORP, CORS and CORB relate and ends with a "what do I actually need to do" task list (COEP, COOP, CORP on your own assets, CORS on third-party assets) that suggests trying COEP in Report-Only first, which
 
 {/* LINKMAP:END */}
 

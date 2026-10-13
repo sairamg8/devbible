@@ -225,6 +225,7 @@ CSRF.
 - **Read this:** [Express behind proxies](https://expressjs.com/en/guide/behind-proxies/) — expressjs.com: `trust proxy` default false (IP from socket); `true` takes the left-most `X-Forwarded-For`; match the setting to your proxy setup (*read*)
 - **Also good:** [MDN: X-Forwarded-For](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Forwarded-For) — MDN: warns of security risk from improper use (*headings only*)
 - **Also good:** [Express 5.x API: Request](https://expressjs.com/en/5x/api/request/)
+- **Beyond the docs:** [Troubleshooting Proxy Issues](https://github.com/express-rate-limit/express-rate-limit/wiki/Troubleshooting-Proxy-Issues) — express-rate-limit wiki, last edited 9 Aug 2023: practical walkthrough of finding the right proxy count with a test endpoint and what goes wrong when `req.ip` is the proxy address or carries a port
 
 {/* LINKMAP:END */}
 

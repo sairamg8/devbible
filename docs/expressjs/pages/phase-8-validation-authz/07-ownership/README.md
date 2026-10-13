@@ -74,6 +74,7 @@ sentence, and describe the test whose absence lets IDOR ship.
 
 - **Read this:** [IDOR Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html) — OWASP: scope the lookup by owner (`findByIdAndOwnerId` style) or verify ownership after fetching; if existence is sensitive, scope the lookup and give both cases the same public response such as 404 (*read* the mitigation and fix section
 - **Also good:** [Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) — OWASP: "ensure lookup IDs are not accessible even when guessed" (*headings only*)
+- **Beyond the docs:** [IDOR Vulnerability Explained: Examples, Risks & Prevention](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references) — Acunetix, Zbigniew Banach, 2026-05-22: ties IDOR to BOLA in APIs, says to filter by object id and owner id, that UUIDs do not replace authorization, and that ownership checks belong in the service or data layer rather than coarse middleware
 
 {/* LINKMAP:END */}
 

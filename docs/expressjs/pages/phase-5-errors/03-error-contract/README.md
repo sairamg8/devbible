@@ -65,6 +65,7 @@ usually leaks.
 
 - **Read this:** [RFC 9457: Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc9457.html) — IETF, July 2023: standard error body: members `type`, `status`, `title`, `detail`, `instance`, plus extension members (*headings only*)
 - **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) — OWASP: generic messages, no call stacks to the client (*read*)
+- **Beyond the docs:** [Send awesome structured error responses with Express](https://dev.to/simonplend/send-awesome-structured-error-responses-with-express-3pg6) — Simon Plenderleith, dev.to, 6 Jan 2021: explains problem types and `application/problem+json`, then maps `http-errors` classes to problem details in an error middleware (written for the older RFC 7807, targets Node 12/14)
 
 {/* LINKMAP:END */}
 

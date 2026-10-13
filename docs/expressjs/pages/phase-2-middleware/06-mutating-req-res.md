@@ -106,6 +106,7 @@ logical clobbering, not OS threads.
 
 - **Read this:** [Overriding the Express API](https://expressjs.com/en/guide/overriding-express-api/) — expressjs.com: `req`/`res` inherit by prototype; extension points `express.request` and `app.request`; some properties cannot be overridden (*read*)
 - **Also good:** [Writing middleware: `requestTime`](https://expressjs.com/en/guide/writing-middleware/) — expressjs.com: a middleware adds a property to `req`; TypeScript needs declaration merging, property optional (*read*)
+- **Beyond the docs:** [Extend Express's Request object with TypeScript declaration merging](https://dev.to/kwabenberko/extend-express-s-request-object-with-typescript-declaration-merging-1nn5) — Kwabena Bio Berko, dev.to: step-by-step typing of a property added to `req` by middleware; declare it optional (commenters point this out) since the article makes it required, and its tsconfig snippet is partial
 
 {/* LINKMAP:END */}
 
