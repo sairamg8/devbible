@@ -123,6 +123,7 @@ not multi-minute transactions that hold resources (Phase 11).
 
 - **Read this:** [Write-Ahead Logging · Reliability](https://www.postgresql.org/docs/current/wal-intro.html) — postgresql.org: log first, no data-page flush per commit, REDO after a crash (*read*)
 - **Also good:** [Reliability](https://www.postgresql.org/docs/current/wal-reliability.html) — postgresql.org: fsync and what a durable commit needs (headings only)
+- **Beyond the docs:** [Write Ahead Logging · Overview](https://www.interdb.jp/pg/pgsql09/01.html) — Hironobu Suzuki, *The Internals of PostgreSQL*: walks one insert through XLOG records, the REDO point and recovery, and explains full-page writes, which the manual intro skips
 
 {/* LINKMAP:END */}
 

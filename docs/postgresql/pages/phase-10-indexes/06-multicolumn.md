@@ -201,6 +201,7 @@ Almost never. Measured, adding the mirror gained nothing and doubled the write c
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [11.3 Multicolumn Indexes](https://www.postgresql.org/docs/current/indexes-multicolumn.html) — postgresql.org: the exact rule: equality on leading columns plus an inequality on the first non-equality column limit the scan (*read*)
+- **Beyond the docs:** [Multicolumn Index Order in Postgres](https://io.adafruit.com/blog/sysadmin/2016/05/18/postgres-multicolumn-indexes) — Adafruit IO blog (@toddtreece): a real incident: about 5 s down to about 0.1 ms on roughly 50 million rows by moving the constrained column first; short; dated 2016-05-18
 
 {/* LINKMAP:END */}
 

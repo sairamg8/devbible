@@ -240,6 +240,7 @@ sorting, joins, constraints and storage.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [JSON Types, section "Designing JSON Documents"](https://www.postgresql.org/docs/current/datatype-json.html) — postgresql.org: JSON can be "considerably more flexible" than the relational model, and both can coexist (*read* the opening of the section)
+- **Beyond the docs:** [When to avoid JSONB in a PostgreSQL schema](https://contentsquare.com/blog/when-to-avoid-jsonb-in-a-postgresql-schema/) — Jack Law, Contentsquare blog, 2016-09-01 (updated 2025-11-28): prices the cost the docs leave out: no statistics on nested values so the planner guesses (author's test: about 2,000 times slower than columns) and per-row key storage bloat
 
 {/* LINKMAP:END */}
 

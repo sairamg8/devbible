@@ -186,6 +186,7 @@ full-text — which need [GIN](11-gin-trgm.md), and very large append-only table
 - **Read this:** [11.2 Index Types](https://www.postgresql.org/docs/current/indexes-types.html) — postgresql.org: B-tree handles equality and range; `LIKE 'foo%'` is indexable but `LIKE '%bar'` is not; non-C locales need a special operator class for the prefix case (*read* the B-tree section)
 - **Also good:** [11.4 Indexes and ORDER BY](https://www.postgresql.org/docs/current/indexes-ordering.html) — postgresql.org: sort order and `ASC`/`DESC` (*headings only*)
 - **Also good:** [65.1 B-Tree Indexes](https://www.postgresql.org/docs/current/btree.html)
+- **Beyond the docs:** [Understanding the Mechanics of PostgreSQL B-Tree Indexes](https://www.postgresql.fastware.com/pzone/2025-01-understanding-the-mechanics-of-postgresql-b-tree-indexes) — Gary Evans, Fastware: walks meta, root, internal and leaf pages with real `pageinspect` output, so the tree is seen rather than described; page dated 2025-01-11
 
 {/* LINKMAP:END */}
 

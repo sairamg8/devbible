@@ -204,6 +204,7 @@ A statement with a very high `calls` count and `rows / calls` of about 1.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [F.32 pg_stat_statements](https://www.postgresql.org/docs/current/pgstatstatements.html) — postgresql.org: must be in `shared_preload_libraries`, restart needed; `calls`, `total_exec_time` columns (*read*)
+- **Beyond the docs:** [Queries for pg_stat_statements](https://www.pgmustard.com/blog/queries-for-pg-stat-statements) — Michael Christofides, pgMustard: ready-to-run queries ranked by total time versus mean time versus I/O, and why those give different answers; dated 2023-05-05, updated 2025-10
 
 {/* LINKMAP:END */}
 

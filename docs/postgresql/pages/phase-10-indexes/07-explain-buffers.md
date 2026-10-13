@@ -208,6 +208,7 @@ works on every version.
 
 - **Read this:** [14.1 Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — postgresql.org: plans with `Buffers: shared hit=… read=…` lines and `rows=` estimate versus actual (*read*)
 - **Also good:** [EXPLAIN (command reference)](https://www.postgresql.org/docs/current/sql-explain.html) — postgresql.org: hit, read, dirtied, written defined (*read*)
+- **Beyond the docs:** [Using BUFFERS for query optimization](https://www.pgmustard.com/blog/using-postgres-buffers-for-query-optimization) — Michael Christofides, pgMustard: worked plans showing why block counts beat timings, with the caveat that read includes OS-cache hits; the author also sells pgMustard; dated 2022-07-25
 
 {/* LINKMAP:END */}
 

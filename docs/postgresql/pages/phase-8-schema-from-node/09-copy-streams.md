@@ -235,6 +235,7 @@ for a load buffer.
 
 - **Read this:** [pg-copy-streams README (raw)](https://raw.githubusercontent.com/brianc/node-pg-copy-streams/master/README.md) — github (raw): `copyFrom('COPY my_table FROM STDIN')` with `stream/promises` `pipeline`; `destroy()` sends CopyFail and rolls back unless CopyDone was already sent; v7.0.0 published 2025-05-27 (*read*)
 - **Also good:** [COPY](https://www.postgresql.org/docs/current/sql-copy.html) — postgresql.org: `FROM STDIN` syntax and options (*read* the synopsis)
+- **Beyond the docs:** [5mins of Postgres E80: Optimizing bulk loads, COPY vs INSERT](https://pganalyze.com/blog/5mins-postgres-optimizing-bulk-loads-copy-vs-insert) — pganalyze, Lukas Fittl (2023-08-10): walks Laurenz Albe's 10-million-row benchmark (single-row INSERT about 9,000 s, multi-row INSERT about 50 s, COPY about 14 s) and shows via `pg_stat_io` why COPY also disturbs shared buffers less; SQL-level, no Node
 
 {/* LINKMAP:END */}
 

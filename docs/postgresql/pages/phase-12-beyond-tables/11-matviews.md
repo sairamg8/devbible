@@ -252,6 +252,7 @@ result.
 
 - **Read this:** [REFRESH MATERIALIZED VIEW](https://www.postgresql.org/docs/current/sql-refreshmaterializedview.html) — postgresql.org: `CONCURRENTLY` needs a UNIQUE index of plain columns and an already populated view; one refresh at a time (*read*)
 - **Also good:** [Materialized Views](https://www.postgresql.org/docs/current/rules-materializedviews.html) — postgresql.org: how they differ from views (*headings only*, 915 words)
+- **Beyond the docs:** [Creating and refreshing materialized views in PostgreSQL](https://www.cybertec-postgresql.com/en/creating-and-refreshing-materialized-views-in-postgresql/) — Hans-Jürgen Schönig, CYBERTEC, 06.2021: shows the error you hit without a unique index and the bloat cost of `CONCURRENTLY` (it behaves like delete and insert), so you plan vacuuming
 
 {/* LINKMAP:END */}
 

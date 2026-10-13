@@ -231,6 +231,7 @@ lost. If you use it, make the missing-store case throw.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Transactions](https://node-postgres.com/features/transactions) — node-postgres.com: "You must use the same client instance for all statements within a transaction" (*read*)
+- **Beyond the docs:** [Fully featured Repository pattern with TypeScript and the native PostgreSQL driver](https://dev.to/fyapy/fully-featured-repository-pattern-with-typescript-and-native-postgresql-driver-4f2j) — dev.to, aabdullin (2022-03-20, edited 2022-04-19): shows `startTrx`, `commit` and `rollback` on one client handed to each repository call, with release in `finally` in the handler; the official page has no multi-repository example
 
 {/* LINKMAP:END */}
 

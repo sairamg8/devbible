@@ -47,6 +47,7 @@ and when you can explain — from the expansion of the predicate, not from memor
 
 - **Read this:** [9.24. Subquery Expressions](https://www.postgresql.org/docs/current/functions-subquery.html#FUNCTIONS-SUBQUERY-EXISTS) — postgresql.org: `EXISTS`, `IN`, `NOT IN` sections; `IN` yields null, not false, when a null is in play (*read*)
 - **Read this:** [Don't Do This → Don't use NOT IN](https://wiki.postgresql.org/wiki/Don't_Do_This) — wiki.postgresql.org: `NOT IN (1,null)` always returns 0 rows; rewrite as `NOT EXISTS`; edited 21 Nov 2024 (*read*)
+- **Beyond the docs:** [NOT IN vs. NOT EXISTS vs. LEFT JOIN / IS NULL: PostgreSQL](https://explainextended.com/2009/09/16/not-in-vs-not-exists-vs-left-join-is-null-postgresql/) — explainextended.com / Quassnoi: 2009-09-16; compares the three anti-join forms with plans: NOT EXISTS and LEFT JOIN / IS NULL both get a hash anti join, NOT IN uses a hashed subplan and was slightly slower (1.34 s against about 1.1 s in its test); written for Po
 
 {/* LINKMAP:END */}
 

@@ -227,6 +227,7 @@ is what enables the optimisation.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [11.9 Index-Only Scans and Covering Indexes](https://www.postgresql.org/docs/current/indexes-index-only-scans.html) — postgresql.org: checks the visibility map bit per heap page, falls back to the heap if unset; `INCLUDE` payload columns (*read*)
+- **Beyond the docs:** [Index-only scans in Postgres](https://www.pgmustard.com/blog/2019/03/04/index-only-scans-in-postgres) — David Conlin, pgMustard: plain-language walk through why heap fetches still happen and what to do about them; introductory; dated 2019-03-04, page says updated 2025-05
 
 {/* LINKMAP:END */}
 

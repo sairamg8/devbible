@@ -185,6 +185,7 @@ where they differ.
 
 - **Read this:** [Binary Data Types](https://www.postgresql.org/docs/current/datatype-binary.html) — postgresql.org: hex and escape formats (headings only; ids `DATATYPE-BINARY-BYTEA-HEX-FORMAT`)
 - **Also good:** [BinaryFilesInDB](https://wiki.postgresql.org/wiki/BinaryFilesInDB) — postgresql.org wiki: "When should files be stored in the database?" (headings only)
+- **Beyond the docs:** [Those darn Large Objects](https://www.enterprisedb.com/blog/those-darn-large-objects) — Martín Marqués, EDB: 2016-09-20
 
 {/* LINKMAP:END */}
 

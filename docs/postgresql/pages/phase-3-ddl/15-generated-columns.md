@@ -209,6 +209,7 @@ wrong — and no constraint or check will notice.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Generated Columns](https://www.postgresql.org/docs/current/ddl-generated-columns.html) — postgresql.org: stored columns are computed on write and take space; virtual columns are computed on read and take none (*read*)
+- **Beyond the docs:** [Waiting for PostgreSQL 18 – Virtual generated columns](https://www.depesz.com/2025/02/28/waiting-for-postgresql-18-virtual-generated-columns/) — depesz: 2025-02-28
 
 {/* LINKMAP:END */}
 

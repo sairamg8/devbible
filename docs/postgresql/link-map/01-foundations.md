@@ -23,6 +23,7 @@ All 45 are ✅ written here. *read* = passage read; *headings only* = fetched, h
 ### T00-02 · Cluster → database → schema → table — Master · ✅ written `docs/postgresql/pages/phase-0-architecture/03-namespace.md`
 - **Read this (1/2):** [Managing Databases · Overview](https://www.postgresql.org/docs/current/manage-ag-overview.html) · postgresql.org · states the full hierarchy cluster, database, schema, table and which objects are cluster-wide (*read*) · covers our angle: full for the four levels · fetched 2026-10-12
 - **Read this (2/2):** [Schemas](https://www.postgresql.org/docs/current/ddl-schemas.html) · postgresql.org · schema creation, the public schema and the search path (headings only; ids `DDL-SCHEMAS-PATH`, `DDL-SCHEMAS-PUBLIC`) · fetched 2026-10-12
+- **Beyond the docs:** [Database Cluster, Databases and Tables · Logical Structure](https://www.interdb.jp/pg/pgsql01/01.html) · Hironobu Suzuki, *The Internals of PostgreSQL* · shows the cluster, database and object hierarchy with the OIDs and catalog queries (`pg_database`, `pg_class`) that identify each level, which the manual page states without queries · fetched 2026-10-13 (*read*)
 - **Our delta:** the `search_path` confusion week (unqualified names, a role-named schema) is ours.
 
 ### T00-03 · What PostgreSQL is, "object-relational", license and governance — Understand · ✅ written `docs/postgresql/pages/phase-0-architecture/01-what-postgresql-is.md`
@@ -33,16 +34,19 @@ All 45 are ✅ written here. *read* = passage read; *headings only* = fetched, h
 ### T00-04 · Shared buffers, the OS page cache, where a row lives — Understand · ✅ written `docs/postgresql/pages/phase-0-architecture/04-shared-buffers.md`
 - **Read this:** [Resource Consumption · Memory](https://www.postgresql.org/docs/current/runtime-config-resource.html) · postgresql.org · `shared_buffers` default 128 MB, 25% of RAM as a start, and PostgreSQL also relies on the OS cache (*read*) · covers our angle: **partial** — a config reference, not a walk of a read · fetched 2026-10-12
 - **Also good:** [Database Page Layout](https://www.postgresql.org/docs/current/storage-page-layout.html) · postgresql.org · tables and indexes are arrays of fixed pages, usually 8 kB (*read*) · [pg_buffercache](https://www.postgresql.org/docs/current/pgbuffercache.html) · postgresql.org · inspect the shared buffer cache live (*read* intro) · fetched 2026-10-12
+- **Beyond the docs:** [Buffer Manager · Structure](https://www.interdb.jp/pg/pgsql08/02.html) · Hironobu Suzuki, *The Internals of PostgreSQL* · the buffer pool, buffer descriptors and buffer table drawn as figures, with the load of a first page step by step; replacement and the OS page cache are not covered on it · fetched 2026-10-13 (*read*)
 - **Our delta:** the double-buffering story (shared buffers plus OS cache) as one picture.
 
 ### T00-05 · WAL — why every change is written twice — Understand · ✅ written `docs/postgresql/pages/phase-0-architecture/05-wal.md`
 - **Read this:** [Write-Ahead Logging · Reliability](https://www.postgresql.org/docs/current/wal-intro.html) · postgresql.org · log first, no data-page flush per commit, REDO after a crash (*read*) · covers our angle: full for "written twice"; **partial** for "durability, concretely" — no commit-durability setting is named on the page · fetched 2026-10-12
 - **Also good:** [Reliability](https://www.postgresql.org/docs/current/wal-reliability.html) · postgresql.org · fsync and what a durable commit needs (headings only)
+- **Beyond the docs:** [Write Ahead Logging · Overview](https://www.interdb.jp/pg/pgsql09/01.html) · Hironobu Suzuki, *The Internals of PostgreSQL* · walks one insert through XLOG records, the REDO point and recovery, and explains full-page writes, which the manual intro skips · fetched 2026-10-13 (*read*)
 - **Our delta:** `synchronous_commit` as the knob behind "durability, concretely" is not in the page above.
 
 ### T00-06 · Roles, users and groups — Understand · ✅ written `docs/postgresql/pages/phase-0-architecture/06-roles.md`
 - **Read this:** [Database Roles](https://www.postgresql.org/docs/current/database-roles.html) · postgresql.org · roles are separate from OS users and global to the cluster (*read*) · covers our angle: full for "one concept" · fetched 2026-10-12
 - **Also good:** [Role Membership](https://www.postgresql.org/docs/current/role-membership.html) · postgresql.org · groups are roles; the `INHERIT` option decides whether privileges flow (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [PostgreSQL Role Membership](https://neon.com/postgresql/administration/role-membership) · Neon · worked `GRANT`/`REVOKE` examples with a group role and a member who inherits its privileges; `NOINHERIT` is only shown in a `CREATE ROLE`, not tested, and `SET ROLE` is not explained · fetched 2026-10-13 (*read*)
 - **Our delta:** "user" and "group" are only a `LOGIN` attribute and membership.
 
 ### T00-07 · Installing for local development — Understand · ✅ written `docs/postgresql/pages/phase-0-architecture/07-local-install.md`
@@ -57,6 +61,7 @@ All 45 are ✅ written here. *read* = passage read; *headings only* = fetched, h
 
 ### T00-09 · Postmaster, backends, background workers, WAL writer, checkpointer, autovacuum — Know · ✅ written `docs/postgresql/pages/phase-0-architecture/09-process-model.md`
 - **Read this:** [Glossary](https://www.postgresql.org/docs/current/glossary.html) · postgresql.org · defines instance, postmaster, backend, auxiliary processes (autovacuum launcher, background writer, checkpointer, WAL writer) (*read*) · covers our angle: full as definitions · fetched 2026-10-12
+- **Beyond the docs:** [Process Architecture](https://www.interdb.jp/pg/pgsql02/01.html) · Hironobu Suzuki, *The Internals of PostgreSQL* · separates the postmaster, backend and background processes and tabulates each background process with a pointer to the chapter that explains it · fetched 2026-10-13 (*read*)
 - **Our delta:** a live `pg_stat_activity` listing by `backend_type` on 18 (page not opened).
 
 ### T00-10 · Version policy — majors, minors, five-year window, what 18 changed — Know · ✅ written `docs/postgresql/pages/phase-0-architecture/10-version-policy.md`
@@ -71,6 +76,7 @@ All 45 are ✅ written here. *read* = passage read; *headings only* = fetched, h
 ### T00-12 · `template0`/`template1`, the `postgres` database, what `CREATE DATABASE` copies — When Needed · ✅ written `docs/postgresql/pages/phase-0-architecture/12-templates.md`
 - **Read this:** [Template Databases](https://www.postgresql.org/docs/current/manage-ag-templatedbs.html) · postgresql.org · `CREATE DATABASE` copies `template1`; `template0` is the pristine copy (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Creating a Database](https://www.postgresql.org/docs/current/manage-ag-createdb.html) · postgresql.org · the initial `postgres` database (*read*) · [CREATE DATABASE](https://www.postgresql.org/docs/current/sql-createdatabase.html) · postgresql.org · `TEMPLATE` and `STRATEGY` options in the synopsis (*read*)
+- **Beyond the docs:** [Exploring the Default Postgres Template Databases](https://cdn.hashrocket.com/blog/posts/exploring-the-default-postgres-template-databases) · Mary Lee, Hashrocket · 2018-09-27 · runs the experiments in `psql`: a change in `template1` carries into new databases, `template0` refuses connections, and a different encoding needs `template0` · fetched 2026-10-13 (*read*)
 
 ---
 
@@ -85,6 +91,7 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 
 ### T01-02 · The daily meta-commands — Master · ✅ written `docs/postgresql/pages/phase-1-psql/02-daily-meta-commands.md`
 - **Read this:** [psql · Meta-Commands](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMANDS) · postgresql.org · the eight daily commands: `\l` (`#APP-PSQL-META-COMMAND-LIST`), `\c` (`-C-LC`), `\dn` (`-DN`), `\df` (`-DF-LC`); `\dt \di \dv \ds` share one group entry (`-DE`); `-DT` is `\dT`, data types, not `\dt` (ids found in the HTML; entries *read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [10 psql Commands That Will Make Your Life Easier](https://www.tigerdata.com/blog/10-psql-commands-that-will-make-your-life-easier) · James Blackwood-Sewell, TigerData · 2024-04-19, updated 2025-11-19 · short list of ten daily commands, with example output for some of them; the publisher is a vendor · fetched 2026-10-13 (*headings only*)
 - **Our delta:** the `S` and `+` suffixes and patterns (`#APP-PSQL-PATTERNS`) as one cheat table.
 
 ### T01-03 · `\d` and `\d+ table` in full — Master · ✅ written `docs/postgresql/pages/phase-1-psql/03-describe-table.md`
@@ -105,11 +112,13 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 
 ### T01-07 · The query buffer — `\e`, `\p`, `\r`, `\g`, `\gx`, semicolons — Understand · ✅ written `docs/postgresql/pages/phase-1-psql/07-query-buffer.md`
 - **Read this:** [psql · Meta-Commands](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMANDS) · postgresql.org · ids `APP-PSQL-META-COMMAND-EDIT`, `-PRINT`, `-RESET`, `-G`, `-GX`, `-SEMICOLON` (ids found in the HTML; entries not read) · covers our angle: **partial** · fetched 2026-10-12
+- **Beyond the docs:** [PostgreSQL Basics: Essential psql Tips and Tricks](https://www.red-gate.com/simple-talk/databases/postgresql/postgresql-basics-essential-psql-tips-and-tricks/) · Ryan Booz, Redgate Simple Talk · 2023-05-01 · beginner walk through `\e` on the query buffer, `\x`, history and `-E` to show the SQL behind meta-commands · fetched 2026-10-13 (*headings only*)
 - **Our delta:** "semicolon discipline" is ours; `\;` is a documented entry.
 
 ### T01-08 · Variables — `\set`, `:var`, `:'var'`, `:"var"` — Understand · ✅ written `docs/postgresql/pages/phase-1-psql/08-variables.md`
 - **Read this:** [psql · SQL Interpolation](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-INTERPOLATION) · postgresql.org · the three colon forms, `:{?name}` to test a variable (*read*) · covers our angle: **partial** — the trap list is ours · fetched 2026-10-12
 - **Also good:** `#APP-PSQL-VARIABLES` (same page) for the special variables.
+- **Beyond the docs:** [Variables in psql, how to use them?](https://www.depesz.com/2023/05/28/variables-in-psql-how-to-use-them/) · depesz · 2023-05-28 · shows `:var` vs `:'var'` vs `:"var"` with the injection risk, `-v` shell quoting and `\gset` · fetched 2026-10-13 (*read*)
 
 ### T01-09 · `\copy` vs server-side `COPY` — Understand · ✅ written `docs/postgresql/pages/phase-1-psql/09-copy.md`
 - **Read this (1/2):** [psql · `\copy`](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMANDS-COPY) · postgresql.org · a frontend copy: the client reads or writes the file (*read*) · covers our angle: full · fetched 2026-10-12
@@ -146,6 +155,7 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 
 ### T02-01 · `integer` / `bigint` / `smallint` — Master · ✅ written `docs/postgresql/pages/phase-2-types/01-integers.md`
 - **Read this:** [Numeric Types · Integer Types](https://www.postgresql.org/docs/current/datatype-numeric.html#DATATYPE-INT) · postgresql.org · range table: smallint -32768 to +32767, integer -2147483648 to +2147483647, bigint -9223372036854775808 to +9223372036854775807 (*read*) · covers our angle: **partial** — why identifiers are `bigint` is not argued · fetched 2026-10-12
+- **Beyond the docs:** [Error: nextval: reached maximum value of sequence](https://www.cybertec-postgresql.com/en/error-nextval-reached-maximum-value-of-sequence/) · Hans-Jürgen Schönig, CYBERTEC · 2022-09-06 · reproduces the `serial` int4 overflow with `setval` and why the later int4 to int8 rewrite locks the table · fetched 2026-10-13 (*read*)
 - **Our delta:** overflow behaviour and the `pg` return type for `bigint`.
 
 ### T02-02 · `numeric` vs `real`/`double precision` — Master · ✅ written `docs/postgresql/pages/phase-2-types/02-numeric-vs-float.md`
@@ -159,12 +169,14 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 ### T02-04 · `timestamptz` vs `timestamp` — Master · ✅ written `docs/postgresql/pages/phase-2-types/04-timestamptz.md`
 - **Read this:** [Don't Do This · timestamp](https://wiki.postgresql.org/wiki/Don%27t_Do_This) · postgresql.org wiki · `timestamptz` stores a point in time (microseconds since 2000-01-01 UTC), not a zone (*read*; last edited 2024-11-21) · covers our angle: full for the choice · fetched 2026-10-12
 - **Also good:** [Date/Time Types](https://www.postgresql.org/docs/current/datatype-datetime.html) · postgresql.org · "stored internally in UTC", shown in `TimeZone` (*read*)
+- **Beyond the docs:** [Time to Better Know The Time in PostgreSQL](https://boringsql.com/posts/know-the-time-in-postgresql/) · Radim Marek, boringSQL · 2025-04-06 · same instant shown in two session zones, DST arithmetic on `timestamptz` vs `timestamp`, `NOW()` vs `clock_timestamp()` · fetched 2026-10-13 (*read*)
 - **Our delta:** what `pg` returns: a JavaScript `Date` for `timestamptz` per the node-postgres types page.
 
 ### T02-05 · Time zones — Master · ✅ written `docs/postgresql/pages/phase-2-types/05-time-zones.md`
 - **Read this (1/2):** [Date/Time Types · Time Zones](https://www.postgresql.org/docs/current/datatype-datetime.html#DATATYPE-TIMEZONES) · postgresql.org · three ways to name a zone; conversion on output by `TimeZone` (*read*) · covers our angle: **partial** · fetched 2026-10-12
 - **Read this (2/2):** [AT TIME ZONE and AT LOCAL](https://www.postgresql.org/docs/current/functions-datetime.html#FUNCTIONS-DATETIME-ZONECONVERT) · postgresql.org · (headings only) · fetched 2026-10-12
 - **Also good:** [Don't Do This](https://wiki.postgresql.org/wiki/Don%27t_Do_This) · heading "Don't use +/-HH:mm as a text Time Zone name" (headings only)
+- **Beyond the docs:** [Postgres AT TIME ZONE Explained](https://www.enterprisedb.com/postgres-tutorials/postgres-time-zone-explained) · Bruce Momjian, EDB · page dated 2023-01-24 (first published 2019-02-11) · one example per direction of `AT TIME ZONE`, which the manual describes only in a table · fetched 2026-10-13 (*read*)
 
 ### T02-06 · `NULL` semantics — Master · ✅ written `docs/postgresql/pages/phase-2-types/06-null.md`
 - **Read this (1/2):** [Comparison Functions and Operators](https://www.postgresql.org/docs/current/functions-comparison.html) · postgresql.org · `IS DISTINCT FROM` treats null as comparable (*read*) · covers our angle: **partial** · fetched 2026-10-12
@@ -188,6 +200,7 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 ### T02-10 · `date`, `time`, `interval`, date arithmetic — Understand · ✅ written `docs/postgresql/pages/phase-2-types/09-boolean-dates.md`
 - **Read this (1/2):** [Date/Time Types](https://www.postgresql.org/docs/current/datatype-datetime.html) · postgresql.org · input and output formats, interval input; ids `DATATYPE-INTERVAL-INPUT`, `DATATYPE-DATETIME-INPUT` (headings only) · covers our angle: **partial** · fetched 2026-10-12
 - **Read this (2/2):** [Date/Time Functions and Operators](https://www.postgresql.org/docs/current/functions-datetime.html) · postgresql.org · `EXTRACT`, `date_trunc`, `date_bin` (headings only) · fetched 2026-10-12
+- **Beyond the docs:** [Time in PostgreSQL: the simple way](https://www.cybertec-postgresql.com/en/time-in-postgresql-the-simple-way/) · Hans-Jürgen Schönig, CYBERTEC · 2013-08-06, updated 2023-08 · interval literals, adding intervals to `now()` and `generate_series` for calendars; `date_trunc` only briefly · fetched 2026-10-13 (*read*)
 
 ### T02-11 · Arrays — Understand · ✅ written `docs/postgresql/pages/phase-2-types/10-arrays.md`
 - **Read this:** [Arrays](https://www.postgresql.org/docs/current/arrays.html) · postgresql.org · declaration, accessing, searching; tip: searching for elements "can be a sign of database misdesign", use a child table (*read*) · covers our angle: full · fetched 2026-10-12
@@ -206,11 +219,13 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 ### T02-14 · `bytea` and binary data — Know · ✅ written `docs/postgresql/pages/phase-2-types/13-bytea.md`
 - **Read this:** [Binary Data Types](https://www.postgresql.org/docs/current/datatype-binary.html) · postgresql.org · hex and escape formats (headings only; ids `DATATYPE-BINARY-BYTEA-HEX-FORMAT`) · covers our angle: **partial** · fetched 2026-10-12
 - **Also good:** [BinaryFilesInDB](https://wiki.postgresql.org/wiki/BinaryFilesInDB) · postgresql.org wiki · "When should files be stored in the database?" (headings only)
+- **Beyond the docs:** [Those darn Large Objects](https://www.enterprisedb.com/blog/those-darn-large-objects) · Martín Marqués, EDB · 2016-09-20 · `bytea` vs large objects, with a case where 96% of almost 100 million large objects were orphans because the Hibernate app did not purge them on delete or update · fetched 2026-10-13 (*read*)
 
 ### T02-15 · Network types, geometric types, `citext` — Know · ✅ written `docs/postgresql/pages/phase-2-types/14-network-geo-citext.md`
 - **Read this (1/2):** [Network Address Types](https://www.postgresql.org/docs/current/datatype-net-types.html) · postgresql.org · `inet`, `cidr`, and `inet` vs `cidr` (headings only; id `DATATYPE-INET-VS-CIDR`) · covers our angle: **partial** · fetched 2026-10-12
 - **Read this (2/2):** [citext](https://www.postgresql.org/docs/current/citext.html) · postgresql.org · calls `lower` when comparing; tip suggests nondeterministic collations as an alternative (*read* the intro) · fetched 2026-10-12
 - **Also good:** [Geometric Types](https://www.postgresql.org/docs/current/datatype-geometric.html) · postgresql.org (headings only)
+- **Beyond the docs:** [Can collations be used over citext?](https://www.cybertec-postgresql.com/en/can-collations-be-used-over-citext/) · Umut Tekin, CYBERTEC · 2025-09-09 · benchmarks an ICU nondeterministic collation against `citext` on tables of up to 33,554,432 rows, including the `LIKE` limit before 18 · fetched 2026-10-13 (*read*)
 
 ### T02-16 · Domains and composite types — Know · ✅ written `docs/postgresql/pages/phase-2-types/15-domains-composites.md`
 - **Read this (1/2):** [CREATE DOMAIN](https://www.postgresql.org/docs/current/sql-createdomain.html) · postgresql.org · (headings only) · covers our angle: **partial** · fetched 2026-10-12
@@ -219,6 +234,7 @@ The manual's `psql` reference is one long page, so each block gives the anchor o
 ### T02-17 · Range types and exclusion constraints — When Needed · ✅ written `docs/postgresql/pages/phase-2-types/16-ranges.md`
 - **Read this:** [Range Types](https://www.postgresql.org/docs/current/rangetypes.html) · postgresql.org · built-in range and multirange types, bounds, indexing, and a "Constraints on Ranges" part (headings only; id `RANGETYPES-CONSTRAINT`) · covers our angle: full by headings · fetched 2026-10-12
 - **Also good:** [Constraints · Exclusion Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-EXCLUSION) · postgresql.org · `EXCLUDE USING gist` builds an index automatically (*read*)
+- **Beyond the docs:** [Range Columns](https://supabase.com/blog/range-columns) · tyler_shukert, Supabase · 2024-07-11 · `tstzrange`, the `&&` overlap operator and an exclusion constraint with `btree_gist` that blocks a double booking · fetched 2026-10-13 (*read*)
 
 ### T02-18 · Modelling money — Master · ✅ written `docs/postgresql/pages/phase-2-types/17-modelling-money/` (`README.md`, `01-storing-money.md`, `02-arithmetic-and-rounding.md`, `03-ledgers-and-node.md`)
 - **Read this:** [Working with Money in Postgres](https://www.crunchydata.com/blog/working-with-money-in-postgres) · Crunchy Data · money, floats, integers and numeric compared; integer math makes 100/3 equal 33 (*read*; published 2023-10-11) · covers our angle: **partial** — nothing on a ledger shape · fetched 2026-10-12

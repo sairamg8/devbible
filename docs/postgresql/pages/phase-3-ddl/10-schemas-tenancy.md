@@ -225,6 +225,7 @@ per-tenant loop.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Schemas](https://www.postgresql.org/docs/current/ddl-schemas.html) — postgresql.org: creating a schema, the public schema, the search path, privileges, usage patterns (*read* the intro; ids `DDL-SCHEMAS-PATH`, `DDL-SCHEMAS-PATTERNS`)
+- **Beyond the docs:** [What surprised us in Postgres-schema multitenancy](https://blog.arkency.com/what-surprised-us-in-postgres-schema-multitenancy/) — Arkency (Tomasz Wróbel): 2020-10-01
 
 {/* LINKMAP:END */}
 

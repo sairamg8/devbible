@@ -247,6 +247,7 @@ footprint small and are interruptible.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [TRUNCATE (reference)](https://www.postgresql.org/docs/current/sql-truncate.html) — postgresql.org: faster because it does not scan; `RESTART IDENTITY`; not MVCC-safe for old snapshots; transaction-safe for the data (*read*)
+- **Beyond the docs:** [The Mystery of The Zombie Postgres Row](https://www.endpointdev.com/blog/2012/03/postgres-mvcc-mystery-truncate-delete/) — endpointdev.com / Greg Sabino Mullane: 2012-03-14; a concrete incident showing why TRUNCATE is not MVCC safe, where the reference only states it; older, so check version details against the manual
 
 {/* LINKMAP:END */}
 

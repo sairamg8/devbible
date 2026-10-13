@@ -195,6 +195,7 @@ are the case where failing fast is better than waiting.
 
 - **Read this:** [13.3 Explicit Locking, section "Table-Level Locks"](https://www.postgresql.org/docs/current/explicit-locking.html) — postgresql.org: lock modes and the conflict table; `ROW EXCLUSIVE` taken by `UPDATE`, `DELETE`, `INSERT`, `MERGE` (*read*)
 - **Read this:** [ALTER TABLE](https://www.postgresql.org/docs/current/sql-altertable.html) — postgresql.org: `ACCESS EXCLUSIVE` unless a subform says otherwise; several subcommands take the strictest (*read*)
+- **Beyond the docs:** [Schema changes and the Postgres lock queue](https://xata.io/blog/migrations-and-exclusive-locks) — Xata blog: demonstrates with `pg_sleep` and `pg_blocking_pids` how a queued `ALTER TABLE` blocks later reads, which is the effect our delta says neither official page shows; no author or date shown on the page
 
 {/* LINKMAP:END */}
 

@@ -181,6 +181,7 @@ pool's management and is a bug.
 
 - **Read this:** [Pooling → Shutdown](https://node-postgres.com/features/pooling) — node-postgres.com: `pool.end()` waits for checked-out clients; later checkouts return errors (*read*)
 - **Also good:** [pg.Pool → pool.end](https://node-postgres.com/apis/pool) — node-postgres.com: `allowExitOnIdle` for scripts and tests (*read*)
+- **Beyond the docs:** [Graceful Node.js server shutdown](https://blog.openreplay.com/graceful-node-server-shutdown/) — OpenReplay blog (2026-09-11): the full sequence, await `server.close()`, then close the Postgres pool last, plus a forced-exit timer below the orchestrator grace period; general Node, not `pg`-specific
 
 {/* LINKMAP:END */}
 

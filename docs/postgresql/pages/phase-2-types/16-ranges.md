@@ -231,6 +231,7 @@ conventionally.
 
 - **Read this:** [Range Types](https://www.postgresql.org/docs/current/rangetypes.html) — postgresql.org: built-in range and multirange types, bounds, indexing, and a "Constraints on Ranges" part (headings only; id `RANGETYPES-CONSTRAINT`)
 - **Also good:** [Constraints · Exclusion Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-EXCLUSION) — postgresql.org: `EXCLUDE USING gist` builds an index automatically (*read*)
+- **Beyond the docs:** [Range Columns](https://supabase.com/blog/range-columns) — tyler_shukert, Supabase: 2024-07-11
 
 {/* LINKMAP:END */}
 

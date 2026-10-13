@@ -228,6 +228,7 @@ the changes rather than one per statement.
 
 - **Read this:** [ALTER TABLE · Notes](https://www.postgresql.org/docs/current/sql-altertable.html) — postgresql.org: a non-volatile `DEFAULT` is stored in metadata with no rewrite; a volatile default, stored generated or identity column, or constrained domain rewrites the table (*read*)
 - **Also good:** [Modifying Tables](https://www.postgresql.org/docs/current/ddl-alter.html) — postgresql.org: add, drop, rename, change type; ids `DDL-ALTER-COLUMN-TYPE` (headings only)
+- **Beyond the docs:** [Which Postgres Operation causes a table rewrite](https://www.bytebase.com/blog/postgres-table-rewrite/) — Bytebase (Adela): 2025-09-06
 
 {/* LINKMAP:END */}
 

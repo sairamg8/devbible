@@ -222,6 +222,7 @@ any driver difference.
 
 - **Read this:** [postgres.js README (raw)](https://raw.githubusercontent.com/porsager/postgres/master/README.md) — github (raw): tagged-template queries, prepared statements created automatically for static queries (off with `prepare: false`), `sql.begin`, `.listen`, bigint returned as a string (*read* the headings and several sections)
 - **Also good:** [`Waddler &lt;&gt; PostgreSQL`](https://waddler.drizzle.team/docs/connect-postgresql) — waddler.drizzle.team: lists differences it found: postgres.js prepares by default, `pg` allows per-query type parsers (*read* the section; vendor-adjacent, undated)
+- **Beyond the docs:** [Benchmarking PostgreSQL drivers in Node.js: node-postgres vs postgres.js](https://dev.to/nigrosimone/benchmarking-postgresql-drivers-in-nodejs-node-postgres-vs-postgresjs-17kl) — dev.to, Nigro Simone (2025-09-06): a third-party measurement, 50,000 iterations on Node 24.7.0: pg-native 161.73 µs, pg 183.02 µs, postgres.js 202.32 µs per iteration; query and database setup are not described, so treat it as indicative
 
 {/* LINKMAP:END */}
 

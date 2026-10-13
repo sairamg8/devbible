@@ -169,6 +169,7 @@ No, and that is the whole reason session state cannot go through it.
 - **Read this:** [Pooling](https://node-postgres.com/features/pooling) — node-postgres.com: handshake costs 20-30 ms; one client runs one query at a time, first-in first-out; `pool.query` is the preferred way for a single query (*read*)
 - **Also good:** [pg.Pool API](https://node-postgres.com/apis/pool) — node-postgres.com: config defaults: `max` 10, `idleTimeoutMillis` 10000 (*read* the config block)
 - **Also good:** [Pool sizing](https://node-postgres.com/guides/pool-sizing)
+- **Beyond the docs:** [PostgreSQL Pool vs Client: Which One Should You Use?](https://blog.nashtechglobal.com/postgresql-pool-vs-client-which-one-should-you-use/) — NashTech blog, San Nguyen (2025-09-03): maps each choice to a use case, a pool for a read-heavy endpoint and a dedicated client for a transactional `COPY` import, with `pg` snippets the official page lacks; the snippets are fragments and skip pool shutdown
 
 {/* LINKMAP:END */}
 

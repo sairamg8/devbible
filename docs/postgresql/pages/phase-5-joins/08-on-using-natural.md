@@ -234,6 +234,7 @@ Yes, and the merged column then holds `coalesce(left.col, right.col)` — worth 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) — postgresql.org: the three forms side by side (*read* the syntax block)
+- **Beyond the docs:** [Why JOIN USING Can Lead to Errors in SQL](https://blog.jooq.org/why-join-using-can-lead-to-errors-in-sql/) — blog.jooq.org / Lukas Eder: 2026-05-04; shows NATURAL JOIN joining on every shared column name, so a new same-named column changes the join, and JOIN USING failing with an ambiguity error (PostgreSQL: common column name appears more than once) after an ALTER
 
 {/* LINKMAP:END */}
 

@@ -115,6 +115,7 @@ Pooling reuses **backends**; shared buffers cache **data pages**. Different laye
 - **Read this:** [Resource Consumption · Memory](https://www.postgresql.org/docs/current/runtime-config-resource.html) — postgresql.org: `shared_buffers` default 128 MB, 25% of RAM as a start, and PostgreSQL also relies on the OS cache (*read*)
 - **Also good:** [Database Page Layout](https://www.postgresql.org/docs/current/storage-page-layout.html) — postgresql.org: tables and indexes are arrays of fixed pages, usually 8 kB (*read*)
 - **Also good:** [pg_buffercache](https://www.postgresql.org/docs/current/pgbuffercache.html)
+- **Beyond the docs:** [Buffer Manager · Structure](https://www.interdb.jp/pg/pgsql08/02.html) — Hironobu Suzuki, *The Internals of PostgreSQL*: the buffer pool, buffer descriptors and buffer table drawn as figures, with the load of a first page step by step; replacement and the OS page cache are not covered on it
 
 {/* LINKMAP:END */}
 

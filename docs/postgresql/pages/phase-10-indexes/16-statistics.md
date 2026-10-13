@@ -267,6 +267,7 @@ Only `SHARE UPDATE EXCLUSIVE`; reads and writes continue.
 
 - **Read this:** [14.2 Statistics Used by the Planner](https://www.postgresql.org/docs/current/planner-stats.html) — postgresql.org: `pg_statistic` and `pg_stats`, single-column and extended statistics (*read*)
 - **Also good:** [CREATE STATISTICS](https://www.postgresql.org/docs/current/sql-createstatistics.html) — postgresql.org: `ndistinct`, `dependencies`, `mcv` kinds; correlated-columns example (*read*)
+- **Beyond the docs:** [The Postgres 10 feature you didn't know about: CREATE STATISTICS](https://www.citusdata.com/blog/2018/03/06/postgres-planner-and-its-usage-of-statistics) — Samay Sharma, Citus Data: before and after `EXPLAIN ANALYZE` of a correlated-column misestimate (100 rows estimated versus 10,000 actual) fixed by dependencies and ndistinct statistics; dated 2018-03-06
 
 {/* LINKMAP:END */}
 

@@ -231,6 +231,7 @@ want whenever a nullable column is being compared.
 - **Read this:** [9.7. Pattern Matching](https://www.postgresql.org/docs/current/functions-matching.html) — postgresql.org: `LIKE`/`ILIKE` (noted as PostgreSQL-specific operators), `SIMILAR TO`, POSIX `~` regex (*read* the `ILIKE` passage; the regex part *headings only*)
 - **Also good:** [9.2. Comparison Functions and Operators](https://www.postgresql.org/docs/current/functions-comparison.html) — postgresql.org: `IS [NOT] DISTINCT FROM` returns true/false where `=` returns NULL (*read*)
 - **Also good:** [Don't Do This: BETWEEN](https://wiki.postgresql.org/wiki/Don't_Do_This)
+- **Beyond the docs:** [The Three-Valued Logic of SQL](https://modern-sql.com/concept/three-valued-logic) — modern-sql.com / Markus Winand: undated page; states that WHERE keeps only rows whose condition is true, so an unknown result is rejected, which is the mechanism behind the NULL traps the manual only lists
 
 {/* LINKMAP:END */}
 

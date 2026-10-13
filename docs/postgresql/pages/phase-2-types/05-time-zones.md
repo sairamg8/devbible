@@ -203,6 +203,7 @@ They are ambiguous across countries and do not carry DST history.
 - **Read this:** [Date/Time Types · Time Zones](https://www.postgresql.org/docs/current/datatype-datetime.html#DATATYPE-TIMEZONES) — postgresql.org: three ways to name a zone; conversion on output by `TimeZone` (*read*)
 - **Read this:** [AT TIME ZONE and AT LOCAL](https://www.postgresql.org/docs/current/functions-datetime.html#FUNCTIONS-DATETIME-ZONECONVERT) — postgresql.org: (headings only)
 - **Also good:** [Don't Do This](https://wiki.postgresql.org/wiki/Don%27t_Do_This) — heading "Don't use +/-HH:mm as a text Time Zone name" (headings only)
+- **Beyond the docs:** [Postgres AT TIME ZONE Explained](https://www.enterprisedb.com/postgres-tutorials/postgres-time-zone-explained) — Bruce Momjian, EDB: page dated 2023-01-24 (first published 2019-02-11)
 
 {/* LINKMAP:END */}
 

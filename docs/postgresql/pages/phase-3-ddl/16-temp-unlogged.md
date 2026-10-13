@@ -208,6 +208,7 @@ saturating replication.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [CREATE TABLE · UNLOGGED](https://www.postgresql.org/docs/current/sql-createtable.html#SQL-CREATETABLE-UNLOGGED) — postgresql.org: not written to WAL, so faster, but truncated after a crash and not replicated (*read*); temporary tables are `#SQL-CREATETABLE-TEMPORARY` (headings only)
+- **Beyond the docs:** [Unlogged tables in Postgres: Is their data truly gone after a crash?](https://pganalyze.com/blog/5mins-postgres-unlogged-tables) — pganalyze (Lukas Fittl): 2023-02-23
 
 {/* LINKMAP:END */}
 

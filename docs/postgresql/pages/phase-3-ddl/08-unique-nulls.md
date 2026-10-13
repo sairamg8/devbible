@@ -206,6 +206,7 @@ partial, so this must be an index.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Constraints · Unique Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-UNIQUE-CONSTRAINTS) — postgresql.org: duplicates with a null are allowed by default; `NULLS NOT DISTINCT` changes that; a unique constraint creates a unique B-tree index; partial unique index for subsets (*read*)
+- **Beyond the docs:** [Waiting for PostgreSQL 15 – Add UNIQUE null treatment option](https://www.depesz.com/2022/02/06/waiting-for-postgresql-15-add-unique-null-treatment-option/) — depesz: 2022-02-06
 
 {/* LINKMAP:END */}
 

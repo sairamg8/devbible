@@ -208,6 +208,7 @@ fails.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Also good:** [pg.Result](https://node-postgres.com/apis/result) — node-postgres.com: an empty result is `rows.length === 0`, not an error (*read*)
+- **Beyond the docs:** [find vs. get](https://tuhrig.de/find-vs-get) — tuhrig.de, Thomas Uhrig (2018-06-04): argues the method name should signal the contract: a find-style call may return nothing, a get-style call returns the entity or throws; Java and Spring examples, the rule carries over
 
 {/* LINKMAP:END */}
 

@@ -25,6 +25,7 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 ### T07-02 · `Pool` vs `Client` — Master · ✅ written `docs/postgresql/pages/phase-7-pg-driver/02-pool-vs-client.md`
 - **Read this:** [Pooling](https://node-postgres.com/features/pooling) · node-postgres.com · handshake costs 20-30 ms; one client runs one query at a time, first-in first-out; `pool.query` is the preferred way for a single query (*read*) · covers our angle: **partial** — no list of cases that still need a dedicated `Client` · fetched 2026-10-12
 - **Also good:** [pg.Pool API](https://node-postgres.com/apis/pool) · node-postgres.com · config defaults: `max` 10, `idleTimeoutMillis` 10000 (*read* the config block) · [Pool sizing](https://node-postgres.com/guides/pool-sizing) · node-postgres.com · serverless and PgBouncer cases (*headings only*)
+- **Beyond the docs:** [PostgreSQL Pool vs Client: Which One Should You Use?](https://blog.nashtechglobal.com/postgresql-pool-vs-client-which-one-should-you-use/) · NashTech blog, San Nguyen (2025-09-03) · maps each choice to a use case, a pool for a read-heavy endpoint and a dedicated client for a transactional `COPY` import, with `pg` snippets the official page lacks; the snippets are fragments and skip pool shutdown · fetched 2026-10-13 (*read*)
 - **Our delta:** the dedicated-`Client` cases (`LISTEN`, session state, a transaction) and a one-paragraph recap with a link to Node Phase 6 for sizing.
 
 ### T07-03 · Connection configuration — Master · ✅ written `docs/postgresql/pages/phase-7-pg-driver/03-connection-config.md`
@@ -64,6 +65,7 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 ### T07-10 · Prepared (named) statements — Understand · ✅ written `docs/postgresql/pages/phase-7-pg-driver/10-prepared.md`
 - **Read this:** [Queries → Prepared statements](https://node-postgres.com/features/queries) · node-postgres.com · a `name` caches the plan per connection; parse is skipped on the second use; the author calls it premature optimisation for most queries (*read*) · covers our angle: **partial** — nothing on generic versus custom plans or pooler trouble · fetched 2026-10-12
 - **Also good:** [PREPARE](https://www.postgresql.org/docs/current/sql-prepare.html) · postgresql.org · a statement runs with a generic or a custom plan (*read* the notes) · [54.2. Message Flow](https://www.postgresql.org/docs/current/protocol-flow.html) · postgresql.org · extended-query protocol (*headings only*)
+- **Beyond the docs:** [What are custom and generic plans in PostgreSQL?](https://www.dbi-services.com/blog/what-are-custom-and-generic-plans-in-postgresql/) · dbi services, Daniel Westermann (2019-02-05) · runs a prepared statement on uniform and skewed data and shows in `EXPLAIN` the switch to a generic plan after five runs, and when it is never chosen; older post, SQL only, nothing on Node or poolers · fetched 2026-10-13 (*read*)
 - **Our delta:** when it backfires (per-connection cache, transaction-mode PgBouncer, a skewed parameter value with a generic plan); the PG pages cover the planner, the Node page the API.
 
 ### T07-11 · Query timeouts — Understand · ✅ written `docs/postgresql/pages/phase-7-pg-driver/11-timeouts.md`
@@ -79,6 +81,7 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 ### T07-13 · `pool.end()` — Understand · ✅ written `docs/postgresql/pages/phase-7-pg-driver/13-pool-end.md`
 - **Read this:** [Pooling → Shutdown](https://node-postgres.com/features/pooling) · node-postgres.com · `pool.end()` waits for checked-out clients; later checkouts return errors (*read*) · covers our angle: **partial** — nothing on HTTP server shutdown order · fetched 2026-10-12
 - **Also good:** [pg.Pool → pool.end](https://node-postgres.com/apis/pool) · node-postgres.com · `allowExitOnIdle` for scripts and tests (*read*)
+- **Beyond the docs:** [Graceful Node.js server shutdown](https://blog.openreplay.com/graceful-node-server-shutdown/) · OpenReplay blog (2026-09-11) · the full sequence, await `server.close()`, then close the Postgres pool last, plus a forced-exit timer below the orchestrator grace period; general Node, not `pg`-specific · fetched 2026-10-13 (*read*)
 - **Our delta:** order — stop accepting requests, drain, then `pool.end()`; and calling it only once.
 
 ### T07-14 · `LISTEN`/`NOTIFY` from Node — Know · ✅ written `docs/postgresql/pages/phase-7-pg-driver/14-listen-notify.md`
@@ -94,6 +97,7 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 ### T07-16 · `pg` vs `postgres.js` — Know · ✅ written `docs/postgresql/pages/phase-7-pg-driver/16-postgres-js.md`
 - **Read this:** [postgres.js README (raw)](https://raw.githubusercontent.com/porsager/postgres/master/README.md) · github (raw) · tagged-template queries, prepared statements created automatically for static queries (off with `prepare: false`), `sql.begin`, `.listen`, bigint returned as a string (*read* the headings and several sections) · covers our angle: **partial** — a README, not a comparison · fetched 2026-10-12
 - **Also good:** [`Waddler <> PostgreSQL`](https://waddler.drizzle.team/docs/connect-postgresql) · waddler.drizzle.team · lists differences it found: postgres.js prepares by default, `pg` allows per-query type parsers (*read* the section; vendor-adjacent, undated)
+- **Beyond the docs:** [Benchmarking PostgreSQL drivers in Node.js: node-postgres vs postgres.js](https://dev.to/nigrosimone/benchmarking-postgresql-drivers-in-nodejs-node-postgres-vs-postgresjs-17kl) · dev.to, Nigro Simone (2025-09-06) · a third-party measurement, 50,000 iterations on Node 24.7.0: pg-native 161.73 µs, pg 183.02 µs, postgres.js 202.32 µs per iteration; query and database setup are not described, so treat it as indicative · fetched 2026-10-13 (*read*)
 - **Our delta:** a neutral comparison — no benchmark source was fetched, so the README's "fastest" claim is **not confirmed** and must be worded as the author's claim.
 - *Checked, not chosen:* StackShare "versus" pages (index noise, no comparison content; not fetched).
 
@@ -143,6 +147,7 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 ### T08-09 · `COPY FROM STDIN` via `pg-copy-streams` — Understand · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/09-copy-streams.md`
 - **Read this:** [pg-copy-streams README (raw)](https://raw.githubusercontent.com/brianc/node-pg-copy-streams/master/README.md) · github (raw) · `copyFrom('COPY my_table FROM STDIN')` with `stream/promises` `pipeline`; `destroy()` sends CopyFail and rolls back unless CopyDone was already sent; v7.0.0 published 2025-05-27 (*read*) · covers our angle: full for the Node side · fetched 2026-10-12
 - **Also good:** [COPY](https://www.postgresql.org/docs/current/sql-copy.html) · postgresql.org · `FROM STDIN` syntax and options (*read* the synopsis)
+- **Beyond the docs:** [5mins of Postgres E80: Optimizing bulk loads, COPY vs INSERT](https://pganalyze.com/blog/5mins-postgres-optimizing-bulk-loads-copy-vs-insert) · pganalyze, Lukas Fittl (2023-08-10) · walks Laurenz Albe's 10-million-row benchmark (single-row INSERT about 9,000 s, multi-row INSERT about 50 s, COPY about 14 s) and shows via `pg_stat_io` why COPY also disturbs shared buffers less; SQL-level, no Node · fetched 2026-10-13 (*read*)
 - **Our delta:** error handling and client release around the stream; `COPY` cannot use `ON CONFLICT`.
 
 ### T08-10 · A local development database in Podman/Docker — Understand · ✅ written `docs/postgresql/pages/phase-8-schema-from-node/10-local-dev-db.md`
@@ -177,6 +182,7 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 
 ### T09-01 · A repository module per resource — Master · ✅ written `docs/postgresql/pages/phase-9-api-crud/01-repository/README.md`
 - **Read this:** [Suggested Code Structure](https://node-postgres.com/guides/project-structure) · node-postgres.com · one `db/index.js` exports `query` and `getClient`, so logging and leak tracing live in one place (*read*) · covers our angle: **partial** — a data-access module, not a repository per resource · fetched 2026-10-12
+- **Beyond the docs:** [Fully featured Repository pattern with TypeScript and the native PostgreSQL driver](https://dev.to/fyapy/fully-featured-repository-pattern-with-typescript-and-native-postgresql-driver-4f2j) · dev.to, aabdullin (2022-03-20, edited 2022-04-19) · a generic repository on raw `pg` where each method takes an optional transaction client and otherwise borrows and releases a pooled one; class-based and skips relations, unlike our plain functions · fetched 2026-10-13 (*read*)
 - **Our delta:** plain functions taking an executor (pool or client) and returning rows; layering rationale stays in Node Phase 6.
 
 ### T09-02 · `list` with filtering, sorting and pagination — Master · ✅ written `docs/postgresql/pages/phase-9-api-crud/02-list-endpoint.md`
@@ -206,6 +212,7 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 ### T09-07 · `findById` — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/07-find-by-id.md`
 - **Read this:** none found — tried: WebSearch "node-postgres findById not found null vs throw repository", node-postgres.com guides, PostgreSQL manual (no page decides the not-found policy)
 - **Also good:** [pg.Result](https://node-postgres.com/apis/result) · node-postgres.com · an empty result is `rows.length === 0`, not an error (*read*)
+- **Beyond the docs:** [find vs. get](https://tuhrig.de/find-vs-get) · tuhrig.de, Thomas Uhrig (2018-06-04) · argues the method name should signal the contract: a find-style call may return nothing, a get-style call returns the entity or throws; Java and Spring examples, the rule carries over · fetched 2026-10-13 (*read*)
 - **Our delta:** the `null`-versus-throw decision is ours to argue; state one rule per layer.
 
 ### T09-08 · `update` — partial updates — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/08-update-partial.md`
@@ -225,10 +232,12 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 ### T09-11 · Idempotent writes — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/11-idempotent-writes.md`
 - **Read this:** [Stripe API: Idempotent requests](https://docs.stripe.com/api/idempotent_requests) · docs.stripe.com · for v1, the first response (status and body) is saved under the key and returned on retry, including 500s (*read*) · covers our angle: **partial** — client-facing contract, no database design · fetched 2026-10-12
 - **Also good:** [INSERT → ON CONFLICT](https://www.postgresql.org/docs/current/sql-insert.html) · postgresql.org · `DO NOTHING` / `DO UPDATE` (*read*)
+- **Beyond the docs:** [Implementing Stripe-like Idempotency Keys in Postgres](https://brandur.org/idempotency-keys) · brandur.org, Brandur (2017-10-27) · the database design the Stripe page leaves out: a key row, request split into atomic phases, recovery points committed in the same transaction so a retry resumes; Ruby, concept transfers · fetched 2026-10-13 (*read*)
 - **Our delta:** the key table, claim-then-work in one transaction, 409 for an in-flight key. *Checked, not chosen:* IETF `draft-ietf-httpapi-idempotency-key-header-07` (datatracker page loaded; draft status **not confirmed**, the page needs JavaScript).
 
 ### T09-12 · Passing a client through service functions — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/12-client-propagation.md`
 - **Read this:** [Transactions](https://node-postgres.com/features/transactions) · node-postgres.com · "You must use the same client instance for all statements within a transaction" (*read*) · covers our angle: **partial** — one function; no multi-repository service · fetched 2026-10-12
+- **Beyond the docs:** [Fully featured Repository pattern with TypeScript and the native PostgreSQL driver](https://dev.to/fyapy/fully-featured-repository-pattern-with-typescript-and-native-postgresql-driver-4f2j) · dev.to, aabdullin (2022-03-20, edited 2022-04-19) · shows `startTrx`, `commit` and `rollback` on one client handed to each repository call, with release in `finally` in the handler; the official page has no multi-repository example · fetched 2026-10-13 (*read*)
 - **Our delta:** every repository function takes the executor first; the service owns `BEGIN`/`COMMIT`. Propagation mechanics stay in Node Phase 6.
 
 ### T09-13 · Optimistic concurrency — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/13-optimistic.md`
@@ -247,11 +256,13 @@ Covers all 48 topic rows of `docs/postgresql/syllabus/03-node-and-pg.md`: T07-01
 ### T09-16 · Testing against a real PostgreSQL — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/16-testing-real-pg.md`
 - **Read this:** [Testcontainers for NodeJS: PostgreSQL module](https://node.testcontainers.org/modules/postgresql/) · node.testcontainers.org · `PostgreSqlContainer`, `getConnectionUri()`, snapshots (not with the `postgres` database) (*read*) · covers our angle: **partial** — module reference; per-test rollback isolation is elsewhere · fetched 2026-10-12
 - **Also good:** [Getting started with Testcontainers for Node.js](https://testcontainers.com/guides/getting-started-with-testcontainers-for-nodejs/) · testcontainers.com · `pg` plus `jest` with the PostgreSQL module (*read*) · [Database Test Isolation](https://eradman.com/posts/database-test-isolation.html) · eradman.com · wrap each test in a transaction, if one connection is used (*read*)
+- **Beyond the docs:** [Transaction rollback test isolation for PostgreSQL](https://qaskills.sh/blog/transaction-rollback-test-isolation-postgres) · qaskills.sh (2026-07-13, no named author) · per-test `BEGIN`/`ROLLBACK` with a Vitest and `pg` harness, and the pitfalls: a second pooled connection cannot see uncommitted fixtures, sequences still advance, deferred constraints never fire · fetched 2026-10-13 (*read*)
 - **Our delta:** per-test `BEGIN`/`ROLLBACK` on one client; written second, with Node Phase 9 once it lands.
 
 ### T09-17 · `created_at`/`updated_at` — trigger versus application — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/17-timestamps-trigger.md`
 - **Read this:** [F.41. spi → moddatetime](https://www.postgresql.org/docs/current/contrib-spi.html) · postgresql.org · a `BEFORE UPDATE` trigger storing the current time in a named column (*read*) · covers our angle: **partial** — an extension, not the trade-off · fetched 2026-10-12
 - **Also good:** [PL/pgSQL Trigger Functions](https://www.postgresql.org/docs/current/plpgsql-trigger.html) · postgresql.org · the `emp_stamp` example sets `last_date` and `last_user` in `BEFORE` (*read*)
+- **Beyond the docs:** [Last-updated columns with Postgres](https://www.morling.dev/blog/last-updated-columns-with-postgres) · morling.dev, Gunnar Morling (2024-02-20) · a no-trigger alternative: set the column to `DEFAULT` in every `UPDATE` so the database clock supplies it; honest about the cost, every statement must remember it · fetched 2026-10-13 (*read*)
 - **Our delta:** why the trigger wins (every writer, including `psql`, is covered); `moddatetime` availability on managed hosts **not confirmed**.
 
 ### T09-18 · `snake_case` to `camelCase` mapping — Understand · ✅ written `docs/postgresql/pages/phase-9-api-crud/18-snake-camel.md`

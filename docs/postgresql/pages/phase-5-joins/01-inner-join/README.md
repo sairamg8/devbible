@@ -97,6 +97,7 @@ whether the total is wrong before running it.
 
 - **Read this:** [2.6. Joins Between Tables](https://www.postgresql.org/docs/current/tutorial-join.html) — postgresql.org: tutorial from a first join to `LEFT OUTER JOIN` and a self join (*read* the self-join passage)
 - **Also good:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) — postgresql.org: `INNER` is the default; defines each join type by its rows (*read*)
+- **Beyond the docs:** [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/) — blog.codinghorror.com / Jeff Atwood: 11 Oct 2007; works inner, outer and cross joins on two four-row tables with the result rows shown, and notes where the Venn-diagram picture breaks (a cross join, 4 x 4 = 16 rows, cannot be drawn as one)
 
 {/* LINKMAP:END */}
 

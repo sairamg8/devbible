@@ -108,6 +108,7 @@ migrations with a migrator role).
 - **Read this:** [Template Databases](https://www.postgresql.org/docs/current/manage-ag-templatedbs.html) — postgresql.org: `CREATE DATABASE` copies `template1`; `template0` is the pristine copy (*read*)
 - **Also good:** [Creating a Database](https://www.postgresql.org/docs/current/manage-ag-createdb.html) — postgresql.org: the initial `postgres` database (*read*)
 - **Also good:** [CREATE DATABASE](https://www.postgresql.org/docs/current/sql-createdatabase.html)
+- **Beyond the docs:** [Exploring the Default Postgres Template Databases](https://cdn.hashrocket.com/blog/posts/exploring-the-default-postgres-template-databases) — Mary Lee, Hashrocket: 2018-09-27
 
 {/* LINKMAP:END */}
 

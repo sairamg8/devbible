@@ -55,6 +55,7 @@ You are done when you can write the archive pattern from memory, say what a sibl
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [7.8.4 Data-Modifying Statements in WITH](https://www.postgresql.org/docs/current/queries-with.html#QUERIES-WITH-MODIFYING) — postgresql.org: all statements share one snapshot and cannot see each other's effects; `RETURNING` is the only way to pass data (*read*)
+- **Beyond the docs:** [Tuple shuffling: Postgres CTEs for Moving and Deleting Table Data](https://www.crunchydata.com/blog/tuple-shuffling-postgres-ctes-for-update-and-delete-table-data) — crunchydata.com / David Christensen: 2023-11-02; a worked archive pattern, DELETE with RETURNING feeding an INSERT in one statement and so one transaction
 
 {/* LINKMAP:END */}
 

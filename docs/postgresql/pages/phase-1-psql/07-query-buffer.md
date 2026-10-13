@@ -215,6 +215,7 @@ Executing the SQL that a query generates — for example running a `format()`-bu
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [psql · Meta-Commands](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMANDS) — postgresql.org: ids `APP-PSQL-META-COMMAND-EDIT`, `-PRINT`, `-RESET`, `-G`, `-GX`, `-SEMICOLON` (ids found in the HTML; entries not read)
+- **Beyond the docs:** [PostgreSQL Basics: Essential psql Tips and Tricks](https://www.red-gate.com/simple-talk/databases/postgresql/postgresql-basics-essential-psql-tips-and-tricks/) — Ryan Booz, Redgate Simple Talk: 2023-05-01
 
 {/* LINKMAP:END */}
 

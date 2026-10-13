@@ -221,6 +221,7 @@ To set the visibility map, which is what makes index-only scans possible.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [24.1 Routine Vacuuming](https://www.postgresql.org/docs/current/routine-vacuuming.html) — postgresql.org: standard `VACUUM` versus `VACUUM FULL`, planner statistics, visibility map, autovacuum daemon (*read*)
+- **Beyond the docs:** [Tuning autovacuum in PostgreSQL and autovacuum internals](https://www.percona.com/blog/tuning-autovacuum-in-postgresql-and-autovacuum-internals/) — Avinash Vallarapu, Percona: the trigger formula with worked numbers, cost-based throttling and per-table overrides; dated 2018-08-10, so check defaults against 18
 
 {/* LINKMAP:END */}
 
