@@ -267,6 +267,17 @@ freedom is what let Angular introduce built-in control flow blocks at all — no
 ratify `@if`. It is also why every major release note has a template-syntax section and why
 `ng update` ships schematics that rewrite templates rather than merely bumping a version.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Ahead-of-time (AOT) compilation](https://angular.dev/tools/cli/aot-compiler) — angular.dev: three phases (code analysis, code generation, template type checking), the metadata rules the compiler enforces (*read*)
+- **Beyond the docs:** [Ivy engine in Angular: first in-depth look at compilation, runtime and change detection](https://angular.love/ivy-engine-in-angular-first-in-depth-look-at-compilation-runtime-and-change-detection) — Max Koretskyi, angular.love, 14 May 2018: shows the template compiled into a function with a create block and an update block, so "a template is compiled code" is visible; written against the Ivy preview, so instruction names are not today's
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Next → [02 · What a template expression may contain](02-what-a-template-expression-may-contain.md)

@@ -264,6 +264,17 @@ every root provider, sharing one platform injector. This is legal and is how mul
 islands on one page work — but it is also the answer to "why is my `@Service()` singleton not a
 singleton", when a test or a micro-frontend host has bootstrapped a second time.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ApplicationConfig](https://angular.dev/api/core/ApplicationConfig) — angular.dev API: the `providers` property is the "list of providers that should be available to the root component and all its children" (*read*)
+- **Beyond the docs:** [Understanding app.config.ts in Angular 19 Standalone Applications](https://dev.to/prateek_kr/understanding-appconfigts-in-angular-19-standalone-applications-a-complete-guide-5coh) — Prateek Kr, DEV Community, 13 Oct 2025: goes through a real `app.config.ts` provider by provider (router, HTTP with fetch, state store); uses zone change detection, not zoneless, and mixes in third-party providers
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [Why provide functions replaced forRoot](02-why-provide-functions-replaced-forroot.md)

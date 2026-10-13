@@ -208,6 +208,16 @@ names it, and the builder schema declares no default for `index` either, so the 
 a fallback that is not documented — if you move it, set `index` explicitly rather than trusting
 discovery. The one line you cannot casually remove is `<base href>`, and it is not a file at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Workspace and project file structure](https://angular.dev/reference/configs/file-structure) — angular.dev: `main.ts` is the entry point, `app.config.ts` "defines the application configuration that tells Angular how to assemble the application" (the page also says it is only generated with the `--standalone` option, wording that looks s
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: **02 · The workspace layer** *(not written yet)* · Index: [Topic index](README.md) · Next → [03b · `index.html` is a shell the build rewrites](03b-index-html-is-a-shell-the-build-rewrites.md)

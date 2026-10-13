@@ -270,6 +270,19 @@ carries a `version` field, and `ng update` builds a semver range from the instal
 target and runs the migrations inside it. Editing the installed version by hand does not just skip
 a step — it destroys the input the selection depends on.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ng update](https://angular.dev/cli/update) — angular.dev CLI reference: updates framework and CLI and applies migrations; recommends the latest patch of a major; points to the Update Guide (*read*)
+- **Also good:** [Update Guide](https://angular.dev/update-guide) — angular.dev: pick start and target version and app complexity, get a tailored checklist (*read*)
+- **Also good:** [Versioning and releases](https://angular.dev/reference/releases)
+- **Beyond the docs:** [Angular Schematics Deep Dive, Part 4: Writing Migration Schematics with ng update](https://angular.love/angular-schematics-deep-dive-part-4-writing-migration-schematics-with-ng-update) — Sakthikumaran Navakumar, angular.love, 21 Apr 2026: shows how the CLI reads `ng-update` in `package.json`, finds `migrations.json` and runs only the migrations between installed and target versions; written from the library author's side
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [What a migration rewrites](01b-what-a-migration-rewrites.md)

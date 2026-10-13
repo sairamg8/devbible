@@ -269,6 +269,16 @@ workspace file is the *intended* behaviour, and project selection happens inside
 than through the directory you are standing in. Directory-based project selection is a separate
 mechanism layered on top of the resolved workspace, covered in [14 · Multi-project workspaces](14-multi-project-workspaces.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Angular workspace configuration](https://angular.dev/reference/configs/workspace-config) — angular.dev: sections for general structure, project options, builders and build target; `budgets` is "default size-budget type and thresholds", `fileReplacements` maps files to compile-time replacements (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [The global config file](01b-the-global-config-is-a-different-file.md)

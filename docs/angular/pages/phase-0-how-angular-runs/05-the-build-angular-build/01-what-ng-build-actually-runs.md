@@ -261,6 +261,18 @@ optimizes when you build and does not when you serve — which is correct, and i
 in `ng serve` but not in `ng build`" is such a common report. Naming the configuration explicitly
 removes the ambiguity.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Angular application build system](https://angular.dev/tools/cli/build-system-migration) — angular.dev: esbuild and Vite named as the new tools, Vite used "within a development server capacity only", the webpack-based system and `browser` builder stated as deprecated (*read*)
+- **Also good:** [Angular 17 Update: Control Flow and App Builder Migration](https://www.angulararchitects.io/blog/angular-17-update/) — Alexander Thalhammer, ANGULARarchitects, 10 May 2024: the `use-application-builder` migration and what to replace (the webpack bundle analyzer) (*read*)
+- **Beyond the docs:** [Angular, Analog, and Vite](https://angularindepth.com/article/angular-analog-and-vite/) — Robin Goetz, Angular In Depth, 4 Jan 2024: explains what a bundler is, why esbuild is fast, and why the CLI uses esbuild for `ng build` and Vite only for `ng serve`; predates Rolldown
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [Inside the package](02-inside-the-package.md)
