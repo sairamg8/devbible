@@ -282,6 +282,17 @@ has nothing between it and itself. `len(s)` is a valid slice bound but not a val
 there is a post after the last element but no element after it. Negative numbers are just the
 same posts labelled from the right, which is why `-len(s)` is post 0.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Built-in Types](https://docs.python.org/3/builtins/stdtypes.html) — Python docs: common sequence operations, including the meaning of s[i:j:k] (*headings only*)
+- **Beyond the docs:** [Python list slicing](https://www.pythonmorsels.com/slicing/) — Trey Hunner, Python Morsels, 2024-03-08: "Slicing a list gives us back a new list", and with a negative step the default meaning of start and stop changes
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Next → [02 · Negative steps](02-negative-steps.md)

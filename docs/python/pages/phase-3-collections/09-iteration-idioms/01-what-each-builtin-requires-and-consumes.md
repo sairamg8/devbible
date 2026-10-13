@@ -215,6 +215,18 @@ Their constructors call `PyObject_GetIter` (or, for `reversed`, look up `__rever
 **Why is it worth typing a parameter `Collection` or `Iterable` instead of `list`?**
 Because the annotation states the contract: `Iterable` promises one pass, `Collection` promises `len`, membership and re-iteration, `Iterator` says the function will drain the argument. A function annotated `Iterable[float]` that loops twice is a bug the annotation should have made visible; a linter or a reviewer can catch it, and a caller can pick the right object.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Built-in Functions](https://docs.python.org/3/builtins/functions.html) — Python docs: `enumerate`, `zip` (with `strict`), `reversed`, `any`, `all`, `min`, `max` (*read* `enumerate`)
+- **Also good:** [Avoid indexes in Python](https://www.pythonmorsels.com/avoid-indexes-in-python/) — Trey Hunner, Python Morsels, 2025-06-03: zip as the replacement for the range(len(...)) loop (*read* that sentence)
+- **Beyond the docs:** [Loop Like A Native](https://nedbatchelder.com/text/iter) — Ned Batchelder, created 2012-04-24, last updated 2013-03-19: the built-in enumerate "takes one iterable, and produces a stream of pairs", and a section on looping over two lists; pre-3.10, so no `strict=`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → **02 · `enumerate` — the counter is not the position** *(not written yet)*

@@ -194,6 +194,19 @@ anything after it, including its children. A heap is a sorted list only by coinc
 invariant constrains each parent against its children and leaves siblings and cousins
 unordered.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [heapq](https://docs.python.org/3/library/heapq.html) — Python docs, includes Priority Queue Implementation Notes (*headings only*): [bisect](https://docs.python.org/3/library/bisect.html)
+- **Read this:** [bisect](https://docs.python.org/3/library/bisect.html)
+- **Also good:** [Binary search in Python with bisect](https://www.pythonmorsels.com/binary-search/) — Python Morsels, 2026-07-29: "Python's `bisect` module implements binary search for you" (*read* that sentence)
+- **Beyond the docs:** [heapq — Heap Sort Algorithm](https://pymotw.com/3/heapq/) — Doug Hellmann, PyMOTW 3, last updated 2017-07-30: "A min-heap requires that the parent be less than or equal to its children", and nlargest and nsmallest are efficient only for relatively small n; examples generated with Python 3.7.9
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [01b · Building and sifting](01b-building-and-sifting.md)

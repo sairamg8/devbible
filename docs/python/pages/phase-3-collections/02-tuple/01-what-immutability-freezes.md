@@ -233,6 +233,18 @@ must ask each element whether it is equal, which can change over time if the ele
 mutable. That split is exactly why a tuple containing a list is a legal, immutable object
 that `hash()` refuses to touch.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Data Structures](https://docs.python.org/3/tutorial/datastructures.html) — Python tutorial: tuples and sequences, packing and unpacking (*headings only*)
+- **Also good:** [dataclasses](https://docs.python.org/3/library/dataclasses.html) — Python docs: the named-fields alternative: a decorator that generates `__init__()` and `__repr__()` (*read* the intro)
+- **Beyond the docs:** [Lists vs. Tuples](https://nedbatchelder.com/blog/201608/lists_vs_tuples) — Ned Batchelder, 2016-08-18: "If you know when you write the code what the third element means, then it is probably a tuple": a cultural rule, not just mutability
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [Thread safety and identity](01b-thread-safety-and-identity.md)

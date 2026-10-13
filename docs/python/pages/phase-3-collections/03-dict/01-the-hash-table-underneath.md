@@ -223,6 +223,18 @@ The slot becomes a *Dummy* — a tombstone that keeps collision probe sequences 
 **Is the compact-dict layout something you can rely on?**
 No — and the distinction is the one thing worth getting right in this area. The 3.6 release notes introduced the compact representation and explicitly said its *"order-preserving aspect … is considered an implementation detail and should not be relied upon."* What became guaranteed a release later is the *observable insertion order*, not the layout. So you may rely on iteration order; you may not rely on the load factor, the growth rate, the minimum size, the index-array width, or the presence of a shared-keys "split table" for instances.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Built-in Types](https://docs.python.org/3/builtins/stdtypes.html) — Python docs: the mapping types section: `dict` methods, views, merge operators (*headings only*)
+- **Also good:** [Modern Python Dictionaries: A confluence of a dozen great ideas](https://pycon-archive.python.org/2017/schedule/presentation/18/) — Raymond Hettinger, PyCon 2017: the talk page and abstract only; I did not open the video (*headings only*)
+- **Beyond the docs:** [Python behind the scenes #10: how Python dictionaries work](https://tenthousandmeters.com/blog/python-behind-the-scenes-10-how-python-dictionaries-work/) — tenthousandmeters, 2021-04-05: "dictionaries became ordered because items are added to the entries array in the insertion order": the compact layout behind the order guarantee
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [02 · What O(1) does not promise](01b-what-o1-does-not-promise.md)

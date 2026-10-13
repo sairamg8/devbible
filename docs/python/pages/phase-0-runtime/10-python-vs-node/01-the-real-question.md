@@ -255,6 +255,16 @@ and free-threading is not an option for the dependency set. And browser code.
 A. Any service whose core work is numerical or ML. Reimplementing pandas or PyTorch in
 JavaScript is not a project, it is a career.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Alternative Python implementations](https://www.python.org/download/alternatives/) — python.org: lists PyPy, GraalPy, Jython and others, the recognition-level part of this row (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`if __name__ == "__main__"`](../09-name-main/README.md) · Index: [Python vs Node](README.md) · Next → [Node's model](02-node-model.md)

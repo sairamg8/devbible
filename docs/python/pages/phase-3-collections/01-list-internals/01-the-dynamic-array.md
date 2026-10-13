@@ -242,6 +242,19 @@ block. CPython's own comment calls unguarded mutation during sorting *"a core-du
 factory, since ob_item may change"*. The defence is to detach the block and make the
 list appear empty for the duration.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Data Structures](https://docs.python.org/3/tutorial/datastructures.html) — Python tutorial: list methods, `sort`, using lists as stacks and queues; says lists are not efficient as queues (*read*)
+- **Also good:** [TimeComplexity](https://wiki.python.org/moin/TimeComplexity) — Python wiki: cost table for list operations: insert O(n), append O(1) (*read*)
+- **Also good:** [listsort.txt](https://raw.githubusercontent.com/python/cpython/main/Objects/listsort.txt)
+- **Beyond the docs:** [Python list implementation](https://www.laurentluce.com/posts/python-list-implementation/) — Laurent Luce, written 2011-03-10, modified 2020-12-29: "It over-allocates memory to avoid calling list_resize too many times" and append is amortized O(1); the resize numbers describe an older CPython
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [The complexity table, and what it is scoped to](01b-the-complexity-table.md)

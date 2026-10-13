@@ -183,6 +183,17 @@ before a long stretch of further work is a real third, but narrower than people
 assume — it only helps if the name held the last reference and the function has
 substantial work left.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Simple statements](https://docs.python.org/3/reference/simple_stmts.html) — docs.python.org: the `del` and `pass` statements and assignment statements, where one value is assigned to each target list from left to right (*read*)
+- **Beyond the docs:** [Python Ellipsis (triple dots): What is it, How to Use](https://python.land/python-ellipsis) — Python.Land, Erik van Baaren (per page metadata), 2022-01-01: placeholder body, NumPy slicing, an end-of-queue marker, and the `[...]` shown for a self-referencing list
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [PEP 8 and idiom](../15-pep8-and-idiom/README.md) · Index: [`del`, `pass`, `Ellipsis`](README.md) · Next → [`pass` and `Ellipsis`](02-pass-and-ellipsis.md)

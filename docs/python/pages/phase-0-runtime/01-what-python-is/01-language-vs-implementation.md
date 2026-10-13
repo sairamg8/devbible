@@ -276,6 +276,18 @@ Because the tag encodes both implementation and version, bytecode caches from
 different interpreters coexist in the same directory without colliding. If an
 implementation sets it to `None`, module caching is disabled entirely.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Glossary](https://docs.python.org/3/glossary.html) — docs.python.org: short entries for bytecode ("compiled into bytecode, the internal representation of a Python program in the CPython interpreter") and CPython ("the canonical implementation"), the vocabulary this topic needs (*read*)
+- **Also good:** [dis — Disassembler for Python bytecode](https://docs.python.org/3/library/dis.html) — docs.python.org: states that bytecode is a CPython implementation detail that can be added, removed or changed between versions (*read*)
+- **Beyond the docs:** [Python behind the scenes #1: how the CPython VM works](https://tenthousandmeters.com/blog/python-behind-the-scenes-1-how-the-cpython-vm-works/) — Victor Skvortsov, 2020-08-31: source to AST to bytecode, then the giant evaluation loop that runs the instructions; it does not mention `.pyc` files, and it is written for an older release (its disassembly shows `BINARY_ADD`, an opcode newer releases no longer
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [What Python is](README.md) · Next → [Source to bytecode](02-source-to-bytecode.md)

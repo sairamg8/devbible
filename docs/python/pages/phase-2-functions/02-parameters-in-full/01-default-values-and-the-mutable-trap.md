@@ -224,6 +224,19 @@ Positional and positional-or-keyword defaults are stored as a tuple on `func.__d
 **Q: Why does `def record_event(name: str, timestamp=datetime.now())` log the same time on every call?**
 Because `datetime.now()` is called only once when the module containing `record_event` is loaded and the `def` statement executes. The resulting `datetime` instance is frozen in `record_event.__defaults__`. Subsequent calls simply bind the parameter to that same pre-computed instance.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [More Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html) — Python tutorial: default values, keyword arguments, special parameters (`/` and `*`), arbitrary argument lists (*read* the default-values section)
+- **Also good:** [Common Gotchas](https://docs.python-guide.org/writing/gotchas/) — The Hitchhiker's Guide to Python: "A new list is created once when the function is defined, and the same list is used in each successive call"; page shows no date (*read*)
+- **Also good:** [Keyword-only function arguments](https://www.pythonmorsels.com/keyword-only-function-arguments/)
+- **Beyond the docs:** [Mutable default arguments](https://www.pythonmorsels.com/mutable-default-arguments/) — Trey Hunner, Python Morsels, 2025-04-07: states that defaults are defined only once, when the function is defined, then shows the None-sentinel fix and the copy-the-argument fix
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [Variadic args and kwargs](02-variadic-args-and-kwargs.md)

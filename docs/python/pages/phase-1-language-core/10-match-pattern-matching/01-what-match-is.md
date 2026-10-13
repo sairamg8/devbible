@@ -170,6 +170,18 @@ methods: *"This proposal intentionally leaves out any specification of what
 methods are called or how many times."* So do not put side effects in
 `__len__`, `__getitem__` or `__eq__` on a type you match against.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PEP 636 — Structural Pattern Matching: Tutorial](https://peps.python.org/pep-0636/) — peps.python.org: the tutorial form of the feature (*headings only*)
+- **Also good:** [PEP 634 — Specification](https://peps.python.org/pep-0634/) — peps.python.org: the formal rules (*headings only*)
+- **Beyond the docs:** [Structural pattern matching tutorial (Pydon't)](https://mathspp.com/blog/pydonts/structural-pattern-matching-tutorial) — Rodrigo Girão Serrão, 2021-03-09: class patterns with `__match_args__`, guards, dict patterns that ignore extra keys, `**remainder`, and `*tail` on sequences; written for 3.10
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Comprehensions](../09-comprehensions/README.md) · Index: [`match` — structural pattern matching](README.md) · Next → [Capture versus value patterns](01b-capture-versus-value-patterns.md)

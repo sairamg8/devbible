@@ -265,6 +265,18 @@ is found by the list's scan but not by the set's lookup, because the set never c
 different hashes. Converting a list membership test into a set one is therefore an optimisation
 with preconditions, which [2](02-the-membership-test-in-a-loop.md) lists.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Built-in Types](https://docs.python.org/3/builtins/stdtypes.html) — Python docs: set types section: common uses are membership testing, removing duplicates and set operations (*read*)
+- **Also good:** [Big-O: how code slows as data grows](https://nedbatchelder.com/text/slowsgrows) — Ned Batchelder, created 2017-10-18: hash-table lookup is constant time ("Finding a key in a million-element dict is just as fast as finding one in ten-element dict") and why nested scans go quadratic; it is about dicts and hash tables and never names `set` (*read*)
+- **Beyond the docs:** [Practical uses of sets](https://www.pythonmorsels.com/practical-uses-of-sets/) — Trey Hunner, Python Morsels, 2025-04-15: sets for removing duplicates "as long as you don't care about maintaining the order", plus membership and set algebra in everyday code
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Overview](README.md) · [Topic index](README.md) · Next → [What the table costs you](01b-what-the-table-costs-you.md)

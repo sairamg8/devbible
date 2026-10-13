@@ -215,6 +215,19 @@ Inheriting (`class C(MutableMapping)`) makes the ABC a real base: you get its mi
 **Why were the ABCs moved out of `collections` into `collections.abc`, and what broke?**
 To separate the concrete container types from the interfaces they implement; `collections.abc` has existed since 3.3 (*"Formerly, this module was part of the `collections` module"*), and the old names stayed as deprecated aliases until 3.10, whose What's New records *"Remove deprecated aliases to Collections Abstract Base Classes from the `collections` module."* Code written against the aliases — `from collections import Mapping` — fails with `ImportError` on 3.10 and later; the fix is the `collections.abc` import, and in a dependency, an upgrade.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [collections](https://docs.python.org/3/library/collections.html) — Python docs: `defaultdict`, `Counter`, `deque`, `namedtuple`, `ChainMap` (*read* the defaultdict section)
+- **Also good:** [Counting occurrences with collections.Counter](https://www.pythonmorsels.com/using-counter/) — Python Morsels, 2023-06-27: Counter and `most_common` (*read*)
+- **Also good:** [Stacks and queues in Python](https://www.pythonmorsels.com/stacks-and-queues/)
+- **Beyond the docs:** [Setting default dictionary values in Python](https://www.pythonmorsels.com/default-dictionary-values/) — Trey Hunner, Python Morsels, 2026-02-13: puts `get`, `setdefault` and `defaultdict` side by side, so the group-by one-liner is chosen against the alternatives
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [02 · `defaultdict` — a factory behind `d[k]`](02-defaultdict.md)

@@ -188,6 +188,19 @@ Yes. Syntactically, Python permits the decorator to return any object. However, 
 **Q: How do you write a decorator that intercepts exceptions without suppressing them?**
 Wrap the `func(*args, **kwargs)` call in a `try/except Exception as exc:` block. Inside `except`, perform the necessary logging, error tracking, or metric incrementation, and end the block with a bare `raise` statement to propagate the original exception and its complete traceback to the caller.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Making a well-behaved decorator](https://www.pythonmorsels.com/making-well-behaved-decorator/) — Trey Hunner, Python Morsels, 2021-06-17: shows what `help()` reports for a decorated function without `functools.wraps`: a function called `wrapper` that "accepts any arguments and has no documentation" (*read*)
+- **Also good:** [functools](https://docs.python.org/3/library/functools.html) — Python docs: `wraps` and `update_wrapper` reference (*read*)
+- **Also good:** [Making a decorator that accepts arguments](https://www.pythonmorsels.com/making-decorator-accepts-arguments/)
+- **Beyond the docs:** [How you implemented your Python decorator is wrong](https://grahamdumpleton.me/posts/2014/01/how-you-implemented-your-python/) — Graham Dumpleton (author of `wrapt`), 7 January 2014: argues the basic closure pattern breaks introspection and the descriptor protocol (his example wraps a classmethod and fails), which is the case for the `wrapt` library; examples are Python 2-era and it is a deeper step than a fir
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [functools.wraps and __wrapped__](02-metadata-preservation-with-functools-wraps.md)

@@ -164,6 +164,17 @@ Yes. A lambda supports the same parameter syntax as `def`: `lambda a, b=10, *arg
 **Q: Does a lambda expression create a closure when referencing outer variables?**
 Yes. A lambda creates an instance of `types.FunctionType` with its own local scope. When it references variables from an enclosing scope, it captures them via `cell` objects in its `__closure__` attribute, exactly like a nested function created with `def`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Expressions](https://docs.python.org/3/reference/expressions.html) — Language reference: the lambda expression section: `lambda parameters: expression` yields a function object (*read*)
+- **Beyond the docs:** [Python's lambda functions](https://www.pythonmorsels.com/lambda-expressions/) — Trey Hunner, Python Morsels, 2023-10-25: argues lambda should usually be avoided and asks whether a named function would be clearer, while keeping the key= use as the good case
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [The named lambda smell](02-the-named-lambda-smell-and-pep8.md)

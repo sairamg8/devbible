@@ -253,6 +253,18 @@ as part of its error. That is why the message you see on Debian talks about
 `apt`, `python3-full` and `pipx` specifically: it is distributor-authored advice
 delivered through a standardised channel, not a generic pip string.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Installing Python — uv](https://docs.astral.sh/uv/guides/install-python/) — Astral docs: installing interpreters with `uv python install`, requesting a version, and the fact that uv downloads one on demand if none is requested (*read*)
+- **Also good:** [How do pyenv and uv compare for Python interpreter management?](https://pydevtools.com/handbook/explanation/how-do-pyenv-and-uv-compare-for-python-interpreter-management/) — Tim Hopper, page says last updated 2026-09-07: pyenv compiles from source and uses shims, uv downloads prebuilt builds and you run through `uv run` or an activated environment (*read*)
+- **Beyond the docs:** [“Externally managed environments”: when PEP 668 breaks pip](https://pythonspeed.com/articles/externally-managed-environment-pep-668/) — Itamar Turner-Trauring, last updated 2025-01-22 (created 2023-05-05): a root `pip install --upgrade pyyaml` replaced the version the OS update manager expected; the case for virtualenvs and not touching the distribution's Python
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Installing and versions](README.md) · Next → [Responding to PEP 668](02-responding-to-pep-668.md)

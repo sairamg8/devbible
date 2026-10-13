@@ -263,6 +263,17 @@ because the falsy behaviour was a bug factory), while `datetime.timedelta(0)` in
 the same module is falsy. And any object of a custom class with no `__bool__`
 and no `__len__` is truthy no matter how empty it looks.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Built-in Types — Truth Value Testing](https://docs.python.org/3/builtins/stdtypes.html) — docs.python.org: the list of values that count as false (*read*)
+- **Beyond the docs:** [Truthy, falsy and bool](https://mathspp.com/blog/pydonts/truthy-falsy-and-bool) — Rodrigo Girão Serrão (mathspp; named in the page metadata and linked from the page), 2021-02-09: lookup order is `__bool__`, then `len()`; empty containers, `0`, `None` and `""` are falsy; do not test for `None` by truthiness
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`bytes` vs `str`](../04-bytes-and-encoding/README.md) · Index: [Truthiness](README.md) · Next → [The truthiness protocol](01b-the-truthiness-protocol.md)

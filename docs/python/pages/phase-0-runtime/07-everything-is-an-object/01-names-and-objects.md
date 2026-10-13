@@ -269,6 +269,17 @@ cannot observe it, because `int` is immutable. So the Java intuition "objects ar
 shared, primitives are copied" becomes "everything is shared, and only mutability
 decides whether sharing is visible".
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Data model](https://docs.python.org/3/reference/datamodel.html) — docs.python.org: objects, identity, type and value; "The `is` operator compares the identity of two objects" (*read*)
+- **Beyond the docs:** [Facts and myths about Python names and values](https://nedbatchelder.com/text/names) — Ned Batchelder, created 2013-07-06, updated 2014-01-26: names refer to values, "assignment never copies data", and mutable values change through any of their names; written before 3.14 but the model has not changed
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Everything is an object](README.md) · Next → [Binding in functions](02-binding-in-functions.md)

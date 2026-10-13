@@ -247,6 +247,16 @@ lazy per-function parse. This is also why `python -m compileall` on your whole
 source tree is a genuinely useful CI step: it catches syntax and indentation
 errors in files your tests never import.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Lexical analysis](https://docs.python.org/3/reference/lexical_analysis.html) — docs.python.org: the line structure, indentation (tabs replaced by one to eight spaces) and explicit and implicit line joining (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Syntax and indentation](README.md) · Index: [Syntax and indentation](README.md) · Next → [Whitespace and tooling](01c-whitespace-and-tooling.md)

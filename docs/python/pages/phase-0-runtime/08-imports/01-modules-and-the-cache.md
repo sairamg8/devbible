@@ -276,6 +276,18 @@ a deliberate blocking mechanism, and it also makes it a very confusing bug when
 some test helper sets it and forgets to clean up, because the file is plainly on
 disk and plainly on `sys.path`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The import system](https://docs.python.org/3/reference/import.html) — docs.python.org: finders, `sys.path`, packages and relative imports, in full (*headings only*)
+- **Also good:** [Modules](https://docs.python.org/3/tutorial/modules.html) — docs.python.org: the tutorial chapter: the search path and packages; its module-search-path section says the directory of the input script is searched first, so a local file shadows a library module of the same name (*read*)
+- **Also good:** [What's New In Python 3.13](https://docs.python.org/3/whatsnew/3.13.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Imports](README.md) · Next → [Reload and monkeypatching](01b-reload-and-monkeypatching.md)

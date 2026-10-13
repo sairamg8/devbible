@@ -277,6 +277,18 @@ sets of behaviour changes into one deployment, and it leaves you running known
 security defects in the meantime, since security fixes ship in the ordinary
 bugfix stream during the two-year full-support window.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Status of Python versions](https://devguide.python.org/versions/) — Python Developer's Guide: table of supported versions with phase and end-of-life dates: 3.13 security (October 2029), 3.14 bugfix (October 2030), 3.15 bugfix (October 2031); the page says dates may be adjusted (*read*)
+- **Also good:** [PEP 602 — Annual Release Cycle for Python](https://peps.python.org/pep-0602/) — peps.python.org: the original decision and rationale; its support window has since been amended (the PEP text says two years of full support and three of security fixes; the devguide gives the current terms), so check the current text before quoti
+- **Also good:** [PEP 745 — Python 3.14 Release Schedule](https://peps.python.org/pep-0745/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [The release model](README.md) · Next → [The five-year support window](02-the-support-window.md)

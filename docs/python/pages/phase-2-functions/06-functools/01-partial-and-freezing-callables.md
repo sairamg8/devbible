@@ -159,6 +159,18 @@ Access its three core attributes: `obj.func` (the wrapped callable), `obj.args` 
 **Q: What happens if a caller passes a keyword argument that was already bound in `partial.keywords`?**
 The caller's newly supplied keyword argument takes precedence and overrides the value previously bound in `partial.keywords`. Positional arguments, by contrast, cannot override previously bound positional arguments; they are appended to `partial.args`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [functools](https://docs.python.org/3/library/functools.html) — Python docs: `partial`, `lru_cache`, `cache`, `singledispatch`, `reduce`; says cache arguments "must be hashable" (*read*)
+- **Also good:** [Function overloading](https://www.pythonmorsels.com/function-overloading/) — Trey Hunner, Python Morsels, 2023-03-13: `singledispatch` as dispatch to helper functions by argument type (*read*)
+- **Beyond the docs:** [Don't wrap instance methods with functools.lru_cache](https://rednafi.com/python/lru-cache-on-methods/) — Redowan Delowar, 2022-01-15: on a method the cache keeps a reference to every instance, so "the instances of the class encapsulating that method never get garbage collected within the lifetime of the process"
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [lru_cache and cache](02-lru-cache-and-unbounded-cache.md)

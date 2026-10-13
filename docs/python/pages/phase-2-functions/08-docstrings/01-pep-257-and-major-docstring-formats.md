@@ -172,6 +172,19 @@ PEP 257 prescribes the **imperative mood** for the summary line (e.g., "Do this"
 **Q: Why must closing quotes in multi-line docstrings sit on their own line according to PEP 257?**
 Placing the closing `"""` on its own line visually demarcates the boundary of the docstring from the implementation code below it, matches the indentation level of the opening `def` statement, and prevents trailing text from being accidentally merged into the documentation block.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PEP 257 — Docstring Conventions](https://peps.python.org/pep-0257/) — python.org: the convention for what a docstring is and how to lay it out (*read* the definition)
+- **Also good:** [Docstrings in Python](https://www.pythonmorsels.com/docstrings/) — Trey Hunner, Python Morsels, 2021-02-18: what a docstring is, that `help()` reads it, and that the triple-quote habit is a PEP 257 convention (*read*)
+- **Also good:** [The features of Python's help() function](https://www.pythonmorsels.com/help-features/)
+- **Beyond the docs:** [sphinx.ext.napoleon: Support for NumPy and Google style docstrings](https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html) — Sphinx project documentation: puts the Google and NumPy styles side by side (Google separates sections by indentation, NumPy by underlines) and says the two styles should not be mixed: choose one for your project and be consistent, which is the format-choice h
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [help, getdoc, and doctest](02-help-inspect-getdoc-and-doctest.md)

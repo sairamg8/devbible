@@ -4,6 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every Python topic there is a [link map](./link-map/README.md): the primary docs plus, where one exists, the best non-official explanation — what it covers and what our own page must keep saying. First pass — open for review.
+:::
+
 > Verified: 2026-08 against docs.python.org (3.14), the Python Insider release
 > posts (3.14.7 / 3.13.15), and PEP 790 (the 3.15 schedule).
 

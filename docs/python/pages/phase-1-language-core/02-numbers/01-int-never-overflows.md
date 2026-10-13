@@ -258,6 +258,19 @@ double, exact only to `2**53 - 1`, with a separate non-interoperating `BigInt`
 type added later. Python: one unbounded integer type, exact always, at the cost
 of allocation and non-constant-time arithmetic.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Floating-Point Arithmetic: Issues and Limitations](https://docs.python.org/3/tutorial/floatingpoint.html) — docs.python.org: why decimal fractions are only approximated by binary floating point (*read*)
+- **Also good:** [decimal](https://docs.python.org/3/library/decimal.html) — docs.python.org: the module reference: decimal numbers are represented exactly, unlike 1.1 and 2.2 in binary (*read*)
+- **Also good:** [High-precision calculations with Decimal](https://testdriven.io/tips/c93b6e81-8db7-4f59-b092-c466e8353769/)
+- **Beyond the docs:** [Why Python's Integer Division Floors](https://python-history.blogspot.com/2010/08/why-pythons-integer-division-floors.html) — Guido van Rossum, 2010-08-24: flooring keeps `b*q + r = a` with `0 &lt;= r &lt; b` for negative `a`; the `t % 86400` time-of-day example; truncation in C comes from older hardware
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Phase 1 — Language core](../README.md) · Index: [Numbers](README.md) · Next → [Bitwise on an infinite width](01b-bitwise-operations.md)

@@ -201,6 +201,18 @@ Functions are first-class values and can be stored as dictionary values indexed 
 **Q: Can you attach arbitrary attributes to a Python function, and where are they stored?**
 Yes. User-defined functions have a writable `__dict__` attribute. Assigning `func.verified = True` writes the key-value pair into `func.__dict__`. This is widely used by decorators and routing frameworks (e.g. attaching permissions or route paths to view functions), but should not be used for mutable runtime request state due to concurrency hazards.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [More Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html) — Python tutorial: defining functions, return values and default behavior in the tutorial voice (*read* 4.8 and 4.9)
+- **Also good:** [Compound statements](https://docs.python.org/3/reference/compound_stmts.html) — Language reference: the formal definition of the function definition statement (*headings only*)
+- **Beyond the docs:** [None in Python](https://www.pythonmorsels.com/none/) — Trey Hunner, Python Morsels, 2024-01-22: states plainly that every function returns something, even without a return statement, which is the root of the forgotten-return bug
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [Return values and None](02-return-values-and-the-none-contract.md)

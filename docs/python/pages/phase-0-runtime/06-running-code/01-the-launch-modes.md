@@ -192,6 +192,17 @@ mode) implies `-P` along with `-E` and `-s`. This removes an entire class of
 shadowing bug at the cost of requiring your imports to resolve through installed
 packages or an explicit `PYTHONPATH`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Command line and environment](https://docs.python.org/3/using/cmdline.html) — docs.python.org: the full option list including `-m` and `-c` (*read*)
+- **Beyond the docs:** [How not to run a script in Python](https://rednafi.com/python/how-not-to-run-a-script/) — Redowan Delowar, 2022-03-16: `python src/sub/b.py` puts that file's directory first on `sys.path`, so `from src import a` fails; `python -m src.sub.b` from the project root makes the root the first entry
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Running code](README.md) · Next → [Script versus -m](02-script-vs-m.md)
