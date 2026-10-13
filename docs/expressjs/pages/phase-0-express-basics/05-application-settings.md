@@ -166,6 +166,7 @@ behaviour and rate-limit keys often depend on it too.
 - **Read this:** [Application API: settings table](https://expressjs.com/en/5x/api/application/) — expressjs.com: `query parser` default `"simple"`; `strict routing` default undefined; `x-powered-by` default true; sub-apps inherit several settings (*read*)
 - **Also good:** [Express behind proxies](https://expressjs.com/en/guide/behind-proxies/) — expressjs.com: what `trust proxy` changes (*read* the intro)
 - **Also good:** [Security best practices](https://expressjs.com/en/advanced/best-practice-security/)
+- **Beyond the docs:** [Troubleshooting Proxy Issues](https://github.com/express-rate-limit/express-rate-limit/wiki/Troubleshooting-Proxy-Issues) — express-rate-limit wiki: shows the practical way to pick the `trust proxy` hop count (a test route returning `req.ip`, raise the number until it matches your public IP) and a real bypass when proxies put ports in X-Forwarded-For; wiki last edited 2023-08-
 
 {/* LINKMAP:END */}
 

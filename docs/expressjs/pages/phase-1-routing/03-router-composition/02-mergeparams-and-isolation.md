@@ -237,6 +237,7 @@ the first segment.
 
 - **Read this:** [pillarjs/router README (raw): Router options](https://raw.githubusercontent.com/pillarjs/router/master/README.md) — github (raw): `mergeParams` merges the parent `req.params`, default false (*read*)
 - **Also good:** [Application API: `app.mountpath`](https://expressjs.com/en/5x/api/application/) — expressjs.com: a sub-app's mount path, a string or array (*read*)
+- **Beyond the docs:** [Validating and consuming mount-path parameters with middleware in Express.js](https://www.bennadel.com/blog/3276-validating-consuming-mount-path-parameters-with-middleware-in-express-js-and-node-js.htm) — Ben Nadel: compares `mergeParams: true`, middleware on the mount path, and a sibling wildcard route for a parent `:teamID`, and argues for keeping the child router prefix-agnostic; 2017, Express 4
 
 {/* LINKMAP:END */}
 

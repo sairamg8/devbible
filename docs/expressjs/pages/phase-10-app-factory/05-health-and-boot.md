@@ -171,6 +171,7 @@ the dependency you are testing. A few seconds of staleness costs nothing.
 
 - **Read this:** [Liveness, readiness and startup probes](https://kubernetes.io/docs/concepts/workloads/pods/probes/) — kubernetes.io: liveness restarts, readiness gates traffic; liveness should signal only unrecoverable failure; back-end availability belongs in readiness (*read*; the last 18k characters were not read)
 - **Also good:** [Health checks and graceful shutdown](https://expressjs.com/en/advanced/healthcheck-graceful-shutdown/) — expressjs.com: liveness vs readiness in two sentences, with the SIGTERM example (*read*)
+- **Beyond the docs:** [How to Implement Health Checks and Readiness Probes in Node.js for Kubernetes](https://oneuptime.com/blog/post/2026-01-06-nodejs-health-checks-kubernetes/view) — OneUptime, 2026-01-06: Express example with a bare liveness route and a readiness route that returns 503 until init finishes and during shutdown; warns against checking the database in liveness
 - **Read this:** [Structuring Node.js apps](https://marius.me.uk/blog/2017/12/structuring-nodejs-apps/) — marius.me.uk: 2017-12-30
 
 {/* LINKMAP:END */}

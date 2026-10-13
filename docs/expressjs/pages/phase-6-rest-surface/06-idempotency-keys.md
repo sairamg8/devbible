@@ -161,6 +161,7 @@ defeats the purpose.
 
 - **Read this:** [Stripe API: Idempotent requests](https://docs.stripe.com/api/idempotent_requests) — docs.stripe.com: saves status and body of the first request, retries return it (500s included for v1), keys up to 255 characters, pruned after 24 hours, changed parameters with the same key error (*read*)
 - **Also good:** [The Idempotency-Key HTTP Header Field (IETF draft)](https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/) — datatracker.ietf.org: draft 07; datatracker lists it as an **expired** Internet-Draft, last updated 2026-04-18 (*headings only*)
+- **Beyond the docs:** [Implementing Stripe-like Idempotency Keys in Postgres](https://brandur.org/idempotency-keys) — brandur.org: Oct 27, 2017
 
 {/* LINKMAP:END */}
 

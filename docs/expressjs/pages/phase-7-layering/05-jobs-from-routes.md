@@ -173,6 +173,7 @@ of the response's truth. If no, it is a job.
 - **Read this:** [Asynchronous Request-Reply pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/asynchronous-request-reply) — learn.microsoft.com: validate first, 400 if invalid; return 202 with a `Location` status endpoint and `Retry-After`; offload to a queue (*read*)
 - **Also good:** [Don't Block the Event Loop](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org: why slow work must not sit on the request path (*headings only*)
 - **Also good:** [Stripe: Receive events](https://docs.stripe.com/webhooks)
+- **Beyond the docs:** [Background jobs in Node.js with BullMQ](https://flaviocopes.com/nodejs-background-jobs-bullmq/) — Flavio Copes, updated Aug 6, 2026: an Express POST route validates, enqueues to a Redis-backed queue and answers 202, with a separate worker
 
 {/* LINKMAP:END */}
 

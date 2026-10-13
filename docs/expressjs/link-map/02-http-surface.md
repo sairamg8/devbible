@@ -35,6 +35,7 @@ Docs pages carry no date, so only the fetch date is given. `github.com` and `npm
 - **Read this:** [Express 5.x API: Application](https://expressjs.com/en/5x/api/application/) · expressjs.com · `query parser` default `"simple"` (Node `querystring`); `"extended"` uses `qs`; also `false` or a custom function (*read*) · covers our angle: **partial** — nothing on nested-key breakage or pollution · fetched 2026-10-12
 - **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) · expressjs.com · default changed from extended to simple (*read*) · [qs README (raw)](https://raw.githubusercontent.com/ljharb/qs/main/README.md) · github (raw) · `depth`, `parameterLimit` 1000, `arrayLimit`, `throwOnLimitExceeded` (*read* the option text) · fetched 2026-10-12
 - *Checked, not chosen:* [CodeQL: type confusion through parameter tampering](https://codeql.github.com/codeql-query-help/javascript/js-type-confusion-through-parameter-tampering/) · a request value can arrive as an Array instead of a String (*read*), but it is a scanner rule, not an Express guide.
+- **Beyond the docs:** [Prevent Parameter Pollution in Node.JS](https://dev.to/pshaddel/prevent-parameter-pollution-in-nodejs-1bdi) · Poorshad Shaddel, dev.to, 12 Sep 2023 · shows a repeated query key arriving as an array and slipping past a validator that checked only the first value, which the API reference does not demonstrate · fetched 2026-10-13 (*read*)
 - **Our delta:** the `a[b]=1` break on upgrade and the repeated-key-becomes-array pollution angle; check the runtime type before use.
 
 ### T03-05 · Malformed JSON / bad urlencoded payloads — Understand · ✅ written `docs/expressjs/pages/phase-3-requests/05-malformed-bodies.md`
@@ -45,6 +46,7 @@ Docs pages carry no date, so only the fetch date is given. `github.com` and `npm
 ### T03-06 · `express.raw()` and `express.text()` — Understand · ✅ written `docs/expressjs/pages/phase-3-requests/06-raw-and-text.md`
 - **Read this:** [Stripe: Webhooks](https://docs.stripe.com/webhooks) · Stripe docs · "Stripe requires the raw body" and any framework manipulation breaks verification (*read*) · covers our angle: **partial** — states the rule but no Express wiring was found on the page · fetched 2026-10-12
 - **Also good:** [Express 5.x API: express](https://expressjs.com/en/5x/api/express/) · expressjs.com · `express.raw()` yields a `Buffer` for matching Content-Type (*read*) · [body-parser](https://expressjs.com/en/resources/middleware/body-parser/) · expressjs.com · `verify(req, res, buf, encoding)` gets the raw bytes before parsing (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Verify Webhook Signatures](https://blog.openreplay.com/verify-webhook-signature/) · OpenReplay Team, 2 Oct 2026 · worked broken-versus-fixed middleware ordering showing a route-level raw parser cannot recover a body a global JSON parser already consumed, plus the `verify` alternative · fetched 2026-10-13 (*read*)
 - **Our delta:** mount `raw` on the webhook route before any global JSON parser; a mismatched type leaves `req.body` `undefined`.
 
 ### T03-07 · Headers and content-type discipline — Understand · ✅ written `docs/expressjs/pages/phase-3-requests/01-req-anatomy/03-reading-headers-and-content.md`
@@ -55,15 +57,18 @@ Docs pages carry no date, so only the fetch date is given. `github.com` and `npm
 ### T03-08 · Client IP and protocol — Understand · ✅ written `docs/expressjs/pages/phase-3-requests/01-req-anatomy/02-the-twelve-getters.md`
 - **Read this:** [Express behind proxies](https://expressjs.com/en/guide/behind-proxies/) · expressjs.com · `trust proxy` default false (IP from socket); `true` takes the left-most `X-Forwarded-For`; match the setting to your proxy setup (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [MDN: X-Forwarded-For](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Forwarded-For) · MDN · warns of security risk from improper use (*headings only*) · [Express 5.x API: Request](https://expressjs.com/en/5x/api/request/) · expressjs.com · `req.ips` is empty unless `trust proxy` is set (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Troubleshooting Proxy Issues](https://github.com/express-rate-limit/express-rate-limit/wiki/Troubleshooting-Proxy-Issues) · express-rate-limit wiki, last edited 9 Aug 2023 · practical walkthrough of finding the right proxy count with a test endpoint and what goes wrong when `req.ip` is the proxy address or carries a port · fetched 2026-10-13 (*read*)
 - **Our delta:** pairing with `trust proxy` in Phase 9; a client can forge the header.
 
 ### T03-09 · Multipart uploads — Understand · ✅ written `docs/expressjs/pages/phase-3-requests/07-multipart-uploads.md`
 - **Read this:** [multer](https://expressjs.com/en/resources/middleware/multer/) · expressjs.com · v2.4.0, built on busboy; no `dest` means memory storage; `limits`, `fileFilter`; "Never add multer as a global middleware" (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Handling File Uploads with Multer in Node.js](https://betterstack.com/community/guides/scaling-nodejs/multer-in-nodejs/) · Stanley Ulili, Better Stack, updated 11 Apr 2025 · end-to-end disk versus memory storage, `fileFilter`, `limits` and `LIMIT_*` error handling in runnable code (its filter checks the extension only) · fetched 2026-10-13 (*read*)
 - **Our delta:** memory versus disk trade-offs and field limits; Multer 2.x only handles `multipart/form-data`.
 
 ### T03-10 · Upload validation — Understand · ✅ written `docs/expressjs/pages/phase-3-requests/07-multipart-uploads.md`
 - **Read this:** [File Upload Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html) · OWASP · sections on extension and Content-Type allowlists, file signature (not alone), filename safety, storage location, size limits (*read* those sections) · covers our angle: **partial** — Java examples, no Multer wiring · fetched 2026-10-12
 - **Also good:** [multer](https://expressjs.com/en/resources/middleware/multer/) · expressjs.com · `fileFilter`, `limits`, `file.mimetype` and `originalname` fields (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Secure API file uploads with magic numbers](https://transloadit.com/devtips/secure-api-file-uploads-with-magic-numbers/) · Tim Koschützki, Transloadit, 2 Jun 2025, updated 30 Sep 2026 · Express plus Multer plus `file-type` endpoint that detects the real format from bytes, with 400/413/415 responses, a test plan for spoofed types, and an honest list of what signature checks do not catch · fetched 2026-10-13 (*read*)
 - **Our delta:** the multer page says `file.originalname` is always client-supplied and untrusted, but says nothing similar about `mimetype` (OWASP does: the Content-Type is user-provided and trivial to spoof); the object-store boundary is ours.
 
 ### T03-11 · Reading cookies — Know · ✅ written `docs/expressjs/pages/phase-3-requests/08-cookies-and-helpers.md`
@@ -111,6 +116,7 @@ Docs pages carry no date, so only the fetch date is given. `github.com` and `npm
 ### T04-07 · `res.sendFile` / `res.download` — Know · ✅ written `docs/expressjs/pages/phase-4-responses/08-streaming-and-downloads.md`
 - **Read this:** [Express 5.x API: Response](https://expressjs.com/en/5x/api/response/) · expressjs.com · `sendFile` path must be absolute unless `root` is set; with `root`, Express checks the path resolves inside it; `download` forwards options to `sendFile` (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) · expressjs.com · `hidden`/`from` options gone, `dotfiles` also covers hidden directories in the path (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Prevent Path Traversal in Node.js](https://blog.openreplay.com/prevent-path-traversal-nodejs/) · OpenReplay Team, 29 Apr 2026 · why `path.join` is not a defense and how a resolve-then-prefix check with `path.sep` stops `/uploads-other` passing for `/uploads` (does not cover the `root` option) · fetched 2026-10-13 (*read*)
 
 ### T04-08 · `express.static` — Understand · ✅ written `docs/expressjs/pages/phase-4-responses/05-static-files.md`
 - **Read this:** [Serving static files in Express](https://expressjs.com/en/starter/static-files/) · expressjs.com · mount path as virtual prefix, multiple directories, use an absolute path (*read*) · covers our angle: **partial** — no `fallthrough` or dotfile defaults · fetched 2026-10-12
@@ -146,16 +152,19 @@ Docs pages carry no date, so only the fetch date is given. `github.com` and `npm
 ### T05-02 · Express 5 async errors — Master · ✅ written `docs/expressjs/pages/phase-5-errors/02-async-errors/README.md`
 - **Read this:** [Error Handling in Express](https://expressjs.com/en/guide/error-handling/) · expressjs.com · handlers returning a Promise call `next(value)` on reject; callback APIs still need `next(err)` by hand (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) · expressjs.com · "Rejected promises handled" section (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Express Error Handling Patterns](https://betterstack.com/community/guides/scaling-nodejs/error-handling-express/) · Stanley Ulili, Better Stack, updated 26 Feb 2025 · side-by-side Express 4 try/catch versus Express 5 automatic propagation with an `AppError` hierarchy and central handler (arity is shown but not explained) · fetched 2026-10-13 (*read*)
 - **Our delta:** the shapes that escape: callbacks, events, detached promises.
 
 ### T05-03 · Error response contract — Master · ✅ written `docs/expressjs/pages/phase-5-errors/03-error-contract/README.md`
 - **Read this:** [RFC 9457: Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc9457.html) · IETF, July 2023 · standard error body: members `type`, `status`, `title`, `detail`, `instance`, plus extension members (*headings only*) · covers our angle: **partial** — our `code`/`message`/`details` is a house design · fetched 2026-10-12
 - **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) · OWASP · generic messages, no call stacks to the client (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Send awesome structured error responses with Express](https://dev.to/simonplend/send-awesome-structured-error-responses-with-express-3pg6) · Simon Plenderleith, dev.to, 6 Jan 2021 · explains problem types and `application/problem+json`, then maps `http-errors` classes to problem details in an error middleware (written for the older RFC 7807, targets Node 12/14) · fetched 2026-10-13 (*read*)
 - **Our delta:** Express has no opinion on body shape; say which fields we use and why.
 
 ### T05-04 · Mapping operational failures to HTTP — Understand · ✅ written `docs/expressjs/pages/phase-5-errors/04-mapping-to-http.md`
 - **Read this:** [MDN: HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status) · MDN · reference for 400 to 503 (*read* the 409 entry; *headings only* elsewhere) · covers our angle: **partial** — meanings, not which to pick · fetched 2026-10-12
 - **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) · OWASP · "HTTP Return Code" table of security-relevant codes (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Choosing the Right HTTP Status Codes for Your API](https://www.milanjovanovic.tech/blog/rest-api-http-status-codes) · Milan Jovanović, published 4 Jul 2026, updated 14 Jul 2026 · gives a decision test for 400 versus 422 versus 409 and argues against 200-with-error-body (code samples are ASP.NET Core, the status reasoning is stack-neutral) · fetched 2026-10-13 (*read*)
 
 ### T05-05 · A thin typed error helper — Understand · ✅ written `docs/expressjs/pages/phase-5-errors/04-mapping-to-http.md`
 - **Read this:** [http-errors README (raw)](https://raw.githubusercontent.com/jshttp/http-errors/master/README.md) · github (raw) · `status`/`statusCode` default 500, `expose` defaults to false when status is 500 or above, `createError(...)` forms (*read*) · covers our angle: **partial** — a library, not the "thin helper, no tree" argument · fetched 2026-10-12
@@ -176,6 +185,7 @@ Docs pages carry no date, so only the fetch date is given. `github.com` and `npm
 ### T05-09 · Error logging at the edge — Know · ✅ written `docs/expressjs/pages/phase-5-errors/07-error-logging.md`
 - **Read this:** [Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) · OWASP · which events and attributes to log, and data to exclude or mask: source code, session identifiers, access tokens, sensitive personal data (*read*) · covers our angle: **partial** — not Express specific · fetched 2026-10-12
 - **Also good:** [Error Handling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html) · OWASP · return a generic response, log details server side (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [A Comprehensive Guide to Logging in Express](https://www.dash0.com/guides/expressjs-logging) · Ayooluwa Isaiah, Dash0, updated 7 Jul 2026 · Pino structured error logging in a catch-all handler, `genReqId` reusing `X-Request-ID`, and an allowlist of logged `req` fields via serializers · fetched 2026-10-13 (*read*)
 - **Our delta:** the method/path/status/request-id field set is ours (the syllabus row).
 
 ### T05-10 · Every error that can reach the handler — Master · ✅ written `docs/expressjs/pages/phase-5-errors/08-every-error-that-arrives/README.md`

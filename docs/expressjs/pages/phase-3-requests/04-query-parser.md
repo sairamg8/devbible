@@ -95,6 +95,7 @@ Nested query parsing + object merge bugs → pollution; keep parsers boring.
 - **Read this:** [Express 5.x API: Application](https://expressjs.com/en/5x/api/application/) — expressjs.com: `query parser` default `"simple"` (Node `querystring`); `"extended"` uses `qs`; also `false` or a custom function (*read*)
 - **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: default changed from extended to simple (*read*)
 - **Also good:** [qs README (raw)](https://raw.githubusercontent.com/ljharb/qs/main/README.md)
+- **Beyond the docs:** [Prevent Parameter Pollution in Node.JS](https://dev.to/pshaddel/prevent-parameter-pollution-in-nodejs-1bdi) — Poorshad Shaddel, dev.to, 12 Sep 2023: shows a repeated query key arriving as an array and slipping past a validator that checked only the first value, which the API reference does not demonstrate
 
 {/* LINKMAP:END */}
 

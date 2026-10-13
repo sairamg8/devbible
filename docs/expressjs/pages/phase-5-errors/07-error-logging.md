@@ -190,6 +190,7 @@ Logging them at `error` buries the 500s that need a human.
 
 - **Read this:** [Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) — OWASP: which events and attributes to log, and data to exclude or mask: source code, session identifiers, access tokens, sensitive personal data (*read*)
 - **Also good:** [Error Handling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html) — OWASP: return a generic response, log details server side (*read*)
+- **Beyond the docs:** [A Comprehensive Guide to Logging in Express](https://www.dash0.com/guides/expressjs-logging) — Ayooluwa Isaiah, Dash0, updated 7 Jul 2026: Pino structured error logging in a catch-all handler, `genReqId` reusing `X-Request-ID`, and an allowlist of logged `req` fields via serializers
 
 {/* LINKMAP:END */}
 

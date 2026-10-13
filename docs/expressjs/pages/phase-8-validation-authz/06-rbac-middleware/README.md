@@ -70,6 +70,7 @@ why middleware can never check ownership.
 
 - **Read this:** [Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) — OWASP: least privilege, deny by default, check on every request, prefer attribute or relationship based control over plain RBAC, test authorization (*read* the least-privilege and deny-by-default passages; the rest *headings only*)
 - **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) — OWASP: 401 is missing or bad credentials; 403 is authenticated but lacking permission (*read*)
+- **Beyond the docs:** [How to Implement RBAC in an Express.js Application](https://permit.io/blog/how-to-implement-rbac-in-an-expressjs-application) — Permit.io, Taofiq Aiyelabegan, 2025-02-10: shows a `checkPermission(action)` middleware over a role-to-action map returning 403, plus a tenant check, as a hands-on version of what the cheat sheet says in the abstract (vendor blog; its second half promotes Permit.io)
 
 {/* LINKMAP:END */}
 

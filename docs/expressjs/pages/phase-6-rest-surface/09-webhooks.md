@@ -183,6 +183,7 @@ rather than assuming each event arrives once.
 - **Read this:** [Stripe: Receive events in your webhook endpoint](https://docs.stripe.com/webhooks) — docs.stripe.com: raw body required for signatures; replay protection via a signed timestamp; default tolerance 5 minutes, never 0; track event IDs for duplicates; return 2xx before slow logic (*read*)
 - **Also good:** [Standard Webhooks specification (raw)](https://raw.githubusercontent.com/standard-webhooks/standard-webhooks/main/spec/standard-webhooks.md) — github (raw): HMAC-SHA256 or ed25519, check `webhook-timestamp` tolerance, use `webhook-id` as idempotency key (*read*)
 - **Also good:** [express.json / express.raw options](https://expressjs.com/en/5x/api/express/)
+- **Beyond the docs:** [How to Verify a Webhook Signature](https://blog.openreplay.com/verify-webhook-signature/) — OpenReplay Team, Oct 2, 2026: spells out the `express.raw` before `express.json` order trap and the `timingSafeEqual` length check
 - **Also good:** [Asynchronous Request-Reply pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/asynchronous-request-reply) — learn.microsoft.com: answer 202, hand off to a queue, point at a status endpoint (*read*)
 
 {/* LINKMAP:END */}

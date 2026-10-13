@@ -221,6 +221,7 @@ should be paid for by a real gain.
 - **Read this:** [RFC 7396 JSON Merge Patch](https://www.rfc-editor.org/info/rfc7396/) — rfc-editor.org: Oct 2014
 - **Also good:** [RFC 6902 JSON Patch](https://www.rfc-editor.org/info/rfc6902/) — rfc-editor.org: Apr 2013
 - **Also good:** [Zalando REST guidelines](https://opensource.zalando.com/restful-api-guidelines/)
+- **Beyond the docs:** [JSON Patch and JSON Merge Patch](https://erosb.github.io/post/json-patch-vs-merge-patch/) — erosb (about software), May 14, 2016: compares the two formats side by side and says when each fits, including merge patch's null and array limits
 
 {/* LINKMAP:END */}
 

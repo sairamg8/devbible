@@ -101,7 +101,9 @@ Object storage (S3-compatible), not the API container’s writable layer.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [multer](https://expressjs.com/en/resources/middleware/multer/) — expressjs.com: v2.4.0, built on busboy; no `dest` means memory storage; `limits`, `fileFilter`; "Never add multer as a global middleware" (*read*)
+- **Beyond the docs:** [Handling File Uploads with Multer in Node.js](https://betterstack.com/community/guides/scaling-nodejs/multer-in-nodejs/) — Stanley Ulili, Better Stack, updated 11 Apr 2025: end-to-end disk versus memory storage, `fileFilter`, `limits` and `LIMIT_*` error handling in runnable code (its filter checks the extension only)
 - **Read this:** [File Upload Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html) — OWASP: sections on extension and Content-Type allowlists, file signature (not alone), filename safety, storage location, size limits (*read* those sections)
+- **Beyond the docs:** [Secure API file uploads with magic numbers](https://transloadit.com/devtips/secure-api-file-uploads-with-magic-numbers/) — Tim Koschützki, Transloadit, 2 Jun 2025, updated 30 Sep 2026: Express plus Multer plus `file-type` endpoint that detects the real format from bytes, with 400/413/415 responses, a test plan for spoofed types, and an honest list of what signature checks do not catch
 
 {/* LINKMAP:END */}
 

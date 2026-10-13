@@ -184,6 +184,7 @@ lookup the token was chosen to avoid.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Multi-Tenant Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Multi_Tenant_Security_Cheat_Sheet.html) — OWASP: section 1 says to treat client-supplied tenant ids as selectors only; good example reads the id from verified token claims, bad one from an `X-Tenant-ID` header (*read* section 1)
+- **Beyond the docs:** [How to Build a Multi-Tenant SaaS API with Node.js, RBAC, and Audit Logging](https://www.freecodecamp.org/news/how-to-build-a-multi-tenant-saas-api-with-nodejs-rbac-and-audit-logging) — freeCodeCamp, Zia Ullah, 2026-07-20: Node worked example that states `tenant_id` must always come from the verified JWT, never the body or URL, and sets `req.user.tenantId` from the token in auth middleware (the tenant filter itself sits in the repository layer)
 - **Read this:** [Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) — OWASP: logout must invalidate the session on the server; clearing the cookie alone is not enough; idle and absolute timeouts (*read*)
 - **Also good:** [express-session](https://expressjs.com/en/resources/middleware/session/) — expressjs.com: `req.session.destroy()` ends the session (*read*)
 - **Also good:** [JSON Web Token Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html)

@@ -164,6 +164,7 @@ duplicate module instances, in exchange for nothing the handler reads.
 
 - **Read this:** [MDN: HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status) — MDN: reference for 400 to 503 (*read* the 409 entry; *headings only* elsewhere)
 - **Also good:** [REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) — OWASP: "HTTP Return Code" table of security-relevant codes (*read*)
+- **Beyond the docs:** [Choosing the Right HTTP Status Codes for Your API](https://www.milanjovanovic.tech/blog/rest-api-http-status-codes) — Milan Jovanović, published 4 Jul 2026, updated 14 Jul 2026: gives a decision test for 400 versus 422 versus 409 and argues against 200-with-error-body (code samples are ASP.NET Core, the status reasoning is stack-neutral)
 - **Read this:** [http-errors README (raw)](https://raw.githubusercontent.com/jshttp/http-errors/master/README.md) — github (raw): `status`/`statusCode` default 500, `expose` defaults to false when status is 500 or above, `createError(...)` forms (*read*)
 
 {/* LINKMAP:END */}

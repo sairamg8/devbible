@@ -102,6 +102,7 @@ Only with careful path separation — first consumer wins the stream.
 - **Read this:** [Stripe: Webhooks](https://docs.stripe.com/webhooks) — Stripe docs: "Stripe requires the raw body" and any framework manipulation breaks verification (*read*)
 - **Also good:** [Express 5.x API: express](https://expressjs.com/en/5x/api/express/) — expressjs.com: `express.raw()` yields a `Buffer` for matching Content-Type (*read*)
 - **Also good:** [body-parser](https://expressjs.com/en/resources/middleware/body-parser/)
+- **Beyond the docs:** [Verify Webhook Signatures](https://blog.openreplay.com/verify-webhook-signature/) — OpenReplay Team, 2 Oct 2026: worked broken-versus-fixed middleware ordering showing a route-level raw parser cannot recover a body a global JSON parser already consumed, plus the `verify` alternative
 
 {/* LINKMAP:END */}
 

@@ -187,6 +187,7 @@ the write itself, with zero rows affected treated as a 412.
 - **Read this:** [HTTP conditional requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Conditional_requests) — MDN: `If-None-Match` (weak) and `If-Match` (strong) validators, cache revalidation with 304, and optimistic locking against lost updates (*read*)
 - **Also good:** [ETag header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag) — MDN: page modified 2025-07-28
 - **Also good:** [Application settings: etag](https://expressjs.com/en/5x/api/application/)
+- **Beyond the docs:** [Optimistic Locking in a REST API](https://sookocheff.com/post/api/optimistic-locking-in-a-rest-api/) — Kevin Sookocheff, Dec 21, 2016: walks the ETag, `If-Match`, 412, re-fetch and retry loop as a lost-update fix
 - **Read this:** [HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) — MDN: private versus shared caches; personalised content in a shared cache can leak to other users (*read*)
 - **Also good:** [Cache-Control header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) — MDN: directive table including `private`, `no-store`, `no-cache`, `s-maxage` (*read*)
 - **Also good:** [RFC 9111 HTTP Caching](https://www.rfc-editor.org/info/rfc9111/)

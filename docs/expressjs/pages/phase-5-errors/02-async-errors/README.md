@@ -62,6 +62,7 @@ and explain why a floating promise is more dangerous than a thrown one.
 
 - **Read this:** [Error Handling in Express](https://expressjs.com/en/guide/error-handling/) — expressjs.com: handlers returning a Promise call `next(value)` on reject; callback APIs still need `next(err)` by hand (*read*)
 - **Also good:** [Moving to Express 5](https://expressjs.com/en/guide/migrating-5/) — expressjs.com: "Rejected promises handled" section (*read*)
+- **Beyond the docs:** [Express Error Handling Patterns](https://betterstack.com/community/guides/scaling-nodejs/error-handling-express/) — Stanley Ulili, Better Stack, updated 26 Feb 2025: side-by-side Express 4 try/catch versus Express 5 automatic propagation with an `AppError` hierarchy and central handler (arity is shown but not explained)
 
 {/* LINKMAP:END */}
 
