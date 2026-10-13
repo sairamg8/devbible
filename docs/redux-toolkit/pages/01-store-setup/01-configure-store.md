@@ -272,6 +272,7 @@ everything that makes RTK Query worth using silently does nothing.
 - **Read this:** [configureStore](https://redux.js.org/toolkit/api/configureStore) — redux.js.org: the whole RTK 2 call: `reducer`, the `middleware` callback and `Tuple`, `devTools`, `preloadedState`, `enhancers`, with a basic and a full example
 - **Also good:** [getDefaultMiddleware → included default middleware](https://redux.js.org/toolkit/api/getDefaultMiddleware#included-default-middleware) — redux.js.org: what the default stack holds in development vs production, and the array it returns
 - **Also good:** [Redux Toolkit setup with Next.js](https://redux.js.org/usage/nextjs) — redux.js.org: the per-request store factory (`makeStore`), providing it, loading initial data — the only official page on the SSR store factory I found
+- **Beyond the docs:** [Exploring Redux Toolkit 2.0 and the Redux second generation](https://blog.logrocket.com/exploring-redux-second-generation) — LogRocket, Stephan Miller: RTK 2.0 overview that states the callback-only `middleware`/`enhancers` rule and the `Tuple` wrapper for custom arrays, with correct and incorrect `configureStore` examples side by side
 
 {/* LINKMAP:END */}
 
