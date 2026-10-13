@@ -206,6 +206,18 @@ walking, avoids clashing with unrelated handlers, and is removed with the compon
 Because there was never a listener on the row. The single listener lives on an ancestor that
 outlives them, which is also why no re-attachment step is needed after a re-render.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Event delegation](https://javascript.info/event-delegation) — javascript.info: one handler on a table with `event.target.closest('td')`; limits: the event must bubble, low-level handlers must not call `stopPropagation()` (*read*)
+- **Also good:** [Event bubbling](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) — MDN: has an "Event delegation" section (*headings only*)
+- **Beyond the docs:** [Why event delegation is a better way to listen for events in vanilla JS](https://gomakethings.com/articles/why-event-delegation-is-a-better-way-to-listen-for-events-in-vanilla-js/) — Go Make Things (Chris Ferdinandi), 2018-02-14: one parent listener checks selectors at click time, so elements added later are covered; says nothing on non-bubbling events
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

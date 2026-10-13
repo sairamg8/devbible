@@ -262,6 +262,19 @@ Because it is specified that way — MDN: *"executed in strict mode even without
 globals, makes unbound `this` `undefined`, and turns several silent failures into
 errors inside every class you write.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) — MDN: constructors, public and private fields, static members, static initialization blocks, hoisting and the TDZ (*read*)
+- **Also good:** [Static initialization blocks](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) — MDN: blocks for statements run during class initialization, more flexible than static properties, with access to private static fields (*read*)
+- **Also good:** [Class basic syntax](https://javascript.info/class)
+- **Beyond the docs:** [The Complete Guide to JavaScript Classes](https://dmitripavlutin.com/javascript-classes-complete-guide/) — Dmitri Pavlutin, 2019-12-11: nine sections from fields and methods through inheritance, `instanceof` and a section on classes and prototypes; dated 2019, when private methods and static fields were still proposals, so read it for the model, not the feature li
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Static members and accessors](./02-static-and-accessors.md)

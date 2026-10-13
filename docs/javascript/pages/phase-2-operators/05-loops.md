@@ -222,6 +222,21 @@ When the body must run at least once before the condition can be evaluated —
 cursor-based pagination is the canonical case: you have to fetch a page before
 you know whether a next cursor exists.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration) — MDN: guide chapter covering the loop statements *(MDN: 200, title and lead passage read)*
+- **Read this:** [for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- **Read this:** [for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+- **Read this:** [for await...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of)
+- **Also good:** [Loops: while and for](https://javascript.info/while-for) — javascript.info, page dated June 19, 2022: `break`, `continue` and labels; `break` and `continue` cannot sit on the right of `?`
+- **Beyond the docs:** [Javascript loops: for vs forEach vs for.. in vs for.. of](https://dev.to/smpnjn/javascript-loops-for-vs-foreach-vs-for-in-vs-for-of-1mbo) — Johnny Simpson, DEV Community, posted Nov 6, 2022: side-by-side of the four loop forms and when each fits; it does not cover `for await...of`, and its claim that `forEach` is much slower is not verified here
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · Optional chaining](./04-optional-chaining.md) · [Phase index](./) · Next: [06 · Spread and rest](./06-spread-and-rest.md) →

@@ -210,6 +210,18 @@ opposite branch, and a fulfilled task may legitimately produce `undefined`.
 Fulfils **synchronously** with `[]`. `allSettled([])` likewise — though MDN notes a non-empty
 iterable of already-settled promises still fulfils *asynchronously*.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Promise.allSettled()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled) — MDN: `allSettled` for independent tasks, `all` when one failure should reject at once (*read*)
+- **Also good:** [Promise.any()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any) — MDN: unlike `race`, ignores rejections; rejects with `AggregateError` only if all reject or the input is empty (*read*)
+- **Beyond the docs:** [Promise.all vs allSettled vs race vs any](https://flaviocopes.com/promise-all-allsettled-race-any/) — Flavio Copes, last updated Jul 29, 2026: one rule of thumb: `all` when failure should abort, `allSettled` for partial success, `race` for timeouts, `any` for mirrors and fallbacks
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · `race` and `any`](./02-race-and-any.md)

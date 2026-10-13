@@ -201,6 +201,18 @@ is ignored rather than thrown, so a silent no-op is the failure mode to guard ag
 The entries queued but not yet delivered, synchronously, clearing the queue. It is how you
 flush metrics when the page is being hidden.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Web Vitals](https://web.dev/articles/vitals) — web.dev (Google): LCP, INP and CLS with thresholds
+- **Also good:** [PerformanceObserver](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver) — MDN
+- **Beyond the docs:** [Custom metrics](https://web.dev/articles/custom-metrics) — web.dev (Google), last updated 2024-08-02: User Timing marks and measures read back through a `PerformanceObserver`, and a `longtask` observer, which is the hands-on half of our row
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Marks and measures](./02-marks-and-measures.md) →

@@ -194,6 +194,16 @@ it.
 **Why validate config at start-up?**
 So a missing value fails the deploy instead of failing a request in the middle of the night.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [no-empty](https://eslint.org/docs/latest/rules/no-empty) — ESLint: flags empty block statements including empty `catch` unless it holds a comment; `allowEmptyCatch` opts out (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Results versus exceptions](./02-results-versus-exceptions.md) →

@@ -208,6 +208,17 @@ purpose. `String(sym)` and `sym.toString()` work explicitly.
 and array destructuring. Others worth knowing are `Symbol.asyncIterator`,
 `Symbol.toPrimitive` for coercion, and `Symbol.toStringTag`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) — MDN: every `Symbol()` is unique, `Symbol.for` uses a registry, and the well-known symbols are listed one line each (*read*)
+- **Beyond the docs:** [A Detailed Overview of Well-Known Symbols](https://dmitripavlutin.com/detailed-overview-of-well-known-symbols/) — Dmitri Pavlutin, updated 2019-07-05: one section per well-known symbol with examples, including `iterator`, `hasInstance` and `toPrimitive`; no `dispose` symbols, which are newer (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [11 · NaN](./11-nan.md) · [Phase index](./) · Next: [13 · `BigInt`](./13-bigint.md) →

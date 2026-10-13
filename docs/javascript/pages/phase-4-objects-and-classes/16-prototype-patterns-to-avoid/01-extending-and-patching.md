@@ -212,6 +212,17 @@ for itself. `Error` is the case where subclassing genuinely is right.
 MDN documents it as very slow in every engine — changing an object's prototype invalidates the shape
 optimisations that make property access fast. Create the object with the prototype it should have.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Prototype Pollution Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html) — OWASP: mitigations: `Object.create(null)`, freezing built-in prototypes (shallow, may break libraries), `Map` or `Set` over object literals, and the Node flag `--disable-proto=delete` (*read*)
+- **Beyond the docs:** [Prototype pollution](https://portswigger.net/web-security/prototype-pollution) — PortSwigger Web Security Academy: shows how an unsanitized recursive merge reaches `Object.prototype`, and that `JSON.parse` makes `__proto__` an own property where a literal would set the prototype
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · Prototype pollution](./02-prototype-pollution.md) →

@@ -264,6 +264,17 @@ renames the function to `"bound whoAmI"`.
 `a.b.c` — only the last dot before the call matters. The rest of the chain is
 just how you reached the function.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) — MDN: reference for `this` *(MDN: 200, title and lead passage read)*
+- **Beyond the docs:** [this and Object Prototypes, ch. 2: this All Makes Sense Now](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch2.md) — Kyle Simpson, You Don't Know JS (1st ed.): find the call-site, then apply new binding, explicit binding, implicit binding, default binding in that order; arrows ignore all four. First edition, so older than the syllabus; fetched as the raw file from the same repo path
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · Next → [Losing `this`, and getting it back](./02-losing-and-fixing-this.md)

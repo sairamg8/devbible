@@ -176,6 +176,17 @@ paths. Freeze constants and configuration. For state, rely on convention,
 review, or TypeScript's `readonly` — which is compile-time only and therefore
 free at runtime, but also does nothing to data arriving from an API.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) — MDN: an immutable binding, not an immutable value; `push` on a `const` array works; freeze for immutability (*read*)
+- **Beyond the docs:** [ES2015 const is not about immutability](https://mathiasbynens.be/notes/es6-const) — Mathias Bynens, 2016-02-04: "The only thing that's immutable here is the binding", and that `Object.freeze()` is shallow (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [06 · Numbers are doubles](./06-numbers-are-doubles.md) · [Phase index](./) · Next: [08 · Type coercion](./08-type-coercion.md) →

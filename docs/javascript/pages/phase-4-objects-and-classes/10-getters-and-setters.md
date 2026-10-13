@@ -279,6 +279,18 @@ Values that cannot go stale because they are derived rather than stored, a singl
 on write, and the freedom to turn a field into computed behaviour later without changing a single
 call site.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) — MDN: object and class getters, computed names, `defineProperty` form, memoized (self-overwriting) getters; no mention of the infinite-recursion trap, which the page's `#msg` example avoids (*read*)
+- **Also good:** [setter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) — MDN: setter syntax in object initializers and classes; the property is an own, configurable property of the created object (*read*)
+- **Beyond the docs:** [Property getters and setters](https://javascript.info/property-accessors) — javascript.info, 2022-04-13: accessors look like plain properties to callers, so a stored `age` can later become a computed getter without breaking old code; also does not mention recursion (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [09 · `extends` and `super`](./09-extends-and-super/README.md) · [Phase index](./README.md) · Next: **11 · Property descriptors** *(not written yet)* →

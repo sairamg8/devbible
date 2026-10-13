@@ -271,6 +271,17 @@ Defining a function without naming its argument — `pipe(trim, replaceSpaces, t
 than `(title) => toLowerCase(replaceSpaces(trim(title)))`. Good for a straight chain of unary
 transforms, bad the moment you need a conditional or a second use of a value.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Composing Functions](https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch4.md) — Kyle Simpson, Functional-Light JavaScript, ch. 4: `compose` runs right to left and `pipe` left to right, a point-free refactor that ends in `getLastOrder( lookupPerson );`, and a warning that fully inlined point-free is less readable; fetched as the raw file from the same repo pa
+- **Also good:** [Chapter 05: Coding by Composing](https://mostly-adequate.gitbook.io/mostly-adequate-guide/ch05) — Mostly Adequate Guide to Functional Programming: `compose` runs right to left, point-free style can obscure intent, and a `trace` helper logs the value between steps of a composition; no date or author shown (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [11 · Currying and partial application](./11-currying-and-partial-application.md) · [Phase index](./README.md) · **13 · Memoization** *(not written yet)* →

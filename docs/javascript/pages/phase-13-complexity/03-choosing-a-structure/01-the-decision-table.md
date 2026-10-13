@@ -193,6 +193,18 @@ profiler reports. The cost is that a `WeakMap` is not iterable and has no `size`
 Enumeration would make garbage-collection timing observable. That is a deliberate design
 constraint, not an omission.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Keyed collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections) — MDN: "use maps over objects when keys are unknown until run time" and objects when the shape is known; `Set` removes by value and tracks uniqueness; deleting array elements by value with `splice(indexOf)` is "very slow" (*read*)
+- **Also good:** [Know Thy Complexities!](https://www.bigocheatsheet.com/) — Eric Rowell: "Common Data Structure Operations" table: access, search, insertion, deletion, average and worst, for arrays, stacks, queues, linked lists, hash tables and trees (*read*)
+- **Beyond the docs:** [Should you use JavaScript Maps and Sets?](https://dev.to/mostlyfocusedmike/should-you-use-javascript-maps-and-sets-6o7) — Mike Cronin, 2021-07-19: times Map and Set against object and array: `set.has` is O(1) against O(N) for `includes`, but `set.add` is slower than `push`; his advice is to benchmark your own app; limited tests, not a spec (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · When the array is right](./02-when-the-array-is-right.md)

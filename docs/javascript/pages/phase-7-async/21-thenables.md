@@ -208,6 +208,18 @@ ignored.
 **What happens if `then` exists but is a string?**
 Nothing special: `then` must be *callable*, so the value fulfils as an ordinary object.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await) — MDN: the "Thenable objects" example: native promises used directly, other thenables get their `then()` called (*read*)
+- **Also good:** [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) — MDN: the Thenables subsection (*read*)
+- **Beyond the docs:** [JavaScript Thenables and Creating Your Own Promises](https://futurestud.io/tutorials/javascript-thenables-and-creating-your-own-promises) — Marcus Pöhls, Future Studio, 2023-11-02: a class with a `then()` method works with `await`, nested thenables are unwrapped, and `Promise.resolve()` returns a real `Promise`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [20 · `Promise.withResolvers`](./20-promise-withresolvers.md) · [Phase index](./README.md)

@@ -225,6 +225,18 @@ Migration only. MDN recommends it *"only while you are transitioning"* — it si
 every string through one function, which is useful for finding call sites and harmful if left
 permanently, since it restores the original problem.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types) — web.dev, last updated 2020-03-25: lists the sinks (`innerHTML`, `outerHTML`, `insertAdjacentHTML`, `document.write`, `eval`) and the policy model; DOMPurify appears only in a "use a library" section and a default-policy example (*read*)
+- **Also good:** [Trusted Types API](https://developer.mozilla.org/en-US/docs/Web/API/Trusted_Types_API) — MDN: current support and the API shape (*headings only*)
+- **Also good:** [Element.setHTMLUnsafe()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setHTMLUnsafe)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

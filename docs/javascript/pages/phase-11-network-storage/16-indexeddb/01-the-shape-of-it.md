@@ -227,6 +227,17 @@ arrays of those. Values: anything structured-cloneable — a much wider set, inc
 pressure; `navigator.storage.persist()` only requests better treatment. Treat it as a cache
 whose source of truth is the server.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) — MDN: stores, transactions, `onupgradeneeded`
+- **Beyond the docs:** [IndexedDB](https://javascript.info/indexeddb) — javascript.info: the upgrade-by-`oldVersion` pattern for schema changes, in plain callbacks
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Overview](./README.md) · [Phase 11](../README.md)

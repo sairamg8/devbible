@@ -188,6 +188,18 @@ No. `Proxy`, `WeakRef`, `BigInt` and real private fields need engine support tha
 cannot be reconstructed in JavaScript. For those the only options are raising the
 runtime floor or designing around them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@babel/preset-env](https://babeljs.io/docs/babel-preset-env) — Babel: `targets`, reading Browserslist config, `useBuiltIns` with `entry` and `usage` (removed in Babel 8), and the `corejs` option (*read*)
+- **Also good:** [Browserslist](https://github.com/browserslist/browserslist) — the shared query list: `defaults`, `last 2 versions`, `&gt; 0.5%`, `not dead`, `baseline widely available` (*read*)
+- **Beyond the docs:** [Compiling vs Polyfills with Babel](https://dev.to/tylermcginnis/compiling-vs-polyfills-with-babel-javascript-bho) — Tyler McGinnis, DEV Community, 2017-10-05: transforming syntax versus adding missing built-ins, with Promise, `fetch` and `includes` as the polyfill cases; 2017, so the Babel setup it shows is old (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [08 · Running and inspecting](./08-running-and-inspecting.md) · [Phase index](./) · Next: [10 · Feature detection](./10-feature-detection.md) →

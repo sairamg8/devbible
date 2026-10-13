@@ -201,6 +201,17 @@ is also why it survives review and local testing, and only shows up in productio
 Extracting a helper that `await`s internally makes calls to that helper serialise. A helper
 that returns a promise instead lets the caller start it early.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) — MDN: "await and concurrency": awaiting in turn is sequential, starting both before awaiting (or `Promise.all`) overlaps them (*read*)
+- **Beyond the docs:** [Sequential vs Parallel JavaScript](https://savvy.co.il/en/blog/complete-javascript-guide/sequential-vs-parallel-javascript/) — Roee Yossef, page shows "Updated on Jun 21, 2026": asks whether each line needs the previous result before choosing; a roughly 3 s waterfall versus roughly 1 s parallel demo; notes parallel awaiting overlaps waiting, not JavaScript execution
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Starting work before awaiting it](./02-starting-before-awaiting.md)

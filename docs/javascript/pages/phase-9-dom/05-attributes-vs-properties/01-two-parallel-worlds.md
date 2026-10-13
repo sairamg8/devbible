@@ -228,6 +228,18 @@ a `WeakMap` keyed by the element.
 When you want exactly what the markup says — the original `href` rather than the resolved
 absolute URL, a `data-*` value, or an ARIA attribute with no property counterpart.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HTML attributes vs DOM properties](https://jakearchibald.com/2024/attributes-vs-properties/) — Jake Archibald, 2024-04-24: covers `&lt;details open&gt;` as a boolean attribute and `value` versus `defaultValue` (*read*)
+- **Also good:** [HTMLElement.dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) — MDN: `data-*` to camelCase mapping (*headings only*)
+- **Beyond the docs:** [The Difference Between HTML Attributes and Properties](https://cloudfour.com/thinks/the-difference-between-html-attributes-and-properties/) — Paul Hebert, Cloud Four, 2025-01-06: an `&lt;input&gt;` value property drifting from its attribute, in a shorter telling than Archibald
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

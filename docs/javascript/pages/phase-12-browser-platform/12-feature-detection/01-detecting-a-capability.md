@@ -165,6 +165,18 @@ so they are watched with listeners rather than sampled once and cached.
 One module exporting a frozen capability object, computed once at load and imported everywhere —
 so the fallback branch can be stubbed and tested rather than discovered in production.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Implementing feature detection](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) — MDN
+- **Also good:** [Browser detection using the user agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) — MDN: why UA sniffing is a last resort
+- **Beyond the docs:** [Not Everything Can Be Feature Detected](https://www.abeautifulsite.net/posts/not-everything-can-be-feature-detected/) — A Beautiful Site (Cory LaViska), 2022-08-15: the cases where detection cannot answer the question
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Progressive enhancement](./02-progressive-enhancement.md) →

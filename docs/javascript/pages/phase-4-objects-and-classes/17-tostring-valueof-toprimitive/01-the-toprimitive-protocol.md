@@ -208,6 +208,17 @@ primitive, that value is what gets concatenated. Use `String(obj)` to force the 
 `"[object Object]"` in expression position. At the start of a statement it is `0`, because `{}` parses
 as an empty block and the rest is unary `+[]`. The answer is about parsing, not coercion.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Symbol.toPrimitive](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) — MDN: hints `number`, `string`, `default`; the hint is a weak signal; the method must return a primitive; `Date` treats `default` as `string` (*read*)
+- **Beyond the docs:** [Object to primitive conversion](https://javascript.info/object-toprimitive) — javascript.info, 2024-03-31: the three hints with which operations use each, and the fallback order: `toString` first for the `string` hint, `valueOf` first otherwise; a method that returns an object instead of a primitive is passed over for the other one
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · Implementing it, and the protocols it is not](./02-implementing-and-the-neighbours.md) →

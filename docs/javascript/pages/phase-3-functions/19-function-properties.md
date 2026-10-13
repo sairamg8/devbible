@@ -231,6 +231,19 @@ Because `caller` and `arguments` are restricted properties on strict-mode functi
 methods and bound functions — and modules are always strict, so effectively everything you write
 today throws on access.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Function: length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) — MDN: reference for `length` *(MDN: 200, title and lead passage read)*
+- **Read this:** [name](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
+- **Read this:** [toString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)
+- **Beyond the docs:** [Function object, NFE](https://javascript.info/function-object) — javascript.info, page dated April 6, 2025: `name` is inferred from context, `length` skips rest parameters and is used for introspection by checking `handler.length`, and a named function expression can call itself reliably
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [18 · IIFE and the module pattern](./18-iife-and-the-module-pattern.md) · [Phase index](./README.md) · Next: **20 · `new.target` and constructor guards** *(not written yet)* →

@@ -222,6 +222,17 @@ considered — that is what the version-2 `trackVisibility`/`isVisible` pair is 
 Returns the entries queued but not yet delivered and empties the queue. It is mainly useful in
 teardown, so a pending callback does not run against something you have already removed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) — MDN: thresholds and root margin
+- **Beyond the docs:** [How to Implement Infinite Scroll in Vanilla JavaScript](https://blog.openreplay.com/implement-infinite-scroll-vanilla-javascript/) — OpenReplay blog: a sentinel element, a fetch guard against overlap, and `disconnect()` at the end
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · The patterns](./02-the-patterns.md) →

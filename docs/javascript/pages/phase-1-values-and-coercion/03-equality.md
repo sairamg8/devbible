@@ -217,6 +217,17 @@ Four. Loose (`==`) and strict (`===`) both treat `NaN` as unequal to itself and
 `0` as equal to `-0`. SameValueZero (`includes`, `Map`/`Set` keys) treats `NaN`
 as equal to itself. SameValue (`Object.is`) also distinguishes `0` from `-0`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) — MDN: the loose-equality steps (same type, null and undefined, object to primitive, then case by case) and a four-way table (*read*)
+- **Beyond the docs:** [JavaScript Equality Table](https://dorey.github.io/JavaScript-Equality-Table/) — no author or date shown: a grid of `==`, `===` and `if` results, ending with "Always use 3 equals unless you have a good reason to use 2" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · References vs values](./02-references-vs-values.md) · [Phase index](./) · Next: [04 · Truthiness](./04-truthiness.md) →

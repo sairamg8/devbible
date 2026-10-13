@@ -214,6 +214,17 @@ are engine-specific, so a V8-tuned micro-benchmark says nothing about Safari)
 and for **feature timing** (engines ship proposals at different rates, which is
 where most "Safari is broken" reports come from).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What's the difference between JavaScript engines and JavaScript runtimes?](https://humanwhocodes.com/blog/2024/03/javascript-engines-runtimes/) — Nicholas C. Zakas, 2024-03-26: defines engine (implements ECMA-262), host and runtime (host plus I/O), and says the event loop is not in the spec, so each runtime brings its own (*read*)
+- **Also good:** [JavaScript Guide: Introduction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction) — MDN: states that ECMAScript does not describe the DOM, and splits client-side from server-side JavaScript (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Phase index](./) · Next: [02 · Parse, compile, execute](./02-parse-compile-execute.md) →

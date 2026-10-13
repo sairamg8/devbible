@@ -165,6 +165,18 @@ A sentinel that lets you skip an argument and fill it later. It roughly doubles 
 and a small named wrapper is usually the better answer — worth knowing they exist, rarely worth
 writing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Currying](https://javascript.info/currying-partials) — javascript.info, page dated Jan 10, 2021: currying turns `f(a, b, c)` into `f(a)(b)(c)`; a partial is the result of presetting arguments; `curry` built on `func.length` and fails for rest-parameter functions
+- **Also good:** [Partial Application and Currying](https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch3.md) — Kyle Simpson, Functional-Light JavaScript, ch. 3: partial application reduces arity, currying fixes it at 1, both rely on closures; fetched as the raw file from the same repo path (*read*)
+- **Beyond the docs:** [Chapter 04: Currying](https://mostly-adequate.gitbook.io/mostly-adequate-guide/ch04) — Mostly Adequate Guide to Functional Programming (free online book): currying as calling a function with fewer arguments than it expects and getting back a function that takes the rest, with the page calling the fewer-arguments call partial application; the page shows no author or date
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [10 · Debounce and throttle](./10-debounce-and-throttle.md) · [Phase index](./README.md) · [12 · Composition](./12-composition.md) →

@@ -230,6 +230,18 @@ not create with `e instanceof Error ? e : new Error(String(e))`.
 `AggregateError`, via its `errors` array — MDN describes it as *"several errors wrapped in a
 single error… for example by `Promise.any()`."*
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) — MDN: `message`, `name`, non-standard `stack`, `cause` set from the constructor options, subclasses, and checking with `instanceof` (*read*)
+- **Also good:** [Error: cause](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause) — MDN: holds the original error passed as `options.cause`, can be any type, writable but not enumerable; Baseline widely available since September 2021 (*read*)
+- **Beyond the docs:** [From instanceof to Error.isError](https://allthingssmitty.com/2026/02/23/from-instanceof-to-error-iserror-safer-error-checking-in-javascript/) — Matt Smith, no date shown (sits between posts of 2026-02-02 and 2026-03-16): `instanceof` fails across realms (iframe, `vm`); `Error.isError()` is realm-safe and also true for `DOMException` in browsers; check support before relying on it (the post lists Chrome 134+, Firefox 138+, Edge 134+, Node 24.3+, Sa
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Custom error classes](./02-custom-errors.md)

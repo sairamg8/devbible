@@ -159,6 +159,18 @@ the IANA zone. Language and time zone are independent, and dates depend on the l
 No. The locale governs formatting; the currency is part of the transaction data. Passing a
 locale-derived currency to a formatter is how a price silently changes meaning.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Navigator: language](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) — MDN: [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- **Read this:** [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- **Beyond the docs:** [@fluent/langneg](https://projectfluent.org/fluent.js/modules/_fluent_langneg.html) — Project Fluent (Mozilla): API docs for matching requested locales, such as `navigator.languages`, against the ones you ship; a library reference, not a tutorial
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Applying it in the DOM](./02-applying-it-in-the-dom.md) →

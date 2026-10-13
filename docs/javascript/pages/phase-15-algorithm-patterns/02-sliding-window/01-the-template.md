@@ -219,6 +219,18 @@ adding an element can decrease the sum — use prefix sums with a hash map there
 "Contiguous subarray/substring" plus a property that changes predictably as one element enters and
 one leaves. Both halves are required.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Sliding Window](https://usaco.guide/gold/sliding-window) — USACO Guide: the sliding window as a two-pointer variant, then the O(N) window maximum with a monotonic deque (*read*)
+- **Also good:** [Two Pointers](https://usaco.guide/silver/two-pointers) — USACO Guide: the sliding-window method for contiguous subarrays (*read*)
+- **Beyond the docs:** [Longest Substring Without Repeating Characters](https://www.hellointerview.com/learn/code/sliding-window/longest-substring-without-repeating-characters) — Hello Interview: a variable-length window with a per-character count dictionary that shrinks from the left on a duplicate, animated step by step; fills the character-count gap the USACO page leaves (Python code)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Variants and traps](./02-variants-and-traps.md)

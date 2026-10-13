@@ -214,6 +214,17 @@ Whenever a cheaper signal exists — an `ETag`, a version number, an `updatedAt`
 timestamp. Deep-comparing two API responses to detect change is O(n) work to
 answer a question the server could have answered in a header.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to Compare Objects in JavaScript](https://masteringjs.io/tutorials/fundamentals/compare-objects) — Mastering JS, 2021-03-23: the `JSON.stringify` shortcut and its limits: key order, Dates turned into strings, and dropped `undefined` values (*read*)
+- **Also good:** [util.isDeepStrictEqual](https://nodejs.org/api/util.html) — Node.js: the built-in deep strict equality; it compares prototypes and constructors by default (*read* that entry)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [13 · BigInt](./13-bigint.md) · [Phase index](./) · Next: [15 · Object wrappers and autoboxing](./15-object-wrappers.md) →

@@ -214,6 +214,17 @@ doing it twice is the same as doing it once, which is why it applies to impure o
 Inject what it reads. Take `now`, the random source, or the id generator as parameters with
 sensible defaults — the call sites stay unchanged and the tests become deterministic.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reducing Side Effects](https://github.com/getify/Functional-Light-JS/blob/master/manuscript/ch5.md) — Kyle Simpson, Functional-Light JavaScript, ch. 5: side effects and side causes, purity judged from the outside, and where impurity belongs: move effects to the call site, encapsulate, or wrap in a pure interface; fetched as the raw file from the same repo path (*read*)
+- **Also good:** [Chapter 03: Pure Happiness with Pure Functions](https://mostly-adequate.gitbook.io/mostly-adequate-guide/ch03) — Mostly Adequate Guide to Functional Programming: a pure function gives the same output for the same input with no observable side effects, and the chapter lists portable, memoizable and testable (no mocks, no world state) as the payoffs; no date or author shown (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [14 · Recursion](./14-recursion.md) · [Phase index](./README.md) · **16 · There is no function overloading** *(not written yet)* →

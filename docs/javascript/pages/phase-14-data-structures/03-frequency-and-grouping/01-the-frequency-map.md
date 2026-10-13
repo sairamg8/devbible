@@ -203,6 +203,17 @@ character".
 Because it re-walks the original input (or a `Map`, whose iteration is insertion-ordered) after
 counting. A plain object's key order is not something to rely on for this.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object.groupBy()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy) — MDN: returns a null-prototype object of arrays, one per string key; use `Map.groupBy()` when keys are arbitrary values (*read*)
+- **Beyond the docs:** [Array Grouping in JavaScript: Object.groupBy()](https://dmitripavlutin.com/javascript-array-group/) — Dmitri Pavlutin, updated 2023-01-28: `reduce` grouping against `Object.groupBy` and `Map.groupBy`, written while the proposal was at stage 3 (so the support notes are dated); never counts items (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Grouping, and the built-ins](./02-grouping-built-ins.md)

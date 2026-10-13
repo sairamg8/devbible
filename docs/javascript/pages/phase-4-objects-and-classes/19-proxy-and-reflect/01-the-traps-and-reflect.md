@@ -218,6 +218,18 @@ useful for capability-style access and for tearing down a sandbox.
 `Reflect.apply` in place of the `Function.prototype.apply.call` idiom, and `Reflect.construct` when
 you need to control `new.target`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) — MDN: the handler traps, `Reflect` for default behaviour, invariants, and uses for defaults, validation and logging; a proxy cannot reach a target's private elements, so `new Proxy(new Map(), &#123;&#125;).size` throws (*read*)
+- **Also good:** [Reflect](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect) — MDN: all-static namespace object; its job is default forwarding behaviour inside `Proxy` traps (*read*)
+- **Beyond the docs:** [Proxy and Reflect](https://javascript.info/proxy) — javascript.info, 2022-06-26: a trap-to-operation table, default-value and validation examples, and why `Reflect.get` needs `receiver` when getters are involved; also lists limits such as `Map` internal slots and private fields
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · What they are actually for](./02-what-they-are-for.md) →

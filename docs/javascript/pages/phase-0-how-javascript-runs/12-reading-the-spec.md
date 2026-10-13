@@ -156,6 +156,18 @@ An internal, non-callable algorithm the spec defines and reuses — `ToPrimitive
 `ToNumber`, `Get`. They are how the spec stays consistent: every operator that
 coerces refers to the same operation rather than restating the rules.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ECMAScript Language Specification](https://tc39.es/ecma262/) — TC39: the Algorithm Conventions section and the Overview section exist and are where reading starts (*headings only*)
+- **Beyond the docs:** [Understanding the ECMAScript spec, part 1](https://v8.dev/blog/understanding-ecmascript-part-1) — Marja Hölttä, V8 blog, 2020-02-03: reads `Object.prototype.hasOwnProperty` step by step: abstract operations, internal slots, Completion Records and the `?` and `!` shorthands (*read*)
+- **Beyond the docs:** [How to Read the ECMAScript Specification](https://timothygu.me/es-howto/) — Timothy Gu, living document dated 2020-03-28: how the spec is organised and worked examples such as `String.prototype.substring()` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [11 · The JIT](./11-the-jit.md) · [Phase index](./) · **Phase 0 complete** → [Phase 1 — Values, types and coercion](../../syllabus/01-language-core.md)

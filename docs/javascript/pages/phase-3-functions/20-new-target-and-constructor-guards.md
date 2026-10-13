@@ -239,6 +239,18 @@ Throw, in almost all cases — it matches class semantics and keeps one contract
 the function two permanent call signatures, and once both appear in a codebase you can never
 remove either.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [new.target](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new.target) — MDN: reference for `new.target` *(MDN: 200, title and lead passage read)*
+- **Read this:** [TypeError: class constructors must be invoked with new](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Class_ctor_no_new)
+- **Beyond the docs:** [Constructor, operator new](https://javascript.info/constructor-new) — javascript.info, page dated Oct 1, 2022: `new.target` is undefined for regular calls; a constructor can return `new User(name)` itself when missing, though the page calls this unwise to use everywhere
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [19 · Function properties](./19-function-properties.md) · [Phase index](./README.md) · **Phase 3 complete** ✅

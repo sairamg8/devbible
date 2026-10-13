@@ -174,6 +174,18 @@ the source, applying each callback to that value only. Nothing is buffered.
 `take`, `drop`, `chunks`, `windows` and `toArray` — `chunks` and `windows` in particular are
 the batching and sliding-window operations people usually hand-write.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) — MDN: `drop`, `filter`, `flatMap`, `map`, `take`, `reduce`, `toArray` and `Iterator.from`; the page never uses the word "lazy" (*read*)
+- **Also good:** [Iterator helpers](https://v8.dev/features/iterator-helpers) — Rezvan Mahdavi Hezaveh, V8 blog, 2024-03-27: `map`, `filter`, `take`, `drop`, `toArray` and `Iterator.from`; shipped in V8 12.2 (Chrome 122); the page does not use the word "lazy" (*read*)
+- **Beyond the docs:** [Iterator helpers in ES2025](https://blog.logrocket.com/iterator-helpers-es2025) — Elijah Asaolu, LogRocket, 2025-07-21: helpers run lazily, "they don't do anything until you actually start consuming the values", suited to large or infinite data
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Using them well](./02-using-them-well.md)

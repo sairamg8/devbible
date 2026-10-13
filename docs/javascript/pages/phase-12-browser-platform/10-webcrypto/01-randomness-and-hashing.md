@@ -179,6 +179,19 @@ It is a secure-context API. So are `randomUUID`, the Clipboard API, service work
 devices — the platform will not hand out powerful capabilities to a page an attacker can rewrite
 in transit.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SubtleCrypto: digest()](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest) — MDN: SHA-256 of a string to hex
+- **Also good:** [Crypto: randomUUID()](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID) — MDN: secure context only
+- **Also good:** [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API)
+- **Beyond the docs:** [Hashing a string with the Web Cryptography API](https://jameshfisher.com/2017/10/30/web-cryptography-api-hello-world/) — James Fisher, 2017-10-30: a short `digest` walk-through; 2017, so read it with the MDN page
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · The rest, and why you should not](./02-the-rest-and-why-not.md) →

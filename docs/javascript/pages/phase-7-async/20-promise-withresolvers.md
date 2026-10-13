@@ -193,6 +193,17 @@ Yes — it is generic and constructs using `this`, so `MySubclass.withResolvers(
 Not within the same task. Unhandled-rejection detection runs at the microtask checkpoint, so a
 handler attached later in the same synchronous run is in time.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Promise.withResolvers()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/withResolvers) — MDN: returns `promise`, `resolve`, `reject`; Baseline widely available since March 2024; stream-to-async-iterable example (*read*)
+- **Beyond the docs:** [Promise.withResolvers(): the deferred pattern built in](https://certificates.dev/blog/promisewithresolvers-the-deferred-pattern-built-in) — Martin Ferret, certificates.dev, 2026-06-23: the old `let resolve, reject` capture next to the one-line form; calls it "sugar, not new semantics"
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [19 · Event loop: browser vs Node](./19-event-loop-browser-vs-node/README.md) ·

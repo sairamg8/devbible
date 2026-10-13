@@ -223,6 +223,18 @@ No. Freezing sets `configurable: false`, which is irreversible, so there is no r
 way to get a mutable version is to build a new object — a shallow copy via spread, or
 `structuredClone` for a deep one. Both produce an unfrozen result.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object.freeze()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) — MDN: freeze is shallow, immutable is not the same as constant, and a `deepFreeze` with the cycle warning and a `WeakSet` suggestion; does not stop changes to private class fields (*read*)
+- **Also good:** [Object.seal()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal) — MDN: no added or removed properties and all existing ones non-configurable, but writable values can still change (*read*)
+- **Beyond the docs:** [How can I deep freeze an object in JavaScript?](https://www.30secondsofcode.org/js/s/deep-freeze-object/) — 30 seconds of code, last updated 2024-06-04: recursive freeze plus an `isDeepFrozen` check, and freezing a `Set` or `Map` by overriding its mutating methods; the recursion has no visited-set, so a cyclic object loops forever, and MDN's version, which warns about cycles and s
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · Shallow — what freeze cannot reach](./02-what-freeze-cannot-reach.md) →

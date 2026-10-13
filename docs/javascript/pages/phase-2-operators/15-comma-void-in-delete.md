@@ -220,6 +220,20 @@ Because it reports "the property is not there afterwards", not "I removed
 something". The return value is only `false` when the property exists and is
 non-configurable, so it is not a useful success signal.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Comma operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) — MDN: reference for the comma operator *(MDN: 200, title and lead passage read)*
+- **Read this:** [void](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void)
+- **Read this:** [in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)
+- **Read this:** [delete](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- **Beyond the docs:** [Basic operators](https://javascript.info/operators) — javascript.info, page dated Jan 31, 2023: the comma operator evaluates each part, keeps the last, and has lower precedence than `=`, so `let a = (1 + 2, 3 + 4);` needs the parentheses
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [14 · Bitwise](./14-bitwise.md) · [Phase index](./) · **Phase 2 complete** → [Phase 3 — Functions, scope and closures](../../syllabus/01-language-core.md)

@@ -226,6 +226,17 @@ supports `await` between iterations.
 Because it uses the **string iterator**, which yields code points, while indexed access
 and `split("")` work on UTF-16 code units and split surrogate pairs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) — MDN: a `for...in` comparison, `break` and iterator `return()`; no `forEach` comparison and nothing on `return` or `await` in the body (*read*)
+- **Beyond the docs:** [For vs forEach vs for/in vs for/of](https://thecodebarbarian.com/for-vs-for-each-vs-for-in-vs-for-of-in-javascript) — Valeri Karpov, The Code Barbarian, 2019-02-20: compares the four on holes, `this`, `await` and `yield`; the article does not discuss `break`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Control flow: `break`, `await` and choosing](./02-control-flow-and-choosing.md)

@@ -217,6 +217,18 @@ A separate **agent** with its own thread, heap and event loop, communicating onl
 message passing with **structured-cloned** payloads. Nothing is shared, which is exactly
 what preserves the run-to-completion guarantee on both sides.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introducing asynchronous JavaScript](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing) — MDN: a long synchronous function blocks the main thread; async APIs start work and report back later; wrapping CPU-heavy code in a promise does not stop the blocking (*read*)
+- **Also good:** [Don't Block the Event Loop](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org: callbacks run on one Event Loop thread while expensive I/O and CPU work goes to a Worker Pool; the page adds that the Worker Pool runs C++ tasks, and the JavaScript callbacks themselves stay on the Event Loop (*read*)
+- **Beyond the docs:** [How Is Javascript Asynchronous And Single Threaded?](https://sohamkamani.com/javascript/single-thread-and-async/) — Soham Kamani, 2016-03-14: states that only your own code is on the one thread, the waiting happens elsewhere, and the response callback still queues behind your code; uses a server request as the example, not browser APIs
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

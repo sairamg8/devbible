@@ -197,6 +197,17 @@ appears on the right or in a call. Rest must be last and there can be only one.
 `[...new Set(items)]`. It is MDN's recommended replacement for the `reduce`-plus-
 `includes` version, which is quadratic.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) — MDN: iterables only in arrays and calls, versus own enumerable properties in object literals, so it works on non-iterables (*read*)
+- **Beyond the docs:** [Rest parameters and spread syntax](https://javascript.info/rest-parameters-spread) — javascript.info, 2022-10-18: says spread works only with iterables, unlike `Array.from`; it does not explain why object spread works on non-iterables
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Where spread earns its place](./02-where-it-earns-its-place.md)

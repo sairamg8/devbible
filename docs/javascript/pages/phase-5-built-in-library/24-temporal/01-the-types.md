@@ -222,6 +222,18 @@ Gone. `Temporal` months are 1-based, years have no 0–99 special case, and out-
 fields either clamp or throw depending on an explicit `overflow` option instead of silently
 rolling over.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Temporal documentation](https://tc39.es/proposal-temporal/docs/) — TC39: `PlainDate`, `Instant`, `ZonedDateTime`, `Duration` and a cookbook; it states no shipping status (*read* the overview)
+- **Also good:** [Temporal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) — MDN: lists the types, marks the feature "Limited availability", and links two polyfills (*read*)
+- **Beyond the docs:** [JavaScript Temporal in 2026 - is it finally here?](https://bryntum.com/blog/javascript-temporal-is-it-finally-here/) — Arsalan Khattak, Bryntum, 2026-01-21: lists all eight types and says Firefox 139 and Chrome 144 ship by default, Safari in preview, with two polyfills
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · Arithmetic, zones and adoption](./02-arithmetic-zones-and-adoption.md) →

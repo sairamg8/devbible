@@ -196,6 +196,18 @@ No. The synchronous version measures `[3,3,3]` as well. The timer only
 guarantees the callbacks run after the loop, making the shared binding
 unmistakable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures) — MDN: guide chapter *(MDN: 200, title and lead passage read)*
+- **Also good:** [Variable scope, closure](https://javascript.info/closure) — javascript.info, page dated June 13, 2022: each call gets a Lexical Environment with an outer reference fixed when the function is created, and it stays in memory while reachable
+- **Beyond the docs:** [Scope and Closures, ch. 7: Using Closures](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/ch7.md) — Kyle Simpson, You Don't Know JS Yet (2nd ed.): a closure is a live link to the variable, not a snapshot; `var` in a loop shares one `i`, fixed by a per-iteration copy or `let`; closures keep captured values alive; fetched as the raw file from the same repo path
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · Next → [Private state and memory](./02-state-and-memory.md)

@@ -185,6 +185,17 @@ reimplement at every exit point.
 can span a chunk boundary; a stateful decoder holds the partial sequence, a per-chunk decode
 corrupts it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API) — MDN: overview and links to each class
+- **Beyond the docs:** [Streams — The definitive guide](https://web.dev/articles/streams) — web.dev (Google): push versus pull sources, `pipeThrough` and `TransformStream` with worked examples
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Overview](./README.md) · [Phase 11](../README.md)

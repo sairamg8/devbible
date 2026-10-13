@@ -202,6 +202,17 @@ promise settles once — but relying on that is relying on an accident, and the 
 Not by identity: `Promise.resolve` returns **`p` itself** when given a native promise, while
 the constructor always allocates a new one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) — MDN guide: common mistakes section: not returning the inner promise, nesting (*read*)
+- **Beyond the docs:** [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) — Nolan Lawson, 2015-05-18: five rookie mistakes: promise pyramid, `forEach` with promises, forgetting `catch`, "deferred", and side effects instead of returning; 2015, so it predates `async`/`await`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Floating promises and the forgotten `return`](./02-floating-promises.md)

@@ -202,6 +202,18 @@ for serialisation.
 `Reflect.ownKeys`. `Object.getOwnPropertyNames` adds non-enumerable string keys but no
 symbols; `Object.getOwnPropertySymbols` gives only symbols.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object.entries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) — MDN: own enumerable string-keyed pairs in the same order as `for...in`; inherited and non-enumerable are skipped (*read*)
+- **Also good:** [Object.fromEntries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) — MDN: turns a list of key-value pairs (an array of pairs or a `Map`) into an object (*read*)
+- **Beyond the docs:** [Object.keys, values, entries](https://javascript.info/keys-values-entries) — javascript.info, 2021-06-27: says outright that symbol keys are ignored, names `Object.getOwnPropertySymbols` and `Reflect.ownKeys` for them, and shows entries, array methods, then `fromEntries` to transform an object
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Transforming objects](./02-transforming-objects.md)

@@ -215,6 +215,17 @@ It closes the iterator: the `return()` method is called if present, so a generat
 `finally` runs and resources held by the iterator are released. `forEach` offers nothing
 equivalent.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array.prototype.some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some) — MDN: stops at the first truthy result; it never presents `some` as a `break` replacement (*read*)
+- **Beyond the docs:** [How to break out of a JavaScript forEach() loop](https://masteringjs.io/tutorials/fundamentals/foreach-break) — Mastering JS, 2020-10-05: `break` fails in `forEach`; use `for/of`, or `every()` returning false; it does not mention `some`
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [The cost of chaining](./02-the-cost-of-chaining.md)

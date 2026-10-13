@@ -263,6 +263,18 @@ It blocks the main thread. One large parse at startup sits in the critical rende
 and a loop over many keys multiplies it. Read once into memory, write on change, and move
 anything large or structured to IndexedDB.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API) — MDN: the two areas, the synchronous API and the `storage` event
+- **Also good:** [Window: storage event](https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event) — MDN: fires in other documents of the same origin, not the one that wrote
+- **Beyond the docs:** [LocalStorage, sessionStorage](https://javascript.info/localstorage) — javascript.info: the `storage` event across tabs and string-only values with JSON round-tripping
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · The `storage` event, and choosing storage](./02-the-storage-event-and-choosing.md) →

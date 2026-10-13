@@ -213,6 +213,16 @@ The `SyntaxError` cases — duplicate parameters, octal literals, `with`,
 `TypeError` and `ReferenceError` cases depend on runtime values and can only be
 caught when the line executes.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) — MDN: the full list of changes, and that module and class bodies are strict with no directive (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · The call stack](./03-call-stack.md) · [Phase index](./) · Next: [05 · What "JavaScript" means today](./05-ecmascript-and-tc39.md) →

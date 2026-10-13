@@ -208,6 +208,18 @@ Because `NaN` makes every relational comparison `false`, including `>=`. With
 `a` as `NaN`, `!(a < b)` is `true` while `a >= b` is `false`. Validate with
 `Number.isFinite` before comparing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Less than](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) — MDN: reference for relational operators *(MDN: 200, title and lead passage read)*
+- **Read this:** [Greater than](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- **Beyond the docs:** [Comparisons](https://javascript.info/comparison) — javascript.info, page dated Nov 12, 2025: strings compare letter by letter in Unicode order so "a" is greater than "A", mixed types convert to numbers, and `null &gt;= 0` is true while `null == 0` is false
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [06 · Spread and rest](./06-spread-and-rest.md) · [Phase index](./) · Next: [08 · Conditionals](./08-conditionals.md) →

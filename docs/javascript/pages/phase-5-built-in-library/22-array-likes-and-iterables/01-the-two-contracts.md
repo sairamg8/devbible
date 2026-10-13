@@ -257,6 +257,17 @@ document the signature. `arguments` survives mainly in older code and in the
 Accidentally, by the naive test — it has a `length`, which is its declared arity. That is
 exactly why a `typeof x.length === "number"` check is not a reliable detector.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array.from](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) — MDN: accepts both iterables and array-likes, with `arguments` and `NodeList` examples (*read*)
+- **Beyond the docs:** [Iterables](https://javascript.info/iterable) — javascript.info, 2024-05-10: contrasts iterables with array-likes (indexes and `length`, maybe no `Symbol.iterator`) and shows `Array.from` converting either
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · Converting correctly](./02-converting-correctly.md) →

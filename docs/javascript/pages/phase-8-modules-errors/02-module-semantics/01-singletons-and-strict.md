@@ -194,6 +194,17 @@ from a classic script that used `this` to reach the global object.
 Implicit globals become a `ReferenceError` (catching a typo that used to create a global),
 and assignments to frozen or read-only properties throw instead of failing silently.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) — MDN guide: module scripts are deferred, strict, run once even if referenced by several script tags; "Import declarations are hoisted" (*read*)
+- **Beyond the docs:** [ECMAScript modules in browsers](https://jakearchibald.com/2017/es-modules-in-browsers/) — Jake Archibald, 2017-05-02: module scripts behave like `defer`, run once per URL, and share the queue with `defer` scripts; it does not discuss strict mode, and the browser-support parts are dated
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Deferred and hoisted](./02-deferred-and-hoisted.md)

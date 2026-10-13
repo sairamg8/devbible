@@ -208,6 +208,17 @@ Narrowly: a documented engine-specific bug workaround with a removal condition,
 platform-specific store links, and analytics where you report the string rather
 than branch on it. Never for gating a capability.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Implementing feature detection](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) — MDN: `in` checks, element-property checks, `CSS.supports` and `@supports`, and a warning not to confuse feature detection with browser sniffing (*read*)
+- **Also good:** [globalThis](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) — MDN: replaces the old per-environment global-object probe (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [09 · Transpilation and polyfills](./09-transpilation-polyfills.md) · [Phase index](./) · Next: [11 · The JIT in one page](./11-the-jit.md) →

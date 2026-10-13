@@ -190,6 +190,18 @@ It rewrites your source. Run it on a clean tree, in its own commit, and read the
 **Where should the config live?**
 In the repository, committed. Configuration that lives in an editor is not a rule the team has.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuration Files](https://eslint.org/docs/latest/use/configure/configuration-files) — ESLint: flat config lives in `eslint.config.*` and exports an array of config objects, later matching objects override earlier ones (*read*)
+- **Also good:** [Rationale](https://prettier.io/docs/rationale) — Prettier: "Prettier is an opinionated code formatter" and "only prints code, does not transform it" (*read* those lines)
+- **Also good:** [Rules reference](https://eslint.org/docs/latest/rules/) — ESLint: rules marked as part of the `recommended` config; the Possible Problems section lists `no-undef`, `no-unused-vars`, `require-atomic-updates` and `no-unsafe-finally` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 8 index](./README.md) · Prev → [17 · Mark-and-sweep and generational GC](./17-gc-mark-sweep-generational.md)

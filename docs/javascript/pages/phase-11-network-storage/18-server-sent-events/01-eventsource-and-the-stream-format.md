@@ -168,6 +168,18 @@ so cross-origin use needs the response headers too.
 **How do you stop one?** `close()`. Nothing else ends the retry loop, and an unclosed stream
 keeps reconnecting after the component that made it is gone.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) — MDN: the stream format and `EventSource`
+- **Also good:** [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) — MDN
+- **Beyond the docs:** [WebSocket vs SSE: Which One Should You Use?](https://websocket.org/comparisons/sse/) — WebSocket.org: compares automatic reconnection with `Last-Event-ID` against hand-built WebSocket retry, which is the "when it beats a WebSocket" half of the row
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Overview](./README.md) · [Phase 11](../README.md)

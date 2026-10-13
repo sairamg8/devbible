@@ -274,6 +274,21 @@ Top-level and exported functions, recursion, and anywhere call-before-definition
 reads better — mutual recursion, or helpers defined below their use. Hoisting is
 a feature there, not a hazard.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions) — MDN: guide chapter *(MDN: 200, title and lead passage read)*
+- **Read this:** [function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- **Read this:** [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- **Read this:** [Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- **Also good:** [Function expressions](https://javascript.info/function-expressions) — javascript.info, page dated Jan 22, 2025: a declaration is set up before the script runs, an expression exists only once execution reaches it, and a declaration in a block is block-scoped in strict mode
+- **Beyond the docs:** [Function Declarations vs. Function Expressions vs. Arrow Functions](https://johnkavanagh.co.uk/articles/function-declarations-vs-expressions-vs-arrow-functions/) — John Kavanagh, 5 December 2016: declarations are callable before their line, expressions assigned with `const` are not, and arrows close over the surrounding `this`; stack-trace naming is not covered
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](./README.md) · Next → [Parameters](./02-parameters/README.md)

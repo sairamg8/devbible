@@ -211,6 +211,18 @@ and re-register when it fires — because after the change the old query no long
 After the document has loaded it replaces the whole document, and browsers may block it for
 cross-origin scripts on slow connections. Nothing needs it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Window](https://developer.mozilla.org/en-US/docs/Web/API/Window) — MDN: [Navigator](https://developer.mozilla.org/en-US/docs/Web/API/Navigator)
+- **Read this:** [Navigator](https://developer.mozilla.org/en-US/docs/Web/API/Navigator)
+- **Beyond the docs:** [Browser environment, specs](https://javascript.info/browser-environment) — javascript.info: separates the DOM from the BOM and the host objects around it
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · navigator and screen](./02-navigator-and-screen.md) →

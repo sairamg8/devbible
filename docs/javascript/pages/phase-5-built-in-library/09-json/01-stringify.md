@@ -248,6 +248,17 @@ cannot represent.
 `Object.fromEntries(map)` if the keys are strings, or a `toJSON` on a `Map` subclass.
 By default it becomes `{}`, because only own enumerable properties are visited.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) — MDN: replacer, `toJSON`, dropped values, `undefined` in arrays becoming `null`, `TypeError` on cycles and BigInt (*read*)
+- **Beyond the docs:** [JSON methods, toJSON](https://javascript.info/json) — javascript.info, 2024-01-24: tutorial-paced walk through replacer, reviver, `toJSON`, skipped properties and the circular-reference error (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [`JSON.parse` and the reviver](./02-parse-and-the-reviver.md)

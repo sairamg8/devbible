@@ -230,6 +230,17 @@ arguments.
 `toSpliced`, added in ES2023, alongside `toSorted`, `toReversed` and `with`. Check environment
 support before relying on them; `filter` and spread have always been non-mutating.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) — MDN: shallow-copy semantics and negative indices, with an arrays-of-objects example (*read*)
+- **Beyond the docs:** [The difference between slice and splice](https://dev.to/antdp425/javascript-the-difference-between-slice-and-splice-mh0) — Anthony (antdp425), DEV Community, 2020-10-21: beginner side-by-side: `slice` returns a copy, `splice` edits in place; covers negative start for `slice` but not for `splice`, and not `at`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · Adding and removing](./02-adding-and-removing/README.md) · [Phase index](./README.md) · Next: [04 · Array iteration methods](./04-array-iteration-methods/README.md) →

@@ -193,6 +193,17 @@ Once, at the boundary. Form values, query parameters, `localStorage`, `dataset`
 and environment variables are always strings; parse and validate them on the way
 in so the rest of the code works with real types.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) — MDN: always pass a radix, parsing stops at the first invalid character (`parseInt("15px", 10)` is 15), and do not use it to truncate (*read*)
+- **Also good:** [Type Conversions](https://javascript.info/type-conversions) — javascript.info: `Number(value)` on `undefined`, `null`, empty and invalid strings (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [08 · Type coercion](./08-type-coercion.md) · [Phase index](./) · Next: [10 · Strings are UTF-16](./10-strings-are-utf16.md) →

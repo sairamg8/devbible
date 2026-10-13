@@ -182,6 +182,17 @@ rather than a string inside a function.
 `${value ?? ""}`. Interpolation spells `null` and `undefined` out as text; `??` supplies an empty
 string only when the value is genuinely missing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) — MDN: multi-line strings, interpolation, nesting, tagged templates, raw strings and `String.raw` (*read* the headings)
+- **Beyond the docs:** [Tagged template literals: build mini DSLs](https://blog.openreplay.com/tagged-template-literals-mini-dsls-javascript/) — OpenReplay Team, 2026-06-22: states that the strings array is always one longer than the values array, and contrasts cooked strings with `strings.raw`, then builds SQL and HTML-escaping tags
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · Tagged templates](./02-tagged-templates.md) →

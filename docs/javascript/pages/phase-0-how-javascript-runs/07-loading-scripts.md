@@ -168,6 +168,17 @@ progressively, producing a waterfall. `modulepreload` mitigates it; bundling
 removes it. That trade-off is why bundlers remain standard despite universal ESM
 support.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script) — MDN: `async` runs with no order guarantee, `defer` runs in document order after parsing and before DOMContentLoaded, modules defer by default (*read*)
+- **Beyond the docs:** [Scripts: async, defer](https://javascript.info/script-async-defer) — javascript.info: "load-first" order for async against relative order for defer, plus dynamic scripts; does not cover `type="module"` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [06 · Hosts and globals](./06-hosts-and-globals.md) · [Phase index](./) · Next: [08 · Running and inspecting code](./08-running-and-inspecting.md) →

@@ -213,6 +213,18 @@ extends `Node`. MDN notes elements are *"further enhanced by the HTML DOM API's 
 interface as well as other interfaces describing capabilities of specific kinds of
 elements."*
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Anatomy of the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM) — MDN: the document as a tree of `Node` objects, `Element` as one kind of node, and `parentElement`/`children` versus `parentNode`/`childNodes` (*read*)
+- **Also good:** [Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) — MDN: hub page for the guides and the Node and Element interfaces (*headings only*)
+- **Beyond the docs:** [What is the Difference Between a DOM Node and an Element?](https://dmitripavlutin.com/dom-node-element/) — Dmitri Pavlutin, 2021-01-05: shows text and document nodes with `nodeType` and contrasts `childNodes` with `children` (comment nodes are only named in passing)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

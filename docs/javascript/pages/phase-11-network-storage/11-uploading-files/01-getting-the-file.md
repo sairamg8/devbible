@@ -243,6 +243,17 @@ anything the client checks the client can skip.
 Listen for `paste` on the document and read `e.clipboardData.files`. Three lines, and it is
 the interaction users most often expect and most often do not get.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using files from web applications](https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications) — MDN: `input type="file"`, `File`, drag and drop
+- **Beyond the docs:** [Resumable file upload](https://javascript.info/resume-upload) — javascript.info: asks the server how many bytes it has, then sends the rest; uses XHR for upload progress
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · Sending it](./02-sending-it.md) →

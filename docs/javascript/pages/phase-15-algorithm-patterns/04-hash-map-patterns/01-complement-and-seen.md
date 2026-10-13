@@ -192,6 +192,16 @@ is usually the interviewer steering you toward two pointers or a cycle-detection
 Not with a `Set` — SameValueZero compares by reference. Key on an id or a canonical string with a
 `Map`, watching for separator collisions in composite keys.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) — MDN: SameValueZero key equality (`NaN` matches `NaN`, `0` matches `-0`, objects by reference) and insertion-order iteration (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Signatures and index maps](./02-signatures-and-index-maps.md)

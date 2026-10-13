@@ -218,6 +218,17 @@ seconds.
 When the dependency is failing persistently rather than transiently — that is a circuit-breaker
 situation, where the right response is to fail fast for a cooling-off period.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Exponential Backoff And Jitter](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/) — Marc Brooker, AWS Architecture Blog, 2015-03-04 (May 2023 update note): plain capped backoff still leaves clusters; full jitter spreads calls to a roughly constant rate and cuts the call count by more than half with 100 clients (*read*)
+- **Also good:** [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) — MDN: `AbortSignal.timeout()` for the timeout half (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · The wrapper](./02-the-wrapper.md) →

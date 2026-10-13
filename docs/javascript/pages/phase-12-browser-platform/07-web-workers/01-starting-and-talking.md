@@ -220,6 +220,19 @@ When several tabs of one origin genuinely need to share one instance — a singl
 in-memory cache. For most cross-tab needs `BroadcastChannel` or Web Locks are simpler and better
 supported.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) — MDN
+- **Also good:** [Transferable objects](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) — MDN: what transfer detaches
+- **Also good:** [Use web workers to run JavaScript off the browser's main thread](https://web.dev/articles/off-main-thread)
+- **Beyond the docs:** [Transferable objects - Lightning fast](https://developer.chrome.com/blog/transferable-objects-lightning-fast) — Chrome for Developers: structured clone is a copy, transfer is zero-copy, with a 32 MB example; the numbers are from the Chrome 13 era
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · The message boundary](./02-the-message-boundary.md) →

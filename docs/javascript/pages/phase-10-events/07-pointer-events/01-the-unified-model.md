@@ -176,6 +176,18 @@ Mouse events the browser fires alongside pointer events so older content keeps w
 `preventDefault()` on `pointerdown` suppresses some, but never `mouseover`, `mouseout`,
 `mouseenter` or `mouseleave`, and never for hovering pointers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Pointer events](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events) — MDN: one event model for mouse, pen and touch; "Capturing the pointer", `touch-action`, and mouse-event compatibility sections (*read*)
+- **Also good:** [Element.setPointerCapture()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setPointerCapture) — MDN (*headings only*): [Pointer events](https://javascript.info/pointer-events)
+- **Also good:** [Pointer events](https://javascript.info/pointer-events)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · A drag that does not leak](./02-a-drag-that-does-not-leak.md) →

@@ -193,6 +193,17 @@ Unicode normalisation. The same character can be a single precomposed code point
 letter plus a combining mark, and those are different bytes. `normalize("NFC")` on both
 sides before encoding makes them comparable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The nuances of base64 encoding strings in JavaScript](https://web.dev/articles/base64-encoding) — web.dev, Matt Joseph, last updated 2023-10-17: `btoa` throws on non-Latin1 text, the TextEncoder fix, and lone surrogates silently changing data (*read*)
+- **Also good:** [TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder) — MDN: UTF-8 only, `encode` and `encodeInto`, links `TextDecoder`; no mention of `btoa` or base64 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · Base64, and its Unicode failure](./02-base64.md) →

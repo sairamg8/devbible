@@ -183,6 +183,18 @@ When choosing between two implementations of the same shape, or when the cost is
 network round trip, a parse or a layout. Use it to reject what cannot scale; measure to make the
 survivor fast.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Big O Notation: Time and Space Complexity](https://www.interviewcake.com/article/javascript/big-o-notation-time-and-space-complexity) — Interview Cake: constant, linear and quadratic work with JavaScript examples; constants and lower-order terms dropped; Big O usually means the worst case; space counted as extra memory (*read*)
+- **Also good:** [Big O notation](https://en.wikipedia.org/wiki/Big_O_notation) — Wikipedia: the formal side: "any constants can be omitted" and the multiplication-by-a-constant rule (*read*, first 100000 characters)
+- **Beyond the docs:** [A beginner's guide to Big O notation](https://robbell.io/2009/06/a-beginners-guide-to-big-o-notation/) — Rob Bell, June 2009: one code example per class (O(1), O(N), O(N squared) from nested loops, O(2 to the N) from recursive Fibonacci); says Big O describes the worst case; C# code, and it does not cover dropping constants; the old rob-bell.net address 
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Reading a bound off the code](./02-reading-a-bound.md)

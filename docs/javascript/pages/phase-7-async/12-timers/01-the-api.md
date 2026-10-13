@@ -268,6 +268,17 @@ closes over. Nothing in that graph can be collected until the interval is cleare
 **Can `clearInterval` cancel a `setTimeout`?**
 In a browser, yes — they share one ID pool — but doing so is a code smell, not a technique.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Window: setTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout) — MDN: 4 ms minimum after five nested calls, longer minimums in background tabs, "reasons for longer delays", `clearTimeout` (*read*)
+- **Beyond the docs:** [Scheduling: setTimeout and setInterval](https://javascript.info/settimeout-setinterval) — javascript.info, last updated February 25, 2026: zero delay runs after the current script; the nested-timer limit is a browser rule and Node has none; nested `setTimeout` guarantees a gap between calls where `setInterval` may not
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Why `0` is not `0`](./02-why-zero-is-not-zero.md) →

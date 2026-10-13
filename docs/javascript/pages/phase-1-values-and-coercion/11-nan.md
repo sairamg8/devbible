@@ -200,6 +200,17 @@ where the value enters.
 `??` falls back only on `null` and `undefined`, and `NaN` is of type `number`.
 Use an explicit `Number.isFinite` check when converting and defaulting together.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [NaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) — MDN: why `NaN !== NaN` (IEEE 754), `Number.isNaN` against `isNaN`, and the five ways NaN enters your data (*read*)
+- **Beyond the docs:** [NaN, the not-a-number number that isn't NaN](https://piccalil.li/blog/nan-the-not-a-number-number-that-isnt-nan/) — Mat Marquis, Piccalilli, 2025-10-23: arithmetic against NaN gives NaN, `typeof NaN` is `"number"`, and the global `isNaN()` is set beside `Number.isNaN` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [10 · Strings are UTF-16](./10-strings-are-utf16.md) · [Phase index](./) · Next: [12 · `Symbol`](./12-symbol.md) →

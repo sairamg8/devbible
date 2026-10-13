@@ -235,6 +235,17 @@ before the loop exits — so asynchronous cleanup completes.
 supported. Iterating locks the stream and, by default, cancels it on exit; pass
 `{ preventCancel: true }` to `values()` to keep using it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [for await...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) — MDN: `Symbol.asyncIterator`, async generators, the sync-iterable fallback, and early exit calling `return()` (*read*)
+- **Beyond the docs:** [Async iteration and generators](https://javascript.info/async-iterators-generators) — javascript.info, 2022-02-04: "Async iterables", "Async generators (finally)" and a paginated GitHub-commits example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Writing async generators](./02-writing-async-generators.md)

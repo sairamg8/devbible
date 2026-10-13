@@ -227,6 +227,16 @@ code. An unbounded queue is not "keeping everything"; it is postponing the loss 
 **Does raising `highWaterMark` solve a backpressure problem?**
 No. It changes when the signal fires. The rate mismatch is still there.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Backpressuring in Streams](https://nodejs.org/learn/modules/backpressuring-in-streams) — nodejs.org: defines backpressure, and shows memory about 87.81 MB with it versus about 1.52 GB without in the page's experiment (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [21 · Thenables](./21-thenables.md) · [Phase index](./README.md)

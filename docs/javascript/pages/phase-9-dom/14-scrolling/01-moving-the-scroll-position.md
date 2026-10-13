@@ -226,6 +226,17 @@ Only relativity — it applies a delta to the current position, so you do not ha
 `scrollY` first. That read would otherwise force layout, which is the concern in
 [12 · Layout thrashing](../12-layout-thrashing/01-the-forced-reflow.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Element.scrollIntoView()](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView) — MDN: options object: `behavior` (`smooth`, `instant`, `auto`), `block`, `inline`, and a `container` option (*read*)
+- **Also good:** [History.scrollRestoration](https://developer.mozilla.org/en-US/docs/Web/API/History/scrollRestoration) — MDN: `auto` or `manual` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Landing on an element](./02-landing-on-an-element.md) →

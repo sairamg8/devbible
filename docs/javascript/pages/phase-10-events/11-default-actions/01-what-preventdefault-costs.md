@@ -191,6 +191,18 @@ accessible.
 `preventDefault()` cancels the browser's action; `stopPropagation()` stops the event travelling to
 other listeners. Using both reflexively breaks delegated handlers upstream.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Event.preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) — MDN (*headings only*)
+- **Also good:** [Making touch scrolling fast by default](https://developer.chrome.com/blog/scrolling-intervention) — Chrome for Developers blog, last updated 2017-01-10: why `preventDefault()` in a `touchstart` or first `touchmove` listener blocks scrolling and what passive listeners change; touch events only, nothing on `wheel` (*read*)
+- **Also good:** [Browser default actions](https://javascript.info/default-browser-action)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [Phase 10 index](../README.md) →

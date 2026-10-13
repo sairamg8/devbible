@@ -218,6 +218,18 @@ a linear scan and the spread rebuilds the array every call.
 Because most languages' hash maps do not guarantee it. In JavaScript a `Map` is both a hash table
 and an ordered collection, which lets it replace an array of pairs rather than accompany one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Keyed collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections) — MDN: Map keys any value, object keys strings or symbols; Map iterates in insertion order; an object has a prototype and default keys; Set removes by value (*read*)
+- **Also good:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) — Wikipedia: load factor (number of pairs over buckets); separate chaining against open addressing; open addressing wants a maximum of about 0.6 to 0.75; rehash on resize (*read*, first 100000 characters)
+- **Beyond the docs:** [V8 Deep Dives: Understanding Map Internals](https://dev.to/puzpuzpuz/v8-deep-dives-understanding-map-internals-fc6) — Andrei Pechkurov, 2020-10-06: a real engine's hash table: buckets with chains, load factor 2, power-of-two capacity, deletion leaves a hole until rehash; **V8 8.4** (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · How hashing works](./02-how-hashing-works.md)

@@ -227,6 +227,18 @@ check-then-use gap.
 It is well-formed, nothing more. `https://exaple.com` parses fine. `URL` is a parser, not a
 validator, and never a reachability check.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [URL API](https://developer.mozilla.org/en-US/docs/Web/API/URL_API) — MDN: the `URL` object, its parts and `searchParams`
+- **Also good:** [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) — MDN: methods and iteration
+- **Beyond the docs:** [URL objects](https://javascript.info/url) — javascript.info: `new URL(path, base)` for relative resolution, then `searchParams` and the `encodeURIComponent` versus `encodeURI` difference in one chapter
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · URLSearchParams](./02-urlsearchparams.md)

@@ -228,6 +228,17 @@ So calls chain — `m.set(a,1).set(b,2)` — and so it works as a `reduce` accum
 `new Map(Object.entries(obj))` and `Object.fromEntries(map)`. The second is lossy if the
 keys are not strings — object keys get stringified on the way in.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) — MDN: the "Objects vs. Maps" section: accidental keys, security, key types, order, size, iteration, performance, serialization (*read*)
+- **Beyond the docs:** [Map vs Object in JavaScript](https://www.explainthis.io/en/swe/map-vs-object) — ExplainThis, 2023-02-13 (no author shown): key types, direct iteration, order, `size`; says only that performance depends on context and points elsewhere
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Choosing, and what `Map` costs](./02-choosing-and-costs.md)

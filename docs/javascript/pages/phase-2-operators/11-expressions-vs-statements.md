@@ -196,6 +196,19 @@ why the trick "works" there.
 JSX interpolation is an expression slot. `if` is a statement. Use `&&`, a
 ternary, or compute the branch into a variable before the `return`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) — MDN: guide chapter on expressions *(MDN: 200, title and lead passage read)*
+- **Read this:** [Statements and declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
+- **Also good:** [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) — MDN glossary *(MDN: 200, title and lead passage read)*
+- **Beyond the docs:** [What is a JavaScript Expression?](https://masteringjs.io/tutorials/fundamentals/expressions) — Mastering JS, page dated July 22, 2019: an expression yields a value and a statement performs an action; `function getAnswer() &#123; return 42 &#125;();` is a SyntaxError and the grouping operator turns it into an IIFE
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [10 · Precedence](./10-precedence.md) · [Phase index](./) · Next: [12 · ASI](./12-asi.md) →

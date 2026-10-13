@@ -196,6 +196,18 @@ They write to stderr rather than stdout, so they survive stdout redirection and
 can be routed separately in production. DevTools also styles and filters by
 level.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Pause your code with breakpoints](https://developer.chrome.com/docs/devtools/javascript/breakpoints) — Chrome for Developers: line, conditional, logpoint, exception, function and event breakpoints, and `debugger` as an in-code line breakpoint (*read*)
+- **Also good:** [Debugging Node.js](https://nodejs.org/learn/getting-started/debugging) — Node.js: `--inspect`, `--inspect-brk` and `chrome://inspect`; it does not mention `node --eval` (*read*)
+- **Beyond the docs:** [Debugging in the browser](https://javascript.info/debugging-chrome) — javascript.info: a short walk through the Sources panel, breakpoints, `debugger` and Watch (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [07 · Loading scripts](./07-loading-scripts.md) · [Phase index](./) · Next: [09 · Transpilation and polyfills](./09-transpilation-polyfills.md) →

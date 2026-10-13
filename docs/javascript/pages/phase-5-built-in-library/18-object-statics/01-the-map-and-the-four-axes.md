@@ -257,6 +257,17 @@ Configuration rather than content: `writable`, `enumerable`, `configurable`, and
 the property is an accessor at all. `entries` calls a getter and hands you the result, so
 an accessor and a plain value look identical through it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object.groupBy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy) — MDN: string or symbol keys, null-prototype result, and `Map.groupBy` for other key types (*read*)
+- **Beyond the docs:** [How to group array items with Object.groupBy()](https://flaviocopes.com/javascript-object-groupby/) — Flavio Copes, 2026-08-22: `groupBy` sorts items into named arrays by a callback key, returns a null-prototype object, and `Map.groupBy` keeps object keys
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · Seeing everything](./02-seeing-everything.md) →

@@ -187,6 +187,18 @@ Because `this.method()` is a dynamic lookup, so it resolves to the subclass's ov
 exists. Every method a base class calls on `this` is effectively public API, whether or not it was
 meant to be.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [extends, Mix-ins](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends) — MDN: a class has one superclass, so mix-ins are functions from a base class to a subclass (*read*)
+- **Also good:** [Mixins](https://javascript.info/mixins) — javascript.info, 2022-08-27: copy methods onto a prototype with `Object.assign`, no inheritance involved, with the warning about overwriting existing methods (*read*)
+- **Beyond the docs:** [From Mixins to Object Composition](https://raganwald.com/2016/07/20/prefer-composition-to-inheritance.html) — raganwald.com (the page names no author and shows no date; the URL carries 2016-07-20): follows an earlier essay on mixins: they snowball in complexity through lack of encapsulation, implicit dependencies and name clashes; shows how to refactor from mixins to object composition, with an afterword on "prefer compositi
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · The three patterns, and choosing](./02-the-three-patterns.md) →

@@ -241,6 +241,18 @@ No. `const` freezes the *binding* — you cannot reassign the variable. Property
 is `writable: false` plus `configurable: false`, and even that protects only the binding, not the
 referenced object's contents.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object.defineProperty()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) — MDN: flags default to false via `defineProperty` but true via assignment; data vs accessor descriptors, and mixing them throws `TypeError` (*read*)
+- **Also good:** [Flags and descriptors](https://javascript.info/property-descriptors) — javascript.info, 2022-10-18: what each flag does, `configurable: false` still allows value changes while writable, and `seal` and `freeze` as flag shortcuts (*read*)
+- **Beyond the docs:** [Property descriptors](https://web.dev/learn/javascript/objects/property-descriptors) — web.dev Learn JavaScript, updated 2024-03-31: a table of the six attributes with defaults, then how descriptors tie into `Object.create` and prototype lookup; no named author (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [10 · Getters and setters](./10-getters-and-setters.md) · [Phase index](./README.md) · Next: [12 · `Object.freeze` and `seal`](./12-freeze-and-seal/README.md) →

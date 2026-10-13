@@ -178,6 +178,17 @@ removes all of them, with no reference matching.
 **Does `bubbles` do anything off the DOM?**
 No. There is no tree, so a dispatch simply reaches that object's listeners.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [EventTarget() constructor](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/EventTarget) — MDN: a `class Counter extends EventTarget` example that dispatches a custom `valuechange` event (*read*)
+- **Also good:** [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) — MDN: the interface page; lists the constructor but says nothing about subclassing and has no example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [Phase 10 index](../README.md) →

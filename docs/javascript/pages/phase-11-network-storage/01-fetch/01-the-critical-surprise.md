@@ -201,6 +201,18 @@ Read it. An API's error body is usually the most useful thing in the incident, a
 typed error carrying the status and that body is what makes callers able to branch without
 parsing messages.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) — MDN: the request/response shape and the `response.ok` check
+- **Also good:** [Fetch](https://javascript.info/fetch) — javascript.info: the same flow taught step by step, with `response.ok` before `.json()`
+- **Beyond the docs:** [The Fetch API Trap: When HTTP Errors Don't Land in Catch](https://dev.to/kresohr/the-fetch-api-trap-when-http-errors-dont-land-in-catch-40l6) — DEV Community: builds the whole article on the 404 or 500 that skips `catch`, then shows the `response.ok` guard; narrower than MDN but a clearer single-point lesson
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

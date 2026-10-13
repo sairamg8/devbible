@@ -182,6 +182,18 @@ attempt, or clone before the first send.
 `JSON.stringify` drops `undefined` values. Send `null` when the server needs to see the field
 explicitly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using FormData objects](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects) — MDN: building a `FormData` and sending it as a body
+- **Also good:** [Using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) — MDN: lists the accepted `body` types and shows a `URLSearchParams` body with an explicit `Content-Type` header; it does not tabulate the automatic header per type
+- **Beyond the docs:** [Uploading files using fetch and FormData](https://muffinman.io/blog/uploading-files-using-fetch-multipart-form-data/) — Muffin Man blog, 2018-03-19: explains the multipart boundary the browser writes into the header, and why setting `Content-Type` by hand breaks the upload
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

@@ -181,6 +181,17 @@ No. It is in the bundle and readable. Only server-side configuration is secret.
 Yes — too many small chunks rebuild the request waterfall. Merge them, and preload the ones you
 know are needed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) — webpack.js.org: static ES2015 structure is required, the `sideEffects` field in `package.json`, `usedExports`, production mode, and the pitfall of dropping CSS imports (*read*)
+- **Beyond the docs:** [Reduce JavaScript payloads with tree shaking](https://web.dev/articles/reduce-javascript-payloads-with-tree-shaking) — Jeremy Wagner, web.dev, last updated 2018-06-14: a 1,300-line `utils` module of which one function is used; `modules: false` in Babel to keep ES modules intact; old, so treat the config as webpack 4 era
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · Next → [02 · Tree shaking, and what defeats it](./02-tree-shaking.md)

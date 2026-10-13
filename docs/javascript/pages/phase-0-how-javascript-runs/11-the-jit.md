@@ -200,6 +200,18 @@ iterations, report the median, repeat the whole run, and use the same machine an
 conditions. Prefer an established harness. Then confirm against the real
 application, because that is the number that matters.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Launching Ignition and TurboFan](https://v8.dev/blog/launching-ignition-and-turbofan) — V8 team, 2017-05-15: why V8 moved to an interpreter plus optimizing compiler (*read*)
+- **Also good:** [Microbenchmarks fairy tale](https://mrale.ph/blog/2012-12-15-microbenchmarks-fairy-tale.html) — Vyacheslav Egorov, 2012-12-15: loop-invariant motion and dead-code removal make a naive timing loop measure the compiler, not the code; V8 internals have moved on since (*read*)
+- **Beyond the docs:** [JavaScript engine fundamentals: Shapes and Inline Caches](https://mathiasbynens.be/notes/shapes-ics) — Mathias Bynens (with Benedikt Meurer), 2018-06-14: shapes, transitions and inline caches, the mechanism behind hidden classes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [10 · Feature detection](./10-feature-detection.md) · [Phase index](./) · Next: [12 · Reading the specification](./12-reading-the-spec.md) →

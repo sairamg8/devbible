@@ -174,6 +174,17 @@ bodies are always strict. Use `0o755`.
 also understands prefixed strings — `Number('0xff')` is `255` — and unlike
 `parseInt` it handles `0b` and `0o` prefixes too.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Lexical grammar: numeric literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar) — MDN: decimal, exponent, binary, octal, hex, BigInt, separators and their limits, and legacy octal as a strict-mode syntax error (*read*)
+- **Beyond the docs:** [Numeric separators](https://v8.dev/features/numeric-separators) — V8 blog, Mathias Bynens, 2019-05-28: readable digit grouping across literal forms and why legacy `017` gets no separators; lists Chrome 75, Firefox 70, Safari 13, Node.js 12.5.0 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [16 · Object.is, -0, Infinity](./16-object-is-and-zero.md) · [Phase index](./) · **Phase 1 complete** → [Phase 2 — Operators, expressions and control flow](../../syllabus/01-language-core.md)

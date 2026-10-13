@@ -217,6 +217,17 @@ Convert at the boundary. Every form value, query parameter, `localStorage` entry
 and environment variable is a string; parse and validate once on the way in, so
 the rest of the code works with real types.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) — MDN: shows coercion in the loose-equality steps, such as `[1, 2] == '1,2'` (*read*)
+- **Beyond the docs:** [JS Type Coercion Explained](https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/) — Alexey Samoshkin, freeCodeCamp, 2018-01-17: the internal ToPrimitive with a pseudo implementation, numeric and string conversion, and how `+` and `==` trigger them (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [07 · const is not immutable](./07-const-is-not-immutable.md) · [Phase index](./) · Next: [09 · Explicit conversion](./09-explicit-conversion.md) →

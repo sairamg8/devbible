@@ -219,6 +219,17 @@ failure arrive through the same `.catch` instead of one escaping the chain.
 Not for a native promise — it returns the same object. For a thenable it returns a new promise
 that follows it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Promise() constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) — MDN: the executor runs synchronously, a throw rejects, resolving with a thenable adopts its state, and the "callback-based API into promise-based" example (*read*)
+- **Beyond the docs:** [Promisification](https://javascript.info/promisify) — javascript.info, last updated October 18, 2022: a generic `promisify(f)` helper, the multiple-results variant, and the warning that it only suits callbacks called once
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Promisifying a callback API](./02-promisifying.md) →

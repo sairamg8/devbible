@@ -243,6 +243,16 @@ No. A `Map` iterates in insertion order, so deleting the first key evicts the ol
 LRU needs the key moved to the end on every read — `delete` then `set` — or a proper linked-list
 implementation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Practical Memoization Patterns in JavaScript](https://blog.openreplay.com/practical-memoization-patterns-javascript/) — OpenReplay Team, January 20, 2026: objects are cached by reference, `JSON.stringify` keys fail on cycles and drop functions, unbounded caches leak so cap with LRU or TTL, cache the promise for async and delete it on failure; no mention of `WeakMap` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [12 · Composition](./12-composition.md) · [Phase index](./README.md) · **14 · Recursion** *(not written yet)* →

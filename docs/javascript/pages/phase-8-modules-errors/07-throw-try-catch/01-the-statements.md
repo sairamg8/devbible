@@ -226,6 +226,18 @@ keeps the original error and its stack.
 **Is the `catch` parameter scoped to the block?**
 Yes, and it shadows an outer binding of the same name. Give nested catches distinct names.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) — MDN: optional catch binding, a `return` or `throw` in `finally` overrides earlier control flow, conditional catch with `instanceof` and re-throw (*read*)
+- **Also good:** [throw](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw) — MDN: any expression can follow `throw`, but the page says to throw an `Error` or subclass (*read*)
+- **Beyond the docs:** [Error handling, "try...catch"](https://javascript.info/try-catch) — javascript.info, last updated April 8, 2025: `finally` runs on any exit including `return`; "technically, we can use anything as an error object", though objects with `name` and `message` are preferred
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · `finally`, and what it can override](./02-finally.md) →

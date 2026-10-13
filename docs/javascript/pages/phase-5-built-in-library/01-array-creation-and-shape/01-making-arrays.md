@@ -198,6 +198,19 @@ valid array-like with no indices, and `Array.from` fills the missing ones with r
 No — MDN says *"shallow-copied"*. The new array holds the same object references, so
 mutating an element is visible through both arrays.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) — MDN: the "Relationship between length and numerical properties" section shows `length = 2` deleting elements and a larger `length` adding empty slots; "Array methods and empty slots" covers holes; `Array.of` and `Array.from` get only o
+- **Also good:** [Array.of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of) — MDN: `Array.of(7)` makes one element, `Array(7)` makes seven empty slots (*read*)
+- **Also good:** [Array.from](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+- **Beyond the docs:** [Sparse and dense arrays in JavaScript](https://dmitripavlutin.com/javascript-sparse-dense-arrays/) — Dmitri Pavlutin, 2021-10-27: lists the four ways a hole appears (literal gaps, `Array(length)`, `delete`, growing `length`) and names `forEach`, `map` and `filter` as skipping holes, which MDN spreads across pages
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Holes, `length` and sparse arrays](./02-holes-and-length.md)

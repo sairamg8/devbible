@@ -221,6 +221,18 @@ instantiation.
 Yes — any expression that evaluates to a constructor or `null`, evaluated once when the class is
 defined. That is what makes `class X extends mixin(Base) {}` work.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [extends](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends) — MDN: `super()` must run before `this`; `extends` sets two prototype links, one for statics and one for instances, with a table of the `extends null` and no-`extends` cases (*read*)
+- **Also good:** [super](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super) — MDN: `super.prop` and `super[expr]` look up the `[[Prototype]]` of the home object, in classes and object literals, and `super()` calls the parent constructor (*read*)
+- **Beyond the docs:** [Class inheritance](https://javascript.info/class-inheritance) — javascript.info, 2022-05-12: derived constructors must call `super(...)` before `this`, `super.method()` extends instead of replacing, and a closing "tricky note" section on overriding class fields, where the parent constructor sees the parent's field value, 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Next → 09.2 · `super.method()` and overriding safely](./02-super-method-and-overriding.md)

@@ -172,6 +172,19 @@ leaves the state at `prompt` so you can ask later; a denied browser prompt is un
 Because its `change` event is how you learn the user revoked or granted the permission from site
 settings mid-session. Permission is state to watch, not a value to cache.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Permissions API](https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API) — MDN: query a state without prompting
+- **Also good:** [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) — [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API): MDN
+- **Also good:** [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API)
+- **Beyond the docs:** [Web permissions best practices](https://web.dev/articles/permissions-best-practices) — web.dev (Google): ask after a user action, in context, and keep a fallback
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Geolocation](./02-geolocation.md) →

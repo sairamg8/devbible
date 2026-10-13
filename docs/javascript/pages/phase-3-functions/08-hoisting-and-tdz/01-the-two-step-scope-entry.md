@@ -163,6 +163,18 @@ it, walking outward. Hoisting answers *when* that binding became usable within i
 own scope. They are separate questions and most variable confusion is one of them
 answered wrongly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) — MDN glossary *(MDN: 200, title and lead passage read)*: [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- **Read this:** [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- **Beyond the docs:** [Scope and Closures, ch. 5: The (Not So) Secret Lifecycle of Variables](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/ch5.md) — Kyle Simpson, You Don't Know JS Yet (2nd ed.): hoisting as a compile-time registering of identifiers; `let` and `const` are registered but uninitialised, so early access throws; the TDZ is a period of time, not a position; fetched as the raw file from the same repo path
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [`var` and function declarations](./02-var-and-function-declarations.md)

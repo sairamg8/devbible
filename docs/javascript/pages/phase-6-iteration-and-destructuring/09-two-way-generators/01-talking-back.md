@@ -215,6 +215,17 @@ itself.
 For ordinary sequential async work. `async`/`await` is the same pattern with the driver
 built in, and it is shorter, more familiar and easier to debug.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Generator.prototype.next](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) — MDN: the argument becomes the result of the paused `yield`, and the first value sent is lost; no mention of coroutines or async/await (*read*)
+- **Beyond the docs:** [Generators](https://javascript.info/generators) — javascript.info, 2022-08-30: "yield is a two-way street" and `generator.throw`; nothing on the generator-as-coroutine link to async/await (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [`return()`, cleanup and the coroutine idea](./02-return-and-the-coroutine-idea.md)

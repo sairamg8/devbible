@@ -196,6 +196,18 @@ A newline after `return` — that is always a bug, not a style choice — and an
 statement that spans lines and is validly parseable two ways. In those cases ASI
 does exactly what it is specified to do and the result is still wrong.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Lexical grammar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar) — MDN: the page that holds the automatic semicolon insertion rules *(MDN: 200, title and lead passage read)*
+- **Also good:** [ECMAScript Language Specification](https://tc39.es/ecma262/) — TC39: normative rules under the "Rules of Automatic Semicolon Insertion" section, which the page contains (section confirmed present, rules not read; no anchor given)
+- **Beyond the docs:** [Semicolons in JavaScript](https://flaviocopes.com/javascript-automatic-semicolon-insertion/) — Flavio Copes, Jul 16, 2018: pitfalls: a bare `return` before an object literal, and next lines that start with a parenthesis, bracket or operator merging into the previous one
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [11 · Expressions vs statements](./11-expressions-vs-statements.md) · [Phase index](./) · Next: [13 · break, continue, labels](./13-break-continue-labels.md) →

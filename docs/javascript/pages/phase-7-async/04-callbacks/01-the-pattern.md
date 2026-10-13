@@ -172,6 +172,18 @@ Synchronous work (`map`, a `sort` comparator), many-shot events (`addEventListen
 streams, observers), and pure scheduling (`queueMicrotask`, `requestAnimationFrame`). A
 promise is one-shot, so it cannot model a stream of events.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JavaScript Asynchronous Programming and Callbacks](https://nodejs.org/learn/asynchronous-work/javascript-asynchronous-programming-and-callbacks) — nodejs.org: callbacks, the error-first convention (first argument is `null` when there is no error), and the problem with nesting (*read*)
+- **Also good:** [Callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) — MDN glossary: a callback is a function passed into another function and invoked inside it; synchronous (`map`) or asynchronous (`setTimeout`) (*read*)
+- **Beyond the docs:** [Introduction: callbacks](https://javascript.info/callbacks) — javascript.info, last updated June 18, 2022: error-first callbacks, the pyramid of doom that grows to the right, and the named-step-functions fix and why it only half works
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · The error-first convention](./02-error-first.md)

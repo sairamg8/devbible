@@ -178,6 +178,18 @@ change?" bugs and behind immutable state updates in React.
 `Object.prototype.toString.call(v)` gives `'[object Date]'`, or `v instanceof
 Date` within one realm. `typeof` reports `'object'` for both and cannot help.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Data_structures) — MDN: lists the primitives, states that all except `null` can be tested with `typeof`, and that `typeof null` returns `"object"` (*read*)
+- **Also good:** [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) — MDN: the type-tag history, and that an opt-in fix was proposed and rejected (*read*)
+- **Beyond the docs:** [typeof null: investigating a classic JavaScript bug](https://alexanderell.is/posts/typeof-null/) — Caffeinspiration blog (no author name shown on the page), 2018-03-19: reads an early (1996) JavaScript engine implementation to show why the zero object tag made `null` look like an object (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Phase index](./) · Next: [02 · Primitives are copied, objects are shared](./02-references-vs-values.md) →

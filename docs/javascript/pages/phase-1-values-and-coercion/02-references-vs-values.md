@@ -193,6 +193,17 @@ Objects compare by identity. Two object literals create two distinct objects, so
 they are never `===` regardless of contents. Only two names for the same object
 compare equal.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Object references and copying](https://javascript.info/object-copy) — javascript.info: primitives copied by value, objects hold a reference, `const` objects still mutate, shallow `Object.assign` against deep `structuredClone` (*read*)
+- **Also good:** [JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Data_structures) — MDN: primitives are immutable values (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · The eight types](./01-the-eight-types.md) · [Phase index](./) · Next: [03 · `==` vs `===`](./03-equality.md) →

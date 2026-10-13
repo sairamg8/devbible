@@ -165,6 +165,23 @@ intact, so only time-sensitive data needs refreshing.
 Stylesheets, fonts and images may not have settled, so geometry can be measured against a layout
 that is about to change. Measure at `load`, or observe the element.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api) — Chrome for Developers, last updated 2023-12-01: says to rely on `visibilitychange` to detect a session ending (the hidden state is the last reliable time to save) and to use `pagehide` instead of `unload` (*read*)
+- **Also good:** [Document: DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) — MDN (*headings only*): [visibilitychange](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event)
+- **Also good:** [visibilitychange](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event)
+- **Also good:** [pagehide](https://developer.mozilla.org/en-US/docs/Web/API/Window/pagehide_event)
+- **Also good:** [beforeunload](https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event)
+- **Also good:** [Back/forward cache](https://web.dev/articles/bfcache)
+- **Also good:** [Page: DOMContentLoaded, load, beforeunload, unload](https://javascript.info/onload-ondomcontentloaded)
+- **Beyond the docs:** [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) — Ilya Grigorik, 2015-11-20: argues `visibilitychange` is the only event to count on, and that `pagehide`, `beforeunload` and `unload` do not reliably fire on mobile; written before the Page Lifecycle API, so read it for the argument
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Shutdown](./02-shutdown.md) →

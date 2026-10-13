@@ -147,6 +147,18 @@ browser's choice.
 **What single fact explains "my UI froze"?**
 One task runs to completion with no preemption, so anything long blocks rendering *and* input.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Node.js Event Loop](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick) — nodejs.org: phases (timers, pending callbacks, poll, check, close), `setImmediate` before `setTimeout` inside an I/O callback, and `process.nextTick` running before the loop continues (*read*)
+- **Also good:** [JavaScript execution model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model) — MDN: the browser/engine side, but it covers no rendering and only briefly names microtasks (*read*)
+- **Beyond the docs:** [A complete guide to the Node.js event loop](https://blog.logrocket.com/complete-guide-node-js-event-loop) — Joseph Mawa, LogRocket, 2023-07-11: six phases, and the `nextTick` queue drained before the promise microtask queue between callbacks; says only that browser and Node timers have "slight implementation differences"; dated 2023, republished with a 2024-06-04 modified
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · The Node loop](./02-the-node-loop.md) →

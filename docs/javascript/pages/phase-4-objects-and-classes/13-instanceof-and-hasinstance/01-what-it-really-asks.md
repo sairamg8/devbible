@@ -232,6 +232,18 @@ directly and cannot. Use the latter when there is no constructor function to nam
 Yes. A bound function delegates the check to its target, so `new P() instanceof P` and
 `new P() instanceof Point` are both `true` when `P = Point.bind(null)`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [instanceof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) — MDN: `Symbol.hasInstance` hook with a flag-based duck-typing example, and the cross-realm failure: `[] instanceof window.frames[0].Array` is false, so use `Array.isArray` (*read*)
+- **Also good:** [instanceof](https://javascript.info/instanceof) — javascript.info, 2025-09-26: the prototype-chain algorithm and how reassigning `Class.prototype` can flip the answer; `Object.prototype.toString` as the typing alternative (*read*)
+- **Beyond the docs:** [From instanceof to Error.isError: safer error checking in JavaScript](https://allthingssmitty.com/2026/02/23/from-instanceof-to-error-iserror-safer-error-checking-in-javascript/) — Matt Smith, 2026-02-23: a worked cross-realm case for errors, with `Error.isError` as the realm-safe check and an `instanceof` fallback; `Error.isError` is new, so check engine support (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · Where it fails, and what to use instead](./02-where-it-fails.md) →

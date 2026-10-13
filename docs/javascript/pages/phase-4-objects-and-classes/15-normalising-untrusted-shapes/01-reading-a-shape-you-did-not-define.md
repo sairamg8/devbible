@@ -231,6 +231,19 @@ Calls the method only if it is not `null` or `undefined` — the idiomatic way t
 callback. It still throws if the property exists but is not callable; the guard is about nullish,
 not about callability.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) — MDN: stops at the first nullish link, pairs with `??` for defaults, and `obj.method?.()` still throws if the property exists and is not a function (*read*)
+- **Also good:** [Nullish coalescing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) — MDN: `??` falls back only on `null` or `undefined`, unlike `||` (*read*)
+- **Also good:** [Basic usage](https://zod.dev/basics)
+- **Beyond the docs:** [Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/) — Alexis King, 2019-11-05: the idea behind this topic: turn input into a precise type once at the edge instead of checking and discarding what you learned; examples are in Haskell, so read it for the principle
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · [Phase index](../README.md) · Next: [2 · Normalising at the boundary](./02-normalising-at-the-boundary.md) →

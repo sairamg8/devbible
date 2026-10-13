@@ -192,6 +192,20 @@ Accumulating with a string. `reduce((a, b) => a + b, '')` concatenates instead o
 summing, and one string field in a numeric accumulator turns the whole total into
 text — `+=` inherits `+`'s overloading.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Assignment (=)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) — MDN: assignment and compound assignment forms *(MDN: 200, title and lead passage read)*
+- **Read this:** [Logical AND assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
+- **Read this:** [Logical OR assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+- **Read this:** [Nullish coalescing assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+- **Beyond the docs:** [Logical assignment](https://v8.dev/features/logical-assignment) — Shu-yu Guo, V8 blog, May 7, 2020: logical assignments only run when the logical operation would evaluate its right side, so no write happens otherwise, with an `innerHTML` reset losing focus as the motivating bug
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · Arithmetic](./01-arithmetic.md) · [Phase index](./) · Next: [03 · Logical operators](./03-logical-operators.md) →

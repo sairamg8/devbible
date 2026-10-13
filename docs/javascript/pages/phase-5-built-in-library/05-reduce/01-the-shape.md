@@ -226,6 +226,17 @@ MDN gives the test: `reduce` is always equivalent to a `for...of` loop over the 
 update function. If you cannot immediately write that loop, the `reduce` should have
 been the loop.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array.prototype.reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) — MDN: the empty-array TypeError without an initial value, and a "When to not use reduce()" section: copying the accumulator each pass is O(N^2) so use a `for` loop, plus swaps for `flat`, `Object.groupBy`, `flatMap`, `Set`, `some` and `
+- **Beyond the docs:** [How not to use reduce](https://dev.to/ycmjason/how-not-to-use-reduce-4a1o) — YCM Jason, DEV Community, 2020-06-30: shows `map`, `flatMap`, `filter`, `Object.fromEntries` and `Math.max` replacing reduce calls; the author says it is about readability, not speed
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [When not to use `reduce`](./02-when-not-to-use-it.md)

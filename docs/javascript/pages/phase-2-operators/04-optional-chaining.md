@@ -213,6 +213,18 @@ for genuinely optional fields.
 No. `obj?.a = 1` is a `SyntaxError` — optional chaining is deliberately
 read-only.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optional chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) — MDN: reference for `?.`, `?.()` and `?.[]` *(MDN: 200, title and lead passage read)*
+- **Also good:** [no-unsafe-optional-chaining](https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining) — ESLint docs: lists where a short-circuited chain still throws: `(obj?.foo)()`, `(obj?.foo).bar`, `new (obj?.foo)()`, spread, destructuring, `for (bar of obj?.foo)` (*read*)
+- **Beyond the docs:** [Optional chaining](https://javascript.info/optional-chaining) — javascript.info, page dated April 14, 2022: `?.()` and `?.[]` shown, and `user?.name = "John"` is an error; an undeclared variable before `?.` still throws a ReferenceError
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · Logical operators](./03-logical-operators.md) · [Phase index](./) · Next: [05 · Loops](./05-loops.md) →

@@ -229,6 +229,18 @@ It is asynchronous, returns structured objects with their attributes, has a genu
 `delete`, and fires change events. It still cannot see `HttpOnly` cookies, which is
 deliberate. Check availability before depending on it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies) — MDN: `Set-Cookie`, `HttpOnly`, `Secure`, `SameSite`
+- **Also good:** [Cookies, document.cookie](https://javascript.info/cookie) — javascript.info: reading and writing through `document.cookie`
+- **Beyond the docs:** [Cookies vs localStorage for JWT Authentication](https://blog.openreplay.com/cookies-vs-localstorage-jwt-auth/) — OpenReplay blog: compares XSS exposure for localStorage with CSRF exposure for cookies, which frames "a decision, not a default"
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next: [2 · Tokens, `SameSite` and the real decision](./02-tokens-and-samesite.md) →

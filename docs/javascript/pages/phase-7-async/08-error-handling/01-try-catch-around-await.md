@@ -227,6 +227,17 @@ Yes, and it is often required, since cleanup is frequently asynchronous. A `fina
 follows ordinary language semantics, unlike `Promise.prototype.finally`, whose return value
 is ignored.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [unhandledrejection event](https://developer.mozilla.org/en-US/docs/Web/API/Window/unhandledrejection_event) — MDN: fires when a promise is rejected with no handler; `preventDefault()` stops the console log; cross-origin script rejections do not fire it (*read*)
+- **Beyond the docs:** [Error handling with promises](https://javascript.info/promise-error-handling) — javascript.info, last updated June 18, 2022: the "invisible try..catch" around executors and handlers, rethrowing, and the unhandled-rejection event with advice to report to the server
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Rejections that vanish](./02-rejections-that-vanish.md)

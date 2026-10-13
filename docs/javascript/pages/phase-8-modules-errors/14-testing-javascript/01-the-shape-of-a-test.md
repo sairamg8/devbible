@@ -194,6 +194,20 @@ when the test fails.
 **Why assert on an error code rather than a message?**
 The message is copy and will change; a code or class is a contract you chose to keep.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mocking](https://vitest.dev/guide/mocking) — Vitest: cheat sheet for mocking exported functions and classes, `vi.mock`, `vi.spyOn`, the current date and globals; timers and network requests are on separate pages, linked below (*read*)
+- **Also good:** [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details) — Kent C. Dodds, 2020-08-17: false negatives on refactor and false positives when wiring is broken (*read*)
+- **Also good:** [Timers](https://vitest.dev/guide/mocking/timers) — and [Mocking Requests](https://vitest.dev/guide/mocking/requests): Vitest
+- **Also good:** [Mocking Requests](https://vitest.dev/guide/mocking/requests)
+- **Beyond the docs:** [Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests) — Kent C. Dodds, 2019-07-13: diminishing returns past roughly 70% coverage (his own admittedly made-up figure), mock less, avoid implementation details
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](./README.md) · Next → [02 · Faking time, network and modules](./02-faking-time-network-modules.md)

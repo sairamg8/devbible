@@ -200,6 +200,17 @@ is a `Map`, or an ordered indexable list, which is an array.
 Its contents live in internal slots rather than properties, so there is nothing for the frozen flags
 to apply to. `add` and `delete` keep working.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) — MDN: includes the set-composition methods and the rule that arguments must be set-like (a `size`, a `has()` and a `keys()`), not plain iterables; an array is not set-like (*read*)
+- **Beyond the docs:** [Union, intersection, difference: new JavaScript Set methods](https://www.sonarsource.com/blog/union-intersection-difference-javascript-sets/) — Phil Nash, Sonar blog, 2024-02-15: worked examples for all seven methods and the SQL-join analogy for four of them; its summary says the methods "operate on any iterable", which MDN contradicts (set-like, not iterable), and every example passes a Set
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [16 · Regular expressions — in practice](./16-regex-in-practice/README.md) · [Phase index](./README.md) · Next: [18 · `Object` statics](./18-object-statics/README.md) →

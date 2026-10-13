@@ -178,6 +178,17 @@ anyway, something else holds it strongly.
 Keep long-lived structures small and bounded, and let short-lived objects die in the young
 generation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Trash talk: the Orinoco garbage collector](https://v8.dev/blog/trash-talk) — Peter Marshall, V8 blog, 2019-01-03: generational hypothesis, semi-space Scavenger, and Mark-Compact in marking, sweeping and compaction (*read*)
+- **Also good:** [Garbage collection](https://javascript.info/garbage-collection) — javascript.info, last updated October 14, 2022: gentler: roots, marking, and the new/old split in a few lines (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase 8 index](./README.md) · Prev → [16 · `AggregateError`](./16-aggregate-error.md)

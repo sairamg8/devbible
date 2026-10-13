@@ -204,6 +204,20 @@ returned 5 and left `i` as 6, while `++j` returned 6. Both mutate. Use them as
 standalone statements or in a `for` header, never nested inside a larger
 expression.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Remainder (%)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder) — MDN: reference for `%`; sibling pages Addition and Exponentiation cover `+` and `**` *(MDN: 200, title and lead passage read)*
+- **Read this:** [Addition (+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- **Read this:** [Exponentiation (**)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- **Also good:** [Basic operators](https://javascript.info/operators) — javascript.info, page dated Jan 31, 2023: `%`, `**`, and the `+` concatenation order (`'1' + 2 + 2` gives `"122"`) are all shown (*read*)
+- **Beyond the docs:** [The Modulus Operator in JavaScript](https://masteringjs.io/tutorials/fundamentals/modulus) — Mastering JS, page dated Dec 13, 2019: states the result of `%` takes the sign of the left operand, with `-21 % 5` giving -1; no true-modulo workaround is shown there
+
+{/* LINKMAP:END */}
+
 ---
 
 [Phase index](./) · Next: [02 · Assignment](./02-assignment.md) →

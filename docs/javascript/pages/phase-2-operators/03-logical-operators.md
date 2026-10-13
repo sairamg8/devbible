@@ -190,6 +190,20 @@ When you genuinely want every falsy value to fall back — for instance treating
 empty string from a form as "not provided". It is rarer than people assume, and
 worth a comment when you do it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Logical operators](https://javascript.info/logical-operators) — javascript.info, page dated June 5, 2022: `||` and `&&` return one of their original operands without boolean conversion, and `||` stops at the first truthy operand
+- **Also good:** [Nullish coalescing operator (??)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) — MDN *(MDN: 200, title and lead passage read)*: [Logical OR (||)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- **Also good:** [Logical OR (||)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- **Also good:** [Logical AND (&&)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
+- **Beyond the docs:** [Nullish coalescing operator '??'](https://javascript.info/nullish-coalescing-operator) — javascript.info, page dated April 23, 2023: `height || 100` gives 100 when `height` is `0` because `0` is falsy, while `height ?? 100` keeps `0`; the page says a zero height is often valid and should not be replaced
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · Assignment](./02-assignment.md) · [Phase index](./) · Next: [04 · Optional chaining](./04-optional-chaining.md) →

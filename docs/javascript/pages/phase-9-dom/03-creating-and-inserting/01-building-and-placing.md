@@ -242,6 +242,17 @@ disappears on insertion, leaving its children as direct children of the parent �
 `insertAdjacentText`, which takes the same four positions. `insertAdjacentHTML` is an
 **injection sink** — MDN: *"Do not use with untrusted strings."*
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modifying the document](https://javascript.info/modifying-document) — javascript.info: `createElement`, the insertion methods (`append`, `prepend`, `before`, `after`, `replaceWith`), `insertAdjacentHTML`, `cloneNode` and `DocumentFragment` together (*headings only*)
+- **Also good:** [Element.insertAdjacentHTML()](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML) — MDN: four positions and the no-sanitisation security note (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

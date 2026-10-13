@@ -204,6 +204,16 @@ Sorted input (or sortable), and an answer about a **pair** whose relationship ch
 as the pointers move. If moving a pointer does not monotonically change the value you are testing,
 it is a different pattern.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Two Pointers](https://usaco.guide/silver/two-pointers) — USACO Guide: opposite-ends search for a sorted pair, then the same-direction window for contiguous subarrays (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · Same direction](./02-same-direction.md)

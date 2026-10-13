@@ -182,6 +182,17 @@ indices shift as you remove.
 Not by itself — see [02 · What removal does not clean up](./02-cleanup.md). A detached node with a
 live reference stays in memory, listeners and all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Element.replaceWith()](https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceWith) — MDN: replaces a node with nodes or strings (*read*)
+- **Also good:** [Element.replaceChildren()](https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceChildren) — MDN: empties and refills in one call (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [02 · What removal does not clean up](./02-cleanup.md)

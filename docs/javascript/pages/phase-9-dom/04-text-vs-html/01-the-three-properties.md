@@ -186,6 +186,17 @@ state (`checked`, focus, scroll). Reading serialises the entire subtree to a str
 When you want the text a user would get by selecting and copying — a rendered snapshot, or a
 field containing hidden helper markup. Accept that it costs layout.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) — MDN: has "Differences from innerText" (`innerText` is layout-aware and triggers a reflow) and "Differences from innerHTML" (XSS, HTML parser cost) (*read*)
+- **Also good:** [HTMLElement.innerText](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText) — MDN: layout-aware, rendered-text reading (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · Next → [Phase index](../README.md)

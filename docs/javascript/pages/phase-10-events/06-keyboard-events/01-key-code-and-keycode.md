@@ -179,6 +179,19 @@ an editable element, then `keyup` on release. `keypress` is deprecated.
 **How do you detect Caps Lock without logging keys?**
 `event.getModifierState('CapsLock')` on any key event.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Keyboard: keydown and keyup](https://javascript.info/keyboard-events) — javascript.info: `event.key` (the character, layout-dependent) versus `event.code` (the physical key), legacy `keyCode`, modifier flags, mobile/IME keys reporting `Unidentified` (*read*)
+- **Also good:** [KeyboardEvent.key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key) — MDN: defines `key` only; it does not explain `code`, `keyCode` or IME (*read*)
+- **Also good:** [KeyboardEvent.code](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+- **Also good:** [KeyboardEvent.isComposing](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/isComposing)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Building a shortcut](./02-building-a-shortcut.md) →

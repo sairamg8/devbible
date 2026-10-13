@@ -237,6 +237,19 @@ closed to custom elements.
 Autonomous in practice: Safari does not support customized built-ins. The cost is that you
 reimplement everything a native `<button>` or `<input>` would have given you.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using custom elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements) — MDN: `connectedCallback`, `disconnectedCallback`, `adoptedCallback`, `attributeChangedCallback` (and `connectedMoveCallback`) (*read*)
+- **Also good:** [Using shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) — MDN (*headings only*): [Shadow DOM v1 - Self-Contained Web Components](https://web.dev/articles/shadowdom-v1)
+- **Also good:** [Shadow DOM v1 - Self-Contained Web Components](https://web.dev/articles/shadowdom-v1)
+- **Also good:** [Shadow DOM](https://javascript.info/shadow-dom)
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](./README.md) · [02 · Shadow DOM](./02-shadow-dom.md) →
