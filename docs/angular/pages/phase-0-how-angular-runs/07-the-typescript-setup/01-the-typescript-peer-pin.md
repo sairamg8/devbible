@@ -271,6 +271,18 @@ The Angular-versioned entries in `latestVersions` are substituted during the rel
 **A colleague fixed a peer conflict with `--legacy-peer-deps` and says the build is fine. What do you check?**
 Whether the pipeline compiles at all. `--legacy-peer-deps` makes npm ignore `peerDependencies` while building the tree — not just this one, every one — so a green install proves nothing about any compatibility constraint in the project. The check that would catch a wrong TypeScript is the build, and the check that would catch the *other* peer ranges the flag suppressed does not exist any more. The correct sequence is: remove the flag, install, and deal with whatever single conflict actually reappears.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Angular compiler options](https://angular.dev/reference/configs/angular-compiler-options) — angular.dev: `extends` inheritance and `strictTemplates` ("when `true`, enables strict template type checking", default `true`) (*read*)
+- **Also good:** [Version compatibility](https://angular.dev/reference/versions) — angular.dev: active-support table with Node.js, TypeScript and RxJS ranges; the 22.0.x row reads TypeScript `&gt;=6.0.0 &lt;6.1.0` (*read*)
+- **Beyond the docs:** [What's new in Angular 22.0?](https://blog.ninja-squad.com/2026/06/03/what-is-new-angular-22.0) — Cédric Exbrayat, Ninja Squad, 3 Jun 2026: opens with "Angular v22 now requires TypeScript v6", Node 20 dropped, and `strictTemplates` enabled by default (with a migration to keep the old behaviour); this is the 22.0 post, not 22.1 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [The check inside the compiler](01b-the-check-inside-the-compiler.md)

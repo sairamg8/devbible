@@ -271,6 +271,18 @@ is an `EnvironmentInjector` built from an array, which is why an injector-hierar
 in a standalone app has exactly three answers — platform, environment, element — and no
 "which module am I in?" branch. Phase 6 owns the rest.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [bootstrapApplication](https://angular.dev/api/platform-browser/bootstrapApplication) — angular.dev API: renders a standalone component as the root, takes an optional config for providers, returns a promise of `ApplicationRef` (*read*)
+- **Also good:** [Anatomy of components](https://angular.dev/guide/components) — angular.dev: a component lists what it uses in `imports`; components are standalone by default and the `standalone` option defaulted to `false` before 19.0.0 (*read*)
+- **Beyond the docs:** [Angular's Future Without NgModules, Part 1](https://www.angulararchitects.io/aktuelles/angulars-future-without-ngmodules-lightweight-solutions-on-top-of-standalone-components/) — Manfred Steyer, ANGULARarchitects, 1 May 2022 (updated 2022-10-09): why NgModules existed (the compilation context for which component may use which), and how `bootstrapApplication` replaces the root `AppModule` while `importProvidersFrom` is a bridge for existing NgModules, not a replacement; wri
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Index: [Topic index](README.md) · Next → [The `NgModule` bootstrap it replaced](01b-the-ngmodule-bootstrap-it-replaced.md)
