@@ -186,6 +186,7 @@ invalidate the other's cache.
 
 - **Read this:** [Building best practices · RUN](https://docs.docker.com/build/building/best-practices/#run) — docs.docker.com: `apt-get update && install` in one `RUN`, `rm -rf /var/lib/apt/lists/*`, `set -o pipefail`, heredoc alternative (*read*)
 - **Also good:** [Dockerfile reference · RUN](https://docs.docker.com/reference/dockerfile/#run) — docs.docker.com: forms, cache invalidation for `RUN`, the `--mount` family (*headings only*)
+- **Beyond the docs:** [How to reduce your Docker image size](https://depot.dev/blog/how-to-reduce-your-docker-image-size) — depot.dev, first published 2023: measures it: a separate cleanup RUN leaves the image at 653.798M, the same cleanup in the install RUN drops it to 638.794M; dive appears only as screenshots
 
 {/* LINKMAP:END */}
 

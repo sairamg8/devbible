@@ -199,6 +199,7 @@ limits a container escape.
 - **Read this:** [Seccomp security profiles for Docker](https://docs.docker.com/engine/security/seccomp/) — Docker docs: default profile disables about 44 of 300+ syscalls, an allowlist (*read*)
 - **Also good:** [AppArmor security profiles](https://docs.docker.com/engine/security/apparmor/) — Docker docs: auto-generated `docker-default` profile (*read*)
 - **Also good:** [Bind mounts: configure the SELinux label](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label)
+- **Beyond the docs:** [Container security fundamentals part 5: AppArmor and SELinux](https://securitylabs.datadoghq.com/articles/container-security-fundamentals-part-5/) — Rory McCune, Datadog Security Labs, Aug 4, 2023: covers the two mandatory access control systems and how each applies to containers, the half the Docker seccomp page leaves out (seccomp is not covered; it is the next part in the series)
 
 {/* LINKMAP:END */}
 

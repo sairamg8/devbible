@@ -160,6 +160,7 @@ Time-filtered pruning preserves what is actively in use, unlike a blanket `-a`.
 
 - **Read this:** [Prune unused Docker objects](https://docs.docker.com/engine/manage-resources/pruning/) — Docker docs, modified 2026-08-13: images, containers, volumes, networks, build cache, everything (*headings only*)
 - **Also good:** [docker system prune](https://docs.docker.com/reference/cli/docker/system/prune/) — Docker docs: stopped containers, unused networks, dangling images, build cache; `--volumes` adds anonymous volumes (*read*)
+- **Beyond the docs:** [Docker: Clean up unused stuff on your development machine](https://adamj.eu/tech/2023/08/21/docker-clean-up/) — Adam Johnson, Aug 21, 2023: a practical routine with `docker system df` to preview, age-filtered prune, and the separate `docker volume prune` because `--volumes` cannot combine with `--filter`
 
 {/* LINKMAP:END */}
 

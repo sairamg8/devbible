@@ -271,6 +271,7 @@ fresh in the runtime stage.
 
 - **Read this:** [Building best practices · RUN](https://docs.docker.com/build/building/best-practices/#run) — docs.docker.com: `apt` lists removal, `--no-install-recommends` (*read*)
 - **Also good:** [Build secrets](https://docs.docker.com/build/building/secrets/) — docs.docker.com: the fix for secrets in an early layer (*read*)
+- **Beyond the docs:** [Reducing Docker Image Sizes: From 1.2GB to 150MB (or less)](https://betterstack.com/community/guides/scaling-docker/reducing-docker-image-size/) — betterstack.com, Ayooluwa Isaiah, updated 10 Mar 2025: lists the usual bloat sources in one place (deleted-but-present layers, .git and .env in context, dev dependencies, leftover caches) with base-image size figures but none for cache contents
 
 {/* LINKMAP:END */}
 

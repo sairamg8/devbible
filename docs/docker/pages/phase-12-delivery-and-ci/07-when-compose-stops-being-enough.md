@@ -199,6 +199,7 @@ a nuisance; three is a threshold.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [When to Use Docker Compose vs. Kubernetes](https://earthly.dev/blog/dockercompose-vs-k8s/) — Earthly blog, date not shown: contents list: scalability, reliability, self-healing versus quick local setup (*headings only*)
+- **Beyond the docs:** [Is Docker-Compose Suited For Production?](https://vsupalov.com/docker-compose-production/) — vsupalov.com, Vladislav, written January 2020: short opinion piece that puts the real dividing line at multi-host scheduling (Compose is fine on one machine; an orchestrator is needed when containers must be spread across a varying number of machines) and exposes the unstated 
 
 {/* LINKMAP:END */}
 

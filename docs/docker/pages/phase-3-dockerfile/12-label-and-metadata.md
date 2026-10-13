@@ -184,6 +184,7 @@ the base image, and setting the same key overrides the inherited value.
 
 - **Read this:** [OCI image annotations (raw)](https://raw.githubusercontent.com/opencontainers/image-spec/main/annotations.md) — opencontainers/image-spec: defines `org.opencontainers.image.source`, `.revision`, `.version`, `.vendor`, `.licenses` (*read*)
 - **Also good:** [Dockerfile reference · LABEL](https://docs.docker.com/reference/dockerfile/#label) — docs.docker.com: syntax and quoting (*headings only*)
+- **Beyond the docs:** [How and when to use Docker labels / OCI container annotations](https://snyk.io/blog/how-and-when-to-use-docker-labels-oci-container-annotations/) — snyk.io, Eric Smalling, 3 Nov 2021: shows what the org.opencontainers.image keys are used for in practice (listing sources with docker inspect, regctl against a registry, scanner-to-Dockerfile linking)
 - **Read this:** [Dockerfile reference · MAINTAINER (deprecated)](https://docs.docker.com/reference/dockerfile/#maintainer-deprecated) — docs.docker.com: the section is marked deprecated and says `LABEL` is the more flexible replacement (*read*)
 
 {/* LINKMAP:END */}

@@ -211,6 +211,7 @@ performance rule on macOS and Windows as much as a correctness one on Linux.
 
 - **Read this:** [Change your Docker Desktop settings](https://docs.docker.com/desktop/settings-and-maintenance/settings/) — docs.docker.com: VirtioFS versus gRPC FUSE on Mac; the page claims up to 98% less time on file operations and says VirtioFS is the only option under Docker VMM; modified 2026-09-29 (*read*)
 - **Also good:** [Use Compose Watch](https://docs.docker.com/compose/how-tos/file-watch/) — docs.docker.com: many small files cause high I/O load on some setups, so sync instead (*read*)
+- **Beyond the docs:** [Truly fast container filesystems on macOS](https://orbstack.dev/blog/fast-filesystem) — OrbStack blog / Danny Lin: explains the mechanism: bind mounts live on the macOS side and pay the VM-boundary cost on access, while the native Linux filesystem (where named volumes sit) is fast, an implication the page does not spell out for named volumes (
 
 {/* LINKMAP:END */}
 

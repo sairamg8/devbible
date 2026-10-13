@@ -24,6 +24,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 - **Read this:** [Volumes](https://docs.docker.com/engine/storage/volumes/) · docs.docker.com · when to use volumes, lifecycle, named versus anonymous, populate-from-image, read-only, drivers, backup (*read*; modified 2026-07-21) · covers our angle: **partial** — Docker only, no Podman volume notes · fetched 2026-10-12
 - **Also good:** [Bind mounts](https://docs.docker.com/engine/storage/bind-mounts/) · docs.docker.com · host path mounted in, files already in the target directory are obscured (*read*) · fetched 2026-10-12
 - **Also good:** [tmpfs mounts](https://docs.docker.com/engine/storage/tmpfs/) · docs.docker.com · Linux only, not shareable between containers, counts toward the container memory limit (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Docker Mount Types: Volumes, Bind Mounts and tmpfs Guide](https://www.datacamp.com/tutorial/docker-mount) · DataCamp / Dario Radečić · one worked FastAPI bind-mount example plus side-by-side performance and security comparison of all three mount types; structured data gives 2026-01-16 · fetched 2026-10-13 (*read*)
 - **Our delta:** the one-job-one-mount decision table; Podman's volume behaviour.
 
 ### T06-03 · `-v` short syntax vs `--mount` — Understand · ✅ written `docs/docker/pages/phase-6-storage/03-v-vs-mount.md`
@@ -39,6 +40,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 ### T06-05 · File ownership and UID mismatch — Master · ✅ written `docs/docker/pages/phase-6-storage/05-uid-mismatch/README.md`
 - **Read this:** [Understanding rootless Podman's user namespace modes](https://www.redhat.com/en/blog/rootless-podman-user-namespace-modes) · Red Hat blog · table of host UID versus container UID for default, `keep-id`, `auto`, `nomap`; page shows January 25, 2023; metadata published 2023-01-11, modified 2025-11-21 (*read*) · covers our angle: **partial** — no worked file-ownership example on a bind mount · fetched 2026-10-12
 - **Also good:** [Podman rootless tutorial (raw)](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/rootless_tutorial.md) · containers/podman · `/etc/subuid` and `/etc/subgid` ranges, `podman unshare ls -ldn` to see mapped owners, 65534 means unmapped (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Docker Mount Permissions: UID/GID, Users, and Five Fixes](https://eastondev.com/blog/en/posts/dev/20251217-docker-mount-permissions-guide/) · Easton Dev / Easton · walks a root-in-container file undeletable by host UID 1000 with `ls -ln` and `docker exec id` output, then five fixes; published December 17, 2025 · fetched 2026-10-13 (*read*)
 - **Our delta:** why a file shows as `165536` on the host; neither page works that arithmetic through for a bind mount.
 
 ### T06-06 · Volume lifecycle — Understand · ✅ written `docs/docker/pages/phase-6-storage/06-volume-lifecycle.md`
@@ -50,6 +52,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 - **Read this:** [podman-run · Volume mounts](https://docs.podman.io/en/latest/markdown/podman-run.1.html) · docs.podman.io · `:z` marks content shared between containers, `:Z` private to one; both relabel the files (*read* the volume passage; the rest *headings only*, 130k characters) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Bind mounts · Configure the SELinux label](https://docs.docker.com/engine/storage/bind-mounts/) · docs.docker.com · same two options; warns it changes the host path itself, with effects beyond Docker (*read*) · fetched 2026-10-12
 - **Also good:** [Dealing with user namespaces and SELinux on rootless containers](https://www.redhat.com/en/blog/user-namespaces-selinux-rootless-containers) · Red Hat blog · `container_t` versus `container_file_t` and why a volume mount breaks it; page shows June 25, 2020; metadata published 2020-06-04, modified 2025-11-20 (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Using docker volumes on SELinux-enabled servers](https://prefetch.net/blog/2017/09/30/using-docker-volumes-on-selinux-enabled-servers) · Blog O' Matty (prefetch.net) · short practical case of the "Permission denied" on a bind mount with no suffix, fixed with `Z`; quotes the Docker docs for `z` (shared) versus `Z` (private unshared label) but only tests `Z`; page shows Sep 30, 2017 · fetched 2026-10-13 (*read*)
 - **Our delta:** never `:Z` on a home directory or shared path; the page gives the shared-versus-private rule only.
 
 ### T06-08 · `--read-only` root filesystem plus tmpfs — Know · ✅ written `docs/docker/pages/phase-6-storage/08-read-only-rootfs.md`
@@ -65,6 +68,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 ### T06-10 · Backing up and restoring a volume — Understand · ✅ written `docs/docker/pages/phase-6-storage/10-backup-and-restore.md`
 - **Read this:** [Volumes · Back up, restore, or migrate data volumes](https://docs.docker.com/engine/storage/volumes/) · docs.docker.com · throwaway container with `--volumes-from`, a host directory at `/backup`, `tar` the data (*read*) · covers our angle: **partial** — a file copy, not a consistent database backup · fetched 2026-10-12
 - **Also good:** [PostgreSQL · SQL Dump](https://www.postgresql.org/docs/current/backup-dump.html) · postgresql.org · `pg_dump` output regenerates the database as of the dump (*read*; the page is the version 18 docs) · fetched 2026-10-12
+- **Beyond the docs:** [Backup Docker Volumes: Destroyed, Restored, and Timed](https://learnwithhasan.com/guide/docker-backups/) · LearnWithHasan / Hasan Aboul Hasan · measured test where restores from a live `tar` copy lost about two-thirds of rows while a dump restored intact, which is the evidence our delta asserts; MariaDB-based, Postgres only noted; published 2026-08-11 · fetched 2026-10-13 (*read*)
 - **Our delta:** tar of a live Postgres data directory is unsafe; use `pg_dump` through `exec`. The Docker page does not say this.
 
 ### T06-11 · Volume drivers and network storage — Know · ✅ written `docs/docker/pages/phase-6-storage/11-volume-drivers.md`
@@ -75,6 +79,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 ### T06-12 · Bind-mount performance on macOS and Windows — Know · ✅ written `docs/docker/pages/phase-6-storage/12-bind-mount-performance.md`
 - **Read this:** [Change your Docker Desktop settings](https://docs.docker.com/desktop/settings-and-maintenance/settings/) · docs.docker.com · VirtioFS versus gRPC FUSE on Mac; the page claims up to 98% less time on file operations and says VirtioFS is the only option under Docker VMM; modified 2026-09-29 (*read*) · covers our angle: **partial** — Mac only, no Windows WSL 2 guidance and no benchmark we can check · fetched 2026-10-12
 - **Also good:** [Use Compose Watch](https://docs.docker.com/compose/how-tos/file-watch/) · docs.docker.com · many small files cause high I/O load on some setups, so sync instead (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Truly fast container filesystems on macOS](https://orbstack.dev/blog/fast-filesystem) · OrbStack blog / Danny Lin · explains the mechanism: bind mounts live on the macOS side and pay the VM-boundary cost on access, while the native Linux filesystem (where named volumes sit) is fast, an implication the page does not spell out for named volumes (vendor of a competing product); May 22, 2024 · fetched 2026-10-13 (*read*)
 - **Our delta:** keep `node_modules` off the mount; the Windows side (project inside the WSL filesystem) is not confirmed by a page we read.
 
 ---
@@ -84,11 +89,13 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 ### T07-01 · The default bridge vs a user-defined bridge — Master · ✅ written `docs/docker/pages/phase-7-networking/01-default-vs-user-defined-bridge.md`
 - **Read this:** [Bridge network driver](https://docs.docker.com/engine/network/drivers/bridge/) · docs.docker.com · user-defined bridges give automatic DNS by name or alias; the default bridge reaches by IP only, `--link` is legacy; modified 2026-02-21 (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Networking overview](https://docs.docker.com/engine/network/) · docs.docker.com · containers with no `--network` join the default bridge; custom networks get their own DNS handling (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Diving into Linux Networking and Docker - Bridge, vETH and IPTables](https://dev.to/arriqaaq/diving-into-linux-networking-and-docker-bridge-veth-and-iptables-419a) · DEV Community / Farhan (arriqaaq) · builds namespaces, a veth pair and a bridge by hand to show what the Docker bridge is made of, plus MASQUERADE for outbound traffic; posted September 11, 2021 · fetched 2026-10-13 (*read*)
 - **Our delta:** the "why `docker run` alone cannot resolve names but Compose can" link to Phase 8.
 
 ### T07-02 · Service discovery — Master · ✅ written `docs/docker/pages/phase-7-networking/02-service-discovery.md`
 - **Read this:** [Networking in Compose](https://docs.docker.com/compose/how-tos/networking/) · docs.docker.com · each service registers its name with an internal DNS server; the default network is enough for most development; modified 2026-08-16 (*read*) · covers our angle: **partial** — the container-port versus published-port rule is shown by example, not stated as a rule · fetched 2026-10-12
 - **Also good:** [Bridge network driver](https://docs.docker.com/engine/network/drivers/bridge/) · docs.docker.com · the same name resolution outside Compose (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Docker Networking, Demystified: Bridge, Host, and Container DNS](https://dev.to/jjoyneriv/docker-networking-demystified-bridge-host-and-container-dns-5fac) · DEV Community / James Joyner · states the rule our page needs: containers on one network use service name and internal port, and publishing is only for host-to-container traffic; page shows "Jul 12" without a year · fetched 2026-10-13 (*read*)
 - **Our delta:** reach `db:5432`, never the published `8001`; no `-p` needed for container-to-container.
 
 ### T07-03 · `localhost` inside a container is the container — Master · ✅ written `docs/docker/pages/phase-7-networking/03-localhost-is-the-container.md`
@@ -100,6 +107,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 ### T07-04 · Publishing ports — Understand · ✅ written `docs/docker/pages/phase-7-networking/04-publishing-ports.md`
 - **Read this:** [Port publishing and mapping](https://docs.docker.com/engine/network/port-publishing/) · docs.docker.com · `-p` creates firewall rules mapping a host address and port to the container; `-p 8080:80` listens on any host address; modified 2025-09-12 (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Docker with iptables](https://docs.docker.com/engine/network/firewall-iptables/) · docs.docker.com · remote hosts reach a container only through a published port, and rules go in the `DOCKER-USER` chain (*read*; modified 2026-08-12) · fetched 2026-10-12
+- **Beyond the docs:** [Docker bypasses UFW: why and how to fix it](https://www.ssdnodes.com/learn/docker-ports-bypass-ufw) · SSD Nodes / Matt Connor · covers the host-firewall gap our delta flags: published ports are DNAT-ed before UFW's INPUT rules, with fixes via `127.0.0.1` binding and `DOCKER-USER`; dated 2026-10-11 · fetched 2026-10-13 (*read*)
 - **Our delta:** bind to `127.0.0.1:` for dev databases; the iptables page covers the firewall side but not host-firewall tools such as `ufw` (not confirmed).
 
 ### T07-05 · Network drivers — Know · ✅ written `docs/docker/pages/phase-7-networking/05-network-drivers.md`
@@ -122,6 +130,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 - **Read this:** [Podman basic networking (raw)](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/basic_networking.md) · containers/podman · rootless containers default to pasta, rootful to netavark; bridge, host and none setups (*read*) · covers our angle: **partial** — nothing on source IPs in logs or throughput · fetched 2026-10-12
 - **Also good:** [Podman 5.3 changes for improved networking with pasta](https://blog.podman.io/2024/10/podman-5-3-changes-for-improved-networking-experience-with-pasta/) · Podman blog · since Podman 5.0 pasta replaces slirp4netns as the default, and works differently (*read*; 2024-10-25) · fetched 2026-10-12
 - **Also good:** [Rootless mode troubleshooting](https://docs.docker.com/engine/security/rootless/troubleshoot/) · docs.docker.com · Docker's rootless `-p` does not propagate source IP addresses by default (*read*; modified 2026-09-01) · fetched 2026-10-12
+- **Beyond the docs:** [podman-networking-docs (raw README)](https://raw.githubusercontent.com/eriksjolund/podman-networking-docs/main/README.md) · eriksjolund/podman-networking-docs · community guide to rootless modes (pasta, slirp4netns, socket activation, host) with source-address preservation and performance notes; states pasta is the default since Podman 5.0.0 · fetched 2026-10-13 (*read* the opening 100k of 110k characters)
 - **Our delta:** the performance difference between pasta and slirp4netns is not confirmed by any page read; the Podman side of source IPs is not confirmed either.
 
 ### T07-09 · Privileged ports rootless — Understand · ✅ written `docs/docker/pages/phase-7-networking/09-privileged-ports-rootless.md`
@@ -132,6 +141,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 
 ### T07-10 · `--network=host` — Know · ✅ written `docs/docker/pages/phase-7-networking/10-network-host.md`
 - **Read this:** [Host network driver](https://docs.docker.com/engine/network/drivers/host/) · docs.docker.com · no isolation, no own IP, a port 80 bind is port 80 on the host; `-p` and `-P` are ignored with a warning; lists performance as a use case; Linux Engine and Desktop 4.34+; modified 2026-08-16 (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Understanding Docker's -net=host Option](https://www.metricfire.com/blog/understanding-dockers-net-host-option) · MetricFire / Vaibhav Thakur · shows the cost concretely: a second container on the same host fails because the first holds port 80; no measured numbers; Oct 12, 2023 · fetched 2026-10-13 (*read*)
 - **Our delta:** the trade-off argument (what you lose); the page gives no measured numbers.
 
 ### T07-11 · Debugging the network — Understand · ✅ written `docs/docker/pages/phase-7-networking/11-debugging-the-network.md`
@@ -147,10 +157,12 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 ### T07-13 · Custom subnets, IPv6, and the VPN clash — Know · ✅ written `docs/docker/pages/phase-7-networking/13-subnets-ipv6-and-vpn.md`
 - **Read this:** [dockerd reference](https://docs.docker.com/reference/cli/dockerd/) · docs.docker.com · `default-address-pools` in `daemon.json` sets the base and size for new networks; modified 2026-10-02 (*read* the config example; the rest *headings only*) · covers our angle: **partial** — no VPN-clash story · fetched 2026-10-12
 - **Also good:** [Use IPv6 networking](https://docs.docker.com/engine/daemon/ipv6/) · docs.docker.com · `docker network create --ipv6 --subnet ...` and the Compose `enable_ipv6` form (*read*; modified 2026-04-13) · fetched 2026-10-12
+- **Beyond the docs:** [Fixing Docker and VPN IP Address Conflicts](https://www.lullabot.com/articles/fixing-docker-and-vpn-ip-address-conflicts) · Lullabot / Nate Lampton · the VPN-clash story the official pages lack: spot it with `route -n` and `ip addr`, recreate networks, set `default-address-pools`; August 15, 2019 (older, concept still holds) · fetched 2026-10-13 (*read*)
 - **Our delta:** the corporate-VPN subnet clash: no page found that names it, so our page owns the argument.
 
 ### T07-14 · Overlay networks and multi-host — When Needed · ✅ written `docs/docker/pages/phase-7-networking/14-overlay-and-multi-host.md`
 - **Read this:** [Overlay network driver](https://docs.docker.com/engine/network/drivers/overlay/) · docs.docker.com · distributed network across daemon hosts; hosts must be in a swarm; ports 2377/tcp and 4789/udp open; modified 2026-08-16 (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Docker Swarm networking explained: overlay, bridges and VXLAN](https://blog.octo.com/how-does-it-work-docker!-part-2-swarm-networking) · OCTO Talks / Sebastian Caceres · shows the per-host bridge plus VXLAN tunnel (L2 wrapped in IP/UDP) that makes an overlay work, and the gossip control plane; 04/09/2017 (Swarm-era, mechanism still valid) · fetched 2026-10-13 (*read*)
 - **Our delta:** why a single-host MERN stack never needs it, and where Kubernetes takes over.
 
 ---
@@ -166,6 +178,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 - **Read this:** [Version and name top-level elements](https://docs.docker.com/reference/compose-file/version-and-name/) · docs.docker.com · `version` is kept for backward compatibility, informative only, and warns that it is obsolete if used; Compose always validates against the newest schema (*read*; modified 2025-07-09) · covers our angle: **partial** — the `version:` rule only; the `compose.yaml` filename is not argued · fetched 2026-10-12
 - **Also good:** [Compose file reference](https://docs.docker.com/reference/compose-file/) · docs.docker.com · the top-level elements; modified 2026-05-28 (*headings only*) · fetched 2026-10-12
 - **Also good:** [compose-spec.io](https://compose-spec.io/) · Compose Specification site · the open spec itself (*headings only*, a short landing page) · fetched 2026-10-12
+- **Beyond the docs:** [Docker: remove obsolete version keys from Compose files](https://adamj.eu/tech/2025/05/05/docker-remove-obsolete-compose-version/) · adamj.eu / Adam Johnson · why the `version` key is ignored since Compose v2 and how to strip it, including from override files; 2025-05-05 · fetched 2026-10-13 (*read*)
 - **Our delta:** `compose.yaml` over `docker-compose.yml` as the preferred filename: the pages read here do not argue it, so our page owns it.
 
 ### T08-03 · `up` / `down` / `-d` / `--build` — Master · ✅ written `docs/docker/pages/phase-8-compose/03-up-and-down/README.md`
@@ -180,6 +193,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 
 ### T08-05 · `depends_on` with `condition: service_healthy` — Master · ✅ written `docs/docker/pages/phase-8-compose/05-depends-on.md`
 - **Read this:** [Control startup and shutdown order in Compose](https://docs.docker.com/compose/how-tos/startup-order/) · docs.docker.com · Compose waits for "running", not "ready"; the fix is `condition: service_healthy` with a `healthcheck`, plus `service_completed_successfully`; modified 2025-12-03 (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [How to Make Docker Compose Wait for Dependency Containers](https://www.howtogeek.com/devops/how-to-make-docker-compose-wait-for-dependency-containers/) · How-To Geek / James Walker · plain-language version of "started is not ready": default `depends_on` waits only for launch, so pair it with a healthcheck and `service_healthy`; updated Jul 23, 2022 · fetched 2026-10-13 (*read*)
 - **Our delta:** the app must still retry (Phase 9, T09-04), since a database can restart after boot.
 
 ### T08-06 · Healthchecks in Compose — Master · ✅ written `docs/docker/pages/phase-8-compose/06-healthchecks/README.md`
@@ -208,6 +222,7 @@ Covers every topic row of `docs/docker/syllabus/03-running-a-stack.md`: T06-01 t
 
 ### T08-11 · Override files — Understand · ✅ written `docs/docker/pages/phase-8-compose/11-override-files.md`
 - **Read this:** [Merge Compose files](https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/) · docs.docker.com · `compose.override.yaml` read by default; single-value options replaced, multi-value options such as `ports` combined; modified 2026-06-22 (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [A Docker Compose Override File Can Help Avoid Compose File Duplication](https://nickjanetakis.com/blog/a-docker-compose-override-file-can-help-avoid-compose-file-duplication) · Nick Janetakis · real use of one file for dev and prod (dev-only watcher, local DB swapped for a managed one); updated March 17, 2020, and the author later moved to profiles (Sept 2022) · fetched 2026-10-13 (*read*)
 - **Our delta:** `docker compose config` to see the merged result (T08-14).
 
 ### T08-12 · `profiles` — Know · ✅ written `docs/docker/pages/phase-8-compose/12-profiles.md`

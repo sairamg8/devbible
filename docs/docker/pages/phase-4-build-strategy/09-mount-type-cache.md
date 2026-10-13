@@ -242,6 +242,7 @@ cache between machines is cache export/import, a different mechanism.
 
 - **Read this:** [Dockerfile reference · RUN --mount=type=cache](https://docs.docker.com/reference/dockerfile/#run---mounttypecache) — docs.docker.com: options `id`, `sharing`, `from`, `mode`, `uid`; contents persist without invalidating the instruction cache; build must work with any cache contents (*read*)
 - **Also good:** [Optimize cache usage · Use cache mounts](https://docs.docker.com/build/cache/optimize/#use-cache-mounts) — docs.docker.com: rebuilt layer downloads only new packages (*read*)
+- **Beyond the docs:** [How to use cache mounts to speed up Docker builds](https://depot.dev/blog/how-to-use-cache-mount-to-speed-up-docker-builds) — depot.dev: explains cache mounts as a second cache inside a step, sharing modes, and why they are not exported by cache-from in CI (example is pnpm, not npm)
 
 {/* LINKMAP:END */}
 

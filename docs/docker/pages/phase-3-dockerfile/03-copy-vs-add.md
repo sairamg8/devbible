@@ -161,6 +161,7 @@ credentials.
 
 - **Read this:** [Dockerfile reference · ADD](https://docs.docker.com/reference/dockerfile/#add) — docs.docker.com: `ADD` sources (URL, git, archives), `--checksum`, `--keep-git-dir`, `--unpack`; `COPY` is a sibling section (*read* the option table and `--checksum`/`--keep-git-dir` text)
 - **Also good:** [Building best practices · ADD or COPY](https://docs.docker.com/build/building/best-practices/#add-or-copy) — docs.docker.com: `COPY` for files between stages, `ADD` for remote URLs and auto-extract, bind mount instead of a temporary `COPY` (*read*)
+- **Beyond the docs:** [What is the Difference Between COPY and ADD Instructions in Dockerfile?](https://linuxhandbook.com/dockerfile-copy-add-difference/) — linuxhandbook.com, Avimanyu Bandyopadhyay, 20 Apr 2021: short side-by-side of what ADD adds (URLs, archive extraction) and why to do those with RUN plus curl/tar instead
 
 {/* LINKMAP:END */}
 

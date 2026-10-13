@@ -169,6 +169,7 @@ error message is the whole story.
 
 - **Read this:** [Running containers: exit status](https://docs.docker.com/engine/containers/run/#exit-status) — Docker docs: 125 is the daemon, 126 not invokable, 127 not found, anything else is the command's own code (*read*)
 - **Also good:** [podman run: exit status](https://docs.podman.io/en/latest/markdown/podman-run.1.html) — Podman docs: same 125 scheme, "error is with Podman itself" (*read*)
+- **Beyond the docs:** [Docker exit code 137: OOMKilled or SIGKILL?](https://www.netdata.cloud/guides/docker/docker-exit-code-137/) — Netdata guides (no date shown on page): 137 is 128 plus signal 9, how to tell an OOM kill from an ignored SIGTERM with `.State.OOMKilled`, and the 10 second stop timeout, which fills the gap the Docker page leaves
 
 {/* LINKMAP:END */}
 

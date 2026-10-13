@@ -185,6 +185,7 @@ machine is better off with a published port.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Host network driver](https://docs.docker.com/engine/network/drivers/host/) — docs.docker.com: no isolation, no own IP, a port 80 bind is port 80 on the host; `-p` and `-P` are ignored with a warning; lists performance as a use case; Linux Engine and Desktop 4.34+; modified 2026-08-16 (*read*)
+- **Beyond the docs:** [Understanding Docker's -net=host Option](https://www.metricfire.com/blog/understanding-dockers-net-host-option) — MetricFire / Vaibhav Thakur: shows the cost concretely: a second container on the same host fails because the first holds port 80; no measured numbers; Oct 12, 2023
 
 {/* LINKMAP:END */}
 

@@ -257,6 +257,7 @@ rather than on a pinned frontend.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Optimize cache usage in builds · Order your layers](https://docs.docker.com/build/cache/optimize/#order-your-layers) — docs.docker.com: copy `package.json` and the lockfile, install, then copy source; before/after Dockerfiles (*read*)
+- **Beyond the docs:** [Fast Dockerfiles: theory and practice](https://depot.dev/blog/fast-dockerfiles-theory-and-practice) — depot.dev: Node.js example of copying only the dependency manifests before install, then .dockerignore so README or build output cannot bust the source layer (ends in a vendor pitch)
 
 {/* LINKMAP:END */}
 

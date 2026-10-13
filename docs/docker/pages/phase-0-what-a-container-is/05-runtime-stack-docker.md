@@ -205,6 +205,7 @@ Docker.
 
 - **Read this:** [containerd vs. Docker](https://www.docker.com/blog/containerd-vs-docker/) — Docker blog, 27 Mar 2024, modified 2024-11-13: containerd delegates to runc "using a shim process" (*read*)
 - **Also good:** [What is Docker?](https://docs.docker.com/get-started/docker-overview/) — Docker docs: daemon, client, registries, objects (*headings only*)
+- **Beyond the docs:** [Implementing Container Runtime Shim: runc](https://iximiuz.com/en/posts/implementing-container-runtime-shim/) — Ivan Velichko, iximiuz.com, Dec 15, 2019 (updated Sep 11, 2022): explains why a shim exists: it holds stdio and records the exit code so containers survive a manager restart, which the Docker blog only mentions
 
 {/* LINKMAP:END */}
 

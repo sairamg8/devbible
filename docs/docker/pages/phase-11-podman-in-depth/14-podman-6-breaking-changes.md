@@ -201,6 +201,7 @@ a changed assumption worth checking.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Podman release notes (raw)](https://raw.githubusercontent.com/containers/podman/main/RELEASE_NOTES.md) — containers/podman: 6.0 removes BoltDB (auto-migration to SQLite), Intel Macs, Windows 10, cgroups v1, iptables, CNI and slirp4netns (*read* the 6.0 list; 6.1.0 is the top entry)
+- **Beyond the docs:** [Podman 6.0 Lands with Breaking Changes, AMD GPUs Support](https://linuxiac.com/podman-6-0-lands-with-breaking-changes-amd-gpus-support/) — Linuxiac, Bobby Borisov, June 24, 2026 (updated July 2, 2026): reads the removals as an upgrade checklist and adds behaviour changes such as `podman volume prune` defaults and macOS machine provider moving to libkrun
 
 {/* LINKMAP:END */}
 

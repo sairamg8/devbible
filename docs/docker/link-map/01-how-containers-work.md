@@ -20,6 +20,7 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 ### T00-01 · A container is a process — Master · ✅ written `docs/docker/pages/phase-0-what-a-container-is/01-a-container-is-a-process.md`
 - **Read this:** [What even is a container: namespaces and cgroups](https://jvns.ca/blog/2016/10/10/what-even-is-a-container/) · Julia Evans, 10 Oct 2016 · short walk through namespaces, cgroups and seccomp-bpf, ending in "what are containers?" (*read* the headings, ≈900 words) · covers our angle: **partial** — 2016, no root filesystem or OCI, no rootless · fetched 2026-10-12
 - **Also good:** [What is Docker?](https://docs.docker.com/get-started/docker-overview/) · Docker docs, modified 2026-09-07 · "The underlying technology": namespaces give the isolated workspace (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Build a Container from Scratch in Go](https://labs.iximiuz.com/tutorials/build-a-container-from-scratch-in-go-1b92e418) · iximiuz Labs (Liz Rice's GOTO 2018 talk, tutorial by Başar Subaşı; page shows last updated Aug 14, 2026) · builds a tiny runtime step by step with UTS, PID and mount namespaces, chroot and a cgroups v2 `pids.max`, so the container-is-a-process claim is shown in code rather than described · fetched 2026-10-13 (*headings only*)
 - **Our delta:** "there is no container object in the kernel" is our framing; neither page says it in those words (not confirmed).
 
 ### T00-02 · Namespaces — Master · ✅ written `docs/docker/pages/phase-0-what-a-container-is/02-namespaces.md`
@@ -36,10 +37,12 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 ### T00-04 · The image is not the container — Master · ✅ written `docs/docker/pages/phase-0-what-a-container-is/04-image-vs-container.md`
 - **Read this:** [Storage drivers](https://docs.docker.com/engine/storage/drivers/) · Docker docs · writes go to a thin writable container layer, deleted with the container; many containers share one image (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [What is an image?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/) · Docker docs · images are immutable and made of layers (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [You Don't Need an Image To Run a Container](https://iximiuz.com/en/posts/you-dont-need-an-image-to-run-a-container/) · Ivan Velichko, iximiuz.com, May 16, 2020 (updated Aug 7, 2021) · runs a container with runc from a plain directory and config.json, which separates what an image is for (build and distribute) from what running needs · fetched 2026-10-13 (*read*)
 
 ### T00-05 · The runtime stack, Docker — Understand · ✅ written `docs/docker/pages/phase-0-what-a-container-is/05-runtime-stack-docker.md`
 - **Read this:** [containerd vs. Docker](https://www.docker.com/blog/containerd-vs-docker/) · Docker blog, 27 Mar 2024, modified 2024-11-13 · containerd delegates to runc "using a shim process" (*read*) · covers our angle: **partial** — no "which piece dies when" table · fetched 2026-10-12
 - **Also good:** [What is Docker?](https://docs.docker.com/get-started/docker-overview/) · Docker docs · daemon, client, registries, objects (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Implementing Container Runtime Shim: runc](https://iximiuz.com/en/posts/implementing-container-runtime-shim/) · Ivan Velichko, iximiuz.com, Dec 15, 2019 (updated Sep 11, 2022) · explains why a shim exists: it holds stdio and records the exit code so containers survive a manager restart, which the Docker blog only mentions · fetched 2026-10-13 (*read*)
 - **Our delta:** the failure table. That a shim lets containers survive a daemon restart came from search summaries only (not confirmed on a fetched page).
 
 ### T00-06 · The runtime stack, Podman — Understand · ✅ written `docs/docker/pages/phase-0-what-a-container-is/06-runtime-stack-podman.md`
@@ -54,6 +57,7 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 
 ### T00-08 · The OCI specifications — Understand · ✅ written `docs/docker/pages/phase-0-what-a-container-is/08-oci-specs.md`
 - **Read this:** [Open Container Initiative overview](https://opencontainers.org/about/overview/) · opencontainers.org · three specs: runtime, image, distribution (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [What is Open Container Initiative (OCI)? Build Spec, Runtime Spec, Image Spec and more](https://mkdev.me/posts/what-is-open-container-initiative-oci-build-spec-runtime-spec-image-spec-and-more) · Kirill Shirinkin, mkdev, published 10/08/24, updated 01/03/25 · explains why compliant tools interoperate (build with one, run with another) and notes that an image is not strictly required to run a container · fetched 2026-10-13 (*read*)
 - **Our delta:** why Docker and Podman are interchangeable in practice.
 
 ### T00-09 · Capabilities and --privileged — Understand · ✅ written `docs/docker/pages/phase-0-what-a-container-is/09-capabilities.md`
@@ -63,6 +67,7 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 ### T00-10 · seccomp, AppArmor and SELinux — Understand · ✅ written `docs/docker/pages/phase-0-what-a-container-is/10-seccomp-apparmor-selinux.md`
 - **Read this:** [Seccomp security profiles for Docker](https://docs.docker.com/engine/security/seccomp/) · Docker docs · default profile disables about 44 of 300+ syscalls, an allowlist (*read*) · covers our angle: **partial** — no AppArmor or SELinux · fetched 2026-10-12
 - **Also good:** [AppArmor security profiles](https://docs.docker.com/engine/security/apparmor/) · Docker docs · auto-generated `docker-default` profile (*read*) · [Bind mounts: configure the SELinux label](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label) · Docker docs · `z` marks content shared between containers, `Z` private; both change labels on the host path (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Container security fundamentals part 5: AppArmor and SELinux](https://securitylabs.datadoghq.com/articles/container-security-fundamentals-part-5/) · Rory McCune, Datadog Security Labs, Aug 4, 2023 · covers the two mandatory access control systems and how each applies to containers, the half the Docker seccomp page leaves out (seccomp is not covered; it is the next part in the series) · fetched 2026-10-13 (*read*)
 - **Checked, not chosen:** [Red Hat on user namespaces and SELinux](https://www.redhat.com/en/blog/user-namespaces-selinux-rootless-containers) · page dated June 25, 2020 (*headings only*; page is mostly site navigation in our fetcher).
 - **Our delta:** the "permission denied on a file you can see" diagnosis ladder.
 
@@ -73,6 +78,7 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 
 ### T00-12 · Why "works on my machine" stops being a sentence — Know · ✅ written `docs/docker/pages/phase-0-what-a-container-is/12-works-on-my-machine.md`
 - **Read this:** [What is a container?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/) · Docker docs · self-contained, isolated processes with no reliance on host dependencies (*read*) · covers our angle: **partial** — the "image ships the config too" point is ours · fetched 2026-10-12
+- **Beyond the docs:** [Not Every Container Has an Operating System Inside](https://iximiuz.com/en/posts/not-every-container-has-an-operating-system-inside/) · Ivan Velichko, iximiuz.com, May 7, 2020 (updated Sep 4, 2022) · shows a container that is one static binary on a scratch base, so what ships is the userland and config, never a kernel · fetched 2026-10-13 (*read*)
 
 ### T00-13 · Containers vs VMs vs serverless — Know · ✅ written `docs/docker/pages/phase-0-what-a-container-is/13-containers-vs-vms.md`
 - **Read this:** [What is a container?](https://www.docker.com/resources/what-container/) · docker.com · containers virtualize the OS, VMs the hardware (*read*) · covers our angle: **partial** — vendor page, no blast-radius or boot-time numbers, serverless barely mentioned · fetched 2026-10-12
@@ -123,6 +129,7 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 ### T01-09 · Exit codes — Understand · ✅ written `docs/docker/pages/phase-1-running-containers/09-exit-codes.md`
 - **Read this:** [Running containers: exit status](https://docs.docker.com/engine/containers/run/#exit-status) · Docker docs · 125 is the daemon, 126 not invokable, 127 not found, anything else is the command's own code (*read*) · covers our angle: **partial** — no 137 or 143 · fetched 2026-10-12
 - **Also good:** [podman run: exit status](https://docs.podman.io/en/latest/markdown/podman-run.1.html) · Podman docs · same 125 scheme, "error is with Podman itself" (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Docker exit code 137: OOMKilled or SIGKILL?](https://www.netdata.cloud/guides/docker/docker-exit-code-137/) · Netdata guides (no date shown on page) · 137 is 128 plus signal 9, how to tell an OOM kill from an ignored SIGTERM with `.State.OOMKilled`, and the 10 second stop timeout, which fills the gap the Docker page leaves · fetched 2026-10-13 (*read*)
 - **Our delta:** 137 (SIGKILL or OOM) and 143 (SIGTERM) are signal numbers plus 128; no fetched page states it.
 
 ### T01-10 · -i, -t and -it — Understand · ✅ written `docs/docker/pages/phase-1-running-containers/10-interactive-and-tty.md`
@@ -140,6 +147,7 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 ### T01-13 · Reclaiming disk — Understand · ✅ written `docs/docker/pages/phase-1-running-containers/13-reclaiming-disk.md`
 - **Read this:** [Prune unused Docker objects](https://docs.docker.com/engine/manage-resources/pruning/) · Docker docs, modified 2026-08-13 · images, containers, volumes, networks, build cache, everything (*headings only*) · covers our angle: **partial** · fetched 2026-10-12
 - **Also good:** [docker system prune](https://docs.docker.com/reference/cli/docker/system/prune/) · Docker docs · stopped containers, unused networks, dangling images, build cache; `--volumes` adds anonymous volumes (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Docker: Clean up unused stuff on your development machine](https://adamj.eu/tech/2023/08/21/docker-clean-up/) · Adam Johnson, Aug 21, 2023 · a practical routine with `docker system df` to preview, age-filtered prune, and the separate `docker volume prune` because `--volumes` cannot combine with `--filter` · fetched 2026-10-13 (*read*)
 - **Our delta:** `system df` was not opened.
 
 ### T01-14 · --user, --workdir, --hostname, --add-host — Know · ✅ written `docs/docker/pages/phase-1-running-containers/14-user-workdir-hostname.md`
@@ -163,6 +171,7 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 
 ### T02-02 · Tags move, digests do not — Master · ✅ written `docs/docker/pages/phase-2-images-and-registries/02-tags-vs-digests.md`
 - **Read this:** [Building best practices: pin base image versions](https://docs.docker.com/build/building/best-practices/#pin-base-image-versions) · Docker docs, modified 2026-09-04 · tags are mutable; `FROM alpine:3.21@sha256:…` pins; the cost is opting out of automated security fixes (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Overcoming Docker's Mutable Image Tags](https://www.mend.io/blog/overcoming-dockers-mutable-image-tags/) · Rhys Arkins, Mend, Mar 19, 2018 · a real incident where tags kept their names but changed content and broke builds, plus tag-and-digest pinning kept current by Renovate · fetched 2026-10-13 (*read*)
 
 ### T02-03 · pull / push / images / tag / rmi — Master · ✅ written `docs/docker/pages/phase-2-images-and-registries/03-pull-push-tag.md`
 - **Read this:** [docker image ls](https://docs.docker.com/reference/cli/docker/image/ls/) · Docker docs · untagged (dangling) images are hidden unless `-a` (*read*) · covers our angle: **partial** — `ls` only · fetched 2026-10-12
@@ -175,6 +184,7 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 ### T02-05 · Choosing a base image — Understand · ✅ written `docs/docker/pages/phase-2-images-and-registries/05-choosing-a-base-image.md`
 - **Read this:** [Building best practices: choose the right base image](https://docs.docker.com/build/building/best-practices/#choose-the-right-base-image) · Docker docs · (*headings only*) · covers our angle: **partial** — section text not read in full · fetched 2026-10-12
 - **Also good:** [Distroless README (raw)](https://raw.githubusercontent.com/GoogleContainerTools/distroless/main/README.md) · github (raw) · images with only your application and its runtime dependencies (*read* the opening) · fetched 2026-10-12
+- **Beyond the docs:** [Fly With Alpine](https://fly.io/blog/fly-with-alpine/) · fly.io blog (no author or date shown on page) · weighs Alpine against Debian slim with measurements and the musl versus glibc and missing-tools costs, concluding Debian stays the default · fetched 2026-10-13 (*read*)
 - **Our delta:** the size, debuggability and compatibility triangle; Docker Hardened Images has a docs section at docs.docker.com/dhi/ (*not opened*).
 
 ### T02-06 · history — Understand · ✅ written `docs/docker/pages/phase-2-images-and-registries/06-history.md`
@@ -218,4 +228,5 @@ Covers every topic row of phases 0, 1 and 2 in `docs/docker/syllabus/01-how-cont
 ### T02-15 · Image signing — Know · ✅ written `docs/docker/pages/phase-2-images-and-registries/15-image-signing.md`
 - **Read this:** [Cosign signing overview](https://docs.sigstore.dev/cosign/signing/overview/) · Sigstore docs · keyless signing ties an OIDC identity to an artifact via a short-lived certificate and a transparency log entry (*read*) · covers our angle: **partial** — does not say what a signature does not prove · fetched 2026-10-12
 - **Also good:** [Content trust in Docker](https://docs.docker.com/engine/security/trust/) · Docker docs · Docker Content Trust is "being retired"; the Notary v1 service shuts down on 8 Dec 2026 (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Keyless Container Image Signing with Sigstore Cosign](https://ndthuan.com/keyless-container-image-signing-cosign/) · Thuan Nguyen, Aug 16, 2026 · states plainly that a signature over a digest shows who signed it, not that the image is safe, which the Sigstore page does not stress · fetched 2026-10-13 (*read*)
 - **Our delta:** a valid signature shows who signed, not that the image is safe; the page should avoid recommending `docker trust` for new work.

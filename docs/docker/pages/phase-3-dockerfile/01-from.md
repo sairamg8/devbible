@@ -185,6 +185,7 @@ install and drop back to a non-root user at the end.
 
 - **Read this:** [Dockerfile reference · FROM](https://docs.docker.com/reference/dockerfile/#from) — docs.docker.com: syntax, how `ARG` and `FROM` interact, multiple `FROM`s start stages (*read*)
 - **Also good:** [Building best practices · Choose the right base image](https://docs.docker.com/build/building/best-practices/#choose-the-right-base-image) — docs.docker.com: trusted source, keep it small, separate build and production bases (*read*)
+- **Beyond the docs:** [Choosing a Base Image For Your Dockerfile](https://vsupalov.com/choose-base-image/) — vsupalov.com, Vladislav, Feb 2021: weighs official, slim Debian, Alpine and scratch bases by use case and names the musl-versus-glibc catch, where the official pages stay generic
 
 {/* LINKMAP:END */}
 

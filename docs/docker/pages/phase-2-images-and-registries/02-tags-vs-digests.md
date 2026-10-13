@@ -155,6 +155,7 @@ deliberately with a review, rather than silently or not at all.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Building best practices: pin base image versions](https://docs.docker.com/build/building/best-practices/#pin-base-image-versions) — Docker docs, modified 2026-09-04: tags are mutable; `FROM alpine:3.21@sha256:…` pins; the cost is opting out of automated security fixes (*read*)
+- **Beyond the docs:** [Overcoming Docker's Mutable Image Tags](https://www.mend.io/blog/overcoming-dockers-mutable-image-tags/) — Rhys Arkins, Mend, Mar 19, 2018: a real incident where tags kept their names but changed content and broke builds, plus tag-and-digest pinning kept current by Renovate
 
 {/* LINKMAP:END */}
 

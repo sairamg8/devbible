@@ -277,6 +277,7 @@ production stack traces; turning it on without knowing either caveat is not.
 
 - **Read this:** [Debugging Node.js](https://nodejs.org/learn/getting-started/debugging) — nodejs.org: `--inspect` listens on `127.0.0.1:9229` by default; binding to `0.0.0.0` lets anyone who can reach it run code (*read*)
 - **Also good:** [Node.js language-specific guide](https://docs.docker.com/guides/nodejs/) — docs.docker.com: `--inspect=0.0.0.0:9229` in the dev script, attach from VS Code or Chrome DevTools; its launch config sets `sourceMaps` (*read*)
+- **Beyond the docs:** [Setting up Node.js in a Docker container](https://mybyways.com/blog/setting-up-node-js-in-a-docker-container) — mybyways.com (2019-04-12): pairs `--inspect=0.0.0.0:9229` in the container with `-p 127.0.0.1:9229:9229` on the host and says why: exposing the debug port publicly is unsafe
 
 {/* LINKMAP:END */}
 

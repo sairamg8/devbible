@@ -239,6 +239,7 @@ where a profile says it in one word.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Merge Compose files](https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/) — docs.docker.com: `compose.override.yaml` read by default; single-value options replaced, multi-value options such as `ports` combined; modified 2026-06-22 (*read*)
+- **Beyond the docs:** [A Docker Compose Override File Can Help Avoid Compose File Duplication](https://nickjanetakis.com/blog/a-docker-compose-override-file-can-help-avoid-compose-file-duplication) — Nick Janetakis: real use of one file for dev and prod (dev-only watcher, local DB swapped for a managed one); updated March 17, 2020, and the author later moved to profiles (Sept 2022)
 
 {/* LINKMAP:END */}
 

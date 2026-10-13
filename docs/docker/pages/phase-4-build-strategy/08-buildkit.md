@@ -212,6 +212,7 @@ operation produces — so a `RUN` can read something that never lands in the ima
 - **Read this:** [BuildKit](https://docs.docker.com/build/buildkit/) — docs.docker.com: LLB, content-addressable graph, caching model rewritten, cache exportable to a registry; modified 2026-04-02 (*read* the LLB passage)
 - **Also good:** [Multi-stage builds · Differences between legacy builder and BuildKit](https://docs.docker.com/build/building/multi-stage/#differences-between-legacy-builder-and-buildkit) — docs.docker.com: BuildKit builds only the stages the target needs (*read*)
 - **Also good:** [Builders](https://docs.docker.com/build/builders/)
+- **Beyond the docs:** [BuildKit in depth: Docker's build engine explained](https://depot.dev/blog/buildkit-in-depth) — depot.dev: explains BuildKit as a compiler: frontend to LLB DAG to backend, with SourceOp, ExecOp and FileOp mapped to FROM, RUN and COPY
 
 {/* LINKMAP:END */}
 

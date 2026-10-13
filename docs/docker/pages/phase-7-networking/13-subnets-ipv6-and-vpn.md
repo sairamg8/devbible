@@ -209,6 +209,7 @@ is what exhausts the space.
 
 - **Read this:** [dockerd reference](https://docs.docker.com/reference/cli/dockerd/) — docs.docker.com: `default-address-pools` in `daemon.json` sets the base and size for new networks; modified 2026-10-02 (*read* the config example; the rest *headings only*)
 - **Also good:** [Use IPv6 networking](https://docs.docker.com/engine/daemon/ipv6/) — docs.docker.com: `docker network create --ipv6 --subnet ...` and the Compose `enable_ipv6` form (*read*; modified 2026-04-13)
+- **Beyond the docs:** [Fixing Docker and VPN IP Address Conflicts](https://www.lullabot.com/articles/fixing-docker-and-vpn-ip-address-conflicts) — Lullabot / Nate Lampton: the VPN-clash story the official pages lack: spot it with `route -n` and `ip addr`, recreate networks, set `default-address-pools`; August 15, 2019 (older, concept still holds)
 
 {/* LINKMAP:END */}
 

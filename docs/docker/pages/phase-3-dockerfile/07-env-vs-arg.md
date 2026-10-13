@@ -216,6 +216,7 @@ under QEMU emulation.
 
 - **Read this:** [Build variables](https://docs.docker.com/build/building/variables/) — docs.docker.com: similarities and differences, scoping (global `ARG` is not visible in a stage until redeclared), pre-defined args; warns args "may persist" in provenance and image history, points to secret mounts (*read*)
 - **Also good:** [Dockerfile reference · ARG](https://docs.docker.com/reference/dockerfile/#arg) — docs.docker.com: scope, predefined ARGs, impact on build caching (*headings only*)
+- **Beyond the docs:** [Docker ARG, ENV and .env - a Complete Guide](https://vsupalov.com/docker-arg-env-variable-guide/) — vsupalov.com, Vladislav, Jul 2017: plain build-time versus runtime split, ARG feeding an ENV default, and the warning that both are inspectable in the built image
 
 {/* LINKMAP:END */}
 

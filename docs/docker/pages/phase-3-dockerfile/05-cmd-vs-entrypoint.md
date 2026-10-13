@@ -167,6 +167,7 @@ your `CMD` is passed to the base's entrypoint as arguments.
 
 - **Read this:** [Dockerfile reference · Understand how CMD and ENTRYPOINT interact](https://docs.docker.com/reference/dockerfile/#understand-how-cmd-and-entrypoint-interact) — docs.docker.com: the interaction table; shell-form `ENTRYPOINT` ignores `CMD` and run arguments (*read*)
 - **Also good:** [Building best practices · CMD](https://docs.docker.com/build/building/best-practices/#cmd) — docs.docker.com: use `CMD ["executable", "param"]` for services (*read*)
+- **Beyond the docs:** [Docker ENTRYPOINT Vs CMD Explained With Examples](https://devopscube.com/entrypoint-vs-cmd-explained) — devopscube.com, 16 Mar 2023: one worked ab example showing run arguments replace CMD but append to ENTRYPOINT, then maps both to Kubernetes command and args
 
 {/* LINKMAP:END */}
 

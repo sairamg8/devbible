@@ -202,6 +202,7 @@ reach for hardware-backed isolation instead.
 
 - **Read this:** [What even is a container: namespaces and cgroups](https://jvns.ca/blog/2016/10/10/what-even-is-a-container/) — Julia Evans, 10 Oct 2016: short walk through namespaces, cgroups and seccomp-bpf, ending in "what are containers?" (*read* the headings, ≈900 words)
 - **Also good:** [What is Docker?](https://docs.docker.com/get-started/docker-overview/) — Docker docs, modified 2026-09-07: "The underlying technology": namespaces give the isolated workspace (*read*)
+- **Beyond the docs:** [Build a Container from Scratch in Go](https://labs.iximiuz.com/tutorials/build-a-container-from-scratch-in-go-1b92e418) — iximiuz Labs (Liz Rice's GOTO 2018 talk, tutorial by Başar Subaşı; page shows last updated Aug 14, 2026): builds a tiny runtime step by step with UTS, PID and mount namespaces, chroot and a cgroups v2 `pids.max`, so the container-is-a-process claim is shown in code rather than described
 
 {/* LINKMAP:END */}
 

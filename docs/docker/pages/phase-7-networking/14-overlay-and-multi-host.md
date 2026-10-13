@@ -148,6 +148,7 @@ encryption by default is the mistake worth avoiding.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Overlay network driver](https://docs.docker.com/engine/network/drivers/overlay/) — docs.docker.com: distributed network across daemon hosts; hosts must be in a swarm; ports 2377/tcp and 4789/udp open; modified 2026-08-16 (*read*)
+- **Beyond the docs:** [Docker Swarm networking explained: overlay, bridges and VXLAN](https://blog.octo.com/how-does-it-work-docker!-part-2-swarm-networking) — OCTO Talks / Sebastian Caceres: shows the per-host bridge plus VXLAN tunnel (L2 wrapped in IP/UDP) that makes an overlay work, and the gossip control plane; 04/09/2017 (Swarm-era, mechanism still valid)
 
 {/* LINKMAP:END */}
 

@@ -18,6 +18,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 ### T10-01 · PID 1 is not a normal process — Master · ✅ written `docs/docker/pages/phase-10-production/01-pid-1/README.md`
 - **Read this:** [Tini README](https://raw.githubusercontent.com/krallin/tini/master/README.md) · krallin/tini · zombie reaping, signal forwarding, "default signal handlers work" for your process, and that `--init` already ships Tini (*read*) · covers our angle: **partial** — no "10 seconds on every deploy" story · fetched 2026-10-12
 - **Also good:** [docker container run → Specify an init process](https://docs.docker.com/reference/cli/docker/container/run/) · Docker docs · `--init` makes an init the PID 1 so zombies are reaped (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Introducing dumb-init, an init system for Docker containers](https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html) · Yelp Engineering, Chris K., January 6, 2016 · explains why the kernel applies no default TERM handling to PID 1, so `docker stop` waits ten seconds and then sends KILL, and why a shell as PID 1 can only be killed with SIGKILL, which the reference pages state only in passing · fetched 2026-10-13 (*read*)
 - **Our delta:** the hang-then-SIGKILL timeline; whether Podman's `--init` behaves the same is not confirmed.
 
 ### T10-02 · Graceful shutdown — Master · ✅ written `docs/docker/pages/phase-10-production/02-graceful-shutdown/README.md`
@@ -53,6 +54,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 ### T10-08 · Log drivers and rotation — Understand · ✅ written `docs/docker/pages/phase-10-production/08-log-drivers-and-rotation.md`
 - **Read this:** [JSON File logging driver](https://docs.docker.com/engine/logging/drivers/json-file/) · Docker docs · `max-size` and `max-file` example for `daemon.json`; values must be strings; file-based storage warning (*read*) · covers our angle: **full**, apart from the 40 GB story · fetched 2026-10-12
 - **Also good:** [Configure logging drivers](https://docs.docker.com/engine/logging/configure/) · Docker docs · driver list including `journald`; blocking versus non-blocking `mode` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Docker log rotation: preventing json-file logs from filling disk](https://www.netdata.cloud/guides/docker/docker-log-rotation/) · Netdata guides (no date shown) · walks the failure end to end: unbounded json-file growth fills `/var/lib/docker`, and a changed default applies only to containers created afterwards, so they must be recreated · fetched 2026-10-13 (*read*)
 
 ### T10-09 · Healthchecks in production — Understand · ✅ written `docs/docker/pages/phase-10-production/09-healthchecks-in-production.md`
 - **Read this:** [Liveness, readiness and startup probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) · kubernetes.io · the three probe kinds and what the kubelet does with each (*read* liveness and readiness passages) · covers our angle: **partial** — Kubernetes, not Docker or Compose · fetched 2026-10-12
@@ -67,6 +69,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 - **Read this:** [docker container stats](https://docs.docker.com/reference/cli/docker/container/stats/) · Docker docs · `--no-stream`, `--format "{{ json . }}"`, columns for memory usage/limit and PIDs (*read*) · covers our angle: **partial** — no cAdvisor, no host versus cgroup memory · fetched 2026-10-12
 - **Also good:** [cAdvisor README](https://raw.githubusercontent.com/google/cadvisor/master/README.md) · google/cadvisor · per-container usage daemon, run as a container (*read* intro) · fetched 2026-10-12
 - **Also good:** [Runtime metrics](https://docs.docker.com/engine/containers/runmetrics/) · Docker docs · says its detailed examples use the cgroup v1 layout (*headings only* plus that note) · fetched 2026-10-12
+- **Beyond the docs:** [Docker memory usage explained: anonymous, file, slab, and what counts](https://www.netdata.cloud/guides/docker/docker-memory-usage-explained/) · Netdata guides (no date shown) · splits cgroup v2 `memory.stat` into anon, file and slab and says `docker stats` is roughly `memory.current` minus `inactive_file`, which the official page does not do for v2 · fetched 2026-10-13 (*read*)
 - **Our delta:** why `docker stats` memory is not `free`, on cgroup v2 hosts.
 
 ### T10-12 · Debugging a container you cannot shell into — Understand · ✅ written `docs/docker/pages/phase-10-production/12-debugging-without-a-shell.md`
@@ -77,6 +80,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 ### T10-13 · Disk growth — Understand · ✅ written `docs/docker/pages/phase-10-production/13-disk-growth.md`
 - **Read this:** [Prune unused Docker objects](https://docs.docker.com/engine/manage-resources/pruning/) · Docker docs · dangling versus unused images, containers, volumes, networks, build cache (*read* images section, rest *headings only*) · covers our angle: **full** for images; production-host caution is ours · fetched 2026-10-12
 - **Also good:** [docker system prune](https://docs.docker.com/reference/cli/docker/system/prune/) · Docker docs · `--volumes` adds anonymous volumes to the prune; volumes are skipped by default (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Docker Disk Space Full: How To Troubleshoot /var/lib/docker](https://www.netdata.cloud/guides/docker/docker-disk-space-full/) · Netdata guides (no date shown) · a diagnosis order (`docker system df`, logs, images, build cache, volumes, writable layers) before any prune, which the prune pages leave out · fetched 2026-10-13 (*read*)
 
 ### T10-14 · Running containers under systemd — Understand · ✅ written `docs/docker/pages/phase-10-production/14-under-systemd.md`
 - **Read this:** [podman-systemd.unit(5)](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html) · Podman docs · Quadlet unit types, `[Install]` with `WantedBy=default.target` (*read* intro and Install section) · covers our angle: **partial** — Podman only; no Docker unit-file page found · fetched 2026-10-12
@@ -102,6 +106,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 ### T11-02 · Rootless by default — Master · ✅ written `docs/docker/pages/phase-11-podman-in-depth/02-rootless-by-default/README.md`
 - **Read this:** [Basic setup and use of Podman in a rootless environment](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/rootless_tutorial.md) · containers/podman · `/etc/subuid` and `/etc/subgid` ranges, `podman system migrate`, pasta networking (*read*) · covers our angle: **partial** — no UID arithmetic worked through · fetched 2026-10-12
 - **Also good:** [user_namespaces(7)](https://man7.org/linux/man-pages/man7/user_namespaces.7.html) · Linux man-pages · the mapping rules (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [How does rootless Podman work?](https://opensource.com/article/19/2/how-does-rootless-podman-work) · opensource.com, Daniel J Walsh, February 11, 2019 · worked `/etc/subuid` example (`dwalsh:100000:65536`) showing container root as the user's own UID and container UID 1 as host UID 100000; the article's own text and output disagree on one UID number · fetched 2026-10-13 (*read*)
 - **Our delta:** the arithmetic that turns a container UID into a host UID.
 
 ### T11-03 · Pods — Understand · ✅ written `docs/docker/pages/phase-11-podman-in-depth/03-pods.md`
@@ -132,6 +137,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 ### T11-09 · Quadlet vs `podman generate systemd` — Understand · ✅ written `docs/docker/pages/phase-11-podman-in-depth/09-quadlet-vs-generate-systemd.md`
 - **Read this:** [podman generate systemd](https://docs.podman.io/en/latest/markdown/podman-generate-systemd.1.html) · Podman docs · marked DEPRECATED, recommends Quadlet, "no plans to remove", urgent bug fixes only (*read*) · covers our angle: **full** · fetched 2026-10-12
 - **Also good:** [podman-systemd.unit(5)](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html) · Podman docs · the replacement (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Podman Containers with systemd](https://labs.iximiuz.com/tutorials/podman-ctrs-with-systemd-346f7757) · iximiuz Labs, Shan Desai, July 19, 2026 · hands-on tutorial that marks `podman generate systemd` deprecated, builds Quadlet `.container` files instead, and shows a `--restart=always` container not coming back after reboot until the restart service is enabled · fetched 2026-10-13 (*read*)
 
 ### T11-10 · `podman auto-update` — Know · ✅ written `docs/docker/pages/phase-11-podman-in-depth/10-auto-update.md`
 - **Read this:** [podman auto-update](https://docs.podman.io/en/latest/markdown/podman-auto-update.1.html) · Podman docs · `registry` policy via label or `AutoUpdate=`, `--rollback` default true when the restarted unit fails (*read*) · covers our angle: **full** · fetched 2026-10-12
@@ -140,6 +146,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 ### T11-11 · `podman kube play` / `generate kube` — Understand · ✅ written `docs/docker/pages/phase-11-podman-in-depth/11-kube-play.md`
 - **Read this:** [podman kube play](https://docs.podman.io/en/latest/markdown/podman-kube-play.1.html) · Podman docs · creates containers, pods and volumes from Kubernetes YAML (*read* intro, rest *headings only*) · covers our angle: **partial** — reference, no on-ramp framing · fetched 2026-10-12
 - **Also good:** [podman kube generate](https://docs.podman.io/en/latest/markdown/podman-kube-generate.1.html) · Podman docs · generates Pod YAML from containers, pods or volumes (*read* intro) · fetched 2026-10-12
+- **Beyond the docs:** [Run Kubernetes Workloads with Podman on Oracle Linux](https://docs.oracle.com/en/learn/ol-podman-kube/) · Oracle Linux tutorial (no author or publication date shown; sample YAML stamped 2025-08-11) · runnable lab: `podman kube generate` from a pod, `podman kube play` of a hand-written pod, then `podman kube down` · fetched 2026-10-13 (*read*)
 - **Our delta:** `podman generate kube` now 404s on the docs site; the command is `podman kube generate`.
 
 ### T11-12 · Buildah and Skopeo — Know · ✅ written `docs/docker/pages/phase-11-podman-in-depth/12-buildah-and-skopeo.md`
@@ -152,6 +159,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 
 ### T11-14 · Podman 6 breaking changes — Understand · ✅ written `docs/docker/pages/phase-11-podman-in-depth/14-podman-6-breaking-changes.md`
 - **Read this:** [Podman release notes (raw)](https://raw.githubusercontent.com/containers/podman/main/RELEASE_NOTES.md) · containers/podman · 6.0 removes BoltDB (auto-migration to SQLite), Intel Macs, Windows 10, cgroups v1, iptables, CNI and slirp4netns (*read* the 6.0 list; 6.1.0 is the top entry) · covers our angle: **full**, plus three removals our row omits · fetched 2026-10-12
+- **Beyond the docs:** [Podman 6.0 Lands with Breaking Changes, AMD GPUs Support](https://linuxiac.com/podman-6-0-lands-with-breaking-changes-amd-gpus-support/) · Linuxiac, Bobby Borisov, June 24, 2026 (updated July 2, 2026) · reads the removals as an upgrade checklist and adds behaviour changes such as `podman volume prune` defaults and macOS machine provider moving to libkrun · fetched 2026-10-13 (*read*)
 
 ### T11-15 · `podman machine` — Know · ✅ written `docs/docker/pages/phase-11-podman-in-depth/15-podman-machine.md`
 - **Read this:** [podman machine](https://docs.podman.io/en/latest/markdown/podman-machine.1.html) · Podman docs · Podman on macOS and Windows requires a VM; subcommands manage it (*read*) · covers our angle: **partial** — nothing on CPU, memory or disk the VM holds · fetched 2026-10-12
@@ -166,6 +174,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 
 ### T12-01 · Tag strategy — Master · ✅ written `docs/docker/pages/phase-12-delivery-and-ci/01-tag-strategy/README.md`
 - **Read this:** [Manage tags and labels with GitHub Actions](https://docs.docker.com/build/ci/github-actions/manage-tags-labels/) · Docker docs · `docker/metadata-action` with `type=sha`, `type=semver`, `type=ref,event=branch` (*read* the example workflow) · covers our angle: **partial** — a how-to, does not argue that `latest` is a trap · fetched 2026-10-12
+- **Beyond the docs:** [Overcoming Docker's Mutable Image Tags](https://www.mend.io/blog/overcoming-dockers-mutable-image-tags/) · Mend.io, Rhys Arkins, March 19, 2018 · argues from a real breakage that even semver-looking tags can be repointed and that pinning a digest beside the tag makes builds reproducible and rollback quick · fetched 2026-10-13 (*read*)
 - **Our delta:** immutable SHA tag plus moving tags, and pinning by digest.
 
 ### T12-02 · Building images in CI — Understand · ✅ written `docs/docker/pages/phase-12-delivery-and-ci/02-building-in-ci.md`
@@ -174,6 +183,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 
 ### T12-03 · One image, three environments — Master · ✅ written `docs/docker/pages/phase-12-delivery-and-ci/03-one-image-three-environments/README.md`
 - **Read this:** [V. Build, release, run](https://12factor.net/build-release-run) · The Twelve-Factor App · strict separation of build and run stages (*read*, short) · covers our angle: **partial** — no digest promotion · fetched 2026-10-12
+- **Beyond the docs:** [Docker Image Build and Promotion Pipeline: A Production Guide](https://devopscube.com/docker-image-build-and-promotion-pipeline/) · DevOpsCube, Bibin Wilson, March 12, 2026 · a dev, stage, prod pipeline that builds once and copies the same image forward with Crane; it hands off by commit-SHA tag, with the digest named only for the prod step · fetched 2026-10-13 (*read*)
 - **Our delta:** promoting one digest; no page found for it (tried: "promote same image digest staging production docker").
 
 ### T12-04 · Registry authentication in CI — Know · ✅ written `docs/docker/pages/phase-12-delivery-and-ci/04-registry-auth-in-ci.md`
@@ -190,6 +200,7 @@ Covers every topic row of phases 10, 11 and 12 in `docs/docker/syllabus/04-produ
 
 ### T12-07 · When Compose stops being enough — Understand · ✅ written `docs/docker/pages/phase-12-delivery-and-ci/07-when-compose-stops-being-enough.md`
 - **Read this:** [When to Use Docker Compose vs. Kubernetes](https://earthly.dev/blog/dockercompose-vs-k8s/) · Earthly blog, date not shown · contents list: scalability, reliability, self-healing versus quick local setup (*headings only*) · covers our angle: **partial** — vendor blog, older, not a threshold · fetched 2026-10-12
+- **Beyond the docs:** [Is Docker-Compose Suited For Production?](https://vsupalov.com/docker-compose-production/) · vsupalov.com, Vladislav, written January 2020 · short opinion piece that puts the real dividing line at multi-host scheduling (Compose is fine on one machine; an orchestrator is needed when containers must be spread across a varying number of machines) and exposes the unstated scale and downtime assumptions behind "never use Compose in production" · fetched 2026-10-13 (*read*)
 - **Our delta:** searches turned up only blogs with rules of thumb and no authoritative threshold; our four triggers (multi-host, health-gated rollouts, autoscaling, team isolation) stay our own judgement.
 
 ### T12-08 · Kubernetes on-ramp — Know · ✅ written `docs/docker/pages/phase-12-delivery-and-ci/08-kubernetes-on-ramp.md`

@@ -236,6 +236,7 @@ habit on both engines is to create a named network.
 
 - **Read this:** [Bridge network driver](https://docs.docker.com/engine/network/drivers/bridge/) — docs.docker.com: user-defined bridges give automatic DNS by name or alias; the default bridge reaches by IP only, `--link` is legacy; modified 2026-02-21 (*read*)
 - **Also good:** [Networking overview](https://docs.docker.com/engine/network/) — docs.docker.com: containers with no `--network` join the default bridge; custom networks get their own DNS handling (*read*)
+- **Beyond the docs:** [Diving into Linux Networking and Docker - Bridge, vETH and IPTables](https://dev.to/arriqaaq/diving-into-linux-networking-and-docker-bridge-veth-and-iptables-419a) — DEV Community / Farhan (arriqaaq): builds namespaces, a veth pair and a bridge by hand to show what the Docker bridge is made of, plus MASQUERADE for outbound traffic; posted September 11, 2021
 
 {/* LINKMAP:END */}
 

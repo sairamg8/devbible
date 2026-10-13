@@ -220,6 +220,7 @@ override file, which production never loads.
 - **Read this:** [postgres image README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/postgres/README.md) — docker-library/docs: connecting with `psql` from a second container on the same network (*read*)
 - **Also good:** [Port publishing and mapping](https://docs.docker.com/engine/network/port-publishing/) — docs.docker.com: `-p 192.168.1.100:8080:80` binds one host address; plain `-p` listens on any (*read*)
 - **Also good:** [psql](https://www.postgresql.org/docs/current/app-psql.html) — postgresql.org: connection options `-h`, `-p`, `-U`, `-d` (*headings only*, 127k characters)
+- **Beyond the docs:** [Docker ports bypass UFW](https://www.ssdnodes.com/learn/docker-ports-bypass-ufw) — SSD Nodes, Matt Connor (2026-10-11): explains why a plain published port is reachable despite a firewall rule (Docker's DNAT happens before UFW's INPUT chain) and why `-p 127.0.0.1:...` is the fix, with an `ss -tlnp` check; the port-publishing page does not spell out
 
 {/* LINKMAP:END */}
 

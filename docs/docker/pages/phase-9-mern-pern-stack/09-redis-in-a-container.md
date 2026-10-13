@@ -272,6 +272,7 @@ whole job is latency.
 
 - **Read this:** [Redis persistence](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/) — redis.io: RDB snapshots, AOF write log, none ("sometimes used when caching"), or both; modified 2026-09-30 (*read*)
 - **Also good:** [redis image README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/redis/README.md) — docker-library/docs: `redis-server --save 60 1` for persistent storage; points to the persistence page (*read*)
+- **Beyond the docs:** [Redis: cache vs store](https://docs.railway.com/guides/redis-cache-vs-store) — Railway guides: frames the cache-or-durable decision with concrete flags: `--save "" --appendonly no` plus `allkeys-lru` for a cache; AOF `everysec`, a `/data` volume and `noeviction` for a store; the persistence page gives no such decision rule
 
 {/* LINKMAP:END */}
 

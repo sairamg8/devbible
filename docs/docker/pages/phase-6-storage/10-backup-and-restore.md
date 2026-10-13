@@ -244,6 +244,7 @@ the volume is none of those things.
 
 - **Read this:** [Volumes · Back up, restore, or migrate data volumes](https://docs.docker.com/engine/storage/volumes/) — docs.docker.com: throwaway container with `--volumes-from`, a host directory at `/backup`, `tar` the data (*read*)
 - **Also good:** [PostgreSQL · SQL Dump](https://www.postgresql.org/docs/current/backup-dump.html) — postgresql.org: `pg_dump` output regenerates the database as of the dump (*read*; the page is the version 18 docs)
+- **Beyond the docs:** [Backup Docker Volumes: Destroyed, Restored, and Timed](https://learnwithhasan.com/guide/docker-backups/) — LearnWithHasan / Hasan Aboul Hasan: measured test where restores from a live `tar` copy lost about two-thirds of rows while a dump restored intact, which is the evidence our delta asserts; MariaDB-based, Postgres only noted; published 2026-08-11
 
 {/* LINKMAP:END */}
 
