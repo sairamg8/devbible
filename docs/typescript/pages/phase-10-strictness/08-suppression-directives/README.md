@@ -79,6 +79,7 @@ virtue is that it expires.
 
 - **Read this:** [TypeScript 3.9 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html) — typescriptlang.org: `@ts-expect-error` suppresses an error and reports if there is none to suppress (*read*)
 - **Also good:** [ban-ts-comment](https://typescript-eslint.io/rules/ban-ts-comment/) — typescript-eslint: directives reduce the effectiveness of TypeScript; can require descriptions (*read*)
+- **Beyond the docs:** [@ts-ignore is almost always the worst option](https://evanhahn.com/ts-ignore-is-almost-always-the-worst-option) — Evan Hahn, 2025-09-21: gives a preference order (fix the error, then a targeted cast, then `@ts-expect-error`) and why a stale `@ts-ignore` is worse than no comment
 
 {/* LINKMAP:END */}
 

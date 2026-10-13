@@ -237,6 +237,7 @@ reads to a future reader as a considered decision rather than a skipped one.
 
 - **Read this:** [TSConfig Option: noUncheckedIndexedAccess](https://www.typescriptlang.org/tsconfig/noUncheckedIndexedAccess.html) — typescriptlang.org: index-signature example: `env.NODE_ENV` goes from `string` to `string | undefined` (*read*)
 - **Also good:** [The Seven Sources of Unsoundness in TypeScript](https://effectivetypescript.com/2021/05/06/unsoundness/) — Effective TypeScript, 2021-05-06: "Object and array lookups": no bounds checking, so `xs[3]` is typed as present (*read*)
+- **Beyond the docs:** [Convert your Typescript codebase to No Unchecked Indexed Access](https://www.flux.ai/p/blog/convert-your-typescript-codebase-to-no-unchecked-indexed-access) — Greg Dingle, Flux, May 2023: a real migration: 2,761 errors, a script that fixed most of them and the rest by hand, which is the "fix the errors" side the official page skips
 
 {/* LINKMAP:END */}
 

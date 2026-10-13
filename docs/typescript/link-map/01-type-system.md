@@ -29,6 +29,7 @@ Covers every topic row of phases 0 and 1 in `docs/typescript/syllabus/01-type-sy
 ### T00-03 · The three ways to run TypeScript — Master · ✅ written `docs/typescript/pages/phase-0-how-typescript-runs/03-three-ways-to-run.md`
 - **Read this:** [Running TypeScript Natively](https://nodejs.org/learn/typescript/run-natively) · nodejs.org · type stripping, no flags on v22.18+ for erasable-only code, "Node.js does not type check", `npx tsc --noEmit` (*read*) · covers our angle: **partial** — Node branch only, not `tsc` emit or esbuild/swc · fetched 2026-10-12
 - **Also good:** [esbuild — TypeScript](https://esbuild.github.io/content-types/) · esbuild · "does not do any type checking so you will still need to run tsc -noEmit"; enums and namespaces are converted (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Running TypeScript in Node.js: tsx vs. ts-node vs. native](https://blog.logrocket.com/running-typescript-node-js-tsx-vs-ts-node-vs-native) · LogRocket, Amazing Enyichi Agu, 2025-05-07 · compares the runner options side by side and states plainly that type stripping never type checks; written before Node's stripping became stable, so ignore its "experimental" verdict · fetched 2026-10-13 (*read*)
 - **Our delta:** the three-way table of who checks (only `tsc`) and what `enum` does in each case.
 
 ### T00-04 · Node's strip-only mode and `erasableSyntaxOnly` — Master · ✅ written `docs/typescript/pages/phase-0-how-typescript-runs/04-strip-only-and-erasable-syntax.md`
@@ -128,21 +129,25 @@ Covers every topic row of phases 0 and 1 in `docs/typescript/syllabus/01-type-sy
 ### T01-09 · Structural typing — Master · ✅ written `docs/typescript/pages/phase-1-type-vocabulary/09-structural-typing.md`
 - **Read this:** [Type Compatibility](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) · typescriptlang.org · "based on structural subtyping", contrasted with nominal typing (*read* the opening) · covers our angle: **partial** — excess property checks live on the Object Types page · fetched 2026-10-12
 - **Also good:** [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) · typescriptlang.org · "Excess Property Checks", and the workaround of assigning to a variable first (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Structural vs. Nominal Type Systems](https://www.alexhwoods.com/structural-vs-nominal-type-systems) · Alex Woods, 2022-06-14 · shows the downside of shape-only compatibility (two `number` aliases mix freely) and the brand-field workaround, which the Handbook page does not cover · fetched 2026-10-13 (*read*)
 - **Our delta:** why a literal errors while the same value in a variable passes.
 
 ### T01-10 · `null` and `undefined` under `strictNullChecks` — Master · ✅ written `docs/typescript/pages/phase-1-type-vocabulary/10-null-and-undefined.md`
 - **Read this:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) · typescriptlang.org · "null and undefined" with `strictNullChecks` off and on (*read*) · covers our angle: **partial** — optional property versus `| undefined` not confirmed · fetched 2026-10-12
 - **Also good:** [TSConfig: strictNullChecks](https://www.typescriptlang.org/tsconfig/strictNullChecks.html) · typescriptlang.org · the flag reference (*headings only*); [exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig/exactOptionalPropertyTypes.html) for the absent-versus-undefined split · fetched 2026-10-12
+- **Beyond the docs:** [optional vs. undefined](https://tkdodo.eu/blog/optional-vs-undefined) · TkDodo, 2022-02-19 · a real refactor where an optional parameter let stale call sites compile; makes the intent difference (omit versus pass `undefined`) concrete and ties it to `exactOptionalPropertyTypes` · fetched 2026-10-13 (*read*)
 - **Our delta:** optional versus `| undefined`.
 
 ### T01-11 · Intersection types — Understand · ✅ written `docs/typescript/pages/phase-1-type-vocabulary/11-intersection-types.md`
 - **Read this:** [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) · typescriptlang.org · "Intersection Types" and "Interface Extension vs. Intersection" (*headings only*) · covers our angle: **partial** — conflicting members and `never` not confirmed · fetched 2026-10-12
 - **Also good:** none beyond the above; the Total TypeScript type-vs-interface article touches `extends` versus `&` (*read*).
+- **Beyond the docs:** [TypeScript: Unexpected intersections](https://oida.dev/typescript-unexpected-intersections/) · oida.dev, 2021-07-21 · shows non-overlapping members (`string & number`) collapsing to `never` through a worked example; it is about indexed writes, so only the collapse idea carries over · fetched 2026-10-13 (*read*)
 - **Our delta:** impossible intersections collapsing to `never`.
 
 ### T01-12 · Call signatures, construct signatures and overloads — Understand · ✅ written `docs/typescript/pages/phase-1-type-vocabulary/12-call-and-construct-signatures.md`
 - **Read this:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) · typescriptlang.org · "Call Signatures", "Construct Signatures", "Function Overloads", "Overload Signatures and the Implementation Signature", "Writing Good Overloads" (*headings only*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** none found that adds to it.
+- **Beyond the docs:** [TypeScript Function Overloads](https://dev.to/gaetanrdn/typescript-function-overloads-1eeo) · dev.to, Gaëtan Redin, 2021-09-26 · a short rule of thumb: overloads when the parameter count differs, otherwise prefer a union parameter · fetched 2026-10-13 (*read*)
 - **Our delta:** none.
 
 ### T01-13 · `enum` vs union of literals vs `const` object — Understand · ✅ written `docs/typescript/pages/phase-1-type-vocabulary/13-enum-vs-union.md`
@@ -158,6 +163,7 @@ Covers every topic row of phases 0 and 1 in `docs/typescript/syllabus/01-type-sy
 ### T01-15 · Recursive type aliases — Understand · ✅ written `docs/typescript/pages/phase-1-type-vocabulary/15-recursive-types.md`
 - **Read this:** [TypeScript 3.7 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html) · typescriptlang.org · "(More) Recursive Type Aliases": the `Json` type and `VirtualNode` tuple examples (*read*) · covers our angle: **partial** — the depth limit is not on it · fetched 2026-10-12
 - **Also good:** none found for the depth limit.
+- **Beyond the docs:** [How to Create Deep Recursive Types](https://dev.to/susisu/how-to-create-deep-recursive-types-5fgg) · dev.to, Susisu, 2020-11-20 · explains the "excessively deep" instantiation error and a workaround that defers recursion inside object properties; its limit of 50 is stated for TypeScript 4.1 and is dated · fetched 2026-10-13 (*read*)
 - **Our delta:** the depth limit and the error you meet at it.
 
 ### T01-16 · `object` vs `Object` vs `{}` — Know · ✅ written `docs/typescript/pages/phase-1-type-vocabulary/16-object-Object-braces.md`

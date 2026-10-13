@@ -229,6 +229,7 @@ intermediate types is worth doing.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [TypeScript 3.7 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html) — typescriptlang.org: "(More) Recursive Type Aliases": the `Json` type and `VirtualNode` tuple examples (*read*)
+- **Beyond the docs:** [How to Create Deep Recursive Types](https://dev.to/susisu/how-to-create-deep-recursive-types-5fgg) — dev.to, Susisu, 2020-11-20: explains the "excessively deep" instantiation error and a workaround that defers recursion inside object properties; its limit of 50 is stated for TypeScript 4.1 and is dated
 
 {/* LINKMAP:END */}
 

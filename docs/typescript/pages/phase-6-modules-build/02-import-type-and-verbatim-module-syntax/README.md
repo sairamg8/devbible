@@ -83,6 +83,7 @@ Because the failure it prevents is silent, and it has three separate faces:
 
 - **Read this:** [TSConfig: verbatimModuleSyntax](https://www.typescriptlang.org/tsconfig/verbatimModuleSyntax.html) — typescriptlang.org: explains import elision first, then the flag (*read* the opening only)
 - **Also good:** [Modules — Reference](https://www.typescriptlang.org/docs/handbook/modules/reference.html) — typescriptlang.org: "Type-only imports and exports" section (*headings only*)
+- **Beyond the docs:** [TypeScript 5: importsNotUsedAsValues replaced by ESLint consistent-type-imports](https://blog.johnnyreilly.com/typescript-5-importsnotusedasvalues-error-eslint-consistent-type-imports) — John Reilly: 2023-05-09
 
 {/* LINKMAP:END */}
 

@@ -74,6 +74,7 @@ capture rather than a `!`.
 
 - **Read this:** [TypeScript 5.4 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-4.html) — typescriptlang.org: "Preserved Narrowing in Closures Following Last Assignments" (*read* the opening)
 - **Also good:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: "Control flow analysis" and "Assignments" (*headings only*)
+- **Beyond the docs:** [Making Sense of Type Narrowing in TypeScript](https://blog.openreplay.com/making-sense-type-narrowing-typescript/) — OpenReplay Team, 2025-12-21: names the places narrowing is lost (callback boundaries, property reassignment, aliasing) and the TS 5.4 `const` closure exception, which the Handbook does not gather in one place
 
 {/* LINKMAP:END */}
 

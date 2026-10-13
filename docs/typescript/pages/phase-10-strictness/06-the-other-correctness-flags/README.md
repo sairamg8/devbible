@@ -92,6 +92,7 @@ behaviour change with no compile-time signal at all — and it costs a keyword.
 
 - **Read this:** [TSConfig Option: noImplicitOverride](https://www.typescriptlang.org/tsconfig/noImplicitOverride.html) — typescriptlang.org: the renamed-base-method example: without the flag nothing warns; with it the missing `override` errors (*read*)
 - **Also good:** [TSConfig reference](https://www.typescriptlang.org/tsconfig/) — typescriptlang.org: the single page that lists all six flags (found in the HTML, *headings only*)
+- **Beyond the docs:** [TSConfig flags to prevent common errors](https://til.jakelazaroff.com/typescript/tsconfig-flags-to-prevent-common-errors) — Jake Lazaroff, 2023-02-03: one short page that groups `noImplicitReturns`, `noFallthroughCasesInSwitch`, `noImplicitOverride`, `noUnusedLocals` and `noUnusedParameters` as a safety set with a line each; thin on code samples
 
 {/* LINKMAP:END */}
 

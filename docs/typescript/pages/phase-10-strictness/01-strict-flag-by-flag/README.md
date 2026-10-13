@@ -73,6 +73,7 @@ reaching for `strictNullChecks: false` to quiet a migration.
 
 - **Read this:** [TSConfig Option: strict](https://www.typescriptlang.org/tsconfig/strict.html) — typescriptlang.org: `strict` enables the whole strict family; future versions may add checks under it (*read*)
 - **Also good:** [How to Incrementally Migrate an Angular Project to TypeScript Strict Mode](https://www.bitovi.com/blog/how-to-incrementally-migrate-an-angular-project-to-typescript-strict-mode) — Bitovi, 2022-06-22: explains each flag in the TS 4.7.3 strict set with code (*read*; Angular examples, flag list predates `strictBuiltinIteratorReturn`)
+- **Beyond the docs:** [Controlling type checking strictness](https://learntypescript.dev/11/l6-strictness/) — Learn TypeScript (learntypescript.dev): walks the strict members one at a time with a small failing snippet each (`noImplicitAny`, `strictNullChecks`, `strictFunctionTypes`, `strictPropertyInitialization`), which the official `strict` page does not; no date shown, exerc
 
 {/* LINKMAP:END */}
 

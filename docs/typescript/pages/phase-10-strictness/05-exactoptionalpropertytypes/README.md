@@ -88,6 +88,7 @@ flag and gains nothing from it.
 
 - **Read this:** [TSConfig Option: exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig/exactOptionalPropertyTypes.html) — typescriptlang.org: the `colorThemeOverride` example and `"x" in settings` behaving differently for absent versus `undefined` (*read*)
 - **Also good:** [TypeScript 4.4 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-4.html) — typescriptlang.org: the `Person` / `age: undefined` example and the runtime-error risk (*read*)
+- **Beyond the docs:** [optional vs. undefined](https://tkdodo.eu/blog/optional-vs-undefined) — TkDodo, 2022-02-19: argues from intent why a missing property and one set to `undefined` differ, and shows how `Partial&lt;User&gt;` blurs them and causes merge bugs
 
 {/* LINKMAP:END */}
 

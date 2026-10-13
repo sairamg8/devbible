@@ -18,12 +18,14 @@ Covers every topic row of `docs/typescript/syllabus/04-rigour-and-tooling.md`: T
 ### T10-01 · `strict` flag by flag — Master · ✅ written `docs/typescript/pages/phase-10-strictness/01-strict-flag-by-flag/README.md`
 - **Read this:** [TSConfig Option: strict](https://www.typescriptlang.org/tsconfig/strict.html) · typescriptlang.org · `strict` enables the whole strict family; future versions may add checks under it (*read*) · covers our angle: **partial** — the page text gives the family idea only; the member list and what each flag rejects are not on it · fetched 2026-10-12
 - **Also good:** [How to Incrementally Migrate an Angular Project to TypeScript Strict Mode](https://www.bitovi.com/blog/how-to-incrementally-migrate-an-angular-project-to-typescript-strict-mode) · Bitovi, 2022-06-22 · explains each flag in the TS 4.7.3 strict set with code (*read*; Angular examples, flag list predates `strictBuiltinIteratorReturn`) · fetched 2026-10-12
+- **Beyond the docs:** [Controlling type checking strictness](https://learntypescript.dev/11/l6-strictness/) · Learn TypeScript (learntypescript.dev) · walks the strict members one at a time with a small failing snippet each (`noImplicitAny`, `strictNullChecks`, `strictFunctionTypes`, `strictPropertyInitialization`), which the official `strict` page does not; no date shown, exercise answers are hidden behind toggles · fetched 2026-10-13 (*read*)
 - **Our delta:** the full-reference page (`https://www.typescriptlang.org/tsconfig/`) has a strict entry with "Default: true" and a Related list: `alwaysStrict`, `strictNullChecks`, `strictBindCallApply`, `strictBuiltinIteratorReturn`, `strictFunctionTypes`, `strictPropertyInitialization`, `noImplicitAny`, `noImplicitThis`, `useUnknownInCatchVariables` (*read* in the HTML). Each of those has its own page at `https://www.typescriptlang.org/tsconfig/<name>.html`, all nine returned 200 on 2026-10-12. The 7.0 post says `strict` is true by default, so say what "default" means per version.
 - *Checked, not chosen:* TSConfig reference index (nav and flag names only in our fetch).
 
 ### T10-02 · `noUncheckedIndexedAccess` — Master · ✅ written `docs/typescript/pages/phase-10-strictness/02-nouncheckedindexedaccess.md`
 - **Read this:** [TSConfig Option: noUncheckedIndexedAccess](https://www.typescriptlang.org/tsconfig/noUncheckedIndexedAccess.html) · typescriptlang.org · index-signature example: `env.NODE_ENV` goes from `string` to `string | undefined` (*read*) · covers our angle: **partial** — the page shows records only, no array `arr[0]` example in our fetch, and nothing on fixing errors without `!` · fetched 2026-10-12
 - **Also good:** [The Seven Sources of Unsoundness in TypeScript](https://effectivetypescript.com/2021/05/06/unsoundness/) · Effective TypeScript, 2021-05-06 · "Object and array lookups": no bounds checking, so `xs[3]` is typed as present (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Convert your Typescript codebase to No Unchecked Indexed Access](https://www.flux.ai/p/blog/convert-your-typescript-codebase-to-no-unchecked-indexed-access) · Greg Dingle, Flux, May 2023 · a real migration: 2,761 errors, a script that fixed most of them and the rest by hand, which is the "fix the errors" side the official page skips · fetched 2026-10-13 (*read*)
 - **Our delta:** the "fix twenty errors without `!` or `as`" drill; neither page teaches it.
 
 ### T10-03 · Containing `any` — Master · ✅ written `docs/typescript/pages/phase-10-strictness/03-containing-any.md`
@@ -39,11 +41,13 @@ Covers every topic row of `docs/typescript/syllabus/04-rigour-and-tooling.md`: T
 ### T10-05 · `exactOptionalPropertyTypes` — Understand · ✅ written `docs/typescript/pages/phase-10-strictness/05-exactoptionalpropertytypes/README.md`
 - **Read this:** [TSConfig Option: exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig/exactOptionalPropertyTypes.html) · typescriptlang.org · the `colorThemeOverride` example and `"x" in settings` behaving differently for absent versus `undefined` (*read*) · covers our angle: full for the concept; **partial** — no API-bug catalogue · fetched 2026-10-12
 - **Also good:** [TypeScript 4.4 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-4.html) · typescriptlang.org · the `Person` / `age: undefined` example and the runtime-error risk (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [optional vs. undefined](https://tkdodo.eu/blog/optional-vs-undefined) · TkDodo, 2022-02-19 · argues from intent why a missing property and one set to `undefined` differ, and shows how `Partial<User>` blurs them and causes merge bugs · fetched 2026-10-13 (*read*)
 - **Our delta:** the JSON boundary and spread/default construction, which are pages of ours.
 
 ### T10-06 · The other correctness flags — Understand · ✅ written `docs/typescript/pages/phase-10-strictness/06-the-other-correctness-flags/README.md`
 - **Read this:** [TSConfig Option: noImplicitOverride](https://www.typescriptlang.org/tsconfig/noImplicitOverride.html) · typescriptlang.org · the renamed-base-method example: without the flag nothing warns; with it the missing `override` errors (*read*) · covers our angle: **partial** — one of six flags · fetched 2026-10-12
 - **Also good:** [TSConfig reference](https://www.typescriptlang.org/tsconfig/) · typescriptlang.org · the single page that lists all six flags (found in the HTML, *headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [TSConfig flags to prevent common errors](https://til.jakelazaroff.com/typescript/tsconfig-flags-to-prevent-common-errors) · Jake Lazaroff, 2023-02-03 · one short page that groups `noImplicitReturns`, `noFallthroughCasesInSwitch`, `noImplicitOverride`, `noUnusedLocals` and `noUnusedParameters` as a safety set with a line each; thin on code samples · fetched 2026-10-13 (*read*)
 - **Our delta:** `noPropertyAccessFromIndexSignature`, `noFallthroughCasesInSwitch`, `noImplicitReturns`, `noUnusedLocals`/`noUnusedParameters`: I read no per-flag passage for these. Each has its own page at `https://www.typescriptlang.org/tsconfig/` plus the flag name and `.html`; all five (and `noImplicitOverride`) returned 200 on 2026-10-12, contents not read. The full-reference page lists all six flags (found in its HTML).
 
 ### T10-07 · Where TypeScript is unsound by design — Understand · ✅ written `docs/typescript/pages/phase-10-strictness/07-unsound-by-design/README.md`
@@ -54,6 +58,7 @@ Covers every topic row of `docs/typescript/syllabus/04-rigour-and-tooling.md`: T
 ### T10-08 · `@ts-expect-error` vs `@ts-ignore` vs `@ts-nocheck` — Understand · ✅ written `docs/typescript/pages/phase-10-strictness/08-suppression-directives/README.md`
 - **Read this:** [TypeScript 3.9 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html) · typescriptlang.org · `@ts-expect-error` suppresses an error and reports if there is none to suppress (*read*) · covers our angle: **partial** — introduction page, no `@ts-nocheck` and no policy · fetched 2026-10-12
 - **Also good:** [ban-ts-comment](https://typescript-eslint.io/rules/ban-ts-comment/) · typescript-eslint · directives reduce the effectiveness of TypeScript; can require descriptions (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [@ts-ignore is almost always the worst option](https://evanhahn.com/ts-ignore-is-almost-always-the-worst-option) · Evan Hahn, 2025-09-21 · gives a preference order (fix the error, then a targeted cast, then `@ts-expect-error`) and why a stale `@ts-ignore` is worse than no comment · fetched 2026-10-13 (*read*)
 - **Our delta:** the suppression tiers and a team policy.
 
 ### T10-09 · Excess property checks vs assignability — Understand · ✅ written `docs/typescript/pages/phase-10-strictness/09-excess-property-checks/README.md`
@@ -80,6 +85,7 @@ Covers every topic row of `docs/typescript/syllabus/04-rigour-and-tooling.md`: T
 ### T10-13 · Designing APIs `unknown`-first — Know · ✅ written `docs/typescript/pages/phase-10-strictness/13-unknown-first-apis.md`
 - **Read this:** [TypeScript 3.0 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html) · typescriptlang.org · "New unknown top type": the type-safe counterpart of `any`, no operations until narrowed (*read*) · covers our angle: **partial** — the type, not API design · fetched 2026-10-12
 - **Also good:** [any type](https://www.totaltypescript.com/concepts/any-type) · Total TypeScript · `greet(name: unknown)` narrowed with `typeof` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [The difference between any and unknown type in TypeScript](https://pawelgrzybek.com/the-difference-between-any-and-unknown-type-in-typescript/) · Pawel Grzybek, 2020-12-25 · short worked example of narrowing `unknown` with `typeof` and a plain rule of thumb (`any` only while migrating) · fetched 2026-10-13 (*read*)
 - **Our delta:** making callers prove the shape at the parameter.
 
 ---
@@ -91,6 +97,7 @@ Covers every topic row of `docs/typescript/syllabus/04-rigour-and-tooling.md`: T
 ### T11-01 · A migration strategy that ships — Understand · 🔲 not written (phase dropped)
 - **Read this:** [Migrating from JavaScript](https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html) · typescriptlang.org · `allowJs` plus `include`, then `noImplicitAny` early; stricter checks after conversion (*read*) · covers our angle: **partial** — no leaf-first order and no "never convert and refactor together" · fetched 2026-10-12
 - **Also good:** [ts-migrate README](https://raw.githubusercontent.com/airbnb/ts-migrate/master/README.md) · Airbnb · output compiles but needs follow-up; many `@ts-expect-error` and `any` to fix (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Incremental JavaScript to TypeScript Migration](https://mixmax.com/engineering/incremental-migration-from-javascript-to-typescript-in-our-largest-service) · Armen Avakian, Mixmax, 2022-12-03 · a production account of migrating file by file and module by module, with new code in TypeScript from the start, instead of a big-bang conversion · fetched 2026-10-13 (*read*)
 - **Our delta:** ordering and commit discipline; one search result recommended leaf-first, which I did not read: **not confirmed**.
 
 ### T11-02 · `checkJs` and JSDoc types — Understand · 🔲 not written (phase dropped)
@@ -121,6 +128,7 @@ Covers every topic row of `docs/typescript/syllabus/04-rigour-and-tooling.md`: T
 ### T11-07 · Deprecations across 5.x → 6.0 → 7.0 — Understand · 🔲 not written (phase dropped)
 - **Read this:** [Announcing TypeScript 6.0](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/) · Microsoft, March 23rd, 2026 · the deprecation list (`target: es5`, `baseUrl`, `--moduleResolution node`…), `ignoreDeprecations: "6.0"`, the `ts5to6` tool, `--stableTypeOrdering` (*read*) · covers our angle: full for 6.0 · fetched 2026-10-12
 - **Also good:** [Announcing TypeScript 7.0](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/) · July 8th, 2026 · hard errors for everything 6.0 deprecated (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [TypeScript v6 is here: A full migration guide](https://blog.logrocket.com/typescript-v6-migration-guide/) · Amazing Enyichi Agu, LogRocket, 2026-05-14 · a practical walk-through of the upgrade changes (`ignoreDeprecations`, explicit `types`, `rootDir`, dropping `baseUrl`, new defaults, the `ts5to6` codemod) rather than a release-note list; the steps are not numbered as a checklist · fetched 2026-10-13 (*read*)
 - **Our delta:** an upgrade plan for a large repo.
 
 ### T11-08 · An `any` budget — Know · 🔲 not written (phase dropped)
@@ -146,6 +154,7 @@ Covers every topic row of `docs/typescript/syllabus/04-rigour-and-tooling.md`: T
 ### T11-12 · Codemods at scale — When Needed · 🔲 not written (phase dropped)
 - **Read this:** [ts-migrate README](https://raw.githubusercontent.com/airbnb/ts-migrate/master/README.md) · Airbnb · plugin-based migration configs; expect follow-up on type safety (*read*) · covers our angle: **partial** — conversion, not review discipline · fetched 2026-10-12
 - **Also good:** [jscodeshift README](https://raw.githubusercontent.com/facebook/jscodeshift/main/README.md) · a runner plus transform toolkit for JS and TS (*read* opening) · fetched 2026-10-12
+- **Beyond the docs:** [Codemods for React and TypeScript](https://carlrippon.com/codemods-for-react-typescript/) · Carl Rippon, 2022-01-19 · a worked jscodeshift transform (rename a `kind` prop to `variant`), the concrete step the README only describes · fetched 2026-10-13 (*read*)
 - **Our delta:** the review discipline.
 
 ---
@@ -155,6 +164,7 @@ Covers every topic row of `docs/typescript/syllabus/04-rigour-and-tooling.md`: T
 ### T12-01 · Type checking in CI — Master · ✅ written `docs/typescript/pages/phase-12-tooling/01-type-checking-in-ci/README.md`
 - **Read this:** [Vite: Features, TypeScript](https://vite.dev/guide/features.html) · vite.dev · "Transpile Only": Vite does NOT perform type checking; run `tsc --noEmit` separately (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [esbuild: Content Types](https://esbuild.github.io/content-types/) · esbuild does no type checking, run `tsc -noEmit` in parallel (*read*) · [TSConfig Option: noEmit](https://www.typescriptlang.org/tsconfig/noEmit.html) · use TypeScript as the type-checker while another tool emits (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Type-check without emitting files](https://flaviocopes.com/courses/typescript/type-check-without-emitting/) · Flavio Copes · makes the type check its own `typecheck` script and its own CI step so a type failure is not buried in a build log; no date shown · fetched 2026-10-13 (*read*)
 - **Our delta:** the 7.0 post's CI figure (Slack, about 7.5 to 1.25 minutes, *read*) is vendor-reported.
 
 ### T12-02 · What TypeScript 7 changed for tooling — Understand · ✅ written `docs/typescript/pages/phase-12-tooling/02-typescript-7-for-tooling/README.md`
@@ -190,6 +200,7 @@ Covers every topic row of `docs/typescript/syllabus/04-rigour-and-tooling.md`: T
 ### T12-08 · `skipLibCheck` as a performance lever — Understand · ✅ written `docs/typescript/pages/phase-12-tooling/08-skiplibcheck-as-a-performance-lever.md`
 - **Read this:** [TSConfig Option: skipLibCheck](https://www.typescriptlang.org/tsconfig/skipLibCheck.html) · typescriptlang.org · saves time at the expense of accuracy; duplicate copies of a library's types are the common trigger (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Performance wiki](https://raw.githubusercontent.com/wiki/microsoft/TypeScript/Performance.md) · `skipDefaultLibCheck` versus `skipLibCheck`; both can hide `.d.ts` conflicts (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [TypeScript: the skipLibCheck Option Explained](https://dev.to/ddmytro/typescript-the-skiplibcheck-option-explained-45dd) · Dmytro Danylov, 2020-07-17 · plain account of what is skipped (all declaration files) and what is still checked (your code against their types), with the warning that it hides declaration errors · fetched 2026-10-13 (*read*)
 - **Our delta:** none.
 
 ### T12-09 · Caching TypeScript in CI and Docker — Understand · ✅ written `docs/typescript/pages/phase-12-tooling/09-caching-in-ci-and-docker.md`
@@ -205,11 +216,13 @@ Covers every topic row of `docs/typescript/syllabus/04-rigour-and-tooling.md`: T
 ### T12-11 · Declaration emit — Know · ✅ written `docs/typescript/pages/phase-12-tooling/11-declaration-emit.md`
 - **Read this:** [TypeScript 5.5 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html) · typescriptlang.org · the "Isolated Declarations" section, co-authored by Rob Palmer, feature built with Bloomberg and Google (*read* the opening) · covers our angle: **partial** — `.d.ts` generation cost not measured here · fetched 2026-10-12
 - **Also good:** [TSConfig Option: isolatedDeclarations](https://www.typescriptlang.org/tsconfig/isolatedDeclarations.html) · annotate exports so other tools can generate declarations (*read*) · [Publishing](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html) (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [TypeScript 5.5: A Blockbuster Release](https://effectivetypescript.com/2024/07/02/ts-55/) · Effective TypeScript, 2024-07-02 · a sceptical read of `isolatedDeclarations`: adopting it does not speed up your build yet ("Probably not, at least not yet"), with an exception for projects already using typescript-eslint's `explicit-function-return-type` rule · fetched 2026-10-13 (*read*)
 - **Our delta:** bundling declarations for a package: none found.
 
 ### T12-12 · Validating published types — Know · ✅ written `docs/typescript/pages/phase-12-tooling/12-validating-published-types.md`
 - **Read this:** [arethetypeswrong README](https://raw.githubusercontent.com/arethetypeswrong/arethetypeswrong.github.io/main/README.md) · detects problems in `node10`, `node16`, `bundler` modes, e.g. "Masquerading as CJS" (*read*) · covers our angle: **partial** — no publint · fetched 2026-10-12
 - **Also good:** [publint rules](https://publint.dev/rules) · publint v0.3.25 · rules grouped by severity (*read* the opening) · [publint README](https://raw.githubusercontent.com/publint/publint/master/README.md) · `npx publint` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Dual Publishing ESM and CJS Modules with tsup and Are the Types Wrong?](https://johnnyreilly.com/dual-publishing-esm-cjs-modules-with-tsup-and-are-the-types-wrong) · John Reilly, 2024-06-15 · runs the tool against a dual-publishing setup built with tsup (a demo project, not a named npm package) and notes that it does not check everything · fetched 2026-10-13 (*read*)
 - **Our delta:** testing the package as a consumer would.
 
 ### T12-13 · Measuring type coverage — Know · ✅ written `docs/typescript/pages/phase-12-tooling/13-measuring-type-coverage.md`

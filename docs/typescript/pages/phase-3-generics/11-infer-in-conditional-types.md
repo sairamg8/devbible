@@ -275,6 +275,7 @@ was wrong.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) — typescriptlang.org: section "Inferring within conditional types": `Flatten` (element type) and `GetReturnType` (*read*)
+- **Beyond the docs:** [Understanding infer in TypeScript](https://blog.logrocket.com/understanding-infer-typescript/) — Simohamed Marhraoui (LogRocket), 2024-10-21: builds `ReturnType` step by step and extracts types from tuples, more examples than the Handbook's two; it does not cover `Awaited`
 
 {/* LINKMAP:END */}
 

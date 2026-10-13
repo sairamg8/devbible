@@ -69,6 +69,7 @@ The tell that it has not landed: *"we don't need `tsc`, the build would fail."*
 - **Read this:** [Vite: Features, TypeScript](https://vite.dev/guide/features.html) — vite.dev: "Transpile Only": Vite does NOT perform type checking; run `tsc --noEmit` separately (*read*)
 - **Also good:** [esbuild: Content Types](https://esbuild.github.io/content-types/) — esbuild does no type checking, run `tsc -noEmit` in parallel (*read*): [TSConfig Option: noEmit](https://www.typescriptlang.org/tsconfig/noEmit.html)
 - **Also good:** [TSConfig Option: noEmit](https://www.typescriptlang.org/tsconfig/noEmit.html)
+- **Beyond the docs:** [Type-check without emitting files](https://flaviocopes.com/courses/typescript/type-check-without-emitting/) — Flavio Copes: makes the type check its own `typecheck` script and its own CI step so a type failure is not buried in a build log; no date shown
 
 {/* LINKMAP:END */}
 

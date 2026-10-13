@@ -211,6 +211,7 @@ because that requires type information they never compute.
 
 - **Read this:** [Running TypeScript Natively](https://nodejs.org/learn/typescript/run-natively) — nodejs.org: type stripping, no flags on v22.18+ for erasable-only code, "Node.js does not type check", `npx tsc --noEmit` (*read*)
 - **Also good:** [esbuild — TypeScript](https://esbuild.github.io/content-types/) — esbuild: "does not do any type checking so you will still need to run tsc -noEmit"; enums and namespaces are converted (*read*)
+- **Beyond the docs:** [Running TypeScript in Node.js: tsx vs. ts-node vs. native](https://blog.logrocket.com/running-typescript-node-js-tsx-vs-ts-node-vs-native) — LogRocket, Amazing Enyichi Agu, 2025-05-07: compares the runner options side by side and states plainly that type stripping never type checks; written before Node's stripping became stable, so ignore its "experimental" verdict
 
 {/* LINKMAP:END */}
 

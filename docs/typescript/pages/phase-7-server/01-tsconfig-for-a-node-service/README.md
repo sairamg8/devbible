@@ -78,6 +78,7 @@ that has silently dropped everything else).
 - **Read this:** [Modules — Choosing Compiler Options](https://www.typescriptlang.org/docs/handbook/modules/guides/choosing-compiler-options.html) — typescriptlang.org: "compiling and running in Node.js" template: `module: nodenext` (implies `moduleResolution`, `esModuleInterop`, `target: esnext`) plus `verbatimModuleSyntax`; says to set `target`, `lib`, `strict` yourself (*read* the Node passage
 - **Also good:** [Node.js — Modules: TypeScript](https://nodejs.org/api/typescript.html) — nodejs.org: type stripping does no type checking and Node ignores `tsconfig.json` (*read*); [TSConfig: erasableSyntaxOnly](https://www.typescriptlang.org/tsconfig/erasableSyntaxOnly.html)
 - **Also good:** [TSConfig: erasableSyntaxOnly](https://www.typescriptlang.org/tsconfig/erasableSyntaxOnly.html)
+- **Beyond the docs:** [The TSConfig Cheat Sheet](https://www.totaltypescript.com/tsconfig-cheat-sheet) — Total TypeScript (Matt Pocock): an opinionated, modular recommended config (base, strictness, transpiling sections) that says NodeNext is the best option for Node, where the handbook lists every option; changelog dated 2024-04-23
 
 {/* LINKMAP:END */}
 

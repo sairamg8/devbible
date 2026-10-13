@@ -266,6 +266,7 @@ Both overrule the compiler, which is the only thing they have in common.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Classes → Fields](https://www.typescriptlang.org/docs/handbook/2/classes.html#fields) — typescriptlang.org: `strictPropertyInitialization`, error 2564, the definite assignment assertion `name!: string`, and `readonly` fields assignable only in the constructor (*read*)
+- **Beyond the docs:** [Strict Property Initialization in TypeScript](https://mariusschulz.com/blog/strict-property-initialization-in-typescript) — Marius Schulz: 2018-05-20
 
 {/* LINKMAP:END */}
 

@@ -252,6 +252,7 @@ history rather than design.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) — typescriptlang.org: section "Generic Parameter Defaults" (*headings only*)
+- **Beyond the docs:** [Making Generics Types Optional](https://dev.to/playfulprogramming/making-generics-types-optional-generics-fundamentals-in-typescript-1m11) — Maina Wycliffe (Playful Programming), 2024-04-30: a default is the fallback when the caller omits the type and inference cannot supply it, with the ordering and constraint rules
 
 {/* LINKMAP:END */}
 

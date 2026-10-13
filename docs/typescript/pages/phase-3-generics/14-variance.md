@@ -285,6 +285,7 @@ contravariance, and it is the mechanism behind `UnionToIntersection`.
 - **Read this:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) — typescriptlang.org: section "Variance Annotations": covariance and contravariance with `Producer`/`Consumer`, `in`/`out`/`in out` annotations and when they have no effect (*read*)
 - **Also good:** [Type Compatibility](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) — typescriptlang.org: "Function Parameter Bivariance" (*headings only*); [TSConfig: strictFunctionTypes](https://www.typescriptlang.org/tsconfig/strictFunctionTypes.html) (*headings only*)
 - **Also good:** [TSConfig: strictFunctionTypes](https://www.typescriptlang.org/tsconfig/strictFunctionTypes.html)
+- **Beyond the docs:** [Covariance and Contravariance in TypeScript](https://dmitripavlutin.com/typescript-covariance-contravariance/) — Dmitri Pavlutin, updated 2022-01-11: builds subtyping, covariance and contravariance from examples and ties function-type checking to `strictFunctionTypes`; it does not cover method bivariance
 
 {/* LINKMAP:END */}
 

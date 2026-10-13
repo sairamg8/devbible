@@ -244,6 +244,7 @@ declarative, discoverable surface.
 
 - **Read this:** [TypeScript 5.0 → Decorators](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html) — typescriptlang.org: standard decorators valid without a flag; `--experimentalDecorators` remains "for the foreseeable future" and is type-checked and emitted differently (*read*)
 - **Also good:** [Decorators (experimental)](https://www.typescriptlang.org/docs/handbook/decorators.html) — typescriptlang.org: carries a note that it describes the experimental stage 2 implementation (*read* the note)
+- **Beyond the docs:** [Using modern decorators in TypeScript](https://blog.logrocket.com/using-modern-decorators-typescript) — LogRocket Blog (Alec Brunelle): 2023-04-28
 
 {/* LINKMAP:END */}
 

@@ -181,6 +181,7 @@ boundary.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) — typescriptlang.org: "Intersection Types" and "Interface Extension vs. Intersection" (*headings only*)
+- **Beyond the docs:** [TypeScript: Unexpected intersections](https://oida.dev/typescript-unexpected-intersections/) — oida.dev, 2021-07-21: shows non-overlapping members (`string & number`) collapsing to `never` through a worked example; it is about indexed writes, so only the collapse idea carries over
 
 {/* LINKMAP:END */}
 

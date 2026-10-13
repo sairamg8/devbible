@@ -64,6 +64,7 @@ an assertion is wrong and a type guard is right.
 
 - **Read this:** [TypeScript 3.7 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html) — typescriptlang.org: "assertion signatures": the `assert` form, `asserts val is T`, and the comparison to type predicates (*read*)
 - **Also good:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: section "Assertion functions" (*headings only*)
+- **Beyond the docs:** [Assertion functions in TypeScript](https://blog.logrocket.com/assertion-functions-typescript) — Matteo Di Pirro (LogRocket), 2022-10-03: states the signature must be explicit, so a const arrow function needs a separately declared assertion type, which the 3.7 notes do not spell out
 
 {/* LINKMAP:END */}
 
