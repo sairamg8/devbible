@@ -193,6 +193,7 @@ permission and existence check without delivering anything.
 - **Read this:** [process: Signal events](https://nodejs.org/api/process.html#signal-events) — nodejs.org: signal names are the event names; not available on Worker threads (*read*)
 - **Read this:** [docker stop](https://docs.docker.com/reference/cli/docker/container/stop/) — Docker: the main process gets SIGTERM, then SIGKILL after a grace period (*read*)
 - **Also good:** [Pod lifecycle: termination](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination) — Kubernetes: TERM to each container's main process, with a grace period (*read*; page modified 2026-07-27 per metadata; anchor id verified)
+- **Beyond the docs:** [Avoid running NodeJS as PID 1 under Docker images](https://www.elastic.io/nodejs-as-pid-1-under-docker-images/) — byline Kevin Mobbs, elastic.io (republished from another blog), 28 February 2018: explains why a SIGTERM handler never runs when Node is PID 1 and fixes it with `--init` or Tini (including mapping exit code 143); the docs pages above do not cover this container case; older, so check the Docker flags against cur
 
 {/* LINKMAP:END */}
 

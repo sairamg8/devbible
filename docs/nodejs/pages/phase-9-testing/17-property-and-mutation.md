@@ -248,6 +248,7 @@ killing. Read the survivors and ask whether killing each would be a real test.
 
 - **Read this:** [fast-check: Introduction](https://fast-check.dev/docs/introduction/) — fast-check.dev: runs assertions over hundreds of generated cases and shrinks failures to a minimal input (*read*)
 - **Read this:** [What is mutation testing?](https://stryker-mutator.io/docs/) — Stryker: why coverage alone does not show test quality (*read*, ≈660 words)
+- **Beyond the docs:** [The Enterprise Developer from Hell](https://fsharpforfunandprofit.com/posts/property-based-testing/) — F# for Fun and Profit (Scott Wlaschin), 01 Dec 2014: a story showing how example-based tests get gamed and why general properties checked on random inputs are stronger; examples are F#
 
 {/* LINKMAP:END */}
 

@@ -288,6 +288,7 @@ snapshot alive. A pool of 4 with 4 open transactions serves nothing at all — s
 - **Read this:** [Pooling](https://node-postgres.com/features/pooling) — node-postgres.com: a pool of clients you check out and return; forgetting `release()` leaks clients until the pool is empty and callers wait forever; `pool.query` is the preferred way as it removes the leak risk (*read*)
 - **Also good:** [Pool sizing](https://node-postgres.com/guides/pool-sizing) — node-postgres.com: napkin math across instances: max connections divided by instance count (*read*)
 - **Also good:** [Connection pools](https://www.mongodb.com/docs/drivers/node/current/connect/connection-options/connection-pools/)
+- **Beyond the docs:** [About Pool Sizing](https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing) — HikariCP wiki: why a small pool beats a large one, since the database can only run so many queries at once; a JVM project, but the argument is language-neutral and explains why more connections are not faster
 
 {/* LINKMAP:END */}
 

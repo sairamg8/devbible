@@ -177,6 +177,7 @@ Nothing automatic. Store the id on the job and establish context when the job st
 
 - **Read this:** [Keep Express Correlation IDs with AsyncLocalStorage](https://oneuptime.com/blog/post/2026-09-11-express-async-local-storage-correlation/view) — oneuptime.com: Sep 11, 2026; middleware makes a UUID, sets an `X-Correlation-ID` header and wraps `next` in `run(store, next)`; the log function reads `getStore()` (*read*)
 - **Also good:** [Asynchronous context tracking](https://nodejs.org/docs/latest/api/async_context.html) — nodejs.org: v26.11.1; headings list `run`, `getStore`, `enterWith`, `exit`, `withScope` and a "Context loss" troubleshooting section (*headings only*, the page is the reference for the API)
+- **Beyond the docs:** [Contextual logging in Node.js](https://xebia.com/blog/contextual-logging-in-nodejs/) — xebia.com / Sander Koenders: walks through attaching request id, trace id and IP to every log line of a request with `AsyncLocalStorage`, keeping logging out of business logic, and passing the trace id on to outgoing HTTP calls, which the API reference does n
 
 {/* LINKMAP:END */}
 

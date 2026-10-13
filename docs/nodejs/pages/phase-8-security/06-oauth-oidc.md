@@ -216,6 +216,7 @@ request.
 - **Read this:** [Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce) — Auth0 docs: `code_verifier`, `code_challenge`, then ID token and access token (*read*)
 - **Also good:** [OAuth2 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html) — OWASP: implicit grant marked deprecated; `state` as CSRF protection (*read*)
 - **Also good:** [How OpenID Connect Works](https://openid.net/developers/how-connect-works/)
+- **Beyond the docs:** [OAuth 2 Simplified](https://aaronparecki.com/oauth-2-simplified/) — Aaron Parecki: plain step-by-step walk through roles and each flow with example requests, follows the spec rather than one vendor's SDK, unlike the Auth0 page
 
 {/* LINKMAP:END */}
 

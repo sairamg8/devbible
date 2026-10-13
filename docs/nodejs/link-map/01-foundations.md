@@ -149,6 +149,7 @@ Covers every topic row of `docs/nodejs/syllabus/01-foundations.md`: T00-01 to T0
 ### T02-01 · Event loop phases in order — Master · ✅ `docs/nodejs/pages/phase-2-async/01-event-loop-phases.md`
 - **Read this:** [The Node.js Event Loop](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick) · nodejs.org · [#phases-overview](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick#phases-overview): pending callbacks, "idle, prepare: only used internally", poll, check, close (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [libuv Design overview → The I/O loop](https://docs.libuv.org/en/v1.x/design.html#the-i-o-loop) · libuv.org · the loop iteration as libuv defines it (*read* timeout rules) · fetched 2026-10-12
+- **Beyond the docs:** [A Complete Visual Guide to Understanding the Node.js Event Loop](https://www.builder.io/blog/visual-guide-to-nodejs-event-loop) · builder.io / Vishwas Gopinath, March 23, 2023 · walks the phases as queues with diagrams and step-by-step output traces, easier to follow than the prose reference · fetched 2026-10-13 (*read*)
 
 ### T02-02 · The poll phase and how it decides to block — Master · ✅ `…/02-poll-phase.md`
 - **Read this:** [The Node.js Event Loop → poll](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick#poll) · nodejs.org · poll retrieves I/O events and "will block here when appropriate" (*read*) · covers our angle: **partial** — the rules for the blocking timeout are in libuv · fetched 2026-10-12
@@ -157,6 +158,7 @@ Covers every topic row of `docs/nodejs/syllabus/01-foundations.md`: T00-01 to T0
 ### T02-03 · Microtasks vs macrotasks: `nextTick`, `queueMicrotask`, promises, timers — Master · ✅ `…/03-microtasks-and-macrotasks.md`
 - **Read this:** [process.nextTick → queueMicrotask vs nextTick](https://nodejs.org/docs/latest/api/process.html#when-to-use-queuemicrotask-vs-processnexttick) · nodejs.org · `queueMicrotask` uses the same queue as promise `then`/`catch`/`finally` handlers; the next tick queue is drained after the current operation, before the loop continues (*read*) · covers our angle: full for Node · fetched 2026-10-12
 - **Also good:** [MDN: Using microtasks](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) · mdn · undated; a microtask runs after the creating function exits and the stack is empty, before control returns to the loop (*read* opening) · fetched 2026-10-12
+- **Beyond the docs:** [A Complete Visual Guide to Understanding the Node.js Event Loop](https://www.builder.io/blog/visual-guide-to-nodejs-event-loop) · builder.io / Vishwas Gopinath, March 23, 2023 · states the Node-specific order directly: the nextTick queue drains before the Promise queue, both between callbacks and after each phase · fetched 2026-10-13 (*read*)
 - **Our delta:** 🔴 `process.nextTick` carries "Stability: 3 - Legacy: Use queueMicrotask() instead" (history: v22.7.0 / v20.18.0) (*read*).
 
 ### T02-04 · Call stack → task queue → microtask queue — Master · ✅ `…/03-microtasks-and-macrotasks.md`
@@ -236,6 +238,7 @@ Covers every topic row of `docs/nodejs/syllabus/01-foundations.md`: T00-01 to T0
 
 ### T02-22 · `AsyncLocalStorage` — Understand · ✅ `…/20-asynclocalstorage.md`
 - **Read this:** [Asynchronous context tracking → AsyncLocalStorage](https://nodejs.org/docs/latest/api/async_context.html#class-asynclocalstorage) · nodejs.org · `run(store, callback)`: store reachable inside the callback only; a [#troubleshooting-context-loss](https://nodejs.org/docs/latest/api/async_context.html#troubleshooting-context-loss) section (*read* `run`) · covers our angle: **partial** — the trace-ID-in-logs recipe is ours · fetched 2026-10-12
+- **Beyond the docs:** [Keeping Context Across Async Calls in Node.js](https://blog.openreplay.com/async-context-nodejs/) · blog.openreplay.com / OpenReplay Team, May 18, 2026 · a worked Express middleware storing request and user IDs with a logger reading them anywhere, which is the recipe the API reference omits · fetched 2026-10-13 (*read*)
 
 ### T02-23 · `async_hooks` — low-level, superseded — When Needed · ✅ `…/21-async-hooks.md`
 - **Read this:** [Async hooks](https://nodejs.org/docs/latest/api/async_hooks.html) · nodejs.org · "Stability: 1 - Experimental. Please migrate away from this API, if you can"; `createHook` has "usability issues, safety risks, and performance implications"; use `AsyncLocalStorage` (*read*) · covers our angle: full · fetched 2026-10-12

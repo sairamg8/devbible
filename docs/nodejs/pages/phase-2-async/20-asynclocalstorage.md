@@ -199,6 +199,7 @@ which leaks easily. Prefer `run()`.
 
 - **Read this:** [Asynchronous context tracking → AsyncLocalStorage](https://nodejs.org/docs/latest/api/async_context.html#class-asynclocalstorage) — nodejs.org: `run(store, callback)`: store reachable inside the callback only; a [#troubleshooting-context-loss](https://nodejs.org/docs/latest/api/async_context.html#troubleshooting-context-loss) section (*read* `run`)
 - **Read this:** [#troubleshooting-context-loss](https://nodejs.org/docs/latest/api/async_context.html#troubleshooting-context-loss)
+- **Beyond the docs:** [Keeping Context Across Async Calls in Node.js](https://blog.openreplay.com/async-context-nodejs/) — blog.openreplay.com / OpenReplay Team, May 18, 2026: a worked Express middleware storing request and user IDs with a logger reading them anywhere, which is the recipe the API reference omits
 
 {/* LINKMAP:END */}
 

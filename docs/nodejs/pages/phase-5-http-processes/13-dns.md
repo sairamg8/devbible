@@ -176,6 +176,7 @@ address.
 
 - **Read this:** [DNS: Implementation considerations](https://nodejs.org/api/dns.html#implementation-considerations) — nodejs.org: `dns.lookup()` is a synchronous `getaddrinfo(3)` on libuv's threadpool, "surprising negative performance implications"; other APIs call it internally (*read*)
 - **Also good:** [libuv thread pool](https://docs.libuv.org/en/v1.x/threadpool.html) — libuv docs: pool runs file-system ops plus `getaddrinfo`; default size 4, `UV_THREADPOOL_SIZE` up to 1024 (*read*)
+- **Beyond the docs:** [Fixing DNS in Node.js](https://httptoolkit.com/blog/configuring-nodejs-dns/) — Tim Perry, HTTP Toolkit, February 2021: walks through why `dns.lookup` ties up one of libuv's four threads per call and what that does to other DNS, file and crypto work, then how to change it; more practical than the reference
 
 {/* LINKMAP:END */}
 

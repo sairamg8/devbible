@@ -128,6 +128,7 @@ Drain starts by failing readiness so new traffic stops before the process exits.
 
 - **Read this:** [docker-node: Best Practices](https://cdn.jsdelivr.net/gh/nodejs/docker-node@main/docs/BestPractices.md) — jsDelivr copy: a Node process as PID 1 will not respond to `SIGINT` and similar signals; `docker run --init` adds a tini init; use `CMD ["node","index.js"]` so `SIGTERM` reaches Node instead of npm swallowing it (*read*)
 - **Also good:** [Building good containers](https://cdn.jsdelivr.net/gh/nodeshift/nodejs-reference-architecture@main/docs/development/building-good-containers.md) — jsDelivr copy of the Node.js reference architecture: Node and npm do not expect to run as PID 1 (zombie reaping); avoid npm to start the app (*read*)
+- **Beyond the docs:** [Avoid running NodeJS as PID 1 under Docker images](https://www.elastic.io/nodejs-as-pid-1-under-docker-images/) — elastic.io (credited Kevin Mobbs, republished from Eugene's own blog): Feb 28, 2018; a war story showing a `SIGTERM` handler that never runs as PID 1, the orchestrator escalating to `SIGKILL`, and Tini forwarding signals, reaping zombies and remapping exit code 143 with `-e 143`, which makes the cost
 
 {/* LINKMAP:END */}
 

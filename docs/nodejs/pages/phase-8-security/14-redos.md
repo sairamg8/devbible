@@ -230,6 +230,7 @@ what the attack looks like in production.
 
 - **Read this:** [Don't Block the Event Loop](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org: the REDOS section; names `safe-regex` and notes it will not catch every case; suggests `node-re2` (*read*)
 - **Also good:** [Regular expression Denial of Service](https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS) — OWASP: evil regex, examples (*headings only*)
+- **Beyond the docs:** [Runaway Regular Expressions: Catastrophic Backtracking](https://www.regular-expressions.info/catastrophic.html) — regular-expressions.info (Jan Goyvaerts): explains why nested quantifiers explode and how atomic groups or tighter patterns avoid it, the mechanism behind ReDoS
 
 {/* LINKMAP:END */}
 

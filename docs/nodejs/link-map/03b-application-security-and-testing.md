@@ -41,6 +41,7 @@ Covers every topic row of phases 8 and 9 in `docs/nodejs/syllabus/03-application
 ### T08-06 · OAuth 2.0 / OIDC flows — Know · ✅ `…/06-oauth-oidc.md`
 - **Read this:** [Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce) · Auth0 docs · `code_verifier`, `code_challenge`, then ID token and access token (*read*) · covers our angle: **partial** — vendor-flavoured, SDK does the work · fetched 2026-10-12
 - **Also good:** [OAuth2 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html) · OWASP · implicit grant marked deprecated; `state` as CSRF protection (*read*) · [How OpenID Connect Works](https://openid.net/developers/how-connect-works/) · OpenID Foundation, published 2023-02-14, modified 2023-07-20 per page metadata · OIDC is built on OAuth 2.0 (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [OAuth 2 Simplified](https://aaronparecki.com/oauth-2-simplified/) · Aaron Parecki · plain step-by-step walk through roles and each flow with example requests, follows the spec rather than one vendor's SDK, unlike the Auth0 page · fetched 2026-10-13 (*read*)
 - **Checked, not chosen:** [RFC 9700](https://datatracker.ietf.org/doc/html/rfc9700) (≈18k words, *headings only*, reference not tutorial); [oauth.net/2](https://oauth.net/2/) (link hub).
 - **Our delta:** a hand-written flow in Node without a vendor SDK.
 
@@ -77,6 +78,7 @@ Covers every topic row of phases 8 and 9 in `docs/nodejs/syllabus/03-application
 ### T08-14 · ReDoS — Understand · ✅ `…/14-redos.md`
 - **Read this:** [Don't Block the Event Loop](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) · nodejs.org · the REDOS section; names `safe-regex` and notes it will not catch every case; suggests `node-re2` (*read*) · covers our angle: full for Node · fetched 2026-10-12
 - **Also good:** [Regular expression Denial of Service](https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS) · OWASP · evil regex, examples (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Runaway Regular Expressions: Catastrophic Backtracking](https://www.regular-expressions.info/catastrophic.html) · regular-expressions.info (Jan Goyvaerts) · explains why nested quantifiers explode and how atomic groups or tighter patterns avoid it, the mechanism behind ReDoS · fetched 2026-10-13 (*read*)
 
 ### T08-15 · Deserialization, open redirects, mass assignment — Know · ✅ `…/15-deserialization-redirects-mass-assignment.md`
 - **Read this (1/3):** [Deserialization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html) · OWASP · alternative formats, only deserialize signed data (*read* the headings) · covers our angle: **partial** — examples are PHP, Python, Java, .NET, none for Node · fetched 2026-10-12
@@ -203,6 +205,7 @@ Covers every topic row of phases 8 and 9 in `docs/nodejs/syllabus/03-application
 
 ### T09-14 · Snapshot testing — Know · ✅ `…/15-snapshot-testing.md`
 - **Read this:** [Test runner: Snapshot testing](https://nodejs.org/api/test.html) · nodejs.org · the section exists; the CLI lists `--test-update-snapshots` (*headings only*) · covers our angle: **partial** · fetched 2026-10-12
+- **Beyond the docs:** [Effective Snapshot Testing](https://kentcdodds.com/blog/effective-snapshot-testing) · Kent C. Dodds, October 30th, 2017 · keep snapshots small, use them for messages and generated output, normalize with serializers; the practical advice the API page lacks · fetched 2026-10-13 (*read*)
 - **Our delta:** when snapshots rot into rubber-stamped diffs; no page opened argues it.
 
 ### T09-15 · ESLint flat config, Prettier, Biome — Know · ✅ `…/16-lint-and-format.md`
@@ -212,6 +215,7 @@ Covers every topic row of phases 8 and 9 in `docs/nodejs/syllabus/03-application
 ### T09-16 · Property-based and mutation testing — When Needed · ✅ `…/17-property-and-mutation.md`
 - **Read this (1/2):** [fast-check: Introduction](https://fast-check.dev/docs/introduction/) · fast-check.dev · runs assertions over hundreds of generated cases and shrinks failures to a minimal input (*read*) · covers our angle: full for property tests · fetched 2026-10-12
 - **Read this (2/2):** [What is mutation testing?](https://stryker-mutator.io/docs/) · Stryker · why coverage alone does not show test quality (*read*, ≈660 words) · fetched 2026-10-12
+- **Beyond the docs:** [The Enterprise Developer from Hell](https://fsharpforfunandprofit.com/posts/property-based-testing/) · F# for Fun and Profit (Scott Wlaschin), 01 Dec 2014 · a story showing how example-based tests get gamed and why general properties checked on random inputs are stronger; examples are F# · fetched 2026-10-13 (*headings only*)
 
 ### T09-17 · Load testing — When Needed · ✅ `…/18-load-testing.md`
 - **Read this:** [autocannon README (raw)](https://raw.githubusercontent.com/mcollina/autocannon/master/README.md) · github (raw) · an HTTP/1.1 benchmarking tool written in Node, with pipelining and HTTPS (*read*) · covers our angle: **partial** — tool README · fetched 2026-10-12

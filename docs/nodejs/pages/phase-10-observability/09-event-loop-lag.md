@@ -125,6 +125,7 @@ off the request path, check GC and logging backpressure.
 
 - **Read this:** [perf_hooks.monitorEventLoopDelay](https://nodejs.org/docs/latest/api/perf_hooks.html) — nodejs.org: v26.11.1; returns an `ELDHistogram` (a Histogram that records event loop delay) with `enable()` and `disable()`; the page also lists `eventLoopUtilization()` (*read*)
 - **Also good:** [Don't Block the Event Loop](https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop) — nodejs.org/learn: ≈6.1k words; the model of one event loop plus a worker pool, and why blocking either hurts every client (*read* the opening)
+- **Beyond the docs:** [Node.js Performance Monitoring, Part 3: Debugging the Event Loop](https://nodesource.com/blog/node-js-performance-monitoring-part-3-debugging-the-event-loop/) — nodesource.com / Tierney Cyren: Sep 20, 2017; explains event loop lag as the delay between a task being ready and being processed, and how to read high lag with low idle (sync work) against low lag with high idle (downstream bottleneck); vendor post that promote
 
 {/* LINKMAP:END */}
 

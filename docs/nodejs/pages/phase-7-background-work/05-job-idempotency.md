@@ -225,6 +225,7 @@ support.
 - **Read this:** [Idempotent Consumer](https://microservices.io/patterns/communication-style/idempotent-consumer.html) — microservices.io: record processed message IDs in the database (a `PROCESSED_MESSAGES` table or the business table) and drop duplicates (*read*)
 - **Also good:** [Idempotent jobs](https://docs.bullmq.io/patterns/idempotent-jobs) — docs.bullmq.io: design jobs so a first-try success and a retry end in the same state; keep them atomic (*read*)
 - **Also good:** [Designing robust and predictable APIs with idempotency](https://stripe.com/blog/idempotency)
+- **Beyond the docs:** [Implementing Stripe-like Idempotency Keys in Postgres](https://brandur.org/idempotency-keys) — brandur.org: a worked backend with keys stored in Postgres, recovery points and atomic phases, so a failed request resumes without repeating side effects; concrete where the pattern pages stay abstract
 
 {/* LINKMAP:END */}
 

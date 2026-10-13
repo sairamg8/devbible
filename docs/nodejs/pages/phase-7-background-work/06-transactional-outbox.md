@@ -236,6 +236,7 @@ with a derived `jobId`, a duplicate publish is a no-op.
 - **Read this:** [Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html) — microservices.io: problem "How to atomically update the database and send messages"; store the message in the same transaction, a separate process sends it (*read*)
 - **Also good:** [Transactional outbox pattern](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html) — AWS Prescriptive Guidance: defines the dual write problem (*read* the intent)
 - **Also good:** [Solving the Dual-Write Problem](https://www.confluent.io/blog/dual-write-problem/)
+- **Beyond the docs:** [Transactionally Staged Job Drains in Postgres](https://brandur.org/job-drain) — brandur.org: 2017-09-20; shows why a job enqueued mid-transaction can run before commit or after rollback, and fixes it with a staging table plus an enqueuer that deletes only after handoff; a concrete Postgres version of the outbox
 
 {/* LINKMAP:END */}
 

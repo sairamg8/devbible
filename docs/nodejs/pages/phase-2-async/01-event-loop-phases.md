@@ -202,6 +202,7 @@ no CPU. See [the poll phase](02-poll-phase.md).
 - **Read this:** [The Node.js Event Loop](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick) — nodejs.org: [#phases-overview](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick#phases-overview): pending callbacks, "idle, prepare: only used internally", poll, check, close (*read*)
 - **Read this:** [#phases-overview](https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick#phases-overview)
 - **Also good:** [libuv Design overview → The I/O loop](https://docs.libuv.org/en/v1.x/design.html#the-i-o-loop) — libuv.org: the loop iteration as libuv defines it (*read* timeout rules)
+- **Beyond the docs:** [A Complete Visual Guide to Understanding the Node.js Event Loop](https://www.builder.io/blog/visual-guide-to-nodejs-event-loop) — builder.io / Vishwas Gopinath, March 23, 2023: walks the phases as queues with diagrams and step-by-step output traces, easier to follow than the prose reference
 
 {/* LINKMAP:END */}
 
