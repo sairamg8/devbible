@@ -180,6 +180,7 @@ a resolution check as a correctness check is a common and expensive conflation.
 - **Read this:** [arethetypeswrong README](https://raw.githubusercontent.com/arethetypeswrong/arethetypeswrong.github.io/main/README.md) — detects problems in `node10`, `node16`, `bundler` modes, e.g. "Masquerading as CJS" (*read*)
 - **Also good:** [publint rules](https://publint.dev/rules) — publint v0.3.25: rules grouped by severity (*read* the opening)
 - **Also good:** [publint README](https://raw.githubusercontent.com/publint/publint/master/README.md)
+- **Beyond the docs:** [Dual Publishing ESM and CJS Modules with tsup and Are the Types Wrong?](https://johnnyreilly.com/dual-publishing-esm-cjs-modules-with-tsup-and-are-the-types-wrong) — John Reilly, 2024-06-15: runs the tool against a dual-publishing setup built with tsup (a demo project, not a named npm package) and notes that it does not check everything
 
 {/* LINKMAP:END */}
 

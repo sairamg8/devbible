@@ -95,6 +95,7 @@ Everything in this topic is a consequence of that sentence.
 
 - **Read this:** [Modules — Choosing Compiler Options](https://www.typescriptlang.org/docs/handbook/modules/guides/choosing-compiler-options.html) — typescriptlang.org: per-situation settings: bundler, compiled for Node, `ts-node`, `tsx`, browser, library; dual-emit notes (*headings only*, `tsx` and library passages *read*)
 - **Also good:** [Modules — Reference](https://www.typescriptlang.org/docs/handbook/modules/reference.html) — typescriptlang.org: every `module` and `moduleResolution` value, including `node16`/`nodenext`, `bundler`, `node10` (*headings only*)
+- **Beyond the docs:** [Understanding module resolution in TypeScript](https://betterstack.com/community/guides/scaling-nodejs/typescript-module-resolution/) — Better Stack (Stanley Ulili): updated 2025-12-04
 
 {/* LINKMAP:END */}
 

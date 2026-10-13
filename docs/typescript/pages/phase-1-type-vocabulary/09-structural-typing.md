@@ -218,6 +218,7 @@ mismatch; the outer lines are the property path the compiler walked to reach it.
 
 - **Read this:** [Type Compatibility](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) — typescriptlang.org: "based on structural subtyping", contrasted with nominal typing (*read* the opening)
 - **Also good:** [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html) — typescriptlang.org: "Excess Property Checks", and the workaround of assigning to a variable first (*read*)
+- **Beyond the docs:** [Structural vs. Nominal Type Systems](https://www.alexhwoods.com/structural-vs-nominal-type-systems) — Alex Woods, 2022-06-14: shows the downside of shape-only compatibility (two `number` aliases mix freely) and the brand-field workaround, which the Handbook page does not cover
 
 {/* LINKMAP:END */}
 

@@ -81,6 +81,7 @@ silent `else`, and a `findUser` whose signature promises a `User`.
 - **Read this:** [TypeScript 4.4 → `useUnknownInCatchVariables`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-4.html) — typescriptlang.org: any value can be thrown, so catch variables default to `unknown` under `--strict` (*read* that section)
 - **Also good:** [MDN — Error: cause](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause) — MDN: re-throwing with the original error kept; `cause` can be any type, so do not assume it is an `Error` (*read*); [Narrowing → `instanceof`](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
 - **Also good:** [Narrowing → `instanceof`](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
+- **Beyond the docs:** [Get a catch block error message with TypeScript](https://kentcdodds.com/blog/get-a-catch-block-error-message-with-typescript) — Kent C. Dodds: turns the unknown catch variable into a reusable getErrorMessage helper instead of only explaining the flag; 2021-10-28
 
 {/* LINKMAP:END */}
 

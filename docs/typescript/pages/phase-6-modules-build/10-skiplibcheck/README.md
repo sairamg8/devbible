@@ -114,6 +114,7 @@ what is this build FOR?
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [TSConfig: skipLibCheck](https://www.typescriptlang.org/tsconfig/skipLibCheck.html) — typescriptlang.org: skips checking declaration files, trading time for accuracy (*read* the lead)
+- **Beyond the docs:** [TypeScript: the skipLibCheck Option Explained](https://dev.to/ddmytro/typescript-the-skiplibcheck-option-explained-45dd) — DEV (Dmytro Danylov): 2020-07-17
 
 {/* LINKMAP:END */}
 

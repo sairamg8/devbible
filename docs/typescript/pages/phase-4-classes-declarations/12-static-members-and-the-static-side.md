@@ -244,6 +244,7 @@ constants where the class name is doing real work at the call site.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Classes → Static Members](https://www.typescriptlang.org/docs/handbook/2/classes.html#static-members) — typescriptlang.org: static members, special static names, `static` blocks with access to private fields (*read*)
+- **Beyond the docs:** [TypeScript: The constructor interface pattern](https://oida.dev/typescript-interface-constructor-pattern/) — oida.dev: 2019-08-15
 
 {/* LINKMAP:END */}
 

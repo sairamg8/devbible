@@ -33,6 +33,7 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 ### T02-04 · Exhaustiveness with `never` — Master · ✅ written `docs/typescript/pages/phase-2-narrowing/06-exhaustiveness.md`
 - **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) · typescriptlang.org · sections "The never type" and "Exhaustiveness checking" (*headings only*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** none found.
+- **Beyond the docs:** [Guard clause and exhaustiveness checking](https://rednafi.com/typescript/guard-clauses-and-never-type/) · Redowan Delowar (rednafi.com), 2022-05-22 · walks through an `assertNever` helper that makes the compiler flag enum members a function forgot to handle, with a Python `match` comparison · fetched 2026-10-13 (*headings only*)
 - **Our delta:** the named `assertNever` helper and the build-breaking workflow.
 
 ### T02-05 · User-defined type guards — Master · ✅ written `docs/typescript/pages/phase-2-narrowing/07-type-guards.md`
@@ -48,6 +49,7 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 ### T02-07 · Narrowing you lose without noticing — Master · ✅ written `docs/typescript/pages/phase-2-narrowing/11-narrowing-lost/README.md`
 - **Read this:** [TypeScript 5.4 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-4.html) · typescriptlang.org · "Preserved Narrowing in Closures Following Last Assignments" (*read* the opening) · covers our angle: **partial** — one case (closures); `await`, mutable properties and callbacks are not covered · fetched 2026-10-12
 - **Also good:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) · typescriptlang.org · "Control flow analysis" and "Assignments" (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Making Sense of Type Narrowing in TypeScript](https://blog.openreplay.com/making-sense-type-narrowing-typescript/) · OpenReplay Team, 2025-12-21 · names the places narrowing is lost (callback boundaries, property reassignment, aliasing) and the TS 5.4 `const` closure exception, which the Handbook does not gather in one place · fetched 2026-10-13 (*headings only*)
 - **Our delta:** most of the row; no single page found that lists the ways a check dies. The TS 5.4 change means the closure case depends on the compiler version.
 
 ### T02-08 · `as` assertions — Understand · ✅ written `docs/typescript/pages/phase-2-narrowing/08-as-assertions/README.md`
@@ -68,11 +70,13 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 ### T02-11 · Assertion functions — Understand · ✅ written `docs/typescript/pages/phase-2-narrowing/09-assertion-functions/README.md`
 - **Read this:** [TypeScript 3.7 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html) · typescriptlang.org · "assertion signatures": the `assert` form, `asserts val is T`, and the comparison to type predicates (*read*) · covers our angle: **partial** — the explicit-annotation requirement is not confirmed in my read · fetched 2026-10-12
 - **Also good:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) · typescriptlang.org · section "Assertion functions" (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Assertion functions in TypeScript](https://blog.logrocket.com/assertion-functions-typescript) · Matteo Di Pirro (LogRocket), 2022-10-03 · states the signature must be explicit, so a const arrow function needs a separately declared assertion type, which the 3.7 notes do not spell out · fetched 2026-10-13 (*headings only*)
 - **Our delta:** the explicit-annotation requirement at the call site.
 
 ### T02-12 · `unknown` in `catch` — Understand · ✅ written `docs/typescript/pages/phase-2-narrowing/12-unknown-in-catch.md`
 - **Read this:** [TypeScript 4.4 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-4.html) · typescriptlang.org · `useUnknownInCatchVariables` changes catch variables from `any` to `unknown`; JavaScript can throw any value (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [TSConfig: useUnknownInCatchVariables](https://www.typescriptlang.org/tsconfig/useUnknownInCatchVariables.html) · typescriptlang.org · the flag reference (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Object is of type 'unknown'](https://www.totaltypescript.com/concepts/object-is-of-type-unknown) · Total TypeScript · shows the error as it appears in a `catch` block and the `instanceof Error` narrowing fix (*headings only*) · fetched 2026-10-13
 - **Our delta:** the "every handler starts by proving" pattern; Phase 7 owns the server version.
 
 ### T02-13 · The non-null assertion `!` — Know · ✅ written `docs/typescript/pages/phase-2-narrowing/13-non-null-assertion.md`
@@ -87,6 +91,7 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 ### T03-01 · Generic functions and inference — Master · ✅ written `docs/typescript/pages/phase-3-generics/01-generic-functions-and-inference/README.md`
 - **Read this:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) · typescriptlang.org · "Generic Functions": Inference, Constraints, Specifying Type Arguments (*headings only*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) · typescriptlang.org · "Hello World of Generics" and "Working with Generic Type Variables" (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Let's Make a Generic Inference Algorithm](https://gitnation.com/contents/lets-make-a-generic-inference-algorithm) · Ryan Cavanaugh (GitNation talk), 2023-09-21 · builds a simplified model of how candidates are collected and the best common supertype chosen, which shows why inference picks what it does · fetched 2026-10-13 (*headings only*)
 - **Our delta:** none.
 
 ### T03-02 · Constraints — `T extends …` — Master · ✅ written `docs/typescript/pages/phase-3-generics/02-constraints/README.md`
@@ -122,6 +127,7 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 ### T03-08 · Default type parameters — Understand · ✅ written `docs/typescript/pages/phase-3-generics/08-default-type-parameters.md`
 - **Read this:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) · typescriptlang.org · section "Generic Parameter Defaults" (*headings only*) · covers our angle: **partial** — interaction with inference not confirmed · fetched 2026-10-12
 - **Also good:** none found.
+- **Beyond the docs:** [Making Generics Types Optional](https://dev.to/playfulprogramming/making-generics-types-optional-generics-fundamentals-in-typescript-1m11) · Maina Wycliffe (Playful Programming), 2024-04-30 · a default is the fallback when the caller omits the type and inference cannot supply it, with the ordering and constraint rules · fetched 2026-10-13 (*headings only*)
 - **Our delta:** defaults and inference.
 
 ### T03-09 · Generic classes — Understand · ✅ written `docs/typescript/pages/phase-3-generics/09-generic-classes.md`
@@ -137,6 +143,7 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 ### T03-11 · `infer` in conditional types — Understand · ✅ written `docs/typescript/pages/phase-3-generics/11-infer-in-conditional-types.md`
 - **Read this:** [Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) · typescriptlang.org · section "Inferring within conditional types": `Flatten` (element type) and `GetReturnType` (*read*) · covers our angle: **partial** — resolved promise types (`Awaited`) are not on the page · fetched 2026-10-12
 - **Also good:** none found.
+- **Beyond the docs:** [Understanding infer in TypeScript](https://blog.logrocket.com/understanding-infer-typescript/) · Simohamed Marhraoui (LogRocket), 2024-10-21 · builds `ReturnType` step by step and extracts types from tuples, more examples than the Handbook's two; it does not cover `Awaited` · fetched 2026-10-13 (*headings only*)
 - **Our delta:** none.
 
 ### T03-12 · `const` type parameters — Understand · ✅ written `docs/typescript/pages/phase-3-generics/12-const-type-parameters/README.md`
@@ -152,4 +159,5 @@ Continues `01-type-system.md` (phases 0–1). Covers every topic row of phases 2
 ### T03-14 · Variance — Know · ✅ written `docs/typescript/pages/phase-3-generics/14-variance.md`
 - **Read this:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) · typescriptlang.org · section "Variance Annotations": covariance and contravariance with `Producer`/`Consumer`, `in`/`out`/`in out` annotations and when they have no effect (*read*) · covers our angle: **partial** — no method-parameter bivariance or `strictFunctionTypes` · fetched 2026-10-12
 - **Also good:** [Type Compatibility](https://www.typescriptlang.org/docs/handbook/type-compatibility.html) · typescriptlang.org · "Function Parameter Bivariance" (*headings only*); [TSConfig: strictFunctionTypes](https://www.typescriptlang.org/tsconfig/strictFunctionTypes.html) (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Covariance and Contravariance in TypeScript](https://dmitripavlutin.com/typescript-covariance-contravariance/) · Dmitri Pavlutin, updated 2022-01-11 · builds subtyping, covariance and contravariance from examples and ties function-type checking to `strictFunctionTypes`; it does not cover method bivariance · fetched 2026-10-13 (*headings only*)
 - **Our delta:** method-parameter bivariance. *Checked, not chosen:* [TypeScript 4.7 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-7.html), where `in`/`out` were introduced (*read* the opening); the Handbook section is the current reference.

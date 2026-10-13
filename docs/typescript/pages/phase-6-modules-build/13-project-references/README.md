@@ -94,6 +94,7 @@ sidebar_position: 0
 
 - **Read this:** [Project References](https://www.typescriptlang.org/docs/handbook/project-references.html) — typescriptlang.org: `composite`, `declarationMap`, build mode `tsc -b`, caveats, guidance (*headings only*)
 - **Also good:** [TSConfig: composite](https://www.typescriptlang.org/tsconfig/composite.html) — typescriptlang.org: constraints `composite` enforces for `--build` (*read* the lead)
+- **Beyond the docs:** [Everything You Need to Know About TypeScript Project References](https://nx.dev/blog/typescript-project-references) — Nx Blog (Zack DeRose): 2025-01-27
 
 {/* LINKMAP:END */}
 

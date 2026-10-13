@@ -225,6 +225,7 @@ forcing exhaustiveness just produces churn.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) — typescriptlang.org: sections "The never type" and "Exhaustiveness checking" (*headings only*)
+- **Beyond the docs:** [Guard clause and exhaustiveness checking](https://rednafi.com/typescript/guard-clauses-and-never-type/) — Redowan Delowar (rednafi.com), 2022-05-22: walks through an `assertNever` helper that makes the compiler flag enum members a function forgot to handle, with a Python `match` comparison
 
 {/* LINKMAP:END */}
 

@@ -80,6 +80,7 @@ mapping. `ReturnType` needs `infer`, which is topic 06.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) — typescriptlang.org: `T extends U ? X : Y`, constraints, `infer`, distribution (*headings only* plus the distribution and `infer` passages *read*)
+- **Beyond the docs:** [Conditional Types in TypeScript](https://mariusschulz.com/blog/conditional-types-in-typescript) — Marius Schulz: 2019-01-09
 
 {/* LINKMAP:END */}
 

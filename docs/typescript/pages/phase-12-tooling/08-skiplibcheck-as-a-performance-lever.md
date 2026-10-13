@@ -208,6 +208,7 @@ to ship.
 
 - **Read this:** [TSConfig Option: skipLibCheck](https://www.typescriptlang.org/tsconfig/skipLibCheck.html) — typescriptlang.org: saves time at the expense of accuracy; duplicate copies of a library's types are the common trigger (*read*)
 - **Also good:** [Performance wiki](https://raw.githubusercontent.com/wiki/microsoft/TypeScript/Performance.md) — `skipDefaultLibCheck` versus `skipLibCheck`; both can hide `.d.ts` conflicts (*read*)
+- **Beyond the docs:** [TypeScript: the skipLibCheck Option Explained](https://dev.to/ddmytro/typescript-the-skiplibcheck-option-explained-45dd) — Dmytro Danylov, 2020-07-17: plain account of what is skipped (all declaration files) and what is still checked (your code against their types), with the warning that it hides declaration errors
 
 {/* LINKMAP:END */}
 

@@ -48,6 +48,7 @@ the same mistake is `TS2300`.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Declaration Merging → Merging Interfaces](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces) — typescriptlang.org: same-name interfaces combine; lists disallowed merges (classes cannot merge with classes or variables) (*read*)
+- **Beyond the docs:** [In defense of interface: Using declaration merging to disable "bad parts"](https://effectivetypescript.com/2021/06/03/interface/) — Effective TypeScript (Dan Vanderkam): 2021-06-03
 
 {/* LINKMAP:END */}
 

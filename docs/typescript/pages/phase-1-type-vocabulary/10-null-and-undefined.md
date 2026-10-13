@@ -252,6 +252,7 @@ It matters beyond style because `JSON.stringify` drops `undefined` and keeps
 - **Read this:** [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html) — typescriptlang.org: "null and undefined" with `strictNullChecks` off and on (*read*)
 - **Also good:** [TSConfig: strictNullChecks](https://www.typescriptlang.org/tsconfig/strictNullChecks.html) — typescriptlang.org: the flag reference (*headings only*); [exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig/exactOptionalPropertyTypes.html) for the absent-versus-undefined split
 - **Also good:** [exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig/exactOptionalPropertyTypes.html)
+- **Beyond the docs:** [optional vs. undefined](https://tkdodo.eu/blog/optional-vs-undefined) — TkDodo, 2022-02-19: a real refactor where an optional parameter let stale call sites compile; makes the intent difference (omit versus pass `undefined`) concrete and ties it to `exactOptionalPropertyTypes`
 
 {/* LINKMAP:END */}
 

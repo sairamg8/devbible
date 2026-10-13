@@ -265,6 +265,7 @@ module graph genuinely provides.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Declaration Merging → Global augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#global-augmentation) — typescriptlang.org: `declare global` written from inside a module, with the `Array` example (*read*)
+- **Beyond the docs:** [TypeScript: Augmenting global and lib.dom.d.ts](https://oida.dev/typescript-augmenting-global-lib-dom/) — oida.dev: 2020-07-17
 
 {/* LINKMAP:END */}
 

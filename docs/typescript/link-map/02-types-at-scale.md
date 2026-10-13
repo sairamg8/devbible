@@ -26,6 +26,7 @@ Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-0
 ### T04-03 · Parameter properties — Understand · ✅ written `docs/typescript/pages/phase-4-classes-declarations/03-parameter-properties.md`
 - **Read this:** [Classes → Parameter Properties](https://www.typescriptlang.org/docs/handbook/2/classes.html#parameter-properties) · typescriptlang.org · a constructor argument prefixed with `public`/`private`/`protected`/`readonly` becomes a field (*read*) · covers our angle: **partial** — does not say they emit code · fetched 2026-10-12
 - **Also good:** [Node.js — Running TypeScript natively](https://nodejs.org/api/typescript.html) · nodejs.org · lists parameter properties among syntax that needs transformation and fails in strip-only mode (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [TypeScript's erasableSyntaxOnly Flag](https://oida.dev/erasable-syntax-only/) · oida.dev · 2025-02-03 · explains why constructor parameter properties, enums and namespaces are the non-erasable syntax, from the type-stripping angle rather than the class angle · fetched 2026-10-13 (*headings only*)
 - **Our delta:** the strip-only failure and the `erasableSyntaxOnly` fix.
 
 ### T04-04 · `implements` vs `extends` — Understand · ✅ written `docs/typescript/pages/phase-4-classes-declarations/04-implements-vs-extends.md`
@@ -34,10 +35,12 @@ Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-0
 
 ### T04-05 · Interface declaration merging — Understand · ✅ written `docs/typescript/pages/phase-4-classes-declarations/05-interface-declaration-merging/README.md`
 - **Read this:** [Declaration Merging → Merging Interfaces](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces) · typescriptlang.org · same-name interfaces combine; lists disallowed merges (classes cannot merge with classes or variables) (*read*) · covers our angle: **partial** — no accident catalogue, nothing on `type` lacking merging · fetched 2026-10-12
+- **Beyond the docs:** [In defense of interface: Using declaration merging to disable "bad parts"](https://effectivetypescript.com/2021/06/03/interface/) · Effective TypeScript (Dan Vanderkam) · 2021-06-03 · shows how the lib files use merging and how to use it deliberately, with the caveat that incorrect types can be worse than none · fetched 2026-10-13 (*read*)
 - **Our delta:** the accidents (a name clash with a global interface silently merging).
 
 ### T04-06 · Global augmentation — Understand · ✅ written `docs/typescript/pages/phase-4-classes-declarations/06-global-augmentation.md`
 - **Read this:** [Declaration Merging → Global augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#global-augmentation) · typescriptlang.org · `declare global` written from inside a module, with the `Array` example (*read*) · covers our angle: **partial** — `globalThis` keys not shown · fetched 2026-10-12
+- **Beyond the docs:** [TypeScript: Augmenting global and lib.dom.d.ts](https://oida.dev/typescript-augmenting-global-lib-dom/) · oida.dev · 2020-07-17 · a worked `declare global` case using `var` to add a missing global (`ResizeObserver`); does not mention `globalThis` · fetched 2026-10-13 (*read*)
 - **Our delta:** `var` for `globalThis` keys, and what happens in a non-module file.
 
 ### T04-07 · Branded / nominal types — Understand · ✅ written `docs/typescript/pages/phase-4-classes-declarations/07-branded-nominal-types.md`
@@ -46,6 +49,7 @@ Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-0
 
 ### T04-08 · `readonly` members and definite assignment `!:` — Understand · ✅ written `docs/typescript/pages/phase-4-classes-declarations/08-readonly-and-definite-assignment.md`
 - **Read this:** [Classes → Fields](https://www.typescriptlang.org/docs/handbook/2/classes.html#fields) · typescriptlang.org · `strictPropertyInitialization`, error 2564, the definite assignment assertion `name!: string`, and `readonly` fields assignable only in the constructor (*read*) · covers our angle: **full** · fetched 2026-10-12
+- **Beyond the docs:** [Strict Property Initialization in TypeScript](https://mariusschulz.com/blog/strict-property-initialization-in-typescript) · Marius Schulz · 2018-05-20 · walks from the strict check to the `!` assertion and says it becomes your job to guarantee assignment, otherwise `undefined` surfaces at runtime · fetched 2026-10-13 (*read*)
 - **Our delta:** what each promise actually guarantees at runtime (nothing for `!:`).
 
 ### T04-09 · Typing getters and setters — Know · ✅ written `docs/typescript/pages/phase-4-classes-declarations/09-typing-getters-and-setters.md`
@@ -63,11 +67,13 @@ Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-0
 
 ### T04-12 · Static members, static blocks and the static side — Know · ✅ written `docs/typescript/pages/phase-4-classes-declarations/12-static-members-and-the-static-side.md`
 - **Read this:** [Classes → Static Members](https://www.typescriptlang.org/docs/handbook/2/classes.html#static-members) · typescriptlang.org · static members, special static names, `static` blocks with access to private fields (*read*) · covers our angle: **partial** — the instance type vs constructor type split is mostly under "Constructor Signatures" (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [TypeScript: The constructor interface pattern](https://oida.dev/typescript-interface-constructor-pattern/) · oida.dev · 2019-08-15 · explains the static side versus instance side of a class and types them with two interfaces · fetched 2026-10-13 (*read*)
 - **Our delta:** `typeof Class` as the static-side type.
 
 ### T04-13 · Decorators (stage 3) — Know · ✅ written `docs/typescript/pages/phase-4-classes-declarations/13-decorators.md`
 - **Read this:** [TypeScript 5.0 → Decorators](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html) · typescriptlang.org · standard decorators valid without a flag; `--experimentalDecorators` remains "for the foreseeable future" and is type-checked and emitted differently (*read*) · covers our angle: **partial** — NestJS/TypeORM context absent · fetched 2026-10-12
 - **Also good:** [Decorators (experimental)](https://www.typescriptlang.org/docs/handbook/decorators.html) · typescriptlang.org · carries a note that it describes the experimental stage 2 implementation (*read* the note) · fetched 2026-10-12
+- **Beyond the docs:** [Using modern decorators in TypeScript](https://blog.logrocket.com/using-modern-decorators-typescript) · LogRocket Blog (Alec Brunelle) · 2023-04-28 · TS 5.0 decorators against the experimental ones, with a migration walkthrough and the missing parameter decorators and metadata emit · fetched 2026-10-13 (*headings only*)
 - **Our delta:** which framework still needs the old flag.
 
 ### T04-14 · Mixins — When Needed · ✅ written `docs/typescript/pages/phase-4-classes-declarations/14-mixins/README.md`
@@ -84,6 +90,7 @@ Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-0
 
 ### T05-02 · Conditional types — Master · ✅ written `docs/typescript/pages/phase-5-type-level/02-conditional-types/README.md`
 - **Read this:** [Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html) · typescriptlang.org · `T extends U ? X : Y`, constraints, `infer`, distribution (*headings only* plus the distribution and `infer` passages *read*) · covers our angle: **partial** — nesting readably is for our page · fetched 2026-10-12
+- **Beyond the docs:** [Conditional Types in TypeScript](https://mariusschulz.com/blog/conditional-types-in-typescript) · Marius Schulz · 2019-01-09 · builds up conditional types, distribution over unions and `infer` with small worked examples · fetched 2026-10-13 (*headings only*)
 - **Our delta:** the assignability question, and nesting.
 
 ### T05-03 · The built-in utility types — Master · ✅ written `docs/typescript/pages/phase-5-type-level/03-utility-types/README.md`
@@ -121,6 +128,7 @@ Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-0
 ### T05-11 · Recursive types — Know · ✅ written `docs/typescript/pages/phase-5-type-level/11-recursive-types/README.md`
 - **Read this:** [TypeScript 4.5 → Tail-Recursion Elimination on Conditional Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-5.html#tail-recursion-elimination-on-conditional-types) · typescriptlang.org · says TypeScript has heuristics so it does not go off the rails on infinitely deep types, then presents tail-recursion elimination (*read* the opening only) · covers our angle: **partial** — exact limits are version-specific; not confirmed for 7.0 · fetched 2026-10-12
 - **Also good:** [TypeScript 4.1 → Recursive Conditional Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-1.html#recursive-conditional-types) · typescriptlang.org · the `Awaited`-style unwrap motivation (*read* the opening) · fetched 2026-10-12
+- **Beyond the docs:** [How to Create Deep Recursive Types](https://dev.to/susisu/how-to-create-deep-recursive-types-5fgg) · DEV (Susisu) · 2020-11-20 · shows the instantiation depth limit (50 as of TS 4.1) and a workaround that defers recursion inside object properties; predates tail-recursion elimination, so re-measure on 7.x · fetched 2026-10-13 (*read*)
 - **Our delta:** the accumulator pattern and the two limits, to be re-measured on 7.0.2.
 
 ### T05-12 · `DeepPartial` / `DeepReadonly` — Know · ✅ written `docs/typescript/pages/phase-5-type-level/12-deep-helpers/README.md`
@@ -150,11 +158,13 @@ Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-0
 ### T06-01 · `module` and `moduleResolution` — Master · ✅ written `docs/typescript/pages/phase-6-modules-build/01-module-and-moduleresolution/README.md`
 - **Read this:** [Modules — Choosing Compiler Options](https://www.typescriptlang.org/docs/handbook/modules/guides/choosing-compiler-options.html) · typescriptlang.org · per-situation settings: bundler, compiled for Node, `ts-node`, `tsx`, browser, library; dual-emit notes (*headings only*, `tsx` and library passages *read*) · covers our angle: **partial** — failure messages per setting are for our page · fetched 2026-10-12
 - **Also good:** [Modules — Reference](https://www.typescriptlang.org/docs/handbook/modules/reference.html) · typescriptlang.org · every `module` and `moduleResolution` value, including `node16`/`nodenext`, `bundler`, `node10` (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Understanding module resolution in TypeScript](https://betterstack.com/community/guides/scaling-nodejs/typescript-module-resolution/) · Better Stack (Stanley Ulili) · updated 2025-12-04 · shows the TS2835 extension error under `nodenext` and the fix, with `bundler` covered briefly · fetched 2026-10-13 (*headings only*)
 - **Our delta:** 🔴 6.0 notes (read) deprecate `node10` and `classic`; 7.0 removes them, so the legacy column is history, not a choice.
 
 ### T06-02 · `import type` / `export type` and `verbatimModuleSyntax` — Master · ✅ written `docs/typescript/pages/phase-6-modules-build/02-import-type-and-verbatim-module-syntax/README.md`
 - **Read this:** [TSConfig: verbatimModuleSyntax](https://www.typescriptlang.org/tsconfig/verbatimModuleSyntax.html) · typescriptlang.org · explains import elision first, then the flag (*read* the opening only) · covers our angle: **partial** — the lost side-effect incident is for our page · fetched 2026-10-12
 - **Also good:** [Modules — Reference](https://www.typescriptlang.org/docs/handbook/modules/reference.html) · typescriptlang.org · "Type-only imports and exports" section (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [TypeScript 5: importsNotUsedAsValues replaced by ESLint consistent-type-imports](https://blog.johnnyreilly.com/typescript-5-importsnotusedasvalues-error-eslint-consistent-type-imports) · John Reilly · 2023-05-09 · a real migration where `verbatimModuleSyntax` errors on a CommonJS-emitting codebase · fetched 2026-10-13 (*read*)
 
 ### T06-03 · Path aliases — `paths` — Master · ✅ written `docs/typescript/pages/phase-6-modules-build/03-path-aliases/README.md`
 - **Read this:** [TSConfig: paths](https://www.typescriptlang.org/tsconfig/paths.html) · typescriptlang.org · states it does not change how import paths are emitted, so another tool must apply the mapping at runtime or bundling (*read*) · covers our angle: **full** for the trap; **partial** for the fix · fetched 2026-10-12
@@ -188,6 +198,7 @@ Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-0
 
 ### T06-10 · `skipLibCheck` — Understand · ✅ written `docs/typescript/pages/phase-6-modules-build/10-skiplibcheck/README.md`
 - **Read this:** [TSConfig: skipLibCheck](https://www.typescriptlang.org/tsconfig/skipLibCheck.html) · typescriptlang.org · skips checking declaration files, trading time for accuracy (*read* the lead) · covers our angle: **partial** — which errors you stop seeing is for our page · fetched 2026-10-12
+- **Beyond the docs:** [TypeScript: the skipLibCheck Option Explained](https://dev.to/ddmytro/typescript-the-skiplibcheck-option-explained-45dd) · DEV (Dmytro Danylov) · 2020-07-17 · concrete example of an error inside a `.d.ts` that goes unreported and whose type becomes `any` · fetched 2026-10-13 (*read*)
 
 ### T06-11 · Publishing a typed package — Understand · ✅ written `docs/typescript/pages/phase-6-modules-build/11-publishing-a-typed-package/README.md`
 - **Read this:** [Declaration Files: Publishing](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html) · typescriptlang.org · including declarations, dependencies, red flags, `typesVersions` (*headings only*, `typesVersions` passage *read*) · covers our angle: **partial** — no `exports` conditions or dual ESM/CJS · fetched 2026-10-12
@@ -201,6 +212,7 @@ Covers every topic row of `docs/typescript/syllabus/02-types-at-scale.md`: T04-0
 ### T06-13 · Project references and `tsc -b` — Know · ✅ written `docs/typescript/pages/phase-6-modules-build/13-project-references/README.md`
 - **Read this:** [Project References](https://www.typescriptlang.org/docs/handbook/project-references.html) · typescriptlang.org · `composite`, `declarationMap`, build mode `tsc -b`, caveats, guidance (*headings only*) · covers our angle: **full** (the "when you do not need them" side is in the Turborepo post under T06-12) · fetched 2026-10-12
 - **Also good:** [TSConfig: composite](https://www.typescriptlang.org/tsconfig/composite.html) · typescriptlang.org · constraints `composite` enforces for `--build` (*read* the lead) · fetched 2026-10-12
+- **Beyond the docs:** [Everything You Need to Know About TypeScript Project References](https://nx.dev/blog/typescript-project-references) · Nx Blog (Zack DeRose) · 2025-01-27 · monorepo walkthrough of how `tsc -b` finds referenced projects, works out which are out of date and builds them in the correct order · fetched 2026-10-13 (*headings only*)
 
 ### T06-14 · Incremental builds — Know · ✅ written `docs/typescript/pages/phase-6-modules-build/14-incremental-builds/README.md`
 - **Read this:** [TSConfig: incremental](https://www.typescriptlang.org/tsconfig/incremental.html) · typescriptlang.org · `.tsbuildinfo` files hold the project graph, are not used at runtime and can be deleted (*read*) · covers our angle: **partial** — no invalidation or CI cache advice · fetched 2026-10-12

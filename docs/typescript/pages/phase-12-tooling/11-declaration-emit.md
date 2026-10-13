@@ -160,6 +160,7 @@ the recurring surprise and the inference that made the emit expensive.
 - **Read this:** [TypeScript 5.5 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-5.html) — typescriptlang.org: the "Isolated Declarations" section, co-authored by Rob Palmer, feature built with Bloomberg and Google (*read* the opening)
 - **Also good:** [TSConfig Option: isolatedDeclarations](https://www.typescriptlang.org/tsconfig/isolatedDeclarations.html) — annotate exports so other tools can generate declarations (*read*): [Publishing](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html) (*headings only*)
 - **Also good:** [Publishing](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html)
+- **Beyond the docs:** [TypeScript 5.5: A Blockbuster Release](https://effectivetypescript.com/2024/07/02/ts-55/) — Effective TypeScript, 2024-07-02: a sceptical read of `isolatedDeclarations`: adopting it does not speed up your build yet ("Probably not, at least not yet"), with an exception for projects already using typescript-eslint's `explicit-function-return-type` rule
 
 {/* LINKMAP:END */}
 

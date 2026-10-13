@@ -275,6 +275,7 @@ DI-framework codebase that compiles properly, they are usually the right call.
 
 - **Read this:** [Classes → Parameter Properties](https://www.typescriptlang.org/docs/handbook/2/classes.html#parameter-properties) — typescriptlang.org: a constructor argument prefixed with `public`/`private`/`protected`/`readonly` becomes a field (*read*)
 - **Also good:** [Node.js — Running TypeScript natively](https://nodejs.org/api/typescript.html) — nodejs.org: lists parameter properties among syntax that needs transformation and fails in strip-only mode (*read*)
+- **Beyond the docs:** [TypeScript's erasableSyntaxOnly Flag](https://oida.dev/erasable-syntax-only/) — oida.dev: 2025-02-03
 
 {/* LINKMAP:END */}
 

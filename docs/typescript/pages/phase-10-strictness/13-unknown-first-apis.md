@@ -226,6 +226,7 @@ only thing that produces a `User` is the function that checked.
 
 - **Read this:** [TypeScript 3.0 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html) — typescriptlang.org: "New unknown top type": the type-safe counterpart of `any`, no operations until narrowed (*read*)
 - **Also good:** [any type](https://www.totaltypescript.com/concepts/any-type) — Total TypeScript: `greet(name: unknown)` narrowed with `typeof` (*read*)
+- **Beyond the docs:** [The difference between any and unknown type in TypeScript](https://pawelgrzybek.com/the-difference-between-any-and-unknown-type-in-typescript/) — Pawel Grzybek, 2020-12-25: short worked example of narrowing `unknown` with `typeof` and a plain rule of thumb (`any` only while migrating)
 
 {/* LINKMAP:END */}
 

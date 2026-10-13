@@ -217,6 +217,7 @@ participates in inference, which overloads do not.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) — typescriptlang.org: "Call Signatures", "Construct Signatures", "Function Overloads", "Overload Signatures and the Implementation Signature", "Writing Good Overloads" (*headings only*)
+- **Beyond the docs:** [TypeScript Function Overloads](https://dev.to/gaetanrdn/typescript-function-overloads-1eeo) — dev.to, Gaëtan Redin, 2021-09-26: a short rule of thumb: overloads when the parameter count differs, otherwise prefer a union parameter
 
 {/* LINKMAP:END */}
 

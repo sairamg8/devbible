@@ -54,6 +54,7 @@ say immediately what is wrong with it.
 
 - **Read this:** [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html) — typescriptlang.org: "Generic Functions": Inference, Constraints, Specifying Type Arguments (*headings only*)
 - **Also good:** [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) — typescriptlang.org: "Hello World of Generics" and "Working with Generic Type Variables" (*headings only*)
+- **Beyond the docs:** [Let's Make a Generic Inference Algorithm](https://gitnation.com/contents/lets-make-a-generic-inference-algorithm) — Ryan Cavanaugh (GitNation talk), 2023-09-21: builds a simplified model of how candidates are collected and the best common supertype chosen, which shows why inference picks what it does
 
 {/* LINKMAP:END */}
 
