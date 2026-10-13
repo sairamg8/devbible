@@ -3,7 +3,7 @@
 
 Purely additive and idempotent:
   - reads docs/<track>/link-map/*.md blocks marked "✅ written `docs/<track>/pages/...md`"
-  - renders that block's "Read this" / "Also good" links as a list
+  - renders that block's "Read this" / "Also good" / "Beyond the docs" links as a list
   - inserts it just before the page footer, between two MDX comment markers, so a
     re-run replaces only its own section and never touches anything else
   - skips a page when the insert would push it past 300 lines (reported, never trimmed)
@@ -61,7 +61,7 @@ def parse_blocks(track_dir: Path):
                 continue
             links = []
             for line in part.splitlines()[1:]:
-                lm = re.match(r"- \*\*(Read this(?: \(\d/\d\))?|Also good):\*\*\s*(.*)", line)
+                lm = re.match(r"- \*\*(Read this(?: \(\d/\d\))?|Also good|Beyond the docs):\*\*\s*(.*)", line)
                 if not lm:
                     continue
                 label, rest = lm.group(1), lm.group(2)
@@ -87,7 +87,7 @@ def render(links):
     out = [START, "", "## Further reading", "",
            "*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*", ""]
     for label, title, url, site, why in links:
-        tag = "Read this" if label.startswith("Read") else "Also good"
+        tag = "Read this" if label.startswith("Read") else ("Beyond the docs" if label.startswith("Beyond") else "Also good")
         suffix = ""
         if site:
             suffix += f" — {clean(site)}"

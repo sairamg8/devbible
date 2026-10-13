@@ -204,6 +204,7 @@ and index it, or use `$expr` with `$size` and accept that it cannot use an index
 - **Also good:** [$elemMatch](https://www.mongodb.com/docs/manual/reference/operator/query/elemmatch/) — [Query an Array of Embedded Documents](https://www.mongodb.com/docs/manual/tutorial/query-array-of-documents/): mongodb.com
 - **Also good:** [Query an Array of Embedded Documents](https://www.mongodb.com/docs/manual/tutorial/query-array-of-documents/)
 - **Also good:** [$all](https://www.mongodb.com/docs/manual/reference/operator/query/all/)
+- **Beyond the docs:** [elemMatch MongoDB: match multiple conditions on array elements](https://codeforgeek.com/elemmatch-in-mongodb/) — CodeForGeek, Aneesha S (page dated Jul 26, 2024): states the split-across-elements trap plainly: without `$elemMatch` each condition is checked against the array independently, so different elements can satisfy different conditions, and `$elemMatch` binds them to one element
 
 {/* LINKMAP:END */}
 
