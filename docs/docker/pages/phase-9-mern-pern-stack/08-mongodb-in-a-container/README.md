@@ -54,6 +54,7 @@ amount of container configuration substitutes for it.
 - **Read this:** [mongo image README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/mongo/README.md) — docker-library/docs: data lives in `/data/db`; mount a volume or host directory there; flags pass through to `mongod` (*read*)
 - **Also good:** [Convert a standalone to a replica set](https://www.mongodb.com/docs/manual/tutorial/convert-standalone-to-replica-set/) — mongodb.com: `rs.initiate()` once, `rs.conf()`, `rs.status()` (*read*)
 - **Also good:** [Change streams](https://www.mongodb.com/docs/manual/changestreams/) — mongodb.com: available for replica sets and sharded clusters (*read*)
+- **Beyond the docs:** [MongoDB composed](https://dev.to/rannn505/mongodb-composed-156g) — Ran Cohen, DEV Community (2023-06-13): a complete single-node replica set in Compose with a `rs.initiate()` / `rs.status()` healthcheck, key file, and the `replicaSet=rs0` plus `directConnection=true` connection string, which the image README lacks
 
 {/* LINKMAP:END */}
 

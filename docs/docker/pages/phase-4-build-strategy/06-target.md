@@ -213,6 +213,7 @@ the stage-skipping explicit.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Multi-stage builds · Stop at a specific build stage](https://docs.docker.com/build/building/multi-stage/#stop-at-a-specific-build-stage) — docs.docker.com: `docker build --target`, debug, test and production stage use cases (*read*)
+- **Beyond the docs:** [How to use docker multi-stage build to create optimal images for dev and production](https://geshan.com.np/blog/2019/11/how-to-use-docker-multi-stage-build/) — geshan.com.np, Geshan Manandhar, 25 Nov 2019: Node.js worked example of dev and production stages selected with --target and with compose target: (2019, so Docker 17.05-era numbers)
 
 {/* LINKMAP:END */}
 

@@ -171,6 +171,7 @@ service does, on every rebuild, indefinitely.
 
 - **Read this:** [Building best practices: choose the right base image](https://docs.docker.com/build/building/best-practices/#choose-the-right-base-image) — Docker docs: (*headings only*)
 - **Also good:** [Distroless README (raw)](https://raw.githubusercontent.com/GoogleContainerTools/distroless/main/README.md) — github (raw): images with only your application and its runtime dependencies (*read* the opening)
+- **Beyond the docs:** [Fly With Alpine](https://fly.io/blog/fly-with-alpine/) — fly.io blog (no author or date shown on page): weighs Alpine against Debian slim with measurements and the musl versus glibc and missing-tools costs, concluding Debian stays the default
 
 {/* LINKMAP:END */}
 

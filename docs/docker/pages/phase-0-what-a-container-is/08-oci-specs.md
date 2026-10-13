@@ -168,6 +168,7 @@ to a different image at any time.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Open Container Initiative overview](https://opencontainers.org/about/overview/) — opencontainers.org: three specs: runtime, image, distribution (*read*)
+- **Beyond the docs:** [What is Open Container Initiative (OCI)? Build Spec, Runtime Spec, Image Spec and more](https://mkdev.me/posts/what-is-open-container-initiative-oci-build-spec-runtime-spec-image-spec-and-more) — Kirill Shirinkin, mkdev, published 10/08/24, updated 01/03/25: explains why compliant tools interoperate (build with one, run with another) and notes that an image is not strictly required to run a container
 
 {/* LINKMAP:END */}
 

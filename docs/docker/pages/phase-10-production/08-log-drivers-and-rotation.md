@@ -240,6 +240,7 @@ when the remote system is what has failed.
 
 - **Read this:** [JSON File logging driver](https://docs.docker.com/engine/logging/drivers/json-file/) — Docker docs: `max-size` and `max-file` example for `daemon.json`; values must be strings; file-based storage warning (*read*)
 - **Also good:** [Configure logging drivers](https://docs.docker.com/engine/logging/configure/) — Docker docs: driver list including `journald`; blocking versus non-blocking `mode` (*read*)
+- **Beyond the docs:** [Docker log rotation: preventing json-file logs from filling disk](https://www.netdata.cloud/guides/docker/docker-log-rotation/) — Netdata guides (no date shown): walks the failure end to end: unbounded json-file growth fills `/var/lib/docker`, and a changed default applies only to containers created afterwards, so they must be recreated
 
 {/* LINKMAP:END */}
 

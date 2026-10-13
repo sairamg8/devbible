@@ -156,6 +156,7 @@ either shell form, or an entrypoint script missing `exec "$@"`.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Dockerfile reference · Shell and exec form](https://docs.docker.com/reference/dockerfile/#shell-and-exec-form) — docs.docker.com: exec form, shell form, choosing another shell; the `ENTRYPOINT` section says shell form runs under `/bin/sh -c`, is not PID 1 and does not get `SIGTERM` (*read*)
+- **Beyond the docs:** [Why Your Dockerized Application Isn't Receiving Signals](https://hynek.me/articles/docker-signals/) — hynek.me, Hynek Schlawack, 19 Jun 2017: walks through shell-form entrypoints, scripts that skip exec, PID 1 duties and apps that handle SIGINT but not the SIGTERM docker stop sends
 
 {/* LINKMAP:END */}
 

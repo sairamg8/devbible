@@ -237,6 +237,7 @@ default, plus `--ssh` for the agent case.
 
 - **Read this:** [Build secrets](https://docs.docker.com/build/building/secrets/) — docs.docker.com: secret mounts exist only for the build instruction; SSH mounts; modified 2026-05-19 (*read*)
 - **Also good:** [podman build](https://docs.podman.io/en/latest/markdown/podman-build.1.html) — docs.podman.io: `--secret=id=mysecret,src=.mysecret` used with the same `RUN --mount=type=secret` (*read*)
+- **Beyond the docs:** [Don't leak your Docker image's build secrets](https://pythonspeed.com/articles/docker-build-secrets/) — pythonspeed.com, Itamar Turner-Trauring, 21 Apr 2021 (updated 21 Mar 2023): shows the two leaks (COPY then delete, --build-arg visible in docker history) before the secret-mount fix
 
 {/* LINKMAP:END */}
 

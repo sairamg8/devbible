@@ -257,6 +257,7 @@ anonymous volumes are renewed with `-V` or removed with `down -v`.
 - **Read this:** [Containerize a React.js application](https://docs.docker.com/guides/reactjs/) — docs.docker.com: multi-stage build into a custom Nginx config, non-root `nginx` user; modified 2026-07-21 (*read* the runner stage)
 - **Also good:** [Vite · Env variables and modes](https://vite.dev/guide/env-and-mode) — vite.dev: `VITE_` variables are replaced into the client code at build time and are public (*read*)
 - **Also good:** [Vite · Deploying a static site](https://vite.dev/guide/static-deploy) — vite.dev: build and preview, host options (*headings only*)
+- **Beyond the docs:** [Runtime environment variables for React apps with Nginx and Docker](https://dev.to/imzihad21/runtime-environment-variables-for-react-apps-with-nginx-and-docker-3p62) — ZèD (imzihad21), DEV Community (2025-12-25): states that bundlers inline config at build time, then shows the alternative of an `envsubst` template run from `/docker-entrypoint.d/` so one image serves many environments; the Docker and Vite pages stop at the build-time rule
 
 {/* LINKMAP:END */}
 

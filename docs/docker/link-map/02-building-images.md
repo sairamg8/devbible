@@ -19,16 +19,19 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T03-01 · `FROM` — Understand · ✅ written `docs/docker/pages/phase-3-dockerfile/01-from.md`
 - **Read this:** [Dockerfile reference · FROM](https://docs.docker.com/reference/dockerfile/#from) · docs.docker.com · syntax, how `ARG` and `FROM` interact, multiple `FROM`s start stages (*read*) · covers our angle: **partial** — nothing on base image as attack surface · fetched 2026-10-12
 - **Also good:** [Building best practices · Choose the right base image](https://docs.docker.com/build/building/best-practices/#choose-the-right-base-image) · docs.docker.com · trusted source, keep it small, separate build and production bases (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Choosing a Base Image For Your Dockerfile](https://vsupalov.com/choose-base-image/) · vsupalov.com, Vladislav, Feb 2021 · weighs official, slim Debian, Alpine and scratch bases by use case and names the musl-versus-glibc catch, where the official pages stay generic · fetched 2026-10-13 (*read*)
 - **Our delta:** inherited `USER` and `ENTRYPOINT` from the base; the best-practices base-image entry says "keep it small" but names no distro (it uses `alpine` only in the pinning example); the Alpine-versus-glibc trade is weighed on our Phase 5 page.
 
 ### T03-02 · `RUN` — Master · ✅ written `docs/docker/pages/phase-3-dockerfile/02-run.md`
 - **Read this:** [Building best practices · RUN](https://docs.docker.com/build/building/best-practices/#run) · docs.docker.com · `apt-get update && install` in one `RUN`, `rm -rf /var/lib/apt/lists/*`, `set -o pipefail`, heredoc alternative (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Dockerfile reference · RUN](https://docs.docker.com/reference/dockerfile/#run) · docs.docker.com · forms, cache invalidation for `RUN`, the `--mount` family (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [How to reduce your Docker image size](https://depot.dev/blog/how-to-reduce-your-docker-image-size) · depot.dev, first published 2023 · measures it: a separate cleanup RUN leaves the image at 653.798M, the same cleanup in the install RUN drops it to 638.794M; dive appears only as screenshots · fetched 2026-10-13 (*read*)
 - **Our delta:** why a later `rm` cannot shrink an earlier layer: the page says the lists clean-up reduces size "since the apt cache isn't stored in a layer" but does not spell out the separate-`RUN` case.
 
 ### T03-03 · `COPY` vs `ADD` — Master · ✅ written `docs/docker/pages/phase-3-dockerfile/03-copy-vs-add.md`
 - **Read this:** [Dockerfile reference · ADD](https://docs.docker.com/reference/dockerfile/#add) · docs.docker.com · `ADD` sources (URL, git, archives), `--checksum`, `--keep-git-dir`, `--unpack`; `COPY` is a sibling section (*read* the option table and `--checksum`/`--keep-git-dir` text) · covers our angle: **partial** — no "prefer COPY" argument in the reference · fetched 2026-10-12
 - **Also good:** [Building best practices · ADD or COPY](https://docs.docker.com/build/building/best-practices/#add-or-copy) · docs.docker.com · `COPY` for files between stages, `ADD` for remote URLs and auto-extract, bind mount instead of a temporary `COPY` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [What is the Difference Between COPY and ADD Instructions in Dockerfile?](https://linuxhandbook.com/dockerfile-copy-add-difference/) · linuxhandbook.com, Avimanyu Bandyopadhyay, 20 Apr 2021 · short side-by-side of what ADD adds (URLs, archive extraction) and why to do those with RUN plus curl/tar instead · fetched 2026-10-13 (*read*)
 - **Our delta:** `COPY --chown`/`--chmod` and ownership under `USER`; use `COPY` unless remote URL or auto-extract is wanted.
 
 ### T03-04 · `WORKDIR` — Understand · ✅ written `docs/docker/pages/phase-3-dockerfile/04-workdir.md`
@@ -38,15 +41,18 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T03-05 · `CMD` vs `ENTRYPOINT` — Master · ✅ written `docs/docker/pages/phase-3-dockerfile/05-cmd-vs-entrypoint.md`
 - **Read this:** [Dockerfile reference · Understand how CMD and ENTRYPOINT interact](https://docs.docker.com/reference/dockerfile/#understand-how-cmd-and-entrypoint-interact) · docs.docker.com · the interaction table; shell-form `ENTRYPOINT` ignores `CMD` and run arguments (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Building best practices · CMD](https://docs.docker.com/build/building/best-practices/#cmd) · docs.docker.com · use `CMD ["executable", "param"]` for services (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Docker ENTRYPOINT Vs CMD Explained With Examples](https://devopscube.com/entrypoint-vs-cmd-explained) · devopscube.com, 16 Mar 2023 · one worked ab example showing run arguments replace CMD but append to ENTRYPOINT, then maps both to Kubernetes command and args · fetched 2026-10-13 (*read*)
 - **Our delta:** the "ENTRYPOINT is the program, CMD its default arguments" model and `--entrypoint` override are ours.
 
 ### T03-06 · Exec form vs shell form — Master · ✅ written `docs/docker/pages/phase-3-dockerfile/06-exec-vs-shell-form.md`
 - **Read this:** [Dockerfile reference · Shell and exec form](https://docs.docker.com/reference/dockerfile/#shell-and-exec-form) · docs.docker.com · exec form, shell form, choosing another shell; the `ENTRYPOINT` section says shell form runs under `/bin/sh -c`, is not PID 1 and does not get `SIGTERM` (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Why Your Dockerized Application Isn't Receiving Signals](https://hynek.me/articles/docker-signals/) · hynek.me, Hynek Schlawack, 19 Jun 2017 · walks through shell-form entrypoints, scripts that skip exec, PID 1 duties and apps that handle SIGINT but not the SIGTERM docker stop sends · fetched 2026-10-13 (*read*)
 - **Our delta:** the Node-specific consequence (`node server.js` and `docker stop` waiting out its timeout) is ours; the page names `docker stop` and `SIGTERM` but not Node.
 
 ### T03-07 · `ENV` vs `ARG` — Master · ✅ written `docs/docker/pages/phase-3-dockerfile/07-env-vs-arg.md`
 - **Read this:** [Build variables](https://docs.docker.com/build/building/variables/) · docs.docker.com · similarities and differences, scoping (global `ARG` is not visible in a stage until redeclared), pre-defined args; warns args "may persist" in provenance and image history, points to secret mounts (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Dockerfile reference · ARG](https://docs.docker.com/reference/dockerfile/#arg) · docs.docker.com · scope, predefined ARGs, impact on build caching (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [Docker ARG, ENV and .env - a Complete Guide](https://vsupalov.com/docker-arg-env-variable-guide/) · vsupalov.com, Vladislav, Jul 2017 · plain build-time versus runtime split, ARG feeding an ENV default, and the warning that both are inspectable in the built image · fetched 2026-10-13 (*read*)
 - **Our delta:** the page says only that build args "may persist" in the image history; the `docker history` demonstration is ours. Secrets: T04-05.
 
 ### T03-08 · `.dockerignore` — Master · ✅ written `docs/docker/pages/phase-3-dockerfile/08-dockerignore.md`
@@ -61,6 +67,7 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 
 ### T03-10 · `EXPOSE` — Understand · ✅ written `docs/docker/pages/phase-3-dockerfile/10-expose.md`
 - **Read this:** [Dockerfile reference · EXPOSE](https://docs.docker.com/reference/dockerfile/#expose) · docs.docker.com · says plainly it does not publish a port, it is documentation; `-p` publishes (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Docker EXPOSE Ports](https://vsupalov.com/docker-expose-ports/) · vsupalov.com, Vladislav, Aug 2019 · calls EXPOSE a hint and contrasts -P with -p, including that -p works with no EXPOSE line · fetched 2026-10-13 (*read*)
 
 ### T03-11 · `HEALTHCHECK` — Understand · ✅ written `docs/docker/pages/phase-3-dockerfile/11-healthcheck.md`
 - **Read this:** [Dockerfile reference · HEALTHCHECK](https://docs.docker.com/reference/dockerfile/#healthcheck) · docs.docker.com · defaults interval 30s, timeout 30s, start-period 0s, start-interval 5s, retries 3; status `starting`/`healthy`/`unhealthy` (*read*) · covers our angle: **partial** — what "unhealthy" does not cause is not in what I read · fetched 2026-10-12
@@ -69,6 +76,7 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T03-12 · `LABEL` and OCI annotation keys — Know · ✅ written `docs/docker/pages/phase-3-dockerfile/12-label-and-metadata.md`
 - **Read this:** [OCI image annotations (raw)](https://raw.githubusercontent.com/opencontainers/image-spec/main/annotations.md) · opencontainers/image-spec · defines `org.opencontainers.image.source`, `.revision`, `.version`, `.vendor`, `.licenses` (*read*) · covers our angle: **partial** — spec, no Dockerfile syntax · fetched 2026-10-12
 - **Also good:** [Dockerfile reference · LABEL](https://docs.docker.com/reference/dockerfile/#label) · docs.docker.com · syntax and quoting (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [How and when to use Docker labels / OCI container annotations](https://snyk.io/blog/how-and-when-to-use-docker-labels-oci-container-annotations/) · snyk.io, Eric Smalling, 3 Nov 2021 · shows what the org.opencontainers.image keys are used for in practice (listing sources with docker inspect, regctl against a registry, scanner-to-Dockerfile linking) · fetched 2026-10-13 (*read*)
 - **Our delta:** setting `revision` from `git rev-parse` through a build arg.
 - *Checked, not chosen:* [Annotations](https://docs.docker.com/build/metadata/annotations/) · docs.docker.com · manifest-level, not image config labels (*headings only*).
 
@@ -103,12 +111,14 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T04-01 · How the layer cache decides — Master · ✅ written `docs/docker/pages/phase-4-build-strategy/01-how-the-cache-decides.md`
 - **Read this:** [Build cache invalidation](https://docs.docker.com/build/cache/invalidation/) · docs.docker.com · each instruction compared to cached layers; `ADD`/`COPY` use a checksum of file metadata, `mtime` excluded; modified 2026-02-21 (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Docker build cache](https://docs.docker.com/build/cache/) · docs.docker.com · overview, modified 2024-09-03 (*headings only*) · fetched 2026-10-12
+- **Beyond the docs:** [The ultimate guide to Docker build cache](https://depot.dev/blog/ultimate-guide-to-docker-build-cache) · depot.dev · walks the compare-each-instruction rule (checksum for COPY/ADD, command string only for RUN) and the cascade, then the fixes, with an apt-get timeline example (long guide, parts restate the Docker docs, ends in a vendor pitch) · fetched 2026-10-13 (*read*)
 
 ### T04-02 · Instruction ordering — Master · ✅ written `docs/docker/pages/phase-4-build-strategy/02-instruction-ordering.md`
 - **Read this:** [Optimize cache usage in builds · Order your layers](https://docs.docker.com/build/cache/optimize/#order-your-layers) · docs.docker.com · "a change causes a rebuild for steps that follow"; modified 2026-07-22 (*read*) · covers our angle: full · fetched 2026-10-12
 
 ### T04-03 · The dependency-install pattern — Master · ✅ written `docs/docker/pages/phase-4-build-strategy/03-dependency-install-pattern.md`
 - **Read this:** [Optimize cache usage in builds · Order your layers](https://docs.docker.com/build/cache/optimize/#order-your-layers) · docs.docker.com · copy `package.json` and the lockfile, install, then copy source; before/after Dockerfiles (*read*) · covers our angle: **partial** — example pairs `yarn.lock` with `npm install`, and uses `npm build` · fetched 2026-10-12
+- **Beyond the docs:** [Fast Dockerfiles: theory and practice](https://depot.dev/blog/fast-dockerfiles-theory-and-practice) · depot.dev · Node.js example of copying only the dependency manifests before install, then .dockerignore so README or build output cannot bust the source layer (ends in a vendor pitch) · fetched 2026-10-13 (*read*)
 - **Our delta:** `npm ci` with `package-lock.json` plus a cache mount (T04-09); the real script call is `npm run build`.
 
 ### T04-04 · Multi-stage builds — Master · ✅ written `docs/docker/pages/phase-4-build-strategy/04-multi-stage-builds.md`
@@ -118,9 +128,11 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T04-05 · `RUN --mount=type=secret` — Understand · ✅ written `docs/docker/pages/phase-4-build-strategy/05-mount-type-secret.md`
 - **Read this:** [Build secrets](https://docs.docker.com/build/building/secrets/) · docs.docker.com · secret mounts exist only for the build instruction; SSH mounts; modified 2026-05-19 (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [podman build](https://docs.podman.io/en/latest/markdown/podman-build.1.html) · docs.podman.io · `--secret=id=mysecret,src=.mysecret` used with the same `RUN --mount=type=secret` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Don't leak your Docker image's build secrets](https://pythonspeed.com/articles/docker-build-secrets/) · pythonspeed.com, Itamar Turner-Trauring, 21 Apr 2021 (updated 21 Mar 2023) · shows the two leaks (COPY then delete, --build-arg visible in docker history) before the secret-mount fix · fetched 2026-10-13 (*read*)
 
 ### T04-06 · `--target` — Understand · ✅ written `docs/docker/pages/phase-4-build-strategy/06-target.md`
 - **Read this:** [Multi-stage builds · Stop at a specific build stage](https://docs.docker.com/build/building/multi-stage/#stop-at-a-specific-build-stage) · docs.docker.com · `docker build --target`, debug, test and production stage use cases (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [How to use docker multi-stage build to create optimal images for dev and production](https://geshan.com.np/blog/2019/11/how-to-use-docker-multi-stage-build/) · geshan.com.np, Geshan Manandhar, 25 Nov 2019 · Node.js worked example of dev and production stages selected with --target and with compose target: (2019, so Docker 17.05-era numbers) · fetched 2026-10-13 (*read*)
 
 ### T04-07 · `COPY --from` — Understand · ✅ written `docs/docker/pages/phase-4-build-strategy/07-copy-from.md`
 - **Read this:** [Multi-stage builds · Use an external image as a stage](https://docs.docker.com/build/building/multi-stage/#use-an-external-image-as-a-stage) · docs.docker.com · `COPY --from=nginx:latest ...`, the client pulls the image if needed (*read*) · covers our angle: full · fetched 2026-10-12
@@ -129,11 +141,13 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T04-08 · BuildKit — Understand · ✅ written `docs/docker/pages/phase-4-build-strategy/08-buildkit.md`
 - **Read this:** [BuildKit](https://docs.docker.com/build/buildkit/) · docs.docker.com · LLB, content-addressable graph, caching model rewritten, cache exportable to a registry; modified 2026-04-02 (*read* the LLB passage) · covers our angle: **partial** — much of the page is Windows setup · fetched 2026-10-12
 - **Also good:** [Multi-stage builds · Differences between legacy builder and BuildKit](https://docs.docker.com/build/building/multi-stage/#differences-between-legacy-builder-and-buildkit) · docs.docker.com · BuildKit builds only the stages the target needs (*read*) · [Builders](https://docs.docker.com/build/builders/) · docs.docker.com · the Engine's default builder uses the bundled BuildKit (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [BuildKit in depth: Docker's build engine explained](https://depot.dev/blog/buildkit-in-depth) · depot.dev · explains BuildKit as a compiler: frontend to LLB DAG to backend, with SourceOp, ExecOp and FileOp mapped to FROM, RUN and COPY · fetched 2026-10-13 (*read*)
 - **Our delta:** parallel stages and progress output are only touched on the best-practices page.
 
 ### T04-09 · `RUN --mount=type=cache` — Understand · ✅ written `docs/docker/pages/phase-4-build-strategy/09-mount-type-cache.md`
 - **Read this:** [Dockerfile reference · RUN --mount=type=cache](https://docs.docker.com/reference/dockerfile/#run---mounttypecache) · docs.docker.com · options `id`, `sharing`, `from`, `mode`, `uid`; contents persist without invalidating the instruction cache; build must work with any cache contents (*read*) · covers our angle: **partial** — no `~/.npm` example · fetched 2026-10-12
 - **Also good:** [Optimize cache usage · Use cache mounts](https://docs.docker.com/build/cache/optimize/#use-cache-mounts) · docs.docker.com · rebuilt layer downloads only new packages (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [How to use cache mounts to speed up Docker builds](https://depot.dev/blog/how-to-use-cache-mount-to-speed-up-docker-builds) · depot.dev · explains cache mounts as a second cache inside a step, sharing modes, and why they are not exported by cache-from in CI (example is pnpm, not npm) · fetched 2026-10-13 (*read*)
 - **Our delta:** cache mounts live in the builder's local storage, so a fresh CI runner starts empty; Podman support is not confirmed on the podman-build page.
 
 ### T04-10 · `RUN --mount=type=bind` — Understand · ✅ written `docs/docker/pages/phase-4-build-strategy/10-mount-type-bind.md`
@@ -147,6 +161,7 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T04-12 · Cache import/export — Know · ✅ written `docs/docker/pages/phase-4-build-strategy/12-cache-import-export.md`
 - **Read this:** [GitHub Actions cache](https://docs.docker.com/build/cache/backends/gha/) · docs.docker.com · `--cache-to type=gha`, `--cache-from type=gha`, scope, `mode`, v2 cache service, API throttling; availability "Experimental"; modified 2026-09-28 (*read*) · covers our angle: **partial** — one backend of several · fetched 2026-10-12
 - **Also good:** [Cache storage backends](https://docs.docker.com/build/cache/backends/) · docs.docker.com · registry, S3, Azure, local, inline; modified 2026-02-21 (*headings only*) · [Optimize cache usage · Use an external cache](https://docs.docker.com/build/cache/optimize/#use-an-external-cache) · docs.docker.com · (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Cache is King: A guide for Docker layer caching in GitHub Actions](https://blacksmith.sh/blog/cache-is-king-a-guide-for-docker-layer-caching-in-github-actions) · blacksmith.sh, Aditya Maru, 6 Apr 2024 · compares gha, inline and registry backends in prose on size limits (10GB per repo for gha), branch-scoped sharing and multi-stage coverage (inline is `mode=min` only) (vendor blog) · fetched 2026-10-13 (*read*)
 - **Our delta:** Podman's `--cache-from` is ignored unless `--layers` is set (podman-build page, *read*; the `--cache-to` entry does not repeat that note).
 
 ### T04-13 · Build args vs runtime env — Understand · ✅ written `docs/docker/pages/phase-4-build-strategy/13-build-args-vs-runtime-env.md`
@@ -155,6 +170,7 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T04-14 · `docker build` vs `podman build` vs `buildah` — Know · ✅ written `docs/docker/pages/phase-4-build-strategy/14-docker-vs-podman-vs-buildah.md`
 - **Read this:** [podman build](https://docs.podman.io/en/latest/markdown/podman-build.1.html) · docs.podman.io · Containerfile uses Dockerfile syntax; `podman buildx build` is an alias and "not all buildx build features are available"; default image format `oci`; `--sbom` presets (*read*) · covers our angle: **partial** — no feature-by-feature list against BuildKit · fetched 2026-10-12
 - **Also good:** [Builders](https://docs.docker.com/build/builders/) · docs.docker.com · the Docker side of the alias (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Using Podman with BuildKit, the better Docker image builder](https://pythonspeed.com/articles/podman-buildkit) · pythonspeed.com, Itamar Turner-Trauring, updated 22 Jan 2025 · account of which BuildKit features Podman picked up (secrets with v3.3, cache mounts tested on 4.1.1), which our delta says no official page lists; versions are dated and the page's own update notes conflict (22 Jan 2025 header, May 2022 in the body) · fetched 2026-10-13 (*read*)
 - **Our delta:** which BuildKit mounts Podman supports is not confirmed on any page I read; our page must test or cite the Buildah docs. *Not opened:* the Buildah project docs.
 
 ### T04-15 · The build context — Know · ✅ written `docs/docker/pages/phase-4-build-strategy/15-the-build-context.md`
@@ -176,6 +192,7 @@ Covers every topic row of `docs/docker/syllabus/02-building-images.md`: T03-01 t
 ### T05-02 · The classic mistakes — Master · ✅ written `docs/docker/pages/phase-5-image-quality/02-classic-mistakes.md`
 - **Read this:** [Building best practices · RUN](https://docs.docker.com/build/building/best-practices/#run) · docs.docker.com · `apt` lists removal, `--no-install-recommends` (*read*) · covers our angle: **partial** — nothing on `npm` cache, `.git`, `node_modules` or secrets in layers · fetched 2026-10-12
 - **Also good:** [Build secrets](https://docs.docker.com/build/building/secrets/) · docs.docker.com · the fix for secrets in an early layer (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Reducing Docker Image Sizes: From 1.2GB to 150MB (or less)](https://betterstack.com/community/guides/scaling-docker/reducing-docker-image-size/) · betterstack.com, Ayooluwa Isaiah, updated 10 Mar 2025 · lists the usual bloat sources in one place (deleted-but-present layers, .git and .env in context, dev dependencies, leftover caches) with base-image size figures but none for cache contents · fetched 2026-10-13 (*read*)
 
 ### T05-03 · Least privilege in the image — Master · ✅ written `docs/docker/pages/phase-5-image-quality/03-least-privilege.md`
 - **Read this:** [Docker Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html) · OWASP · rule 2 set a user, rule 3 limit capabilities, rule 8 `--read-only` with `--tmpfs`, rule 11 rootless (*read* rules 2, 3 and 8; rule 11 *headings only*) · covers our angle: full · fetched 2026-10-12

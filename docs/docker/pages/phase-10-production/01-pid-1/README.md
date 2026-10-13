@@ -71,6 +71,7 @@ idle.
 
 - **Read this:** [Tini README](https://raw.githubusercontent.com/krallin/tini/master/README.md) — krallin/tini: zombie reaping, signal forwarding, "default signal handlers work" for your process, and that `--init` already ships Tini (*read*)
 - **Also good:** [docker container run → Specify an init process](https://docs.docker.com/reference/cli/docker/container/run/) — Docker docs: `--init` makes an init the PID 1 so zombies are reaped (*read*)
+- **Beyond the docs:** [Introducing dumb-init, an init system for Docker containers](https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html) — Yelp Engineering, Chris K., January 6, 2016: explains why the kernel applies no default TERM handling to PID 1, so `docker stop` waits ten seconds and then sends KILL, and why a shell as PID 1 can only be killed with SIGKILL, which the reference pages state only in passing
 
 {/* LINKMAP:END */}
 

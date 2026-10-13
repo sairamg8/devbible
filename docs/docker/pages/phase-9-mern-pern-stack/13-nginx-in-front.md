@@ -262,6 +262,7 @@ change this; it writes into `conf.d` too.
 - **Read this:** [NGINX reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) — docs.nginx.com: `proxy_pass` inside a `location`, passing headers, buffering; modified 2026-07-02 (*read*)
 - **Also good:** [nginx image README (raw)](https://raw.githubusercontent.com/docker-library/docs/master/nginx/README.md) — docker-library/docs: `/etc/nginx/templates/*.template` with `envsubst`, a Compose example (*read*)
 - **Also good:** [Beginner's guide](https://nginx.org/en/docs/beginners_guide.html) — nginx.org: serving static files and proxying, config structure (*headings only*)
+- **Beyond the docs:** [full-stack-js-docker-tutorial README (raw)](https://raw.githubusercontent.com/daniil/full-stack-js-docker-tutorial/master/README.md) — daniil/full-stack-js-docker-tutorial: a step-by-step Compose build of React, Express, MySQL and an NGINX service routing `/api` to Express and the rest to the UI, which shows the one-origin layout end to end (uses MySQL, not Postgres)
 
 {/* LINKMAP:END */}
 

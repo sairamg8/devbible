@@ -257,6 +257,7 @@ proves nothing about the container's resolver.
 
 - **Read this:** [Networking in Compose](https://docs.docker.com/compose/how-tos/networking/) — docs.docker.com: each service registers its name with an internal DNS server; the default network is enough for most development; modified 2026-08-16 (*read*)
 - **Also good:** [Bridge network driver](https://docs.docker.com/engine/network/drivers/bridge/) — docs.docker.com: the same name resolution outside Compose (*read*)
+- **Beyond the docs:** [Docker Networking, Demystified: Bridge, Host, and Container DNS](https://dev.to/jjoyneriv/docker-networking-demystified-bridge-host-and-container-dns-5fac) — DEV Community / James Joyner: states the rule our page needs: containers on one network use service name and internal port, and publishing is only for host-to-container traffic; page shows "Jul 12" without a year
 
 {/* LINKMAP:END */}
 

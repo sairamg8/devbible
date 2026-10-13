@@ -221,6 +221,7 @@ rootless removes an entire class of host compromise.
 - **Read this:** [Podman basic networking (raw)](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/basic_networking.md) — containers/podman: rootless containers default to pasta, rootful to netavark; bridge, host and none setups (*read*)
 - **Also good:** [Podman 5.3 changes for improved networking with pasta](https://blog.podman.io/2024/10/podman-5-3-changes-for-improved-networking-experience-with-pasta/) — Podman blog: since Podman 5.0 pasta replaces slirp4netns as the default, and works differently (*read*; 2024-10-25)
 - **Also good:** [Rootless mode troubleshooting](https://docs.docker.com/engine/security/rootless/troubleshoot/) — docs.docker.com: Docker's rootless `-p` does not propagate source IP addresses by default (*read*; modified 2026-09-01)
+- **Beyond the docs:** [podman-networking-docs (raw README)](https://raw.githubusercontent.com/eriksjolund/podman-networking-docs/main/README.md) — eriksjolund/podman-networking-docs: community guide to rootless modes (pasta, slirp4netns, socket activation, host) with source-address preservation and performance notes; states pasta is the default since Podman 5.0.0
 
 {/* LINKMAP:END */}
 

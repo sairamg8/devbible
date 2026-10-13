@@ -173,6 +173,7 @@ the identity pinned, and enforce last, after auditing.
 
 - **Read this:** [Cosign signing overview](https://docs.sigstore.dev/cosign/signing/overview/) — Sigstore docs: keyless signing ties an OIDC identity to an artifact via a short-lived certificate and a transparency log entry (*read*)
 - **Also good:** [Content trust in Docker](https://docs.docker.com/engine/security/trust/) — Docker docs: Docker Content Trust is "being retired"; the Notary v1 service shuts down on 8 Dec 2026 (*read*)
+- **Beyond the docs:** [Keyless Container Image Signing with Sigstore Cosign](https://ndthuan.com/keyless-container-image-signing-cosign/) — Thuan Nguyen, Aug 16, 2026: states plainly that a signature over a digest shows who signed it, not that the image is safe, which the Sigstore page does not stress
 
 {/* LINKMAP:END */}
 

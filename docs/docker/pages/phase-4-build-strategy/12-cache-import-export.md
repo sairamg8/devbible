@@ -205,6 +205,7 @@ The same `--cache-from` / `--cache-to` flags against a repository, plus
 - **Read this:** [GitHub Actions cache](https://docs.docker.com/build/cache/backends/gha/) — docs.docker.com: `--cache-to type=gha`, `--cache-from type=gha`, scope, `mode`, v2 cache service, API throttling; availability "Experimental"; modified 2026-09-28 (*read*)
 - **Also good:** [Cache storage backends](https://docs.docker.com/build/cache/backends/) — docs.docker.com: registry, S3, Azure, local, inline; modified 2026-02-21 (*headings only*)
 - **Also good:** [Optimize cache usage · Use an external cache](https://docs.docker.com/build/cache/optimize/#use-an-external-cache)
+- **Beyond the docs:** [Cache is King: A guide for Docker layer caching in GitHub Actions](https://blacksmith.sh/blog/cache-is-king-a-guide-for-docker-layer-caching-in-github-actions) — blacksmith.sh, Aditya Maru, 6 Apr 2024: compares gha, inline and registry backends in prose on size limits (10GB per repo for gha), branch-scoped sharing and multi-stage coverage (inline is `mode=min` only) (vendor blog)
 
 {/* LINKMAP:END */}
 

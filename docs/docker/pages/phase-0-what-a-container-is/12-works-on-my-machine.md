@@ -131,6 +131,7 @@ does not.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [What is a container?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/) — Docker docs: self-contained, isolated processes with no reliance on host dependencies (*read*)
+- **Beyond the docs:** [Not Every Container Has an Operating System Inside](https://iximiuz.com/en/posts/not-every-container-has-an-operating-system-inside/) — Ivan Velichko, iximiuz.com, May 7, 2020 (updated Sep 4, 2022): shows a container that is one static binary on a scratch base, so what ships is the userland and config, never a kernel
 
 {/* LINKMAP:END */}
 

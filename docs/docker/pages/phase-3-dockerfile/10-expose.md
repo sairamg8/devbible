@@ -132,6 +132,7 @@ never for deployment.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Dockerfile reference · EXPOSE](https://docs.docker.com/reference/dockerfile/#expose) — docs.docker.com: says plainly it does not publish a port, it is documentation; `-p` publishes (*read*)
+- **Beyond the docs:** [Docker EXPOSE Ports](https://vsupalov.com/docker-expose-ports/) — vsupalov.com, Vladislav, Aug 2019: calls EXPOSE a hint and contrasts -P with -p, including that -p works with no EXPOSE line
 
 {/* LINKMAP:END */}
 

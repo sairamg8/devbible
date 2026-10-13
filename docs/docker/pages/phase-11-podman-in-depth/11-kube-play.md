@@ -199,6 +199,7 @@ with the same dependency and restart handling as a `.container` unit. Running
 
 - **Read this:** [podman kube play](https://docs.podman.io/en/latest/markdown/podman-kube-play.1.html) — Podman docs: creates containers, pods and volumes from Kubernetes YAML (*read* intro, rest *headings only*)
 - **Also good:** [podman kube generate](https://docs.podman.io/en/latest/markdown/podman-kube-generate.1.html) — Podman docs: generates Pod YAML from containers, pods or volumes (*read* intro)
+- **Beyond the docs:** [Run Kubernetes Workloads with Podman on Oracle Linux](https://docs.oracle.com/en/learn/ol-podman-kube/) — Oracle Linux tutorial (no author or publication date shown; sample YAML stamped 2025-08-11): runnable lab: `podman kube generate` from a pod, `podman kube play` of a hand-written pod, then `podman kube down`
 
 {/* LINKMAP:END */}
 

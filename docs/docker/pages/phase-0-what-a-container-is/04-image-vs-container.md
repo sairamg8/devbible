@@ -194,6 +194,7 @@ mounted config, or in an environment variable. Exec is for diagnosis.
 
 - **Read this:** [Storage drivers](https://docs.docker.com/engine/storage/drivers/) — Docker docs: writes go to a thin writable container layer, deleted with the container; many containers share one image (*read*)
 - **Also good:** [What is an image?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/) — Docker docs: images are immutable and made of layers (*read*)
+- **Beyond the docs:** [You Don't Need an Image To Run a Container](https://iximiuz.com/en/posts/you-dont-need-an-image-to-run-a-container/) — Ivan Velichko, iximiuz.com, May 16, 2020 (updated Aug 7, 2021): runs a container with runc from a plain directory and config.json, which separates what an image is for (build and distribute) from what running needs
 
 {/* LINKMAP:END */}
 

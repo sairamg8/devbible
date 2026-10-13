@@ -213,6 +213,7 @@ the generated unit is making a choice on your behalf.
 
 - **Read this:** [podman generate systemd](https://docs.podman.io/en/latest/markdown/podman-generate-systemd.1.html) — Podman docs: marked DEPRECATED, recommends Quadlet, "no plans to remove", urgent bug fixes only (*read*)
 - **Also good:** [podman-systemd.unit(5)](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html) — Podman docs: the replacement (*read*)
+- **Beyond the docs:** [Podman Containers with systemd](https://labs.iximiuz.com/tutorials/podman-ctrs-with-systemd-346f7757) — iximiuz Labs, Shan Desai, July 19, 2026: hands-on tutorial that marks `podman generate systemd` deprecated, builds Quadlet `.container` files instead, and shows a `--restart=always` container not coming back after reboot until the restart service is enabled
 
 {/* LINKMAP:END */}
 

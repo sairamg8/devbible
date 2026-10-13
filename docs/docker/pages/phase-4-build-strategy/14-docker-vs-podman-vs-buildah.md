@@ -169,6 +169,7 @@ offers `--cache-ttl`, which Docker has no equivalent for.
 
 - **Read this:** [podman build](https://docs.podman.io/en/latest/markdown/podman-build.1.html) — docs.podman.io: Containerfile uses Dockerfile syntax; `podman buildx build` is an alias and "not all buildx build features are available"; default image format `oci`; `--sbom` presets (*read*)
 - **Also good:** [Builders](https://docs.docker.com/build/builders/) — docs.docker.com: the Docker side of the alias (*read*)
+- **Beyond the docs:** [Using Podman with BuildKit, the better Docker image builder](https://pythonspeed.com/articles/podman-buildkit) — pythonspeed.com, Itamar Turner-Trauring, updated 22 Jan 2025: account of which BuildKit features Podman picked up (secrets with v3.3, cache mounts tested on 4.1.1), which our delta says no official page lists; versions are dated and the page's own update notes conflict (22 Jan 2025 header, M
 
 {/* LINKMAP:END */}
 

@@ -58,6 +58,7 @@ the file moves.
 - **Read this:** [Version and name top-level elements](https://docs.docker.com/reference/compose-file/version-and-name/) — docs.docker.com: `version` is kept for backward compatibility, informative only, and warns that it is obsolete if used; Compose always validates against the newest schema (*read*; modified 2025-07-09)
 - **Also good:** [Compose file reference](https://docs.docker.com/reference/compose-file/) — docs.docker.com: the top-level elements; modified 2026-05-28 (*headings only*)
 - **Also good:** [compose-spec.io](https://compose-spec.io/) — Compose Specification site: the open spec itself (*headings only*, a short landing page)
+- **Beyond the docs:** [Docker: remove obsolete version keys from Compose files](https://adamj.eu/tech/2025/05/05/docker-remove-obsolete-compose-version/) — adamj.eu / Adam Johnson: why the `version` key is ignored since Compose v2 and how to strip it, including from override files; 2025-05-05
 
 {/* LINKMAP:END */}
 

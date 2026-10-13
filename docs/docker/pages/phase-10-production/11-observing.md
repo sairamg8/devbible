@@ -234,6 +234,7 @@ will not fix it.
 - **Read this:** [docker container stats](https://docs.docker.com/reference/cli/docker/container/stats/) — Docker docs: `--no-stream`, `--format "&#123;&#123; json . &#125;&#125;"`, columns for memory usage/limit and PIDs (*read*)
 - **Also good:** [cAdvisor README](https://raw.githubusercontent.com/google/cadvisor/master/README.md) — google/cadvisor: per-container usage daemon, run as a container (*read* intro)
 - **Also good:** [Runtime metrics](https://docs.docker.com/engine/containers/runmetrics/) — Docker docs: says its detailed examples use the cgroup v1 layout (*headings only* plus that note)
+- **Beyond the docs:** [Docker memory usage explained: anonymous, file, slab, and what counts](https://www.netdata.cloud/guides/docker/docker-memory-usage-explained/) — Netdata guides (no date shown): splits cgroup v2 `memory.stat` into anon, file and slab and says `docker stats` is roughly `memory.current` minus `inactive_file`, which the official page does not do for v2
 
 {/* LINKMAP:END */}
 

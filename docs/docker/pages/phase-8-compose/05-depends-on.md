@@ -274,6 +274,7 @@ enabled in this run.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Control startup and shutdown order in Compose](https://docs.docker.com/compose/how-tos/startup-order/) — docs.docker.com: Compose waits for "running", not "ready"; the fix is `condition: service_healthy` with a `healthcheck`, plus `service_completed_successfully`; modified 2025-12-03 (*read*)
+- **Beyond the docs:** [How to Make Docker Compose Wait for Dependency Containers](https://www.howtogeek.com/devops/how-to-make-docker-compose-wait-for-dependency-containers/) — How-To Geek / James Walker: plain-language version of "started is not ready": default `depends_on` waits only for launch, so pair it with a healthcheck and `service_healthy`; updated Jul 23, 2022
 
 {/* LINKMAP:END */}
 

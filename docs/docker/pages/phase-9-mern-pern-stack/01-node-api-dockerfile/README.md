@@ -113,6 +113,7 @@ chunks, and each has a failure mode you can name:
 
 - **Read this:** [Node.js language-specific guide](https://docs.docker.com/guides/nodejs/) — docs.docker.com: a multi-stage Dockerfile (builder, production-deps and runner stages) using cache and bind mounts; it runs `npm install`, with `npm ci` only as a commented-out upgrade; modified 2026-09-07 (*read* the Dockerfile; the rest *heading
 - **Also good:** [Docker and Node.js Best Practices (raw)](https://raw.githubusercontent.com/nodejs/docker-node/main/docs/BestPractices.md) — nodejs/docker-node: `NODE_ENV=production`; Node as PID 1 ignores `SIGINT`, so use `--init` or Tini; the `node` user has uid 1000 (*read*)
+- **Beyond the docs:** [node-docker-good-defaults README (raw)](https://raw.githubusercontent.com/BretFisher/node-docker-good-defaults/main/README.md) — BretFisher/node-docker-good-defaults: a worked repo showing why to run `node` directly instead of npm (npm does not pass SIGTERM on), the `/healthz` HEALTHCHECK, and dependencies kept outside the bind mount; the official guide does not argue these choices
 
 {/* LINKMAP:END */}
 

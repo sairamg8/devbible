@@ -78,6 +78,7 @@ name which documented shortcoming it is before reading the error message.
 
 - **Read this:** [Basic setup and use of Podman in a rootless environment](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/rootless_tutorial.md) — containers/podman: `/etc/subuid` and `/etc/subgid` ranges, `podman system migrate`, pasta networking (*read*)
 - **Also good:** [user_namespaces(7)](https://man7.org/linux/man-pages/man7/user_namespaces.7.html) — Linux man-pages: the mapping rules (*headings only*)
+- **Beyond the docs:** [How does rootless Podman work?](https://opensource.com/article/19/2/how-does-rootless-podman-work) — opensource.com, Daniel J Walsh, February 11, 2019: worked `/etc/subuid` example (`dwalsh:100000:65536`) showing container root as the user's own UID and container UID 1 as host UID 100000; the article's own text and output disagree on one UID number
 
 {/* LINKMAP:END */}
 

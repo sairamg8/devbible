@@ -245,6 +245,7 @@ with `semanage`.
 - **Read this:** [podman-run · Volume mounts](https://docs.podman.io/en/latest/markdown/podman-run.1.html) — docs.podman.io: `:z` marks content shared between containers, `:Z` private to one; both relabel the files (*read* the volume passage; the rest *headings only*, 130k characters)
 - **Also good:** [Bind mounts · Configure the SELinux label](https://docs.docker.com/engine/storage/bind-mounts/) — docs.docker.com: same two options; warns it changes the host path itself, with effects beyond Docker (*read*)
 - **Also good:** [Dealing with user namespaces and SELinux on rootless containers](https://www.redhat.com/en/blog/user-namespaces-selinux-rootless-containers) — Red Hat blog: `container_t` versus `container_file_t` and why a volume mount breaks it; page shows June 25, 2020; metadata published 2020-06-04, modified 2025-11-20 (*read*)
+- **Beyond the docs:** [Using docker volumes on SELinux-enabled servers](https://prefetch.net/blog/2017/09/30/using-docker-volumes-on-selinux-enabled-servers) — Blog O' Matty (prefetch.net): short practical case of the "Permission denied" on a bind mount with no suffix, fixed with `Z`; quotes the Docker docs for `z` (shared) versus `Z` (private unshared label) but only tests `Z`; page shows Sep 30, 2017
 
 {/* LINKMAP:END */}
 

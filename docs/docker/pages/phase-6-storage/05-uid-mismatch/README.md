@@ -52,6 +52,7 @@ the right fix without trying three.
 
 - **Read this:** [Understanding rootless Podman's user namespace modes](https://www.redhat.com/en/blog/rootless-podman-user-namespace-modes) — Red Hat blog: table of host UID versus container UID for default, `keep-id`, `auto`, `nomap`; page shows January 25, 2023; metadata published 2023-01-11, modified 2025-11-21 (*read*)
 - **Also good:** [Podman rootless tutorial (raw)](https://raw.githubusercontent.com/containers/podman/main/docs/tutorials/rootless_tutorial.md) — containers/podman: `/etc/subuid` and `/etc/subgid` ranges, `podman unshare ls -ldn` to see mapped owners, 65534 means unmapped (*read*)
+- **Beyond the docs:** [Docker Mount Permissions: UID/GID, Users, and Five Fixes](https://eastondev.com/blog/en/posts/dev/20251217-docker-mount-permissions-guide/) — Easton Dev / Easton: walks a root-in-container file undeletable by host UID 1000 with `ls -ln` and `docker exec id` output, then five fixes; published December 17, 2025
 
 {/* LINKMAP:END */}
 

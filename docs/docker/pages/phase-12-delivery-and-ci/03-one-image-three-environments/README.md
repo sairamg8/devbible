@@ -49,6 +49,7 @@ environment rather than per build.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [V. Build, release, run](https://12factor.net/build-release-run) — The Twelve-Factor App: strict separation of build and run stages (*read*, short)
+- **Beyond the docs:** [Docker Image Build and Promotion Pipeline: A Production Guide](https://devopscube.com/docker-image-build-and-promotion-pipeline/) — DevOpsCube, Bibin Wilson, March 12, 2026: a dev, stage, prod pipeline that builds once and copies the same image forward with Crane; it hands off by commit-SHA tag, with the digest named only for the prod step
 
 {/* LINKMAP:END */}
 

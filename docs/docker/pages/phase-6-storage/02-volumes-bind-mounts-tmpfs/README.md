@@ -48,6 +48,7 @@ storage bugs in this phase.
 - **Read this:** [Volumes](https://docs.docker.com/engine/storage/volumes/) — docs.docker.com: when to use volumes, lifecycle, named versus anonymous, populate-from-image, read-only, drivers, backup (*read*; modified 2026-07-21)
 - **Also good:** [Bind mounts](https://docs.docker.com/engine/storage/bind-mounts/) — docs.docker.com: host path mounted in, files already in the target directory are obscured (*read*)
 - **Also good:** [tmpfs mounts](https://docs.docker.com/engine/storage/tmpfs/) — docs.docker.com: Linux only, not shareable between containers, counts toward the container memory limit (*read*)
+- **Beyond the docs:** [Docker Mount Types: Volumes, Bind Mounts and tmpfs Guide](https://www.datacamp.com/tutorial/docker-mount) — DataCamp / Dario Radečić: one worked FastAPI bind-mount example plus side-by-side performance and security comparison of all three mount types; structured data gives 2026-01-16
 
 {/* LINKMAP:END */}
 

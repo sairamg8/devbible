@@ -49,6 +49,7 @@ rollback you have actually tested.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Manage tags and labels with GitHub Actions](https://docs.docker.com/build/ci/github-actions/manage-tags-labels/) — Docker docs: `docker/metadata-action` with `type=sha`, `type=semver`, `type=ref,event=branch` (*read* the example workflow)
+- **Beyond the docs:** [Overcoming Docker's Mutable Image Tags](https://www.mend.io/blog/overcoming-dockers-mutable-image-tags/) — Mend.io, Rhys Arkins, March 19, 2018: argues from a real breakage that even semver-looking tags can be repointed and that pinning a digest beside the tag makes builds reproducible and rollback quick
 
 {/* LINKMAP:END */}
 
