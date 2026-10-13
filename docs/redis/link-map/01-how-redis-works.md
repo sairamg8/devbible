@@ -23,6 +23,7 @@ Only **T01-01** has a page of ours; the other 16 are 🔲 not written, so each b
 ### T01-02 · Single-threaded command execution — Master · 🔲 not written
 - **Read this:** [Diagnosing latency issues](https://redis.io/docs/latest/operate/oss_and_stack/management/optimization/latency/) · redis.io · the "Single threaded nature of Redis" section: a *mostly* single-threaded design, one request served at a time, requests served sequentially, multiplexing; background threads exist for slow disk I/O but do not change this (*read*) · covers our angle: **partial** — I/O threads (`io-threads`) are **not mentioned**; "commands are atomic" is implied, not stated · fetched 2026-10-12
 - **Also good:** [Benchmarks](https://redis.io/docs/latest/operate/oss_and_stack/management/optimization/benchmarks/) · redis.io · "mostly, a single-threaded server" for command execution, though modern versions use threads for other things; not designed to use many cores (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Why and How Single-Threaded Redis Is Fast and Handles Concurrent Connections](https://arpitbhayani.me/videos/why-and-how-single-threaded-redis-is-fast/) · Arpit Bhayani (Oct 14, 2022) · walks through epoll-style I/O multiplexing and the event loop, and shows two clients running `INCR` on one counter to explain why atomicity needs no lock, which the latency page only implies; it does not cover `io-threads` · fetched 2026-10-13 (*read*)
 - **Our delta:** atomicity as a consequence of one-at-a-time execution, `INCR` needing no lock, and what I/O threads do and do not change. A primary page that explains `io-threads` is **not confirmed**; the [INFO](https://redis.io/docs/latest/commands/info/) page only lists a `threads` section for I/O thread information (*read*).
 - *Checked, not chosen:* oneuptime.com and dev.to blog posts on the single-thread model (search snippets only, *not opened*).
 
@@ -38,6 +39,7 @@ Only **T01-01** has a page of ours; the other 16 are 🔲 not written, so each b
 ### T01-05 · Redis is not durable by default — Master · 🔲 not written
 - **Read this:** [Redis persistence](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/) · redis.io · RDB snapshots at intervals, AOF logging every write with fsync policies, no persistence at all ("sometimes used when caching"), or RDB + AOF (*read*) · covers our angle: **partial** — it says "By default Redis saves snapshots" to `dump.rdb` (*read*), but the default `save` thresholds are **not confirmed** on this page, and it does not frame the data-loss window · fetched 2026-10-12
 - **Also good:** [Diagnosing latency issues](https://redis.io/docs/latest/operate/oss_and_stack/management/optimization/latency/) · redis.io · a ranked durability-versus-latency list from AOF `always` down to RDB (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Redis persistence demystified](https://oldblog.antirez.com/post/redis-persistence-demystified.html) · antirez weblog (Salvatore Sanfilippo per the site copyright; the page shows "26 March 12") · opens "there is no Redis feature that is as misunderstood as its persistence"; walks RDB, the AOF log and rewrite, and the three `appendfsync` modes against what PostgreSQL and InnoDB guarantee, which frames the data-loss window the docs do not · fetched 2026-10-13 (*read*)
 - **Our delta:** what you may therefore store in Redis, and the default configuration, to be checked on a running 8.x instance.
 
 ### T01-06 · Versions and the 8.x line — Know · 🔲 not written
@@ -64,6 +66,7 @@ Only **T01-01** has a page of ours; the other 16 are 🔲 not written, so each b
 ### T01-10 · `SCAN` instead of `KEYS` — Master · 🔲 not written
 - **Read this:** [SCAN](https://redis.io/docs/latest/commands/scan/) · redis.io · cursor-based iteration; the SCAN family gives only limited guarantees because the collection can change; a full iteration returns every element present from start to end; syntax shows `MATCH`, `COUNT`, `TYPE` (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Redis CLI](https://redis.io/docs/latest/develop/tools/cli/) · redis.io · the `--scan` option, which lists keys with `SCAN` and accepts a pattern (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Making sense of Redis' SCAN cursor](https://engineering.q42.nl/redis-scan-cursor/) · Q42 Engineering, Herman Banken (15 Jul 2019) · explains with a bit-prefix example why the reversed-bit cursor survives the hash table doubling, which the command page only promises; it does not discuss why duplicates appear · fetched 2026-10-13 (*read*)
 - **Our delta:** the duplicates-may-appear rule and a worked loop in node-redis and ioredis.
 
 ### T01-11 · Key existence, deletion and `UNLINK` — Understand · 🔲 not written

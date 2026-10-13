@@ -104,6 +104,7 @@ Covers all 23 topic rows of `docs/redis/syllabus/03-from-node.md`: T03-01 to T03
 ### T03-16 · Session store — Understand · 🔲 not written
 - **Read this:** [Redis session store with node-redis](https://redis.io/docs/latest/develop/use-cases/session-store/nodejs/) · redis.io · explicit store with cookie handling; production notes on securing the cookie, sliding expiry defining how long a stolen cookie works, ID rotation after login (*read* the production notes) · covers our angle: **partial** — hand-rolled store, not `connect-redis` wire-up · fetched 2026-10-12
 - **Also good:** [express-session](https://expressjs.com/en/resources/middleware/session/) · expressjs.com · lists `connect-redis` as a compatible store; `rolling` defaults to false; `store.touch` resets idle timers; `MemoryStore` is not for production (*read*) · [Redis session store](https://redis.io/docs/latest/develop/use-cases/session-store/) · redis.io · one hash per session ID with a sliding `EXPIRE` (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) · OWASP Cheat Sheet Series · gives the security reasoning the Redis pages leave out: ID regeneration after login, idle versus absolute timeouts enforced server-side, and a meaningless session ID with state kept on the server · fetched 2026-10-13 (*read*)
 - **Our delta:** the `connect-redis` option list (`client`, `prefix`, `ttl`) and its default key shape are **not confirmed** — its README returned 403 (github, npmjs) or 404 (raw). Read it at writing time.
 
 ### T03-17 · Revocation and denylists — Understand · 🔲 not written
@@ -114,6 +115,7 @@ Covers all 23 topic rows of `docs/redis/syllabus/03-from-node.md`: T03-01 to T03
 ### T03-18 · Rate limiting — Master · 🔲 not written
 - **Read this:** [Build 5 Rate Limiters with Redis](https://redis.io/tutorials/howtos/ratelimiting/) · redis.io, William Johnston, published 2025-11-18 per the page metadata, updated 2026-03-20 · fixed window (`INCR` + `EXPIRE`), sliding log (sorted set), sliding counter, token bucket, leaky bucket, each as a Lua script, with a comparison table and the boundary-burst flaw of fixed windows (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Redis rate limiter](https://redis.io/docs/latest/develop/use-cases/rate-limiter/) · redis.io · overview; lists `rate-limiter-flexible` and `express-rate-limit` as Node options (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Scaling your API with rate limiters](https://stripe.com/blog/rate-limiters) · stripe.com, Paul Tarjan, March 30, 2017 · a production account of why a token bucket per user in a central Redis store is used, and how load shedders differ from rate limiters, which the Redis pages do not cover · fetched 2026-10-13 (*read*)
 - **Our delta:** the tutorial runs on bun and uses Lua for all five; our page must show the plain `INCR` + `EXPIRE` race (a crash between the two leaves no expiry) before introducing a script.
 
 ### T03-19 · Why the limiter must be shared — Master · 🔲 not written
