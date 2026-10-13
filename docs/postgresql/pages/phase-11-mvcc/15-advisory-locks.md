@@ -242,6 +242,7 @@ advantage over an external lock service.
 
 - **Read this:** [13.3 Explicit Locking, section "Advisory Locks"](https://www.postgresql.org/docs/current/explicit-locking.html) — postgresql.org: application-defined, not enforced by the system; faster than a table flag, no bloat, cleaned up at session end (*read*)
 - **Also good:** [9.28 System Administration Functions](https://www.postgresql.org/docs/current/functions-admin.html) — postgresql.org: `pg_advisory_lock` family (*read* the function table)
+- **Beyond the docs:** [How do PostgreSQL advisory locks work](https://vladmihalcea.com/how-do-postgresql-advisory-locks-work) — Vlad Mihalcea: short overview of shared versus exclusive and session versus transaction locks with the `try_` variants; introductory and written against 9.6; posted 2017-04-12
 
 {/* LINKMAP:END */}
 

@@ -223,6 +223,7 @@ the existing values were written in. It rewrites the table.
 
 - **Read this:** [Don't Do This · timestamp](https://wiki.postgresql.org/wiki/Don%27t_Do_This) — postgresql.org wiki: `timestamptz` stores a point in time (microseconds since 2000-01-01 UTC), not a zone (*read*; last edited 2024-11-21)
 - **Also good:** [Date/Time Types](https://www.postgresql.org/docs/current/datatype-datetime.html) — postgresql.org: "stored internally in UTC", shown in `TimeZone` (*read*)
+- **Beyond the docs:** [Time to Better Know The Time in PostgreSQL](https://boringsql.com/posts/know-the-time-in-postgresql/) — Radim Marek, boringSQL: 2025-04-06
 
 {/* LINKMAP:END */}
 

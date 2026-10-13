@@ -192,6 +192,7 @@ partitioning adds planning overhead plus the recurring job of creating partition
 - **Read this:** [Inheritance](https://www.postgresql.org/docs/current/ddl-inherit.html) — postgresql.org: links inheritance to partitioning, with a caveats section `DDL-INHERIT-CAVEATS` (*read* the partition mention)
 - **Read this:** [Table Partitioning](https://www.postgresql.org/docs/current/ddl-partitioning.html) — postgresql.org: declarative partitioning and "Partitioning Using Inheritance" as separate sections (headings only; ids `DDL-PARTITIONING-DECLARATIVE`, `DDL-PARTITIONING-USING-INHERITANCE`)
 - **Also good:** [Don't Do This · table inheritance](https://wiki.postgresql.org/wiki/Don%27t_Do_This) — postgresql.org wiki (headings only)
+- **Beyond the docs:** [PostgreSQL 11: Partitioning Evolution from Postgres 9.6 to 11](https://www.enterprisedb.com/blog/postgresql-11-partitioning-evolution-postgres-96-11) — EnterpriseDB (David Rowley): 2018-10-24
 
 {/* LINKMAP:END */}
 

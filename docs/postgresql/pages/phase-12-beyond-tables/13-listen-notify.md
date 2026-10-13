@@ -240,6 +240,7 @@ for its next poll. Losing the notification costs latency, not the event.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [NOTIFY](https://www.postgresql.org/docs/current/sql-notify.html) — postgresql.org: delivered only on commit, in commit order, duplicates folded; send a record key rather than the data; a full queue fails commits (*read*)
+- **Beyond the docs:** [Postgres LISTEN/NOTIFY does not scale](https://www.recall.ai/blog/postgres-listen-notify-does-not-scale) — Elliot Levin, Recall.ai, 2025-07-01 (updated 2026-05-08): a production outage story: `NOTIFY` takes a lock held to commit, serialising commits across the instance; the update notes a core fix, so check your version
 
 {/* LINKMAP:END */}
 

@@ -61,6 +61,7 @@ referenced twice — without guessing.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [7.8.3 CTE Materialization](https://www.postgresql.org/docs/current/queries-with.html#QUERIES-WITH-CTE-MATERIALIZATION) — postgresql.org: merged into the parent when referenced once, not more; `MATERIALIZED`/`NOT MATERIALIZED` override (*read*)
+- **Beyond the docs:** [Waiting for PostgreSQL 12 - Allow user control of CTE materialization, and change the default behavior](https://www.depesz.com/2019/02/19/waiting-for-postgresql-12-allow-user-control-of-cte-materialization-and-change-the-default-behavior/) — depesz.com / depesz: 2019-02-19, updated 2019-05-15; quotes the commit and shows what changed from the old always-materialize fence to inlining a CTE referenced once
 
 {/* LINKMAP:END */}
 

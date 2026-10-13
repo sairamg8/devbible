@@ -223,6 +223,7 @@ the argument types do not match any of them.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [psql · Meta-Commands](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-META-COMMANDS) — postgresql.org: the eight daily commands: `\l` (`#APP-PSQL-META-COMMAND-LIST`), `\c` (`-C-LC`), `\dn` (`-DN`), `\df` (`-DF-LC`); `\dt \di \dv \ds` share one group entry (`-DE`); `-DT` is `\dT`, data types, not `\dt` (ids found in the HTML; entrie
+- **Beyond the docs:** [10 psql Commands That Will Make Your Life Easier](https://www.tigerdata.com/blog/10-psql-commands-that-will-make-your-life-easier) — James Blackwood-Sewell, TigerData: 2024-04-19, updated 2025-11-19
 
 {/* LINKMAP:END */}
 

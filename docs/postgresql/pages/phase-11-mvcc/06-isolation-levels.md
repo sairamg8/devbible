@@ -260,6 +260,7 @@ also why it does not block [VACUUM](12-long-transactions.md).
 
 - **Read this:** [13.2 Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html) — postgresql.org: the two levels, serialization anomaly defined (*read*)
 - **Read this:** [13.5 Serialization Failure Handling](https://www.postgresql.org/docs/current/mvcc-serialization-failure-handling.html) — postgresql.org: applications must retry; SQLSTATE `40001`; deadlock failures may also be retried (*read*)
+- **Beyond the docs:** [Jepsen: PostgreSQL 12.3](https://jepsen.io/analyses/postgresql-12.3) — Kyle Kingsbury, Jepsen: tests each isolation level for anomalies: Repeatable Read is snapshot isolation, and Serializable had a conflict-detection bug (patch scheduled for the 2020-08-13 minor release); dated 2020-06-12; note it describes a bug in 12.3
 
 {/* LINKMAP:END */}
 

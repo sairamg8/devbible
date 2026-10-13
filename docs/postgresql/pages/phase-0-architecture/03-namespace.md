@@ -145,6 +145,7 @@ easy to overcrowd.
 
 - **Read this:** [Managing Databases · Overview](https://www.postgresql.org/docs/current/manage-ag-overview.html) — postgresql.org: states the full hierarchy cluster, database, schema, table and which objects are cluster-wide (*read*)
 - **Read this:** [Schemas](https://www.postgresql.org/docs/current/ddl-schemas.html) — postgresql.org: schema creation, the public schema and the search path (headings only; ids `DDL-SCHEMAS-PATH`, `DDL-SCHEMAS-PUBLIC`)
+- **Beyond the docs:** [Database Cluster, Databases and Tables · Logical Structure](https://www.interdb.jp/pg/pgsql01/01.html) — Hironobu Suzuki, *The Internals of PostgreSQL*: shows the cluster, database and object hierarchy with the OIDs and catalog queries (`pg_database`, `pg_class`) that identify each level, which the manual page states without queries
 
 {/* LINKMAP:END */}
 

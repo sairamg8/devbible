@@ -21,12 +21,14 @@ Covers every topic row of phases 12 and 13 in `docs/postgresql/syllabus/04-perfo
 
 ### T12-02 · When a column beats JSON — Master · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/02-column-vs-json.md`
 - **Read this:** [JSON Types, section "Designing JSON Documents"](https://www.postgresql.org/docs/current/datatype-json.html) · postgresql.org · JSON can be "considerably more flexible" than the relational model, and both can coexist (*read* the opening of the section) · covers our angle: **partial** — states the trade-off, does not price the cost of getting it wrong · fetched 2026-10-12
+- **Beyond the docs:** [When to avoid JSONB in a PostgreSQL schema](https://contentsquare.com/blog/when-to-avoid-jsonb-in-a-postgresql-schema/) · Jack Law, Contentsquare blog, 2016-09-01 (updated 2025-11-28) · prices the cost the docs leave out: no statistics on nested values so the planner guesses (author's test: about 2,000 times slower than columns) and per-row key storage bloat · fetched 2026-10-13 (*read*)
 - **Our delta:** the decision table (stable queried field means a column) and the planner-statistics and constraint costs; not confirmed in any page I read.
 - *Checked, not chosen:* a Contentsquare blog post "when to avoid jsonb" (our fetch of it failed, connection error). *Not opened:* DEV Community and DZone summaries.
 
 ### T12-03 · Indexing `jsonb` — Understand · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/03-index-jsonb.md`
 - **Read this:** [JSON Types, section "jsonb Indexing"](https://www.postgresql.org/docs/current/datatype-json.html) · postgresql.org · default GIN class versus `jsonb_path_ops` (no key-exists operators, supports `@>`, `@?`, `@@`) (*read*) · covers our angle: **partial** — no expression index on one hot key walkthrough in what I read · fetched 2026-10-12
 - **Also good:** [CREATE INDEX](https://www.postgresql.org/docs/current/sql-createindex.html) · postgresql.org · the expression-index syntax (*headings only*; synopsis seen) · fetched 2026-10-12
+- **Beyond the docs:** [Indexing JSONB in Postgres](https://www.crunchydata.com/blog/indexing-jsonb-in-postgres) · Craig Kerstiens, Crunchy Data blog, 2025-08-11 · fills the gap the docs leave: when GIN helps versus a B-tree expression index on one hot key (the query expression must match the index), plus GIN write overhead and bloat; does not mention `jsonb_path_ops` · fetched 2026-10-13 (*read*)
 
 ### T12-04 · Building JSON responses in SQL — Understand · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/04-build-json-sql.md`
 - **Read this:** [JSON Functions and Operators](https://www.postgresql.org/docs/current/functions-json.html) · postgresql.org · `jsonb_build_object` takes alternating keys and values; `jsonb_agg` and `jsonb_object_agg` aggregate (*read*) · covers our angle: **partial** — a reference, no nested-response recipe; `row_to_json` not checked · fetched 2026-10-12
@@ -35,9 +37,11 @@ Covers every topic row of phases 12 and 13 in `docs/postgresql/syllabus/04-perfo
 ### T12-05 · Full-text search — Understand · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/05-full-text/`
 - **Read this:** [Introduction to Full Text Searching](https://www.postgresql.org/docs/current/textsearch-intro.html) · postgresql.org · `tsvector` for preprocessed documents, `tsquery` for queries, the `@@` match operator (*read*) · covers our angle: **partial** — ranking and the index are in the next pages · fetched 2026-10-12
 - **Also good:** [Tables and Indexes](https://www.postgresql.org/docs/current/textsearch-tables.html) · postgresql.org · `CREATE INDEX ... USING GIN (to_tsvector('english', body))`; only the two-argument `to_tsvector` can be indexed (*read*) · [Controlling Text Search](https://www.postgresql.org/docs/current/textsearch-controls.html) · postgresql.org · `ts_rank` versus `ts_rank_cd` (*read* the ranking part) · fetched 2026-10-12
+- **Beyond the docs:** [Postgres full-text search is Good Enough!](https://rachbelaid.com/postgres-full-text-search-is-good-enough/) · Rachid Belaid, 2015-07-13 · one worked example from `to_tsvector` through weights, `ts_rank`, a GIN index and multi-table documents, which the reference pages split apart; older, so check syntax against current docs · fetched 2026-10-13 (*read*)
 
 ### T12-06 · `pg_trgm` similarity and fuzzy matching — Understand · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/06-pg-trgm.md`
 - **Read this:** [pg_trgm](https://www.postgresql.org/docs/current/pgtrgm.html) · postgresql.org · trigram indexes also support `LIKE`, `ILIKE`, `~`, `~*` and `=` (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [GiST vs GIN index for LIKE searches – a comparison](https://elephanttamer.net/?p=9) · Elephant Tamer blog, 2020-06-13 · measured on 12 million rows: GIN built in about 3 minutes versus 12 for GiST, was far smaller, and answered suffix `LIKE` in 50-100 ms versus 1-3 s, so the docs' either-index choice has a clear winner · fetched 2026-10-13 (*read*)
 
 ### T12-07 · Views — Understand · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/07-views.md`
 - **Read this:** [CREATE VIEW](https://www.postgresql.org/docs/current/sql-createview.html) · postgresql.org · automatically updatable views and `WITH CHECK OPTION` (*read*) · covers our angle: **partial** — no page states "no parameters, no free performance" in one place · fetched 2026-10-12
@@ -60,6 +64,7 @@ Covers every topic row of phases 12 and 13 in `docs/postgresql/syllabus/04-perfo
 ### T12-11 · Materialized views and `REFRESH ... CONCURRENTLY` — Know · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/11-matviews.md`
 - **Read this:** [REFRESH MATERIALIZED VIEW](https://www.postgresql.org/docs/current/sql-refreshmaterializedview.html) · postgresql.org · `CONCURRENTLY` needs a UNIQUE index of plain columns and an already populated view; one refresh at a time (*read*) · covers our angle: full · fetched 2026-10-12
 - **Also good:** [Materialized Views](https://www.postgresql.org/docs/current/rules-materializedviews.html) · postgresql.org · how they differ from views (*headings only*, 915 words) · fetched 2026-10-12
+- **Beyond the docs:** [Creating and refreshing materialized views in PostgreSQL](https://www.cybertec-postgresql.com/en/creating-and-refreshing-materialized-views-in-postgresql/) · Hans-Jürgen Schönig, CYBERTEC, 06.2021 · shows the error you hit without a unique index and the bloat cost of `CONCURRENTLY` (it behaves like delete and insert), so you plan vacuuming · fetched 2026-10-13 (*read*)
 
 ### T12-12 · PL/pgSQL functions — Know · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/12-plpgsql.md`
 - **Read this:** [PL/pgSQL Overview](https://www.postgresql.org/docs/current/plpgsql-overview.html) · postgresql.org · grouping queries inside the server saves client/server round trips (*read*) · covers our angle: **partial** — the case for it, little on "when not to" · fetched 2026-10-12
@@ -67,6 +72,7 @@ Covers every topic row of phases 12 and 13 in `docs/postgresql/syllabus/04-perfo
 
 ### T12-13 · `LISTEN`/`NOTIFY` — Know · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/13-listen-notify.md`
 - **Read this:** [NOTIFY](https://www.postgresql.org/docs/current/sql-notify.html) · postgresql.org · delivered only on commit, in commit order, duplicates folded; send a record key rather than the data; a full queue fails commits (*read*) · covers our angle: **partial** — the at-most-once consequence is inferred from the listener rules, not stated as a headline · fetched 2026-10-12
+- **Beyond the docs:** [Postgres LISTEN/NOTIFY does not scale](https://www.recall.ai/blog/postgres-listen-notify-does-not-scale) · Elliot Levin, Recall.ai, 2025-07-01 (updated 2026-05-08) · a production outage story: `NOTIFY` takes a lock held to commit, serialising commits across the instance; the update notes a core fix, so check your version · fetched 2026-10-13 (*read*)
 - **Our delta:** the Node `pg` client's `notification` event and reconnect handling.
 
 ### T12-14 · Partitioning — Know · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/14-partitioning.md`
@@ -82,6 +88,7 @@ Covers every topic row of phases 12 and 13 in `docs/postgresql/syllabus/04-perfo
 
 ### T12-17 · `pgvector` — When Needed · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/17-pgvector.md`
 - **Read this:** [pgvector README (raw)](https://raw.githubusercontent.com/pgvector/pgvector/master/README.md) · github (raw) · distances (L2, inner product, cosine, L1, Hamming, Jaccard); HNSW is faster than IVFFlat at the cost of build time and memory; `hnsw.ef_search` defaults to 40 (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Tuning pgvector Performance](https://www.paradedb.com/learn/postgresql/tuning-pgvector) · James Blackwood-Sewell, ParadeDB, 2026-05-14 · practical tuning the README only lists: HNSW `m`, `ef_construction`, `hnsw.ef_search`, IVFFlat `lists` and `probes`, `maintenance_work_mem`, filtered search with iterative scans · fetched 2026-10-13 (*read*)
 - **Our delta:** the Node `pg` side (passing a vector as text); the README lists the operators `<->` (L2), `<#>` (negative inner product), `<=>` (cosine) and `<+>` (L1).
 
 ### T12-18 · The transactional outbox — Understand · ✅ written `docs/postgresql/pages/phase-12-beyond-tables/18-transactional-outbox.md`
@@ -160,6 +167,7 @@ Covers every topic row of phases 12 and 13 in `docs/postgresql/syllabus/04-perfo
 ### T13-16 · Logical replication — Know · ✅ written `docs/postgresql/pages/phase-13-ops/16-logical-replication.md`
 - **Read this:** [Logical Replication: Quick Setup](https://www.postgresql.org/docs/current/logical-replication-quick-setup.html) · postgresql.org · `CREATE PUBLICATION` then `CREATE SUBSCRIPTION`, initial sync, then streaming (*read*) · covers our angle: **partial** — nothing on the upgrade use · fetched 2026-10-12
 - **Also good:** [Restrictions](https://www.postgresql.org/docs/current/logical-replication-restrictions.html) · postgresql.org · schema and DDL are not replicated (*read*) · [Upgrading via Replication](https://www.postgresql.org/docs/current/upgrading.html) · postgresql.org · logical replication works across major versions (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Online Upgrades in Postgres](https://www.crunchydata.com/blog/online-upgrade-in-postgres) · James Chanco Jr., Crunchy Data blog, 2020-10-20 · an end-to-end walkthrough of the upgrade use: primary-key check, `wal_level`, schema via `pg_dump -s`, publication, subscription, verify row counts, drop the subscription after cutover (no cutover procedure itself); versions are old (11 to 12) · fetched 2026-10-13 (*read*)
 
 ### T13-17 · Major version upgrades — Know · ✅ written `docs/postgresql/pages/phase-13-ops/17-major-upgrades.md`
 - **Read this:** [Upgrading a PostgreSQL Cluster](https://www.postgresql.org/docs/current/upgrading.html) · postgresql.org · the three routes: `pg_dumpall`, `pg_upgrade`, replication (*read*) · covers our angle: full · fetched 2026-10-12

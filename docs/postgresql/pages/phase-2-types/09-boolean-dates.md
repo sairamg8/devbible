@@ -218,6 +218,7 @@ As a `PostgresInterval` object with only the non-zero fields. Convert with
 - **Also good:** [Boolean Type](https://www.postgresql.org/docs/current/datatype-boolean.html) — postgresql.org (headings only)
 - **Read this:** [Date/Time Types](https://www.postgresql.org/docs/current/datatype-datetime.html) — postgresql.org: input and output formats, interval input; ids `DATATYPE-INTERVAL-INPUT`, `DATATYPE-DATETIME-INPUT` (headings only)
 - **Read this:** [Date/Time Functions and Operators](https://www.postgresql.org/docs/current/functions-datetime.html) — postgresql.org: `EXTRACT`, `date_trunc`, `date_bin` (headings only)
+- **Beyond the docs:** [Time in PostgreSQL: the simple way](https://www.cybertec-postgresql.com/en/time-in-postgresql-the-simple-way/) — Hans-Jürgen Schönig, CYBERTEC: 2013-08-06, updated 2023-08
 
 {/* LINKMAP:END */}
 

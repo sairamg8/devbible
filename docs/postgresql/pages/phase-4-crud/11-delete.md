@@ -289,6 +289,7 @@ orders belonging to a soft-deleted user remained visible.
 
 - **Read this:** [DELETE (reference)](https://www.postgresql.org/docs/current/sql-delete.html) — postgresql.org: `USING` for join-deletes, `RETURNING` (*read* the synopsis)
 - **Also good:** [6.3. Deleting Data](https://www.postgresql.org/docs/current/dml-delete.html) — postgresql.org (*read* the opening)
+- **Beyond the docs:** [Soft deletion with PostgreSQL: but with logic on the database!](https://evilmartians.com/chronicles/soft-deletion-with-postgresql-but-with-logic-on-the-database) — evilmartians.com / Andrew Kozin and Travis Turner: 2022-05-16; the design side the DELETE reference lacks: soft deletion done in the database with views and rules, and its debuggability and schema-management costs
 
 {/* LINKMAP:END */}
 

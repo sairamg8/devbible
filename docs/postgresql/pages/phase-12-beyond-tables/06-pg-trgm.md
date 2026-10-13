@@ -290,6 +290,7 @@ both the hit and the noise.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [pg_trgm](https://www.postgresql.org/docs/current/pgtrgm.html) — postgresql.org: trigram indexes also support `LIKE`, `ILIKE`, `~`, `~*` and `=` (*read*)
+- **Beyond the docs:** [GiST vs GIN index for LIKE searches – a comparison](https://elephanttamer.net/?p=9) — Elephant Tamer blog, 2020-06-13: measured on 12 million rows: GIN built in about 3 minutes versus 12 for GiST, was far smaller, and answered suffix `LIKE` in 50-100 ms versus 1-3 s, so the docs' either-index choice has a clear winner
 
 {/* LINKMAP:END */}
 

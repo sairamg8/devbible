@@ -195,6 +195,7 @@ savepoint plus a caught `23505` on both round trips and overhead.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [SAVEPOINT](https://www.postgresql.org/docs/current/sql-savepoint.html) — postgresql.org: `ROLLBACK TO`, `RELEASE`, only inside a transaction block (*read*)
+- **Beyond the docs:** [PostgreSQL Subtransactions Considered Harmful](https://postgres.ai/blog/20210831-postgresql-subtransactions-considered-harmful) — Nikolay Samokhvalov, PostgresAI: what savepoints cost under load: XID growth, the 64-entry per-session cache, MultiXact contention, standby SLRU overflow; dated 2021-08-31, corrections listed 2025-09-22
 
 {/* LINKMAP:END */}
 

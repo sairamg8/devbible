@@ -22,6 +22,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 ### T04-02 · `WHERE` predicates — Master · ✅ written `docs/postgresql/pages/phase-4-crud/02-where-predicates.md`
 - **Read this:** [9.7. Pattern Matching](https://www.postgresql.org/docs/current/functions-matching.html) · postgresql.org · `LIKE`/`ILIKE` (noted as PostgreSQL-specific operators), `SIMILAR TO`, POSIX `~` regex (*read* the `ILIKE` passage; the regex part *headings only*) · covers our angle: **partial** — `BETWEEN` and `IN` live elsewhere · fetched 2026-10-12
 - **Also good:** [9.2. Comparison Functions and Operators](https://www.postgresql.org/docs/current/functions-comparison.html) · postgresql.org · `IS [NOT] DISTINCT FROM` returns true/false where `=` returns NULL (*read*) · [Don't Do This: BETWEEN](https://wiki.postgresql.org/wiki/Don't_Do_This) · wiki.postgresql.org · closed interval trap with timestamps; page last edited 21 Nov 2024 (*read*)
+- **Beyond the docs:** [The Three-Valued Logic of SQL](https://modern-sql.com/concept/three-valued-logic) · modern-sql.com / Markus Winand · undated page; states that WHERE keeps only rows whose condition is true, so an unknown result is rejected, which is the mechanism behind the NULL traps the manual only lists · fetched 2026-10-13 (*read*)
 - **Our delta:** the three-valued-logic story (`NULL` never equals) tying `IS DISTINCT FROM` to `WHERE`.
 
 ### T04-03 · `LIMIT`/`OFFSET` — Master · ✅ written `docs/postgresql/pages/phase-4-crud/03-limit-offset.md`
@@ -56,10 +57,12 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 
 ### T04-10 · `ORDER BY` — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/10-order-by.md`
 - **Read this:** [7.5. Sorting Rows (ORDER BY)](https://www.postgresql.org/docs/current/queries-order.html) · postgresql.org · `NULLS FIRST` is default for `DESC`, `NULLS LAST` otherwise; per-column options; sort by output label (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [NULL: Purpose, Comparisons, Expressions, and Mapping](https://modern-sql.com/concept/null) · modern-sql.com / Markus Winand · undated page; has a section on NULL in ORDER BY and notes the standard leaves NULL placement to vendors, which explains why PostgreSQL's default is a vendor choice · fetched 2026-10-13 (*read*)
 
 ### T04-11 · `DELETE` — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/11-delete.md`
 - **Read this:** [DELETE (reference)](https://www.postgresql.org/docs/current/sql-delete.html) · postgresql.org · `USING` for join-deletes, `RETURNING` (*read* the synopsis) · covers our angle: **partial** — nothing on soft delete as a design choice · fetched 2026-10-12
 - **Also good:** [6.3. Deleting Data](https://www.postgresql.org/docs/current/dml-delete.html) · postgresql.org (*read* the opening)
+- **Beyond the docs:** [Soft deletion with PostgreSQL: but with logic on the database!](https://evilmartians.com/chronicles/soft-deletion-with-postgresql-but-with-logic-on-the-database) · evilmartians.com / Andrew Kozin and Travis Turner · 2022-05-16; the design side the DELETE reference lacks: soft deletion done in the database with views and rules, and its debuggability and schema-management costs · fetched 2026-10-13 (*read*)
 - *Checked, not chosen:* soft-delete articles — none opened; our page owns that argument.
 
 ### T04-12 · `DISTINCT` and `DISTINCT ON` — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/12-distinct-on.md`
@@ -73,10 +76,12 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 
 ### T04-14 · `TRUNCATE` vs `DELETE` — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/14-truncate.md`
 - **Read this:** [TRUNCATE (reference)](https://www.postgresql.org/docs/current/sql-truncate.html) · postgresql.org · faster because it does not scan; `RESTART IDENTITY`; not MVCC-safe for old snapshots; transaction-safe for the data (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [The Mystery of The Zombie Postgres Row](https://www.endpointdev.com/blog/2012/03/postgres-mvcc-mystery-truncate-delete/) · endpointdev.com / Greg Sabino Mullane · 2012-03-14; a concrete incident showing why TRUNCATE is not MVCC safe, where the reference only states it; older, so check version details against the manual · fetched 2026-10-13 (*read*)
 
 ### T04-15 · Expressions and operators — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/15-expressions.md`
 - **Read this:** [9.18. Conditional Expressions](https://www.postgresql.org/docs/current/functions-conditional.html) · postgresql.org · `CASE`, `COALESCE`, `NULLIF`, `GREATEST`/`LEAST` (*read* `COALESCE`; ids `FUNCTIONS-CASE`, `FUNCTIONS-COALESCE-NVL-IFNULL`, `FUNCTIONS-GREATEST-LEAST` exist) · covers our angle: **partial** — arithmetic and `||` are on other pages · fetched 2026-10-12
 - **Also good:** [9.3. Mathematical Functions and Operators](https://www.postgresql.org/docs/current/functions-math.html) · postgresql.org (*headings only*)
+- **Beyond the docs:** [NULL: Purpose, Comparisons, Expressions, and Mapping](https://modern-sql.com/concept/null) · modern-sql.com / Markus Winand · undated page (the NULL concept page, same site); covers COALESCE and NULLIF as mapping to and from NULL, with propagation rules the function reference does not draw together · fetched 2026-10-13 (*read*)
 
 ### T04-16 · String functions — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/16-string-functions.md`
 - **Read this:** [9.4. String Functions and Operators](https://www.postgresql.org/docs/current/functions-string.html) · postgresql.org · `concat_ws`, `format` (printf-like), `split_part` (*read* examples) · covers our angle: full · fetched 2026-10-12
@@ -92,6 +97,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 ### T04-19 · `VALUES` and `unnest` — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/19-values-unnest.md`
 - **Read this (1/2):** [7.7. VALUES Lists](https://www.postgresql.org/docs/current/queries-values.html) · postgresql.org · a "constant table" with no on-disk table (*read* the opening) · covers our angle: **partial** · fetched 2026-10-12
 - **Read this (2/2):** [9.19. Array Functions → unnest](https://www.postgresql.org/docs/current/functions-array.html) · postgresql.org · multi-array `unnest(a, b, ...)` expands several arrays into columns (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [Boosting Postgres INSERT Performance by 2x With UNNEST](https://www.tigerdata.com/blog/boosting-postgres-insert-performance) · tigerdata.com / James Blackwood-Sewell · 2024-11-15; measures unnest arrays against multi-row VALUES inserts and attributes the gain to planning time, not execution · fetched 2026-10-13 (*read*)
 - **Our delta:** the `INSERT ... SELECT * FROM unnest($1::int[], $2::text[])` pattern from Node.
 
 ### T04-20 · Row constructors and tuple comparison — Understand · ✅ written `docs/postgresql/pages/phase-4-crud/20-tuple-comparison.md`
@@ -106,6 +112,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 ### T05-01 · `INNER JOIN` — Master · ✅ written `docs/postgresql/pages/phase-5-joins/01-inner-join/README.md`
 - **Read this:** [2.6. Joins Between Tables](https://www.postgresql.org/docs/current/tutorial-join.html) · postgresql.org · tutorial from a first join to `LEFT OUTER JOIN` and a self join (*read* the self-join passage) · covers our angle: **partial** — "what a join actually produces" is better argued in 7.2 · fetched 2026-10-12
 - **Also good:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) · postgresql.org · `INNER` is the default; defines each join type by its rows (*read*)
+- **Beyond the docs:** [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/) · blog.codinghorror.com / Jeff Atwood · 11 Oct 2007; works inner, outer and cross joins on two four-row tables with the result rows shown, and notes where the Venn-diagram picture breaks (a cross join, 4 x 4 = 16 rows, cannot be drawn as one) · fetched 2026-10-13 (*read*)
 
 ### T05-02 · `LEFT JOIN` and the `WHERE` bug — Master · ✅ written `docs/postgresql/pages/phase-5-joins/02-left-join/README.md`
 - **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) · postgresql.org · defines the outer join, then shows a `LEFT JOIN` with the restriction in `ON` versus in `WHERE` and says the `ON` one is processed before the join, the `WHERE` one after, which "matters a lot with outer joins" (*read*) · covers our angle: full for the mechanism · fetched 2026-10-12
@@ -115,6 +122,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 ### T05-03 · Semi and anti joins; `NOT IN` NULL trap — Master · ✅ written `docs/postgresql/pages/phase-5-joins/03-semi-anti/README.md`
 - **Read this (1/2):** [9.24. Subquery Expressions](https://www.postgresql.org/docs/current/functions-subquery.html#FUNCTIONS-SUBQUERY-EXISTS) · postgresql.org · `EXISTS`, `IN`, `NOT IN` sections; `IN` yields null, not false, when a null is in play (*read*) · covers our angle: **partial** — no planner (semi/anti join) talk · fetched 2026-10-12
 - **Read this (2/2):** [Don't Do This → Don't use NOT IN](https://wiki.postgresql.org/wiki/Don't_Do_This) · wiki.postgresql.org · `NOT IN (1,null)` always returns 0 rows; rewrite as `NOT EXISTS`; edited 21 Nov 2024 (*read*) · fetched 2026-10-12
+- **Beyond the docs:** [NOT IN vs. NOT EXISTS vs. LEFT JOIN / IS NULL: PostgreSQL](https://explainextended.com/2009/09/16/not-in-vs-not-exists-vs-left-join-is-null-postgresql/) · explainextended.com / Quassnoi · 2009-09-16; compares the three anti-join forms with plans: NOT EXISTS and LEFT JOIN / IS NULL both get a hash anti join, NOT IN uses a hashed subplan and was slightly slower (1.34 s against about 1.1 s in its test); written for PostgreSQL 8.4, so treat timings as dated · fetched 2026-10-13 (*read*)
 
 ### T05-04 · Multi-table joins and readable layout — Understand · ✅ written `docs/postgresql/pages/phase-5-joins/04-multi-join.md`
 - **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) · postgresql.org · without parentheses `JOIN`s nest left to right; parentheses control order (*read*) · covers our angle: **partial** — nothing on formatting style · fetched 2026-10-12
@@ -132,6 +140,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 
 ### T05-08 · `ON` vs `USING` vs `NATURAL JOIN` — Understand · ✅ written `docs/postgresql/pages/phase-5-joins/08-on-using-natural.md`
 - **Read this:** [7.2.1.1 Joined Tables](https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN) · postgresql.org · the three forms side by side (*read* the syntax block) · covers our angle: **partial** — no "never use NATURAL" argument · fetched 2026-10-12
+- **Beyond the docs:** [Why JOIN USING Can Lead to Errors in SQL](https://blog.jooq.org/why-join-using-can-lead-to-errors-in-sql/) · blog.jooq.org / Lukas Eder · 2026-05-04; shows NATURAL JOIN joining on every shared column name, so a new same-named column changes the join, and JOIN USING failing with an ambiguity error (PostgreSQL: common column name appears more than once) after an ALTER TABLE, where ON survives · fetched 2026-10-13 (*read*)
 - **Our delta:** why `NATURAL` breaks when a column is added — **not confirmed** on a page I read.
 
 ### T05-09 · Self joins — Understand · ✅ written `docs/postgresql/pages/phase-5-joins/09-self-join.md`
@@ -162,6 +171,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 ### T06-02 · `count(*)` vs `count(col)` vs `count(DISTINCT col)` — Master · ✅ written `docs/postgresql/pages/phase-6-aggregation/02-count-variants/README.md`
 - **Read this:** [9.21. Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html) · postgresql.org · `count(*)` counts input rows; `count(any)` counts rows where the value is not null (*read* the table) · covers our angle: **partial** — `DISTINCT` form is in 4.2.7, not here · fetched 2026-10-12
 - **Also good:** [4.2.7 Aggregate Expressions](https://www.postgresql.org/docs/current/sql-expressions.html#SYNTAX-AGGREGATES) · postgresql.org · the `aggregate_name (DISTINCT expression)` and `FILTER` syntax (*read* the syntax)
+- **Beyond the docs:** [What's Faster? COUNT(*) or COUNT(1)?](https://blog.jooq.org/whats-faster-count-or-count1/) · blog.jooq.org / Lukas Eder · 2019-09-19, updated 2022-03-23; benchmarks count(*) against count(1) on PostgreSQL (about 10 percent faster for count(*)) and explains the per-row NULL check · fetched 2026-10-13 (*read*)
 
 ### T06-03 · `HAVING` vs `WHERE` — Master · ✅ written `docs/postgresql/pages/phase-6-aggregation/03-having/README.md`
 - **Read this:** [2.7. Aggregate Functions](https://www.postgresql.org/docs/current/tutorial-agg.html) · postgresql.org · `HAVING` filters grouped rows, `WHERE` filters before grouping (*read*) · covers our angle: full · fetched 2026-10-12
@@ -186,12 +196,15 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 
 ### T06-09 · CTEs and the `MATERIALIZED` rule — Understand · ✅ written `docs/postgresql/pages/phase-6-aggregation/09-ctes/README.md`
 - **Read this:** [7.8.3 CTE Materialization](https://www.postgresql.org/docs/current/queries-with.html#QUERIES-WITH-CTE-MATERIALIZATION) · postgresql.org · merged into the parent when referenced once, not more; `MATERIALIZED`/`NOT MATERIALIZED` override (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Waiting for PostgreSQL 12 - Allow user control of CTE materialization, and change the default behavior](https://www.depesz.com/2019/02/19/waiting-for-postgresql-12-allow-user-control-of-cte-materialization-and-change-the-default-behavior/) · depesz.com / depesz · 2019-02-19, updated 2019-05-15; quotes the commit and shows what changed from the old always-materialize fence to inlining a CTE referenced once · fetched 2026-10-13 (*read*)
 
 ### T06-10 · Data-modifying CTEs — Understand · ✅ written `docs/postgresql/pages/phase-6-aggregation/10-modifying-ctes/README.md`
 - **Read this:** [7.8.4 Data-Modifying Statements in WITH](https://www.postgresql.org/docs/current/queries-with.html#QUERIES-WITH-MODIFYING) · postgresql.org · all statements share one snapshot and cannot see each other's effects; `RETURNING` is the only way to pass data (*read*) · covers our angle: full · fetched 2026-10-12
+- **Beyond the docs:** [Tuple shuffling: Postgres CTEs for Moving and Deleting Table Data](https://www.crunchydata.com/blog/tuple-shuffling-postgres-ctes-for-update-and-delete-table-data) · crunchydata.com / David Christensen · 2023-11-02; a worked archive pattern, DELETE with RETURNING feeding an INSERT in one statement and so one transaction · fetched 2026-10-13 (*read*)
 
 ### T06-11 · Scalar, row and correlated subqueries — Understand · ✅ written `docs/postgresql/pages/phase-6-aggregation/11-subqueries/README.md`
 - **Read this:** [9.24. Subquery Expressions](https://www.postgresql.org/docs/current/functions-subquery.html) · postgresql.org · `EXISTS`, `IN`, `ANY`, single-row comparison (*read* the opening) · covers our angle: **partial** — correlated-subquery cost (the N+1) is not discussed; scalar subqueries are in 4.2.11 (**not opened**) · fetched 2026-10-12
+- **Beyond the docs:** [Optimizing Correlated Subqueries with Semi Joins in PostgreSQL and YugabyteDB](https://www.yugabyte.com/blog/correlated-subqueries-with-semi-joins/) · yugabyte.com / Mark Peacock · 2025-03-20; shows a correlated EXISTS running as a per-row SubPlan versus being decorrelated into a semi join, the cost angle the manual page omits (the worked case is YugabyteDB, which is PostgreSQL-compatible; the site returns 403 to curl but loads in a fetch tool) · fetched 2026-10-13 (*read*)
 
 ### T06-12 · Counting for pagination — Understand · ✅ written `docs/postgresql/pages/phase-6-aggregation/12-pagination-counts/README.md`
 - **Read this:** [PostgreSQL count(*) made fast](https://www.cybertec-postgresql.com/en/postgresql-count-made-fast/) · cybertec-postgresql.com · 2019-04-03, modified 2024-03-05; why it is slow, index-only scan, aggregate table, and an `EXPLAIN`-based estimate function (*read* the estimate section) · covers our angle: **partial** — no `limit + 1` "has more" trick · fetched 2026-10-12
@@ -204,6 +217,7 @@ Covers all 49 topic rows of `docs/postgresql/syllabus/02-sql.md`: T04-01 to T04-
 ### T06-14 · Frame clauses — Know · ✅ written `docs/postgresql/pages/phase-6-aggregation/14-frames/README.md`
 - **Read this:** [4.2.8 Window Function Calls](https://www.postgresql.org/docs/current/sql-expressions.html#SYNTAX-WINDOW-FUNCTIONS) · postgresql.org · frame clause syntax covering `ROWS`, `RANGE`, `GROUPS`, `EXCLUDE` (*read* the syntax) · covers our angle: **partial** — no running-total example on this page · fetched 2026-10-12
 - **Also good:** [3.5. Window Functions](https://www.postgresql.org/docs/current/tutorial-window.html) · postgresql.org · `sum(salary) OVER (ORDER BY salary)` gives running sums, and the default frame is explained (*read*) · [9.22 Window Functions](https://www.postgresql.org/docs/current/functions-window.html) · postgresql.org · says which functions depend on the frame (*read*)
+- **Beyond the docs:** [PostgreSQL 11's Support for SQL Standard GROUPS and EXCLUDE Window Function Clauses](https://blog.jooq.org/postgresql-11s-support-for-sql-standard-groups-and-exclude-window-function-clauses/) · blog.jooq.org / Lukas Eder · 2018-07-05, updated 2018-10-02; one-line contrast of ROWS counting rows, RANGE using value offsets and GROUPS counting tied groups · fetched 2026-10-13 (*read*)
 
 ### T06-15 · Recursive CTEs — Know · ✅ written `docs/postgresql/pages/phase-6-aggregation/15-recursive-cte/README.md`
 - **Read this:** [7.8.2 Recursive Queries](https://www.postgresql.org/docs/current/queries-with.html#QUERIES-WITH-RECURSIVE) · postgresql.org · includes Cycle Detection (7.8.2.2): path arrays, `UNION` vs `UNION ALL`, the `CYCLE` clause (*read*) · covers our angle: full · fetched 2026-10-12

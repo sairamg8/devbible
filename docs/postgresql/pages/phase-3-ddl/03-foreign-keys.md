@@ -235,6 +235,7 @@ natural and mutable, which is an argument for a surrogate key instead.
 
 - **Read this:** [Constraints · Foreign Keys](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-FK) — postgresql.org: declaring a foreign key "does not automatically create an index on the referencing columns" (*read*)
 - **Also good:** [CREATE TABLE · REFERENCES](https://www.postgresql.org/docs/current/sql-createtable.html#SQL-CREATETABLE-PARMS-REFERENCES) — postgresql.org: ids for each action, e.g. `SQL-CREATETABLE-PARMS-REFERENCES-REFACT-CASCADE`, `-SET-NULL`, `-RESTRICT` (headings only)
+- **Beyond the docs:** [PostgreSQL: Indexes and foreign keys](https://www.cybertec-postgresql.com/en/postgresql-indexes-and-foreign-keys/) — CYBERTEC (Hans-Jürgen Schönig): published 2017-07-20
 
 {/* LINKMAP:END */}
 

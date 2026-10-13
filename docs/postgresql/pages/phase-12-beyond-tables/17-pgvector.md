@@ -273,6 +273,7 @@ and is exactly correct — no build time, no index storage, no recall question.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [pgvector README (raw)](https://raw.githubusercontent.com/pgvector/pgvector/master/README.md) — github (raw): distances (L2, inner product, cosine, L1, Hamming, Jaccard); HNSW is faster than IVFFlat at the cost of build time and memory; `hnsw.ef_search` defaults to 40 (*read*)
+- **Beyond the docs:** [Tuning pgvector Performance](https://www.paradedb.com/learn/postgresql/tuning-pgvector) — James Blackwood-Sewell, ParadeDB, 2026-05-14: practical tuning the README only lists: HNSW `m`, `ef_construction`, `hnsw.ef_search`, IVFFlat `lists` and `probes`, `maintenance_work_mem`, filtered search with iterative scans
 
 {/* LINKMAP:END */}
 

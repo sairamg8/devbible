@@ -66,6 +66,7 @@ rolling 7-day window that survives a day with no data, and explain `EXCLUDE GROU
 - **Read this:** [4.2.8 Window Function Calls](https://www.postgresql.org/docs/current/sql-expressions.html#SYNTAX-WINDOW-FUNCTIONS) — postgresql.org: frame clause syntax covering `ROWS`, `RANGE`, `GROUPS`, `EXCLUDE` (*read* the syntax)
 - **Also good:** [3.5. Window Functions](https://www.postgresql.org/docs/current/tutorial-window.html) — postgresql.org: `sum(salary) OVER (ORDER BY salary)` gives running sums, and the default frame is explained (*read*)
 - **Also good:** [9.22 Window Functions](https://www.postgresql.org/docs/current/functions-window.html)
+- **Beyond the docs:** [PostgreSQL 11's Support for SQL Standard GROUPS and EXCLUDE Window Function Clauses](https://blog.jooq.org/postgresql-11s-support-for-sql-standard-groups-and-exclude-window-function-clauses/) — blog.jooq.org / Lukas Eder: 2018-07-05, updated 2018-10-02; one-line contrast of ROWS counting rows, RANGE using value offsets and GROUPS counting tied groups
 
 {/* LINKMAP:END */}
 

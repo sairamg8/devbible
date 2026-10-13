@@ -219,6 +219,7 @@ why WAL volume — not just query time — is a design constraint for write-heav
 
 - **Read this:** [3.4 Transactions (tutorial)](https://www.postgresql.org/docs/current/tutorial-transactions.html) — postgresql.org: a transaction bundles steps into one all-or-nothing operation; atomic, and durable once acknowledged (*read*)
 - **Also good:** [13.1 Introduction (Concurrency Control)](https://www.postgresql.org/docs/current/mvcc-intro.html) — postgresql.org: the isolation side: each statement sees a snapshot (*read*)
+- **Beyond the docs:** [How Postgres Makes Transactions Atomic](https://brandur.org/postgres-atomicity) — brandur: follows a commit through `xmin`/`xmax`, snapshots, the WAL flush and the commit log, so atomicity and durability are seen in mechanism; advanced; dated 2017-08-16
 
 {/* LINKMAP:END */}
 

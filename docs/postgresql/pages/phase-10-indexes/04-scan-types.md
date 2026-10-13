@@ -180,6 +180,7 @@ Turn off the plan type it chose, re-run `EXPLAIN (ANALYZE, BUFFERS)`, and compar
 
 - **Read this:** [14.1 Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — postgresql.org: worked plans for `Seq Scan`, `Index Scan` and the two-step `Bitmap Index Scan` then `Bitmap Heap Scan` with `Recheck Cond` (*read*)
 - **Also good:** [11.5 Combining Multiple Indexes](https://www.postgresql.org/docs/current/indexes-bitmap-scans.html) — postgresql.org: bitmaps ANDed and ORed in memory, rows then visited in physical order (*read*)
+- **Beyond the docs:** [PostgreSQL indexing: index scan vs bitmap scan vs sequential scan](https://www.cybertec-postgresql.com/en/postgresql-indexing-index-scan-vs-bitmap-scan-vs-sequential-scan-basics/) — Hans-Jürgen Schönig, Cybertec: one 10-million-row table showing when the planner flips between the three scan types, and why `ANALYZE` matters; beginner level; posted 2018-02
 
 {/* LINKMAP:END */}
 

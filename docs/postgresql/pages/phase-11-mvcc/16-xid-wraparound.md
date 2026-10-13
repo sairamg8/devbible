@@ -228,6 +228,7 @@ table. A table nobody touches still ages.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [24.1 Routine Vacuuming, "Preventing Transaction ID Wraparound Failures"](https://www.postgresql.org/docs/current/routine-vacuuming.html) — postgresql.org: 32-bit XIDs wrap after about 4 billion; vacuum every table at least once every two billion transactions (*read*)
+- **Beyond the docs:** [Transaction ID Wraparound in Postgres](https://blog.sentry.io/transaction-id-wraparound-in-postgres/) — David Cramer, Sentry: a production outage account: what the stop-accepting-writes state looks like and how recovery went; dated 2015-07-23, so mechanism only, not current settings
 
 {/* LINKMAP:END */}
 

@@ -216,6 +216,7 @@ Ordinary inserts are enough to deadlock if two sessions do them in opposite orde
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [13.3 Explicit Locking, section "Deadlocks"](https://www.postgresql.org/docs/current/explicit-locking.html) — postgresql.org: automatic detection aborts one transaction; which one is "difficult to predict"; acquire locks in a consistent order (*read*)
+- **Beyond the docs:** [PostgreSQL: understanding deadlocks](https://www.cybertec-postgresql.com/en/postgresql-understanding-deadlocks/) — Hans-Jürgen Schönig, Cybertec: step-by-step timeline of two sessions deadlocking and the reorder fix; also states the `deadlock_timeout` default of 1 second that our delta could not confirm from the docs page; posted 2021-04
 
 {/* LINKMAP:END */}
 

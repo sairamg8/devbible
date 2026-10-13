@@ -104,6 +104,7 @@ Background workers share the view; filter on `backend_type` or `datname`.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Glossary](https://www.postgresql.org/docs/current/glossary.html) — postgresql.org: defines instance, postmaster, backend, auxiliary processes (autovacuum launcher, background writer, checkpointer, WAL writer) (*read*)
+- **Beyond the docs:** [Process Architecture](https://www.interdb.jp/pg/pgsql02/01.html) — Hironobu Suzuki, *The Internals of PostgreSQL*: separates the postmaster, backend and background processes and tabulates each background process with a pointer to the chapter that explains it
 
 {/* LINKMAP:END */}
 

@@ -47,6 +47,7 @@ called standalone and inside a transaction without knowing which is happening.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Suggested Code Structure](https://node-postgres.com/guides/project-structure) — node-postgres.com: one `db/index.js` exports `query` and `getClient`, so logging and leak tracing live in one place (*read*)
+- **Beyond the docs:** [Fully featured Repository pattern with TypeScript and the native PostgreSQL driver](https://dev.to/fyapy/fully-featured-repository-pattern-with-typescript-and-native-postgresql-driver-4f2j) — dev.to, aabdullin (2022-03-20, edited 2022-04-19): a generic repository on raw `pg` where each method takes an optional transaction client and otherwise borrows and releases a pooled one; class-based and skips relations, unlike our plain functions
 
 {/* LINKMAP:END */}
 

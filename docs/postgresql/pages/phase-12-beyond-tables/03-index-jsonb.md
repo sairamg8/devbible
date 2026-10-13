@@ -257,6 +257,7 @@ for the hot path.
 
 - **Read this:** [JSON Types, section "jsonb Indexing"](https://www.postgresql.org/docs/current/datatype-json.html) — postgresql.org: default GIN class versus `jsonb_path_ops` (no key-exists operators, supports `@&gt;`, `@?`, `@@`) (*read*)
 - **Also good:** [CREATE INDEX](https://www.postgresql.org/docs/current/sql-createindex.html) — postgresql.org: the expression-index syntax (*headings only*; synopsis seen)
+- **Beyond the docs:** [Indexing JSONB in Postgres](https://www.crunchydata.com/blog/indexing-jsonb-in-postgres) — Craig Kerstiens, Crunchy Data blog, 2025-08-11: fills the gap the docs leave: when GIN helps versus a B-tree expression index on one hot key (the query expression must match the index), plus GIN write overhead and bloat; does not mention `jsonb_path_ops`
 
 {/* LINKMAP:END */}
 

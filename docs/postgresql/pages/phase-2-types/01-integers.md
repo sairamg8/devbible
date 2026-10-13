@@ -206,6 +206,7 @@ several such columns packed together.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [Numeric Types · Integer Types](https://www.postgresql.org/docs/current/datatype-numeric.html#DATATYPE-INT) — postgresql.org: range table: smallint -32768 to +32767, integer -2147483648 to +2147483647, bigint -9223372036854775808 to +9223372036854775807 (*read*)
+- **Beyond the docs:** [Error: nextval: reached maximum value of sequence](https://www.cybertec-postgresql.com/en/error-nextval-reached-maximum-value-of-sequence/) — Hans-Jürgen Schönig, CYBERTEC: 2022-09-06
 
 {/* LINKMAP:END */}
 

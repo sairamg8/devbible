@@ -201,6 +201,7 @@ the information you want.
 
 - **Read this:** [Dependency Tracking](https://www.postgresql.org/docs/current/ddl-depend.html) — postgresql.org: `RESTRICT` is the default and blocks dropping objects others depend on; `CASCADE` drops dependents (*read*)
 - **Also good:** [DROP TABLE](https://www.postgresql.org/docs/current/sql-droptable.html) — postgresql.org (headings only)
+- **Beyond the docs:** [Managing object dependencies in PostgreSQL: Removing dependent objects (Part 2)](https://aws.amazon.com/blogs/database/managing-object-dependencies-in-postgresql-removing-dependent-objects-part2/) — AWS Database Blog: 2024-05-06
 
 {/* LINKMAP:END */}
 

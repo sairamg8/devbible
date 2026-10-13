@@ -65,6 +65,7 @@ table by asking one question about its indexes.
 
 - **Read this:** [9.21. Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html) — postgresql.org: `count(*)` counts input rows; `count(any)` counts rows where the value is not null (*read* the table)
 - **Also good:** [4.2.7 Aggregate Expressions](https://www.postgresql.org/docs/current/sql-expressions.html#SYNTAX-AGGREGATES) — postgresql.org: the `aggregate_name (DISTINCT expression)` and `FILTER` syntax (*read* the syntax)
+- **Beyond the docs:** [What's Faster? COUNT(*) or COUNT(1)?](https://blog.jooq.org/whats-faster-count-or-count1/) — blog.jooq.org / Lukas Eder: 2019-09-19, updated 2022-03-23; benchmarks count(*) against count(1) on PostgreSQL (about 10 percent faster for count(*)) and explains the per-row NULL check
 
 {/* LINKMAP:END */}
 

@@ -252,6 +252,7 @@ iteration speed matter more.
 
 - **Read this:** [9.18. Conditional Expressions](https://www.postgresql.org/docs/current/functions-conditional.html) — postgresql.org: `CASE`, `COALESCE`, `NULLIF`, `GREATEST`/`LEAST` (*read* `COALESCE`; ids `FUNCTIONS-CASE`, `FUNCTIONS-COALESCE-NVL-IFNULL`, `FUNCTIONS-GREATEST-LEAST` exist)
 - **Also good:** [9.3. Mathematical Functions and Operators](https://www.postgresql.org/docs/current/functions-math.html) — postgresql.org (*headings only*)
+- **Beyond the docs:** [NULL: Purpose, Comparisons, Expressions, and Mapping](https://modern-sql.com/concept/null) — modern-sql.com / Markus Winand: undated page (the NULL concept page, same site); covers COALESCE and NULLIF as mapping to and from NULL, with propagation rules the function reference does not draw together
 
 {/* LINKMAP:END */}
 

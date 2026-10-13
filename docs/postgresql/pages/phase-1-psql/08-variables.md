@@ -243,6 +243,7 @@ The `:ROW_COUNT` variable, set after each statement.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [psql · SQL Interpolation](https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-INTERPOLATION) — postgresql.org: the three colon forms, `:&#123;?name&#125;` to test a variable (*read*)
+- **Beyond the docs:** [Variables in psql, how to use them?](https://www.depesz.com/2023/05/28/variables-in-psql-how-to-use-them/) — depesz: 2023-05-28
 
 {/* LINKMAP:END */}
 

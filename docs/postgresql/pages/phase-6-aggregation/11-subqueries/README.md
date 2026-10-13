@@ -58,6 +58,7 @@ You are done when you can spot a correlated subquery in a plan without being tol
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [9.24. Subquery Expressions](https://www.postgresql.org/docs/current/functions-subquery.html) — postgresql.org: `EXISTS`, `IN`, `ANY`, single-row comparison (*read* the opening)
+- **Beyond the docs:** [Optimizing Correlated Subqueries with Semi Joins in PostgreSQL and YugabyteDB](https://www.yugabyte.com/blog/correlated-subqueries-with-semi-joins/) — yugabyte.com / Mark Peacock: 2025-03-20; shows a correlated EXISTS running as a per-row SubPlan versus being decorrelated into a semi join, the cost angle the manual page omits (the worked case is YugabyteDB, which is PostgreSQL-compatible; the site returns 4
 
 {/* LINKMAP:END */}
 

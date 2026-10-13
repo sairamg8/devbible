@@ -201,6 +201,7 @@ transaction, which makes it invisible to everyone, and VACUUM removes it later.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [13.1 Introduction (Concurrency Control)](https://www.postgresql.org/docs/current/mvcc-intro.html) — postgresql.org: each statement sees a snapshot; "reading never blocks writing and writing never blocks reading" (*read*)
+- **Beyond the docs:** [MVCC in PostgreSQL, 4. Snapshots](https://postgrespro.com/blog/pgsql/5967899) — Egor Rogov, Postgres Professional: snapshot contents (`xmin`, `xmax`, active list), per-statement versus per-transaction snapshots and the vacuum horizon, with SQL you can run; dated 2020-12-04
 
 {/* LINKMAP:END */}
 

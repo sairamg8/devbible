@@ -282,6 +282,7 @@ assertions do not catch.
 - **Read this:** [Testcontainers for NodeJS: PostgreSQL module](https://node.testcontainers.org/modules/postgresql/) — node.testcontainers.org: `PostgreSqlContainer`, `getConnectionUri()`, snapshots (not with the `postgres` database) (*read*)
 - **Also good:** [Getting started with Testcontainers for Node.js](https://testcontainers.com/guides/getting-started-with-testcontainers-for-nodejs/) — testcontainers.com: `pg` plus `jest` with the PostgreSQL module (*read*)
 - **Also good:** [Database Test Isolation](https://eradman.com/posts/database-test-isolation.html)
+- **Beyond the docs:** [Transaction rollback test isolation for PostgreSQL](https://qaskills.sh/blog/transaction-rollback-test-isolation-postgres) — qaskills.sh (2026-07-13, no named author): per-test `BEGIN`/`ROLLBACK` with a Vitest and `pg` harness, and the pitfalls: a second pooled connection cannot see uncommitted fixtures, sequences still advance, deferred constraints never fire
 
 {/* LINKMAP:END */}
 

@@ -243,6 +243,7 @@ accounts that are distinct rows and wrong data.
 - **Read this:** [UUID, serial or identity columns for PostgreSQL auto-generated primary keys?](https://www.cybertec-postgresql.com/en/uuid-serial-or-identity-columns-for-postgresql-auto-generated-primary-keys/) — CYBERTEC: published 2021-05-20, modified 2024-03-05
 - **Also good:** [Don't Do This · serial](https://wiki.postgresql.org/wiki/Don%27t_Do_This) — postgresql.org wiki: "For new applications, identity columns should be used instead" (*read*; last edited 2024-11-21)
 - **Also good:** [Primary Keys](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-PRIMARY-KEYS)
+- **Beyond the docs:** [Database Normalization and Primary Keys](https://tapoueh.org/blog/2018/03/database-normalization-and-primary-keys/) — Dimitri Fontaine (tapoueh.org): 2018-03-09
 
 {/* LINKMAP:END */}
 

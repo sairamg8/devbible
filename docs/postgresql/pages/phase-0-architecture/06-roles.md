@@ -109,6 +109,7 @@ superuser, not arbitrary DDL in production traffic paths.
 
 - **Read this:** [Database Roles](https://www.postgresql.org/docs/current/database-roles.html) — postgresql.org: roles are separate from OS users and global to the cluster (*read*)
 - **Also good:** [Role Membership](https://www.postgresql.org/docs/current/role-membership.html) — postgresql.org: groups are roles; the `INHERIT` option decides whether privileges flow (*read*)
+- **Beyond the docs:** [PostgreSQL Role Membership](https://neon.com/postgresql/administration/role-membership) — Neon: worked `GRANT`/`REVOKE` examples with a group role and a member who inherits its privileges; `NOINHERIT` is only shown in a `CREATE ROLE`, not tested, and `SET ROLE` is not explained
 
 {/* LINKMAP:END */}
 

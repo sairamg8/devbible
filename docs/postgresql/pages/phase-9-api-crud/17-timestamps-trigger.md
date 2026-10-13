@@ -236,6 +236,7 @@ Not a `BEFORE UPDATE` one. Give the column `DEFAULT now()` as well, or add
 
 - **Read this:** [F.41. spi → moddatetime](https://www.postgresql.org/docs/current/contrib-spi.html) — postgresql.org: a `BEFORE UPDATE` trigger storing the current time in a named column (*read*)
 - **Also good:** [PL/pgSQL Trigger Functions](https://www.postgresql.org/docs/current/plpgsql-trigger.html) — postgresql.org: the `emp_stamp` example sets `last_date` and `last_user` in `BEFORE` (*read*)
+- **Beyond the docs:** [Last-updated columns with Postgres](https://www.morling.dev/blog/last-updated-columns-with-postgres) — morling.dev, Gunnar Morling (2024-02-20): a no-trigger alternative: set the column to `DEFAULT` in every `UPDATE` so the database clock supplies it; honest about the cost, every statement must remember it
 
 {/* LINKMAP:END */}
 
