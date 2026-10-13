@@ -230,6 +230,16 @@ In JSX text, yes — the compiler resolves them into the actual characters. Insi
 Put the string in an expression — a template literal keeps its newlines — and
 make sure CSS does not collapse them, with `<pre>` or `white-space: pre-wrap`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JSX In Depth](https://legacy.reactjs.org/docs/jsx-in-depth.html) — legacy React docs: JSX trims leading and trailing whitespace per line, drops blank lines, removes newlines adjacent to tags, and collapses newlines inside text to one space (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Form elements in JSX](13-form-elements/README.md) · Index: [Phase 1](README.md) · Next → [The classic runtime](15-the-classic-runtime.md)

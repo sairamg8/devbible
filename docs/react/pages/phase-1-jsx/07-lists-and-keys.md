@@ -260,6 +260,17 @@ No. Measured: after the first offending list with a given parent tag warns,
 later ones — even in other components — stay silent. Absence of the warning
 proves nothing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Rendering Lists](https://react.dev/learn/rendering-lists) — react.dev: keys come from data and must not be generated during render; index keys break on insert, delete, reorder; put the key on the component element, not its inner root (*read*)
+- **Beyond the docs:** [Index as a key is an anti-pattern](https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/) — Robin Pokorny, 2015-10-11: explains how a reused key matches the wrong element after a removal; no input-state example, so pair with our page
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Conditional rendering](06-conditional-rendering.md) · Index: [Phase 1](README.md) · Next → [Fragments](08-fragments.md)

@@ -270,6 +270,18 @@ component *has*. Declarations do not happen conditionally, so the correct restru
 splitting the component so each variant declares its own needs — becomes the obvious
 move instead of a workaround for a linter rule.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Why Do React Hooks Rely on Call Order?](https://overreacted.io/why-do-hooks-rely-on-call-order/) — Dan Abramov, 2018-12-13: why Hooks are matched by call order; written at the proposal stage, so it argues a design choice and does not walk the implementation (*headings only*)
+- **Also good:** [Rules of Hooks](https://react.dev/reference/rules/rules-of-hooks) — react.dev: the official statement of the rules (*read*)
+- **Beyond the docs:** [You Can't Use Hooks Conditionally… or Can You?](https://gitnation.com/contents/you-cant-use-hooks-conditionally-or-can-you) — Charlotte Isambert, React Summit 2023 (page dated 2023-06-02): a talk page whose abstract builds a mental model of how React keeps track of props, state, refs and context at runtime to explain why the rule exists; the video itself I did not watch, so I judge it from the abstract and FAQ (*hea
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Why the rules exist](README.md) ·

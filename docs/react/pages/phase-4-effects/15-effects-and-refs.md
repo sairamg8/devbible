@@ -236,6 +236,17 @@ callbacks just as it does for effects, so a callback that registers a node into 
 map without unregistering it ends up with two entries per node in development —
 which is the whole point of the extra cycle.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Manipulating the DOM with Refs](https://react.dev/learn/manipulating-the-dom-with-refs) — react.dev: `ref.current` is set in commit, so read it from handlers or effects, not during render (*read*)
+- **Also good:** [Referencing Values with Refs](https://react.dev/learn/referencing-values-with-refs) — react.dev: refs hold values that do not affect rendering; do not read or write `ref.current` during render (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Timers, listeners and observers](14-timers-listeners-observers.md) · Index: [Phase 4](README.md) · Next → [Subscribing to an external store](16-external-store.md)

@@ -243,6 +243,17 @@ where one piece of state has changed and a related piece has not. The
 documentation calls these "half-finished" renders. Batching guarantees that a
 group of updates from one event reaches the screen together.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Automatic batching for fewer renders in React 18](https://github.com/reactwg/react-18/discussions/21) — Dan Abramov, React 18 Working Group, 2021-05-27: before/after for handlers versus promises, timeouts and native handlers, plus `flushSync` as the opt-out (*read*)
+- **Also good:** [React v18.0](https://react.dev/blog/2022/03/29/react-v18) — react.dev blog: the batching section in the release post (*read* that section)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Updater functions](03-updater-functions.md) · Index: [Phase 3](README.md) · Next → [Immutable updates](05-immutable-updates/README.md)

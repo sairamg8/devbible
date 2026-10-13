@@ -279,6 +279,17 @@ that looks at the whole element.
 error, including the DOM at that moment. The timeout is configurable per call, but a test
 that needs a much longer one is usually waiting on something that should have been mocked.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [About Queries](https://testing-library.com/docs/queries/about/) — Testing Library docs: the `getBy`, `queryBy` and `findBy` behaviour table, and a priority list that ends at test IDs (*read*)
+- **Beyond the docs:** [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) — Kent C. Dodds, 2020-05-04: use `query*` only to check non-existence, `find*` instead of `waitFor` for elements, and prefer `*ByRole` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [The query families](README.md) ·

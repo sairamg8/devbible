@@ -260,6 +260,18 @@ resulting value, so they survive changes in data shape. And because the reducer
 sees the whole state at once, it can refuse to produce impossible combinations —
 which separate `useState` calls have no place to enforce.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Extracting State Logic into a Reducer](https://react.dev/learn/extracting-state-logic-into-a-reducer) — react.dev: the step-by-step conversion from `useState` to a reducer, with a testing note that a reducer is a pure function independent of the component (*read*)
+- **Also good:** [useReducer](https://react.dev/reference/react/useReducer) — react.dev: the reference page: signature, `dispatch`, and the note that `dispatch` has a stable identity (*read*)
+- **Beyond the docs:** [useState vs useReducer](https://tkdodo.eu/use-state-vs-use-reducer) — Dominik Dorfmeister (TkDodo), 2021-09-26 (last update 2022-04-23): the reducer as event-driven: the UI dispatches events and the transition logic lives in the reducer, with a multi-step wizard as the example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [DOM refs](02-dom-refs/README.md) · Index: [Phase 5](README.md) · Next → [`createContext` and `useContext`](04-createcontext-usecontext.md)

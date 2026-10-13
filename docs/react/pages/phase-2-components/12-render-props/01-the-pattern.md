@@ -212,3 +212,14 @@ it in `useCallback` with an incomplete dependency array.
 ---
 
 Index: [Render props](README.md) · Next → [02 · Where it still wins](02-where-it-still-wins.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Render Props](https://legacy.reactjs.org/docs/render-props.html) — legacy React docs: mouse-tracker example, `children` as the function, inline functions defeat `PureComponent` (*read*)
+- **Beyond the docs:** [React Hooks: What's going to happen to render props?](https://kentcdodds.com/blog/react-hooks-whats-going-to-happen-to-render-props) — Kent C. Dodds, 2018-12-10: hooks replace many render props, but render props stay for inversion of control such as `rowRenderer`; written while Hooks were in alpha
+
+{/* LINKMAP:END */}

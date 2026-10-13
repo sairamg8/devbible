@@ -257,6 +257,17 @@ not control — or when the source is a controlled text input, which transitions
 control at all. `useTransition` marks an update you make; `useDeferredValue` lags behind a
 value you receive.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useDeferredValue](https://react.dev/reference/react/useDeferredValue) — react.dev: showing stale content while fresh content loads, indicating staleness, deferring part of the UI, and the first-render rule: the returned value is `initialValue` or, if that is omitted, the value you passed in (*read*)
+- **Beyond the docs:** [React: useTransition() vs useDeferredValue()](https://academind.com/articles/react-usetransition-vs-usedeferredvalue) — Maximilian Schwarzmüller, Academind, 2023-01-31: wrap the update when you own the setter, wrap the value when you only receive it, and do not combine both; predates the React 19 `initialValue` argument (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Urgent vs transition updates](07-urgent-vs-transition.md) ·

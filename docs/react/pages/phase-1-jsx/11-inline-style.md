@@ -228,6 +228,16 @@ Not for host elements; React diffs the object's contents. It matters only when
 that object is a prop of a memoised component, where the new identity defeats
 the comparison.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Common components](https://react.dev/reference/react-dom/components/common) — react.dev: camelCase object, plain numbers get `px` unless the property is unitless; `className` for static styles, `style` for dynamic values (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Spreading props](10-spreading-props.md) · Index: [Phase 1](README.md) · Next → [dangerouslySetInnerHTML](12-dangerously-set-inner-html.md)

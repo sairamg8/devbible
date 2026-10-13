@@ -240,6 +240,17 @@ Import it from `@testing-library/react`, which re-exports React's with the match
 version. You rarely call it directly: `render`, `rerender`, `unmount`, `user-event` and
 the async helpers already wrap their work in it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React Testing Library intro](https://testing-library.com/docs/react-testing-library/intro/) — Testing Library docs: works on real DOM nodes, not component instances; not a test runner; no tools for testing implementation details (*read*)
+- **Beyond the docs:** [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) — Kent C. Dodds, 2020-05-04: fifteen concrete mistakes, including not using `screen` and needless `act` wrapping (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [React Testing Library's model](README.md) ·

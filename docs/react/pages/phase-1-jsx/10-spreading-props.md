@@ -224,6 +224,16 @@ When the set of props is the unit being forwarded — a wrapper passing DOM
 attributes through, or a framework handing you a props object. Rarely for
 domain objects.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Unknown Prop Warning](https://react.dev/warnings/unknown-prop) — react.dev: spreading `props` onto a DOM element forwards parent-only props; destructure them out first (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [children](09-children.md) · Index: [Phase 1](README.md) · Next → [Inline style](11-inline-style.md)

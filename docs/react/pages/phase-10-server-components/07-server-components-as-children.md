@@ -220,6 +220,17 @@ No — any prop that holds an element works the same way, which is what makes mu
 layouts possible. The one thing that matters is passing an *element*, `<Nav />`, not the
 component function `Nav`; the latter is not serializable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) — Next.js docs: a `Modal` Client Component receives a server-rendered `Cart` as `children`, and the "owner versus parent" box explains why that works (*read*)
+- **Also good:** [Making Sense of React Server Components](https://www.joshwcomeau.com/react/server-components/) — Josh W. Comeau: the Workarounds section moves state into a small `'use client'` provider so the parent stays a Server Component (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Server Function security](06-server-function-security/README.md) ·

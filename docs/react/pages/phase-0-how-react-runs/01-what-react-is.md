@@ -226,3 +226,15 @@ policy — is genuinely small.
 ---
 
 Index: [Phase 0 — How React runs](README.md) · Next → [The element](02-the-element.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [react-dom](https://react.dev/reference/react-dom) — react.dev: says react-dom is the web-only package with the DOM APIs, not supported in React Native, and lists `react-dom/client` and `react-dom/server` as entry points (*read*)
+- **Beyond the docs:** [How Does setState Know What to Do?](https://overreacted.io/how-does-setstate-know-what-to-do/) — Dan Abramov, Overreacted, 2018-12-09: the `react` package only defines components, the renderer supplies the implementation and plugs in an updater, which is the "no DOM in the core" claim shown in code
+- **Read this:** [Reacting to Input with State](https://react.dev/learn/reacting-to-input-with-state) — react.dev: the taxi analogy; imperative `disable` and `show` calls versus setting a status and deriving the UI (*read*)
+
+{/* LINKMAP:END */}

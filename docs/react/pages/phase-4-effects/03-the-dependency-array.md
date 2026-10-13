@@ -244,6 +244,18 @@ drop those from outside the component, drop stable identities like setters and
 ref objects. What remains is the array. If it is uncomfortably long, that is
 information about the effect — it is probably two effects.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Removing Effect Dependencies](https://react.dev/learn/removing-effect-dependencies) — react.dev: the list must match the reactive values the code reads; change the code, do not suppress the linter (*read*)
+- **Also good:** [useEffect](https://react.dev/reference/react/useEffect) — react.dev: "Specifying reactive dependencies" (*read*)
+- **Beyond the docs:** [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/) — Dan Abramov, 2019-03-09: argues for fixing the source of a changing dependency rather than removing it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useEffect` anatomy](02-useeffect-anatomy.md) · Index: [Phase 4](README.md) · Next → [Cleanup](04-cleanup/README.md)

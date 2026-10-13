@@ -208,6 +208,19 @@ No. Transitions, Suspense, deferred values and `<Activity>` are all fully usable
 19.2.8, and none of their behaviour changes when View Transitions ship. It is additive
 polish on machinery you already have.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ViewTransition](https://react.dev/reference/react/ViewTransition) — react.dev: only updates wrapped in a Transition, `Suspense` or `useDeferredValue` activate it; enter, exit, update and share (*read*)
+- **Also good:** [React 19.3](https://react.dev/blog/2026/09/09/react-19-3) — react.dev, 2026-09-09: states `ViewTransition` is stable in 19.3 and shows `addTransitionType` inside `startTransition`; says it works only in the DOM (*read*)
+- **Also good:** [addTransitionType](https://react.dev/reference/react/addTransitionType)
+- **Beyond the docs:** [React View Transitions and Activity API tutorial: Animate an AirBnB clone](https://blog.logrocket.com/react-view-transitions-activity-api) — Emmanuel John, LogRocket, 2025-05-09: a full app using shared elements, direction types with `addTransitionType`, and animated list filtering; written for the experimental build, which it says to use only in development (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Error boundaries and Suspense together](16-error-boundaries-and-suspense.md) ·

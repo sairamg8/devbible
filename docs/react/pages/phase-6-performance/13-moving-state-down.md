@@ -212,6 +212,17 @@ than memoizing around them, avoiding effects that update state, and removing
 unnecessary effect dependencies — with react.dev's own claim that effect chains cause
 most React performance problems. The list is mostly Phase 4 wearing a Phase 6 label.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Before You memo()](https://overreacted.io/before-you-memo/) — Dan Abramov, 2021-02-23: "Move State Down" then lifting content up, on a worked colour-picker example (*read*)
+- **Beyond the docs:** [State Colocation will make your React app faster](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster) — Kent C. Dodds, 2019-09-23: opens on global state as a leading cause of slow apps and moves state closer to where it is used (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Lazy loading components](12-lazy-loading.md) · Index: [Phase 6](README.md) · Next → [List virtualization](14-list-virtualization.md)

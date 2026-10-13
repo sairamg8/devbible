@@ -263,6 +263,17 @@ If the app does, yes. Otherwise the double-invocation class of bug is precisely 
 the suite cannot see, and a hook whose tests pass only outside `StrictMode` has a cleanup
 bug you will meet in production instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React Testing Library: API](https://testing-library.com/docs/react-testing-library/api/) — Testing Library: documents `renderHook` and says it is mostly interesting for libraries publishing hooks, and that you should prefer `render` with a custom test component otherwise (*read*)
+- **Beyond the docs:** [How to test custom React hooks](https://kentcdodds.com/blog/how-to-test-custom-react-hooks) — Kent C. Dodds, 2020-03-22: starts from a throwaway test component and then shows `renderHook` from `@testing-library/react` as the shorter route (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`use` breaks the rule on purpose](10-use-breaks-the-rule.md) ·

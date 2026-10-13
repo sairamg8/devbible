@@ -231,6 +231,17 @@ semver — but treat the pin as something under review, not as done. Audit the r
 lockfile for `react-server-dom-*`, since the dependency usually arrives through a framework,
 and treat an RSC advisory as a same-day upgrade.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Critical Security Vulnerability in React Server Components](https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components) — react.dev blog, 2025-12-03: CVE-2025-55182, unauthenticated remote code execution, CVSS 10.0, in `react-server-dom-webpack`, `-parcel` and `-turbopack` 19.0 to 19.2.0; patched in 19.0.1, 19.1.2 and 19.2.1; the page was updated later with follow-up CVEs (*rea
+- **Also good:** [Denial of Service and Source Code Exposure in React Server Components](https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components) — react.dev blog, 2025-12-11, updated 2026-01-26: CVE-2025-55184, CVE-2025-67779, CVE-2026-23864 (denial of service) and CVE-2025-55183 (source exposure); the earlier patches 19.0.3, 19.1.4 and 19.2.3 are incomplete, current fixes are 19.0.4, 19.1.5 and 19.2.4 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Where interactivity goes](11-where-interactivity-goes.md) ·

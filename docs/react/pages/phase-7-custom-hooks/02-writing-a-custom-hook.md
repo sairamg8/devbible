@@ -229,6 +229,17 @@ No. The convention is only worth having because a non-`use` name is a guarantee 
 no React state can hide in the call. Prefixing a pure helper spends that guarantee
 for nothing and makes readers check a file they would otherwise skip.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks) — react.dev: extracting stateful logic into a function whose name starts with `use` (*read*)
+- **Beyond the docs:** [Custom React Hooks and When to Use Them](https://thoughtbot.com/blog/custom-react-hooks) — Stephen Hanson, thoughtbot, 2023-01-31: a custom hook is any function that starts with `use` and calls other hooks; the post then weighs when it is worth extracting (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The Rules of Hooks](01-the-rules-of-hooks.md) · Index: [Phase 7](README.md) · Next → [Custom hooks share logic, not state](03-share-logic-not-state/README.md)

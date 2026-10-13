@@ -182,6 +182,17 @@ Give each an accessible name that includes the row's identity, usually via visua
 text, or scope the query with `within(row)`. Both make the test unambiguous, and the first
 also fixes the experience for someone hearing five identical "Delete" announcements.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`ByRole`](https://testing-library.com/docs/queries/byrole/) — Testing Library docs: "the most preferred query to use as it most closely resembles the user experience"; the `name` option matches the accessible name (*read*)
+- **Beyond the docs:** [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) — Kent C. Dodds, 2020-05-04: "Not using `*ByRole` most of the time", plus a separate section on adding `aria-` and `role` attributes incorrectly (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Wrappers — context, providers and the router](10-wrappers-and-providers.md) ·

@@ -238,3 +238,14 @@ exactly this.
 ---
 
 Index: [Phase 1](README.md) · Next → [Embedding expressions](02-embedding-expressions.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introducing the New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) — legacy React blog: the compiler imports from `react/jsx-runtime`, no `import React` needed, and those functions are for the compiler only (*read*)
+- **Beyond the docs:** [What is JSX?](https://kentcdodds.com/blog/what-is-jsx) — Kent C. Dodds, 2018-07-09: each JSX snippet beside its `React.createElement` form; classic-runtime output, so the call name differs today
+
+{/* LINKMAP:END */}

@@ -175,6 +175,16 @@ No. With `<Suspense>` boundaries the tree hydrates in pieces, and React can prio
 boundary the user just interacted with. That is why boundary placement affects interactivity
 and not just what paints first.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`hydrateRoot`](https://react.dev/reference/react-dom/client/hydrateRoot) — react.dev: hydrating server-rendered HTML, the error options, and the `suppressHydrationWarning` and `isClient` sections (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The three server renderers](03-the-server-renderers.md) ·

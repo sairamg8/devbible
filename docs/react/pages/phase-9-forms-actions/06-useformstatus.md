@@ -201,6 +201,18 @@ for a string action or none — so it is not a test for "am I in a form".
 deprecated `useFormState`, which is one reason the two get confused — but they do different
 things, and only one of them is deprecated.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useFormStatus](https://react.dev/reference/react-dom/hooks/useFormStatus) — react.dev: displaying a pending state, reading the submitted data, and a troubleshooting entry plus a pitfall showing `status.pending` never true when the Hook sits in the same component that renders the form (*read*)
+- **Also good:** [React v19](https://react.dev/blog/2024/12/05/react-19) — react.dev: "reads the status of the parent form as if the form was a Context provider" (*read*)
+- **Beyond the docs:** [Leveraging Actions in React 19 for Enhanced Form Handling](https://www.greatfrontend.com/blog/leveraging-actions-in-react-19-for-enhance-form-handling) — Vikas Yadav, GreatFrontend, 2024-08-10: moves the submit button into its own `SubmitButton` component because the Hook only works inside a form (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Uncontrolled forms and `FormData`](05-uncontrolled-and-formdata.md) ·

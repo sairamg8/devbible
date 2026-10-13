@@ -191,6 +191,20 @@ It was removed from the `react-dom` root export and now lives only in
 `react-dom/client`. That is a move, not a deletion — unlike `render`, which is
 genuinely gone.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React v19](https://react.dev/blog/2024/12/05/react-19) — react.dev: Actions, `use`, `ref` as a prop, document metadata, preloading, `useActionState`, `useOptimistic`, hydration error diff (*read*)
+- **Also good:** [React 19 Upgrade Guide](https://react.dev/blog/2024/04/25/react-19-upgrade-guide) — react.dev: the removals that break upgrades (*read*)
+- **Beyond the docs:** [The Complete Developer Guide to React 19, Part 2](https://www.callstack.com/blog/the-complete-developer-guide-to-react-19-part-2-new-enhancements) — Hristo Totov, Callstack, 2024-09-03: ref as a prop with the class-component limit and ref cleanup callbacks; pre-release, so future tense
+- **Read this:** [React 19.2](https://react.dev/blog/2025/10/01/react-19-2) — react.dev: `Activity`, `useEffectEvent`, `cacheSignal`, Partial Pre-rendering with `resume`, `useId` prefix now `_r_`, Performance Tracks (*read*)
+- **Beyond the docs:** [React 19.2 is here](https://blog.logrocket.com/react-19-2-is-here/) — David Omotayo, LogRocket, 2025-10-13: contrasts `Activity` with conditional rendering (state kept) and gives a timer example for `useEffectEvent`; sample code has a typo
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Versions and channels](08-versions-and-channels.md) · Index: [Phase 0](README.md) · Next → [Starting a project](10-starting-a-project.md)

@@ -215,6 +215,17 @@ you meant and there are no keys. Convert to an array of keyed elements.
 React 19 treats it as suspended work. Without a `<Suspense>` boundary above it,
 nothing commits — the subtree simply does not appear, with no error.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [isValidElement](https://react.dev/reference/react/isValidElement) — react.dev: elements are only one kind of React node; strings, numbers, arrays and portals are renderable but are not elements (*read*)
+- **Beyond the docs:** [Objects are not valid as a React child](https://kinsta.com/blog/objects-are-not-valid-as-a-react-child/) — Joel Olawanle, Kinsta, 2023-06-08 (updated 2026-03-20): rendering an object literal, an object in a variable, or an array directly; does not cover the Promise case (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Embedding expressions](02-embedding-expressions.md) · Index: [Phase 1](README.md) · Next → [Attributes vs props](04-attributes-vs-props.md)

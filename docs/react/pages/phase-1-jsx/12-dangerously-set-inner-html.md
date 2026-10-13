@@ -207,6 +207,17 @@ throws when activated.
 A renderer that produces React elements from a structured document — a Markdown
 AST or a portable-text format — so raw HTML never reaches the DOM.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Common components](https://react.dev/reference/react-dom/components/common) — react.dev: takes an object with `__html`, carries an XSS warning, cannot be combined with `children` (*read*)
+- **Beyond the docs:** [dangerouslySetInnerHTML in a React application](https://blog.logrocket.com/using-dangerouslysetinnerhtml-react-application/) — Doğacan Bilgili, LogRocket (page says last updated 2024-09-13 by Ikeh Akinyemi; no separate original date): two XSS payloads (`onmouseover`, `img onerror`) stripped by `DOMPurify.sanitize`, and the jsdom note for Node
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Inline style](11-inline-style.md) · Index: [Phase 1](README.md) · Next → [Form elements in JSX](13-form-elements/README.md)

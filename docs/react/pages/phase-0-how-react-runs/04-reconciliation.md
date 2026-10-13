@@ -222,6 +222,17 @@ The inner function is recreated on every render, so its identity — the element
 Give it a `key` derived from the identity of what it is editing. When the key
 changes, React unmounts the old instance and mounts a fresh one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reconciliation](https://legacy.reactjs.org/docs/reconciliation.html) — legacy React docs: the two assumptions (different types give different trees, keys mark stable children) and the O(n³) to O(n) argument; root type change destroys the old tree and its state (*read*)
+- **Beyond the docs:** [React as a UI Runtime](https://overreacted.io/react-as-a-ui-runtime/) — Dan Abramov, Overreacted, 2019-02-02: builds the host tree, renderer, elements and reconciliation one after another, so the diff rules read as consequences of a model; the reconciliation section covers same type reuses the host instance and different type recreates it
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Render, reconcile, commit](03-render-reconcile-commit.md) · Index: [Phase 0](README.md) · Next → [Fiber](05-fiber.md)

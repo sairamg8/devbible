@@ -211,6 +211,18 @@ No, and the restriction applies to the context form too even though a context re
 not suspend. Errors belong to an error boundary; treat the ban as a property of the API
 rather than of the resource being read.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [use](https://react.dev/reference/react/use) — react.dev: `use` can be called inside `if` and `for`, unlike Hooks; conditional `use(ThemeContext)`; reads the closest provider above the caller, not one rendered inside the same component (*read*)
+- **Also good:** [useContext](https://react.dev/reference/react/useContext) — react.dev: the Hook it is the exception to; the page says to call it at the top level and never mentions `use(Context)` (*read*)
+- **Beyond the docs:** [The use() Hook](https://stevekinney.com/courses/react-performance/the-use-hook) — Steve Kinney, course page, last modified 2025-09-28: `useContext` must be top-level, `use` can sit in a conditional, which helps components that only sometimes need the value (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Suspense inside a transition](11-suspense-inside-a-transition.md) ·

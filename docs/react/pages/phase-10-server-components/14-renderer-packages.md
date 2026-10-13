@@ -214,6 +214,17 @@ integration APIs, which may break between 19.x minors — the docs recommend pin
 version or tracking Canary. React Router's own RSC support is still experimental with every
 API `unstable_`-prefixed, which is a fair reading of the ecosystem's maturity.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`@vitejs/plugin-rsc` README](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-rsc) — vite-plugin-react repository: the rsc environment loads modules "with `react-server` condition", the ssr environment without it; the plugin vendors `react-server-dom-webpack` unless the project installs it (*read*)
+- **Also good:** [React Server Components in React Router](https://reactrouter.com/how-to/react-server-components) — React Router docs: shows a framework wiring an RSC bundler (`@vitejs/plugin-rsc`) with separate rsc, ssr and client entries (*read*); never names `react-server-dom-webpack` or the `react-server` condition
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The RSC payload](13-the-rsc-payload.md) ·

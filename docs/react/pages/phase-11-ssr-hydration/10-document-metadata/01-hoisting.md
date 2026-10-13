@@ -198,6 +198,18 @@ No, and React says so: these features *"make it easier for frameworks and librar
 a library gives you policy — route-based overriding of generic metadata with specific
 metadata. [Chunk 02](02-the-three-tags.md) covers where that line falls.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`&lt;title&gt;`](https://react.dev/reference/react-dom/components/title) — react.dev: React always places `title` in the head wherever it renders; text only; render one at a time (*read*)
+- **Also good:** [`&lt;meta&gt;`](https://react.dev/reference/react-dom/components/meta) — react.dev: hoisted to the head, except with `itemProp` (*read*)
+- **Also good:** [`&lt;link&gt;`](https://react.dev/reference/react-dom/components/link)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [10 · Document metadata](README.md) ·

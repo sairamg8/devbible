@@ -227,6 +227,17 @@ It activates the closest parent Suspense boundary, so the parent's fallback is s
 instead of the one you wrote. Fallbacks are rendered like any other UI, so a skeleton that
 lazily imports a component or reads a promise will quietly escalate.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Suspense](https://react.dev/reference/react/Suspense) — react.dev: nested boundaries reveal in sequence, components sharing a closest boundary reveal together, and the list of what activates a boundary (*read*)
+- **Beyond the docs:** [New Suspense SSR Architecture in React 18](https://github.com/reactwg/react-18/discussions/37) — Dan Abramov, React 18 Working Group, 2021-06-05: explains boundaries as independent sections that stream and hydrate separately; a working-group post, not react.dev, and SSR-focused (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [`<Suspense>`](README.md) ·

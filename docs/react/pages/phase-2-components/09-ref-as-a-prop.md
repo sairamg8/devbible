@@ -257,6 +257,18 @@ exist in 18. In new application code on React 19, no. And there is no reason to
 rewrite working `forwardRef` components mechanically; convert them when you are
 already editing the file.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [forwardRef](https://react.dev/reference/react/forwardRef) — react.dev: "In React 19, forwardRef is no longer necessary. Pass ref as a prop instead"; to be deprecated later, not yet (*read*)
+- **Also good:** [React v19](https://react.dev/blog/2024/12/05/react-19) — react.dev: the `ref` as a prop section (*read*)
+- **Beyond the docs:** [The Complete Developer Guide to React 19, Part 2](https://www.callstack.com/blog/the-complete-developer-guide-to-react-19-part-2-new-enhancements) — Hristo Totov, Callstack, 2024-09-03: does not work on class components; ref callbacks may return a cleanup; pre-release, so codemod and deprecation are future tense
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Children patterns](08-children-patterns.md) · Index: [Phase 2](README.md) · Next → [Component boundaries](10-component-boundaries.md)

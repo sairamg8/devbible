@@ -242,6 +242,17 @@ identical source.
 No. Measured above: the production build logs `render #1` once and one effect
 setup, from the same source file.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [StrictMode](https://react.dev/reference/react/StrictMode) — react.dev: extra component calls expose impure code, one extra setup and cleanup cycle per Effect, development only (*read*)
+- **Beyond the docs:** [Why useEffect Runs Twice](https://blog.openreplay.com/useeffect-runs-twice/) — OpenReplay Team, 2026-10-04: treats the double run as a test of cleanup logic and warns against removing StrictMode or adding ref guards to hide it
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [createRoot](06-createroot.md) · Index: [Phase 0](README.md) · Next → [Versions and release channels](08-versions-and-channels.md)

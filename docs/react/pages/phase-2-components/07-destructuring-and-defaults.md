@@ -276,6 +276,17 @@ For data crossing the program boundary it is not, because types are erased at
 runtime; that needs schema validation where the data enters. `propTypes` never
 covered that case well either, so nothing was lost.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React 19 Upgrade Guide](https://react.dev/blog/2024/04/25/react-19-upgrade-guide) — react.dev: `defaultProps` removed for function components (use default parameters), class components keep it; `propTypes` silently ignored (*read*)
+- **Also good:** [Passing Props to a Component](https://react.dev/learn/passing-props-to-a-component) — react.dev: the default applies only for a missing or undefined prop, not `null` or `0` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Props are read-only](06-props-are-read-only.md) · Index: [Phase 2](README.md) · Next → [Children patterns](08-children-patterns.md)

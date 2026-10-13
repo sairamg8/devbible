@@ -271,6 +271,17 @@ expensive. The docs' heuristic is the shape of the interactions: coarse ones lik
 replacing a page rarely need it; granular ones like dragging shapes in an editor
 often do. If there is no perceptible lag, `memo` is unnecessary.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [memo](https://react.dev/reference/react/memo) — react.dev: skipping re-renders when props are unchanged, the comparator argument, and minimizing prop changes; a note says the Compiler applies the equivalent automatically (*read*)
+- **Beyond the docs:** [Why React Re-Renders](https://www.joshwcomeau.com/react/why-react-re-renders/) — Josh W. Comeau, 2022-08-16 (updated 2025-12-03): has a "Creating pure components" section that works through `memo` in the context of the re-render rule (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Why did this component re-render?](01-why-did-this-re-render.md) · Index: [Phase 6](README.md) · Next → [`useMemo`](03-usememo.md)

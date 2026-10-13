@@ -222,6 +222,19 @@ They do different jobs. `id` associates the label and the error message; `name` 
 `FormData` reads, so it is what actually submits. A field with only an `id` renders and
 behaves perfectly and never appears in the submission.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Forms Tutorial: User Notification](https://www.w3.org/WAI/tutorials/forms/notifications/) — W3C WAI: sections on listing errors at the top (with `role=alert`), in-line feedback, and after submit, where it says to set the focus to the first input that contains an error (*read*)
+- **Also good:** [useId](https://react.dev/reference/react/useId) — react.dev: unique IDs for `aria-describedby`, and one `useId` call with a suffix per field for `htmlFor` labels (*read*)
+- **Also good:** [Improving Accessibility](https://nextjs.org/learn/dashboard-app/improving-accessibility)
+- **Beyond the docs:** [Accessible React Forms](https://carlrippon.com/accessible-react-forms) — Carl Rippon, 2022-04-13: label association, `aria-invalid`, `aria-describedby` for errors, and `role="alert"`; predates Actions and does not cover moving focus to the first invalid field (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Progressive enhancement](11-progressive-enhancement.md) ·

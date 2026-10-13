@@ -202,6 +202,17 @@ they do in the app.
 Once per test, before `render`. It applies its workarounds to the document and establishes
 the shared device state, and the pattern in the docs puts it first.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [user-event introduction](https://testing-library.com/docs/user-event/intro/) — Testing Library docs: "`fireEvent` dispatches DOM events, whereas `user-event` simulates full interactions"; visibility and interactability checks; call `userEvent.setup()` before rendering (*read*)
+- **Beyond the docs:** [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) — Kent C. Dodds, 2020-05-04: `type` fires keystroke events per character where `fireEvent.change` fires one; written for user-event before v14, so it does not show the `setup()` call (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [`user-event` over `fireEvent`](README.md) ·

@@ -170,6 +170,18 @@ reset it independently.
 Because a member expression cannot be an HTML tag name, so JSX always compiles
 it to the expression itself, regardless of case.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Your First Component](https://react.dev/learn/your-first-component) — react.dev: "their names must start with a capital letter or they won't work"; lowercase is read as an HTML tag (*read*)
+- **Also good:** [Unknown Prop Warning](https://react.dev/warnings/unknown-prop) — react.dev: lists a lowercase custom component such as `myButton` as a cause of the warning (*read*)
+- **Beyond the docs:** [The uppercase rule for React component names](https://angularindepth.com/article/why-component-identifiers-must-be-capitalized-in-react/) — Andrei Gatej, Angular In Depth, 2022-04-07: shows Babel's `getTag` turning a lowercase name into a string and a capitalized name into an identifier
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Attributes vs props](04-attributes-vs-props.md) · Index: [Phase 1](README.md) · Next → [Conditional rendering](06-conditional-rendering.md)

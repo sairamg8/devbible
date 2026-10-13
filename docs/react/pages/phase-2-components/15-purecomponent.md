@@ -218,6 +218,17 @@ and do not need stabilised props. And the React Compiler memoizes automatically
 at a finer grain than `memo` can, provided the components are pure, which makes
 most hand-written memoization redundant.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PureComponent](https://react.dev/reference/react/PureComponent) — react.dev: same as a `shouldComponentUpdate` that shallow-compares props and state; `memo` compares props only (*read*)
+- **Beyond the docs:** [PureComponent and React.memo](https://blog.logrocket.com/pure-component-in-react) — Glad Chinda, LogRocket, 2025-03-03: side-by-side of `PureComponent`, `memo` with `arePropsEqual`, and a hand-written `shouldComponentUpdate`; notes `arePropsEqual` returns true to skip, the opposite of `shouldComponentUpdate`; also covers the old Recompose `pure` HO
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Class components](14-class-components/README.md) · Index: [Phase 2](README.md) · Next → [cloneElement, Children.map and isValidElement](16-element-manipulation.md)

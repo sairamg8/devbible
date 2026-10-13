@@ -215,6 +215,19 @@ simpler to read and easier to consume elsewhere, since you can read `.current` l
 without storing anything yourself. The callback earns its complexity when the node
 is conditional, replaceable, or one of many.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Common components (ref callback)](https://react.dev/reference/react-dom/components/common) — react.dev: React calls the callback with the node, and calls the cleanup function the callback returns when the node is removed; an inline callback is a new function every render, so React cleans up and re-creates it (*read*)
+- **Also good:** [React v19](https://react.dev/blog/2024/12/05/react-19) — react.dev: the release post that introduced cleanup functions for refs; React no longer calls the ref with `null` on unmount when a cleanup is returned (*read*)
+- **Also good:** [So you think you know everything about React refs](https://dev.to/thoughtspile/so-you-think-you-know-everything-about-react-refs-48h2)
+- **Beyond the docs:** [Ref Callbacks, React 19 and the Compiler](https://tkdodo.eu/blog/ref-callbacks-react-19-and-the-compiler) — Dominik Dorfmeister (TkDodo), 2024-12-08: covers the React 19 cleanup function directly, works a measuring example, and gives rules of thumb for a ref callback versus `useEffect`; written for React 19, which the older refs posts are not (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The context re-render problem](05-context-re-render-problem.md) · Index: [Phase 5](README.md) · Next → [`useImperativeHandle`](07-useimperativehandle.md)

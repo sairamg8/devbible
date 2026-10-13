@@ -237,6 +237,18 @@ No — that is the explicitly documented prohibition, and react.dev's `useTimer`
 example is exactly this shape. The Effect Event should live inside the custom hook,
 next to that hook's own effect, rather than being handed across the boundary.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useEffectEvent](https://react.dev/reference/react/useEffectEvent) — react.dev: wraps a callback so effects read the latest props and state without re-running; call it only from effects or other Effect Events, never list it in dependencies (*read*)
+- **Also good:** [Separating Events from Effects](https://react.dev/learn/separating-events-from-effects) — react.dev: the `onConnected` example; names no version, and neither does the `useEffectEvent` reference page (*read* both)
+- **Beyond the docs:** [React has finally solved its biggest problem: useEffectEvent](https://blog.logrocket.com/react-has-finally-solved-its-biggest-problem-useeffectevent/) — Jack Herrington, LogRocket, 2026-01-07: compares a `useRef` workaround, a dependency that restarts the timer, and `useEffectEvent` on one example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [An effect has its own lifecycle](09-effect-lifecycle.md) · Index: [Phase 4](README.md) · Next → [Removing dependencies legitimately](11-removing-dependencies/README.md)

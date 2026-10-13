@@ -192,6 +192,17 @@ object literal itself. `style={{margin: 8}}` is `style={ {margin: 8} }`.
 They are skipped. React flattens arrays, including nested ones, and drops
 `null`, `undefined` and booleans while concatenating the rest.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JavaScript in JSX with Curly Braces](https://react.dev/learn/javascript-in-jsx-with-curly-braces) — react.dev: braces work as text inside a tag or right after `=` in an attribute; any expression works, statements are not mentioned (*read*)
+- **Beyond the docs:** [How JSX Renders Different Data Types in ReactJS](https://www.bennadel.com/blog/2879-how-jsx-renders-different-data-types-in-reactjs.htm) — Ben Nadel, 2015-07-31: tries booleans, null, undefined, 0, NaN, strings, arrays and objects one by one; React 0.13.3, where an object rendered each key-value pair, which today throws "Objects are not valid as a React child"
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [JSX is a function call](01-jsx-is-a-function-call.md) · Index: [Phase 1](README.md) · Next → [What can be rendered](03-what-can-be-rendered.md)

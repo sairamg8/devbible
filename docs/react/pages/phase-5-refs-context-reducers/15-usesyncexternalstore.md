@@ -241,6 +241,17 @@ store during a migration. The caching requirement on `getSnapshot` naturally bel
 to the store rather than the component, which is itself a hint that this is library
 territory. State that lives in React should use `useState` or `useReducer`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useSyncExternalStore](https://react.dev/reference/react/useSyncExternalStore) — react.dev: `subscribe`, `getSnapshot`, `getServerSnapshot` and the "result of getSnapshot should be cached" troubleshooting entry (*read*)
+- **Beyond the docs:** [useSyncExternalStore: Demystified](https://www.epicreact.dev/use-sync-external-store-demystified-for-practical-react-development-w5ac0) — Epic React (Kent C. Dodds), 2025-05-28: starts from the tearing problem and then explains each argument of the hook (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useId`](14-useid.md) · Index: [Phase 5](README.md) · Next → [`useDebugValue`](16-usedebugvalue.md)

@@ -204,6 +204,18 @@ Per form. `useFormStatus().pending` is the parent form's, so every button sees t
 value — which usually is what you want, since it stops a "save then publish" race. And
 multiple ongoing Actions are batched, so it stays true until all of them settle.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [form](https://react.dev/reference/react-dom/components/form) — react.dev: a `formAction` on a button overrides the form's `action`, with a Publish and Save draft example (*read*)
+- **Also good:** [useActionState](https://react.dev/reference/react/useActionState) — react.dev: "Using multiple Action types" dispatches typed actions to one reducer, which is not the same as separate `formAction` buttons; "Using with `&lt;form&gt;` Action props" is the nearer section (*read*)
+- **Beyond the docs:** [useActionState in React: A practical guide with examples](https://blog.logrocket.com/react-useactionstate/) — Rishi Purwar, LogRocket, 2025-04-25: several `useActionState` calls in one component, each with its own state (like and follow); it has no `formAction` save-versus-delete example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useOptimistic`](07-useoptimistic.md) ·

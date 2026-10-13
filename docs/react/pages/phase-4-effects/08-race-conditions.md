@@ -245,6 +245,17 @@ network work; `ignore` guards the state update, including for any part of the
 pipeline that does not accept a signal. A common arrangement is `ignore` inside a
 shared data hook and the controller at the fetch boundary.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useEffect](https://react.dev/reference/react/useEffect) — react.dev: "Fetching data with Effects": the `ignore` flag set in cleanup (*read*)
+- **Beyond the docs:** [Handling race conditions when fetching data in React with useEffect](https://maxrozen.com/race-conditions-fetching-data-react-with-useeffect) — Max Rozen: reproduces the race with random delays, then fixes it with a boolean flag and with `AbortController`; the page shows no date (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Fetching data in an effect](07-fetching-data.md) · Index: [Phase 4](README.md) · Next → [An effect has its own lifecycle](09-effect-lifecycle.md)

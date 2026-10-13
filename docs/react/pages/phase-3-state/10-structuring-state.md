@@ -255,6 +255,17 @@ reducer gives those transitions a name and a single home, and it makes
 impossible states much harder to produce because only the reducer can construct
 a new state.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Choosing the State Structure](https://react.dev/learn/choosing-the-state-structure) — react.dev: five principles: group related, avoid contradictions, redundancy, duplication, deep nesting (*read*)
+- **Beyond the docs:** [Avoiding impossible states in React](https://www.jackfranklin.co.uk/blog/avoiding-impossible-states-react/) — Jack Franklin, 2019-07-22: works one tabbed UI through three data structures, showing the structure itself can rule out the bug (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Lazy initial state](09-lazy-initial-state.md) · Index: [Phase 3](README.md) · Next → [Bailing out](11-bailing-out.md)

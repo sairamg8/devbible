@@ -233,6 +233,18 @@ Yes. Render must be pure, so `await` reads and never mutate — mutations belong
 Functions. Hooks are unavailable in the server graph. And the component renders once, which
 is why there is no dependency array to reason about.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Server Components](https://react.dev/reference/rsc/server-components) — react.dev: async components section: "When you `await` in an async component, React will suspend"; shows an un-awaited promise passed to a Client Component and read with `use` (*read*)
+- **Also good:** [The Big "Server Waterfall Problem" with RSCs](https://www.epicreact.dev/server-waterfall-problem-rscs) — Kent C. Dodds, Epic React, no date shown: argues a server waterfall is the old colocate-versus-pass-down problem and cheaper than a client one; includes a newsletter and workshop plug (*read*)
+- **Beyond the docs:** [Fetch Waterfall in React](https://blog.sentry.io/fetch-waterfall-in-react) — Lazar Nikolov, Sentry blog, 2023-12-15: sequential `await` calls create a server waterfall, fixed with `Promise.all` and Suspense; "a concurrency problem, not a rendering problem"; written when `use` was canary only (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Passing Server Components as `children`](07-server-components-as-children.md) ·

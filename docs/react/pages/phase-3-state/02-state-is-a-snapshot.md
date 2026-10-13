@@ -261,6 +261,17 @@ to apply a transformation to whatever the value is when the update is processed,
 so the callback does not need to close over the current count — which also means
 the effect no longer needs `count` as a dependency and can stay mounted.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [State as a Snapshot](https://react.dev/learn/state-as-a-snapshot) — react.dev: each render gets a fixed copy of state; calling a setter only queues a re-render with a new snapshot (*read*)
+- **Beyond the docs:** [Fantastic closures and how to find them in React](https://www.developerway.com/posts/fantastic-closures) — Nadia Makarevich, Developer Way, 2023-08-14 (page metadata): ties the snapshot to JavaScript closures: a function made during a render keeps that render's values unless it is re-created
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useState`](01-usestate.md) · Index: [Phase 3](README.md) · Next → [Updater functions](03-updater-functions.md)

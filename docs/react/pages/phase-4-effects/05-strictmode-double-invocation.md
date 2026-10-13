@@ -268,6 +268,17 @@ traffic in production metrics anyway. The real bug in that shape is a doubled
 *mutation*: a POST that changes state, which was caused by an interaction and
 belonged in an event handler, where the double-invocation does not reach.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects) — react.dev: "How to handle the Effect firing twice in development?" with recipes for widgets, events, animations and fetching (*read*)
+- **Beyond the docs:** [Why does useEffect run twice](https://blog.openreplay.com/useeffect-runs-twice/) — OpenReplay Team, 2026-10-04: calls the double run a deliberate test of cleanup and warns against a `useRef` "has run" guard (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Cleanup](04-cleanup/README.md) · Index: [Phase 4](README.md) · Next → [You might not need an effect](06-you-might-not-need-an-effect/README.md)

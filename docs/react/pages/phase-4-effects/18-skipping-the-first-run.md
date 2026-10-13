@@ -194,6 +194,18 @@ harmful — an optimisation. Two checks before accepting it: is the first run
 actually harmful, and would the effect still be correct on a remount? If the guard
 is what makes it correct, it is hiding a bug.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects) — react.dev: Pitfall "Don't use refs to prevent Effects from firing": a `useRef` guard shows "Connecting..." once in development but "doesn't fix the bug", because the Effect must work after a remount (*read*)
+- **Also good:** [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect) — react.dev: "Adjusting some state when a prop changes" and "Sharing logic between event handlers" are the replacements for most skip-first-run effects (*headings only*)
+- **Beyond the docs:** [Why does useEffect run twice](https://blog.openreplay.com/useeffect-runs-twice/) — OpenReplay Team, 2026-10-04: states that a `useRef` flag that skips the second run does not fix a missing cleanup, and why a real remount gets a fresh ref (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useInsertionEffect`](17-useinsertioneffect.md) · Index: [Phase 4](README.md)

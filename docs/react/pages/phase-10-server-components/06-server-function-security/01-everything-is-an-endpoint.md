@@ -246,6 +246,18 @@ user is re-authorized inside each action, whether ownership of the resource is c
 than just login, and whether return values are filtered. Then the `'use client'` files, for
 props whose types are broader than the component needs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to Think About Security in Next.js](https://nextjs.org/blog/security-nextjs-server-components-actions) — Sebastian Markbåge, Next.js blog, 2023-10-23: `'use server'` exposes an endpoint callable "with any arguments"; validate the user and each argument; closed-over variables are encrypted but `.bind()` arguments are not (*read*)
+- **Also good:** [React Server Components in React Router](https://reactrouter.com/how-to/react-server-components) — React Router docs: "Treat every Server Function as a public endpoint"; do not rely on route middleware for authentication or authorization (*read*)
+- **Also good:** [How to think about data security in Next.js](https://nextjs.org/docs/app/guides/data-security) — Next.js docs, v16.4.0: a page-level auth check does not cover an action defined on it; check authorization (ownership), not only authentication; return only what the UI needs; do not rely on closure encryption alone (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Server Function security](README.md) ·

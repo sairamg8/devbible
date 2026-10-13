@@ -252,3 +252,14 @@ form read through `FormData` has neither cost.
 ---
 
 Index: [Form elements](README.md) · Next → [select, textarea, files and FormData](02-select-textarea-and-formdata.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [input](https://react.dev/reference/react-dom/components/input) — react.dev: `value` vs `defaultValue`, `checked` vs `defaultChecked`, `onChange` fires on every keystroke like the DOM `input` event (*read*)
+- **Beyond the docs:** [Controlled and uncontrolled form inputs in React don't have to be complicated](https://goshacmd.com/controlled-vs-uncontrolled-inputs-react/) — Gosha Spark, 2016-11-07: a table of the value and change-callback props for text inputs, checkboxes, radios, textareas and selects, plus a feature comparison; 2016 and ref-based, so use `defaultValue` and hooks from our page; has a book promotion at the e
+
+{/* LINKMAP:END */}

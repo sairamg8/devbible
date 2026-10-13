@@ -228,6 +228,17 @@ Because something else changed at the same time. The measurement above showed
 remount caused by swapping the component type. Always ask what else differs
 between the two sides.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React Developer Tools](https://react.dev/learn/react-developer-tools) — react.dev: install for Chrome, Firefox, Edge; standalone for Safari; Components and Profiler panels (*read*)
+- **Beyond the docs:** [Measuring Performance with Real Tools](https://stevekinney.com/courses/react-performance/measuring-performance-with-real-tools) — Steve Kinney (course notes, last modified 2025-09-28): recording a profile, flamegraph, Ranked view and "why did this render"; no "highlight updates"
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The React Compiler](11-the-compiler.md) · Index: [Phase 0](README.md) · Next → [React on other renderers](./13-other-renderers.md)

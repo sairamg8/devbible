@@ -230,6 +230,17 @@ a new element instead.
 data. React strips it, and in 19 leaves a getter that warns and returns
 `undefined`. Pass the value again under another prop name.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [createElement](https://react.dev/reference/react/createElement) — react.dev: returns an object with `type`, `props`, `ref`, `key`; treat it as immutable, frozen in development (*read*)
+- **Beyond the docs:** [React Components, Elements, and Instances](https://legacy.reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html) — Dan Abramov, 2015-12-18: separates element, component and instance; older (class-era) but the distinction is unchanged
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What React is](01-what-react-is.md) · Index: [Phase 0](README.md) · Next → [Render, reconcile, commit](03-render-reconcile-commit.md)

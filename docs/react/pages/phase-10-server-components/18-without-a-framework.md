@@ -149,6 +149,16 @@ That the three-environment model is not a teaching device — it is the file lay
 entry that generates payloads, an SSR entry that turns a payload into HTML for document
 requests, and a browser entry that hydrates and installs `callServer`. One per environment.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [RSC From Scratch. Part 1: Server Components](https://github.com/reactwg/server-components/discussions/5) — Dan Abramov, 2023-06-02: an RSC server and an SSR server built by hand; Client Components are deferred to an unwritten Part 2 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [When RSC is the wrong choice](17-when-rsc-is-wrong.md) ·

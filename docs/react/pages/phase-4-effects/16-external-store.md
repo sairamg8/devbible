@@ -264,6 +264,18 @@ on the client's first render as the server produced, which usually means
 transferring the value rather than recomputing it — otherwise you get a hydration
 mismatch.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useSyncExternalStore](https://react.dev/reference/react/useSyncExternalStore) — react.dev: "Subscribing to a browser API" shows `navigator.onLine` with `subscribe` and `getSnapshot`; the Caveats say React restarts a transition update as blocking if the store changed, so every component shows the same store version; the 
+- **Also good:** [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect) — react.dev: "Subscribing to an external store": replace the effect with `useSyncExternalStore` for `navigator.onLine` (*read*)
+- **Also good:** [Concurrent React for Library Maintainers](https://github.com/reactwg/react-18/discussions/70)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Effects and refs together](15-effects-and-refs.md) · Index: [Phase 4](README.md) · Next → [`useInsertionEffect`](17-useinsertioneffect.md)

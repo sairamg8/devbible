@@ -217,6 +217,17 @@ principles for making memoization unnecessary: accept `children` in wrappers, ke
 state local, keep rendering pure and fix bugs rather than memoizing around them,
 avoid effects that update state, and remove unnecessary effect dependencies.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useMemo](https://react.dev/reference/react/useMemo) — react.dev: caching a calculation between re-renders; a note says the Compiler memoizes values and functions automatically (*read*)
+- **Beyond the docs:** [Understanding useMemo and useCallback](https://www.joshwcomeau.com/react/usememo-and-usecallback/) — Josh W. Comeau, 2022-08-30 (updated 2025-12-03): splits the topic into "Heavy computations" and "Preserved references", which are the two reasons our row names (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`memo`](02-memo.md) · Index: [Phase 6](README.md) · Next → [`useCallback`](04-usecallback.md)

@@ -214,6 +214,18 @@ suspends, the user does not see the fallback, they keep seeing the old deferred 
 The staleness signal there is comparing the live value with the deferred one, which needs
 no extra state.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Suspense](https://react.dev/reference/react/Suspense) — react.dev: "Preventing fallbacks for already-revealed content": a transition waits only long enough to avoid hiding revealed content; new boundaries still show their fallback (*read*)
+- **Also good:** [useTransition](https://react.dev/reference/react/useTransition) — react.dev: sections on preventing unwanted loading indicators and building a Suspense-enabled router (*read*)
+- **Beyond the docs:** [Suspense](https://www.apollographql.com/docs/react/data/suspense) — Apollo Client docs, undated: a concrete before/after: the section "Updating state without suspending" shows the fallback going away and the previous record staying on screen, and "Showing pending UI during a transition" dims the control with `isPending` (*rea
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Suspense boundary placement](10-boundary-placement.md) ·

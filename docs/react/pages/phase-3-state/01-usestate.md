@@ -242,6 +242,17 @@ calls to a pure function produce the same value and change nothing; if the
 second call changes something observable, the initialiser has a side effect.
 React discards one of the two results.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useState](https://react.dev/reference/react/useState) — react.dev: reference with usage sections for updater functions, avoiding recreated initial state and storing information from previous renders (*read*)
+- **Beyond the docs:** [Things to know about useState](https://tkdodo.eu/blog/things-to-know-about-use-state) — TkDodo (blog), 2021-02-13: five short sections (updater, lazy initializer, bailout, overload, implementation detail) that read as a checklist of what the reference spreads over several pages
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 3](README.md) · Next → [State is a snapshot](02-state-is-a-snapshot.md)

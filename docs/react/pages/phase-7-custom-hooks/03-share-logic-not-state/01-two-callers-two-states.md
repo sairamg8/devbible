@@ -228,6 +228,16 @@ That the state is in the wrong place. Hook state lives on the component instance
 is discarded with it. State that must outlive a component belongs above it — a parent,
 a context provider, or an external store read with `useSyncExternalStore`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks) — react.dev: "Custom Hooks let you share stateful logic, not state itself", and it is wrong to think one `isOnline` variable is shared between callers (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Share logic, not state](README.md) ·

@@ -224,6 +224,18 @@ No. Suspense does not detect data fetched inside an Effect, and effects do not r
 server rendering at all — the component server-renders in its empty state regardless of
 renderer. Streaming can only defer work that told the server it was waiting.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`renderToString`](https://react.dev/reference/react-dom/server/renderToString) — react.dev: "does not support streaming or waiting for data"; a suspended component immediately sends its nearest fallback as HTML; names the three alternatives (*read*)
+- **Also good:** [`renderToPipeableStream`](https://react.dev/reference/react-dom/server/renderToPipeableStream) — react.dev: Node streams, with `onShellReady` and `onAllReady` (*read*)
+- **Also good:** [`renderToReadableStream`](https://react.dev/reference/react-dom/server/renderToReadableStream)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Hydration mismatches](02-hydration-mismatches.md) ·

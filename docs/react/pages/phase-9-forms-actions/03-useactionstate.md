@@ -237,6 +237,17 @@ returns an error object has succeeded as far as React is concerned. The fix is t
 the submitted values in the state and render them as `defaultValue`, which is also why the
 error and the values usually travel together.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useActionState](https://react.dev/reference/react/useActionState) — react.dev: signature `useActionState(reducerAction, initialState, permalink?)` returning state, a dispatcher and `isPending`; previous state is the first argument and `FormData` the second; sections on multiple Action types, `useOptimistic`,
+- **Beyond the docs:** [useActionState in React: A practical guide with examples](https://blog.logrocket.com/react-useactionstate/) — Rishi Purwar, LogRocket, 2025-04-25: the action receives previous state first, `isPending` replaces a loading flag, and a validation example returns a failure object; it does not cover thrown exceptions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Actions](02-actions.md) ·

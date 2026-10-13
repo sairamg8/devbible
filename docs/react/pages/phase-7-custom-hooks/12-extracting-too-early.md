@@ -190,6 +190,17 @@ The component gets shorter. The wrapper, the return shape and the argument plumb
 disappear with it. If inlining makes the component meaningfully worse to read, the hook
 was earning its place and should stay.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks) — react.dev: the guidance on when a function should and should not be a hook (*read*)
+- **Beyond the docs:** [Custom React Hooks and When to Use Them](https://thoughtbot.com/blog/custom-react-hooks) — Stephen Hanson, thoughtbot, 2023-01-31: extract either for reuse or to keep the component simpler, then asks whether the parent is more understandable with the abstraction and whether it is isolated enough, and says to inline it back if not (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Testing a custom hook](11-testing-a-custom-hook.md) ·

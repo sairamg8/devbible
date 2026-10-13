@@ -183,3 +183,15 @@ and the signal that the `prelude` already contains everything.
 
 Index: [08 · Prerendering](README.md) ·
 Next → [Calling them](02-calling-them.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`prerender`](https://react.dev/reference/react-dom/static/prerender) — react.dev: "Unlike `renderToString`, `prerender` waits for all data to load before resolving"; returns `prelude` and `postponed` (*read*)
+- **Also good:** [`prerenderToNodeStream`](https://react.dev/reference/react-dom/static/prerenderToNodeStream) — react.dev: the Node streams variant (*read*)
+- **Also good:** [react-dom/static](https://react.dev/reference/react-dom/static)
+
+{/* LINKMAP:END */}

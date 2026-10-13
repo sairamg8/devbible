@@ -200,6 +200,17 @@ Rarely. 19.0 in December 2024, 19.1 in March 2025, 19.2 in October 2025, and
 nothing since — 316 days as of this writing. Most perceived React churn is
 router and framework churn.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Versioning Policy](https://react.dev/community/versioning-policy) — react.dev: Latest, Canary, Experimental, and the version-string formats for each (*read*)
+- **Read this:** [The React Foundation](https://react.dev/blog/2026/02/24/the-react-foundation) — react.dev, 2026-02-24: React, React Native and JSX owned by an independent foundation hosted by the Linux Foundation; eight Platinum members; technical direction stays with maintainers (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [StrictMode](07-strictmode.md) · Index: [Phase 0](README.md) · Next → [What changed in React 19](09-what-changed-in-19.md)

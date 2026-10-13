@@ -185,3 +185,14 @@ and the component you care about, each of which re-renders in turn.
 ---
 
 Index: [Higher-order components](README.md) · Next → [02 · Why hooks replaced them, and where they remain](02-why-hooks-replaced-them.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Higher-Order Components](https://legacy.reactjs.org/docs/higher-order-components.html) — legacy React docs: caveats: never wrap inside `render`, static methods not copied, refs not passed through; `displayName` is a separate convention section (*read*)
+- **Beyond the docs:** [React Higher-Order Components](https://www.robinwieruch.de/react-higher-order-components/) — Robin Wieruch, 2022-04-19: HOC patterns for loading and empty states, composing several, and the hidden-dependency trap when order matters
+
+{/* LINKMAP:END */}

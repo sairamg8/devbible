@@ -203,3 +203,16 @@ sits on the static side and carries the same refusal for the same reason.
 
 Index: [09 · Partial pre-rendering](README.md) ·
 Next → [Calling the resume APIs](02-calling-them.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React 19.2](https://react.dev/blog/2025/10/01/react-19-2) — react.dev blog, 2025-10-01: the Partial Pre-rendering section: `prerender` with an `AbortController`, save the `postponed` state, later `resume` to an SSR stream or `resumeAndPrerender` for static HTML (*read*)
+- **Also good:** [`resume`](https://react.dev/reference/react-dom/server/resume) — react.dev: takes the opaque `postponedState`, re-renders from the root and skips only fully prerendered components (*read*)
+- **Also good:** [`resumeToPipeableStream`](https://react.dev/reference/react-dom/server/resumeToPipeableStream)
+- **Also good:** [`resumeAndPrerender`](https://react.dev/reference/react-dom/static/resumeAndPrerender)
+
+{/* LINKMAP:END */}

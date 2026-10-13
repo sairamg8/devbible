@@ -247,6 +247,18 @@ from the filesystem or a database, which only a Server Component can do — and 
 serializable prop down to the interactive leaf. Interactivity below, data access above, the
 boundary exactly at the join.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`'use client'`](https://react.dev/reference/rsc/use-client) — react.dev: the boundary marks the module and all its transitive dependencies as Client modules; has the serializable-props list (*read*)
+- **Also good:** [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) — Next.js docs: "you only need the directive at the entry to a client subtree"; everything imported from there joins the client graph (*read*)
+- **Beyond the docs:** [What Does "use client" Do?](https://overreacted.io/what-does-use-client-do/) — Dan Abramov, 2025-04-25: frames the directive as a typed door from server to client rather than a label on a component
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The two module graphs](02-two-module-graphs.md) ·

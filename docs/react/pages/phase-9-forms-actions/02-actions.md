@@ -226,6 +226,18 @@ a fallback.
 `<input type="submit">` or `<input type="image">` — so Save and Delete each get their own
 function without a hidden intent field.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [form](https://react.dev/reference/react-dom/components/form) — react.dev: a function passed to `action` runs as a Transition, receives `FormData`, needs no `preventDefault`, and uncontrolled fields reset on success (*read*)
+- **Also good:** [React v19](https://react.dev/blog/2024/12/05/react-19) — react.dev, 2024-12-05: where Actions are introduced alongside `useActionState`, `useFormStatus` and `useOptimistic` (*read*)
+- **Beyond the docs:** [Leveraging Actions in React 19 for Enhanced Form Handling](https://www.greatfrontend.com/blog/leveraging-actions-in-react-19-for-enhance-form-handling) — Vikas Yadav, GreatFrontend, 2024-08-10: a before/after of a hand-written submit handler versus an action, with `useFormStatus` in a child button; written before React 19 shipped ("React 19 has not been published") (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Controlled inputs](01-controlled-inputs/README.md) ·

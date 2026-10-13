@@ -241,6 +241,18 @@ Yes — an error thrown for particular arguments is cached and the same error is
 for those arguments. That keeps every component's answer consistent within a render, and
 it means retrying belongs above the cached function rather than inside it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [cache](https://react.dev/reference/react/cache) — react.dev: cache is for Server Components only, arguments are compared with `Object.is`, the cache is invalidated per server request, plus a preload pattern (*read*)
+- **Read this:** [cacheSignal](https://react.dev/reference/react/cacheSignal)
+- **Beyond the docs:** [The cache() API](https://stevekinney.com/courses/react-performance/react-cache-api) — Steve Kinney, course page, last modified 2026-09-14: server cache lives for one request, arguments compared by reference so a fresh object literal misses, no built-in invalidation; the page never mentions `cacheSignal` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`use(context)`](12-use-context.md) ·

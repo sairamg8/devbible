@@ -217,6 +217,18 @@ Memoization makes re-rendering cheaper; `lazy` stops code being downloaded at al
 until it is needed. It is one of the few optimisations here that improves the *first*
 load, which `useMemo` explicitly does not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [lazy](https://react.dev/reference/react/lazy) — react.dev: `lazy(() =&gt; import(…))` with a Suspense boundary and a troubleshooting entry for a lazy component's state resetting (*read*)
+- **Also good:** [Suspense](https://react.dev/reference/react/Suspense) — react.dev: the fallback and what activates a Suspense boundary (*headings only*)
+- **Beyond the docs:** [Code splitting with React.lazy and Suspense](https://web.dev/articles/code-splitting-suspense) — web.dev (Google), last updated 2019-04-29: says to begin code splitting at the route level, then split large components that render only on interaction; written for an older React and a Create React App setup (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Do you still write `useMemo`?](11-do-you-still-write-usememo.md) · Index: [Phase 6](README.md) · Next → [Moving state down and lifting content up](13-moving-state-down.md)

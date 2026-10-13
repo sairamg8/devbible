@@ -242,6 +242,17 @@ appears in the terminal or the browser console, and — the one that settles it 
 built client bundle for a distinctive string from the file. Only the last one is evidence;
 the rest are inference.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) — Next.js docs, v16.4.0: opens with the sentence that RSC splits a tree between server and client module graphs, and says the client graph never imports the server graph (*read*)
+- **Beyond the docs:** [How Imports Work in RSC](https://overreacted.io/how-imports-work-in-rsc/) — Dan Abramov, 2025-06-05: each environment keeps its own module cache, and `server-only` and `client-only` act as build-time poison pills
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What a Server Component is](01-what-a-server-component-is/README.md) ·

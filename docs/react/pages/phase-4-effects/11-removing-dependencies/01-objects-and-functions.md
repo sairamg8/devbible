@@ -242,3 +242,14 @@ dependency instead of managing it.
 ---
 
 Index: [Removing dependencies](README.md) · Next → [Restructuring the effect](02-restructuring-the-effect.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Removing Effect Dependencies](https://react.dev/learn/removing-effect-dependencies) — react.dev: move objects and functions inside the effect or outside the component, depend on primitives (*read*)
+- **Also good:** [useEffect](https://react.dev/reference/react/useEffect) — react.dev: "Removing unnecessary object dependencies" and "function dependencies" (*read*)
+
+{/* LINKMAP:END */}

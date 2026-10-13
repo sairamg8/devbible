@@ -225,6 +225,17 @@ is this wrong?" is answered by walking up to the `useState` that owns it.
 Mutating props destroys that guarantee — any component in the tree becomes a
 candidate — and no amount of tooling gives it back.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Passing Props to a Component](https://react.dev/learn/passing-props-to-a-component) — react.dev: "props are immutable"; respond to input with state, parent passes new props (*read*)
+- **Beyond the docs:** [Can you modify React props?](https://epicreact.dev/can-you-modify-react-props) — Kent C. Dodds, EpicReact (no date shown): mutating the props object surprises other code and does not re-render; reassigning a destructured variable is fine
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Lifting state up](05-lifting-state-up/README.md) · Index: [Phase 2](README.md) · Next → [Destructuring and default values](07-destructuring-and-defaults.md)

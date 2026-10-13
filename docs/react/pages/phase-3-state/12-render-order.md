@@ -184,6 +184,17 @@ component while rendering a different component" for this. The child's request
 has to become a new render starting from the top, which is what an event handler
 or an effect produces.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Render and Commit](https://react.dev/learn/render-and-commit) — react.dev: rendering is recursive: React calls the triggering component, then each component it returns (*read*)
+- **Beyond the docs:** [React Internals: Which useEffect runs first?](https://blog.master.dev/react-internals-which-useeffect-runs-first/) — Teng Wei Herr, Frontend Masters blog, 2025-04-28: render goes top-down while effects run child-first because of depth-first fiber traversal in commit; about effects, not render order alone (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Bailing out](11-bailing-out.md) · Index: [Phase 3](README.md) · Next → [The update queue](13-the-update-queue.md)

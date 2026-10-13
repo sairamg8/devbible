@@ -207,6 +207,18 @@ Because `display: none` needs an element to apply to, and text has no correspond
 element — so React renders nothing rather than hidden text. It matters mostly in tests that
 assert on hidden content.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Activity](https://react.dev/reference/react/Activity) — react.dev: hidden children keep state and DOM (`display: none`), their Effects are destroyed ("think of hidden Activities as being unmounted"), hidden children still re-render at lower priority, pre-rendering mounts no Effects, and two troub
+- **Also good:** [React Labs: View Transitions, Activity, and more](https://react.dev/blog/2025/04/23/react-labs-view-transitions-activity-and-more) — Ricky Hanlon, react.dev, 2025-04-23: describes `Activity` as hiding and showing parts of the UI; a note says it shipped in react 19.2, so the 2025-04-23 post was edited later; I did not read the mechanics section of this long page (*read* the opening only)
+- **Beyond the docs:** [React Activity: When A Render No Longer Guarantees an Effect](https://hackernoon.com/react-activity-when-a-render-no-longer-guarantees-an-effect) — Sergey Levkovich, HackerNoon, 2026-09-11: hidden content keeps state and DOM, Effects do not mount while hidden, and a component can render without its Effects ever running, so render-time subscriptions leak (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`cache` and `cacheSignal`](13-cache-and-cachesignal.md) ·

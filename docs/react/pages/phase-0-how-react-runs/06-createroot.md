@@ -226,6 +226,17 @@ The `createRoot` options: `onUncaughtError`, `onCaughtError` and
 `onRecoverableError`. Error boundaries handle recovery in the UI; these three
 are how you get the report out.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [createRoot](https://react.dev/reference/react-dom/client/createRoot) — react.dev: `root.render` shows and updates, `root.unmount` tears down, plus error-handler options (*read*)
+- **Also good:** [React 19 Upgrade Guide](https://react.dev/blog/2024/04/25/react-19-upgrade-guide) — react.dev: `render`, `hydrate` and `unmountComponentAtNode` removed, with the `createRoot`, `hydrateRoot` and `root.unmount` replacements (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Fiber](05-fiber.md) · Index: [Phase 0](README.md) · Next → [StrictMode](07-strictmode.md)

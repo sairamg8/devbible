@@ -216,6 +216,18 @@ consumer re-renders when any part of that context's value changes. The signal is
 splitting contexts further and further to approximate selectors; at that point a
 state library is doing something React genuinely does not provide.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Scaling Up with Reducer and Context](https://react.dev/learn/scaling-up-with-reducer-and-context) — react.dev: two separate contexts, one for the current tasks and one for the dispatch function (*read*)
+- **Also good:** [How to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively) — Kent C. Dodds, 2021-06-05: the same reducer-plus-provider shape, but with state and dispatch in one value object and a code comment that you might need to memoize it, so it does not show the split (*read*)
+- **Beyond the docs:** [How to write performant React apps with Context](https://www.developerway.com/posts/how-to-write-performant-react-apps-with-context) — Nadia Makarevich, Developer Way, 2022-02-07: splits one provider into a state context and an API context, makes the API stable, and then moves the state to `useReducer` with the API calling `dispatch`, with render logs showing which consumers stop re-rendering; written befor
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [What context is and is not](11-what-context-is-and-is-not.md) · Index: [Phase 5](README.md) · Next → [The default context value](13-default-context-value.md)

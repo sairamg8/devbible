@@ -232,6 +232,16 @@ Which thing outside React reads the DOM immediately after this callback, and why
 `useLayoutEffect` or the next render is not enough. Then whether anything in the flushed subtree
 can suspend, because that is the caveat most likely to surface later as a flicker.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`flushSync`](https://react.dev/reference/react-dom/flushSync) — react.dev: "uncommon and can hurt the performance of your app"; legitimate uses are third-party integrations and `onbeforeprint`; ignored with a warning inside render or Effects (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 11](README.md) ·

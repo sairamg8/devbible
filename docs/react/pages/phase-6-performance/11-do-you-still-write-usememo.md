@@ -182,6 +182,17 @@ from a routine tool to a precision one. The docs describe them as an escape hatc
 for control over which values are memoized, which is a smaller role, not a removed
 one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React Compiler Introduction](https://react.dev/learn/react-compiler/introduction) — react.dev: how the Compiler relates to manual memoization (*read*)
+- **Beyond the docs:** [I let React Compiler handle memoization: Here's what actually broke](https://blog.logrocket.com/react-compiler-memoization-what-actually-broke) — Isaac Okoro, LogRocket Blog, 2026-06-29: a migration report where removing a `useCallback` that fed a Chart.js click handler exposed a timing bug it had hidden (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`eslint-plugin-react-hooks`](10-eslint-plugin-react-hooks.md) · Index: [Phase 6](README.md) · Next → [Lazy loading components](12-lazy-loading.md)

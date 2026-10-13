@@ -146,6 +146,18 @@ and the December 2024 release uses the old name throughout, usually without noti
 that is a large share of the React 19 tutorials available. Recognising `import { useFormState }
 from 'react-dom'` on sight saves debugging code that was never wrong, only old.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React v19](https://react.dev/blog/2024/12/05/react-19) — react.dev, 2024-12-05: "`React.useActionState` was previously called `ReactDOM.useFormState` in the Canary releases, but we've renamed it and deprecated `useFormState`" (*read*)
+- **Also good:** [useActionState](https://react.dev/reference/react/useActionState) — react.dev: the current page; the old `useFormState` reference URL redirects here (*read*)
+- **Also good:** [React 19 Upgrade Guide](https://react.dev/blog/2024/04/25/react-19-upgrade-guide) — react.dev: lists a codemod named `replace-use-form-state` among the React 19 codemods run by `npx codemod@latest react/19/migration-recipe`, without saying what it changes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Accessible forms](12-accessible-forms.md) ·

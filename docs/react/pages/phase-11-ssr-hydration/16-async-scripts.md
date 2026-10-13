@@ -164,6 +164,16 @@ Same pattern, different proof obligation. A stylesheet declares its order with `
 script proves order does not matter by being `async`. Both use a URL as the de-duplication key,
 and both read their props once.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`&lt;script&gt;`](https://react.dev/reference/react-dom/components/script) — react.dev: hoisting needs both `src` and `async=&#123;true&#125;`; scripts with the same `src` are de-duplicated; inline scripts are not moved; React may leave the script in the DOM after unmount (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 11](README.md) ·

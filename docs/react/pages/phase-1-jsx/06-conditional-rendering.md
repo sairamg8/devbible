@@ -225,6 +225,17 @@ Rarely. It renders the fallback when `cond` is falsy, but when `cond` is truthy
 it renders `cond` itself — `true` renders nothing, but a truthy string or
 number renders. A ternary says what you mean.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Conditional Rendering](https://react.dev/learn/conditional-rendering) — react.dev: a Pitfall on `messageCount && ...` showing a literal 0, fixed with `messageCount &gt; 0 && ...` (*read*)
+- **Beyond the docs:** [Common Beginner Mistakes with React](https://www.joshwcomeau.com/react/common-beginner-mistakes/) — Josh Comeau, 2023-03-06 (updated 2026-01-30): "Evaluating with zero": `items.length && ...` prints 0, with the fix as `&gt; 0` or a ternary
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Capitalization](05-capitalization.md) · Index: [Phase 1](README.md) · Next → [Lists and keys](07-lists-and-keys.md)

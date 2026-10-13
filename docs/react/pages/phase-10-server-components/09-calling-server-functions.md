@@ -241,6 +241,16 @@ calling component, and a returned error reaches `useActionState`. The choice mat
 style, because a form that "succeeded" resets its uncontrolled fields — returning the error
 is what preserves what the user typed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Server Functions](https://react.dev/reference/rsc/server-functions) — react.dev: form `action`, `startTransition` for `isPending`, `onClick`, and `useActionState` with progressive enhancement (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Async components](08-async-components.md) ·

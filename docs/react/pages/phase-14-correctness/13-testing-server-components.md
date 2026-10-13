@@ -168,6 +168,17 @@ presentation and interaction in children, put transformation and validation in p
 That leaves very little in the part the tools cannot reach — and it is the same separation
 that makes the pieces reusable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to set up Vitest with Next.js](https://nextjs.org/docs/app/guides/testing/vitest) — Next.js docs, v16.4.0, last updated 2026-08-25: "Vitest currently does not support" `async` Server Components; unit-test synchronous Server and Client Components and use E2E tests for `async` ones (*read*)
+- **Also good:** [Server Components](https://react.dev/reference/rsc/server-components) — react.dev: the concept only; no testing content (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Snapshot tests](12-snapshot-tests.md) ·

@@ -257,6 +257,18 @@ option: drop the `useCallback` and wrap the extracted component in `memo` instea
 if its `item` prop is unchanged it skips re-rendering, and so does everything below
 it. One `memo` at the right boundary beats many `useCallback`s at the wrong one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useCallback](https://react.dev/reference/react/useCallback) — react.dev: caching a function definition between re-renders (*read*)
+- **Also good:** [How to useMemo and useCallback: you can remove most of them](https://www.developerway.com/posts/how-to-use-memo-use-callback) — Nadia Makarevich, Developer Way, 2022-06-13: memoizing props to prevent re-renders only works if every prop and the component are memoized, which is the honest test for a given `useCallback`; pre-Compiler (*read*)
+- **Beyond the docs:** [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback) — Kent C. Dodds, 2019-06-04: works through a candy-dispenser example and argues that every line of code executed has a cost, so a memoization that saves almost nothing is not worth the complexity; pre-Compiler (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`useMemo`](03-usememo.md) · Index: [Phase 6](README.md) · Next → [Measure before you optimise](05-measure-before-you-optimise.md)

@@ -249,6 +249,17 @@ Turned two independent booleans into a single active index — which makes "two
 panels open at once" unrepresentable rather than merely prevented. Lifting often
 improves the shape of the state, not just its location.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Sharing State Between Components](https://react.dev/learn/sharing-state-between-components) — react.dev: three-step accordion procedure; one owner per piece of state (*read*)
+- **Beyond the docs:** [State Colocation will make your React app faster](https://kentcdodds.com/blog/state-colocation-will-make-your-app-faster) — Kent C. Dodds, 2019-09-23: state high in the tree makes React walk every component below it; moving it down skips them
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Lifting state up](README.md) · Next → [The cost, and how to pay less of it](02-the-cost.md)

@@ -235,6 +235,17 @@ React flushes the remaining fallbacks as HTML and attempts to render the rest on
 a graceful degradation to client rendering rather than an error, which makes an abort on a
 timer a sensible default for a page that must not hold a connection open.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`renderToPipeableStream`](https://react.dev/reference/react-dom/server/renderToPipeableStream) — react.dev: fallback first, then the real HTML with an inline `script`; `onShellReady` to stream, `onAllReady` for crawlers and static generation, with the trade-off stated (*read*)
+- **Beyond the docs:** [New Suspense SSR Architecture in React 18](https://github.com/reactwg/react-18/discussions/37) — Dan Abramov (gaearon), React Working Group, 2021-06-05: placeholder first, later HTML in the same response, patched in by a small inline script; written for React 18, and neither `onShellReady` nor `onAllReady` appears in it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`suppressHydrationWarning` and the two-pass render](05-suppresshydrationwarning.md) ·

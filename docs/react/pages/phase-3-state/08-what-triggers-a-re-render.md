@@ -222,6 +222,17 @@ a mutable value that persists across renders without causing one. It is also
 why reading a ref during render is unsupported — nothing guarantees the render
 you are in reflects its current value.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Render and Commit](https://react.dev/learn/render-and-commit) — react.dev: two triggers: initial render, and a state update on the component or an ancestor's state (*read*)
+- **Beyond the docs:** [React re-renders guide: everything, all at once](https://www.developerway.com/posts/react-re-renders-guide) — Nadia Makarevich, Developer Way, 2022-08-02 (page metadata): four triggers (own state, parent or children, context, hooks) with state as the root cause
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Resetting state with `key`](07-resetting-state-with-key.md) · Index: [Phase 3](README.md) · Next → [Lazy initial state](09-lazy-initial-state.md)

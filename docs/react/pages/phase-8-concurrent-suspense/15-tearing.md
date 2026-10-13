@@ -210,6 +210,19 @@ non-local mutable values during render, because that makes them non-idempotent.
 `useSyncExternalStore` is the supported way to read outside state while still obeying that
 rule.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useSyncExternalStore](https://react.dev/reference/react/useSyncExternalStore) — react.dev: subscribing to an external store, custom Hook, server rendering; a Caveat says that if a store changes during a Transition React re-reads `getSnapshot` and restarts as a blocking update so the screen shows one version of the store
+- **Also good:** [useSyncExternalStore: Demystified for Practical React Development](https://www.epicreact.dev/use-sync-external-store-demystified-for-practical-react-development-w5ac0) — Kent C. Dodds, Epic React, no date shown: defines tearing as the UI showing conflicting information, and says Effect-plus-state subscription is prone to it under concurrent rendering (*read*)
+- **Also good:** [Concurrent React for Library Maintainers](https://github.com/reactwg/react-18/discussions/70)
+- **Beyond the docs:** [What is Tearing in React Concurrent Mode](https://dev.to/childrentime/what-is-tearing-in-react-concurrent-mode-ebn) — ReactUse (childrentime), DEV Community, 2025-07-28: a runnable demo: a store ticking every 50 ms, five slow components mounted in a transition, mismatched values on screen, then fixed with `useSyncExternalStore` (the fixed demo also drops the interval to 10 ms) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`<Activity>`](14-activity.md) ·

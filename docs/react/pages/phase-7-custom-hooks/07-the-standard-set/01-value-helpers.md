@@ -277,6 +277,19 @@ yes: the updater form, the honest dependency array and the cleanup are behaviour
 optimisation. And a component that reads a ref during render is one the Compiler
 *cannot* optimise, so the wrong `usePrevious` costs you the Compiler as well.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useLocalStorage](https://usehooks-ts.com/react-hook/use-local-storage) — usehooks-ts: library docs for one of the ten hooks: `initializeWithValue` should be false in SSR so the initial value is returned first (*read*)
+- **Also good:** [useDebounceValue](https://usehooks-ts.com/react-hook/use-debounce-value) — usehooks-ts: the debounce hook from the same library (*headings only*)
+- **Also good:** [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect)
+- **Beyond the docs:** [Making setInterval Declarative with React Hooks](https://overreacted.io/making-setinterval-declarative-with-react-hooks/) — Dan Abramov, 2019-02-04: the canonical `useInterval`: the latest callback is kept in a ref so the interval is not reset (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [The standard set](README.md) ·

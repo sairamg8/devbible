@@ -169,6 +169,16 @@ server; whether they can upgrade React within a day of an advisory; and whether 
 is actually the problem they have. The last one is the one that most often ends the
 conversation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Also good:** [Making Sense of React Server Components](https://www.joshwcomeau.com/react/server-components/) — Josh W. Comeau: the Advantages section is the case for RSC, useful as the other side of this page (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Next.js App Router vs React Router](16-nextjs-vs-react-router.md) ·

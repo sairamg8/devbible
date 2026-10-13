@@ -230,6 +230,17 @@ No. It is for content that is unavailable, not content that is expensive. A slow
 suspends nothing; the tools are transitions, memoization and virtualization. The
 experimental `defer` prop is React's move in that direction and is not in stable 19.2.8.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Suspense](https://react.dev/reference/react/Suspense) — react.dev: lists the activators (`lazy`, promises read with `use`, data streamed from Server Components or a Suspense-enabled framework, stylesheets with `precedence`) and states that Suspense does not detect data fetched in an Effect or eve
+- **Also good:** [lazy](https://react.dev/reference/react/lazy) — react.dev: code-splitting with Suspense, and the troubleshooting entry: declare a `lazy` component inside another component and its state resets on re-render (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`<Suspense>`](02-suspense/README.md) ·

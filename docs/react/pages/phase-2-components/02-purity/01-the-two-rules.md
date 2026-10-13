@@ -243,6 +243,17 @@ external source in a way React can track, including under concurrent rendering.
 Reading `window.innerWidth` during render is impure, and reading it in an effect
 gives you a first paint with the wrong value.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Keeping Components Pure](https://react.dev/learn/keeping-components-pure) — react.dev: same inputs give same JSX; do not mutate pre-existing values; local mutation is fine; StrictMode double-calls to expose it (*read*)
+- **Beyond the docs:** [Component Purity and StrictMode in React](https://certificates.dev/blog/component-purity-and-strictmode-in-react) — Aurora Scharff, certificates.dev, 2025-07-09: mutating props and non-idempotent values like the current time in render, with StrictMode as the detector; suggests capturing the time once with a `useState` initializer
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Purity](README.md) · Next → [What purity still allows](02-what-is-allowed.md)

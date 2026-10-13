@@ -249,6 +249,16 @@ against the portal's own node instead.
 No. It targets a real DOM node and there is no DOM on the server. Render it
 after mount, or use a framework component that handles the SSR case.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [createPortal](https://react.dev/reference/react-dom/createPortal) — react.dev: a portal acts as a child of its React parent; events bubble through the React tree, stated in the Caveats in prose (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Component boundaries](10-component-boundaries.md) · Index: [Phase 2](README.md) · Next → [Render props and function-as-children](12-render-props/README.md)

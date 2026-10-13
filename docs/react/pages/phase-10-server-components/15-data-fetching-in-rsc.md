@@ -275,6 +275,17 @@ It returns `null` outside rendering and in Client Components, so always use opti
 — and do **not** treat `null` as "we are on the client", because the docs say it will be used
 on the client in future when a client cache refreshes or invalidates.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`cache`](https://react.dev/reference/react/cache) — react.dev: "only for use with React Server Components"; the cache is invalidated for each server request (*read*)
+- **Also good:** [`cacheSignal`](https://react.dev/reference/react/cacheSignal) — react.dev: an `AbortSignal` that aborts when React has finished rendering; returns `null` in Client Components and outside rendering (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The renderer packages](14-renderer-packages.md) ·

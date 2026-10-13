@@ -170,6 +170,16 @@ Effectively yes. Rather than change the update model, React keeps re-rendering
 and moves memoization into a build step, so the ergonomic cost of the model is
 paid by the compiler instead of by you.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Beyond the docs:** [Virtual DOM is pure overhead](https://svelte.dev/blog/virtual-dom-is-pure-overhead) — Rich Harris, Svelte blog, 2018-12-27: argues the virtual DOM is a means to declarative UI, not a speed feature, and that update work can move to build time; written by a competing framework's author and from 2018, before the React Compiler
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [React on other renderers](13-other-renderers.md) · Index: [Phase 0](README.md) · Next phase → [Phase 1 — JSX](../../syllabus/01-the-react-model.md)

@@ -184,6 +184,17 @@ production that cannot be split away, since they are needed to render anything.
 Knowing that baseline is what lets you distinguish "React is big" from "our
 dependencies are big" — and it is nearly always the second.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) — webpack: tree shaking relies on the static structure of ES2015 module syntax, and side-effect marking decides what stays (*read*)
+- **Beyond the docs:** [Bundle Size Investigation](https://www.developerway.com/posts/bundle-size-investigation) — Nadia Makarevich, Developer Way, 2025-12-04: a React-app walk-through of bundle analysis, tree-shaking fixes and duplicate libraries, with a step-by-step process for picking a package to eliminate (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Expensive initial mount](15-expensive-initial-mount.md) · Index: [Phase 6](README.md) · Next → [`useDeferredValue` for a laggy list](17-usedeferredvalue.md)

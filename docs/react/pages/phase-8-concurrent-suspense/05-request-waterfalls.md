@@ -262,6 +262,18 @@ are sequential, requests that begin together are not. Structurally, look for `us
 components nested below a boundary whose content also fetches, and ask of each request
 whether it needs anything from the one above it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Performance and Request Waterfalls](https://tanstack.com/query/latest/docs/framework/react/guides/request-waterfalls) — TanStack Query docs: dependent queries, nested-component waterfalls, code-splitting adding a round trip, and prefetching at the router level (*read*)
+- **Also good:** [Fetch Waterfall in React](https://blog.sentry.io/fetch-waterfall-in-react) — Lazar Nikolov, Sentry blog, 2023-12-15: three fixes: Suspense, `Promise.all` on the server, hoisting; predates stable `use` (*read*)
+- **Beyond the docs:** [React 19 and Suspense - A Drama in 3 Acts](https://tkdodo.eu/blog/react-19-and-suspense-a-drama-in-3-acts) — Dominik (TkDodo), 2024-06-16: why fetches inside one boundary can run one after another in React 19 and why render-as-you-fetch is the answer; written before 19.0 shipped, and the article itself says the team postponed the release to look for a fix, so check t
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`use(promise)`](04-use-promise.md) ·

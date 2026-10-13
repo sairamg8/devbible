@@ -227,3 +227,15 @@ belongs in an effect with a cleanup.
 ---
 
 Index: [Phase 5](README.md) · Next → [DOM refs](02-dom-refs/README.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useRef](https://react.dev/reference/react/useRef) — react.dev: the reference page: a ref holds a value that is not needed for rendering, and changing it does not trigger a re-render (*read*)
+- **Also good:** [Referencing Values with Refs](https://react.dev/learn/referencing-values-with-refs) — react.dev: the learn page, with a "Best practices for refs" section: treat refs as an escape hatch, use them for values that do not impact the rendering logic (*read*)
+- **Beyond the docs:** [Don't Misuse useRef in React](https://dev.to/a1guy/dont-misuse-useref-in-react-the-practical-guide-you-actually-need-5aj6) — Ali Aslam (a1guy), DEV Community, 2025-08-17: calls it a little mutable box kept between renders, and builds a mental model for when to reach for it, which is the instance-variable half the reference page states briefly
+
+{/* LINKMAP:END */}

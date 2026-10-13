@@ -215,6 +215,17 @@ The documented default is that React logs all errors to the console, and your ha
 runs in its place. The server-side `onError` reference says explicitly to keep calling
 `console.error`; the same discipline is worth applying on the client.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`createRoot`](https://react.dev/reference/react-dom/client/createRoot) — react.dev: documents `onCaughtError`, `onUncaughtError` and `onRecoverableError`, with an "Error logging in production" example (*read*)
+- **Also good:** [`hydrateRoot`](https://react.dev/reference/react-dom/client/hydrateRoot) — react.dev: the same three options for hydration (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [13 · Root error options](README.md) ·
