@@ -191,6 +191,17 @@ incidental memory edges and changed JIT decisions, masking the race.
 Heisenbugs of this shape are near-diagnostic of a visibility problem:
 the fix is an intentional edge, not the accidental one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Java Memory Model Pragmatics](https://shipilev.net/blog/2014/jmm-pragmatics/) — Aleksey Shipilev, transcript, last updated 2016-09-28: happens-before as program order plus synchronizes-with, volatile write as release and read as acquire, and why an acquire on an unrelated variable guarantees nothing (*read*)
+- **Also good:** [JLS chapter 17, Threads and Locks](https://docs.oracle.com/javase/specs/jls/se25/html/jls-17.html) — Oracle, Java Language Specification SE 25: section 17.4.5 defines happens-before: if one action happens-before another, the first is visible to and ordered before the second; spec style, dense (*read* that section)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The Java Memory Model](README.md) · Next → [Happens-before](02-happens-before.md)

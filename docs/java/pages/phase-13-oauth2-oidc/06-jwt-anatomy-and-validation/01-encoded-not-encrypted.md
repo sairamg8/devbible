@@ -260,6 +260,18 @@ public key as the secret, or decodes without verifying at all, then editing work
 Those are chunks **11** *(not written yet)*, **11b** *(not written yet)* and
 **11e** *(not written yet)*.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [RFC 8725, JSON Web Token Best Current Practices](https://datatracker.ietf.org/doc/html/rfc8725) — IETF: the attack and validation checklist (section 3 lists algorithm verification, issuer and subject validation, and audience validation)
+- **Also good:** [RFC 7519, JSON Web Token](https://datatracker.ietf.org/doc/html/rfc7519) — IETF: the claim definitions
+- **Beyond the docs:** [JWT attacks](https://portswigger.net/web-security/jwt) — PortSwigger Web Security Academy: covers `alg` set to none, algorithm confusion and injected `jwk` and `jku` keys, with labs to try
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [Compact serialization](02-compact-serialization.md)

@@ -168,6 +168,17 @@ the daemon keeps its old one until stopped. Toolchains sidestep it by
 separating the daemon's JVM from the compilation JDK; otherwise
 `gradle --stop` after switching.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SDKMAN! usage](https://sdkman.io/usage/) — SDKMAN!: `sdk install`, `sdk use`, `sdk env init`, `sdk env`, `sdk env install` (*read*)
+- **Beyond the docs:** [Automatic Switching Of Java Versions With SDKMAN!](https://jdriven.com/blog/2020/10/Automatic-Switching-Of-Java-Versions-With-SDKMAN) — Hubert Klein Ikkink, JDriven, 2020-10-16: `sdk env init` writes `.sdkmanrc`, `sdk env` applies it, `sdkman_auto_env=true` switches on `cd`; 2020 identifiers will differ from today's `sdk list java`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Garbage collection, the working model](08-garbage-collection.md) · Next → [The standard library layout](10-stdlib-layout.md)

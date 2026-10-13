@@ -176,6 +176,18 @@ without resizing* — it does the load-factor arithmetic. The constructor's
 50 is raw initial capacity: it resizes at 37 entries (50 × 0.75) — the
 subtle off-by-a-third that the factory was added to end.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HashMap](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/HashMap.html) — Java SE 25 API docs: load factor 0.75, capacity as bucket count, rehash on growth, "many keys with the same `hashCode()`" slows any hash table, and `Comparable` keys may be used to break ties (*read*)
+- **Also good:** [JEP 180: Handle Frequent HashMap Collisions with Balanced Trees](https://openjdk.org/jeps/180) — OpenJDK: the design note for the Java 8 change: balanced trees replace long bucket lists, worst-case lookup O(n) to O(log n), helps any `Comparable` key; gives no threshold (*read*)
+- **Beyond the docs:** [HashMap performance improvements in Java 8](https://nurkiewicz.com/2014/04/hashmap-performance-improvements-in.html) — Tomasz Nurkiewicz, 2014-04-22: a long bucket is replaced by a tree once it passes `TREEIFY_THRESHOLD = 8`, ordered by hash and then by `Comparable`, and why that blunts collision attacks; written against Java 8
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Sets](06-sets.md) · [Next → LinkedHashMap and TreeMap](08-linkedhashmap-treemap.md)

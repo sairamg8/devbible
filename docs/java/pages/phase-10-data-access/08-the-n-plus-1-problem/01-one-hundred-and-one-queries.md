@@ -220,3 +220,14 @@ point at the wrong page.
 ---
 
 Index: [08 · The N+1 problem](README.md) · Next → [1b · The general rule](01b-the-general-rule.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Hibernate ORM User Guide](https://docs.jboss.org/hibernate/orm/current/userguide/html_single/Hibernate_User_Guide.html) — Hibernate project: fetching strategies (*fetched, not read*)
+- **Beyond the docs:** [N+1 query problem with JPA and Hibernate](https://vladmihalcea.com/n-plus-1-query-problem/) — Vlad Mihalcea, 2020-03-17: the extra statements each run fast and evade slow-query logs; fix by fetching everything in the original query with `JOIN FETCH`
+
+{/* LINKMAP:END */}

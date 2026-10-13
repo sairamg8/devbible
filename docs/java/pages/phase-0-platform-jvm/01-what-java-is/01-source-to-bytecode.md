@@ -226,6 +226,17 @@ secrets out of it.
 by `javac`. Until consumers recompile, they carry the old value — a classic
 "deployed the fix, nothing changed" incident.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Java Virtual Machine Specification, chapter 1](https://docs.oracle.com/javase/specs/jvms/se25/html/jvms-1.html) — Oracle: calls the JVM the cornerstone of the platform and credits it for hardware and operating-system independence and the small size of compiled code (*read*)
+- **Also good:** [javac](https://docs.oracle.com/en/java/javase/25/docs/specs/man/javac.html) — Oracle man page for the compiler (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [What Java is](README.md) · Next → [The JVM at run time](02-the-jvm-at-run-time.md)

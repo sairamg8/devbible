@@ -212,6 +212,18 @@ the threads are gone until restart, so "retry" just queues more work
 behind a frozen path. The dividing line is whether some arbiter breaks
 the cycle for you.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Deadlock](https://docs.oracle.com/javase/tutorial/essential/concurrency/deadlock.html) — The Java Tutorials: the Alphonse and Gaston `bow` and `bowBack` example (*read*)
+- **Read this:** [Starvation and Livelock](https://docs.oracle.com/javase/tutorial/essential/concurrency/starvelive.html)
+- **Beyond the docs:** [How to Troubleshoot Deadlock in Java](https://blog.fastthread.io/deadlock/) — tier1appteam, fastThread blog, 2016-04-25: a sample dump from a deliberately deadlocked program where Thread-0 and Thread-1 are both BLOCKED on an object monitor, each waiting for the other's lock; has vendor promo banners around the article
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Overview](README.md) · Index: [Deadlock, livelock, starvation](README.md) · Next → [Reading the dump; livelock and starvation](02-dumps-livelock-starvation.md)

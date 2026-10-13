@@ -153,6 +153,19 @@ Null safety on *both* sides: true when both are null, false when exactly one
 is, delegates otherwise — the right call sites are comparisons inside your own
 `equals` implementations and any code where either operand may be null.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`Object`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html) — Javadoc: the contract is written out on `equals` and `hashCode` (*read*)
+- **Also good:** [How To Implement hashCode Correctly](https://nipafx.dev/implement-java-hashcode-correctly/) — Nicolai Parlog (nipafx), 2016-06-13: hash-based structures do not recompute the position of a stored element when its hash fields change, so do not build `hashCode` from mutable fields (*read*)
+- **Also good:** [MET11-J. Ensure that keys used in comparison operations are immutable](https://cmu-sei.github.io/secure-coding-standards/sei-cert-oracle-coding-standard-for-java/rules/methods-met/met11-j/)
+- **Beyond the docs:** [How to Write an Equality Method in Java](https://www.artima.com/articles/how-to-write-an-equality-method-in-java) — Martin Odersky, Lex Spoon and Bill Venners, Artima, 2009-06-01: four pitfalls: wrong signature, `equals` without `hashCode`, defining `equals` on mutable fields (a point added to a `HashSet` then changed can no longer be found by `contains`), and breaking the equivalence relation with subclass
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [equals and hashCode](README.md) · Next → [Implementing it right](02-implementing-it-right.md)

@@ -162,6 +162,17 @@ sleeps the current thread, and a `Base`-typed variable holding a `Child`
 still calls `Base`'s static. The spelling implies dispatch that does not
 exist.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Understanding Class Members](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html) — Oracle Java Tutorial: class variables and class methods (*read*)
+- **Also good:** [Initialization of Classes and Interfaces (JLS 12.4)](https://docs.oracle.com/javase/specs/jls/se25/html/jls-12.html) — Oracle: when static state is set up (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [`static`](README.md) · Next → [Initialization and `<clinit>`](02-initialization-clinit.md)

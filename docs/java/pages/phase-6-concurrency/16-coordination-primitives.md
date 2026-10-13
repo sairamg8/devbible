@@ -202,6 +202,19 @@ test failing, with a stack instead of a kill -9, and the timeout bounds
 suite time. Rule: production and test `await`s are always the timed
 overloads.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CountDownLatch](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CountDownLatch.html) — Oracle, Java SE 25 API: lets threads wait until operations in other threads complete; one-shot, and the page points to `CyclicBarrier` if you need a reset (*read*; `Semaphore` is not on this page)
+- **Also good:** [CountDownLatch](https://jenkov.com/tutorials/java-util-concurrent/countdownlatch.html) — Jakob Jenkov, last update 2014-06-23: count, `countDown()` and `await()` with a Waiter and Decrementer example (*read*)
+- **Also good:** [Semaphore](https://jenkov.com/tutorials/java-util-concurrent/semaphore.html)
+- **Also good:** [CyclicBarrier](https://jenkov.com/tutorials/java-util-concurrent/cyclicbarrier.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Change as replacement](15-immutability-first-strategy/03-change-as-replacement.md) · Index: [Phase 6 — Concurrency](README.md) · Next → [`wait`/`notify` — the legacy protocol](17-wait-notify-legacy.md)

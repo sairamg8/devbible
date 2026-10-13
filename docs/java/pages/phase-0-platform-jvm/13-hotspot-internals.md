@@ -160,6 +160,18 @@ Faster: tier progression 0 → 3 → 4 as profiles mature. The one-off slowdown:
 a deoptimization — some speculation failed (new type observed, rare branch
 taken), execution dropped to the interpreter, then recompiled.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HotSpot Group](https://openjdk.org/groups/hotspot/) — OpenJDK: the group's page and links into its documents (*read*)
+- **Also good:** [Java HotSpot Virtual Machine Performance Enhancements](https://docs.oracle.com/en/java/javase/25/vm/java-hotspot-virtual-machine-performance-enhancements.html) — Oracle JVM Guide: tiered compilation and escape analysis, the two entries from our row that Oracle documents (*read*)
+- **Beyond the docs:** [JVM Anatomy Quark 29: Uncommon Traps](https://shipilev.net/jvm/anatomy-quarks/29-uncommon-traps/) — Aleksey Shipilëv, last updated 2021-07-21: the JIT replaces never-taken branches with an uncommon trap, and when one fires the method is deoptimized and recompiled (C2 version "made not entrant"); a measured walk through the mechanism
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Java vs Kotlin vs the JVM ecosystem](12-java-vs-kotlin.md) · Index: [Phase 0 — The platform and the JVM](README.md)

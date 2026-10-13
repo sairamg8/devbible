@@ -246,6 +246,17 @@ HikariCP be invisible to your repository code: the repository sees the same
 interface whether the connection came from a pool, from a driver directly, or
 from a test double.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JDBC Basics](https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html) — Oracle Java Tutorials: connections, statements, result sets (*fetched, not read*)
+- **Also good:** [SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) — OWASP: parameterized queries as the primary defence (*fetched, not read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Phase 10 — Data access](../README.md) · Index: [JDBC](README.md) · Next → [2 · `DataSource`, not `DriverManager`](02-datasource-not-drivermanager.md)

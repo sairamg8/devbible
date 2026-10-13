@@ -190,6 +190,19 @@ A method that can break JVM integrity if misused (linking native functions, `rei
 **★ C returns `char*` — why can't you read it immediately, and what's the safe pattern?**
 The returned `MemorySegment` has length zero because the runtime can't know the allocation's size; any read throws. `reinterpret` it with the documented size (or scan within a documented maximum for the NUL), ideally attaching it to an arena so the claimed region still has a lifetime.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Calling a C Library Function with the Foreign Function and Memory API](https://docs.oracle.com/en/java/javase/25/core/calling-c-library-function-foreign-function-and-memory-api.html) — Oracle, Java SE 25 Core Libraries guide: the `strlen` walk-through: `Linker.nativeLinker()`, `defaultLookup().findOrThrow`, a `FunctionDescriptor`, a downcall `MethodHandle` kept `static final`, and an `Arena.ofConfined()` for the native string (*read*)
+- **Also good:** [Restricted Methods](https://docs.oracle.com/en/java/javase/25/core/restricted-methods.html) — Oracle, Java SE 25 Core Libraries guide: `Linker.downcallHandle` is restricted; enable with `--enable-native-access`; the `--illegal-native-access` default is `warn` from JDK 24, and `deny` is planned as a future default (*read*)
+- **Also good:** [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
+- **Also good:** [Foreign Function and Memory API](https://docs.oracle.com/en/java/javase/25/core/foreign-function-and-memory-api.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [NIO channels and selectors](12-nio-channels-selectors.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Phase 8 — The build: Maven, Gradle and dependencies](../phase-8-build-dependencies/README.md)

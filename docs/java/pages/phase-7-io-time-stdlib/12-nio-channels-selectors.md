@@ -221,6 +221,17 @@ The kernel can move bytes source→destination without surfacing them into user 
 **★ You see `epoll` and a spinning thread in a Netty bug report — what class of bug is that?**
 A selector wakeup/interest-set bug: either an interest op (usually `OP_WRITE`) that is always ready, a key never removed from the selected set, or the historical "epoll spurious wakeup returns 0" JDK bug frameworks work around by rebuilding the selector after N zero-returns.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [java.nio.channels](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/channels/package-summary.html) — Oracle, Java SE 25 API: channels, `Selector` as a multiplexor of selectable channels, non-blocking mode, and readiness as "a hint, but not a guarantee" (*read*)
+- **Beyond the docs:** [Java NIO Overview](https://jenkov.com/tutorials/java-nio/overview.html) — Jakob Jenkov, last update 2014-06-23: channels, buffers and selectors in short, "a channel is a bit like a stream"; non-blocking IO is only linked to a separate page; pre-Java 8 era
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Console I/O and Scanner](11-console-io-scanner.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Foreign Function & Memory API](13-ffm-api.md)

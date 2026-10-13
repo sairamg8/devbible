@@ -206,6 +206,16 @@ Unicode CLDR, bundled with the JDK since 9 (JEP 252) and updated each release. C
 **★ Why is caching one `NumberFormat` in a static field wrong twice?**
 Thread-safety — `DecimalFormat` is documented unsafe for concurrent use; and locale-correctness — one cached instance froze one locale, but display formatting should follow the *request's* user locale. Create per use (cheap) or per thread, keyed by locale.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Trail: Internationalization](https://docs.oracle.com/javase/tutorial/i18n/index.html) — The Java Tutorials: `Locale`, locale-specific resources via `ResourceBundle`, locale-aware numbers, dates and messages (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Java serialization](08-java-serialization.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [ProcessBuilder](10-processbuilder.md)

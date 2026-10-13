@@ -278,3 +278,14 @@ an AssertJ internal — most realistically a custom `AbstractAssert` subclass of
 that is failing somewhere you did not expect.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [AssertJ documentation](https://assertj.github.io/doc/) — AssertJ project (*fetched, not read*)
+- **Beyond the docs:** [Asserting Lists with AssertJ](https://reflectoring.io/assertj-lists/) — Mateo Stjepanović, Reflectoring, 2021-10-04: `extracting()` for properties, `tuple()` for several, `hasSize()` after filtering (*read*)
+
+{/* LINKMAP:END */}

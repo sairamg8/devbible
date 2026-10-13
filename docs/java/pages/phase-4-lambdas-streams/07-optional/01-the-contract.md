@@ -230,6 +230,17 @@ behaviour, honest name. In review, `get()` (or bare `orElseThrow()`) demands
 the same justification: why is empty impossible here, and is a
 `NoSuchElementException` the failure you want if that reasoning rots?
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optional](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Optional.html) — Java SE 25 API docs: API note: "primarily intended for use as a method return type where there is a clear need to represent 'no result'"; `orElse` takes an already-built value, `orElseGet` a supplier (*read*)
+- **Beyond the docs:** [Java 8 SE Optional, a strict approach](https://nipafx.dev/stephen-colebourne-java-optional-strict-approach/) — Nicolai Parlog, 2015-08-27: sets Stephen Colebourne's rules (no `Optional` fields, none in setters or constructors, return type only) beside his own two: stricter on `null` (design optionality away, otherwise prefer `Optional` to `null`) but looser on placem
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Optional used correctly](README.md) · Next → [The operative API](02-the-operative-api.md)

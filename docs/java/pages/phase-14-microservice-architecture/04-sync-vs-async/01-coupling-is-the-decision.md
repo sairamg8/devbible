@@ -248,3 +248,14 @@ it having happened", "yes", "reference data" and "no" are the ones to change, an
 at least two of the four do.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Microservices](https://martinfowler.com/articles/microservices.html) — Martin Fowler and James Lewis: the communication-style discussion
+- **Also good:** [Microservice Trade-Offs](https://martinfowler.com/articles/microservice-trade-offs.html) — Martin Fowler: distribution costs
+
+{/* LINKMAP:END */}

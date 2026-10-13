@@ -199,6 +199,17 @@ thread kinds, and the suspension points are inside the JDK, invisible to
 the programmer. The continuation-parking machinery is comparable; the
 programming model is not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Virtual Threads](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html) — Oracle, Java SE 25 Core Libraries guide: do not pool virtual threads, use `newVirtualThreadPerTaskExecutor` and a `Semaphore` to limit concurrency; not for long-running CPU work; "do not run code any faster" (*read*)
+- **Beyond the docs:** [Virtual Threads: Lightweight Concurrency](https://www.infoq.com/presentations/virtual-threads-lightweight-concurrency/) — Ron Pressler (Project Loom lead), InfoQ talk, 2024-01-09: why thread-per-request wins over async (Little's Law), "scalable threads, not fast threads", and what to unlearn (never pool virtual threads; use a semaphore, not a pool, to limit concurrency); a talk, so read the summary or watch
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Next → [What changed, what didn't](02-what-changed-what-didnt.md)

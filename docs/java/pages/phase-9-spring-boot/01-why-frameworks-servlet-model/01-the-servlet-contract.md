@@ -247,6 +247,18 @@ Memory Model gives no ordering guarantees about whatsoever. The fixes are the
 ones from Phase 6: don't keep the state, or make it an `AtomicInteger`, or put
 it behind a lock — and in a web application the first is almost always right.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [DispatcherServlet](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-servlet.html) — Spring Framework reference: the front controller that Spring MVC hangs off the servlet container (*fetched, not read*)
+- **Also good:** [Embracing Virtual Threads](https://spring.io/blog/2022/10/11/embracing-virtual-threads) — Mark Paluch, Spring blog, 2022-10-11: virtual threads mainly help I/O-intensive applications that make blocking calls, which is the thread-per-request cost story; also warns that `synchronized` blocks can pin the carrier thread (*read*)
+- **Beyond the docs:** [Inside a Spring Boot Request](https://www.codingshuttle.com/blogs/inside-a-spring-boot-request-threads-security-transactions-memory-and-system-limits) — Shreyash Gurav, Coding Shuttle, 2026-03-15: walks the Tomcat pool settings (`threads.max`, `accept-count`) and what happens when the pool fills, then DispatcherServlet routing; filter coverage is shorter
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [The container's own extension points](02-filters-and-the-container.md)

@@ -168,6 +168,17 @@ String sql  = ids.stream().map(String::valueOf)
    versions (hash randomization aside, capacity changes reorder). Ordered
    dedupe is `LinkedHashSet` via `toCollection`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Collectors](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/stream/Collectors.html) — Java SE 25 API docs: two-argument `toMap` throws `IllegalStateException` on a colliding key; the three-argument merge form; `groupingBy` and `partitioningBy` (which always holds both keys) (*read*; first 100000 characters of a longer page)
+- **Beyond the docs:** [Java Collectors.toMap(): Collecting Stream Items into Map](https://howtodoinjava.com/java/stream/collect-stream-to-map/) — Lokesh Gupta, HowToDoInJava, page shows 2026-10-10: the "Duplicate key 3 (attempted merging ...)" message, keep-first, keep-last, join and count merge functions, and groupingBy when you want every value
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Collectors](README.md) · Next → [Grouping and partitioning](02-grouping-partitioning.md)

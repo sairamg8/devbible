@@ -226,3 +226,14 @@ capture the falsifying sample as a permanent example test. The mechanics of seed
 `.jqwik-database`, and what CI does and does not persist are the whole of
 [07 · Reproducibility](07-reproducibility.md).
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [jqwik User Guide](https://jqwik.net/docs/current/user-guide.html) — jqwik project: documents jqwik 1.10.2; covers `@Property` with `@ForAll` parameter generation, edge cases and result shrinking, where the shrinking mode runs until no smaller failing value is found (*read* the opening 100000 of 278903 characters
+- **Beyond the docs:** [Property-Based Testing in Java: Introduction](https://blog.johanneslink.net/2018/03/24/property-based-testing-in-java-introduction/) — Johannes Link (jqwik's author), 2018-03-24: why he took up property-based testing and how properties differ from example-based unit tests; motivation only, it does not teach generators or shrinking and links to later parts of the series for those; examples are for jqwik 1.1
+
+{/* LINKMAP:END */}

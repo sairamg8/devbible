@@ -252,6 +252,17 @@ cached artifact — and hides the diagnosis for everything else. The correct
 first move is `mvn dependency:tree -Dverbose`, which shows which versions were
 considered and which were omitted for conflict.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to the Dependency Mechanism](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) — Apache Maven: nearest wins, first declaration wins on a tie; `dependencyManagement` beats nearest-wins; a BOM is imported with `type pom` and `scope import` (*read*)
+- **Also good:** [Build Systems, dependency management](https://docs.spring.io/spring-boot/reference/using/build-systems.html) — Spring Boot reference: Boot curates versions in the `spring-boot-dependencies` BOM, you omit versions for managed libraries, and you can override one; do not set the Spring Framework version yourself (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Transitive dependencies and mediation](README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [Reading the tree, and overriding it](02-reading-and-overriding.md)

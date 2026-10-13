@@ -261,3 +261,15 @@ being timed.
 Next: [Why the JVM defeats naive timing](02-why-the-jvm-defeats-naive-timing.md).
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JMHSample_08_DeadCode](https://raw.githubusercontent.com/openjdk/jmh/master/jmh-samples/src/main/java/org/openjdk/jmh/samples/JMHSample_08_DeadCode.java) — OpenJDK JMH samples (source file): `measureWrong()` discards its result so the compiler can remove the work and the benchmark reports an impossibly fast time; `measureRight()` returns the value; a `baseline()` measures harness overhead (*read*)
+- **Also good:** [Nanotrusting the Nanotime](https://shipilev.net/blog/2014/nanotrusting-nanotime/) — Aleksey Shipilëv (JMH author), last updated 2014-09-28: `System.nanoTime()` costs about 15 to 30 ns per call, is coarse, and is a scalability bottleneck under contention; the experiments use JMH (*read*)
+- **Beyond the docs:** [Java Microbenchmark Harness (JMH) Tutorial](https://jenkov.com/tutorials/java-performance/jmh.html) — Jakob Jenkov, last updated 2023-11-27: thorough on dead-code elimination, `Blackhole` and the `@State` scopes; thin on why warmup matters and silent on `System.nanoTime` loops (*read*)
+
+{/* LINKMAP:END */}

@@ -169,3 +169,14 @@ keep serving through it — fail readiness first, keep accepting for a while, th
 Next: [Signals](02-signals.md).
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Graceful Shutdown (Spring Boot)](https://docs.spring.io/spring-boot/reference/web/graceful-shutdown.html) — Spring Boot reference: graceful shutdown is on by default for Tomcat, Jetty and Reactor Netty; the grace period is `spring.lifecycle.timeout-per-shutdown-phase`; `server.shutdown=immediate` turns it off (*read*)
+- **Beyond the docs:** [Graceful shutdown in Kubernetes](https://learnkube.com/graceful-shutdown) — Daniele Polencic, learnk8s, April 2024: endpoint removal and Pod deletion start in parallel, so traffic can still reach a Pod that is going away; delay in the app or a `preStop` hook (*read*)
+
+{/* LINKMAP:END */}

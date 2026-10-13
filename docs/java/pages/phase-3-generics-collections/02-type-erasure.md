@@ -200,6 +200,18 @@ methods erasing to the same `Number`-taking signature), for the raw type
 seen by reflection, and for which casts the compiler inserts for the
 other bounds.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Type Erasure](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html) — The Java Tutorials: the three steps: replace type parameters with bounds or `Object`, insert casts, generate bridge methods (*read*)
+- **Also good:** [Restrictions on Generics](https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html) — The Java Tutorials: the seven restrictions with the reason for each: no primitive type arguments, no `new E()`, no static fields of a type-parameter type, no casts or `instanceof` with parameterized types, no arrays of parameterized types, no generic
+- **Beyond the docs:** [Arrays in Java Generics](https://angelikalanger.com/Articles/Papers/JavaGenerics/ArraysInJavaGenerics.htm) — Angelika Langer and Klaus Kreft, last updated 2003-10-30: explains why arrays of parameterized types are a problem: arrays check element types at run time, and erasure leaves `Pair&lt;Integer,Integer&gt;[]` as just `Pair[]`; written for Java 5 era, covers the array rule only
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Generics and raw types](01-generics-raw-types/README.md) · Next → [Wildcards and PECS](03-wildcards-pecs.md)

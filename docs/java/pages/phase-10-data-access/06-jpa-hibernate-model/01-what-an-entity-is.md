@@ -265,3 +265,15 @@ exactly as relevant once JPA is in the picture.
 ---
 
 Index: [06 · The JPA/Hibernate model](README.md) · Next → [1b · The rules the spec imposes](01b-the-rules-the-spec-imposes.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Hibernate ORM User Guide](https://docs.jboss.org/hibernate/orm/current/userguide/html_single/Hibernate_User_Guide.html) — Hibernate project: entities, identifiers, the persistence context (*fetched, not read*; one very large page)
+- **Also good:** [The anatomy of Hibernate dirty checking](https://vladmihalcea.com/the-anatomy-of-hibernate-dirty-checking/) — Vlad Mihalcea (*fetched, not read*)
+- **Beyond the docs:** [The JPA and Hibernate first-level cache](https://vladmihalcea.com/jpa-hibernate-first-level-cache/) — Vlad Mihalcea, 2020-10-27: the persistence context is the first-level cache, bound to one thread, returning the same managed instance per id
+
+{/* LINKMAP:END */}

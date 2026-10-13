@@ -147,3 +147,15 @@ another equally cold instance — a loop that adds capacity without adding throu
 Next: [What CRaC is](02-what-crac-is.md).
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [OpenJDK CRaC project](https://openjdk.org/projects/crac/) — OpenJDK (*fetched, not read*)
+- **Also good:** [Checkpoint/Restore (Spring Framework)](https://docs.spring.io/spring-framework/reference/integration/checkpoint-restore.html) — Spring Framework reference (*fetched, not read*): [Coordinated Restore at Checkpoint (CRaC) Documentation](https://docs.azul.com/crac/)
+- **Also good:** [Coordinated Restore at Checkpoint (CRaC) Documentation](https://docs.azul.com/crac/)
+
+{/* LINKMAP:END */}

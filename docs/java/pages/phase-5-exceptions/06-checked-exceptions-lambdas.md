@@ -247,6 +247,17 @@ fingerprints in the error tracker. Extract named methods or one `unchecked`
 helper so wrapping is single-policy with causes attached — then the
 pipeline reads as logic again.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Exceptions in lambdas](https://blog.frankel.ch/exceptions-lambdas/) — Nicolas Fränkel, 2022-10-16: compares inline try/catch, a wrapper class, Lombok `@SneakyThrow`, Commons Lang `Failable` and Vavr's `Try`; notes `Failable` surfaces as `UndeclaredThrowableException` (*read*)
+- **Also good:** [Stream Gatherers (JEP 485)](https://horstmann.com/unblog/2024-10-01/index.html) — Cay Horstmann: mentions a `mapChecked` gatherer for checked exceptions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Reading a stack trace fast](05-reading-stack-traces/README.md) · Next → [Exceptions as control flow](07-exceptions-as-control-flow.md)

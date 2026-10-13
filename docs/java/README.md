@@ -4,6 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip 🔗 Link map — the best explanation on the web, per topic
+For every Java topic there is a [link map](./link-map/README.md): the primary docs plus, where one exists, the best non-official explanation — what it covers and what our own page must keep saying. First pass — open for review.
+:::
+
 > Verified: 2026-08 against the JDK 25 documentation, openjdk.org/projects/jdk/26
 > and /27, and the Oracle Java SE support roadmap.
 

@@ -220,6 +220,18 @@ No — lambda parameters share the enclosing scope, so `s -> …` fails to
 compile when `s` already names a local. Anonymous-class parameters, having
 their own scope, can shadow. Another reason conversions are not mechanical.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [java.util.function](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/package-summary.html) — Java SE 25 API docs: the naming scheme: `Function` T to R, `Consumer` T to void, `Predicate` T to boolean, `Supplier` nothing to R, `Bi` prefixes, primitive specializations (*read*)
+- **Also good:** [State of the Lambda](https://cr.openjdk.org/~briangoetz/lambda/lambda-state-final.html) — OpenJDK, dated September 2013, author not named on the page (links point to Brian Goetz): what counts as a functional interface and how the compiler decides (*read*)
+- **Beyond the docs:** [Java 8 Tutorial](https://winterbe.com/posts/2014/03/16/java-8-tutorial/) — winterbe, 2014-03-16: a hands-on walk through lambdas, the built-in `Predicate`, `Function`, `Supplier`, `Consumer` and `Comparator`, and which variables a lambda may capture; Java 8 era
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Lambdas and functional interfaces](README.md) · Next → [The `java.util.function` vocabulary](02-the-function-vocabulary.md)

@@ -171,6 +171,17 @@ and this is where most first attempts stop compiling.
    `null` is not the empty stream. (Contrast `mapMulti`: just don't call the
    consumer.)
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Stream](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/stream/Stream.html) — Java SE 25 API docs: the method reference for each operation; `peek` "exists mainly to support debugging" (*read*)
+- **Beyond the docs:** [Java 8 Streams: Definitive Guide to flatMap()](https://stackabuse.com/java-8-streams-definitive-guide-to-flatmap/) — Hiram Kamau, Stack Abuse, last updated 2023-05-17: `map` on words gives a list of lists, `flatMap` returns one flat list; one-to-many transformations; the `Optional` counterpart
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [map, filter, flatMap and friends](README.md) · Next → [Stateful, bounding and peek](02-stateful-bounding-peek.md)

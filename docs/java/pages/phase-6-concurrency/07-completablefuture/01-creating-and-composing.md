@@ -173,6 +173,17 @@ Adapting callback- or listener-style APIs: create it, return it, and
 between push APIs and composable stages — with the caveat that *you* now
 own completing it on every path, including timeouts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [A Guide to CompletableFuture](https://www.callicoder.com/java-8-completablefuture-tutorial/) — CalliCoder (the page names no author), published 2020-09-30, updated 2026-08-26: `supplyAsync`, `thenApply` as map, `thenCompose` as flatMap, `allOf` with result collection, `exceptionally` and `handle`, and a Timeouts section on `orTimeout` and `completeOnTimeout`, noting neither cancels the underlying work (
+- **Also good:** [CompletableFuture](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/CompletableFuture.html) — Oracle, Java SE 25 API: async methods without an executor run on `ForkJoinPool.commonPool()`; `get()` wraps in `ExecutionException`, `join()` rethrows `CompletionException` (*read* the class description)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Overview](README.md) · Index: [CompletableFuture](README.md) · Next → [Fan-out: `allOf`, `anyOf`, timeouts](02-fan-out-allof-anyof-timeouts.md)

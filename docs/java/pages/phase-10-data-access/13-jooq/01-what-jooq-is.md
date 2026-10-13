@@ -224,3 +224,15 @@ against the real database — the exact failure mode jOOQ was adopted to prevent
 generation must be wired into the build, not run by hand.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [jOOQ manual](https://www.jooq.org/doc/latest/manual/) — jOOQ project (*fetched, not read*)
+- **Also good:** [jOOQ vs. Hibernate: When to choose which](https://blog.jooq.org/jooq-vs-hibernate-when-to-choose-which/) — Lukas Eder (jOOQ's creator), 2015 (the page shows two March 2015 dates): chooses by whether the data model or the application drives design, and complex reads versus complex object-graph writes; vendor view (*read*)
+- **Beyond the docs:** [Why jOOQ matters](https://leanpub.com/read/high-performance-Java-persistence/leanpub-auto-why-jooq-matters) — Vlad Mihalcea, High-Performance Java Persistence (free sample chapter on Leanpub): an independent view: entity queries for read-write transactions, jOOQ for dynamic native SQL and database-specific syntax
+
+{/* LINKMAP:END */}

@@ -189,6 +189,17 @@ A common `RandomGenerator` interface over all generators, named algorithms (`Ran
 **★ When is seeding a generator correct, and when is it a bug?**
 Correct for reproducibility — tests, simulations, generated fixtures — on `Random`/`SplittableRandom`/LXM generators. A bug when applied to `SecureRandom` in the belief it "adds entropy": the OS already seeds it; explicit seeding of some algorithms replaces good entropy with guessable material.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SecureRandom](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/security/SecureRandom.html) — Oracle, Java SE 25 API: a cryptographically strong generator, safe for multiple threads, and `generateSeed`, `reseed` and `nextBytes` may block while gathering entropy (*read*)
+- **Beyond the docs:** [Cryptographically Strong Random on the JVM](https://alexn.org/blog/2024/08/13/cryptographically-strong-random-jvm/) — Alexandru Nedelcu, 2024-08-13: `Random` and `ThreadLocalRandom` are predictable, `UUID.randomUUID` uses `SecureRandom` and can block; on his Linux box `nextBytes` reads `/dev/urandom` and `generateSeed` reads `/dev/random`; Scala and Kotlin examples
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Regex](06-regex.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Java serialization](08-java-serialization.md)

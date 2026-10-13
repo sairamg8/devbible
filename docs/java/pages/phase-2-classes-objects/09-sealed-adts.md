@@ -190,6 +190,17 @@ exhaustive case analysis in an open-hierarchy language; `switch` over a
 sealed type does it natively, per operation, without touching the data
 types or paying double-dispatch ceremony.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JEP 409: Sealed Classes](https://openjdk.org/jeps/409) — OpenJDK (*read*)
+- **Beyond the docs:** [Data Oriented Programming in Java](https://www.infoq.com/articles/data-oriented-programming-java/) — Brian Goetz, InfoQ, 2022-06-20: records are product types, sealed classes are sum types, and a switch over a sealed type with no `default` makes the compiler show which switches break when a subtype is added; it has a "complex return types" section close to our 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Records](08-records/README.md) · Index: [Phase 2 — Classes and objects](README.md) · Next → [Enums](10-enums/README.md)

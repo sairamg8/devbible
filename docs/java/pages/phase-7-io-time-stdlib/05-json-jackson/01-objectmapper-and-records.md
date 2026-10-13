@@ -184,6 +184,16 @@ compile time unless `-parameters` is on (plus the parameter-names module in
 2.x); records always retain component names, which is one reason they bind
 so cleanly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [jackson-databind](https://github.com/FasterXML/jackson-databind) — FasterXML, README: the example comments `create once, reuse`, and 3.x makes `ObjectMapper` immutable and thread-safe; 3.x needs JDK 17, 2.x needs JDK 8; the README mentions neither records nor `JavaTimeModule` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [JSON with Jackson](README.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](../README.md) · Next → [The policy decisions](02-the-policy-decisions.md)

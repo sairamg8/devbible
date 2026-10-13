@@ -198,6 +198,18 @@ the copy boundary surfaces the bug at construction instead of at some
 later lookup. Fix the source; treat a genuine need for nulls as a signal
 the field wants a richer type.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`List`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html) — Javadoc: `copyOf` and the unmodifiable-collection rules (*read*)
+- **Also good:** [OBJ05-J. Do not return references to private mutable class members](https://cmu-sei.github.io/secure-coding-standards/sei-cert-oracle-coding-standard-for-java/rules/object-orientation-obj/obj05-j/) — SEI CERT Oracle Coding Standard for Java: a getter that returns the internal `Date` breaks encapsulation, the fix returns a defensive copy (*read*)
+- **Beyond the docs:** [Model Data Immutably and Transparently - Data-Oriented Programming v1.1](https://nipafx.dev/dop-v1-1-immutable-transparent-data/) — Nicolai Parlog (nipafx), 2024-05-27: starts from a `HashSet` entry that becomes undiscoverable after a hash field changes and argues immutability removes that class of bug, then shows records as the vehicle; it says little about defensive copies, only that a construc
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Designing immutable classes](README.md) · Next → [What it buys — threads, keys, records](02-what-it-buys-threads-keys-records.md)

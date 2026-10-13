@@ -264,6 +264,16 @@ variable and must likewise be last. The practical upshot is that a lot of
 pre-6.x sample code and blog material contains patterns that silently fail to
 match rather than failing loudly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Annotated Controllers](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller.html) — Spring Framework reference: `@RestController`, mappings, `@RequestBody`, `ResponseEntity` (*fetched, not read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [REST controllers](README.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Narrowing the match](02-narrowing-the-match.md)

@@ -196,6 +196,17 @@ terminal individually, so peak memory is one element (plus stateful-op
 buffers). `Files.lines(path).filter(...).count()` reads a multi-gigabyte
 file in constant memory — a `List<String>` version cannot.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [java.util.stream package summary](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/stream/package-summary.html) — Java SE 25 API docs: source, intermediate (always lazy) and terminal operations; a stream cannot be reused after a terminal operation (*read*)
+- **Beyond the docs:** [Java 8 Stream Tutorial](https://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/) — winterbe, 2014-07-31: quotes that intermediate operations run only with a terminal operation and shows elements moving through the chain one at a time, so filter before map saves work
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [The stream pipeline](README.md) · Next → [The machinery](02-the-machinery.md)

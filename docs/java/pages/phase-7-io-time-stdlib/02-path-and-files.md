@@ -250,6 +250,17 @@ failures detectable at call time throw plain `IOException`. If you need
 per-file failure handling, `walkFileTree`'s `visitFileFailed` is the
 finer-grained tool.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Files](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/file/Files.html) — Oracle, Java SE 25 API: `lines(Path)`: "The file is closed by closing the stream" and it "must be used within a try-with-resources statement or similar control structure"; `walk` carries the same rule for open directories (*read* the two entries; the cla
+- **Also good:** [File I/O (Featuring NIO.2)](https://docs.oracle.com/javase/tutorial/essential/io/fileio.html) — The Java Tutorials: the lead-in page of the trail: `Path`, `Files`, metadata, file and directory I/O, links, walking a file tree; it has no code and does not mention charsets or closing streams; the page says it was written for JDK 8 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [java.time](01-java-time/README.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Streams, buffers and charsets](03-streams-buffers-charsets.md)

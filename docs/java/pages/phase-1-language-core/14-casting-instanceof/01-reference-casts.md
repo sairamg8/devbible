@@ -146,6 +146,17 @@ Upstream. The throw site is where the wrong belief met reality; the bug is
 where the wrong object entered the collection, cache, or API. The exception
 message naming both classes tells you what to search for.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JEP 394: Pattern Matching for instanceof](https://openjdk.org/jeps/394) — OpenJDK: the pattern variable is in scope only where the match is definite (*read*)
+- **Beyond the docs:** [Pattern Matching in Java](https://nipafx.dev/java-pattern-matching/) — Nicolai Parlog (nipafx), 2021-02-16: flow scoping: the variable is usable after `&&` and after an early return on a negated test; pattern variables were implicitly final in Java 14 and 15 and are reassignable from Java 16
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Casting and `instanceof`](README.md) · Next → [`instanceof` and flow scoping](02-instanceof-flow-scoping.md)

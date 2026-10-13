@@ -188,6 +188,18 @@ works — schedule a `BlockingQueue` migration for maintainability, not as
 an emergency. Any rule violated: it's not verifiable — replace rather
 than patch, because the replacement encodes the rules structurally.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Guarded Blocks](https://docs.oracle.com/javase/tutorial/essential/concurrency/guardmeth.html) — The Java Tutorials: call `wait()` in a loop that re-tests the condition, because it can return on an unrelated notification (*read*)
+- **Also good:** [Thread Signaling in Java](https://jenkov.com/tutorials/java-concurrency/thread-signaling.html) — Jakob Jenkov, last update 2024-07-21: `wait`, `notify`, `notifyAll`, missed signals and spurious wakeups, with the `while` loop as the guard (*read*)
+- **Also good:** [WaitNotInLoop](https://errorprone.info/bugpattern/WaitNotInLoop)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Coordination primitives](16-coordination-primitives.md) · Index: [Phase 6 — Concurrency](README.md) · Next → [Phase 7 — I/O, time and the everyday stdlib](../phase-7-io-time-stdlib/README.md)

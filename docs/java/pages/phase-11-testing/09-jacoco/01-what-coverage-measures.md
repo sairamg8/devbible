@@ -255,3 +255,14 @@ mismatch in one of them, which renders affected classes as 0% and drags the tota
 which counter and which class set each number covers before treating the difference as real.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Coverage Counters](https://www.jacoco.org/jacoco/trunk/doc/counters.html) — JaCoCo project (*fetched, not read*)
+- **Beyond the docs:** [Test Coverage](https://martinfowler.com/bliki/TestCoverage.html) — Martin Fowler, 2012-04-17: high numbers are easy to reach with low-quality tests; coverage finds untested code, not good tests (*read*)
+
+{/* LINKMAP:END */}

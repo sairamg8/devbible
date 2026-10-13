@@ -237,3 +237,13 @@ left. The practical consequence is that any sizing measurement taken at average 
 here; the number to capture is peak concurrency.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Containerize your Java Applications](https://learn.microsoft.com/en-us/azure/developer/java/containers/overview) — Microsoft Learn (Java on Azure), page updated 2026-06-24: do not set max heap equal to container memory; `-XX:MaxRAMPercentage=75` as a starting point, default max heap is 25 percent of memory above 512 MB (*read*)
+
+{/* LINKMAP:END */}

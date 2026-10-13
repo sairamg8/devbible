@@ -263,6 +263,17 @@ that guarantee is doing real work. It is also the concrete reason constructor
 injection is preferred over field injection — reflection-assigned fields cannot
 be `final`, so the guarantee is simply unavailable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Bean Scopes](https://docs.spring.io/spring-framework/reference/core/beans/factory-scopes.html) — Spring Framework reference: singleton as the default, prototype and the web scopes (*fetched, not read*)
+- **Also good:** [Customizing the Nature of a Bean](https://docs.spring.io/spring-framework/reference/core/beans/factory-nature.html) — Spring Framework reference: lifecycle callbacks including `@PostConstruct` (*fetched, not read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Prototype scope and the singleton trap](02-prototype-and-the-trap.md)

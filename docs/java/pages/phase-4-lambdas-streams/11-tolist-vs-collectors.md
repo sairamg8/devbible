@@ -165,6 +165,17 @@ not — mutability; `Stream.of((String) null).toList()` succeeds where
 `collect(toList())` to `ArrayList` compiles but pins unspecified
 behaviour — the spec gap.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JDK-8260559: convert JDK code to use Stream.toList()](https://bugs.openjdk.org/browse/JDK-8260559) — OpenJDK bug tracker, reported by Stuart Marks: `Stream.toList()` (JDK 16) is unmodifiable, `Collectors.toList()` is unspecified though an `ArrayList` in practice; serialized results do not read on older JDKs; "en masse conversion is inappropriate" (*read*)
+- **Also good:** [Collectors](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/stream/Collectors.html) — Java SE 25 API docs: `toList` gives "no guarantees on the type, mutability, serializability, or thread-safety"; `toCollection(ArrayList::new)` for control (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Stateful lambdas and side effects](10-stateful-lambdas.md) · Next → [Infinite streams](12-infinite-streams.md)

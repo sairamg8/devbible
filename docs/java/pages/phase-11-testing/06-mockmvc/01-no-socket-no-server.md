@@ -227,3 +227,14 @@ between them is slice choice, which belongs to **05 · The test pyramid** *(not 
 yet)*.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MockMvc](https://docs.spring.io/spring-framework/reference/testing/mockmvc.html) — Spring Framework reference: setup, requests, assertions (*fetched, not read*)
+- **Beyond the docs:** [Unit Testing Spring MVC Controllers with @WebMvcTest](https://reflectoring.io/spring-boot-web-controller-test/) — Tom Hombergs, Reflectoring, 2021-12-16: asserts the status, compares the JSON body with a custom matcher and checks a named field error, with no server; names no Boot version and pins JUnit Jupiter 5.2.0, so the dependency setup is dated (*read*)
+
+{/* LINKMAP:END */}

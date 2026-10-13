@@ -243,6 +243,18 @@ replaced the main file wholesale, taking every setting it did not itself
 restate with it. Fix by completing the test file or by naming it differently
 and loading it explicitly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to the Standard Directory Layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html) — Apache Maven: `src/main/java`, `src/main/resources`, `src/test/java` and the rest, each holding one kind of material (*read*)
+- **Also good:** [Guide to Working with Multiple Modules](https://maven.apache.org/guides/mini/guide-multiple-modules.html) — Apache Maven: the reactor collects the modules in a parent's `modules` element and builds them in dependency order (*read*)
+- **Beyond the docs:** [A Multi-Module Project](https://www.sonatype.com/resources/guides/maven-by-example/multi-module-project) — Sonatype, Maven by Example: a parent POM with `pom` packaging referencing submodules (6.2) and the Reactor (6.5); the page shows no date and the sample log is from 2007
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Layout and multi-module projects](README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [Multi-module and the reactor](02-multi-module-and-the-reactor.md)

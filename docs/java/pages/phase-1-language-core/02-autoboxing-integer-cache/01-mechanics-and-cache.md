@@ -166,3 +166,15 @@ allocate).
 ---
 
 Index: [Autoboxing and the integer cache](README.md) · Next → [Unboxing NPEs and overload ambushes](02-unboxing-npes-overloads.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Conversions and Contexts (JLS chapter 5)](https://docs.oracle.com/javase/specs/jls/se25/html/jls-5.html) — Oracle: boxing conversion (5.1.7), including the rule that values from -128 to 127 must be cached (*read*)
+- **Also good:** [`Integer`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html) — Javadoc: `valueOf` (*read*)
+- **Beyond the docs:** [EXP03-J. Do not use the equality operators when comparing values of boxed primitives](https://cmu-sei.github.io/secure-coding-standards/sei-cert-oracle-coding-standard-for-java/rules/expressions-exp/exp03-j/) — SEI CERT Oracle Coding Standard for Java, Carnegie Mellon SEI: quotes JLS 5.1.7 on which boxed values are always cached (booleans, bytes, chars up to `\u007f`, ints and shorts from -128 to 127), notes a JVM may cache more so code relying on it is nonportable, and shows a `Comparator` that use
+
+{/* LINKMAP:END */}

@@ -228,6 +228,17 @@ that doesn't build on the false invariant. (With sealed types and
 exhaustive `switch` — [phase 2's sealed ADTs](../../phase-2-classes-objects/09-sealed-adts.md) —
 the compiler increasingly removes the need for it.)
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Unchecked Exceptions — The Controversy](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html) — The Java Tutorials: runtime exceptions signal programming errors; checked exceptions are part of a method's API; the guideline "If a client can reasonably be expected to recover from an exception, make it a checked exception" (*read*)
+- **Also good:** [Throwable](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Throwable.html) — Java SE 25 API docs: `Error` and `Exception` as the two conventional branches; checked means a `Throwable` that is neither a `RuntimeException` nor an `Error` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [The hierarchy, checked vs unchecked](README.md) · Next → [Checked exceptions — the mechanics and the debate](02-checked-mechanics-debate.md)

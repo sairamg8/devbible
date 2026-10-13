@@ -167,6 +167,18 @@ Put the closing `"""` at the end of the last content line rather than on its
 own line. On its own line, the preceding newline belongs to the content —
 the detail exact-match tests discover first.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Programmer's Guide to Text Blocks](https://openjdk.org/projects/amber/guides/text-blocks-guide) — Jim Laskey and Stuart Marks, OpenJDK Amber: incidental white space and how it is stripped, escape sequences, where the closing delimiter goes (*read*)
+- **Also good:** [JEP 378](https://openjdk.org/jeps/378) — OpenJDK (*read*): [Text blocks (Oracle docs)](https://docs.oracle.com/en/java/javase/25/text-blocks/index.html)
+- **Also good:** [Text blocks (Oracle docs)](https://docs.oracle.com/en/java/javase/25/text-blocks/index.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Strings](06-strings/README.md) · Next → [Control flow and `switch` expressions](08-control-flow-switch/README.md)

@@ -228,6 +228,17 @@ internal repository (Nexus, Artifactory) under real GAV coordinates and depend
 on it like anything else; a committed repository-shaped directory declared as a
 `<repository>` is the acceptable fallback.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to the Dependency Mechanism](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) — Apache Maven: scope table; a transitive dependency's scope is the combination of the direct scope and its own, so `compile` plus `runtime` gives `runtime` and `compile` plus `test` drops it (*read*)
+- **Beyond the docs:** [Maven Scopes: Compile, Provided, Runtime, Test, Import, System](https://howtodoinjava.com/maven/maven-dependency-scopes/) — Lokesh Gupta, HowToDoInJava, 2024-05-26: a section and XML example per scope (six, including `system` and `import`), but only a bare matrix for transitive scope and no mediation or `optional`; shallow, so use the official table for the rules
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Dependency scopes](README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [Transitivity, `optional`, and what actually ships](02-transitivity-and-what-ships.md)

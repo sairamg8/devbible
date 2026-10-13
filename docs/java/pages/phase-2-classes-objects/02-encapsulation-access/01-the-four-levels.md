@@ -159,6 +159,16 @@ The top-level class and everything nested in it compile into one nest;
 nestmates access each other's private members directly. Privacy is
 file-scoped, not braces-scoped.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Controlling Access to Members of a Class](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html) — Oracle Java Tutorial: the four levels and the access table (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Encapsulation and access](README.md) · Next → [Designing with access](02-designing-with-access.md)

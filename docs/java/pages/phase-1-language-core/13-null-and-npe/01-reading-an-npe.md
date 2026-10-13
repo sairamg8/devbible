@@ -153,6 +153,18 @@ Yes — both are specified to NPE when handed a null (a null exception
 reference, a null lock target). Obscure, but they complete the "only
 dereference throws" model.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JEP 358: Helpful NullPointerExceptions](https://openjdk.org/jeps/358) — OpenJDK: the message names the exact variable or expression that was null; its stated non-goal is tracking down the ultimate producer of the null, only the consumer (*read*)
+- **Also good:** [`Objects`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Objects.html) — Javadoc: `requireNonNull` with a message (*read*)
+- **Beyond the docs:** [How to Avoid NullPointerException in Java Code](https://foojay.io/today/avoiding-nullpointerexception/) — Victor Rentea, Foojay, 2020-12-22: validate in the constructor with `Objects.requireNonNull`, return `Optional` from getters for nullable fields, keep collections non-null; one engineer's opinionated style, and the `Optional` advice is debated
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [null and NPE](README.md) · Next → [Designing nulls out](02-designing-nulls-out.md)

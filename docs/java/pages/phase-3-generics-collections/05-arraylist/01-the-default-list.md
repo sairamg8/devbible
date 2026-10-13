@@ -173,6 +173,17 @@ see a stale `size` and a fresh array (or vice versa) from an earlier write.
 Safe publication — or an immutable snapshot like `List.copyOf` — is the fix;
 Phase 6 owns the details.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ArrayList](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/ArrayList.html) — Java SE 25 API docs: says capacity grows automatically but the growth policy is not specified beyond constant amortized time for `add`; `ensureCapacity` and `trimToSize` (*read*)
+- **Beyond the docs:** [ArrayList vs LinkedList Puzzle (Issue 334)](https://www.javaspecialists.eu/archive/Issue334-ArrayList-vs-LinkedList-Puzzle.html) — Heinz Kabutz, The Java Specialists' Newsletter, 2026-04-28: times adding 100 million elements on Java 25: `ArrayList` about 7x faster with the default GC but `LinkedList` faster under ZGC; the author calls it "not meant to be a thorough benchmark" (one laptop, one run), so treat it as a ca
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [ArrayList](README.md) · Next → [vs LinkedList — the honest comparison](02-arraylist-vs-linkedlist.md)

@@ -175,6 +175,17 @@ divergent recovery, different retry semantics, different translations.
 Multi-catch encodes "these failures are indistinguishable *here*"; keep it
 truthful.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The finally Block](https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html) — The Java Tutorials: `finally` runs after `return`, `break` and `continue`; may not run if the JVM exits; advises try-with-resources for resources (*read*)
+- **Also good:** [Catching and Handling Exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/catch.html) — The Java Tutorials: handler order, multi-catch with `|`, and that the multi-catch parameter is implicitly `final` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [`try`/`catch`/`finally` mechanics](README.md) · Next → [`finally` — the guarantees and the fine print](02-finally-the-fine-print.md)

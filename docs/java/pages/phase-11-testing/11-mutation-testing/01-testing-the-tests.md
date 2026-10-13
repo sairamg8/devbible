@@ -265,3 +265,14 @@ a clean coverage run first and refuses to continue if anything is red, with the 
 testing requires a green suite."*
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PIT mutation testing](https://pitest.org/) — pitest project: injects faults and measures the share your tests catch, which line coverage cannot show (*read*)
+- **Beyond the docs:** [State of Mutation Testing at Google](https://research.google/pubs/state-of-mutation-testing-at-google/) — Goran Petrovic and Marko Ivankovic, Google, ICSE-SEIP 2018 (the page lists it as 2017, to appear): mutation testing made affordable by mutating only changed, covered lines and showing the surviving mutants during code review, at Google scale; abstract page only, not the paper body (*read* the abstract)
+
+{/* LINKMAP:END */}

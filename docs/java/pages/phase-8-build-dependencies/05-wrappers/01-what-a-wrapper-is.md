@@ -246,6 +246,19 @@ destroyed, so the daemon costs startup and memory for a benefit it never
 collects. On a persistent, reused runner the calculation flips and keeping
 the daemon is right.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Gradle Wrapper Basics](https://docs.gradle.org/current/userguide/gradle_wrapper_basics.html) — Gradle User Manual: everyone who builds gets the same declared Gradle version with no manual install; the page does not explicitly say to commit it (*read*)
+- **Also good:** [Apache Maven Wrapper](https://maven.apache.org/tools/wrapper/) — Apache Maven, the Maven-side wrapper page (*read*: `mvnw`/`mvnw.cmd`, `.mvn/wrapper/maven-wrapper.properties` with `distributionUrl`, added with `mvn wrapper:wrapper`; it does not say whether to commit the files)
+- **Beyond the docs:** [Run Your Maven Build Anywhere with the Maven Wrapper](https://reflectoring.io/maven-wrapper/) — Saajan Nagendra, reflectoring.io, 2020-07-29: `mvnw`, `mvnw.cmd`, the `.mvn/wrapper` directory with `maven-wrapper.properties` and its `distributionUrl`, and the CI benefit; notes Maven 3.7.0 and later made the wrapper a core feature
+- **Beyond the docs:** [Run Your Gradle Build Anywhere with the Gradle Wrapper](https://reflectoring.io/gradle-wrapper/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Wrappers](README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [Trusting the wrapper — and what it does not pin](02-supply-chain-and-toolchains.md)

@@ -199,6 +199,17 @@ value semantics or appears in logs — topics 06 and 07. Leave `clone`,
 `finalize`, `wait`/`notify` alone: copy factories, try-with-resources +
 `Cleaner`, and `java.util.concurrent` replaced them respectively.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`Object`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html) — Javadoc: every method with its contract (*read*)
+- **Beyond the docs:** [NoClone](https://checkstyle.org/checks/coding/noclone.html) — Checkstyle documentation: `clone` "relies on strange, hard to follow rules": `Cloneable` does not declare `clone()`, `clone` does not work with final mutable references, and a copy constructor or static factory method can be used instead; it covers `clone`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Object lifecycle](14-object-lifecycle.md) · Index: [Phase 2 — Classes and objects](README.md)

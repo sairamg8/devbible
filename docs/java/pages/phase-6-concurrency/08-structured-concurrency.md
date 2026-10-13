@@ -194,6 +194,17 @@ It's a preview in JDK 25 (fifth round, JEP 505), gated behind
 it only with eyes open (pinned JDK, tolerance for migration); otherwise
 the concepts transfer to executors-with-discipline until it finalizes.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JEP 505: Structured Concurrency (Fifth Preview)](https://openjdk.org/jeps/505) — OpenJDK: Release 25, status Closed / Delivered (as a preview); the goal is to avoid thread leaks and delayed cancellation and make concurrent code observable (*read* the header and goals)
+- **Beyond the docs:** [Java's Structured Concurrency: Finally Finding Its Footing](https://foojay.io/today/javas-structured-concurrency-finally-finding-its-footing/) — A N M Bazlur Rahman, foojay, 2025-06-04: `StructuredTaskScope.open()` replaces the constructor, `Joiner` decides cancellation and the `join()` result, failure cancels siblings, and forking from a non-owner thread throws; JDK 25 with `--enable-preview`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [CompletableFuture](07-completablefuture/README.md) · Next → [Explicit locks](09-explicit-locks.md)

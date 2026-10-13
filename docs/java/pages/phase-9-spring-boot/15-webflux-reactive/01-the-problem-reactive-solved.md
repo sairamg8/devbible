@@ -237,3 +237,16 @@ no stack recording how the request got there.
 ---
 
 Index: [WebFlux and reactive](README.md) · Next → [Mono, Flux and laziness](02-mono-flux-and-laziness.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Overview (Spring WebFlux)](https://docs.spring.io/spring-framework/reference/web/webflux/new-framework.html) — Spring Framework reference: why WebFlux was created, including the case against blocking threads (*fetched, not read*)
+- **Also good:** [Embracing Virtual Threads](https://spring.io/blog/2022/10/11/embracing-virtual-threads) — Mark Paluch, Spring blog, 2022-10-11: virtual threads reduce the need for async code while reactive stays good for composing streams (*read*)
+- **Also good:** [JEP 444: Virtual Threads](https://openjdk.org/jeps/444)
+- **Beyond the docs:** [What Color is Your Function?](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/) — Bob Nystrom, 2015-02-01: why async functions split a codebase into two kinds that spread up the call chain, and why thread-based languages avoid it; not about Java or Spring, so it explains the idea behind our "colored functions" point and nothing else (*
+
+{/* LINKMAP:END */}

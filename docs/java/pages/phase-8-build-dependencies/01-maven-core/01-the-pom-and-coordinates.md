@@ -270,3 +270,14 @@ workaround.
 ---
 
 Index: [Maven core](README.md) · Next → [Inheritance and aggregation](02-inheritance-and-aggregation.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to the Build Lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html) — Apache Maven: the default lifecycle runs from `validate` to `deploy`, and invoking a phase runs every earlier phase (*read*)
+- **Beyond the docs:** [A Simple Maven Project](https://www.sonatype.com/resources/guides/maven-by-example/simple-maven-project) — Sonatype, Maven by Example chapter 3: generates a project with `archetype:generate`, runs `mvn install` with the build output, shows a full `pom.xml`, then explains the lifecycle (3.5.2) and `groupId`, `artifactId`, `version`, `packaging` (3.5.3); the page shows no da
+
+{/* LINKMAP:END */}

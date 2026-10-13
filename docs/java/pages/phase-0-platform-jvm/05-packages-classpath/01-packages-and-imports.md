@@ -176,6 +176,19 @@ In exactly the same package as its users — not a subpackage. This is the
 design constraint that makes package-private a *deliberate* module boundary
 (Phase 2) rather than an accident.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`java` launcher man page](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html) — Oracle: `--class-path`, wildcards, the module path option (*read*)
+- **Also good:** [`NoClassDefFoundError`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/NoClassDefFoundError.html) — Javadoc: the official definition of the error half of the pair (*read*)
+- **Also good:** [JVMS chapter 5, loading, linking and initializing](https://docs.oracle.com/javase/specs/jvms/se25/html/jvms-5.html)
+- **Beyond the docs:** [JAR Hell](https://nipafx.dev/jar-hell/) — Nicolai Parlog (nipafx), 2015-10-19: why class-path problems happen: a JAR cannot express its dependencies, so a missing one surfaces at run time as `NoClassDefFoundError`, and when two JARs hold the same class name the first on the class path shadows the rest, so be
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Packages and the classpath](README.md) · Next → [The classpath](02-the-classpath.md)

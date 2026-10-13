@@ -235,3 +235,16 @@ question, "what was this particular execution doing", which is only tractable on
 execution to look at. Reading logs first means searching an unbounded corpus with no filter.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SLF4J user manual](https://www.slf4j.org/manual.html) — SLF4J project: parameterized messages (*fetched, not read*)
+- **Also good:** [Logging (Spring Boot)](https://docs.spring.io/spring-boot/reference/features/logging.html) — Spring Boot reference (*fetched, not read*): [Logback manual](https://logback.qos.ch/manual/)
+- **Also good:** [Logback manual](https://logback.qos.ch/manual/)
+- **Beyond the docs:** [Fast and flexible observability with canonical log lines](https://stripe.com/blog/canonical-log-lines) — Brandur Leach, Stripe, 2019-07-30: one long log line per request at its end, gathering key telemetry so cross-request queries are simple
+
+{/* LINKMAP:END */}

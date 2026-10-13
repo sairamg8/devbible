@@ -174,6 +174,17 @@ Packages map to directories; case-only distinctions break on
 case-insensitive file systems, and lowercase keeps package names visually
 distinct from class names in imports and qualified references.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Google Java Style Guide, naming](https://google.github.io/styleguide/javaguide.html) — Google: package and module names lowercase with no underscores, types in UpperCamelCase, `CONSTANT_CASE` for static final immutable fields (*read*)
+- **Also good:** [Code Conventions for the Java Programming Language](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html) — Oracle, archive-only document last revised 1999 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Casting and `instanceof` patterns](14-casting-instanceof/README.md) · Next → [Precedence and evaluation order](16-precedence-evaluation.md)

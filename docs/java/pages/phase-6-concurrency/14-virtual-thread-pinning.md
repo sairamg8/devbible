@@ -160,6 +160,18 @@ fairness, multiple conditions. Where it was a mechanical swap, prefer
 reverting to `synchronized`: less API surface, no unlock-in-`finally` to
 get wrong, and identical virtual-thread behaviour now.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JEP 491: Synchronize Virtual Threads without Pinning](https://openjdk.org/jeps/491) — OpenJDK: Release 24, Closed / Delivered; still pinned: class loading, class initializers, and native code that calls back into Java and blocks (*read*)
+- **Also good:** [Java 24 Stops Pinning Virtual Threads (Almost) - Inside Java Newscast 80](https://nipafx.dev/inside-java-newscast-80/) — Nicolai Parlog, 2024-11-21: `synchronized` and `Object::wait` no longer pin; native frames and class loading still do; watch `jdk.VirtualThreadPinned` in JFR (*read*)
+- **Beyond the docs:** [Your Loom App Quietly Became a Thread Pool Again: A Field Guide to Virtual Thread Pinning](https://foojay.io/today/virtual-thread-pinning-field-guide/) — Felipe Maschio, foojay (also on DEV), 2026-07-16: on JDK 21 to 23 only `synchronized` and native frames pin; the JFR event is on by default from 21 for pins of 20 ms or more and fires for every pin in 24; `-Djdk.tracePinnedThreads` was removed in 24; in a reply to a reader commen
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Reading the dump; livelock and starvation](13-deadlock-livelock-starvation/02-dumps-livelock-starvation.md) · Index: [Phase 6 — Concurrency](README.md) · Next → [Immutability as the first strategy](15-immutability-first-strategy/README.md)

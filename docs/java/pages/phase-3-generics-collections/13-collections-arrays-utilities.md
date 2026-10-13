@@ -151,6 +151,17 @@ In-place algorithm work over a `List` without dropping to arrays —
 `rotate(list, k)` is the idiomatic "shift by k" and is O(n) with O(1) space,
 which a slice-and-concat rewrite is not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Arrays](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Arrays.html) — Java SE 25 API docs: `asList` is "a fixed-size list backed by the specified array"; changes write through in both directions, size-changing methods throw `UnsupportedOperationException`, a mismatched component type can give `ArrayStoreException` (*rea
+- **Also good:** [Collections](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Collections.html) — Java SE 25 API docs: `sort` (stable), `binarySearch` (negative insertion-point result, list must be sorted), `shuffle`, `fill`, `unmodifiableList` as a view (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 [← Prev: Immutable collections](12-immutable-collections.md) · Next → [Choosing a collection](14-choosing-a-collection/README.md)

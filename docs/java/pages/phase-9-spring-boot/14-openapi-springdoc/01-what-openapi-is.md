@@ -186,6 +186,17 @@ renames a schema and breaks the consumer's build. That is a real cost of
 generating the document from code rather than writing it, and it is the subject
 of chunk 3.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [springdoc-openapi](https://springdoc.org/) — springdoc project: the starter, properties and annotations (*fetched, not read*)
+- **Beyond the docs:** [Spring Boot 3 OpenAPI Docs with Springdoc and Swagger](https://howtodoinjava.com/spring-boot/springdoc-openapi-rest-documentation) — Lokesh Gupta, HowToDoInJava, 2026-10-06: uses springdoc 3.1.1 with Spring Boot 4.1.1, our target; covers security schemes, disabling the docs in production, and fixing Swagger UI 404s (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [OpenAPI with springdoc](README.md) · Next → [What 3.1 changed](02-what-3-1-changed.md)

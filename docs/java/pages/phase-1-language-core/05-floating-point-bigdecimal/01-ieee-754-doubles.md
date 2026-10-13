@@ -135,6 +135,19 @@ Floating: `Infinity` — arithmetic is total, continues silently, and
 `0.0/0.0` gives `NaN`. Integer: throws `ArithmeticException`. A type
 refactor can therefore convert a loud failure into silent propagation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`BigDecimal`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/math/BigDecimal.html) — Javadoc: scale, `setScale(int, RoundingMode)` and the `divide` overloads that take a `RoundingMode` (*read*)
+- **Also good:** [What Every Computer Scientist Should Know About Floating-Point Arithmetic](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) — David Goldberg, hosted by Oracle: the classic long paper (*headings only*)
+- **Also good:** [NUM10-J. Do not construct BigDecimal objects from floating-point literals](https://cmu-sei.github.io/secure-coding-standards/sei-cert-oracle-coding-standard-for-java/rules/numeric-types-and-operations-num/num10-j/)
+- **Beyond the docs:** [Floating-point cheat sheet for Java](https://floating-point-gui.de/languages/java/) — The Floating-Point Guide (floating-point-gui.de), Creative Commons licence, no author named on the page: `new BigDecimal("0.1")` plus `"0.2"` gives exactly 0.3, rounding with `setScale` and a `RoundingMode`, `String.format` for display; the site's home page explains why 0.1 + 0.2 gives 0.30000000000000004; its `strictfp` paragraph is
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Floating point and BigDecimal](README.md) · Next → [`BigDecimal`, correctly](02-bigdecimal-correctly.md)

@@ -205,6 +205,18 @@ merge-hostile state (running totals, seen-sets with first-wins semantics)
 belongs in `ofSequential`, which stays correct inside a parallel pipeline
 by evaluating the stage sequentially.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JEP 485: Stream Gatherers](https://openjdk.org/jeps/485) — OpenJDK: final in JDK 24 after previews in 22 and 23; the built-ins `fold`, `mapConcurrent`, `scan`, `windowFixed` and `windowSliding`; `windowFixed` turns 1 to 9 into three lists of three (*read*)
+- **Also good:** [Gatherers](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/stream/Gatherers.html) — Java SE 25 API docs: one-line contracts for `fold`, `mapConcurrent` (virtual threads, preserves order), `scan`, `windowFixed`, `windowSliding` (*read*)
+- **Beyond the docs:** [Stream Gatherers (JEP 485)](https://horstmann.com/unblog/2024-10-01/index.html) — Cay Horstmann: motivates gatherers by the awkward stateful lambda for dropping adjacent duplicates, then builds a custom gatherer with `Gatherer.ofSequential`; page shows no date (the URL carries 2024-10-01)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Infinite streams](12-infinite-streams.md) · Next → [Phase 5 — Exceptions](../phase-5-exceptions/README.md)

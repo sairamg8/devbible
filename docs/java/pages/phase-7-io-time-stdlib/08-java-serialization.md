@@ -166,6 +166,17 @@ For ordinary serializable classes: no constructor of the class runs (the first n
 **★ Where does Java serialization still appear in a modern stack, and what's your migration posture?**
 RMI/JMX, session replication, old caches and queue payloads. Posture: filter immediately (JEP 290), stop introducing new uses, migrate boundaries to JSON/protobuf with explicit versioning — and treat any surviving `ObjectInputStream` fed by the network as a critical finding.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Serialization Filtering](https://docs.oracle.com/en/java/javase/25/core/serialization-filtering1.html) — Oracle, Java SE 25 Core Libraries guide: filters screen incoming serialized streams before deserialization, to protect applications that accept untrusted data (*read*)
+- **Beyond the docs:** [Deserialization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html) — OWASP Cheat Sheet Series: a Java section on class allowlists with resource limits and a look-ahead `ObjectInputStream` that overrides `resolveClass()`; it says filtering "does not make arbitrary untrusted deserialization safe"; page shows no date
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [UUID and randomness](07-uuid-and-randomness.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Localization basics](09-localization-basics.md)

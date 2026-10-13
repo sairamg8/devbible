@@ -211,6 +211,17 @@ non-zero; the orchestrator's restart gives a clean state, which no
 in-process recovery can promise at that point. Degrading is for *scoped*,
 understood failures — not for wounded JVMs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Controller Advice (Spring Framework reference)](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-advice.html) — Spring Framework docs: `@ExceptionHandler` in a `@ControllerAdvice` or `@RestControllerAdvice` applies to any controller, and runs after the controller's own handlers (*read*)
+- **Also good:** [Thread.UncaughtExceptionHandler](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Thread.UncaughtExceptionHandler.html) — Java SE 25 API docs: the JVM queries the thread's handler when it is about to terminate; if none is set the `ThreadGroup` acts as the handler and may forward to the default; "Any exception thrown by this method will be ignored by the Java Virtual Mach
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Exceptions as control flow](07-exceptions-as-control-flow.md) · Next → [Phase 6 — Concurrency](../phase-6-concurrency/README.md)

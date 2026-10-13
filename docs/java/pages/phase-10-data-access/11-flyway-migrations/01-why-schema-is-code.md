@@ -270,3 +270,14 @@ bookkeeping are what the tool does; the review is what prevents the outage, and 
 possible because the change is now a file somebody wrote deliberately.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Database Initialization](https://docs.spring.io/spring-boot/how-to/data-initialization.html) — Spring Boot how-to: Flyway and Liquibase support at startup (*fetched, not read*)
+- **Beyond the docs:** [Database Migration with Spring Boot and Flyway](https://reflectoring.io/database-migration-spring-boot-flyway/) — Petromir Dzhunev, Reflectoring, 2020-02-21: why versioned migrations, SQL and Java scripts, repeatable and undo migrations, placeholders, running in a Jenkins pipeline; names no Boot version and uses Flyway 6.2.3, so treat setup details as dated
+
+{/* LINKMAP:END */}

@@ -187,6 +187,18 @@ defect cost of a missed guard. Where allocation genuinely dominates a
 measured hot path, confine mutation locally — don't abandon the strategy
 globally.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [A Strategy for Defining Immutable Objects](https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html) — The Java Tutorials: four rules: no setters, all fields `final` and `private`, no overriding (make the class `final` or the constructor private), and for mutable fields do not expose or share references, copy instead (*read*)
+- **Read this:** [Immutable Objects](https://docs.oracle.com/javase/tutorial/essential/concurrency/immutable.html)
+- **Beyond the docs:** [Thread Safety and Immutability](https://www.jenkov.com/tutorials/java-concurrency/thread-safety-and-immutability.html) — Jakob Jenkov, last update 2014-07-18: immutable objects are thread safe because nobody can change them, but a `Calculator` that holds a replaceable reference to an immutable value is not: "The `ImmutableValue` class is thread safe, but the use of it is not" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Index: [Immutability as the first strategy](README.md) · Next → [Boundaries, copies and "effectively immutable"](02-boundaries-and-effective-immutability.md)

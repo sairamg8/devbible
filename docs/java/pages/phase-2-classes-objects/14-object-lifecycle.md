@@ -168,6 +168,19 @@ It broke the invariant that unreachable objects stay dead and is one
 reason finalization was removed; `Cleaner` actions run after *phantom*
 reachability precisely so resurrection is impossible.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JEP 421: Deprecate Finalization for Removal](https://openjdk.org/jeps/421) — OpenJDK: why finalization is going away and what replaces it; the text is JDK 18 era and says finalization stays enabled by default for now (*read*)
+- **Also good:** [`Cleaner`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/ref/Cleaner.html) — Javadoc (*read*): [MET12-J. Do not use finalizers](https://cmu-sei.github.io/secure-coding-standards/sei-cert-oracle-coding-standard-for-java/rules/methods-met/met12-j/)
+- **Also good:** [MET12-J. Do not use finalizers](https://cmu-sei.github.io/secure-coding-standards/sei-cert-oracle-coding-standard-for-java/rules/methods-met/met12-j/)
+- **Beyond the docs:** [Clean your Memory: From Finalize to Cleaner](https://blog.frankel.ch/java-cleaner/) — Stefano Fago, blog.frankel.ch, 2025-03-23: finalizer problems (undetermined timing, an extra GC cycle, unintended retention) and Cleaner rules: prefer try-with-resources, keep the cleaning action from capturing the object (avoid lambdas), call `clean()` from `close()`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Composition over inheritance](13-composition-over-inheritance.md) · Next → [The rest of `Object`](15-rest-of-object.md)

@@ -222,6 +222,18 @@ A record — `record Range(int min, int max) {}` — named, typed, and free
 since Java 16. Arrays and `Map.Entry` are the legacy idioms; "out
 parameters" via mutable arguments don't survive review.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Passing Information to a Method](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html) — Oracle Java Tutorial: reference arguments are passed by value (*read*)
+- **Also good:** [Method invocation expressions (JLS chapter 15)](https://docs.oracle.com/javase/specs/jls/se25/html/jls-15.html) — Oracle: 15.12.2: the phased overload resolution and "choosing the most specific method" (*read*)
+- **Beyond the docs:** [Pass-by-Value Please (Cup Size continued)](https://javaranch.com/campfire/StoryPassBy.jsp) — JavaRanch Campfire, no author or date shown, early-2000s style: the remote-control picture: the reference is copied, so changes through it are visible but reassigning the parameter does not touch the caller; "you never pass the object"
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Arrays](09-arrays.md) · Next → [`static`](11-static/README.md)

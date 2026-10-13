@@ -239,3 +239,16 @@ about a one-hour window, without a redeploy. Histograms cost more series but kee
 open.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Micrometer reference](https://docs.micrometer.io/micrometer/reference/) — Micrometer project (*fetched, not read*)
+- **Also good:** [Metrics (Spring Boot Actuator)](https://docs.spring.io/spring-boot/reference/actuator/metrics.html) — Spring Boot reference (*fetched, not read*): [Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
+- **Also good:** [Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
+- **Beyond the docs:** [The RED Method](https://grafana.com/blog/the-red-method-how-to-instrument-your-services/) — Julie Dam, Grafana blog, 2018-08-03, summarising Tom Wilkie's talk: request rate, failed share and duration per service (*read*)
+
+{/* LINKMAP:END */}

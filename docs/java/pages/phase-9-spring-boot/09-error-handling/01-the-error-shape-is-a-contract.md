@@ -231,6 +231,17 @@ survives, because both belong to the request/response objects rather than the
 thread. The `ThreadLocal` lifecycle problem is the same one covered in
 [ThreadLocal and ScopedValue](../../phase-6-concurrency/12-threadlocal-scopedvalue/README.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Error Responses](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-ann-rest-exceptions.html) — Spring Framework reference: `ProblemDetail`, `ErrorResponse`, `ResponseEntityExceptionHandler` with `@ControllerAdvice` (*fetched, not read*)
+- **Also good:** [RFC 9457: Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc9457) — IETF: the standard behind the JSON shape (*fetched, not read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Error handling](README.md) · Phase: [Phase 9 — Spring Boot and the web](../README.md) · Next → [The resolver chain](02-the-resolver-chain.md)

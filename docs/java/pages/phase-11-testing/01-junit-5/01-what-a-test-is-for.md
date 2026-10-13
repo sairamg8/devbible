@@ -251,3 +251,14 @@ contains tests that assert nothing, and renaming those makes them look trustwort
 without making them useful.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JUnit User Guide](https://docs.junit.org/6.1.3/overview.html) — JUnit project: annotations, lifecycle, assertions; the current guide documents JUnit 6.1.3, and the address `docs.junit.org/current/user-guide/` redirects here (*fetched, not read*; very large)
+- **Beyond the docs:** [JUnit 5 Basics](https://nipafx.dev/junit-5-basics/) — Nicolai Parlog, 2018-08-05: a new test instance per method by default, so `@BeforeAll` must be static in that default mode; `assertThrows` returns the exception for further checks. The page does not spell out the `PER_CLASS` exception, and it is a JUnit 5.x-
+
+{/* LINKMAP:END */}

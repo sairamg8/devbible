@@ -175,3 +175,14 @@ the memory win is real only in arrays. `short`/`byte` are storage formats;
 ---
 
 Index: [Primitives vs reference types](README.md) · Next → [References and memory](02-references-and-memory.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Creating Primitive Type Variables in Your Programs](https://dev.java/learn/language/constructs/basics/primitive-types/) — dev.java: the eight primitives, ranges, and a table of default values for fields ("zero or null") (*read*)
+- **Also good:** [Types, Values, and Variables (JLS chapter 4)](https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html) — Oracle: the normative definition (*headings only*)
+
+{/* LINKMAP:END */}

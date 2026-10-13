@@ -159,6 +159,16 @@ Spark-centric data engineering, or a team committed to typed FP with the
 ecosystem (Cats/ZIO) to match. As a general backend default its complexity
 budget rarely pays against post-21 Java or Kotlin.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Comparison to Java](https://kotlinlang.org/docs/comparison-to-java.html) — Kotlin documentation: what Kotlin fixes and what Java has that Kotlin lacks (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The module system (JPMS)](11-module-system.md) · Next → [HotSpot internals](13-hotspot-internals.md)

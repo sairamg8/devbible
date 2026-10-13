@@ -209,6 +209,18 @@ and a function reading other mutable state may compute from a view that's
 stale by the time the CAS succeeds. The contract is: deterministic,
 side-effect-free, dependent only on the passed argument.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Atomic Variables](https://docs.oracle.com/javase/tutorial/essential/concurrency/atomicvars.html) — The Java Tutorials: an `AtomicInteger` counter prevents thread interference without `synchronized` methods (*read*)
+- **Also good:** [Compare and Swap](https://jenkov.com/tutorials/java-concurrency/compare-and-swap.html) — Jakob Jenkov, last update 2021-06-16: CAS explained with a lock built on `AtomicBoolean.compareAndSet()` and an optimistic `AtomicLong` counter; never mentions ABA (*read*)
+- **Also good:** [LongAdder](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/atomic/LongAdder.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Explicit locks](09-explicit-locks.md) · Index: [Phase 6 — Concurrency](README.md) · Next → [Concurrent collections](11-concurrent-collections.md)

@@ -179,6 +179,18 @@ first free port after a base. Hash sets answer only exact membership.
 `null.compareTo(x)` / `x.compareTo(null)` throw by contract. Either way the
 practical rule is the same: no nulls in collections.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Set Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html) — The Java Tutorials: the three general-purpose implementations and the dedupe idioms (`new HashSet&lt;&gt;(c)`, `new LinkedHashSet&lt;&gt;(c)` to keep order, `Collectors.toSet()`); written for JDK 8 (*read*)
+- **Also good:** [Set](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Set.html) — Java SE 25 API docs: the contract: no duplicates by `equals`, behaviour unspecified if an element is mutated in a way that changes `equals`, `Set.of` and `copyOf` are unmodifiable (*read*)
+- **Beyond the docs:** [Difference between HashSet, TreeSet, and LinkedHashSet in Java](https://www.techiedelight.com/difference-between-hashset-treeset-linkedhashset-java) — Techie Delight: a side-by-side of structure, order, cost, null handling and navigation methods; page shows no author or date
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [ArrayList](05-arraylist/README.md) · Next → [HashMap internals](07-hashmap-internals.md)

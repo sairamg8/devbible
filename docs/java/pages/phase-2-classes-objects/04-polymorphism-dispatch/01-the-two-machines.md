@@ -201,6 +201,18 @@ compile error. Run-time dispatch never sees the question — it is settled
 before the program runs ([Phase 1's methods topic](../../phase-1-language-core/10-methods.md)
 works the cases).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html) — Oracle Java Tutorial (*read*)
+- **Also good:** [JVMS chapter 5](https://docs.oracle.com/javase/specs/jvms/se25/html/jvms-5.html) — Oracle: method resolution (5.4.3.3) and method selection (5.4.6) (*read*)
+- **Beyond the docs:** [How Does JVM Handle Polymorphism (Method Overloading and Overriding) Internally](https://dev.to/njnareshjoshi/how-does-jvm-handle-polymorphism-method-overloading-and-overriding-internally-2m26) — Naresh Joshi, DEV Community, 2019-06-09: `invokevirtual` dispatches on the object's runtime type through a per-object method table, while overloads are resolved at compile time and show different bytecode; the article quotes the JVMS on the table layout being implementat
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Polymorphism and dispatch](README.md) · Next → [The machinery and the JIT](02-the-machinery-and-the-jit.md)

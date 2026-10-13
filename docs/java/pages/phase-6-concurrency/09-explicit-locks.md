@@ -256,6 +256,18 @@ thread running and skips a queue handoff — the Javadoc warns fair mode has
 notably lower throughput. Fairness is a fix for *demonstrated starvation*,
 not for aesthetic ordering discomfort.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ReentrantLock](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/locks/ReentrantLock.html) — Oracle, Java SE 25 API: the lock, try, finally unlock idiom in the class description and the timed `tryLock(long, TimeUnit)` (*read*; no code example for the timed form)
+- **Also good:** [Java Concurrency: Locks in Java](https://jenkov.com/tutorials/java-util-concurrent/lock.html) — Jakob Jenkov, last update 2021-01-04: a section on the main differences between a `Lock` and a synchronized block and the timed `tryLock` (*read*; `ReadWriteLock` is only linked, not explained here)
+- **Also good:** [Java Concurrency: Read / Write Locks in Java](https://jenkov.com/tutorials/java-util-concurrent/readwritelock.html)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Structured concurrency](08-structured-concurrency.md) · Index: [Phase 6 — Concurrency](README.md) · Next → [Atomics](10-atomics.md)

@@ -233,3 +233,15 @@ Only after those two numbers exist is it worth arguing about which test should h
 slice.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Testing Spring Boot Applications](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html) — Spring Boot reference: `@SpringBootTest`, the slice annotations, context caching (*fetched, not read*)
+- **Also good:** [Mastering Testing Efficiency in Spring Boot](https://engineering.zalando.com/posts/2023/11/mastering-testing-efficiency-in-spring-boot-optimization-strategies-and-best-practices.html) — Hassan Elseoudy, Zalando Engineering, 2023-11-14: reusing cached contexts and slices cut a suite from 10 min 7 s to 4 min 15 s (*read*)
+- **Beyond the docs:** [The Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) — Ham Vocke, martinfowler.com, 2018-02-26: many small unit tests, fewer integration tests, very few end-to-end; warns against the "test ice-cream cone" (*read*)
+
+{/* LINKMAP:END */}

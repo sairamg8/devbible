@@ -213,6 +213,18 @@ After `TERMINATED`, the object is collectable like any other once
 unreferenced. This is also why leaked threads leak everything their stacks
 and thread-locals point at.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Interrupts](https://docs.oracle.com/javase/tutorial/essential/concurrency/interrupt.html) — The Java Tutorials: an interrupt is a signal; a thread supports its own interruption by catching `InterruptedException` or polling `Thread.interrupted()` (*read*)
+- **Also good:** [Creating and Starting Java Threads](https://jenkov.com/tutorials/java-concurrency/creating-and-starting-threads.html) — Jakob Jenkov, last update 2024-08-06: thread creation with `Thread`, `Runnable` and lambdas, the `run()` versus `start()` pitfall, and a daemon-thread section (*read*; `join` only in passing)
+- **Beyond the docs:** [What to do with an InterruptedException](https://trifork.nl/blog/what-to-do-with-an-interruptedexception/) — Jelmer Kuperus, Trifork blog, 2007-10-05: the author cites Brian Goetz's article and quotes its advice to "reinterrupt the current thread before returning", and says the Spring bug "was fixed in spring 1.2.8"; 2007, so no virtual threads
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Topic index](README.md) · Next → [Interruption — the cancellation protocol](02-interruption.md)

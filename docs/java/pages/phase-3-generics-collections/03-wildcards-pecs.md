@@ -199,6 +199,18 @@ parameter that flows to the return), or the method genuinely reads *and*
 writes. Wildcards model one-sided, one-shot use; `<T>` models identity
 across positions.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Wildcard Guidelines](https://docs.oracle.com/javase/tutorial/java/generics/wildcardGuidelines.html) — The Java Tutorials: the PECS rule under another name: an "in" variable (supplies data) takes `? extends T`, an "out" variable (receives data) takes `? super T`, `?` when only `Object` methods are used, no wildcard when it is both; shows why `List&lt;
+- **Also good:** [Lower Bounded Wildcards](https://docs.oracle.com/javase/tutorial/java/generics/lowerBounded.html) — The Java Tutorials: the `? super` syntax with `addNumbers(List&lt;? super Integer&gt;)` accepting `List&lt;Integer&gt;`, `List&lt;Number&gt;` or `List&lt;Object&gt;`; defers the in/out guidance to the page above (*read*)
+- **Beyond the docs:** [PECS (Producer Extends Consumer Super)](https://github.com/nus-cs2030/2021-s1/wiki/PECS-%28Producer-Extends-Consumer-Super%29) — NUS CS2030 course wiki, last edit 2020-11-30 by the editor bingmeow1999 (original author not named): puts the rule as "put into a structure: super; get out of a structure: extends", with `ChessPiece` lists and `Consumer.andThen`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Type erasure](02-type-erasure.md) · [Next → The collection hierarchy](04-collection-hierarchy.md)

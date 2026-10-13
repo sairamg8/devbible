@@ -200,6 +200,17 @@ Redirect every stream away from `PIPE`: `INHERIT` for tooling, `Redirect.to(file
 **★ What is `startPipeline` for?**
 `ProcessBuilder.startPipeline(List<ProcessBuilder>)` (JDK 9) connects stdout→stdin across the builders like a shell pipeline, without invoking a shell — you get back the list of `Process`es and still owe a drain only at the ends you kept as `PIPE`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ProcessBuilder](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/ProcessBuilder.html) — Oracle, Java SE 25 API: the list-of-strings constructor keeps a reference to the caller's list, `redirectErrorStream(true)` merges stderr into stdout, `inheritIO()` is shorthand for `Redirect.INHERIT`; the draining warning is not on this page (*read*)
+- **Beyond the docs:** [When Runtime.exec() won't](https://www.infoworld.com/article/2157336/when-runtime-exec-won-t.html) — Michael C. Daconta, JavaWorld on InfoWorld, 2000-12-29: a `javac` child whose streams are never read never finishes, the JDK Javadoc warns it may "block, and even deadlock", and the fix is a `StreamGobbler` thread per stream. Written for `Runtime.exec()` and Windows 95/98 era, so use i
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Localization basics](09-localization-basics.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Console I/O and Scanner](11-console-io-scanner.md)

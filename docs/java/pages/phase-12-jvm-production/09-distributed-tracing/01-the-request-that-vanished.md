@@ -195,6 +195,18 @@ is "the downstream work took no time" or "the downstream service was never calle
 downstream service is in fact doing the work, under a brand new trace ID nobody is looking at.
 That is why [03e](03e-propagation-that-breaks.md) exists.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Traces](https://opentelemetry.io/docs/concepts/signals/traces/) — OpenTelemetry project: spans, span context (trace id, span id), parent and child spans, and context propagation across services (*read*)
+- **Also good:** [OpenTelemetry Java](https://opentelemetry.io/docs/languages/java/) — OpenTelemetry project: a hub page that points to the API, SDK, configuration and instrumentation pages and reports traces, metrics and logs as stable; it does not explain tracing itself (*read*)
+- **Also good:** [Dapper, a Large-Scale Distributed Systems Tracing Infrastructure](https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [02 · Traces, spans and context](02-traces-spans-and-context.md)

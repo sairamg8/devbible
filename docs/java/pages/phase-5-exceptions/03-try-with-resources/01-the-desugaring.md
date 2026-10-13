@@ -236,6 +236,18 @@ Yes — the extended form. Both apply to the statement *after* translation,
 so every resource is already closed when the `catch` or `finally` body
 executes. Retry logic in such a `catch` must acquire fresh resources.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The try-with-resources Statement](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) — The Java Tutorials: `AutoCloseable`, reverse close order, and that the body's exception propagates while close exceptions are suppressed and readable via `getSuppressed()` (*read*)
+- **Also good:** [AutoCloseable](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/AutoCloseable.html) — Java SE 25 API docs: `close()` need not be idempotent (unlike `Closeable`), and should not throw `InterruptedException` because it may be suppressed (*read*)
+- **Beyond the docs:** [Java Try With Resources](https://jenkov.com/tutorials/java-exception-handling/try-with-resources.html) — Jakob Jenkov, last updated 2019-08-25: contrasts it with try-catch-finally, where an exception in `finally` replaces the earlier one and the first is lost rather than suppressed; also an effectively final variable as a resource (Java 9)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [try-with-resources](README.md) · Next → [Suppressed exceptions](02-suppressed-exceptions.md)

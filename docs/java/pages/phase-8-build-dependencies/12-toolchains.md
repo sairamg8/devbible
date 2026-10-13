@@ -272,6 +272,19 @@ to a toolchain resolver such as the foojay plugin, which is applied in
 `settings.gradle.kts` because it is a settings plugin. Both stages can be
 disabled with `org.gradle.java.installations.auto-detect` and `…auto-download`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Guide to Using Toolchains](https://maven.apache.org/guides/mini/guide-using-toolchains.html) — Apache Maven: declare the JDK requirement in `maven-toolchains-plugin` and map it to an install in `~/.m2/toolchains.xml` (*read*)
+- **Also good:** [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html) — Gradle User Manual: Gradle builds with the Java version you declare and can detect or download a matching JDK (*read*)
+- **Beyond the docs:** [Running Multiple JDK Versions with the Gradle Toolchains Configuration](https://www.jvt.me/posts/2021/06/09/gradle-toolchain/) — Jamie Tanna, 2021-06-09 (updated 2022-02-14): a `toolchain` block with `languageVersion`, auto-detect and download, `gradle -q javaToolchains`, and a comparison with the Maven plugin; Gradle 6.7 era
+- **Beyond the docs:** [Using Maven Toolchains Configuration For Gradle Java Toolchain Resolution](https://jdriven.com/blog/2024/02/Gradle-Goodness-Using-Maven-Toolchains-Configuration-For-Gradle-Java-Toolchain-Resolution)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`javac` flags that matter](11-javac-flags/README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](README.md) · Next → **Phase 9 — Spring Boot and the web** *(not written yet)*

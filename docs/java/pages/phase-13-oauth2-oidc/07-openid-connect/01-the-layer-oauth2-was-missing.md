@@ -213,6 +213,18 @@ presence and meaning vary by provider. Do not require it and do not make authori
 decisions on it; validators that insist on it reject valid tokens from providers that never
 emit it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html) — OpenID Foundation: ID token claims and the UserInfo endpoint (errata set 2)
+- **Also good:** [OpenID Connect Discovery 1.0](https://openid.net/specs/openid-connect-discovery-1_0.html) — OpenID Foundation: the `/.well-known/openid-configuration` document that providers MUST publish
+- **Beyond the docs:** [Identity, Claims, and Tokens: An OpenID Connect Primer, Part 1 of 3](https://developer.okta.com/blog/2017/07/25/oidc-primer-part-1) — Okta Developer blog: a readable primer on identity, claims, scopes and the id_token, access_token and refresh_token; vendor blog by Micah Silverman, July 25, 2017
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [The authentication request](02-the-authentication-request.md)

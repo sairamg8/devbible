@@ -281,3 +281,15 @@ setup, and the connection count on the database grows without bound.
 ---
 
 Index: [Connection pooling with HikariCP](README.md) · Next → [2 · Why a small pool is faster](02-why-a-small-pool-is-faster.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [About Pool Sizing](https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing) — HikariCP wiki: the formula `core_count * 2 + effective_spindle_count`, and the Oracle example of 2048 connections cut to 96 with response time falling from about 100 ms to 2 ms (*read*, from the wiki's raw markdown: the github.com address itself
+- **Also good:** [Number Of Database Connections](https://wiki.postgresql.org/wiki/Number_Of_Database_Connections) — PostgreSQL wiki: throughput rises with connections only until resources saturate; use an external pool; the same core-count formula as a starting point to tune on your own system (*read*)
+- **Beyond the docs:** [The best way to determine the optimal connection pool size](https://vladmihalcea.com/optimal-connection-pool-size/) — Vlad Mihalcea, 2024-11-07: gives no fixed formula; ties size to the database's throughput peak and recommends measuring, growing the pool on demand with FlexyPool to find the number
+
+{/* LINKMAP:END */}

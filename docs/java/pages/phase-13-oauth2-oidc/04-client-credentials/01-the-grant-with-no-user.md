@@ -231,6 +231,17 @@ log; and revocation or rotation is all-or-nothing across the fleet. It is the ma
 equivalent of a shared admin password. One registration per calling service, scoped to what
 that service actually calls.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) — OAuth 2.0 Simplified: the machine-to-machine grant with a worked request
+- **Also good:** [RFC 7523, JWT Profile for OAuth 2.0 Client Authentication and Authorization Grants](https://datatracker.ietf.org/doc/html/rfc7523) — IETF: using a signed JWT as the client's credential, the basis of private-key JWT (OpenID Connect Core names the `private_key_jwt` method)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Topic index](README.md) · Next → [Why not just an API key](02-why-not-just-an-api-key.md)

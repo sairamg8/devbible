@@ -212,3 +212,13 @@ the same computation done in the slower place with more network traffic.
 ---
 
 Index: [05 · SQL-first access](README.md) · Next → [1b · The three APIs](01b-the-three-apis.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Data Access with JDBC](https://docs.spring.io/spring-framework/reference/data-access/jdbc/core.html) — Spring Framework reference: `JdbcTemplate`, `NamedParameterJdbcTemplate`, `JdbcClient` (*fetched, not read*)
+
+{/* LINKMAP:END */}

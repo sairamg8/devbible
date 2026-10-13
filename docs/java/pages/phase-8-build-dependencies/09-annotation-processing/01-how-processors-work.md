@@ -278,6 +278,18 @@ compile **succeeds** and the generated classes are simply gone — missing
 Lombok accessors, missing MapStruct implementations — so the first failure
 is at runtime or in an unrelated compile error.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [javax.annotation.processing](https://docs.oracle.com/en/java/javase/25/docs/api/java.compiler/javax/annotation/processing/package-summary.html) — Oracle, Java SE 25 API: the JSR 269 package: processors talk to the tool through objects such as `RoundEnvironment` (*read*)
+- **Also good:** [Lombok features](https://projectlombok.org/features/) — Project Lombok: a list of annotations and what each generates; it does not explain how Lombok works, only that `delombok` produces the desugared source (*read*)
+- **Beyond the docs:** [Modern Java: Why You Might Not Need Lombok Anymore](https://www.danvega.dev/blog/no-lombok) — Dan Vega, 2024-11-11: says Lombok edits the AST through internal `com.sun.tools.javac` APIs rather than the standard processor route, lists IDE, processor-conflict, debugging and upgrade costs, and offers records as the replacement; an opinionated piec
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Annotation processing](README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [MapStruct and Spring's processors](02-mapstruct-and-spring.md)

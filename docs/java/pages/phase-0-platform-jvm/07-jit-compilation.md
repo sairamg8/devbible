@@ -163,6 +163,18 @@ No — the code cache is process memory. Hence per-restart warm-up, hence JMH's
 forked warm-up methodology, hence Project Leyden's AOT cache work to shift
 some of that cost to build/first-run time (Phase 12).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Java HotSpot Virtual Machine Performance Enhancements](https://docs.oracle.com/en/java/javase/25/vm/java-hotspot-virtual-machine-performance-enhancements.html) — Oracle JVM Guide: the Tiered Compilation section: since Java SE 7 the server VM also uses the client compiler to produce profiled code, on by default, switch off with `-XX:-TieredCompilation`; also compressed oops and escape analysis (*read*)
+- **Also good:** [Java Virtual Machine Technology Overview](https://docs.oracle.com/en/java/javase/25/vm/java-virtual-machine-technology-overview.html) — Oracle: a one-paragraph description of the adaptive compiler (hot spots compiled, cold code not); it does not name C1, C2 or tiers (*read*)
+- **Beyond the docs:** [How we solved a HotSpot performance puzzle](https://developers.redhat.com/articles/2023/09/29/how-we-solved-hotspot-performance-puzzle) — Ashutosh Mehra, Red Hat Developer, 2023-09-29: defines warm-up as time to peak throughput, shows C1 levels 1 to 3 and C2 level 4, and a case where compiler and application threads competed for CPU so compilation starved; JDK of 2023
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [main, startup and the config channels](06-main-startup-config.md) · Next → [Garbage collection, the working model](08-garbage-collection.md)

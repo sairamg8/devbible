@@ -222,6 +222,17 @@ becomes `/actuator/featureflags/{name}`. It is how `health` supports
 remaining segments, which is what lets the loggers endpoint accept a dotted
 logger name as a single selector.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Endpoints](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html) — Spring Boot reference: exposing, securing and the endpoint list (*fetched, not read*)
+- **Also good:** [Liveness and Readiness Probes with Spring Boot](https://spring.io/blog/2020/03/25/liveness-and-readiness-probes-with-spring-boot/) — Brian Clozel, Spring blog, 2020-03-25 (updated for 2.3.0.RC1): a failed liveness check should mean restart, and external dependencies in probes need careful thought (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Actuator](README.md) · Phase: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Exposure, access and where endpoints live](02-exposure-access-and-ports.md)

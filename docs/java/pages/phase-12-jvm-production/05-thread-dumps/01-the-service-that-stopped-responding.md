@@ -203,3 +203,13 @@ service today; fixing A's missing timeout is what stops the next slow dependency
 down. Resilience patterns for exactly this are phase 16's subject.
 
 {/* FOOTER */}
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Troubleshooting Guide for JDK 25](https://docs.oracle.com/en/java/javase/25/troubleshoot/) — Oracle: diagnostic tools including `jcmd` (*fetched, not read*)
+
+{/* LINKMAP:END */}

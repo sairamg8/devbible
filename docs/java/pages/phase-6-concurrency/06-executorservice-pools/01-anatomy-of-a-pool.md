@@ -178,6 +178,17 @@ A custom `RejectedExecutionHandler` counting rejections, plus gauges on
 `getQueue().size()` and `getActiveCount()`. Queue depth trending up at
 stable arrival rate is the leading indicator; rejections are the alarm.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ExecutorService](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/ExecutorService.html) — Oracle, Java SE 25 API: the Usage Examples section has the two-phase shutdown: `shutdown`, then `awaitTermination`, then `shutdownNow`; `ExecutorService` is `AutoCloseable` since 19, so try-with-resources does the shutdown-and-wait (*read*; `newVirtualTh
+- **Beyond the docs:** [How to set an ideal thread pool size](https://engineering.zalando.com/posts/2019/04/how-to-set-an-ideal-thread-pool-size.html) — Anton Ilinchik, Zalando Engineering, 2019-04-18: the Goetz formula cores times one plus wait over service time; CPU-bound work wants about the core count, I/O-bound more; predates virtual threads
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [ExecutorService and pools](README.md) · Next → [Submitting work and getting results](02-submit-and-futures.md)

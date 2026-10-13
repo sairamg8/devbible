@@ -218,6 +218,17 @@ iterator strategy — `ArrayList` implements it, `LinkedList` doesn't.
 widest interface whose operations it uses. Callers then pass a `List`,
 `Set`, or view without copying.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Outline of the Collections Framework](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/doc-files/coll-reference.html) — Java SE 25 API docs: the official outline of the interfaces, general-purpose and concurrent implementations, wrappers and legacy classes, one line each (*read*)
+- **Also good:** [Java Collections Framework](https://docs.oracle.com/en/java/javase/25/core/java-collections-framework.html) — Java SE 25 Core Libraries guide: lists the components and links to unmodifiable and sequenced collections (JDK 21); does not draw the hierarchy (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [Bounds, wildcards and PECS](03-wildcards-pecs.md) · Next → [ArrayList](05-arraylist/README.md)

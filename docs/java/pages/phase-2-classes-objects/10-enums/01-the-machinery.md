@@ -180,6 +180,17 @@ are assigned; the language forbids the reference rather than let you read
 an uninitialized value. Lookup maps over constants belong in a static
 initializer that runs after the constants exist.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Enum Types](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html) — Oracle Java Tutorial: fields, methods and `values()` (*read*)
+- **Also good:** [`Enum`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Enum.html) — Javadoc: `valueOf` throws `IllegalArgumentException` for an unknown name (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Enums](README.md) · Next → [Behaviour per constant](02-behaviour-per-constant.md)

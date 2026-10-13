@@ -181,6 +181,20 @@ test runner; the moment either matters, Maven/Gradle (Phase 8) is the answer.
 Multi-file source programs (22) moved the line from "one file" to "one small
 tree", not past dependencies.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Launching Simple Source-Code Programs](https://dev.java/learn/first-steps/first-java-code/launch-simple-source-code-programs/) — dev.java: single-file launch (the first class must hold `main`), passing arguments, several classes in one file, and multi-file launch since JDK 22 (*read*)
+- **Also good:** [JEP 330: Launch Single-File Source-Code Programs](https://openjdk.org/jeps/330) — OpenJDK: the design: compiled in memory, the first class found is executed (*read*)
+- **Also good:** [JEP 458: Launch Multi-File Source-Code Programs](https://openjdk.org/jeps/458)
+- **Also good:** [JShell introduction](https://docs.oracle.com/en/java/javase/25/jshell/introduction-jshell.html)
+- **Beyond the docs:** [Running Single-file Programs without Compiling in Java 11](https://www.infoq.com/articles/single-file-execution-java11/) — Mohamed Taman, InfoQ, 2019-07-24: explains the in-memory compile, what happens to a file without a `.java` extension (`--source` is needed), and shebang scripts; written for Java 11, so it predates multi-file launch
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [The release model](03-release-model.md) · Next → [Packages and the classpath](05-packages-classpath/README.md)

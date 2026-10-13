@@ -265,6 +265,17 @@ your compiled sources and the classpath it was built against. What it cannot do
 is defer the decision to something discovered after the artifact exists, and
 that is exactly the case Spring's model is designed around.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Contexts and Dependency Injection](https://quarkus.io/guides/cdi-reference) — Quarkus guide: build-time DI in Quarkus (*fetched, not read*)
+- **Read this:** [Micronaut](https://micronaut.io/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [16 · The alternatives](README.md) · Next → [Quarkus: the build does the work](02-quarkus.md)

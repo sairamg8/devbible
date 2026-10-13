@@ -252,6 +252,17 @@ breakpoint behaves the way you expect. See
 `WebClient` still wins is streaming or genuine backpressure, neither of which a
 fan-out-and-combine needs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [REST Clients](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html) — Spring Framework reference: `RestClient`, `WebClient`, `RestTemplate` and the declarative HTTP interfaces (*fetched, not read*)
+- **Also good:** [The state of HTTP clients in Spring](https://spring.io/blog/2025/09/30/the-state-of-http-clients-in-spring/) — Brian Clozel, Spring blog, 2025-09-30: RestClient for most cases, WebClient when you need reactive or streaming, and RestTemplate on a deprecation path; says nothing about timeouts (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Wiring it in Boot 4](02-wiring-it-in-boot-4.md)
