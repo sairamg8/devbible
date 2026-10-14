@@ -245,6 +245,18 @@ HTML that references the names carries a short TTL. The order rule: deploy the h
 before the HTML that references them, or an edge serving the new HTML will request a bundle the
 origin does not yet have, and cache the 404.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cache keys](https://developers.cloudflare.com/cache/how-to/cache-keys/) — Cloudflare docs: the default key is the full URL plus the Origin header and several override headers, and it can be customised by query string, header, cookie, host and device type (*read*)
+- **Also good:** [Use Amazon CloudFront Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) — AWS docs: an extra cache layer in front of the origin that consolidates requests for the same object to as few as one, and is a poor fit for dynamic or low-cacheability content (*read*)
+- **Also good:** [Use signed URLs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-signed-urls.html) — AWS docs: a signed URL carries a policy with an expiry, is verified with a public key at the edge, and the signature must cover any query string (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [04 · Stateless services, and where the state went](04-stateless-services-and-where-the-state-went.md) · Index: [Phase 2 — The request path](README.md) · Next → [06 · Long-lived connections](06-long-lived-connections.md)

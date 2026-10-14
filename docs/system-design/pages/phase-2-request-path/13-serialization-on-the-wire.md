@@ -243,6 +243,22 @@ each screen size, and the right quality level — chosen once, cached at the edg
 That single decision moves more bytes than every JSON-versus-Protobuf choice on the site, and
 it is why the gateway's compression rule excludes image types.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Protocol Buffers overview](https://protobuf.dev/overview/) — protobuf.dev: smaller and faster than JSON, schema in a `.proto` so fields can be added without breaking old code, and a poor fit for payloads over a few megabytes (*read*)
+- **Also good:** [HTTP compression](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Compression) — MDN: `Accept-Encoding` negotiation with gzip and Brotli, `Vary: Accept-Encoding` for caches, and no recompression of images or video (*read*)
+- **Also good:** [MessagePack](https://msgpack.org/) — project site: positioned as JSON-shaped but faster and smaller (*read*, tagline only)
+- **Read this:** [Protocol Buffers Language Guide (proto3)](https://protobuf.dev/programming-guides/proto3/) — protobuf.dev: changing a field number is unsafe, equal to deleting the field and adding a new one; unknown fields are preserved (*read*)
+- **Also good:** [Dos and Don'ts](https://protobuf.dev/best-practices/dos-donts/) — protobuf.dev: use `reserved` for deleted field numbers and names (*read*)
+- **Also good:** [Buf breaking change detection](https://buf.build/docs/breaking/) — Buf: compares the schema against a baseline (for example the main branch) under FILE, PACKAGE, WIRE_JSON or WIRE rules, and runs in CI (*read*)
+- **Beyond the docs:** [Schema evolution in Avro, Protocol Buffers and Thrift](https://martin.kleppmann.com/2012/12/05/schema-evolution-in-avro-protocol-buffers-thrift.html) — Martin Kleppmann: names are not on the wire so fields can be renamed but tags never changed or reused, unknown tags are skipped by their type code, and `required` is where disagreement becomes a runtime error (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [12 · Service discovery](12-service-discovery.md) · Index: [Phase 2 — The request path](README.md) · Next → [14 · Connection pooling and keep-alive](14-connection-pooling-and-keep-alive.md)

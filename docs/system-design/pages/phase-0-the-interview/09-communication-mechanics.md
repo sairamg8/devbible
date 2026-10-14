@@ -206,6 +206,17 @@ what comes next — about twenty seconds. Leave out the list of technologies on 
 restates the diagram and gives the interviewer nothing to redirect. A summary that gets
 interrupted by a redirect has done its job.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [System Design in a Hurry: Delivery](https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery) — Hello Interview: talk through your thought process as you design, build the high-level design one API endpoint at a time, and do not talk over the interviewer, which hurts the communication and collaboration score (*read*)
+- **Also good:** [A framework for system design interviews](https://bytebytego.com/courses/system-design-interview/a-framework-for-system-design-interviews) — ByteByteGo: don'ts include thinking in silence and treating the round as over before the interviewer says so (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [08 · Reasoned beats memorised](08-reasoned-wrong-beats-memorised-right.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [10 · How to practise](10-how-to-practise.md)

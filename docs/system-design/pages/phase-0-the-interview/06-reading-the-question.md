@@ -229,6 +229,17 @@ sentences — functional, non-functional, out. Running to ten minutes reads as s
 the time the deep dive needs, and the deep dive is where senior loops put the most weight. The
 reading's job is to produce the requirements line and the numbers; once it has, estimation starts.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [System Design in a Hurry: Introduction](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction) — Hello Interview: the round tests how you break an ambiguous, high-level problem into pieces and is "not about getting to a single right answer" (*read*)
+- **Also good:** [A framework for system design interviews](https://bytebytego.com/courses/system-design-interview/a-framework-for-system-design-interviews) — ByteByteGo: step one is understanding the problem and establishing scope: ask about features, scale, traffic and stack, write assumptions down, and do not answer fast for no credit (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05 · The latency ladder](05-the-latency-ladder.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [07 · The common ways to fail](07-the-common-ways-to-fail.md)

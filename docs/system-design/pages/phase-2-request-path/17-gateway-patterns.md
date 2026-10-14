@@ -279,3 +279,15 @@ other consumer must now understand. The BFF exists partly so that the services c
 contract and one deprecation policy.
 
 ← Prev: [16g · When a mesh earns its cost](16g-when-a-mesh-earns-its-cost.md) · Index: [Phase 2 — The request path](README.md) · Next → [17b · Aggregation and partial failure](17b-aggregation-and-partial-failure.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Backends for Frontends pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends) — Microsoft Azure Architecture Center: one backend per frontend, owned by that frontend team, with the costs of extra services and an added hop, and a note that GraphQL with frontend-specific resolvers may remove the need (*read*)
+- **Also good:** [GraphQL introduction](https://graphql.org/learn/) — GraphQL Foundation: the learning hub's lesson index: versionless APIs over a strong type system, a schema language for the data's shape, and queries that request exactly the data needed (*read*, index page only)
+- **Beyond the docs:** [Backends for Frontends](https://samnewman.io/patterns/architectural/bff/) — Sam Newman, 2015-11-18: one backend per user experience, tightly focused on a single UI, with the worry that the more client types share one BFF the more it bloats, and the rule "one experience, one BFF" (*read*)
+
+{/* LINKMAP:END */}

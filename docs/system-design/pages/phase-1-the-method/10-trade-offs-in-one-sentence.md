@@ -203,6 +203,17 @@ lost order becomes worse than a slower checkout. It makes the constraint-changin
 easy, because the answer is already on the board, and it is the difference between a design
 presented as a snapshot and one presented as a set of decisions with triggers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PACELC theorem](https://en.wikipedia.org/wiki/PACELC_theorem) — Wikipedia: the trade-off framed as two-part: under a partition availability or consistency, else latency or consistency (*read*)
+- **Also good:** [Please stop calling databases CP or AP](https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html) — Martin Kleppmann: drop the CP and AP labels, reason with precise consistency models, and stop citing CAP to justify a design choice (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · Choosing the deep dives](09-choosing-the-deep-dives.md) · Index: [Phase 1 — The method](README.md) · Next → [11 · Bottlenecks and single points of failure](11-bottlenecks-and-single-points-of-failure.md)

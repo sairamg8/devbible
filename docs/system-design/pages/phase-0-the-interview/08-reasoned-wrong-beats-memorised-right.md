@@ -227,6 +227,16 @@ and time to ship. They cover the links a design chain is built from — numbers,
 uniformity, the latency floor, operational capacity, failure and guarantees — so practising them
 exercises every place a re-derivation can start.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [System Design Interview Guide](https://interviewing.io/guides/system-design-interview) — interviewing.io: the interviewer steers the path and wants a back-and-forth about constraints, probing choices with follow-ups such as "Kafka, interesting choice. Why that instead of …" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07 · The common ways to fail](07-the-common-ways-to-fail.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [09 · Communication mechanics](09-communication-mechanics.md)

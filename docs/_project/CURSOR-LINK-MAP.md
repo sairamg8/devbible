@@ -7,7 +7,9 @@ metadata:
 
 # 🔴 START HERE — the link map ("hub + delta", one place)
 
-## 🔴 RESUME HERE — 2026-10-14 (dsa done; next system-design)
+## 🔴 RESUME HERE — 2026-10-14 (ALL languages in the list are done: dsa + system-design closed; PR open)
+
+- **system-design DONE 2026-10-14** (472 topics, 13 files; linkcheck + mdxcheck clean). Nothing left in the cursor's order; the next scheduled run should find every language done and do nothing.
 
 - **dsa DONE 2026-10-14** (301 topics, 8 files; linkcheck + mdxcheck clean). **Next: system-design** (13 syllabus files, 01–13). Tooling: `corepack enable && yarn install --immutable` is needed for `node scripts/mdxcheck.mjs --no-rawtag docs/<track>`.
 
@@ -69,7 +71,8 @@ metadata:
 | eslint-oxlint | 24 blocks (21 pages) | ✅ complete 2026-10-14 (21 pages got Further reading) | — |
 | framer-motion | 22 blocks (16 sections) | ✅ complete 2026-10-14 (21 pages got Further reading, 1 over cap) | — |
 | dsa | 301 (8 files) | ✅ complete 2026-10-14 (researcher + verifier per part; only phases 0–2 have pages, 48 pages got Further reading, 5 over cap; PR open) | — |
-| system-design | — | ⬜ not started — **RESUME HERE** (13 syllabus files; lanes = syllabus files, ≤5 per batch: 01–05, 06–10, 11–13) | — |
+| system-design | 472 (13 files) | ✅ complete 2026-10-14 (researcher + verifier per part; pages exist for phases 0–3 only; 46 pages got Further reading, 7 over cap; three Medium links in part 12 were read via RSS because Medium 403s bots; PR open) | — |
+| **Every language in the cursor's list is now done** | — | Remaining work is owed re-reads/spot-checks listed per row above, and splitting over-cap pages so the injector can add Further reading | — |
 
 **"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
 

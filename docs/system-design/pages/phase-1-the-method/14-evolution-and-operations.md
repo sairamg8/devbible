@@ -235,6 +235,21 @@ that reports the process is up will route traffic to a replica that cannot reach
 a check that runs a cheap query against a real dependency reports unhealthy, the balancer stops
 routing, and the failure walk's "the balancer stops routing to the dead one" actually happens.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Monolith First](https://martinfowler.com/bliki/MonolithFirst.html) — Martin Fowler, 2015: start with a monolith because boundaries are hard to find early, Yagni applies until the product proves useful, and microservices carry a premium (*read*)
+- **Also good:** [Strangler Fig Application](https://martinfowler.com/bliki/StranglerFigApplication.html) — Martin Fowler, updated 2024: replace a legacy system gradually by growing new parts around it rather than in one rewrite (*read*)
+- **Also good:** [Yagni](https://martinfowler.com/bliki/Yagni.html) — Martin Fowler, 2015: do not build a presumptive feature, since it carries a cost of build, of delay, of carry and of repair (*read*)
+- **Read this:** [Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/) — Google SRE book, ch. 6: dashboards should answer basic questions about your service and normally include some form of the four golden signals (*read*)
+- **Also good:** [The RED Method: How to instrument your services](https://grafana.com/blog/the-red-method-how-to-instrument-your-services/) — Grafana Labs, from Tom Wilkie's talk: rate, errors and duration for every service, set beside the USE method (*read*)
+- **Beyond the docs:** [The USE Method](https://www.brendangregg.com/usemethod.html) — Brendan Gregg: for every resource, check utilization, saturation and errors, as a checklist for finding bottlenecks early in an investigation (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [13 · Designing for cost](13-designing-for-cost.md) · Index: [Phase 1 — The method](README.md) · Next → [15 · Time management in 45 minutes](15-time-management.md)

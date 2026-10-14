@@ -169,6 +169,17 @@ on the component the interviewer's signals pointed at second or the other half o
 journey. Two shallow deep dives grade below one deep one, because follow-ups are where the level
 is decided and shallow dives give them nowhere to go.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [System Design in a Hurry: Delivery](https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery) — Hello Interview: deep dives take about the last 10 minutes and harden the design against non-functional requirements, edge cases, bottlenecks and interviewer probes; senior candidates are expected to lead them (*read*)
+- **Also good:** [A framework for system design interviews](https://bytebytego.com/courses/system-design-interview/a-framework-for-system-design-interviews) — ByteByteGo: step three, the deep dive, given 10 to 25 of 45 minutes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [08 · Read path and write path](08-read-path-and-write-path.md) · Index: [Phase 1 — The method](README.md) · Next → [10 · Trade-offs in one sentence](10-trade-offs-in-one-sentence.md)

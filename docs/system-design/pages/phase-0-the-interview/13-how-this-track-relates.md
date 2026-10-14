@@ -163,6 +163,16 @@ both. Writing examples in TypeScript first and Java second follows the reader's 
 making the design layer language-specific; if the two implementations ever disagreed on the
 *decision*, one of them would be wrong.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [System design interview](https://www.techinterviewhandbook.org/system-design/) — Tech Interview Handbook: a generic prep overview with formats, prompts and resources, not tied to any one stack (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [12 · Primary sources](12-primary-sources.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next phase → [Part 1 of the syllabus — the method](../../syllabus/01-the-interview-and-the-method.md)

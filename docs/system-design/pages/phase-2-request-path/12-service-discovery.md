@@ -236,6 +236,18 @@ or when the fleet spans environments that share no orchestrator. Not for a handf
 in one cluster: the platform's Service is discovery, and a registry there is a second source of
 truth to keep consistent and a second thing to fail.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Service](https://kubernetes.io/docs/concepts/services-networking/service/) — Kubernetes docs: a ClusterIP Service gives pods one stable virtual IP, a selector picks the pods, and EndpointSlices track them as they come and go (*read*, first 100000 characters only)
+- **Also good:** [Client-side discovery](https://microservices.io/patterns/client-side-discovery.html) — microservices.io: the client queries a registry itself, with fewer hops but coupling to the registry in every language (*read*)
+- **Also good:** [Server-side discovery](https://microservices.io/patterns/server-side-discovery.html) — microservices.io: a router at a known address consults the registry, which simplifies clients but adds a component and a hop (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11 · HTTP/1.1, HTTP/2 and HTTP/3](11-http-1-1-http-2-and-http-3.md) · Index: [Phase 2 — The request path](README.md) · Next → [13 · Serialization on the wire](13-serialization-on-the-wire.md)

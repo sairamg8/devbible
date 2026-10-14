@@ -246,6 +246,17 @@ scenario usually comes from a health check that tests a shared dependency, so th
 is a cheaper check, thresholds, and readiness separated from liveness — and then the choice of
 fail-open or fail-closed made deliberately.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Layer 4 and layer 7 proxy mode](https://www.haproxy.com/blog/layer-4-and-layer-7-proxy-mode) — HAProxy: layer 4 forwards on IP and port without reading the message and suits databases; layer 7 (`mode http`) reads the request and routes on it; the mode is set per section, and a frontend and its backend must share it (*read*)
+- **Also good:** [HTTP load balancing](https://nginx.org/en/docs/http/load_balancing.html) — nginx: round robin by default, `least_conn`, `least_time`, `ip_hash` for sticky sessions, weights, and passive health checks with `max_fails` and `fail_timeout`; active health checks are listed as paid NGINX Plus features (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01 · From the tap to the first byte](01-from-the-tap-to-the-first-byte.md) · Index: [Phase 2 — The request path](README.md) · Next → [03 · Reverse proxies and API gateways](03-reverse-proxies-and-api-gateways.md)

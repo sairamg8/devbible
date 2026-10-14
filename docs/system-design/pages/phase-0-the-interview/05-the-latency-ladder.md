@@ -240,6 +240,19 @@ are made on the ratios. Where a current figure matters, it is a lookup against t
 front of you, not a number to recall; the honest answer in an interview is "roughly this order of
 magnitude, and the ratio to the next rung is what decides the design."
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Latency numbers every programmer should know](https://gist.github.com/jboner/2841832) — gist by Jonas Bonér, figures credited to Jeff Dean and originally Peter Norvig: labelled about 2012: L1 reference 0.5 ns, main memory 100 ns, random 4K SSD read 150 microseconds, same-datacentre round trip 500 microseconds, disk seek 10 ms, California to Netherlands and back 150 ms (*read*)
+- **Also good:** [Latency numbers, interactive](https://colin-scott.github.io/personal_website/research/interactive_latency.html) — Colin Scott: the same ladder with a year slider; values are extrapolated from trend formulas, while the datacentre and cross-continent round trips are held constant (*read*)
+- **Also good:** [Response times: the 3 important limits](https://www.nngroup.com/articles/response-times-3-important-limits/) — Jakob Nielsen, Nielsen Norman Group, 1993: 0.1 s feels instantaneous, 1 s keeps the flow of thought, 10 s is the limit of attention; the thresholds that turn a latency budget into a target (*read*)
+- **Beyond the docs:** [Numbers everyone should know](https://highscalability.com/numbers-everyone-should-know/) — Todd Hoff, High Scalability, 2009-02-18: Jeff Dean's figures used for capacity arithmetic, such as about 100 disk seeks a second and the fetch rate implied by reading 1 MB from memory (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [04 · The vocabulary contract](04-the-vocabulary-contract.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [06 · Reading the question](06-reading-the-question.md)

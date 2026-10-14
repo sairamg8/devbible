@@ -180,6 +180,21 @@ per second at 50 ms is ten in flight; with a 30 s provider call inside the trans
 thousand, which exhausts any pool and holds six thousand row locks. It converts a latency on the
 board into a resource count, and it is the arithmetic behind committing before the provider call.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Embracing Risk](https://sre.google/sre-book/embracing-risk/) — Google SRE book, ch. 3: availability expressed as the "nines" of acceptable unplanned downtime, and the point that a user on a 99% reliable phone cannot tell 99.99% from 99.999% (*read*)
+- **Also good:** [Composite availability: calculating the overall availability of cloud infrastructure](https://cloud.google.com/blog/products/devops-sre/composite-cloud-availability) — Google Cloud Blog, 16 Nov 2022: the combined availability of the services that make up an application, and how their dependency relationships set the result (*read*)
+- **Also good:** [Appendix A: Availability Table](https://sre.google/sre-book/availability-table/) — Google SRE book: downtime allowed per year, quarter, month, week, day and hour for each level; 99.9% is 43.2 minutes a month, 99.99% is 4.32 (*read*)
+- **Read this:** [Static stability using Availability Zones](https://builder.aws.com/content/3K9SiqiJ369TGkkGzqPM95BuYWI/static-stability-using-availability-zones) — Amazon Builders' Library, Oct 2026: defines static stability and applies it to Availability Zones, so a system keeps working when a dependency is impaired (*read*)
+- **Also good:** [AWS Fault Isolation Boundaries](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/abstract-and-introduction.html) — AWS whitepaper, 16 Nov 2022: the boundaries that give a predictable scope of impact and the zonal, Regional and global scopes of services (*read*)
+- **Beyond the docs:** [Availability in AWS' Physalia](https://www.the-paper-trail.org/post/2020-04-06-physalia/) — Henry Robinson, the-paper-trail: notes on the NSDI 2020 paper about reducing the effect of failures with many small independent cells (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11 · Bottlenecks and single points of failure](11-bottlenecks-and-single-points-of-failure.md) · Index: [Phase 1 — The method](README.md) · Next → [12 · The scaling walk](12-the-scaling-walk.md)

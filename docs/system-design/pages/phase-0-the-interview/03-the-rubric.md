@@ -242,6 +242,19 @@ if the primary dies… if the provider times out." Or: "I've made two choices wi
 cost — the log costs us offset management; the dedupe table costs us a retention policy." A line
 filled late is graded as filled; a line discovered blank in the feedback is not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [System Design in a Hurry: Introduction](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction) — Hello Interview: its Assessment section names the four themes interviewers grade: problem navigation, solution design, technical excellence, and communication and collaboration (*read*)
+- **Also good:** [A framework for system design interviews](https://bytebytego.com/courses/system-design-interview/a-framework-for-system-design-interviews) — ByteByteGo, from Alex Xu's book: the round also assesses how you collaborate, work under pressure and resolve ambiguity, plus a dos and don'ts list (*read*)
+- **Also good:** [System Design in a Hurry: Delivery](https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery) — Hello Interview: the six-step method whose steps map onto the rubric's lines (*read*)
+- **Beyond the docs:** [System Design Interview Guide](https://interviewing.io/guides/system-design-interview) — interviewing.io: "What your interviewer looks for, and what they don't" and a set of green and red flags, written from the interviewer's chair (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02 · The three design rounds](02-the-three-design-rounds.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [04 · The vocabulary contract](04-the-vocabulary-contract.md)

@@ -246,6 +246,18 @@ deliberately, because a cache that cannot read a response cannot cache it or shi
 If a requirement forbids that, the CDN passes TLS through at layer 4 and loses caching for that
 route, and termination moves to the origin.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [RFC 8446](https://www.rfc-editor.org/rfc/rfc8446.html) — IETF, TLS 1.3: a full handshake is one round trip, resumption uses a pre-shared key, and 0-RTT early data is not forward secret and can be replayed (*read*, first 100000 characters only)
+- **Also good:** [Configuring HTTPS servers](https://nginx.org/en/docs/http/configuring_https_servers.html) — nginx: the handshake is the most CPU-intensive TLS operation, cut by keep-alive and a shared `ssl_session_cache` (about 4000 sessions per megabyte, 5 minute default timeout) (*read*)
+- **Beyond the docs:** [Transport Layer Security](https://hpbn.co/transport-layer-security-tls/) — Ilya Grigorik, High Performance Browser Networking: early termination at edge servers near the user to shorten handshake round trips, session resumption, and timeouts that force needless renegotiation (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · DNS as a component](09-dns-as-a-component.md) · Index: [Phase 2 — The request path](README.md) · Next → [11 · HTTP/1.1, HTTP/2 and HTTP/3](11-http-1-1-http-2-and-http-3.md)

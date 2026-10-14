@@ -205,6 +205,17 @@ such as residency or an availability target puts them there; and monitoring, CI 
 which belong to the evolution-and-operations part of the conversation. The diagram shows the
 shape the journeys need, sparse enough that one box can be opened.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [System Design in a Hurry: Delivery](https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery) — Hello Interview: high-level design takes 10 to 15 minutes, built one endpoint at a time (*read*)
+- **Also good:** [C4 model](https://c4model.com/) — Simon Brown: nested abstractions (software system, container, component, code) with a diagram for each, independent of notation and tooling (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06 · The data model](06-the-data-model-from-access-patterns.md) · Index: [Phase 1 — The method](README.md) · Next → [08 · Read path and write path](08-read-path-and-write-path.md)

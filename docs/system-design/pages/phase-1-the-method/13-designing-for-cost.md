@@ -278,6 +278,18 @@ the same thing in both cases. Cost per order, per thousand page views or per gig
 makes trade-offs legible to the business: synchronous replication that adds a fraction of a cent
 per order is a decision about lost orders, not about a large monthly number.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cost optimization pillar](https://docs.aws.amazon.com/wellarchitected/latest/framework/cost-optimization.html) — AWS Well-Architected Framework: the pillar's overview, pointing to its design principles, best practices and questions, with the prescriptive detail in a separate whitepaper (*read*)
+- **Also good:** [Google Cloud Architecture Framework](https://docs.cloud.google.com/architecture/framework) — Google Cloud: the cost optimisation pillar alongside the others (*headings only*)
+- **Beyond the docs:** [AWS's Egregious Egress](https://blog.cloudflare.com/aws-egregious-egress/) — Matthew Prince and Nitin Rao, Cloudflare, 2021-07-23: why egress is the bill line that surprises: charged out but not in, and priced far above wholesale transit; written by a competitor, so read it for the mechanism rather than the markup figures (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [12 · The scaling walk](12-the-scaling-walk.md) · Index: [Phase 1 — The method](README.md) · Next → [14 · Evolution and operations](14-evolution-and-operations.md)

@@ -249,6 +249,17 @@ updates its status in a second transaction, and it does not matter which replica
 either half. A design where the callback must reach "the same pod" has hidden state in the
 process and fails the moment there are two replicas.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [VI. Processes](https://12factor.net/processes) — The Twelve-Factor App: processes are stateless and share-nothing, local memory and disk are at most a single-transaction cache, sticky sessions are a violation, and session data belongs in a store with expiry such as Redis (*read*)
+- **Also good:** [IX. Disposability](https://12factor.net/disposability) — The Twelve-Factor App: fast startup, graceful shutdown on SIGTERM (stop accepting, finish in-flight work), workers return jobs to the queue and jobs are idempotent (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03 · Reverse proxies and API gateways](03-reverse-proxies-and-api-gateways.md) · Index: [Phase 2 — The request path](README.md) · Next → [05 · CDNs](05-cdns.md)
