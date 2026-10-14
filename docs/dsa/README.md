@@ -111,3 +111,5 @@ other prerequisites and must be read first.
 - [MDN — JavaScript built-ins](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) — the costs of the built-ins in Part 1 and Part 2
 - [Java SE 25 API — java.util](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/package-summary.html) — the collections named in Part 1 and Part 4
 - [PostgreSQL documentation](https://www.postgresql.org/docs/current/) · [Redis documentation](https://redis.io/docs/) — the production algorithms of Part 7
+
+> **Link map:** for every topic there is a [link map](./link-map/README.md) — the best explanation found on the web plus, where one exists, the best non-official one. First pass, open for review.
