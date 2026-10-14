@@ -188,6 +188,17 @@ design decision, made in the requirements step: it makes the order a state machi
 pair of endpoints plus a callback, and the payment boundary a legitimate deep dive. Folding them
 into one journey hides the asynchrony until the design cannot express it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [System Design in a Hurry: Delivery](https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery) — Hello Interview: requirements come first, about 5 minutes, functional then prioritised non-functional (*read*)
+- **Also good:** [A framework for system design interviews](https://bytebytego.com/courses/system-design-interview/a-framework-for-system-design-interviews) — ByteByteGo: step one is establishing scope with clarifying questions, and any assumption the interviewer asks you to make is written down (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 1 — The method](README.md) · Next → [02 · Non-functional requirements](02-non-functional-requirements.md)

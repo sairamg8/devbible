@@ -230,6 +230,18 @@ are queried separately or aggregated for reporting wants rows. An order is read 
 reported by product, and at the storefront's scale the join is cheap, so it stays normalised.
 Neither shape is the default; the frequency column decides and the decision is said.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [System Design in a Hurry: Delivery](https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery) — Hello Interview: core entities as a short bulleted first draft, about 2 minutes, before the API and design, extended as more are discovered (*read*)
+- **Also good:** [Designing Data-Intensive Applications](https://dataintensive.net/) — Martin Kleppmann: the chapters on data models and storage engines tie the model to how it is queried (*headings only*)
+- **Beyond the docs:** [The what, why, and when of single-table design with DynamoDB](https://www.alexdebrie.com/posts/dynamodb-single-table/) — Alex DeBrie, 2020-02-05: the strongest statement of "start with your access patterns first", written down before any item is laid out (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05 · The API sketch](05-the-api-sketch.md) · Index: [Phase 1 — The method](README.md) · Next → [07 · The high-level diagram](07-the-high-level-diagram.md)

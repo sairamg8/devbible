@@ -258,6 +258,26 @@ an unpaginated list breaks the read path's latency target for heavy customers; a
 callback produces double transitions; an unversioned stock write loses updates between two
 writers. Each is a minute in the sketch that would have saved ten minutes later.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Idempotent requests](https://docs.stripe.com/api/idempotent_requests) — Stripe API reference: for API v1, the client sends an Idempotency-Key of up to 255 characters, the first response (500 errors included) is saved once execution begins and replayed on retries, keys may be pruned after 24 hours, and reusing a key with di
+- **Also good:** [AIP-158: Pagination](https://google.aip.dev/158) — Google API Improvement Proposals: page size and opaque page tokens, and pagination added from the start because adding it later is a backwards-incompatible change (*read*)
+- **Also good:** [API Design Guide](https://docs.cloud.google.com/apis/design) — Google Cloud: resource-oriented design, resource names, standard and custom methods (*read*)
+- **Beyond the docs:** [Implementing Stripe-like idempotency keys in Postgres](https://brandur.org/idempotency-keys) — Brandur Leach, 2017-10-27: an idempotency-key table with recovery points and atomic phases committed around each foreign call, the server side of the key on our own stack (*read*)
+- **Read this:** [409 Conflict](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/409) — MDN: a request conflict with the current state of the target resource (*read*)
+- **Read this:** [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status)
+- **Also good:** [RFC 9110: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html) — IETF: the normative definition of safe and idempotent methods that our page quotes (*headings only*)
+- **Beyond the docs:** [Choosing the Right HTTP Status Codes for Your API](https://milanjovanovic.tech/blog/rest-api-http-status-codes) — Milan Jovanović: never return 200 with an error in the body, because caches, retry policies and dashboards key on the status class (*read*)
+- **Also good:** [The Idempotency-Key HTTP Header Field](https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/) — IETF HTTPAPI working group draft (expired): a header to make non-idempotent methods such as POST or PATCH fault-tolerant (*read*)
+- **Read this:** [Pagination](https://docs.stripe.com/api/pagination) — Stripe API Reference: list methods use cursor-based pagination with `starting_after` and `ending_before` object IDs, newest first (*read*)
+- **Beyond the docs:** [We need tool support for keyset pagination](https://use-the-index-luke.com/no-offset) — Markus Winand: offset makes the database fetch and order the skipped rows first, so deep pages cost more (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [04 · Traffic shapes](04-traffic-shapes.md) · Index: [Phase 1 — The method](README.md) · Next → [06 · The data model](06-the-data-model-from-access-patterns.md)

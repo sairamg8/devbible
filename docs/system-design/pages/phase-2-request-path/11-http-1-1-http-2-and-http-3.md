@@ -244,6 +244,18 @@ streams, the connection tier's arithmetic is in streams, the edge must speak QUI
 early data must be limited to idempotent requests. An API redesigned "for HTTP/2" has
 misunderstood which layer moved.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Evolution of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP) — MDN: HTTP/1.1 browsers open up to six connections per origin to work around blocking, HTTP/2 multiplexes on one TCP connection where loss can block all streams, and HTTP/3 uses QUIC over UDP so only the affected stream waits (*read*)
+- **Also good:** [RFC 9114](https://www.rfc-editor.org/rfc/rfc9114.html) — IETF, HTTP/3: one request per QUIC stream, and a lost packet on one stream does not stall the others (*read*, first 100000 characters only)
+- **Beyond the docs:** [HTTP/3: the past, the present, and the future](https://blog.cloudflare.com/http3-the-past-present-and-future/) — Cloudflare engineering blog, 2019-09-26: TCP head-of-line blocking under HTTP/2, QUIC streams delivered independently over UDP, and the TCP and TLS 1.3 handshakes combined (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10 · TLS termination and where it lives](10-tls-termination-and-where-it-lives.md) · Index: [Phase 2 — The request path](README.md) · Next → [12 · Service discovery](12-service-discovery.md)

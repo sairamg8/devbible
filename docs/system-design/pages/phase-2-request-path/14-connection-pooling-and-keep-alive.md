@@ -261,6 +261,18 @@ means a database failover or a pooler restart is discovered by every connection 
 than gradually. Retiring connections after minutes — with jitter so they do not all expire
 together — makes topology changes take effect and spreads reconnection over time.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Number of database connections](https://wiki.postgresql.org/wiki/Number_Of_Database_Connections) — PostgreSQL wiki: throughput peaks near core count times two plus spindle count, and more connections lower it through memory pressure, lock contention and context switching, so queue in a pool (*read*)
+- **Also good:** [Connection management in HTTP/1.x](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x) — MDN: persistent keep-alive connections avoid a TCP handshake per request, and idle ones are eventually closed (*read*)
+- **Beyond the docs:** [About pool sizing](https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing) — HikariCP wiki, Brett Wooldridge: for 10,000 simultaneous users the question is how small the pool should be, citing an Oracle demo that cut connections from 2048 to 96 and the core count times two plus spindles formula (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [13 · Serialization on the wire](13-serialization-on-the-wire.md) · Index: [Phase 2 — The request path](README.md) · Next → [15 · The path in the storefront](15-the-path-in-the-storefront.md)

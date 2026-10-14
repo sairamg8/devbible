@@ -184,6 +184,17 @@ hint — there is no one to give it — and it grades narration less honestly, b
 does not notice silence. It is a weaker substitute for a peer mock, not for solo drills, which
 train patterns rather than behaviour.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Coding interview study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/) — Tech Interview Handbook: start booking mock coding interviews at about 60 percent through the plan (*read*)
+- **Also good:** [Mock interviews](https://interviewing.io/mocks) — interviewing.io: a library of recorded mock interviews shared with both participants' permission; the page describes no feedback process (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · The ladders](09-the-ladders.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [11 · Communication mechanics](11-communication-mechanics.md)

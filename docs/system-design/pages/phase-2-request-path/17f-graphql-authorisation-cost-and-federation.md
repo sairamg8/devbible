@@ -268,3 +268,21 @@ federation trigger written down — because "who may change this type" is the qu
 whether the graph is an asset or the next shared file nobody owns.
 
 ← Prev: [17e · GraphQL at the edge](17e-graphql-at-the-edge.md) · Index: [Phase 2 — The request path](README.md) · Next → [18 · Abuse at the edge](18-abuse-at-the-edge.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Solving the N+1 Problem with DataLoader](https://www.graphql-js.org/docs/n1-dataloader/) — GraphQL.js: batches per-key loads into one call such as `getUsersByIds`, caches within the request, and says to create a new DataLoader per request (*read*)
+- **Also good:** [Performance](https://graphql.org/learn/performance/) — graphql.org: the N+1 problem defined with the hero-and-friends example, mitigated by batching and caching (*read*)
+- **Also good:** [Batching and caching](https://goldenpath.graphql.org/solutions/batching-caching/) — GraphQL Golden Path: notes that inconsistent usage fragments batches (*read*)
+- **Beyond the docs:** [Solving the N+1 Problem for GraphQL through Batching](https://shopify.engineering/solving-the-n-1-problem-for-graphql-through-batching) — Shopify Engineering: resolvers return promises, loaders group similar loads and run once per group, and nested fields resolve and batch again — the same mechanism in Ruby (*read*)
+- **Read this:** [Safelisting with Persisted Queries](https://www.apollographql.com/docs/graphos/platform/security/persisted-queries) — Apollo GraphOS: an allowlist of trusted operations, optionally requiring clients to send operation IDs (*read*)
+- **Also good:** [Rate limits and query limits for the GraphQL API](https://docs.github.com/en/graphql/overview/rate-limits-and-query-limits-for-the-graphql-api) — GitHub Docs: points assigned per query, 5,000 points per hour per user (*read*)
+- **Also good:** [Introduction to Apollo Federation](https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/federation) — Apollo: federate many subgraphs into one supergraph (*read*)
+- **Also good:** [GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html) — OWASP: depth and amount limits, timeouts and disabling introspection (*read*)
+- **Beyond the docs:** [Rate Limiting GraphQL APIs by Calculating Query Complexity](https://shopify.engineering/rate-limiting-graphql-apis-calculating-query-complexity) — Shopify Engineering: static cost before execution (objects 1 point, connections 2 plus items, mutations 10), 50 points a second up to 1,000, and the difference between requested and actual cost refunded (*read*)
+
+{/* LINKMAP:END */}

@@ -229,6 +229,18 @@ are raising a larger matrix to a power for nothing, at a cubic cost in the dimen
 same principle as choosing a DP state — the state is what the future depends on, no more — and it is
 why the augmentations on this page each add exactly one component per thing the future needs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Fibonacci numbers](https://cp-algorithms.com/algebra/fibonacci-numbers.html) — cp-algorithms: the matrix of ones and a zero raised to the n, plus the fast-doubling identities; the page ties O(log n) to the matrix route (*read*)
+- **Also good:** [Binary exponentiation](https://cp-algorithms.com/algebra/binary-exp.html) — cp-algorithms: applications include Fibonacci, path counting and transformation matrices (*read*)
+- **Beyond the docs:** [Fast Fibonacci algorithms](https://www.nayuki.io/page/fast-fibonacci-algorithms) — Project Nayuki: shows fast doubling as matrix exponentiation with redundant work removed, with benchmarks on one old machine (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11j · Base conversion and digit sums](11j-base-conversion-and-digit-sums.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [12b · Augmenting the state](12b-augmenting-the-state.md)

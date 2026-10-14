@@ -160,6 +160,18 @@ as steps; write the invariant as a comment so it is anchored in the code rather 
 Design rounds narrate boxes and flows; coding rounds narrate blocks and traces, and both take
 the hint in the same breath.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Coding interview rubrics](https://www.techinterviewhandbook.org/coding-interview-rubrics/) — Tech Interview Handbook, updated Aug 7, 2026: Communication means asking clarifying questions and explaining approach and reasoning while coding (*read*)
+- **Also good:** [Coding interview techniques](https://www.techinterviewhandbook.org/coding-interview-techniques/) — Tech Interview Handbook: outline the high-level functions first to show structured thinking, and state the best theoretical time complexity to the interviewer (*read*)
+- **Beyond the docs:** [Solving Coding Problems Without Overthinking](https://algocademy.com/blog/solving-coding-problems-without-overthinking-how-to-trust-your-instincts/) — AlgoCademy, Oct 15, 2024: narrating your process lets the interviewer follow the logic and step in with guidance (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10 · Mock interviews](10-mock-interviews.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [12 · Java's collections](12-javas-collections-for-interviews.md)

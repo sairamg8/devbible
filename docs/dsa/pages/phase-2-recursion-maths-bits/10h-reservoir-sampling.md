@@ -274,6 +274,16 @@ with probability `k/10^9`, so the reservoir is effectively frozen and stops refl
 The fix is not a better reservoir but a different problem statement — windowed or time-decayed
 sampling, restarting the reservoir per interval, which is what observability pipelines do.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling) — Wikipedia: Algorithm R for a stream of unknown length, an induction for the single-slot case, and the skipping and weighted variants (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10g · The randomised pivot](10g-the-randomised-pivot.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10i · Why add randomness](10i-why-add-randomness.md)

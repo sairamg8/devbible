@@ -190,6 +190,18 @@ dimension is not information, it is duplication, and carrying it would multiply 
 nothing. The habit this teaches generalises past bitmasks — before adding a dimension to a DP, ask
 whether it is implied by the ones you already have.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Held–Karp algorithm](https://en.wikipedia.org/wiki/Held%E2%80%93Karp_algorithm) — Wikipedia: defines g(S, e) as the shortest path from city 1 through subset S ending at e, filled from smaller subsets up, Theta of n squared times 2 to the n time and Theta of n times 2 to the n space, with the second-to-last city stored to 
+- **Also good:** [Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) — Wikipedia: the problem and its exact and approximate solution families (*headings only*)
+- **Also good:** [Assignment problem](https://en.wikipedia.org/wiki/Assignment_problem) — Wikipedia: the problem and its polynomial Hungarian algorithm; the mask DP that is the small-n interview route is not on the page (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09d · Fixed-size subsets and Gray code](09d-fixed-size-subsets-and-gray-code.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [09f · dp[mask][last] and the tour](09f-dp-over-masks-with-a-last-element.md)

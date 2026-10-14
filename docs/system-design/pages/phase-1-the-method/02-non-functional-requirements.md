@@ -212,6 +212,19 @@ path; and that "global" may mean data residency, which turns multi-region replic
 latency decision into a legal constraint on topology. Naming them is the evidence; citations are
 not expected.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Service Level Objectives](https://sre.google/sre-book/service-level-objectives/) — Google SRE book: SLIs as measured indicators, SLOs as targets on them, and percentiles preferred because an average can hide a slow tail (*read*)
+- **Also good:** [Embracing Risk](https://sre.google/sre-book/embracing-risk/) — Google SRE book: the availability target is a floor and a ceiling, each extra increment can cost 100 times the last, and availability can be measured by time or by the share of successful requests (*read*)
+- **Also good:** [Implementing SLOs](https://sre.google/workbook/implementing-slos/) — Google SRE workbook: write SLOs in terms of user-centric actions using critical user journeys, with the online-shop example of searching, adding to a cart and completing a purchase (*read*)
+- **Beyond the docs:** [What are Service-Level Objectives (SLOs)?](https://www.atlassian.com/incident-management/kpis/sla-vs-slo-vs-sli) — Atlassian: an SLO is an internal target, an SLA is the agreement with the customer, shown with a streaming service promising 99.9% uptime, about 43.2 minutes down a month (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01 · Functional requirements](01-functional-requirements.md) · Index: [Phase 1 — The method](README.md) · Next → [03 · Estimation](03-back-of-the-envelope-estimation.md)

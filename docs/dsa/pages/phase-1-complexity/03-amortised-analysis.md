@@ -213,6 +213,19 @@ work becomes Θ(E) and the visited check has silently moved; the traversal is st
 still Θ(V + E) overall, but the "each vertex once" sentence is false and the queue can hold more
 than V entries. Marking on enqueue keeps the sentence true and the queue bounded by V.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Amortized analysis](https://en.wikipedia.org/wiki/Amortized_analysis) — Wikipedia: aggregate, accounting and potential methods, and the dynamic-array push worked as a geometric series totalling O(n) (*read*)
+- **Also good:** [Disjoint set union](https://cp-algorithms.com/data_structures/disjoint_set_union.html) — cp-algorithms: path compression with union by size gives amortised O(alpha(n)), with inverse Ackermann at most 4 for any reasonable n (*read*)
+- **Also good:** [Analysis of algorithms](https://algs4.cs.princeton.edu/14analysis/) — Princeton: resizing arrays take time proportional to N for any N operations, so amortised constant (*read*)
+- **Also good:** [Minimum stack / Minimum queue](https://cp-algorithms.com/data_structures/stack_queue_modification.html) — cp-algorithms: method 3 simulates a queue with two modified stacks (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02b · Recursion as a tree](02b-recursion-as-a-tree.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [03b · Union-find, and the limits of amortised](03b-union-find-and-the-limits-of-amortised.md)

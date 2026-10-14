@@ -194,6 +194,17 @@ The kind counts in the log fall over a month — fewer "pattern not matched", fe
 and repetitions start passing at day 3 that used to fail. Problem count rising says nothing;
 a candidate can raise it indefinitely without changing the kinds of mistakes they make.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition) — Wikipedia: the spacing effect, Mace's 1932 proposal of gaps roughly doubling from one day, and the note that meta-analyses often find expanding and uniform spacing similar (*read*)
+- **Also good:** [Forgetting curve](https://en.wikipedia.org/wiki/Forgetting_curve) — Wikipedia: Ebbinghaus's 1885 curve; each repetition lengthens the interval before the next review (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05 · Reading the constraints](05-reading-the-constraints.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [07 · The when-stuck protocol](07-the-when-stuck-protocol.md)

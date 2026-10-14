@@ -247,6 +247,17 @@ sliding window fails; prefix sums instead." Thirty seconds and visible reasoning
 forcing a pattern that does not fit, costs a rewrite at minute twenty and reads as not having
 checked.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to Solve It](https://en.wikipedia.org/wiki/How_to_Solve_It) — Wikipedia: Polya's four phases (understand, devise a plan, carry out, look back) and the heuristics list: related simpler problem, look for a pattern, work backwards (*read*)
+- **Also good:** [Coding interview techniques](https://www.techinterviewhandbook.org/coding-interview-techniques/) — Tech Interview Handbook: "apply common data structures and algorithms", starting with hash maps (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02 · The 45-minute shape](02-the-45-minute-shape.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [04 · Language choice and traps](04-language-choice-and-runtime-traps.md)

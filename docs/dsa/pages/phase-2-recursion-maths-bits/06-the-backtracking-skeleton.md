@@ -241,6 +241,18 @@ answer (subsets is exactly that), and it is worth saying which of the two shapes
 because it changes whether the recursion needs a base case at all: a subsets search terminates
 because `start` runs off the end of the array, so the base case is the empty loop.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) — Wikipedia: the reject, accept, first and next skeleton over a potential search tree, and pruning as the main performance lever (*read*)
+- **Also good:** [Algorithms, Chapter 2: Backtracking](https://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf) — Jeff Erickson, University of Illinois course text: N-Queens, game trees, subset sum, then a section on the general pattern: each recursive call makes one decision consistent with the earlier ones, carrying a summary of past decisions that should be as small as possible (*read*)
+- **Beyond the docs:** [Backtracking Algorithms](https://www.geeksforgeeks.org/dsa/backtracking-algorithms/) — GeeksforGeeks: a hub of links to the standard problems grouped by difficulty (N-Queen, Sudoku, subset sum, combinational sum, palindromic partitions and more); the hub itself has no explanation or code, the linked pages do (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05f · The cross-language trap](05f-the-cross-language-trap.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06k · State that is not the path](06k-state-that-is-not-the-path.md)

@@ -186,6 +186,17 @@ dive; and because the requirements list is the rubric's line-1 evidence, which s
 for the whole round so the interviewer can redirect against it. The diagram changes; the
 requirements should not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Excalidraw](https://excalidraw.com/) — Excalidraw: a free browser whiteboard that needs no account, one of the tools candidates use remotely (*headings only*)
+- **Also good:** [Mermaid introduction](https://mermaid.js.org/intro/) — Mermaid: diagrams written as text (flowcharts, sequence diagrams and more), a fallback when drawing is slow (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10 · How to practise](10-how-to-practise.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [12 · Primary sources](12-primary-sources.md)

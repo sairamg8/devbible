@@ -264,6 +264,19 @@ work is `BigInt`, where MDN documents that there is no truncation at all and neg
 as if they have infinitely many leading one bits — but BigInt and Number cannot be mixed in a
 single bitwise expression without a `TypeError`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Bit manipulation](https://cp-algorithms.com/algebra/bit-manipulation.html) — cp-algorithms: `n & (n-1)` clears the lowest set bit, `n & -n` extracts it, Kernighan popcount, the power-of-two test with the zero guard; submask iteration is not on this page (*read*)
+- **Also good:** [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html) — Sean Eron Anderson, Stanford: the power-of-2 test with its zero caveat, several ways to count set bits (naive, table, Kernighan, parallel), and XOR swap with its same-location failure (*read*)
+- **Also good:** [Bitwise AND](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) — MDN: Number operands are converted to 32-bit integers and higher bits discarded; BigInt has no truncation (*read*)
+- **Also good:** [Integer](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html) — Oracle Java SE 21: `bitCount`, `lowestOneBit`, `numberOfTrailingZeros` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03l · Why modulo a large prime](03l-why-answers-are-taken-modulo-a-large-prime.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [04b · Single-bit idioms and masks](04b-the-single-bit-idioms-and-masks.md)

@@ -251,6 +251,17 @@ verification records, because they change only by a planned deploy that can lowe
 in advance. A short TTL on everything buys nothing and costs a lookup on more first visits and
 load on the authoritative servers; it is not agility, it is churn.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Choosing a routing policy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html) — AWS Route 53 docs: simple, failover (active-passive), geolocation, geoproximity, latency, weighted, IP-based and multivalue answer policies (*read*)
+- **Also good:** [RFC 2308](https://www.rfc-editor.org/rfc/rfc2308.html) — IETF: resolvers cache negative answers for the lower of the SOA TTL and its MINIMUM field (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [08 · Timeouts, retries and budgets](08-timeouts-retries-and-budgets.md) · Index: [Phase 2 — The request path](README.md) · Next → [10 · TLS termination and where it lives](10-tls-termination-and-where-it-lives.md)

@@ -197,6 +197,18 @@ is the real answer; quicksort's nothing, which is why its space is just the stac
 algorithm's presorted arrays. Answering "Θ(log n)" for merge sort is the standard mistake, and it
 comes from counting only the recursion.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mergesort](https://algs4.cs.princeton.edu/22mergesort/) — Princeton, Sedgewick and Wayne: top-down mergesort splits, sorts halves and merges, with N log N time and N extra space (*read*)
+- **Also good:** [Quickselect](https://en.wikipedia.org/wiki/Quickselect) — Wikipedia: average O(n), worst O(n squared), recurses into one side only, median of medians gives a linear worst case (*read*)
+- **Also good:** [Inversion (discrete mathematics)](https://en.wikipedia.org/wiki/Inversion_(discrete_mathematics) — ): Wikipedia
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01h · Choosing, and reading the overflow](01h-choosing-recursion-and-reading-the-overflow.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02b · Base cases, induction, and when to reach for it](02b-base-cases-induction-and-when-to-reach-for-it.md)

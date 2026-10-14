@@ -231,6 +231,17 @@ force that is too slow for the constraints before the time is spent writing it �
 to a hundred thousand is too slow; I need the map" — which is the reading-the-constraints skill
 the next pages build.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Coding interview rubrics](https://www.techinterviewhandbook.org/coding-interview-rubrics/) — Tech Interview Handbook, updated Aug 7, 2026: four graded dimensions (communication, problem solving, technical competency, testing), each scored in bands from strong hire to strong no hire (*read*)
+- **Also good:** [Coding interview preparation](https://www.techinterviewhandbook.org/coding-interview-prep/) — Tech Interview Handbook: lists the four criteria (communication, problem solving, technical competency, testing) and says a round is typically 30 to 45 minutes; it defines no stages (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [02 · The 45-minute shape](02-the-45-minute-shape.md)

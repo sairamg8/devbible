@@ -246,6 +246,18 @@ means the order service and the inventory row never see the excess. The admissio
 many are being let through, the wait queue — lives in a store, not the gateway, so that gateway
 replicas can die and be replaced without losing it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [API gateways](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/gateway) — Microsoft Azure Architecture Center, updated 2026: a gateway is a reverse proxy with layer-7 routing that offloads SSL termination, mutual TLS, authentication, IP lists, rate limiting, caching, WAF and gzip, and without one every service repeats those concerns (*read*)
+- **Also good:** [NGINX reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) — NGINX docs: `proxy_pass`, header rewriting with `proxy_set_header`, and response buffering controls (*read*)
+- **Also good:** [Pattern: API Gateway / Backends for Frontends](https://microservices.io/patterns/apigateway.html) — microservices.io, Chris Richardson: a single entry point that routes or fans out to services, and a Backends for Frontends variation with a separate gateway per kind of client (web, mobile, third party) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02 · Load balancing, layer 4 vs layer 7](02-load-balancing-layer-4-vs-layer-7.md) · Index: [Phase 2 — The request path](README.md) · Next → [04 · Stateless services, and where the state went](04-stateless-services-and-where-the-state-went.md)

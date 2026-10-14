@@ -221,6 +221,17 @@ output is 2ⁿ items of length up to n." Separating the two is how you avoid quo
 space bound for a recursion that holds n frames, and how you avoid quoting Θ(n) for a function
 that is about to materialise every permutation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Recursion and stack](https://javascript.info/recursion) — javascript.info: each call pushes an execution context, depth is limited by the engine, "any recursion can be rewritten as a loop" (*read*)
+- **Also good:** [Too much recursion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion) — MDN: a missing base case or too many calls triggers the error; it gives no numeric depth (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [01b · The three ways the contract breaks](01b-the-three-ways-the-contract-breaks.md)

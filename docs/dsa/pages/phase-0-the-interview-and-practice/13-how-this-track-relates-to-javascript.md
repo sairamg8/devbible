@@ -124,6 +124,16 @@ the absence of a heap, `Map` versus object keys — language layer. The signal t
 sliding window, the invariant of a binary search, the order in which patterns are learned —
 interview layer, because they hold in TypeScript and Java alike.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Data structures and algorithms study cheatsheets](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) — Tech Interview Handbook: per-topic study guides with a time-complexity cheatsheet and general interview tips; headings: What is this, Contents of each study guide, Study guides list, General interview tips, Recommended courses (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [12 · Java's collections](12-javas-collections-for-interviews.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [14 · Contests vs interviews](14-competitive-programming-vs-interviews.md)

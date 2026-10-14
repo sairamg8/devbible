@@ -117,6 +117,18 @@ aloud; writing reviewer-grade code with names and comments; taking a hint in the
 and re-deriving after a constraint change. Recorded, narrated solving plus a weekly peer mock
 covers all four; the speed and the pattern recognition they already have take care of the rest.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Competitive programming](https://en.wikipedia.org/wiki/Competitive_programming) — Wikipedia: contests are judged automatically on secret tests; contest skill helps with interviews, and Norvig's Google observation on contest winners is quoted with his later caveat (*read*)
+- **Beyond the docs:** [How do coding interviews differ from coding contests](https://www.redgreencode.com/cpfaq-how-do-coding-interviews-differ-from-coding-contests/) — Duncan Smith, redgreencode: a compiler needs exact syntax, a person forgives it; interviews are collaborative and draw on a narrower range of algorithms (*read*)
+- **Also good:** [Greedy algorithms with sorting](https://usaco.guide/silver/greedy-sorting) — USACO Guide: a sample of contest-style problems with CSES, Codeforces and USACO practice sets (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [13 · This track and the JS track](13-how-this-track-relates-to-javascript.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next phase → [Part 1 of the syllabus — complexity, recursion, maths and bits](../../syllabus/01-foundations.md)

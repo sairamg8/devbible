@@ -274,6 +274,18 @@ the input. In each case `hi` is chosen because it is provably feasible and `lo` 
 below it can be, and stating those two reasons is what makes the answer complete rather than a
 guess that happened to work.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Binary Search](https://cp-algorithms.com/num_methods/binary_search.html) — cp-algorithms: lower bound is the first element at least k and upper bound the first greater than k, both from one loop with bounds l = -1 and r = n; states the invariant `A[l] &lt;= k &lt; A[r]`, and warns that `(l + r) / 2` can overflow, offer
+- **Also good:** [Extra, Extra - Read All About It: Nearly All Binary Searches and Mergesorts are Broken](https://research.google/blog/extra-extra-read-all-about-it-nearly-all-binary-searches-and-mergesorts-are-broken/) — Joshua Bloch, Google Research, 2006-06-02: `(low + high) / 2` overflows; fix with `low + ((high - low) / 2)` or `(low + high) &gt;&gt;&gt; 1` (*read*)
+- **Beyond the docs:** [Binary Search on Answer: the pattern that unlocks hard problems](https://dev.to/alex_hunter_44f4c9ed6671e/binary-search-on-answer-the-pattern-that-unlocks-hard-problems-iil) — Alex Hunter, DEV Community, 2025-12-14: define the range, write a `can(x)` check, search for the smallest valid value; pitfalls are bad bounds and a non-monotonic predicate; TypeScript for minimum eating speed; names shipping capacity and splitting an array, not the k-t
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02h · Solve halves, combine — without sorting](02h-solve-halves-combine-when-it-is-not-sorting.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03 · gcd and Euclid's algorithm](03-mathematical-foundations.md)

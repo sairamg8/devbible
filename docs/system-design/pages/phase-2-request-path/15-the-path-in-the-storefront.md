@@ -239,6 +239,17 @@ terminates at the origin so the handshakes cross too, if a service calls a store
 in another region synchronously, or if the provider call sits inside the transaction so its
 latency is added to the row's lock time and to the buyer's wait at the same moment.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) — MDN: personalised responses need `Cache-Control: private`, a cookie alone does not make a response private, and `public` should be avoided on `Authorization` traffic (*read*)
+- **Also good:** [Designing robust and predictable APIs with idempotency](https://stripe.com/blog/idempotency) — Stripe: an idempotency key lets a checkout retry return the stored result instead of charging twice (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [14 · Connection pooling and keep-alive](14-connection-pooling-and-keep-alive.md) · Index: [Phase 2 — The request path](README.md) · Next → [16 · Service mesh](16-service-mesh.md)

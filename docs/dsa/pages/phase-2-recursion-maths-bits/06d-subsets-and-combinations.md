@@ -269,6 +269,22 @@ duplicate input the correct fix is to skip equal siblings in the choice loop, wh
 the duplicate branch at all — the `Set` version still walks the entire duplicated tree and merely
 hides the result, so it is slower by exactly the factor the input's multiplicities imply.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Power set](https://en.wikipedia.org/wiki/Power_set) — Wikipedia: the set of all subsets of an n-element set has 2 to the n members, and each subset corresponds to an indicator function into 0 and 1, which is the include-or-skip recursion's leaf (*read*)
+- **Also good:** [Permutation](https://en.wikipedia.org/wiki/Permutation) — Wikipedia: the n factorial count and a section on generating permutations in lexicographic order (*read*)
+- **Also good:** [Combination](https://en.wikipedia.org/wiki/Combination) — Wikipedia: the n choose k count and a section on combinations with repetition (k-multisets) (*read*)
+- **Beyond the docs:** [Backtracking Algorithms](https://www.geeksforgeeks.org/dsa/backtracking-algorithms/) — GeeksforGeeks: a hub of links to the standard problems grouped by difficulty (N-Queen, Sudoku, subset sum, combinational sum, palindromic partitions and more); the hub itself has no explanation or code, the linked pages do (*read*)
+- **Read this:** [Subset sum problem](https://en.wikipedia.org/wiki/Subset_sum_problem) — Wikipedia: defines the question of whether some subset of integers reaches a target, the decision form that combination sum enumerates; has sections on exponential-time algorithms and the pseudo-polynomial dynamic programming solution (*read
+- **Also good:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) — Wikipedia: builds candidates step by step and abandons a partial candidate as soon as it cannot possibly be completed to a valid solution, which prunes whole branches; uses the eight queens puzzle as its classic example and names Sudoku and 
+- **Also good:** [Algorithms, Chapter 2: Backtracking](https://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf) — Jeff Erickson, University of Illinois course text: a subset-sum section that decides, element by element, whether to include each input, with an O(2 to the n) recurrence (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06c · The cost of the search tree](06c-the-cost-of-the-search-tree.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06e · Permutations and the used array](06e-permutations-and-the-used-array.md)

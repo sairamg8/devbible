@@ -160,6 +160,19 @@ list is the general list resampled, and it is useful in the last two weeks befor
 loop as timed practice. It is not a syllabus; a pattern learned from a tagged list is the same
 pattern, and the phase order is what to climb regardless of the tag.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Coding interview study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/) — Tech Interview Handbook: three months at about 11 hours a week, topics by priority, then 75 questions from the Grind 75 tool, worked in order of priority, high-priority topics first (*read*)
+- **Also good:** [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) — NeetCode: Blind 75 plus 75 more, 28 easy, 101 medium, 21 hard, in 18 categories (*read*)
+- **Also good:** [Grind 75](https://www.techinterviewhandbook.org/grind75/) — Tech Interview Handbook: "a better Blind 75 you can customize, by the author of Blind 75"; the fetched page gives no list detail (*headings only*)
+- **Beyond the docs:** [Blind 75 vs NeetCode 150 vs Educative](https://www.educative.io/blog/blind75-vs-neetcode-vs-educative) — Educative blog, Aisha Noor, Jun 15, 2026: compares Blind 75, NeetCode 150 and Educative's pattern paths and advises working category by category, easy before hard within each (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [08 · Testing your code live](08-testing-your-own-code-live.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [10 · Mock interviews](10-mock-interviews.md)

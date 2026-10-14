@@ -226,6 +226,17 @@ weights requirements and trade-offs over the diagram — ten minutes on requirem
 wrap-up's evolution and not-yet list. The method is the same; asking the format at minute zero
 picks the budget.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [System Design in a Hurry: Delivery](https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery) — Hello Interview: the time boxes: requirements 5, entities 2, API 5, optional data flow 5, high-level design 10 to 15, deep dives about 10 (*read*)
+- **Also good:** [A framework for system design interviews](https://bytebytego.com/courses/system-design-interview/a-framework-for-system-design-interviews) — ByteByteGo: for 45 minutes: scope 3 to 10, high-level design 10 to 15, deep dive 10 to 25, wrap-up 3 to 5 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [14 · Evolution and operations](14-evolution-and-operations.md) · Index: [Phase 1 — The method](README.md) · Next → [16 · Estimation worked examples](16-estimation-worked-examples.md)

@@ -227,6 +227,18 @@ services you would take with their ceilings stated. "A modular monolith, with se
 split out, on managed PostgreSQL and a managed queue, until a team boundary forces the next
 split" is a senior sentence; "just a monolith" is not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [A framework for system design interviews](https://bytebytego.com/courses/system-design-interview/a-framework-for-system-design-interviews) — ByteByteGo, from Alex Xu's book: its dos and don'ts name over-engineering, jumping to a solution before clarifying, going deep on one component before the high-level design, thinking in silence, and claiming the design is perfect (*read*)
+- **Also good:** [Monolith First](https://martinfowler.com/bliki/MonolithFirst.html) — Martin Fowler, 2015: even experienced architects struggle to get service boundaries right at the start, and microservices carry a premium, which is the counter to jumping straight to microservices (*read*)
+- **Beyond the docs:** [System Design Interview Guide](https://interviewing.io/guides/system-design-interview) — interviewing.io: a section of red and green flags from the interviewer's side (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06 · Reading the question](06-reading-the-question.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [08 · Reasoned beats memorised](08-reasoned-wrong-beats-memorised-right.md)

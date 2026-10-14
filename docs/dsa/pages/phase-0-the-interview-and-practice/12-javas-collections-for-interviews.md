@@ -273,6 +273,19 @@ and `put`, so the eldest is the least recently used, and the map removes it on i
 ten lines, and it is the answer an interviewer expects unless they ask for the doubly linked
 list explicitly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PriorityQueue](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/PriorityQueue.html) — Oracle Java SE 21: `offer`, `poll`, `add` are O(log n), `remove(Object)` and `contains` are linear, iteration order is not sorted, null is rejected, not thread-safe (*read*)
+- **Also good:** [TreeMap](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/TreeMap.html) — Oracle Java SE 21: guaranteed log(n) for `containsKey`, `get`, `put`, `remove`; `floorKey` and `ceilingKey` return the nearest key or null, with no stated bound (*read*)
+- **Also good:** [ArrayDeque](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayDeque.html) — Oracle Java SE 21: faster than `Stack` and `LinkedList` as stack or queue, nulls prohibited, most operations amortised constant (*read*)
+- **Also good:** [Collections Framework overview](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/doc-files/coll-overview.html) — Oracle Java SE 21: the table of general-purpose implementations by interface (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11 · Communication mechanics](11-communication-mechanics.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [13 · This track and the JS track](13-how-this-track-relates-to-javascript.md)

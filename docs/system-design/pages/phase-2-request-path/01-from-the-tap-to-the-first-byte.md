@@ -256,6 +256,18 @@ on connections already open, and the edge can absorb abuse before it reaches the
 floor for the request is still one crossing — the CDN removes handshakes from the ocean, not
 the ocean from the write.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Understanding latency](https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Understanding_latency) — MDN: splits a request into DNS resolution, TCP connect, TLS handshake, sending, waiting and receiving, and says the first 14KB of a first request pays for DNS, TCP and TLS setup while later requests on an open connection do not (*read*
+- **Also good:** [Timeouts, retries and backoff with jitter](https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter) — Amazon Builders' Library: connection setup can count against a timeout, and a 20 ms timeout caused errors after each deploy until connections were opened at process start (*read*)
+- **Beyond the docs:** [Primer on latency and bandwidth](https://hpbn.co/primer-on-latency-and-bandwidth/) — Ilya Grigorik, High Performance Browser Networking: splits delay into propagation, transmission, processing and queuing, puts propagation within a small factor of the speed of light, and gives last-mile latencies of 10 to 65 ms by access technology (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 2 — The request path](README.md) · Next → [02 · Load balancing, layer 4 vs layer 7](02-load-balancing-layer-4-vs-layer-7.md)

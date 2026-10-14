@@ -254,6 +254,17 @@ fifth seconds, a month two and a half million, one significant figure at the rig
 Correctness is the arithmetic; fluency is producing the chain without visible effort and ending
 each one with the sentence that says which box the number chose.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Back-of-the-envelope estimation](https://bytebytego.com/courses/system-design-interview/back-of-the-envelope-estimation) — ByteByteGo: a worked social-feed example from monthly users to QPS, peak and about 55 PB of media over five years (*read*)
+- **Also good:** [Latency numbers every programmer should know](https://gist.github.com/jboner/2841832) — Jonas Bonér: the constants an estimate leans on (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [15 · Time management in 45 minutes](15-time-management.md) · Index: [Phase 1 — The method](README.md) · Next → [17 · The same method in writing](17-the-same-method-in-writing.md)

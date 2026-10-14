@@ -252,3 +252,14 @@ get three things from one mechanism: `GET` requests the edge can cache, safe-met
 semantics back, and an allowlist that removes arbitrary query cost as an attack surface.
 
 ← Prev: [17d · Routing versus orchestration](17d-routing-versus-orchestration.md) · Index: [Phase 2 — The request path](README.md) · Next → [17f · Graph authorisation, cost and federation](17f-graphql-authorisation-cost-and-federation.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to GraphQL](https://graphql.org/learn/introduction/) — graphql.org: a query language and server runtime over a type system you define; clients describe the shape they need and get just that data in a single request (*read*)
+- **Beyond the docs:** [GraphQL vs. REST](https://www.apollographql.com/blog/graphql-vs-rest) — Apollo: concedes GraphQL results cannot use HTTP caching as effectively as REST and has fewer tools and integrations (*read*)
+
+{/* LINKMAP:END */}

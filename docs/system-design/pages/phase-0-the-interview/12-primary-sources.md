@@ -241,6 +241,22 @@ cost of global consistency precisely, naming what a majority buys, reasoning abo
 the log model. Interviewers notice explanations that come from mechanism; they do not award points
 for naming the paper the mechanism came from.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Amazon's Dynamo](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html) — Werner Vogels, 2007: the author's post carries the full SOSP 2007 paper inline; sections 4.5 and 4.6 give the R plus W greater than N quorum, the sloppy quorum and hinted handoff, and the paper calls Dynamo eventually consistent (*read*)
+- **Also good:** [Bigtable](https://research.google/pubs/bigtable-a-distributed-storage-system-for-structured-data/) — Google Research: the paper's own page (*headings only*)
+- **Also good:** [Spanner: Google's Globally-Distributed Database](https://research.google/pubs/spanner-googles-globally-distributed-database-2/) — Google Research: the OSDI 2012 paper's own page, the one our page cites; a sibling page holds the 2013 TOCS version (*read*)
+- **Also good:** [In Search of an Understandable Consensus Algorithm](https://raft.github.io/raft.pdf) — Ongaro and Ousterhout: the Raft paper, extended version (*headings only*)
+- **Also good:** [Kafka design](https://kafka.apache.org/43/design/design/) — Apache Kafka 4.3 documentation: the design chapter (persistence on the filesystem and page cache, delivery semantics, replication with in-sync replicas, log compaction), the readable substitute for the original Kafka paper; the unversioned documentation address 
+- **Also good:** [Google SRE book, contents](https://sre.google/sre-book/table-of-contents/) — Google: the chapter list from which our page picks the ones worth reading (*headings only*)
+- **Beyond the docs:** [Designing Data-Intensive Applications](https://dataintensive.net/) — Martin Kleppmann: the book that explains most of these papers side by side (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11 · Whiteboard and remote tooling](11-whiteboard-and-remote-tooling.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [13 · How this track relates](13-how-this-track-relates.md)

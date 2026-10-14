@@ -123,3 +123,5 @@ Parts are sequential and the order is load-bearing:
 - [OWASP API Security Top 10](https://owasp.org/API-Security/) — Part 9
 - [Claude API documentation](https://docs.claude.com) · [pgvector](https://github.com/pgvector/pgvector) — Part 10
 - [PostgreSQL documentation](https://www.postgresql.org/docs/current/) — wherever a row leans on the database
+
+> **Link map:** for every topic there is a [link map](./link-map/README.md) — the primary docs plus, where one exists, the best non-official explanation. First pass, open for review.

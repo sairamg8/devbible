@@ -276,6 +276,18 @@ is counted twice. Orders that used a promo plus orders that used a gift card dou
 that used both, and the fix is either to redefine the cases or to reach for inclusion–exclusion. Most
 wrong counts are one of those two conditions violated silently, and both take one sentence to check.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Catalan numbers](https://cp-algorithms.com/combinatorics/catalan-numbers.html) — cp-algorithms: counts bracket sequences, binary trees and triangulations; the sum recurrence and the closed form C(2n, n) over n+1 (*read*)
+- **Also good:** [Inclusion-exclusion](https://cp-algorithms.com/combinatorics/inclusion-exclusion.html) — cp-algorithms: the alternating-sum principle with derangements as an application (*read*)
+- **Also good:** [Binomial coefficients](https://cp-algorithms.com/combinatorics/binomial-coefficients.html) — cp-algorithms: Pascal's triangle in O(n squared) and the modular route (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07f · Any associative operation](07f-any-associative-operation.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [08b · Pascal's rule and the DP table](08b-pascals-rule-and-the-dp-table.md)

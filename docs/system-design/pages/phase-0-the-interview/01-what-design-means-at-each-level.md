@@ -229,6 +229,18 @@ centralised option, a randomised one, and a derived one) and leave time to choos
 cost. If a fourth is genuinely relevant, name it in one clause as "also possible, rejected
 because…" rather than developing it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Staff archetypes](https://staffeng.com/guides/staff-archetypes/) — Will Larson, StaffEng: staff-plus is not one job: four archetypes (Tech Lead, Architect, Solver, Right Hand), each with a different scope of design ownership (*read*)
+- **Also good:** [System Design in a Hurry: Introduction](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction) — Hello Interview: entry-level roles often have no design round, mid-level candidates are expected to cover the basics well, seniors move through them faster and go deeper, staff gets separate guidance (*read*)
+- **Also good:** [System Design Interview Guide](https://interviewing.io/guides/system-design-interview) — interviewing.io: a senior candidate is expected to direct more of the interview, while a mid-level one may do better letting the interviewer lead; only those two levels are contrasted (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 0 — What system design interviews test](README.md) · Next → [01b · Staff, and reading the room](01b-staff-and-reading-the-room.md)
