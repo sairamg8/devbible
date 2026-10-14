@@ -7,6 +7,21 @@ metadata:
 
 # 🔴 START HERE — DSA + System Design (syllabus + card)
 
+## 💾 SAVE POINT — 2026-10-14, branch `claude/friendly-sagan-3kq3o1` (cloud session)
+
+**User's order:** *"No more new agents once they returned and confirm; just save the session progress."*
+⛔ **Do NOT dispatch Wave 2** until the user says so.
+
+- **Wave 1 of SD phase 3 was dispatched 2026-10-14** (4 `devbible-author` agents: A 01+07 · B 02+03 · C 04+12 · D 05+06).
+  Brief paths were overridden to the in-repo bank `docs/_project/research_system-design_phase3.md`; verified date 2026-10-14.
+- At save time, **uncommitted** files in `docs/system-design/pages/phase-3-caching/` (agents still writing):
+  01, 01b, 02, 02b, 02c, 04, 04b, 04c, 05, 05b (+ a stray `.parts.json` — delete it, not content). 03, 06, 07, 12 not yet on disk.
+- **Next session, first:** treat anything in that directory idle 10+ min as salvage — `wc -l` (cap 300), float
+  duplicate check on `sidebar_position`, last line `{/* FOOTER */}`, then `yarn linkcheck docs/system-design`,
+  then commit explicit paths. Then the close-out chain listed under "Owed by the session at close" below.
+- Still queued (Wave 2, unstarted): 08, 09, 10, 11, 13, 14, 16, then 15 last. Then SD phase 4 and DSA phase 3 onward.
+- `/claude-context` and the old store path `/mnt/Storage/my-learning/claude` do not exist in this container; progress is saved in-repo here.
+
 ## ⏹️ WOUND DOWN FOR THE DAY — 2026-09-08 19:31, session `0e733592`
 
 **Everything below is committed and PUSHED in both repos. Nothing is half-written. No agent is
