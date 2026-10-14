@@ -269,6 +269,18 @@ guaranteed-defined `data` that is the mode's main benefit falls out of that. It 
 mode cannot be toggled at runtime, which is what makes the missing `enabled` option in
 [01b](./01b-what-suspense-mode-removes.md) unavoidable rather than an oversight.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Suspense](https://tanstack.com/query/latest/docs/framework/react/guides/suspense) — TanStack Query docs: `data` always defined, loading and error handled by Suspense and error boundaries, `enabled` not allowed, queries in one component fetch serially (*read*)
+- **Also good:** [useSuspenseQuery reference](https://tanstack.com/query/latest/docs/framework/react/reference/useSuspenseQuery) — TanStack Query API reference: differences from `useQuery`: `throwOnError`, `enabled` and `placeholderData` excluded, `queryFn` cannot be `skipToken`, `data` always defined, cancellation does not work (*read*)
+- **Beyond the docs:** [React 19 and Suspense - A Drama in 3 Acts](https://tkdodo.eu/blog/react-19-and-suspense-a-drama-in-3-acts) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2024-06-16: why sibling `useSuspenseQuery` calls stopped fetching in parallel under React 19, and why starting the fetch in a loader fixes it
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Prefetching & SSR](../09-prefetching-and-ssr/01-server-rendered-data-flow.md) · [Topic index](../README.md) · Next → [What suspense mode removes](./01b-what-suspense-mode-removes.md)

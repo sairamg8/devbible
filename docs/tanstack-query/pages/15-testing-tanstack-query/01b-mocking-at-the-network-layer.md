@@ -224,6 +224,18 @@ Decisively, because the whole mechanism travels through the `queryFn`'s `signal`
 **★ Two mounts of the same query key: how many requests should a test expect, and why is the naive answer wrong?**
 Two, under default options. The docs say cached data is considered stale by default and that stale queries refetch when new instances mount, so the second mount renders the cached value immediately *and* fires a background refetch. Engineers write this test expecting one request because they are thinking of the cache as a request cache; it is a stale-while-revalidate cache. If the intent is genuinely "no second request", the test has to set a `staleTime` that covers the window and say so — at which point the test is documenting a real configuration decision rather than asserting a default it guessed at.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Testing](https://tanstack.com/query/latest/docs/framework/react/guides/testing) — TanStack Query docs: mocks with nock; MSW only through a link to TkDodo's article (*read*)
+- **Also good:** [Mock Service Worker docs](https://mswjs.io/docs/) — MSW: the introduction: MSW intercepts real requests at the network level through the Service Worker API in the browser and class extension in Node (*read*)
+- **Beyond the docs:** [Testing React Query](https://tkdodo.eu/blog/testing-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-04-04, updated 2023-10-21: MSW as the single source of truth for mocking; with a companion repo
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The test QueryClient](01-isolated-and-integration-testing.md) · [Topic index](../README.md) · Next → [Testing mutations](01c-testing-mutations.md)

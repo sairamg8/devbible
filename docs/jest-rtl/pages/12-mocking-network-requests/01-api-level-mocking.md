@@ -195,3 +195,23 @@ expect(capturedBody).toEqual({ productId: '101', quantity: 2 });
 - **Previous**: [11 · Custom Render](../11-custom-render/01-provider-wrapping.md) — Integrating MSW with `renderWithProviders`.
 - **Next**: [13 · Testing Hooks](../13-testing-hooks/01-render-hook.md) — Testing custom React data hooks with `renderHook`.
 - **TanStack Query Integration (`docs/tanstack-query/`)**: Testing cache invalidation and query retries against MSW endpoints.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js integration](https://mswjs.io/docs/integrations/node) — MSW docs: `setupServer` from `msw/node`, a synchronous `listen`, `resetHandlers` between tests, and `close` after all tests (*read*)
+- **Also good:** [Quick start](https://mswjs.io/docs/quick-start) — MSW docs: the five-step setup with a Vitest setup file; Jest wiring is the same hooks in `setupFilesAfterEnv`. It calls `listen()` with no options (*read*)
+- **Also good:** [listen()](https://mswjs.io/docs/api/setup-server/listen) — MSW docs (v3): the unhandled-request option is documented here as `onUnhandledFrame`, default `"warn"`, with `"error"`, `"bypass"` or a custom function (*read*)
+- **Beyond the docs:** [Stop mocking fetch](https://kentcdodds.com/blog/stop-mocking-fetch) — Kent C. Dodds, 2020-06-03: why mocking `fetch` per test hides bad request formats and headers, and why one shared mock server is better; uses the old `rest` API
+- **Read this:** [Path parameters](https://mswjs.io/docs/http/intercepting-requests/path-parameters) — MSW docs: `:id`, optional `:id?`, repeating `:segments+`; values are always strings or string arrays, with no parsing (*read*)
+- **Also good:** [Query parameters](https://mswjs.io/docs/http/intercepting-requests/query-parameters) — MSW docs: build a `URL` from `request.url` and use `searchParams.get` or `getAll` (*read*)
+- **Read this:** [Network behavior overrides](https://mswjs.io/docs/best-practices/network-behavior-overrides) — MSW docs: `server.use()` prepends handlers that take priority, overrides are permanent until `resetHandlers()`, and `&#123; once: true &#125;` limits one to a single request (*read*)
+- **Also good:** [Error responses](https://mswjs.io/docs/http/mocking-responses/error-responses) — MSW docs: 404 with a null body, 401 with a JSON body (*read*); [Network errors](https://mswjs.io/docs/recipes/network-errors)
+- **Also good:** [Network errors](https://mswjs.io/docs/recipes/network-errors)
+- **Also good:** [Response timing](https://mswjs.io/docs/http/mocking-responses/response-timing) — MSW docs: `await delay(ms)` inside a resolver; says nothing on Node-specific behaviour, which is left to the `delay()` API reference I did not fetch (*read*)
+- **Read this:** [Async methods](https://testing-library.com/docs/dom-testing-library/api-async) — Testing Library: `findBy` is `getBy` plus `waitFor`; `waitFor` retries a callback that throws, 1000 ms timeout and 50 ms interval by default (*read*)
+
+{/* LINKMAP:END */}

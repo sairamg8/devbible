@@ -130,3 +130,17 @@ PWDEBUG=1 npm run test:e2e   # committed into a CI script by mistake
 # ✅ CORRECT: PWDEBUG is a LOCAL, interactive debugging tool — never set in CI/automated scripts
 npm run test:e2e   # CI runs normally, without any interactive debugging flag set
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Trace viewer](https://playwright.dev/docs/trace-viewer) — playwright.dev: `on-first-retry` for CI, `retain-on-failure`, `show-trace`, actions, DOM snapshots, network and console tabs, trace.playwright.dev loads traces in the browser
+- **Read this:** [Debugging tests](https://playwright.dev/docs/debug) — playwright.dev: `--debug` opens the Inspector in headed mode, `page.pause()`, actionability logs, VS Code debugger; `PWDEBUG=console` exposes a `playwright` object. The page does not show `PWDEBUG=1`, which our page uses
+- **Also good:** [UI mode](https://playwright.dev/docs/test-ui-mode) — playwright.dev: watch mode, timeline, pick locator, filter by `@tag` and status (*read*)
+- **Beyond the docs:** [Complete Playwright Debugging Tutorial](https://dev.to/adam_zampa_/complete-playwright-debugging-tutorial-inspector-trace-viewer-logs-explained-19i5) — Adam Zampa, DEV Community, posted Feb 4 (year not shown), originally on testgrid.io: covers `PWDEBUG=1`, `page.pause()`, DevTools, trace viewer and `DEBUG=pw:api`; no UI mode and no single failing test worked through
+- **Read this:** [Codegen](https://playwright.dev/docs/codegen) — playwright.dev: recording in VS Code or the Inspector, pick locator, assertion icons, locators prioritising role, text and test id, device and auth emulation
+
+{/* LINKMAP:END */}

@@ -108,3 +108,17 @@ test.describe.serial('user tests', () => {
 
 ### ⚠️ Pitfall 3: Sharding Without Load-Balancing Test Duration Across Shards
 Naive sharding (splitting tests purely by count, e.g. alphabetically or by file order) can produce unevenly-loaded shards if some test files are significantly slower than others — one shard might take 15 minutes while another finishes in 3, meaning the SLOWEST shard still gates total CI time, undermining much of sharding's intended benefit. Playwright's built-in sharding attempts reasonably balanced distribution, but for suites with highly uneven per-file test durations, monitoring actual per-shard completion times (and potentially reorganizing test files) may be needed to realize sharding's full benefit.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Parallelism](https://playwright.dev/docs/test-parallel) — playwright.dev: files run in parallel, tests in a file in order in one worker, `fullyParallel`, serial mode "not recommended", limiting workers on CI, worker index
+- **Also good:** [Test API](https://playwright.dev/docs/api/class-test) — playwright.dev: `test.describe.parallel()` and `test.describe.serial()` sit in the Deprecated section as "Discouraged"; use `test.describe.configure` with `mode` (*read*)
+- **Beyond the docs:** [Playwright - Parallelism and sharding](https://dev.to/this-is-learning/playwright-parallelism-and-sharding-58h9) — Luca Del Puppo, DEV Community, 2023-02-09: workers, `fullyParallel`, serial and shard with the `configure` form; no blob reports
+- **Read this:** [Sharding](https://playwright.dev/docs/test-sharding) — playwright.dev: `--shard=x/y`, `fullyParallel` shards per test and otherwise per file, blob reporter and `merge-reports`, GitHub Actions matrix
+- **Beyond the docs:** [Playwright Parallel Test Execution](https://www.deviqa.com/blog/playwright-parallel-test-execution-how-to-speed-up-the-test-suite/) — Anastasiia Sokolinska, DeviQA, 2026-06-25: one 60-test file leaving shards idle under file-level sharding, test-level sharding, `--shard-weights` (the article's claim: since 1.57), `fail-fast: false` for blobs
+
+{/* LINKMAP:END */}

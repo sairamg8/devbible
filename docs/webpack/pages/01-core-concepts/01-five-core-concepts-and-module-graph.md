@@ -102,3 +102,15 @@ entry: {
 
 ### ⚠️ Pitfall 3: `publicPath: 'auto'` Breaking on Non-Root-Relative Deployments
 `publicPath` determines the URL prefix the *runtime* uses to fetch async chunks. `'auto'` (the modern default) infers this from the currently executing script's URL, which works for most CDN/subpath deployments — but breaks silently (404s on chunk fetches) if the app is server-side rendered and the initial HTML's script tag URL doesn't match where chunks are actually hosted. Set `publicPath` explicitly for SSR or multi-CDN setups rather than trusting auto-inference.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Concepts](https://webpack.js.org/concepts/) — webpack.js.org: entry, output, loaders, plugins, mode; it says "dependency graph" and never "module graph" (*read*)
+- **Also good:** [Under the hood](https://webpack.js.org/concepts/under-the-hood/) — webpack.js.org: modules, ModuleGraph, chunks, ChunkGraph and the build lifecycle, aimed at plugin authors (*read*); [Loaders](https://webpack.js.org/concepts/loaders/)
+- **Also good:** [Loaders](https://webpack.js.org/concepts/loaders/)
+
+{/* LINKMAP:END */}

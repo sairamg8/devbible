@@ -147,3 +147,14 @@ describe('Snapshot Suite & Custom Serializers', () => {
 - **Previous**: [04 · Async Testing](../04-async-testing/01-handling-asynchrony.md) — Asynchronous assertions.
 - **Next**: [06 · Coverage and Configuration](../06-coverage-and-configuration/01-jest-config.md) — Jest configuration, thresholds, and coverage collection.
 - **RTL Philosophy**: [07 · RTL Core Philosophy](../07-rtl-core-philosophy/01-guiding-principle.md) — Why behavioral testing supersedes snapshot assertions.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Snapshot Testing](https://jestjs.io/docs/snapshot-testing) — jestjs.io: inline snapshots are written back into the source ("if Prettier is used, Jest delegates to it"; Prettier is optional), property matchers, "treat snapshots as code", the `no-large-snapshots` lint option, `-u` (*read*)
+- **Beyond the docs:** [Effective Snapshot Testing](https://kentcdodds.com/blog/effective-snapshot-testing) — Kent C. Dodds, 2017-10-30: quotes Justin Searls that developers "nuke the snapshot and record a fresh passing one"; keeps snapshots for error messages, Babel plugin output and CSS-in-JS; cites a 640-line snapshot nobody reviewed
+
+{/* LINKMAP:END */}

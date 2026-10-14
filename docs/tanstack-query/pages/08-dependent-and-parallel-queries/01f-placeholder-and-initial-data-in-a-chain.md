@@ -222,6 +222,18 @@ something overwrites it. `placeholderData` stays local to the render, marks itse
 `isPlaceholderData`, and disappears when the real data lands. `initialData` is for data you
 genuinely already have, typically seeded from a list response you just received.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Initial Query Data](https://tanstack.com/query/latest/docs/framework/react/guides/initial-query-data) — TanStack Query docs: initialData counts as fresh within `staleTime`, `initialDataUpdatedAt` (*read*)
+- **Also good:** [Placeholder Query Data](https://tanstack.com/query/latest/docs/framework/react/guides/placeholder-query-data) — TanStack Query docs: placeholder data is not persisted to the cache (*read*)
+- **Beyond the docs:** [Placeholder and Initial Data in React Query](https://tkdodo.eu/blog/placeholder-and-initial-data-in-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-08-09: initialData skips the refetch within staleTime, placeholderData always refetches on mount
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The gate in full](./01e-the-gate-in-full-skiptoken-and-placeholder-chains.md) · [Topic index](../README.md) · Next → [`placeholderData` in a chain](./01g-placeholderdata-in-a-chain.md)

@@ -246,6 +246,19 @@ content, the server work is wasted, and the origin takes double the traffic. The
 default `staleTime`, which both the streaming provider and the advanced-SSR guide recommend for
 exactly this reason.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Prefetching and Router Integration](https://tanstack.com/query/latest/docs/framework/react/guides/prefetching) — TanStack Query docs: start the request on the route or event before the component mounts (*read*)
+- **Also good:** [Advanced Server Rendering](https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr) — TanStack Query docs: streaming a pending query into `useSuspenseQuery` (*read*)
+- **Also good:** [Suspense](https://react.dev/reference/react/Suspense) — React docs: a boundary shows its fallback while children suspend; `use(promise)`, `lazy` and streaming activate it, a fetch in an Effect or event handler does not; transitions keep revealed content (*read*)
+- **Beyond the docs:** [TanStack Router and Query](https://tkdodo.eu/blog/tan-stack-router-and-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2026-05-26: the loader starts the request with `ensureQueryData` and the component reads it with `useSuspenseQuery`, so repeated suspense calls do not waterfall
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Errors and reset](./01c-errors-boundaries-and-reset.md) · [Topic index](../README.md) · Next → [DevTools](../11-devtools/01-react-query-devtools.md)

@@ -138,3 +138,15 @@ const Button = lazy(() => import('design_system/Button'));
 
 ### ⚠️ Pitfall 3: Forgetting a Remote's `exposes` Path Must Match What Hosts Actually Import
 The string on the left of `exposes: { './Button': ... }` **is** the import path consumers use (`design_system/Button`, stripping the leading `.`) — renaming an exposed path without coordinating with every consuming host breaks those hosts' federated imports at runtime with a cryptic "Module not found" error that only surfaces when a user's browser actually tries to load that specific route, not at any host's build time (since the host's build never validates the remote's actual exposed surface).
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Module Federation](https://webpack.js.org/concepts/module-federation/) — webpack.js.org: local versus remote modules, container with `get` and `init`, share scopes, use cases, and troubleshooting including the `bootstrap.js` async boundary for "Shared module is not available for eager consumption" (*read*)
+- **Also good:** [ModuleFederationPlugin](https://webpack.js.org/plugins/module-federation-plugin/) — webpack.js.org: `name`, `filename`, `remotes` (`name@url`), `remoteType`, `exposes` (string or object), `shared` (*read*); [Webpack integration](https://module-federation.io/integrations/bundler/webpack)
+- **Also good:** [Webpack integration](https://module-federation.io/integrations/bundler/webpack)
+
+{/* LINKMAP:END */}

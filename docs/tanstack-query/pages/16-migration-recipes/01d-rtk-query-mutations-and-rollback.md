@@ -226,6 +226,18 @@ By enumerating cache entries with `getQueriesData({ queryKey: prefix })`, patchi
 **Should the response of a mutation be written into the cache, or should you invalidate?**
 Both, usually, and for different keys. If the server returns the updated entity, `setQueryData` it into the detail key in `onSuccess` — you already paid for that data. Then invalidate the list prefix, because you do not know whether the change affects ordering, filtering or pagination, and reconstructing that client-side is how caches drift. Invalidating everything is one wasted request; hand-computing the list is an ongoing correctness liability.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Manual Cache Updates](https://redux.js.org/toolkit/rtk-query/usage/manual-cache-updates) — Redux Toolkit docs: `updateQueryData` plus `.undo` in `onQueryStarted`; warns that overlapping mutations make undo race and suggests invalidating tags (*read*)
+- **Also good:** [Optimistic Updates](https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates) — TanStack Query docs: the snapshot-and-restore side (*read*)
+- **Beyond the docs:** [Concurrent Optimistic Updates in React Query](https://tkdodo.eu/blog/concurrent-optimistic-updates-in-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2025-04-28: what goes wrong when writes overlap
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Endpoints → `queryOptions`](./01c-rtk-query-endpoints-to-query-options.md) · [Topic index](../README.md) · Next → [Running both caches at once](./01e-running-both-caches-at-once.md)

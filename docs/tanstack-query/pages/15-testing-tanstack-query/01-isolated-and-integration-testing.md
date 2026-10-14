@@ -226,6 +226,17 @@ Because the two most useful things a query test does need a handle on the cache.
 **★ Should the test `QueryClient` just reuse the app's `defaultOptions`?**
 No, and this is the most common well-intentioned mistake. The app's defaults encode production trade-offs — retries for flaky networks, `staleTime` for bandwidth, `refetchOnWindowFocus` for freshness — and each of them is a source of nondeterminism or delay in a test. Copying them means every error test pays the backoff, every focus event fires a request, and a `staleTime` bump in production silently changes what the test suite is asserting. The test client should be built by a dedicated factory that states its own options explicitly, so that reading the factory tells you exactly which behaviours the suite has neutralised. Where a specific test needs a production-like option, it passes its own client rather than moving the global.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Testing](https://tanstack.com/query/latest/docs/framework/react/guides/testing) — TanStack Query docs: `retry: false` in defaults, a wrapper giving each test a fresh client, `renderHook`, `waitFor` isSuccess, gcTime Infinity for Jest (*read*)
+- **Beyond the docs:** [Testing React Query](https://tkdodo.eu/blog/testing-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-04-04, updated 2023-10-21: a client per test and `retry: false` (its `waitFor` example is the old boolean react-hooks form); explicit retry wins, so use `setQueryDefaults`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Advanced rollback strategies](../14-optimistic-updates-patterns/01-advanced-rollback-strategies.md) · [Topic index](../README.md) · Next → [Mocking at the network layer](01b-mocking-at-the-network-layer.md)

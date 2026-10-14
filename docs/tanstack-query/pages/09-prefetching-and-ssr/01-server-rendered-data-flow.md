@@ -272,6 +272,19 @@ intent and navigation is a second or two. Prefetching an entire nav tree on load
 server capacity on paths most users never take, and on the server it also inflates every dehydrated
 payload.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Advanced Server Rendering](https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr) — TanStack Query docs: server prefetch into a per-request client, `dehydrate`, `HydrationBoundary`, staleTime above 0, streaming pending queries (5.40+), waterfalls from sequential awaits (*read*)
+- **Also good:** [Prefetching and Router Integration](https://tanstack.com/query/latest/docs/framework/react/guides/prefetching) — TanStack Query docs: event prefetching and router integration; says the `query` tips replace the now-deprecated `prefetchQuery` and `ensureQueryData` (*read*)
+- **Also good:** [Server Rendering and Hydration](https://tanstack.com/query/latest/docs/framework/react/guides/ssr) — TanStack Query docs: prefetch, dehydrate and hydrate with Pages Router and Remix examples, an `initialData` shortcut, and `queryClient.query` in its examples; points to Advanced Server Rendering for the App Router (*read*)
+- **Beyond the docs:** [React Query meets React Router](https://tkdodo.eu/blog/react-query-meets-react-router) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2022-08-28, updated 2022-12-11: loaders fill the cache while components still call `useQuery`; fetchQuery vs prefetchQuery in a loader (v4 era; `prefetchQuery` is now deprecated)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`placeholderData` in a chain](../08-dependent-and-parallel-queries/01g-placeholderdata-in-a-chain.md) · [Topic index](../README.md) · Next → [Suspense Integration](../10-suspense-integration/01-suspense-driven-fetching.md)

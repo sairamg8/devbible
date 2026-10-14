@@ -128,6 +128,18 @@ Look at the set of rows sharing the prefix before you act, then invalidate and w
 **★ Why is a key factory worth the boilerplate, argued from the devtools rather than from tidiness?**
 Because it makes the panel legible. With ad-hoc keys, every call site invents its own serialised shape, and reading the panel becomes an exercise in reverse-engineering which component produced which row. With a factory, the vocabulary is closed: you know that every list is `["todos","list",…]`, so a row that does not match the pattern is immediately identifiable as a bypassing call site, and prefix invalidation is provably correct because the prefixes are constructed by spreading rather than retyped. It also removes the two most common duplicate-row causes at the source — inconsistent coercion of ids, and array order drift — since both are now decided in exactly one file.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Caching](https://tanstack.com/query/latest/docs/framework/react/guides/caching) — TanStack Query docs: inactive after the last unmount, deleted after gcTime (*read*)
+- **Also good:** [Query Keys](https://tanstack.com/query/latest/docs/framework/react/guides/query-keys) — TanStack Query docs: object property order is ignored in the hash, array item order is not (*read*)
+- **Beyond the docs:** [Inside React Query](https://tkdodo.eu/blog/inside-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2022-12-03: QueryCache keyed by hashed key, a Query with observers, an observer per `useQuery`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [status and fetchStatus](./01b-status-and-fetchstatus-matrix.md) · [Topic index](../README.md) · Next → [Stale, fresh, inactive](./01d-stale-fresh-inactive-and-eviction.md)

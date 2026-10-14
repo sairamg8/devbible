@@ -107,3 +107,16 @@ filename: '[name].[contenthash].js',
 
 ### ⚠️ Pitfall 3: `chunkFilename` Missing `[id]`/`[name]`, Causing Chunk Filename Collisions
 A `chunkFilename` template that only uses `[contenthash]` (no `[id]` or `[name]`) can theoretically collide if two unrelated async chunks happen to hash identically at a given hash-truncation length, and makes debugging network tab output far harder since chunk files carry no human-readable identity at all. Always include `[id]` (or `[name]` via magic comments) alongside the hash.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Entry and Context](https://webpack.js.org/configuration/entry-context/) — webpack.js.org: object syntax, the entry descriptor, and the function (dynamic) entry returning a promise, re-invoked on every make (*read*)
+- **Also good:** [Entry Points](https://webpack.js.org/concepts/entry-points/) — webpack.js.org: EntryDescription (`dependOn`, `filename`, `import`, `runtime`, `publicPath`); `runtime` and `dependOn` cannot combine; documents no function entry (*read*)
+- **Read this:** [Output](https://webpack.js.org/configuration/output/) — webpack.js.org: `chunkFilename` and `assetModuleFilename` defaults, `clean` (5.20+), `globalObject`, `library.type` (`umd`, `commonjs2`, `module`), and `publicPath` (`'auto'` default for web, runtime override with `__webpack_public_path__`) (*rea
+- **Also good:** [Authoring Libraries](https://webpack.js.org/guides/author-libraries/) — webpack.js.org: UMD output with `globalObject: 'this'`, per-target `externals`, `peerDependencies`, `main` versus `module` (*read*)
+
+{/* LINKMAP:END */}

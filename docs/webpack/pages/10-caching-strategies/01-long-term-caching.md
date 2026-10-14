@@ -98,3 +98,15 @@ Changing a Babel preset or `tsconfig.json` compiler option should change how fil
 
 ### ⚠️ Pitfall 3: Committing the Filesystem Cache Directory to Version Control
 The `.webpack-cache` directory is large, binary, machine/version-specific, and not meant to be portable across Webpack versions or Node versions — accidentally committing it (missing from `.gitignore`) bloats repo size for zero benefit, since a cache built on one CI runner's Webpack/Node version isn't guaranteed valid on a different one. Always `.gitignore` it and rely on CI's own cache-restore mechanism instead (as shown above), which correctly keys on lockfile state.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Caching](https://webpack.js.org/guides/caching/) — webpack.js.org: `[contenthash]`, `runtimeChunk: 'single'`, `moduleIds: 'deterministic'` (already the production default), vendor cache group, deploy-time `ChunkLoadError`; one sample still prints webpack 4.12.0 output (*read*)
+- **Beyond the docs:** [Adding hashes to filenames](https://survivejs.com/webpack/optimizing/adding-hashes-to-filenames/) — SurviveJS, undated, sample output from webpack 5.5.0: hashes in `output.filename`, `chunkFilename`, `assetModuleFilename` and MiniCssExtractPlugin
+- **Read this:** [Cache](https://webpack.js.org/configuration/cache/) — webpack.js.org: `type: 'filesystem'`, `cacheDirectory`, `buildDependencies` (recommend `config: [__filename]`), `version`, `compression` (`'zstd'` needs 5.109+ and Node 22.15+), CI sharing needs the same absolute path, GitHub Actions setup (*read
+
+{/* LINKMAP:END */}

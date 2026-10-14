@@ -272,6 +272,18 @@ Only as part of something larger. `offlineFirst` changes the retry policy — *"
 **★ You want to test the offline path. What do the devtools actually give you?**
 The library's belief, not the browser's. *"There is also a toggle button to Mock offline behavior. Please note that this button will not actually mess with your network connection… but it will set the OnlineManager in an offline state."* That is precisely right for reproducing `fetchStatus: 'paused'` and checking that your UI branches on `isPaused`. It is wrong for testing a request that dies in flight, a slow connection, or a service worker cache hit — for those you need the browser's own network throttling, which exercises a different path through the same code.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Network Mode](https://tanstack.com/query/latest/docs/framework/react/guides/network-mode) — TanStack Query docs: online, always and offlineFirst; a query can be pending and paused at once; mentions onlineManager only for the devtools toggle (*read*)
+- **Also good:** [Navigator: onLine property](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine) — MDN: `true` can mean only a LAN link, and MDN calls the flag inherently unreliable and advises against disabling features on it (*read*)
+- **Beyond the docs:** [Offline React Query](https://tkdodo.eu/blog/offline-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2022-02-05: introduces networkMode and the paused fetchStatus; written for v4, so it uses `isLoading` and the `loading` status, and has no `navigator.onLine` warning
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Polling](./01c-polling-and-refetch-interval.md) · [Topic index](../README.md) · Next → [Pagination & Infinite Queries](../07-pagination-and-infinite-queries/01-paged-data-patterns.md)

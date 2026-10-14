@@ -87,3 +87,17 @@ Any value passed to `DefinePlugin` ends up as a **plaintext string in the shippe
 
 ### ⚠️ Pitfall 3: `HtmlWebpackPlugin` Chunk Injection Order With Multiple Entries
 When multiple entries produce multiple chunks that must load in a specific order (e.g. a `vendor` runtime chunk before `main`), relying on `HtmlWebpackPlugin`'s default injection order without also configuring `optimization.runtimeChunk`/`chunksSortMode` correctly can inject `<script>` tags in an order that references a class/function before its defining chunk has executed — manifesting as a `ReferenceError` only in production builds where chunk splitting behaves differently than an unsplit dev build.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [DefinePlugin](https://webpack.js.org/plugins/define-plugin/) — webpack.js.org: text replacement, so values need real quotes (`JSON.stringify`), feature flags, `runtimeValue`; it does not say whether `mode` sets `NODE_ENV` (*read*)
+- **Also good:** [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/) — webpack.js.org: identifier to module, array form for named exports, `default` for ES2015 default exports; the page gives no advice on sparing use (*read*); [Plugins](https://webpack.js.org/concepts/plugins/)
+- **Also good:** [Plugins](https://webpack.js.org/concepts/plugins/)
+- **Read this:** [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin) — GitHub README: `template`, `filename`, `inject`, `chunks`, `minify` (default on only in production); independent project; README marks it deprecated for webpack's native HTML (*read*)
+- **Also good:** [copy-webpack-plugin](https://github.com/webpack/copy-webpack-plugin) — GitHub README: `patterns` with `from`, `to`, `globOptions.ignore`, `noErrorOnMissing`; archived, and webpack 5.111+ copies natively through `output.copy` (*read*); MiniCssExtractPlugin is covered in T04-01a
+
+{/* LINKMAP:END */}

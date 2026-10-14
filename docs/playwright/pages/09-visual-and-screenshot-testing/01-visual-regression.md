@@ -104,3 +104,14 @@ await expect(page).toHaveScreenshot('dashboard.png', { mask: [page.getByTestId('
 
 ### ⚠️ Pitfall 3: Generating Baselines on a Different OS/Environment Than CI Runs Them
 Screenshot rendering (font hinting, anti-aliasing) can differ meaningfully between operating systems — a baseline generated on a developer's local macOS machine may not match pixel-for-pixel against a Linux-based CI runner's rendering, causing persistent, environment-driven failures unrelated to any real regression. Baselines should be generated in the **same environment** (ideally the same Docker image) that CI will later compare against, not on an engineer's local machine.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Visual comparisons](https://playwright.dev/docs/test-snapshots) — playwright.dev: `toHaveScreenshot`, `--update-snapshots`, platform and browser suffix such as `chromium-darwin`, `maxDiffPixels` and `threshold`, `stylePath`; advises the same environment for baselines
+- **Beyond the docs:** [Playwright Visual Regression Testing: A Production Guide to Baselines, Flake, and CI](https://testquality.com/playwright-visual-regression-guide/) — Jose Amoros, TestQuality, 2026-05-08 (updated 2026-05-12): cross-OS font rendering, official Docker image for local and CI parity, `maxDiffPixels` versus `maxDiffPixelRatio`, `mask`, and baseline image diffs being unreviewable in Git hosts
+
+{/* LINKMAP:END */}

@@ -143,3 +143,15 @@ describe('Asynchronous Authentication Suite', () => {
 - **Previous**: [03 · Mocking](../03-mocking/01-jest-mock-functions.md) — Asynchronous mock function resolution (`mockResolvedValue`).
 - **Next**: [05 · Snapshot Testing](../05-snapshot-testing/01-snapshot-mechanics.md) — Snapshot testing mechanics and serializers.
 - **RTL Async**: [10 · Async Utilities](../10-async-utilities/01-waiting-for-updates.md) — Waiting for DOM mutations with `waitFor` and `findBy`.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Testing Asynchronous Code](https://jestjs.io/docs/asynchronous) — jestjs.io: "Be sure to return (or await) the promise" or the test completes first; `expect.assertions(n)` is shown with the `.catch` and try/catch forms, not with `.rejects` (*read*)
+- **Also good:** [Expect](https://jestjs.io/docs/expect) — jestjs.io: `.rejects.toThrow('octopus')` on `Promise.reject(new Error('octopus'))`, and `expect.assertions(2)` in the `doAsync` example (*read*)
+- **Beyond the docs:** [Demystifying Jest Async Testing Patterns](https://dev.to/lirantal/demystifying-jest-async-testing-patterns-4n5n) — Liran Tal, DEV Community, 2019-05-20: a test that never returns its promise always passes; a try/catch test passes when nothing throws; calls `expect.assertions` "somewhat non-elegant" and prefers the promise matchers
+
+{/* LINKMAP:END */}

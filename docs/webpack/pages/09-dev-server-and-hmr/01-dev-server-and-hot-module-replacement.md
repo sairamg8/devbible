@@ -101,3 +101,15 @@ Because any unmatched request falls back to `index.html`, a typo'd image/font pa
 // ✅ CORRECT: explicitly enable WebSocket proxying for ws:// endpoints
 { context: ['/socket'], target: 'http://localhost:4000', ws: true },
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [devServer](https://webpack.js.org/configuration/dev-server/) — webpack.js.org: `hot` (true, `'only'`, false; default true since v4), array-form `proxy` with `context`, `historyApiFallback`, `static`, `client.overlay`; scope is dev-server v5 with some v6 text (*read*)
+- **Read this:** [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) — webpack.js.org: how it works in the app, compiler, module and runtime; update bubbling through `top.js`, `middle.js`, `leaf.js`; no `module.hot.accept` code sample (*read*)
+- **Beyond the docs:** [Deep dive into HMR with webpack, part two](https://blog.nativescript.org/deep-dive-into-hot-module-replacement-with-webpack-part-two-handling-updates/) — Stanimira Vlaeva, NativeScript blog, 2019-02-12: hand-written `module.hot.accept` and `dispose`, self-accepted versus parent-accepted; no webpack version stated
+
+{/* LINKMAP:END */}

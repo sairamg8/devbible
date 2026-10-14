@@ -265,6 +265,18 @@ Because `refetchOnMount` governs *re*fetching, not the initial load. The observe
 **★ Two components use the same query key with different options. Whose `gcTime` wins?**
 The longest. The TSDoc states it as a rule of the cache, not of the observer: *"When different garbage collection times are specified, the longest one will be used."* That is the safe merge — no observer can shorten another's retention — but it means a single `gcTime: Infinity` anywhere in the app pins that key in memory forever, and the option responsible may live in a component that is almost never rendered. When a cache grows without bound, grep for `gcTime` before you suspect a leak in your own code.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Window Focus Refetching](https://tanstack.com/query/latest/docs/framework/react/guides/window-focus-refetching) — TanStack Query docs: automatic focus refetch, `focusManager` and the visibilitychange default; does not say stale-only and does not cover reconnect (*read*)
+- **Also good:** [Important Defaults](https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults) — TanStack Query docs: the three triggers listed together, all gated by stale data (*read*)
+- **Beyond the docs:** [React Query as a State Manager](https://tkdodo.eu/blog/react-query-as-a-state-manager) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-08-20: stale-while-revalidate and why a zero default staleTime refetches on every mount
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`useMutation`](../05-usemutation/01-mutation-lifecycle.md) · [Topic index](../README.md) · Next → [Refetch render cost](./01b-refetch-render-cost.md)

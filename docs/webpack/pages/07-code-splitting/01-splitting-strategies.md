@@ -113,3 +113,16 @@ import(/* webpackPreload: true */ './RarelyUsedFeature');
 import(/* webpackPrefetch: true */ './RarelyUsedFeature');
 ```
 Reserve `webpackPreload` for chunks needed almost immediately after the current one (e.g. a modal that opens automatically), not speculative "might click this later" navigation targets.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Code Splitting](https://webpack.js.org/guides/code-splitting/) — webpack.js.org: entry points, `dependOn` and SplitChunks, dynamic `import()`, prefetch versus preload, `ChunkLoadError` tips, `webpackExports`; no `webpackChunkName` (*read*)
+- **Read this:** [SplitChunksPlugin](https://webpack.js.org/plugins/split-chunks-plugin/) — webpack.js.org: production defaults (`chunks: async`, `minSize` 20000, `maxAsyncRequests` 30, `maxInitialRequests` 30), `defaultVendors` and `default` cache groups, `priority`; says nothing of `runtimeChunk` (*read*)
+- **Beyond the docs:** [Bundle Splitting](https://survivejs.com/webpack/building/bundle-splitting/) — SurviveJS, undated, sample output from webpack 5.5.0: vendor bundle, `chunks: all`, `cacheGroups`; and [Separating a Runtime](https://survivejs.com/webpack/optimizing/separating-runtime/)
+- **Beyond the docs:** [Separating a Runtime](https://survivejs.com/webpack/optimizing/separating-runtime/)
+
+{/* LINKMAP:END */}

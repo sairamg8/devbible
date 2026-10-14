@@ -247,6 +247,18 @@ follows: anything the server owns goes in the query cache, anything the user is 
 has not sent anywhere (a half-filled form, a selected tab, a sort order) stays in component or client
 state.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Important Defaults](https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults) — TanStack Query docs: the shortest official statement of the model: cached data is stale at once, refetches on mount, focus and reconnect, inactive entries are collected after 5 minutes (*read*)
+- **Also good:** [Queries](https://tanstack.com/query/latest/docs/framework/react/guides/queries) — TanStack Query docs: a unique key plus a promise-returning function, and the status (about `data`) and fetchStatus (about the `queryFn`) split (*read*)
+- **Beyond the docs:** [React Query as a State Manager](https://tkdodo.eu/blog/react-query-as-a-state-manager) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-08-20: argues that the library is an async state manager, not a fetcher, and that you hold a snapshot of data you do not own
+
+{/* LINKMAP:END */}
+
 ---
 
 [Topic index](../README.md) · Next → [`useQuery` Deep Dive](../02-usequery-deep-dive/01-core-options.md)

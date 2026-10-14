@@ -141,3 +141,16 @@ describe('CheckoutForm Query Priority & Variant Specifications', () => {
 - **Previous**: [07 · RTL Core Philosophy](../07-rtl-core-philosophy/01-guiding-principle.md) — Behavior vs implementation details.
 - **Next**: [09 · User Interaction](../09-user-interaction/01-simulating-input.md) — Simulating realistic input with `user-event` v14.
 - **Async Queries**: [10 · Async Utilities](../10-async-utilities/01-waiting-for-updates.md) — How `findBy` delegates to `waitFor`.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [About Queries](https://testing-library.com/docs/queries/about) — testing-library.com: the table of 0, 1 and more than 1 matches for `getBy`, `queryBy`, `findBy` and their `AllBy` forms, with the retry column; `findBy` rejects after a default 1000 ms (*read*)
+- **Beyond the docs:** [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) — Kent C. Dodds, 2020-05-04: "Using query* variants for anything except checking for non-existence" and "Using get* variants as assertions"
+- **Read this:** [Querying Within Elements](https://testing-library.com/docs/dom-testing-library/api-within) — testing-library.com: `within` is an alias of `getQueriesForElement` and binds the queries to one element; one short example (*read*)
+- **Beyond the docs:** [Within reach: testing lists with React Testing Library](https://dev.to/derekmt12/within-reach-testing-lists-with-react-testing-library-347o) — Derek N. Davis, DEV Community, 2021-06-30: a list where every row has its own Delete button; `within(item)` scopes each lookup to one row; the article does not name the "Found multiple elements" error itself (*read*)
+
+{/* LINKMAP:END */}

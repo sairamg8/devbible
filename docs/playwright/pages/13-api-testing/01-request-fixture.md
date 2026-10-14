@@ -117,3 +117,14 @@ const response = await request.post('/api/orders', {
 
 ### ⚠️ Pitfall 3: Never Testing the ACTUAL UI Flow the API Shortcut Was Bypassing
 Using API-level setup for every test's precondition is valuable, but if the actual UI checkout flow is never exercised by ANY test (only ever bypassed via direct API calls), a genuine regression in that UI flow itself could go completely undetected. At least some tests should still exercise the full, real user-facing flow end-to-end — API shortcuts are for tests where that specific flow ISN'T the thing under test, not a wholesale replacement for ever testing it directly.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [API testing](https://playwright.dev/docs/api-testing) — playwright.dev: `request` fixture with `baseURL` and `extraHTTPHeaders`, setup and teardown, preconditions and postconditions from UI tests, `page.request` using the browser's cookies, a new `APIRequestContext` having separate cookies
+- **Beyond the docs:** [The Playwright Playbook Part 4: API Testing](https://dev.to/sshhfaiz/the-playwright-playbook-part-4-api-testing-the-underrated-superpower-4c64) — Faizal, DEV Community, posted June 18 (year not shown), part 4 of 9: API seeding before UI checks; contrasts the isolated `request` fixture with `page.request` sharing cookies; assumes some prior Playwright and TypeScript
+
+{/* LINKMAP:END */}

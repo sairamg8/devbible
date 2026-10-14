@@ -169,6 +169,19 @@ The deprecation of `prefetchQuery`, `fetchQuery` and `ensureQueryData` in favour
 **Is `getQueryDefaults` merging all matching registrations a breaking change worth auditing?**
 It is a change in effective configuration that produces no diff, which is the definition of worth auditing. Registering defaults for `['users']` and again for `['users','detail']` previously gave the detail key only its own registration; now it inherits the broader one too. The new behaviour is what almost everyone assumed, so it usually *fixes* things — but any option you believed you had overridden by registering a narrower key is now inherited instead, and you will find that out from behaviour, not from a build.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Migrating to v5](https://tanstack.com/query/latest/docs/framework/react/guides/migrating-to-v5) — TanStack Query docs: single-object signature, `isLoading` renamed `isPending` and new `isLoading` is isPending and isFetching, `isInitialLoading` deprecated, codemod is best-effort (*read*)
+- **Also good:** [Migrating to v4](https://tanstack.com/query/latest/docs/framework/react/guides/migrating-to-react-query-4) — TanStack Query docs: the v3 to v4 guide (keys must be arrays, `idle` status removed, paused queries without a network); for codebases still on v3 (*headings only*)
+- **Beyond the docs:** [Status Checks in React Query](https://tkdodo.eu/blog/status-checks-in-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-03-27, updated 2023-10-21: the pending state was called loading before v5
+- **Beyond the docs:** [Breaking React Query's API on Purpose](https://tkdodo.eu/blog/breaking-react-querys-api-on-purpose) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2023-04-16: why query `onSuccess`, `onError` and `onSettled` went; says nothing of the isLoading rotation
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Running both caches at once](./01e-running-both-caches-at-once.md) · [Topic index](../README.md) · Next → [The status rename](./01h-the-status-rename-and-the-isloading-trap.md)

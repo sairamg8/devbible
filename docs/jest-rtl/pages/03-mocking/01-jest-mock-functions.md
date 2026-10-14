@@ -166,3 +166,22 @@ jest.mock('./module', () => ({
 - **Previous**: [02 · Assertions & Matchers](../02-assertions-and-matchers/01-the-expect-api.md) — Assertion API and `.mock.calls` inspection.
 - **Next**: [04 · Async Testing](../04-async-testing/01-handling-asynchrony.md) — Handling Promises, async/await, and microtask queues.
 - **Modern MSW Alternative**: [12 · Mocking Network Requests](../12-mocking-network-requests/01-api-level-mocking.md) — Intercepting network requests at the transport layer instead of function mocking.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mock Functions](https://jestjs.io/docs/mock-functions) — jestjs.io: the `.mock` property (`calls`, `results`, `instances`, `contexts`, `lastCall`), `mockReturnValue`, `mockImplementation`, and `mockResolvedValue` in the axios example (*read*)
+- **Also good:** [Mock Functions API](https://jestjs.io/docs/mock-function-api) — jestjs.io: reference entries for each `.mock` array and `mockReturnValue`, `mockResolvedValue`, `mockImplementation`; `mockClear()` replaces `mockFn.mock`, so do not keep references to it (*read*)
+- **Read this:** [The Jest Object](https://jestjs.io/docs/jest-object) — jestjs.io: `jest.spyOn(object, methodName)` tracks calls and by default still calls the original; `mockImplementation` overrides; the getter and setter form; `using spy = jest.spyOn(...)` restores on block exit; `restoreAllMocks()` "only wor
+- **Beyond the docs:** [Mocks and Spies with Jest](https://dev.to/qmenoret/mocks-and-spies-with-jest-32gf) — Quentin Ménoret, DEV Community, 2020-12-31: replacing a global with `jest.fn` leaves cleanup to you while `spyOn` is cleaned up for you, and the original still runs unless mocked; its `jest.mock` remark is imprecise (Jest automocks the module), so read it for spyOn versus `
+- **Read this:** [Configuring Jest](https://jestjs.io/docs/configuration) — jestjs.io: `clearMocks`, `resetMocks`, `restoreMocks`, each the config form of the matching `jest.*AllMocks()` call, with what each removes; all default to `false` (*read*)
+- **Beyond the docs:** [The Difference Between Clearing, Resetting, and Restoring Mocks](https://www.epicweb.dev/the-difference-between-clearing-resetting-and-restoring-mocks) — Artem Zakharchenko, Epic Web Dev, 2024-10-25: clear, reset, restore as three levels of cleanup; Vitest-centred (names `mockReset` in the Vitest config, mentions Jest once)
+- **Read this:** [Manual Mocks](https://jestjs.io/docs/manual-mocks) — jestjs.io: the `__mocks__` directory rules (adjacent to the module, or next to `node_modules`; built-ins need an explicit `jest.mock`), and "Jest will automatically hoist jest.mock calls to the top of the module", which does not hold under n
+- **Beyond the docs:** [When is it safe to use import statements in Jest tests?](https://tigeroakes.com/posts/jest-mock-and-import-statements/) — Tiger Oakes, 2022-12-27: `babel-jest` hoists `jest.mock` above imports; lists what must hold (literal first argument, inline factory, top level, no outer variables) and `jest.doMock` as the escape; no word on the `mock` prefix
+- **Read this:** [Timer Mocks](https://jestjs.io/docs/timer-mocks) — jestjs.io: `runAllTimers`, `runOnlyPendingTimers`, `advanceTimersByTime`, selective faking, and the abort message "Aborting after running 100000 timers, assuming an infinite loop!" (*read*)
+- **Beyond the docs:** [Faster tests with Jest timers vs. waitFor on debounced inputs](https://testdouble.com/insights/jest-timers-vs-waitfor-debounced-inputs) — James Walker, Test Double, undated: a debounced input tested both ways; `userEvent.setup(&#123; advanceTimers: jest.advanceTimersByTime &#125;)` and `act` around the advance; reports 10 to 100 times faster, no Jest version stated
+
+{/* LINKMAP:END */}

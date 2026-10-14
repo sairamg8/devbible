@@ -138,6 +138,17 @@ Because it targets the exact signal the library makes its decision from, and onl
 **★ Are the devtools' actions safe to run against a production build pointed at production data?**
 They are as safe as running the equivalent `QueryClient` calls in the console against that environment, which is to say: reads are cheap and writes are not reversible from the panel. Refetching and invalidating cause real requests, which on an expensive or rate-limited endpoint is a genuine cost, and a wide invalidation can fan out to every query sharing the prefix. Removing an entry can lose data that was never fetched and cannot be re-fetched. The panel does not mutate your server on its own — it has no way to issue writes — so the real risks are traffic and local data loss, plus the plain fact that anyone watching your screen can now read every response body in the cache. That last point is the strongest argument for keeping the production build's devtools behind a deliberate opt-in, which is [01f](./01f-keeping-devtools-out-of-production.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Devtools](https://tanstack.com/query/latest/docs/framework/react/devtools) — TanStack Query docs: bundles include the devtools only when `process.env.NODE_ENV` is development (*read*)
+- **Also good:** [QueryClient](https://tanstack.com/query/latest/docs/reference/QueryClient) — TanStack Query API reference: invalidateQueries, refetchQueries, resetQueries and removeQueries as separate entries (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Stale, fresh, inactive](./01d-stale-fresh-inactive-and-eviction.md) · [Topic index](../README.md) · Next → [Keeping devtools out of production](./01f-keeping-devtools-out-of-production.md)

@@ -208,6 +208,18 @@ It is an isolated HTTP client for talking to your API without a browser — seed
 **How does the `projects` matrix change what a fixture means?**
 A project supplies the `use` options that the built-in fixtures are constructed from, so the same fixture code produces a different `context` per project — a different device descriptor, viewport or base URL. This is why fixtures are written against `page`/`context` rather than against a browser you launched: the project is allowed to decide what those are, and a fixture that launches its own browser silently opts out of the entire matrix.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Fixtures](https://playwright.dev/docs/test-fixtures) — playwright.dev: the built-in table lists `page`, `context`, `browser`, `browserName` and `request`; then creating, using, overriding, worker-scoped, automatic and timeout sections
+- **Beyond the docs:** [Playwright Fixtures: The Ultimate Guide for Test Automation](https://testomat.io/?p=11663) — Michael Bodnarchuk, Testomat.io, updated 2026-04-15: setup before and teardown after `await use()`, test versus worker scope, `&#123; auto: true &#125;`, dependent fixtures torn down in reverse; gives no isolation warning of its own
+- **Read this:** [Projects](https://playwright.dev/docs/test-projects) — playwright.dev: multi-browser and multi-environment projects, `--project`, dependencies with teardown, custom project parameters
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Core architecture](../01-core-architecture/01-browser-automation-model.md) · [Playwright index](../../README.md) · Next → [Locators](../03-locators/01-locator-api.md)

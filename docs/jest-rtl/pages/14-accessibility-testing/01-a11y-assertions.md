@@ -155,3 +155,14 @@ describe('ModalDialog Accessibility Specifications', () => {
 - **Previous**: [13 · Testing Hooks](../13-testing-hooks/01-render-hook.md) — Testing custom hook states.
 - **Next**: [15 · Debugging Tests](../15-debugging-tests/01-diagnostic-tools.md) — Inspecting DOM trees and using testing-playground.
 - **Storybook Accessibility (`docs/storybook/pages/07-accessibility-testing/`)**: Real-browser automated accessibility audits.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [jest-axe README](https://github.com/NickColley/jest-axe) — project README: `expect(await axe(html)).toHaveNoViolations()`, `configureAxe`, colour contrast is off because it does not work in jsdom, and axe does not work with fake timers (*read*)
+- **Beyond the docs:** [Automatically testing for accessibility issues with jest-axe](https://maxrozen.com/automatic-a11y-testing-with-jest-axe) — Max Rozen (no date shown): a short RTL example, and a plain statement that it finds markup problems but cannot prove a component is accessible
+
+{/* LINKMAP:END */}

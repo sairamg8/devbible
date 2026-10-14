@@ -84,3 +84,14 @@ Migrating from `file-loader`'s `options: { name: '[name].[ext]', outputPath: 'im
 
 ### ⚠️ Pitfall 3: Leaving `maxSize` at the Default for a Project With Many Large SVG Illustrations
 The 8kb default `dataUrlCondition.maxSize` was tuned as a reasonable general default, but a project whose SVGs are complex illustrations (30-60kb) rather than simple icons will have the automatic `asset` type inline surprisingly large data URIs into the JS bundle well past the point of it being a net win — measure with `webpack-bundle-analyzer` and tune `maxSize` down (or split the rule by directory/naming convention) rather than trusting the default blindly.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Asset Modules](https://webpack.js.org/guides/asset-modules/) — webpack.js.org: `asset/resource`, `asset/inline`, `asset/source`, `asset/bytes`, `asset`; `parser.dataUrlCondition.maxSize` (8 KB default), `generator.filename`, built-in `?raw`, `?inline`, `?url` suffixes (5.109+, under `experiments.futureDefaul
+- **Beyond the docs:** [Webpack 5 Asset Modules](https://dev.to/smelukov/webpack-5-asset-modules-2o3h) — Sergey Melyukov, DEV Community, 2020-02-16: maps `asset/resource`, `asset/inline`, `asset/source` to file-loader, url-loader, raw-loader; written during the beta, so `experiments: &#123; asset: true &#125;` is obsolete, and it has no suffix coverage
+
+{/* LINKMAP:END */}

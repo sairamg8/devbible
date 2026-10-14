@@ -230,6 +230,19 @@ No, and this is the cleanest way to remember the whole distinction. Preventing a
 **★ When is `initialData` unambiguously the right choice?**
 When the value is real, complete and you can state its age. Three cases qualify. Server-rendered bootstrap data threaded into a specific hook, with `initialDataUpdatedAt` set to the render timestamp. A detail record you already hold in full — not a list row that happens to share some fields, which is the trap covered in [`01e2`](./01e2-seeding-hydration-and-suspense.md). And a persisted cache read where you also stored the write time. In all three, the fact that other observers of the key benefit from the write is a feature, which is the test: if you would be unhappy for another component to render this value, it does not belong in the cache.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Initial Query Data](https://tanstack.com/query/latest/docs/framework/react/guides/initial-query-data) — TanStack Query docs: `initialData` is persisted to the cache, `initialDataUpdatedAt`, and seeding a detail query from a list (*read*)
+- **Also good:** [Placeholder Query Data](https://tanstack.com/query/latest/docs/framework/react/guides/placeholder-query-data) — TanStack Query docs: placeholder data is not persisted to the cache, `isPlaceholderData`, and the function form for key changes; no mention of `keepPreviousData` (*read*)
+- **Beyond the docs:** [Placeholder and Initial Data in React Query](https://tkdodo.eu/blog/placeholder-and-initial-data-in-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-08-09: cache level vs observer level, and how each behaves on a failed refetch; says `loading` where v5 says `pending`
+- **Beyond the docs:** [Seeding the Query Cache](https://tkdodo.eu/blog/seeding-the-query-cache) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2022-10-22, updated 2023-10-21: pull (`initialData`) vs push (`setQueryData`) seeding and the staleness trap
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`retry` & `throwOnError`](./01d-retry-retrydelay-and-throwonerror.md) · [Topic index](../README.md) · Next → [Seeding, hydration & suspense](./01e2-seeding-hydration-and-suspense.md)

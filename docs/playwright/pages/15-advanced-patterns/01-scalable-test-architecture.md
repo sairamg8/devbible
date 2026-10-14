@@ -160,3 +160,17 @@ class CartPage { /* ... */ }
 class ShippingPage { /* ... */ }
 class PaymentPage { /* ... */ }
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Page object models](https://playwright.dev/docs/pom) — playwright.dev: a `PlaywrightDevPage` class holding locators and methods, built from `page` in the constructor; no fixtures there
+- **Beyond the docs:** [Combine Fixtures & Page Object Models for DRYer Test Code in Playwright](https://checklyhq.com/blog/page-object-models-and-fixtures-with-playwright) — Nočnica Mellifera, Checkly, 2025-03-13 (updated 2025-07-23): `base.extend` fixtures that build `LoginPage` and `DashboardPage` so tests request them by name, plus the downsides of POM
+- **Read this:** [Assertions, expect.extend section](https://playwright.dev/docs/test-assertions) — playwright.dev: custom matchers return `pass` and a `message`; combining matchers from several modules; use Playwright's own `expect`
+- **Beyond the docs:** [Playwright Assertions - Types & Best Practices](https://www.checklyhq.com/learn/playwright/assertions/) — Checkly Docs, no author or date shown: has "How to Add Custom Matchers Using expect.extend" and a worked example (*headings only* for that section)
+- **Read this:** [Annotations](https://playwright.dev/docs/test-annotations) — playwright.dev: tags via a details object or an `@` token in the title, `--grep` and `--grep-invert`, `annotation` with type and description, `skip`, `fixme`, `fail`, `slow`
+
+{/* LINKMAP:END */}

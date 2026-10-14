@@ -179,6 +179,17 @@ Because a disabled query ignores invalidation outright; it is not deferred, it i
 **★ How would you write a lazy "run this report" query so the button state is correct?**
 `enabled: false`, trigger with `refetch()`, and drive the button from `isFetching` rather than `isPending`, because `isPending` is permanently true for a query that has never resolved. Add `gcTime: 0` if the result is a one-shot artefact you do not want served from cache on the next visit, and remember that a second click during an in-flight fetch is deduplicated at the query level, so disabling the button is about the UI, not about protecting the server.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Disabling/Pausing Queries](https://tanstack.com/query/latest/docs/framework/react/guides/disabling-queries) — TanStack Query docs: what `enabled: false` opts out of (mount fetch, background refetch, invalidation) and the `skipToken` limitation: `refetch()` throws Missing queryFn (*read*)
+- **Beyond the docs:** [React Query and TypeScript](https://tkdodo.eu/blog/react-query-and-type-script) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-05-16, updated 2023-10-21: why `enabled` does not narrow a possibly-undefined id inside `queryFn` and how `skipToken` (from v5.25) fixes it
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Core options](./01-core-options.md) · [Topic index](../README.md) · Next → [`staleTime` & the `refetchOn*` family](./01c-staletime-and-the-refetchon-family.md)

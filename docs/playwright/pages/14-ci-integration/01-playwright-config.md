@@ -123,3 +123,17 @@ retries: 5, // masks real flakiness rather than surfacing it for investigation
 
 ### ⚠️ Pitfall 3: Not Uploading Trace/Report Artifacts on CI Failure
 Configuring `trace: 'on-first-retry'` and rich reporters is only useful if the resulting trace/report files are actually **retrievable** after a CI run — forgetting to upload them as CI artifacts (as shown in the GitHub Actions example above) means all that diagnostic data is generated, then immediately discarded when the CI job's container is torn down, leaving engineers to debug a CI-only failure with no more information than the raw console log.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reporters](https://playwright.dev/docs/test-reporters) — playwright.dev: list is the default, `dot` on CI; multiple reporters; line, dot, html, blob, json, junit, github, custom
+- **Read this:** [Retries](https://playwright.dev/docs/test-retries) — playwright.dev: no retries by default, flaky status, a failed test discards the worker, serial groups retry together, `testInfo.retry`; the page does not mention `on-first-retry` traces (that is the trace viewer page)
+- **Beyond the docs:** [How to fix hidden flakes when retries make failures pass in Playwright](https://webcrawlerapi.com/glossary/playwright/how-to-fix-playwright-retries-masking-flakes) — WebCrawlerAPI glossary, no author or date shown: one retry in CI and none locally, traces on first retry, reviewing tests with non-zero retry counts, `--repeat-each`
+- **Read this:** [Continuous Integration](https://playwright.dev/docs/ci) — playwright.dev: `workers` of 1 on CI for stability, `install --with-deps`, GitHub Actions, sharding, "Caching browser binaries is not recommended"; no retries or traces on this page
+- **Also good:** [Docker](https://playwright.dev/docs/docker) — playwright.dev: image at `mcr.microsoft.com/playwright`, "always pin your Docker image to a specific version", `--ipc=host` for Chromium, `--init`, seccomp, non-root for untrusted sites (*read*)
+
+{/* LINKMAP:END */}

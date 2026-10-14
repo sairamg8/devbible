@@ -103,3 +103,16 @@ module.exports = { target: 'node', externals: [require('webpack-node-externals')
 
 ### ⚠️ Pitfall 3: A Multi-Compiler Config Where One Compiler's Slow Build Blocks the Other
 By default, `webpack` CLI runs array-config compilers **sequentially** unless `parallelism`/a build orchestrator explicitly parallelizes them — a large client bundle compiling before a much smaller server bundle even starts means total build time is the sum, not the max, of both. For CI build-time-sensitive setups, consider running client/server builds as genuinely separate parallel CI steps instead of one combined array config, if wall-clock build time matters more than single-command convenience.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuration Types](https://webpack.js.org/configuration/configuration-types/) — webpack.js.org: function export with `env` and `argv`, promise export (CLI only), no mention of webpack-merge (*read*)
+- **Also good:** [webpack-merge](https://github.com/survivejs/webpack-merge) — GitHub README: `merge` concatenates arrays and rightmost wins, `mergeWithRules`, `mergeWithCustomize`, no promises (*read*); [Production](https://webpack.js.org/guides/production/)
+- **Also good:** [Production](https://webpack.js.org/guides/production/)
+- **Beyond the docs:** [Composing configuration](https://survivejs.com/webpack/developing/composing-configuration/) — SurviveJS, undated: `webpack.parts.js` composed with `merge`; it says `mode` does not set `NODE_ENV` inside the config file, so it contradicts the Production guide's wording
+
+{/* LINKMAP:END */}

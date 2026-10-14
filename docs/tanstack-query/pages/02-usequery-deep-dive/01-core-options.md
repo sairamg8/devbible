@@ -273,6 +273,18 @@ suppresses the redundant refetch on remount and reconnect, which the focus flag 
 [`01b`](./01b-enabled-and-skiptoken.md), the two-consumers-one-key question is in
 [`01f`](./01f-select.md).)*
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Important Defaults](https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults) — TanStack Query docs: the defaults behind every option on our page (*read*)
+- **Also good:** [useQuery reference](https://tanstack.com/query/latest/docs/framework/react/reference/useQuery) — TanStack Query API reference: every option and result field described; the gcTime and retry defaults appear in prose, not the table (*read*)
+- **Beyond the docs:** [Practical React Query](https://tkdodo.eu/blog/practical-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2020-11-16, updated 2023-10-21: the staleTime vs gcTime split and why he tunes staleTime and rarely gcTime
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Core Concepts](../01-core-concepts/01-the-server-state-model.md) · [Topic index](../README.md) · Next → [`enabled` & `skipToken`](./01b-enabled-and-skiptoken.md)

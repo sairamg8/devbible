@@ -130,3 +130,15 @@ test('redirects to login when unauthenticated', async ({ page }) => {
 // WITHOUT storageState configured, or explicitly clear cookies first
 test.use({ storageState: { cookies: [], origins: [] } }); // explicitly empty state for this specific test file
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Authentication](https://playwright.dev/docs/auth) — playwright.dev: a setup project saves `storageState` under `playwright/.auth` which is added to `.gitignore`; dependent projects reuse it; per-worker accounts, multiple roles, API login, a session-storage workaround
+- **Also good:** [Global setup and teardown](https://playwright.dev/docs/test-global-setup-teardown) — playwright.dev: project dependencies are "the recommended approach"; `globalSetup` is the alternative, with a comparison table (report visibility, fixtures support) (*read*)
+- **Beyond the docs:** [How to reuse authenticated state with playwright](https://abigailarmijo.substack.com/p/how-to-reuse-authenticated-state) — Abigail Armijo, Substack, 2024-02-13: mentions the setup-project route but chooses `globalSetup`, logging in by API as two roles into separate JSON files
+
+{/* LINKMAP:END */}

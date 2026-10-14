@@ -151,3 +151,18 @@ describe('Price Calculator Suite', () => {
 - **Next**: [02 · The Expect API](../02-assertions-and-matchers/01-the-expect-api.md) — Assertion matchers and deep equality semantics.
 - **Mocking**: [03 · Jest Mock Functions](../03-mocking/01-jest-mock-functions.md) — Clearing and restoring spy state across lifecycle hooks.
 - **Node.js Phase 9 (`docs/nodejs/pages/phase-9-testing/`)**: Backend integration testing patterns using the same runner structure.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Setup and Teardown](https://jestjs.io/docs/setup-teardown) — jestjs.io: "Jest executes all describe handlers in a test file before it executes any of the actual tests", so setup belongs in `before*` hooks and not in a `describe` body (*read*)
+- **Beyond the docs:** [Jest Recap: What Runs When?](https://dev.to/htho/jest-recap-what-runs-when-4475) — Hauke T., DEV Community, 2024-07-18: a worked log of describe bodies, hooks and tests: "Everything on the top-level and in describe callbacks is executed immediately"
+- **Read this:** [Jest Globals API](https://jestjs.io/docs/api) — jestjs.io: the `test.each` and `describe.each` entries: array table, 1D array, objects, and the tagged template (header row, `$&#123;value&#125;` cells), titles with printf tokens and `$variable` (*read*)
+- **Beyond the docs:** [How to Use Jest each to Get More Code Coverage with Less Test Code](https://geshan.com.np/blog/2024/07/it.each-jest/) — Geshan Manandhar, 2024-07-06: four repeated `it` blocks collapsed into one `it.each` table, then the same cases as a tagged template (the "before" snippet calls a differently named function than the one defined)
+- **Also good:** [no-focused-tests](https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-focused-tests.md) — eslint-plugin-jest: flags `describe.only`, `it.only`, `test.only`, `fdescribe`, `fit`; on in the recommended config; cannot catch `describe.only` assigned to a variable and called later (*read*)
+- **Beyond the docs:** [Don't commit focused tests](https://timdeschryver.dev/blog/dont-commit-focused-tests) — Tim Deschryver, 2020-05-10: the prevention stack: editor highlighter, lint rule (the eslint-plugin-jest rule among them), a Husky pre-commit script, and linting in CI; it does not explain why the rest of the suite is silently skipped, and its other examples 
+
+{/* LINKMAP:END */}

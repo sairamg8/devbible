@@ -209,6 +209,18 @@ Yes, via `setDefaultOptions` — but *"Previously defined default options will b
 **★ Why does the SSR client need configuring separately?**
 Because it is a different client. *"Server: always make a new query client"* — one per request, so no user's cache can leak into another's HTML — and that new instance starts from the library's defaults, not from your browser configuration. If it has no `staleTime`, everything you dehydrate arrives at the browser already stale, and the client refetches it on mount, which undoes the point of prefetching while still looking correct on screen.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [QueryClient](https://tanstack.com/query/latest/docs/reference/QueryClient) — TanStack Query API reference: `new QueryClient(config?)`, `setDefaultOptions` and `setQueryDefaults` (matches keys by prefix); the config fields are linked out, not listed (*read*)
+- **Also good:** [Important Defaults](https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults) — TanStack Query docs: the out-of-the-box values being overridden (*read*)
+- **Beyond the docs:** [React Query Error Handling](https://tkdodo.eu/blog/react-query-error-handling) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-09-10, updated 2023-10-21: global `QueryCache` onError runs once per request and cannot be overwritten like `defaultOptions`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Query Cancellation](../12-query-cancellation/01-abortsignal-integration.md) · [Topic index](../README.md) · Next → [Optimistic Updates Patterns](../14-optimistic-updates-patterns/01-advanced-rollback-strategies.md)

@@ -173,3 +173,23 @@ export default defineConfig({
 - **Part 1 (Jest Core)**: [01 · Jest Core Concepts](../01-jest-core-concepts/01-test-structure.md) — Understanding test trees and lifecycle hooks.
 - **Part 2 (RTL)**: [08 · RTL Queries](../08-rtl-queries/01-query-variants-and-priority.md) — Query priority order.
 - **Part 3 (MSW)**: [12 · Mocking Network Requests](../12-mocking-network-requests/01-api-level-mocking.md) — Network boundary interception.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Getting started](https://jestjs.io/docs/getting-started) — Jest 30 docs: install, config generation, Babel and TypeScript (`ts-jest` for type checking), and a note that Vite does not support Jest (use Vitest). No jsdom mention (*read*)
+- **Also good:** [How to set up Jest with Next.js](https://nextjs.org/docs/app/guides/testing/jest) — Next.js 16.4 docs: jsdom, `@testing-library/react`, and jest-dom through `setupFilesAfterEnv` (*read*)
+- **Beyond the docs:** [Setup Jest and React Testing Library in a React project](https://dev.to/ivadyhabimana/setup-jest-and-react-testing-library-in-a-react-project-a-step-by-step-guide-1mf0) — Ivad Yves Habimana, DEV Community, 2022-05-17: installs RTL, Jest and `jest-environment-jsdom`, wires jest-dom in a setup file, ends with a first test; Babel era, no MSW
+- **Read this:** [Configuring Vitest](https://vitest.dev/config/) — Vitest docs: extending Vite's config from a separate `vitest.config` with `mergeConfig(viteConfig, defineConfig(&#123; ... &#125;))`, and Vite options such as `resolve.alias` go at the top level, not inside `test` (*read*)
+- **Also good:** [environment](https://vitest.dev/config/environment) — Vitest docs: `jsdom` is a supported environment; `environmentOptions` for custom settings (*read*); [setupFiles](https://vitest.dev/config/setupfiles)
+- **Also good:** [setupFiles](https://vitest.dev/config/setupfiles)
+- **Also good:** [Migrating from Jest](https://vitest.dev/guide/migration/jest) — Vitest docs: globals are off by default, and with them off Testing Library's automatic cleanup does not run (*read*)
+- **Read this:** [Testing with Jest (Mantine)](https://mantine.dev/guides/jest/) — Mantine docs: `matchMedia` via `Object.defineProperty` with `matches: false`, a no-op `ResizeObserver` class, a `scrollIntoView` stub, plus `document.fonts` and `getComputedStyle` shims (*read*)
+- **Also good:** [jest-canvas-mock](https://github.com/hustcc/jest-canvas-mock) — project README: the `getContext` row (*read*)
+- **Beyond the docs:** [jsdom-testing-mocks](https://github.com/trurl-master/jsdom-testing-mocks) — trurl-master, project README (no date shown): ready-made `matchMedia` (`mockViewport`), `IntersectionObserver` and `ResizeObserver` mocks you can trigger by hand; `configMocks(&#123; act &#125;)` for React; Jest and Vitest both confirmed (*read*)
+- **Beyond the docs:** [Migrating from Jest to Vitest for React testing](https://dev.to/eamonnprwalsh/migrating-from-jest-to-vitest-for-react-testing-ljn) — Eamonn Walsh, DEV Community, 2023-06-17: seven steps: swap packages, setup file with jest-dom matchers and RTL `cleanup`, `test` block with `globals`, `jsdom` and `setupFiles`; warns Vitest does not type-check tests; written for an early Vitest, so use the official page 
+
+{/* LINKMAP:END */}

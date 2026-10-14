@@ -107,3 +107,17 @@ use: [isProd ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader'],
 
 ### ⚠️ Pitfall 3: `ts-loader` Without `transpileOnly`, Silently Blocking Every Rebuild on Type Errors
 Using bare `ts-loader` without `{ transpileOnly: true }` (paired with `fork-ts-checker-webpack-plugin` for out-of-band checking) means a single type error anywhere in the project blocks the entire compilation from producing output — including for files completely unrelated to the error, since Webpack treats a `ts-loader` failure as fatal to that module's transform, not just a warning.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [MiniCssExtractPlugin](https://github.com/webpack/mini-css-extract-plugin) — GitHub README (the webpack.js.org page returned 200 but empty to my reader): `MiniCssExtractPlugin.loader` before `css-loader`, `style-loader` for dev, `filename`, `chunkFilename`, `insert`; the README now marks the plugin deprecated in favor of native CSS (*read*)
+- **Beyond the docs:** [Difference between style-loader and mini-css-extract-plugin](https://maxrozen.com/difference-between-style-loader-mini-css-extract-plugin) — Max Rozen, undated: style-loader injects style tags (fine for dev), the plugin emits one CSS file per JS file that imports CSS; no webpack version stated
+- **Read this:** [babel-loader](https://webpack.js.org/loaders/babel-loader/) — webpack.js.org: `cacheDirectory` (default false, "as much as 2x" with no benchmark), `exclude` for `node_modules`, troubleshooting; a third-party package, loader 10 needs webpack 5.61+ (*read*)
+- **Also good:** [ts-loader](https://github.com/TypeStrong/ts-loader) — GitHub README: `transpileOnly` speeds builds and loses type checking, so pair it with fork-ts-checker (*read*); [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin)
+- **Also good:** [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin)
+
+{/* LINKMAP:END */}

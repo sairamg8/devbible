@@ -247,6 +247,16 @@ With the function form, not with `enabled`. The guide shows it: *"Pass a functio
 **★ You need a query polled every 10 seconds and you also want a manual Refresh button. Anything to watch for?**
 Two things. The manual path is `refetch()`, which fetches unconditionally and does not reset the interval, so a click one second before a tick produces two requests a second apart — usually harmless, occasionally not, and worth a disabled button while `isFetching`. The second is that `refetchQueries` and `invalidateQueries` from elsewhere in the app also reach a polling query, so the effective request rate is the poll plus every unrelated invalidation that matches the key prefix. When a "10-second poll" shows up in logs at three seconds, the interval is rarely the thing to look at first.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Polling](https://tanstack.com/query/latest/docs/framework/react/guides/polling) — TanStack Query docs: `refetchInterval` as a number or a function returning a number or false, paused in hidden tabs unless `refetchIntervalInBackground`; independent of `staleTime`; each observer runs its own timer and only in-flight fetches are dedup
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Refetch render cost](./01b-refetch-render-cost.md) · [Topic index](../README.md) · Next → [Network mode & offline](./01d-network-mode-and-offline.md)

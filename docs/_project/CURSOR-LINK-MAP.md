@@ -15,6 +15,7 @@ metadata:
 - **Next.js findings in our pages (not fixed):** 02b react-compiler page states 34%/46% figures the 16.3 post doesn't; 03 bundle-analysis says `next experimental-analyze` (live: `next analyze`); 05 CWV page calls the Analytics guide stale (it now lists INP); 10/02b says `z.flattenError()` where Zod's changelog names `z.treeifyError()`; 09/05d says Partytown docs unreachable (they resolve).
 - **No-syllabus tracks** (vite, webpack, playwright, tanstack-query, babel, eslint-oxlint, framer-motion): topic list is built by `scratchpad/mklist.py` from the page tree (a numbered page + its a/b/c chunks = one group); big groups become several blocks, header `— Topic · ✅ written`.
 - **Vite findings in our pages (not fixed):** 04b says a linked package needs `optimizeDeps.exclude` (Vite docs: linked packages outside node_modules are already source); 14/01b says Vitest `environmentMatchGlobs` removal is "third-party only" (official: removed in v4 migration guide); dev-server page omits Full Bundle Mode; `closeServer`/`closePreviewServer` in no chunk; 01d "removal not documented" is stale; 3 pages over cap (10/01f, 18/03, 18/07, 18/07b).
+- **Findings in our pages (2026-10-14 batch, not fixed):** Playwright page 12 teaches the removed `@playwright/experimental-ct-*` packages (currency pass owed); Playwright 09 `mask`, 10 `PWDEBUG=1`, 11 `describe.parallel/serial`, 13 no `page.request`; tanstack-query `16-migration-recipes/01n-prefetchquery-to-queryclient-query.md` is stale (the deprecation is now in the migration guide + reference); jest-rtl: MSW option is `onUnhandledFrame` in msw 3.x, SWC "3-5x" claim unsupported, TanStack `gcTime: Infinity` (official) vs `0` (ours); webpack: `[hash]` deprecated alias of `[fullhash]`, pages lack Verified lines.
 - Routine PRs are NOT merged now (user changed it: leave open for review).
 
 ## 🔴 RESUME HERE — 2026-10-13 (Beyond-the-docs round done for the 10 finished languages)
@@ -56,7 +57,11 @@ metadata:
 | CSS | 74 | ✅ complete 2026-10-14 (researcher + verifier per lane; PR open for review, not merged; Further reading on 74 pages) | — |
 | nextjs | 115 | ✅ complete 2026-10-14 (researcher + verifier per part, 5 files; 107 pages got Further reading, 7 skipped over the 300-line cap; PR open) | — |
 | vite | 72 blocks (188 pages) | ✅ complete 2026-10-14 (no syllabus: topics = page groups, big groups split into chunk clusters; 68 pages got Further reading, 4 over cap; PR open) | — |
-| webpack · others | — | ⬜ not started | — |
+| webpack | 30 blocks (21 pages) | ✅ complete 2026-10-14 (21 pages got Further reading; PR open) | — |
+| jest-rtl | 59 | ✅ complete 2026-10-14 (11 topics marked 🔲 not written; 16 pages got Further reading) | — |
+| playwright | 28 blocks (16 sections) | ✅ complete 2026-10-14 (16 pages got Further reading) | — |
+| tanstack-query | 43 blocks (69 chunk files) | ✅ complete 2026-10-14 (39 pages got Further reading, 3 over cap) | — |
+| storybook · others | — | ⬜ not started | — |
 
 **"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
 
