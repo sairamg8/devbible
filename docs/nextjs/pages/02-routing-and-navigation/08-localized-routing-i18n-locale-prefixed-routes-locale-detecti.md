@@ -185,6 +185,17 @@ Both are still possible, but only the sub-path form is developed in the guide. W
 **★ Can you keep some routes out of the locale prefix with a route group?**
 A route group changes the URL, not the tree, so it does not by itself remove a route from under `[lang]`. To have a genuinely unlocalized route you place it outside the locale segment — and then it has no `lang`, neither as a prop nor through `next/root-params`. That is a real architectural decision rather than a formatting one: it splits your app into localized and unlocalized halves, and anything shared between them cannot assume a locale exists.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Internationalization](https://nextjs.org/docs/app/guides/internationalization) — nextjs.org: sub-path versus domain routing, locale from `Accept-Language` in Proxy, everything under `app/[lang]`, dictionaries by locale, and a short root-params section for reading `lang` without prop drilling (*read*)
+- **Also good:** [next-root-params](https://nextjs.org/docs/app/api-reference/functions/next-root-params) — nextjs.org: getters for segments above the root layout; Server Components only (not Client Components, Server Actions or Route Handlers), `generateStaticParams` needed with Cache Components (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [07 · `proxy.ts`: the deployment boundary](07-the-proxyts-layer-successor-to-middlewarets-request-intercep.md) · [Chapter 2 overview](01-explanation.md) · Next → [08b · Dictionaries and reading the locale](08b-dictionaries-and-reading-the-locale.md)

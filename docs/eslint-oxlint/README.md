@@ -25,6 +25,8 @@ Treat the content as a strong draft, not as verified reference.
 
 :::
 
+> **Link map:** for every topic there is a [link map](./link-map/README.md) — the primary docs plus, where one exists, the best non-official explanation. First pass, open for review.
+
 **21 topics** across 21 sections.
 
 | # | Section | Topics |

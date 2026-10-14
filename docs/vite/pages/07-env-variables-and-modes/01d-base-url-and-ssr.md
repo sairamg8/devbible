@@ -278,6 +278,20 @@ looks like a performance problem, not a correctness one. The bug therefore prese
 slow" or "offline mode stopped working" weeks after the change that caused it, which is why the fix
 belongs in a single helper rather than in everybody's memory.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Env Variables and Modes](https://vite.dev/guide/env-and-mode) — vite.dev: `dev` defaults to development, `build` to production, `--mode` picks the `.env.[mode]` file, `NODE_ENV=development vite build` keeps mode `production`, "two different concepts" (*read*)
+- **Also good:** [Shared Options: mode and base](https://vite.dev/config/shared-options) — vite.dev: mode precedence and the forms `base` accepts, which `BASE_URL` mirrors (*read*)
+- **Also good:** [Command Line Interface](https://vite.dev/guide/cli) — vite.dev: `vite preview` takes `--mode`, `--outDir` and `--base` (*read*)
+- **Also good:** [Server-Side Rendering](https://vite.dev/guide/ssr) — vite.dev: `import.meta.env.SSR` "statically replaced during build so it will allow tree-shaking of unused branches" (*read*)
+- **Also good:** [Development and production](https://nodejs.org/en/learn/getting-started/nodejs-the-difference-between-development-and-production) — Node.js: run with `NODE_ENV=production`, anything else is an "antipattern" because behaviour diverges; backs our "two useful values" rule (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Built-Ins & the String Trap](01c-built-in-constants-and-typing.md) · [Vite overview](../../README.md) · Next → [Modes & `NODE_ENV`](01e-modes-and-node-env.md)

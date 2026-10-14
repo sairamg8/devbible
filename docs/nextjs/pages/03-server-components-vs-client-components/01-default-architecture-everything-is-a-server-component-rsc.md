@@ -118,6 +118,19 @@ Precise but narrower than people hear. It means none of that component's own cod
 **Which components are Server Components by default?**
 All of them. Layouts and pages are Server Components with no directive and no configuration, and everything you write stays one until something marks it otherwise. That is the inversion relative to the Pages Router, where the mental model was client-first — and it is why the burden of proof sits on the client boundary rather than on staying server-side.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) — nextjs.org: when to pick which, the RSC Payload and the first-load versus later-navigation flow (*read*)
+- **Also good:** [Server Components](https://react.dev/reference/rsc/server-components) — react.dev: the framework-neutral definition (rendered ahead of time, in a separate environment) and the async components section (*read*)
+- **Also good:** [The Server and Client Boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary)
+- **Beyond the docs:** [Making Sense of React Server Components](https://joshwcomeau.com/react/server-components/) — Josh Comeau, 2023-09-06, updated 2025-05-09: same mental model through running examples (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [Overview: Server Components vs Client Components](01-explanation.md) · [Index](01-explanation.md) · Next → [02 · `'use client'`: when and why to opt in](02-use-client-when-and-why-to-opt-in-interactivity-browser-apis.md)

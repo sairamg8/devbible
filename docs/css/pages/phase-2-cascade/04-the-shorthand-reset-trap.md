@@ -208,6 +208,17 @@ Shorthands in a base rule, where you are defining the whole concept; longhands
 in modifiers, states and theme overrides, where you mean to change exactly one
 thing and keep the rest.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) — MDN: omitted longhands are set to the shorthand's default, which may differ from the property's initial value, and so override earlier values (*read*)
+- **Beyond the docs:** [CSS shorthand properties](https://blog.openreplay.com/css-shorthand-properties/) — OpenReplay Team, 2026-08-11: `background: red` resets the image, position and size (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · Specificity](./03-specificity-counted-properly.md) · Back to [Phase 2 overview](./README.md)

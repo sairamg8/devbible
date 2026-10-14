@@ -249,3 +249,15 @@ without a major version bump to warn you.
 
 **← Prev** [04 · Installing into an existing app](./04-installing-into-an-existing-app.md) ·
 **Next →** the phase index — [Phase 0 overview](./README.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Addon migration guide for Storybook 10.0](https://storybook.js.org/docs/addons/addon-migration-guide) — Storybook docs: says `addon-essentials`, `addon-interactions`, `addon-links` and `blocks` are empty since 9 and no longer published; ESM-only builds (*read*)
+- **Also good:** [Migration guide for Storybook 10](https://storybook.js.org/docs/releases/migration-guide) — Storybook docs: ESM-only, Node 20.19+ or 22.12+, valid-ESM config; defers the package map to GitHub notes (*read*)
+- **Beyond the docs:** [Storybook is going ESM-only](https://storybook.js.org/blog/storybook-is-going-esm-only/) — Norbert de Langen, Storybook blog, 2025-09-22: the why behind ESM-only; it names 20.16, 22.19 and 24 as the floor, which differs from the migration guide's 20.19 and 22.12, so trust the guide
+
+{/* LINKMAP:END */}

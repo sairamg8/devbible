@@ -228,6 +228,18 @@ Because the per-route `size` and `First Load JS` columns were removed from the b
 **How would you attribute cost to a feature in a Next.js application?**
 Not from the invoice, which is per-project. Use the trace attributes: the root span carries `next.route` and `http.status_code`, so invocation counts and durations can be grouped per route pattern, and `next.rsc` separates prefetch traffic from user-initiated traffic. That gives a per-route profile you can multiply by the published rates to get a defensible estimate. It also usually shows that a small number of routes dominate, which turns a budget conversation into a short list of pages to cache.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Vercel Functions limits](https://vercel.com/docs/functions/limitations) — Vercel docs: billed on active CPU plus provisioned memory; waiting on I/O does not count as active CPU (*read*)
+- **Also good:** [Pricing on Vercel](https://vercel.com/docs/pricing) — Vercel docs: the billable line items (Fast Data Transfer, Fast Origin Transfer, CDN requests, Active CPU, Provisioned Memory, invocations, image optimization) (*read*)
+- **Also good:** [Supporting Immutable Static Assets](https://nextjs.org/docs/app/api-reference/adapters/immutable-static-assets) — Next.js docs (updated 2026-07-20): immutable assets live under `/_next/static/immutable/*` and are requested without `?dpl`, so deployments share them (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [OpenTelemetry and the span catalogue](04b-opentelemetry-the-span-catalogue-and-trace-volume.md) · [Chapter 17 overview](01-explanation.md) · Next → [Milestone: SprintDesk deployed twice](06-project-milestone-sprintdesk-deployed-twice.md)

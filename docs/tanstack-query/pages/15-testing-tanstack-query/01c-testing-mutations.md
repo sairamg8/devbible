@@ -250,6 +250,18 @@ In v5 the mutation callbacks take `(data, variables, onMutateResult, context)`; 
 **★ Why is `act()` needed around `result.current.mutate(...)` but not around a `userEvent.click` that triggers the same mutation?**
 `userEvent` dispatches a real DOM event, so React owns the update and batches and flushes it through its own event handling; Testing Library also wraps its interactions appropriately. Calling `mutate` straight off `result.current` originates the state change from outside React entirely — it is a plain function call in test code — so React has no opportunity to schedule and flush the resulting render before your next statement executes. Wrapping in `act` gives it that opportunity and removes the warning. The trap is over-correcting into `await act(async () => { ... })` around the whole mutation, which flushes all pending work and destroys any chance of asserting the intermediate `isPending` or optimistic state.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mutations](https://tanstack.com/query/latest/docs/framework/react/guides/mutations) — TanStack Query docs: per-call callbacks do not run after unmount; hook-level ones do (*read*)
+- **Read this:** [Testing](https://tanstack.com/query/latest/docs/framework/react/guides/testing) — TanStack Query docs: wrapper and `waitFor`; no suspense-specific advice (*read*)
+- **Also good:** [Async utilities](https://testing-library.com/docs/dom-testing-library/api-async/) — Testing Library (DOM): `waitFor` retries until the callback stops throwing, `findBy` queries wrap it, defaults 1000ms and 50ms (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Mocking at the network layer](01b-mocking-at-the-network-layer.md) · [Topic index](../README.md) · Next → [Suspense and harness hazards](01d-suspense-and-harness-hazards.md)

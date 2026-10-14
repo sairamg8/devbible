@@ -241,6 +241,18 @@ text substitution and contributes nothing of its own.
 The full class name never appears in the source, so searching the codebase for
 `card__title` finds nothing — a real cost when navigating an unfamiliar project.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The parent selector](https://sass-lang.com/documentation/style-rules/parent-selector/) — Sass docs: adding suffixes with `&`, such as `&__copy` and `&--open` (*read*)
+- **Also good:** [Style rules](https://sass-lang.com/documentation/style-rules/) — Sass docs: nesting, selector lists and combinators; warns that deep nesting grows the CSS and rendering work but gives no depth limit (*read*)
+- **Beyond the docs:** [Sass and BEM ftw](https://www.kevinpowell.co/article/sass-and-bem-ftw/) — Kevin Powell, 2018-03-01: `&-child` builds `.parent-child`, and `&--primary` under `.button` builds BEM modifiers with their own `:hover` rules, so the block name is written once
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · Setting up and compiling](./01-setting-up-and-compiling.md) · Next: [03 · Variables — Sass vs custom properties](./03-variables-sass-vs-custom-properties.md) →

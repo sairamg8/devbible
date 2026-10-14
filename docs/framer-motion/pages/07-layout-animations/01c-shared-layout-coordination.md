@@ -218,6 +218,17 @@ Nest it. A bare `transition` object applies to every animating value on the comp
 **★ Why does `onAnimationComplete` not fire for a layout animation, and what does that tell you about the architecture?**
 Because layout animations are explicitly excluded from `onAnimationStart` and `onAnimationComplete`, which have dedicated `onLayoutAnimationStart` and `onLayoutAnimationComplete` counterparts. The split is a hint about the internals: a layout animation is not a value animation with a different source, it is a separate projection pass driven by measurement, and it has its own lifecycle to report. Treating the two callback families as interchangeable produces a callback that silently never runs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Layout animation](https://motion.dev/docs/react-layout-animations) — motion.dev: `layoutId` crossfade and the rule that the transition of the element being animated to wins, `LayoutGroup`, `layoutScroll`, `layoutRoot`, `layoutAnchor` (*read*)
+- **Beyond the docs:** [Everything about Framer Motion layout animations](https://blog.maximeheckel.com/posts/framer-motion-layout-animations) — Maxime Heckel, 2022-03-08 (updated 2022-08-06): layout, shared layout, `LayoutGroup` as namespacing and as grouping, and `AnimatePresence`; imports from the `framer-motion` package
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Silent failure modes](01b-when-layout-animations-fail-silently.md) · [Explanations](../README.md) · Next → [Measuring inside a moving container](01d-scroll-fixed-and-anchored-containers.md)

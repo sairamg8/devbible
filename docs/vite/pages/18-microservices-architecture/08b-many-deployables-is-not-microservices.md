@@ -138,6 +138,16 @@ strictly cheaper than browser-to-server. The Environment API contributes nothing
 composition logic; it only means the composing code now shares config and a module graph with
 the rest of the app instead of living in a separately built server.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Why Vite: A Unified Toolchain and Environment API](https://vite.dev/guide/why) — vite.dev: environments such as edge runtimes, service workers and other deployment targets (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The Environment API](08-the-environment-api-and-many-build-targets.md) · [Vite overview](../../README.md) · Next → [When not to split](09-when-not-to-split-the-frontend.md)

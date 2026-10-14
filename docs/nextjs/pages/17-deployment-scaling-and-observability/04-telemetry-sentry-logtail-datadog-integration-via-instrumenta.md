@@ -230,6 +230,18 @@ That it will do nothing. The `logging` reference describes itself as configuring
 Ordering. It executes after the document loads but *before* React hydration begins and before any user interaction is possible, so error tracking installed there catches failures during hydration itself — precisely the window a `useEffect` cannot cover, because the effect only runs once hydration succeeds. The trade is a strict one: only synchronous top-level code is guaranteed to finish in time, anything asynchronous is fire-and-forget, and there is a 16 ms initialisation budget that development warns about.
 
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Instrumentation](https://nextjs.org/docs/app/guides/instrumentation) — Next.js docs (updated 2026-08-06): `register()` is called once when a server instance starts and must finish before requests are handled; branch on `NEXT_RUNTIME` (*read*)
+- **Also good:** [Manual setup for Next.js](https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/) — Sentry docs: `register()` loads the server or edge Sentry config by `NEXT_RUNTIME` and exports `onRequestError`; needs `@sentry/nextjs` 8.28 or newer and Next.js 15 (*read*)
+- **Also good:** [OpenTelemetry](https://nextjs.org/docs/app/guides/open-telemetry) — Next.js docs: `@vercel/otel`, manual `NodeSDK` setup, the default span list, and `NEXT_OTEL_VERBOSE=1` for more spans (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Multi-region and data locality](03-multi-region-strategies-and-data-locality-patterns.md) · [Chapter 17 overview](01-explanation.md) · Next → [OpenTelemetry and the span catalogue](04b-opentelemetry-the-span-catalogue-and-trace-volume.md)

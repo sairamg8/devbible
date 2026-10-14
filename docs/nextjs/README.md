@@ -62,6 +62,8 @@ Full evidence, and a corrected syllabus proposal, live in the frontend repo:
 `syllabus/NEXTJS_SYLLABUS_VERIFICATION_20260903.md` and
 `syllabus/nextjs_bible_syllabus_v2_16.3_PROPOSED.txt`.
 
+> **Link map:** for every syllabus topic there is a [link map](./link-map/README.md) — the primary docs plus, where one exists, the best non-official explanation. First pass, open for review.
+
 ## How this track is shaped
 
 It is **not** in devbible's usual `phase-N-topic/` form. The frontend-bible generator

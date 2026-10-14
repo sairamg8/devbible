@@ -206,3 +206,13 @@ created per story render there, which keeps call counts isolated between stories
 
 **← Prev** [03 · The Controls panel](./03-the-controls-panel.md) ·
 **Next →** [05 · Globals and toolbars](./05-globals-and-toolbars.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Actions](https://storybook.js.org/docs/essentials/actions) — Storybook docs: `fn()` from `storybook/test` as the recommended way; `argTypesRegex` discouraged because inferred args are not spies in `play` (*read*)
+
+{/* LINKMAP:END */}

@@ -152,3 +152,16 @@ APIs evolved through the flat-config era. If `eslint/config` export is missing, 
 
 ### ⚠️ Forever FlatCompat
 Each compat extend is tech debt. Track tickets to replace with native flat exports (`plugin.flatConfigs`, `plugin.configs['flat/recommended']`, etc.) as plugins ship them.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuration Files](https://eslint.org/docs/latest/use/configure/configuration-files) — ESLint docs: later config objects override earlier ones; `files` and `ignores` resolve relative to the config file; `defineConfig()` with `extends`; `eslint.config.ts` needs `jiti` 2.2+ on Node (*read*)
+- **Also good:** [Configure Plugins](https://eslint.org/docs/latest/use/configure/plugins) — ESLint docs: the `plugins` key maps a namespace to a plugin object; local and virtual plugins (*read*)
+- **Also good:** [New config system, part 2](https://eslint.org/blog/2022/08/new-config-system-part-2/) — Nicholas C. Zakas, ESLint blog, 2022-08-05: "Glob-based configs everywhere" and "Goodbye extends, hello flat cascade" explain the shape (*read*)
+- **Beyond the docs:** [What is ESLint flat config?](https://nx.dev/docs/kb/flat-config) — Nx docs (undated): how `files` replaces `overrides`, `.eslintignore` moves into `ignores`, and `globalIgnores`; it does not explain precedence (*read*)
+
+{/* LINKMAP:END */}

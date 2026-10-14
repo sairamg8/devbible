@@ -148,3 +148,17 @@ const shouldReduceMotion = useReducedMotion();
   <motion.div key={pathname} exit={{ opacity: 0 }}>{children}</motion.div>
 </AnimatePresence>
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Motion component](https://motion.dev/docs/react-motion-component) — motion.dev: lists `motion/react-client` for React Server Components such as Next.js (*read*)
+- **Also good:** [How to animate route transitions in the app directory?](https://github.com/vercel/next.js/discussions/42658) — vercel/next.js discussion opened 2022-11-08, maintainer updates through 2025-02: the primary thread on the App Router issue: entry animations work but exits do not, because Next wraps pages in internal providers that defeat `AnimatePresence` child detection; workarounds are hacks on internal router context, DO
+- **Also good:** [Designing view transitions](https://nextjs.org/docs/app/guides/view-transitions)
+- **Also good:** [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components)
+- **Beyond the docs:** [Advanced page transitions with Next.js and Framer Motion](https://blog.logrocket.com/advanced-page-transitions-next-js-framer-motion) — Francois Brill, LogRocket, 2023-12-28: mostly Pages Router (`_app.js`), with an App Router section saying `AnimatePresence` exits do not play and the workaround relies on unexposed Next internals; imports from `framer-motion` and predates Motion 13
+
+{/* LINKMAP:END */}

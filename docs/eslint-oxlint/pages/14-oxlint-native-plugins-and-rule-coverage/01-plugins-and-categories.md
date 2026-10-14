@@ -110,3 +110,15 @@ Coverage is large but partial. Maintain a gap list after migration.
 
 ### ⚠️ Dropping ESLint security plugins without replacement
 Explicit risk acceptance required—or keep dual-run.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Built-in Plugins](https://oxc.rs/docs/guide/usage/linter/plugins.html) — oxc.rs: defaults are `eslint`, `typescript`, `unicorn`, `oxc`; setting `plugins` overwrites that set; `--&lt;name&gt;-plugin` flags; only default plugins can be disabled (*read*)
+- **Also good:** [Rules reference](https://oxc.rs/docs/guide/usage/linter/rules.html) — oxc.rs: 871 rules; category filter lists correctness, nursery, pedantic, perf, restriction, style, suspicious (*read*)
+- **Also good:** [Configuration](https://oxc.rs/docs/guide/usage/linter/config.html) — oxc.rs: "Enable groups of rules with categories"; `correctness` on by default (*read*)
+
+{/* LINKMAP:END */}

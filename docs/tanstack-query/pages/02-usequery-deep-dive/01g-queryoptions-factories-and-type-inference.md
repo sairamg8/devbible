@@ -263,6 +263,18 @@ No, and wrapping it in `useMemo` is a fix for a problem that does not exist. It 
 **★ A colleague says "we already have factories, we don't need this". How do you check whether that is true?**
 Grep for the type arguments. `getQueryData<`, `setQueryData<` and `useQuery<` with explicit generics are the signature of a codebase whose factories return plain objects: the reuse landed, the typing did not, and every cache read is an unverified assertion. The second grep is for `queryKey: [` outside the `api/` directory — each hit is a call site that can drift from the factory's key, and drift there is silent, because a mismatched key is a second cache entry rather than an error.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Query Options](https://tanstack.com/query/latest/docs/framework/react/guides/query-options) — TanStack Query docs: one `queryOptions` object shared by `useQuery`, `useSuspenseQuery`, `useQueries`, `queryClient.query` and `setQueryData`, with a parameterised `groupOptions(id)`; states type inference but not key tagging or `skipToken` (*read*)
+- **Beyond the docs:** [The Query Options API](https://tkdodo.eu/blog/the-query-options-api) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2024-01-17: `queryOptions` tags the key with the data type so `getQueryData` infers instead of casting
+- **Beyond the docs:** [Leveraging the Query Function Context](https://tkdodo.eu/blog/leveraging-the-query-function-context) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-10-26, updated 2023-01-03: reading arguments from the key vs a closure, and a typed key factory
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`select`](./01f-select.md) · [Topic index](../README.md) · Next → [Parameterised factories & composition](./01g2-parameterised-factories-and-composition.md)

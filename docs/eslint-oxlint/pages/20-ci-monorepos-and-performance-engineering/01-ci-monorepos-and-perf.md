@@ -104,3 +104,16 @@ Ensure config files are part of task inputs/hash.
 
 ### ⚠️ Annotations only for ESLint, not Oxlint
 Engineers miss Oxlint failures in the UI—configure both or fail the job hard with clear logs.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Setup CI and other integrations](https://oxc.rs/docs/guide/usage/linter/ci.html) — oxc.rs: detects GitHub Actions and turns on annotations; `--format=gitlab` for GitLab Code Quality; `--format` overrides (*read*)
+- **Also good:** [Multithread linting](https://eslint.org/blog/2025/08/multithread-linting/) — Francesco Trotta, ESLint blog, 2025-08-22: `--concurrency` takes a number, `auto` or `off`; `auto` uses half the cores on large projects; Node API `concurrency` option needs cloneable options (*read*)
+- **Also good:** [Nested config files](https://oxc.rs/docs/guide/usage/linter/nested-config.html) — oxc.rs: monorepo pattern with a shared base (*read*)
+- **Also good:** [Typed linting performance](https://typescript-eslint.io/troubleshooting/typed-linting/performance/) — typescript-eslint.io: where typed-lint time goes (*read*)
+
+{/* LINKMAP:END */}

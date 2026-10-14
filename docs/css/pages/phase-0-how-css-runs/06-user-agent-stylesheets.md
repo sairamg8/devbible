@@ -162,6 +162,18 @@ It inverts the order. Normally author beats user beats user-agent; for
 rule beats an author's `!important` rule. This exists so accessibility overrides
 cannot be defeated by a site.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Rendering](https://html.spec.whatwg.org/multipage/rendering.html) — WHATWG HTML Standard: section 15 gives suggestions for rendering HTML, since user agents are not required to render in any particular way; the CSS user agent style sheet is in 15.2 (*read*)
+- **Also good:** [Blink's html.css](https://chromium.googlesource.com/chromium/src/+/main/third_party/blink/renderer/core/html/resources/html.css) — Chromium source: the default HTML style sheet itself, such as the 8px body margin (*read*)
+- **Beyond the docs:** [User Agent Style Sheets: Basics and Samples](https://meiert.com/blog/user-agent-style-sheets/) — Jens Oliver Meiert, 2007-09-22, updated 2026-04-19: what UA sheets are, a list of collected defaults for older browsers, and links to the Chromium, Gecko and WebKit sources (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05 · CSS fails silently](./05-css-fails-silently.md) · Next: [07 · Resets and normalisers](./07-resets-and-normalisers.md) →

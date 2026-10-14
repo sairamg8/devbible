@@ -238,6 +238,18 @@ The boundary inventory (`grep -rl "^'use client'" app/`), the DTO type list show
 **Why does the Next.js support policy belong in a compliance document at all?**
 Because it determines your patch SLA, and the two LTS tiers behave differently. On the current major (Active LTS) you get features, fixes and security patches, and minors follow ordinary semver expectations. On the previous major (Maintenance LTS) you get only critical fixes and essential security updates for two years from that major's initial release — and those *land as semver-minor releases even when they contain breaking changes*. So "we automatically accept minor upgrades", a perfectly reasonable policy on the active line, is an uncontrolled-change policy on the maintenance line. The compliance artifact has to name which line you are on and what that implies.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Nextjs Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nextjs_Security_Cheat_Sheet.html) — OWASP: "Proxy should not be the only line of defense" (with CVE-2025-29927), scope caches to their audience, and `NEXT_PUBLIC_` values reach the client (*read*)
+- **Also good:** [OWASP Top 10:2021](https://top10.owasp.org/2021) — OWASP: the ten categories A01 to A10 that our mapping uses; `owasp.org/Top10` now redirects to the 2025 edition (*read*)
+- **Also good:** [Environment Variables](https://nextjs.org/docs/app/guides/environment-variables) — Next.js docs: `NEXT_PUBLIC_` values are inlined into the bundle at build and frozen after it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Micro-frontends and multi-zone architectures](01-micro-frontends-and-multi-zone-architectures-for-decoupled-t.md) · [Chapter index](01-explanation.md) · Next → [Supply-chain vigilance](03b-supply-chain-vigilance.md)

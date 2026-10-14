@@ -275,6 +275,17 @@ tells you about the value: anything you want to change without a restart is not 
 and treating a restart as an annoyance rather than a signal is how a value ends up in the wrong
 layer for the rest of the project's life.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Env Variables and Modes](https://vite.dev/guide/env-and-mode) — vite.dev: `import.meta.env`, `MODE`, `BASE_URL`, `PROD`, `DEV`, `SSR` "statically replaced at build time to make tree-shaking effective", the four `.env` files, mode file above generic, existing shell variables outrank files, "loaded at the
+- **Also good:** [Shared Options: envPrefix](https://vite.dev/config/shared-options) — vite.dev: default `VITE_`; an empty prefix would expose everything and Vite throws (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Asset Handling](../06-asset-handling/01-static-asset-imports.md) · [Vite overview](../../README.md) · Next → [What Static Replacement Costs You](01a-build-time-vs-runtime-config.md)

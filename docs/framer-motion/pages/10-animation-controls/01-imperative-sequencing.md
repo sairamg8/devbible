@@ -139,3 +139,14 @@ await animate('.item', { opacity: 1 }); // if MULTIPLE .item elements exist in s
 // ✅ CORRECT: use sufficiently specific selectors (or scope the animate() call to exactly
 // the intended single element) to avoid unintentionally animating multiple matches at once
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useAnimate](https://motion.dev/docs/react-use-animate) — motion.dev: scoped `animate`, selectors limited to the scope, automatic cleanup on unmount, an exit example that awaits each step before `safeToRemove()` (*read*)
+- **Also good:** [animate()](https://motion.dev/docs/animate) — motion.dev: the vanilla function: timeline sequences with the `at` option and labels, and a controls object (`play`, `pause`, `stop`, `speed`, `time`); it does not cover the scoped React form (*read*)
+
+{/* LINKMAP:END */}

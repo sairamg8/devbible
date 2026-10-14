@@ -106,6 +106,19 @@ Yes, for a different layer of the test pyramid: Browser Mode gives fast, real-br
 **★ Why does the Playwright provider get Vitest's own explicit recommendation over WebdriverIO?**
 Parallel execution — the documentation's stated reason is exactly that: *"it supports parallel execution, which makes your tests run faster."* For a team with no existing investment in either automation library, the recommendation removes a decision that otherwise has no clearly correct default; teams already using WebdriverIO for other automation have a legitimate reason to diverge from the recommendation and reuse that investment instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Browser Mode](https://vitest.dev/guide/browser/) — vitest.dev: installation, the three providers (preview, playwright, webdriverio), and "always requires a provider"; the page never says "experimental" and never compares Browser Mode with E2E (*read*)
+- **Also good:** [Mocking](https://vitest.dev/guide/mocking) — vitest.dev: cheat sheet with a one-line hoisting warning (*read*)
+- **Beyond the docs:** [Vitest Browser Mode vs Playwright](https://epicweb.dev/vitest-browser-mode-vs-playwright) — Artem Zakharchenko, Epic Web, 2025-11-12: Browser Mode runs the test file in the browser (component level), Playwright is E2E with page as the unit
+- **Beyond the docs:** [vi.mock hoists. Your closure variables do not.](https://mergify.com/blog/vitest-vimock-hoisting-traps) — Rémy Duthu, Mergify, 2026-05-11: the ReferenceError, why declaring inside the factory loses the handle, and the `vi.hoisted` fix; the post is part of a vendor guide that promotes Mergify's product
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01b · Environments](01b-environments.md) · [Vite overview](../../README.md) · Next → [01d · Mocking under a shared pipeline](01d-mocking.md)

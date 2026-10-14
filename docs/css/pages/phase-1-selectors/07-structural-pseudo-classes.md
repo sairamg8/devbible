@@ -162,6 +162,18 @@ No. They count DOM position only. A hidden element still counts, and visual
 reordering has no effect on them — which is why `of S` exists and why relying on
 `order` for meaningful sequence is an accessibility problem.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [:nth-child()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-child) — MDN: An+B syntax and `of S`, including a striped table that skips `[hidden]` rows (*read*)
+- **Also good:** [More control over :nth-child() selections with the of S syntax](https://developer.chrome.com/docs/css-ui/css-nth-child-of-s) — Chrome for Developers, Bramus, last updated 2023-02-09: `:nth-child(2 of .highlight)` against `.highlight:nth-child(2)`, and why plain `even` striping breaks when rows are hidden (*read*)
+- **Beyond the docs:** [Guide to Advanced CSS Selectors - Part Two](https://moderncss.dev/guide-to-advanced-css-selectors-part-two/) — Stephanie Eckles, Modern CSS, 2020-12-30: the `nth-`, `first-`, `last-` and `only-` families with examples (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [06 · :has()](./06-has.md) · Next: [08 · State pseudo-classes](./08-state-pseudo-classes.md) →

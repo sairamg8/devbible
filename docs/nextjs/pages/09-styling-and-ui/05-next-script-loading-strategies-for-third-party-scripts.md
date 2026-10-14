@@ -251,6 +251,18 @@ Because it is the only strategy where Next.js writes the tags itself, into one d
 **Is there any strategy that keeps a third-party script off the main thread today?**
 Not on the App Router. `worker` is the strategy for it, and its own documentation says it *"is not yet stable and does not yet work with the App Router"* and can *"only currently be used in the `pages/` directory"*. The realistic App Router answers are to load the script late (`lazyOnload`), to load it on fewer routes, or not to load it — see [05d](05d-the-worker-strategy-partytown-and-what-to-use-instead.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Script Component](https://nextjs.org/docs/app/api-reference/components/script) — nextjs.org (updated 2026-08-21): `beforeInteractive` (root layout only, runs once per document load), `afterInteractive` (default), `lazyOnload`, and `worker` (experimental; the page says it does not yet work with the App Router and shows it only under `pages/`);
+- **Also good:** [How to load and optimize scripts](https://nextjs.org/docs/app/guides/scripts) — nextjs.org (updated 2026-10-05): layout vs root-layout scripts load once, inline scripts need an `id`, extra attributes such as `nonce` are forwarded (*read*)
+- **Also good:** [Partytown trade-offs](https://partytown.qwik.dev/trade-offs) — Partytown docs: DOM work from the worker is deliberately slowed, UI-heavy scripts are a poor fit while tag managers and pixels suit it, `preventDefault` from the worker has no effect, cross-origin iframe cookies read as empty (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04f · When not to optimize](04f-when-not-to-use-the-optimizer.md) · [Chapter index](01-explanation.md) · Next → [05b · Handlers and the client boundary](05b-onload-onready-onerror-and-the-client-component-boundary.md)

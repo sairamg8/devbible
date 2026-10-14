@@ -271,6 +271,19 @@ read, the `'window.__backend_api_url'` form, which has no `import.meta.env` equi
 Outside those, prefer the env variable: `define` bypasses the prefix filter, uses arbitrary names,
 and is therefore invisible to the `VITE_*` audit that is your main defence against a leak.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Shared Options: define](https://vite.dev/config/shared-options) — vite.dev: globals in dev, static replacement in build, done by Oxc, values must be a string with a JSON-serialisable value or a single identifier (*read*)
+- **Read this:** [Env Variables and Modes](https://vite.dev/guide/env-and-mode) — vite.dev: `%CONST_NAME%` in HTML; unknown names are left as-is, unlike `undefined` in JavaScript (*read*)
+- **Also good:** [Global variable replacement](https://oxc.rs/docs/guide/usage/transformer/global-variable-replacement) — Oxc: `define` keys can be identifiers, dotted members such as `import.meta.env.MODE`, or `typeof` forms; values are code, so a string needs its own quotes; objects are not shared; `inject` runs before `define` (*read*)
+- **Beyond the docs:** [Vite 環境で index.html から環境変数を参照する](https://dev.classmethod.jp/articles/vite-index-html-read-env-variables/) — cho-megumi, Classmethod, 2022-08-23: the problem it reproduces (`import.meta` in an inline HTML script) and a `transformIndexHtml` plus `loadEnv` plugin; Japanese, tested on Vite 3.0.7, concept only, and the built-in `%CONST_NAME%` above now covers the plain case
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The Config Loader](02b-the-config-loader.md) · [Vite overview](../../README.md) · Next → [HTML `%VAR%` Replacement](02d-html-constant-replacement.md)

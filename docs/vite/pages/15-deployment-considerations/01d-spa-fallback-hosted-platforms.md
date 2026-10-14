@@ -105,6 +105,22 @@ Because Cloudflare Pages uses the *presence of a top-level `404.html`* as its si
 **★ On GitHub Pages, `base` is set correctly and the site loads at the root, but a bookmarked deep link still 404s. Why doesn't fixing `base` also fix this?**
 Because `base` and the deep-link 404 are unrelated problems that happen to both live under "GitHub Pages configuration." `base` controls what URL prefix Vite writes into every *asset* reference — get it right, and the JavaScript and CSS the page needs actually load. The deep-link 404 is about what happens when the *browser itself* requests a path that isn't a real file in the repository, which is a routing question `base` has no bearing on — the assets could be perfectly resolvable and the server would still have no file called `/project-name/settings/profile` to serve. Fixing one does nothing for the other; both need to be addressed, independently, for a GitHub Pages SPA deploy with client-side routing to fully work.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Rewrites and proxies](https://docs.netlify.com/manage/routing/redirects/rewrites-proxies/) — Netlify Docs: a 200 status makes a redirect a rewrite; `/* /index.html 200` for pushState apps; does not override existing files unless `200!` (*read*)
+- **Also good:** [Change response codes returned by CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/custom-error-pages-response-code.html) — AWS CloudFront guide: CloudFront can return a custom error page with a 200 for an origin 404 (its own example), and lists the allowed codes (200, 400, 403, 404, 405, 414, 416, 500 to 504); it never mentions single-page apps, so the SPA use is our infer
+- **Also good:** [Generate custom error responses](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GeneratingCustomErrorResponses.html)
+- **Also good:** [ngx_http_core_module](https://nginx.org/en/docs/http/ngx_http_core_module.html) — nginx.org: `try_files` checks files in order and uses the first found; if none exist, an internal redirect goes to the last parameter (*read*)
+- **Also good:** [mod_dir](https://httpd.apache.org/docs/2.4/mod/mod_dir.html) — Apache HTTP Server docs: `FallbackResource disabled | local-url`, default `disabled` (404) (*read*)
+- **Also good:** [HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) — MDN: cache busting with hashed filenames and `public, max-age=31536000, immutable`; the HTML main resource uses `no-cache` (*read*)
+- **Beyond the docs:** [How to Fix Cannot GET Errors After Deploying an SPA](https://blog.openreplay.com/fix-cannot-get-spa-deployment/) — OpenReplay Team (team byline), 2026-09-08: one table of nginx, Apache, Netlify, Vercel and S3 plus CloudFront fixes, and the soft-404 trade-off
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01c · vite preview](01c-vite-preview-is-not-a-production-server.md) · [Vite overview](../../README.md) · Next → [01e · SPA fallback: self-managed infra](01e-spa-fallback-self-managed-infrastructure.md)

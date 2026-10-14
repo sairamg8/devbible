@@ -200,6 +200,19 @@ Inventory first: list every plugin in `postcss.config.js` and classify each as (
 **★ The performance guide recommends trying Lightning CSS. When is that advice wrong?**
 When the PostCSS chain is doing work Lightning CSS has no equivalent for — in-house plugins that inject design tokens, plugins that read or write files, anything that depends on the PostCSS AST — and when the CSS volume is small enough that stage ② is not on the critical path anyway. Vite's own wording is *"may be worth the cost for larger applications"*: it is a trade between compile speed and an ecosystem, and on a small app you are paying the ecosystem cost for a saving you cannot measure.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Lightning CSS docs › With Vite](https://lightningcss.dev/docs.html) — lightningcss.dev: the three config places: `css.transformer: 'lightningcss'`, `css.lightningcss.targets` via `browserslistToTargets()`, and `build.cssMinify: 'lightningcss'` (heading id `with-vite`) (*read*)
+- **Also good:** [Build Options › `build.cssTarget`, `cssMinify`, `cssCodeSplit`](https://vite.dev/config/build-options) — vite.dev: `cssTarget` defaults to `build.target` and, with `cssMinify: 'lightningcss'`, takes precedence over `css.lightningcss.targets`; `cssMinify` defaults to `'lightningcss'` (`false` if client minify is off); `cssCodeSplit` to `true` (
+- **Also good:** [Features › Disabling CSS injection into the page](https://vite.dev/guide/features) — vite.dev: the `?inline` query returns processed CSS as the default export without injecting it; `?raw` and `?url` live on [Static Asset Handling](https://vite.dev/guide/assets) under "Importing Asset as String" and "Explicit URL Imports" (*
+- **Also good:** [Static Asset Handling](https://vite.dev/guide/assets)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [CSS Modules Edge Cases](01da-css-modules-edge-cases.md) · [Vite overview](../../README.md) · Next → [?inline, ?raw and ?url](01f-inline-raw-and-url-suffixes.md)

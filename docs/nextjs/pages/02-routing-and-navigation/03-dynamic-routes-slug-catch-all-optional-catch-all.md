@@ -233,6 +233,16 @@ Because the value comes from a URL a user can type anything into, so the framewo
 **★ Under Cache Components, why is `await props.params` at the top of a layout a mistake?**
 It binds the layout's entire output to request-time data, so the layout cannot be prerendered into the static shell. The documented fix is to pass the promise down and await it inside the component that actually needs the value, which keeps the layout static and confines the request-time dependency to a subtree that can sit behind Suspense.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dynamic Route Segments](https://nextjs.org/docs/app/api-reference/file-conventions/dynamic-routes) — nextjs.org: `[slug]`, `[...slug]`, `[[...slug]]`, the TypeScript shapes, and behaviour under Cache Components (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Nested layouts, parallel and intercepting routes](02-nested-layouts-parallel-routes-slot-intercepting-routes-rout.md) · [Chapter 2 overview](01-explanation.md) · Next → [03b · Reading params](03b-reading-params.md)

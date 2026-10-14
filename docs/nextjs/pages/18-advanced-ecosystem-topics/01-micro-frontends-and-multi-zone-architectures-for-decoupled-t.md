@@ -268,6 +268,16 @@ Two zones cannot appear on one screen. A request resolves to exactly one zone, a
 **A zone is "a normal Next.js application" — so what actually makes it a zone?**
 Only two things, and neither is in the zone's own code: an `assetPrefix` that namespaces its assets, and a rewrite somewhere else that sends a path range to it. There is no zone mode, no marker file and no framework awareness of the arrangement. That is genuinely useful to know operationally — a zone can be run, tested and deployed standalone on its own domain, which is what makes the "independent deploy" claim real rather than aspirational.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Multi-Zones](https://nextjs.org/docs/app/guides/multi-zones) — Next.js docs (updated 2026-06-01): one domain split over several Next.js apps, `assetPrefix` per zone, plain `a` links across zones (hard navigation), `serverActions.allowedOrigins`; the only "when not to" is to keep pages visited together in one zone (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter index](01-explanation.md) · Next → [Routing requests to a zone](01b-routing-requests-to-a-zone.md)

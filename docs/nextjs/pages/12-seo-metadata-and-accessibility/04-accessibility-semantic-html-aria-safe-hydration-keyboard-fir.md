@@ -206,6 +206,19 @@ The grouping itself. WCAG 1.3.1 requires that structure and relationships convey
 **★ How do you handle heading levels in a component reused at different depths, and why is the obvious React answer wrong here?**
 Take the level as a prop with a sensible default and build the tag name — `` const Heading = `h${level}` `` — because a heading level is a fact about the page's outline, not about the component. The obvious React answer is a context provider carrying the current depth, and it is wrong in an RSC codebase for a mechanical reason: consuming context requires a Client Component, so every card that reads the level becomes client code and drags its subtree across the boundary. The prop works identically in a Server Component and costs nothing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Accessibility](https://nextjs.org/docs/architecture/accessibility) — Next.js docs, last updated 2024-11-06: the route announcer (reads `document.title`, then `h1`, then the path), bundled `eslint-plugin-jsx-a11y` rules, WCAG resource list (*read*)
+- **Also good:** [useId](https://react.dev/reference/react/useId) — react.dev: ids for `aria-describedby` and `htmlFor`, generated from the component's parent path, so server and client ids match only when the two trees are identical (*read*)
+- **Also good:** [hydrateRoot](https://react.dev/reference/react-dom/client/hydrateRoot)
+- **Beyond the docs:** [How to Make Your Next.js Website Accessible: WCAG 2.1 Compliance](https://www.wcagrepair.com/blog/nextjs-accessibility-wcag-compliance-guide) — WCAG Repair Team, 2026-06-15: advice to move focus or announce the title after route changes, skip links, and `focus-trap-react` for dialogs; the focus and skip-link advice has no implementation code, and its announcer imports `next/router`, so it is **Pages R
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Localized metadata for i18n routes](03d-localized-metadata-for-i18n-routes.md) · [Chapter 12 overview](01-explanation.md) · Next → [Links, buttons, forms and the `alt` decision](04b-links-buttons-forms-and-the-alt-decision.md)

@@ -102,3 +102,15 @@ fallback: { crypto: false },
 fallback: { crypto: require.resolve('crypto-browserify') },
 // Only use `false` when you've verified the code path importing it is never actually executed in the browser bundle.
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Resolve](https://webpack.js.org/configuration/resolve/) — webpack.js.org: `alias` (trailing `$` for exact match, `false` to ignore), `extensions` with `'...'`, `mainFields` defaults (`browser`, `module`, `main` for web; `module`, `main` otherwise), `conditionNames`, `exportsFields`, `fallback` for missi
+- **Also good:** [Module Resolution](https://webpack.js.org/concepts/module-resolution/) — webpack.js.org: absolute, relative and module paths; its steps imply `exportsFields` is checked first and `mainFields` only for a folder (*read*); [enhanced-resolve](https://github.com/webpack/enhanced-resolve)
+- **Also good:** [enhanced-resolve](https://github.com/webpack/enhanced-resolve)
+
+{/* LINKMAP:END */}

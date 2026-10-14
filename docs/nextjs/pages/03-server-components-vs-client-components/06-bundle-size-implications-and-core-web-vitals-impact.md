@@ -134,6 +134,18 @@ LCP considers images, `image` elements inside SVG, videos, elements with a CSS `
 **A route is fast for you and slow for users on a mid-range Android. What is the most likely cause and which metric shows it?**
 Hydration and script execution, showing up as INP rather than LCP. Parse and execute time scales with CPU, so a client tree that costs a few tens of milliseconds on a developer machine can produce a long task on a mid-range phone, and any tap landing in that window is delayed. LCP is comparatively less sensitive because its budget is dominated by network time, which the device does not change much. This is also the case that makes field measurement non-optional: the difference between the two devices is invisible in every metric you can collect locally.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optimizing package bundling](https://nextjs.org/docs/app/guides/package-bundling) — nextjs.org: the Turbopack Bundle Analyzer (`next analyze`, v16.1 and later: filter modules, trace import chains), `@next/bundle-analyzer` for webpack, and a "Heavy client workloads" example that moves a syntax highlighter to a Server Componen
+- **Also good:** [Interaction to Next Paint (INP)](https://web.dev/articles/inp) — web.dev, updated 2025-09-02: 200 ms good threshold at the 75th percentile, and JavaScript as often the main driver of interactivity delay (*read*)
+- **Also good:** [How to upgrade to version 16: Performance Improvements](https://nextjs.org/docs/app/guides/upgrading/version-16)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [05b · What it does not protect](05b-what-server-only-does-not-protect.md) · [Index](01-explanation.md) · Next → [06b · Measuring the boundary](06b-measuring-the-boundary.md)

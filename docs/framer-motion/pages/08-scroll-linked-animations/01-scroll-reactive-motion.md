@@ -278,6 +278,17 @@ When the thing that has to change is not a style on a motion component. `useInVi
 **★ Both `useScroll` and `useInView` can watch a custom scrollable element. Why do they not use the same option name, and what breaks if you mix them up?**
 They describe different relationships. `useInView` wraps an IntersectionObserver, whose spec term for the reference box is `root`. `useScroll` measures a scroll position, and the thing that has a scroll position is a `container`. Passing `container` to `viewport` or `root` to `useScroll` is not a type error you will notice at a glance — the option is simply ignored, the default (window) applies, and you get a trigger or a progress value computed against a viewport that is not the one the user is scrolling.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React scroll animation](https://motion.dev/docs/react-scroll-animations) — motion.dev: scroll-triggered versus scroll-linked, `whileInView` with `viewport` (`once: true`), parallax with `useScroll` and `useTransform` (the parallax snippet omits the `useScroll` call; the FAQ names it) (*read*)
+- **Also good:** [useScroll](https://motion.dev/docs/react-use-scroll) — motion.dev: `container`, `target`, `axis`, `offset`, and `trackContentSize` (default `false`); the page has no troubleshooting section (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Shared layout coordination](../07-layout-animations/01c-shared-layout-coordination.md) · [Explanations](../README.md) · Next → [How `useScroll` measures](01b-how-usescroll-measures.md)

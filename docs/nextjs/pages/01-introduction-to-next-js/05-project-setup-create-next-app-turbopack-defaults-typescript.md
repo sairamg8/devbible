@@ -224,6 +224,17 @@ It points coding agents at documentation matching the installed version rather t
 **You install `react` and `react-dom` — do you control the React version?**
 On the App Router, effectively no. It uses React canary releases built-in, including all stable React 19 changes plus features being validated in frameworks, and the docs are explicit that you declare the packages for tooling and ecosystem compatibility rather than version selection. The Next.js version is what moves React underneath you. The Pages Router does use the version from `package.json`, so in a codebase mid-migration the same dependency governs one half and not the other.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [create-next-app](https://nextjs.org/docs/app/api-reference/cli/create-next-app) — nextjs.org: every flag with its default: TypeScript, Tailwind, Turbopack, Cache Components (App Router) and `AGENTS.md` on by default; ESLint is the default linter, with `--eslint` / `--biome` / `--no-linter`, plus `--react-compiler` and `--c
+- **Also good:** [Installation](https://nextjs.org/docs/app/getting-started/installation) — nextjs.org: Node 20.9 floor, the `--yes` quick start, `next lint` removal, linting via the ESLint or Biome CLI (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [04 · Versioning and the LTS model](04-versioning-and-lts-model-what-stable-canary-and-preview-mean.md) · [Index](01-explanation.md) · Next → [06 · Hello World with the app directory](06-hello-world-with-the-app-directory.md)

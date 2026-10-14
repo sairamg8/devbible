@@ -88,3 +88,15 @@ Disabling the hint entirely to get past a size-budget CI failure (rather than fi
 
 ### ⚠️ Pitfall 3: Running Bundle Analysis Only Locally, Never in CI
 A one-off local `ANALYZE=true` build the day the app was first optimized doesn't catch the next six months of gradual dependency creep — each individually-small addition passing under the radar. Wiring `performance.hints: 'error'` (or a dedicated size-limit CI step) into every PR turns bundle-size awareness from a one-time audit into a continuously-enforced property of the codebase.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Performance](https://webpack.js.org/configuration/performance/) — webpack.js.org: `hints` (warning by default in production), `maxAssetSize` and `maxEntrypointSize` (250000 bytes), `assetFilter`, opt-in checks from 5.110 such as `duplicatePackages` (*read*)
+- **Also good:** [webpack-bundle-analyzer](https://github.com/webpack/webpack-bundle-analyzer) — GitHub README: `webpack --profile --json &gt; stats.json` then the CLI, or the plugin with `generateStatsFile`; `stat`, `parsed`, `gzip`, `brotli` sizes (*read*)
+- **Beyond the docs:** [Build analysis](https://survivejs.com/webpack/optimizing/build-analysis/) — SurviveJS, undated: tools grouped by purpose: dependency, composition, comparison, duplicates, why a module is included
+
+{/* LINKMAP:END */}

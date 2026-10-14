@@ -232,6 +232,18 @@ sites is how one component ends up refetching on every mount while its neighbour
 key, does not — because `staleTime` is per-observer and the call site that omitted it silently gets
 the zero default.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Caching](https://tanstack.com/query/latest/docs/framework/react/guides/caching) — TanStack Query docs: the five-step lifecycle: first mount, extra mounts, all unmount (inactive), remount within gcTime, then collection (*read*)
+- **Also good:** [Important Defaults](https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults) — TanStack Query docs: staleTime 0 and gcTime 5 minutes stated as defaults (*read*)
+- **Beyond the docs:** [Practical React Query](https://tkdodo.eu/blog/practical-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2020-11-16, updated 2023-10-21: a fresh query reads only from the cache; inactive means no observers
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Direct cache access](./01e-direct-cache-access.md) · [Topic index](../README.md) · Next → [Structural sharing](./01g-structural-sharing.md)

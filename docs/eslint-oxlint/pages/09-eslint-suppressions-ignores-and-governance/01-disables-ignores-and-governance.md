@@ -88,3 +88,17 @@ Formatted files that ESLint still parses (or the reverse) confuse contributors.
 
 ### ⚠️ `noInlineConfig` without a fast override path
 Engineers will invent worse escapes (cast to `any`, `@ts-expect-error` spam). Provide a documented override process.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Ignore Files](https://eslint.org/docs/latest/use/configure/ignore) — ESLint docs: `globalIgnores()` is the way to skip directories; `ignores` inside a config only matches files; unignoring; `includeIgnoreFile` for `.gitignore`; no mention of `.eslintignore` (*read*)
+- **Also good:** [Bulk Suppressions](https://eslint.org/docs/latest/use/suppressions) — ESLint docs: `eslint-suppressions.json` at the project root, committed to the repo; `--suppress-all`, `--suppress-rule`, `--prune-suppressions` (*read*)
+- **Also good:** [Introducing bulk suppressions](https://eslint.org/blog/2025/04/introducing-bulk-suppressions/) — Iacovos Constantinou, ESLint blog, 2025-04-04: record existing violations, enforce the rule as error for new code, fix the backlog over time (*read*)
+- **Also good:** [Configure Rules](https://eslint.org/docs/latest/use/configure/rules) — ESLint docs: disabling rules with comments; `reportUnusedDisableDirectives` defaults to warn (*read*)
+- **Beyond the docs:** [Bulk Suppressions: A new ESLint feature for large codebases](https://developers.tiktok.com/blog/bulk-suppressions-a-new-eslint-feature-for-large-codebases) — Kevin Yang, TikTok for Developers (undated): why inline disables do not scale and a four-step adoption flow; it describes the earlier Rush Stack patch, not the built-in feature (*read*)
+
+{/* LINKMAP:END */}

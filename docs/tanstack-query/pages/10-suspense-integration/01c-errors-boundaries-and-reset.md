@@ -272,6 +272,18 @@ replaces all of them; one *inside* a suspense boundary scopes the error to that 
 skeleton logic stays outside. The practical rule is to pair them at the same level, around the same
 subtree, so that "what is loading" and "what has failed" describe the same region of the page.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Suspense](https://tanstack.com/query/latest/docs/framework/react/guides/suspense) — TanStack Query docs: errors reach the nearest boundary only when no cached data exists; `QueryErrorResetBoundary` and `useQueryErrorResetBoundary` (*read*)
+- **Also good:** [QueryErrorResetBoundary reference](https://tanstack.com/query/latest/docs/framework/react/reference/QueryErrorResetBoundary) — TanStack Query API reference: the component and its `reset`, shown only through a children-function example on a short page (*read*)
+- **Beyond the docs:** [React Query Error Handling](https://tkdodo.eu/blog/react-query-error-handling) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-09-10, updated 2023-10-21: error boundaries and `throwOnError` as a predicate; the post uses the v5 name and says nothing about resetting a boundary
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [What suspense removes](./01b-what-suspense-mode-removes.md) · [Topic index](../README.md) · Next → [Fetch-on-render and streaming](./01d-fetch-on-render-and-streaming.md)

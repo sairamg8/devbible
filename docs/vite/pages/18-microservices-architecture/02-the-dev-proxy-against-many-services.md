@@ -216,6 +216,17 @@ rather than assumed. The defensive answer is to avoid overlapping prefixes in th
 must exist, put the most specific key first as a defensive convention while explicitly not
 relying on that ordering surviving a Vite upgrade.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Server Options: server.proxy](https://vite.dev/config/server-options) — vite.dev (v8.3.4): path-prefix or `^` regexp keys, options extend `http-proxy-3`, `target`, `changeOrigin`, `rewrite`, `ws`, `configure` (*read*)
+- **Beyond the docs:** [Vite Proxy Not Working](https://fixdevs.com/blog/vite-proxy-not-working/) — FixDevs, 2026-03-25 (updated 2026-05-22): prefix matching (`/api` misses `/v1/api/users`), `rewrite` not webpack's `pathRewrite`, a three-service example for `/api`, `/auth` and `/uploads`, and that the proxy only runs in dev (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The BFF and browser fan-out](01a-the-bff-and-the-browser-fan-out.md) · [Vite overview](../../README.md) · Next → [CORS, cookies and websockets](02a-cors-cookies-and-websockets-through-the-proxy.md)

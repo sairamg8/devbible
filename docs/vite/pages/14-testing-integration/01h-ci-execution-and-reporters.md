@@ -108,6 +108,19 @@ Vitest 5.0 changed the `json` and `junit` reporters to write to a file by defaul
 **★ When would `vmForks` be the right pool choice over the default `forks`?**
 For a large test suite where per-file overhead from spinning up and tearing down VM contexts under `vmThreads` would be worth the speed, but `vmThreads`'s own known memory-leak proneness over a long run is unacceptable — `vmForks` gets the VM-context execution speed while still using `child_process` for worker isolation, so the OS reclaims memory on worker recycling instead of leaving it to accumulate inside long-lived `worker_threads`. It is a choice made for large, long-running suites specifically, not a general-purpose default; for most projects `forks` remains the right starting point and `vmForks` is a measured optimization, not a blind swap.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Command Line Interface](https://vitest.dev/guide/cli) — vitest.dev: `vitest` runs once in CI or without a TTY, `vitest run`, `--reporter` values, `--outputFile`; several defaults depend on `process.env.CI`; the `pool` option reads "default: `forks`" (*read*)
+- **Also good:** [pool](https://vitest.dev/config/pool) — vitest.dev: "Default: `'forks'`"; the page gives no version note on when that became the default (*read*)
+- **Also good:** [Migration Guide](https://vitest.dev/guide/migration) — vitest.dev: Vitest 5.0 breaking changes, including "Hoisted Mocking Calls Must Be at the Top Level" (Vitest 4 only logged a warning, 5.0 throws), `clearMocks` on by default, and under "Generated Reports and Artifacts Use the `.vitest` Directo
+- **Beyond the docs:** [Migration from Jest to Vitest: A Real-World Experience with 2900+ Tests](https://dev.to/56_kode/migration-from-jest-to-vitest-a-real-world-experience-with-2900-tests-39np) — 56kode, DEV Community, 2024-12-18: uneven speed gains, empty snapshots Jest had passed, a jsdom to Happy DOM swap that saved "almost 1 minute"; results varied by machine (30 seconds to 5 minutes) and the post names no Vitest version, so check anything version-speci
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01g · In-source testing](01g-in-source-testing.md) · [Vite overview](../../README.md) · Next → [01i · Migrating from Jest](01i-migrating-from-jest.md)

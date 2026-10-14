@@ -202,6 +202,18 @@ On the mutation instance held by the library — not in the query cache and not 
 **★ A colleague fixes a flickering rollback by widening the `onSettled` invalidation from `['posts', id]` to `['posts']`. What do you say in review?**
 That the flicker is gone because the whole subtree now refetches, not because the rollback is right. Invalidation filters are prefix matches, so the widened call pulls the list, the search results and every cached page — real network cost on every mutation, and it hides whatever the actual defect was, usually a snapshot that missed one of the two keys the optimistic write touched. The diagnostic question is which keys `onMutate` wrote and whether the returned result has a field for each of them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optimistic Updates](https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates) — TanStack Query docs: cancel outgoing refetches, snapshot with `getQueryData`, write with `setQueryData`, return the snapshot for rollback (*read*)
+- **Also good:** [Mutations](https://tanstack.com/query/latest/docs/framework/react/guides/mutations) — TanStack Query docs: onMutate result passed to onError and onSettled (*read*)
+- **Beyond the docs:** [Concurrent Optimistic Updates in React Query](https://tkdodo.eu/blog/concurrent-optimistic-updates-in-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2025-04-28: a fast refetch overwriting the second mutation's update; skip invalidation while `isMutating()`; leaves rollback out on purpose
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`useMutation` lifecycle](../05-usemutation/01-mutation-lifecycle.md) · [Topic index](../README.md) · Next → [Concurrent mutations on one key](01b-concurrent-mutations-on-one-key.md)

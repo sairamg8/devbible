@@ -130,3 +130,14 @@ transition: { staggerChildren: 0.1 }, // fine for 5 items, feels sluggish for 50
 // duration regardless of item count, for lists whose size can vary significantly
 transition: { staggerChildren: Math.min(0.1, 2 / items.length) }, // caps total stagger time at ~2s regardless of count
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [stagger](https://motion.dev/docs/stagger) — motion.dev: `from`, `startDelay`, `ease`, negative staggers, a Grid stagger heading (the page also says grids are not yet supported), and a React section on variants and `delayChildren` (*read*)
+- **Also good:** [Transitions](https://motion.dev/docs/react-transitions) — motion.dev: `delayChildren: stagger(...)` and `when` under Orchestration (*read*)
+
+{/* LINKMAP:END */}

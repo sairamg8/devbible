@@ -220,6 +220,18 @@ The array emits two separate `<meta property="article:author">` tags, one per el
 **★ Which is authoritative when a segment has both `opengraph-image.png` and `metadata.openGraph.images`?**
 The file. File-based metadata has higher priority than both the `metadata` object and `generateMetadata`. This is the intended design — the docs recommend the file convention precisely so you do not have to keep a config export in sync with files on disk — but it produces a genuinely confusing debugging session when someone dropped an `opengraph-image.png` into a segment months ago and your computed images are being discarded. The check is a file listing of the segment and its ancestors, not a read of the metadata code.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [opengraph-image and twitter-image](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image) — Next.js docs, updated 2026-07-09: image files vs generated `ImageResponse` from `next/og`, `alt`/`size`/`contentType` exports, `params` as a Promise, static by default, 5 MB (Twitter) and 8 MB (Open Graph) build-failing size limits (*read*)
+- **Read this:** [How to implement JSON-LD](https://nextjs.org/docs/app/guides/json-ld) — Next.js docs, updated 2026-03-02: plain script tag, `JSON.stringify(...).replace(/&lt;/g, '\\u003c')` against XSS, `schema-dts` for types, Rich Results Test and Schema Markup Validator (*read*)
+- **Beyond the docs:** [Implementing JSON-LD in Next.js for SEO](https://wisp.blog/blog/implementing-json-ld-in-nextjs-for-seo) — Raymond Yeh, 2024-11-18: blog, product and CMS examples, placement in the body not the head; its snippets mix App Router code with `pages/` paths, and it never mentions escaping `&lt;` in `JSON.stringify`, which the official page insists on (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [File metadata, the 404 route and the insight](01g-file-metadata-the-404-route-and-debugging-the-insight.md) · [Chapter 12 overview](01-explanation.md) · Next → [Twitter cards and the companion blocks](02b-twitter-cards-and-the-companion-blocks.md)

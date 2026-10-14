@@ -120,3 +120,15 @@ shared: { react: { eager: true }, 'react-dom': { eager: true }, lodash: { eager:
 // ✅ CORRECT: eager is a host-only concern for the FIRST render's dependencies; remotes stay lazy by default
 shared: { react: { singleton: true }, 'react-dom': { singleton: true } }, // no eager — in a remote
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [shared](https://module-federation.io/configure/shared) — module-federation.io: `singleton` (higher version wins, lower side warned), `requiredVersion`, `eager`, `shareScope`, prefix matching with a trailing slash; does not document `strictVersion` (*read*)
+- **Also good:** [ModuleFederationPlugin: sharing hints](https://webpack.js.org/plugins/module-federation-plugin/) — webpack.js.org: all hints, and `strictVersion` defaults to true when a local fallback exists and the module is not a singleton (*read*); [Runtime troubleshooting](https://module-federation.io/guide/troubleshooting/runtime)
+- **Also good:** [Runtime troubleshooting](https://module-federation.io/guide/troubleshooting/runtime)
+
+{/* LINKMAP:END */}

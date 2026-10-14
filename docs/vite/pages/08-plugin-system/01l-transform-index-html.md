@@ -239,6 +239,17 @@ is to branch on `this.environment` or to inject only in the environment that pro
 user actually receives. It is a good illustration of why the **Scope** line on each hook is worth
 reading rather than assuming: the Vite-specific hooks do not share one rule.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Plugin API — transformIndexHtml](https://vite.dev/guide/api-plugin) — vite.dev: the hook signature (`#transformindexhtml`), `order: 'pre'` so an injected script goes through the plugin pipeline and `'post'` after unordered hooks, return a string, an array of descriptors or `&#123; html, tags &#125;`, `injectT
+- **Also good:** [Environment API for Plugins](https://vite.dev/guide/api-environment-plugins) — vite.dev: Per-environment Hooks and Global Hooks, which is why this hook can run once per environment (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The Guard Is Not the Fix](01k-the-guard-is-not-the-fix.md) · [Vite overview](../../README.md) · Next → [HTML Tag Descriptors](01m-html-tag-descriptors.md)

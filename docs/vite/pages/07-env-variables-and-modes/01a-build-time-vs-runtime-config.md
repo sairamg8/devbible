@@ -263,6 +263,18 @@ have reached for it too early is that the value is stable per environment and th
 known at build time; that is a build matrix, not a runtime concern, and paying a blocking request on
 every page load to avoid three CI jobs is a bad trade.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Env Variables and Modes](https://vite.dev/guide/env-and-mode) — vite.dev: replacement at build time, `VITE_` variables exposed to client source, "`VITE_*` variables should not contain sensitive information such as API keys" (*read*)
+- **Also good:** [Shared Options: envPrefix](https://vite.dev/config/shared-options) — vite.dev: why an empty prefix is refused; widening it exposes more (*read*)
+- **Beyond the docs:** [Build-Time vs Runtime Environment Variables](https://env.dev/guides/build-time-env-variables) — env.dev, updated 2026-06-23: the `grep -rF` check on `dist/` for a baked-in value and the runtime-config options (entrypoint writes `config.json` or `window.__CONFIG__`); generic, not Vite-specific
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Env System & `.env` Files](01-environment-system.md) · [Vite overview](../../README.md) · Next → [The `VITE_` Prefix & Built-In Constants](01b-the-vite-prefix-and-secrets.md)

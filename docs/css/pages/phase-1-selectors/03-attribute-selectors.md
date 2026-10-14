@@ -157,6 +157,17 @@ user-entered data.
 Language subtag matching: `[lang|="en"]` matches `en` and anything beginning
 `en-`, such as `en-GB`. It has essentially no other use.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) — MDN: all seven operators and the `i` and `s` flags (*read*)
+- **Beyond the docs:** [Case Insensitive CSS Attribute Selector](https://davidwalsh.name/css-attribute-case) — David Walsh, 2024-06-19: the `i` flag, with advice to use it sparingly (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · Combinators](./02-combinators.md) · Next: [04 · Selector lists](./04-selector-lists.md) →

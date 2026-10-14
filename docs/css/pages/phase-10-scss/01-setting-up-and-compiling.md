@@ -199,6 +199,18 @@ Without one, DevTools attributes every rule to the compiled output, so you canno
 tell which partial a rule came from. With one, it points at the source line you
 wrote.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dart Sass command-line interface](https://sass-lang.com/documentation/cli/dart-sass/) — Sass docs: `--watch` recompiles on changes to a file or its dependencies, source maps are on by default (`--no-source-map` disables), `--load-path` adds lookup directories (*read*)
+- **Also good:** [Install Sass](https://sass-lang.com/install/) — Sass docs: npm, Homebrew, Chocolatey and standalone downloads (*read*)
+- **Also good:** [Syntax](https://sass-lang.com/documentation/syntax/) — Sass docs: SCSS (`.scss`, braces) vs the indented syntax (`.sass`); does not cover partials (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · Nesting and `&`](./02-nesting-and-ampersand.md) →

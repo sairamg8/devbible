@@ -209,6 +209,18 @@ detonating its plugin ecosystem. That is a genuinely instructive piece of design
 surface that survived the rewrite was the *interface*, not the implementation, and it is why the
 Vite 8 migration is a list of renamed options rather than an ecosystem reset.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Why Vite](https://vite.dev/guide/why) — vite.dev: why bundling is still needed in production, and the "A Unified Toolchain" section: Rolldown, using Oxc, unifies what esbuild and Rollup did separately (*read*)
+- **Also good:** [Rolldown introduction](https://rolldown.rs/guide/introduction) — rolldown.rs: what Rolldown is and that it is "primarily designed to serve as the underlying bundler in Vite"; the page still marks minification and HMR as WIP, so it lags the 1.0 release (*read*)
+- **Also good:** [Vite 8.0 is out](https://vite.dev/blog/announcing-vite8) — vite.dev blog, 2026-03-12: Vite 8 resolves esbuild plus Rollup into Rolldown; the "10-30x" figure is "up to", measured against Rollup; "most" existing plugins work out of the box (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01n · Module Federation](../16-migration-recipes/01n-module-federation-migration.md) · [Vite overview](../../README.md) · Next → [Choosing a Bundler](01a-choosing-a-bundler.md)

@@ -146,3 +146,16 @@ output) before deciding a specific finding is actually worth the engineering tim
 
 ### ⚠️ Pitfall 4: Not Adding a Regression Guard After Fixing the Bloat
 Fixing today's bloat without wiring `performance.hints: 'error'` (or a dedicated CI size-limit step) into the pipeline means the exact same gradual-creep problem from the scenario above recurs — the fix addressed the symptom for this moment, not the absence of a tripwire that would have caught it three weeks in instead of two months in.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Setting performance budgets with webpack](https://web.dev/articles/codelab-setting-performance-budgets-with-webpack) — web.dev codelab, last updated 2019-01-31: measure a 323 KiB bundle, budget at 100000 bytes, drop moment.js, reach 97.7 KiB, monitor; webpack version unstated and the era is webpack 4
+- **Also good:** [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) — the `sideEffects` pitfalls for libraries (*read*); [Performance](https://webpack.js.org/configuration/performance/): `duplicatePackages` and `unsplitVendors` checks (*read*)
+- **Also good:** [Performance](https://webpack.js.org/configuration/performance/)
+- **Beyond the docs:** [A dirty webpack trick that reduced our gzipped bundle size by 55kb](https://swizec.com/blog/a-dirty-webpack-trick-that-reduced-our-gzipped-bundle-size-by-55kb/) — Swizec Teller, 2017-06-15: `IgnorePlugin` for Moment locales, Lodash replaced by modular packages; webpack 2, the author says it "might be brittle"
+
+{/* LINKMAP:END */}

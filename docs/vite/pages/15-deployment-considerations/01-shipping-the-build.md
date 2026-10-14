@@ -161,6 +161,19 @@ The CLI flag overrides the config value for that invocation. It exists because `
 **★ Why does the GitHub Pages sub-path mistake produce a completely blank page instead of a partially broken one?**
 Because the failure is in loading the JavaScript itself, not in something the JavaScript does. `index.html` loads fine — it's served correctly regardless of `base`, since the host is just returning a static file at a known path. But every `<script type="module" src="...">` inside it points at the wrong URL, so the browser's very first request for the app's code 404s. Nothing in the SPA ever executes: no router, no component tree, no fallback UI, because there was never any JavaScript running to produce one. The `<body>` renders whatever static markup was in `index.html` before the app mounts — usually nothing — which is why the failure mode is specifically a blank page rather than a broken-looking one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Building for Production](https://vite.dev/guide/build) — vite.dev: Public Base Path: `base` rewrites asset paths, `import.meta.env.BASE_URL` for runtime URLs, relative base needs `import.meta` support (*read*)
+- **Also good:** [Deploying a Static Site](https://vite.dev/guide/static-deploy) — vite.dev: project sites on a subpath need `base` set to the repo name; `vite preview` "not meant as a production server"; the page lists the hosts but does not explain SPA fallback (*read*)
+- **Also good:** [Build Options](https://vite.dev/config/build-options) — vite.dev: `outDir` (`dist`), `assetsDir` (`assets`), `emptyOutDir` (true when inside root) (*read*)
+- **Also good:** [Static Asset Handling](https://vite.dev/guide/assets) — vite.dev: `public/` is for files never referenced in source, files needing exact names, or URLs without an import; copied unchanged, referenced as `/icon.png` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01i · Migrating from Jest](../14-testing-integration/01i-migrating-from-jest.md) · [Vite overview](../../README.md) · Next → [01a · The shape of dist/](01a-outdir-assetsdir-and-the-dist-shape.md)

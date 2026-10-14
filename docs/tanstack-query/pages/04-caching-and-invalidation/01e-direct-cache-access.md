@@ -274,6 +274,18 @@ plus no visual change means you created a second cache entry that nothing observ
 reading the key back with `getQueryData` before the write, or by opening the devtools and looking
 for a key that appeared with no observers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Updates from Mutation Responses](https://tanstack.com/query/latest/docs/framework/react/guides/updates-from-mutation-responses) — TanStack Query docs: writing a mutation's response into the cache with `setQueryData`, plus an immutability warning; its examples guard `oldData` but never say the updater can receive undefined (*read*)
+- **Also good:** [QueryClient](https://tanstack.com/query/latest/docs/reference/QueryClient) — TanStack Query API reference: `setQueryData`, `setQueriesData` and `getQueryData` as separate entries (*read*)
+- **Beyond the docs:** [Using WebSockets with React Query](https://tkdodo.eu/blog/using-web-sockets-with-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-06-06, v3/v4 era: invalidate by default, `setQueryData` or `setQueriesData` for small partial updates, and why partial writes miss additions and deletions
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Invalidate vs refetch vs reset vs remove](./01d-invalidate-refetch-reset-remove.md) · [Topic index](../README.md) · Next → [`staleTime` vs `gcTime`](./01f-staletime-vs-gctime.md)

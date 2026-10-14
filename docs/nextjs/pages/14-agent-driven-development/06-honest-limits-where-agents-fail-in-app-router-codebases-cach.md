@@ -178,6 +178,18 @@ Not by describing the semantics, because `revalidateTag` and `updateTag` both re
 **Which of the failures on this page would a code reviewer plausibly catch, and which would they not?**
 A reviewer who knows the codebase catches the `'use client'` addition and the request API in a shared layout, because both are visible lines with known consequences. They will not catch a `cacheLife` profile that is merely plausible, because nothing in the diff says what the right one is; they will not catch a moved `<Suspense>` boundary, because the interesting effect is on a subtree the diff does not show; and they will not catch lost instant navigation, because there is nothing anywhere to see. The dividing line is not reviewer skill — it is whether the consequence is local to the change.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [AGENTS.md outperforms skills in our agent evals](https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals) — Jude Gao, Vercel, 2026-01-27: why agents miss on-demand retrieval (the skill was never invoked in 56% of default cases) and why always-present context helps; vendor evals (*read*)
+- **Also good:** [How Next.js supports AI coding agents (Built-in guidance for errors)](https://nextjs.org/docs/app/guides/ai-agents) — Next.js docs: the framework's own fix for a common failure: blocking-route errors with labeled trade-offs rather than a guess (*read*)
+- **Beyond the docs:** [Checklist: review AI-generated Next.js code](https://pastecode.xyz/checklists/review-ai-generated-nextjs-code) — PasteCode, updated 2026-06-08, author not named: names the repeat failures: mixing Pages and App Router, client-only code in Server Components, stale cache after mutations or outdated fetch options, invented APIs and config options; anecdotal, no failure rates (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The verification loop, guardrails and review discipline](05b-the-verification-loop-guardrails-and-review-discipline.md) · [Chapter 14 overview](01-explanation.md) · Next → [What an agent cannot decide](06b-what-an-agent-cannot-decide-and-what-context-files-fix.md)

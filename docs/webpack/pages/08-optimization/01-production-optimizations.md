@@ -100,3 +100,16 @@ Even with `"sideEffects": false` set correctly, a CommonJS-authored library (or 
 
 ### ⚠️ Pitfall 3: Blanket `drop_console: true` Silencing Legitimate Production Error Logging
 Stripping all `console.*` calls in production removes genuine `console.error` calls a monitoring/error-tracking setup might rely on for capturing unhandled exceptions client-side. Scope Terser's `pure_funcs` to specifically target `console.log`/`console.debug` (development-only chatter) while explicitly preserving `console.error`/`console.warn`, rather than a blanket `drop_console`.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) — webpack.js.org: `sideEffects` (array of globs) versus `usedExports`, `/*#__PURE__*/`, the CSS-dropped-by-`sideEffects: false` example, four common pitfalls (*read*)
+- **Beyond the docs:** [Tree-Shaking: A Reference Guide](https://www.smashingmagazine.com/2021/05/tree-shaking-reference-guide) — Atila Fassina, Smashing Magazine, 2021-05-14: ES modules versus CommonJS, side effects, scope hoisting, a checklist; no single webpack version targeted
+- **Read this:** [Optimization](https://webpack.js.org/configuration/optimization/) — webpack.js.org: production defaults for `moduleIds` (deterministic), `concatenateModules`, `usedExports`, `minimize`, and the `'...'` minimizer shorthand (*read*)
+- **Also good:** [ModuleConcatenationPlugin](https://webpack.js.org/plugins/module-concatenation-plugin/) — webpack.js.org: scope hoisting, bailouts (non-ES modules, `eval`, `module.hot`), `stats.optimizationBailout` (*read*)
+
+{/* LINKMAP:END */}

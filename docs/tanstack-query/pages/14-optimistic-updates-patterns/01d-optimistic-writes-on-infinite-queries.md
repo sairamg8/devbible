@@ -170,6 +170,17 @@ It changes when a whole page is added or removed — the guide's own example dro
 **★ How does `cancelQueries` interact with `fetchNextPage`?**
 They are the same query key, so `cancelQueries({ queryKey: ['feed'] })` at the top of `onMutate` cancels an in-flight page load as readily as a background refetch. The query is reverted and the observer refetches, so nothing is permanently lost, but the user who scrolled and immediately tapped "like" sees the incoming page vanish and the loading spinner return. There is no finer-grained filter that separates "the refetch I am racing" from "the page the user asked for" — the key is the unit — which is another argument for keeping the optimistic value out of the cache entirely when the update only needs to be visible in one place ([`01c`](01c-in-flight-state-and-ui-variables.md)).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optimistic Updates](https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates) — TanStack Query docs: does not cover infinite queries (*read*)
+- **Also good:** [Infinite Queries](https://tanstack.com/query/latest/docs/framework/react/guides/infinite-queries) — TanStack Query docs: data is an object with pages and pageParams (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [In-flight state and UI variables](01c-in-flight-state-and-ui-variables.md) · [Topic index](../README.md) · Next → [Testing TanStack Query](../15-testing-tanstack-query/01-isolated-and-integration-testing.md)

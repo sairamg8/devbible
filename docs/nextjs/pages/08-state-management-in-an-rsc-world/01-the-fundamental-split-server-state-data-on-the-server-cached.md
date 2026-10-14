@@ -197,6 +197,18 @@ It is gone. The documentation says entries do not carry over *"even durable `rem
 **★ Why can a Server Component not hold state at all?**
 Because its code never reaches the browser, so there is nothing to hold the state between renders and nothing to trigger an update. `useState`, `useEffect` and event handlers all require code that runs in the browser and responds to updates over time. A Server Component's "state" is its input — params, `searchParams`, cookies, headers and whatever it reads from the system of record — and the way to change what it renders is to render it again on the server.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) — nextjs.org (updated 2026-10-05): when state, effects and browser APIs force a Client Component, how the RSC Payload carries server output, and context providers as Client Components (*read*)
+- **Also good:** [Server Components](https://react.dev/reference/rsc/server-components) — react.dev: what runs ahead of time, how it composes with Client Components, and the client fetch waterfall that server-side reads remove (*read*)
+- **Beyond the docs:** [React Query as a state manager in Next.js: do you still need Redux or Zustand?](https://techblog.geekyants.com/react-query-as-a-state-manager-in-nextjs-do-you-still-need-redux-or-zustand) — GeekyAnts tech blog, no author or date shown: the plain two-bucket taxonomy (server state is fetched and cached data, client state is UI-only), placing React Query on the first and Zustand or Context on the second; it sorts by what the data is, not by who is authoritative, so
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter 8 overview](01-explanation.md) · Next → [01b · The categories the table omits](01b-the-categories-the-table-omits.md)

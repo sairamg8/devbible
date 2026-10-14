@@ -186,3 +186,14 @@ and visual-regression services consume stories.
 
 **← Prev** [01 · What Storybook is](./01-what-storybook-is.md) ·
 **Next →** [03 · Renderers and builders](./03-renderers-and-builders.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configure Storybook](https://storybook.js.org/docs/configure) — Storybook docs: `preview.js` runs in the preview iframe, `manager.js` configures the UI, `main.js` the project (*read*)
+- **Also good:** [Types of addons](https://storybook.js.org/docs/addons/addon-types) — Storybook docs: describes panel, toolbar and tab addons, with the examples in files named `manager.js`; it does not explain the two environments (*headings only*)
+
+{/* LINKMAP:END */}

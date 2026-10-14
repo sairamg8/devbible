@@ -210,6 +210,19 @@ into a build failure instead of an empty value.
 **What is the difference between `@for … through` and `@for … to`?**
 `through` includes the final value; `to` stops one short.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@each](https://sass-lang.com/documentation/at-rules/control/each/) — Sass docs: `@each $key, $value in $map` walks a map (*read*)
+- **Also good:** [Maps](https://sass-lang.com/documentation/values/maps/) — Sass docs: `map.get()`, `map.set()`, `map.merge()`; maps are immutable (*read*)
+- **Also good:** [@for](https://sass-lang.com/documentation/at-rules/control/for/) — Sass docs: `to` excludes the end, `through` includes it (*read*)
+- **Beyond the docs:** [Efficient Infinite Utility Helpers Using Inline CSS Custom Properties and calc()](https://css-tricks.com/efficient-infinite-utility-helpers-using-inline-css-custom-properties-and-calc/) — Andy Ford, CSS-Tricks, 2021-08-06: an `@each` loop over a spacing map gives about 8.6 KB uncompressed, and about 41.7 KB uncompressed with three breakpoints from a mixin; replaced by custom properties and `calc()`. This is the cost side of the generator argument
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05 · Mixins](./05-mixins.md) · Next: [07 · Sass functions](./07-sass-functions.md) →

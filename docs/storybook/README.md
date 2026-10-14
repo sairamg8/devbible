@@ -76,6 +76,8 @@ common reason a copied snippet fails to resolve.
 
 ## Parts
 
+> **Link map:** for every topic there is a [link map](./link-map/README.md) — the primary docs plus, where one exists, the best non-official explanation. First pass, open for review.
+
 | # | Part | Covers | Phases |
 |---|---|---|---|
 | 1 | **[How Storybook runs](syllabus/01-how-storybook-runs.md)** | The two processes, CSF, args and controls | 0–2 |

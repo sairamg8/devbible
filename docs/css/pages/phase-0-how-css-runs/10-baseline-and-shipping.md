@@ -213,6 +213,18 @@ make sure the fallback is genuinely usable rather than degraded to the point of
 being broken. Record the date so the guard can be deleted when the feature
 reaches Baseline.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Baseline](https://web.dev/baseline) — web.dev: Limited, Newly available (all core browsers), Widely available (30 months after that), and the core set of Chrome, Edge, Firefox and Safari on desktop and mobile (*read*)
+- **Also good:** [How to query the Web Platform Dashboard for Baseline tooling](https://web.dev/articles/web-platform-dashboard-baseline) — web.dev, Jeremy Wagner, 2025-03-04: queries the webstatus.dev API with a `web-features` id and reads `baseline.status` (*read*)
+- **Beyond the docs:** [How to Use Baseline Data](https://12daysofweb.dev/2024/how-to-use-baseline-data/) — Rachel Andrew, 12 Days of Web 2024: adopt Widely available as the cutoff and you can use those features; Newly available is a case-by-case call; polyfill decisions are left to each team
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [09 · @supports](./09-supports-feature-queries.md) · Next: [11 · Vendor prefixes in 2026](./11-vendor-prefixes.md) →

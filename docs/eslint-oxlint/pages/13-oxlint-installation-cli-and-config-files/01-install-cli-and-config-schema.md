@@ -128,3 +128,15 @@ You lose JSON completion and are more likely to mistype keys.
 
 ### ⚠️ `options.typeAware: true` without `oxlint-tsgolint`
 Type-aware mode requires the companion package—install it explicitly when enabling.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuration](https://oxc.rs/docs/guide/usage/linter/config.html) — oxc.rs: discovers `.oxlintrc.json`, `.oxlintrc.jsonc`, `oxlint.config.ts` or `oxlint.config.mts`; JSON and TS configs cannot coexist; `defineConfig` from `oxlint`; `options.typeCheck` is experimental (*read*)
+- **Also good:** [Command-line interface](https://oxc.rs/docs/guide/usage/linter/cli.html) — oxc.rs: `--fix`, `-c`, `--type-aware`, `-D`, `-W`, `-A`, `--format` values (checkstyle, github, gitlab, json, junit, sarif and more) (*read*)
+- **Also good:** [Nested config files](https://oxc.rs/docs/guide/usage/linter/nested-config.html) — oxc.rs: per-package configs in a monorepo, a shared base through `extends`; "not automatically merged" (*read*)
+
+{/* LINKMAP:END */}

@@ -126,3 +126,15 @@ describe('CartDrawer Behavioral Specifications', () => {
 - **Previous**: [06 · Coverage and Configuration](../06-coverage-and-configuration/01-jest-config.md) — Configuring jsdom environment.
 - **Next**: [08 · RTL Queries](../08-rtl-queries/01-query-variants-and-priority.md) — Query variants (`getBy`, `queryBy`, `findBy`) and priority order.
 - **React Testing Track (`docs/react/pages/phase-14-correctness/`)**: Deep dive into React component testing contracts.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Guiding Principles](https://testing-library.com/docs/guiding-principles) — testing-library.com: "The more your tests resemble the way your software is used, the more confidence they can give you" and deal with DOM nodes rather than component instances; the phrase "implementation details" does not appear (*read*)
+- **Beyond the docs:** [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details) — Kent C. Dodds, 2020-08-17: an accordion test that fails after renaming `openIndex` to `openIndexes` (false negative) and passes with a broken click handler (false positive); enzyme and React 16 class components, so read it for the argument, not the code
+- **Also good:** [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) — Kent C. Dodds, 2020-05-04: "Not using screen", added in DOM Testing Library 6.11.0; written before React 18 and user-event v14
+
+{/* LINKMAP:END */}

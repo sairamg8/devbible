@@ -205,6 +205,17 @@ CI catches the Node floor of 20.9, the TypeScript floor of 5.1, the removed sync
 **★ Someone proposes upgrading React and Next.js in two separate PRs to reduce blast radius. Respond.**
 For the App Router that split is illusory: the React that renders comes with Next.js, so the "React PR" changes only declared versions and types while the "Next.js PR" carries the actual React change. Worse, in between the two you have types describing one React and a runtime using another. The genuinely separable pieces are different — raise the Node version in its own change, run the async Request API codemod ahead of the major, and set the browser matrix expectation with the team — and then do `next`, `react`, `react-dom` and the two `@types` packages as one move.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Upgrading to Next.js 16](https://nextjs.org/docs/app/guides/upgrading/version-16) — Next.js docs (updated 2026-10-02): Node 20.9+ and TypeScript 5.1+, the upgrade codemod, and "the App Router uses the latest React Canary release" with 19.2 features (*read*)
+- **Also good:** [React 19.2](https://react.dev/blog/2025/10/01/react-19-2) — react.dev blog, 2025-10-01: what 19.2 adds: New React Features, New React DOM Features, Notable Changes (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Glossary, part 3 — the A–Z](01c-appendix-a-glossary-the-a-to-z.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix B part 2 · the migration the build catches](02b-appendix-b-the-15-to-16-migration-mechanically.md)

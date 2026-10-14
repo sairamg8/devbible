@@ -143,3 +143,17 @@ Running a suspect test 50 times locally and seeing zero failures is evidence the
 
 ### ⚠️ Pitfall 4: Debugging a Visual-Regression Flake as if It Were a Functional One
 `toHaveScreenshot()` flakiness has a mostly disjoint cause set from functional-assertion flakiness: font rendering differences between a local OS and CI's Docker image, animations not fully settled at capture time, or a slightly different default viewport. The Step 1-5 sequence above (traces, CPU throttling, isolation audits) mostly doesn't apply here — the actual fix path is usually `maxDiffPixels`/threshold tuning, disabling animations before capture (`animations: 'disabled'` on the screenshot call), and generating baseline images from the SAME environment (CI's Docker image, not a local machine) that will run the comparison.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Best Practices](https://playwright.dev/docs/best-practices) — playwright.dev: web-first assertions, isolation, "use the Playwright trace viewer instead of videos and screenshots" on CI, `--debug` locally; no flaky-test triage recipe
+- **Also good:** [Retries](https://playwright.dev/docs/test-retries) — playwright.dev: flaky classification (*read*)
+- **Also good:** [Timeouts](https://playwright.dev/docs/test-timeouts)
+- **Beyond the docs:** [How to Reproduce CI Failures Locally in Playwright](https://dev.to/playwright/how-to-reproduce-ci-failures-locally-in-playwright-lfl) — Debbie O'Brien, DEV Community, 2025-02-19: `--repeat-each=100`, `--workers=10` and `-x` to expose intermittent failures; does not cover Docker, `CI=true`, traces or throttling
+- **Beyond the docs:** [How to Detect and Avoid Playwright Flaky Tests](https://www.browserstack.com/guide/playwright-flaky-tests) — Grandel Robert, BrowserStack, last updated 2026-08-21: CI runners with less CPU and memory, retries flag but do not fix, `on-first-retry` traces, shared-state interference between workers
+
+{/* LINKMAP:END */}

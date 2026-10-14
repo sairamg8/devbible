@@ -160,6 +160,16 @@ dropped, silently.
 The later one replaces the earlier one entirely — they do not merge, so
 partially-defined duplicates silently lose their earlier steps.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [At-rules](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/At-rules) — MDN: what an at-rule is, and the statement and block at-rules listed (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [07 · Resets and normalisers](./07-resets-and-normalisers.md) · Next: [09 · @supports feature queries](./09-supports-feature-queries.md) →

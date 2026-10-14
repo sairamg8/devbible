@@ -155,6 +155,18 @@ Whether `vite build` has been run. Everything the dev server can prove is that y
 **Why is the `--` in `npm create vite@latest my-app -- --template react-ts` not optional?**
 Because `npm create` is `npm exec` with an argument convention, and npm parses flags it recognises before deciding what to forward. Without the separator, `--template` is consumed as an npm flag rather than passed to `create-vite`, and `create-vite` — having received no template — falls back to its interactive prompt. It looks like the flag was ignored; it was actually intercepted one layer up. This is npm-specific plumbing, not a Vite behaviour, which is why the failure survives every "check the Vite docs" instinct.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Getting Started](https://vite.dev/guide/) — vite.dev: the `create vite` command per package manager, `--template`, the extra `--` on npm 7+, `.` for current directory, `--no-interactive`, the 18 template names, the three default scripts, and the Node line our page quotes: "20.19+, 22
+- **Also good:** [Command Line Interface](https://vite.dev/guide/cli) — vite.dev: `vite`, `vite build`, `vite optimize` (marked deprecated, pre-bundling is automatic), `vite preview`, and the options each takes; `--configLoader` is listed on all four (*read*)
+- **Also good:** [create-vite README](https://github.com/vitejs/vite/tree/main/packages/create-vite) — vitejs/vite repo: the same preset list including `react-compiler` and `react-compiler-ts`; the plain `template-react-ts` README there says the React Compiler is off by default for dev and build cost (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Core Architecture](../01-core-architecture/01-dual-engine-model.md) · [Vite overview](../../README.md) · Next → [Configuration](../03-configuration/01-vite-config-file.md)

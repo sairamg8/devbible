@@ -172,6 +172,23 @@ Ask where the numbers come from. The Next.js `runtime` reference is four sentenc
 **A route needs to run physically close to users in Asia. What is the Next.js answer in 16?**
 There isn't one at the framework level any more. The route-segment API for this was `preferredRegion`, and it is deprecated in the same table as `runtime = 'edge'` — the documentation notes that *"regions were previously only supported with `export const runtime = 'edge'`, which is now deprecated"*, and names no successor export. Region placement is now configured on the platform, not in the route file. That also changes the shape of the conversation: before you move compute closer to users, work out where the data is, because moving compute away from its database usually makes the request slower, not faster. That arithmetic is [chapter 17 · 03](../17-deployment-scaling-and-observability/03-multi-region-strategies-and-data-locality-patterns.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Edge Runtime](https://nextjs.org/docs/app/api-reference/edge) — Next.js docs, version 16.4.0, updated 2026-02-02: Node.js is the default; Edge has a limited API set, no ISR, no native Node APIs, no `eval`; lists the supported Web APIs. The page predates the deprecation wording and still describes Edge as the runtime "used in Proxy" (*read*)
+- **Also good:** [runtime route segment config](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config/runtime) — Next.js docs, updated 2026-04-30: `'edge'` is marked deprecated, remove the export; cannot be used in Proxy (*read*)
+- **Also good:** [Route Segment Config](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config)
+- **Also good:** [preferredRegion](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config/preferredRegion)
+- **Also good:** [Edge Runtime Deprecated](https://nextjs.org/docs/messages/edge-runtime-deprecated)
+- **Also good:** [preferredRegion Deprecated](https://nextjs.org/docs/messages/preferred-region-deprecated)
+- **Also good:** [Vercel Edge Runtime](https://vercel.com/docs/functions/runtimes/edge) — Vercel docs, updated 2026-08-03: "We recommend migrating from edge to Node.js", and "Starting in Next.js 16.3, setting `runtime = 'edge'` is no longer supported" (*read*)
+- **Also good:** [Fluid compute](https://vercel.com/docs/fluid-compute)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · Bundle analysis and lazy loading](03-bundle-analysis-dynamic-imports-lazy-loading.md) · [Chapter index](01-explanation.md) · Next → [04b · What survives the withdrawal](04b-what-survives-the-withdrawal-proxy-and-region-placement.md)

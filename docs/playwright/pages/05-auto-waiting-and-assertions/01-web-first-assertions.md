@@ -204,6 +204,19 @@ Right when a page has settled and you want a complete report of what is wrong wi
 **Does auto-waiting mean explicit waits are never needed?**
 No — it means arbitrary sleeps are never needed. The auto-waiting covers actionability before actions and polling inside assertions; anything outside that (a specific network response, a custom readiness condition, a value that lives outside the browser) still needs an explicit construct, which is what `waitForResponse`, `expect.poll` and `expect.toPass` are for. What disappears is `waitForTimeout(2000)`, because a fixed guess is simultaneously too short under CI load and too long everywhere else.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Assertions](https://playwright.dev/docs/test-assertions) — playwright.dev: auto-retrying versus non-retrying matchers, soft assertions ("do not terminate test execution, but mark the test as failed"), `expect.poll`, `expect.toPass`, custom message, 5-second assertion timeout
+- **Beyond the docs:** [Playwright Assertions - Types & Best Practices](https://www.checklyhq.com/learn/playwright/assertions/) — Checkly Docs, no author or date shown: retrying versus one-shot groups, treats extract-then-assert as a mistake because it "doesn't include waiting at all", also soft, poll, `toPass`
+- **Read this:** [Auto-waiting](https://playwright.dev/docs/actionability) — playwright.dev: the five checks (Visible, Stable, Receives Events, Enabled, Editable), the per-action table, `TimeoutError` when checks never pass, `force`
+- **Also good:** [Timeouts](https://playwright.dev/docs/test-timeouts) — playwright.dev: test 30,000 ms, expect 5,000 ms; action, navigation, global and fixture: no timeout (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Actions and interactions](../04-actions-and-interactions/01-interaction-primitives.md) · [Playwright index](../../README.md) · Next → [Navigation and network](../06-navigation-and-network/01-navigation-and-interception.md)

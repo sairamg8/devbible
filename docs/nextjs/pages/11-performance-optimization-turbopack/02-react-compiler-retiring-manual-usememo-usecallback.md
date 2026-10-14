@@ -246,6 +246,18 @@ file is processed by both toolchains. The SWC pre-filter is what keeps that from
 The experimental Rust port of the compiler exists precisely to collapse that duplication, and it is a separate,
 non-stable flag.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [reactCompiler](https://nextjs.org/docs/app/api-reference/config/next-config-js/reactCompiler) — Next.js docs, version 16.4.0, updated 2026-10-02: install `babel-plugin-react-compiler`, `reactCompiler: true`, the SWC pre-filter, `compilationMode: 'annotation'` with `"use memo"` / `"use no memo"`, and `enablePreserveExistingMemoizationGuarantees`; stable and top-level since 1
+- **Also good:** [React Compiler introduction](https://react.dev/learn/react-compiler/introduction) — react.dev: memoization is "as precise, or moreso" than hand-written; `useMemo`/`useCallback` stay as an escape hatch (effect dependencies); for existing code leave memoization in place, since removing it can change compilation output (*read*
+- **Beyond the docs:** [React Compiler Explained: Do You Still Need useMemo, useCallback, and React.memo](https://www.syncfusion.com/blogs/post/react-compiler-usememo-usecallback) — Arunachalam Kandasamy Raja, Syncfusion, 2026-08-10: profile first, then keep `useMemo` for measured hot spots and `useCallback` where reference identity is part of a library or hook contract (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01e · What Turbopack does not support](01e-what-turbopack-does-not-support-and-how-to-read-the-list.md) · [Chapter index](01-explanation.md) · Next → [02b · What the React Compiler costs](02b-what-the-react-compiler-costs-and-the-rust-port.md)

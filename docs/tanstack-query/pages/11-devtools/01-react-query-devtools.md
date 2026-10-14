@@ -190,6 +190,17 @@ First, confirm the component is rendered *inside* `QueryClientProvider` — the 
 **★ What does the devtools documentation actually specify, and what would you refuse to assert from it?**
 It specifies the package name, the two components, the placement inside the provider, the full option list with several defaults, the production-exclusion rule, the production lazy-load recipe, and the existence of browser extensions. It does **not** specify the panel's columns, colours, button labels or shortcuts. So I would happily assert "a query with no data that cannot fetch will read `pending` and `paused`", because `status` and `fetchStatus` are documented on the Queries and Network Mode guides — and I would refuse to assert "the panel colours paused queries purple", because nothing in the documentation says so and a UI string is exactly the kind of claim that quietly goes stale.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Devtools](https://tanstack.com/query/latest/docs/framework/react/devtools) — TanStack Query docs: install, render inside `QueryClientProvider` near the root, `initialIsOpen` (*read*)
+- **Beyond the docs:** [Status Checks in React Query](https://tkdodo.eu/blog/status-checks-in-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-03-27, updated 2023-10-21: status and fetchStatus as two axes, which is the panel's matrix
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Fetch-on-render and streaming](../10-suspense-integration/01d-fetch-on-render-and-streaming.md) · [Topic index](../README.md) · Next → [status and fetchStatus](./01b-status-and-fetchstatus-matrix.md)

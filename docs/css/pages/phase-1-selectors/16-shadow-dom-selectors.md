@@ -176,6 +176,19 @@ isolation is worth the loss of the cascade. Inside your own application, CSS
 Modules or `@scope` give sufficient separation without requiring every styling
 hook to be designed and documented up front.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [:host](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:host) — MDN: styling the host from inside; `:host()` and `:host-context()` are only linked from See also (*read*)
+- **Also good:** [::part()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::part) — MDN: styles shadow-tree elements that carry a matching `part` attribute; [::slotted()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::slotted)
+- **Also good:** [::slotted()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::slotted)
+- **Beyond the docs:** [Style Web Components and Shadow DOM with CSS](https://blog.openreplay.com/style-web-components-shadow-dom-css/) — OpenReplay Team, 2026-05-14: hosts, slots, and custom properties plus `::part()` as a public styling API (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [15 · Selector performance](./15-selector-performance.md) · Back to [Phase index](./) · Next phase: **Phase 2 · The cascade** →

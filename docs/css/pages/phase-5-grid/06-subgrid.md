@@ -216,6 +216,17 @@ It couples the component to its container's track structure, so it no longer
 works standalone. Anything in a shared library needs a fallback, typically guarded
 with `@supports`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Subgrid](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid) — MDN: a nested grid reuses its parent's tracks; marked widely available, in browsers since September 2023 (*read*)
+- **Beyond the docs:** [Brand New Layouts with CSS Subgrid](https://www.joshwcomeau.com/css/subgrid/) — Josh W. Comeau, 2025-11-25, updated 2026-04-27: cards and pricing features that align across siblings, including the need to reserve rows with `span` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05 · Line-based placement](./05-line-based-placement.md) · Next: [07 · Grid patterns](./07-grid-patterns.md) →

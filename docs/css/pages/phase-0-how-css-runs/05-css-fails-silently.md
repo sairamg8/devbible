@@ -195,6 +195,17 @@ Did it parse (is it in the CSSOM / not struck through in DevTools), did it match
 (is the element actually selected), and did it win (is another declaration
 overriding it). Those three questions, in that order, cover almost every case.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CSS error handling](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/Error_handling) — MDN: browsers raise no alert; a bad declaration is discarded; one invalid selector drops the whole rule (except inside `:is()` and `:where()`); an unclosed block is auto-closed at the end of the stylesheet (*read*)
+- **Also good:** [Selector list](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Selector_list) — MDN: one unsupported selector invalidates the whole rule, with the `:is()` remedy (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · Render-blocking CSS](./04-render-blocking-css.md) · Next: [06 · User-agent stylesheets](./06-user-agent-stylesheets.md) →

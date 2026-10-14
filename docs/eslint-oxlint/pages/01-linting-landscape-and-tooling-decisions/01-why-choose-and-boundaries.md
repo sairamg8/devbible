@@ -180,3 +180,15 @@ It runs Prettier *inside* ESLint, so every formatting difference becomes a lint 
 **★ When is an all-in-one tool like Biome the right call over Oxlint + ESLint?**
 When the plugin inventory is small. All-in-one tools win by collapsing format and lint into one binary and one config, and that trade is good exactly when you are not relying on the long tail of the ESLint plugin ecosystem. The moment the inventory contains a custom AST rule or an unported security plugin, the dual-run story — where ESLint stays as the escape hatch — is the stronger position.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Oxlint overview](https://oxc.rs/docs/guide/usage/linter.html) — oxc.rs: has a "Choosing a JavaScript linter" section, more than 870 rules (871 on the rules page), and the project's own "50 to 100 times faster" claim (*read*)
+- **Also good:** [Integrating with Linters](https://prettier.io/docs/integrating-with-linters) — Prettier docs: turn off conflicting rules with `eslint-config-prettier`; `eslint-plugin-prettier` is "generally not recommended" because it is slower and adds noise (*read*)
+- **Also good:** [Biome linter](https://biomejs.dev/linter/) — Biome docs: 568 rules; Biome has no formatting rules because its formatter handles layout (*read*)
+- **Beyond the docs:** [Biome vs ESLint vs Oxlint: JS Linters 2026](https://dev.to/royce_fabbd83cb268312e928/biome-vs-eslint-vs-oxlint-js-linters-2026-408h) — Royce, DEV Community, posted Mar 18 (year not shown; says it was first published at pkgpulse.com): chooses by plugin needs, formatting, project stage and CI speed; its numbers are its own and unverified (*read*)
+
+{/* LINKMAP:END */}

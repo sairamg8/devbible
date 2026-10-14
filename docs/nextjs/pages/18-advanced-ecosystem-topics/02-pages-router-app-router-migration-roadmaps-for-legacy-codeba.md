@@ -260,6 +260,18 @@ Because that sentence is in the guide's *Upgrading* preamble, which is still wri
 **Why is "one route per PR" stricter than "one section per PR", given the review overhead?**
 Because the value of the cadence is attribution, not review size. If eight routes ship together and your error rate or LCP moves, you have eight candidate causes and a revert that undoes seven working migrations to investigate one. With one route you compare that route's metrics before and after against unchanged siblings, and a revert costs one route. The overhead is real; it buys you a signal that batching destroys.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [App Router migration](https://nextjs.org/docs/app/guides/migrating/app-router-migration) — Next.js docs (updated 2026-09-28): `pages` and `app` coexist and migrate page by page; the text is still Next.js 13 era (upgrade to 13, Node 18.17) (*read*)
+- **Also good:** [Codemods](https://nextjs.org/docs/app/guides/upgrading/codemods) — Next.js docs (updated 2026-10-02): `npx @next/codemod upgrade` and per-version transforms (16.3 `cache-components-instant-false`, 16.0 `middleware-to-proxy`); no Pages-to-App transform is listed (*read*)
+- **Beyond the docs:** [Migrating from Pages Router to App Router: An Incremental Guide](https://clerk.com/blog/migrating-pages-router-to-app-router-an-incremental-guide) — Clerk blog, no byline or date shown: page-by-page steps (create `/app`, move `_document` and `_app`, then each page); built on Pages Router best practice for Next.js 12.3 and leaves out `getInitialProps` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Micro-frontends and multi-zone architectures](01-micro-frontends-and-multi-zone-architectures-for-decoupled-t.md) · [Chapter index](01-explanation.md) · Next → [Translating request-time data](02b-translating-the-data-fetching-contracts.md)

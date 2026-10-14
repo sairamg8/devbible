@@ -199,6 +199,17 @@ reverse of how most people say the pair aloud.
 When text across cells should line up despite differing padding or font sizes —
 a row of labels or cards. It aligns by first text baseline rather than box edges.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Box alignment in grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout) — MDN: `*-items` and `*-self` place items in their areas; `*-content` places the tracks in the container (*read*)
+- **Beyond the docs:** [The Fundamentals of CSS Alignment](https://css-tip.com/explore/alignment/) — Temani Afif, CSS-Tip, 2025-09-04, updated 2026-04-17: item level versus content level across grid, flex and block (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [07 · Grid patterns](./07-grid-patterns.md) · Next: [09 · Explicit vs implicit grid](./09-explicit-vs-implicit-grid.md) →

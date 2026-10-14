@@ -181,3 +181,14 @@ deliberately, which is the non-determinism that breaks visual-regression snapsho
 
 **← Prev** [03 · Providers in decorators](./03-providers-in-decorators.md) ·
 **Next →** [05 · Loaders and beforeEach](./05-loaders-and-beforeeach.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Decorators](https://storybook.js.org/docs/writing-stories/decorators) — Storybook docs: the second argument holds `args`, `argTypes`, `globals`, `hooks`, `parameters`, `viewMode` (*read*)
+- **Also good:** [Toolbars and globals](https://storybook.js.org/docs/essentials/toolbars-and-globals) — Storybook docs: a decorator choosing a theme from `context.globals.theme` (it looks the theme up rather than branching) (*read*)
+
+{/* LINKMAP:END */}

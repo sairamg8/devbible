@@ -158,6 +158,19 @@ That is worth measuring rather than assuming. In an app that adopted RTK Query e
 **What do you lose by moving the cache out of the store?**
 Time-travel debugging over server state, a single `getState()` snapshot that contains everything the user was looking at, persistence that came for free with whatever persisted the store, and `resetApiState()` being part of a reducer you already reset on logout. Those are real losses and the honest answer names them; the compensations are React Query Devtools, no store setup as a precondition for fetching, and a data layer a shared component can use without imposing Redux on its host.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [RTK Query Overview](https://redux.js.org/toolkit/rtk-query/overview) — Redux Toolkit docs: endpoints declared in `createApi` and hooks generated from them; cache entry lifecycle is only mentioned and linked out, and the comparison table lives on a separate page (*read*)
+- **Also good:** [Cache Behavior](https://redux.js.org/toolkit/rtk-query/usage/cache-behavior) — Redux Toolkit docs: `keepUnusedDataFor` default 60 seconds, `refetchOnMountOrArgChange`, `refetchOnFocus` needing `setupListeners` (*read*)
+- **Also good:** [Comparison with Other Tools](https://redux.js.org/toolkit/rtk-query/comparison) — Redux Toolkit docs: RTK's own table: cache key is endpoint plus serialized arguments versus a user-defined query key, invalidation declarative by type versus manual by key; not pinned to a version (*read*)
+- **Also good:** [Query Invalidation](https://tanstack.com/query/latest/docs/framework/react/guides/query-invalidation) — TanStack Query docs: prefix matching, which is what makes tag-to-key over-invalidate (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Testing TanStack Query](../15-testing-tanstack-query/01-isolated-and-integration-testing.md) · [Topic index](../README.md) · Next → [The option-by-option map](./01b-rtk-query-the-option-by-option-map.md)

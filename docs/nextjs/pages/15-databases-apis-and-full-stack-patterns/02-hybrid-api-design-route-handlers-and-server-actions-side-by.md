@@ -103,6 +103,20 @@ Where the authorisation rule lives. Everything else — which entry point, which
 **Why does this topic spend so long on things that are not about choosing?**
 Because the choice is easy once the mechanics are known and impossible before. "Which should I use" is genuinely answered by one question about the caller — but knowing that a webhook cannot use an action requires knowing that action IDs are rotating build artefacts; knowing that typeahead cannot use one requires knowing about the per-client queue; knowing that a handler for your own UI costs you something requires knowing which four protections you just gave up. The decision rule is one page ([02l](02l-the-decision-rule.md)); the reason each row of it is true is the rest.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mutating Data](https://nextjs.org/docs/app/getting-started/mutating-data) — Next.js docs: Server Functions and Server Actions, POST only, the client dispatching one action at a time (*read*)
+- **Also good:** [Server Actions and Mutations](https://nextjs.org/docs/app/guides/server-actions) — Next.js docs: sequential dispatch per client, one response carrying both return value and re-rendered UI, and the security boundary (*read*)
+- **Also good:** [Route Handlers](https://nextjs.org/docs/app/getting-started/route-handlers) — Next.js docs: not cached by default, opt-in caching for `GET`, and `GET` handlers prerender under Cache Components unless they touch runtime data (*read*)
+- **Also good:** [Backend for Frontend](https://nextjs.org/docs/app/guides/backend-for-frontend) — Next.js docs: its caveats say Server Actions are queued, so using them for data fetching serializes it, and not to call Route Handlers from Server Components (*read*)
+- **Beyond the docs:** [Server Actions vs Route Handlers: When to Use Each in Next.js](https://makerkit.dev/blog/tutorials/server-actions-vs-route-handlers) — Makerkit, 2024-12-16, no byline (page says tested on Next.js 16): three questions in order: caller outside the app or cacheable `GET` means Route Handler, UI-driven mutation means Server Action (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · Database integrations](01-database-integrations-serverless-postgres-neon-prisma-drizzl.md) · Next → [02b · What an action compiles into](02b-what-a-server-action-compiles-into.md)

@@ -227,6 +227,18 @@ Anything high-frequency (hover, drag position, scroll offset) because each write
 **★ Why does `PageProps` type `params` strictly but not `searchParams`?**
 Because `params` is derivable from the filesystem and `searchParams` is not. The route literal `'/shop/[slug]'` tells the compiler exactly which dynamic segments exist and what they are named, so the generated type can give you strict keys and autocomplete. Query keys are invented at runtime by whoever constructs the URL — a link elsewhere in your app, a bookmark, a marketing campaign, a bot — so there is no filesystem fact the framework could read to constrain them. That gap is where your own schema goes: the framework guarantees the *shape* of the values and you guarantee their *meaning*.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useSearchParams](https://nextjs.org/docs/app/api-reference/functions/use-search-params) — nextjs.org (updated 2026-07-14): the hook is read-only and client-only, the page `searchParams` prop for Server Components, the Suspense requirement when prerendered, and why layouts get no `searchParams` (*read*)
+- **Also good:** [nuqs](https://nuqs.dev) — nuqs docs: the library's own pitch: `useState`-like hooks bound to the query string, typed parsers, a server cache for nested Server Components, shallow updates by default (*read*)
+- **Beyond the docs:** [Managing search parameters in Next.js with nuqs](https://blog.logrocket.com/managing-search-parameters-next-js-nuqs) — Jude Miracle, LogRocket, 2024-11-27: a product-list app using `useQueryState`, `useQueryStates`, parsers, `createSearchParamsCache` and a Zod-validated sort param; it targets Next.js 13 to 15 and points to a version table for nuqs, so re-check the setup against curre
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · When RSC data flow is enough](02-when-rsc-data-flow-is-enough.md) · [Chapter 8 overview](01-explanation.md) · Next → [03b · URL state and the static shell](03b-url-as-state-and-the-static-shell.md)

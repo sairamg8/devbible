@@ -188,6 +188,17 @@ They run first, at stage ①, before the transformer branch. `compileCSS()` invo
 **★ Why is "it looks right in the dev server" not an acceptable answer to a CSS ordering bug?**
 Because dev and build emit different artefacts. In dev, each CSS module becomes a small JS module that pushes its text into a `<style>` element at execution time, in module-evaluation order, with HMR swapping it in place. In build, the CSS is extracted, concatenated per chunk, `@import`/`@charset`-hoisted, minified and served as a `<link>`ed asset whose ordering follows chunk graph and load order. Cascade-order bugs, FOUC and `@charset` problems can only exist in one of those two worlds, and it is not the one with the dev server.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Features › CSS](https://vite.dev/guide/features) — vite.dev: the CSS section: `@import` inlining via `postcss-import` with aliases honoured, `url()` rebasing, a valid PostCSS config applied to all imported CSS, minification after PostCSS using `build.cssTarget`, and Sass, Less and Stylus su
+- **Also good:** [Shared Options › `css.postcss`, `css.preprocessorOptions`](https://vite.dev/config/shared-options) — vite.dev: inline `css.postcss` stops the config search; Sass uses `sass-embedded` if installed, otherwise `sass`; `additionalData` is prepended to every file so relative paths break; `css.preprocessorMaxWorkers` defaults to `true` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Plugin API & Conventions](../08-plugin-system/01-plugin-api.md) · [Vite overview](../../README.md) · Next → [@import Inlining & URL Rebasing](01a-import-inlining-and-url-rebasing.md)

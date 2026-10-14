@@ -40,6 +40,8 @@ Total syllabus topics: **59** across 12 phases.
 
 The following 16 foundation chapters are available in [`pages/`](pages/README.md) and are being validated against the Devbible contract:
 
+> **Link map:** for every topic there is a [link map](./link-map/README.md) — the primary docs plus, where one exists, the best non-official explanation. First pass, open for review.
+
 | # | Section | Link |
 |---|---|---|
 | 01 | Jest core concepts | [01 · Test structure](pages/01-jest-core-concepts/01-test-structure.md) |

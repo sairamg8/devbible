@@ -161,3 +161,21 @@ export default config;
 - **Previous**: [05 · Snapshot Testing](../05-snapshot-testing/01-snapshot-mechanics.md) — Snapshot mechanics and property matching.
 - **Next**: [07 · RTL Core Philosophy](../07-rtl-core-philosophy/01-guiding-principle.md) — React Testing Library core mental model.
 - **Vite & Vitest Bridge**: [16 · Testing Setup from Zero](../16-real-world-workflows-and-recipes/01-testing-setup-from-zero.md) — Comparing Jest configuration with `vitest.config.ts`.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuring Jest](https://jestjs.io/docs/configuration) — Jest docs: `setupFiles` configures the environment once per test file, before the framework is installed; `setupFilesAfterEnv` runs right after the framework is installed and is for code repeated in each test file (*read*)
+- **Beyond the docs:** [jest-explore-config](https://github.com/rajatkumar/jest-explore-config) — rajatkumar, GitHub repo README (no date shown): a small repo whose README explains that `setupFiles` has no `beforeAll`, `beforeEach` or other hooks and `setupFilesAfterEnv` does
+- **Read this:** [Jest (SWC usage)](https://swc.rs/docs/usage/jest) — SWC docs: install `@swc/core` and `@swc/jest`, map `'^.+\\.(t|j)sx?$'` to `@swc/jest`, `jsc.target` defaults from your Node version; no benchmark figures (*read*)
+- **Beyond the docs:** [Jest: from Babel to SWC](https://www.joshuakgoldberg.com/blog/jest-babel-to-swc) — Josh Goldberg, 2022-02-21: his project's runs got 30–40% faster (10–13% with coverage and two workers), not 3–5x; install size grew from 186M to 330M
+- **Also good:** [ECMAScript Modules](https://jestjs.io/docs/ecmascript-modules) — Jest 30 docs: ESM support is experimental; needs `--experimental-vm-modules`; says nothing on transforming `node_modules` (*read*)
+- **Beyond the docs:** [Jest and ESM: Cannot use import statement outside a module](https://dev.to/steveruizok/jest-and-esm-cannot-use-import-statement-outside-a-module-4mmj) — Steve Ruiz, DEV Community, 2021-06-25: the negative-lookahead pattern for one package plus a `transform` entry that runs `babel-jest` on `.js` and `.mjs`, which is why the pattern alone is not always enough (*read*)
+- **Read this:** [Using with webpack](https://jestjs.io/docs/webpack) — Jest docs: `moduleNameMapper` sends images and fonts to a `fileMock.js` stub and `.css` to `identity-obj-proxy`, where `styles.foobar === 'foobar'` (*read*)
+- **Also good:** [How to set up Jest with Next.js](https://nextjs.org/docs/app/guides/testing/jest) — Next.js 16.4 docs: maps `@/components/*` from `tsconfig` paths to `&lt;rootDir&gt;/components/$1` (*read*)
+- **Also good:** [Paths mapping](https://kulshekhar.github.io/ts-jest/docs/getting-started/paths-mapping) — ts-jest docs: `pathsToModuleNameMapper` turns `compilerOptions.paths` into `moduleNameMapper`, with an optional `prefix` such as `&lt;rootDir&gt;/` (*read*)
+
+{/* LINKMAP:END */}

@@ -221,3 +221,14 @@ function" error.
 ---
 
 **Next →** [02 · Decorator order](./02-decorator-order.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Decorators](https://storybook.js.org/docs/writing-stories/decorators) — Storybook docs: wrap a story in extra markup, story/component/global levels (*read*)
+- **Also good:** [Mocking providers](https://storybook.js.org/docs/writing-stories/mocking-data-and-modules/mocking-providers) — Storybook docs: a `ThemeProvider` global decorator (*read*)
+
+{/* LINKMAP:END */}

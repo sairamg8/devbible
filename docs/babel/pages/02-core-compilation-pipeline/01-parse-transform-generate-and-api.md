@@ -255,3 +255,15 @@ node names match. Babel diverges where it needs to carry more information — it
 single `Literal` into `StringLiteral`, `NumericLiteral` and friends (probed on 7.29.7), and it
 adds a large set of nodes for TypeScript, JSX and proposals that ESTree does not define. So a
 visitor is usually portable in structure and rarely portable verbatim.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@babel/core](https://babeljs.io/docs/babel-core) — babeljs.io: `transformSync` and `transformAsync` returning code, map and ast; `loadPartialConfig` resolves plugins and presets and goes no further; the callback-less `transform` still behaves synchronously and "this backward-compatibility wil
+- **Also good:** [@babel/parser](https://babeljs.io/docs/babel-parser) — babeljs.io: the `plugins` option (first options win when a plugin is repeated) and `errorRecovery` with an `errors` array that can still throw on unrecoverable errors (*read*)
+- **Also good:** [@babel/traverse](https://babeljs.io/docs/babel-traverse) — babeljs.io: a very short quick-start: install and two visitor examples; nothing on scope, and it points to the plugin handbook (*read*)
+
+{/* LINKMAP:END */}

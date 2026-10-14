@@ -187,6 +187,18 @@ Because the Server Component is already running on the server with full access t
 **★ `revalidateTag` and `updateTag` in a launch review: what are you actually checking?**
 Whose data it is. `revalidateTag`, which now requires a `cacheLife` profile as its second argument, marks data stale and serves the stale copy while it refreshes — correct for content other people will see later. `updateTag` is Server-Actions-only and gives read-your-writes within the same request — correct when the person who triggered the mutation is about to look at the result. Getting this backwards produces the worst kind of bug report: "I saved it and it didn't save", from a user who is looking at a perfectly healthy cache.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Production checklist](https://nextjs.org/docs/app/guides/production-checklist) — Next.js docs (updated 2026-03-10): automatic optimizations, during development, before going to production (*read*)
+- **Also good:** [Content Security Policy](https://nextjs.org/docs/app/guides/content-security-policy) — Next.js docs (updated 2026-03-20): nonce-based CSP through Proxy needs dynamic rendering and is incompatible with Partial Prerendering; experimental SRI is the static alternative (*read*)
+- **Also good:** [Nextjs Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nextjs_Security_Cheat_Sheet.html) — OWASP: entry points, caches by audience, configuration as security code (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Appendix C part 3 · the CLI surface](03c-appendix-c-the-cli-surface.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix D part 2 · security](04b-appendix-d-security.md)

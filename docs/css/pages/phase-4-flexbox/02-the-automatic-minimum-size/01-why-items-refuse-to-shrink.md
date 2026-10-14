@@ -217,6 +217,18 @@ The automatic minimum applies to every flex item in the chain. A new wrapper is 
 flex item with `min-width: auto`, so it reintroduces the floor even though the
 inner element still has the fix.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [min-width](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/min-width) — MDN: the `auto` entry: for flex and grid items it is the suggested size, transferred size or `min-content`, and `0` for scroll containers (and for grid items spanning more than one flexible column track) (*read*)
+- **Also good:** [CSS Flexible Box Layout Module Level 1](https://www.w3.org/TR/css-flexbox-1/) — W3C: section 4.5 "Automatic Minimum Size of Flex Items" (*headings only*)
+- **Beyond the docs:** [Understanding the automatic minimum size of flex items](https://www.bigbinary.com/blog/understanding-the-automatic-minimum-size-of-flex-items) — Praveen Murali, BigBinary, 2023-08-17: a flex item will not shrink below its longest unbreakable string; `min-width: 0` overrides that, and `overflow: hidden` alone can also help (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · Diagnosing it in a real layout](./02-diagnosing-it.md) →

@@ -123,3 +123,15 @@ animate={{ boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }} // triggers repaint, not 
 // layout-triggering ones — choose based on what the specific effect actually requires,
 // understanding the real cost tiers rather than assuming everything is equally cheap
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Performance](https://motion.dev/docs/performance) — motion.dev: treat hardware acceleration as progressive enhancement, since many conditions disable it; `willChange` layers cost GPU memory; individual transforms such as `x` and `scale` animate CSS variables, which are not accelerated (*read*)
+- **Also good:** [How to create high-performance CSS animations](https://web.dev/articles/animations-guide) — web.dev: restrict animation to `transform` and `opacity`, use `will-change` sparingly (*read*)
+- **Beyond the docs:** [The Web Animation Performance Tier List](https://motion.dev/blog/web-animation-performance-tier-list) — Matt Perry, motion.dev, 2025-11-05 (date from the page's metadata): ranks techniques S to F by which render stages they trigger
+
+{/* LINKMAP:END */}

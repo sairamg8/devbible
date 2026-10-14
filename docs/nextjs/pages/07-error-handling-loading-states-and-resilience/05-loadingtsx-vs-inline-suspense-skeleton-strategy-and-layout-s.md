@@ -238,6 +238,18 @@ By default, yes — and it can be a Client Component with `'use client'` when th
 needs interactivity or client-only APIs. Most skeletons want neither, and a Server Component
 fallback keeps it out of the bundle.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Streaming: when to use loading.js vs Suspense](https://nextjs.org/docs/app/guides/streaming) — nextjs.org guide: a comparison table, the rule to prefer boundaries near the dynamic access, and CLS advice: size skeletons like the content and reserve space (*read*)
+- **Also good:** [Optimize Cumulative Layout Shift](https://web.dev/articles/optimize-cls) — web.dev, updated 2025-02-07: the platform-level causes (images without dimensions, late-loaded content, animations, web fonts); for dynamic content, reserve room with placeholders or skeletons (*read*)
+- **Beyond the docs:** [How loading.tsx in Next.js Caused Massive CLS Issues](https://dev.to/homielab/how-loadingtsx-in-nextjs-caused-massive-cls-issues-and-hurt-my-seo-4n0c) — HomieLab, DEV Community, 2025-07-13: a small loader replaced by a tall page flagged 35,000 mobile URLs; the fix was removing `loading.tsx` for skeletons with matching heights, plus image aspect ratios, with Google still validating when written. One site's case study,
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04b · Designing the error envelope](04b-designing-the-error-envelope.md) · **Next → [05b · The layout that stops your skeleton appearing](05b-the-layout-that-stops-your-skeleton-appearing.md)**

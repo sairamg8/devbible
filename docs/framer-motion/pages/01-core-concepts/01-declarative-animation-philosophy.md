@@ -168,6 +168,17 @@ By default `motion.create()` filters the motion props out of what it forwards, s
 **Is `import { motion } from 'framer-motion'` broken?**
 No — `framer-motion` is still published in lockstep with `motion` (both **13.2.0**) and carries no npm deprecation notice, so existing code keeps working. But upstream's instruction is to uninstall `framer-motion`, install `motion`, and import from `motion/react`. Treat the old specifier as out of date rather than broken, which is exactly why it is worth fixing in a reference before it becomes the second thing a reader has to unlearn.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Motion component](https://motion.dev/docs/react-motion-component) — motion.dev: drop-in replacement for HTML and SVG elements, bypasses React's render cycle, `motion.create()` for custom components, `import &#123; motion &#125; from "motion/react"` in its Usage section (*read*)
+- **Also good:** [Animation overview](https://motion.dev/docs/react-animation) — motion.dev: the tour of `initial`, `animate`, `exit`, `transition`, keyframes, variants and controls on one page (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Core concepts](../README.md) · Next → [The core prop triad](../02-basic-animation-props/01-the-core-prop-triad.md)

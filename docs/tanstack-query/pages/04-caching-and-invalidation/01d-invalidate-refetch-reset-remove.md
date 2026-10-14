@@ -275,6 +275,18 @@ pattern — an optimistic update, where the docs' own example opens with *"Cance
 refetches (so they don't overwrite our optimistic update)"*. It has to be awaited, because the goal
 is to be certain nothing is still resolving when your `setQueryData` runs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Query Invalidation](https://tanstack.com/query/latest/docs/framework/react/guides/query-invalidation) — TanStack Query docs: marks matches stale (overriding staleTime) and refetches the observed ones; the page never mentions `resetQueries` and names `removeQueries` once (*read*)
+- **Also good:** [QueryClient](https://tanstack.com/query/latest/docs/reference/QueryClient) — TanStack Query API reference: invalidateQueries, refetchQueries, resetQueries and removeQueries as separate entries (*read*)
+- **Beyond the docs:** [Automatic Query Invalidation after Mutations](https://tkdodo.eu/blog/automatic-query-invalidation-after-mutations) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2024-05-25, updated 2025-11-25: invalidation refetches only active queries and marks the rest stale, so over-invalidating is a trade he accepts, not a free action
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Filtering by state](./01c-filtering-by-state-type-stale-predicate.md) · [Topic index](../README.md) · Next → [Direct cache access](./01e-direct-cache-access.md)

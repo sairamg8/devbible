@@ -194,6 +194,17 @@ By not using the warning for it. The option is described as a limit for warnings
 **★ A team raises `chunkSizeWarningLimit` from 500 to 2000 and the warnings stop. What has changed?**
 Only what they are told. No chunk boundary moved, no byte was removed, no user-visible behaviour changed — the threshold is a reporting comparison and nothing downstream reads it. What has changed for the worse is the signal: the value no longer encodes a decision about how much JavaScript a page may evaluate, so the next genuine regression will arrive silently. Raising it is legitimate as the *conclusion* of an investigation into a specific chunk; as a response to being warned, it is deleting the evidence.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Build Options](https://vite.dev/config/build-options) — vite.dev: `chunkSizeWarningLimit` 500 kB compared against the uncompressed chunk size, `modulePreload` default `&#123; polyfill: true &#125;`, `sourcemap` false, `target` `'baseline-widely-available'` (a date fixed per major; Vite 8 gives C
+- **Also good:** [Building for Production](https://vite.dev/guide/build) — vite.dev: chunking strategy via `build.rolldownOptions.output.codeSplitting` and the `vite:preloadError` event (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01ea · Group sizing and entry awareness](01ea-group-sizing-and-entry-awareness.md) · [Vite overview](../../README.md) · Next → [01g · Preloading and cache granularity](01g-preloading-and-cache-granularity.md)

@@ -200,6 +200,17 @@ between that ancestor and its siblings, not between your element and its target.
 Paints the element behind its parent's content but still in front of the parent's
 background — the standard technique for decorative backdrops.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Stacking context](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) — MDN: the list of creators: `opacity` below 1, `transform`, `filter`, `will-change`, `isolation: isolate`, `contain: layout` or `paint`, and more; a context is stacked as one unit in its parent (*read*)
+- **Beyond the docs:** [What The Heck, z-index??](https://www.joshwcomeau.com/css/stacking-contexts/) — Josh W. Comeau, 2021-02-22, updated 2024-09-13: a tooltip with `z-index: 999999` that still sits under the header, because `main` has `position: relative` and `z-index: 1` and so forms its own context
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · z-index in practice](./02-z-index-in-practice.md) →

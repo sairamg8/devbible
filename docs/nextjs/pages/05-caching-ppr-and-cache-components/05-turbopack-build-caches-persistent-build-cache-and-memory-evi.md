@@ -200,6 +200,18 @@ That no such figure is in the API reference for the feature, so it should not be
 **How does this cache relate to the rest of the chapter's caches?**
 It does not, beyond sharing the word. Every other cache in this chapter is about request-time work: `use cache` entries, prerendered HTML, the client's copy of an RSC payload — things that decide what a user waits for. The Turbopack FileSystem cache is a compilation cache, consumed by your build pipeline and your dev server, and invisible to production traffic. The distinction is worth keeping crisp because they fail in unrelated ways and are fixed by unrelated people: a stale `use cache` entry is a product bug with a lifetime and an invalidation API, while a cold Turbopack cache is a pipeline configuration issue with no user-visible symptom at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Turbopack FileSystem Caching](https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopackFileSystemCache) — nextjs.org reference, updated 2026-10-06: the two options `turbopackFileSystemCacheForDev` and `turbopackFileSystemCacheForBuild`, both default true; the build cache lives in `.next/cache` and CI only benefits if that directory is restored (*read*)
+- **Also good:** [Turbopack: What's New in Next.js 16.3](https://nextjs.org/blog/next-16-3-turbopack) — nextjs.org blog, Andrew Imm, 2026-06-29: dev memory after compiling 50 routes (vercel.com dashboard 21.5 GB to 2 GB) and build timings (5.5x on vercel.com/geist, 2.3x on nextjs.org, 1.4x on vercel.com/home); the page still carries a 16.3 pre-release notice. Option refere
+- **Also good:** [turbopackMemoryEviction](https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopackMemoryEviction)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · Revalidation: every way a lifetime ends](04-revalidation-time-based-isr.md) · [Chapter index](01-explanation.md) · Next → [06 · Milestone: cache the board shell](06-project-milestone-cache-sprintdesks-team-dashboard-shell-wit.md)

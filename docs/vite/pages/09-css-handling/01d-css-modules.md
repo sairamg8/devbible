@@ -225,6 +225,17 @@ Collision safety stops being structural and becomes a matter of discipline, and 
 **★ Does switching to Lightning CSS keep your CSS Modules working?**
 Detection does — the `.module.` filename test is the same. Configuration does not: `css.modules` is documented as having no effect under Lightning CSS, and the replacement is `css.lightningcss.cssModules`, which is Lightning CSS's own option shape rather than `postcss-modules`'. So a project with a non-trivial `css.modules` block, especially a custom `generateScopedName` or `localsConvention`, has to port it, and generated names can change in the process.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Features › CSS Modules](https://vite.dev/guide/features) — vite.dev: any file ending `.module.css` returns a module object, tuned by `css.modules`; named imports work once `localsConvention` is a camelCase mode (`.apply-color` becomes `applyColor`) (*read*)
+- **Also good:** [Shared Options › `css.modules`](https://vite.dev/config/shared-options) — vite.dev: options are handed to postcss-modules (`generateScopedName`, `hashPrefix`, `scopeBehaviour`, `globalModulePaths`, `exportGlobals`, `getJSON`, `localsConvention` with four string modes or a function); no effect when Lightning CSS i
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Preprocessors](01c-preprocessors.md) · [Vite overview](../../README.md) · Next → [CSS Modules Edge Cases](01da-css-modules-edge-cases.md)

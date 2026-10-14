@@ -239,6 +239,18 @@ Enum if you want the declared order to be the sort order and you expect the set 
 **★ What is wrong with adding a `comment_count` column now, before you need it?**
 It turns every comment insert into a write to the card row, which serialises concurrent comments on the same card behind one row lock, and it makes the count something you must keep correct forever including through deletes, cascades and restores. It also becomes a client promise the moment it appears in a response — and [01c](01c-what-the-client-may-rely-on.md) explicitly refuses to promise counts, precisely because an exact count is the cheapest-looking and most expensive-to-serve field in any API. The general rule is that a derived column is a cache with no invalidation story, and adding one before a query demands it means you have taken on the maintenance without having measured the benefit.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Constraints](https://www.postgresql.org/docs/18/ddl-constraints.html) — PostgreSQL 18 docs: check, not-null, unique, primary key, foreign key and exclusion constraints, with the `ON DELETE` actions under foreign keys (*read*)
+- **Also good:** [Drizzle migrations](https://orm.drizzle.team/docs/migrations) — Drizzle docs: `generate` plus `migrate` as the file-based flow and `push` for rapid prototyping, though it also reports teams using `push` in production; it does not name one for production (*read*)
+- **Beyond the docs:** [Zero-Downtime Database Migrations With EF Core](https://milanjovanovic.tech/blog/zero-downtime-migrations-ef-core) — Milan Jovanović, 2026-08-23: expand, migrate, contract as three separately deployed steps, plus index creation without blocking writes; C# and EF Core examples, but the pattern is database-wide (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01c · What the client may rely on](01c-what-the-client-may-rely-on.md) · [Chapter 16 overview](01-explanation.md) · Next → [02b · Constraints are the first validation layer](02b-constraints-are-the-first-validation-layer.md)

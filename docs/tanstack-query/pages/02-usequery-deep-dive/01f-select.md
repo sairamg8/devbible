@@ -195,6 +195,18 @@ No, and that is the point of it. The cache holds whatever `queryFn` returned; `s
 **Can two different `select` functions on the same key cause two requests?**
 Never. `select` plays no part in cache identity — the key does, and only the key. If you are seeing two requests, the two `queryKey`s differ, and by far the most common reason is that one of them was built inline with its array elements in a different order, since *"Array item order matters!"* while object key order does not. Look at the keys, not at the projections.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Render Optimizations](https://tanstack.com/query/latest/docs/framework/react/guides/render-optimizations) — TanStack Query docs: `select` re-runs only when its reference or the data changes, so an inline arrow runs every render; wrap in `useCallback` or hoist it (*read*)
+- **Beyond the docs:** [React Query Selectors, Supercharged](https://tkdodo.eu/blog/react-query-selectors-supercharged) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2025-08-04: why the inline-function behaviour is useful, and when to stabilise with `useCallback` or a module-level function; structural sharing applies to the result
+- **Beyond the docs:** [React Query Data Transformations](https://tkdodo.eu/blog/react-query-data-transformations) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-03-10, updated 2023-10-21: transform in `queryFn` vs `select`, with the trade-offs
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`initialData` vs `placeholderData`](./01e-initialdata-vs-placeholderdata.md) · [Topic index](../README.md) · Next → [`queryOptions` factories](./01g-queryoptions-factories-and-type-inference.md)

@@ -210,6 +210,18 @@ webpack-side Module Federation configuration surface (`name`, `filename`, `expos
 source does not hot-swap the copy a running host already loaded; the dev loop for
 cross-app changes has to route through a rebuild or a full reload rather than in-place HMR.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Module Federation: Vite integration](https://module-federation.io/integrations/build-tool/vite.html) — module-federation.io: quick start with `name`, `manifest`, `remotes` (`type: 'module'` for an ESM remote), `exposes`, `shared`; "Except for the dev option, all options are supported" (*read*)
+- **Also good:** [module-federation/vite](https://github.com/module-federation/vite) — GitHub README: the plugin repo: the OriginJS migration guide, remote `type: "module"` (an omitted type falls back to legacy `var` with a warning), and on Vite 8 both `manualChunks` forms are ignored in favour of `codeSplitting.groups` (*read*)
+- **Beyond the docs:** [Micro Frontends](https://martinfowler.com/articles/micro-frontends.html) — Cam Jackson, martinfowler.com, 2019-06-19: the concept behind it: build-time versus run-time integration, why lockstep releases defeat the point (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Shared packages & deploy decision](04b-shared-packages-and-the-deploy-decision.md) · [Vite overview](../../README.md) · Next → [Shared deps and singletons](05a-shared-dependencies-and-singleton-breakage.md)

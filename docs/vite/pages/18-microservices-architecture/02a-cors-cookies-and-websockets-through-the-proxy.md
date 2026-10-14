@@ -212,6 +212,18 @@ subdomains**. In a setup where several services are exposed under sibling subdom
 realistic local testing, the leading-dot form avoids having to add a new allowlist entry every
 time a service moves to a new subdomain.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) — MDN: `credentials: "include"`, no wildcard `Access-Control-Allow-Origin` with credentials, preflights never carry credentials, third-party cookies and `SameSite` (*read*)
+- **Also good:** [Server Options](https://vite.dev/config/server-options) — vite.dev: the section intro says options apply to dev only unless noted, which is why the proxy is absent in a deploy (*read*)
+- **Beyond the docs:** [How to fix CORS errors when testing APIs](https://requestly.com/blog/how-to-fix-cors-errors-when-testing-apis/) — Ronak Kadhi, Requestly, 2026-06-10: shows a Vite `server.proxy` so "the browser only ever sees a same-origin request" and calls it a local-development convenience; a vendor blog, and it never states which bugs the proxy then hides (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The dev proxy across services](02-the-dev-proxy-against-many-services.md) · [Vite overview](../../README.md) · Next → [Websocket origin checks & the preview recipe](02a2-websocket-origin-checks-and-the-preview-verification-recipe.md)

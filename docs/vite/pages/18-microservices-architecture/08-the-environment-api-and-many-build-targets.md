@@ -258,6 +258,18 @@ safe to build a production deploy pipeline around, and to treat the programmatic
 surface (module runners, per-environment hooks reached from custom tooling) as more likely to
 move, re-verifying it on upgrade rather than assuming it is frozen the way the config shape is.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Environment API](https://vite.dev/guide/api-environment) — vite.dev: Vite 6 formalised environments (before, only `client` and `ssr`), "as many environments as needed"; the page says "generally in the release candidate phase", with some APIs still experimental (*read*)
+- **Also good:** [Vite 6.0 announcement](https://vite.dev/blog/announcing-vite6) — vite.dev blog, 2024-11-26: the origin: experimental then, aimed at framework and plugin authors, single-page apps unaffected (*read*)
+- **Beyond the docs:** [Introducing the Cloudflare Vite plugin](https://blog.cloudflare.com/introducing-the-cloudflare-vite-plugin/) — Cloudflare Blog, 2025-04-08: a real use: Worker code runs in workerd through the Environment API instead of Node, "any number of custom runtime environments"; written when the API was experimental, by a vendor (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [server.origin, manifest & router basename](07b-server-origin-manifest-and-the-router-basename.md) · [Vite overview](../../README.md) · Next → [Many deployables, not microservices](08b-many-deployables-is-not-microservices.md)

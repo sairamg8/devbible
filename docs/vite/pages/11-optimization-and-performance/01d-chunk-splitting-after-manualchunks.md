@@ -222,6 +222,19 @@ Because a chunk determines when a module's top-level code runs. Bundling into on
 **★ What does it mean that manual and automatic splitting "are not contradictory"?**
 That `groups` is a set of claims over the module graph, not a partition of it. Every module is captured by at most one group; everything uncaptured is chunked by the automatic algorithm as before. Two things follow. First, you never have to enumerate your whole graph — declaring one vendor group is a complete, valid configuration. Second, adding a group perturbs the automatic algorithm's input for everything else, so unrelated chunk names and hashes can move. That second consequence is the one people are surprised by, and it is why emitted filenames should be read from the manifest rather than assumed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CodeSplittingGroup](https://rolldown.rs/reference/TypeAlias.CodeSplittingGroup) — rolldown.rs: `priority` default 0 with ties to the smaller index, `minSize` and `maxSize` in bytes, `entriesAware` default false, `minShareCount` default 1, `test`, `name`, plus `minModuleSize`, `maxModuleSize`, `entriesAwareMergeThreshold` an
+- **Also good:** [Advanced chunks](https://rolldown.rs/in-depth/advanced-chunks) — rolldown.rs: a module is captured by manual or automatic splitting, not both; recursive dependency capture; `maxSize` is a target not a limit and `minSize` wins; a runtime chunk is always generated (*read*)
+- **Also good:** [Migration from v7 › Removed object form `build.rollupOptions.output.manualChunks` and deprecate function form one](https://vite.dev/guide/migration) — vite.dev: the object form is not supported, the function form is deprecated, and the replacement is Rolldown's `codeSplitting`; [Building for Production](https://vite.dev/guide/build) names `build.rolldownOptions.output.codeSplitting` (*rea
+- **Also good:** [Building for Production](https://vite.dev/guide/build)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01c · optimizeDeps include/exclude](01c-optimizedeps-include-and-exclude.md) · [Vite overview](../../README.md) · Next → [01e · codeSplitting: matching and priority](01e-tuning-codesplitting-groups.md)

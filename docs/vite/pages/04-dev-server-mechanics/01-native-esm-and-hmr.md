@@ -198,6 +198,18 @@ Exclude packages you are actively editing — a linked workspace package in a mo
 **Why must HMR calls be wrapped in `if (import.meta.hot)` rather than optional-chained?**
 Because the guard is what makes the block statically eliminable. The docs' first instruction on the HMR API page is to guard all usage *"so that the code can be tree-shaken in production"*. `import.meta.hot?.accept(...)` is an expression the bundler has to keep unless it can prove `import.meta.hot` is undefined, whereas `if (import.meta.hot) { … }` collapses to nothing once `import.meta.hot` is substituted as a falsy constant in the production build. It is the same reason `if (process.env.NODE_ENV !== 'production')` is the conventional shape in libraries: the pattern is chosen for what a bundler can delete, not for what reads best.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dependency Pre-Bundling](https://vite.dev/guide/dep-pre-bundling) — vite.dev: the two reasons (CommonJS and UMD compatibility, one request instead of 600 for `lodash-es`), dev only, four cache inputs (lockfile, patches folder, config fields, `NODE_ENV`), `--force`, Rolldown does it, and the `max-age=3153600
+- **Read this:** [HMR API](https://vite.dev/guide/api-hmr) — vite.dev: `accept`, `dispose`, `prune`, `data` (mutate, never reassign), `invalidate`, `on`/`off`/`send`; `decline` is a no-op (*read*)
+- **Also good:** [Features](https://vite.dev/guide/features) — vite.dev: bare imports are rewritten to `/node_modules/.vite/deps/my-dep.js` with a `?v=` hash, React Fast Refresh and Vue SFC HMR ship first party, Preact via `@prefresh/vite` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Configuration](../03-configuration/01-vite-config-file.md) · [Vite overview](../../README.md) · Next → [Build System](../05-build-system-rollup/01-build-options.md)

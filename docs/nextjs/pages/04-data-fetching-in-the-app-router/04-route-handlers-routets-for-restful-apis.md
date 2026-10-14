@@ -255,6 +255,18 @@ Because a parenthesised folder is excluded from the URL by design — route grou
 **A colleague wants to export a shared query helper from `route.ts` so the tests can import it. What do you say?**
 That the seven verb names are the only exports the router reads, so an extra export is not a route — but the file also carries route segment configuration through exports such as `runtime`, `revalidate` and `dynamic`, and a helper named to collide with one of those is a configuration change nobody will look for. Handlers and config in `route.ts`; everything else in a sibling module the tests import directly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [route.js](https://nextjs.org/docs/app/api-reference/file-conventions/route) — nextjs.org reference, updated 2026-04-30: the seven methods, automatic `OPTIONS`, `params` as a promise, cookies, headers, CORS, webhooks, streaming; `GET` handlers are dynamic since 15.0.0-RC. Its revalidate and segment-config examples are the previous model (*read*)
+- **Also good:** [Route Handlers](https://nextjs.org/docs/app/getting-started/route-handlers) — nextjs.org docs, updated 2026-08-27: convention, a `405` for unsupported methods, caching via `dynamic = 'force-static'`, a separate "With Cache Components" section (prerender when nothing runtime is read, `use cache` only in a helper function), special handlers and 
+- **Beyond the docs:** [Next.js Route Handlers: The Complete Guide](https://makerkit.dev/blog/tutorials/nextjs-api-best-practices) — MakerKit, published 2026-01-25: Zod `safeParse` on body and query with 400 responses, an error-class and helper pattern for structured JSON errors, auth wrappers returning 401 and 403, webhook signature checks; Next.js 16, no author named. It does not cover vers
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03c · Diagnosing stale and unexpectedly dynamic routes](03c-diagnosing-stale-and-unexpectedly-dynamic-routes.md) · [Chapter 4 overview](01-explanation.md) · Next → [04b · Constructing the response](04b-constructing-the-response-status-codes-and-streaming.md)

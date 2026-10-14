@@ -133,3 +133,15 @@ Without the "already loaded" guard shown in `loadScript` above, navigating to th
 
 ### ⚠️ Pitfall 3: No Fallback UI for a Dynamic Remote That Fails to Load
 A per-tenant remote URL that 404s (a misconfigured tenant record, a remote that's mid-deploy, a network blip) with no error handling around the `loadRemoteModule` call leaves the user staring at an infinitely-pending skeleton or an unhandled promise rejection crashing the whole page. Production dynamic-remote loading needs an explicit try/catch with a genuine fallback UI — see [production ops & troubleshooting](./05-production-ops-and-troubleshooting.md) for resilience patterns.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Runtime API](https://module-federation.io/guide/runtime/runtime-api) — module-federation.io: `createInstance`, `registerRemotes`, `loadRemote`, `registerShared`, `preloadRemote`; only `init` is flagged "use with caution" (*read*)
+- **Also good:** [Module Federation: Dynamic Remote Containers](https://webpack.js.org/concepts/module-federation/) — webpack.js.org: who loads the container, promise-based remotes (`promise new Promise(...)`), dynamic public path (*read*)
+- **Beyond the docs:** [Dynamic remotes in webpack module federation](https://h3manth.com/scribe/dynamic-remotes-webpack-module-federation/) — Hemanth HM, 2021-06-06: `__webpack_init_sharing__`, `container.init`, `container.get`; the script-injection step is described but not in the code; no webpack version stated
+
+{/* LINKMAP:END */}

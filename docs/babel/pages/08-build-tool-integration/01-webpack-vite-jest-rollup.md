@@ -103,3 +103,19 @@ Deletes the point of Vite’s speed—audit plugins annually.
 
 ### ⚠️ source map mismatches
 Debug points land on wrong lines—unify babel sourceMaps + bundler devtool.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [babel-loader](https://github.com/babel/babel-loader) — GitHub README: `cacheDirectory` and `cacheCompression`, exclude `node_modules`, transform-runtime for helper bloat; written for Babel 7, and loader 10.x lists Babel `^7.12.0 || ^8.0.0-alpha` only (*read*)
+- **Also good:** [@rollup/plugin-babel](https://github.com/rollup/plugins/tree/master/packages/babel) — GitHub README: `babelHelpers` modes `bundled` (default), `runtime`, `inline` (not recommended) and `external`, and when to use each (*read*)
+- **Also good:** [babel-loader on webpack.js.org](https://webpack.js.org/loaders/babel-loader) — webpack.js.org: the README rendered inside webpack's docs; says the loader is community maintained and works with webpack or Rspack (*read*)
+- **Read this:** [Getting Started: Using Babel](https://jestjs.io/docs/getting-started) — jestjs.io: `babel-jest` transforms automatically when a Babel config exists, `targets: &#123;node: 'current'&#125;`, `api.env('test')`, and the "Jest does not type-check" warning (in the TypeScript subsection) (*read*)
+- **Also good:** [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react) — GitHub README: Babel appears only for the React Compiler preset via `@rolldown/plugin-babel`; `react()` has no `babel` option, and the `compiler` option uses Oxc (*read*)
+- **Also good:** [plugin-react CHANGELOG](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/CHANGELOG.md) — GitHub: 6.0.0 removed Babel as a dependency (Vite 8 does the refresh transform with Oxc); Vite 7 and below are no longer supported by 6.x; 5.1.4 still had the `babel` option (*read*)
+- **Beyond the docs:** [React Compiler 1.0 + Vite 8: The Right Way to Install After plugin-react v6 Drops Babel](https://recca0120.github.io/en/2026/04/14/react-compiler-vite-v6/) — recca0120 Tech Notes, 2026-04-14: shows the install and `babel()` plus `reactCompilerPreset()` order for Vite 8, and says the old `react(&#123; babel &#125;)` form still applies to Vite 7 and earlier
+
+{/* LINKMAP:END */}

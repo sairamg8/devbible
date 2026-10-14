@@ -96,3 +96,16 @@ Misses broken imports in files not touched by the PR when the *importer* changes
 
 ### ⚠️ JSON formatter without handling huge output
 Monorepo JSON reports can OOM log collectors—stream or path-filter.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Command Line Interface](https://eslint.org/docs/latest/use/command-line-interface) — ESLint docs: `--cache` (default `.eslintcache`, stale for cross-file rules), `--fix`, `--max-warnings`, `--format` (default `stylish`), exit codes 0, 1, 2, and `--concurrency` (*read*)
+- **Also good:** [Node.js API](https://eslint.org/docs/latest/integrate/nodejs-api) — ESLint docs: `lintFiles`, `lintText`, `loadFormatter`, static `ESLint.outputFixes`, plus `loadESLint()` (*read*)
+- **Also good:** [Formatters Reference](https://eslint.org/docs/latest/use/formatters/) — ESLint docs: built-ins are `stylish` (default), `json`, `json-with-metadata`, `html` (*read*)
+- **Also good:** [Integration tutorial](https://eslint.org/docs/latest/integrate/integration-tutorial) — ESLint docs: a small Node module that lints, fixes with `outputFixes` and prints results; one code comment still names `.eslintrc` (*read*)
+
+{/* LINKMAP:END */}

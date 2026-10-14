@@ -177,6 +177,21 @@ information, just via the mechanism Vite actually built for this. The literal tr
 works; it also means carrying forward a webpack-shaped abstraction that Vite's `mode`
 concept was specifically designed to replace.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [codeSplitting](https://rolldown.rs/reference/OutputOptions.codeSplitting) — rolldown.rs: `groups` with `name`, `test`, `priority`, `minSize`, `maxSize`; the page shows `priority` only in examples and defines none of the fields in prose (*read*)
+- **Also good:** [Manual Code Splitting](https://rolldown.rs/in-depth/advanced-chunks) — rolldown.rs: why and how to group; `maxSize` is a target, not a strict limit, and `minSize` wins when they conflict; does not cover `priority`, and never mentions the deprecated `advancedChunks` (*read*)
+- **Also good:** [SplitChunksPlugin](https://webpack.js.org/plugins/split-chunks-plugin/) — webpack docs: `cacheGroups`, `test`, `priority` (higher wins), the model our page maps from (*read*)
+- **Also good:** [Module](https://webpack.js.org/configuration/module/) — webpack docs: `module.noParse` text (*read*)
+- **Also good:** [Migration from v7](https://vite.dev/guide/migration) — vite.dev: object `manualChunks` removed, function form deprecated, `codeSplitting` is the replacement; `define` and `mode` are on the Shared Options and Env pages above (*read*)
+- **Beyond the docs:** [サンプルプロジェクトを作ってVite 7からVite 8への移行手順を確認してみた](https://dev.classmethod.jp/articles/vite7-to-vite8-migration-pitfalls/) — 西村祐二, Classmethod, 2026-04-23: in Japanese; a tested Vite 7.3.2 to 8.0.10 move: the object `manualChunks` form is gone, the function form is deprecated, and a `codeSplitting.groups` entry with `name: 'vendor'` and a regex `test` produced the same `vendor-*.js` 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01j · CommonJS in app source](01j-commonjs-in-application-source.md) · [Vite overview](../../README.md) · Next → [01l · splitChunks → codeSplitting](01l-splitchunks-to-code-splitting.md)

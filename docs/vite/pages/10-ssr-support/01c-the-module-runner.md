@@ -268,6 +268,18 @@ call is deleted, and the server entry gains an `import.meta.hot.accept()`. Leave
 inside third-party packages alone and record them; that is the vendor's migration, and the
 API still works meanwhile.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Environment API for Frameworks](https://vite.dev/guide/api-environment-frameworks) — vite.dev: `RunnableDevEnvironment` (same runtime, values pass directly, `runner.import()` is "the modern replacement for `server.ssrLoadModule`") versus `FetchableDevEnvironment` (Request and Response, recommended where possible) (*read*)
+- **Also good:** [SSR Using ModuleRunner API](https://vite.dev/changes/ssr-using-modulerunner) — vite.dev: the primary source for the deprecation claim: "The deprecation of `server.ssrLoadModule` is planned for a future major", `future.removeSsrLoadModule: 'warn'` to find usages, `ModuleRunner` since v6.0; no version or date is given, 
+- **Also good:** [Environment API for Runtimes](https://vite.dev/guide/api-environment-runtimes) — vite.dev: `ModuleRunner` from `vite/module-runner`, `ESModulesEvaluator` (uses `new AsyncFunction`), transport, `HotChannel` and `createServerHotChannel`; it contrasts the runner with `ssrLoadModule` but does not mention deprecation (*read*
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Environments vs the `ssr` Boolean](01b-environments-replace-the-ssr-boolean.md) · [Vite overview](../../README.md) · Next → [Fetchable & Custom Environments](01ca-fetchable-and-custom-environments.md)

@@ -210,6 +210,17 @@ by URL prefix and to know Vite's namespace: anything beginning `/@` is internal,
 `/node_modules/.vite/`. This is also a good reason to prefer `server.middlewares.use('/api', fn)`
 with a mount path over an unmounted middleware plus a manual check.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Plugin API — configureServer](https://vite.dev/guide/api-plugin) — vite.dev: `configureServer` (`#configureserver`) is async, sequential, Global; custom middlewares run before internal ones unless you return a function; it is not called in a production build; `configurePreviewServer` (`#configurepreviewser
+- **Beyond the docs:** [Creating a Custom Plugin for Vite: The Easiest Guide](https://hackernoon.com/creating-a-custom-plugin-for-vite-the-easiest-guide) — German Makarov, HackerNoon, 2024-01-21: builds an SVG sprite plugin as two plugins, `apply: 'build'` with `writeBundle` and `apply: 'serve'` with `configureServer` returning a function so its middleware runs after Vite's; no Vite version named
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Eliminating Coupling](01h-eliminating-cross-plugin-coupling.md) · [Vite overview](../../README.md) · Next → [Storing the Server](01j-storing-the-server.md)

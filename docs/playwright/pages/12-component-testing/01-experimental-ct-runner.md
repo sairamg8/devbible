@@ -104,3 +104,15 @@ Component testing verifies a component in isolation — it does NOT verify how t
 
 ### ⚠️ Pitfall 3: Forgetting Component Testing Is Still Marked Experimental
 Playwright's Component Testing runner has historically carried an "experimental" designation with API surface still evolving between versions — teams adopting it for significant test coverage should track its stability status and be prepared for potential breaking changes across Playwright version upgrades, unlike the fully-stable core E2E API.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Components](https://playwright.dev/docs/test-components) — playwright.dev: a component test is "a regular Playwright end-to-end test that runs against a small story gallery page", driven by the built-in `mount(id, props)` fixture; the old packages "have been removed and are no longer published", with a m
+- **Also good:** [Release notes](https://playwright.dev/docs/release-notes) — playwright.dev: 1.62 introduced the gallery `mount` fixture, 1.63 said the experimental packages will no longer be updated; latest listed 1.64 (first half of a very long page read)
+- **Beyond the docs:** [Playwright Component Testing in Large Frontend Codebases](https://currents.dev/posts/playwright-component-testing) — Currents Team, 2026-07-09: real browser versus jsdom layout, the Node-browser serialization boundary, cost model; written for the experimental packages before the 1.62 change, so read it for concepts only
+
+{/* LINKMAP:END */}

@@ -253,6 +253,19 @@ Because the CSS class is an implementation detail with no contract behind it —
 **★ What is `trace: 'on-first-retry'` buying you?**
 A full recording — DOM snapshots, network, console, actions — for exactly the runs that failed once and are being retried, and nothing for the runs that passed. `trace: 'on'` gives you the same debugging power plus an artefact for every passing test, which on a large suite is gigabytes of storage per run for data nobody will open.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Ensuring instant navigations](https://nextjs.org/docs/app/guides/instant-navigation) — Next.js docs, updated 2026-10-06: `instant()` from `@next/playwright` scoped to what is visible before dynamic data, initial-load vs client-navigation tests, `exposeTestingApiInProductionBuild` for CI, and what a failing test means (*read*)
+- **Also good:** [How to set up Playwright with Next.js](https://nextjs.org/docs/app/guides/testing/playwright) — Next.js docs, version 16.4.0, updated 2026-09-28: setup, run against `build` plus `start`, headless CI (*read*)
+- **Also good:** [instant API reference](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config/instant)
+- **Beyond the docs:** [Playwright E2E testing for Next.js with CI (2026)](https://noqta.tn/tutorials/playwright-e2e-testing-nextjs-ci-2026) — Noqta Team, 2026-02-14: Page Object Model, API mocking, auth reuse, axe checks, GitHub Actions; never mentions `instant()`, streaming or PPR, so it covers ordinary flows only (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Server Components and Actions](01b-testing-server-components-and-server-actions.md) · [Chapter 13 overview](01-explanation.md) · Next → [PPR, Activity and CI](02b-testing-ppr-activity-and-playwright-in-ci.md)

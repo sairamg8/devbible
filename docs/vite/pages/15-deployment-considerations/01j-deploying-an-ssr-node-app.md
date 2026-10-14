@@ -177,6 +177,18 @@ A full `node_modules` image tolerates leaving most dependencies external — Nod
 **★ A teammate says "the SSR build passed, so the deploy will work." Where does that reasoning break, specifically for dependencies?**
 It breaks at the boundary between build-time and runtime dependency resolution. `vite build --ssr` only has to succeed at bundling and transforming what it decides to touch — externalized dependencies are, by definition, left completely alone, so a missing or broken externalized package produces no build-time signal at all. The failure only appears the moment the running process actually executes the `import`/`require()` for that package, which happens on the first real request in whatever environment is missing it. A green build tells you the SSR entry point compiled; it tells you nothing about whether the container that will run it actually has the dependencies that entry point assumes exist on disk.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Server-Side Rendering](https://vite.dev/guide/ssr) — vite.dev: Building for Production (client build to `dist/client`, `--ssr` build to `dist/server`), SSR Externals, `ssr.noExternal` (*read*)
+- **Also good:** [Speculative loading](https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/Speculative_loading) — MDN: `modulepreload` fetches, parses and compiles a module into the module map, unlike plain `preload` (*read*)
+- **Beyond the docs:** [Building Production-Ready SSR React Applications](https://dev.to/maxh1t/building-production-ready-ssr-react-applications-4bne) — Max (maxh1t), DEV Community, 2025-01-02 (edited 2025-03-08): a worked deploy of the two outputs: client build to `dist/client`, SSR build to `dist/ssr`, the server bundled by `tsup` and run on Express with `compression` and `sirv`, and a multi-stage `node:22-alpine` Dockerfile; it names no 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01i · Source maps in production](01i-sourcemaps-in-production.md) · [Vite overview](../../README.md) · Next → [01k · Manifest & backend integration](01k-manifest-and-backend-integration.md)

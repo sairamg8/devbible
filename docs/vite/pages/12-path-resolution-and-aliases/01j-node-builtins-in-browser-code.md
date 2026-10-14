@@ -216,6 +216,18 @@ behaviour on the client — no alias supplies actual filesystem or process acces
 in that case only defers the failure from a clear resolution warning to a confusing runtime
 one once the stub's missing methods get called.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Troubleshooting › Module externalized for browser compatibility](https://vite.dev/guide/troubleshooting) — vite.dev: the warning appears when a Node.js module is used in the browser, because Vite does not automatically polyfill Node.js modules (the section is two sentences, heading id `module-externalized-for-browser-compatibility`) (*read*)
+- **Also good:** [Dependency Pre-Bundling](https://vite.dev/guide/dep-pre-bundling) — vite.dev: CommonJS to ESM conversion in pre-bundling, the context for our dual-package page (*read*)
+- **Beyond the docs:** [vite-plugin-node-polyfills](https://github.com/davidmyersdev/vite-plugin-node-polyfills) — David Myers, GitHub README, undated: the escape hatch when a library really needs `Buffer` or `process`: `include`, `exclude`, `globals`, `overrides`, `protocolImports`; the README states no supported Vite versions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01i · mainFields & browser field](01i-resolve-mainfields-and-the-browser-field.md) · [Vite overview](../../README.md) · Next → [01k · Externalisation & the two builds](01k-externalization-and-the-two-builds.md)

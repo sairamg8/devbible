@@ -180,3 +180,21 @@ function LocationDisplay() {
 - **Previous**: [10 · Async Utilities](../10-async-utilities/01-waiting-for-updates.md) — Handling asynchronous DOM updates.
 - **Next**: [12 · Mocking Network Requests](../12-mocking-network-requests/01-api-level-mocking.md) — Integrating Mock Service Worker (MSW) with custom render.
 - **Redux Toolkit Track (`docs/redux-toolkit/`)**: In-depth state slice management.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Setup](https://testing-library.com/docs/react-testing-library/setup) — Testing Library: the Custom Render section: an `AllTheProviders` wrapper (a theme provider and a translation provider) passed as the `wrapper` option, with the rest of the library re-exported (*read*)
+- **Beyond the docs:** [Setting up React Testing Library](https://github.com/nareshbhatia/react-testing-techniques/blob/main/docs/setting-up-react-testing-library.md) — Naresh Bhatia, GitHub docs repo (no date shown): argues the custom render should mirror the real app's global providers, tells tests to import from the utility file instead of the library, and links a `test-utils.tsx` example; the page is short, so read the linked file for the c
+- **Read this:** [Writing Tests](https://redux.js.org/usage/writing-tests) — Redux docs: `renderWithProviders`, a `setupStore` factory that calls `configureStore` with an optional `preloadedState`, and the rule that each test gets its own store; the helper returns the store "in case the test needs to dispatch more act
+- **Beyond the docs:** [Getting started with Redux and Testing Library](https://dev.to/bonnie/getting-started-with-redux-and-testing-library-36ln) — Bonnie Schulkin, DEV Community, 2022-06-02: a custom `render` that takes `preloadedState` and builds a new store per test from a factory function; written before the Toolkit `setupStore` convention, so read it for the reasoning
+- **Read this:** [Testing](https://tanstack.com/query/latest/docs/framework/react/guides/testing) — TanStack Query v5 docs: default is three retries with exponential backoff, so set `retry: false` in the client's `defaultOptions.queries` (a per-query `retry` overrides it); a fresh `QueryClient` in the wrapper isolates tests (*read*)
+- **Beyond the docs:** [Testing React Query](https://tkdodo.eu/blog/testing-react-query) — TkDodo (Dominik Dorfmeister), first published 2021-04-04, updated 2023-10-21: one client per test over clearing a shared cache, retries off, and MSW as the single API mock; does not mention `gcTime`, and predates some v5 renames, so read for reasoning
+- **Read this:** [createMemoryRouter](https://reactrouter.com/api/data-routers/createMemoryRouter) — React Router v7 docs: keeps history in memory, takes `initialEntries` and `initialIndex`, is passed to `RouterProvider`, and should be created once outside the React tree (*read*)
+- **Also good:** [createMemoryRouter (v6)](https://reactrouter.com/v6/routers/create-memory-router) — React Router v6 docs: a full RTL test: `initialEntries: ["/", "/events/123"]`, `initialIndex: 1`, `render(&lt;RouterProvider router=&#123;router&#125; /&gt;)`, then `waitFor` on a heading. v6 era, so imports come from `react-router-dom` (*read*)
+- **Also good:** [Testing](https://reactrouter.com/start/framework/testing) — React Router v7 docs: `createRoutesStub` for unit testing reusable components that need router context; recommends E2E tools for whole routes. It does not mention `createMemoryRouter` (*read*)
+
+{/* LINKMAP:END */}

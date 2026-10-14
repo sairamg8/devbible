@@ -175,6 +175,19 @@ When the automatic scanner cannot see the import. The scanner works from your en
 **Why does the removal of the object form of `manualChunks` matter more than a config rename?**
 Because the object form encoded a *strategy* — "these package names go in this chunk" — and the function form and Rolldown's `codeSplitting` encode a *policy* evaluated per module. Teams that wrote `{ 'react-vendor': ['react', 'react-dom'] }` were expressing a caching intent, and porting that intent forward means restating it in terms of module IDs or of whatever `codeSplitting` actually exposes, not mechanically translating a literal. It is the one item in the v7→v8 migration on this page that is a design decision rather than a find-and-replace.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Why Vite](https://vite.dev/guide/why) — vite.dev: native ESM served on demand with HMR touching only the edited module, why production still bundles (nested imports cost round trips), and the esbuild plus Rollup history that Rolldown unifies; our page quotes it (*read*)
+- **Also good:** [Announcing Vite 8](https://vite.dev/blog/announcing-vite8) — vite.dev blog: two pipelines meant two plugin systems, Vite 8 ships Rolldown as one bundler, and an experimental Full Bundle Mode that bundles during development; the 10 to 30x figure is theirs (*read*)
+- **Also good:** [Migration from v7](https://vite.dev/guide/migration) — vite.dev: `rollupOptions` becomes `rolldownOptions` (deprecated alias), esbuild is now an optional dependency, Oxc transforms, Rolldown does dependency optimization (*read*)
+- **Beyond the docs:** [Vite v8 Rust (InfoQ)](https://infoq.com/news/2026/05/vite-v8-rust/) — Daniel Curtis, InfoQ, 2026-05-19: plain news write-up of the esbuild plus Rollup problem and the single-bundler fix; repeats the vite.dev 10 to 30x claim
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Vite overview](../../README.md) · Next → [CLI & Project Scaffolding](../02-cli-and-scaffolding/01-commands-and-templates.md)

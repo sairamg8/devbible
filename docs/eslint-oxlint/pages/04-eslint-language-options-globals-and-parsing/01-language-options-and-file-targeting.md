@@ -136,3 +136,14 @@ Hides architectural boundary violations. Split by `files`.
 `{ rules: { ...tseslint.configs.recommendedTypeChecked.rules } }` does not throw — arrays have no `.rules` property, so `{ ...undefined }` silently becomes `{}`, and the config object ends up with **zero rules enabled**. No lint errors, no warnings, just a linter that looks configured for type-aware checking and isn't. Always check whether a shareable config export is an array or a single object before spreading it; when in doubt, use `extends: [tseslint.configs.X]` instead of touching `.rules` directly.
 
 Cross-link: for Babel-era experimental syntax that Espree cannot parse, see the Babel bible on [`@babel/eslint-parser`](../../../babel/pages/09-linter-and-type-checker-interop/01-babel-eslint-parser-and-tsc.md)—rare in 2026 if you are on typescript-eslint.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Language Options](https://eslint.org/docs/latest/use/configure/language-options) — ESLint docs: ESLint assumes no globals beyond the `ecmaVersion` built-ins; `ecmaVersion` defaults to `latest` and `sourceType` to `module`; globals via comments or `languageOptions.globals` (*read*)
+- **Also good:** [Configuration Files](https://eslint.org/docs/latest/use/configure/configuration-files) — ESLint docs: "Specify `files` and `ignores`", with the advice to always include `files` when you set `ignores` (*read*)
+
+{/* LINKMAP:END */}

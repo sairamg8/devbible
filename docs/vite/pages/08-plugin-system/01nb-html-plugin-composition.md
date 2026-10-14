@@ -245,6 +245,17 @@ one plugin, whereas anchor collisions are a property of the *set* of plugins ins
 individual author can reason about it in isolation. That is the case for making the array form the
 default and treating any `html.replace` as a documented, commented exception.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Plugin API — transformIndexHtml context](https://vite.dev/guide/api-plugin) — vite.dev: Kind async, sequential, Scope Per-environment; the context carries `path`, `filename`, `originalUrl`, plus `server` in dev or `bundle` and `chunk` in build; "This hook won't be called if you are using a framework that has custom h
+- **Also good:** [Environment API for Plugins — per-environment state](https://vite.dev/guide/api-environment-plugins) — vite.dev: Per-environment State in Plugins (`#per-environment-state-in-plugins`), the documented fix for the module-level flag problem (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Nested Descriptors & `{ html, tags }`](01na-html-injection-composition.md) · [Vite overview](../../README.md) · Next → [When `transformIndexHtml` Runs](01nc-html-hook-execution-contract.md)

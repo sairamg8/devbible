@@ -218,6 +218,17 @@ Combining an automatic repeat (`auto-fit`/`auto-fill`) with intrinsic or flexibl
 track sizes elsewhere in the same declaration is invalid, and the entire
 declaration is dropped silently.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [repeat()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/repeat) — MDN: `auto-fit` is `auto-fill` plus collapsing of empty tracks to `0px` (*read*)
+- **Beyond the docs:** [Auto-Sizing Columns in CSS Grid: auto-fill vs auto-fit](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/) — Sara Soueidan, CSS-Tricks, 2017-12-29: two otherwise identical grids, one `auto-fill` and one `auto-fit`, shown while resizing; they differ when the row has room for a column with nothing to put in it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · `fr` and the track sizing algorithm](./02-fr-and-track-sizing.md) →

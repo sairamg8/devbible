@@ -166,6 +166,18 @@ Narrow to the row first and chain from it: `page.locator('.product-card').filter
 **A colleague stores `const btn = await page.$('button')` and reuses it later. What do you tell them?**
 That they have taken a snapshot of a node rather than a description of one, so anything that re-renders that part of the tree leaves them holding a detached element — and that the fix is not to re-take the snapshot at every use, it is to hold the locator instead and let Playwright resolve it each time. The locator form also gets auto-waiting and strictness for free, neither of which a stored handle has.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Locators](https://playwright.dev/docs/locators) — playwright.dev: "Every time a locator is used for an action, an up-to-date DOM element is located"; `getByRole` first in the quick guide; strictness throws when more than one element matches; filtering, chaining, `and`, `or`; `first`, `last`, `nt
+- **Also good:** [Other locators](https://playwright.dev/docs/other-locators) — playwright.dev: CSS, XPath, n-th and parent locators, legacy text selectors, id and `data-testid` shorthands; no React or Vue selectors; steers back to role locators (*read*)
+- **Beyond the docs:** [Playwright locators: getByRole first, CSS and XPath last](https://momentic.ai/resources/a-guide-to-playwright-locators-from-getbyrole-to-css-and-xpath) — Wei-Wei Wu, Momentic, last updated 2026-09-11: ranked ladder from role down to XPath; mentions the strict-mode error and that `first`/`last`/`nth` opt out, but presents chaining and `filter()` as general scoping, not as a strict-mode cure
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Test runner](../02-test-runner/01-playwright-test-fixtures.md) · [Playwright index](../../README.md) · Next → [Actions and interactions](../04-actions-and-interactions/01-interaction-primitives.md)

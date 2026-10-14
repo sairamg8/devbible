@@ -197,6 +197,18 @@ It is correct at every width and specified at none, so the states a designer
 approved were never explicitly verified, and reviewing a fluid rule is harder
 than reading a breakpoint. Failures appear in the untested gaps.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [minmax()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/minmax) — MDN: track size range, three `minmax(0, 1fr)` tracks written out, and that `fr` is valid only for the maximum, not the minimum (*read*)
+- **Also good:** [clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp) — MDN: `clamp(MIN, VAL, MAX)`, and for text size a relative-unit maximum no less than twice the minimum so text can reach 200% on zoom (*read*)
+- **Beyond the docs:** [Auto-Sizing Columns in CSS Grid: auto-fill vs auto-fit](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/) — Sara Soueidan, CSS-Tricks, 2017-12-29: the two keywords act the same until a row has spare room, then `auto-fill` keeps empty tracks and `auto-fit` collapses them
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · Container queries](./01-container-queries.md) · Next: [03 · User-preference queries](./03-user-preference-queries.md) →

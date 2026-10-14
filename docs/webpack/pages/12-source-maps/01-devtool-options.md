@@ -82,3 +82,14 @@ devtool: 'hidden-source-map',
 
 ### ⚠️ Pitfall 3: Forgetting to Delete `.map` Files Before Deploying Static Assets
 Even with `hidden-source-map` (no `sourceMappingURL` comment), if the `.map` files themselves are still deployed alongside the `.js` files, anyone who guesses or discovers the URL pattern (`app.[hash].js.map` sitting right next to `app.[hash].js`) can fetch and read it directly — the "hidden" in `hidden-source-map` only hides the *reference*, not the file's existence. The map must be deleted or excluded from the deployed asset folder entirely, as shown in the CI example above.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Devtool](https://webpack.js.org/configuration/devtool/) — webpack.js.org: development picks (`eval`, `eval-source-map`, `eval-cheap-module-source-map`), production (`false`, `source-map`, `nosources-source-map`), `hidden-source-map` for error reporting, array form (5.105+); no error-tracker upload (*rea
+- **Beyond the docs:** [Source maps](https://survivejs.com/webpack/building/source-maps/) — SurviveJS, undated, mentions "webpack 4 or newer": inline versus separate maps and a quality-versus-speed walk-through; uses pre-5 names like `cheap-eval-source-map`
+
+{/* LINKMAP:END */}

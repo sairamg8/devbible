@@ -227,3 +227,16 @@ When the route is behind authentication. No crawler will ever request it, so the
 The ordering does, and Q1 and Q4 still identify the right constraints — but the terminals change, because there are no holes. A request read anywhere in the subtree makes the whole route request-time, so Q2's "hoist it out" branch is even more valuable, and the fallback for un-hoistable per-user content is a Client Component fetching after hydration, with a visible flash as its price. Q0 exists precisely so that this difference is stated before anyone argues from the wrong model.
 
 ← [02d · The two applications side by side](02d-the-two-applications-side-by-side.md) · [Chapter 19 overview](01-explanation.md) · Next → [03b · The caching tree](03b-the-caching-tree.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`use cache: remote`](https://nextjs.org/docs/app/api-reference/directives/use-cache-remote) — and [`use cache: private`](https://nextjs.org/docs/app/api-reference/directives/use-cache-private): Next.js docs
+- **Read this:** [`use cache: private`](https://nextjs.org/docs/app/api-reference/directives/use-cache-private)
+- **Also good:** [Caching](https://nextjs.org/docs/app/getting-started/caching) — Next.js docs: the base model for the caching tree: `use cache`, `Suspense`, runtime APIs, where cached content is stored (*read*)
+- **Also good:** [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) — Next.js docs: when to use each, input for the state-placement tree (*read*)
+
+{/* LINKMAP:END */}

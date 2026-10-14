@@ -225,6 +225,17 @@ Only that fraction of the free space is distributed; the remainder stays empty.
 Because `fr` tracks absorbed all the free space. Alignment distributes only what
 track sizing left behind.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CSS Grid Layout Module Level 1](https://www.w3.org/TR/css-grid-1/) — W3C: section 7.2.4 "Flexible Lengths: the fr unit" and 11.3 "Track Sizing Algorithm" (*headings only*)
+- **Beyond the docs:** [Debugging CSS Grid: Part 2: What the Fr(action)?](https://css-irl.info/debugging-css-grid-part-2-what-the-fraction/) — Michelle Barker, CSS-IRL, 2019-05-16: `1fr` behaves as `minmax(auto, 1fr)` and the browser subtracts fixed tracks and gaps before sharing space between `fr` tracks (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · `repeat()`, `minmax()`, `auto-fit`](./01-repeat-minmax-autofit.md) · Next: [03 · The `minmax(0, 1fr)` fix](./03-the-minmax-zero-fix.md) →

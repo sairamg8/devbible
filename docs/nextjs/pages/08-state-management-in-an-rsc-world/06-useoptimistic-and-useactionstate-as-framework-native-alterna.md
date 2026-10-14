@@ -268,6 +268,18 @@ No, and this is the shape to reach for. Keep the page a Server Component that do
 **Can a single component use `useActionState` for several different operations?**
 Yes, in two ways, and they have different properties. Several separate `useActionState` calls give each operation its own state and its own `isPending`, which is what you want when they are unrelated. One call whose `actionPayload` carries a discriminant (`{ type: 'ADD' }` / `{ type: 'REMOVE' }`) gives you one state that all of them reduce into, and one queue — which is what you want when they mutate the same thing, because it guarantees ordering.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useOptimistic](https://react.dev/reference/react/useOptimistic) — react.dev: must be called inside an Action or transition, automatic rollback when the transition ends, reducer vs updater, how to detect pending state (*read*)
+- **Also good:** [useActionState](https://react.dev/reference/react/useActionState) — react.dev: actions are queued one at a time, expected failures should be returned as state while unexpected errors are thrown, the `permalink` argument for progressive enhancement, pairing with `useOptimistic` (*read*)
+- **Also good:** [Building interactive apps](https://nextjs.org/docs/app/guides/interactive-apps) — nextjs.org (updated 2026-08-19): eight worked patterns with `useOptimistic`, transitions and `useActionState` against a Server Component app, including the reducer form for a drag-and-drop move and the post-`await` transition caveat (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05f · RTK Query and Redux](05f-rtk-query-and-the-redux-question.md) · [Chapter 8 overview](01-explanation.md) · Next → [06b · Queuing and errors](06b-queuing-and-errors.md)

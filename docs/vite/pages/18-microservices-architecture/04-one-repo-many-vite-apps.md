@@ -230,6 +230,19 @@ from its siblings', pointing every app at one shared file removes exactly the pe
 distinction the workspace was built to preserve, defeating the reason to run several apps at
 all rather than one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dependency Pre-Bundling: Monorepos and Linked Dependencies](https://vite.dev/guide/dep-pre-bundling) — vite.dev: a linked package outside `node_modules` is treated as source, must be ESM or go in `optimizeDeps.include`, and needs `--force` after changes (*read*)
+- **Also good:** [Shared Options: resolve.dedupe](https://vite.dev/config/shared-options) — vite.dev: force one copy of a dependency when hoisting or linking in a monorepo creates duplicates; SSR caveat for ESM outputs (*read*)
+- **Also good:** [Building for Production: Multi-Page App](https://vite.dev/guide/build) — vite.dev: the alternative to separate apps: several HTML entries in one build (*read*)
+- **Also good:** [Turborepo: Vite guide](https://turborepo.dev/docs/guides/frameworks/vite) — Turborepo docs: adding an internal package to a Vite app (`workspace:*`), and the `with-vite-module-federation` example: a host app, a remote app and a shared UI package; the page shows no date (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Runtime configuration](03b-runtime-configuration-and-the-fix.md) · [Vite overview](../../README.md) · Next → [Shared packages & deploy decision](04b-shared-packages-and-the-deploy-decision.md)

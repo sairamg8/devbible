@@ -216,6 +216,19 @@ a cache, a `Set` of seen ids, a counter — is shared across builds that should 
 matters in a monorepo where one process builds several packages, and it produces the worst kind of
 bug: correct in isolation, wrong under concurrency, and invisible in a single-project test.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Plugin API](https://vite.dev/guide/api-plugin) — vite.dev: Authoring a Plugin, Conventions (`#conventions`: `rolldown-plugin-` for plugins that work as Rolldown plugins, `vite-plugin-` for Vite-only ones that must say why), Plugins Config (`#plugins-config`), and the line telling you to r
+- **Also good:** [Rolldown Interface.Plugin](https://rolldown.rs/reference/Interface.Plugin) — rolldown.rs reference: the base interface Vite extends: required `name`, optional `api`, `meta`, `version`, each hook with its Kind, and a `filter` option on `load`, `resolveId`, `transform`, `renderChunk` (*read*)
+- **Also good:** [Announcing Vite 8](https://vite.dev/blog/announcing-vite8) — vite.dev blog, 2026-03-12: says Rolldown supports the same plugin API as Rollup and Vite and that most existing Vite plugins work out of the box; does not cover hook filters or plugin-author changes (*read*)
+- **Beyond the docs:** [Build and Use Plugins in Vite](https://blog.openreplay.com/build-use-plugins-vite/) — OpenReplay Team, 2025-11-01: a gentler tour of `config`, `configResolved`, `transform`, `load`, `resolveId`, `configureServer`, `transformIndexHtml`, `writeBundle` with `enforce` and `apply`; names no Vite version, so its Rollup-flavoured wording and `moduleP
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Env System & `.env` Files](../07-env-variables-and-modes/01-environment-system.md) · [Vite overview](../../README.md) · Next → [Conventions & Discovery](01a-plugin-conventions.md)

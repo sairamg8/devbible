@@ -149,3 +149,16 @@ await waitFor(() => {
 - **Previous**: [12 · Mocking Network Requests](../12-mocking-network-requests/01-api-level-mocking.md) — Mocking HTTP endpoints for data-fetching hooks.
 - **Next**: [14 · Accessibility Testing](../14-accessibility-testing/01-a11y-assertions.md) — Automated a11y assertions with `jest-axe`.
 - **Custom Render**: [11 · Custom Render](../11-custom-render/01-provider-wrapping.md) — Passing custom `wrapper` providers into `renderHook`.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [React Testing Library API](https://testing-library.com/docs/react-testing-library/api) — Testing Library: `renderHook`: `result.current` is the last committed value, `rerender` with new props, `initialProps`, and `wrapper`; `initialProps` are not passed to the wrapper (*read*)
+- **Beyond the docs:** [How to test custom hooks with React Testing Library](https://site.builder.io/blog/test-custom-hooks-react-testing-library) — Vishwas Gopinath, Builder.io blog, 2023-05-09: a counter hook with `initialProps` and `act(() =&gt; result.current.increment())`; does not cover `rerender` or `wrapper` (*read*)
+- **Read this:** [Testing custom hooks](https://www.epicreact.dev/modules/testing-react-apps-v1/testing-custom-hooks-intro) — Kent C. Dodds, Epic React: test through the component for hooks used by one or two components; test directly for reusable or library hooks (*read*)
+- **Beyond the docs:** [How to test custom React hooks](https://kentcdodds.com/blog/how-to-test-custom-react-hooks) — Kent C. Dodds, 2020-03-22: tests a `useUndo` hook through an example component first, then shows a test-only component and `renderHook` as alternatives; written when the package was `react-hooks-testing-library` (*read*)
+
+{/* LINKMAP:END */}

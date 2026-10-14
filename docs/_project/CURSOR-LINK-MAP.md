@@ -7,6 +7,18 @@ metadata:
 
 # 🔴 START HERE — the link map ("hub + delta", one place)
 
+## 🔴 RESUME HERE — 2026-10-14 (CSS done, PR open)
+
+- **CSS DONE 2026-10-14** (74 topics, 4 files; linkcheck + mdxcheck clean; the check script is `scripts/mdxcheck.mjs` — `mdxcheck.py` no longer exists; needs `corepack enable && yarn install`). PR left open for the user. **Next language: webpack** (nextjs DONE 115 topics, vite DONE 72 blocks, 2026-10-14), then webpack, jest-rtl, playwright, tanstack-query, storybook, babel, eslint-oxlint, framer-motion, dsa, system-design.
+- **Content bug found (not fixed, outside lane):** `docs/css/pages/phase-1-selectors/14-scope.md` "Proximity" says proximity wins before specificity; Chrome and MDN put scoping proximity after specificity, before source order.
+- **Recipe notes:** block headers must read `### T05-03 · title — <tier or "Syllabus bullet"> · ✅ written \`docs/…\`` or the injector matches 0 pages. All work lands on the one designated branch/PR (#30) — separate branches are not allowed.
+- **Next.js findings in our pages (not fixed):** 02b react-compiler page states 34%/46% figures the 16.3 post doesn't; 03 bundle-analysis says `next experimental-analyze` (live: `next analyze`); 05 CWV page calls the Analytics guide stale (it now lists INP); 10/02b says `z.flattenError()` where Zod's changelog names `z.treeifyError()`; 09/05d says Partytown docs unreachable (they resolve).
+- **No-syllabus tracks** (vite, webpack, playwright, tanstack-query, babel, eslint-oxlint, framer-motion): topic list is built by `scratchpad/mklist.py` from the page tree (a numbered page + its a/b/c chunks = one group); big groups become several blocks, header `— Topic · ✅ written`.
+- **Vite findings in our pages (not fixed):** 04b says a linked package needs `optimizeDeps.exclude` (Vite docs: linked packages outside node_modules are already source); 14/01b says Vitest `environmentMatchGlobs` removal is "third-party only" (official: removed in v4 migration guide); dev-server page omits Full Bundle Mode; `closeServer`/`closePreviewServer` in no chunk; 01d "removal not documented" is stale; 3 pages over cap (10/01f, 18/03, 18/07, 18/07b).
+- **Findings in our pages (2026-10-14 batch, not fixed):** Playwright page 12 teaches the removed `@playwright/experimental-ct-*` packages (currency pass owed); Playwright 09 `mask`, 10 `PWDEBUG=1`, 11 `describe.parallel/serial`, 13 no `page.request`; tanstack-query `16-migration-recipes/01n-prefetchquery-to-queryclient-query.md` is stale (the deprecation is now in the migration guide + reference); jest-rtl: MSW option is `onUnhandledFrame` in msw 3.x, SWC "3-5x" claim unsupported, TanStack `gcTime: Infinity` (official) vs `0` (ours); webpack: `[hash]` deprecated alias of `[fullhash]`, pages lack Verified lines.
+- **Findings in our pages (2026-10-14, second batch, not fixed):** Babel p08 says plugin-react runs Babel by default (false since plugin-react 6 / Vite 8: needs `@rolldown/plugin-babel`); Babel p04b/p15 say a Babel config drops SWC in Next (only `--webpack` does); Babel 8 released 2026-06-16, sections 05-16 unchecked against it; ESLint p02 says v9 is the supported path (v10 removed eslintrc), p21 uses deprecated `tseslint.config(`, p08 lists removed formatters, p18 `flat/recommended` ordering; Storybook play-functions page imports `@storybook/test` (use `storybook/test`), `@storybook/blocks`/`manager-api` imports stale; Framer Motion T15 page's `usePathname`-keyed AnimatePresence recipe is the setup Next discussion #42658 says does not reliably play exit animations.
+- Routine PRs are NOT merged now (user changed it: leave open for review).
+
 ## 🔴 RESUME HERE — 2026-10-13 (Beyond-the-docs round done for the 10 finished languages)
 
 - **FINAL RULE (user, 2026-10-13):** keep every existing official link as is; ADD one line `- **Beyond the docs:** [Title](url) · site/author · why · fetched date (*read*|*headings only*)` per topic block **only where a good non-official explanation (article, blog, book chapter, repo, talk) exists** — no placeholder when none. `scripts/linkmap-inject.py` renders it into the pages' Further reading. NEW languages: normal blocks + the optional Beyond-the-docs line.
@@ -43,7 +55,18 @@ metadata:
 | React | 210 | ✅ complete 2026-10-13 (verified once; verifiers hit the search limit — re-search owed for lane 01 T00-06/08/09/12/16, T01-02/05/08/10/14/15, T02-07/11/16 and lane 02's none-found blocks) | 2026-10-13 |
 | Angular | 211 | ✅ complete 2026-10-13 (verified once; verifiers hit the search limit — spot-check searches owed, e.g. lane 01 T00-06/08/10/11, T01-01/02/05/09/11/13; only phase 0 pages are written) | 2026-10-13 |
 | Java | 233 | ✅ complete 2026-10-13 (verified once; verifiers hit the search limit — spot-check searches owed for the none-found blocks, e.g. lane 01 T00-01/06/10/12, T01-01/07/11/12/15/16, lane 02 T03-09/13/14/16, T04-02/08-11, T05-01/02/05-08) | 2026-10-13 |
-| CSS · others | — | ⬜ not started | — |
+| CSS | 74 | ✅ complete 2026-10-14 (researcher + verifier per lane; PR open for review, not merged; Further reading on 74 pages) | — |
+| nextjs | 115 | ✅ complete 2026-10-14 (researcher + verifier per part, 5 files; 107 pages got Further reading, 7 skipped over the 300-line cap; PR open) | — |
+| vite | 72 blocks (188 pages) | ✅ complete 2026-10-14 (no syllabus: topics = page groups, big groups split into chunk clusters; 68 pages got Further reading, 4 over cap; PR open) | — |
+| webpack | 30 blocks (21 pages) | ✅ complete 2026-10-14 (21 pages got Further reading; PR open) | — |
+| jest-rtl | 59 | ✅ complete 2026-10-14 (11 topics marked 🔲 not written; 16 pages got Further reading) | — |
+| playwright | 28 blocks (16 sections) | ✅ complete 2026-10-14 (16 pages got Further reading) | — |
+| tanstack-query | 43 blocks (69 chunk files) | ✅ complete 2026-10-14 (39 pages got Further reading, 3 over cap) | — |
+| storybook | 58 | ✅ complete 2026-10-14 (phases 4-5 matched loosely, 4 topics 🔲; 28 pages got Further reading, 8 over cap) | — |
+| babel | 20 blocks (16 pages) | ✅ complete 2026-10-14 (17 pages got Further reading) | — |
+| eslint-oxlint | 24 blocks (21 pages) | ✅ complete 2026-10-14 (21 pages got Further reading) | — |
+| framer-motion | 22 blocks (16 sections) | ✅ complete 2026-10-14 (21 pages got Further reading, 1 over cap) | — |
+| dsa · system-design | — | ⬜ not started — **RESUME HERE** (both have syllabus/ dirs: dsa 8 files, system-design 13 files; use mktab.py-style extraction, lanes = syllabus files, ≤5 lanes) | — |
 
 **"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
 

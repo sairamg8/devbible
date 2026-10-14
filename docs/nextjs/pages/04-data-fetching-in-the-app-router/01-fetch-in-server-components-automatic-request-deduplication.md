@@ -280,6 +280,18 @@ The same 503. Memoization stores the outcome of the call, not only successes, an
 **When would you deliberately opt a fetch out of memoization, and how?**
 Pass an `AbortController` signal. Legitimate cases are narrow: racing two mirrors of the same path, or deliberately reading a resource twice around some other work within one render. Most apparent needs are better served by making the requests genuinely different, since different URLs dedupe apart for free. The trap runs the other way too — people add a `signal` purely for a timeout and are surprised that their request count doubles.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Fetching Data](https://nextjs.org/docs/app/getting-started/fetching-data) — nextjs.org docs, updated 2026-09-01: identical `fetch` calls in one component tree are memoized, and a "Reusing data with React.cache" section wraps an ORM query so many components share one result per request (*read*)
+- **Also good:** [cache](https://react.dev/reference/react/cache) — react.dev: the cache is invalidated for each server request, arguments compare by `Object.is` so pass primitives, and calling `cache` inside a component makes a fresh function every render (*read*)
+- **Beyond the docs:** [Common Errors in Next.js Caching](https://trackjs.com/blog/common-errors-in-nextjs-caching/) — Jordan Griffin, TrackJS, updated 2024-11-12: the section on duplicate fetches shows the trap where a page that repeats a request on purpose gets the first memoized result; written for Next.js 15, so its fetch-cache advice predates Cache Components
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Overview: fetch and its caches](01-explanation.md) · Next → [01g · `React.cache()`, `connection()` and non-fetch memoization](01g-react-cache-connection-and-non-fetch-memoization.md)

@@ -164,3 +164,17 @@ expect.extend({
 - **Previous**: [01 · Jest Core Concepts](../01-jest-core-concepts/01-test-structure.md) — Test tree execution lifecycle and hooks.
 - **Next**: [03 · Mocking](../03-mocking/01-jest-mock-functions.md) — Spying on functions and asserting call arguments.
 - **RTL Matchers**: [08 · RTL Queries](../08-rtl-queries/01-query-variants-and-priority.md) — Extending `expect` with `@testing-library/jest-dom`.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Expect](https://jestjs.io/docs/expect) — jestjs.io: `toBe` calls `Object.is`; `toEqual` ignores `undefined` properties, array sparseness and object type; `toStrictEqual` checks all three, shown with a `LaCroix` class against a literal (*read*)
+- **Beyond the docs:** [Jest: toEqual or toStrictEqual? The difference.](https://ultimatecourses.com/blog/jest-toequal-tostrictequal-difference) — Todd Motto, Ultimate Courses, 2023-01-30: a `Pizza` class instance passes `toEqual` against a literal and fails `toStrictEqual`; also the `undefined` keys case; concludes `toStrictEqual` should be the default
+- **Also good:** [Snapshot Testing](https://jestjs.io/docs/snapshot-testing) — jestjs.io: property matchers, `createdAt: expect.any(Date)` and `id: expect.any(Number)`, checked before the snapshot is written (*read*)
+- **Beyond the docs:** [Asymmetric Matchers](https://stevekinney.com/courses/testing/asymmetric-matchers) — Steve Kinney, Testing course, last modified 2025-04-28: `expect.any(String)` on a generated id, `stringMatching`, `objectContaining` for a subset; argues for using them sparingly so tests do not go loose; no timestamp example and no `stringContaining` (*read*)
+- **Beyond the docs:** [Making custom Jest assertion matchers in JavaScript and TypeScript](https://dev.to/andyhaskell/making-custom-jest-assertion-matchers-in-javascript-and-typescript-15ij) — Andy Haskell, DEV Community, 2020-12-29: builds `toBeWithinOneMinuteOf`, handles the `.not` message, adds the `jest.Matchers` TypeScript declaration; its message prints times and a difference in seconds, not a Jest diff
+
+{/* LINKMAP:END */}

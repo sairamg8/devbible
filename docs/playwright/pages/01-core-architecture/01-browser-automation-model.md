@@ -184,6 +184,18 @@ When you share *serialized* state rather than a live context. Reusing one logged
 **What does adding an entry to `projects` change about a test's identity?**
 It stops the test being one thing. The same file, the same title, now runs once per project, and the project name becomes part of how the run reports and retries it. Anything that keys off "the test" — a snapshot name, a fixture that writes to a shared path, a test-scoped external record — has to include the project, or two projects will collide on the same key.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Isolation](https://playwright.dev/docs/browser-contexts) — playwright.dev: contexts are "equivalent to incognito-like profiles", each test has its own, several can coexist in one browser and in one test
+- **Also good:** [BrowserType API](https://playwright.dev/docs/api/class-browsertype) — playwright.dev: `launch` starts a browser; `connect` attaches to one started by `launchServer`; also `connectOverCDP` and `launchPersistentContext` (headings only)
+- **Beyond the docs:** [Playwright BrowserContexts and Pages Explained](https://macmyths.com/playwright-browsercontexts-and-pages-explained/) — MacMyths Team, 2026-09-29: Browser as process, context as isolated session, page as tab or popup; says to register the popup wait before the click; does not discuss the driver or protocol
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Playwright index](../../README.md) · Next → [Test runner](../02-test-runner/01-playwright-test-fixtures.md)

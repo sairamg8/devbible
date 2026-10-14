@@ -215,6 +215,18 @@ Closer to a requirement. Large-area motion can cause nausea and dizziness for
 users with vestibular disorders, and WCAG 2.2 SC 2.3.3 covers animation from
 interactions.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) — MDN: the example swaps a scaling `pulse` for a slower, fading `dissolve` under `reduce` (*read*)
+- **Also good:** [prefers-reduced-motion: Sometimes less movement is more](https://web.dev/articles/prefers-reduced-motion) — Thomas Steiner, web.dev, last updated 2019-03-11: the query in CSS, `matchMedia` in JavaScript, static `picture` sources (*read*)
+- **Beyond the docs:** [Accessible Animations in React](https://www.joshwcomeau.com/react/prefers-reduced-motion/) — Josh W. Comeau, 2020-05-04, updated 2026-04-29 (page title: Accessible Animations in React with "prefers-reduced-motion"): prefers motion-free alternatives (fades are generally safe) and doubts a global near-zero duration override, which can make JavaScript-driven motion faster; React hook examples are not our focus
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · Transition traps](./02-transition-traps.md) · Back to [Phase 9 overview](./README.md)

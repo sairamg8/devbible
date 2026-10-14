@@ -280,6 +280,17 @@ The ref. `motion.create()` accepts every motion prop regardless of whether the w
 be reached, so a missing or unattached `ref` fails silently: no error, no warning, no animation. On
 React 19 the component just needs to take `ref` as a prop and put it on the element you want animated.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Gesture animation](https://motion.dev/docs/react-gestures) — motion.dev: hover, tap, focus (same rules as `:focus-visible`), keyboard Enter starting a tap, and an Event propagation section where the `propagate` prop (tap only, for now) replaces `stopPropagation` (*read*)
+- **Also good:** [Accessibility](https://motion.dev/docs/react-accessibility) — motion.dev: `MotionConfig` with `reducedMotion="user"` disables transform and layout animations while opacity and colour still animate; also `useReducedMotion` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Variants](../04-variants/01-reusable-named-states.md) · [Explanations](../README.md) · Next → [Gesture accessibility and propagation](01b-gesture-accessibility-and-propagation.md)

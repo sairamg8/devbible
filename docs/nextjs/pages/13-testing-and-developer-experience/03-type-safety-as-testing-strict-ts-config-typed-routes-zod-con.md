@@ -275,6 +275,18 @@ When it is off in a shared dependency you do not control and the build validates
 **★ Is a type check a substitute for a test?**
 For the class of properties it can express, it is strictly better: it is exhaustive over call sites, it costs nothing per assertion, and it cannot go stale. For everything else it is not a test at all, because types are erased. It cannot tell you whether the value that arrived at runtime matches the type you wrote — that is a parsing problem, and it belongs to a schema at the boundary. The right mental model is a division of labour: types cover the interior of the program, parsers cover its edges, and tests cover behaviour that neither can express.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [TypeScript](https://nextjs.org/docs/app/api-reference/config/typescript) — Next.js docs, version 16.4.0, updated 2026-08-25: statically typed links (`typedRoutes`, `as Route` for non-literals), `PageProps`/`LayoutProps`/`RouteContext` helpers via `next typegen`, TypeScript 7 (install it, project-local `tsc` is the default, `experimental.useTypeScriptCli
+- **Also good:** [typedRoutes](https://nextjs.org/docs/app/api-reference/config/next-config-js/typedRoutes) — Next.js docs, updated 2025-08-19: now stable and top-level, not `experimental.typedRoutes` (*read*)
+- **Also good:** [Forms (Form validation)](https://nextjs.org/docs/app/guides/forms)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [PPR, Activity and CI](02b-testing-ppr-activity-and-playwright-in-ci.md) · [Chapter 13 overview](01-explanation.md) · Next → [Module syntax and where types stop](03b-module-syntax-and-where-types-stop.md)

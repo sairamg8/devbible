@@ -109,3 +109,14 @@ A loader whose output depends on `Date.now()`, random IDs, or external state tha
 
 ### ⚠️ Pitfall 3: A Loader Mutating Global State Instead of Staying Pure
 Loaders run in Webpack's compilation process and can, in theory, be invoked multiple times per file (across multi-compiler configs, or cache invalidation reruns) — a loader that mutates a shared module-level variable to track state between invocations produces build results that depend on invocation order, an extremely hard class of bug to reproduce. Keep loader functions pure: all needed context should come from `this` (the loader context) or `this.getOptions()`, not module-level mutable state.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Loader Interface](https://webpack.js.org/api/loaders/) — webpack.js.org: sync and async loaders (`this.async()` or an async function), raw loaders, Pitching Loader (pitch runs left to right, a returned value skips the rest), `this.getOptions(schema)` (*read*)
+- **Beyond the docs:** [Extending with Loaders](https://survivejs.com/webpack/extending/loaders/) — SurviveJS (author and date not shown): loader-runner debugging, async loaders, pitch loaders, a caching loader that passes data from pitch to the normal phase; no webpack version stated
+
+{/* LINKMAP:END */}

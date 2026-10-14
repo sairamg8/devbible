@@ -165,6 +165,18 @@ There is one cache entry and several observers, each evaluating its own options.
 **★ You have a page that must render instantly on back-navigation and must never show data older than a minute. Which options, and in what order do they apply?**
 `staleTime: 60_000` so a return within the minute is a pure cache hit, `gcTime` well above that (say fifteen minutes) so the entry actually survives the round trip, and the default `refetchOnMount: true` left alone so a return *after* the minute shows the cached value immediately and refreshes it behind a subtle indicator. The order that matters is the gate order: the mount event fires first, the staleness check decides whether it becomes a request, and `gcTime` decides whether there was anything to show while that request ran.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Important Defaults](https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults) — TanStack Query docs: staleTime 0, the three refetch triggers, retry 3 with backoff (*read*)
+- **Also good:** [Query Retries](https://tanstack.com/query/latest/docs/framework/react/guides/query-retries) — TanStack Query docs: default 3 retries, exponential delay from 1s capped at 30s, off on the server; does not cover throwOnError (*read*)
+- **Beyond the docs:** [React Query Error Handling](https://tkdodo.eu/blog/react-query-error-handling) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-09-10, updated 2023-10-21: `throwOnError` as true or a predicate (send 5xx to the boundary, handle 4xx locally); the post now uses the v5 name and notes it was `useErrorBoundary` before v5
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`enabled` & `skipToken`](./01b-enabled-and-skiptoken.md) · [Topic index](../README.md) · Next → [`retry`, `retryDelay` & `throwOnError`](./01d-retry-retrydelay-and-throwonerror.md)

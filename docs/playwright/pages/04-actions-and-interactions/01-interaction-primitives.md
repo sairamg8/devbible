@@ -194,6 +194,20 @@ You set the files on the `input` element with `setInputFiles()`. Clicking the bu
 **When should you drop to `page.mouse` and `page.keyboard` instead of the locator methods?**
 When the gesture itself is the thing under test and no semantic method expresses it: drawing on a canvas, a pinch or a custom drag path, a key combination directed at the document rather than at a control. The cost is that you give up every actionability check and every locator-based retry — you are now issuing raw coordinates against whatever happens to be at that point on the screen, so the surrounding test has to establish readiness itself with assertions. Reach for it last, and keep the raw section as short as possible.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Actions](https://playwright.dev/docs/input) — playwright.dev: `fill` "focuses the element and triggers an `input` event", `pressSequentially` types character by character, plus checkboxes, `selectOption`, `setInputFiles`, drag and drop, scrolling
+- **Also good:** [Auto-waiting](https://playwright.dev/docs/actionability) — playwright.dev: the table: `fill` checks Visible, Enabled, Editable; `press`, `pressSequentially` and `setInputFiles` run no checks (*read*)
+- **Read this:** [Mouse class](https://playwright.dev/docs/api/class-mouse) — playwright.dev: operates "in main-frame CSS pixels relative to the top-left corner of the viewport"; `click`, `dblclick`, `down`, `move`, `up`, `wheel` (*read*)
+- **Also good:** [Keyboard class](https://playwright.dev/docs/api/class-keyboard) — playwright.dev: `press`, `type`, `down`, `up`, `insertText`; says to prefer `locator.press`, `locator.fill`, or `pressSequentially` for special key handling (*read*)
+- **Beyond the docs:** [How to Click, Type, and Hover with Playwright](https://www.browserstack.com/guide/playwright-click-type) — Venkatesh Raghunathan, BrowserStack, last updated 2026-07-30: has a section on `page.mouse.click()` instead of `locator.click()` for canvas and map positions, and `fill` versus keystrokes
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Locators](../03-locators/01-locator-api.md) · [Playwright index](../../README.md) · Next → [Auto-waiting and assertions](../05-auto-waiting-and-assertions/01-web-first-assertions.md)

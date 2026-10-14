@@ -184,6 +184,16 @@ Because the target is an output, not an input. A spring is given a destination a
 **How do you read how hard a user flicked something?**
 `onDragEnd` receives an event and an info object whose `velocity` field is documented as the current velocity of the pointer. That is the supported way to branch — dismiss above a threshold, snap back below it — and it is a read, not a write: the reference does not document feeding a `velocity` back into an inertia transition, so build the branch in your own handler rather than assuming you can seed the animation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Transitions](https://motion.dev/docs/react-transitions) — motion.dev: inertia decelerates from initial velocity, tunable with `power`, `timeConstant`, bounds and `modifyTarget`, and is the animation used for `dragTransition` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Transition types](01-timing-models.md) · [Explanations index](../README.md) · Next → [Variants](../04-variants/01-reusable-named-states.md)

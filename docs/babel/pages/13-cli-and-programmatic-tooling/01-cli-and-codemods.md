@@ -73,3 +73,15 @@ Parse failures—set parser to tsx.
 
 ### ⚠️ Using Babel CLI as a formatter
 Output style is not Prettier; run Prettier after.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@babel/cli](https://babeljs.io/docs/babel-cli) — babeljs.io: `--out-dir`, `--watch`, `--ignore`, `--copy-files`, `--extensions`, `--source-maps` (*read*)
+- **Also good:** [jscodeshift](https://github.com/facebook/jscodeshift) — GitHub README: `--parser` babel/babylon/flow/ts/tsx (default babel), `--dry`, `--print`, transform shape, `testUtils` (*read*)
+- **Beyond the docs:** [Effective Refactoring with Codemods](https://carloscuesta.me/blog/effective-refactoring-with-codemods) — Carlos Cuesta, 2023-01-29: builds a lodash `get` to optional chaining codemod in AST Explorer with `@babel/parser` and jscodeshift, exporting `parser = 'babel'` and finishing with `toSource()`
+
+{/* LINKMAP:END */}

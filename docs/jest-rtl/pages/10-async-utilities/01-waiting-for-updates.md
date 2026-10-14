@@ -134,3 +134,17 @@ describe('ProjectManager Async Lifecycle Specifications', () => {
 - **Previous**: [09 · User Interaction](../09-user-interaction/01-simulating-input.md) — Triggering user events that cause async updates.
 - **Next**: [11 · Custom Render](../11-custom-render/01-provider-wrapping.md) — Wrapping components in Context, Redux, and Query providers.
 - **Network Mocking**: [12 · Mocking Network Requests](../12-mocking-network-requests/01-api-level-mocking.md) — Using MSW to control asynchronous network responses.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Async Methods](https://testing-library.com/docs/dom-testing-library/api-async) — testing-library.com: "findBy methods are a combination of getBy queries and waitFor"; `waitFor` retries a callback until it stops throwing (*read*)
+- **Beyond the docs:** [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) — Kent C. Dodds, 2020-05-04: "Using waitFor to wait for elements that can be queried with find*", rated high importance
+- **Beyond the docs:** [Testing-library: avoid these mistakes in async tests](https://dev.to/tipsy_dev/testing-library-writing-better-async-tests-c67) — Aleksei Tsikov, DEV Community, 2021-11-21: a `fireEvent.click` inside `waitFor` toggles a panel on every retry and hangs the test; also an un-awaited `waitFor` that lets a broken test pass
+- **Read this:** [act](https://react.dev/reference/react/act) — react.dev: `act` makes sure updates are applied to the DOM before assertions; needs `global.IS_REACT_ACT_ENVIRONMENT=true`, already set by React Testing Library; use `await act(async ...)`, the sync form will be deprecated; treats the warnin
+- **Beyond the docs:** [Fix the "not wrapped in act(...)" warning](https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning) — Kent C. Dodds, 2020-02-03: a test still passes with `setState` commented out because nothing waited for "Saving..." to go; fix is `waitForElementToBeRemoved`, with manual `act` kept for fake timers and hooks; names no React version and predates React 18
+
+{/* LINKMAP:END */}

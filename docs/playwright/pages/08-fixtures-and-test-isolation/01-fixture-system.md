@@ -121,3 +121,15 @@ const test = base.extend({
 
 ### ⚠️ Pitfall 3: Assuming Worker-Scoped Fixture Setup Runs Fresh for Every Test File
 A worker-scoped fixture's setup runs once **per worker process**, and a single worker typically runs **many** test files sequentially (not one worker per file) — assuming its setup re-runs at the start of each new test *file* (rather than each new test *worker*) leads to incorrect assumptions about exactly when that expensive setup work actually happens, especially when reasoning about test run ordering or debugging why a worker-scoped fixture's state appears to persist across files that seem unrelated.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Fixtures](https://playwright.dev/docs/test-fixtures) — playwright.dev: worker-scoped, automatic, overriding, fixture options, execution order, `mergeTests`, box fixtures
+- **Also good:** [Isolation](https://playwright.dev/docs/browser-contexts) — playwright.dev: "Each test has its own Browser Context", how isolation is achieved (*read*)
+- **Beyond the docs:** [Playwright Fixtures](https://bug0.com/knowledge-base/playwright-fixtures) — bug0 knowledge base, no author shown, updated 2026-07-30: worker scope only for read-only resources, "Used casually, it is where flake comes from"; does not cover auto fixtures
+
+{/* LINKMAP:END */}

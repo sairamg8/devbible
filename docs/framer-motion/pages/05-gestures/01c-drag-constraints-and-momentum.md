@@ -279,6 +279,18 @@ direction locking, imperative control — and it is the right choice for sliders
 lists and swipe cards. If you need real drop targets with `dataTransfer` semantics, including drags
 between windows, that is still the platform API's job.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Drag animation](https://motion.dev/docs/react-drag) — motion.dev: constraints by pixels or ref, elastic constraints (no numeric `dragElastic` default stated), momentum on by default, `dragTransition`, plus troubleshooting for transformed parents (`correctParentTransform`) and ghost images (`drag
+- **Also good:** [Gesture animation](https://motion.dev/docs/react-gestures) — motion.dev: pan needs `touch-action` set to disable scrolling on the tracked axis, and a tap inside a draggable is cancelled past 3 pixels of movement (*read*); [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Propert
+- **Also good:** [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/touch-action)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Gesture accessibility & propagation](01b-gesture-accessibility-and-propagation.md) · [Explanations](../README.md) · Next → [Drag in the real DOM](01d-drag-in-the-real-dom.md)

@@ -199,6 +199,18 @@ something absurd and see whether the output moves; if it does not, something has
 The way to prevent the question is to pick one source of truth per repository and write a comment
 in the other place saying which.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@babel/preset-env](https://babeljs.io/docs/babel-preset-env) — babeljs.io: `targets`, Browserslist (".browserslistrc recommended"), `modules`, and `useBuiltIns` marked "removed in Babel 8" with `babel-plugin-polyfill-corejs3` as the replacement; the `corejs` section carries no separate notice (*read*)
+- **Also good:** [Babel 8 migration](https://babeljs.io/docs/v8-migration) — babeljs.io: default targets become Browserslist `defaults`; `loose` and `spec` removed in favor of `assumptions`; `modules: "auto"` assumes ESM; Node `^22.18.0 || &gt;=24.11.0` (*read*)
+- **Also good:** [Usage Guide](https://babeljs.io/docs/usage) — babeljs.io: `@babel/polyfill` deprecated since 7.4.0, `core-js/stable`, `usage` versus `entry`; still documents `useBuiltIns`, so it is Babel 7 text on that point (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Track index](../../README.md) · Next → [Preset-react, preset-typescript and the framework bundles](01b-react-typescript-and-framework-presets.md)

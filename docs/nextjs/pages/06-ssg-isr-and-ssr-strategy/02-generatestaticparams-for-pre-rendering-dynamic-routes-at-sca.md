@@ -207,6 +207,17 @@ That it treats the symptom and costs money forever. The build is long because th
 **How does `next dev` mislead you about all of this?**
 Two ways. First, *"During `next dev`, `generateStaticParams` will be called when you navigate to a route"* — it is lazy, so you never sit through the enumeration-and-render loop that dominates `next build`, and a build cost problem is invisible locally by construction. Second, that laziness makes `dynamicParams = false` look harmless: you navigate to a URL, the function runs for that navigation, the page works. The 404s only appear in a real build against a real dataset. Verifying either of these requires `next build` followed by `next start`, which is exactly what the ISR guide recommends under *Verifying correct production behavior*.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [generateStaticParams](https://nextjs.org/docs/app/api-reference/functions/generate-static-params) — nextjs.org reference, updated 2026-10-01: single, multiple (bottom up and top down) and catch-all segments, a first-10-posts subset with `dynamicParams` set to false for 404s, Route Handlers; with Cache Components it must return at least one param, since an empty array is
+- **Also good:** [Incremental Static Regeneration with Cache Components](https://nextjs.org/docs/app/guides/incremental-static-regeneration-cache-components) — nextjs.org guide, updated 2026-10-06: prerender a subset, serve the App Shell for the rest (16.3 and later), upgrade after the first visit; a "Choosing what to prerender" section says every prerendered page adds build work and storage (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · Choosing a rendering pattern](01-choosing-a-rendering-pattern-seo-build-time-data-velocity-pe.md) · [Chapter index](01-explanation.md) · Next → [02b · Enumerating from a database at build time](02b-enumerating-from-a-database-at-build-time.md)

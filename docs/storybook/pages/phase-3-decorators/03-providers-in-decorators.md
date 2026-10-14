@@ -242,3 +242,14 @@ in as props for that story.
 
 **← Prev** [02 · Decorator order](./02-decorator-order.md) ·
 **Next →** [04 · The story context](./04-the-story-context.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mocking providers](https://storybook.js.org/docs/writing-stories/mocking-data-and-modules/mocking-providers) — Storybook docs: apply a mock provider to all stories from `preview.tsx`, vary it per story through `parameters` (*read*)
+- **Beyond the docs:** [How to build connected components in Storybook](https://storybook.js.org/blog/how-to-build-connected-components-in-storybook/) — Varun Vachhar, Storybook blog, 2022-07-06: a mock Redux store fed different state per story through decorators; older APIs
+
+{/* LINKMAP:END */}

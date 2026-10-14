@@ -198,6 +198,17 @@ No. It scales rendered pixels — text, borders and radii scale with it — and 
 does not reflow surrounding content. Fine for short hover effects, wrong when
 crisp text or reflow is required.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to create high-performance CSS animations](https://web.dev/articles/animations-guide) — Kayce Basques and Rachel Andrew, web.dev, last updated 2020-10-06: animate only `transform` and `opacity`, avoid `top` and `left`, check with DevTools, use `will-change` sparingly (*read*)
+- **Also good:** [Stick to compositor-only properties and manage layer count](https://web.dev/articles/stick-to-compositor-only-properties-and-manage-layer-count) — Paul Lewis, web.dev, last updated 2015-03-20: every layer needs memory and management, so too many promoted layers cost memory and GPU time; dated, Chrome-centred (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · Transition traps](./02-transition-traps.md) →

@@ -246,6 +246,20 @@ Since v13.0.0 `<Link>` renders the anchor itself. A nested `<a>` produces an anc
 **What actually happens to props you put on a `<Link>` that are not in its prop table?**
 They pass through to the underlying `<a>`. `className`, `target`, `rel`, `aria-*`, `data-*` all land on the anchor, which is why `<Link target="_blank">` opens a new tab like any anchor and skips the client-side transition entirely. It also means `<Link>` will not add `rel="noopener noreferrer"` on your behalf.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Linking and Navigating](https://nextjs.org/docs/app/getting-started/linking-and-navigating) — nextjs.org: server rendering, prefetching, streaming and client transitions, then what makes a transition slow and `useLinkStatus` for slow networks (*read*)
+- **Also good:** [Link](https://nextjs.org/docs/app/api-reference/components/link) — nextjs.org: `href`, `replace`, `scroll`, `prefetch`, `onNavigate` and `transitionTypes` (added in 16.2) props (*read*)
+- **Also good:** [redirect](https://nextjs.org/docs/app/api-reference/functions/redirect)
+- **Also good:** [notFound](https://nextjs.org/docs/app/api-reference/functions/not-found)
+- **Also good:** [useRouter](https://nextjs.org/docs/app/api-reference/functions/use-router)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · Dynamic routes](03-dynamic-routes-slug-catch-all-optional-catch-all.md) · [Chapter 2 overview](01-explanation.md) · Next → [04b · Scroll behaviour and the navigation lifecycle](04b-scroll-behaviour-and-the-navigation-lifecycle.md)

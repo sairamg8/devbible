@@ -168,3 +168,20 @@ describe('UserProfileForm Interaction Specifications', () => {
 - **Previous**: [08 · RTL Queries](../08-rtl-queries/01-query-variants-and-priority.md) — Query priority order for locating interactive elements.
 - **Next**: [10 · Async Utilities](../10-async-utilities/01-waiting-for-updates.md) — Handling asynchronous DOM updates after user interactions.
 - **Form Testing**: [11 · Custom Render](../11-custom-render/01-provider-wrapping.md) — Testing complex interactive forms wrapped in global contexts.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction](https://testing-library.com/docs/user-event/intro) — testing-library.com: "We recommend invoking userEvent.setup() before the component is rendered", inside the test or a setup function and not in `before` or `after` hooks; v14 calls are awaited (*read*)
+- **Also good:** [Setup](https://testing-library.com/docs/user-event/setup) — testing-library.com: `setup()` returns an instance whose methods "share one input device state"; direct calls like `userEvent.click()` still work and call `setup` internally, kept to ease migration; never mentions `render`, `delay` or `advanceTimers` 
+- **Read this:** [Utility APIs](https://testing-library.com/docs/user-event/utility) — testing-library.com: `clear`, `selectOptions` and `deselectOptions`, `type` and `upload`, with `skipClick`, `initialSelectionStart`, `applyAccept` and `pointerEventsCheck`; no `click` entry here (*read*)
+- **Also good:** [Convenience APIs](https://testing-library.com/docs/user-event/convenience) — testing-library.com: `click`, `dblClick`, `tripleClick`, `hover`, `unhover`, and `tab` with a `shift` option (*read*)
+- **Read this:** [Keyboard](https://testing-library.com/docs/user-event/keyboard) — testing-library.com: braces name a `key` value, brackets a `code` value, `&gt;` holds a key, `/` releases it, doubling `&#123;` or `[` escapes; `&#123;Enter&#125;` and `&#123;Escape&#125;` are not shown by name, and `tab()` and focus are not mentioned
+- **Also good:** [testing-library/jest-dom](https://github.com/testing-library/jest-dom) — GitHub README: `toHaveFocus()` (*read*)
+- **Also good:** [Firing Events](https://testing-library.com/docs/dom-testing-library/api-events) — testing-library.com: "Most projects have a few use cases for fireEvent", without saying which; silent on `act` (*read*)
+- **Beyond the docs:** [Common mistakes with React Testing Library](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library) — Kent C. Dodds, 2020-05-04: "Not using @testing-library/user-event"; names no user-event version and predates v14
+
+{/* LINKMAP:END */}

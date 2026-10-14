@@ -186,6 +186,19 @@ Right when the dependency is outside your control and hard to drive: a third-par
 **What does `goto()` wait for, and when would you change it?**
 By default it waits for the `load` event. `'domcontentloaded'` returns earlier, before subresources; `'commit'` returns as soon as the response arrives and the document starts loading, which is often the best choice in a suite where the next line is a web-first assertion that does the real waiting. `'networkidle'` exists and is discouraged. The general shape is: return from navigation as early as you reasonably can, and let assertions define readiness.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Page class](https://playwright.dev/docs/api/class-page) — playwright.dev: `waitUntil` defaults to `load`; `domcontentloaded`, `commit`, and `networkidle` marked "DISCOURAGED"; read only the first part of a very long page, the `goto` options
+- **Read this:** [Mock APIs](https://playwright.dev/docs/mock) — playwright.dev: `page.route` with `route.fulfill`, and `route.fetch` to patch a real response
+- **Also good:** [Network](https://playwright.dev/docs/network) — playwright.dev: network events, `waitForResponse`, glob patterns, context-level routes also cover popups, and the last section: set `serviceWorkers` to `'block'` when events go missing (*read*)
+- **Beyond the docs:** [The Playwright Network Mocking Playbook](https://currents.dev/posts/the-playwright-network-mocking-playbook) — Currents Team, 2026-04-01: a five-level mocking spectrum, "mock debt is invisible until it becomes expensive", a small real-API contract suite alongside mocked feature tests
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Auto-waiting and assertions](../05-auto-waiting-and-assertions/01-web-first-assertions.md) · [Playwright index](../../README.md) · Next → [Authentication and state](../07-authentication-and-state/01-session-reuse.md)

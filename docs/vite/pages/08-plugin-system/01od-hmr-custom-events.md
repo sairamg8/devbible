@@ -270,6 +270,18 @@ confirm the hook returned `[]` if the intent was full custom handling, because o
 update runs too and can mask the custom one. Each of these is a single check, and all four are
 silent when wrong.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HMR API](https://vite.dev/guide/api-hmr) — vite.dev: `hot.accept(cb)` and the rule that the call must appear literally as `import.meta.hot.accept(`, `dispose`, `prune`, `data` (mutate, do not reassign), `decline` as a no-op in favour of `invalidate`, `on`, `off`, `send` with data bu
+- **Also good:** [Plugin API — Client-server Communication](https://vite.dev/guide/api-plugin) — vite.dev: Server to Client and Client to Server (`#client-server-communication`), prefix event names, `server.ws.on` with a reply to the sending client, and TypeScript for Custom Events (`#typescript-for-custom-events`): extend `CustomEvent
+- **Beyond the docs:** [How to Send Real-Time Custom Events from the Browser to a Vite Dev Server](https://vueschool.io/articles/vuejs-tutorials/how-to-send-real-time-custom-events-from-the-browser-a-vite-dev-server/) — Daniel Kelly, Vue School, updated 2025-09-03: a dev-only channel: `import.meta.hot.send` and `on` in the browser, `server.ws.on` and `server.ws.send(event, data)` inside `configureServer`; names no Vite version and does not cover typing events or listener cleanup
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Which Hooks Fire Per Environment](01ocb-which-hooks-fire-per-environment.md) · [Vite overview](../../README.md) · Next → [Client-Server Communication](01oda-client-server-communication.md)

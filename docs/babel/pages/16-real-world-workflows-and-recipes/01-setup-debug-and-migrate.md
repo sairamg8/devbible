@@ -156,3 +156,16 @@ Be precise: free from **app compile** vs free from **repo entirely**.
 
 ### ⚠️ Migration without documenting the decision
 The next hire reintroduces babel.config.js “for React.”
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Usage Guide](https://babeljs.io/docs/usage) — babeljs.io: install `@babel/core`, `@babel/cli`, `@babel/preset-env`, add targets, compile `src` to `lib` (*read*)
+- **Also good:** [Getting Started: Using Babel](https://jestjs.io/docs/getting-started) — jestjs.io: the Jest-side setup recipe (*read*)
+- **Also good:** [babel-loader: debug logging](https://github.com/babel/babel-loader) — GitHub README: `stats.loggingDebug: ["babel-loader"]` for webpack debugging (*read*)
+- **Beyond the docs:** [Jest and ESM: Cannot use import statement outside a module](https://dev.to/steveruizok/jest-and-esm-cannot-use-import-statement-outside-a-module-4mmj) — Steve Ruiz, DEV Community, 2021-06-25: the error from an ESM-only dependency in node_modules, fixed with `babel-jest` plus a `transformIgnorePatterns` exception for the named packages; Next.js example from 2021
+
+{/* LINKMAP:END */}

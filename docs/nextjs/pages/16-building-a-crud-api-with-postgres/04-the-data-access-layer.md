@@ -262,6 +262,17 @@ Because a closed set is exhaustively mappable and a string is not. With classes,
 **★ What does the DAL split do to your test suite?**
 It moves the majority of the logic into plain async functions, which are the only thing in this stack that is cheap to test. A Server Action is compiled into a reference and does not exist as a callable in the way a test wants; a Route Handler is testable only through a `Request`/`Response` round trip; a DAL function is import, seed, call, assert, with no framework at all. So the ratio of logic in the DAL to logic in the entry points is directly the ratio of your suite that runs fast. The useful diagnostic is the reverse direction: if a mutation is hard to test, the logic is in the wrong layer, and the fix is the same one the security argument was asking for.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to think about data security in Next.js](https://nextjs.org/docs/app/guides/data-security) — Next.js docs (updated 2026-10-06): the DAL as server-only, authorizing, and returning DTOs; mutations delegate to it too (*read*)
+- **Beyond the docs:** [Authorization in Next.js](https://www.robinwieruch.de/next-authorization/) — Robin Wieruch, 2025-03-25: permission logic belongs in a service layer, and the DAL is the "last line of defense" focused on data manipulation; written for Next.js 15.2 and the CVE-2025-29927 middleware bypass (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03d · What the pooler removes](03d-what-does-not-survive-the-pooler.md) · [Chapter 16 overview](01-explanation.md) · Next → [04b · What `server-only` does not protect](04b-what-server-only-does-not-protect.md)

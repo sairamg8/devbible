@@ -102,6 +102,17 @@ Whether every dependency in `node_modules` that the app actually imports relies 
 **★ Why does the documentation warn against adding `.vue` to `resolve.extensions` instead of just saying it's slower?**
 Because the cost it names isn't resolution speed at all — it's IDE and type-support fidelity. Vite's resolver and the TypeScript language service (plus framework-specific tooling like `vue-tsc`) are separate programs; adding `.vue` to `resolve.extensions` only changes what Vite's own resolver will try, and does nothing for tools that expect to see the real extension written at the import site to know which language service to hand the file to. The performance cost of a longer list is real too, but it's the secondary reason, not the one the documentation leads with.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Shared Options › `resolve.dedupe`, `extensions`, `preserveSymlinks`](https://vite.dev/config/shared-options) — vite.dev: `extensions` default `.mjs, .js, .mts, .ts, .jsx, .tsx, .json` with advice not to omit extensions for custom types such as `.vue`; `dedupe` forces one copy from the project root; `preserveSymlinks` (default false) decides file ide
+- **Also good:** [Performance › Reduce Resolve Operations](https://vite.dev/guide/performance) — vite.dev: explicit paths with extensions, trim `resolve.extensions` (the trimmed list must still work for files in `node_modules`) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01b · Aliases in CSS, HTML & assets](01b-aliases-in-css-html-and-assets.md) · [Vite overview](../../README.md) · Next → [01d · resolve.dedupe](01d-resolve-dedupe.md)

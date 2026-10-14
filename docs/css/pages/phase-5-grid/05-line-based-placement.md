@@ -219,6 +219,17 @@ Named areas for page shells you could sketch in seconds — they are readable an
 rearrange in one media query. Line-based placement for what areas cannot express:
 overlaps, full-bleed break-outs, and large column systems.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Grid layout using line-based placement](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement) — MDN: `span`, negative line numbers ("counting backwards") and the `grid-area` shorthand with its four-value order (*read*)
+- **Beyond the docs:** [Negative Grid Lines](https://css-irl.info/negative-grid-lines/) — Michelle Barker, CSS-IRL, 2018-10-14: `-1` is the last line of the explicit grid; an item placed past it creates implicit tracks and shifts where auto-placed items land (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · Named areas](./04-named-areas.md) · Next: [06 · Subgrid](./06-subgrid.md) →

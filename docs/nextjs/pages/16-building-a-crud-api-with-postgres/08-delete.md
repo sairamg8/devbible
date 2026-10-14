@@ -123,6 +123,17 @@ Anything machine-generated with no user-facing identity — event logs, complete
 **★ How do you decide, for a table you have never seen?**
 Ask the four questions in order: will a user want it back soon, does anything need to prove it existed, do other rows reference it, and is there a duty to erase. The first three push toward soft; the fourth is orthogonal and means you need a real erase path either way. If none of the first three is a yes, hard delete — because the default choice is the one that adds no permanent obligation to every future query.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Constraints](https://www.postgresql.org/docs/18/ddl-constraints.html) — PostgreSQL 18 docs: `ON DELETE` actions: `RESTRICT`, `CASCADE`, `SET NULL`, plus the default `NO ACTION` and `SET DEFAULT` (*read*)
+- **Beyond the docs:** [Soft deletion with PostgreSQL: but with logic on the database](https://evilmartians.com/chronicles/soft-deletion-with-postgresql-but-with-logic-on-the-database) — Andrew Kozin and Travis Turner, Evil Martians, 2022-05-16: hides soft-deleted rows behind views, and a foreign key cannot cascade a soft delete so extra rules are needed; it measures neither read nor index cost (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [07g · position and updatedAt](07g-position-collisions-and-updatedat.md) · [Chapter 16 overview](01-explanation.md) · Next → [08b · What soft delete costs every read](08b-what-soft-delete-costs-every-read.md)

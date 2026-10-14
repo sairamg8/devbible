@@ -211,6 +211,19 @@ page has no meaningful output without it, throw and let the boundary handle it. 
 right is letting the choice fall out of whichever file the call happened to sit in.
 
 ---
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Error Handling](https://nextjs.org/docs/app/getting-started/error-handling) — nextjs.org docs, updated 2026-10-06: expected errors versus uncaught exceptions, nested error boundaries, global errors (*read*)
+- **Also good:** [catchError](https://nextjs.org/docs/app/api-reference/functions/catchError) — nextjs.org reference, updated 2026-08-24: stable in 16.3.0: leaves `redirect()` and `notFound()` alone, `retry()` re-renders inside a Transition, clears on client navigation. Also [error.js](https://nextjs.org/docs/app/api-reference/file-conventions/error), where the reco
+- **Also good:** [error.js](https://nextjs.org/docs/app/api-reference/file-conventions/error)
+- **Beyond the docs:** [Error Handling in Next.js with catchError](https://certificates.dev/blog/error-handling-in-nextjs-with-catcherror) — Aurora Scharff, 2026-06-18: a client-only reset re-renders with the same errored state, while `retry()` re-fetches on the server, so a transient database timeout can recover; the contrast with `react-error-boundary` is inferred, not walked through
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter index](01-explanation.md) · **Next → [01b · Expected errors are return values](01b-expected-errors-are-return-values.md)**

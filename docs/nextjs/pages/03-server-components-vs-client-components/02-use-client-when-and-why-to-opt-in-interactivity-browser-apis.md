@@ -127,6 +127,18 @@ Either use it inside a file that is already a Client Component, where it works u
 **What is wrong with putting `'use client'` on a barrel file?**
 The directive lands nowhere near the component that needed it, and every export in the barrel becomes client code. So one component's need for `useState` ships the entire module's worth of exports and their imports. It also destroys legibility — a reviewer opening the barrel sees a directive with no hook or handler anywhere near it. Put it on the implementation file.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [use client](https://nextjs.org/docs/app/api-reference/directives/use-client) — nextjs.org: the directive as an entry point at the top of the file, serializable props, and nesting Client Components inside Server Components (*read*)
+- **Also good:** [Server and Client Components: Using Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) — nextjs.org: state, effects, browser APIs and custom hooks as the triggers; imports of a client file join the bundle (*read*)
+- **Also good:** [react.dev 'use client'](https://react.dev/reference/rsc/use-client)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [01 · Default architecture: everything is a Server Component](01-default-architecture-everything-is-a-server-component-rsc.md) · [Index](01-explanation.md) · Next → [03 · Composition patterns](03-composition-patterns-server-to-client-boundaries.md)

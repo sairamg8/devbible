@@ -82,3 +82,16 @@ Same adoption failure mode as `eslint:all`. Start correctness; expand.
 
 ### ⚠️ Ignoring JS-plugin alpha performance cliffs
 Many simultaneous JS plugins can regress toward ESLint-like costs—see [§16](../16-oxlint-js-plugins-and-extensibility/01-js-plugins-and-custom-rules.md).
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Oxlint overview](https://oxc.rs/docs/guide/usage/linter.html) — oxc.rs: built on the Oxc stack, native plugins "without a large JavaScript dependency tree", type-aware linting through the native Go port of TypeScript (*read*)
+- **Also good:** [Linter architecture](https://oxc.rs/docs/learn/architecture/linter.html) — oxc.rs: the linter service iterates file paths in parallel with `rayon`, parses to an AST, builds semantic data, then runs rules (*read*)
+- **Also good:** [Migrate from ESLint](https://oxc.rs/docs/guide/usage/linter/migrate-from-eslint.html) — oxc.rs: "When to migrate" section; stay on ESLint if a missing behavior blocks you (*read*)
+- **Beyond the docs:** [A Look at the JavaScript Oxidation Compiler](https://blog.openreplay.com/javascript-oxidation-compiler/) — OpenReplay Team, 2026-08-21: why Oxc is fast: one shared AST across tools, arena allocation, parallel analysis; brief on the linter itself (*read*)
+
+{/* LINKMAP:END */}

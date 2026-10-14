@@ -204,6 +204,17 @@ It plausibly moves bundling, transpiling and minifying — Rolldown replaces Rol
 **★ Why is comparing "before" and "after" build numbers on your laptop nearly always wrong?**
 Because the two runs almost never share a cache state. The pre-bundle cache in `node_modules/.vite` is keyed on lockfile content, patch directory mtime, relevant `vite.config` fields and `NODE_ENV` — so a config edit made *as part of the experiment* invalidates it and the "after" run pays a cold pre-bundle the "before" run did not. The disciplined version is to fix the cache state explicitly (`--force` on both runs, or a warm cache on both) and to say which you did.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Dependency Pre-Bundling](https://vite.dev/guide/dep-pre-bundling) — vite.dev: the two reasons (CommonJS to ESM, many-file packages to one), performed with Rolldown, linked-package handling (add to `optimizeDeps.include` if not ESM), and the cache in `node_modules/.vite` keyed on lockfile, patches folder, re
+- **Also good:** [Performance](https://vite.dev/guide/performance) — vite.dev: audit plugins, trim `resolve.extensions`, avoid barrel files, `server.warmup`, `vite --profile` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [SSR Support](../10-ssr-support/01-server-side-rendering-primitives.md) · [Vite overview](../../README.md) · Next → [01a · Dependency pre-bundling](01a-dependency-pre-bundling.md)

@@ -202,6 +202,18 @@ It was a proxy/middleware bypass affecting App Router applications built with Tu
 **★ You need to protect a statically generated page whose content is shared between users — a paywalled article. Where does that check go?**
 That is the one case where proxy is the right layer rather than the fallback, and the authentication guide says so directly: use proxy *"to protect static routes that share data between users (e.g. content behind a paywall)"*, and it notes that a Data Access Layer protects data fetched at request time, whereas static-route data is fetched at build time and so has no request-time read to attach a check to. [04c](04c-defence-in-depth-the-innermost-layer-that-can-see-the-fact.md) works through why that is a consequence of the layering rule rather than an exception to it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to think about data security in Next.js](https://nextjs.org/docs/app/guides/data-security) — nextjs.org (updated 2026-10-06): the DAL that runs server-only, authorizes and returns DTOs; actions are reachable by direct POST so re-verify inside each; IDOR ownership checks; return-value filtering; an audit checklist that names `proxy.ts` (*read*)
+- **Also good:** [How to implement authentication in Next.js](https://nextjs.org/docs/app/guides/authentication) — nextjs.org: "Optimistic checks with Proxy": read only the cookie, avoid database checks, Proxy "should not be your only line of defense", and Proxy uses the Node.js runtime (*read*)
+- **Beyond the docs:** [Next.js Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nextjs_Security_Cheat_Sheet.html) — OWASP Cheat Sheet Series, no author or date shown: do not rely on Proxy alone (a `matcher` can omit a route; cites CVE-2025-29927), secure Server Actions as endpoints, protect Route Handlers separately (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Authentication patterns](03-authentication-patterns-authjs-clerk-supabase-jwt-strategies.md) · [Chapter 10 overview](01-explanation.md) · Next → [04b · Matchers, runtime and the rename](04b-proxy-configuration-matchers-runtime-and-what-the-rename-meant.md)

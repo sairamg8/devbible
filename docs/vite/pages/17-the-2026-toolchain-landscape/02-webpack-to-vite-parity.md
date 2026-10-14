@@ -251,6 +251,19 @@ reasonably concludes it is unmaintained. The transferable habit is to check the 
 publishing org of any plugin a migration depends on, before it becomes an argument about the
 migration itself.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Migration from v7](https://vite.dev/guide/migration) — vite.dev: official, but Vite 7 to 8, not webpack to Vite and no webpack mention; its Rolldown section covers the `manualChunks` object form removed (function form deprecated for `codeSplitting`) and CommonJS interop, which bite webpack port
+- **Also good:** [Features](https://vite.dev/guide/features) — vite.dev: built-in handling that deletes loaders: npm dependency pre-bundling, `new Worker(new URL(...))`, glob import (the closest thing to `require.context`, which the page never names) (*read*)
+- **Beyond the docs:** [Migrating Webpack to Vite 2026: Large App Guide](https://www.pkgpulse.com/guides/webpack-to-vite-migration-large-codebases-2026) — PkgPulse Team, 2026-03-16: a mapping table: `splitChunks` to `manualChunks`, `ProvidePlugin` to `vite-plugin-node-polyfills`, `DefinePlugin` to `define`, custom loaders to `transform` hooks; a separate Vite 8 section shows `advancedChunks`, a name the offic
+- **Beyond the docs:** [How we migrated to ViteJS](https://retool.com/blog/vitejs-migration) — Juan Lasheras, Retool, 2025-04-16: a real migration: old packages assuming Node builtins like `process`, and Rollup producing more chunks than webpack because it "does not duplicate code" (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Choosing a Bundler](01a-choosing-a-bundler.md) · [Vite overview](../../README.md) · Next → [The Four That Do Not Transfer](02a-the-four-that-do-not-transfer.md)

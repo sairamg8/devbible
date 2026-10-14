@@ -264,6 +264,17 @@ Because a relative string has no unambiguous "relative to what" once it is detac
 **★ Two engineers each configure `'@': path.resolve(__dirname, 'src')` and one gets a `ReferenceError` at startup while the other doesn't. What differs between their setups?**
 Whether their `vite.config` file is loaded as CommonJS or as native ESM. If the nearest `package.json` has no `"type": "module"` and the file is `.js`/`.ts` without an `.mjs`/`.mts` extension, `__dirname` is a real CommonJS binding and the line works. If the project uses `"type": "module"` (or the file is `.mts`), the same file is native ESM, `__dirname` is undefined, and the config throws before Vite resolves anything. The fix that works in both cases is `import.meta.dirname`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Shared Options › `resolve.alias`, `resolve.tsconfigPaths`](https://vite.dev/config/shared-options) — vite.dev: object and array formats for `alias` (first rule wins, use absolute paths for file system targets), plus the built-in `tsconfigPaths` option (default false, applies only to files matched by a tsconfig `files` or `include`, unsuppo
+- **Beyond the docs:** [Vite: fix failed to resolve import path aliases](https://blog.openreplay.com/vite-fix-failed-to-resolve-import-path-aliases/) — OpenReplay Team, 2025-10-31: shows the two configs that must agree (`resolve.alias` and tsconfig `paths`), the `vite-tsconfig-paths` plugin route, and the `__dirname` in ESM and missing `@types/node` causes; never mentions the built-in `resolve.tsconfigPaths`
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01h · Sourcemaps, target and minifiers](../11-optimization-and-performance/01h-sourcemaps-target-and-minifiers.md) · [Vite overview](../../README.md) · Next → [01a · tsconfig paths vs resolve.alias](01a-tsconfig-paths-and-vite-alias.md)

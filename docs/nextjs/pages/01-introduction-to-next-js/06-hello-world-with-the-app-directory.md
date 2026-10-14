@@ -161,6 +161,17 @@ A folder under `app/` is a route segment, and it becomes publicly routable when 
 **Where do static assets go and how are they referenced?**
 An optional `public/` folder at the project root, referenced from the base URL — `public/profile.png` is `/profile.png`. The mistake people make is treating the path as relative to the importing file, or including `public` in the URL. Neither works: the folder name never appears in the path, and the leading slash is not optional.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Installation: Create the app directory](https://nextjs.org/docs/app/getting-started/installation) — nextjs.org: the required root layout with `html` and `body`, then `app/page.tsx` rendering at `/`; notes `next dev` creates a missing root layout (*read*)
+- **Also good:** [Layouts and Pages](https://nextjs.org/docs/app/getting-started/layouts-and-pages) — nextjs.org: a page, a layout, nesting and a dynamic segment in one short tour (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [05 · Project setup](05-project-setup-create-next-app-turbopack-defaults-typescript.md) · [Index](01-explanation.md) · Next → [07 · Key framework shifts](07-key-framework-shifts-stable-react-compiler-support.md)

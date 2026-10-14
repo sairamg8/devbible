@@ -213,6 +213,18 @@ It keeps running. The `AbortSignal` on the Web `Request` tells your handler the 
 **★ Why is `statement_timeout` a connection-management setting rather than a performance one?**
 Because on a serverless deployment the scarce resource is backends, and a statement's duration is exactly how long it occupies one. A slow query is a latency problem for one user and a capacity problem for everyone — a few hundred long transactions saturate `default_pool_size` and every other request queues behind them. Bounding statement duration therefore bounds the worst case of the whole system, not just the worst case of one endpoint, and it does so from a place no application code can forget. The pairing with `lock_timeout` matters for the same reason: without both, one of the two ways a statement can occupy a backend indefinitely is left uncovered, and which one you left open decides which kind of incident you get.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Connection pooling with Vercel Functions](https://vercel.com/kb/guide/connection-pooling-with-functions) — Vercel KB: suspended instances hold sockets open ("phantom" pool usage after deploys and traffic spikes) (*read*)
+- **Also good:** [Vercel Functions limits](https://vercel.com/docs/functions/limitations) — Vercel docs: 1,024 file descriptors shared across concurrent executions, with "use connection pooling" as the advice (*read*)
+- **Also good:** [Next.js (Prisma ORM v7)](https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices) — Prisma docs, undated: hot reloading can create several Prisma Client instances, fixed by caching one on a global object outside production; it does not mention connection exhaustion by name (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02e · Expand and contract](02e-expand-and-contract.md) · [Chapter 16 overview](01-explanation.md) · Next → [03b · The arithmetic and the three escapes](03b-the-arithmetic-and-the-three-escapes.md)

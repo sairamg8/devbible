@@ -131,3 +131,14 @@ Place `debugger;` statements inside your test or component code. Connect via Chr
 - **Previous**: [14 · Accessibility Testing](../14-accessibility-testing/01-a11y-assertions.md) — Verifying accessible roles and WCAG compliance.
 - **Next**: [16 · Testing Setup from Zero](../16-real-world-workflows-and-recipes/01-testing-setup-from-zero.md) — Comprehensive setup recipe with Jest, RTL, and MSW.
 - **RTL Queries**: [08 · RTL Queries](../08-rtl-queries/01-query-variants-and-priority.md) — Query prioritization hierarchy.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Debugging](https://testing-library.com/docs/dom-testing-library/api-debugging) — Testing Library: `screen.debug()`, `prettyDOM`, `logTestingPlaygroundURL`, and `DEBUG_PRINT_LIMIT` (default 7000 characters) (*read*)
+- **Beyond the docs:** [Using the React Testing Library debug method](https://blog.logrocket.com/using-react-testing-library-debug-method/) — Ibadehin Mojeed, LogRocket, 2023-11-03: `logRoles` and the playground link; moves a `findByText` test to `findByRole` (*read*)
+
+{/* LINKMAP:END */}

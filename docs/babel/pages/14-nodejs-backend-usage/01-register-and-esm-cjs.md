@@ -77,3 +77,16 @@ Two transform pipelines diverge—pick one for scripts.
 
 ### ⚠️ Ignoring .mjs/.cjs extension rules under "type": "module"
 Resolution bugs that only appear in consumers.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@babel/register](https://babeljs.io/docs/babel-register) — babeljs.io: ignores `node_modules` by default, `only`/`ignore` (not supported in config files), does not compile native ESM on the fly; the page does not mention Babel 8 being ESM-only (*read*)
+- **Also good:** [Publishing a package](https://nodejs.org/learn/modules/publishing-a-package) — nodejs.org: `exports` conditions, `import` is not ESM and `require` is not CJS, the dual package hazard (two instances, `instanceof` fails) and the `node`/`default` split that avoids it (*read*)
+- **Also good:** [Node.js Packages](https://nodejs.org/api/packages.html) — nodejs.org: `type`, `.mjs`/`.cjs`, conditional exports (`import`, `require`, `module-sync`); its dual-package section only links to an examples repo (*read*)
+- **Also good:** [@babel/node](https://babeljs.io/docs/babel-node) — babeljs.io: "You should not be using `babel-node` in production" (*read*)
+
+{/* LINKMAP:END */}

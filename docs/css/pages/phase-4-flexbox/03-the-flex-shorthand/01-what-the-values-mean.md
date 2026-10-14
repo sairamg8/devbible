@@ -197,6 +197,16 @@ Sets `flex-basis: 200px` and leaves grow and shrink at 1, so the item starts at
 Yes — both give `0 1 auto`, the longhands' initial values: content-sized, will
 not grow, may shrink.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex) — MDN: `flex: 2` expands to `2 1 0%`, `flex: auto` to `1 1 auto`, and unitless values size items in proportion (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · Choosing a basis](./02-choosing-a-basis.md) →

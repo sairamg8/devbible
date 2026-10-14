@@ -184,6 +184,18 @@ version and publish date. Don't assume Vite 8 or the Rolldown-backed pipeline is
 compatible on the strength of the integration doc alone; check the installed plugin's own
 `peerDependencies` before committing to a Vite major.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Module Federation: manifest](https://module-federation.io/configure/manifest) — module-federation.io: `mf-manifest.json` is "a runtime-oriented manifest" whose `exposes`, `shared` and `remotes` entries describe what consumers can use; written on every build when `manifest` is enabled (*read*)
+- **Also good:** [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Subresource_Integrity) — MDN, last modified 2026-04-14: a hash on the loaded file, and cross-origin use needs CORS (`crossorigin`); any byte change changes the hash, which is why a mutable, independently deployed remote entry cannot carry a fixed one (*read*)
+- **Beyond the docs:** [Solving micro frontend challenges with Module Federation](https://blog.logrocket.com/solving-micro-frontend-challenges-module-federation) — Peter Aideloje, LogRocket, 2025-01-23: host and remote basics, `singleton` plus `requiredVersion`, and `React.Suspense` for slow loads; webpack-based, with no error boundary or retry coverage (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Shared dep versioning gap](05a2-shared-dependency-versioning-and-the-optimizedeps-gap.md) · [Vite overview](../../README.md) · Next → [Version skew and the manifest](05c-version-skew-and-the-remote-manifest.md)

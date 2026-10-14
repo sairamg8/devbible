@@ -170,3 +170,15 @@ Breaks deterministic codegen—ignore generated paths.
 
 ### ⚠️ “Debugging” by disabling the rule globally
 Always find the owning config first; disable is last resort with expiry.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Getting Started with ESLint](https://eslint.org/docs/latest/use/getting-started) — ESLint docs: `npm init @eslint/config` asks questions and writes `eslint.config.js` or `.mjs`; Node 20.19+, 22.13+ or 24+ (*read*)
+- **Also good:** [Migrate from ESLint](https://oxc.rs/docs/guide/usage/linter/migrate-from-eslint.html) — oxc.rs: the migration recipe, including running both tools (*read*)
+- **Beyond the docs:** [How to Migrate from ESLint to Oxlint](https://www.hongkiat.com/blog/eslint-to-oxlint-migration-guide/) — Hongkiat Lim, updated 2025-11-21: the migrate, run and script steps with a note on unsupported rules; no full sample config or lint output (*read*)
+
+{/* LINKMAP:END */}

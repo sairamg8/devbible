@@ -262,6 +262,17 @@ Two things. First, the premise is true — Routing Middleware is deployed to all
 **How does the 16.3 streaming change affect a multi-region decision?**
 It changes the baseline you are comparing against. The release notes attribute up to 22% more requests handled under load to the move from web streams to native Node.js streams, with no application changes. A capacity model built before that upgrade will overstate how close you are to needing more compute, and "add regions" is one of the most expensive ways to buy headroom you may already have. Re-measure on 16.3 before changing topology — and treat "up to 22%" as a benchmark ceiling for SSR-bound work, not a promise for a database-bound route.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuring regions for Vercel Functions](https://vercel.com/docs/functions/configuring-functions/region) — Vercel docs: default region `iad1` for new projects, place functions near the data, per-function regions, Enterprise failover; Hobby is one region and Pro five (*read*)
+- **Also good:** [Fluid compute](https://vercel.com/docs/fluid-compute) — Vercel docs: several invocations share one instance (optimized concurrency) and `waitUntil` allows background work; it does not discuss database latency (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The cache across containers](02b-caching-and-the-cachehandler-when-you-run-more-than-one-container.md) · [Chapter 17 overview](01-explanation.md) · Next → [Telemetry via `instrumentation.ts`](04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md)

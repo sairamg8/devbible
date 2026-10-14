@@ -162,6 +162,21 @@ Because those packages ship in lockstep with `vitest` core and communicate over 
 **★ Why would you ever want a `vitest.config.ts` separate from `vite.config.ts`, given the override trap?**
 Two legitimate cases: a package in a monorepo that has tests but no `vite.config.ts` of its own (nothing to merge with), or a workspace project entry that is deliberately meant to diverge from the root config rather than extend it. Outside those, a separate file only exists to hold a `test` block, and a `test` block belongs directly in `vite.config.ts` — the separate-file form is strictly more code (an extra file, an extra `mergeConfig` call) for the same result, with a failure mode the single-file form cannot have at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuring Vitest](https://vitest.dev/config/file) — vitest.dev: states that a `vitest.config.ts` has higher priority and overrides `vite.config.ts`, with the `mergeConfig` pattern for keeping both
+- **Also good:** [server](https://vitest.dev/config/server) — vitest.dev: `server.deps.external` means the engine loads it directly, `server.deps.inline` means Vite transforms it; note the `server` option is marked deprecated on the live page (*read*)
+- **Also good:** [Test Environment](https://vitest.dev/guide/environment) — vitest.dev: `node` default, `jsdom`, `happy-dom`, `edge-runtime`, per-file control comment, and "browser is not an environment, create a project" (*read*)
+- **Also good:** [deps](https://vitest.dev/config/deps) — vitest.dev: `deps.optimizer` is off by default (`enabled` defaults to `false`) and bundles listed packages into one file using esbuild, which is the third mechanism beside `server.deps.external` and `server.deps.inline` (*read*)
+- **Also good:** [Migrating to Vitest 4.0 (archived v4 docs)](https://v4.vitest.dev/guide/migration) — vitest.dev: the section "Deprecated APIs are Removed" lists `environmentMatchGlobs` and `poolMatchGlobs`, each with "Use `projects` instead"; the live Vitest 5 guide no longer mentions them, and the deprecation notice is on [v3.vitest.dev/con
+- **Also good:** [v3.vitest.dev/config](https://v3.vitest.dev/config/)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01d · TypeScript for workers & WASM](../13-worker-and-wasm-support/01d-typescript-for-workers-and-wasm.md) · [Vite overview](../../README.md) · Next → [01a · The transform boundary](01a-the-transform-boundary.md)

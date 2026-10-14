@@ -186,6 +186,16 @@ unmounts, then it can't control exit animations!"* In practice that means one wr
 layout, `mode="wait"` because exactly one page is on screen at a time, and `key={pathname}` so a
 navigation reads as a key change.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [AnimatePresence](https://motion.dev/docs/react-animate-presence) — motion.dev: `mode` as `sync` (default, no sequencing), `wait` (one child only) and `popLayout` (exiting element leaves the layout; custom component children need `forwardRef`), plus `key` changes (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Interaction-driven animation](../05-gestures/01-interaction-driven-animation.md) · [Explanations index](../README.md) · Next → [Modes: sync, wait and popLayout](01b-modes-sync-wait-poplayout.md)

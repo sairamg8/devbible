@@ -215,6 +215,18 @@ It commits everything written so far, because returning is not rolling back. If 
 **★ Why is nesting `tx.transaction()` not the same as two transactions?**
 Because it is a savepoint. An inner failure rolls back to the savepoint and the outer transaction carries on and can still commit; a genuine second transaction would commit or roll back independently of the first. That makes nesting useful for "attempt this part, tolerate its failure" and wrong for "these two things must succeed or fail separately" — and when you find yourself wanting the latter, the inner operation should be its own transaction outside the outer one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Serialization Failure Handling](https://www.postgresql.org/docs/18/mvcc-serialization-failure-handling.html) — PostgreSQL 18 docs: SQLSTATE `40001`, "retry the complete transaction", and PostgreSQL offers no automatic retry (*read*)
+- **Also good:** [Transaction Isolation](https://www.postgresql.org/docs/18/transaction-iso.html) — PostgreSQL 18 docs: Read Committed (default), Repeatable Read and Serializable, with the anomalies table and the advice to keep transactions short and use a pool (*read*)
+- **Also good:** [Drizzle transactions](https://orm.drizzle.team/docs/transactions) — Drizzle docs: `db.transaction`, nested transactions as savepoints, `tx.rollback()` and the PostgreSQL `isolationLevel`, `accessMode` and `deferrable` options (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [08e · Restoring a soft-deleted row](08e-restoring-a-soft-deleted-row.md) · [Chapter 16 overview](01-explanation.md) · Next → [09b · The tx rule](09b-the-tx-rule.md)

@@ -272,6 +272,21 @@ Read the `lastUpdated` field, which every docs page publishes. It is the differe
 **Is `metric.rating` enough to run an SLO on?**
 No, for two reasons. The Next.js documentation does not state what boundaries `rating` uses, so you would be running a service objective on an unstated definition. And Core Web Vitals are defined at the 75th percentile of real page views, which is a property of a *distribution* — a per-observation label cannot express it. Store `value` alongside `id`, compute your own percentiles, and treat `rating` as a convenient coarse signal for a smoke alert rather than as the grade.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optimize Interaction to Next Paint](https://web.dev/articles/optimize-inp) — Jeremy Wagner, Philip Walton, Barry Pollard, web.dev, published 2023-05-19, updated 2025-09-02: field data first, reproduce in lab, split each slow interaction into input delay, processing and presentation delay, then fix the matching phase; INP good is 200 ms or less at the 75th percentile (*read*)
+- **Also good:** [Optimize LCP](https://web.dev/articles/optimize-lcp) — web.dev: the four LCP subparts with target shares (TTFB about 40%, load delay under 10%, load duration about 40%, render delay under 10%), given as guidelines (*read*)
+- **Also good:** [Web Vitals](https://web.dev/articles/vitals)
+- **Also good:** [Streaming (Web Vitals section)](https://nextjs.org/docs/app/guides/streaming) — Next.js docs, updated 2026-10-06: what a Suspense boundary does to TTFB, LCP, CLS and INP, and the `preload` prop on `next/image`; [Analytics](https://nextjs.org/docs/app/guides/analytics)
+- **Also good:** [Analytics](https://nextjs.org/docs/app/guides/analytics)
+- **Beyond the docs:** [How to improve Core Web Vitals](https://vercel.com/kb/guide/how-to-improve-core-web-vitals) — Vercel KB, no individual author, published 2025-11-03, updated 2026-10-01: one diagnose-fix-verify loop per metric using `next/image`, `next/font` and `useTransition`; it names no Next.js version or router (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04b · What survives the withdrawal](04b-what-survives-the-withdrawal-proxy-and-region-placement.md) · [Chapter index](01-explanation.md) · Next → [05b · Shipping the metric](05b-shipping-the-metric-transport-analytics-and-pre-hydration-setup.md)

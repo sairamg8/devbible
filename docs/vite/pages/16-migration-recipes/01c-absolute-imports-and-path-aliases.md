@@ -137,6 +137,22 @@ Because a root-scoped `baseUrl` reroutes every bare import in the project throug
 **★ What's the fastest way to tell whether a CRA app's absolute-import setup needs `vite-tsconfig-paths`, `resolve.tsconfigPaths`, or a plain `resolve.alias`, before writing any Vite config at all?**
 Open the existing `jsconfig.json` or `tsconfig.json` and check for a `paths` key. No `paths`, `baseUrl` only → `vite-tsconfig-paths` (the plugin implements the fallback-root behaviour the native flag does not). A real `paths` map present → `resolve.tsconfigPaths: true` is sufficient and is the smaller dependency footprint. Neither file exists, and the app used some other, non-standard resolution trick (a webpack alias added via CRACO, covered in **[01f](01f-eject-and-craco-codebases.md)**) → read what that trick actually did before choosing any of the three, because none of them reproduce an arbitrary webpack `resolve.alias` block automatically.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Importing a Component](https://create-react-app.dev/docs/importing-a-component/) — Create React App docs: absolute imports via `baseUrl: "src"` in `jsconfig.json` or `tsconfig.json`, the narrow feature our page contrasts with (*read*)
+- **Also good:** [Shared Options](https://vite.dev/config/shared-options) — vite.dev: `resolve.alias`, `resolve.tsconfigPaths` (default false, only for files in the tsconfig `include`), `oxc`, `define` (*read*)
+- **Also good:** [Server Options](https://vite.dev/config/server-options) — vite.dev: `server.proxy` syntax; compare with the CRA side: [Proxying API Requests in Development](https://create-react-app.dev/docs/proxying-api-requests-in-development/) (*read*)
+- **Also good:** [Proxying API Requests in Development](https://create-react-app.dev/docs/proxying-api-requests-in-development/)
+- **Also good:** [Available Scripts](https://create-react-app.dev/docs/available-scripts/) — CRA docs: `npm run eject` is one-way and copies webpack and Babel config into the project (*read*)
+- **Beyond the docs:** [Importing SVG files as React components with Vite](https://cassidoo.co/post/svg-react-vite/) — Cassidy Williams, 2023-01-06: CRA gave an SVG component for free and Vite does not; pair it with the plugin README [vite-plugin-svgr](https://github.com/pd4d10/vite-plugin-svgr), which shows the current `?react` suffix (the post predates it)
+- **Beyond the docs:** [vite-plugin-svgr](https://github.com/pd4d10/vite-plugin-svgr)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01b · File extensions](01b-file-extensions-and-the-jsx-transform.md) · [Vite overview](../../README.md) · Next → [01d · SVG imports](01d-svg-imports.md)

@@ -232,6 +232,17 @@ have it. That distinguishes "truncated" from "wrong" from "correct but rejected"
 without putting a credential into a CI log that is retained for ninety days and visible to everyone
 with read access to the repository.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Env Variables and Modes](https://vite.dev/guide/env-and-mode) — vite.dev: "Vite uses dotenv-expand", `$KEY` expansion, `\$` for a literal dollar, and the three-line example where `test$foo` becomes `test` (*read*)
+- **Also good:** [motdotla/dotenv-expand](https://github.com/motdotla/dotenv-expand) — upstream README: braced and unbraced forms, `$&#123;MISSING:-default&#125;`, the alternate-value form, the `processEnv` option; backslash escaping is not documented there, it points to dotenvx docs for the rules (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Modes in CI & Containers](01f-modes-in-ci-and-containers.md) · [Vite overview](../../README.md) · Next → [Composition, the Prefix Filter & Tool Interop](01h-env-composition-and-interop.md)

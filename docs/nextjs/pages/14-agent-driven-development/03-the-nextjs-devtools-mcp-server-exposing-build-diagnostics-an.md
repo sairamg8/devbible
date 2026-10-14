@@ -150,6 +150,17 @@ No. Every capability is dev-server state and the stated requirements are Next.js
 **★ `get_logs` returns a path rather than contents. Is that a limitation?**
 It is a design choice and the right one. Development logs are large, and an agent that ingests a whole log file has spent its context window on noise before it reaches the relevant line. Returning a path lets the agent grep for the route, the timestamp or the error string and read only what matters. The general principle is worth carrying into any tool you design for an agent: return a handle to large data, not the data.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Connecting coding agents to the Next.js MCP server](https://nextjs.org/docs/app/guides/mcp) — Next.js docs, updated 2026-10-02: `/_next/mcp` on the dev server, the `next-devtools-mcp` client with `nextjs_index`, `nextjs_call`, `nextjs_docs`, `browser_eval`, and runtime tools `get_errors`, `get_routes`, `get_compilation_issues`, `compile_route`, `get_reques
+- **Also good:** [Next.js 16.3: AI Improvements (A smaller MCP server)](https://nextjs.org/blog/next-16-3-ai-improvements) — why the knowledge-base, upgrade and Cache Components tools were removed and the two compile tools added (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`AGENTS.md` and repository context maps](02-agentsmd-and-repository-context-maps-version-matched-bundled.md) · [Chapter 14 overview](01-explanation.md) · Next → [Skills, agent-browser and fix-menus](04-163-preview-first-party-skills-for-multi-step-workflows.md)

@@ -178,6 +178,17 @@ In the first, lowest-priority layer. Layer order beats specificity, so a reset
 in the bottom layer can never accidentally override a component rule no matter
 how its selectors are written.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [A Modern CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/) — Josh W. Comeau: ten rules, each with a stated reason; the page says it was updated 2026-06-03 (*read*)
+- **Also good:** [A (more) Modern CSS Reset](https://piccalil.li/blog/a-more-modern-css-reset/) — Andy Bell, Piccalilli, 2023-09-18: box sizing, text-size adjustment, block-end margins and list styles (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [06 · User-agent stylesheets](./06-user-agent-stylesheets.md) · Next: [08 · The at-rule map](./08-the-at-rule-map.md) →

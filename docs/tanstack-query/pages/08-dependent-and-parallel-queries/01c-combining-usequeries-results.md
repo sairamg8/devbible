@@ -283,6 +283,17 @@ function itself when it is declared inline — that forces the work to happen ev
 though the output may then be shared away. The rule of thumb: stabilise the function, and stop
 worrying about the shape of the value it returns.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [useQueries reference](https://tanstack.com/query/latest/docs/framework/react/reference/useQueries) — TanStack Query API reference: the `combine` option and result shape; its Remarks warn that an inline `combine` runs on every render (*read*)
+- **Also good:** [Parallel Queries](https://tanstack.com/query/latest/docs/framework/react/guides/parallel-queries) — TanStack Query docs: `useQueries` basics; the page does not mention `combine` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Parallel queries & `useQueries`](./01b-parallel-queries-and-usequeries.md) · [Topic index](../README.md) · Next → [What composition costs](./01d-what-query-composition-costs.md)

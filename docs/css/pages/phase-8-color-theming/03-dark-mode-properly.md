@@ -227,6 +227,18 @@ A function that picks between two values based on the used colour scheme, keepin
 both adjacent instead of split across a media query. It is newly available
 (2024-05-13), so treat it as an enhancement over a media-query fallback.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CSS color-scheme-dependent colors with light-dark()](https://web.dev/articles/light-dark) — Bramus, web.dev, last updated 2024-05-13: `light-dark()` picks one of two colours and needs a `color-scheme`, usually on `:root` (*read*)
+- **Also good:** [Improve dark mode default with color-scheme and a meta tag](https://web.dev/articles/color-scheme) — Thomas Steiner, web.dev, last updated 2020-04-08: the property and its meta tag opt form controls, scrollbars and system colours into the browser's theme defaults (*read*)
+- **Beyond the docs:** [Embracing Native Dark Mode with the CSS color-scheme Property](https://rebeccamdeprey.com/blog/embracing-native-dark-mode-with-the-css-color-scheme-property) — Rebecca M. Deprey, 2025-05-03: `color-scheme: light dark` on the root, `light-dark()` for colours, and a React toggle that sets `data-theme`, saves it in localStorage and follows OS changes
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · `color-mix()`](./02-color-mix.md) · Back to [Phase 8 overview](./README.md)

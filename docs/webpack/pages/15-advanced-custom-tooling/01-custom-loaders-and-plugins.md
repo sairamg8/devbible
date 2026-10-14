@@ -120,3 +120,16 @@ this.callback(null, transformedSource, map, meta);
 
 ### ⚠️ Pitfall 3: A Custom Plugin Not Declaring `tapAsync`/`tapPromise` for Genuinely Async Work
 Using the synchronous `.tap()` API inside a hook callback that then kicks off a Promise without awaiting it (e.g. an async file read) means Webpack proceeds to the next lifecycle stage believing this hook already finished — any assets that plugin meant to add arrive too late, silently missing from the actual emitted output. Async work inside a plugin hook requires `tapAsync` (callback-based) or `tapPromise` (returning a Promise), matching the hook's declared type (`AsyncSeriesHook` vs `SyncHook`) — check the hook's documented type before choosing which `tap*` variant to use.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Writing a Loader](https://webpack.js.org/contribute/writing-a-loader/) — webpack.js.org: local testing, chaining, guidelines (stateless, `this.addDependency`, no absolute paths, peer dependencies), a Jest plus `memfs` test (*read*)
+- **Also good:** [Loader Interface](https://webpack.js.org/api/loaders/) — the loader context API, including `this.getOptions(schema)` (*read*); [Extending with Loaders](https://survivejs.com/webpack/extending/loaders/): SurviveJS, undated
+- **Also good:** [Extending with Loaders](https://survivejs.com/webpack/extending/loaders/)
+- **Read this:** [Writing a Plugin](https://webpack.js.org/contribute/writing-a-plugin/) — webpack.js.org: compiler versus compilation, `tapAsync` and `tapPromise`, `compilation.emitAsset`, `processAssets` stages, watch `modifiedFiles`, cacheable classes; options validation changed at 5.106; it has a Testing section (*read*)
+
+{/* LINKMAP:END */}

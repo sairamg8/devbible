@@ -266,6 +266,18 @@ The client's is a lie. `Response.json` serialises with `JSON.stringify`, which i
 **★ Where does the ownership check go relative to the query, and why does the order matter?**
 Before. If you fetch first and check the returned row afterwards, the row has already been materialised into your process — it can be in a log line, a trace attribute, an error message or a crash dump before anyone established the caller was entitled to it. Worse, the natural shape of that code returns early when nothing is found, which means the ownership check is skipped entirely for ids that do not exist, and the two paths take measurably different amounts of work. That difference is exactly the existence oracle the deliberate-404 pattern exists to close. Checking first — `requireCardAccess(cardId)` before `select` — makes the authorisation decision independent of whether the row is there, which is the property topic 11 needs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cursor-based pagination](https://orm.drizzle.team/docs/guides/cursor-based-pagination) — Drizzle docs: the keyset query on a unique id and a compound cursor with a matching index; one sentence on why it beats offset (*read*)
+- **Also good:** [LIMIT and OFFSET](https://www.postgresql.org/docs/18/queries-limit.html) — PostgreSQL 18 docs: "rows skipped by an `OFFSET` clause still have to be computed inside the server" (*read*)
+- **Beyond the docs:** [We need tool support for keyset pagination](https://use-the-index-luke.com/no-offset) — Markus Winand, Use The Index, Luke, 2014-08-06 (updated 2023-09-08): big offsets make the database fetch and discard rows, and an insert between page fetches causes duplicates; keyset is a `WHERE` on the last seen key, and multi-column sorting is left to a linked article (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05ea · The position value](05ea-the-position-value-and-concurrent-creates.md) · [Chapter 16 overview](01-explanation.md) · Next → [06b · Filtering and sorting without injection](06b-filtering-and-sorting-without-injection.md)

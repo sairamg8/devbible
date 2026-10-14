@@ -273,6 +273,17 @@ Because the key *is* the cache identity. TanStack Query has no visibility into w
 **★ Can you use `useInfiniteQuery` for a numbered pager if the API only takes `?page=n`?**
 You can make it fetch — the guide shows the shape for cursorless APIs, deriving the next param with `lastPageParam + 1` — but you should not, because the hook accumulates. `data.pages` grows without bound, a refetch re-requests every accumulated page sequentially, and there is no supported way to jump: v5 removed manual `pageParam` passing to `fetchNextPage` because *"this feature didn't work at all with refetches."* A numbered pager wants one page in memory at a time, which is `useQuery` with the number in the key. The reverse mistake — a `useQuery` per page behind an infinite-scroll UI — costs you the single accumulated array and the automatic end-of-list signal.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Paginated Queries](https://tanstack.com/query/latest/docs/framework/react/guides/paginated-queries) — TanStack Query docs: `placeholderData: keepPreviousData` and `isPlaceholderData` for page-number UIs, also valid with `useInfiniteQuery` (*read*)
+- **Also good:** [Infinite Queries](https://tanstack.com/query/latest/docs/framework/react/guides/infinite-queries) — TanStack Query docs: required `initialPageParam`, `getNextPageParam` returning null or undefined to stop, `hasNextPage` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Network mode & offline](../06-background-refetching/01d-network-mode-and-offline.md) · [Topic index](../README.md) · Next → [`useInfiniteQuery`](./01b-infinite-queries.md)

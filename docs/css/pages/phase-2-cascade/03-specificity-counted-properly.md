@@ -185,6 +185,17 @@ layers, and before order of appearance. It only decides when all of those tie.
 `&` behaves like `:is()`, taking the most specific selector from the parent
 list. A parent list containing an id raises every nested rule to `1,x,x`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Specificity) — MDN: the three-column counting rules, plus how `:is()`, `:has()`, `:not()` and `:where()` count, with worked examples (*read*)
+- **Beyond the docs:** [CSS Selector Specificity Calculator](https://polypane.app/css-specificity-calculator/) — Polypane, no author or date on the page: calculator with notes: `:is()` and `:not()` take their highest argument, `:where()` is zero; it does not mention `:has()` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · `@layer`](./02-layer/README.md) · Next: [04 · The shorthand reset trap](./04-the-shorthand-reset-trap.md) →

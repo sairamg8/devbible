@@ -156,6 +156,19 @@ Volume and shape, not aesthetics. A job table is rows being inserted, updated an
 **A colleague says "we need exactly-once delivery". What do you say?**
 That they can have exactly-once *effects*, which is what they actually want, but not exactly-once *delivery*, which is not on offer from any queue that also survives crashes. The reason is fundamental: a worker that dies between doing the work and acknowledging it is indistinguishable, from the queue's side, from a worker that died before doing the work. The queue must choose between redelivering (at-least-once, risking duplicates) and not redelivering (at-most-once, risking loss), and every system you would want to use chooses redelivery. Vercel Queues states it plainly — *"Delivery is at-least-once, so consumers should be idempotent."* The engineering work is therefore in the handler, not in the queue.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`after`](https://nextjs.org/docs/app/api-reference/functions/after) — Next.js docs: schedules work to run after the response or prerender finishes, for the route's max duration, and still runs if the response errored (*read*)
+- **Also good:** [How to self-host your Next.js application](https://nextjs.org/docs/app/guides/self-hosting) — Next.js docs: the `after` section: on `SIGINT` or `SIGTERM` the server finishes pending callbacks, and a 10 to 30 second drain is recommended (*read*)
+- **Also good:** [pg-boss](https://pgboss.io/) — library docs: a Node job queue on Postgres that relies on `SKIP LOCKED`; sections for CLI, dashboard and proxy (*read*)
+- **Also good:** [Cron Jobs](https://vercel.com/docs/cron-jobs) — Vercel docs: a schedule in `vercel.json` makes Vercel send an HTTP GET to the production deployment URL; UTC only, all plans (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03e · Pull sources and back-pressure](03e-pull-sources-and-back-pressure.md) · [Chapter 15 overview](01-explanation.md) · Next → [04b · `after()` and `waitUntil` are not a queue](04b-after-and-waituntil-are-not-a-queue.md)

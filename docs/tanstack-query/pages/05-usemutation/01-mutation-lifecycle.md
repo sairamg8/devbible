@@ -245,6 +245,18 @@ Runs both, concurrently — *"all mutations run in parallel"* — and does not d
 **★ Where does the rollback value actually live between `onMutate` and `onError`?**
 In the mutation instance, not in the cache and not in your component. `onMutate` returns it, the library holds it for the life of that mutation, and hands it to `onSuccess`, `onError` and `onSettled` as `onMutateResult`. That is why the pattern survives a re-render, and why the value must be a snapshot rather than a reference into the cache — the cache is going to change underneath it, which is the whole point of the optimistic write.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mutations](https://tanstack.com/query/latest/docs/framework/react/guides/mutations) — TanStack Query docs: onMutate, onError, onSuccess, onSettled order, the onMutate result passed on, mutate vs mutateAsync, and per-call callbacks skipped on unmount (*read*)
+- **Also good:** [Optimistic Updates](https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates) — TanStack Query docs: the variables approach and the onMutate cache approach (*read*)
+- **Beyond the docs:** [Mastering Mutations in React Query](https://tkdodo.eu/blog/mastering-mutations-in-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-10-09, updated 2023-10-21: prefer `mutate`; data logic in `useMutation` callbacks, UI actions in `mutate` callbacks; names the mutation state `loading` (v4)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Caching & Invalidation](../04-caching-and-invalidation/01-cache-management-apis.md) · [Topic index](../README.md) · Next → [Background Refetching](../06-background-refetching/01-automatic-freshness.md)

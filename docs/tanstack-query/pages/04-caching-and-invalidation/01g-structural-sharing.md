@@ -225,6 +225,17 @@ It is a necessity of immutable data, not a flaw. If `items[1]` is a different ob
 **★ Someone proposes asserting `data === previousData` in production code to detect "no change". Is that sound?**
 It is sound as an observation and unsound as a contract. The behaviour is documented, so the identity does hold for a refetch returning identical JSON — but it is a rendering optimisation, it is switchable per query and globally by an option somebody else may set, and it stops applying the moment a non-JSON value enters the payload. Any logic whose correctness depends on it becomes a bug the day a mapper is added. Depend on it for `useMemo` dependencies and `React.memo`, where a false "changed" costs a render and nothing else; never for business decisions such as "did the server change this record" — use `dataUpdatedAt` or a version field from the server for that.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Render Optimizations](https://tanstack.com/query/latest/docs/framework/react/guides/render-optimizations) — TanStack Query docs: structural sharing keeps unchanged references, JSON-compatible data only; `structuralSharing: false` or a custom function; tracked-properties proxy (*read*)
+- **Beyond the docs:** [React Query Render Optimizations](https://tkdodo.eu/blog/react-query-render-optimizations) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-03-20, updated 2023-10-21: the todo walk-through where the unchanged object keeps its reference across a refetch; its examples use the v4 `isLoading` flag
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`staleTime` vs `gcTime`](./01f-staletime-vs-gctime.md) · [Topic index](../README.md) · Next → [The `structuralSharing` option and its interactions](./01g2-structuralsharing-option-and-interactions.md)

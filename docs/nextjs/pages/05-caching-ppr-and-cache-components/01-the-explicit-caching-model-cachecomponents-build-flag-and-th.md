@@ -181,6 +181,18 @@ Because it stopped being an optimisation and became the rendering model. Once ev
 **Can you adopt Cache Components for part of an application?**
 Not by route, because the flag is global and requires the Node.js runtime everywhere. What you *can* stage is the work: `instant = false` on a segment defers validation feedback for it while the rest of the app converts, and a codemod applies that opt-out across the whole `app/` directory in one pass. That is a migration schedule, not partial adoption — the model is on everywhere from the moment the flag flips, and any route still exporting `dynamic`, `revalidate` or `fetchCache` errors immediately.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Caching](https://nextjs.org/docs/app/getting-started/caching) — nextjs.org docs, updated 2026-10-06: enabling `cacheComponents` with `partialPrefetching`, data-level and UI-level `use cache`, streaming uncached data, runtime APIs, `connection()` and where cached content is stored (*read*)
+- **Also good:** [cacheComponents](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheComponents) — nextjs.org reference, updated 2026-10-02: data fetching is dynamic by default, the flag controls `ppr`, `useCache` and `dynamicIO` as one setting, requires the Node.js runtime (*read*)
+- **Beyond the docs:** [Cache Components in Next.js](https://certificates.dev/blog/cache-components-in-nextjs) — Aurora Scharff (says she works on the Next.js team at Vercel), 2026-07-09: one store page: the shared catalog is cached, the per-user recommendations stream behind a fallback, blocking is described only as the opt-out; then `cacheLife('hours')`, `cacheTag`, and `revalidateTag` versus `updateTag` from a S
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter index](01-explanation.md) · Next → [01b · What the model costs](01b-what-the-model-costs-persistence-storage-and-the-runtime-floor.md)

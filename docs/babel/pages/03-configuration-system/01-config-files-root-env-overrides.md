@@ -236,3 +236,14 @@ you pass to `transformFileSync`. It is one of the config-*loading* options, alon
 `envName`, `configFile` and `babelrc` — it decides which files get loaded, so it has to be known
 before any file is read. Putting it in `babel.config.js` asks Babel to consult the file it has not
 found yet.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Config Files](https://babeljs.io/docs/config-files) — babeljs.io: project-wide `babel.config.json` versus file-relative `.babelrc.json`, the search stopping at `package.json`, `api.env`/`api.cache` and the monorepo section (*read*)
+- **Also good:** [Options](https://babeljs.io/docs/options) — babeljs.io: `env` and `overrides` may not be nested, `babelrcRoots`, `root`/`rootMode` values `root`, `upward`, `upward-optional`, and `caller` (*read*)
+
+{/* LINKMAP:END */}

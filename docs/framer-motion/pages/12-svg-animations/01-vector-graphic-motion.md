@@ -115,3 +115,15 @@ function AnimatedCheckmark() {
 
 ### ⚠️ Pitfall 3: Assuming `pathLength` Animates at a Perceptually Uniform Speed Across Complex Paths
 A path with highly uneven segment lengths (a long straight line followed by a tiny, tight curve) animates `pathLength` at a uniform RATE relative to total path length — meaning the long straight segment draws relatively slowly (in visual terms) while the short curve whips by very quickly, since both consume proportional, not perceptually-equal, amounts of the 0-1 range. For paths with very uneven segment lengths, this can produce an animation that FEELS uneven even though the underlying `pathLength` progression is mathematically linear.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SVG animation](https://motion.dev/docs/react-svg-animation) — motion.dev: `pathLength` and `pathOffset` on a 0 to 1 scale, and morphing `d` when both paths have the same number and type of instructions, with Flubber suggested otherwise (*read*)
+- **Also good:** [Path drawing tutorial](https://motion.dev/tutorials/react-path-drawing) — motion.dev: staggered line drawing with variants and a custom index (*read*)
+- **Beyond the docs:** [Animated line drawing in SVG](https://jakearchibald.com/2013/animated-line-drawing-svg/) — Jake Archibald, 2013-07-29: the `stroke-dasharray` and `stroke-dashoffset` trick with `getTotalLength()`, which is what `pathLength` saves you from writing by hand; plain CSS, not Motion
+
+{/* LINKMAP:END */}

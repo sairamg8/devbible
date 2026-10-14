@@ -237,6 +237,18 @@ When the query is not enabled — or is paused — at the moment of render. Both
 touching `data`, or to return early on whatever precondition set `enabled` to false, so the query's
 own states are only consulted once the query is actually allowed to run.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Queries](https://tanstack.com/query/latest/docs/framework/react/guides/queries) — TanStack Query docs: status is about `data`, fetchStatus is about the `queryFn`; check `isPending`, then `isError`, then use `data` (*read*)
+- **Also good:** [Background Fetching Indicators](https://tanstack.com/query/latest/docs/framework/react/guides/background-fetching-indicators) — TanStack Query docs: `status === 'pending'` for the first load, `isFetching` for a background refresh, `useIsFetching` for an app-wide indicator (*read*)
+- **Beyond the docs:** [Status Checks in React Query](https://tkdodo.eu/blog/status-checks-in-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-03-27, updated 2023-10-21: status as the state machine, `isFetching` as derived; check data before error so stale data survives a failed refetch
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`useQuery` Deep Dive](../02-usequery-deep-dive/01-core-options.md) · [Topic index](../README.md) · Next → [Caching & Invalidation](../04-caching-and-invalidation/01-cache-management-apis.md)

@@ -176,6 +176,17 @@ matches radio groups with no selection and `<progress>` with no value.
 the `required` attribute, so the marker cannot drift from the actual
 requirement.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [:user-invalid](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:user-invalid) — MDN: matches only after the user has interacted (*read*)
+- **Beyond the docs:** [CSS :valid / :invalid vs :user-valid / :user-invalid](https://pawelgrzybek.com/css-valid-invalid-vs-user-valid-user-invalid-pseudo-classes/) — Pawel Grzybek, 2023-08-23: `:invalid` applies at once, which confuses users; the `:user-` pair waits for interaction, shown in a CodePen demo (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [08 · State pseudo-classes](./08-state-pseudo-classes.md) · Next: [10 · Pseudo-elements](./10-pseudo-elements.md) →

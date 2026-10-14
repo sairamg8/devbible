@@ -279,6 +279,19 @@ slow one becomes a CI surprise, and the team's mental model of "clean" quietly n
 subset. Running both is fine and common; what matters is that the fast one is understood as a subset
 rather than as the standard.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Oxlint overview](https://oxc.rs/docs/guide/usage/linter) — oxc.rs: what Oxlint is, 871 built-in rules, type-aware linting through the TypeScript Go port, and the project's own claim of 50 to 100 times faster than ESLint, a vendor benchmark (*read*)
+- **Also good:** [Announcing Vite+ 1.0](https://voidzero.dev/posts/announcing-vite-plus-1-0) — VoidZero, 2026-09-28: `vp` commands: `check` (Oxfmt, Oxlint, type-check), `test` (Vitest 5, described as stable), `build` (Vite 8 and Rolldown), `pack` (tsdown), `run` (task runner); `vp install` uses your own package manager; MIT (*read*)
+- **Also good:** [Announcing Vite+ Alpha](https://voidzero.dev/posts/announcing-vite-plus-alpha) — VoidZero, 2026-03-13: the first bundle (Vite 8, Vitest 4.1, Oxlint 1.52, Oxfmt beta); superseded by the 1.0 post, kept for the history (*read*)
+- **Beyond the docs:** [Four months of VoidZero at Cloudflare](https://blog.cloudflare.com/voidzero-update/) — Cloudflare Blog, 2026-09-28: progress report: Vitest 5, stable tsgolint, Oxfmt formatters rewritten in Rust, the ownership change and the open-source pledge; every speed figure is a vendor claim (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Loaders → Plugins](02b-loaders-become-plugins.md) · [Vite overview](../../README.md) · Next → [What microservices mean to a build](../18-microservices-architecture/01-what-microservices-mean-to-a-vite-build.md)

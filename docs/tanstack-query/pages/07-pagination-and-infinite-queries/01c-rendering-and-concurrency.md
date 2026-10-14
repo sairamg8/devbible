@@ -109,6 +109,18 @@ No — it removes the cancellation, not the collision, and the collision is the 
 **★ Why does `useMemo` over `data.pages` actually work, given that a refetch replaces the pages?**
 Because a refetch does not necessarily replace them. Query results *"are structurally shared to detect if data has actually changed and if not, the data reference remains unchanged"*, so a background refetch that returns identical pages leaves `data` referentially identical and the memo holds. That is what makes `[data]` a correct dependency rather than a fragile one — it changes when the content changes and not merely when a request completes, which is the property you want and the one a hand-rolled flatten in the render body throws away.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Infinite Queries](https://tanstack.com/query/latest/docs/framework/react/guides/infinite-queries) — TanStack Query docs: pages refetch sequentially from the first; `maxPages` caps stored pages and refetch cost; `isFetchingNextPage` vs background refresh; one ongoing fetch per entry and the `pages` and `pageParams` shape (*read*)
+- **Also good:** [useInfiniteQuery reference](https://tanstack.com/query/latest/docs/framework/react/reference/useInfiniteQuery) — TanStack Query API reference: options (`initialPageParam`, `getNextPageParam`, `maxPages`) and result fields; warns that calling `fetchNextPage` imperatively can interfere with refetching (*read*)
+- **Beyond the docs:** [How Infinite Queries work](https://tkdodo.eu/blog/how-infinite-queries-work) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2024-09-14: why a refetch walks the pages as a sequential loop that re-derives each param from the last page, and how a retry resumes mid-loop; leaves `maxPages` out
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`useInfiniteQuery`](./01b-infinite-queries.md) · [Topic index](../README.md) · Next → [Infinite cache & refetch](./01d-infinite-cache-refetch-and-manual-updates.md)

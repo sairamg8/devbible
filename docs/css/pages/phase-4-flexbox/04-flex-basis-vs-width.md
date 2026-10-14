@@ -216,6 +216,18 @@ For a component that must work both inside and outside a flex container. `width`
 applies in both contexts; `flex-basis` only applies when the element is a flex
 item.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [flex-basis](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-basis) — MDN: if `flex-basis` is not `auto` it takes precedence over `width` (or `height` in a column), and `auto` falls back to `width` and then to content (*read*)
+- **Also good:** [Controlling ratios of flex items along the main axis](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios) — MDN: shrink weighted by factor times base size (*read*)
+- **Beyond the docs:** [Flexbox: flex-basis vs. width vs. min-width vs. max-width](https://makandracards.com/makandra/137994-flexbox-flex-basis-vs-width-vs-min-width-vs-max-width) — Henning Koch, makandra cards, 2019-08-30, updated 2025-03-17: `flex-basis` sets the starting size, `width` only when no basis is set, `min-width` and `max-width` set limits (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · The `flex` shorthand](./03-the-flex-shorthand/README.md) · Next: [05 · Main and cross axis](./05-main-and-cross-axis.md) →

@@ -231,6 +231,19 @@ Because `metadataBase` composition is a feature of the *metadata* pipeline, appl
 **★ How do you keep a sitemap from advertising URLs that 404?**
 By deriving it from the same predicate the pages use, not from a parallel query. If the blog index renders `published: true, deletedAt: null`, the sitemap must use that same filter — best expressed as one exported function both call. The failure is always divergence: someone adds a `scheduledFor` check to the listing page and not to the sitemap, and six months later the console reports a few hundred URLs returning 404 with no obvious cause. Treating the sitemap as a *view over the same data* rather than a second implementation is the whole discipline.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [sitemap.xml](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap) — Next.js docs, updated 2026-08-18: `MetadataRoute.Sitemap`, localized `alternates.languages` (since 14.2), image and video sitemaps, `generateSitemaps` with the 50,000-URL split and `id` as a Promise (since 16.0) (*read*)
+- **Also good:** [robots.txt](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots) — Next.js docs, updated 2026-05-01: per-agent rules, `sitemap`, and the 16.3.0 `other` field for non-standard directives (*read*)
+- **Also good:** [Internationalization](https://nextjs.org/docs/app/guides/internationalization)
+- **Beyond the docs:** [Implementing multilingual sitemap with next-intl in Next.js App Router](https://dev.to/oikon/implementing-multilingual-sitemap-with-next-intl-in-nextjs-app-router-1354) — Oikon, DEV Community, 2025-01-30 (edited 2025-02-05): why the author dropped `next-sitemap` for one `app/sitemap.ts` that emits every locale with alternates; written for Next.js 14, and its `sitemap()` reads no params. Its home-page check appears to compare a route object to a string
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [What the unfurlers actually fetch](02f-what-the-unfurlers-actually-fetch.md) · [Chapter 12 overview](01-explanation.md) · Next → [`robots.ts` and the crawl directives](03b-robotsts-and-the-crawl-directives.md)

@@ -123,3 +123,14 @@ animate={{ opacity: isVisible ? [0, 1] : [1, 0] }} // overcomplicated for a simp
 // reserve keyframe arrays for GENUINELY multi-step motion (bounce, pulse, multi-point paths)
 animate={{ opacity: isVisible ? 1 : 0 }}
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Transitions](https://motion.dev/docs/react-transitions) — motion.dev: `times` takes 0 to 1 values, one per keyframe, otherwise spread evenly; tween default is 0.8s with several keyframes (*read*)
+- **Also good:** [Keyframes tutorial](https://motion.dev/tutorials/react-keyframes) — motion.dev: multi-step `scale`, `rotate` and `borderRadius` arrays with `times: [0, 0.2, 0.5, 0.8, 1]` (*read*)
+
+{/* LINKMAP:END */}

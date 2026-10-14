@@ -235,6 +235,18 @@ Percentages resolve against the container's inner main size. If that size is
 indefinite — typically a column container sized by its own content — there is
 nothing to resolve against and the basis behaves as `auto`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Controlling ratios of flex items along the main axis](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios) — MDN: `flex-basis` as the starting size, `flex-grow` sharing positive free space, `flex-shrink` weighted by factor times base size, never below `min-content` (*read*)
+- **Also good:** [CSS Flexible Box Layout Module Level 1](https://www.w3.org/TR/css-flexbox-1/) — W3C: section 9.7 "Resolving Flexible Lengths" is the normative loop (freeze inflexible items, then loop on remaining free space) (*read*)
+- **Beyond the docs:** [An Interactive Guide to Flexbox in CSS](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/) — Josh W. Comeau, 2022-11-22, updated 2026-04-27: live widgets for basis, grow and shrink, and resizable demos where minimum sizes cause overflow (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · Growing and shrinking](./02-grow-and-shrink.md) →

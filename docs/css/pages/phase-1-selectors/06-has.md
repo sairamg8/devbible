@@ -190,6 +190,18 @@ the JavaScript it replaces costs far more.
 state lives in the DOM rather than in a class that has to be added and removed,
 so it cannot get out of sync on an error path.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [:has()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has) — MDN: relative selector argument, parent and previous-sibling use, no nesting `:has()` inside `:has()` (*read*)
+- **Also good:** [CSS Has Pseudo Class](https://webkit.org/blog/13096/css-has-pseudo-class/) — WebKit blog, Jen Simmons, 2022-08-18: the engine team's examples; says a form-validation case needed JavaScript before `:has()` (*read*)
+- **Beyond the docs:** [Level Up Your CSS Skills With The :has() Selector](https://www.smashingmagazine.com/2023/01/level-up-css-skills-has-selector/) — Stephanie Eckles, Smashing Magazine, 2023-01-23: previous-sibling and range selection, and a star-rating component driven by state (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05 · :is() and :where()](./05-is-and-where.md) · Next: [07 · Structural pseudo-classes](./07-structural-pseudo-classes.md) →

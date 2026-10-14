@@ -230,6 +230,18 @@ Be careful, because a cancellation arrives as a rejection there. A blanket `catc
 **★ Does aborting actually reduce backend load?**
 Sometimes, and it is worth being honest about which parts are guaranteed. The client stops waiting and the cache write does not happen — those are certain. Whether the server stops working depends on it observing the disconnect: a handler still writing a response usually will, a query already running in the database usually will not, and anything already queued for asynchronous processing will not. Threading `signal` is still right, because the client-side guarantees alone justify it; promising a proportional drop in server cost does not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Query Cancellation](https://tanstack.com/query/latest/docs/framework/react/guides/query-cancellation) — TanStack Query docs: signal aborts when a query is outdated or inactive; unmount does not cancel unless the signal is consumed; `cancelQueries` options silent and revert; not for suspense hooks (*read*)
+- **Also good:** [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) — MDN: `aborted`, `reason`, `AbortSignal.timeout` and `any`, and passing `signal` to `fetch` (*read*)
+- **Beyond the docs:** [Why You Want React Query](https://tkdodo.eu/blog/why-you-want-react-query) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2023-11-07: the out-of-order response race in a hand-rolled effect, and forwarding the `signal` to `fetch` so a key change aborts the old request
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [DevTools](../11-devtools/01-react-query-devtools.md) · [Topic index](../README.md) · Next → [Global Configuration](../13-global-configuration/01-defaultoptions.md)

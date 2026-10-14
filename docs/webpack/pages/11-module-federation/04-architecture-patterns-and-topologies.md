@@ -123,3 +123,15 @@ Each additional level of nested (vertical) federation adds another network round
 
 ### ⚠️ Pitfall 3: Defaulting to Module Federation When Route-Level Independence Was All That Was Needed
 Module Federation's value is same-page, live component-level composition with shared runtime state (shared React instance, shared design tokens, cross-remote event communication). A feature that's really just "a different set of routes, maybe on a different stack, that doesn't need to share live state with the rest of the app" gets that independence more simply (and with far less operational complexity — no shared-scope version negotiation, no singleton constraints) via edge/reverse-proxy path-based routing to a wholly separate deployment, as in the marketplace scenario above. Reach for Module Federation specifically when same-page runtime composition is the actual requirement, not merely "we want independent deploys" — simpler routing-based composition achieves independent deploys too, with less coupling.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Module Federation: use cases](https://webpack.js.org/concepts/module-federation/) — webpack.js.org: separate builds per page, component library as container (*read*)
+- **Beyond the docs:** [Module Federation and federated application architectures](https://rangle.io/blog/module-federation-federated-application-architectures) — Michael Mrowetz, Rangle, 2020-06-29: host, remote and bi-directional host; design system, multi-SPA, shell-driven and multi-shell patterns
+- **Beyond the docs:** [Micro frontends with Webpack Module Federation](https://techblog.telia.no/blog/micro-frontends-with-webpack-module-federation) — Helene Grini, Telia, 2021-03-22: bi-directional remotes, singleton React, doubt that `main` scales as a shared library (the page never calls it an app shell)
+
+{/* LINKMAP:END */}

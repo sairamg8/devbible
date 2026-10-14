@@ -190,3 +190,13 @@ general.
 
 **← Prev** [01 · What a decorator is](./01-what-a-decorator-is.md) ·
 **Next →** [03 · Providers in decorators](./03-providers-in-decorators.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Decorators](https://storybook.js.org/docs/writing-stories/decorators) — Storybook docs: the "Decorator inheritance" section lists run order as global, then component, then story, each in definition order; "innermost outward" is stated only for story decorators (*read*)
+
+{/* LINKMAP:END */}

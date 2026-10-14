@@ -189,6 +189,17 @@ The single winning value per property, already resolved — including inherited
 and default values that no author rule set. It answers "what is this element
 actually using", where Styles answers "what rules are competing".
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CSS features reference](https://developer.chrome.com/docs/devtools/css/reference) — Chrome DevTools: Styles and Computed filtering, and forcing element state with `:hov` (*read*)
+- **Beyond the docs:** [Hidden gems of the Chrome DevTools, part 2: CSS tools](https://dev.to/juhanakristian/hidden-gems-of-the-chrome-devtools-part-2-css-tools-g8k) — Juhana Jauhiainen, DEV Community, 2021-06-25: short tour of the Layout tab's grid and flex overlays, forced hover, focus and visited states, and cycling colour formats
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [11 · Vendor prefixes](./11-vendor-prefixes.md) · Back to [Phase index](./) · Next phase: [Phase 1 · Selectors](../phase-1-selectors/) →

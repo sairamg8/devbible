@@ -192,6 +192,18 @@ nested `@media` applied `padding: 4px` to `.card` directly.
 specific selector in the parent list. One id in that list raises every nested
 rule to id-level specificity.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CSS nesting and specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Nesting/Nesting_and_specificity) — MDN: `&` takes the largest specificity in its parent list, as `:is()` does, with a worked `#a, b` case (*read*)
+- **Also good:** [Nesting](https://web.dev/learn/css/nesting) — web.dev Learn CSS, last updated 2025-08-21: the `:is()` desugaring with a worked specificity case (*read*)
+- **Beyond the docs:** [The gotchas of CSS nesting](https://kilianvalkhof.com/2023/css-html/the-gotchas-of-css-nesting/) — Kilian Valkhof, 2023-06-13: `&` is wrapped in `:is()`, so a list like `main, #intro` lifts every nested rule; a nested `@media` also lands after sibling declarations
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [11 · :not(), :empty, :root](./11-not-empty-root.md) · Next: [13 · Styling hooks](./13-styling-hooks.md) →

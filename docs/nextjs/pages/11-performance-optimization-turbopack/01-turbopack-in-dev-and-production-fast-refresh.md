@@ -250,6 +250,18 @@ is memoised compiler work keyed by input, not merely fast file reads. That is wh
 rather than merely reading source faster, and it is also why a stale or corrupted `.next` can produce behaviour with
 no cause in your source: you are reusing computed results, not re-deriving them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Turbopack](https://nextjs.org/docs/app/api-reference/turbopack) — Next.js docs, updated 2026-10-06: default bundler since 16.0, Fast Refresh supported with no config, `--webpack` opt-out, version table (dev stable 15.0, build stable 16.0), the `webpack()` config and plugin gaps (*read*)
+- **Also good:** [Turbopack: What's New in Next.js 16.3](https://nextjs.org/blog/next-16-3-turbopack) — Andrew Imm, Next.js blog, 2026-06-29: memory eviction (vercel.com dev server 21.5 GB to 2 GB after 50 routes), build file-system cache in `.next/cache`, and `reactCompiler: true` plus `experimental.turbopackRustReactCompiler` with "compilation wins of 20-50%" from "pr
+- **Also good:** [turbopackRustReactCompiler](https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopackRustReactCompiler) — Next.js docs, updated 2026-06-29, Experimental badge: introduced 16.3.0; requires `reactCompiler` on; Turbopack only (webpack throws); no need to install `babel-plugin-react-compiler` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter index](01-explanation.md) · Next → [01b · Configuring the compile pipeline](01b-configuring-the-turbopack-compile-pipeline.md)

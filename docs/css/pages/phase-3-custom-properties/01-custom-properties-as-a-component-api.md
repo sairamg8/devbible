@@ -238,6 +238,17 @@ On an ancestor, so it arrives by inheritance. Setting it in a rule that targets
 the component itself puts it into cascade competition with the component's own
 declaration.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) — MDN: declaring, inheritance and scope, `var()` fallbacks (the second argument is used when the referenced property is invalid, and everything after the first comma is the fallback), and setting a property from script with `setProperty`
+- **Beyond the docs:** [Custom Property Fallbacks](https://blog.master.dev/custom-property-fallbacks/) — Matthew Morete, Master.dev Blog, 2025-02-28: why an invalid custom property does not fall back to an earlier declaration, and how `@property` (its `initial-value`) and `@supports` give a real fallback
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · `clamp()`, `min()`, `max()`](./02-clamp-min-max.md) →

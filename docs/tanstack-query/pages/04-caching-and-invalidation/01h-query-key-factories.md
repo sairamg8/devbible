@@ -256,6 +256,18 @@ Two things. The URL is not a hierarchy in the shape invalidation needs: `/todos?
 **★ Your app has a factory and the devtools show two entries for what is obviously the same resource. Where do you look first?**
 At the *types* of the variable segments before anything else, because that is the failure that survives having a factory. A factory guarantees the shape and the order; it does not guarantee that every caller passes the same runtime type into `detail(id)`, and a numeric `42` from a payload and a string `'42'` from a router hash differently. Confirm it in one line with `getQueryData` — an `undefined` for a key you can see rendered on screen proves the mismatch — then fix it by normalising inside the factory so no call site can reintroduce it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Query Keys](https://tanstack.com/query/latest/docs/framework/react/guides/query-keys) — TanStack Query docs: arrays, hashing, order of array items matters and object property order does not; a key should hold every variable the query uses (*read*)
+- **Beyond the docs:** [Effective React Query Keys](https://tkdodo.eu/blog/effective-react-query-keys) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-06-13, updated 2022-04-23: one factory per feature, generic to specific, so invalidation can target lists or details
+- **Beyond the docs:** [Leveraging the Query Function Context](https://tkdodo.eu/blog/leveraging-the-query-function-context) — TkDodo (Dominik Dorfmeister), tkdodo.eu, 2021-10-26, updated 2023-01-03: every dependency belongs in the key; a closure lets key and function drift apart
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Structural sharing](./01g-structural-sharing.md) · [Topic index](../README.md) · Next → [What belongs in a query key](./01h2-what-belongs-in-a-query-key.md)

@@ -206,6 +206,18 @@ Because the documentation states that all cache stores are scoped to a single de
 **You enumerate 500,000 product IDs in `generateStaticParams`. What have you bought and what are you paying?**
 You bought a CDN-servable document for every product, with no origin hit and no cold-start on first visit. You are paying 500,000 renders plus the enumeration query on every deploy, a correspondingly long build, storage for every artefact, and the risk that the majority of those pages are never requested at all. The documentation gives no threshold for "too many" — the honest test is whether your traffic distribution justifies it, and for a catalogue it almost never does past the first few thousand SKUs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Next.js Rendering Philosophy](https://nextjs.org/docs/app/guides/rendering-philosophy) — nextjs.org guide, updated 2026-03-30: static versus dynamic as a spectrum at component level, and what that does to infrastructure and portability (*read*)
+- **Also good:** [Caching](https://nextjs.org/docs/app/getting-started/caching) — nextjs.org docs: the four things that decide what lands in the shell: cached, `Suspense`, predictable, random (*read*)
+- **Beyond the docs:** [When to Use SSR in Next.js 16: A Decision Framework](https://makerkit.dev/blog/tutorials/nextjs-when-to-use-ssr) — MakerKit, published 2026-01-22, updated 2026-09: static by default for public pages where SEO matters, dynamic for authenticated experiences, Cache Components for mostly static pages with a personal section; SSR-focused, no author named, also linked under T06-05
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter index](01-explanation.md) · Next → [Data velocity and the staleness budget](01b-data-velocity-and-the-staleness-budget.md)

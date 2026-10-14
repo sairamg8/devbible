@@ -210,6 +210,18 @@ Disable auto-promotion. Merging then produces a production-configured deployment
 **Why is "immutable deployment" a security property and not just an operational one?**
 Because it means an artefact under investigation cannot change while you are investigating it. A commit URL from an incident three weeks ago serves exactly the bytes that were serving then, so you can diff behaviour rather than reconstruct it — provided retention has not deleted it. It also means a compromised build is contained to one artefact: you promote past it rather than trying to repair it in place, and you can delete it to stop clients reaching it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Deploying to Vercel](https://vercel.com/docs/deployments) — Vercel docs: preview and production deployments from Git, Vercel Drop, the CLI, deploy hooks or the REST API (*read*)
+- **Also good:** [Environments](https://vercel.com/docs/deployments/environments) — Vercel docs: Local, Preview and Production, per-environment variables, custom environments on Pro and Enterprise, and a project's first deployment is always production (*read*)
+- **Also good:** [Skew Protection](https://vercel.com/docs/skew-protection) — Vercel docs: the framework adds the deployment id (`?dpl=` or `x-deployment-id`) to framework-managed requests; Pro and Enterprise, default max age one day, document navigations not pinned by default (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter 17 overview](01-explanation.md) · Next → [Environments and the build-time/runtime split](01b-vercel-environments-and-the-build-time-runtime-split.md)

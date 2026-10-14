@@ -257,6 +257,18 @@ Yes, when the row does not exist by the time you respond. §15.3.3 describes 202
 **★ Why is it safe to put a cached `GET` and this `POST` in the same `route.ts`?**
 Because the caching decision in Next.js is per method, not per file. The Route Handlers guide states it twice, the second time specifically to close this question: *"Other supported HTTP methods are **not** cached, even if they are placed alongside a `GET` method that is cached, in the same file."* The file is a routing artefact; the method exports are independent handlers with independent caching semantics. What you cannot do is put a `route.js` at the same path as a `page.js` — that is a hard conflict.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Idempotency-Key HTTP header field](https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/) — IETF HTTPAPI draft -07 (revised 2025-10-15), an expired Internet-Draft and not an RFC: the datatracker page shows only the abstract; the full text says keys are unique and not reused for another payload (422), a concurrent retry gets 409, and the server publishes its expiry policy (*read*)
+- **Also good:** [Errors appendix](https://www.postgresql.org/docs/18/errcodes-appendix.html) — PostgreSQL 18 docs: SQLSTATE `23505` unique_violation and `23503` foreign_key_violation (class 23), the codes we map to 409 and 422 (*read*)
+- **Beyond the docs:** [Implementing Stripe-like Idempotency Keys in Postgres](https://brandur.org/idempotency-keys) — Brandur Leach, 2017-10-27: stores the key with request progress so a retry resumes at a recovery point, with a `SERIALIZABLE` upsert and a locked-at column (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04e · One function per use case](04e-function-per-use-case.md) · [Chapter 16 overview](01-explanation.md) · Next → [05b · Validation at the boundary](05b-validating-at-the-boundary-with-zod.md)

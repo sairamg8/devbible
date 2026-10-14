@@ -113,3 +113,16 @@ Motion's automatic `will-change` application (see the performance considerations
 
 ### ⚠️ Pitfall 4: Not Distinguishing Main-Thread-Busy From Genuinely-Slow-Animation
 If DevTools shows the main thread busy with **unrelated** work (a large React re-render, heavy JS execution from something else entirely) during the same window as the animation, the animation itself may be fully GPU-composited and cheap — the jank is competition for frame budget from something else running concurrently, not the animation's own cost. Check what ELSE is on the main thread during the janky window before concluding the animation configuration itself is the problem.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Analyze runtime performance](https://developer.chrome.com/docs/devtools/performance) — Chrome DevTools docs: recording a trace, the FPS chart and Frames section, long tasks flagged with a red triangle (*read*)
+- **Also good:** [Performance](https://motion.dev/docs/performance) — motion.dev: animating layout means re-renders that can take upwards of 100ms (*read*)
+- **Also good:** [How to create high-performance CSS animations](https://web.dev/articles/animations-guide)
+- **Beyond the docs:** [Debugging Janky CSS Animations with DevTools](https://blog.openreplay.com/debug-janky-css-animations-devtools/) — OpenReplay Team, 2026-06-08: Rendering, Performance, Animations and Layers panels in order, plus forced synchronous layout; CSS-focused rather than Motion, and the ending promotes the vendor's product
+
+{/* LINKMAP:END */}

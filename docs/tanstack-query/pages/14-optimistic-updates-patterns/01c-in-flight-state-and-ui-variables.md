@@ -171,6 +171,17 @@ Queries retry three times with exponential backoff, so a transient read failure 
 **★ Do hook-level and call-site callbacks fire in a defined order?**
 Both fire — the hook's `onSuccess`/`onError`/`onSettled` and any passed to `mutate(variables, { … })` — but **the documentation does not state which runs first**, and I could not confirm it. Treat the order as unspecified: never have one callback write state that the other reads. The difference that *is* documented is lifetime — *"those additional callbacks won't run if your component unmounts before the mutation finishes"* — so anything that must happen belongs on the hook regardless of ordering.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optimistic Updates](https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates) — TanStack Query docs: render `variables` while pending, no cache write; `useMutationState` filtered by mutationKey and status pending (*read*)
+- **Also good:** [useMutationState reference](https://tanstack.com/query/latest/docs/framework/react/reference/useMutationState) — TanStack Query API reference: `filters` and `select` with a pending-status example; the field lists are linked out (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Concurrent mutations on one key](01b-concurrent-mutations-on-one-key.md) · [Topic index](../README.md) · Next → [Optimistic writes against infinite queries](01d-optimistic-writes-on-infinite-queries.md)

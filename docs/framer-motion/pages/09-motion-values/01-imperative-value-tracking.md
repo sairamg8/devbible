@@ -142,3 +142,15 @@ return <div style={{ opacity: opacity.get() }} />; // STALE — doesn't update a
 // ✅ CORRECT: pass derived motion values directly to a motion component's style prop too
 return <motion.div style={{ opacity }} />;
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Motion values](https://motion.dev/docs/react-motion-value) — motion.dev: values update styles without re-rendering, track velocity, events, and the get/set/jump API (*read*)
+- **Also good:** [useTransform](https://motion.dev/docs/react-use-transform) — motion.dev: range mapping (input range must be monotonic), function form, `clamp` default true (*read*)
+- **Also good:** [useSpring](https://motion.dev/docs/react-use-spring)
+
+{/* LINKMAP:END */}

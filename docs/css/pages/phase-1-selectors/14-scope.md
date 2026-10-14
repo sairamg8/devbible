@@ -187,6 +187,18 @@ but without the 30-month margin, so an older-device audience may not have it.
 And because an unsupported at-rule drops its whole block, whatever is inside must
 be an enhancement rather than the base styling.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Limit the reach of your selectors with the CSS @scope at-rule](https://developer.chrome.com/docs/css-ui/at-scope) — Chrome for Developers, Bramus, 2023-10-04: donut scope, and scoping proximity placed after specificity and before source order (*read*)
+- **Also good:** [@scope](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@scope) — MDN: syntax, proximity, and a Baseline 2026 Newly available label (since March 2026) (*read*)
+- **Beyond the docs:** [Native CSS @scope](https://blog.openreplay.com/native-css-scope/) — OpenReplay Team, 2026-09-22: donut scopes, proximity, and why inherited properties still cross a scope limit (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [13 · Styling hooks](./13-styling-hooks.md) · Next: [15 · Selector performance](./15-selector-performance.md) →

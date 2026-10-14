@@ -132,3 +132,16 @@ declare module 'design_system/Button' {
   export default Button;
 }
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Runtime troubleshooting](https://module-federation.io/guide/troubleshooting/runtime) — module-federation.io: 14 error codes RUNTIME-001 to 015 (no 011) with causes and fixes (*read*)
+- **Also good:** [Error handling for remote module rendering](https://module-federation.io/blog/error-load-remote) — module-federation.io: retry plugin, `errorLoadRemote` hook, error boundary; undated (*read*); [Manifest and Snapshot](https://module-federation.io/guide/basic/manifest-snapshot.html)
+- **Also good:** [Manifest and Snapshot](https://module-federation.io/guide/basic/manifest-snapshot.html)
+- **Beyond the docs:** [Error boundaries and federation](https://stevekinney.com/courses/enterprise-ui/error-boundaries-and-federation) — Steve Kinney, course page, modified 2026-09-14: a down remote fails before React mounts, so no boundary exists to catch it (*read*)
+
+{/* LINKMAP:END */}

@@ -231,6 +231,18 @@ instance, reproducing exactly the multiple-instance problem `singleton` exists t
 while also giving up the async-loading benefit `shared` is usually adopted for in the first
 place.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Module Federation: shared](https://module-federation.io/configure/shared) — module-federation.io: `singleton` (higher version loads, the other side gets a warning), `requiredVersion` (below it: console warning), `eager`, `import: false` (*read*)
+- **Also good:** [webpack ModuleFederationPlugin](https://webpack.js.org/plugins/module-federation-plugin) — webpack.js.org: the origin of these options: `singleton` is "critical" for libraries with global state such as react and react-dom, and `strictVersion` "throws a runtime error"; its default depends on whether a local fallback exists and the modul
+- **Beyond the docs:** [Getting out of version mismatch hell with Module Federation](https://angularindepth.com/article/getting-out-of-version-mismatch-hell-with-module-federation/) — Manfred Steyer, Angular In Depth, 2020-09-06: a singleton with a mismatch loads the highest known version and warns; `strictVersion` turns that into a runtime failure; non-singletons get a separate copy. Written for webpack 5 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Module Federation on Vite](05-module-federation-on-vite.md) · [Vite overview](../../README.md) · Next → [Shared dep versioning gap](05a2-shared-dependency-versioning-and-the-optimizedeps-gap.md)

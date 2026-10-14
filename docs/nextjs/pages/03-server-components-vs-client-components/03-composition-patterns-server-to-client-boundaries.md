@@ -198,6 +198,17 @@ None, and recognising that quickly is the useful skill. Slots flow one way: the 
 **Why is `React.ReactNode` the right type for a slot prop rather than `React.ComponentType`?**
 Because you pass rendered elements, not component references. `<Filters />` is an element and serializes; `Filters` is a function and does not. Typing the prop as `ReactNode` makes the wrong version a type error at the call site, where the mistake actually is. With `ComponentType` you get a runtime serialization error instead, and its message points at serialization rather than at the confusion between a component and an element.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The Server and Client Boundary: Crossing the boundary](https://nextjs.org/docs/app/guides/server-and-client-boundary) — nextjs.org: code crosses by import, data by serializable props, and rendered output passed as `children` keeps a Server Component out of the client graph; also the owner versus parent note and compound components breaking across the boundary 
+- **Beyond the docs:** [Navigating the Interplay of Server and Client Components in Next.js](https://leapcell.io/blog/navigating-the-interplay-of-server-and-client-components-in-next-js) — Takashi Yamamoto, Leapcell, 2025-08-13: a `ClientWrapper` receiving `children` and a dashboard wrapper receiving named slot props; names no Next version and is shorter than the official guide
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [02 · `'use client'`: when and why to opt in](02-use-client-when-and-why-to-opt-in-interactivity-browser-apis.md) · [Index](01-explanation.md) · Next → [04 · React 19.2 primitives](04-react-192-primitives-useeffectevent-for-non-reactive-side-ef.md)

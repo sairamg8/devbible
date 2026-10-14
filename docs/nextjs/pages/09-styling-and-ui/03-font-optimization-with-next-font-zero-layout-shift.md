@@ -178,6 +178,18 @@ Three things. Your build now depends on network access to the font host at build
 **Why is a `<link>` to a font stylesheet worse than an extra image request?**
 Because a `<link rel="stylesheet">` is render-blocking: the browser will not paint the document until it has been fetched and parsed. A font CDN therefore inserts a full DNS-plus-TCP-plus-TLS round trip to an origin you do not control *in front of first paint*, before the browser has even learned the URL of the actual font file. An image request is not on that path.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Font Optimization](https://nextjs.org/docs/app/getting-started/fonts) — nextjs.org (updated 2026-05-27): build-time self-hosting, no requests to Google from the browser, Google and local fonts, variable fonts recommended, scope via the root layout (*read*)
+- **Also good:** [Font Module](https://nextjs.org/docs/app/api-reference/components/font) — nextjs.org (updated 2026-09-24): the reference: `adjustFontFallback` (default true for Google fonts, `'Arial'` for local) "to reduce Cumulative Layout Shift", `subsets` plus `preload`, `variable` with Tailwind `@theme inline`, and preload scoping by file type (*r
+- **Beyond the docs:** [Framework tools for font fallbacks](https://developer.chrome.com/blog/framework-tools-font-fallback) — Janicklas Ralph James, Chrome for Developers, last updated 2023-02-27: why the fallback font's metrics decide the shift, `size-adjust` and the ascent, descent and line-gap overrides, and that the framework computes them at build time; written for the old `@next/font` name and says only Arial and Time
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · CSS-in-JS at the server boundary](02-css-in-js-caveats-at-server-component-boundaries.md) · [Chapter index](01-explanation.md) · Next → [03b · the loader API: Google, local and variable fonts](03b-the-loader-api-google-local-and-variable-fonts.md)

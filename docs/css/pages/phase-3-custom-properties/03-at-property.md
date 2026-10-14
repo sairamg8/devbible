@@ -235,6 +235,17 @@ is rejected and the property falls back to its `initial-value`.
 For component-scoped settings, so a nested instance does not inherit its
 ancestor's value. Ambient values such as a theme hue want `inherits: true`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@property) — MDN: the `syntax`, `inherits` and `initial-value` descriptors, a malformed rule being ignored, and a typed `--progress` animated in `@keyframes` (*read*)
+- **Beyond the docs:** [The Times You Need A Custom @property Instead Of A CSS Variable](https://www.smashingmagazine.com/2024/05/times-need-custom-property-instead-css-variable/) — Preethi Sam, Smashing Magazine, 2024-05-13: worked animations of gradient colours, a length and an angle that plain variables cannot do (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · `clamp()`, `min()`, `max()`](./02-clamp-min-max.md) · Next: [04 · Units that matter for layout](./04-units-that-matter.md) →

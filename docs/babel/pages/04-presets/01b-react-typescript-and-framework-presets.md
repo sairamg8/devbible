@@ -186,6 +186,19 @@ implementation. It only makes sense on the automatic runtime because that is the
 happens to be in scope, so the only way to swap it is to change what you imported. That is also
 why the classic runtime needs `React` in scope in every file and the automatic one does not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@babel/preset-react](https://babeljs.io/docs/babel-preset-react) — babeljs.io: automatic runtime (`importSource`, `development`) versus classic (`pragma`, `pragmaFrag`); `runtime` documented as defaulting to `automatic`, with no Babel 8 mention on the page (*read*)
+- **Also good:** [@babel/preset-typescript](https://babeljs.io/docs/babel-preset-typescript) — babeljs.io: `allowNamespaces`, `optimizeConstEnums`, and `onlyRemoveTypeImports` (default false in 7.9.0, true in 8.0.0) (*read*)
+- **Also good:** [How to configure Babel in Next.js](https://nextjs.org/docs/pages/guides/babel) — nextjs.org, Pages Router guide, lastUpdated 2025-04-24: `next/babel` preset must be listed once a config exists, and its sub-options are customizable (*read*)
+- **Also good:** [Turbopack](https://nextjs.org/docs/app/api-reference/turbopack) — nextjs.org, App Router docs, lastUpdated 2026-10-06: since Next 16 Turbopack uses Babel automatically when a config file exists, SWC still does the internal transforms, and webpack mode disables SWC when a Babel config is present (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [`@babel/preset-env` and the polyfill boundary](01-env-react-typescript-and-framework.md) · [Track index](../../README.md)

@@ -93,3 +93,15 @@ It is not.
 
 ### ⚠️ Emotion importSource without the Emotion Babel/SWC plugin when required
 css prop may not work as expected—check Emotion docs for your major.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@babel/plugin-transform-typescript](https://babeljs.io/docs/babel-plugin-transform-typescript) — babeljs.io: caveats: it does not add type-checking, `tsconfig.json` changes are not picked up (behaves as if `isolatedModules` is on), no exported `var`/`let` in namespaces, and namespaces do not share scope (*read*)
+- **Also good:** [Introducing the New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) — React blog, 2020-09-22: what changes, Babel 7.9.0+, `runtime: "automatic"`; says Babel 8 makes automatic the default, which is now true (*read*)
+- **Also good:** [isolatedModules](https://www.typescriptlang.org/tsconfig/isolatedModules.html) — typescriptlang.org: why single-file transpilers break on type re-exports, namespaces in non-module files and ambient const enum members (*read*)
+
+{/* LINKMAP:END */}

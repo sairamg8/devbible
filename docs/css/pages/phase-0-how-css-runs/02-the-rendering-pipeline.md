@@ -182,6 +182,18 @@ Because cost is driven by how much has to be *re-matched and re-computed*, not
 by file size — a broad selector invalidating a large subtree, or a change high
 in the tree that forces restyling of everything beneath it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Rendering performance](https://web.dev/articles/rendering-performance) — web.dev, Paul Lewis, last updated 2023-12-13: the five-step pixel pipeline (JavaScript, style, layout, paint, composite); costs are ranked qualitatively, with compositing-only changes the cheapest path (*read*)
+- **Also good:** [Stick to compositor-only properties and manage layer count](https://web.dev/articles/stick-to-compositor-only-properties-and-manage-layer-count) — web.dev, Paul Lewis, last updated 2015-03-20: says only `transform` and `opacity` skip layout and paint; the list is dated and there is no per-property table (*read*)
+- **Beyond the docs:** [Inside look at modern web browser, part 3](https://developer.chrome.com/blog/inside-browser-part3) — Mariko Kosaka, Chrome for Developers, last updated 2018-09-20: walks style, layout, paint and compositing as one story, with compositing done without the main thread
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · What CSS is](./01-what-css-is.md) · Next: [03 · How stylesheets reach the page](./03-how-stylesheets-reach-the-page.md) →

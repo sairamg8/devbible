@@ -278,6 +278,18 @@ It renders a single `<img>` with a generated `srcset` and `src` pointing at `/_n
 **When would you use `getImageProps` instead of the component?**
 When you need the generated `srcset` somewhere the component cannot go: a `<picture>` element for art direction with different sources per media query, a CSS `image-set()` background, or a `<figure>` where you want to control the element yourself. The reference notes it also avoids a `useState()` call — but it comes with a hard limitation: *"it cannot be used with the `placeholder` prop because the placeholder will never be removed."*
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Image Component](https://nextjs.org/docs/app/api-reference/components/image) — nextjs.org (updated 2026-09-28): 🔴 Next 16 change: "Starting with Next.js 16, the `priority` property has been deprecated in favor of the `preload` property", and the page says to use `loading="eager"` or `fetchPriority="high"` in most cases; `blurDataURL` is aut
+- **Also good:** [Image Optimization](https://nextjs.org/docs/app/getting-started/images) — nextjs.org (updated 2026-04-01): local vs remote images, the manual `width`, `height`, `blurDataURL` for remote, and "Be as specific as possible" in `remotePatterns` (*read*)
+- **Beyond the docs:** [next/image Deep Dive: Optimization, Lazy Loading, and the Props That Actually Matter](https://dev.to/aon_infotech_3a1b6ff525fc/nextimage-deep-dive-optimization-lazy-loading-and-the-props-that-actually-matter-4kpg) — Aon infotech, DEV Community, posted July 14 (year not shown): `sizes`, `priority`, `fill`, `placeholder` and `remotePatterns` in one pass; it uses the pre-16 `priority` name, says Next serves WebP or AVIF with no caveat, and names no Next.js version, so read it with the corrections above
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · Font optimization](03-font-optimization-with-next-font-zero-layout-shift.md) · [Chapter index](01-explanation.md) · Next → [04b · Loading priority](04b-loading-priority-preload-eager-fetchpriority.md)

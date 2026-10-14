@@ -221,6 +221,17 @@ No. It is a `vercel-labs` CLI, distributed and versioned separately from the `ne
 **How does this page's material relate to the MCP server?**
 They cover different surfaces of the same loop. [MCP](03-the-nextjs-devtools-mcp-server-exposing-build-diagnostics-an.md) answers questions about the running dev server — which routes exist, what is failing, which source function an action ID belongs to. `agent-browser` answers questions about the rendered page — the DOM, the console, the network, and with the DevTools flag, which boundaries are pending. The fix-menu is the framework volunteering a structured task rather than waiting to be asked. Skills package the multi-step workflows those three make verifiable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Next.js 16.3: AI Improvements](https://nextjs.org/blog/next-16-3-ai-improvements) — Aurora Scharff and Jude Gao, Next.js blog, 2026-06-26: confirms the 🔴 flag: the earlier knowledge Skills are being retired (`npx skills update` removes them), while three new workflow Skills (`next-dev-loop`, `next-cache-components-adoption`, `next-cache-components-optimizer`) ship; `
+- **Also good:** [How Next.js supports AI coding agents (Skills)](https://nextjs.org/docs/app/guides/ai-agents) — Next.js docs, updated 2026-10-06: the stable-release view: "framework knowledge comes from the bundled docs, not from Skills", and six Skills listed: the three above plus `next-partial-prefetching-adoption`, `next-partial-prefetching-optimizer` and `next-bundle-op
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The DevTools MCP server](03-the-nextjs-devtools-mcp-server-exposing-build-diagnostics-an.md) · [Chapter 14 overview](01-explanation.md) · Next → [Agent-authored migrations](05-practical-agent-workflows-agent-authored-migrations.md)

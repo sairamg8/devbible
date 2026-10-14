@@ -267,6 +267,17 @@ Because `"use server"` modules are resolved in a server-only webpack layer — t
 **What would you look for first in a security review of an App Router codebase?**
 The audit checklist in the data security guide is a good order: whether an isolated Data Access Layer exists and whether database packages and environment variables are imported anywhere outside it; whether `"use client"` props expect private data or have overly broad types; for each `"use server"` file, whether arguments are validated, the user re-authorized, ownership checked and return values filtered; whether bracketed route params are validated as user input; and `proxy.ts` plus `route.ts`, which the guide singles out as having *"a lot of power"* and deserving traditional penetration testing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to create forms with Server Actions](https://nextjs.org/docs/app/guides/forms) — nextjs.org (updated 2026-10-06): `FormData` in actions, `bind` for extra arguments, `useActionState` changes the action signature to take previous state first, `pending`, `useFormStatus`, and an optimistic message thread; opens with a warning to verify authentica
+- **Also good:** [useActionState](https://react.dev/reference/react/useActionState) — react.dev: queuing and error semantics behind the hook (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter 10 overview](01-explanation.md) · Next → [01b · Mutation shape and failure posture](01b-mutation-shape-and-failure-posture.md)

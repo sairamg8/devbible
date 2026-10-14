@@ -94,3 +94,14 @@ Types never gate merges—add `typecheck`.
 
 ### ⚠️ Duplicate language features enabled in Babel and ESLint inconsistently
 Optional chaining parses in one tool and fails in another—align versions.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@babel/eslint-parser](https://babeljs.io/docs/babel-eslint-parser) — babeljs.io: use it only if Babel transforms your code, `requireConfigFile`, `babelOptions`, limits (core rules need `@babel/eslint-plugin`, no TypeScript linting with Babel's plugin, needs `@babel/core` 7.2.0+); the Babel 8 guide says it drop
+- **Also good:** [@babel/plugin-transform-typescript](https://babeljs.io/docs/babel-plugin-transform-typescript) — babeljs.io: the plugin "does not add the ability to type-check", so `tsc` stays in CI (*read*)
+
+{/* LINKMAP:END */}

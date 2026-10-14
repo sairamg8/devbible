@@ -234,6 +234,17 @@ should not scale with the user's font size. Type and spacing should still be
 approximation of character count used for a readable line length, typically
 landing nearer 70–80 real characters in proportional prose.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [The large, small, and dynamic viewport units](https://web.dev/blog/viewport-units) — web.dev, Bramus: `lvh` assumes the URL bar retracted, `svh` expanded, `dvh` follows it live (*read*)
+- **Also good:** [CSS values and units: `&lt;length&gt;`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/length) — MDN: reference for the units in separate sections, not one table: font-relative (`em`, `ch`), root-relative (`rem`), viewport (including `dvh`) and container units (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · `@property`](./03-at-property.md) · Back to [Phase 3 overview](./README.md)

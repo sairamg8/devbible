@@ -157,6 +157,17 @@ Generally yes for long-standardised properties, and keeping them is not risk-fre
 either: `-moz-border-radius` returns `false` in Firefox 153, so Mozilla dropped
 its own prefix. Let the tool regenerate whatever your target actually needs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Vendor Prefix](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix) — MDN Glossary: what prefixes were and why they were abandoned; experimental features now sit behind flags (*read*)
+- **Beyond the docs:** [It's 2026, why are vendor prefixes still in your CSS?](https://blog.omgmog.net/post/why-vendor-prefixes-are-still-in-your-css/) — Max Glenister, 2026-03-11: says almost all remaining need is `-webkit-` for Safari, with `tab-size` the `-moz-` exception; lists `appearance`, `backdrop-filter`, `user-select` as transitional
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [10 · Baseline](./10-baseline-and-shipping.md) · Next: [12 · DevTools for CSS](./12-devtools-for-css.md) →
