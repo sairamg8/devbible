@@ -7,7 +7,7 @@ sidebar_position: 2
 # Link map · DSA · Part 2 (phases 3–5)
 
 Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-strings-and-hashing.md`: arrays, hashing and prefix sums (T03-01 to T03-16), two pointers and sliding window (T04-01 to T04-13), and strings (T05-01 to T05-13). That is 42 rows. No page of ours covers any of them yet (our pages stop at phase 2), so every block is `🔲 not written`.
-*read* = I read the passage that supports the claim; *headings only* = fetched at 200, headings or opening checked. Third-party links carry a date only where the page shows one. No `#anchors` are given. "Official" here means canonical references (MDN, the Java SE 25 API docs, Wikipedia, cp-algorithms). Where no good non-official explanation turned up, the block has no "Beyond the docs" line. Our solutions are TypeScript first, Java second; picks are language-neutral unless a block says otherwise. Many "Beyond" picks are interview-prep sites, so their code was not run.
+*read* = I read the passage that supports the claim; *headings only* = fetched at 200, headings or opening checked. Third-party links carry a date only where the page shows one. No `#anchors` are given. "Official" here means canonical references (MDN, the Java SE 25 API docs, Wikipedia, cp-algorithms). Where no good non-official explanation turned up after a second search, the block has no "Beyond the docs" line. Our solutions are TypeScript first, Java second; picks are language-neutral unless a block says otherwise. Many "Beyond" picks are interview-prep sites, so their code was not run. Two picks carry a correctness warning (T03-10, T03-16); tiers follow the syllabus table, and every one of its 42 rows has a block here.
 
 ---
 
@@ -16,11 +16,11 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 ### T03-01 · Hash maps and sets, with their costs — Master · 🔲 not written
 - **Read this:** [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) · MDN · the "Objects vs. Maps" table: any key type against string or symbol, insertion-order iteration, `size` (*read*) · covers our angle: **partial** — JavaScript only · fetched 2026-10-14
 - **Also good:** [HashMap](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/HashMap.html) · Java SE 25 API · constant-time `get` and `put` only if the hash disperses; keys found by `equals`; no iteration-order guarantee; many equal hash codes slow it down (*read*) · fetched 2026-10-14. Also [Object](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html) for the `hashCode` contract: equal objects must give equal hash codes, unequal ones need not differ (*read*)
-- **Beyond the docs:** [map vs object](https://30secondsofcode.org/js/s/map-vs-object) · 30 seconds of code, 2022-02-13 · short list of the practical differences, including prototype keys and `clear()` · fetched 2026-10-14 (*read*)
+- **Beyond the docs:** [map vs object](https://www.30secondsofcode.org/js/s/map-vs-object/) · 30 seconds of code, 2022-02-13 · short list of the practical differences, including prototype keys and `clear()` · fetched 2026-10-14 (*read*)
 - **Our delta:** why average O(1) is an expectation, and the `equals`/`hashCode` failure demo in Java.
 
 ### T03-02 · Frequency counting and the two-sum family — Master · 🔲 not written
-- **Read this:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · Wikipedia · load factor, expected Θ(1) search/insert/delete, collision handling (*read*, first 100000 characters) · covers our angle: **partial** — the structure behind the trick, not the trick · fetched 2026-10-14
+- **Read this:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) · Wikipedia · load factor, expected Θ(1) search/insert/delete, collision handling (*read*) · covers our angle: **partial** — the structure behind the trick, not the trick · fetched 2026-10-14
 - **Beyond the docs:** [1. Two Sum](https://neetcode.io/solutions/two-sum) · NeetCode · the one-pass map: compute the complement, look it up before inserting, so no element pairs with itself · fetched 2026-10-14 (*read*)
 - **Our delta:** anagrams as frequency signatures and counting pairs, which the page above does not cover (see T05-03 for the anagram side).
 
@@ -43,11 +43,13 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 ### T03-06 · Cyclic sort and index-as-hash — Master · 🔲 not written
 - **Read this:** [5.1. Cyclic Sort](https://algorithm-spices.readthedocs.io/en/latest/patterns_for_coding_questions/cyclic_sort/) · Algorithm Spices · swap each value to index value-1 in O(n) time and O(1) space; missing, duplicate and corrupt-pair variants (*read*) · covers our angle: **full** — not an official source, but the best structured one found · fetched 2026-10-14
 - **Also good:** [Array](https://www.techinterviewhandbook.org/algorithms/array/) · Tech Interview Handbook · "index as a hash key": negate the value at an index to mark presence (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [First Missing Positive](https://www.jointaro.com/interviews/questions/first-missing-positive/) · Jointaro · the sign-marking version: replace out-of-range values with 1, then negate the value at index `abs(x) - 1`, and the first positive slot is the answer; Python (*read*) · fetched 2026-10-14
 - **Our delta:** why the swap loop is still linear, and the sign-marking alternative that avoids reordering.
 
 ### T03-07 · In-place operations — Master · 🔲 not written
 - **Read this:** [Coding Interview: Array Problems Comprehensive Guide](https://www.techinterview.org/post/3233474355/coding-interview-array-problems-comprehensive-guide-two-sum-sliding-window-kadane-rotation-merge-intervals-meeting-rooms/) · techinterview.org, 2026-04-20 · rotate by three reversals, slow/fast pointer dedupe of a sorted array (*read*) · covers our angle: **partial** — nothing on merging from the back · fetched 2026-10-14
-- **Our delta:** merge sorted arrays from the back (write position never overtakes the unread part of the first array); the in-place dedupe invariant.
+- **Also good:** [Merge Sorted Array](https://docs.vultr.com/problem-set/merge-sorted-array) · Vultr Docs, updated 2025-06-12 · three pointers from the back (`m-1`, `n-1`, `m+n-1`); filling from the front would overwrite unmerged elements of the first array (*read*) · fetched 2026-10-14
+- **Our delta:** the proof that the write position never overtakes the unread part of the first array; the in-place dedupe invariant.
 
 ### T03-08 · Intervals — Master · 🔲 not written
 - **Read this:** [Interval and Sweep Line Patterns](https://www.techinterview.org/post/3233474289/coding-interview-interval-sweep-line-patterns-meeting-rooms-skyline-problem-event-processing-coordinate-compression/) · techinterview.org, 2026-04-20 · Meeting Rooms II as +1/-1 events, sorted, process the end first on a tie; says it equals the heap version but does not walk through the heap (*read*) · covers our angle: **partial** — merge and insert intervals are only linked out · fetched 2026-10-14
@@ -59,12 +61,13 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 - **Our delta:** the constraint-driven rule (n, value range, follow-up wants O(1) space). Searched for a source naming "hash then sort" as a two-opening rule; none found.
 
 ### T03-10 · Difference arrays — Understand · 🔲 not written
-- **Read this:** [Difference array technique](https://dev.to/thetenthman/difference-array-technique-4n5a) · TheTenthMan, DEV Community, 2025-11-16 · add at the left index, subtract just past the right, prefix-sum to rebuild; worked example (*read*) · covers our angle: **partial** — its practice answer looks wrong by one update, so do not copy it · fetched 2026-10-14
+- **Read this:** [Coding Interview: Prefix Sum and Difference Array Patterns](https://www.techinterview.org/post/3233474193/coding-interview-prefix-sum-difference-array-patterns-range-query-subarray-sum-2d-prefix-sum-running-total/) · techinterview.org, 2026-04-20 · the difference array as the inverse of prefix sum: `D[left] += V`, `D[right+1] -= V`, one prefix pass to rebuild; O(N + Q) against O(N*Q); flight bookings and car pooling as uses (*read*) · covers our angle: **full** for the technique, no `n + 1` bounds discussion · fetched 2026-10-14
+- **Also good:** [Difference array technique](https://dev.to/thetenthman/difference-array-technique-4n5a) · TheTenthMan, DEV Community, 2025-11-16 · step-by-step worked example, including a non-zero starting array (*read*) · fetched 2026-10-14. **Warning:** the technique is right but its closing practice answer is wrong. For `[2,1,4,5,1,2,3,9,8,2]` with +1 on [3,6], +4 on [4,8], +2 on [0,3] the page says `[3,2,5,7,6,7,8,13,12,2]`; brute force gives `[4,3,6,8,6,7,8,13,12,2]` (the +2 update was applied as +1). Do not copy that answer.
 - **Our delta:** the booking-count trick, the `n + 1` size, and why it is the inverse of a prefix sum. Codeforces and GeeksforGeeks explainers refused scripted fetches and are not cited.
 
 ### T03-11 · Sorting-based approaches — Understand · 🔲 not written
 - **Read this:** [Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) · MDN · comparator contract, stable since ES2019, default sort is by UTF-16 string order (so `[40, 1, 5, 200]` sorts wrongly) (*read*) · covers our angle: **partial** — JavaScript only · fetched 2026-10-14
-- **Beyond the docs:** [Sorting Algorithms for Interviews](https://www.techinterview.org/post/3233466068/sorting-algorithms-interview/) · techinterview.org, 2026-04-17 · stable versus unstable sorts, why stability matters for multi-key sorts (*read*; it has no real comparator section) · fetched 2026-10-14
+- **Beyond the docs:** [Sorting Algorithm Deep Dive: Quicksort, Mergesort, Heapsort, and Counting Sort](https://www.techinterview.org/post/3233466647/sorting-algorithms-deep-dive/) · techinterview.org, 2026-04-17 · stable versus unstable sorts (a comparison table has a Stable column), why stability matters for multi-key sorts (*read*; it has no custom-comparator section; the old `3233466068` link redirects here) · fetched 2026-10-14
 - **Our delta:** custom comparators for "sort then scan" problems; Java `Arrays.sort` on primitives versus objects.
 
 ### T03-12 · Matrices — Understand · 🔲 not written
@@ -74,6 +77,7 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 
 ### T03-13 · Product except self — Understand · 🔲 not written
 - **Read this:** [238. Product of Array Except Self](https://neetcode.io/solutions/product-of-array-except-self) · NeetCode · prefix and suffix arrays, then folding them into the output array with two running variables (*read*) · covers our angle: **full** · fetched 2026-10-14
+- **Beyond the docs:** [Prefix and Suffix Products: Solving 'Product of Array Except Self'](https://johnkavanagh.co.uk/articles/product-of-array-except-self-prefix-suffix/) · John Kavanagh, 2024-12-09 · TypeScript; one zero makes every answer 0 except at the zero's own index, two zeros make all answers 0, which is why division is the wrong model (*read*) · fetched 2026-10-14
 - **Our delta:** the zero-handling argument for why division fails.
 
 ### T03-14 · Majority element and voting — Understand · 🔲 not written
@@ -83,11 +87,12 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 
 ### T03-15 · Longest consecutive sequence and set tricks — Understand · 🔲 not written
 - **Read this:** [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) · MDN · membership is sublinear on average, insertion order, a deleted-then-re-added item goes to the end (*read*) · covers our angle: **partial** — the data structure, not the trick · fetched 2026-10-14
-- **Beyond the docs:** [Longest Consecutive Sequence](https://dev.to/tammyvocs/longest-consecutive-sequence-234i) · Tammy Vo, DEV Community, 2022-07-21 · count upward only from a number whose left neighbour is missing, which keeps the total linear (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [Longest Consecutive Sequence](https://dev.to/tammyvocs/longest-consecutive-sequence-234i) · Tammy Vo, DEV Community, 2022-07-21 · count upward only from a number whose left neighbour is missing; states O(n) but gives no proof of why (*read*) · fetched 2026-10-14
 - **Our delta:** the amortised argument stated precisely.
 
 ### T03-16 · Problems over two arrays — Know · 🔲 not written
-- **Read this:** [Kth element of two sorted arrays](https://workat.tech/problem-solving/editorial/kth-two-sorted/index.html) · workat.tech · concatenate and sort, versus discarding k/2 from one array per step; the editorial states O(log(n x m)) (*read*) · covers our angle: **partial** — no intersection or merge, and the median is only implied · fetched 2026-10-14
+- **Read this:** [Kth element of two sorted arrays](https://workat.tech/problem-solving/editorial/kth-two-sorted/index.html) · workat.tech · concatenate and sort, versus discarding k/2 from one array per step; the editorial states O(log(n x m)) and O(1) space (*read*) · covers our angle: **partial** — no intersection or merge, and the median is only implied. **Warning:** that bound is loose and the O(1) space claim does not hold for its recursive code; halving k each step gives O(log k) (NeetCode below says the same) · fetched 2026-10-14
+- **Also good:** [Median of Two Sorted Arrays](https://neetcode.io/solutions/median-of-two-sorted-arrays) · NeetCode · merge, two-pointer and binary-search versions; the k-th smallest framing, comparing the k/2-th elements and discarding that many, "O(log(k))"; recommends O(log(min(n, m))) time (*read*) · fetched 2026-10-14
 - **Our delta:** intersection and merge with two pointers; the median previewed for Part 3.
 
 ---
@@ -101,6 +106,7 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 ### T04-02 · Same-direction pointers — Master · 🔲 not written
 - **Read this:** [Two Pointers Technique](https://archman.dev/docs/algorithms-and-data-structures/arrays-and-strings/two-pointers) · archman.dev · same-direction section, "Remove Duplicates In-Place" among the headings (*read*) · covers our angle: **partial** · fetched 2026-10-14
 - **Also good:** [Coding Interview: Array Problems Comprehensive Guide](https://www.techinterview.org/post/3233474355/coding-interview-array-problems-comprehensive-guide-two-sum-sliding-window-kadane-rotation-merge-intervals-meeting-rooms/) · techinterview.org · slow marks the write position, fast scans (*read*) · fetched 2026-10-14
+- **Also good:** [Read and Write Pointers](https://datadriven.io/learn/py_pattern_two_pointers_beginner/section/2) · DataDriven · both pointers at index 0; read visits every element, write advances only for a kept one, and write never passes read; Python (*read*) · fetched 2026-10-14
 - **Our delta:** remove element and move zeroes as one reader/writer pattern. A dedicated lesson page (AlgoMaster) loaded only as an index, so it is not cited.
 
 ### T04-03 · Fast and slow pointers — Master · 🔲 not written
@@ -113,17 +119,20 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 - **Our delta:** the O(n^2) 3-sum count and where duplicates get skipped.
 
 ### T04-05 · Container with most water and trapping rain water — Master · 🔲 not written
-- **Read this:** [Container With Most Water](https://dev.to/steadbytes/container-with-most-water-3ige) · Ben Steadman, DEV Community (from steadbytes.com), 2020-06-11 · moving the shorter side loses nothing because height is capped by the shorter line (*read*) · covers our angle: **partial** — container only; I found no clean trapping-rain-water source · fetched 2026-10-14
-- **Our delta:** trapping rain water with left-max and right-max pointers.
+- **Read this:** [Container With Most Water](https://dev.to/steadbytes/container-with-most-water-3ige) · Ben Steadman, DEV Community (from steadbytes.com), 2020-06-11 · moving the shorter side loses nothing because height is capped by the shorter line (*read*) · covers our angle: **partial** — container only (it has a formal proof) · fetched 2026-10-14
+- **Beyond the docs:** [LeetCode: The 'Trapping Rain Water' Problem with Two-Pointer Approach](https://johnkavanagh.co.uk/articles/trapping-rain-water-two-pointers/) · John Kavanagh, 2025-03-17 · TypeScript; water depends on the shorter of the tallest bars on each side, so resolve whichever pointer has the lower bar and keep `leftMax` and `rightMax`; O(n) time, O(1) space. Its prose argues the invariant rather than proving it (*read*; I hand-traced `[4,2,3]`, which gives 1) · fetched 2026-10-14
+- **Our delta:** the proof for the trapping step (why the lower side's max is safe) and the version that compares running maxima instead of heights.
 
 ### T04-06 · Fixed-size windows — Master · 🔲 not written
 - **Read this:** [Sliding Window Interview Patterns](https://www.techinterview.org/post/3233460634/sliding-window-interview-patterns/) · techinterview.org, 2026-04-16 · build the first window, then add the new element and drop the outgoing one; maximum sum and anagram examples (*read*) · covers our angle: **full** · fetched 2026-10-14
+- **Beyond the docs:** [Maximum Sum Subarray of Size K](https://www.callicoder.com/maximum-sum-subarray-of-size-k/) · CalliCoder, 2021-07-24, updated 2026-08-26 · Java 17; add the entering element, subtract the leaving one; the loop bound `start + k <= length` and the window-boundary off-by-ones (*read*) · fetched 2026-10-14
 - **Our delta:** the anagram window with a counts array (see T05-03).
 
 ### T04-07 · Variable-size windows — Master · 🔲 not written
 - **Read this:** [Variable-Size Sliding Window](https://codemia.io/courses/dsa_fundamentals/variable_size_sliding_window) · Codemia · expand right, shrink left while invalid; works only if adding elements never makes the condition easier; at most about 2n pointer moves (*read*) · covers our angle: **full** · fetched 2026-10-14
 - **Also good:** [Sliding Window Interview Patterns](https://www.techinterview.org/post/3233460634/sliding-window-interview-patterns/) · techinterview.org · longest substring without repeats as the example (*read*) · fetched 2026-10-14
-- **Our delta:** the last-seen-index jump for no-repeat substrings.
+- **Beyond the docs:** [Sliding Window Fundamentals: Solving 'Longest Substring Without Repeating Characters'](https://johnkavanagh.co.uk/articles/sliding-window-longest-substring-without-repeating-chars/) · John Kavanagh, 2025-05-12 · TypeScript; a Set version first, then the last-seen Map that jumps `left` to `previousIndex + 1` only when `previousIndex >= left` (*read*) · fetched 2026-10-14
+- **Our delta:** the last-seen-index jump for no-repeat substrings, with the stale-index guard proved.
 
 ### T04-08 · Minimum window substring — Master · 🔲 not written
 - **Read this:** [The coverage counter behind Minimum Window Substring](https://www.techinterview.org/post/3233476884/coverage-counter-minimum-window-substring/) · techinterview.org, 2026-07-28 · one `missing` integer instead of comparing two maps; counts may go negative, meaning a surplus copy (*read*) · covers our angle: **full** (it uses "missing" where we say have/need) · fetched 2026-10-14
@@ -131,6 +140,7 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 
 ### T04-09 · Sliding-window maximum — Master · 🔲 not written
 - **Read this:** [Monotonic Queue to Solve Sliding Window Problems](https://labuladong.online/en/algo/data-structure/monotonic-queue/) · labuladong · push pops smaller tail items, `max()` is the head, `pop` removes the head only if equal; linear because each element enters and leaves once (*read*) · covers our angle: **full** · fetched 2026-10-14
+- **Also good:** [Sliding Window Maximum: The Monotonic Queue Trick Explained](https://dev.to/alex_hunter_44f4c9ed6671e/sliding-window-maximum-the-monotonic-queue-trick-explained-34di) · Alex Hunter, DEV Community (from leetcopilot.dev), 2025-12-26 · stores indices so expired entries can be evicted; two pop rules; O(n) against O(nk) (*read*) · fetched 2026-10-14
 - **Our delta:** the deque of indices (not values) version used in TypeScript.
 
 ### T04-10 · Recognising a window — Master · 🔲 not written
@@ -139,16 +149,18 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 - **Our delta:** a one-page decision table.
 
 ### T04-11 · The "at most k" trick — Understand · 🔲 not written
-- **Read this:** [992. Subarrays with K Different Integers](https://neetcode.io/solutions/subarrays-with-k-different-integers) · NeetCode · exactly k = at most k minus at most k-1; add `r - l + 1` per right end; worked example 12 - 5 = 7 (*read*) · covers our angle: **full** · fetched 2026-10-14
-- **Our delta:** why `r - l + 1` counts each subarray once.
+- **Read this:** [992. Subarrays with K Different Integers](https://neetcode.io/solutions/subarrays-with-k-different-integers) · NeetCode · exactly k = at most k minus at most k-1; add `r - l + 1` per right end; sample `[1,2,1,2,3]`, k = 2, answer 7 (*read*) · covers our angle: **full** · fetched 2026-10-14
+- **Our delta:** why `r - l + 1` counts each subarray once; the sample as 12 - 5 = 7 (at most 2 gives 12, at most 1 gives 5; my own count, the page does not show it).
 
 ### T04-12 · Two pointers on linked lists and strings — Understand · 🔲 not written
-- **Read this:** [The Backspace String Compare Algorithm](https://dev.to/alisabaj/the-backspace-string-compare-algorithm-3ioo) · ab (a_b_102931), DEV Community, 2020-05-18 · scan from the end with a skip counter per string, O(1) space (*read*) · covers our angle: **partial** · fetched 2026-10-14
+- **Read this:** [Backspace String Comparisons: Two Ways To Approach a Common Algorithm](https://dev.to/a_b_102931/the-backspace-string-compare-algorithm-3ioo) · ab (a_b_102931), DEV Community, 2020-05-18 · scan from the end with a skip counter per string, O(1) space (*read*) · covers our angle: **partial** · fetched 2026-10-14
 - **Also good:** [Intersection of Two Linked Lists](https://www.interviewbit.com/blog/intersection-of-two-linked-lists/) · InterviewBit · each pointer switches to the other list's head at the end, so both walk the same distance (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [Two Pointer Techniques for Linked List Problems](https://labuladong.online/en/algo/essential-technique/linked-list-skills-summary-2/) · labuladong, updated 2026-10-13 · dummy-node merge of two sorted lists, kth from the end, middle, cycle start and intersection, all as two pointers (*read*) · fetched 2026-10-14
 - **Our delta:** merging two sorted lists.
 
 ### T04-13 · Windows over streams — Understand · 🔲 not written
-- **Read this:** [Sliding Window Rate Limiting](https://arpitbhayani.me/blogs/sliding-window-ratelimiter) · Arpit Bhayani, undated (2026 footer) · per-key request counts over the last window, drop old entries, coarser buckets for long windows, concurrency and deletion races (*read*) · covers our angle: **partial** — a log-style limiter; no moving-average code · fetched 2026-10-14
+- **Read this:** [Sliding Window Rate Limiting](https://arpitbhayani.me/blogs/sliding-window-ratelimiter/) · Arpit Bhayani, undated (2026 footer) · per-key request counts over the last window, drop old entries, coarser buckets for long windows, concurrency and deletion races (*read*) · covers our angle: **partial** — a log-style limiter; no moving-average code · fetched 2026-10-14
+- **Also good:** [Moving Average from Data Stream](https://docs.vultr.com/problem-set/moving-average-from-data-stream) · Vultr Docs, updated 2025-06-17 · queue of the last `size` values plus a running sum: add the new value, drop and subtract the oldest (*read*) · fetched 2026-10-14
 - **Our delta:** moving average from a stream, and the link to the System Design rate-limiter chapter.
 
 ---
@@ -157,11 +169,12 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 
 ### T05-01 · Strings in TypeScript and Java — Master · 🔲 not written
 - **Read this:** [String (JavaScript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) · MDN · strings are sequences of UTF-16 code units; indexes are code-unit indexes; `[...s]` iterates by code point (*read*) · covers our angle: **partial** — immutability is implied, never stated · fetched 2026-10-14
-- **Also good:** [String (Java SE 25)](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html) · Java SE 25 API · "Strings are constant"; `length()` counts `char` units, `codePointCount` counts code points; `+` may compile to `StringBuilder` or `StringConcatFactory` (*read*, first 100000 characters) · fetched 2026-10-14
+- **Also good:** [String (Java SE 25)](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html) · Java SE 25 API · "Strings are constant"; `length()` counts `char` units, `codePointCount` counts code points; `+` may compile to `StringBuilder` or `StringConcatFactory` (*read*) · fetched 2026-10-14
 - **Our delta:** the real cost of concatenation and of character access in each language.
 
 ### T05-02 · Palindromes — Master · 🔲 not written
 - **Read this:** [Longest palindromic substring](https://en.wikipedia.org/wiki/Longest_palindromic_substring) · Wikipedia · quadratic centre expansion (separator trick for even lengths) and Manacher's linear algorithm with its three mirror cases (*read*) · covers our angle: **full** for the substring problem; palindrome partitions are not covered · fetched 2026-10-14
+- **Beyond the docs:** [Longest Palindromic Substring](https://www.callicoder.com/longest-palindromic-substring/) · CalliCoder, 2019-10-03, updated 2026-08-26 · Java 17; there are 2n-1 centres (gaps count), O(n^2) time and O(1) space against the DP table's O(n^2) space; `cbbd` fails if only odd centres are tried (*read*) · fetched 2026-10-14
 - **Our delta:** the two-pointer check, and a note that interviews expect centre expansion, not Manacher.
 
 ### T05-03 · Anagrams and frequency signatures — Master · 🔲 not written
@@ -171,7 +184,7 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 
 ### T05-04 · Parsing problems — Master · 🔲 not written
 - **Read this:** [String to Integer (atoi)](https://docs.vultr.com/problem-set/string-to-integer-atoi) · Vultr Docs · skip spaces, one optional sign, digits until a non-digit, clamp to 32 bits (check before adding each digit) (*read*) · covers our angle: **partial** · fetched 2026-10-14
-- **Beyond the docs:** [How to Implement a Calculator](https://labuladong.online/algo/en/data-structure/implement-calculator/) · labuladong · stack of numbers, pending sign; `*` and `/` fold into the stack top, final answer is the sum (*read*; its parentheses section did not load) · fetched 2026-10-14
+- **Beyond the docs:** [How to Implement a Calculator](https://labuladong.online/en/algo/data-structure/implement-calculator/) · labuladong · stack of numbers, pending sign; `*` and `/` fold into the stack top, final answer is the sum (*read*; its parentheses section did not load) · fetched 2026-10-14
 - **Our delta:** nested decode-string and parentheses.
 
 ### T05-05 · Building strings efficiently — Master · 🔲 not written
@@ -191,7 +204,8 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 - **Our delta:** why the writer never overtakes the reader.
 
 ### T05-08 · The small classics — Understand · 🔲 not written
-- **Read this:** [14. Longest Common Prefix](https://neetcode.io/solutions/longest-common-prefix) · NeetCode · horizontal, vertical, sort and trie approaches; edge cases: empty string, one string a prefix of the rest (*read*) · covers our angle: **partial** — nothing on rotation, isomorphic strings or word patterns · fetched 2026-10-14
+- **Read this:** [14. Longest Common Prefix](https://neetcode.io/solutions/longest-common-prefix) · NeetCode · horizontal, vertical, sort and trie approaches; the pitfall of an empty string in the array (*read*) · covers our angle: **partial** — nothing on rotation, isomorphic strings or word patterns · fetched 2026-10-14
+- **Beyond the docs:** [LeetCode Challenge: 290. Word Pattern](https://dev.to/rahulgithubweb/leetcode-challenge-290-word-pattern-javascript-solution-2lbf) · Rahul, DEV Community, 2025-01-15 · JavaScript; two Maps (character to word, word to character) enforce the bijection, length check first (*read*) · fetched 2026-10-14. Also [Isomorphic Strings](https://docs.vultr.com/problem-set/isomorphic-strings) · Vultr Docs, updated 2025-06-04 · the reverse mapping catches two characters mapped to one (*read*)
 - **Our delta:** the two-way mapping trap for isomorphic strings and word pattern, and rotation as a search in the doubled string. An AlgoMaster page for isomorphic strings loaded only as an index and is not cited.
 
 ### T05-09 · Reversal problems — Understand · 🔲 not written
@@ -217,4 +231,5 @@ Covers every topic row of phases 3, 4 and 5 in `docs/dsa/syllabus/02-arrays-stri
 ### T05-13 · The string problems that are really DP — Know · 🔲 not written
 - **Read this:** [Edit distance](https://en.wikipedia.org/wiki/Edit_distance) · Wikipedia · the Levenshtein recurrence (diagonal on a match; else min of delete, insert, substitute), Θ(mn) time, two rows for the value only (*read*) · covers our angle: **partial** — edit distance only · fetched 2026-10-14
 - **Also good:** [Longest common subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence) · Wikipedia · the match/mismatch recurrence, O(nm) time (*read*) · fetched 2026-10-14
-- **Our delta:** regular-expression matching (no good source found in this pass); all three are only named here and solved in Part 6.
+- **Beyond the docs:** [Classic DP: Regular Expression Matching](https://labuladong.online/en/algo/dynamic-programming/regular-expression-matching/) · labuladong, updated 2026-10-13 · `.` is easy, `*` means zero or more copies, so the state is the two pointers (i, j) and the choice is how many characters `p[j]` consumes; builds on edit distance (*read*; the dp-function code section after "2. Dynamic Programming Solution" did not load) · fetched 2026-10-14
+- **Our delta:** all three are only named here and solved in Part 6; regular-expression matching is now covered by the labuladong pick.
