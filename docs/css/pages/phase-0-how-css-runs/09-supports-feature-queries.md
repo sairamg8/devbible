@@ -172,6 +172,17 @@ anchor positioning and `accent-color`, both of which `web-features` reports as
 Limited availability. Support in the browser in front of you is not support in
 the browsers your users have.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using feature queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries) — MDN: declaration tests, `selector()` and combining with `and` / `or` / `not` (*read*)
+- **Also good:** [@supports](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@supports) — MDN: syntax reference, including `at-rule()`, `selector()`, `font-tech()` and `font-format()` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [08 · The at-rule map](./08-the-at-rule-map.md) · Next: [10 · Baseline and shipping decisions](./10-baseline-and-shipping.md) →

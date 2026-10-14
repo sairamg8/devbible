@@ -163,6 +163,17 @@ enforce with a lint rule.
 No — `[data-state="open"]` is `0,1,0`, exactly the same as `.is-open`, so
 switching from one to the other never disturbs existing overrides.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using data attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes) — MDN: the `data-*` mechanism, `dataset`, and a `data-variant` styling example (*read*)
+- **Beyond the docs:** [The wasted potential of CSS attribute selectors](https://elisehe.in/2022/10/16/attribute-selectors) — Elise Hein, 2022-10-16: prefers native and ARIA attributes for state, keeps classes as a fallback, and is cautious about custom `data-*`; names the trade-offs of each
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [12 · Nesting](./12-nesting.md) · Next: [14 · @scope](./14-scope.md) →

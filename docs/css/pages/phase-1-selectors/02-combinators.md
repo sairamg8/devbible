@@ -175,6 +175,17 @@ For content whose structure you do not control — CMS output, rendered Markdown
 where an extra wrapper element would break a `>` selector and there is no way to
 add classes.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Combinators](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) — MDN Learn: descendant, child, next and subsequent sibling (*read*)
+- **Also good:** [Selectors and combinators](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators) — MDN guide: an overview of selectors with a combinators section that also lists the column and namespace separators (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · Selector families](./01-the-selector-families.md) · Next: [03 · Attribute selectors](./03-attribute-selectors.md) →

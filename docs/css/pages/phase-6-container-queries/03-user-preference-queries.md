@@ -215,6 +215,18 @@ DevTools media-feature emulation in Chrome, Edge and Firefox. `forced-colors`
 emulation is the least faithful and deserves a real check on Windows if it
 matters.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) — MDN: `light` or `dark` from the OS or browser, Baseline since January 2020 (*read*)
+- **Also good:** [forced-colors](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors) — MDN: detects Windows High Contrast style modes (`none` or `active`); example restores a border where `box-shadow` is forced to `none`; Baseline since September 2022 (*read*)
+- **Also good:** [prefers-contrast](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) — MDN: `more`, `less`, `custom`, `no-preference`; Baseline since May 2022 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · Layouts that need no query](./02-layouts-that-need-no-query.md) · Back to [Phase 6 overview](./README.md)

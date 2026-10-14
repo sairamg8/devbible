@@ -7,6 +7,12 @@ metadata:
 
 # 🔴 START HERE — the link map ("hub + delta", one place)
 
+## 🔴 RESUME HERE — 2026-10-14 (CSS done, PR open)
+
+- **CSS DONE 2026-10-14** (74 topics, 4 files; linkcheck + mdxcheck clean; the check script is `scripts/mdxcheck.mjs` — `mdxcheck.py` no longer exists; needs `corepack enable && yarn install`). PR left open for the user. **Next language: nextjs**, then vite, webpack, jest-rtl, playwright, tanstack-query, storybook, babel, eslint-oxlint, framer-motion, dsa, system-design.
+- **Content bug found (not fixed, outside lane):** `docs/css/pages/phase-1-selectors/14-scope.md` "Proximity" says proximity wins before specificity; Chrome and MDN put scoping proximity after specificity, before source order.
+- Routine PRs are NOT merged now (user changed it: leave open for review).
+
 ## 🔴 RESUME HERE — 2026-10-13 (Beyond-the-docs round done for the 10 finished languages)
 
 - **FINAL RULE (user, 2026-10-13):** keep every existing official link as is; ADD one line `- **Beyond the docs:** [Title](url) · site/author · why · fetched date (*read*|*headings only*)` per topic block **only where a good non-official explanation (article, blog, book chapter, repo, talk) exists** — no placeholder when none. `scripts/linkmap-inject.py` renders it into the pages' Further reading. NEW languages: normal blocks + the optional Beyond-the-docs line.
@@ -43,7 +49,8 @@ metadata:
 | React | 210 | ✅ complete 2026-10-13 (verified once; verifiers hit the search limit — re-search owed for lane 01 T00-06/08/09/12/16, T01-02/05/08/10/14/15, T02-07/11/16 and lane 02's none-found blocks) | 2026-10-13 |
 | Angular | 211 | ✅ complete 2026-10-13 (verified once; verifiers hit the search limit — spot-check searches owed, e.g. lane 01 T00-06/08/10/11, T01-01/02/05/09/11/13; only phase 0 pages are written) | 2026-10-13 |
 | Java | 233 | ✅ complete 2026-10-13 (verified once; verifiers hit the search limit — spot-check searches owed for the none-found blocks, e.g. lane 01 T00-01/06/10/12, T01-01/07/11/12/15/16, lane 02 T03-09/13/14/16, T04-02/08-11, T05-01/02/05-08) | 2026-10-13 |
-| CSS · others | — | ⬜ not started | — |
+| CSS | 74 | ✅ complete 2026-10-14 (researcher + verifier per lane; PR open for review, not merged; Further reading on 74 pages) | — |
+| nextjs · others | — | ⬜ not started | — |
 
 **"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
 

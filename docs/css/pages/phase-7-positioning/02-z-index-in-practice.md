@@ -205,6 +205,18 @@ No. An element clipped by an ancestor's `overflow: hidden` is a clipping problem
 that no `z-index` fixes, and two positioned elements with no `z-index` simply
 paint in document order.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/z-index) — MDN: orders positioned and flex or grid items within their context; an integer value also creates a local context (*read*)
+- **Also good:** [isolation](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/isolation) — MDN: `isolate` always creates a stacking context; Baseline since January 2020 (*read*)
+- **Beyond the docs:** [Fix Any CSS Z-index Issue With This One Trick](https://railsdesigner.com/css-isolation/) — Rails Designer (no author named), 2024-09-16: content scrolling over a sticky nav, fixed by wrapping the content in an `isolate` element (Tailwind's `isolation: isolate`), not by a bigger number
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · Stacking contexts](./01-stacking-contexts.md) · Next: [03 · position: sticky](./03-position-sticky.md) →

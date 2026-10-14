@@ -193,6 +193,17 @@ No layout jump when the element becomes stuck, no scroll-linked work on the main
 thread, and no manual threshold arithmetic. Its cost is that it fails silently
 rather than visibly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [position](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position) — MDN: sticky offsets from the nearest scrolling ancestor (`overflow` hidden, scroll, auto, overlay) and needs a non-`auto` inset on that axis, else it acts like `relative` on that axis (*read*)
+- **Beyond the docs:** [Troubleshooting CSS sticky positioning](https://blog.logrocket.com/troubleshooting-css-sticky-positioning) — Ibadehin Mojeed, LogRocket, 2024-11-13: the missing offset, a parent too short to travel in, and an `overflow` ancestor, each with a fix (`align-items: start` for stretched grid or flex items)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · z-index in practice](./02-z-index-in-practice.md) · Next: [04 · The clipped-dropdown problem](./04-the-clipped-dropdown-problem.md) →

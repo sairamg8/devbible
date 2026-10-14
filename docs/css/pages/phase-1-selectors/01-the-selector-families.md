@@ -152,6 +152,17 @@ it.
 Not meaningfully at typical page sizes; selector matching is rarely the
 bottleneck. The reason is maintainability — coupling and specificity — not speed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors) — MDN: the selector index in eleven categories (*read*)
+- **Beyond the docs:** [Keep your CSS selectors short](https://csswizardry.com/2012/05/keep-your-css-selectors-short/) — Harry Roberts, 2012-05-15: a long descendant selector ties a component to its container; a standalone class can move anywhere
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](./) · Next: [02 · Combinators](./02-combinators.md) →

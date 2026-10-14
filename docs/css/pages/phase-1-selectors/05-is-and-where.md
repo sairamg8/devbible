@@ -177,6 +177,18 @@ Yes — a plain list cannot be nested inside a combinator chain. `:is(article,
 aside) :is(h2, h3) + p` has no single-rule equivalent without writing out every
 combination.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [:where()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:where) — MDN: always zero specificity, forgiving selector list; contrasts `:is()` (*read*)
+- **Also good:** [:is()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:is) — MDN: takes the specificity of its most specific argument (*read*)
+- **Beyond the docs:** [CSS is where the magic happens](https://matthiasott.com/notes/css-is-where-the-magic-happens) — Matthias Ott, 2025-10-07: `:where()` for base styles that stay easy to override, without `!important` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · Selector lists](./04-selector-lists.md) · Next: [06 · :has()](./06-has.md) →

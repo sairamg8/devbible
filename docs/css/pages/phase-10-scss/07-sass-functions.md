@@ -213,6 +213,18 @@ arguments can be silently evaluated away by Sass.
 Wrap `map.get` in a `@function` that `@error`s when the result is `null`, since
 `map.get` itself returns `null` silently.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@function](https://sass-lang.com/documentation/at-rules/function/) — Sass docs: `@function` with `@return`, optional, keyword and arbitrary arguments (*read*)
+- **Also good:** [Built-in modules](https://sass-lang.com/documentation/modules/) — Sass docs: `sass:math`, `sass:string`, `sass:color`, `sass:list`, `sass:map`, `sass:selector`, `sass:meta` (*read*)
+- **Also good:** [sass:math](https://sass-lang.com/documentation/modules/math/) — Sass docs: `math.div` (Dart Sass 1.33.0+) returns what the deprecated `/` operator did (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [06 · Loops and maps](./06-loops-and-maps.md) · Next: [08 · Control flow and `@extend`](./08-control-flow-and-extend.md) →

@@ -215,6 +215,17 @@ When the *design* changes rather than the size — a different number of columns
 a rearranged shell, an element appearing or disappearing. Comparison functions
 are for continuous properties; queries are for discrete states.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp) — MDN: `clamp(MIN, VAL, MAX)` resolves as `max(MIN, min(VAL, MAX))`, plus the accessibility note that for text the maximum should be a relative unit no less than twice the minimum so text can reach 200% zoom (*read*)
+- **Beyond the docs:** [Modern Fluid Typography Using CSS Clamp](https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/) — Adrian Bece, Smashing Magazine, 2022-01-17: derives the formula step by step (36px at 600px to 52px at 1400px gives `2vw + 1.5rem`) and recommends `rem` bounds; it also warns that `vw` units, or a clamp that caps the maximum, can stop text reaching 200% zoom (WCAG 1.4.4) (*
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · Custom properties as a component API](./01-custom-properties-as-a-component-api.md) · Next: [03 · `@property`](./03-at-property.md) →

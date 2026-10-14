@@ -225,6 +225,18 @@ arrangement; a gallery of *n* cards wants `repeat(auto-fit, minmax(…))` instea
 Row-start, column-start, row-end, column-end — not the clockwise order used by
 `margin` and friends, which is why it is so often written wrong.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Grid template areas](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas) — MDN: the ASCII-art syntax, the rule that an area must be rectangular, and a section on redefining the grid in media queries (*read*)
+- **Also good:** [Realizing common layouts using grids](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts) — MDN: a responsive named-areas page, redrawn inside a media query (*read*)
+- **Beyond the docs:** [Concise Media Queries with CSS Grid](https://thoughtbot.com/blog/concise-media-queries-with-css-grid) — Stephen Lindberg, thoughtbot, 2018-10-26, updated 2019-04-10: a profile layout whose `grid-template-areas` is redrawn in a single media query; short and one example only (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · The `minmax(0, 1fr)` fix](./03-the-minmax-zero-fix.md) · Next: [05 · Line-based placement](./05-line-based-placement.md) →

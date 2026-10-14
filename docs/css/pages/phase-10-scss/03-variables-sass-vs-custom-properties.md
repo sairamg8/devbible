@@ -233,6 +233,17 @@ component-API pattern possible.
 A Sass variable — it is needed inside a media-query condition, where `var()`
 cannot be used.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Variables](https://sass-lang.com/documentation/variables/) — Sass docs: `$` variables are compiled away, hold one value, and are imperative, unlike CSS variables (*read*)
+- **Beyond the docs:** [Sass variables vs CSS custom properties](https://www.ltvco.com/engineering/sass-variables-css-custom-properties/) — Dáger Zúñiga, LTV engineering, 2022-07-19: Sass values vanish at compile time while custom properties stay in the browser where JavaScript can change them; picks custom properties for a light and dark switch, noting they need browser support
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · Nesting and `&`](./02-nesting-and-ampersand.md) · Next: [04 · `@use` and `@forward`](./04-use-and-forward.md) →

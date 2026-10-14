@@ -185,6 +185,17 @@ the exact colour matters.
 Both requested chroma beyond the gamut at their lightness and were clamped to the
 same colour.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [oklch()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) — MDN: lightness, chroma, hue in Oklab; Baseline since May 2023; a short note that HSL lightness is not comparable and that red sits near hue 29deg (*read*)
+- **Beyond the docs:** [OKLCH in CSS: why we moved from RGB and HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) — Andrey Sitnik and Travis Turner, Evil Martians, 2025-09-17: HSL lightness is not consistent across hues, OKLCH is, so generated palettes stay predictable; it also says OKLCH alone is not enough for contrast and recommends APCA
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · `color-mix()`](./02-color-mix.md) →

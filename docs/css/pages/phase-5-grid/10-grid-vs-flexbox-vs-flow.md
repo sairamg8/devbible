@@ -174,6 +174,17 @@ The costs are asymmetric. A grid layout that did not need column alignment is
 mildly over-engineered; a flex layout that later needs it must be rebuilt, by
 which time every item carries flex-specific sizing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Relationship of grid layout to other layout methods](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods) — MDN: flexbox is one-dimensional, grid two-dimensional, with a two-question test and a "content out or layout in" heuristic (*read*)
+- **Beyond the docs:** [To Grid or to Flex?](https://css-irl.info/to-grid-or-to-flex/) — Michelle Barker, CSS-IRL, 2019-02-10: take each design individually rather than assume which technology you need (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [09 · Explicit vs implicit grid](./09-explicit-vs-implicit-grid.md) · Back to [Phase 5 overview](./README.md)

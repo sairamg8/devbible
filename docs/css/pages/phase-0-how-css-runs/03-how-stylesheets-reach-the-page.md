@@ -165,6 +165,17 @@ two connections and two cache entries, which matters at a much larger count.
 Nowhere special — both are the author origin, and they are ordered by document
 position. A `<style>` block before a `<link>` loses to it on source order.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@import](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@import) — MDN: syntax, `layer()` and `supports()` options, and the rule that it must precede other rules or be ignored (*read*)
+- **Beyond the docs:** [don't use @import](https://www.stevesouders.com/blog/2009/04/09/dont-use-import/) — Steve Souders, 2009-04-09: an `@import` inside another sheet adds a round trip and stops parallel loading in all browsers; the IE 6 to 8 ordering findings are dated
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · The rendering pipeline](./02-the-rendering-pipeline.md) · Next: [04 · Render-blocking CSS](./04-render-blocking-css.md) →

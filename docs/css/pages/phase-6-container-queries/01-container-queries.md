@@ -210,6 +210,18 @@ preference. A `rem` term is still needed in the preferred value of a `clamp()`.
 For genuinely page-level decisions — the top-level shell, page margins, print
 styles, and user-preference queries such as `prefers-reduced-motion`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CSS container queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_queries) — MDN: `container-type: inline-size` on the container, then `@container (width &gt; 700px)` on the children; names, units and style queries follow (*read*)
+- **Also good:** [Container queries](https://web.dev/learn/css/container-queries) — web.dev Learn CSS: `container-type` (`inline-size`, `size`), `container-name`, and the `cqi` unit with an example; `cqh` appears only in the quiz (*read*)
+- **Beyond the docs:** [Say Hello To CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) — Ahmad Shadeed, 2021-04-13: component-by-component cases (cards, sidebars, pagination, forms) showing why the parent's width is the right input; written when the feature was only in Chrome Canary behind a flag, so check syntax against MDN
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · Layouts that need no query](./02-layouts-that-need-no-query.md) →

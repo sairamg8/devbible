@@ -181,6 +181,19 @@ attribute removes the element from the tab order and the accessibility tree, so
 it cannot be focused or announced; `aria-disabled="true"` keeps it discoverable
 and you block the action in the event handler.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [:focus-visible](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus-visible) — MDN: it matches `:focus` when the browser's heuristics say focus should be shown (*read*)
+- **Also good:** [Privacy and the :visited selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited) — MDN: the colour-only allow-list, no alpha differences, and `getComputedStyle` always reporting unvisited (*read*)
+- **Also good:** [Privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/)
+- **Also good:** [:focus-within](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus-within)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [07 · Structural pseudo-classes](./07-structural-pseudo-classes.md) · Next: [09 · Form-state pseudo-classes](./09-form-state-pseudo-classes.md) →

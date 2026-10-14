@@ -166,6 +166,16 @@ per property, computes values, and then lays out and paints. That resolution
 happens for every element on every relevant change — see
 [the rendering pipeline](./02-the-rendering-pipeline.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What is CSS?](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) — MDN Learn: CSS as rules applied to a DOM tree to give a render tree, with rule anatomy (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Phase index](./) · Next: [02 · The rendering pipeline](./02-the-rendering-pipeline.md) →

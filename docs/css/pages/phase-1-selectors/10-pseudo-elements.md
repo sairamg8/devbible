@@ -186,6 +186,18 @@ Only syntax and era. The double colon distinguishes pseudo-elements from
 pseudo-classes and is the modern form; the single colon is still accepted for the
 four original pseudo-elements for backwards compatibility.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) — MDN: the index by category, one line each (*read*)
+- **Also good:** [::before](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::before) — MDN: without a valid `content` the pseudo-element is not rendered (*read*)
+- **Beyond the docs:** [::before and ::after Pseudo-Elements in CSS](https://johnkavanagh.co.uk/articles/before-and-after-pseudo-elements-in-css/) — John Kavanagh, 2017-09-09: icons, separators, a clearfix and hover effects (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [09 · Form-state pseudo-classes](./09-form-state-pseudo-classes.md) · Next: [11 · :not(), :empty, :root and friends](./11-not-empty-root.md) →

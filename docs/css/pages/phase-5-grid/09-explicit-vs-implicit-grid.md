@@ -191,6 +191,17 @@ Negative line numbers only address the explicit grid. If the rows are implicit,
 `minmax(10rem, auto)` — a floor that gives visual rhythm while still letting a
 row grow for longer content.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Auto-placement in grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement) — MDN: implicit tracks, `grid-auto-rows` and `grid-auto-columns`, `grid-auto-flow` with `column` and `dense` (*read*)
+- **Beyond the docs:** [Explicit vs Implicit Grid](https://www.quackit.com/css/grid/tutorial/explicit_vs_implicit_grid.cfm) — Quackit (page shows no author or date): beginner walkthrough with three runnable examples: `grid-template-rows` sizes only explicit rows, `grid-auto-rows` sizes implicit ones, `grid-auto-flow: column`; `grid-auto-columns` and `dense` get thin coverage (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [08 · Alignment in grid](./08-alignment-in-grid.md) · Next: [10 · Grid vs flexbox vs flow](./10-grid-vs-flexbox-vs-flow.md) →

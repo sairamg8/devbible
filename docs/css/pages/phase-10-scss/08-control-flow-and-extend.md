@@ -229,6 +229,18 @@ controls which declarations are emitted.
 Everything except `false` and `null` — including `0` and the empty string, which
 differs from JavaScript and is a common source of bugs in mixin guards.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@extend](https://sass-lang.com/documentation/at-rules/extend/) — Sass docs: `%placeholder` selectors vanish from output while extenders stay, extends resolve after compilation, and cannot cross `@media` (*read*)
+- **Also good:** [@if and @else](https://sass-lang.com/documentation/at-rules/control/if/) — Sass docs: only `false` and `null` are falsey, so `0` and empty strings are truthy (*read*)
+- **Beyond the docs:** [Extending In Sass Without Creating A Mess](https://www.smashingmagazine.com/2015/05/extending-in-sass-without-mess/) — David Khourshid, Smashing Magazine, 2015-05-04: extend placeholders, limit how often a selector is extended, avoid descendant combinators on both sides; written before the module system
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [07 · Sass functions](./07-sass-functions.md) · Back to [Phase 10 overview](./README.md)

@@ -190,6 +190,19 @@ When the direction is inherited or resolved rather than written on the element.
 `dir="auto"`; the attribute selector only matches an explicit attribute on that
 element.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [:not()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:not) — MDN: takes the specificity of its most specific argument; one invalid selector invalidates the rule, with the `:is()` workaround (*read*)
+- **Also good:** [:empty](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:empty) — MDN: whitespace counts as content; [:dir()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:dir)
+- **Also good:** [:dir()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:dir)
+- **Beyond the docs:** [On :not and Specificity](https://bitsofco.de/on-not-and-specificity/) — Ire Aderinokun, bitsofcode, 2016-03-15: why `p:not(#foo)` quietly gains ID weight and beats a later class rule (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [10 · Pseudo-elements](./10-pseudo-elements.md) · Next: [12 · CSS Nesting](./12-nesting.md) →

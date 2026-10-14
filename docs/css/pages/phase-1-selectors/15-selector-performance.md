@@ -140,6 +140,17 @@ Deleting unused CSS. It reduces bytes, parse time and the number of rules to be
 matched, all at once — unlike rewriting individual selectors, which usually
 changes nothing measurable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Reduce the scope and complexity of style calculations](https://web.dev/articles/reduce-the-scope-and-complexity-of-style-calculations) — web.dev, Jeremy Wagner and Paul Lewis, last updated 2015-03-20: style cost scales with elements times selectors, and element count often matters more than selector complexity; one DevTools example of about 900 elements and 25 ms (*read*)
+- **Beyond the docs:** [CSS Selector Performance has changed! (For the better)](https://calendar.perfplanet.com/2011/css-selector-performance-has-changed-for-the-better/) — Nicole Sullivan, Web Performance Calendar, 2011-12-29: rule hashes, ancestor filters and style sharing made old advice obsolete; adjacent combinators can still be slow
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [14 · @scope](./14-scope.md) · Next: [16 · Shadow DOM selectors](./16-shadow-dom-selectors.md) →

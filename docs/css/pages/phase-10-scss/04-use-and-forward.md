@@ -243,6 +243,19 @@ prevents — realistically, a single project-local shared partial.
 `@use` and namespaces every reference. It needs review where the code relied on
 global scope.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@use](https://sass-lang.com/documentation/at-rules/use/) — Sass docs: namespaces, `as`, `with` configuration, and private members starting with `-` or `_` (*read*)
+- **Also good:** [@forward](https://sass-lang.com/documentation/at-rules/forward/) — Sass docs: re-exports members with prefixes, `show` and `hide`, and configuration (*read*)
+- **Also good:** [@import is Deprecated](https://sass-lang.com/blog/import-is-deprecated/) — Sass blog, Jennifer Thakar, 2024-10-17: deprecated in Dart Sass 1.80.0, removal planned for 3.0.0, migrator available (*read*)
+- **Beyond the docs:** [Sass Modules, a Primer](https://www.oddbird.net/2019/10/02/sass-modules/) — Miriam Suzanne, OddBird, 2019-10-02: `@use` namespaces, `as *`, `with` configuration (first load only), and `@forward` gathering a folder's partials into one `_index.scss`; written at launch, so its "at least a year before anything will be deprecated" is out of date 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · Variables vs custom properties](./03-variables-sass-vs-custom-properties.md) · Next: [05 · Mixins](./05-mixins.md) →

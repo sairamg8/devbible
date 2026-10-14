@@ -160,6 +160,18 @@ For the critical path, the number of files matters less than the bytes — paral
 requests overlap, measured at a 1 ms start gap. Splitting helps when it lets you
 send *less* on a given route; it does not help if every route loads all of them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Render-blocking CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css) — web.dev, 2014-03-31: `media` absent or `all` blocks; `print` does not; a query blocks only if it matches; every sheet still downloads (*read*)
+- **Also good:** [Defer non-critical CSS](https://web.dev/articles/defer-non-critical-css) — web.dev, Demián Renzulli, last updated 2019-02-17: inline critical CSS, load the rest with `rel="preload"` plus an `onload` swap, and it warns this is advanced (*read*)
+- **Beyond the docs:** [CSS and network performance](https://csswizardry.com/2018/11/css-and-network-performance/) — Harry Roberts, CSS Wizardry, 2018-11-09: a slow stylesheet delays first render, scripts wait on in-flight CSS, `@import` can hide files from the preload scanner (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · Getting CSS to the page](./03-how-stylesheets-reach-the-page.md) · Next: [05 · CSS fails silently](./05-css-fails-silently.md) →

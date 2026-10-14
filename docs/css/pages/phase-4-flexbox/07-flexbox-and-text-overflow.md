@@ -216,6 +216,17 @@ Truncate, wrap, or scroll. Truncate for dense lists where the value is reachable
 elsewhere; wrap when the content must stay readable, such as errors; scroll for
 tabular or code content that must not reflow.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [text-overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-overflow) — MDN: ellipsis needs `overflow` and `white-space` set (its example uses `overflow: hidden` and `white-space: nowrap`) (*read*)
+- **Beyond the docs:** [Flexbox Gotchas Reloaded](https://dev.to/hbarcelos/flexbox-gotchas-reloaded-2i39) — Henrique Barcelos, DEV Community, 2020-04-20, edited 2022-06-28: the nowrap, hidden, ellipsis trio still overflows in a flex layout; `min-width: 0` on the inner child did not fix it, on the outer flex child it did (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [06 · Flexbox patterns](./06-flexbox-patterns/README.md) · Back to [Phase 4 overview](./README.md)

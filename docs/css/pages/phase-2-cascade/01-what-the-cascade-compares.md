@@ -225,6 +225,17 @@ importance, inline and layer all say directly who should win; specificity only
 measures how narrowly the selector was written, which correlates with intent
 poorly and gets worse as a codebase grows.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to the CSS cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Introduction) — MDN: relevance, origin and importance, specificity, scoping proximity, then order of appearance; layers are handled inside the origin step (*read*)
+- **Also good:** [Cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) — MDN Learn: the cascade steps, layer creation, and the inverted order for important styles (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · `@layer`](./02-layer/README.md) →

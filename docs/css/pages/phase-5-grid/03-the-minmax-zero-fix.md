@@ -194,6 +194,17 @@ known and short.
 `min-width: 0` on the flex item. Both override an automatic content-based minimum
 that the layout system applies by default.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [minmax()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/minmax) — MDN: as a minimum, `auto` is the largest minimum size of the items in the track; `minmax(0, 1fr)` appears among its "Try it" variants but the page does not explain why (*read*)
+- **Beyond the docs:** [Preventing a Grid Blowout](https://css-tricks.com/preventing-a-grid-blowout/) — Chris Coyier, CSS-Tricks, 2018-10-01: a wide `pre` blows out a `1fr` column; `minmax(0, 1fr)` or `min-width: 0` on the item fixes it, and he prefers the grid-level fix (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · `fr` and track sizing](./02-fr-and-track-sizing.md) · Next: [04 · Named areas](./04-named-areas.md) →

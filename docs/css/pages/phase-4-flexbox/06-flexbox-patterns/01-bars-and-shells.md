@@ -188,6 +188,17 @@ expresses the intent precisely.
 Because shrinking controls until their labels truncate is a poor failure mode.
 Keeping natural sizes and wrapping to a new line preserves readability.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Typical use cases of flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases) — MDN: navigation, split navigation, centring, a card footer pushed down, media objects, form controls (*read*)
+- **Beyond the docs:** [The Flexbox Holy Albatross](https://heydonworks.com/article/the-flexbox-holy-albatross/) — Heydon Pickering, 2019-01-13: a row that flips to a stack at a container width of 40rem using `flex-basis` and a custom property (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · Truncation and the squeeze](./02-truncation-and-the-squeeze.md) →

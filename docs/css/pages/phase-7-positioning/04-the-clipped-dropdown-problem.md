@@ -217,6 +217,18 @@ responsibility.
 `::backdrop`. `show()` opens it in the normal flow, where it can still be clipped
 and layered like any other element.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Top layer](https://developer.mozilla.org/en-US/docs/Glossary/Top_layer) — MDN Glossary: a browser-made layer above all page content that holds fullscreen elements, modal dialogs, popovers and an open customizable `select` picker (*read*)
+- **Also good:** [Popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API) — MDN: the `popover` and `popovertarget` attributes, `showPopover()`, `:popover-open`; Baseline 2025, newly available since January 2025 (*read*)
+- **Beyond the docs:** [Introducing the popover API](https://developer.chrome.com/blog/introducing-popover-api) — Una Kravets, Chrome for Developers, page shows last updated 2023-05-23 and no publish date: popovers sit on a separate layer above the page, so no `z-index` juggling, with light-dismiss for `auto` popovers and focus moving into the popover; it does not discuss `overflow` clipping directly, and its animation notes are dat
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · `position: sticky`](./03-position-sticky.md) · Back to [Phase 7 overview](./README.md)

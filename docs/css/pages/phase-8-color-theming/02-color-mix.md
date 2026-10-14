@@ -189,6 +189,17 @@ Contrast. It preserves relationships between colours, not legibility against a
 foreground, so generated palettes still need checking against the pairs that
 carry text.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [color-mix()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) — MDN: mixes colours in a chosen space (default `oklab`) with optional percentages; Baseline since May 2023 (*read*)
+- **Beyond the docs:** [Creating color palettes with the CSS color-mix() function](https://developer.mozilla.org/en-US/blog/color-palettes-css-color-mix/) — Michelle Barker, MDN Blog, 2024-03-08: tints, shades and opacity variants from a custom property (examples mix in `srgb`); argues that `srgb` mixes can look muddy while `lch` and `oklch` stay vibrant, and says the space is the reader's choice
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · `oklch()` and perceptual colour](./01-oklch-and-perceptual-colour.md) · Next: [03 · Dark mode properly](./03-dark-mode-properly.md) →

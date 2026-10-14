@@ -231,6 +231,18 @@ bounds everything inside it.
 The whole stylesheet is then beaten by any later layer regardless of the
 selectors it uses.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Cascade layers are coming to your browser](https://developer.chrome.com/blog/cascade-layers) — Chrome for Developers, Una Kravets, last updated 2022-02-01: unlayered beats layered, and `!important` reverses layer order (*read*)
+- **Also good:** [@layer](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@layer) — MDN reference: statement form, re-declaring a name keeps its order, unlayered wins, important inverts (*read*)
+- **Beyond the docs:** [Hello, CSS Cascade Layers](https://ishadeed.com/article/cascade-layers/) — Ahmad Shadeed, 2022-02-11: layers beside specificity and order, with theming and third-party CSS cases; it does not cover the `!important` reversal inside layers (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 Next: [02 · Precedence and `!important`](./02-precedence-and-important.md) →

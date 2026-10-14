@@ -219,6 +219,18 @@ delay set elsewhere.
 degrades to an instant show/hide on older browsers. Acceptable for decoration; not
 for motion that carries meaning.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Transitions/Using) — MDN: the "Transitioning display and content-visibility" example: `transition-behavior: allow-discrete`, `@starting-style`, and the `display: none` flip at the start or end (*read*)
+- **Also good:** [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations) — Una Kravets and Joey Arhar, Chrome for Developers, page shows last updated 2023-08-16 with an update note dated 2024-09-13: `display` in keyframes, `allow-discrete`, `@starting-style`, `overlay`; notes `@starting-style` must follow normal rules since Chrome 130 (*read*)
+- **Beyond the docs:** [One of the Boss Battles of CSS is Almost Won! Transitioning to Auto](https://blog.master.dev/one-of-the-boss-battles-of-css-is-almost-won-transitioning-to-auto/) — Chris Coyier, Frontend Masters blog (Master.dev), 2024-06-12, with a September 2024 update: why zero to natural height cannot interpolate, then `calc-size()` and `interpolate-size`; the author first calls it experimental in Canary, then saw it in stable Chrome 129; no other browsers documented
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01 · What is cheap to animate](./01-what-is-cheap-to-animate.md) · Next: [03 · prefers-reduced-motion](./03-prefers-reduced-motion.md) →

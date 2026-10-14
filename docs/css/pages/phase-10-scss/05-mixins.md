@@ -227,6 +227,17 @@ which matters as soon as a mixin has more than two or three parameters.
 No. It injects declarations into the rule that includes it, so they carry that
 rule's specificity and source position.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@mixin and @include](https://sass-lang.com/documentation/at-rules/mixin/) — Sass docs: arguments, default values and content blocks with `@content` (*read*)
+- **Beyond the docs:** [Sass's @content Directive Use Cases](https://thoughtbot.com/blog/sasss-content-directive) — Christian Reuter, thoughtbot, 2014-04-22, updated 2016-08-02: `@content` for media queries, keyframes (vendor-prefixed blocks from one set of declarations) and context selectors, plus BEM with `@at-root`; old, but the idea has not changed
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · `@use` and `@forward`](./04-use-and-forward.md) · Next: [06 · Loops and maps](./06-loops-and-maps.md) →

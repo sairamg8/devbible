@@ -208,6 +208,18 @@ alignment usually needs swapping too.
 A shorthand for `flex-direction` and `flex-wrap` — `flex-flow: row wrap`. Useful
 to recognise; the longhands are clearer when direction changes responsively.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Basic concepts of flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) — MDN: main and cross axes and all four `flex-direction` values (*read*)
+- **Also good:** [Box alignment in flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox) — MDN: `justify-content` on the main axis, `align-content`, `align-self` and `align-items` on the cross axis, and why there is no `justify-self` in flexbox (*read*)
+- **Beyond the docs:** [An Interactive Guide to Flexbox in CSS](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/) — Josh W. Comeau, 2022-11-22, updated 2026-04-27: flip `flex-direction` and watch the primary and cross axes swap (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · `flex-basis` vs `width`](./04-flex-basis-vs-width.md) · Next: [06 · Flexbox patterns](./06-flexbox-patterns/README.md) →

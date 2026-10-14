@@ -213,6 +213,18 @@ reordered or added without touching other rules.
 When the template no longer reads at a glance — a wall of area names or a long
 track list. Several simple grids are easier to maintain than one clever one.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Realizing common layouts using grids](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts) — MDN: named-areas shell, 12-column system, auto-placement product listing, `dense` backfill (*read*)
+- **Beyond the docs:** [Full-Bleed Layout Using CSS Grid](https://www.joshwcomeau.com/css/full-bleed/) — Josh W. Comeau, 2020-10-05, updated 2025-12-13: readable column with full-width children (*read*)
+- **Beyond the docs:** [Layout Breakouts with CSS Grid](https://ryanmulligan.dev/blog/layout-breakouts/) — Ryan Mulligan, 2022-10-07, updated 2022-10-12: named lines full, feature, popout and content (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [06 · Subgrid](./06-subgrid.md) · Next: [08 · Alignment in grid](./08-alignment-in-grid.md) →

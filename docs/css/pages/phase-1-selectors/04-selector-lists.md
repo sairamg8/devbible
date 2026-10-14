@@ -154,6 +154,17 @@ definitions, so an invalid selector inside them invalidates the whole thing.
 `selector()` wrapper is required — a bare selector inside `@supports` is parsed
 as a declaration test and is always false.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Selector list](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Selector_list) — MDN: strict versus forgiving lists, with the `:is()` fix (*read*)
+- **Beyond the docs:** [Day 35: forgiving selectors](https://matuzo.at/blog/2022/100daysof-day35) — Manuel Matuzović, 2022-11-11: a worked demo: an invalid selector kills the whole list but `:where()` ignores it
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03 · Attribute selectors](./03-attribute-selectors.md) · Next: [05 · :is() and :where()](./05-is-and-where.md) →
