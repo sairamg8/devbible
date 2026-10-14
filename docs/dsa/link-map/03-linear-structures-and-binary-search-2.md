@@ -18,7 +18,7 @@ Covers rows T07-02 to T07-13 (phase 7, linked lists).
 ### T07-03 · Fast and slow on lists — Master · 🔲 not written
 - **Read this:** [Cycle detection](https://en.wikipedia.org/wiki/Cycle_detection) · Wikipedia · Floyd's tortoise and hare, with the first-repeat index and cycle length it recovers · covers our angle: **partial** - no middle-of-list or palindrome-list recipe · fetched 2026-10-14 (*headings only*)
 - **Also good:** [Linked List Cycle](https://www.hellointerview.com/learn/code/linked-list/linked-list-cycle) · Hello Interview · the interview form of cycle detection · fetched 2026-10-14
-- **Also good:** [142. Linked List Cycle II](https://walkccc.me/LeetCode/problems/142/) · walkccc · finding where the cycle starts · fetched 2026-10-14
+- **Also good:** [142. Linked List Cycle II](https://walkccc.me/LeetCode/problems/142/) · walkccc · code-only: the reset-to-head step that finds the cycle start · fetched 2026-10-14
 - **Our delta:** the middle pointer and the palindrome list (middle, reverse half, compare).
 
 ### T07-04 · Merging — Master · 🔲 not written
@@ -38,8 +38,8 @@ Covers rows T07-02 to T07-13 (phase 7, linked lists).
 
 ### T07-07 · Reorder, rotate and partition — Understand · 🔲 not written
 - **Read this:** [Reorder List](https://neetcode.io/solutions/reorder-list) · NeetCode · split at the middle, reverse the second half, weave · covers our angle: **partial** - rotate and partition are separate pages · fetched 2026-10-14 (*headings only*)
-- **Also good:** [61. Rotate List](https://walkccc.me/LeetCode/problems/61/) · walkccc · close into a ring, cut at the new tail · fetched 2026-10-14
-- **Also good:** [86. Partition List](https://walkccc.me/LeetCode/problems/86/) · walkccc · two dummy-headed lists, stable order · fetched 2026-10-14
+- **Also good:** [61. Rotate List](https://walkccc.me/LeetCode/problems/61/) · walkccc · code-only: close into a ring, cut at the new tail · fetched 2026-10-14
+- **Also good:** [86. Partition List](https://walkccc.me/LeetCode/problems/86/) · walkccc · code-only: a before list and an after list, order kept · fetched 2026-10-14
 
 ### T07-08 · Copying a list with random pointers — Understand · 🔲 not written
 - **Read this:** [Copy List With Random Pointer](https://neetcode.io/solutions/copy-list-with-random-pointer) · NeetCode · hash-map versions first, then two space-optimised interleaving versions · covers our angle: full · fetched 2026-10-14 (*headings only*)
@@ -57,7 +57,7 @@ Covers rows T07-02 to T07-13 (phase 7, linked lists).
 - **Our delta:** the `ListNode` class in TypeScript, references versus garbage, and when to reach for the built-in.
 
 ### T07-12 · Flattening and other structural changes — Know · 🔲 not written
-- **Read this:** [430. Flatten a Multilevel Doubly Linked List](https://walkccc.me/LeetCode/problems/430/) · walkccc · splice the child list in, recursive and iterative · covers our angle: **partial** - no explicit-stack comparison in prose · fetched 2026-10-14 (*headings only*)
+- **Read this:** [430. Flatten a Multilevel Doubly Linked List](https://walkccc.me/LeetCode/problems/430/) · walkccc · recursive and iterative depth-first versions, code with complexity notes · covers our angle: **partial** - no explicit-stack comparison in prose · fetched 2026-10-14 (*headings only*)
 - **Our delta:** one paragraph on recursion versus an explicit stack for deep nesting.
 
 ### T07-13 · Skip lists — Know · 🔲 not written
