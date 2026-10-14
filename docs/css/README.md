@@ -196,6 +196,8 @@ engine-specific and no page states one as if it were CSS.
 
 ## Explanations
 
+> **Link map:** for every topic there is a [link map](./link-map/README.md) — the primary docs plus, where one exists, the best non-official explanation. First pass, open for review.
+
 The explanations will live in **`pages/`** — one page per topic (or tight
 group), with code, gotchas and interview questions. **Nothing is written yet**;
 this syllabus is the proposal.
