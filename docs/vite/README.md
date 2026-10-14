@@ -26,6 +26,8 @@ and 18 were written here rather than imported.
 
 :::
 
+> **Link map:** for every topic there is a [link map](./link-map/README.md) — the primary docs plus, where one exists, the best non-official explanation. First pass, open for review.
+
 **18 topics.** ✅ = re-validated against the Vite 8 docs · 🆕 = written new, not imported.
 
 🆕 **Topic 17 answers the questions the rest of the track cannot**, because they are about the
