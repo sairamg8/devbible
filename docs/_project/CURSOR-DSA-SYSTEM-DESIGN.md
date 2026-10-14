@@ -12,15 +12,18 @@ metadata:
 **User's order:** *"No more new agents once they returned and confirm; just save the session progress."*
 ⛔ **Do NOT dispatch Wave 2** until the user says so.
 
-- **Wave 1 of SD phase 3 was dispatched 2026-10-14** (4 `devbible-author` agents: A 01+07 · B 02+03 · C 04+12 · D 05+06).
-  Brief paths were overridden to the in-repo bank `docs/_project/research_system-design_phase3.md`; verified date 2026-10-14.
-- At save time, **uncommitted** files in `docs/system-design/pages/phase-3-caching/` (agents still writing):
-  01, 01b, 02, 02b, 02c, 04, 04b, 04c, 05, 05b (+ a stray `.parts.json` — delete it, not content). 03, 06, 07, 12 not yet on disk.
-- **Next session, first:** treat anything in that directory idle 10+ min as salvage — `wc -l` (cap 300), float
-  duplicate check on `sidebar_position`, last line `{/* FOOTER */}`, then `yarn linkcheck docs/system-design`,
-  then commit explicit paths. Then the close-out chain listed under "Owed by the session at close" below.
-- Still queued (Wave 2, unstarted): 08, 09, 10, 11, 13, 14, 16, then 15 last. Then SD phase 4 and DSA phase 3 onward.
-- `/claude-context` and the old store path `/mnt/Storage/my-learning/claude` do not exist in this container; progress is saved in-repo here.
+✅ **SD phase 3 Wave 1 LANDED and is committed.** 4 agents, 8 topics, **27 files** in
+`docs/system-design/pages/phase-3-caching/`: 01 (2) · 02 (3) · 03 (3) · 04 (4) · 05 (3) · 06 (5) · 07 (5) · 12 (2).
+Gate run by the coordinator: none over 300 lines (max 288), no float-duplicate `sidebar_position`, every file ends `{/* FOOTER */}`,
+`node scripts/linkcheck.mjs docs/system-design` → 0 problems. (`yarn` needs corepack + install in a fresh container; call the node script directly.)
+
+**Owed at phase close (NOT yet done):** real footer chain (6 chunks replace `{/* FOOTER */}` in sidebar order), turn every
+`**bold** *(not written yet)*` for topics 01–07, 12 into real links (`grep -rn 'not written yet' docs/system-design/pages/phase-3-caching`),
+README table rows (8 of 16 written), `src/data/progress.js`, `docs/README.md`, page-counts/status scripts.
+Unconfirmed claims the agents flagged (Caffeine API details, Spring Security header precedence, rendezvous/jump hash, XFetch attribution) are labelled on the pages.
+
+**Still queued (Wave 2, unstarted):** 08, 09, 10, 11, 13, 14, 16, then 15 last. Then SD phase 4 and DSA phase 3 onward.
+`/claude-context` and `/mnt/Storage/my-learning/claude` do not exist in this container; progress lives here in-repo.
 
 ## ⏹️ WOUND DOWN FOR THE DAY — 2026-09-08 19:31, session `0e733592`
 
