@@ -195,6 +195,18 @@ It fetched a URL that does not exist. The docs site returns a *"Page Not Found"*
 **★ Would you turn `agentRules` off?**
 Rarely, and not for tidiness. Vercel's stated position is that the default is right and that their published benchmarks show agents perform better with the bundled docs available. The defensible reasons to disable it are policy-shaped rather than technical — a repository where generated files must not appear, or a monorepo where the auto-generated root file would point at a path that does not resolve and would therefore be worse than nothing. In the second case the better fix is to place a correct `AGENTS.md` where it belongs rather than to disable the mechanism.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Next.js MCP Server](https://nextjs.org/docs/app/guides/mcp) — Next.js docs (updated 2026-10-02): the dev server exposes `/_next/mcp` in Next.js 16 and later, and `next-devtools-mcp` adds `nextjs_index` and `nextjs_call`, with runtime tools such as `get_errors` and `get_routes` (*read*)
+- **Also good:** [How Next.js supports AI coding agents](https://nextjs.org/docs/app/guides/ai-agents) — Next.js docs (updated 2026-10-06): bundled docs in `node_modules/next/dist/docs/` from 16.2, a managed `AGENTS.md` block on by default from 16.3, and Skills for multi-step workflows (*read*)
+- **Also good:** [Next.js CLI](https://nextjs.org/docs/app/api-reference/cli/next) — Next.js docs: `dev`, `build`, `start`, `info`, `telemetry`, `typegen`, `upgrade` and `analyze` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Appendix B part 3 · the changes nothing catches](02c-appendix-b-the-changes-nothing-catches.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix C part 2 · MCP and the error loop](03b-appendix-c-runtime-sight-mcp-and-the-error-loop.md)

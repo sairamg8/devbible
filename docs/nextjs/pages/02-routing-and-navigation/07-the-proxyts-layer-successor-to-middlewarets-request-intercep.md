@@ -197,6 +197,18 @@ Set it as a *request* header and read it with `headers()`. The critical detail i
 **★ Where does proxy sit relative to `next.config` redirects and rewrites, and why does it matter?**
 It is third of eight. The order is `headers`, then `redirects`, then proxy, then `beforeFiles` rewrites, then filesystem routes, then `afterFiles` rewrites, then dynamic routes, then `fallback` rewrites. It matters in both directions: a `redirects` entry in `next.config.ts` fires before proxy is ever invoked, so a proxy rule for the same path is dead code; and because proxy runs *before* filesystem routing, it sees requests for `_next/static` and `public/` assets unless the matcher excludes them, which is how a naive auth redirect ends up blocking your own CSS.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [proxy.js](https://nextjs.org/docs/app/api-reference/file-conventions/proxy) — nextjs.org: the `proxy` export, matcher, execution order, Node.js runtime (no `runtime` option); warns that a matcher change can silently remove coverage and to verify auth inside each Server Function, not in Proxy alone (*read*)
+- **Also good:** [Data Security](https://nextjs.org/docs/app/guides/data-security) — nextjs.org: the Data Access Layer pattern and the "re-verify inside every Server Action" rule that the Proxy page points to (*read*)
+- **Beyond the docs:** [Next.js 16 middleware change](https://www.buildwithmatija.com/blog/nextjs16-middleware-change) — Matija Žiberna, 2025-10-14: ties the rename to the March 2025 middleware-bypass vulnerability (no CVE id given) and argues for data-layer checks; that is the author's reading, since the official Proxy page gives other reasons (confusion with Express middlewa
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [06d · Block, and opting out honestly](06d-block-and-opting-out-honestly.md) · [Chapter 2 overview](01-explanation.md) · Next → [07b · Adopting proxy: the rename, the limits and where it runs](07b-adopting-proxy-the-rename-the-limits-and-where-it-runs.md)

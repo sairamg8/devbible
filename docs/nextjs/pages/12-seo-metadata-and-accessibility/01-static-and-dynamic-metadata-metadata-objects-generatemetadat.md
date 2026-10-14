@@ -281,6 +281,18 @@ then the segment's `generateMetadata` or `metadata` object, then whatever ancest
 contributed and the child did not override. Within the object layer, resolution runs root to
 leaf with a shallow merge.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [generateMetadata](https://nextjs.org/docs/app/api-reference/functions/generate-metadata) — Next.js docs, updated 2026-08-19: `metadata` vs `generateMetadata`, Server Components only, request memoization of `fetch`, title `template`/`default`/`absolute`, `metadataBase`, shallow merge across segments, streaming metadata and `htmlLimitedBots`, Cache Compon
+- **Also good:** [generateViewport](https://nextjs.org/docs/app/api-reference/functions/generate-viewport) — Next.js docs, updated 2026-06-09: `themeColor`, `colorScheme` and `viewport` moved out of `metadata` (deprecated there since 14); viewport cannot stream (*read*)
+- **Also good:** [Metadata Files](https://nextjs.org/docs/app/api-reference/file-conventions/metadata)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter 12 overview](01-explanation.md) · [Chapter 12 overview](01-explanation.md) · Next → [The title algebra and the viewport export](01b-the-title-algebra-and-the-viewport-export.md)

@@ -181,6 +181,19 @@ Not with a normal uptime probe, because the page renders fine for a browser User
 **★ Someone proposes disabling streaming metadata site-wide to make debugging simpler. Argue both sides.**
 For: it makes every response's `<head>` complete before the body, so `curl` with any User-Agent shows the truth, and any scraper outside the bot list gets tags where it expects them — which is the correct fix if you have a real consumer that only parses `<head>`. Against: the documentation is explicit that the blocking path costs TTFB, because the whole document waits on `generateMetadata`, and that cost lands on every dynamically rendered route including the ones no crawler visits. The proportionate move is to fix the specific case — add the agent, or make that route's metadata static — and keep streaming for everything else.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Streaming (HTTP contract and bots)](https://nextjs.org/docs/app/guides/streaming) — Next.js docs, updated 2026-10-06: a 200 is committed once streaming starts, so mid-stream `notFound()` injects `noindex` and `redirect()` becomes client-side; put `notFound()` before any `await` or Suspense; HTML-limited bots get blocking metadata; a script that f
+- **Also good:** [generateMetadata, Streaming metadata](https://nextjs.org/docs/app/api-reference/functions/generate-metadata) — `htmlLimitedBots`, and the warning that overriding it can lengthen responses (*read*)
+- **Also good:** [loading.js](https://nextjs.org/docs/app/api-reference/file-conventions/loading)
+- **Beyond the docs:** [Server-Side Streaming SEO in 2026: A Cross-Framework Study](https://unhead.unjs.io/learn/research/streaming-head-performance) — Unhead docs, last updated 2026-03-05, author not named: compares eight frameworks' head strategies; only Next.js is described as serving bots and users differently (blocking for UA-detected bots), and it notes niche crawlers missing from the default bot list as a risk. The site belongs
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Auditing a11y and what no tool can reach](04g-auditing-accessibility-and-what-no-tool-can-reach.md) · [Chapter 12 overview](01-explanation.md) · Next → [Canonicals, duplicate URLs and redirect hygiene](05b-canonicals-duplicate-urls-and-redirect-hygiene.md)

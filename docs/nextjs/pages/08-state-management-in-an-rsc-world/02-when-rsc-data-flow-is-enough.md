@@ -195,6 +195,18 @@ Because it moves the fetch to after hydration. The server render already had the
 **★ How does the segment granularity of the loop show up as a performance problem, and what do you do about it?**
 The unit re-rendered is everything below the shared layout of the current and destination routes, so a value that changes often forces a large re-render even when only one leaf displays it. Two remedies exist before a store: push the boundary down by moving the changing content into a deeper segment or a separate `<Suspense>` boundary so less is in scope, and move the expensive work into a cached function so the re-render replays a payload instead of re-querying. A store is the right answer only when the update frequency is genuinely beyond what a request-driven loop should be doing — sixty times a second, not once a click.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mutating Data](https://nextjs.org/docs/app/getting-started/mutating-data) — nextjs.org (updated 2026-10-06): the single-roundtrip model where an action returns new UI plus data, `refresh`, `revalidatePath`, `redirect`, and the pointer to the interactive-apps guide for optimistic UI (*read*)
+- **Also good:** [Building interactive apps](https://nextjs.org/docs/app/guides/interactive-apps) — nextjs.org (updated 2026-08-19): starts from a Server Component app that calls `refresh()` after each mutation and adds streaming, `useOptimistic` and transitions only where the wait is felt (*read*)
+- **Also good:** [Server Components](https://react.dev/reference/rsc/server-components) — react.dev: why co-located server reads remove the client fetch waterfall (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01e · Stale mirrors and drift](01e-the-stale-mirror-and-the-drifting-store.md) · [Chapter 8 overview](01-explanation.md) · Next → [02b · The symptom that lies](02b-the-symptom-that-lies.md)

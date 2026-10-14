@@ -207,6 +207,16 @@ At the Data Access Layer boundary — the DAL catches it, maps the `SQLSTATE` to
 - [ch7 · expected errors are return values](../07-error-handling-loading-states-and-resilience/01b-expected-errors-are-return-values.md) — why an Action returns rather than throws
 - [ch15 · thin entry points over one rule](../15-databases-apis-and-full-stack-patterns/02n-thin-entry-points-over-one-rule.md) — the same argument at the chapter-15 scale
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Problem Details for HTTP APIs (RFC 9457)](https://www.rfc-editor.org/rfc/rfc9457) — IETF Proposed Standard, 2023, obsoletes RFC 7807: `application/problem+json` with `type`, `title`, `status`, `detail`, `instance` and extension members that clients must ignore if unknown (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [09g · The one genuine superpower](09g-the-one-genuine-superpower.md) · [Chapter 16 overview](01-explanation.md) · Next → [10b · Never leak a driver error](10b-never-leak-a-driver-error.md)

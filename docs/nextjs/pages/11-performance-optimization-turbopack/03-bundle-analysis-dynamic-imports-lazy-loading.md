@@ -263,6 +263,18 @@ the *measurement exists* before comparing it to a threshold, and prefer a tool t
 budget file over one whose output you parse. Both are cheap, and both convert this class of failure from
 invisible to loud.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optimizing package bundling](https://nextjs.org/docs/app/guides/package-bundling) — Next.js docs, updated 2026-10-06: `next analyze` (Turbopack, 16.1+) with import-chain tracing, `--output` to `.next/diagnostics/analyze`, `next analyze export` for JSON Lines, then `optimizePackageImports`, moving heavy rendering to Server Components, `serverExter
+- **Also good:** [How to lazy load Client Components and libraries](https://nextjs.org/docs/app/guides/lazy-loading) — Next.js docs, updated 2026-03-10: `next/dynamic` vs `React.lazy`, `ssr: false` only inside Client Components, on-demand `import()`, magic comments (*read*)
+- **Beyond the docs:** [Optimizing Next.js performance: bundles, lazy loading and images](https://www.catchmetrics.io/blog/optimizing-nextjs-performance-bundles-lazy-loading-and-images) — Catch Metrics, author not shown, 2025-07-15: explains the webpack analyzer's treemap output briefly, then covers code splitting in a separate section (`next/dynamic` with `ssr: false`, `React.lazy` mentioned); it never connects a treemap finding to a specific split, so use i
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02e · What the compiler surfaces](02e-what-the-compiler-surfaces-in-old-code.md) · [Chapter index](01-explanation.md) · Next → [03b · The two analyzers](03b-the-two-analyzers-and-how-to-read-them.md)

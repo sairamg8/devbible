@@ -261,6 +261,17 @@ Because a rendering decision is always a trade, and the thing you gave up is wha
 **★ Give a review trigger for the marketing-site decision that is genuinely observable.**
 "Personalised marketing content appears on the committed roadmap" is one — it is a date on a plan, not a judgement call. "Concurrent experiments exceed the number the variant cache tolerates" is another, and it is measurable as a cache hit ratio falling. "Build duration crosses the point where you would hesitate to deploy during an incident" is the third. Each is something a person can check without re-litigating the architecture; a trigger like "when the site gets big" is not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Optimizing the static shell](https://nextjs.org/docs/app/guides/optimizing-the-static-shell) — nextjs.org guide, updated 2026-10-06: the worked example turns an authenticated team settings route into a shell plus streamed parts, which is the dashboard end of the spectrum (*read*)
+- **Beyond the docs:** [When to Use SSR in Next.js 16: A Decision Framework](https://makerkit.dev/blog/tutorials/nextjs-when-to-use-ssr) — MakerKit, published 2026-01-22, updated 2026-09 for Next.js 16 and React 19.2: dynamic for dashboards, static or cached for marketing and blog, Cache Components with `Suspense` for mostly static pages with one personal section; no author named, so treat as one team's opinion
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04d · The migration back](04d-the-migration-back-and-the-one-way-door.md) · [Chapter 6 overview](01-explanation.md) · Next → [05b · Content platforms, and the SSR reflex](05b-content-platforms-and-the-ssr-reflex.md)

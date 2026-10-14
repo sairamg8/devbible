@@ -132,6 +132,17 @@ It removes the framework-owned cache, so it removes that class of framework bug 
 **Why should a comparison document be written around what each framework makes hard?**
 Because that is the stable part. Features copy between frameworks within a release or two — every project here has server rendering, streaming, file-based routing and type-safe params in some form — so a feature table is out of date almost immediately. What each project made *hard* follows from what it decided to optimise, and that rarely changes: Astro will keep being awkward for interactive shells, React Router will keep declining to make caching decisions for you, and Next.js will keep having opinions you must learn. A document written on that axis survives the next release; one written on features does not.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Comparison: TanStack Start vs Next.js vs React Router](https://tanstack.com/start/latest/docs/framework/react/comparison) — tanstack.com: a feature matrix marked as checked on 2026-09-11 against Next 16.3 and React Router 8.3, with a "When to Choose Each Framework" section and a note that it does not establish a performance winner (*read*)
+- **Beyond the docs:** [Five Alternatives to Next.js](https://blog.openreplay.com/next-js-alternatives/) — OpenReplay Team, 2026-05-28: one paragraph each on React Router v7, Astro and TanStack Start with the "who should switch" call; says TanStack Start was still RC in mid-2026, so check that line
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [01 · Evolution to the App Router](01-evolution-from-pages-router-to-app-router-why-app-router-is.md) · [Index](01-explanation.md) · Next → [03 · Core philosophy: server-first rendering](03-core-philosophy-server-first-rendering.md)

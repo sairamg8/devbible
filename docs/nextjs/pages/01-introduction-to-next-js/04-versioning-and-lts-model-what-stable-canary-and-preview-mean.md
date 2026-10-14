@@ -194,6 +194,17 @@ Because that range spans the August 2026 security release, which disabled AVIF o
 **Why does `next upgrade` matter beyond bumping a dependency?**
 It also updates the documentation bundled inside the package at `node_modules/next/dist/docs/`, and `next dev` maintains an `AGENTS.md` block pointing agents at those docs. That mechanism is why Vercel retired the earlier documentation Skills — version-matched docs now travel with the install. The practical consequence is that an AI agent in your repo reads docs for the version you actually have, but only if you upgrade; a stale install produces an agent that is confidently wrong about your own codebase.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Next.js Support Policy](https://nextjs.org/support-policy) — nextjs.org: Active LTS until the next major, then Maintenance LTS for two years (critical fixes only, shipped as semver-minor even if breaking), and canary is published daily and not for production traffic (*read*)
+- **Also good:** [Next.js 16.3](https://nextjs.org/blog/next-16-3) — nextjs.org blog, 2026-08-03: the stable release post that replaces the "16.3 is in preview" callout; Instant Navigations are opt-in behind two flags, and the Rust React Compiler is listed as experimental (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [03b · Hybrid static/dynamic](03b-hybrid-static-dynamic-and-the-cost-model.md) · [Index](01-explanation.md) · Next → [05 · Project setup](05-project-setup-create-next-app-turbopack-defaults-typescript.md)

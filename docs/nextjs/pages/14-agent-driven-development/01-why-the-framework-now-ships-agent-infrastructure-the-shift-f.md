@@ -133,6 +133,19 @@ Two of the three parts cannot live in an editor. Version-matched documentation r
 **★ What does this infrastructure explicitly not solve?**
 Anything about your codebase rather than the framework. Bundled docs make the agent right about Next.js; they say nothing about your cache boundaries, your data-access rules or where your `"use client"` boundaries belong — that is what you encode yourself, outside the managed block. It also does not reach production: every MCP capability is a dev-server capability. And it does not verify judgement — nothing checks whether the fix chosen from the menu was the right one for that route, whether an authorization check tests the relationship rather than just the session, or whether the result is usable with a keyboard.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Next.js 16.3: AI Improvements](https://nextjs.org/blog/next-16-3-ai-improvements) — Aurora Scharff and Jude Gao, Next.js blog, 2026-06-26: the thesis "designed primarily for agent-driven development", the list of what ships (bundled docs via `AGENTS.md`, Skills, agent-browser, actionable errors, a smaller MCP server, docs as Markdown) (*read*)
+- **Also good:** [How Next.js supports AI coding agents](https://nextjs.org/docs/app/guides/ai-agents) — Next.js docs, updated 2026-10-06: the one-page map of all of it (*read*)
+- **Also good:** [Next.js 16.2: AI Improvements](https://nextjs.org/blog/next-16-2-ai)
+- **Also good:** [AGENTS.md outperforms skills in our agent evals](https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals) — Jude Gao, Vercel, 2026-01-27: skills matched the 53% baseline by default, 79% with explicit instructions, an `AGENTS.md` docs index reached 100%; vendor-run evals on a Next.js 16 suite (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter 14 overview](01-explanation.md) · Next → [`AGENTS.md` and repository context maps](02-agentsmd-and-repository-context-maps-version-matched-bundled.md)

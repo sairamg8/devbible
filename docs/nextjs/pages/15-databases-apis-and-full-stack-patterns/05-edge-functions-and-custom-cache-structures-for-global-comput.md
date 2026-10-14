@@ -52,6 +52,19 @@ You are done with this topic when you can take an application that is correct on
 - [04 · Background jobs and message queues](04-background-jobs-and-message-queues-for-async-workloads.md) — where work goes when a request cannot hold it
 - [ch17 · Deployment, scaling and observability](../17-deployment-scaling-and-observability/01-explanation.md) — the platform view of the same decisions
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`cacheHandlers`](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheHandlers) — Next.js docs (frontmatter 16.4.0, updated 2026-09-29): custom storage for `use cache` and `use cache: remote`; "most applications don't need custom cache handlers"; `use cache: private` is not configurable; `refreshTags` and `updateTags` coordinate invalidation across instances (*read
+- **Also good:** [Using a CDN with Next.js](https://nextjs.org/docs/app/guides/cdn-caching) — Next.js docs: `Cache-Control` per route type, the `Vary` headers (`rsc`, `next-router-state-tree`, `next-router-prefetch`, `next-router-segment-prefetch`, `next-url`), `rsc` must be forwarded and `_rsc` kept in the cache key (*read*)
+- **Also good:** [`runtime` segment config](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config/runtime) — and [Edge Runtime Deprecated](https://nextjs.org/docs/messages/edge-runtime-deprecated): Next.js docs
+- **Also good:** [Edge Runtime Deprecated](https://nextjs.org/docs/messages/edge-runtime-deprecated)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · Background jobs and message queues](04-background-jobs-and-message-queues-for-async-workloads.md) · Start → [05b · The Edge Runtime is deprecated](05b-the-edge-runtime-is-deprecated.md)

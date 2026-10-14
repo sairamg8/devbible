@@ -192,6 +192,18 @@ No, and this is a common inversion. A boundary declares where a fallback is allo
 **Why does the swap happen before the page's JavaScript bundle has loaded?**
 Because the swap is not React's job at that point — it is a small inline `<script>` that React streams next to the boundary's HTML, and the browser runs it the moment it parses it. Hydration comes later and separately, driven by the component payload. This is what makes streamed content visible on a slow connection long before the page is interactive, and it is also why a boundary costs something on the client even when its data was instant: the content only appears once that script has run.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Streaming](https://nextjs.org/docs/app/guides/streaming) — nextjs.org guide, updated 2026-10-06: the HTML stream and component payload, sibling and nested boundaries, "push dynamic access down", and why a status code cannot change after the first chunk (*read*)
+- **Also good:** [Fetching Data](https://nextjs.org/docs/app/getting-started/fetching-data) — nextjs.org docs: the short version: `loading.js` wraps the page in a boundary, and a layout that reads runtime data does not fall back to its own segment's `loading.js` (*read*)
+- **Beyond the docs:** [Suspense and Streaming](https://vercel.com/academy/nextjs-foundations/suspense-and-streaming) — Vercel Academy, Next.js Foundations lesson, updated 2026-08-21: shell first, then slow sections as they resolve; `loading.tsx` as a page-level boundary, component-level boundaries, skeletons shaped like the content and the warning that too many nested boundaries give confusing loading states; 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01i · co-location and preloading](01i-co-location-preloading-and-where-the-fetch-call-belongs.md) · Next → [02b · where to put boundaries](02b-where-to-put-boundaries-loading-js-and-granular-streaming.md)

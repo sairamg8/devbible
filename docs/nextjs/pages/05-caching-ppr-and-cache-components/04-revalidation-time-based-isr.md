@@ -208,6 +208,17 @@ Because the two caches are invalidated by different mechanisms with different gr
 **Why does `revalidateTag` not update the screen in the same round trip when `updateTag` does?**
 Because they express different intentions and the framework acts on the difference. `updateTag`, `revalidatePath` and `refresh` all cause Next.js to re-render the current route server-side and include a fresh RSC payload in the action's response, so the change is visible in the same round trip. `revalidateTag` with a stale-while-revalidate profile intentionally skips that re-render — the whole point of the profile is that stale content continues to be served while a refresh happens in the background, so waiting for fresh data in the action's response would contradict it. That makes the choice a product decision rather than a technical one: `updateTag` when the user must see their own write, `revalidateTag` when a background refresh is enough and you would rather nobody waited.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Revalidating](https://nextjs.org/docs/app/getting-started/revalidating) — nextjs.org docs, updated 2026-06-25: `cacheLife`, `cacheTag`, `revalidateTag` (stale-while-revalidate, profile `max` recommended), `updateTag` (read-your-own-writes, Server Actions only), `revalidatePath` (*read*)
+- **Also good:** [updateTag](https://nextjs.org/docs/app/api-reference/functions/updateTag) — nextjs.org reference, updated 2026-08-18: the `updateTag` versus `revalidateTag` rules, and that `revalidateTag` without a profile is the legacy form, equivalent to `updateTag` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03c · Validation, DevTools and CI](03c-instant-navigation-validation-devtools-and-proving-it-in-ci.md) · [Chapter index](01-explanation.md) · Next → [05 · Turbopack build caches](05-turbopack-build-caches-persistent-build-cache-and-memory-evi.md)

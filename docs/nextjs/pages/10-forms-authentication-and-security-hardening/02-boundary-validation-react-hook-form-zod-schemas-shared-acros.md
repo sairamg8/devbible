@@ -216,6 +216,20 @@ Everything it imports comes with it. That is a bundle-size problem when the tran
 **Why does the Next.js forms guide describe client-side validation as HTML attributes rather than as a schema?**
 Because HTML attributes are the only client-side validation that works before hydration, which matters for a form that posts to a Server Action with JavaScript still loading. `required` and `type="email"` are enforced by the browser itself. A schema-based client check needs the bundle to have arrived, so it is strictly an enhancement layered on top — useful, but not the baseline the guide documents.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to create forms with Server Actions](https://nextjs.org/docs/app/guides/forms) — nextjs.org: server-side validation with Zod or Valibot via `safeParse`, flattened field errors returned as state (*read*)
+- **Read this:** [authentication guide](https://nextjs.org/docs/app/guides/authentication)
+- **Also good:** [Zod 4 changelog](https://zod.dev/v4/changelog) — Zod docs: "The `invalid_type_error` / `required_error` params have been dropped" in favour of `error`; `.flatten()` is deprecated, and the page names `z.treeifyError()` as the replacement; `z.email()` over the deprecated method form `z.stri
+- **Also good:** [react-hook-form/resolvers](https://github.com/react-hook-form/resolvers) — GitHub: `zodResolver(schema)` passed to `useForm`, the full list of supported schema libraries (Zod, Valibot, Yup, ArkType and others), and a caveat on `.default()` with a generic passed to `useForm`; examples carry a `zod/v4` import comm
+- **Beyond the docs:** [Both-sides form validation with Next.js (React Hook Form and next-safe-action)](https://dev.to/arnaudrenaud/both-sides-form-validation-with-nextjs-react-hook-form-next-safe-action-1di1) — Arnaud Renaud, DEV Community, 2025-04-09: one Zod schema reused in the browser and in the Server Action, with loading, success and error states; uses the next-safe-action library, which our chapter does not, and names no Zod version (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01e · The request envelope](01e-the-request-envelope-csrf-size-rate-limits-and-idempotency.md) · [Chapter 10 overview](01-explanation.md) · Next → [02b · `FormData` is all strings](02b-formdata-is-all-strings-coercion-at-the-boundary.md)

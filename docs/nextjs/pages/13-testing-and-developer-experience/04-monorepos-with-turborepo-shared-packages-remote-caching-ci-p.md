@@ -211,6 +211,18 @@ Because Turborepo's model is "run a script to completion, then cache its outputs
 **★ In a monorepo on Next.js 16, what silently stopped happening after an upgrade?**
 Linting. `next lint` was removed and `next build` no longer runs the linter, so a pipeline whose only quality gate was `turbo run build` now lints nothing and stays green. The monorepo-specific consequence is that the fix is per package — a `lint` script in each, and a `lint` task with `"outputs": []` — because a single root-level lint task rehashes the whole repository on every commit and stops being cacheable in any useful sense.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) — Turborepo docs, no date shown: `turbo login` and `turbo link`, signed artifacts via `remoteCache.signature` (HMAC-SHA256 key from `TURBO_REMOTE_CACHE_SIGNATURE_KEY`), self-hosting against the Remote Cache API spec (*read*)
+- **Also good:** [GitHub Actions](https://turborepo.dev/docs/guides/ci-vendors/github-actions) — Turborepo docs: workflow with Vercel Remote Cache using OIDC (recommended) or a token, `TURBO_TEAM` and `TURBO_TOKEN` (*read*)
+- **Also good:** [Next.js with Turborepo](https://turborepo.dev/docs/guides/frameworks/nextjs)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Env schemas and contract tests](03e-env-schemas-and-contract-tests.md) · [Chapter 13 overview](01-explanation.md) · Next → [Shared packages and transpilation](04b-shared-packages-and-transpilation.md)

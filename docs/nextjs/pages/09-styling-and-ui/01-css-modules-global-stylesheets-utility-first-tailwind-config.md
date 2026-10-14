@@ -252,6 +252,17 @@ That the documentation explicitly allows it and that it will not do what they wa
 **How would you style a tenant-specific theme whose stylesheet URL is only known at request time?**
 Not with `import`, which is static and resolved at build time. React 19 supports rendering `<link rel="stylesheet" href={...} />` directly, and Next.js documents this as a supported option, so the layout can render a `link` element with a URL derived from the tenant. The alternative — and usually the better one — is to keep one stylesheet and swap only custom-property values on `:root` via an inline style or a data attribute, which avoids a second render-blocking resource entirely.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [CSS](https://nextjs.org/docs/app/getting-started/css) — nextjs.org (updated 2026-08-25): Tailwind via `@tailwindcss/postcss` and one `@import`, CSS Modules scoping, global CSS in the root layout, import-order merging, and the `cssChunking` option (*read*)
+- **Also good:** [Theme variables](https://tailwindcss.com/docs/theme) — Tailwind CSS docs (v4.3): the CSS-first model: an `@theme` block of CSS variables generates the utilities, `@theme inline` for variables that reference other variables, `:root` for variables that should not become utilities; it does not mention CSS Modules
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter index](01-explanation.md) · Next → [01b · CSS import order and chunking](01b-css-import-order-chunking-and-what-css-costs.md)

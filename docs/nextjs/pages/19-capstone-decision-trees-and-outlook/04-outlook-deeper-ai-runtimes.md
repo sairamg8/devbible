@@ -143,3 +143,15 @@ By separating what has shipped from what has been stated as intent from what the
 - [Appendix E · the version watchlist](../20-appendices/05-appendix-e-version-watchlist.md) — where the Skills correction is recorded in full
 
 ← [03e · The runtime and deployment-target tree](03e-the-runtime-and-deployment-target-tree.md) · [Chapter 19 overview](01-explanation.md) · Next → [04b · Compiler evolution and the next default](04b-compiler-evolution-and-the-next-default.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Next.js 16.3](https://nextjs.org/blog/next-16-3) — Next.js blog, 2026-08-03: the Instant Navigations behaviours "will become the default in a future major version"; `turbopackRustReactCompiler` and `useOffline` are experimental; the post retires the earlier docs-only Skills (the AI agents guide now lists w
+- **Also good:** [Migrating to Cache Components](https://nextjs.org/docs/app/guides/migrating-to-cache-components) — and [Adopting Partial Prefetching](https://nextjs.org/docs/app/guides/adopting-partial-prefetching): Next.js docs (both updated 2026-10-06)
+- **Also good:** [Adopting Partial Prefetching](https://nextjs.org/docs/app/guides/adopting-partial-prefetching)
+
+{/* LINKMAP:END */}

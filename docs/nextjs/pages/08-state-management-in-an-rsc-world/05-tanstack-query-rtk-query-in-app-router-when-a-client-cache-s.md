@@ -230,6 +230,20 @@ Because it re-requests the RSC payload for the entire current route, running eve
 **You keep TanStack Query for the socket-fed board but the rest of the app is pure RSC. Is that a coherent architecture?**
 Yes, and it is the recommended shape. The library's own guide frames Server Components as *"a place to prefetch data, nothing more"* and explicitly supports mixing prefetched and non-prefetched queries in one tree. Scope the cache to the screens whose requirements the framework cannot meet, and let the CRUD screens stay framework-native. What is *not* coherent is a global rule ("all data goes through Query") applied to screens that only ever fetch on navigation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Client-side data fetching](https://nextjs.org/docs/app/guides/client-side-data-fetching) — nextjs.org (updated 2026-08-11): try `use()` with a passed Promise first; reach for SWR or TanStack Query only when Client Components need a shared browser cache; `HydrationBoundary` for server-provided data; three cache layers with independent freshness; invalid
+- **Also good:** [Advanced Server Rendering](https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr) — TanStack Query docs: create a QueryClient per request on the server, prefetch in a Server Component, pass `dehydrate` state to `HydrationBoundary`, stream pending queries (v5.40+), and set `staleTime` above 0; no mention of Next 16 or `use cache` (*re
+- **Also good:** [Setup with Next.js](https://redux.js.org/usage/nextjs) — Redux docs: create the store per request, RSCs must not read or write it, store only globally shared mutable data, and use RTK Query "on the client only" with server fetching done by async RSCs. Its RTK Query SSR page ([server-side-rendering]
+- **Also good:** [server-side-rendering](https://redux.js.org/toolkit/rtk-query/usage/server-side-rendering)
+- **Beyond the docs:** [Advanced Server Rendering: React Query with Next.js App Router](https://dev.to/rayenmabrouk/advanced-server-rendering-react-query-with-nextjs-app-router-bi7) — Rayen Mabrouk, DEV Community, 2024-05-30: per-request client creation, `staleTime`, and the server-memory cost of `gcTime` on per-request clients; names no Next.js version and predates Cache Components (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04 · Client state tools compared](04-client-state-tools-compared-react-context-zustand-jotai.md) · [Chapter 8 overview](01-explanation.md) · Next → [05b · Server prefetch and HydrationBoundary](05b-server-prefetch-and-hydrationboundary.md)

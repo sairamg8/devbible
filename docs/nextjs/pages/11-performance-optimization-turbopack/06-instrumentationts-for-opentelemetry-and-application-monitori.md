@@ -259,6 +259,18 @@ The reference does not say, and I could not settle it from the documentation. Wh
 **Your host runs four worker processes per container. How many times does `register` run?**
 The documented rule is once per *new Next.js server instance*, and the docs do not enumerate what a multi-process host counts as. Practically, a process that constructs its own server instance runs it, so the honest answer in an interview is "once per server instance, and on a multi-worker host that usually means once per worker — which I would verify for the specific host rather than assume." The consequence is what matters and does not depend on the count: registration cost is multiplied by however many instances exist, and anything that must happen exactly once globally — a schema migration, a leader election — does not belong in `register` at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to set up instrumentation with OpenTelemetry](https://nextjs.org/docs/app/guides/open-telemetry) — Next.js docs, version 16.4.0, updated 2026-08-06: `@vercel/otel` with `registerOTel`, the manual `NodeSDK` path behind `process.env.NEXT_RUNTIME === 'nodejs'`, custom spans, default span list, `NEXT_OTEL_VERBOSE=1` and `NEXT_OTEL_FETCH_DISABLED=1` (*read*)
+- **Also good:** [instrumentation.js](https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation) — Next.js docs, updated 2026-06-09: `register()` runs once per server instance, `onRequestError(err, request, context)` with `digest`, stable since 15.0.0 (*read*)
+- **Beyond the docs:** [An in-depth guide to monitoring Next.js apps with OpenTelemetry](https://www.checklyhq.com/blog/in-depth-guide-to-monitoring-next.js-apps-with-opentelemetry/) — Tim Nolet, Checkly, 2024-07-15 (updated 2025-05-23): turning off fs/net/dns instrumentation to cut span noise, and head sampling (always-on locally, 10% in production); written for Next.js 14, so ignore its `instrumentationHook` step (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05 · Core Web Vitals](05-core-web-vitals-tuning-lcp-inp-cls-auditing-workflows.md) · [Chapter 11 overview](01-explanation.md) · Next → [06b · The price of a span](06b-the-price-of-a-span-trace-volume-as-a-production-cost.md)

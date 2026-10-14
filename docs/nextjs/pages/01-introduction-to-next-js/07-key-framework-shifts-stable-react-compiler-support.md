@@ -169,6 +169,17 @@ It removes `dynamic`, `dynamicParams`, `revalidate` and `fetchCache` as of v16.0
 **What problem does `catchError` solve that a React error boundary does not?**
 Two. Ordinary error boundaries in Next.js interfered with `notFound()` and `redirect()`, because those are implemented as thrown control flow and a boundary catches them as errors — so a boundary meant for real failures would swallow an intended redirect. And a plain boundary can only reset client state, giving no way to retry a Server Component that failed during rendering. `catchError` from `next/error` avoids the first and supplies a `retry()` for the second, which can refetch the boundary's children including re-rendering Server Components.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to upgrade to version 16](https://nextjs.org/docs/app/guides/upgrading/version-16) — nextjs.org: Node 20.9 / TypeScript 5.1 floor, synchronous `params` and `searchParams` removed (with `next typegen` helpers), `reactCompiler: true` stable but off by default with higher build times (*read*)
+- **Also good:** [Next.js 16](https://nextjs.org/blog/next-16) — nextjs.org blog, 2025-10-21: the release post, including the React Compiler Support (stable) section (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [06 · Hello World with the app directory](06-hello-world-with-the-app-directory.md) · [Index](01-explanation.md) · Next → [Chapter 2 · Routing and navigation](../02-routing-and-navigation/01-explanation.md)

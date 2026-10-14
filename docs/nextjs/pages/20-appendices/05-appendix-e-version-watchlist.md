@@ -119,6 +119,17 @@ It converts a feature evaluation into a migration schedule. Something that will 
 **★ This page carried an incorrect entry. What process failure does that represent, and what fixes it?**
 A plausible summary was recorded without being checked against the source that owned the feature — the AI agents guide, which describes Skills as current and repositions rather than removes them. The fix is structural rather than about care: record the source and the date next to every claim, so re-verification is a single fetch rather than a fresh investigation, and prefer the reference page over the release post, because references are corrected over time while posts are frozen. It is also the argument for a watchlist existing at all — a claim nobody wrote down cannot be re-checked, only re-argued.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Next.js 16.3](https://nextjs.org/blog/next-16-3) — Next.js blog, 2026-08-03: the stable list (Instant Insights, Partial Prefetching, root params, glob imports, immutable assets, `catchError`) and the experimental list (*read*)
+- **Also good:** [Next.js 16.3 support on Vercel](https://vercel.com/blog/vercel-supports-next-js-16-3) — Vercel blog, 2026-08-04: immutable assets under `/_next/static/immutable/*`, sharded routing metadata and new observability views (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Appendix D part 3 · metadata, a11y and the measurements](04c-appendix-d-metadata-a11y-and-the-measurements.md) · [Chapter 20 overview](01-explanation.md)

@@ -257,6 +257,18 @@ Serverless containers that have been paused, or marked for removal but not yet r
 **★ Why does one connection only run one query at a time, and why does that matter to a React Server Component tree?**
 The Postgres wire protocol is request/response on a single session; the backend process handles one statement at a time in FIFO order. It matters because RSC encourages you to co-locate fetches — the header component, the sidebar and the board each `await` their own query, and React renders those siblings concurrently. If they share one connection they run one after another and the page's time-to-first-byte becomes the sum, not the max. This is the concrete reason the pool size should be at least a few even in the most constrained runtime, and it is also why the parallel-fetch guidance in [ch04](../04-data-fetching-in-the-app-router/01h-parallel-and-sequential-fetching-and-the-shape-of-a-route.md) silently assumes a pool wide enough to honour it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Connection pooling](https://neon.com/docs/connect/connection-pooling) — Neon docs: the pooled string adds `-pooler` to the endpoint host, PgBouncer runs in transaction mode, and the page lists what breaks (`SET`/`RESET`, `LISTEN`/`NOTIFY`, SQL-level `PREPARE`, session advisory locks) (*read*)
+- **Also good:** [Neon with Drizzle ORM](https://orm.drizzle.team/docs/connect-neon) — Drizzle docs: separate HTTP and WebSocket tabs: HTTP suits single non-interactive transactions, and interactive transactions need the WebSocket driver (*read*)
+- **Also good:** [Connection pooling with Vercel Functions](https://vercel.com/kb/guide/connection-pooling-with-functions) — Vercel KB: suspended or reused instances keep connections open because idle timeouts do not run while suspended, so pools leak; the page's fix is `attachDatabasePool` on Fluid compute (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter 15 overview](01-explanation.md) · Next → [01b · Three kinds of pool](01b-the-three-kinds-of-pool.md)

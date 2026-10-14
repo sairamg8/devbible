@@ -281,6 +281,17 @@ or to render an explicit degraded state — never to make the error disappear.
 No. They are independent streaming points and resolve independently, so a failure in one does
 not cancel or affect the others. Three failures produce three error UIs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Streaming: Error handling mid-stream and The HTTP contract](https://nextjs.org/docs/app/guides/streaming) — nextjs.org guide, updated 2026-10-06: the nearest `error.js` replaces only the failed section, the 200 is already sent, `notFound()` mid-stream injects `noindex`, `redirect()` becomes a client redirect (*read*)
+- **Also good:** [loading.js: Status codes](https://nextjs.org/docs/app/api-reference/file-conventions/loading) — nextjs.org reference, updated 2026-09-23: put `notFound()`, `forbidden()` or `unauthorized()` before the first suspend to keep a real 404, 403 or 401 (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01e · `unstable_rethrow`](01e-unstable-rethrow-and-its-exact-contract.md) · **Next → [02b · `notFound()` and `redirect()` after the first chunk](02b-notfound-and-redirect-after-the-first-chunk.md)**

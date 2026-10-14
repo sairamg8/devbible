@@ -218,6 +218,19 @@ Because some of the verification tooling only exists after the app is on 16 — 
 **An agent replaced `serverRuntimeConfig` with `process.env` reads and a per-deployment value is now frozen. What went wrong?**
 The replacement is correct and incomplete. Environment variables are the documented successor, but a `process.env` read in a Server Component can be resolved at build time; `connection()` before the read is what forces it to request time. It is a good example of the class of migration an agent completes plausibly — the symbol is right, the timing is wrong, and nothing fails until deployment.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Ensuring instant navigations (AI workflow)](https://nextjs.org/docs/app/guides/instant-navigation) — Next.js docs, updated 2026-10-06: the observe, test, fix, verify loop: an `instant()` test that fails before the fix and passes after, run against a production-like build and kept as a regression guard (*read*)
+- **Also good:** [Upgrade with a coding agent](https://nextjs.org/docs/app/guides/upgrading/agent-upgrade) — Next.js docs, updated 2026-10-02, Experimental badge: `next upgrade --agent` gathers version-matched migration guides, hands the task to an agent, and asks it to use a separate worktree and run checks (*read*)
+- **Beyond the docs:** [Guardrails for Agentic Coding Workflows](https://coderabbit.ai/guides/guardrails-for-agentic-coding-workflows) — Brandon Gubitosa, CodeRabbit, 2026-06-18: advisory rules in instruction files can be ignored; enforced ones (sandboxing, merge-blocking CI) cannot; agents suppress linters or edit failing tests. Vendor article (*read*)
+- **Beyond the docs:** [The Ten-Thousand-File Codemod](https://tianpan.co/blog/2026-07-02-the-ten-thousand-file-codemod) — Tian Pan, 2026-07-02: codemods for the common cases, agents for the odd files, run as a batch job with idempotent retries and automated gates (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Skills, agent-browser and fix-menus](04-163-preview-first-party-skills-for-multi-step-workflows.md) · [Chapter 14 overview](01-explanation.md) · Next → [The verification loop, guardrails and review discipline](05b-the-verification-loop-guardrails-and-review-discipline.md)

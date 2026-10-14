@@ -125,6 +125,17 @@ Put the load-bearing pile where the next change has to read it — the repositor
 - [ch14 · the context file as decisions](../14-agent-driven-development/06b-what-an-agent-cannot-decide-and-what-context-files-fix.md) — where the load-bearing pile belongs afterwards
 - [02 · the contrast case study](02-case-study-2-contrast-a-ppr-driven-e-commerce-storefront.md) — the same review method against a differently-shaped application
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Production checklist](https://nextjs.org/docs/app/guides/production-checklist) — Next.js docs (updated 2026-03-10): the official pass over rendering, caching, security and analytics; some text predates 16 (it calls Partial Prerendering experimental) (*read*)
+- **Also good:** [How to build multi-tenant apps in Next.js](https://nextjs.org/docs/app/guides/multi-tenant) — Next.js docs (updated 2025-04-15): one sentence pointing at the Platforms Starter Kit as the recommended architecture (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter 19 overview](01-explanation.md) · Next → [01b · The decisions that are now load-bearing](01b-the-decisions-that-are-now-load-bearing.md)

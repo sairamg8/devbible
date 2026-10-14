@@ -276,6 +276,19 @@ It has to be cheaper and more reliable than the thing it replaces. A fallback th
 live service adds a second way to fail and often a slower path; cached data, a static default, or
 simply omitting the feature are the options that actually hold up when the primary is down.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [unstable_rethrow](https://nextjs.org/docs/app/api-reference/functions/unstable_rethrow) — nextjs.org reference, updated 2026-03-03: `notFound()` and `redirect()` throw, so a `try`/`catch` swallows them; call it first in the catch block. Marked "unstable" (*read*)
+- **Also good:** [catchError](https://nextjs.org/docs/app/api-reference/functions/catchError) — for `retry()` (*read*), and [Handling connectivity drops](https://nextjs.org/docs/app/guides/offline-support): guide, updated 2026-08-10, experimental: with `experimental.useOffline`, failed navigations, RSC fetches, prefetches and Server Actions stay pending and retry when the network returns, while direct `fetch()` in Client Components a
+- **Also good:** [Handling connectivity drops](https://nextjs.org/docs/app/guides/offline-support)
+- **Beyond the docs:** [Timeouts, retries, and backoff with jitter](https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter) — Marc, AWS, Amazon Builders' Library article (the old aws.amazon.com/builders-library address redirects here); page shows 2026-06-12: set a timeout on any remote call, retries need backoff and jitter, and APIs with side effects are not safe to retry without idempotency; not Next.js specific
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05c · Skeletons and layout shift](05c-skeletons-layout-shift-and-the-cost-of-a-boundary.md) · **Next → [06b · Timeouts, backoff and the retries you own](06b-timeouts-backoff-and-the-retries-you-own.md)**

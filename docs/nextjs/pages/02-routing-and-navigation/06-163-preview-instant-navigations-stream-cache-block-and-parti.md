@@ -223,6 +223,19 @@ Because the *behaviour* and the *feedback about the behaviour* stabilise on diff
 **The `instant` reference says a future validation level will support validation during build. What does that change for you?**
 Today the only level is `'warning'`, described as *"Validates in development only. Errors appear in the dev overlay; the build is unaffected."* Every Instant Insight is therefore invisible in CI unless you write an explicit `instant()` Playwright test. When a build-time level arrives, a regression in an instant route becomes a build failure rather than something a developer has to notice locally — which means the sensible preparation now is to keep the route set that must be instant small and explicitly annotated, so that the day the default changes you know exactly which routes are in scope.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Ensuring instant navigations](https://nextjs.org/docs/app/guides/instant-navigation) — nextjs.org: what "instant" means, the two flags (`cacheComponents`, `partialPrefetching`), validating in DevTools and in CI with the `instant()` Playwright helper, and fixing a navigation that blocks (*read*)
+- **Also good:** [Next.js 16.3](https://nextjs.org/blog/next-16-3) — nextjs.org blog, 2026-08-03: Instant Insights and Partial Prefetching sections (*read*)
+- **Also good:** [Building app-like experiences with Next.js 16.3](https://nextjs.org/blog/building-app-like-experiences-with-nextjs-16-3)
+- **Beyond the docs:** [Next.js 16.3 Instant Navigations](https://alexcloudstar.com/blog/nextjs-16-3-instant-navigations-cache-components/) — Alex Cloudstar, 2026-08-31: frames Partial Prefetching as a cost fix over broad `prefetch=&#123;true&#125;` and lists the `instant = false` opt-out in one line (no code)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [05 · Prefetching fundamentals and View Transitions](05-prefetching-fundamentals-and-the-native-view-transitions-api.md) · [Chapter 2 overview](01-explanation.md) · Next → [06b · Instant Insights and the fix cards](06b-instant-insights-and-the-fix-cards.md)

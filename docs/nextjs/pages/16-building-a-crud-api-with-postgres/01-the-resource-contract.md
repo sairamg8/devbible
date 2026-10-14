@@ -200,6 +200,17 @@ Only the parts you are willing to be unable to change. A field's name, type, nul
 **★ What does it mean for the contract file to have no imports?**
 That it can be consumed by things that cannot run your server — a test, a client SDK, a documentation build, another team's repository. The moment the contract imports the Drizzle schema, it is no longer a statement about the API; it is a statement about the database that happens to be reachable over HTTP, and it stops compiling anywhere the driver does not. The DAL's return types are derived from the schema, which is correct and covered in [04d](04d-projections-not-rows.md); the contract is the other direction, and keeping the two apart is what lets you change one without the other.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`route.js` file convention](https://nextjs.org/docs/app/api-reference/file-conventions/route) — Next.js docs: the seven methods and automatic `OPTIONS`, `params` as a Promise (since v15 RC), the `RouteContext` helper (*read*)
+- **Also good:** [Backend for Frontend](https://nextjs.org/docs/app/guides/backend-for-frontend) — Next.js docs: Route Handlers are public endpoints, a rate-limiting example returning 429, and "do not rely on proxy alone" for authorization (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter 16 overview](01-explanation.md) · Next → [01b · Six routes, and the codes](01b-the-six-routes-and-the-codes-they-commit-to.md)

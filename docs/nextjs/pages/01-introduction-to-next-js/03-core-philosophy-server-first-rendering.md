@@ -241,6 +241,18 @@ Importing it directly into a Server Component errors, because Next.js has no way
 **Someone adds `'use client'` to fix a hook error. Is that the right fix?**
 Usually not, and it is dangerous precisely because it works. The directive silences the error by moving the component to the browser, so the symptom disappears while the work quietly relocates and the bundle grows. The right question is whether the component genuinely needs one of the four things only the client offers: state and event handlers, lifecycle logic, browser-only APIs, or custom hooks built on those. If none apply, the hook was the mistake and the directive is papering over it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) — nextjs.org: layouts and pages are Server Components by default, the RSC Payload, HTML plus hydration on first load, and the "Reducing JS bundle size" example (*read*)
+- **Also good:** [Next.js Rendering Philosophy](https://nextjs.org/docs/app/guides/rendering-philosophy) — nextjs.org: static and dynamic as a spectrum at the component level, not the route level (*read*)
+- **Beyond the docs:** [Making Sense of React Server Components](https://joshwcomeau.com/react/server-components/) — Josh Comeau, 2023-09-06, updated 2025-05-09: builds the mental model that Server Components run once on the server and never hydrate, while Client Components render on both server and client
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [02 · Next.js vs the alternatives](02-nextjs-vs-alternatives-remix-react-router-v7-astro-tanstack.md) · [Index](01-explanation.md) · Next → [03b · Hybrid static/dynamic and the cost model](03b-hybrid-static-dynamic-and-the-cost-model.md)

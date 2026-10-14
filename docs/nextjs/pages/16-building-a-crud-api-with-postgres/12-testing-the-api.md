@@ -191,6 +191,17 @@ Because it cannot use the same reset strategy. DAL tests can run inside a wrappi
 **★ How do you decide which layer an assertion belongs in?**
 The lowest layer that can make it. Not the lowest layer that *could be made to* make it — a DAL test can be tortured into asserting a 404, and a Playwright test can be tortured into asserting a cascade — but the lowest layer that can make it *natively*, with the vocabulary it already has. If an assertion needs you to import something from a higher layer to express it, it belongs in that higher layer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Testing: Vitest](https://nextjs.org/docs/app/guides/testing/vitest) — Next.js docs (updated 2026-08-25): jsdom setup for unit tests; Vitest does not support async Server Components, so use E2E for those (*read*)
+- **Also good:** [Getting started with Testcontainers for Node.js](https://testcontainers.com/guides/getting-started-with-testcontainers-for-nodejs/) — Testcontainers: starts a real Postgres container in `beforeAll` and stops it in `afterAll`, so one per suite rather than per test; undated, with 2023 log timestamps (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [11 · Ownership on the API surface](11-ownership-on-the-api-surface.md) · [Chapter 16 overview](01-explanation.md) · Next → [12b · The database is the thing under test](12b-the-database-is-the-thing-under-test.md)

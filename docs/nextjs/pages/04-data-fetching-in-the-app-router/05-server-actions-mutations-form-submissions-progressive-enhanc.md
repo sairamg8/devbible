@@ -212,6 +212,18 @@ It is right about the mechanism and dangerous as a habit. Unreferenced Server Fu
 **What is the one sentence that prevents most Server Action security bugs?**
 "It is a route with a nicer calling convention." The `import` makes it look like a local function call; what actually ships to the browser is an action ID and a dispatcher that POSTs. Anyone who can send that POST reaches the function, with arguments of their choosing, without going through your UI at all. Once that is the mental model, authorizing inside the action, validating every argument and constraining every return value all read as obvious rather than as ceremony.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mutating Data](https://nextjs.org/docs/app/getting-started/mutating-data) — nextjs.org docs, updated 2026-10-06: creating and invoking Server Functions; Server Component forms work without JavaScript, Client Component forms queue until hydration; actions are POST-only and reachable directly (*read*)
+- **Also good:** [Server Actions and Mutations](https://nextjs.org/docs/app/guides/server-actions) — nextjs.org guide, updated 2026-10-06: sequential dispatch, one response carrying data and UI, CSRF and action-ID protections, and how `updateTag` differs from `revalidateTag` (*read*)
+- **Beyond the docs:** [Next.js Forms with Server Actions](https://www.robinwieruch.de/next-forms/) — Robin Wieruch, updated 2026-05-28: builds a form with `useActionState` and server-side Zod validation, then shows it still works with JavaScript off but loses the loading feedback and toast, with a `noscript` fallback for the status message; intro says Next.js 15
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04f · Config, runtime and CORS](04f-caching-runtime-cors-and-the-public-endpoint-contract.md) · [Chapter 4 overview](01-explanation.md) · Next → [05b · Invoking an action](05b-invoking-an-action-and-what-progressive-enhancement-really-buys.md)

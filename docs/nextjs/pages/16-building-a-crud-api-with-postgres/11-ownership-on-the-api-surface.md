@@ -192,6 +192,18 @@ At the next query, if the predicate joins `team_members` at query time — which
 - [10 · errors and one response shape](10-errors-and-one-response-shape.md) — the taxonomy that can express all three answers
 - [ch10 · authorization on the board](../10-forms-authentication-and-security-hardening/06f-milestone-authorization-on-the-board.md) — roles and permissions, which are a different question
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to think about data security in Next.js](https://nextjs.org/docs/app/guides/data-security) — Next.js docs: re-verify inside each action, and check ownership (authorization), not just login, to avoid IDOR; its example loads the post and compares `authorId` afterwards (*read*)
+- **Also good:** [Server Actions and Mutations](https://nextjs.org/docs/app/guides/server-actions) — Next.js docs: the safe version takes only an id, derives identity from the session and looks the row up with `findFirst` on id plus `ownerId`, which is our predicate; schema validation checks shape, not ownership (*read*)
+- **Also good:** [Nextjs Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nextjs_Security_Cheat_Sheet.html) — OWASP: "Proxy should not be the only line of defense", and test entry points directly with wrong-owner and wrong-tenant requests (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [10b · Never leak a driver error](10b-never-leak-a-driver-error.md) · [Chapter 16 overview](01-explanation.md) · Next → [12 · Testing the API](12-testing-the-api.md)

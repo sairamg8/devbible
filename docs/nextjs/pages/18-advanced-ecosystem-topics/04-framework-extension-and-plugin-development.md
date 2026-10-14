@@ -245,6 +245,18 @@ In an adapter, not a config wrapper. `modifyConfig` and `onBuildComplete` are th
 **Is `next.config.ts` meaningfully safer than `next.config.js` for plugin authors?**
 Yes, for one specific failure: unknown keys. Next.js ignores config keys it does not recognise, so a wrapper that returns a subtly misspelled option produces a build that silently does nothing different. Typing the *composed* result with `satisfies NextConfig` catches that; typing only the base object does not, because the wrapper's return value is where the mistake lives.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Turbopack configuration](https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack) — Next.js docs (updated 2026-09-24): `rules` for webpack loaders (a subset of the loader API: no `importModule`, `loadModule` or `emitFile`), `resolveAlias`, `resolveExtensions`, `debugIds` (*read*)
+- **Also good:** [`adapterPath`](https://nextjs.org/docs/app/api-reference/config/next-config-js/adapterPath) — Next.js docs: the built-in adapters API for platforms and build systems, stable and top-level since v16.2.0 (*read*)
+- **Also good:** [Next.js Across Platforms](https://nextjs.org/blog/nextjs-across-platforms) — Next.js blog, 2026-03-25: the adapter contract is versioned and breaking changes need a new major (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Supply-chain vigilance](03b-supply-chain-vigilance.md) · [Chapter index](01-explanation.md) · Next → [The bundler seam](04b-the-bundler-seam-webpack-and-turbopack.md)

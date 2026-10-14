@@ -187,6 +187,19 @@ Whether `AGENTS.md` and `.mcp.json` are committed. Both are frequently treated a
 **★ Your context map says data fetching is dynamic by default. Why is that worth writing down when the framework already knows it?**
 Because the framework knows the default and only your team knows the consequence. The agent will read in the bundled docs that Cache Components makes fetching dynamic; what it will not know is that in this repository an unmarked read is considered a bug rather than an acceptable default, that your `stale` values have floors chosen deliberately, and that lowering `stale` to fix a staleness complaint will silently disable prefetching. That is the gap between knowing a framework's semantics and knowing a team's policy, and only one of those ships in `node_modules`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How Next.js supports AI coding agents (Version-matched documentation)](https://nextjs.org/docs/app/guides/ai-agents) — Next.js docs, updated 2026-10-06: docs at `node_modules/next/dist/docs/`; the managed block between `nextjs-agent-rules` markers that `next dev` writes when it detects an agent (16.3+); `create-next-app` creates the agent files; 16.2 bundles docs without generatin
+- **Also good:** [agentRules](https://nextjs.org/docs/app/api-reference/config/next-config-js/agentRules) — Next.js docs, updated 2026-09-22: added in 16.3.0; `false` stops the block, and from 16.4.0 removes an existing one on the next `next dev`; `create-next-app --no-agents-md` (*read*)
+- **Also good:** [Upgrade with a coding agent](https://nextjs.org/docs/app/guides/upgrading/agent-upgrade)
+- **Beyond the docs:** [Next.js 16.2 AGENTS.md and next-browser: A Hands-On Guide](https://rabinarayanpatra.com/blogs/nextjs-16-2-agents-md-next-browser) — Rabinarayan Patra, 2026-04-29: hands-on setup: `CLAUDE.md` importing `AGENTS.md` with `@AGENTS.md`, why CI must install packages before agents can read the bundled docs. Written for 16.2, before the 16.3 managed block, and it tells 16.2 users to run the `agents
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Why the framework ships agent infrastructure](01-why-the-framework-now-ships-agent-infrastructure-the-shift-f.md) · [Chapter 14 overview](01-explanation.md) · Next → [The Next.js DevTools MCP server](03-the-nextjs-devtools-mcp-server-exposing-build-diagnostics-an.md)

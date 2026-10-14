@@ -239,6 +239,20 @@ Because a route handler returns a `Response`, not markup — there is no JSX to 
 **★ Reading `searchParams` in a page makes it dynamic. How do you keep most of the page static anyway?**
 Do not read it at the top of the page component. Anything above the read can still be prerendered, so move the read into a child component and wrap that child in a `Suspense` boundary. The shell — heading, navigation, filters chrome — is prerendered and streamed immediately; only the part that genuinely depends on the query string waits for the request. The same trick is what makes the Cache Components model workable, and it generalises to `cookies()` and `headers()`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Layouts and Pages](https://nextjs.org/docs/app/getting-started/layouts-and-pages) — nextjs.org: folders are routes, `page` makes one public, `layout` wraps and persists (*read*)
+- **Also good:** [Template](https://nextjs.org/docs/app/api-reference/file-conventions/template) — nextjs.org: a template remounts on navigation, and a Suspense fallback in it shows on every navigation (*read*)
+- **Also good:** [loading](https://nextjs.org/docs/app/api-reference/file-conventions/loading)
+- **Also good:** [error](https://nextjs.org/docs/app/api-reference/file-conventions/error)
+- **Also good:** [not-found](https://nextjs.org/docs/app/api-reference/file-conventions/not-found)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter 2 overview](01-explanation.md) · Next → [01b · Layout and the root layout](01b-layout-and-the-root-layout.md)

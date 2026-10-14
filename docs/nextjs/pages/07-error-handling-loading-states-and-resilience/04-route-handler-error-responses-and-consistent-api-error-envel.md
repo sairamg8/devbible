@@ -235,6 +235,17 @@ handler defines. You only need to write `OPTIONS` yourself when the response mus
 more than that — CORS headers beyond the defaults, for instance.
 
 ---
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [route.js](https://nextjs.org/docs/app/api-reference/file-conventions/route) — nextjs.org reference: handlers return a Web `Response`, so status and body are yours (the webhook example returns a 400 with a plain-text message on a bad payload); nothing on envelope design (*read*)
+- **Beyond the docs:** [RFC 9457: Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc9457.html) — IETF, 2023-07, obsoletes RFC 7807: the `type` (defaults to `about:blank`), `title`, `status`, `detail` and `instance` members and the `application/problem+json` type; `status` is advisory but must match the HTTP status; section 4 covers defining new problem types. 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03d · Action IDs rotate](03d-action-ids-rotate-and-what-that-does-to-an-open-tab.md) · **Next → [04b · Designing the error envelope](04b-designing-the-error-envelope.md)**

@@ -157,6 +157,18 @@ Easier, because `cacheLife` decomposes the single number into the three quantiti
 **A stakeholder asks for "real-time" pricing on a cached page. What do you tell them?**
 That "real-time" and "cached" are exclusive, and that the framework's own guidance says so: if you need real-time data, switch to dynamic rendering. Then I would separate the two questions they have merged. If a stale price is merely *old* — the customer sees yesterday's price on a listing and today's at checkout — then on-demand invalidation on the price-write path plus a modest time-based backstop is the right shape, and it will usually look instant. If a stale price is *incorrect* — it is the number the customer is charged — then no cache configuration is acceptable and that read must be dynamic and authoritative. Almost every "real-time" request is the first case described in the language of the second.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Incremental Static Regeneration](https://nextjs.org/docs/app/guides/incremental-static-regeneration) — nextjs.org guide, updated 2026-06-23: time-based and on-demand revalidation, debugging, caveats; background regeneration runs on the instance that got the request, and the default cache is per instance (*read*)
+- **Also good:** [How revalidation works](https://nextjs.org/docs/app/guides/how-revalidation-works) — nextjs.org guide, updated 2026-06-01: time-based revalidation is stale-while-revalidate; soft and explicit tags; multi-instance behavior (*read*)
+- **Beyond the docs:** [Preventing the stampede: Request collapsing in the Vercel CDN](https://vercel.com/blog/cdn-request-collapsing) — Sachin Raja, Vercel, 2025-09-25: many requests to an expired ISR page each start a function; now one per region does the work, as the intended outcome rather than a guarantee (a request that cannot get the lock in time invokes the function itself). Describes Verc
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02d · What Cache Components changes](02d-when-the-path-set-changes-and-what-cache-components-changes.md) · [Chapter index](01-explanation.md) · Next → [03b · The stampede](03b-the-stampede-and-what-the-framework-does-not-protect-you-from.md)

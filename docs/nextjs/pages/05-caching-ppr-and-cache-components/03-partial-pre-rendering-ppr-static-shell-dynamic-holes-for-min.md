@@ -242,6 +242,18 @@ Module scope, `use cache`, or behind a `<Suspense>` boundary — and the choice 
 **Why is there no standalone PPR documentation page, and what does that tell you?**
 Because PPR stopped being a feature. In 15 it was `experimental.ppr`, a flag with its own guide, something you opted into per route. In 16 it is what rendering does when `cacheComponents` is on — the flag and the `experimental_ppr` segment config were both removed rather than deprecated. So it is documented where it now belongs, inside the Caching page's *Prerendering* section, with a glossary entry. The one page still titled for PPR — *Implementing Partial Prerendering on your platform* — is addressed to people building a hosting platform, and is where the build artefacts are named: a static HTML shell plus an opaque `postponedState` blob that must be stored and revalidated atomically with it. That is useful if you are writing an adapter and irrelevant if you are writing pages. The practical consequence is that searching for a PPR guide surfaces mostly 15-era material describing an experimental flag that no longer exists, which is a real hazard when the tutorial's first instruction is to add configuration that will now do nothing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Caching: Prerendering](https://nextjs.org/docs/app/getting-started/caching) — nextjs.org docs: the Prerendering section defines PPR as the default with Cache Components: cached, `Suspense` fallback and predictable parts form the shell, the rest streams; also "Maximizing the static shell" and the App Shell (*read*)
+- **Also good:** [Optimizing the static shell](https://nextjs.org/docs/app/guides/optimizing-the-static-shell) — nextjs.org guide, updated 2026-10-06: three patterns, then a five-step example on a team settings route: URL work behind `Suspense`, auth behind `Suspense`, caching shared plan data, verifying with `instant()`, per-link URL content (*read*)
+- **Beyond the docs:** [Cache Components for Instant and Fresh Pages](https://vercel.com/academy/nextjs-foundations/cache-components) — Vercel Academy, updated 2026-08-21: a lesson that builds a product page with a prefetched shell, `Suspense` holes and cached data using `cacheLife`, `cacheTag` and `updateTag`; Next.js 16 with 16.3 features, no author named
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [10 · The three cache directives](10-the-three-cache-directives/README.md) · [Chapter index](01-explanation.md) · Next → [03b · Maximizing the shell, and crawlers](03b-maximizing-the-shell-the-app-shell-and-what-crawlers-get.md)

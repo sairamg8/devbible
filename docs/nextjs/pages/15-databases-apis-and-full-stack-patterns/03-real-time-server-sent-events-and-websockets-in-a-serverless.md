@@ -177,6 +177,20 @@ Not SSE. Cursor positions are client→server at high frequency, which is the on
 **★ What is the first thing you check when an SSE endpoint "hangs" in production?**
 Whether anything is arriving at all versus arriving late. If the connection opens and the first byte never comes, suspect the handler — a `start()` that awaits before its first `enqueue`, or a route that got prerendered. If bytes arrive but all at once, it is a buffering layer: proxy, CDN or compression. The cheap discriminator is to send a comment line (`: ping`) immediately on connect, before any work. If that comment never appears, the path is buffering; if it appears instantly and the real events do not, the problem is your producer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) — MDN: wire format (`event`, `data`, `id`, `retry`, comment lines), `EventSource`, named events, `onerror` and `close()` (*read*)
+- **Also good:** [Vercel Functions limits](https://vercel.com/docs/functions/limitations) — Vercel docs: max duration counts streamed responses (300s default; Pro and Enterprise 800s maximum, 1800s in beta; Hobby 300s), and Edge must start responding within 25s (*read*)
+- **Also good:** [WebSocket support is now in Public Beta](https://vercel.com/changelog/websocket-support-is-now-in-public-beta) — Vercel changelog, 2026-06-22: WebSockets run on Fluid compute with the same limits and pricing as other invocations, and `ws` or Socket.IO work unconfigured; the Backend for Frontend guide's warning that WebSockets fail on lambda-style hosts predates this (*re
+- **Beyond the docs:** [Using Server-Sent Events (SSE) to stream LLM responses in Next.js](https://upstash.com/blog/sse-streaming-llm-responses) — Rishi Raj Jain, Upstash, 2024-05-06: a route handler streaming model tokens and a client reading the POST response with `TextDecoderStream`; Next.js version not stated (App Router, 2024) and no word on duration limits (*read*)
+- **Beyond the docs:** [WebSockets on Vercel: why serverless functions can't host them](https://ably.com/topic/ai-stack/websockets-on-vercel-why-serverless-functions-cant-host-them) — Ably, 2026-07-09, no named author: a connection pins to one instance under a 5-minute default cap with a 30-minute beta ceiling, and native support has no fan-out or presence; vendor content selling Ably, and its title says "can't" while its body reports Vercel's n
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02 · Hybrid API design](02-hybrid-api-design-route-handlers-and-server-actions-side-by.md) · [Chapter 15 overview](01-explanation.md) · Next → [03b · The event stream format](03b-the-event-stream-format.md)

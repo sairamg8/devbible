@@ -205,6 +205,18 @@ Because it drops unrecognised keys silently. A client that misspells `stauts` ge
 **★ If you could ship only one of PUT and PATCH, which and why?**
 PATCH, for a resource a UI edits field by field — which describes almost every CRUD API. A UI that must send the whole resource has to have read the whole resource recently, and every field it did not touch becomes a chance to overwrite someone else's edit. PUT earns its place when the client genuinely owns the record end to end — an importer, a sync agent, a system that regenerates the resource from its own source of truth — and there the retry safety of an idempotent method is worth real money.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [HTTP Semantics (RFC 9110)](https://www.rfc-editor.org/rfc/rfc9110.html) — IETF, June 2022: the `If-Match` (13.1.1), `ETag` (8.8.3) and 412 Precondition Failed (15.5.13) sections are in the table of contents (*headings only*)
+- **Also good:** [Explicit Locking](https://www.postgresql.org/docs/18/explicit-locking.html) — PostgreSQL 18 docs: row-level lock modes (`FOR UPDATE`, `FOR NO KEY UPDATE`, `FOR SHARE`, `FOR KEY SHARE`) for the pessimistic alternative (*read*)
+- **Beyond the docs:** [ETags and Optimistic Concurrency Control](https://fideloper.com/etags-and-optimistic-concurrency-control) — fideloper.com, no byline or publication date shown: client B sends a stale ETag in `If-Match` after client A changed the article and gets a 412 instead of overwriting (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [06g · Conditional requests](06g-conditional-requests-and-etag.md) · [Chapter 16 overview](01-explanation.md) · Next → [07b · Absent vs null](07b-absent-versus-null.md)

@@ -222,6 +222,19 @@ Not with this mechanism. The transform matches literal specifiers against a fixe
 **A dependency you did not write fails your build with a `server-only` error. Whose bug is it?**
 Usually nobody's — it is the package correctly telling you that you reached its server entry point from a client module. Well-built packages with both surfaces poison the server half deliberately, so the error is the feature working. Check the package's exports for a client entry and import that, or move the call up into a Server Component parent and pass the result down. The one case where it is the package's bug is a library that poisons a genuinely isomorphic module; then it is an upstream issue, and the workaround is a thin server-side wrapper you own.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Server and Client Components: Preventing environment poisoning](https://nextjs.org/docs/app/getting-started/server-and-client-components) — nextjs.org: the `API_KEY` example, why unprefixed env vars become empty strings, `server-only` giving a build-time error; install is optional (*read*)
+- **Also good:** [Data Security](https://nextjs.org/docs/app/guides/data-security) — nextjs.org: tainting (needs `experimental.taint`) as an extra layer behind a Data Access Layer, and `server-only` for proprietary code (*read*)
+- **Also good:** [experimental_taintObjectReference](https://react.dev/reference/react/experimental_taintObjectReference)
+- **Beyond the docs:** [Server-only Code in Next.js 16](https://makerkit.dev/blog/tutorials/server-only-code-nextjs) — Makerkit, no author, page date 2024-12-10, which predates Next 16 (title says 16, body names no version): shows props leaking server data and why taint alone is not enough, since a derived key is untainted
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [04b · `<Activity>` and offscreen state](04b-activity-and-offscreen-state.md) · [Index](01-explanation.md) · Next → [05b · What it does not protect](05b-what-server-only-does-not-protect.md)

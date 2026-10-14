@@ -144,3 +144,14 @@ The guidelines are tuned for data that cannot be shared and must be correct unde
 Because it appears in the header on every route, and a runtime read in a shared header is a runtime read on the whole catalogue. Under the pre-Cache-Components model that made every one of those routes dynamic outright. Under PPR the badge can be a hole — but only if the read stays inside a boundary and nothing above it awaits runtime data. So a component whose entire output is a number decides whether the most-visited pages on the site are served from a CDN or rendered per request. It is the smallest piece of UI on the page and the largest single lever on the hosting bill.
 
 ← [01e · What SprintDesk still does not have](01e-what-sprintdesk-still-does-not-have.md) · [Chapter 19 overview](01-explanation.md) · Next → [02b · Rendering and caching](02b-the-storefronts-rendering-and-caching-decisions.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Caching (Cache Components)](https://nextjs.org/docs/app/getting-started/caching) — Next.js docs (updated 2026-10-06; `getting-started/cache-components` ends up here): static shell plus cached and streamed parts; its figure shows a product page with a dynamic cart and recommendations, while the code example is a blog page (*read*)
+- **Also good:** [Implementing Partial Prerendering on your platform](https://nextjs.org/docs/app/guides/ppr-platform-guide) — Next.js docs: a PPR route yields a static shell, `postponedState` and an RSC payload, and a CDN can serve the shell while the origin resumes the dynamic parts; the line that streaming must work end to end is on the self-hosting guide, not here 
+
+{/* LINKMAP:END */}

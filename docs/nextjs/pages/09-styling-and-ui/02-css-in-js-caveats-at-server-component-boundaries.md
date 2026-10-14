@@ -172,6 +172,16 @@ No, and the shared list is misleading if you read it as a menu. `styled-componen
 **What does the warning about "concurrent rendering" at the top of the guide really mean for your library choice?**
 That compatibility is a property of the library's maintenance, not of your configuration. The documented warning is that using CSS-in-JS with Server Components and Streaming *"requires library authors to support the latest version of React"*. Under streaming, a component's markup can be flushed to the browser before later components have even rendered, so a library that assumes it can collect every rule and inject them once at the end is wrong by construction. That is why the list has a "currently working on support" section at all, and why a library's React-version support policy is a legitimate selection criterion.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to use CSS-in-JS libraries](https://nextjs.org/docs/app/guides/css-in-js) — nextjs.org (updated 2026-03-24): thirteen libraries listed as supported in Client Components, the three-step registry plus `useServerInsertedHTML` plus client wrapper setup, the styled-components registry, and the page's reason for a top-level Client Component re
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01c · Tailwind v4 and coexistence](01c-tailwind-v4-css-first-config-and-coexisting-with-css-modules.md) · [Chapter index](01-explanation.md) · Next → [02b · Style registries and the client boundary](02b-style-registries-and-what-the-client-boundary-actually-costs.md)

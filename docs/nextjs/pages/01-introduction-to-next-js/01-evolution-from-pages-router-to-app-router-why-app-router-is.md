@@ -165,6 +165,17 @@ The routers coexist, routed per path, so this is genuinely incremental. Move rea
 **What is the strongest argument that the Pages Router was a good design?**
 That its limitation was architectural rather than a defect. It was fast, predictable, and its data flow was extremely easy to reason about — one function, one props object, no question about where a fetch happens. What it could not do was let a nested component own its data, and that constraint only becomes expensive as applications grow deep rather than wide. Recognising that keeps the migration honest: you are trading a simpler model for a more capable one, and on a small site the trade may not pay.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to migrate from Pages to the App Router](https://nextjs.org/docs/app/guides/migrating/app-router-migration) — nextjs.org: a bulleted map of what replaced what (`getServerSideProps` and `getStaticProps` to Server Component data fetching, `_app`/`_document` to the root layout, `pages/api` to Route Handlers) and the rule that `app` and `pages` run side 
+- **Beyond the docs:** [Migrating from Pages Router to App Router: An Incremental Guide](https://clerk.com/blog/migrating-pages-router-to-app-router-an-incremental-guide) — Clerk blog, no author or date shown: a step recipe (root layout from `_document`, a `use client` wrapper for `_app`, a `ClientPage` plus a server `page`); it targets Next 12.3 Pages Router practice, so it predates Next 15/16
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev [01 · Overview: what Next.js is](01-explanation.md) · [Index](01-explanation.md) · Next → [02 · Next.js vs the alternatives](02-nextjs-vs-alternatives-remix-react-router-v7-astro-tanstack.md)

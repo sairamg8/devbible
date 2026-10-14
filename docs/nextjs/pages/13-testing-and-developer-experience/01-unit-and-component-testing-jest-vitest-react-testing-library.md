@@ -259,6 +259,19 @@ Because in Vitest 4 those assertions were auto-awaited at the end of the test wi
 **★ How do you decide something belongs in Playwright rather than in a unit test?**
 Ask whether the behaviour depends on anything jsdom does not have: real navigation, real streaming of a response, layout and visibility, the framework's request lifecycle, or a browser engine. If the answer is yes for any of them, no amount of mocking will make a jsdom test meaningful — you will be asserting on the shape of your mocks. Async Server Components, streaming boundaries and full request flows all fall on that side of the line.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to set up Vitest with Next.js](https://nextjs.org/docs/app/guides/testing/vitest) — Next.js docs, version 16.4.0, updated 2026-08-25: packages, `vitest.config.mts` with jsdom, a first RTL test; states Vitest does not support `async` Server Components, so test those end to end (*read*)
+- **Also good:** [How to set up Jest with Next.js](https://nextjs.org/docs/app/guides/testing/jest) — Next.js docs, updated 2026-08-25: the Jest equivalent with `next/jest`, same `async` Server Component caveat (*read*)
+- **Also good:** [Testing](https://nextjs.org/docs/app/guides/testing)
+- **Beyond the docs:** [Vitest and React Testing Library with Next.js 15](https://noqta.tn/en/tutorials/vitest-react-testing-library-nextjs-unit-testing-2026) — Noqta Team, 2026-03-08: components, a hook, forms, `vi.mock` of `next/navigation`; its learning objectives promise Server Components and Actions but the body has no tests for either (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Chapter 13 overview](01-explanation.md) · [Chapter 13 overview](01-explanation.md) · Next → [Server Components and Actions](01b-testing-server-components-and-server-actions.md)

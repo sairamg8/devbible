@@ -227,6 +227,19 @@ No. `app/dashboard/layout.tsx` wraps `/dashboard/settings` whether or not `app/d
 **Why does a nested layout not re-render when you navigate between its children?**
 Because that is the point of the layout tree: Next.js caches layouts on the client and reuses them across navigations within their subtree, so a sidebar's state and its server-side data fetching survive. Only the segments below the common prefix are re-rendered. The trade-offs that follow — no `searchParams` prop, no raw request object — are covered in [01b](01b-layout-and-the-root-layout.md), and the way to force a remount deliberately is `template.tsx`, in [01c](01c-layout-vs-template.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Parallel Routes](https://nextjs.org/docs/app/api-reference/file-conventions/parallel-routes) — nextjs.org: named `@folder` slots passed to the parent layout as props, `default.js` as fallback, and a step-by-step login modal with Intercepting Routes (*read*)
+- **Also good:** [Intercepting Routes](https://nextjs.org/docs/app/api-reference/file-conventions/intercepting-routes) — nextjs.org: the `(.)` / `(..)` / `(..)(..)` / `(...)` convention, based on route segments not folders, and why a modal URL survives refresh (*read*)
+- **Also good:** [Route Groups](https://nextjs.org/docs/app/api-reference/file-conventions/route-groups)
+- **Beyond the docs:** [Maximizing Routing Flexibility with Next.js Parallel and Intercepting Routes](https://www.thisdot.co/blog/maximizing-routing-flexibility-with-next-js-parallel-and-intercepting-routes) — Mattia Magi, This Dot Labs, 2024-04-05: explains the `@modal` slot plus `(..)photo` idea, but the code is incomplete (the `Modal` and `PhotoDetail` components are never defined), it names no Next version, and the page warns it is over 18 months old; it mentions `default
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01g · global-not-found.js](01g-global-not-found.md) · [Chapter 2 overview](01-explanation.md) · Next → [02b · Parallel routes and named slots](02b-parallel-routes-and-named-slots.md)

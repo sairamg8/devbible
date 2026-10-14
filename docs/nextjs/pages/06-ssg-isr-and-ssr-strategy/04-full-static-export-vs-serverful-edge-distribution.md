@@ -193,6 +193,17 @@ Draft Mode and ISR — items 11 and 9. Both are invisible on day one because the
 **★ A colleague argues that `dynamicParams: false` is not really a loss, since you can enumerate everything. What is the counter-argument?**
 That the loss is not correctness, it is the shape of the build. With on-demand generation, build time is bounded by however many paths you *chose* to prerender and the long tail costs nothing at build. With enumeration mandatory, build time is a function of content volume, which grows without anyone deciding to grow it. The failure is not a wrong page; it is a CI job that crosses a timeout during a release, with no code change to blame.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Static Exports](https://nextjs.org/docs/app/guides/static-exports) — nextjs.org guide, updated 2026-08-09: `output: 'export'`, what survives (only `GET` Route Handlers marked `force-static`), and the unsupported list: dynamic routes without `generateStaticParams`, request-reading Route Handlers, cookies, rewrites, redirects, headers, P
+- **Also good:** [Next.js Rendering Philosophy](https://nextjs.org/docs/app/guides/rendering-philosophy) — nextjs.org guide: "Infrastructure Implications" and "Portability and Fidelity": streaming, cache coordination and cache consistency needs, and functional versus performance fidelity of a host (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [03d · The cache is not one thing](03d-the-cache-is-not-one-thing.md) · [Chapter 6 overview](01-explanation.md) · Next → [04b · What survives, and the `force-static` trap](04b-what-survives-and-the-force-static-trap.md)

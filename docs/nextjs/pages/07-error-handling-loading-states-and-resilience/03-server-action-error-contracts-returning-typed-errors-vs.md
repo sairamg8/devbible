@@ -219,6 +219,19 @@ does not run, and the destination renders whatever was in the cache before the m
 
 ---
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Error Handling: Server Functions](https://nextjs.org/docs/app/getting-started/error-handling) — nextjs.org docs: model expected errors as return values, avoid `try`/`catch` for them, read the state with `useActionState` (*read*)
+- **Also good:** [Forms](https://nextjs.org/docs/app/guides/forms) — nextjs.org guide, updated 2026-10-06: "Validation errors": Zod `safeParse` plus `useActionState`, where the action gains a `prevState` first argument (*read*). Also [useActionState](https://react.dev/reference/react/useActionState)
+- **Also good:** [useActionState](https://react.dev/reference/react/useActionState)
+- **Beyond the docs:** [Next.js Server Actions: The Complete Guide (2026)](https://makerkit.dev/blog/tutorials/nextjs-server-actions) — MakerKit, published 2026-01-22: an `ActionResult` type with `success`, `error` and `data`, a generic message to the user with the real error logged server-side; no author or update date named
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [02c · What silently defeats streaming](02c-what-silently-defeats-streaming-in-production.md) · **Next → [03b · Sequential dispatch](03b-sequential-dispatch-and-what-it-does-to-error-ui.md)**

@@ -265,6 +265,18 @@ At hydration, not at prefetching configuration. `<Link>` is a Client Component a
 **Why is the Client Cache keyed by route segment rather than by URL?**
 So that navigating between siblings can reuse what is already there. Moving from `/dashboard/settings` to `/dashboard/analytics` reuses the cached parent layout and fetches only the changed leaf. Keying by URL would make every distinct URL a cache miss for content that is identical, and it is the same insight Next.js 16 generalised into layout deduplication across *prefetches*, not just navigations.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Prefetching](https://nextjs.org/docs/app/guides/prefetching) — nextjs.org: how prefetching works, static versus dynamic prefetch and client-cache TTL, the viewport and intent scheduler, and how to control or disable it (*read*)
+- **Also good:** [Designing view transitions](https://nextjs.org/docs/app/guides/view-transitions) — nextjs.org: four patterns (shared-element morph, Suspense reveal, directional slides, same-route crossfade); it says React 19.3 ships `ViewTransition`, while our target is React 19.2, so check which React your build uses (*read*)
+- **Also good:** [Link](https://nextjs.org/docs/app/api-reference/components/link)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [04k · Query state in practice](04k-query-state-in-practice.md) · [Chapter 2 overview](01-explanation.md) · Next → [05b · The native View Transitions API](05b-the-native-view-transitions-api.md)
