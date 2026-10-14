@@ -272,6 +272,8 @@ single bitwise expression without a `TypeError`.
 
 - **Read this:** [Bit manipulation](https://cp-algorithms.com/algebra/bit-manipulation.html) — cp-algorithms: set, clear and test a bit, clearing the rightmost set bit, the power-of-two check and the C++ popcount helpers in one page
 - **Beyond the docs:** [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html) — Sean Eron Anderson, Stanford: the classic catalogue: counting bits set (including Brian Kernighan's way), parity, power-of-two test, swapping with XOR
+- **Read this:** [Common Bit Manipulation Techniques](https://labuladong.online/algo/en/frequency-interview/bitwise-operation/) — labuladong: the n AND (n minus 1) trick for Hamming weight and power of two, then XOR cancellation (a XOR a is 0) for single number and missing number
+- **Also good:** [Hamming weight](https://en.wikipedia.org/wiki/Hamming_weight) — Wikipedia: population count definition, the Hamming distance as the weight of an XOR, and mask-and-add implementations
 
 {/* LINKMAP:END */}
 

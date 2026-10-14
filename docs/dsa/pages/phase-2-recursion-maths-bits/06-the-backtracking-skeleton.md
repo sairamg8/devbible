@@ -249,6 +249,8 @@ because `start` runs off the end of the array, so the base case is the empty loo
 
 - **Read this:** [Introduction to Backtracking](https://algomaster.io/learn/dsa/backtracking-introduction) — AlgoMaster: sections on the template, choose-explore-unchoose, base case and pruning
 - **Beyond the docs:** [Backtracking (chapter 2)](https://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf) — Jeff Erickson, Algorithms book (PDF): the recursive-strategy view from a textbook author, opening with n Queens
+- **Read this:** [Backtracking Algorithm Common Patterns and Code Template](https://labuladong.online/algo/en/essential-technique/backtrack-framework/) — labuladong: choose, recurse, undo loop worked through on permutations
+- **Also good:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) — Wikipedia: definition, the search-tree view (the traversed tree is only a part of the potential tree) and the eight queens example
 
 {/* LINKMAP:END */}
 

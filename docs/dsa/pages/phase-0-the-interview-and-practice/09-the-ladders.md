@@ -168,6 +168,8 @@ pattern, and the phase order is what to climb regardless of the tag.
 
 - **Read this:** [Grind 75](https://www.techinterviewhandbook.org/grind75/) — Tech Interview Handbook: an interactive tool by the author of Blind 75 that goes beyond 75 questions and lets you set available time, difficulty and topics (the page itself is app UI, with little prose; the handbook's prep guide below describes the algori
 - **Also good:** [Coding interview preparation guide](https://www.techinterviewhandbook.org/coding-interview-prep/) — Tech Interview Handbook: where the ladder sits in a whole plan, and how the Grind 75 tool ranks questions by priority and balances breadth with depth
+- **Read this:** [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) — NeetCode: states the list is the Blind 75 plus 75 more problems, meant for people who already know basic algorithms and data structures
+- **Also good:** [Best practice questions](https://www.techinterviewhandbook.org/best-practice-questions/) — Tech Interview Handbook: the author of Blind 75 explains how the list spread, then gives a 50-question, 5-week schedule and points to Grind 75 as the customisable successor
 
 {/* LINKMAP:END */}
 

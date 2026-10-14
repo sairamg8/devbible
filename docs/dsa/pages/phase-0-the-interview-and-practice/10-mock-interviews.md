@@ -191,6 +191,9 @@ train patterns rather than behaviour.
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
 - **Read this:** [How to Think Out Loud in a Coding Interview](https://ad.intervue.io/blog/how-to-think-out-loud-coding-interview) — Intervue: three practice methods: record yourself narrating a timed problem, peer practice with turns as interviewer, expert mocks
+- **Read this:** [zero2sudo's Mock SWE Interview Rubric](https://zero2sudo.substack.com/p/zero2sudos-mock-swe-interview-rubric) — zero2sudo, Substack: eight-dimension rubric with sections on solo, paired and group practice: swap interviewer and candidate roles, time the phases, record sessions, track scores over time
+- **Also good:** [How candidates are evaluated in coding interviews](https://www.techinterviewhandbook.org/coding-interview-rubrics/) — Tech Interview Handbook: four dimensions (communication, problem solving, technical competency, testing) with score bands
+- **Also good:** [Coding interview study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/) — Tech Interview Handbook: says to start scheduling mocks about 60 percent of the way through the plan, which is later than our week five
 
 {/* LINKMAP:END */}
 
