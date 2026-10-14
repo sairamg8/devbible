@@ -221,6 +221,18 @@ output is 2ⁿ items of length up to n." Separating the two is how you avoid quo
 space bound for a recursion that holds n frames, and how you avoid quoting Θ(n) for a function
 that is about to materialise every permutation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Too much recursion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion) — MDN: the error appears with a missing base case or with too many calls; Chrome says `Maximum call stack size exceeded` as a `RangeError`; gives no depth figure (*read*)
+- **Also good:** [Question about v8 --stack_size](https://github.com/nodejs/node/issues/6360) — Node.js issue, opened 2016-04-24 on Node 5.11: quotes V8's option help: the stack region V8 may use defaults to 984 kB; the flag sets V8's estimate, and a value above the real limit can crash the process; gives no frame count, and the figure is dated (*read*)
+- **Beyond the docs:** [Converting recursion to iteration using a stack](https://dev.to/frorning/converting-recursion-to-iteration-using-a-stack-a-practical-guide-n0m) — Piyush Chauhan, DEV Community, 2024-12-14: five steps (push the start state, loop, base case becomes `continue`, process, push next states) with an in-order traversal in JavaScript; post-order is not covered (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [01b · The three ways the contract breaks](01b-the-three-ways-the-contract-breaks.md)

@@ -251,6 +251,17 @@ into the array — `const x = queue[head++]` — which is Θ(1) per dequeue and 
 at Θ(V + E); or use a deque. In Java, `ArrayDeque` is the queue, and its javadoc says most
 operations run in amortised constant time.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Competitive Programmer's Handbook, chapter 8 Amortized analysis](https://cses.fi/book/book.pdf) — Antti Laaksonen, CSES, draft of 3 July 2018 (PDF, read as extracted text): the two-pointers subarray sum is O(n) because each pointer only moves right (no useful bound per turn, O(n) in total); nearest smaller elements with a stack is O(n) because each element is pushed once and popped at most once (*rea
+- **Also good:** [Time Complexity Analysis of Loop in Programming](https://www.enjoyalgorithms.com/blog/time-complexity-analysis-of-loop-in-programming/) — EnjoyAlgorithms (no byline or date shown): nested loops, a dependent inner loop (`j = i + 1` gives n(n-1)/2, still O(n^2)), halving loops giving O(log n), and a two-pointers loop at O(n) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01 · Big-O, Theta and Omega](01-big-o-theta-and-omega.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [02b · Recursion as a tree](02b-recursion-as-a-tree.md)

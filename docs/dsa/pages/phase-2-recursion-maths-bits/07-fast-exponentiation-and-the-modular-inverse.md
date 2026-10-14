@@ -253,6 +253,18 @@ chain only on set bits, so `b` desynchronises from the bit position. The bug is 
 exponents of the form `2^k − 1`, whose bits are all ones, which is exactly the family of small test
 values someone is likely to try.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Binary Exponentiation](https://cp-algorithms.com/algebra/binary-exp.html) — cp-algorithms: O(log n) multiplications, recursive and iterative versions, modular exponentiation, and applications such as Fibonacci by matrix power and counting graph paths (*read*)
+- **Also good:** [Modular Multiplicative Inverse](https://cp-algorithms.com/algebra/module-inverse.html) — cp-algorithms: extended Euclid, Euler's theorem via binary exponentiation (needs phi(m), which means factoring m), the linear precomputation for prime moduli only, and the prefix-product trick with one inverse (*read*)
+- **Beyond the docs:** [Modular arithmetic](https://usaco.guide/gold/modular) — USACO Guide: Python code for modular exponentiation and the Fermat inverse, with a warning about dividing by a value that is zero after the modulus (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06j · N-Queens and symmetry](06j-n-queens-and-symmetry.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [07b · Modular exponentiation and overflow](07b-modular-exponentiation-and-where-the-product-overflows.md)

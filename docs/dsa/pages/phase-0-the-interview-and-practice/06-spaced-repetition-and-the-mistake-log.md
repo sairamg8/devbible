@@ -194,6 +194,16 @@ The kind counts in the log fall over a month — fewer "pattern not matched", fe
 and repetitions start passing at day 3 that used to fail. Problem count rising says nothing;
 a candidate can raise it indefinitely without changing the kinds of mistakes they make.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Beyond the docs:** [Spaced repetition for LeetCode](https://studycardsai.com/blog/spaced-repetition-for-leetcode) — Charlie Groves, StudyCards AI, 2026-05-30: first review at 24 hours, an easy solve moves to 3 days, a struggle stays at 1 day, a failed review resets to 1 day; summarises as 1, 3, 7, 14 days; keeps a model solution per problem rather than a mistake log (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05 · Reading the constraints](05-reading-the-constraints.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [07 · The when-stuck protocol](07-the-when-stuck-protocol.md)

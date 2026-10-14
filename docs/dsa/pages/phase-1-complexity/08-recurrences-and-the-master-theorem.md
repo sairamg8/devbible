@@ -235,6 +235,18 @@ theorem, if the size is a constant fraction, or unrolling if it is not. If the f
 memoised, the recurrence no longer describes the cost; count distinct states times work per
 state instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Master Theorem and Summary of Common Recurrences](https://web.engr.oregonstate.edu/~huanlian/algorithms_course/1-datastructures/master.html) — Oregon State course notes: the three cases as leaf-heavy, equilibrium and root-heavy, with merge sort (case 2, n log n) and binary search (case 2, log n) worked (*read*)
+- **Also good:** [Master theorem (analysis of algorithms)](https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms) — ): Wikipedia
+- **Also good:** [CS 161 Lecture 3: Divide and Conquer, Solving Recurrences](https://web.stanford.edu/class/archive/cs/cs161/cs161.1194/Lectures/Lecture3/CS161Lecture03.pdf) — Stanford, scribe notes of 2017-10-02 (PDF, read as extracted text): the theorem in the a versus b^d form, a recursion-tree proof, and Karatsuba and merge sort worked (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07 · Complexity of the built-ins](07-complexity-of-the-built-ins.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [09 · Best, average and worst](09-best-average-and-worst.md)

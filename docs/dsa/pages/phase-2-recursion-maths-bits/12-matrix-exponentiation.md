@@ -229,6 +229,17 @@ are raising a larger matrix to a power for nothing, at a cubic cost in the dimen
 same principle as choosing a DP state — the state is what the future depends on, no more — and it is
 why the augmentations on this page each add exactly one component per thing the future needs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Matrix Exponentiation](https://usaco.guide/plat/matrix-expo) — USACO Guide: Fibonacci as the power of `[[1,1],[1,0]]` proved by induction, the general k-term recurrence, cost O(K^3 log N), and "derive the matrix from how the state vector changes"; Python and C++ (*read*)
+- **Also good:** [Fast Fibonacci algorithms](https://www.nayuki.io/page/fast-fibonacci-algorithms) — Nayuki, last updated 2023-01-22: matrix exponentiation and fast doubling, each with a proof; exact integer methods only (*headings only* for the proofs, which were not read through)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11j · Base conversion and digit sums](11j-base-conversion-and-digit-sums.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [12b · Augmenting the state](12b-augmenting-the-state.md)

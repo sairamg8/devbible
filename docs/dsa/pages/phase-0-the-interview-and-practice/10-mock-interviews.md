@@ -184,6 +184,17 @@ hint — there is no one to give it — and it grades narration less honestly, b
 does not notice silence. It is a weaker substitute for a peer mock, not for solo drills, which
 train patterns rather than behaviour.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Beyond the docs:** [How to think out loud in a coding interview](https://ad.intervue.io/blog/how-to-think-out-loud-coding-interview) — Sakshi Jhunjhunwala, Intervue.io, 2026-07-23: three practice methods: record yourself on a medium problem, take turns as interviewer and candidate with a peer, then expert mocks (a vendor pitch); language-neutral (*read*)
+- **Also good:** [Technical interview rubric](https://prachub.com/resources/technical-interview-rubric-how-companies-score-coding-design-and-communication) — PracHub, 2026-08-03: a four-level scale for scoring a timed practice session, one piece of evidence per rating (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · The ladders](09-the-ladders.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [11 · Communication mechanics](11-communication-mechanics.md)

@@ -213,6 +213,18 @@ work becomes Θ(E) and the visited check has silently moved; the traversal is st
 still Θ(V + E) overall, but the "each vertex once" sentence is false and the queue can hold more
 than V entries. Marking on enqueue keeps the sentence true and the queue bounded by V.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Lecture 21: Amortized Analysis](https://www.cs.cornell.edu/courses/cs3110/2009fa/Lectures/lec21.html) — Cornell CS 3110: dynamic array doubling: the banker's method charging 3 per insert, and the potential method with potential 2n - m giving amortised cost 3; fixed-increment growth would not stay constant (*read*)
+- **Also good:** [Analysis of algorithms](https://algs4.cs.princeton.edu/14analysis/) — Princeton Algorithms: defines amortised analysis as a worst-case guarantee over a sequence of operations (*read*)
+- **Beyond the docs:** [Amortized Analysis Interview Patterns](https://www.techinterview.org/post/3233465126/amortized-analysis-interview/) — techinterview.org, updated 2026-04-17: doubling array, the 3-tokens-per-append accounting argument, union-find at amortised inverse Ackermann per operation, and a one-sentence form (cheap operations build credit that pays for the occasional expensive one); Python (*rea
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02b · Recursion as a tree](02b-recursion-as-a-tree.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [03b · Union-find, and the limits of amortised](03b-union-find-and-the-limits-of-amortised.md)

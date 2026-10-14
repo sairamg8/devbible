@@ -179,6 +179,19 @@ partition is empty and the recursion is n deep. The array itself is sorted in pl
 a randomised or median-of-three pivot, and recursing on the smaller side first while looping
 on the larger, which bounds the stack to log n regardless of pivot quality.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ES2015, ES2016, and beyond](https://v8.dev/blog/modern-javascript) — V8 blog, 2016-04-29: proper tail calls were implemented but not shipped; the team argued against implicit elision (hard to see which calls are tail calls, frames lost from `error.stack`, a shadow stack too costly) and for opt-in syntax; an undated upd
+- **Also good:** [Proper tail calls in JavaScript](https://www.mgmarlow.com/words/2021-03-27-proper-tail-calls-js/) — Graham Marlow, 2021-03-27: only Safari's JavaScriptCore supports proper tail calls; V8 implemented them and removed them (*read*); and [ECMAScript 6 Proper Tail Calls in WebKit](https://webkit.org/blog/6240/ecmascript-6-proper-tail-calls-in-webkit/)
+- **Also good:** [ECMAScript 6 Proper Tail Calls in WebKit](https://webkit.org/blog/6240/ecmascript-6-proper-tail-calls-in-webkit/)
+- **Also good:** [Analysis of algorithms](https://algs4.cs.princeton.edu/14analysis/) — Princeton Algorithms: the "Memory usage" section on estimating space for primitives, objects and arrays (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03b · Union-find, and the limits of amortised](03b-union-find-and-the-limits-of-amortised.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [04b · Tail calls, and the explicit stack](04b-tail-calls-and-the-explicit-stack.md)

@@ -244,6 +244,16 @@ two on the brute force, four or five optimising, eight to ten coding, four testi
 complexity. The plan-aloud moment before typing survives unchanged, because it is the only
 evidence of judgement the round produces and it costs a minute at any length.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Coding interview cheatsheet](https://www.techinterviewhandbook.org/coding-interview-cheatsheet/) — Tech Interview Handbook: the steps: clarify with 2 to 3 questions and an example, discuss approach and complexity (a few minutes, up to 5 to 10 on hard ones), wait for the go-ahead, code while explaining, then review, test edge cases and restate complexit
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01 · What the rounds grade](01-what-the-coding-rounds-grade.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [03 · The method](03-the-method.md)

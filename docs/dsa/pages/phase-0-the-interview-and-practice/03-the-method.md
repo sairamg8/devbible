@@ -247,6 +247,17 @@ sliding window fails; prefix sums instead." Thirty seconds and visible reasoning
 forcing a pattern that does not fit, costs a rewrite at minute twenty and reads as not having
 checked.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [UMPIRE Interview Strategy](https://guides.codepath.org/compsci/UMPIRE-Interview-Strategy) — CodePath: the six steps under their names; Match means naming the problem category and rating patterns as likely, unlikely or neutral (the page's example is linked lists); Review means walking the code like a debugger hunting a bug, not ski
+- **Beyond the docs:** [How to recognize coding patterns](https://dglearning.substack.com/p/how-to-recognize-coding-patterns) — Rafay Abbasi, Cracking the Tech Interview, 2026-07-20: four signal channels for Match (wording, output shape, constraints, input structure), stating a hypothesis aloud before coding; language-neutral with one Python example (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02 · The 45-minute shape](02-the-45-minute-shape.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [04 · Language choice and traps](04-language-choice-and-runtime-traps.md)

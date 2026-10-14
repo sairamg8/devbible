@@ -117,6 +117,16 @@ aloud; writing reviewer-grade code with names and comments; taking a hint in the
 and re-deriving after a constraint change. Recorded, narrated solving plus a weekly peer mock
 covers all four; the speed and the pattern recognition they already have take care of the rest.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Beyond the docs:** [CPFAQ: How do coding interviews differ from coding contests?](https://www.redgreencode.com/cpfaq-how-do-coding-interviews-differ-from-coding-contests/) — Duncan Smith, RedGreenCode, 13 December (year not shown): contests are judged by machine, interviews are a dialogue with a human who forgives minor syntax slips; contests draw on a wider, more specialised set of algorithms while interviews stay on common university-level CS; contests bui
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [13 · This track and the JS track](13-how-this-track-relates-to-javascript.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next phase → [Part 1 of the syllabus — complexity, recursion, maths and bits](../../syllabus/01-foundations.md)

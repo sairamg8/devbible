@@ -231,6 +231,17 @@ force that is too slow for the constraints before the time is spent writing it �
 to a hundred thousand is too slow; I need the map" — which is the reading-the-constraints skill
 the next pages build.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Coding interview rubrics](https://www.techinterviewhandbook.org/coding-interview-rubrics/) — Tech Interview Handbook (the old coding-signals address redirects here): four graded dimensions: communication, problem solving (basic signal: no major hints needed; advanced: time left for follow-up problems or extensions), technical competency (working, clean code) and testing (typical cases, corner 
+- **Beyond the docs:** [Technical interview rubric: how companies score coding, design and communication](https://prachub.com/resources/technical-interview-rubric-how-companies-score-coding-design-and-communication) — PracHub, 2026-08-03: a four-level self-scoring scale (needs evidence to interview-ready) with one piece of evidence per rating; says a hint is not automatic failure and lists adapting after new information as a collaboration signal; language-neutral (
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [02 · The 45-minute shape](02-the-45-minute-shape.md)

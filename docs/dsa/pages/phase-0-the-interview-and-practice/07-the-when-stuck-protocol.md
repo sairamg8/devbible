@@ -214,6 +214,16 @@ check it at each step of the trace; check the boundaries first — first and las
 single element — because that is where most bugs are; and say what you are checking so the
 interviewer can point. Staring at the middle of the loop in silence is the failure mode.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Beyond the docs:** [What to do when you get stuck in a coding interview](https://prachub.com/resources/what-to-do-when-you-get-stuck-in-a-coding-interview-hints-recovery-and-communication) — PracHub, 2026-08-30: "name, shrink, ask": name the blocker (requirement, algorithm, data structure, proof or bug), shrink with a tiny example, a dropped constraint or a brute force, then ask for the smallest useful hint after saying what you tried; a 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06 · Spaced repetition and the log](06-spaced-repetition-and-the-mistake-log.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [08 · Testing your code live](08-testing-your-own-code-live.md)

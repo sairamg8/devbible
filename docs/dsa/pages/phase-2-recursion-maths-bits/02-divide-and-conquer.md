@@ -197,6 +197,18 @@ is the real answer; quicksort's nothing, which is why its space is just the stac
 algorithm's presorted arrays. Answering "Θ(log n)" for merge sort is the standard mistake, and it
 comes from counting only the recursion.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Mergesort](https://algs4.cs.princeton.edu/22mergesort/) — Princeton Algorithms: mergesort as the standard divide-and-conquer example, top-down and bottom-up, compare bounds of half N lg N to N lg N stated as propositions without full proofs; inversion counting appears only as an exercise with no algorithm; Ja
+- **Also good:** [Quickselect](https://en.wikipedia.org/wiki/Quickselect) — Wikipedia: partition then recurse into one side; O(n) average, O(n^2) worst; median of medians for worst-case linear but high overhead (*read*)
+- **Beyond the docs:** [Counting inversions slides (CSCI 211)](https://cs.wlu.edu/~sprenkles/cs211/slides/22-counting_inversions.pdf) — Sprenkle, Washington and Lee, 2019-03-11 (PDF, read as extracted text): divide, count in each half, then count split inversions during a merge with `inversions += A.size - i` when the right element is smaller; O(n) merge and O(n log n) total; language-neutral pseudocode (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01h · Choosing, and reading the overflow](01h-choosing-recursion-and-reading-the-overflow.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02b · Base cases, induction, and when to reach for it](02b-base-cases-induction-and-when-to-reach-for-it.md)

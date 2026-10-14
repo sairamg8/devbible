@@ -215,6 +215,18 @@ Fisher–Yates achieves it. The interesting corollary is the one in
 [10b](10b-fisher-yates-in-practice.md): a generator whose entire state is 64 bits cannot supply
 `log2(n!)` bits for `n` past about 20, no matter how many times you call it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Fisher–Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle) — Wikipedia: the modern algorithm, the naive swap being biased because n^n outcomes do not divide evenly into n! orderings, modulo bias, and a short "Sorting" section saying a random-comparator shuffle is very likely to be highly non-uniform a
+- **Also good:** [Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling) — Wikipedia: Algorithm R and its induction proof (item survives with k/(i+1)) (*read*)
+- **Beyond the docs:** [Fisher-Yates Shuffle: an algorithm every developer should know](https://spin.atomicobject.com/fisher-yates-shuffle-randomization-algorithm/) — Matt Nedrich, Atomic Object, 2014-08-11: the N^N vs N! argument for why the naive swap is biased, plus a one-million-run test on three items; Python; says nothing about `sort` with a random comparator (*read*; this host returned 403 to curl but loaded in the page fetcher
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09i · Where n stops fitting](09i-where-n-stops-fitting.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10b · Fisher–Yates in practice](10b-fisher-yates-in-practice.md)

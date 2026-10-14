@@ -124,6 +124,16 @@ the absence of a heap, `Map` versus object keys — language layer. The signal t
 sliding window, the invariant of a binary search, the order in which patterns are learned —
 interview layer, because they hold in TypeScript and Java alike.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) — MDN: the spec requires maps that, on average, give sublinear access, so a hash table or a search tree both qualify; iteration is in insertion order (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [12 · Java's collections](12-javas-collections-for-interviews.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [14 · Contests vs interviews](14-competitive-programming-vs-interviews.md)

@@ -257,6 +257,19 @@ is amortised constant as a dynamic array, `slice` and spread copy their range, `
 the tail, `indexOf` and `includes` scan; and name the engine optimisations — ropes for string
 concatenation, sliced strings — as unguaranteed, so the safe code uses `join` and indices.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) — MDN: the spec only demands average sublinear access (a hash table at O(1) or a search tree at O(log N) both fit) (*read*)
+- **Also good:** [PriorityQueue](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/PriorityQueue.html) — and [TreeMap](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/TreeMap.html): Java SE 25 API
+- **Also good:** [TreeMap](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/TreeMap.html)
+- **Also good:** [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) — MDN: stable since ES2019; says time and space complexity cannot be guaranteed because it depends on the implementation (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06b · Hash keys, and the test for hidden loops](06b-hash-keys-and-the-test-for-hidden-loops.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [08 · Recurrences and the master theorem](08-recurrences-and-the-master-theorem.md)

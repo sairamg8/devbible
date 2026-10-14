@@ -160,6 +160,16 @@ as steps; write the invariant as a comment so it is anchored in the code rather 
 Design rounds narrate boxes and flows; coding rounds narrate blocks and traces, and both take
 the hint in the same breath.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Beyond the docs:** [How to think out loud in a coding interview](https://ad.intervue.io/blog/how-to-think-out-loud-coding-interview) — Intervue.io, 2026-07-23: name the pattern and why, narrate while coding, trace the code on a quick example, state time and space after coding, summarise the edge cases handled and mention an improvement such as input validation (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10 · Mock interviews](10-mock-interviews.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [12 · Java's collections](12-javas-collections-for-interviews.md)

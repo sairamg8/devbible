@@ -240,6 +240,16 @@ elements and the sum is Θ(n²). The functional shape hides it — `reduce` with
 accumulator reads as idiomatic — but the copy is in the semantics. `push` onto a local array is
 amortised constant, and returning that array at the end gives the same result in Θ(n).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Beyond the docs:** [Efficient string building in JavaScript](https://dev.to/andreygermanov/efficient-string-building-in-javascript-2bej) — Andrey Germanov, DEV Community, 2022-11-25 (edited 2023-03-22): repeated `+=` copies the string each time; one run of 100 million appends in Chrome took about 1 min 26 s vs about 8 s with `push` then one `join`; engines may differ; ropes are mentioned as a faster structure but not as what an e
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05 · The common classes and the limits](05-the-common-classes-and-what-the-limits-imply.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [06b · Hash keys, and the test for hidden loops](06b-hash-keys-and-the-test-for-hidden-loops.md)

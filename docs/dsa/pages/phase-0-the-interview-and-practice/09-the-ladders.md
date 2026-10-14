@@ -160,6 +160,16 @@ list is the general list resampled, and it is useful in the last two weeks befor
 loop as timed practice. It is not a syllabus; a pattern learned from a tagged list is the same
 pattern, and the phase order is what to climb regardless of the tag.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Beyond the docs:** [LeetCode patterns by frequency: Top 75, Blind 75, NeetCode 150 compared](https://www.techinterview.org/post/3233474682/leetcode-patterns-by-frequency/) — techinterview.org, 2026-04-27 (updated 2026-07-13): NeetCode 150 extends the Top 75 with 75 more problems on the same pattern structure; suggests 2 to 3 months for the first and 3 to 5 for the second; says the Top 75 is light on graphs and advanced DP (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [08 · Testing your code live](08-testing-your-own-code-live.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [10 · Mock interviews](10-mock-interviews.md)

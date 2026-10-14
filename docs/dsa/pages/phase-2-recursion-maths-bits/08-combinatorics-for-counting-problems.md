@@ -276,6 +276,19 @@ is counted twice. Orders that used a promo plus orders that used a gift card dou
 that used both, and the fix is either to redefine the cases or to reach for inclusion–exclusion. Most
 wrong counts are one of those two conditions violated silently, and both take one sentence to check.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Binomial Coefficients](https://cp-algorithms.com/combinatorics/binomial-coefficients.html) — cp-algorithms: Pascal's triangle in O(n^2), the factorial form with modular inverses, and Lucas's theorem for a small modulus (*read*)
+- **Also good:** [Catalan Numbers](https://cp-algorithms.com/combinatorics/catalan-numbers.html) — cp-algorithms: recursive and analytical formulas, with correct bracket sequences and full binary trees as applications; binary search trees are not mentioned (*read*)
+- **Also good:** [Inclusion-Exclusion Principle](https://cp-algorithms.com/combinatorics/inclusion-exclusion.html) — cp-algorithms: statement, proof, and a worked list including derangements (about n!/e) (*read*)
+- **Beyond the docs:** [Combinatorics](https://usaco.guide/gold/combo) — USACO Guide: binomials by Pascal DP in O(n^2) or by modular inverses, derangements by inclusion-exclusion or DP, stars and bars; Python (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07f · Any associative operation](07f-any-associative-operation.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [08b · Pascal's rule and the DP table](08b-pascals-rule-and-the-dp-table.md)

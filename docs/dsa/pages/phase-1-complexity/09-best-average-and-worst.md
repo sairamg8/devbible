@@ -249,6 +249,17 @@ implementation reaches that by detecting adversarial patterns and switching stra
 sentence rather than the name. The object sort avoids the question altogether by being a
 mergesort — TimSort — with n log n worst case by construction and a stability guarantee.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Quicksort](https://en.wikipedia.org/wiki/Quicksort) — Wikipedia: worst case O(n^2) when a partition leaves n - 1, average O(n log n) over all permutations, and the randomised pivot's expected bound holding for any input (*read*, first 100,000 characters)
+- **Also good:** [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) — MDN: "on average" is the spec's wording for sublinear access (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [08 · Recurrences and the master theorem](08-recurrences-and-the-master-theorem.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [10 · Benchmarking vs analysis](10-benchmarking-vs-analysis.md)

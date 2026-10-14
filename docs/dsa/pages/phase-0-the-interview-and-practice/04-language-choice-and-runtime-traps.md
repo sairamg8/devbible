@@ -244,6 +244,19 @@ approximately, so distinct values can compare equal — MDN's example is `MAX_SA
 MAX_SAFE_INTEGER + 2` being true. The fixes are `BigInt`, or reducing modulo before multiplying
 in modular problems. Bitwise operators are separately limited to 32-bit integers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) — MDN: stable since ES2019; default order compares strings by UTF-16 code units, so `[1, 30, 4, 21, 100000].sort()` gives `[1, 100000, 21, 30, 4]`; an inconsistent comparator gives engine-dependent results (V8 and SpiderMonkey differ in 
+- **Also good:** [Number.MAX_SAFE_INTEGER](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) — MDN: 2^53 - 1, and `MAX_SAFE_INTEGER + 1 === MAX_SAFE_INTEGER + 2` is true (*read*)
+- **Also good:** [Integer](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Integer.html) — Java SE 25 API: `valueOf` always caches -128 to 127 (and may cache more), which is why `==` on boxed values misleads; `Integer.compare` is documented only as a signed numeric comparison, so its overflow-safety is our inference from the lack of su
+- **Beyond the docs:** [Why 1 == 1 is true but 128 == 128 is false in Java](https://dev.to/vsnikhilvs/mind-blowing-why-1-1-is-true-but-128-128-is-false-in-java-57a5) — Nikhil Vikraman, DEV Community, 2024-10-13: cached `Integer` objects for -128 to 127 so `==` compares equal references there and not beyond; use `equals`; Java; never mentions `valueOf` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03 · The method](03-the-method.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [04b · Java traps and sorting](04b-java-traps-and-sorting.md)

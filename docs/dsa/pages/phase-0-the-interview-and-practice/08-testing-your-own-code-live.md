@@ -197,6 +197,17 @@ Invariant: the answer is in `[lo, hi)` with `hi` starting at the length. Iterati
 length, which the caller must treat as not found; the empty array returns 0 without entering the
 loop.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Beyond the docs:** [5 effective strategies for dry running code with test cases](https://algocademy.com/blog/5-effective-strategies-for-dry-running-code-with-test-cases/) — AlgoCademy, 2025-01-06: simple cases first, hand-tracing, and the edge cases empty, minimum and maximum, single element, negatives; boundary value analysis is named but off-by-one and overflow are not; language-neutral (*read*)
+- **Also good:** [Coding interview rubrics](https://www.techinterviewhandbook.org/coding-interview-rubrics/) — Tech Interview Handbook: the Testing signal: typical cases, corner cases, self-corrected bugs (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07 · The when-stuck protocol](07-the-when-stuck-protocol.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [09 · The ladders](09-the-ladders.md)

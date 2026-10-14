@@ -264,6 +264,18 @@ work is `BigInt`, where MDN documents that there is no truncation at all and neg
 as if they have infinitely many leading one bits — but BigInt and Number cannot be mixed in a
 single bitwise expression without a `TypeError`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Bit manipulation](https://cp-algorithms.com/algebra/bit-manipulation.html) — cp-algorithms: set, clear, flip, check a bit; `n & (n-1)` clears the lowest set bit and `n & -n` isolates it; Brian Kernighan's popcount; power-of-two test with the zero guard; C++ with GCC built-ins (*read*)
+- **Also good:** [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html) — Sean Eron Anderson, Stanford: power-of-two test `v && !(v & (v - 1))`, Kernighan and other popcount methods, XOR swap; `v & -v` appears only in passing; C (*read*)
+- **Beyond the docs:** [Bit manipulation interview patterns](https://www.techinterview.org/post/3233460816/bit-manipulation-interview-patterns/) — techinterview.org, 2026-04-16 (updated 2026-04-17): single number via XOR, `n & (n-1)`, get/set/clear/toggle, counting bits by DP, swap without a temp; Python; the page says some snippets are garbled by rendering, so check them (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03l · Why modulo a large prime](03l-why-answers-are-taken-modulo-a-large-prime.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [04b · Single-bit idioms and masks](04b-the-single-bit-idioms-and-masks.md)

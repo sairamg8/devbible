@@ -276,6 +276,18 @@ structure. The limit is the setter saying that anything that touches the input's
 even once is too slow — and in JavaScript it is also a reminder that the value exceeds
 `Number.MAX_SAFE_INTEGER`, so `BigInt` or modular arithmetic is needed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Time Complexity](https://www.cs.kzoo.edu/cs210/resources/TimeComplexity.html) — Kalamazoo College CS 210 notes, 2025-09-25 (the page credits Google Gemini with edits by Alyce Brady): the seven classes from O(1) to O(n!) with an example each (*read*)
+- **Also good:** [Competitive Programmer's Handbook, section 2.3](https://cses.fi/book/book.pdf) — Laaksonen, CSES, 2018 draft (PDF): the size-to-required-class table for a one-second limit (*read*)
+- **Also good:** [Big-O Cheat Sheet](https://www.bigocheatsheet.com/) — Eric Rowell and contributors: a complexity chart, a data-structure operations table and a sorting table; almost no prose, the extracted tables lose their column headers, and there is no graph section (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [04b · Tail calls, and the explicit stack](04b-tail-calls-and-the-explicit-stack.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [06 · Hidden costs](06-hidden-costs.md)

@@ -193,6 +193,17 @@ better, and then defend it — the interviewer will either confirm it or point a
 misses. Saying it shows the constraint was read; silently presenting the polynomial solution
 leaves the interviewer wondering whether you noticed the bound at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Competitive Programmer's Handbook, section 2.3 Estimating efficiency](https://cses.fi/book/book.pdf) — Antti Laaksonen, CSES, draft of 3 July 2018 (PDF, read as extracted text): a modern computer does some hundreds of millions of operations a second; for a one-second limit, n up to 10 allows n!, 20 allows 2^n, 500 allows n^3, 5000 allows n^2, 10^6 allows n log n or n; n = 10^5 probably means n or n log n;
+- **Beyond the docs:** [Read Constraints the Right Way](https://dev.to/alimalim77/read-constraints-the-right-way-3aka) — Alim Mohammad, DEV Community, 2022-10-31: N = 10^5 allows N, N log N, N root N; N up to about 20 allows exponential, with recursion and backtracking; language-neutral (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [04b · Java traps and sorting](04b-java-traps-and-sorting.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [06 · Spaced repetition and the log](06-spaced-repetition-and-the-mistake-log.md)

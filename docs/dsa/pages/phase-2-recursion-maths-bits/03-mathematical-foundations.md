@@ -244,6 +244,19 @@ the pair becomes `(b, a)`, so the algorithm sorts them itself at a cost of one e
 explicit swap is not a correctness fix, it is a micro-optimisation of one iteration, and it is a
 common source of the bug where the swap is written inside the loop instead of before it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Euclidean algorithm for computing the greatest common divisor](https://cp-algorithms.com/algebra/euclid-algorithm.html) — cp-algorithms: algorithm, Lamé's theorem for O(log) steps (stated, not proved) plus a halving argument, LCM from GCD with division first to avoid overflow, binary GCD; extended Euclid is a separate article (*read*)
+- **Also good:** [Sieve of Eratosthenes](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html) — cp-algorithms: O(n log log n) analysis, segmented sieve, a linear-time modification pointed to elsewhere (*read*)
+- **Also good:** [Integer factorization](https://cp-algorithms.com/algebra/factorization.html) — cp-algorithms: trial division with wheel and precomputed primes, then Fermat, Pollard p - 1 and Pollard rho (*headings only*)
+- **Beyond the docs:** [Modular arithmetic](https://usaco.guide/gold/modular) — USACO Guide: why results are taken modulo a large prime (10^9+7 and 998,244,353 named as the common ones) to avoid overflow; Python and C++ code (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02i · Binary search as degenerate D&C](02i-binary-search-as-degenerate-divide-and-conquer.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03b · gcd on signed and wide types](03b-gcd-on-signed-and-wide-types.md)

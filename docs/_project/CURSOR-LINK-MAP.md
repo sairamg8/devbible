@@ -7,6 +7,13 @@ metadata:
 
 # 🔴 START HERE — the link map ("hub + delta", one place)
 
+## 🔴 RESUME HERE — 2026-10-14 (13 languages done, DSA half done)
+
+- **USER ORDERS (2026-10-14, supersede the routine prompt):** (1) **work ~3 h, then stop (2 h gap)** — not 4 h; cron stays `23 */5 * * *`. (2) **From the next run, merge the PR to `main` yourself and let the deploy run, then pick the next language and continue** (merge with the full 40-char head sha; check the deploy). PR #30 (CSS … Framer Motion + DSA 0-13) was left open on purpose; merge it first thing in the next run unless the user already did. (3) No new agents once running ones return when wrapping up; save progress in `sairamg8/claude-context` (`shared/progress_devbible_linkmap_routine_20261013.md`, attached at /home/user/claude-context).
+- **Order from here:** finish dsa parts 6-8, then system-design, then anything else with a syllabus (check `docs/*/syllabus`, `docs/real-world`, `frontend-architecture`, `web-vitals-performance`, `reviews` are not tracks to map unless the user says).
+- **Recipe notes:** `scripts/mdxcheck.mjs` (not .py); `corepack enable && yarn install --immutable` first, then `git checkout .yarn/install-state.gz`. Per-language lane files are built with `scratchpad/mktab.py` (syllabus tables) or `mklist.py` (page tree) — recreate from the recipe if the scratchpad is gone. The brief given to every researcher and verifier is in this file's history (PR #30 description + the prompts: read-only research, one WebSearch per block, mark *read* only for passages actually in the fetched text, verifier re-fetches every URL and opens our pages to make 'covers our angle'/'Our delta' truthful).
+- **Findings in our pages, DSA:** none in pages 0-2 beyond: phase-2 pages 09/11/13 and phase-1/2 several are over the 300-line cap (Further reading skipped).
+
 ## 🔴 RESUME HERE — 2026-10-14 (CSS done, PR open)
 
 - **CSS DONE 2026-10-14** (74 topics, 4 files; linkcheck + mdxcheck clean; the check script is `scripts/mdxcheck.mjs` — `mdxcheck.py` no longer exists; needs `corepack enable && yarn install`). PR left open for the user. **Next language: webpack** (nextjs DONE 115 topics, vite DONE 72 blocks, 2026-10-14), then webpack, jest-rtl, playwright, tanstack-query, storybook, babel, eslint-oxlint, framer-motion, dsa, system-design.
@@ -66,7 +73,8 @@ metadata:
 | babel | 20 blocks (16 pages) | ✅ complete 2026-10-14 (17 pages got Further reading) | — |
 | eslint-oxlint | 24 blocks (21 pages) | ✅ complete 2026-10-14 (21 pages got Further reading) | — |
 | framer-motion | 22 blocks (16 sections) | ✅ complete 2026-10-14 (21 pages got Further reading, 1 over cap) | — |
-| dsa · system-design | — | ⬜ not started — **RESUME HERE** (both have syllabus/ dirs: dsa 8 files, system-design 13 files; use mktab.py-style extraction, lanes = syllabus files, ≤5 lanes) | — |
+| dsa | 183 of 301 topics | 🟡 **partial 2026-10-14**: syllabus parts 1-5 (phases 0-13) mapped + verified, 34 pages got Further reading (4 over cap); **RESUME HERE: parts 6-8** = `06-backtracking-greedy-and-dp.md` (53 topics), `07-design-flavoured-and-applied.md` (33), `08-the-ladder-and-the-plan.md` (32) -> `link-map/06-…`, `07-…`, `08-…`, then update `link-map/README.md` (it says parts 6-8 are unmapped) and re-run inject/linkcheck/mdxcheck | — |
+| system-design | — | ⬜ not started (13 syllabus files; same extraction, lanes = syllabus files, ≤5 lanes) | — |
 
 **"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
 

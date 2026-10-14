@@ -273,6 +273,18 @@ and `put`, so the eldest is the least recently used, and the map removes it on i
 ten lines, and it is the answer an interviewer expects unless they ask for the doubly linked
 list explicitly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PriorityQueue](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/PriorityQueue.html) — Java SE 25 API: O(log n) for `offer`, `poll`, `remove()` and `add`; linear for `remove(Object)` and `contains`; constant for `peek`, `element` and `size`; the iterator does not traverse in order (*read*)
+- **Also good:** [TreeMap](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/TreeMap.html) — Java SE 25 API: guaranteed log(n) for `containsKey`, `get`, `put`, `remove`; the ordering must be consistent with `equals` or the map breaks the `Map` contract (*read*)
+- **Also good:** [ArrayDeque](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/ArrayDeque.html) — Java SE 25 API: most operations amortised constant; `remove(Object)`, `contains`, `iterator.remove()` and bulk operations are linear; null elements are prohibited; likely faster than `Stack` as a stack and `LinkedList` as a queue (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11 · Communication mechanics](11-communication-mechanics.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [13 · This track and the JS track](13-how-this-track-relates-to-javascript.md)

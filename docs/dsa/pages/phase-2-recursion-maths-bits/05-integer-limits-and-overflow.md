@@ -255,6 +255,19 @@ depend on. Java also gives you an opt-in that turns the wrap into an exception, 
 its family ([05c](05c-javas-int-and-the-checked-arithmetic.md)); JavaScript has no equivalent for
 the rounding, only the choice to use a different type.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [NUM00-J. Detect or prevent integer overflow](https://cmu-sei.github.io/secure-coding-standards/sei-cert-oracle-coding-standard-for-java/rules/numeric-types-and-operations-num/num00-j/) — SEI CERT Java: operators do not signal overflow; `Math.abs` and negation overflow on the minimum; `compareTo` by subtraction can break; fixes are precondition checks, `Math.*Exact` (Java 8), upcasting, `BigInteger`, an atomic loop; hash-code ove
+- **Also good:** [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) — MDN: no mixing with Number in arithmetic (relational and equality operators are allowed), no `Math` methods, division truncates toward zero, exact beyond `MAX_SAFE_INTEGER` (*read*)
+- **Also good:** [Number.MAX_SAFE_INTEGER](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) — MDN: 2^53 - 1 and the `+ 1` equals `+ 2` example (*read*)
+- **Beyond the docs:** [Extra, Extra - Read All About It: Nearly All Binary Searches and Mergesorts are Broken](https://research.google/blog/extra-extra-read-all-about-it-nearly-all-binary-searches-and-mergesorts-are-broken/) — Joshua Bloch, Google Research blog, 2006-06-02: `(low + high) / 2` overflows to a negative index in Java; fixes `low + ((high - low) / 2)` and `(low + high) &gt;&gt;&gt; 1`; a 2008 update says the C unsigned-cast fix relies on undefined signed overflow (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [04g · The 32-bit ceiling, and what to use instead](04g-the-32-bit-ceiling-and-what-to-use-instead.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [05b · BigInt, and when to reach for it](05b-bigint-and-when-to-reach-for-it.md)

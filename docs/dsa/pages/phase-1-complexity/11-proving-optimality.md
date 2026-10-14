@@ -212,6 +212,16 @@ written; a lower bound on the problem must hold for every possible algorithm, wh
 output-size, must-read, decision-tree and adversary arguments provide. The claim "this is
 optimal" needs the second kind; without it, the honest form is "this is the best I know."
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Sorting lower bound](https://tarjotin.cs.aalto.fi/cs-a1141/OpenDSA/Books/CS-A1141/html/SortingLowerBound.html) — Aalto OpenDSA: the decision-tree argument in three steps: comparisons form a binary tree, at least n! leaves, so depth is Omega(n log n) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10 · Benchmarking vs analysis](10-benchmarking-vs-analysis.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next phase → [Part 1 of the syllabus — recursion, maths and bits](../../syllabus/01-foundations.md)
