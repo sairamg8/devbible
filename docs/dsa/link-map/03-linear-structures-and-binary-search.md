@@ -17,17 +17,17 @@ Covers every topic row of phases 6, 7 and 8 in `docs/dsa/syllabus/03-linear-stru
 - **Read this:** [Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) · Wikipedia · LIFO with push, pop and peek; names compilers' syntax parsing and reverse Polish evaluation as stack uses, but does not name balanced brackets (*read*) · covers our angle: **partial** — no bracket matching, path simplification or nested decoding · fetched 2026-10-14
 - **Also good:** [Reverse Polish notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation) · Wikipedia · push operands, on an operator pop two, apply, push the result (*read*) · fetched 2026-10-14
 - **Also good:** [Shunting yard algorithm](https://en.wikipedia.org/wiki/Shunting_yard_algorithm) · Wikipedia · operators wait on a stack and are popped by precedence and associativity; carries a missing-citations notice (*read*) · fetched 2026-10-14
-- **Beyond the docs:** [Bags, Queues, and Stacks](https://algs4.cs.princeton.edu/13stacks/) · Sedgewick and Wayne, Princeton, last modified 2020-02-13 · Dijkstra's two-stack expression evaluation, worked as code (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [Bags, Queues, and Stacks](https://algs4.cs.princeton.edu/13stacks/) · Sedgewick and Wayne, Princeton, last modified 2020-02-13 · Dijkstra's two-stack expression evaluation as numbered steps, with `Evaluate.java` linked rather than shown; exercise 5 asks for a balanced-brackets checker (*read*) · fetched 2026-10-14
 - **Our delta:** the syllabus row promises four shapes at once: balanced brackets, path simplification, postfix and nested-string decoding.
 
 ### T06-02 · The monotonic stack — Master · 🔲 not written
 - **Read this:** [All nearest smaller values](https://en.wikipedia.org/wiki/All_nearest_smaller_values) · Wikipedia · the stack method has a nested loop yet is linear, because each inner pop discards an item pushed earlier (*read*) · covers our angle: **partial** — the linear argument is there, with no next-greater or stock-span framing · fetched 2026-10-14
-- **Beyond the docs:** [Monotonic Stack Interview Patterns: Next Greater Element, Largest Rectangle, and Stock Span](https://techinterview.org/stack-monotonic-interview-patterns/) · techinterview.org, 2026-04-17 · "each element is pushed and popped at most once", walked through next greater and daily temperatures; the page does not mention stock span (*read*) · fetched 2026-10-14
-- **Our delta:** the syllabus row's "pop while" invariant stated once and tied to the push-once, pop-once bound; our amortised page `docs/dsa/pages/phase-1-complexity/03-amortised-analysis.md` only lists it as a case of the 2n bound.
+- **Beyond the docs:** [Monotonic Stack and Queue Interview Patterns](https://www.techinterview.org/post/3233465178/monotonic-stack-queue-interview-patterns/) · techinterview.org, 2026-04-17 · "each element is pushed and popped at most once", walked through next greater (with the circular variant) and daily temperatures; the page does not mention stock span (*read*) · fetched 2026-10-14
+- **Our delta:** the syllabus row's "pop while" invariant stated once and tied to the push-once, pop-once bound; our amortised page `docs/dsa/pages/phase-1-complexity/03-amortised-analysis.md` only lists it as a case of the 2n bound, with one short code sketch.
 
 ### T06-03 · Largest rectangle in a histogram — Master · 🔲 not written
-- **Read this:** [Cartesian tree](https://en.wikipedia.org/wiki/Cartesian_tree) · Wikipedia · stack-based construction maintains a stack holding a subsequence of the input; the histogram problem is not mentioned (*read*) · covers our angle: **partial** — the machinery only; no rectangles and no matrix extension · fetched 2026-10-14
-- **Beyond the docs:** [Monotonic Stack Interview Patterns](https://techinterview.org/stack-monotonic-interview-patterns/) · techinterview.org, 2026-04-17 · largest rectangle (LC 84) with an increasing stack and a zero appended to flush it (*read*) · fetched 2026-10-14
+- **Read this:** [Cartesian tree](https://en.wikipedia.org/wiki/Cartesian_tree) · Wikipedia · the stack-based construction pops until the top is smaller, giving each value its nearest smaller neighbour on the left, and again on the reversed sequence for the right; the histogram problem is not mentioned (*read*) · covers our angle: **partial** — the machinery only (those two neighbours are each bar's rectangle bounds); no rectangles and no matrix extension · fetched 2026-10-14
+- **Beyond the docs:** [Monotonic Stack and Queue Interview Patterns](https://www.techinterview.org/post/3233465178/monotonic-stack-queue-interview-patterns/) · techinterview.org, 2026-04-17 · largest rectangle (LC 84) with an increasing stack and a zero appended to flush it (*read*) · fetched 2026-10-14
 - **Our delta:** the syllabus row promises the maximal rectangle in a matrix built on the histogram, which these sources do not give.
 
 ### T06-04 · Min-stack and the auxiliary structure — Master · 🔲 not written
@@ -36,7 +36,7 @@ Covers every topic row of phases 6, 7 and 8 in `docs/dsa/syllabus/03-linear-stru
 
 ### T06-05 · The monotonic deque — Master · 🔲 not written
 - **Read this:** [Minimum stack / Minimum queue](https://cp-algorithms.com/data_structures/stack_queue_modification.html) · cp-algorithms · a nondecreasing deque keeps the minimum at the front; applied to the minimum of every fixed-length window in linear time (*read*) · covers our angle: **partial** — minimum, not maximum, and no shortest-subarray-with-sum-at-least-k · fetched 2026-10-14
-- **Also good:** [Monotonic Stack Interview Patterns](https://techinterview.org/stack-monotonic-interview-patterns/) · techinterview.org, 2026-04-17 · sliding window maximum with a monotonic deque (LC 239) (*read*) · fetched 2026-10-14
+- **Also good:** [Monotonic Stack and Queue Interview Patterns](https://www.techinterview.org/post/3233465178/monotonic-stack-queue-interview-patterns/) · techinterview.org, 2026-04-17 · sliding window maximum with a deque of indices in decreasing value order (LC 239); the code snippet for it is garbled and will not run, so read the prose (*read*) · fetched 2026-10-14
 - **Our delta:** the syllabus row adds the prefix-sum variant, shortest subarray with a sum of at least k.
 
 ### T06-06 · Circular buffers and array-backed queues — Master · 🔲 not written
@@ -61,7 +61,7 @@ Covers every topic row of phases 6, 7 and 8 in `docs/dsa/syllabus/03-linear-stru
 
 ### T06-10 · Recursion as an explicit stack — Understand · ✅ written `docs/dsa/pages/phase-2-recursion-maths-bits/01f-converting-recursion-to-an-explicit-stack.md`
 - **Read this:** [Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) · Wikipedia · a stack can record the last correct point so a search can return to it, which is how depth-first search works (*read*) · covers our angle: **partial** — no conversion recipe · fetched 2026-10-14
-- **Our delta:** the mechanical conversion: the frame becomes an object you push, children go on in reverse, post-order work needs a resume point. Tree traversals themselves arrive in Part 4.
+- **Our delta:** the mechanical conversion: the frame becomes an object you push, children go on in reverse; post-order work needs a resume point, which is `docs/dsa/pages/phase-2-recursion-maths-bits/01g-post-order-and-the-resume-point-frame.md`. Tree traversals themselves arrive in Part 4.
 
 ### T06-11 · Design problems on stacks and queues — Know · 🔲 not written
 - **Read this:** [Queue (abstract data type)](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) · Wikipedia · array-as-circle with indices modulo size, and an amortised queue from two lists; carries a missing-citations notice (*read*) · covers our angle: **partial** — no browser history, undo or queue-with-maximum · fetched 2026-10-14
@@ -85,14 +85,15 @@ Covers every topic row of phases 6, 7 and 8 in `docs/dsa/syllabus/03-linear-stru
 
 ### T07-03 · Fast and slow on lists — Master · 🔲 not written
 - **Read this:** [Cycle detection](https://en.wikipedia.org/wiki/Cycle_detection) · Wikipedia · two pointers at different speeds meet inside the cycle; reset one to the start and step both to reach the start mu; advance one to find the length lambda (*read*) · covers our angle: **partial** — no list-middle and no palindrome list · fetched 2026-10-14
+- **Beyond the docs:** [Coding Interview: Linked List Patterns](https://www.techinterview.org/post/3233474169/coding-interview-linked-list-patterns-reverse-merge-cycle-detection-fast-slow-pointer-dummy-node-techniques/) · techinterview.org, 2026-04-20 · the fast-slow section covers the middle, Floyd's meeting point, the cycle start, and the palindrome check by reversing the second half (*read*) · fetched 2026-10-14
 - **Our delta:** the syllabus row adds the middle and the palindrome list; happy numbers use the same idea in `docs/dsa/pages/phase-2-recursion-maths-bits/11i-happy-numbers-and-cycle-detection.md`.
 
 ### T07-04 · Merging — Master · 🔲 not written
-- **Read this:** [Coding Interview: Linked List Patterns](https://www.techinterview.org/post/3233474169/coding-interview-linked-list-patterns-reverse-merge-cycle-detection-fast-slow-pointer-dummy-node-techniques/) · techinterview.org, 2026-04-20 · merging sorted lists with a dummy head (*read*) · covers our angle: **partial** — k lists is not given a full treatment there · fetched 2026-10-14
-- **Our delta:** k lists both ways: a heap and divide and conquer, both O(N log k).
+- **Read this:** [Coding Interview: Linked List Patterns](https://www.techinterview.org/post/3233474169/coding-interview-linked-list-patterns-reverse-merge-cycle-detection-fast-slow-pointer-dummy-node-techniques/) · techinterview.org, 2026-04-20 · merging two sorted lists with a dummy head, and k sorted lists with a priority queue or by divide and conquer (*read*) · covers our angle: **full** · fetched 2026-10-14
+- **Our delta:** k lists both ways in TypeScript and Java, both O(N log k), with the heap's comparator traps.
 
 ### T07-05 · One-pass tricks — Master · 🔲 not written
-- **Read this:** [Coding Interview: Linked List Patterns](https://www.techinterview.org/post/3233474169/coding-interview-linked-list-patterns-reverse-merge-cycle-detection-fast-slow-pointer-dummy-node-techniques/) · techinterview.org, 2026-04-20 · fast-slow and dummy-node techniques (*read*) · covers our angle: **partial** — no gap pointer · fetched 2026-10-14
+- **Read this:** [Coding Interview: Linked List Patterns](https://www.techinterview.org/post/3233474169/coding-interview-linked-list-patterns-reverse-merge-cycle-detection-fast-slow-pointer-dummy-node-techniques/) · techinterview.org, 2026-04-20 · the n-th from the end by advancing one pointer N steps and then moving both, under the fast-slow section; the deletion itself gets one line (*read*) · covers our angle: **partial** — the gap pointer is there, the edge cases are thin · fetched 2026-10-14
 - **Our delta:** the gap pointer for the n-th from the end, and the k-th from the end.
 
 ### T07-06 · The LRU cache — Master · 🔲 not written
@@ -103,19 +104,19 @@ Covers every topic row of phases 6, 7 and 8 in `docs/dsa/syllabus/03-linear-stru
 - **Our delta:** where the insertion-ordered `Map` shortcut stops being one; the JavaScript track covers the machine-coding side.
 
 ### T07-07 · Reorder, rotate and partition — Understand · 🔲 not written
-- **Read this:** [Coding Interview: Linked List Patterns](https://www.techinterview.org/post/3233474169/coding-interview-linked-list-patterns-reverse-merge-cycle-detection-fast-slow-pointer-dummy-node-techniques/) · techinterview.org, 2026-04-20 · reconstruction patterns built from the same primitives (*headings only*) · covers our angle: **partial** · fetched 2026-10-14
+- **Read this:** [Coding Interview: Linked List Patterns](https://www.techinterview.org/post/3233474169/coding-interview-linked-list-patterns-reverse-merge-cycle-detection-fast-slow-pointer-dummy-node-techniques/) · techinterview.org, 2026-04-20 · the copy-and-reconstruct section names reorder list (1→5→2→4→3) and partitioning around a value x (*read*) · covers our angle: **partial** — rotate is not named · fetched 2026-10-14
 - **Our delta:** split, reverse and weave, and stable partition around a value.
 
 ### T07-08 · Copying a list with random pointers — Understand · 🔲 not written
-- **Read this:** [Coding Interview: Linked List Patterns](https://www.techinterview.org/post/3233474169/coding-interview-linked-list-patterns-reverse-merge-cycle-detection-fast-slow-pointer-dummy-node-techniques/) · techinterview.org, 2026-04-20 · lists copy and reconstruct as one of five patterns (*headings only*) · covers our angle: **partial** · fetched 2026-10-14
+- **Read this:** [Coding Interview: Linked List Patterns](https://www.techinterview.org/post/3233474169/coding-interview-linked-list-patterns-reverse-merge-cycle-detection-fast-slow-pointer-dummy-node-techniques/) · techinterview.org, 2026-04-20 · copy list with random pointer both ways: a hash map from old to new node, and interleaving copies for O(1) extra space (*read*) · covers our angle: **full** · fetched 2026-10-14
 - **Our delta:** the interleaving trick set against a map.
 
 ### T07-09 · Arithmetic on lists — Understand · 🔲 not written
-- **Read this:** [Linked list](https://en.wikipedia.org/wiki/Linked_list) · Wikipedia · the structure the digits ride on (*headings only*) · covers our angle: **partial** — no carries · fetched 2026-10-14
+- **Read this:** [Linked list](https://en.wikipedia.org/wiki/Linked_list) · Wikipedia · the structure the digits ride on; the page has nothing on adding numbers (*read*) · covers our angle: **partial** — no carries · fetched 2026-10-14
 - **Our delta:** adding with carries, digits stored forward and reversed.
 
 ### T07-10 · Intersection of two lists — Understand · 🔲 not written
-- **Read this:** [Linked list](https://en.wikipedia.org/wiki/Linked_list) · Wikipedia · basic structure only (*headings only*) · covers our angle: **partial** — nothing on intersection · fetched 2026-10-14
+- **Read this:** [Linked list](https://en.wikipedia.org/wiki/Linked_list) · Wikipedia · basic structure only; the page has nothing on intersecting lists (*read*) · covers our angle: **partial** — nothing on intersection · fetched 2026-10-14
 - **Our delta:** aligning lengths and the two-pointer switch.
 
 ### T07-11 · Lists in Java and TypeScript — Understand · 🔲 not written
@@ -123,7 +124,7 @@ Covers every topic row of phases 6, 7 and 8 in `docs/dsa/syllabus/03-linear-stru
 - **Our delta:** the built-in list against your own nodes, references and garbage, and why the interviewer supplies the node class.
 
 ### T07-12 · Flattening and other structural changes — Know · 🔲 not written
-- **Read this:** [Linked list](https://en.wikipedia.org/wiki/Linked_list) · Wikipedia · covers multiply linked lists as a concept (*headings only*) · covers our angle: **partial** · fetched 2026-10-14
+- **Read this:** [Linked list](https://en.wikipedia.org/wiki/Linked_list) · Wikipedia · multiply linked lists, where each node has two or more link fields; nothing on flattening (*read*) · covers our angle: **partial** · fetched 2026-10-14
 - **Our delta:** multilevel lists, recursion against an explicit stack.
 
 ### T07-13 · Skip lists — Know · 🔲 not written
@@ -135,7 +136,7 @@ Covers every topic row of phases 6, 7 and 8 in `docs/dsa/syllabus/03-linear-stru
 ## Phase 8 — Binary search
 
 ### T08-01 · The template — Master · ✅ written `docs/dsa/pages/phase-2-recursion-maths-bits/02i-binary-search-as-degenerate-divide-and-conquer.md`
-- **Read this:** [Binary Search](https://cp-algorithms.com/num_methods/binary_search.html) · cp-algorithms · lower bound is the first element at least k and upper bound the first greater than k, both from one loop with bounds l = -1 and r = n (*read*) · covers our angle: **partial** — no stated invariant, no overflow note · fetched 2026-10-14
+- **Read this:** [Binary Search](https://cp-algorithms.com/num_methods/binary_search.html) · cp-algorithms · lower bound is the first element at least k and upper bound the first greater than k, both from one loop with bounds l = -1 and r = n; states the invariant `A[l] <= k < A[r]`, and warns that `(l + r) / 2` can overflow, offering `l + (r - l) / 2` and C++20 `std::midpoint` (*read*) · covers our angle: **full** on the invariant and the midpoint; nothing in TypeScript or Java · fetched 2026-10-14
 - **Also good:** [Extra, Extra - Read All About It: Nearly All Binary Searches and Mergesorts are Broken](https://research.google/blog/extra-extra-read-all-about-it-nearly-all-binary-searches-and-mergesorts-are-broken/) · Joshua Bloch, Google Research, 2006-06-02 · `(low + high) / 2` overflows; fix with `low + ((high - low) / 2)` or `(low + high) >>> 1` (*read*) · fetched 2026-10-14
 - **Our delta:** the invariant written as a comment above the loop, and the one hidden-test off-by-one.
 
@@ -145,47 +146,46 @@ Covers every topic row of phases 6, 7 and 8 in `docs/dsa/syllabus/03-linear-stru
 - **Our delta:** first and last occurrence, insert position and closest element written from one invariant.
 
 ### T08-03 · Rotated sorted arrays — Master · 🔲 not written
-- **Read this:** [Search in Rotated Sorted Array: binary search](https://johnkavanagh.co.uk/articles/search-in-rotated-sorted-array-binary-search) · John Kavanagh, 2026-01-26 · find the half that is still sorted and test whether the target lies in it, with no pivot search; TypeScript solution; distinct values assumed (*read*) · covers our angle: **partial** — no duplicates, no minimum · fetched 2026-10-14
-- **Beyond the docs:** [Advanced Binary Search Interview Patterns](https://www.techinterview.org/post/3233461982/binary-search-advanced-interview-patterns/) · techinterview.org, 2026-04-17 · identify the sorted half and narrow accordingly (*read*) · fetched 2026-10-14
-- **Our delta:** the duplicates case, where equal ends make the sorted half undecidable and the worst case turns linear, plus the rotated minimum.
+- **Read this:** [Search in Rotated Sorted Array: binary search](https://johnkavanagh.co.uk/articles/search-in-rotated-sorted-array-binary-search/) · John Kavanagh, 2026-01-26 · find the half that is still sorted and test whether the target lies in it, with no pivot search; TypeScript solution; distinct values assumed, and duplicates are flagged as needing extra handling without giving it (*read*) · covers our angle: **partial** — duplicates not solved, no minimum · fetched 2026-10-14
+- **Beyond the docs:** [Advanced Binary Search Interview Patterns](https://www.techinterview.org/post/3233466118/binary-search-advanced-patterns/) · techinterview.org, 2026-04-17 · identify the sorted half and narrow accordingly (*read*) · fetched 2026-10-14
+- **Our delta:** the duplicates case, where equal ends make the sorted half undecidable and the worst case turns linear, plus the rotated minimum, both as code; our 02i page already states both in one table row and one interview answer.
 
 ### T08-04 · Search on the answer — Master · ✅ written `docs/dsa/pages/phase-2-recursion-maths-bits/02i-binary-search-as-degenerate-divide-and-conquer.md`
-- **Read this:** [Binary Search](https://cp-algorithms.com/num_methods/binary_search.html) · cp-algorithms · a monotone predicate over a range finds its transition point with the same loop; worked on a maximum-average subarray problem (*read*) · covers our angle: **partial** — no shipping, eating-speed or pair-distance cases · fetched 2026-10-14
-- **Beyond the docs:** [Binary Search on Answer: the pattern that unlocks hard problems](https://dev.to/alex_hunter_44f4c9ed6671e/binary-search-on-answer-the-pattern-that-unlocks-hard-problems-iil) · Alex Hunter, DEV Community, 2025-12-14 · define the range, write a `can(x)` check, search for the smallest valid value; pitfalls are bad bounds and a non-monotonic predicate; TypeScript for minimum eating speed (*read*) · fetched 2026-10-14
+- **Read this:** [Binary Search](https://cp-algorithms.com/num_methods/binary_search.html) · cp-algorithms · a monotone predicate over a range finds its transition point with the same loop; worked on the maximum floored average over subarrays of a minimum length, checked with prefix sums (*read*) · covers our angle: **partial** — no shipping, eating-speed or pair-distance cases · fetched 2026-10-14
+- **Beyond the docs:** [Binary Search on Answer: the pattern that unlocks hard problems](https://dev.to/alex_hunter_44f4c9ed6671e/binary-search-on-answer-the-pattern-that-unlocks-hard-problems-iil) · Alex Hunter, DEV Community, 2025-12-14 · define the range, write a `can(x)` check, search for the smallest valid value; pitfalls are bad bounds and a non-monotonic predicate; TypeScript for minimum eating speed; names shipping capacity and splitting an array, not the k-th pair distance (*read*) · fetched 2026-10-14
 - **Our delta:** the predicate-in-place-of-comparison reading, and the k-th smallest pair distance as the hard case.
 
 ### T08-05 · Recognising binary search — Master · 🔲 not written
-- **Read this:** [Advanced Binary Search Interview Patterns](https://www.techinterview.org/post/3233461982/binary-search-advanced-interview-patterns/) · techinterview.org, 2026-04-17 · binary search works on any condition that flips once, not only on sorted arrays (*read*) · covers our angle: **partial** — no "minimum x such that" phrasing cue · fetched 2026-10-14
+- **Read this:** [Advanced Binary Search Interview Patterns](https://www.techinterview.org/post/3233466118/binary-search-advanced-patterns/) · techinterview.org, 2026-04-17 · binary search works on any condition that flips from false to true exactly once, not only on sorted arrays; its example is worded "the minimum speed such that you can eat all bananas" (*read*) · covers our angle: **partial** — the phrasing is present but not taught as a recognition cue · fetched 2026-10-14
 - **Our delta:** the phrasing signals, sorted input or a monotone answer, as a recognition checklist. Our page 02i touches the monotone-predicate idea only.
 
 ### T08-06 · In TypeScript and Java — Master · 🔲 not written
 - **Read this:** [Collections](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collections.html) · Oracle Java SE 21 · `binarySearch` returns the index if found, otherwise `-(insertion point) - 1`, so the result is non-negative if and only if the key is found (*read*) · covers our angle: **partial** — Java only; JavaScript has no built-in · fetched 2026-10-14
-- **Also good:** [Arrays](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Arrays.html) · Oracle Java SE 21 · the array overloads (page truncated before the `binarySearch` detail) (*headings only*) · fetched 2026-10-14
+- **Also good:** [Arrays](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Arrays.html) · Oracle Java SE 21 · the array overloads return `-(insertion point) - 1` when absent, results are undefined on an unsorted array, and with duplicates there is no guarantee which index is found (*read*) · fetched 2026-10-14
 - **Our delta:** why to write your own every time, and the negative-return trap; our 02i page already notes the Java midpoint.
 
 ### T08-07 · On a two-dimensional matrix — Understand · 🔲 not written
-- **Read this:** [Advanced Binary Search Interview Patterns](https://www.techinterview.org/post/3233461982/binary-search-advanced-interview-patterns/) · techinterview.org, 2026-04-17 · start at the top-right corner and move left or down, O(m+n) (*read*) · covers our angle: **partial** — no row-major flattening and no k-th smallest · fetched 2026-10-14
-- **Our delta:** row-major flattening, the staircase, and the k-th smallest in a sorted matrix.
+- **Read this:** [Advanced Binary Search Interview Patterns](https://www.techinterview.org/post/3233466118/binary-search-advanced-patterns/) · techinterview.org, 2026-04-17 · start at the top-right corner and move left or down, O(m+n) (*read*) · covers our angle: **partial** — no row-major flattening and no k-th smallest · fetched 2026-10-14
+- **Our delta:** row-major flattening and the k-th smallest in a sorted matrix; the staircase is already one row of the table in our 02i page.
 
 ### T08-08 · Median of two sorted arrays — Understand · 🔲 not written
-- **Read this:** [Advanced Binary Search Interview Patterns](https://www.techinterview.org/post/3233461982/binary-search-advanced-interview-patterns/) · techinterview.org, 2026-04-17 · lists the median of two sorted arrays among the techniques, with Python code (*headings only*) · covers our angle: **partial** · fetched 2026-10-14
+- **Read this:** [Advanced Binary Search Interview Patterns](https://www.techinterview.org/post/3233466118/binary-search-advanced-patterns/) · techinterview.org, 2026-04-17 · the median section is prose only, with no code: a binary search on the partition of the smaller array, O(log(min(m, n))) (*read*) · covers our angle: **partial** — no boundary-value handling · fetched 2026-10-14
 - **Our delta:** the partition search on the smaller array, with the boundary-value checks spelled out.
 
 ### T08-09 · Unknown or unbounded length — Understand · 🔲 not written
 - **Read this:** [Exponential search](https://en.wikipedia.org/wiki/Exponential_search) · Wikipedia, last edited 2026-08-08 · Bentley and Yao, 1976: find a range holding the key, then binary search it; O(log i) with i the key's position (*read*) · covers our angle: **full** · fetched 2026-10-14
-- **Also good:** [Binary Search](https://cp-algorithms.com/num_methods/binary_search.html) · cp-algorithms · a "search with powers of 2" section (*headings only*) · fetched 2026-10-14
 - **Our delta:** exponential probing then binary search, tied to the template's invariant.
 
 ### T08-10 · Floating-point binary search — Know · 🔲 not written
-- **Read this:** [Binary Search](https://cp-algorithms.com/num_methods/binary_search.html) · cp-algorithms · the continuous search approximates a root within a tolerance in O(log((R-L)/delta)) (*read*) · covers our angle: **partial** — no square-root or geometry examples · fetched 2026-10-14
-- **Our delta:** precision-bounded loops, square roots and geometric answers.
+- **Read this:** [Binary Search](https://cp-algorithms.com/num_methods/binary_search.html) · cp-algorithms · the continuous search approximates a root within a tolerance in O(log((R-L)/delta)), justified by the intermediate value theorem rather than monotonicity (*read*) · covers our angle: **partial** — no square-root or geometry examples · fetched 2026-10-14
+- **Our delta:** precision-bounded loops, square roots and geometric answers; our 02i page has the fixed-iteration fix as a gotcha.
 
 ### T08-11 · Ternary search and unimodal functions — Know · 🔲 not written
 - **Read this:** [Ternary search](https://en.wikipedia.org/wiki/Ternary_search) · Wikipedia · for a unimodal function, evaluate at the one-third and two-thirds points and drop the outer third that cannot hold the maximum; carries a single-source notice (*read*) · covers our angle: **full** for a concept-only row · fetched 2026-10-14
-- **Also good:** [Interpolation search](https://en.wikipedia.org/wiki/Interpolation_search) · Wikipedia · a sibling idea, about O(log log n) on uniform data (*headings only*) · fetched 2026-10-14
+- **Also good:** [Interpolation search](https://en.wikipedia.org/wiki/Interpolation_search) · Wikipedia · a sibling idea, about log(log n) comparisons on average when the keys are uniformly distributed (*read*) · fetched 2026-10-14
 - **Our delta:** the concept and its rare uses.
 
 ### T08-12 · The same idea in trees and databases — Know · 🔲 not written
 - **Read this:** [Binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree) · Wikipedia, last edited 2026-06-01 · each comparison rules out about half the remaining nodes; search time follows tree height, which can degrade to linear (*read*) · covers our angle: **partial** — nothing on databases · fetched 2026-10-14
-- **Also good:** [B-tree](https://en.wikipedia.org/wiki/B-tree) · Wikipedia · descend one level at a time, binary search inside a node; the default relational index (*read*) · fetched 2026-10-14
+- **Also good:** [B-tree](https://en.wikipedia.org/wiki/B-tree) · Wikipedia · binary search is "typically (but not necessarily)" used inside a node; called "the standard index implementation in almost all relational databases" (*read*) · fetched 2026-10-14
 - **Our delta:** the link from the template to the BST (Part 4) and to the PostgreSQL B-tree lookup.
