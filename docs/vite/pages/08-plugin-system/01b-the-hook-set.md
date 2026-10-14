@@ -190,6 +190,18 @@ is the documented compatibility boundary, and the documented answer is to regist
 `enforce: 'post'` and `apply: 'build'`"*. Diagnosing it correctly saves the fruitless step of
 reordering the plugins array.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Plugin API — Rolldown Hooks](https://vite.dev/guide/api-plugin) — vite.dev: the dev server's plugin container, `resolveId`, `load`, `transform` called per module request, `moduleParsed` not called, output generation hooks (except `closeBundle`) not called, "All rolldown hooks are per-environment hooks", t
+- **Also good:** [Environment API for Plugins](https://vite.dev/guide/api-environment-plugins) — vite.dev: Per-environment Hooks and Global Hooks (`#per-environment-hooks-and-global-hooks`) and Accessing the Current Environment in Hooks (`#accessing-the-current-environment-in-hooks`), which replaces the old `ssr` boolean with `this.env
+- **Also good:** [Rolldown Plugin API — Build Hooks](https://rolldown.rs/apis/plugin-api) — rolldown.rs: the build-phase and output-phase hook order that Vite's dev server is selectively replaying, plus the four Kind definitions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Conventions & Discovery](01a-plugin-conventions.md) · [Vite overview](../../README.md) · Next → [Per-Environment & `importer`](01c-per-environment-hooks.md)

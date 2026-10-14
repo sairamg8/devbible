@@ -258,6 +258,20 @@ your project: it converts the single most common env bug from a runtime `undefin
 failure, and the migration cost is a one-time batch of errors that are, in my experience of this
 pattern, mostly real.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Env Variables and Modes](https://vite.dev/guide/env-and-mode) — vite.dev: augment `ImportMetaEnv` in `vite-env.d.ts`; a top-level `import` in that file breaks the augmentation (*read*)
+- **Also good:** [Shared Options: define](https://vite.dev/config/shared-options) — vite.dev: declare `define` constants in `vite-env.d.ts` for type checks (*read*)
+- **Beyond the docs:** [How to Type Environment Variables in TypeScript](https://blog.openreplay.com/type-environment-variables-typescript/) — OpenReplay Team, 2026-02-02: types alone do not stop a missing value, with a Zod parse at startup; it has an `ImportMetaEnv` section, but the Zod example parses `process.env`, so adapt it for `import.meta.env`
+- **Beyond the docs:** [Validate env plugin for Vite](https://dev.to/julienr/validate-env-plugin-for-vite-mfb) — Julien Ripouteau, DEV Community, 2022-10-02: a plugin (`@julr/vite-plugin-validate-env`) that fails the dev server or build on a bad variable and generates the types; the [repo README](https://github.com/Julien-R44/vite-plugin-validate-env) (*read*) is newer (standard-schema
+- **Beyond the docs:** [repo README](https://github.com/Julien-R44/vite-plugin-validate-env)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [HTML `%VAR%` Replacement](02d-html-constant-replacement.md) · [Vite overview](../../README.md) · Next → [Types That Lie About Runtime](02f-types-that-lie-about-runtime.md)

@@ -165,6 +165,18 @@ entirely, since the key name is legitimate and only the value is wrong, so a pro
 env values needs the second check specifically. Both belong in CI as failing steps; a review
 checklist has already been shown, twice on these pages, not to catch this.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Env Variables and Modes](https://vite.dev/guide/env-and-mode) — vite.dev: reverse-order expansion is supported, "does not work in shell scripts and other tools like docker compose", and "recommended to avoid relying on this behavior" (*read*)
+- **Also good:** [Environment variables (.env files)](https://nodejs.org/api/environment_variables.html) — Node.js: a third reader of `.env`: `--env-file`, `process.loadEnvFile`, quoting, `export` ignored, values always strings; documents no `$VAR` expansion; Stable (*read*)
+- **Also good:** [Interpolation (Docker Compose)](https://docs.docker.com/compose/how-tos/environment-variables/variable-interpolation/) — Docker: `$VAR` and `$&#123;VAR&#125;` in unquoted and double-quoted values, `$&#123;VAR:-default&#125;`, shell beats `--env-file` beats `.env`; says nothing on forward references or escaping (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [`dotenv-expand` & Escaping](01g-dotenv-expansion.md) · [Vite overview](../../README.md) · Next → [Sharing One `.env` Across Tools](01i-sharing-env-across-tools.md)

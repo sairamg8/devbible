@@ -233,6 +233,20 @@ No, and the trade-off is legible. Finer chunks mean a smaller invalidated set pe
 **What does `chunkSizeWarningLimit` measure, and why is the default 500?**
 It compares the **uncompressed** size of an emitted chunk, in kB, against the limit, and warns above it. The reason it is uncompressed is stated in the build reference's own reasoning: JS size relates to *execution* time, and gzip does not make a script faster to parse and run — it only makes it faster to arrive. So the warning is about main-thread cost, not bandwidth, and 500 kB is a heuristic about how much JavaScript a page can afford to evaluate rather than how much it can afford to download. Raising the limit changes nothing except whether you are told.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Build Options](https://vite.dev/config/build-options) — vite.dev: `build.rolldownOptions` (`rollupOptions` is a deprecated alias), `build.lib` default formats `es` and `umd` (`es` and `cjs` for several entries), `build.target` default `baseline-widely-available`, `chunkSizeWarningLimit` 500 comp
+- **Read this:** [Building for Production](https://vite.dev/guide/build) — vite.dev: chunking through `build.rolldownOptions.output.codeSplitting` (no example, links to Rolldown), library mode (externals, `globals`, `main`/`module`/`exports`), multi-page entries (*read*)
+- **Also good:** [Migration from v7](https://vite.dev/guide/migration) — vite.dev: object-form `manualChunks` not supported, function form deprecated, "Rolldown has the more flexible `codeSplitting`"; the page does not say outright that it replaces them; new `build.target` floor (Chrome and Edge 111, Firefox 114
+- **Also good:** [codeSplitting reference](https://rolldown.rs/reference/OutputOptions.codeSplitting) — rolldown.rs: `true` by default, `false` inlines dynamic imports, or an object with `groups` plus global fallbacks `minSize`, `maxSize`, `minShareCount`, `includeDependenciesRecursively`; warns manual splitting can change execution order. Per-g
+- **Beyond the docs:** [サンプルプロジェクトを作ってVite 7からVite 8への移行手順を確認してみた](https://dev.classmethod.jp/articles/vite7-to-vite8-migration-pitfalls/) — Nishimura Yuji, Classmethod, 2026-04-23: tried 7.3.2 to 8.0.10: object `manualChunks` breaks the build, the function form still runs, and a `codeSplitting` group with a regex `test` gave the same vendor chunk; Japanese, a version older than ours
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Dev Server Mechanics](../04-dev-server-mechanics/01-native-esm-and-hmr.md) · [Vite overview](../../README.md) · Next → [Asset Handling](../06-asset-handling/01-static-asset-imports.md)

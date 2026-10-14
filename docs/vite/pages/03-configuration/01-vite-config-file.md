@@ -174,6 +174,17 @@ Because `process.env` at module scope tells you about the shell, not about the i
 **Why must `base` be decided at build time rather than configured on the host?**
 Because `base` is not a server setting — it is a string compiled into the emitted `index.html`, into every asset URL the bundler rewrites, and into the runtime value the app uses to construct further URLs. By the time a host is serving those files, the paths inside them are already literal. This is the practical consequence of the dev/build split: in dev, paths are resolved live by a server that can be told anything; in the build, they were frozen at bundle time by a tool that had to be told at bundle time.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuring Vite](https://vite.dev/config/) — vite.dev: config file resolution, `defineConfig`, the function form receiving `command`, `mode`, `isSsrBuild`, `isPreview`, and the warning to compare the last two explicitly against `true` and `false` (*read*)
+- **Also good:** [Shared Options](https://vite.dev/config/shared-options) — vite.dev: the defaults our page marks "not re-checked": `root` is `process.cwd()`, `base` is `/`, `publicDir` is `"public"` (false disables), `envDir` is `root`; `mode` defaults per command and `--mode` overrides config (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [CLI & Project Scaffolding](../02-cli-and-scaffolding/01-commands-and-templates.md) · [Vite overview](../../README.md) · Next → [Dev Server Mechanics](../04-dev-server-mechanics/01-native-esm-and-hmr.md)

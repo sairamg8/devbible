@@ -265,6 +265,17 @@ Because in middleware mode Vite never opens a port; your process does. `vite` wo
 Vite's own dev server, which knows nothing about your Express routes or your renderer. The
 guide shows the change as a diff for exactly that reason.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Server-Side Rendering](https://vite.dev/guide/ssr) — vite.dev: source structure, dev server in middleware mode with `appType: 'custom'`, and the note that it is a low-level API for framework authors (its Express example still calls `vite.ssrLoadModule`) (*read*)
+- **Also good:** [Environment API](https://vite.dev/guide/api-environment) — vite.dev: `client` and `ssr` environments are always present in dev; the top-level `ssr` property is going to be deprecated once the API is stable (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [CSS: Styling Pipeline](../09-css-handling/01-styling-pipeline.md) · [Vite overview](../../README.md) · Next → [The Dev Request Pipeline](01a-the-dev-request-pipeline.md)

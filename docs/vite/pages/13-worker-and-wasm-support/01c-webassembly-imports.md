@@ -187,6 +187,17 @@ Because the two forms handle the WASM binary's own declared imports differently.
 **★ A `.wasm` import works fine in your Node SSR server and fails only when the same server code runs on an edge runtime. What's the mechanism, and is it a WebAssembly support problem?**
 Not a WebAssembly support problem specifically — most edge runtimes support WASM well, sometimes better than Node. It's a loading-mechanism problem: Vite's documented SSR implementation for both the bare `.wasm` import and `?init` relies on `node:fs` internally to read the binary off disk, and that dependency has nothing to do with WebAssembly execution itself — it's purely how Vite gets the bytes into memory before instantiating. An edge runtime that doesn't provide `node:fs` breaks at that loading step, before WebAssembly is even involved. The fix is to route around Vite's built-in loader entirely — `?url` plus a manual `fetch()` and `WebAssembly.instantiateStreaming()` call, using whichever fetch implementation the edge runtime natively provides.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Features › WebAssembly](https://vite.dev/guide/features) — vite.dev: ESM integration (a bare `.wasm` import behaves as an async module and needs top-level `await`), manual initialization with `?init` (init function returning a Promise of a `WebAssembly.Instance`, optional `importObject`, inlined be
+- **Beyond the docs:** [vite-plugin-wasm](https://github.com/Menci/vite-plugin-wasm) — Menci, GitHub README, undated: WebAssembly ESM integration like webpack's `asyncWebAssembly`, wasm-pack support; needs `vite-plugin-top-level-await` unless `build.target` is `esnext`, and `wasm()` must also go in `worker.plugins`; says it supports Vite 2 to 8, 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01b · Shared workers & messaging](01b-shared-workers-and-messaging.md) · [Vite overview](../../README.md) · Next → [01d · TypeScript for workers & WASM](01d-typescript-for-workers-and-wasm.md)

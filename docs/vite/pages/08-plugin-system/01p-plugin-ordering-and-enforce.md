@@ -278,6 +278,18 @@ contributed — inside-band order is undocumented. In practice you write the plu
 idempotent and detects already-transformed input rather than assuming it is first, because "first"
 is not a position `enforce` can express.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Plugin API — Plugin Ordering and Conditional Application](https://vite.dev/guide/api-plugin) — vite.dev: the resolved order (Alias, user `pre`, Vite core, user unordered, Vite build, user `post`, Vite post-build), `apply` as `'serve'`, `'build'` or a function (`#plugin-ordering`, `#conditional-application`), and the spread pattern fo
+- **Also good:** [Using Plugins](https://vite.dev/guide/using-plugins) — vite.dev: the user-side view: `enforce` of `pre`, default or `post`, `apply` limited to `'build'` or `'serve'`, and the note that ordering is mainly for Rollup-plugin compatibility (*read*)
+- **Also good:** [Rolldown ObjectHook](https://rolldown.rs/reference/TypeAlias.ObjectHook) — rolldown.rs reference: a hook's own `order` of `pre`, `post` or `null` (`#order`), distinct from plugin `enforce`; `sequential` is deprecated and hooks always behave as sequential (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Typing Custom Events](01oe-typing-custom-events.md) · [Vite overview](../../README.md) · Next → [`enforce` vs Hook `order`](01pa-enforce-vs-hook-order.md)

@@ -182,6 +182,18 @@ component's props and the host's build stays green; the break surfaces at runtim
 browser instead, which is strictly worse than a compile error, since it reaches production
 before anyone with a red pipeline sees it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [When microfrontends make sense](https://vercel.com/academy/microfrontends-on-vercel/when-microfrontends) — Vercel Academy, updated 2026-05-06: warning signs (builds over five minutes, teams blocking each other), counter-signs (under about five developers, builds under three minutes), "Don't adopt them unless they solve problems you actually have" (*read*)
+- **Beyond the docs:** [MonolithFirst](https://martinfowler.com/bliki/MonolithFirst.html) — Martin Fowler, 2015-06-03: teams that start with microservices often hit trouble, successful systems began as monoliths; Fowler calls it tentative, and it is about backend services, so it carries over to frontends by analogy (*read*)
+- **Beyond the docs:** [Micro Frontends: Downsides](https://martinfowler.com/articles/micro-frontends.html) — Cam Jackson, martinfowler.com, 2019-06-19: payload size, environment differences, operational and governance complexity (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Many deployables, not microservices](08b-many-deployables-is-not-microservices.md) · [Vite overview](../../README.md) · Next → [The decision framework](09b-the-decision-framework.md)

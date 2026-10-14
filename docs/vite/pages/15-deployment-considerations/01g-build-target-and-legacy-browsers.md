@@ -101,6 +101,20 @@ A second, parallel build of the entire bundle. Every chunk gets transformed by B
 **★ Is `build.target` and `@vitejs/plugin-legacy`'s `targets` the same configuration, just read by two different tools?**
 No, and treating them as the same is a common mistake. `build.target` controls how far Oxc lowers the syntax of the single modern build Vite always produces — it never adds a second bundle. `plugin-legacy`'s `targets` is a Browserslist query handed to Babel, and it controls an entirely separate, additional legacy build that only exists when the plugin is installed. Raising `build.target` makes the modern bundle assume more; it does nothing to whether a legacy bundle exists or what it contains. Lowering `plugin-legacy`'s `targets` widens which old browsers get a legacy chunk; it has no effect on the modern bundle Oxc produces. A project can legitimately set `build.target: 'esnext'` for the fastest possible modern bundle while separately configuring `plugin-legacy` to support browsers far below that — the two numbers answer different questions and are read by different transpilers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Building for Production](https://vite.dev/guide/build) — vite.dev: Browser Compatibility: default targets Baseline Widely Available, lower targets still need native dynamic import and `import.meta`, no polyfills, `@vitejs/plugin-legacy` for older browsers (*read*)
+- **Also good:** [Env Variables and Modes](https://vite.dev/guide/env-and-mode) — vite.dev: `import.meta.env` constants are "statically replaced at build time" (*read*)
+- **Also good:** [Build Options](https://vite.dev/config/build-options) — vite.dev: `build.target` default `'baseline-widely-available'` as of 2026-01-01; `build.sourcemap` values `true`, `'inline'`, `'hidden'` (*read*)
+- **Also good:** [Vite for Express (source map upload)](https://docs.sentry.io/platforms/javascript/guides/express/sourcemaps/uploading/vite/) — Sentry docs: vendor docs: `"hidden"` plus `filesToDeleteAfterUpload`, or deny `.js.map` on the server (*read*)
+- **Beyond the docs:** [Runtime Environment Variables for React Apps with Nginx and Docker](https://dev.to/imzihad21/runtime-environment-variables-for-react-apps-with-nginx-and-docker-3p62) — ZèD (imzihad21), DEV Community, 2025-12-25: template file plus `envsubst` at container start, loaded before the bundle, public values only; not Vite-specific; its sample script defaults each variable to an empty string, which contradicts its own advice to stop boot when a r
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01f · Caching strategy](01f-caching-strategy-and-library-mode-deployment.md) · [Vite overview](../../README.md) · Next → [01h · Env baking & runtime config](01h-env-baking-and-runtime-config.md)

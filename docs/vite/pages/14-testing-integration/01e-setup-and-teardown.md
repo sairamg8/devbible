@@ -143,6 +143,18 @@ Because `globalSetup` executes in a separate process/scope from every test worke
 **★ When does the extra process-boundary cost of `globalSetup` pay for itself over just doing the same setup inside `setupFiles`?**
 When the setup work is expensive enough that paying its cost once for the whole test run is meaningfully cheaper than paying it once per test file — starting a real database container, compiling a large fixture, seeding data that many test files will read but none will mutate destructively. For anything cheap — instantiating a mock, extending `expect`, resetting handlers — the per-file cost of `setupFiles` is negligible and the direct, same-process access to the result is worth more than the one-time saving `globalSetup` would offer.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [setupFiles](https://vitest.dev/config/setupfiles) — vitest.dev: runs in the same process as tests, before each test file, unlike `globalSetup`, which runs once in the main thread before any worker exists (*read*)
+- **Beyond the docs:** [Vitest Setup Files vs Global Setup: Choose the Correct Lifecycle](https://qaskills.sh/blog/vitest-setup-files-vs-global-setup) — QASkills.sh (no author byline), 2026-08-07: ownership matrix, `provide` and `inject` for passing values out of global setup, `EADDRINUSE` from top-level server code
+- **Beyond the docs:** [V8 Coverage vs Istanbul: Performance and Accuracy](https://dev.to/stevez/v8-coverage-vs-istanbul-performance-and-accuracy-3ei8) — Steve Zhang, DEV Community, year not shown: the instrumentation-versus-engine model, and the rule not to mix V8 and Istanbul data in one report; it says Istanbul is "always more accurate", which the official page contradicts since 3.2.0 (the post shows no year, so I cannot 
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01d · Mocking under a shared pipeline](01d-mocking.md) · [Vite overview](../../README.md) · Next → [01f · Coverage providers](01f-coverage.md)

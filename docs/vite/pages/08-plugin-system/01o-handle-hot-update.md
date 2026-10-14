@@ -242,6 +242,19 @@ rather than one: an empty read makes a content check fail, so the update is drop
 read can make a diff report far more change than occurred, so the update is oversized. `ctx.read()`
 is not a convenience wrapper, it is the correct API.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Plugin API — handleHotUpdate](https://vite.dev/guide/api-plugin) — vite.dev: `handleHotUpdate` (`#handlehotupdate`) is async, sequential, Per-environment; the context has `file`, `timestamp`, `modules`, `read`, `server`; the three documented choices are narrow the module list, return an empty array and ful
+- **Also good:** [HMR hotUpdate Plugin Hook](https://vite.dev/changes/hotupdate-hook) — vite.dev: why `handleHotUpdate` mixes client and SSR modules, `this.environment.hot.send`, the `create` / `update` / `delete` `type` field, and the `future.removePluginHookHandleHotUpdate` flag; says deprecation is planned for "a future maj
+- **Also good:** [Environment API for Plugins — hotUpdate and state](https://vite.dev/guide/api-environment-plugins) — vite.dev: The `hotUpdate` Hook (`#the-hotupdate-hook`, runs once per environment in series), Per-environment State in Plugins (`#per-environment-state-in-plugins`), and the `perEnvironmentStartEndDuringDev` and `perEnvironmentWatchChangeDur
+- **Beyond the docs:** [Hot module reloading for content in SvelteKit](https://dev.to/dimfeld/hot-module-reloading-for-content-in-sveltekit-137e) — Daniel Imfeld, DEV Community, 2021-11-01: a real `watch-content` plugin: `handleHotUpdate` turns a changed markdown or HTML file into a custom `content-update` event via `ctx.server.ws.send`, returns an empty module list; names no version, and its early-SvelteKit APIs poi
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The `transformIndexHtml` Context](01nd-html-transform-context.md) · [Vite overview](../../README.md) · Next → [The `handleHotUpdate` Return Contract](01oa-hmr-return-contract.md)

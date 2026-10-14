@@ -88,6 +88,19 @@ A nonce's security guarantee rests entirely on being unpredictable and unique pe
 **★ A CSP for a Vite-built app forbids `'unsafe-inline'` in `script-src`. Does the default build output need an exception, and why or why not?**
 No exception is needed by default, because Vite's build never emits inline script bodies for its own output — every script it writes is an external `<script type="module" src="...">` reference to a hashed file in `dist/`, and the same is true for stylesheets via `<link rel="stylesheet">`. A strict policy with no `'unsafe-inline'` is therefore compatible with an unmodified Vite production build as-is. The exception would only become necessary if something else in the pipeline introduces genuinely inline content — a plugin that injects an inline `<script>` for analytics bootstrapping, hand-written inline styles in a hand-authored backend template, or an experimental feature whose output shape hasn't been fully audited against the policy — at which point the correct tool is either removing the inline content, switching to `html.cspNonce` with a server that can make nonces per-request meaningful, or a `script-src 'sha256-...'` hash pinned to that specific inline content's fixed value.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Features](https://vite.dev/guide/features) — vite.dev: `html.cspNonce` adds a nonce to script, style and link tags plus a `csp-nonce` meta tag; the placeholder must be replaced per request (*read*)
+- **Also good:** [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) — MDN: nonces must differ per response and cannot be used with static HTML (*read*)
+- **Beyond the docs:** [Production React + Vite Docker deployment](https://www.buildwithmatija.com/blog/production-react-vite-docker-deployment) — Matija Žiberna, 2025-08-19 (updated 2026-07-21): `VITE_` values are compile-time constants, so `docker run -e` cannot reach the app; the fix is `ARG` plus `ENV` in the build stage and `--build-arg`; it names no Vite version and never explains why both `ARG` and `ENV` are needed
+- **Beyond the docs:** [Documentation: Clarify limitations of `html.cspNonce` for SPA deployments (vitejs/vite #20531)](https://github.com/vitejs/vite/issues/20531) — Vite issue thread, opened 2025-08-02, still open: maintainer replies: the `csp-nonce` meta tag is an internal placeholder, a static nonce defeats the point, per-request nonces do not conflict with caching because they sit only in the HTML, and hash-based CSP is doubtful with dyna
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01l · Module preload & the polyfill](01l-module-preload-and-the-polyfill.md) · [Vite overview](../../README.md) · Next → [01n · Docker build-args vs runtime env](01n-docker-build-args-vs-runtime-env.md)

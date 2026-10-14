@@ -263,6 +263,18 @@ inspect how many backend services exist behind that URL. Conflating "the backend
 distributed" with "the frontend build must change" is a category error worth naming directly
 in review rather than letting a proposal imply changes that would not actually happen.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Backends for Frontends pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends) — Microsoft Azure Architecture Center, first dated 2025-03-19, page metadata updated 2026-09-25: one backend per frontend, the extra network hop, when it does not pay off (same requests from every interface, one interface only), and the GraphQL and API-gateway alternatives (*read*)
+- **Also good:** [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) — MDN: preflight and credentialed requests, the cost our fan-out argument counts (*read*)
+- **Beyond the docs:** [Backends For Frontends](https://samnewman.io/patterns/architectural/bff/) — Sam Newman, 2015-11-18: the original pattern: "one experience, one BFF" (credited to Stewart Gleadow), with team boundaries deciding how many (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The Adjacent Toolchain](../17-the-2026-toolchain-landscape/03-the-adjacent-toolchain.md) · [Vite overview](../../README.md) · Next → [The BFF and browser fan-out](01a-the-bff-and-the-browser-fan-out.md)

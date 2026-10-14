@@ -267,6 +267,18 @@ half of what it claims. It is the same class of defect as the silent plugin inje
 same defence applies: read the hook's notes, because Vite documents its footguns adjacent to the
 things that trigger them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Plugin API — config and configResolved](https://vite.dev/guide/api-plugin) — vite.dev: `config` (`#config`) is Kind async, sequential, Scope Global, runs before resolution, user plugins are already resolved so adding plugins from it has no effect; `configResolved` (`#configresolved`) is async, parallel, Global, and 
+- **Also good:** [Rolldown Plugin API](https://rolldown.rs/apis/plugin-api) — rolldown.rs: defines async, first, sequential and parallel in prose (sequential: all plugins run in order and async ones are awaited; parallel: async hooks do not block the next one) (*read*)
+- **Also good:** [Vite 8 migration — Advanced](https://vite.dev/guide/migration) — vite.dev: the sentence "All parallel hooks in Rollup work as sequential hooks", linking to Rolldown; the Rolldown ObjectHook page agrees that hooks always behave as `sequential: true` (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Per-Environment & `importer`](01c-per-environment-hooks.md) · [Vite overview](../../README.md) · Next → [`configResolved`](01e-configresolved.md)

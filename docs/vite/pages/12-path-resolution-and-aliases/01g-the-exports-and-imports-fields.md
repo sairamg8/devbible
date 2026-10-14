@@ -266,6 +266,19 @@ mental model: `exports` is a contract about *how imports are written*, not a fil
 permission system. Treat anything reached by working around it as unsupported, since the
 maintainer never promised that path and can move or delete it without warning.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Node.js Modules: Packages](https://nodejs.org/api/packages.html) — nodejs.org: "all subpaths of the package are encapsulated" (`ERR_PACKAGE_PATH_NOT_EXPORTED`), earlier condition entries win and `default` goes last, `imports` keys start with `#`, self-reference needs `exports`; this is the latest-branch page
+- **Also good:** [Shared Options › `resolve.conditions`, `resolve.mainFields`](https://vite.dev/config/shared-options) — vite.dev: `conditions` default `module`, `browser`, `development|production`; `mainFields` default `browser`, `module`, `jsnext:main`, `jsnext`, lower precedence than `exports` (*read*)
+- **Also good:** [Migration from v7 › Removed Module Resolution Using Format Sniffing](https://vite.dev/guide/migration) — vite.dev: Vite no longer inspects file contents to choose between `browser` and `module` and always respects the `resolve.mainFields` order; workarounds are an alias or patching the package (*read*)
+- **Beyond the docs:** [Package exports](https://webpack.js.org/guides/package-exports) — webpack docs, undated: the same `exports` semantics from a bundler's side: unlisted requests fail, conditions are tried in object order and a matched null target stops resolution, `default` or `import` placed early shadows specific ones, and stateless v
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01f · Aliasing to stubs & monorepo source](01f-aliasing-stubs-and-monorepo-source.md) · [Vite overview](../../README.md) · Next → [01ga · imports field & self-reference](01ga-the-imports-field-and-self-referencing.md)

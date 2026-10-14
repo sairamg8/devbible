@@ -274,6 +274,18 @@ earlier `export` makes the code look correct. The fix is `loadEnv`, and the reas
 beyond correctness: it puts the value in a reviewed file in the repository instead of in everyone's
 dotfiles, where it drifts silently and nobody can diff it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuring Vite](https://vite.dev/config/) — vite.dev: `.env*` files load after the config resolves, `loadEnv(mode, process.cwd(), '')`, the `bundle` default loader (Rolldown, temp file in `node_modules/.vite-temp`), `--configLoader native` on Node 22.18+, planned default in a future 
+- **Also good:** [Command Line Interface](https://vite.dev/guide/cli) — vite.dev: `--configLoader` listed on every command (*read*)
+- **Also good:** [Node.js TypeScript](https://nodejs.org/api/typescript.html) — Node.js: type stripping on by default from v22.18.0 and v23.6.0, Stable from v24.12 and v25.2; erasable syntax only (enums, runtime namespaces and parameter properties fail), `tsconfig.json` ignored so `paths` do not apply, no `.tsx`, no f
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Sharing `.env` Across Tools](01i-sharing-env-across-tools.md) · [Vite overview](../../README.md) · Next → [Conditional Config & the Config Loader](02a-conditional-config-and-the-loader.md)

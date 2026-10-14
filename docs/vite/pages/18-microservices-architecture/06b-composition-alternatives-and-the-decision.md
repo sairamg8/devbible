@@ -159,6 +159,17 @@ entirely — there's no client-side runtime shared between the pieces at all, be
 browser only ever receives one already-composed document, and any coordination problem
 moves to edge/proxy infrastructure instead of into a page's JavaScript realm.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) — MDN, last modified 2026-09-01: `customElements.define`, lifecycle callbacks, autonomous elements (*read*)
+- **Beyond the docs:** [Micro Frontends](https://martinfowler.com/articles/micro-frontends.html) — Cam Jackson, martinfowler.com, 2019-06-19: integration approaches and the downsides section: payload size, environment differences, governance (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Import maps and the alternatives](06-import-maps-and-the-other-answers.md) · [Vite overview](../../README.md) · Next → [base and asset URLs](07-base-and-asset-urls-across-origins.md)

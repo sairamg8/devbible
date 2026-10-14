@@ -168,6 +168,21 @@ Because it solved a problem specific to Webpack's templating model: the built HT
 **★ What is the actual cost distribution of a CRA-to-Vite migration — where does the time really go?**
 Not in the dependency swap or the `vite.config.ts` scaffold, which are both a few lines. It goes into the categories that touch application code directly and fail silently or at runtime rather than at build time: env var references scattered across the codebase (`process.env.REACT_APP_*` has no Vite equivalent that throws a helpful error — it just becomes `undefined`), any file with JSX in a `.js` extension (a hard parse error, at least visible), path aliases that type-check but do not resolve at runtime, and SVG component imports that compile but hand a URL string to something expecting a React component. The category that costs the most on any app old enough to have accumulated one is an ejected or CRACO-customized build — see **[01f](01f-eject-and-craco-codebases.md)** — because there is no automatic converter for a hand-rolled webpack override, only a person reading it line by line.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Getting Started](https://vite.dev/guide/) — vite.dev: "index.html and Project Root": `index.html` is the entry in the module graph, URLs are rebased so `%PUBLIC_URL%` is not needed (*read*)
+- **Also good:** [Env Variables and Modes](https://vite.dev/guide/env-and-mode) — vite.dev: `VITE_` prefix exposure, `import.meta.env`, HTML constant replacement (*read*)
+- **Also good:** [Sunsetting Create React App](https://react.dev/blog/2025/02/14/sunsetting-create-react-app) — react.dev: why CRA is deprecated and the option of moving to Vite, Parcel or Rsbuild (*read*)
+- **Also good:** [Migration from v7](https://vite.dev/guide/migration) — vite.dev: `esbuild` options become `oxc`, `oxc.jsx` mapping (*read*)
+- **Beyond the docs:** [Migrate to Vite from Create React App (CRA)](https://www.robinwieruch.de/vite-create-react-app/) — Robin Wieruch, 2023-03-29: env prefix, moving `index.html`, renaming `.js` to `.jsx`; the CRA sunset post itself links to it; pre-Vite 8, so it does not say Oxc decides JSX from the extension
+- **Also good:** [Shared Options](https://vite.dev/config/shared-options) — vite.dev: "By default, transformation by Oxc is applied to `ts`, `jsx` and `tsx` files", adjustable with `oxc.include` and `oxc.exclude`; it never says a `.js` file with JSX fails (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01n · Docker build-args vs runtime env](../15-deployment-considerations/01n-docker-build-args-vs-runtime-env.md) · [Vite overview](../../README.md) · Next → [01a · Environment variables](01a-environment-variables.md)

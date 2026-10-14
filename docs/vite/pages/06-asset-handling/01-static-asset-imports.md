@@ -186,6 +186,18 @@ Because both are compile-time rewrites, not runtime functions. Vite has to know,
 **Why is inlining an asset not simply a free win?**
 Three costs. Base64 is 4 characters per 3 bytes, so the payload grows about a third before compression. The asset stops being independently cacheable — it lives inside a JS or CSS file, and it is re-downloaded every time *that* file changes, which for app code is every deploy. And if the same asset is referenced from several chunks, it can be duplicated into each of them rather than shared. Against that you save one request. That trade is clearly worth it at a few hundred bytes and clearly not worth it for something reused across the app, which is why a threshold exists rather than a boolean.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Static Asset Handling](https://vite.dev/guide/assets) — vite.dev: import returns the public URL (`/src/img.png` in dev, hashed path in build), inlining under `assetsInlineLimit`, `?url` for unknown types, `?raw`, `?inline` and `?no-inline`, the three reasons for `public/`, "prefer importing" (*r
+- **Also good:** [Build Options](https://vite.dev/config/build-options) — vite.dev: `assetsInlineLimit` default 4096, `copyPublicDir` default true, and `build.lib` makes the limit ignored so assets always inline (*read*)
+- **Also good:** [Features: glob import](https://vite.dev/guide/features) — vite.dev: `import.meta.glob` lazy by default, `&#123; eager: true &#125;`, patterns relative or absolute, all arguments must be literals; our page says it did not re-fetch this (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Build System](../05-build-system-rollup/01-build-options.md) · [Vite overview](../../README.md) · Next → [Env Variables & Modes](../07-env-variables-and-modes/01-environment-system.md)

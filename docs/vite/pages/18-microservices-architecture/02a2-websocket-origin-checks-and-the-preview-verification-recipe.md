@@ -163,6 +163,18 @@ to find these bugs locally before a real deployment does. What it does *not* pro
 real production gateway or ingress is configured correctly, because `vite preview` has no
 gateway in front of it either; that's a separate, infrastructure-side check.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Server Options: server.proxy and server.ws](https://vite.dev/config/server-options) — vite.dev: Vite does not check WebSocket request origins before proxying, `rewriteWsOrigin` bypasses the target's check, and HMR falls back to a direct connection when a front proxy lacks WebSocket support (avoid with `server.ws.clientPort` 
+- **Also good:** [Deploying a Static Site](https://vite.dev/guide/static-deploy) — vite.dev: `vite preview` serves `dist` at port 4173 and "is not meant as a production server" (*read*)
+- **Also good:** [Any websites were able to send any requests to the development server](https://github.com/vitejs/vite/security/advisories/GHSA-vg6x-rcgg-rjx6) — Vite security advisory, CVE-2025-24010, 2025-01-20: Vite's own HMR WebSocket once lacked Origin validation (fixed in 6.0.9); a different bug from the proxied-target check, but the same lesson about origins on dev WebSockets (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [CORS, cookies and websockets](02a-cors-cookies-and-websockets-through-the-proxy.md) · [Vite overview](../../README.md) · Next → [Websockets, configure and dev-only scope](02b-websockets-configure-and-the-proxys-dev-only-scope.md)

@@ -179,6 +179,19 @@ look because that is where webpack's `entry` conceptually lived — the second p
 correctly and 404s the instant someone tries to reach it from the dev server, which is
 usually how the gap is found.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Features](https://vite.dev/guide/features) — vite.dev: Glob Import: lazy by default, `eager: true`, patterns must be literals, relative, root-absolute or alias (*read*)
+- **Also good:** [DevServer](https://webpack.js.org/configuration/dev-server/) — webpack docs: the `historyApiFallback` and `proxy` options our page maps from (*read*)
+- **Also good:** [Modules: CommonJS modules](https://nodejs.org/api/modules.html) — Node.js docs: the module wrapper that supplies `require`, `module`, `exports`, `__filename`, `__dirname` (*read*)
+- **Beyond the docs:** [How we migrated to ViteJS](https://retool.com/blog/vitejs-migration) — Juan Lasheras, Retool, 2025-04-16: converting CommonJS source to ESM, `require` forcing async rewrites, Jest ESM trouble, and a cookie plus Nginx gradual rollout; it was a Rollup-era migration, so its bundle-size findings are pre-Rolldown
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01f · Eject and CRACO apps](01f-eject-and-craco-codebases.md) · [Vite overview](../../README.md) · Next → [01h · devServer → server](01h-devserver-and-resolve.md)

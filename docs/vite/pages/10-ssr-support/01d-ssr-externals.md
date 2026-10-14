@@ -275,6 +275,18 @@ has native bindings, or must resolve differently at runtime than at build time. 
 already answers "externalise" for you, so in practice the list you maintain is `noExternal`,
 and every entry on it should have a reason you could state in one sentence.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SSR Options](https://vite.dev/config/ssr-options) — vite.dev: all deps externalised except linked ones (`noExternal` default); `external: true` externalises linked ones too; `ssr.target` `node` or `webworker`; `ssr.resolve.conditions` default `module`, `node`, `development|production` versus
+- **Also good:** [SSR Externals, SSR Target, SSR Resolve Conditions](https://vite.dev/guide/ssr) — vite.dev: the guide's short versions of the same three sections (*read*)
+- **Beyond the docs:** [Broken npm package](https://vike.dev/broken-npm-package) — Vike docs, undated: why a dependency that bundlers accept crashes in Node during SSR (Vite does not transpile npm server code), the error list (`Cannot use import statement outside a module`, `ERR_UNSUPPORTED_DIR_IMPORT` and others), and the fixes `s
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Fetchable & Custom Environments](01ca-fetchable-and-custom-environments.md) · [Vite overview](../../README.md) · Next → [`ssr.target` & Conditions](01e-ssr-target-and-resolve-conditions.md)

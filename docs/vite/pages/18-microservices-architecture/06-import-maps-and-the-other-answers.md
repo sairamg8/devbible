@@ -251,6 +251,18 @@ all of that on purpose, and for a payment widget or any surface where a bug in t
 code being unable to touch your own page matters more than integration convenience, that
 isolation is the feature, not the limitation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [`&lt;script type="importmap"&gt;`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) — MDN: bare specifiers, path-prefix mapping, `scopes`, an `integrity` map; Baseline widely available since March 2023 (*read*)
+- **Also good:** [Building for Production: Library Mode](https://vite.dev/guide/build) — vite.dev: `build.lib`, with dependencies externalized through `build.rolldownOptions.external` and `output.globals` (*read*)
+- **Beyond the docs:** [Micro Frontends](https://martinfowler.com/articles/micro-frontends.html) — Cam Jackson, martinfowler.com, 2019-06-19: compares iframes, run-time JavaScript, Web Components and server-side composition, with the trade-off of each (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [exposes, SRI and observability](05d-exposes-sri-and-build-observability.md) · [Vite overview](../../README.md) · Next → [Composition alternatives + decision](06b-composition-alternatives-and-the-decision.md)

@@ -110,6 +110,21 @@ Not the worker script's contents — the construction site. This symptom is the 
 **★ What decides whether a module worker is required to exist in the browser your app supports?**
 Dev mode does; the production build might not. In dev, Vite serves the worker as native ESM and leans on the browser's own module-worker support (`new Worker(url, { type: 'module' })` support, which is newer than `<script type="module">` support and not universal). In the production build, the worker's whole module graph gets bundled into one artifact by Rolldown, and `worker.format` decides what that artifact looks like — `'iife'` produces a self-contained classic script with no module-worker dependency at all. So a codebase can use `import`/`export` syntax inside its worker source, develop it against a modern browser, and still ship a production build that runs on a browser with zero module-worker support — and `'iife'` is in fact `worker.format`'s **default**, not the exception (see [01a](01a-worker-build-configuration.md) for why that default surprises people who read only the source and never the config).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Worker Options](https://vite.dev/config/worker-options) — vite.dev: `worker.format` defaults to `'iife'`; `worker.plugins` is a function returning new instances because workers build in parallel, and `config.plugins` reaches workers only in dev; `worker.rolldownOptions` (`worker.rollupOptions` is 
+- **Also good:** [Features › Web Workers](https://vite.dev/guide/features) — and [Static Asset Handling](https://vite.dev/guide/assets): vite.dev
+- **Also good:** [Static Asset Handling](https://vite.dev/guide/assets)
+- **Also good:** [Transferable objects](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) — MDN: transfer detaches the original and is zero-copy for `ArrayBuffer` (copying is shown by its `structuredClone()` example rather than stated as a rule); with [The structured clone algorithm](https://developer.mozilla.org/en-US/docs/W
+- **Also good:** [The structured clone algorithm](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
+- **Also good:** [SharedWorker](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [01m · Debugging resolution](../12-path-resolution-and-aliases/01m-debugging-bare-specifier-resolution.md) · [Vite overview](../../README.md) · Next → [01a · Worker build configuration](01a-worker-build-configuration.md)

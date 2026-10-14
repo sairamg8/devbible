@@ -277,6 +277,19 @@ subject to their `order` attribute as usual for Rolldown hooks."* Narrowing a fi
 ordering bug *appear* to go away by removing one of the two plugins from the contested module,
 which is worse than not fixing it, because the bug returns the moment the filter widens again.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Plugin API — Hook Filters, Virtual Files, Compatibility, Paths](https://vite.dev/guide/api-plugin) — vite.dev: Hook Filters (`#hook-filters`: Vite 6.3.0 and later, repeat the check in the handler for older versions), Importing a Virtual File (`#importing-a-virtual-file`: `\0` prefix, `/@id/__x00__` in the browser, decoded before hooks), Ro
+- **Also good:** [Plugin Hook Filters](https://rolldown.rs/apis/plugin-api/hook-filters) — rolldown.rs: keys `id`, `moduleType`, `code`; supported on `resolveId` (`id`), `load` (`id`), `transform` (all three), `renderChunk` (`code`); `exclude` beats `include`; several keys are ANDed, several values in `include` are ORed; composable 
+- **Also good:** [Why Plugin Hook Filter](https://rolldown.rs/in-depth/why-plugin-hook-filter) — rolldown.rs: explains the Rust to JavaScript crossing per module and publishes a synthetic benchmark (0 to 10 plugins, about 745 ms flat with filters versus 2,792 ms without). Our page 01r says no published benchmark exists and does not cite t
+- **Beyond the docs:** [Build a Vite plugin from scratch](https://flaviocopes.com/vite-plugin-tutorial/) — Flavio Copes, updated 2026-08-03: builds `vite-plugin-note` with a `transform` for a custom file type and a `virtual:notes` module using a `\0`-prefixed resolved id, plus ordering advice; does not cover filters or the `/@id/__x00__` URL, and strips query strings b
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Four Ways to Make a Plugin Conditional](01qa-four-ways-to-make-a-plugin-conditional.md) · [Vite overview](../../README.md) · Next → [Filter Utilities & Ids](01ra-filter-utilities-and-ids.md)
