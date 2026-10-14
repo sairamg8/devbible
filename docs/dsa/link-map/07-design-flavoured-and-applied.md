@@ -123,7 +123,7 @@ Covers every topic row of phases 17 and 18 in `docs/dsa/syllabus/07-design-flavo
 ### T18-06 · Bloom filters — Understand · 🔲 not written
 - **Read this:** [Bloom filter](https://en.wikipedia.org/wiki/Bloom_filter) · Wikipedia · "possibly in set" or "definitely not in set", no removal without the counting variant, and sections on the false-positive probability and the optimal number of hash functions (*read*) · covers our angle: **partial** — maths there, not the storefront placements · fetched 2026-10-14
 - **Also good:** [Bloom filter](https://redis.io/docs/latest/develop/data-types/probabilistic/bloom-filter/) · Redis docs · the structure as a shipped data type, BF.ADD and BF.EXISTS at O(k) for k hash functions (*read*) · fetched 2026-10-14
-- **Beyond the docs:** [Bloom Filters by Example](https://llimllib.github.io/bloomfilter-tutorial/) · Bill Mill · an interactive bit vector: add strings, watch the bits set, test membership, then size the filter for a target false-positive rate (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [Bloom Filters by Example](https://llimllib.github.io/bloomfilter-tutorial/) · llimllib.github.io · an interactive bit vector: add strings, watch the bits set, test membership, then size the filter for a target false-positive rate (*read*) · fetched 2026-10-14
 - **Our delta:** bit array and k hashes with the false-positive arithmetic, in caches, crawlers and storage engines. Phase 2 (`docs/dsa/pages/phase-2-recursion-maths-bits/10i-why-add-randomness.md`) covers only the no-false-negatives asymmetry.
 
 ### T18-07 · Count-min sketch, HyperLogLog and streaming top-k — Understand · 🔲 not written
@@ -181,7 +181,7 @@ Covers every topic row of phases 17 and 18 in `docs/dsa/syllabus/07-design-flavo
 
 ### T18-16 · Shortest paths in maps — Know · 🔲 not written
 - **Read this:** [Contraction hierarchies](https://en.wikipedia.org/wiki/Contraction_hierarchies) · Wikipedia · a speed-up for road networks that adds shortcut edges in a preprocessing phase so the query phase searches far less (*read*) · covers our angle: **partial** · fetched 2026-10-14
-- **Also good:** [Dijkstra Algorithm](https://cp-algorithms.com/graph/dijkstra.html) · cp-algorithms · the baseline being sped up (*headings only*) · fetched 2026-10-14
+- **Also good:** [Dijkstra - finding shortest paths from given vertex](https://cp-algorithms.com/graph/dijkstra.html) · cp-algorithms · the baseline being sped up (*headings only*) · fetched 2026-10-14
 - **Our delta:** Dijkstra at scale, precomputation, and contraction hierarchies as the idea.
 
 ### T18-17 · Union-find in networking and clustering — Know · 🔲 not written
