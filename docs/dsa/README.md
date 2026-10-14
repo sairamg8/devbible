@@ -23,6 +23,8 @@ library; this track links to both and never re-teaches them. Its companion is th
 [System Design track](../system-design/README.md): the two share Part 13's plan there and
 Part 8's plan here.
 
+> **Link map:** for every topic there is a [link map](./link-map/README.md) — the best canonical reference plus, where one exists, the best explainer. Phases 0–13 so far. First pass, open for review.
+
 ## Where this sits, as of September 2026
 
 | | |
