@@ -6,10 +6,10 @@ sidebar_position: 1
 
 # Link map · Storybook · Part 1 (phases 0–5)
 
-Covers every topic row of phases 0 to 5 in `docs/storybook/syllabus/01-how-storybook-runs.md` (T00-01 to T02-06) and `docs/storybook/syllabus/02-composing-stories.md` (T03-01 to T05-06). That is 34 rows. Phases 0 to 3 have a page of ours each. Phases 4 and 5 map onto older chapter pages (`08-documentation`, `13-build-and-configuration`, `17-theming-colors-and-fonts`) that cover them only in part; rows with no matching page are marked not written.
+Covers every topic row of phases 0 to 5 in `docs/storybook/syllabus/01-how-storybook-runs.md` (T00-01 to T02-06) and `docs/storybook/syllabus/02-composing-stories.md` (T03-01 to T05-06). That is 34 rows. Phases 0 to 3 have a page of ours each. Phases 4 and 5 have no phase directory; they are matched loosely to older chapter pages (`08-documentation`, `13-build-and-configuration`, `17-theming-colors-and-fonts`). A row is marked written only where that page covers the topic's main point; otherwise it is marked not written and the block says what the nearest page does and does not contain (T04-02, T04-04, T04-05 and T05-06 are marked not written).
 *read* = I read the passage that supports the claim in the fetched text; *headings only* = fetched at 200 and only the headings or opening were confirmed. No `#anchors` are given. Where no good non-official explanation turned up after searching, the block has no "Beyond the docs" line.
 
-🔴 **Version note.** Our pages were verified 2026-08-14. Official links are the current storybook.js.org docs (the 10.x line; the page chrome showed 10.3 and 10.4 beta). Several third-party picks predate Storybook 8 and use `@storybook/test`, `DecoratorFn` or `ComponentMeta`; each such block says so. In the 10 docs the packages are `storybook/test`, `storybook/theming` and `storybook/manager-api`, and doc blocks come from `@storybook/addon-docs/blocks`. Tier tag `[vite]` on T00-04 is shown as Understand and `[use]` on T04-05 as When Needed.
+🔴 **Version note.** Our pages were verified 2026-08-14. Official links are the current storybook.js.org docs (the 10.x line; the page chrome showed 10.3 and 10.4 beta). Several third-party picks predate Storybook 8 and use `@storybook/test`, `DecoratorFn` or `ComponentMeta`; each such block says so. In the 10 docs the packages are `storybook/test`, `storybook/theming` and `storybook/manager-api`, and doc blocks come from `@storybook/addon-docs/blocks`. Tiers are copied from the syllabus tables (T00-04 is Understand, T04-05 is Know). Our older phase 4 and 5 pages still import from `@storybook/blocks`, `@storybook/manager-api` and `@storybook/theming`; the blocks that touch them say so.
 
 ---
 
@@ -23,7 +23,7 @@ Covers every topic row of phases 0 to 5 in `docs/storybook/syllabus/01-how-story
 
 ### T00-02 · Two processes: manager and preview — Understand · ✅ written `docs/storybook/pages/phase-0-how-storybook-runs/02-manager-and-preview.md`
 - **Read this:** [Configure Storybook](https://storybook.js.org/docs/configure) · Storybook docs · `preview.js` runs in the preview iframe, `manager.js` configures the UI, `main.js` the project (*read*) · covers our angle: **partial** — never says which side an error belongs to · fetched 2026-10-14
-- **Also good:** [Types of addons](https://storybook.js.org/docs/addons/addon-types) · Storybook docs · panels, toolbars and tabs live in `manager.js`; it does not explain the two environments (*headings only*) · fetched 2026-10-14
+- **Also good:** [Types of addons](https://storybook.js.org/docs/addons/addon-types) · Storybook docs · describes panel, toolbar and tab addons, with the examples in files named `manager.js`; it does not explain the two environments (*headings only*) · fetched 2026-10-14
 - **Our delta:** triage by symptom: which process an error belongs to. No good non-official explainer found.
 
 ### T00-03 · The renderer architecture — Know · ✅ written `docs/storybook/pages/phase-0-how-storybook-runs/03-renderers-and-builders.md`
@@ -66,7 +66,7 @@ Covers every topic row of phases 0 to 5 in `docs/storybook/syllabus/01-how-story
 
 ### T01-04 · CSF factories — Understand · ✅ written `docs/storybook/pages/phase-1-story-format/04-csf-factories.md`
 - **Read this:** [Component Story Format (CSF Next)](https://storybook.js.org/docs/api/csf/csf-next) · Storybook docs · `definePreview`, `preview.meta`, `meta.story`; labelled a preview feature; React, Vue, Angular and Web Components tabs (*read*) · covers our angle: **full** — the old `csf-factories` URL returned 404, so the page is now named CSF Next · fetched 2026-10-14
-- **Our delta:** the docs say "preview"; our syllabus says experimental, and CSF 1/2/3 stay supported. No third-party explainer worth linking.
+- **Our delta:** the page calls the API a "preview feature" and marks only the `.test` section experimental; our syllabus says the whole thing is experimental, and CSF 1/2/3 stay supported. No third-party explainer worth linking.
 
 ### T01-05 · Naming, `title` and the sidebar — Understand · ✅ written `docs/storybook/pages/phase-1-story-format/05-naming-and-the-sidebar.md`
 - **Read this:** [Naming components and hierarchy](https://storybook.js.org/docs/writing-stories/naming-components-and-hierarchy) · Storybook docs · slash paths, roots, single-story hoisting, `storySort` function and object forms (*read*) · covers our angle: **partial** — tags are on a separate page · fetched 2026-10-14
@@ -83,7 +83,7 @@ Covers every topic row of phases 0 to 5 in `docs/storybook/syllabus/01-how-story
 
 ### T02-01 · Args as the source of truth — Master · ✅ written `docs/storybook/pages/phase-2-args-and-controls/01-args-as-the-source-of-truth.md`
 - **Read this:** [How to write stories](https://storybook.js.org/docs/writing-stories) · Storybook docs · args as the generic term for props, `render` should spread `args` so Controls keep working (*read*) · covers our angle: **full** · fetched 2026-10-14
-- **Also good:** [Args](https://storybook.js.org/docs/writing-stories/args) · Storybook docs · story, component and global args, setting args by URL (*headings only*) · fetched 2026-10-14
+- **Also good:** [Args](https://storybook.js.org/docs/writing-stories/args) · Storybook docs · story, component and global args, setting args by URL (*read*) · fetched 2026-10-14
 - **Our delta:** none. Search turned up only low-quality skill-file pages.
 
 ### T02-02 · `argTypes` and inference — Understand · ✅ written `docs/storybook/pages/phase-2-args-and-controls/02-argtypes-and-inference.md`
@@ -117,7 +117,7 @@ Covers every topic row of phases 0 to 5 in `docs/storybook/syllabus/01-how-story
 - **Our delta:** the provider-tree comparison.
 
 ### T03-02 · The three levels and their order — Understand · ✅ written `docs/storybook/pages/phase-3-decorators/02-decorator-order.md`
-- **Read this:** [Decorators](https://storybook.js.org/docs/writing-stories/decorators) · Storybook docs · lists global, then component, then story-innermost-outward order, and a "Decorator inheritance" section (*read*) · covers our angle: **full** · fetched 2026-10-14
+- **Read this:** [Decorators](https://storybook.js.org/docs/writing-stories/decorators) · Storybook docs · the "Decorator inheritance" section lists run order as global, then component, then story, each in definition order; "innermost outward" is stated only for story decorators (*read*) · covers our angle: **partial** — the inside-out wrapping of all three levels is left for the reader to infer · fetched 2026-10-14
 - **Our delta:** reasoning about a double-wrapped story. No good non-official source found.
 
 ### T03-03 · Providers in decorators — Master · ✅ written `docs/storybook/pages/phase-3-decorators/03-providers-in-decorators.md`
@@ -127,7 +127,7 @@ Covers every topic row of phases 0 to 5 in `docs/storybook/syllabus/01-how-story
 
 ### T03-04 · The story context — Understand · ✅ written `docs/storybook/pages/phase-3-decorators/04-the-story-context.md`
 - **Read this:** [Decorators](https://storybook.js.org/docs/writing-stories/decorators) · Storybook docs · the second argument holds `args`, `argTypes`, `globals`, `hooks`, `parameters`, `viewMode` (*read*) · covers our angle: **full** · fetched 2026-10-14
-- **Also good:** [Toolbars and globals](https://storybook.js.org/docs/essentials/toolbars-and-globals) · Storybook docs · branching on `context.globals.theme` (*read*) · fetched 2026-10-14
+- **Also good:** [Toolbars and globals](https://storybook.js.org/docs/essentials/toolbars-and-globals) · Storybook docs · a decorator choosing a theme from `context.globals.theme` (it looks the theme up rather than branching) (*read*) · fetched 2026-10-14
 - **Our delta:** none.
 
 ### T03-05 · `loaders` and `beforeEach` — Know · ✅ written `docs/storybook/pages/phase-3-decorators/05-loaders-and-beforeeach.md`
@@ -138,46 +138,49 @@ Covers every topic row of phases 0 to 5 in `docs/storybook/syllabus/01-how-story
 ## Phase 4 — Documentation
 
 ### T04-01 · Autodocs — Master · ✅ written `docs/storybook/pages/08-documentation/01-docs-generation.md`
-- **Read this:** [Automatic documentation and Storybook](https://storybook.js.org/docs/writing-docs/autodocs) · Storybook docs · `tags: ['autodocs']` per component or project-wide, `!autodocs` opt-out (*read*) · covers our angle: **partial** — "two sources" is only implied · fetched 2026-10-14
+- **Read this:** [Automatic documentation and Storybook](https://storybook.js.org/docs/writing-docs/autodocs) · Storybook docs · `tags: ['autodocs']` per component or project-wide in `preview`, `!autodocs` opt-out; the page is built from stories and inferred args, argTypes and parameters (*read*) · covers our angle: **partial** — types or docgen are not named as a source · fetched 2026-10-14
 - **Also good:** [Tags](https://storybook.js.org/docs/writing-stories/tags) · Storybook docs · `autodocs` is built in but not applied by default (*read*) · fetched 2026-10-14
-- **Beyond the docs:** [Storybook 7 Docs: New architecture, streamlined UX, and readymade doc blocks](https://storybook.js.org/blog/storybook-7-docs/) · Tom Coleman, Storybook blog, 2023-02-22 · the component-not-story idea behind autodocs; written for 7, so the `docs.autodocs` option it names is gone · fetched 2026-10-14 (*read*)
-- **Our delta:** the two sources, types and stories.
+- **Beyond the docs:** [Storybook 7 Docs: New architecture, streamlined UX, and readymade doc blocks](https://storybook.js.org/blog/storybook-7-docs/) · Tom Coleman, Storybook blog, 2023-02-22 · the component-not-story idea behind autodocs; written for 7, and it enables autodocs with a `docs.autodocs` option in `main.js` where current docs use the tag · fetched 2026-10-14 (*read*)
+- **Our delta:** the two sources, types and stories. Our page covers the per-component tag and the props table from types but not the project-wide tag or `!autodocs`; its MDX example imports from `@storybook/blocks`, which is empty since 9.
 
-### T04-02 · Doc blocks — Understand · ✅ written `docs/storybook/pages/08-documentation/01-docs-generation.md`
+### T04-02 · Doc blocks — Understand · 🔲 not written
 - **Read this:** [Doc blocks](https://storybook.js.org/docs/writing-docs/doc-blocks) · Storybook docs · the block list and the `@storybook/addon-docs/blocks` import path (*read*) · covers our angle: **full** · fetched 2026-10-14
 - **Also good:** [Controls (doc block)](https://storybook.js.org/docs/api/doc-blocks/doc-block-controls) · Storybook docs · same import path confirmed for `Controls` (*read*) · fetched 2026-10-14
-- **Our delta:** the moved import is the main point. No better third-party page found.
+- **Our delta:** the moved import is the main point, and it is not written. The nearest page, `docs/storybook/pages/08-documentation/01-docs-generation.md`, uses only `Meta` and `Canvas` in one example and imports them from the old `@storybook/blocks`. No better third-party page found.
 
 ### T04-03 · MDX pages — Understand · ✅ written `docs/storybook/pages/08-documentation/01-docs-generation.md`
 - **Read this:** [MDX](https://storybook.js.org/docs/writing-docs/mdx) · Storybook docs · attached versus unattached pages, `Meta` props, remove the autodocs tag when overriding (*read*) · covers our angle: **full** · fetched 2026-10-14
 - **Also good:** [Meta (doc block)](https://storybook.js.org/docs/api/doc-blocks/doc-block-meta) · Storybook docs · `of`, `title`, `name`, `isTemplate` (*read*) · fetched 2026-10-14
 - **Also good:** [How to document components](https://storybook.js.org/docs/writing-docs) · Storybook docs · autodocs as baseline, MDX for free-form (*read*) · fetched 2026-10-14
-- **Our delta:** a decision rule for when a hand-written page beats autodocs.
+- **Beyond the docs:** [Add MDX overview page for Checkbox (design-system-react PR 73)](https://github.com/cfpb/design-system-react/pull/73) · contolini, CFPB, 2023-06-07 · a real team finds autodocs "lack a lot of the information" (rendered states, guidelines, a11y tips) and tries an MDX overview page; no Storybook version given · fetched 2026-10-14 (*read*)
+- **Our delta:** a decision rule for when a hand-written page beats autodocs. Our page has it (the "When auto-generation isn't enough" section and pitfall 1) but never mentions attached versus unattached pages or `isTemplate`.
 
-### T04-04 · Docgen and the missing prop description — Understand · ✅ written `docs/storybook/pages/08-documentation/01-docs-generation.md`
+### T04-04 · Docgen and the missing prop description — Understand · 🔲 not written
 - **Read this:** [typescript (main config)](https://storybook.js.org/docs/api/main-config/main-config-typescript) · Storybook docs · `reactDocgen` chooses `react-docgen` (fast, incomplete), `react-docgen-typescript` (slow, accurate) or off; `propFilter` (*read*) · covers our angle: **partial** — never lists the four missing-prop cases · fetched 2026-10-14
-- **Our delta:** the four causes. Search found only GitHub issues (for example a case of types in a separate file); none was fetched.
+- **Beyond the docs:** [Docs don't pull component props automatically (discussion 24794)](https://github.com/storybookjs/storybook/discussions/24794) · Storybook GitHub, 2023-11-09 · props and descriptions missing in a monorepo: found when a component is imported by relative path but not through an alias, and empty when prop types sit in a separate generated file; Storybook 7.4 to 7.5 era, and the final fix is only linked, not shown · fetched 2026-10-14 (*read*)
+- **Our delta:** the four causes; they are not written. The nearest page, `docs/storybook/pages/08-documentation/01-docs-generation.md`, covers TSDoc comments on props and the case where types hide a runtime constraint, not why a prop shows no description. The discussion covers two of the causes loosely (aliased import, separate type file), not the four in the syllabus.
 
-### T04-05 · Writing docs a designer will actually read — When Needed · 🔲 not written
-- **Read this:** [MDX](https://storybook.js.org/docs/writing-docs/mdx) · Storybook docs · unattached pages and `Meta` for prose-first guidance (*read*) · covers our angle: **partial** — nothing on usage/don't-use pairs · fetched 2026-10-14
-- **Our delta:** usage and don't-use pairs over prop tables. Search surfaced a Grafana contributor style guide and a WordPress design-system feedback post; neither was fetched, so neither is linked.
+### T04-05 · Writing docs a designer will actually read — Know · 🔲 not written
+- **Read this:** [MDX](https://storybook.js.org/docs/writing-docs/mdx) · Storybook docs · MDX mixes Markdown with embedded components, and standalone unattached pages are possible; the page never says "prose-first" (*read*) · covers our angle: **partial** — nothing on usage/don't-use pairs · fetched 2026-10-14
+- **Beyond the docs:** [4 ways to document your design system with Storybook](https://storybook.js.org/blog/4-ways-to-document-your-design-system-with-storybook/) · Varun Vachhar, Storybook blog, 2021-11-16 · lists "design reference" content (when to use a component, do and don't) as its own layer beside the props table; written for the Docs addon of the 6.x era · fetched 2026-10-14 (*read*)
+- **Our delta:** usage and don't-use pairs over prop tables; not written. The nearest page, `docs/storybook/pages/08-documentation/01-docs-generation.md`, has one MDX example with a "When NOT to use Button" section and nothing on a designer reader.
 
 ## Phase 5 — Theming, colors and fonts
 
 ### T05-01 · Two different things are called "theme" — Master · ✅ written `docs/storybook/pages/17-theming-colors-and-fonts/01-global-colors-themes-and-tokens.md`
 - **Read this:** [Theming](https://storybook.js.org/docs/configure/user-interface/theming) · Storybook docs · manager theme via `addons.setConfig` in `manager.js`, docs theme separately in `preview` under `parameters.docs.theme`; says nothing about the app's own tokens (*read*) · covers our angle: **partial** · fetched 2026-10-14
 - **Also good:** [Configure Storybook](https://storybook.js.org/docs/configure) · Storybook docs · `preview.js` versus `manager.js` (*read*) · fetched 2026-10-14
-- **Our delta:** app tokens versus UI chrome, and why they never share a variable. No third-party source stated it.
+- **Our delta:** app tokens versus UI chrome, and why they never share a variable. No third-party source stated it. Our colors page has the preview side and one pitfall that decorators run in the iframe; the manager side is in `docs/storybook/pages/13-build-and-configuration/03-manager-ui-builder-hooks-and-env.md` (a note and pitfall 3), so the split is only partly written.
 
 ### T05-02 · Theming the manager — Understand · ✅ written `docs/storybook/pages/13-build-and-configuration/03-manager-ui-builder-hooks-and-env.md`
 - **Read this:** [Theming](https://storybook.js.org/docs/configure/user-interface/theming) · Storybook docs · `themes` and `create()` from `storybook/theming`, `brandTitle`, `brandImage`, a theme replaces rather than merges (*read*) · covers our angle: **full** · the examples use `manager.js`, ours says `manager.ts` · fetched 2026-10-14
 - **Beyond the docs:** [How to Customize the Storybook React Theme for Your Brand](https://www.newline.co/courses/storybook-for-react-apps/theming-the-storybook-app) · newline course lesson, no author or date shown · a manager file, dark theme, `create`, and `manager-head.html` for a favicon; version unknown · fetched 2026-10-14 (*read*)
-- **Our delta:** the `@storybook/theming` to `storybook/theming` move.
+- **Our delta:** the `@storybook/theming` to `storybook/theming` move. Our page still imports `@storybook/manager-api` and `@storybook/theming/create`, so it shows the old paths and needs the update.
 
 ### T05-03 · Getting design tokens into every story — Understand · ✅ written `docs/storybook/pages/17-theming-colors-and-fonts/01-global-colors-themes-and-tokens.md`
 - **Read this:** [Styling and CSS](https://storybook.js.org/docs/configure/styling-and-css) · Storybook docs · imports in `preview` get hot reload; `preview-head.html` does not; tags go to the iframe, not the manager (*read*) · covers our angle: **full** for the hot-reload point · fetched 2026-10-14
 - **Also good:** [Story rendering](https://storybook.js.org/docs/configure/story-rendering) · Storybook docs · code in `preview` runs for every story, `preview-head.html` and `preview-body.html` (*read*) · fetched 2026-10-14
-- **Our delta:** the decorator route. No good non-official source found.
+- **Our delta:** the decorator route and the hot-reload difference between a `preview` import and `preview-head.html`. Our colors page shows the `preview` import and a decorator; the fonts page shows `preview-head.html`; neither says that only the import is hot-reloaded. No good non-official source found.
 
 ### T05-04 · A working theme switcher — Understand · ✅ written `docs/storybook/pages/17-theming-colors-and-fonts/01-global-colors-themes-and-tokens.md`
 - **Read this:** [Toolbars and globals](https://storybook.js.org/docs/essentials/toolbars-and-globals) · Storybook docs · `globalTypes` toolbar plus a decorator reading `context.globals.theme` (*read*) · covers our angle: **full** · fetched 2026-10-14
@@ -191,7 +194,7 @@ Covers every topic row of phases 0 to 5 in `docs/storybook/syllabus/01-how-story
 - **Beyond the docs:** [Using fonts in Storybook for Next.JS and Tailwind Projects](https://dev.to/timreach/using-fonts-in-storybook-for-nextjs-and-tailwind-projects-4f1p) · timreach, DEV Community, 2024-02-29 · why the font loads in the app (root layout) but not in the iframe, and the `preview-head.html` fix · fetched 2026-10-14 (*read*)
 - **Our delta:** CDN versus self-hosted trade-offs.
 
-### T05-06 · Dark mode across both processes — Understand · ✅ written `docs/storybook/pages/17-theming-colors-and-fonts/01-global-colors-themes-and-tokens.md`
+### T05-06 · Dark mode across both processes — Understand · 🔲 not written
 - **Read this:** [storybook-dark-mode](https://storybook.js.org/addons/storybook-dark-mode) · Storybook integrations (community addon) · class on the manager plus class on the preview body, `classTarget`, `stylePreview`, `useDarkMode` hook (*read*) · covers our angle: **full** · supported Storybook versions are not stated on the page; forks exist for 9 and 10 · fetched 2026-10-14
 - **Also good:** [Theming](https://storybook.js.org/docs/configure/user-interface/theming) · Storybook docs · built-in light, dark and a normal theme that follows the user's scheme (*read*) · fetched 2026-10-14
-- **Our delta:** keeping manager and preview in step without the community addon. The npm page for the addon returned 403 and is not linked.
+- **Our delta:** keeping manager and preview in step without the community addon; not written. Our colors page covers only the preview decorator and the manager page only a dark manager `base`; neither mentions `storybook-dark-mode` or syncing the two. The npm page for the addon returned 403 and is not linked.
