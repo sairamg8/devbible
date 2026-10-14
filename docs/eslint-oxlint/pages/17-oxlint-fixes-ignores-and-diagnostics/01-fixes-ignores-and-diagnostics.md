@@ -83,3 +83,15 @@ Running both with fix can thrash if overlapping rules disagree—disable overlap
 
 ### ⚠️ ignorePatterns that accidentally ignore `src`
 Test with a known violation file after changing ignores.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Automatic fixes](https://oxc.rs/docs/guide/usage/linter/automatic-fixes.html) — oxc.rs: `--fix` (safe), `--fix-suggestions`, `--fix-dangerously`, and how to combine them (*read*)
+- **Also good:** [Inline ignore comments](https://oxc.rs/docs/guide/usage/linter/ignore-comments.html) — oxc.rs: `oxlint-disable`, `-enable`, `-disable-line`, `-disable-next-line`; `eslint-` forms also honoured; unused-comment reporting is off by default (*read*)
+- **Also good:** [Command-line interface](https://oxc.rs/docs/guide/usage/linter/cli.html) — oxc.rs: `--format` values, `--deny-warnings`, `--max-warnings` (*read*)
+
+{/* LINKMAP:END */}

@@ -114,3 +114,16 @@ In flat config, prefers `ignores` / `globalIgnores`. Oxlint similarly wants `ign
 
 ### ⚠️ Mixing CLI Engine mental models from old blog posts
 `CLIEngine` is historical. Modern programmatic use is the `ESLint` class API (see [CLI & programmatic](../08-eslint-cli-output-cache-and-fixes/01-cli-and-programmatic-usage.md)).
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Core Concepts](https://eslint.org/docs/latest/use/core-concepts/) — ESLint docs: short definitions of rule, parser (Espree by default), processor and formatter, plus fixes versus suggestions (*read*)
+- **Also good:** [Configuration Files (v8.x, legacy)](https://eslint.org/docs/v8.x/use/configure/configuration-files) — ESLint docs, v8: the `.eslintrc` cascade, `extends` and `overrides`; carries an end-of-life banner (2024-10-05), so use it only to read old repos (*read*)
+- **Also good:** [Flat config rationale, part 2](https://eslint.org/blog/2022/08/new-config-system-part-2/) — Nicholas C. Zakas, ESLint blog, 2022-08-05 (updated 2024-08-12): why the directory cascade of eslintrc was dropped, in the author's words (*read*)
+- **Beyond the docs:** [ESLint v10: Flat Config Completion and JSX Tracking](https://www.infoq.com/news/2026/04/eslint-10-release/) — Daniel Curtis, InfoQ, 2026-04-01: eslintrc is gone in v10, and config lookup now starts from each linted file's directory (*read*)
+
+{/* LINKMAP:END */}

@@ -177,3 +177,15 @@ function — directly off the story object, without a `composeStories` call.
 
 **← Prev** [05 · Naming, titles and the sidebar](./05-naming-and-the-sidebar.md) ·
 **Next →** the phase index — [Phase 1 overview](./README.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Portable stories in Vitest](https://storybook.js.org/docs/api/portable-stories/portable-stories-vitest) — Storybook docs: `composeStories`, `composeStory`, `setProjectAnnotations`, `run()` (*read*)
+- **Also good:** [Args](https://storybook.js.org/docs/writing-stories/args) — Storybook docs: args composition by spreading `Primary.args` and across files (*read*)
+- **Also good:** [Portable stories in Jest](https://storybook.js.org/docs/api/portable-stories/portable-stories-jest) — Storybook docs: same API for Jest (*read*)
+
+{/* LINKMAP:END */}

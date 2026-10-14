@@ -127,3 +127,18 @@ It does not. Keep `tsc -b --pretty false` (or equivalent) as a required check.
 
 ### ⚠️ Next + typed lint without ignoring `.next`
 Generated files create parse/project noise—global ignore them.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@typescript-eslint/parser](https://typescript-eslint.io/packages/parser/) — typescript-eslint.io: turns TypeScript into ESLint-compatible nodes; `projectService` uses the nearest `tsconfig.json` for each file; `programs` accepts your own TS program (*read*)
+- **Also good:** [typescript-eslint package](https://typescript-eslint.io/packages/typescript-eslint/) — typescript-eslint.io: exports `configs`, `extensions`, `globs`; `config(...)` is deprecated in favour of ESLint's `defineConfig(...)`, and the usage example now uses `defineConfig` with `extends` (*read*)
+- **Read this:** [Linting with Type Information](https://typescript-eslint.io/getting-started/typed-linting/) — typescript-eslint.io: `parserOptions.projectService: true`; typed rules need TypeScript to analyse the whole project, so they are slower (*read*)
+- **Also good:** [Performance](https://typescript-eslint.io/troubleshooting/typed-linting/performance/) — typescript-eslint.io: narrow `tsconfig` includes; slow third-party rules named: `@stylistic/indent`, `eslint-plugin-prettier`, and several `eslint-plugin-import` rules (*read*)
+- **Also good:** [Project Service](https://typescript-eslint.io/blog/project-service/) — Josh Goldberg, typescript-eslint blog, 2025-05-29: why the project service replaces `parserOptions.project`; stable since v8 (*read*)
+- **Beyond the docs:** [Configuring ESLint with TypeScript](https://nx.dev/docs/kb/configuring-eslint-with-typescript) — Nx docs (undated): turn typed linting on per project only when needed, because building the TS programs is expensive; its examples use `FlatCompat`, not `defineConfig` (*read*)
+
+{/* LINKMAP:END */}

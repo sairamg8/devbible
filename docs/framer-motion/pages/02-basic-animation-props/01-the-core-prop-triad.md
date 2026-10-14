@@ -270,6 +270,17 @@ relies on being on that list. Mixing a percentage and a unitless zero on a value
 is unspecified by the documentation, and the honest advice is to keep units consistent
 anywhere the exception list does not cover you.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Animation overview](https://motion.dev/docs/react-animation) — motion.dev: `initial` sets starting values, `animate` the target and re-animates when its values change, `initial=&#123;false&#125;` skips the enter animation, `exit` needs `AnimatePresence`; has an Enter animations section (*read*)
+- **Also good:** [Motion component](https://motion.dev/docs/react-motion-component) — motion.dev: the prop reference grouped by animation, hover, tap, focus, pan, drag, viewport, layout and advanced (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Declarative animation](../01-core-concepts/01-declarative-animation-philosophy.md) · [Explanations](../README.md) · Next → [exit and AnimatePresence](01b-exit-and-animatepresence.md)

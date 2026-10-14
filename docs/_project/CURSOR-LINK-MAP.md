@@ -16,6 +16,7 @@ metadata:
 - **No-syllabus tracks** (vite, webpack, playwright, tanstack-query, babel, eslint-oxlint, framer-motion): topic list is built by `scratchpad/mklist.py` from the page tree (a numbered page + its a/b/c chunks = one group); big groups become several blocks, header `— Topic · ✅ written`.
 - **Vite findings in our pages (not fixed):** 04b says a linked package needs `optimizeDeps.exclude` (Vite docs: linked packages outside node_modules are already source); 14/01b says Vitest `environmentMatchGlobs` removal is "third-party only" (official: removed in v4 migration guide); dev-server page omits Full Bundle Mode; `closeServer`/`closePreviewServer` in no chunk; 01d "removal not documented" is stale; 3 pages over cap (10/01f, 18/03, 18/07, 18/07b).
 - **Findings in our pages (2026-10-14 batch, not fixed):** Playwright page 12 teaches the removed `@playwright/experimental-ct-*` packages (currency pass owed); Playwright 09 `mask`, 10 `PWDEBUG=1`, 11 `describe.parallel/serial`, 13 no `page.request`; tanstack-query `16-migration-recipes/01n-prefetchquery-to-queryclient-query.md` is stale (the deprecation is now in the migration guide + reference); jest-rtl: MSW option is `onUnhandledFrame` in msw 3.x, SWC "3-5x" claim unsupported, TanStack `gcTime: Infinity` (official) vs `0` (ours); webpack: `[hash]` deprecated alias of `[fullhash]`, pages lack Verified lines.
+- **Findings in our pages (2026-10-14, second batch, not fixed):** Babel p08 says plugin-react runs Babel by default (false since plugin-react 6 / Vite 8: needs `@rolldown/plugin-babel`); Babel p04b/p15 say a Babel config drops SWC in Next (only `--webpack` does); Babel 8 released 2026-06-16, sections 05-16 unchecked against it; ESLint p02 says v9 is the supported path (v10 removed eslintrc), p21 uses deprecated `tseslint.config(`, p08 lists removed formatters, p18 `flat/recommended` ordering; Storybook play-functions page imports `@storybook/test` (use `storybook/test`), `@storybook/blocks`/`manager-api` imports stale; Framer Motion T15 page's `usePathname`-keyed AnimatePresence recipe is the setup Next discussion #42658 says does not reliably play exit animations.
 - Routine PRs are NOT merged now (user changed it: leave open for review).
 
 ## 🔴 RESUME HERE — 2026-10-13 (Beyond-the-docs round done for the 10 finished languages)
@@ -61,7 +62,11 @@ metadata:
 | jest-rtl | 59 | ✅ complete 2026-10-14 (11 topics marked 🔲 not written; 16 pages got Further reading) | — |
 | playwright | 28 blocks (16 sections) | ✅ complete 2026-10-14 (16 pages got Further reading) | — |
 | tanstack-query | 43 blocks (69 chunk files) | ✅ complete 2026-10-14 (39 pages got Further reading, 3 over cap) | — |
-| storybook · others | — | ⬜ not started | — |
+| storybook | 58 | ✅ complete 2026-10-14 (phases 4-5 matched loosely, 4 topics 🔲; 28 pages got Further reading, 8 over cap) | — |
+| babel | 20 blocks (16 pages) | ✅ complete 2026-10-14 (17 pages got Further reading) | — |
+| eslint-oxlint | 24 blocks (21 pages) | ✅ complete 2026-10-14 (21 pages got Further reading) | — |
+| framer-motion | 22 blocks (16 sections) | ✅ complete 2026-10-14 (21 pages got Further reading, 1 over cap) | — |
+| dsa · system-design | — | ⬜ not started — **RESUME HERE** (both have syllabus/ dirs: dsa 8 files, system-design 13 files; use mktab.py-style extraction, lanes = syllabus files, ≤5 lanes) | — |
 
 **"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
 

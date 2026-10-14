@@ -88,3 +88,18 @@ Downstream cannot parse without the same plugins.
 
 ### ⚠️ Duplicate Emotion + styled-components plugins
 Accidental dual CSS-in-JS transforms—pick one stack.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Plugins](https://babeljs.io/docs/plugins) — babeljs.io: transform plugins enable their syntax plugin; syntax plugins only parse; plugins run before presets, first to last; presets last to first (*read*)
+- **Also good:** [Presets](https://babeljs.io/docs/presets) — babeljs.io: the official preset list, "Preset Ordering" reversed, and the note that the Stage-X presets were deprecated in Babel 7 and are no longer published (*read*)
+- **Beyond the docs:** [Babel Plugin "Ordering"](https://jamie.build/babel-plugin-ordering.html) — James Kyle, undated: argues the plugin list is not an execution order: visitors merge into one traversal, so order only decides between visitors on the same node, and two plugins that both want to go first have no clean fix
+- **Beyond the docs:** [The Mysterious Case of Emotion and "exports is not defined"](https://dev.to/laurenashpole/the-mysterious-case-of-emotion-and-exports-is-not-defined-24m2) — Lauren Ashpole, DEV Community, 2021-11-03: a real ordering bug: the commonjs module transform had to run after Emotion's preset, but plugins always run first; fixed by listing the preset's plugins individually
+- **Read this:** [babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros) — GitHub README (Kent C. Dodds): the problem (each plugin must be configured individually) and the single standard interface; explicit imports make the compile-time step visible; the README says nothing on maintenance status (*read*)
+- **Beyond the docs:** [Zero-config code transformation with babel-plugin-macros](https://babeljs.io/blog/2017/09/11/zero-config-with-babel-macros) — Kent C. Dodds, guest post on the Babel blog, 2017-09-11: why plugins hide transforms, need out-of-band config and conflict in one AST walk, versus an explicit, importable macro; the 2017 post predates later releases
+
+{/* LINKMAP:END */}

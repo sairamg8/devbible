@@ -100,3 +100,14 @@ Invalid options throw when ESLint loads config—fix locally after every rule tw
 
 ### ⚠️ Using severity to mean “priority” without CI policy
 If CI allows unlimited warnings, `warn` is documentation, not a gate.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configure Rules](https://eslint.org/docs/latest/use/configure/rules) — ESLint docs: off, warn (exit code unchanged), error (exit 1); inline config comments have the highest priority; plugin rules take a namespace prefix (*read*)
+- **Also good:** [Migrate to v10.0.0](https://eslint.org/docs/latest/use/migrate-to-10.0.0) — ESLint docs: `eslint:recommended` gains `no-unassigned-vars`, `no-useless-assignment` and `preserve-caught-error` (*read*)
+
+{/* LINKMAP:END */}

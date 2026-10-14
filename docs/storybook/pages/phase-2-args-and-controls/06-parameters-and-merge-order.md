@@ -187,3 +187,13 @@ supplies the theme provider. Setting only the background is what produces the
 
 **← Prev** [05 · Globals and toolbars](./05-globals-and-toolbars.md) ·
 **Next →** the phase index — [Phase 2 overview](./README.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Parameters](https://storybook.js.org/docs/api/parameters) — Storybook docs: project, then meta, then story; objects deep-merge, arrays are replaced (*read*)
+
+{/* LINKMAP:END */}

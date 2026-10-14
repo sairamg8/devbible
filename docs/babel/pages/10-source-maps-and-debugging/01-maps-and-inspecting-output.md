@@ -73,3 +73,15 @@ If SWC/esbuild path is active, Babel map settings never run.
 
 ### ⚠️ Map path `sources` wrong with monorepo roots
 Breaks editor “open file” from DevTools—check `sourceRoot` / bundler source map settings.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Options: source map options](https://babeljs.io/docs/options) — babeljs.io: `sourceMaps` (`true`, `"inline"`, `"both"`) and `inputSourceMap` default true (*read*)
+- **Also good:** [What are source maps?](https://web.dev/articles/source-maps) — web.dev, last updated 2023-03-31: the `mappings` field as base 64 VLQ, the `.map` extension, and drawbacks such as optimized-away variables (*read*)
+- **Beyond the docs:** [The Inner Workings of JavaScript Source Maps](https://blog.polarsignals.com/blog/posts/2025/11/04/javascript-source-maps-internals) — Manoj Vivek, Polar Signals blog, 2025-11-04: decodes `mappings` step by step (relative deltas, 5-bit groups, Base64) and explains `sources` and `sourcesContent`, usually left out of production builds
+
+{/* LINKMAP:END */}

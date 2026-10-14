@@ -253,3 +253,14 @@ were not looking at.
 ---
 
 **Next →** [02 · File structure and the stories glob](./02-file-structure-and-the-glob.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Component Story Format (CSF)](https://storybook.js.org/docs/api/csf) — Storybook docs: default export is metadata, every named export is a story, `includeStories` and `excludeStories` (*read*)
+- **Beyond the docs:** [Component Story Format 3 is here](https://storybook.js.org/blog/storybook-csf3-is-here/) — Michael Shilman, Storybook blog, 2023-01-25: stories become objects, `render` optional, `play` attached to a story
+
+{/* LINKMAP:END */}

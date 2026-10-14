@@ -87,3 +87,15 @@ Taxes every developer forever—make support policy explicit.
 
 ### ⚠️ Running Babel on already-compiled dist in monorepo
 Double compile—exclude build outputs.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [babel-loader: Troubleshooting](https://github.com/babel/babel-loader) — GitHub README: "babel-loader is slow!": transform fewer files, exclude `node_modules`, `cacheDirectory` (README says up to 2x) (*read*)
+- **Also good:** [Config Files: api.cache](https://babeljs.io/docs/config-files) — babeljs.io: config function caching via `api.cache` and `api.env`; do not mix `api.env` with `forever()` or `never()` (*read*)
+- **Also good:** [@babel/register](https://babeljs.io/docs/babel-register) — babeljs.io: JSON cache in the temp dir, `BABEL_CACHE_PATH`, `BABEL_DISABLE_CACHE` (*read*)
+
+{/* LINKMAP:END */}

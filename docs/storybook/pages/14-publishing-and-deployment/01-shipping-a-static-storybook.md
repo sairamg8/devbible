@@ -114,3 +114,15 @@ rather than a fully public static host
 
 ### ⚠️ Pitfall 3: Not Cache-Busting Between Static Deployments, Serving a Stale Storybook Build
 Exactly the same class of issue covered in the [Vite deployment doc](../../../vite/pages/15-deployment-considerations/01-shipping-the-build.md) — if the static hosting platform doesn't correctly cache-bust the deployed Storybook's assets between deploys, users can end up viewing a stale, previously-deployed version of the component library, confusingly out of sync with the actual current codebase state.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Publish Storybook](https://storybook.js.org/docs/sharing/publish-storybook) — Storybook docs: build a static app any web server can host; Chromatic recommended; "whenever you open a PR you'll get a handy link"; the page shows `npm run build-storybook` (*read*)
+- **Also good:** [CLI options](https://storybook.js.org/docs/api/cli-options) — Storybook docs: `storybook build [options]`, run from the project root; `--test` for a stripped build (*read*)
+- **Beyond the docs:** [Super GitHub Pages: budget frontend staging, with Storybook and more](https://evilmartians.com/chronicles/super-github-pages-budget-frontend-staging-with-storybook-and-more) — Ekaterina Shibakova and Travis Turner, Evil Martians, 2023-08-04: a workflow builds Storybook into a folder named after the branch on a Pages branch, posts the link on the PR, and a second workflow removes it on close; no Storybook version given (*read*)
+
+{/* LINKMAP:END */}

@@ -106,3 +106,15 @@ Add fixtures for optional chaining, TS, and JSX if your plugin claims to support
 
 ### ⚠️ Publishing plugins without `name`
 Harder debugging in Babel error stacks—set `name` in the plugin object.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [@babel/types](https://babeljs.io/docs/babel-types) — babeljs.io: each node type's builder, `is`/`assert` helpers, field types and aliases (first 100000 of about 170000 chars *read*; the rest not read, so `loc` and `raw` coverage is unchecked)
+- **Also good:** [@babel/traverse](https://babeljs.io/docs/babel-traverse) — babeljs.io: minimal visitor and node-type examples (*read*)
+- **Beyond the docs:** [Babel Plugin Handbook](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md) — Jamie Kyle, GitHub: the long-form explanation of visitors, paths, scope and bindings, UID generation and renaming, manipulation, and unit testing with snapshot, AST and exec tests plus babel-plugin-tester; it has no version note, and its testing exam
+
+{/* LINKMAP:END */}

@@ -73,3 +73,19 @@ Silent behavior changes.
 
 ### ⚠️ Keeping Babel undocumented
 Guarantees accidental removal or cargo-cult forever.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [SWC compilation config](https://swc.rs/docs/configuration/compilation) — swc.rs: `env.targets` as the preset-env equivalent (does not work with `jsc.target`), `jsc.transform.react` (default runtime classic), plugins under `jsc.experimental` (*read*)
+- **Also good:** [esbuild: TypeScript caveats](https://esbuild.github.io/content-types/) — esbuild.github.io: no type-check, no `declaration`, no `emitDecoratorMetadata`, isolatedModules needed (*read*)
+- **Also good:** [SWC disabled](https://nextjs.org/docs/messages/swc-disabled) — nextjs.org: a Babel config makes Next fall back to Babel; `experimental.forceSwcTransforms`; text dates from Next 12, and Next 16 Turbopack behaves differently (see T04-01b) (*read*)
+- **Beyond the docs:** [Jest: Babel to SWC](https://www.joshuakgoldberg.com/blog/jest-babel-to-swc) — Josh Goldberg, 2022-02-21: a worked migration with the real traps: missing `regenerator-runtime`, coverage on re-export files, node_modules 186M to 330M; written for an early `@swc/jest`, and the author notes 0.2.18 later auto-detects the target
+- **Read this:** [Babel 8 migration](https://babeljs.io/docs/v8-migration) — babeljs.io: the list of renamed and removed packages and options to audit against, including syntax plugins that are no longer needed (*read*)
+- **Also good:** [@babel/plugin-transform-runtime](https://babeljs.io/docs/babel-plugin-transform-runtime) — babeljs.io: helper aliasing to `@babel/runtime`; `corejs` option "removed in Babel 8" (`useBuiltIns` is not mentioned as a Babel 8 removal on this page) (*read*)
+- **Also good:** [Releasing Babel 8 today](https://babeljs.io/blog/2026/06/16/8.0.0) — babeljs.io blog, 2026-06-16: the release post: ESM-only, no ES5 default, `loose`/`spec` removed, Babel 7 security fixes until June 2027 (*read*)
+
+{/* LINKMAP:END */}

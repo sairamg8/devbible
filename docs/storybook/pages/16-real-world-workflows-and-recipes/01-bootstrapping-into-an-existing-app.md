@@ -154,3 +154,15 @@ A component using Tailwind utility classes, CSS custom properties, or any global
 
 ### ⚠️ Pitfall 4: Aliases Drifting Out of Sync Over Time, Same Failure Class as Jest's `moduleNameMapper`
 Exactly like the Jest configuration drift problem, Storybook's `viteFinal`/`webpackFinal` alias mirroring (Step 4) is a manually-maintained duplicate of the app's real bundler config — a new alias added to the app's `vite.config.ts` six months from now, with nobody remembering Storybook needs the same alias added to `.storybook/main.ts`, produces "works in the app, `Cannot resolve '@/newFeature'` only inside Storybook" with no obvious connection to the recent alias change for whoever hits it next.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Install Storybook](https://storybook.js.org/docs/get-started/install) — Storybook docs: `npm create storybook@latest`; `--type`, `--package-manager` and `--features` flags; no monorepo coverage (*read*)
+- **Also good:** [Storybook](https://turborepo.dev/docs/guides/tools/storybook) — Turborepo docs: a dedicated Storybook app, UI package installed by workspace filter, optional co-located stories (*read*)
+- **Beyond the docs:** [Migrating from Styleguidist to Storybook](https://engineeringblog.yelp.com/2022/07/migrating-from-styleguidist-to-storybook.html) — Kedar Vaidya and Benson Pan, Yelp Engineering, 2022-07-06: codemods turned thousands of Styleguidist files in a React monorepo into stories without blocking developers (*read*)
+
+{/* LINKMAP:END */}

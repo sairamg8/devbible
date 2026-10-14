@@ -218,3 +218,13 @@ all change, and on a non-React renderer you need at least 10.3.
 
 **← Prev** [03 · Typing stories](./03-typing-stories.md) ·
 **Next →** [05 · Naming, titles and the sidebar](./05-naming-and-the-sidebar.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Component Story Format (CSF Next)](https://storybook.js.org/docs/api/csf/csf-next) — Storybook docs: `definePreview`, `preview.meta`, `meta.story`; labelled a preview feature; React, Vue, Angular and Web Components tabs (*read*)
+
+{/* LINKMAP:END */}

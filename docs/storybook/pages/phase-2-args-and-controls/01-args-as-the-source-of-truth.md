@@ -207,3 +207,14 @@ right payload.
 ---
 
 **Next →** [02 · argTypes and control inference](./02-argtypes-and-inference.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to write stories](https://storybook.js.org/docs/writing-stories) — Storybook docs: args as the generic term for props, `render` should spread `args` so Controls keep working (*read*)
+- **Also good:** [Args](https://storybook.js.org/docs/writing-stories/args) — Storybook docs: story, component and global args, setting args by URL (*read*)
+
+{/* LINKMAP:END */}

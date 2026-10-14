@@ -276,3 +276,15 @@ browsable, reviewable and shared. Phase 10 covers the difference.
 ---
 
 **Next →** [02 · The manager and the preview](./02-manager-and-preview.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Why Storybook?](https://storybook.js.org/docs/get-started/why-storybook) — Storybook docs: isolated iframe free of app logic, a story as one declared variation, every state reachable without reproducing it in the app (*read*)
+- **Also good:** [Get started with Storybook](https://storybook.js.org/docs) — Storybook docs: the "frontend workshop for building UI components and pages in isolation" definition (*read*)
+- **Beyond the docs:** [Component Driven User Interfaces](https://www.componentdriven.org/) — Chromatic and contributors, no date shown: the bottom-up method (component, then screen, then page) that the workshop idea comes from
+
+{/* LINKMAP:END */}

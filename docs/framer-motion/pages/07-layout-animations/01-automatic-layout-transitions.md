@@ -223,6 +223,17 @@ It crossfades them — *"If the original component is still on the page when the
 **★ When would you reach for `layout="position"` rather than plain `layout`?**
 When the size change is one you do not want animated, or cannot animate honestly. The reference is precise: `"position"` and `"size"` each restrict the animation to that half, and the other half applies instantly. The common case is an element whose aspect ratio differs at both ends — an image, a block of re-wrapping text — where a `scale` between the two states has no correct value to interpolate and reads as a stretch. Animating the position and snapping the size is the better lie.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Layout animation](https://motion.dev/docs/react-layout-animations) — motion.dev: `layout` animates via `transform`, and the Troubleshooting list (not animating, window resize, SVG, scrollbar appearing, stretched content, border radius and shadows, stretched border) (*read*)
+- **Beyond the docs:** [Inside Framer's Magic Motion](https://www.nan.fyi/magic-motion) — nan.fyi, no author or date shown on the page: builds FLIP step by step, then fixes transform origin and child scale distortion; explains the mechanism behind the failures
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Exit animations](../06-animatepresence/01-exit-animations.md) · [Explanations](../README.md) · Next → [When layout animations fail silently](01b-when-layout-animations-fail-silently.md)

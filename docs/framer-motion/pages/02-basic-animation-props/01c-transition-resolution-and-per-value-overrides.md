@@ -256,6 +256,16 @@ ignored" have opposite causes and are worth distinguishing before touching anyth
 genuinely is being ignored, look for a more specific `transition` on the component or inside
 a target, which replaces the `MotionConfig` one entirely.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Transitions](https://motion.dev/docs/react-transitions) — motion.dev: Setting a transition has Value-specific, Default and Inheritance subsections: a `default` key covers unnamed values, and `inherit: true` pulls in values from lower-specificity transitions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [exit and AnimatePresence](01b-exit-and-animatepresence.md) · [Explanations](../README.md) · Next → [Transition types](../03-transition-types/01-timing-models.md)

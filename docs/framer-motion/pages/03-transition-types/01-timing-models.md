@@ -252,6 +252,17 @@ Whenever the animation is continuing motion that already exists. Physics springs
 **How do you give `x` a spring and `opacity` a linear tween in the same animation?**
 With a value-specific transition: each value can take its own transition, and the `default` key handles everything not named explicitly. That is also the honest answer to "should I set one transition for the whole component" — usually no, because a transform and an opacity genuinely want different models, which is exactly what Motion's dynamic default was already doing for you before you overrode it with a single object.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Transitions](https://motion.dev/docs/react-transitions) — motion.dev: tween (duration and easing, default 0.3s), physics springs (stiffness, damping, mass) versus duration springs (duration, bounce) (*read*)
+- **Beyond the docs:** [The physics behind spring animations](https://blog.maximeheckel.com/posts/the-physics-behind-spring-animations/) — Maxime Heckel, 2020-06-23 (updated 2022-08-04): derives the spring from Hooke's law, adds damping, then maps mass, stiffness and damping to a button; written for Framer Motion of that era, so the concepts hold but option names and quoted default values may differ from today's d
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Basic animation props](../02-basic-animation-props/01-the-core-prop-triad.md) · [Explanations index](../README.md) · Next → [Inertia and drag release](01b-inertia-and-drag-release.md)

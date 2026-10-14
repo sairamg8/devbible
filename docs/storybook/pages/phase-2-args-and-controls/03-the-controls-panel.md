@@ -157,3 +157,14 @@ either in a config is a reliable sign the config predates 9.0.
 
 **← Prev** [02 · argTypes and control inference](./02-argtypes-and-inference.md) ·
 **Next →** [04 · Actions and spies](./04-actions-and-spies.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Controls](https://storybook.js.org/docs/essentials/controls) — Storybook docs: `control: false` keeps the docs row, `table.disable` drops control and docs, `include`, `exclude`, `disable` (*read*)
+- **Also good:** [ArgTypes](https://storybook.js.org/docs/api/arg-types) — Storybook docs: `control: false` and `table.disable` defined (*read*)
+
+{/* LINKMAP:END */}

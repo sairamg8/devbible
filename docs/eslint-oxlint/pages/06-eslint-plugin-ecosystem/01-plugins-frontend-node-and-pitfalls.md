@@ -152,3 +152,14 @@ Double format / fighting fixes. Use `eslint-config-prettier` only.
 
 ### ⚠️ Peer dependency warnings ignored for months
 A plugin silently not loading recommended configs is worse than a hard failure—verify with Config Inspector.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [eslint-plugin-react-hooks](https://react.dev/reference/eslint-plugin-react-hooks) — react.dev: the plugin enforces the Rules of React; its `recommended` preset enables 17 rules, including `exhaustive-deps`, `rules-of-hooks` and React Compiler diagnostics (*read*)
+- **Also good:** [Configure Plugins](https://eslint.org/docs/latest/use/configure/plugins) — ESLint docs: "Common Problems" links to two cases only: plugin rules on the pre-9 API, plugin configs not yet flat (*read*)
+
+{/* LINKMAP:END */}

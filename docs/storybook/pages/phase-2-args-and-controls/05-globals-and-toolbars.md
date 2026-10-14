@@ -174,3 +174,14 @@ being discovered in production.
 
 **← Prev** [04 · Actions and spies](./04-actions-and-spies.md) ·
 **Next →** [06 · Parameters and the merge order](./06-parameters-and-merge-order.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Toolbars and globals](https://storybook.js.org/docs/essentials/toolbars-and-globals) — Storybook docs: `globalTypes` toolbar annotation, `context.globals`, rerun of decorators on change (*read*)
+- **Beyond the docs:** [How to add a theme switcher to Storybook](https://storybook.js.org/blog/how-to-add-a-theme-switcher-to-storybook/) — Yann Braga, Storybook blog, 2022-06-22: global decorator reading `parameters.theme` then `globals.theme`, side-by-side mode; Storybook 6 era APIs
+
+{/* LINKMAP:END */}

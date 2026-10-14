@@ -213,3 +213,15 @@ packages were removed as no longer needed; `@babel/preset-env`'s default targets
 Babel 7's *"`targets: ">= 0%"` (all browsers)"* to *"`targets: "defaults"`"*, which changes the
 output of a config that never set targets; and every package now requires Node
 `^22.18.0 || >=24.11.0`.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [What is Babel?](https://babeljs.io/docs/) — babeljs.io: the one-page definition: a toolchain that converts ECMAScript 2015+ into backwards-compatible JavaScript, plus syntax transforms, polyfills via core-js, codemods, JSX, and stripping Flow and TypeScript annotations without type-che
+- **Also good:** [Migrating from Babel](https://swc.rs/docs/migrating-from-babel) — swc.rs: says the SWC CLI is "designed to be a drop-in replacement for Babel" and supports all stage 3 proposals and preset-env including bugfix transforms (*read*)
+- **Also good:** [Oxc transformer](https://oxc.rs/docs/guide/usage/transformer) — oxc.rs: fixed transform order: React Compiler, TypeScript strip, decorators, plugins, React Refresh, JSX, then lowering ES2026 down to ES2015; no Babel compatibility claim beyond an external `babelHelpers` option (*read*)
+
+{/* LINKMAP:END */}

@@ -90,3 +90,16 @@ Developers will use `--no-verify`. Prefer Oxlint + staged ESLint.
 
 ### ⚠️ Extension resolving a different ESLint than the project
 Pin and use workspace TypeScript/ESLint SDKs where applicable; never rely on a global outdated `eslint`.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Integrations](https://eslint.org/docs/latest/use/integrations) — ESLint docs: a list of editor plugins (VS Code, JetBrains, Vim, Neovim and more) and a few git hook entries (a generic pre-commit hook, a staged-only hook, overcommit); it lists neither lint-staged nor husky (*read*)
+- **Also good:** [Setup editors](https://oxc.rs/docs/guide/usage/linter/editors.html) — oxc.rs: editor extensions run `oxlint --lsp` from your project, so Oxlint must be installed locally (*read*)
+- **Also good:** [Setup CI and other integrations](https://oxc.rs/docs/guide/usage/linter/ci.html) — oxc.rs: lint-staged and pre-commit examples; husky suggested for installing the hook (*read*)
+- **Beyond the docs:** [Husky and lint-staged](https://betterstack.com/community/guides/scaling-nodejs/husky-and-lint-staged/) — Stanley Ulili, Better Stack, updated 2025-06-10: uses `npx husky init` (the v9 flow); `.husky/pre-commit` holds one `lint-staged` line, and the lint-staged config runs `eslint --fix --max-warnings=0` (*read*)
+
+{/* LINKMAP:END */}

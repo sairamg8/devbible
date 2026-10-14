@@ -100,3 +100,15 @@ Upstream notes limitations—type-aware custom rules may not be supported the wa
 
 ### ⚠️ Infinite “temporary” dual systems without ownership matrix
 Document which rules live where.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [JS Plugins](https://oxc.rs/docs/guide/usage/linter/js-plugins.html) — oxc.rs: alpha, API targets ESLint v9+, `jsPlugins` key, known-supported plugins such as cypress, playwright and sonarjs (*read*)
+- **Also good:** [Writing JS Plugins](https://oxc.rs/docs/guide/usage/linter/writing-js-plugins.html) — oxc.rs: ESLint-compatible `create` versus `createOnce` (not faster yet, expected to be); a `RuleTester` based on ESLint's (*read*)
+- **Also good:** [Oxlint JS plugins alpha](https://oxc.rs/blog/2026-03-11-oxlint-js-plugins-alpha) — overlookmotel and Cameron, oxc.rs blog, slug dated 2026-03-11: conformance table (ESLint built-ins 100%, SonarJS 99.6%), no custom type-aware rules, Windows memory issues, tips to move formatting out of the linter (*read*)
+
+{/* LINKMAP:END */}

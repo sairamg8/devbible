@@ -163,3 +163,14 @@ same three levels as decorators, parameters and args.
 
 **← Prev** [04 · The story context](./04-the-story-context.md) ·
 **Next →** the phase index — [Phase 3 overview](./README.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Loaders](https://storybook.js.org/docs/writing-stories/loaders) — Storybook docs: loaders are an "escape hatch", results land in `loaded`, later levels win (*read*)
+- **Beyond the docs:** [Loaders (Building Design Systems in Storybook)](https://stevekinney.com/courses/storybook/loaders) — Steve Kinney, course page, modified 2025-04-16: a loader fetches, a decorator consumes `loaded`; no `beforeEach` either
+
+{/* LINKMAP:END */}

@@ -128,3 +128,15 @@ npm run build-storybook
 npx http-server storybook-static --port 6006 &
 npm run test-storybook
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Test runner](https://storybook.js.org/docs/writing-tests/integrations/test-runner) — Storybook docs: Jest plus Playwright; a story with `play` also fails on errors or failed assertions; CI builds with `build-storybook`, serves `storybook-static`, runs `test-storybook`; "superseded by the Vitest addon" (*read*)
+- **Also good:** [Migrating to Vitest addon from test-runner](https://storybook.js.org/docs/writing-tests/integrations/vitest-addon/migration-guide) — Storybook docs: stories need no change; no build step; Vite builder frameworks only, Angular and Webpack stay on the test-runner (*read*)
+- **Also good:** [Continuous Integration](https://playwright.dev/docs/ci) — Playwright docs: `npx playwright install --with-deps` in CI, plus a pre-built Docker image (*read*)
+
+{/* LINKMAP:END */}

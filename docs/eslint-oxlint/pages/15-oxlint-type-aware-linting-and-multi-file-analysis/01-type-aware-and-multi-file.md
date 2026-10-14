@@ -91,3 +91,15 @@ Stack costs; enable one dimension at a time and benchmark.
 
 ### ⚠️ Floating promise false positives on intentional void
 Establish a team pattern (`void promise` or helper) and document it.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Type-Aware Linting](https://oxc.rs/docs/guide/usage/linter/type-aware.html) — oxc.rs: `oxlint-tsgolint` as a dev dependency, TypeScript 7.0+, 59 of 61 typescript-eslint type-aware rules, no `baseUrl` support; `options.typeAware` works only in the root config (*read*)
+- **Also good:** [Type-Aware Linting Stable](https://oxc.rs/blog/2026-07-22-type-aware-linting-stable) — Cameron, oxc.rs blog, slug dated 2026-07-22: tsgolint v7 as `oxlint-tsgolint@7`, version string tied to the TypeScript release, 59 of 61 rules (*read*)
+- **Read this:** [Multi-file analysis](https://oxc.rs/docs/guide/usage/linter/multi-file-analysis.html) — oxc.rs: needs the `import` plugin; builds the module graph in the core engine; resolves TypeScript path aliases from `tsconfig.json`; its ESLint comparison figures are reports from projects, not benchmarks (*read*)
+
+{/* LINKMAP:END */}

@@ -203,6 +203,16 @@ removing the whole section no longer fires them. Either lift the presence bounda
 `propagate` on the inner `AnimatePresence`. The second candidate is keys — a list is where
 `key={index}` first becomes reachable.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [AnimatePresence](https://motion.dev/docs/react-animate-presence) — motion.dev: Usage (exit animations, changing `key`) and a Troubleshooting section headed "Exit animations aren't working": unique stable keys, no array index as key, keep `AnimatePresence` outside the element that unmounts (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [The core prop triad](01-the-core-prop-triad.md) · [Explanations](../README.md) · Next → [Transition resolution](01c-transition-resolution-and-per-value-overrides.md)

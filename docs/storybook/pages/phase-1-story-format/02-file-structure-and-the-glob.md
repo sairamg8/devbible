@@ -194,3 +194,14 @@ than `dist` keeps hot reload working.
 
 **← Prev** [01 · Component Story Format](./01-component-story-format.md) ·
 **Next →** [03 · Typing stories](./03-typing-stories.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [stories (main config)](https://storybook.js.org/docs/api/main-config/main-config-stories) — Storybook docs: array of globs or a `directory`/`files`/`titlePrefix` object, picomatch syntax, default `files` pattern (*read*)
+- **Also good:** [How to write stories](https://storybook.js.org/docs/writing-stories) — Storybook docs: where to put stories, beside the component (*read*)
+
+{/* LINKMAP:END */}

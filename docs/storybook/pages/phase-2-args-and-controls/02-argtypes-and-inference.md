@@ -214,3 +214,14 @@ name.
 
 **← Prev** [01 · Args as the source of truth](./01-args-as-the-source-of-truth.md) ·
 **Next →** [03 · The Controls panel](./03-the-controls-panel.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ArgTypes](https://storybook.js.org/docs/api/arg-types) — Storybook docs: control types, `options`, `mapping`, automatic inference from react-docgen or vue-docgen-api, manual override wins (*read*)
+- **Beyond the docs:** [Improving ArgTypes with Metadata](https://stevekinney.com/courses/storybook/arg-types) — Steve Kinney, course page, modified 2025-04-16: a worked case of inference missing a default and the manual fix
+
+{/* LINKMAP:END */}

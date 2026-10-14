@@ -131,3 +131,16 @@ matrix) rather than one maximally exhaustive, unscannable grid
 
 ### ⚠️ Pitfall 3: Storybook Composition Creating a Confusing, Inconsistent Cross-Team Experience
 Combining multiple teams' Storybook instances via composition is powerful, but if those teams use meaningfully different conventions (different CSF versions, wildly different addon sets, inconsistent naming/organization), the "unified" experience can feel disjointed rather than cohesive — composition solves the technical problem of combining instances, but doesn't substitute for actual cross-team convention alignment if a genuinely unified experience is the goal.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Design integrations](https://storybook.js.org/docs/sharing/design-integrations) — Storybook docs: links stories to design tools: Storybook Connect for Figma (needs a Chromatic-published Storybook), the Designs addon, the Zeplin addon; no mention of QA (*read*)
+- **Beyond the docs:** [A UX designer's guide to Storybook](https://blog.logrocket.com/ux-design/ux-designers-guide-storybook) — Eric Chung, LogRocket, 2024-04-15: Figma and code become "two sources of truth" when teams work in silos; Storybook is the one place both can contribute; QA is not named (*read*)
+- **Read this:** [Storybook Composition](https://storybook.js.org/docs/sharing/storybook-composition) — Storybook docs: `refs` in `main` takes a title and URL; `refs` can be a function of the config; addons "will not work as they normally do" in composed Storybooks (*read*)
+- **Beyond the docs:** [Storybook Composition](https://www.chromatic.com/blog/storybook-composition/) — Dominic Nguyen, Chromatic blog, 2020-06-24, updated 2020-09-02: why hundreds of components scattered across Storybooks hurt reuse; `refs` with a Chromatic permalink; written for 6.0 and `main.js` (*read*)
+
+{/* LINKMAP:END */}

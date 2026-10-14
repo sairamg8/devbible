@@ -134,3 +134,19 @@ interface ModalProps { title?: string; customHeader?: ReactNode; } // NOTHING do
 // explicit note in an MDX page, or a docgen comment explicitly calling out the constraint
 /** Provide EITHER title OR customHeader, never both. */
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Automatic documentation and Storybook](https://storybook.js.org/docs/writing-docs/autodocs) — Storybook docs: `tags: ['autodocs']` per component or project-wide in `preview`, `!autodocs` opt-out; the page is built from stories and inferred args, argTypes and parameters (*read*)
+- **Also good:** [Tags](https://storybook.js.org/docs/writing-stories/tags) — Storybook docs: `autodocs` is built in but not applied by default (*read*)
+- **Beyond the docs:** [Storybook 7 Docs: New architecture, streamlined UX, and readymade doc blocks](https://storybook.js.org/blog/storybook-7-docs/) — Tom Coleman, Storybook blog, 2023-02-22: the component-not-story idea behind autodocs; written for 7, and it enables autodocs with a `docs.autodocs` option in `main.js` where current docs use the tag
+- **Read this:** [MDX](https://storybook.js.org/docs/writing-docs/mdx) — Storybook docs: attached versus unattached pages, `Meta` props, remove the autodocs tag when overriding (*read*)
+- **Also good:** [Meta (doc block)](https://storybook.js.org/docs/api/doc-blocks/doc-block-meta) — Storybook docs: `of`, `title`, `name`, `isTemplate` (*read*)
+- **Also good:** [How to document components](https://storybook.js.org/docs/writing-docs) — Storybook docs: autodocs as baseline, MDX for free-form (*read*)
+- **Beyond the docs:** [Add MDX overview page for Checkbox (design-system-react PR 73)](https://github.com/cfpb/design-system-react/pull/73) — contolini, CFPB, 2023-06-07: a real team finds autodocs "lack a lot of the information" (rendered states, guidelines, a11y tips) and tries an MDX overview page; no Storybook version given
+
+{/* LINKMAP:END */}

@@ -97,3 +97,14 @@ gate protects quality without becoming an unowned bottleneck
 
 ### ⚠️ Pitfall 3: Writing Stories That Don't Reflect Genuinely Realistic Data/Edge Cases
 The value of outside-in development depends entirely on stories covering GENUINELY realistic edge cases (real-world long strings, real boundary conditions, real error shapes) — a set of stories using only clean, idealized sample data (`'Item'`, `$9.99`, always exactly 2 items) provides much less edge-case-discovery value than stories deliberately incorporating the messy, awkward real-world data variations (very long names, unusual prices, empty/single/many-item boundary cases) that actually tend to break UI in production.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Component Driven User Interfaces](https://www.componentdriven.org/) — componentdriven.org: bottom-up: build one component at a time, combine, assemble pages with mock data, then integrate with backend services (*read*)
+- **Also good:** [Publish Storybook](https://storybook.js.org/docs/sharing/publish-storybook) — Storybook docs: the published build and PR link supply the review step (*read*)
+
+{/* LINKMAP:END */}

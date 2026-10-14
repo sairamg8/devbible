@@ -209,3 +209,14 @@ names to carry status.
 
 **← Prev** [04 · CSF factories](./04-csf-factories.md) ·
 **Next →** [06 · Reusing stories](./06-reusing-stories.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Naming components and hierarchy](https://storybook.js.org/docs/writing-stories/naming-components-and-hierarchy) — Storybook docs: slash paths, roots, single-story hoisting, `storySort` function and object forms (*read*)
+- **Also good:** [Tags](https://storybook.js.org/docs/writing-stories/tags) — Storybook docs: built-in tags, applying and removing, sidebar filtering (*read*)
+
+{/* LINKMAP:END */}

@@ -217,3 +217,14 @@ checking on every assertion in the play function.
 
 **← Prev** [02 · File structure and the stories glob](./02-file-structure-and-the-glob.md) ·
 **Next →** [04 · CSF factories](./04-csf-factories.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Writing stories in TypeScript](https://storybook.js.org/docs/writing-stories/typescript) — Storybook docs: `Meta`, `StoryObj`, `satisfies`, passing `typeof meta` (*read*)
+- **Beyond the docs:** [Improved type safety in Storybook 7](https://storybook.js.org/blog/improved-type-safety-in-storybook-7/) — Kasper Peulen, Storybook blog, 2023-02-08: why `satisfies` catches missing required args that old types missed; TypeScript 4.9+
+
+{/* LINKMAP:END */}

@@ -115,3 +115,15 @@ Engineers “fix” the other tool’s CI failures—align editor with CI owners
 
 ### ⚠️ No rollback switch
 Keep `"lint": "oxlint && eslint"` vs `"lint": "oxlint"` behind a short-lived branch or documented script change window.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Migrate from ESLint](https://oxc.rs/docs/guide/usage/linter/migrate-from-eslint.html) — oxc.rs: "Running Oxlint and ESLint together": run Oxlint first (`oxlint && eslint`); `eslint-plugin-oxlint` disables the overlap (*read*)
+- **Also good:** [eslint-plugin-oxlint](https://github.com/oxc-project/eslint-plugin-oxlint) — oxc-project, GitHub README: `oxlint.configs['flat/recommended']` for flat config, listed last; `buildFromConfigFile(path)` and `buildFromOxlintConfig(object)` read your Oxlint config; `buildFromConfigFile` is not supported for ESLint below 9 (*read*)
+- **Beyond the docs:** [How to Migrate from ESLint to Oxlint](https://www.hongkiat.com/blog/eslint-to-oxlint-migration-guide/) — Hongkiat Lim, updated 2025-11-21: keeps ESLint for unsupported rules with `eslint-plugin-oxlint` and chains `npx oxlint && npx eslint` in one script (*read*)
+
+{/* LINKMAP:END */}

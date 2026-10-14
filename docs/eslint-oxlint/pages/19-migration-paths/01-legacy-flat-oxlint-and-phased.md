@@ -81,3 +81,18 @@ Ignores drift from Oxlint patterns—consolidate.
 
 ### ⚠️ Big-bang monorepo cutover on Friday
 Phased dual-run exists for a reason—use it.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Configuration Migration Guide](https://eslint.org/docs/latest/use/configure/migration-guide) — ESLint docs: plugins and parsers become imported objects; `globals` and `parserOptions` move under `languageOptions`; `@eslint/migrate-config` gives a starting point; `FlatCompat` for old shareable configs (*read*)
+- **Also good:** [Migrate to v10.0.0](https://eslint.org/docs/latest/use/migrate-to-10.0.0) — ESLint docs: eslintrc no longer supported; Node 20.19+, 22.13+, 24+; new config lookup algorithm (*read*)
+- **Also good:** [New config system, part 2](https://eslint.org/blog/2022/08/new-config-system-part-2/) — Nicholas C. Zakas, ESLint blog, 2022-08-05: the design reasons behind the change (*read*)
+- **Beyond the docs:** [ESLint v10: Flat Config Completion and JSX Tracking](https://www.infoq.com/news/2026/04/eslint-10-release/) — Daniel Curtis, InfoQ, 2026-04-01: what teams still on `.eslintrc` must do before upgrading to v10, including `npx @eslint/migrate-config` (*read*)
+- **Read this:** [Migrate from ESLint](https://oxc.rs/docs/guide/usage/linter/migrate-from-eslint.html) — oxc.rs: `npx @oxlint/migrate` converts a flat config; `--type-aware` and JS-plugin options; legacy `.eslintrc` must go through `@eslint/migrate-config` first (*read*)
+- **Beyond the docs:** [How to Migrate from ESLint to Oxlint](https://www.hongkiat.com/blog/eslint-to-oxlint-migration-guide/) — Hongkiat Lim, updated 2025-11-21: short steps: run `@oxlint/migrate`, then Oxlint, then add the lint script; handling unsupported rules (*read*)
+
+{/* LINKMAP:END */}

@@ -119,3 +119,15 @@ addons: ['addon-theme-switcher-a', 'addon-theme-switcher-b'], // both trying to 
 // ✅ CORRECT: audit the addon set for genuinely overlapping responsibilities before adding
 // a new one, rather than assuming all addons compose cleanly regardless of what they each do
 ```
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Main configuration](https://storybook.js.org/docs/api/main-config/main-config) — Storybook docs: "This file must be valid ESM": use `import`, no `__dirname` or `__filename`; `stories` and `framework` required, `addons` and `staticDirs` optional (*read*)
+- **Also good:** [Configure Storybook](https://storybook.js.org/docs/configure) — Storybook docs: what each of `main`, `preview` and `manager` is for (*read*)
+- **Also good:** [Storybook is going ESM-only](https://storybook.js.org/blog/storybook-is-going-esm-only/) — Norbert de Langen, Storybook blog, 2025-09-22: config and story files must be valid ESM from 10; needs Node 20.16, 22.19 or 24 for `require()` of ESM (*read*)
+
+{/* LINKMAP:END */}

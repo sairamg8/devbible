@@ -134,3 +134,16 @@ Maintenance cost of mapping source locations is high.
 
 ### ⚠️ Rules that need type info without type-aware setup
 They will be wrong or empty—use typescript-eslint utilities and document projectService requirements.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Custom Rules](https://eslint.org/docs/latest/extend/custom-rules) — ESLint docs: a rule exports `meta` and `create(context)` returning visitors; `meta.schema`, scopes, code paths, `RuleTester`, `TIMING` profiling (*read*)
+- **Also good:** [Custom Rule Tutorial](https://eslint.org/docs/latest/extend/custom-rule-tutorial) — ESLint docs: build, test with `RuleTester`, bundle in a plugin, publish with `eslint` as a peer dependency (*read*)
+- **Also good:** [Custom Processors](https://eslint.org/docs/latest/extend/custom-processors) — ESLint docs: `preprocess` and `postprocess`; no autofix unless the processor sets `supportsAutofix` (*read*)
+- **Beyond the docs:** [How I built my first custom ESLint rule](https://blog.maximeheckel.com/posts/how-to-build-first-eslint-rule/) — Maxime Heckel, 2019-11-19: gentle walkthrough of the AST, `meta`, `create` and testing with `RuleTester`; written before flat config, so its plugin setup is dated (*read*)
+
+{/* LINKMAP:END */}

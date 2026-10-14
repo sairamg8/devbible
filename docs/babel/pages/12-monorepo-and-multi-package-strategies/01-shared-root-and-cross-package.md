@@ -76,3 +76,14 @@ Confusing double application—test with `@babel/cli` on a package file.
 
 ### ⚠️ Forgetting test env for Jest in monorepo root config
 Tests break only in packages that relied on local .babelrc before centralization.
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Config Files: Monorepos](https://babeljs.io/docs/config-files) — babeljs.io: root `babel.config.json` with `overrides`, subpackage `.babelrc.json` ignored unless listed in `babelrcRoots`; `rootMode: "upward"` when running from a subpackage, passable to the CLI, `@babel/register`, babel-loader or a Jest tra
+- **Also good:** [Options: rootMode and babelrcRoots](https://babeljs.io/docs/options) — babeljs.io: exact semantics of `root`, `rootMode` (`upward` throws when no root config is found, `upward-optional` falls back), `babelrcRoots` (*read*)
+
+{/* LINKMAP:END */}

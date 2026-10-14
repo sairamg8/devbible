@@ -195,6 +195,16 @@ keeps all three and can animate on the way out anyway. Two caveats before propos
 documented as *"currently available in Motion+ Early Access"*, and it *"requires motion@12.23.24 and
 react@19.2.0 or above"*.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [AnimatePresence](https://motion.dev/docs/react-animate-presence) — motion.dev: `usePresence` returning `isPresent` and a `safeToRemove` callback, `custom` with `usePresenceData`, `initial`, `onExitComplete`, `propagate` for nested instances (default `false`) (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← [Modes: sync, wait and popLayout](01b-modes-sync-wait-poplayout.md) · [Explanations index](../README.md) · Next → [Nesting, propagation and the one-shot props](01d-nesting-propagation-and-one-shot-props.md)

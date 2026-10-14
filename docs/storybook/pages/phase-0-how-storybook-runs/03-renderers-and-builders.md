@@ -168,3 +168,15 @@ migration.
 
 **← Prev** [02 · The manager and the preview](./02-manager-and-preview.md) ·
 **Next →** [04 · Installing into an existing app](./04-installing-into-an-existing-app.md)
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Framework support](https://storybook.js.org/docs/configure/integration/frameworks) — Storybook docs: frameworks auto-configure a builder plus renderer; the table groups frameworks by Webpack and Vite (*read*)
+- **Beyond the docs:** [How to use the Storybook Framework API](https://blog.logrocket.com/use-storybook-framework-api) — Chak Shun Yu, LogRocket, 2023-05-19: defines builder, renderer and framework package and shows the `preset.js` that pairs them; pre-8 era
+- **Read this:** [Storybook for React with Vite](https://storybook.js.org/docs/get-started/frameworks/react-vite) — Storybook docs: `@storybook/react-vite`, requirements (React 16.8+, Vite 5+), the `builder` option, migrating from the webpack framework (*read*)
+
+{/* LINKMAP:END */}
