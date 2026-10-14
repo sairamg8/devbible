@@ -73,7 +73,6 @@ Covers chunks 01d, 01e, 01f.
 - **Read this:** [Env Variables and Modes](https://vite.dev/guide/env-and-mode) · vite.dev · `dev` defaults to development, `build` to production, `--mode` picks the `.env.[mode]` file, and `NODE_ENV=development vite build` still runs in production mode (*read*) · covers our angle: **full** for the axes, **partial** for CI and containers · fetched 2026-10-14
 - **Also good:** [Shared Options: mode and base](https://vite.dev/config/shared-options) · vite.dev · mode precedence and the forms `base` accepts, which `BASE_URL` mirrors (*read*) · fetched 2026-10-14
 - **Also good:** [Command Line Interface](https://vite.dev/guide/cli) · vite.dev · `vite preview` takes `--mode`, `--outDir` and `--base` (*read*) · fetched 2026-10-14
-- **Beyond the docs:** [Fix Undefined Vite Environment Variables on Cloud Run](https://oneuptime.com/blog/post/2026-09-13-vite-env-undefined-cloud-run/view) · OneUptime, 2026-09-13 per the URL, not confirmed on the page · container-side view of why a runtime variable never reaches the bundle · fetched 2026-10-14 (*headings only*)
 - **Our delta:** the two-axes table and the CI job layout. `SSR` as a constant, not an access control, is our own point.
 
 ### T07-01c · `dotenv-expand`, composition and sharing one `.env` across tools — Topic · ✅ written `docs/vite/pages/07-env-variables-and-modes/01g-dotenv-expansion.md`
