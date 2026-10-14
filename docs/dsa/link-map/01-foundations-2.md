@@ -44,7 +44,7 @@ Covers the 11 topic rows of phase 1 (T01-01 to T01-11). *read* = I read the pass
 
 ### T01-08 · Recurrences and the master theorem — Understand · ✅ written `docs/dsa/pages/phase-1-complexity/08-recurrences-and-the-master-theorem.md`
 - **Read this:** [1.9 Master Theorem and Summary of Common Recurrences](https://web.engr.oregonstate.edu/~huanlian/algorithms_course/1-datastructures/master.html) · Oregon State course notes · the three cases with a summary of common recurrences · covers our angle: full · fetched 2026-10-14 (*headings only*)
-- **Also good:** [Master theorem (analysis of algorithms)](https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)) · Wikipedia · states the regularity condition for case 3 and gives examples · fetched 2026-10-14
+- **Also good:** [Master theorem (analysis of algorithms)](https://en.wikipedia.org/wiki/Master_theorem_%28analysis_of_algorithms%29) · Wikipedia · states the regularity condition for case 3 and gives examples · fetched 2026-10-14
 
 ### T01-09 · Best, average and worst — Understand · ✅ written `docs/dsa/pages/phase-1-complexity/09-best-average-and-worst.md`
 - **Read this:** [Quicksort](https://en.wikipedia.org/wiki/Quicksort) · Wikipedia · the worst-case quadratic, best and average figures and the pivot choices behind them · covers our angle: **partial** - quicksort only, not hashing · fetched 2026-10-14 (*read*)
