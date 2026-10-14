@@ -220,6 +220,16 @@ the linear traversal to reach the insertion point costs two orders of magnitude 
 than the array's linear shift. The JDK's own documentation recommends `ArrayDeque` over
 `LinkedList` for stack and queue use.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Galactic algorithm](https://en.wikipedia.org/wiki/Galactic_algorithm) — Wikipedia: asymptotically better methods whose constants make them lose on any realistic input, such as the expected linear-time minimum spanning tree that beats Borůvka only above about 9
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · Best, average and worst](09-best-average-and-worst.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [11 · Proving optimality](11-proving-optimality.md)

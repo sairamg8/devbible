@@ -257,6 +257,18 @@ is amortised constant as a dynamic array, `slice` and spread copy their range, `
 the tail, `indexOf` and `includes` scan; and name the engine optimisations — ropes for string
 concatenation, sliced strings — as unguaranteed, so the safe code uses `join` and indices.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [ArrayList](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html) — Oracle Java SE 21: `get`, `set`, `size` constant, `add` amortised constant, everything else roughly linear (*read*)
+- **Also good:** [LinkedList](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/LinkedList.html) — Oracle Java SE 21: indexed operations traverse from whichever end is closer; no Big-O stated (*read*)
+- **Also good:** [Know Thy Complexities](https://www.bigocheatsheet.com/) — bigocheatsheet.com: tables for structures and sorts (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06b · Hash keys, and the test for hidden loops](06b-hash-keys-and-the-test-for-hidden-loops.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [08 · Recurrences and the master theorem](08-recurrences-and-the-master-theorem.md)

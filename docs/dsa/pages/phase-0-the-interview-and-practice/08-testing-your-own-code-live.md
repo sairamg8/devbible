@@ -197,6 +197,18 @@ Invariant: the answer is in `[lo, hi)` with `hi` starting at the length. Iterati
 length, which the caller must treat as not found; the empty array returns 0 without entering the
 loop.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Coding interview rubrics](https://www.techinterviewhandbook.org/coding-interview-rubrics/) — Tech Interview Handbook, updated Aug 7, 2026: Testing is a graded dimension: common and corner cases, and whether you fix your own bugs (*read*)
+- **Also good:** [Coding interview techniques](https://www.techinterviewhandbook.org/coding-interview-techniques/) — Tech Interview Handbook: reuse the extra examples you invented as test cases (*read*)
+- **Also good:** [Data structures and algorithms study cheatsheets](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) — Tech Interview Handbook: the General interview tips list includes validating inputs, checking for off-by-one errors and testing with example inputs; each study guide lists corner cases per topic (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07 · The when-stuck protocol](07-the-when-stuck-protocol.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [09 · The ladders](09-the-ladders.md)

@@ -244,6 +244,19 @@ the pair becomes `(b, a)`, so the algorithm sorts them itself at a cost of one e
 explicit swap is not a correctness fix, it is a micro-optimisation of one iteration, and it is a
 common source of the bug where the swap is written inside the loop instead of before it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Euclidean algorithm](https://cp-algorithms.com/algebra/euclid-algorithm.html) — cp-algorithms: GCD in O(log min(a, b)), LCM as a times b over GCD with a divided first to avoid overflow (*read*)
+- **Also good:** [Sieve of Eratosthenes](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html) — cp-algorithms: O(n log log n), start the inner loop at i squared, segmented and odd-only variants (*read*)
+- **Also good:** [Integer factorization](https://cp-algorithms.com/algebra/factorization.html) — cp-algorithms: trial division in O(sqrt n), then wheel, Fermat, Pollard methods (*read*)
+- **Also good:** [Modular arithmetic](https://usaco.guide/gold/modular) — USACO Guide: modular arithmetic is used to avoid overflow, and the modulus is usually a large prime, most often 10^9+7 or 998244353; it gives no reason why a prime and does not treat negative remainders (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02i · Binary search as degenerate D&C](02i-binary-search-as-degenerate-divide-and-conquer.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [03b · gcd on signed and wide types](03b-gcd-on-signed-and-wide-types.md)

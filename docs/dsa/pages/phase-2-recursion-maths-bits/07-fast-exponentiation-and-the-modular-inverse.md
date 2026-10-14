@@ -253,6 +253,18 @@ chain only on set bits, so `b` desynchronises from the bit position. The bug is 
 exponents of the form `2^k − 1`, whose bits are all ones, which is exactly the family of small test
 values someone is likely to try.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Binary exponentiation](https://cp-algorithms.com/algebra/binary-exp.html) — cp-algorithms: a to the n in O(log n) multiplications, modular version, any associative operation (*read*)
+- **Also good:** [Modular multiplicative inverse](https://cp-algorithms.com/algebra/module-inverse.html) — cp-algorithms: a to the m minus 2 for prime m, extended Euclid otherwise, linear-time inverses of 1 to n (*read*)
+- **Also good:** [Binomial coefficients](https://cp-algorithms.com/combinatorics/binomial-coefficients.html) — cp-algorithms: factorials and inverse factorials mod a prime, O(1) per query after precompute (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06j · N-Queens and symmetry](06j-n-queens-and-symmetry.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [07b · Modular exponentiation and overflow](07b-modular-exponentiation-and-where-the-product-overflows.md)

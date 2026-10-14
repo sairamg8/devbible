@@ -235,6 +235,16 @@ theorem, if the size is a constant fraction, or unrolling if it is not. If the f
 memoised, the recurrence no longer describes the cost; count distinct states times work per
 state instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Master theorem](https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms) — ): Wikipedia
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07 · Complexity of the built-ins](07-complexity-of-the-built-ins.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [09 · Best, average and worst](09-best-average-and-worst.md)

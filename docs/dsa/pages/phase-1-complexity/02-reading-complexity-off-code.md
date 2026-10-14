@@ -251,6 +251,16 @@ into the array — `const x = queue[head++]` — which is Θ(1) per dequeue and 
 at Θ(V + E); or use a deque. In Java, `ArrayDeque` is the queue, and its javadoc says most
 operations run in amortised constant time.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Analysis of algorithms](https://algs4.cs.princeton.edu/14analysis/) — Princeton, Sedgewick and Wayne: worked loop fragments (exercise 2): a halving outer loop whose inner loop runs to the current n is linear (N + N/2 + N/4 + …), a doubling outer loop whose inner loop runs to N is linearithmic (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01 · Big-O, Theta and Omega](01-big-o-theta-and-omega.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [02b · Recursion as a tree](02b-recursion-as-a-tree.md)

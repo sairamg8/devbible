@@ -215,6 +215,19 @@ Fisher–Yates achieves it. The interesting corollary is the one in
 [10b](10b-fisher-yates-in-practice.md): a generator whose entire state is 64 bits cannot supply
 `log2(n!)` bits for `n` past about 20, no matter how many times you call it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Fisher–Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle) — Wikipedia: the in-place modern algorithm, why the naive swap is biased (n to the n outcomes cannot split evenly over n factorial), modulo bias, off-by-one range errors, and a Sorting section warning that a random comparator gives highly non-
+- **Also good:** [Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling) — Wikipedia: Algorithm R and the induction that every item ends with probability k over n (*read*)
+- **Also good:** [Quicksort](https://en.wikipedia.org/wiki/Quicksort) — Wikipedia: a random pivot makes the expected bound hold for any input (*read*, first 100000 characters)
+- **Beyond the docs:** [The Danger of Naïveté](https://blog.codinghorror.com/the-danger-of-naivete/) — Jeff Atwood, Dec 7, 2007: runs a naive shuffle 600,000 times on three cards and shows the skewed counts against Knuth–Fisher–Yates, which is the measured bias made visible (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09i · Where n stops fitting](09i-where-n-stops-fitting.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10b · Fisher–Yates in practice](10b-fisher-yates-in-practice.md)

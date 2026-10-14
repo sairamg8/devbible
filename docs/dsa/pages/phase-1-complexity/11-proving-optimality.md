@@ -212,6 +212,17 @@ written; a lower bound on the problem must hold for every possible algorithm, wh
 output-size, must-read, decision-tree and adversary arguments provide. The claim "this is
 optimal" needs the second kind; without it, the honest form is "this is the best I know."
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Comparison sort](https://en.wikipedia.org/wiki/Comparison_sort) — Wikipedia: the decision-tree argument: n factorial leaves force at least log2 of n factorial comparisons, which is Omega of n log n (*read*)
+- **Also good:** [Mergesort](https://algs4.cs.princeton.edu/22mergesort/) — Princeton, Sedgewick and Wayne: no compare-based sort can beat lg(N!) compares, so mergesort is asymptotically optimal (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10 · Benchmarking vs analysis](10-benchmarking-vs-analysis.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next phase → [Part 1 of the syllabus — recursion, maths and bits](../../syllabus/01-foundations.md)

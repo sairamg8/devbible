@@ -240,6 +240,19 @@ elements and the sum is Θ(n²). The functional shape hides it — `reduce` with
 accumulator reads as idiomatic — but the copy is in the semantics. `push` onto a local array is
 amortised constant, and returning that array at the end gives the same result in Θ(n).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array.prototype.shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) — MDN: shift moves every remaining value left by one and reindexes; the page states no complexity (*read*)
+- **Also good:** [Array.prototype.includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) — MDN: searches front to back with SameValueZero; no complexity stated (*read*)
+- **Also good:** [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) — MDN: the spec requires sublinear average access, and `has` is on average faster than `includes` on an equal-size array (*read*)
+- **Also good:** [HashMap](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html) — Oracle Java SE 21: constant time only if the hash disperses well, and many equal-hash keys are "a sure way to slow down" the table (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05 · The common classes and the limits](05-the-common-classes-and-what-the-limits-imply.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [06b · Hash keys, and the test for hidden loops](06b-hash-keys-and-the-test-for-hidden-loops.md)

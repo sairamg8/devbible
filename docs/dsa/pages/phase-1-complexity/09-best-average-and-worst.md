@@ -249,6 +249,17 @@ implementation reaches that by detecting adversarial patterns and switching stra
 sentence rather than the name. The object sort avoids the question altogether by being a
 mergesort — TimSort — with n log n worst case by construction and a stability guarantee.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Best, worst and average case](https://en.wikipedia.org/wiki/Best,_worst_and_average_case) — Wikipedia: the three definitions, hash tables as poor worst case but rarely hit, quicksort average n log n against worst n squared (*read*)
+- **Also good:** [Quicksort](https://en.wikipedia.org/wiki/Quicksort) — Wikipedia: worst case when the pivot is always the smallest or largest, a random pivot makes the expected bound hold for any input (*read*, first 100000 characters)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [08 · Recurrences and the master theorem](08-recurrences-and-the-master-theorem.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [10 · Benchmarking vs analysis](10-benchmarking-vs-analysis.md)

@@ -7,7 +7,9 @@ metadata:
 
 # 🔴 START HERE — the link map ("hub + delta", one place)
 
-## 🔴 RESUME HERE — 2026-10-14 (CSS done, PR open)
+## 🔴 RESUME HERE — 2026-10-14 (dsa done; next system-design)
+
+- **dsa DONE 2026-10-14** (301 topics, 8 files; linkcheck + mdxcheck clean). **Next: system-design** (13 syllabus files, 01–13). Tooling: `corepack enable && yarn install --immutable` is needed for `node scripts/mdxcheck.mjs --no-rawtag docs/<track>`.
 
 - **CSS DONE 2026-10-14** (74 topics, 4 files; linkcheck + mdxcheck clean; the check script is `scripts/mdxcheck.mjs` — `mdxcheck.py` no longer exists; needs `corepack enable && yarn install`). PR left open for the user. **Next language: webpack** (nextjs DONE 115 topics, vite DONE 72 blocks, 2026-10-14), then webpack, jest-rtl, playwright, tanstack-query, storybook, babel, eslint-oxlint, framer-motion, dsa, system-design.
 - **Content bug found (not fixed, outside lane):** `docs/css/pages/phase-1-selectors/14-scope.md` "Proximity" says proximity wins before specificity; Chrome and MDN put scoping proximity after specificity, before source order.
@@ -66,7 +68,8 @@ metadata:
 | babel | 20 blocks (16 pages) | ✅ complete 2026-10-14 (17 pages got Further reading) | — |
 | eslint-oxlint | 24 blocks (21 pages) | ✅ complete 2026-10-14 (21 pages got Further reading) | — |
 | framer-motion | 22 blocks (16 sections) | ✅ complete 2026-10-14 (21 pages got Further reading, 1 over cap) | — |
-| dsa · system-design | — | ⬜ not started — **RESUME HERE** (both have syllabus/ dirs: dsa 8 files, system-design 13 files; use mktab.py-style extraction, lanes = syllabus files, ≤5 lanes) | — |
+| dsa | 301 (8 files) | ✅ complete 2026-10-14 (researcher + verifier per part; only phases 0–2 have pages, 48 pages got Further reading, 5 over cap; PR open) | — |
+| system-design | — | ⬜ not started — **RESUME HERE** (13 syllabus files; lanes = syllabus files, ≤5 per batch: 01–05, 06–10, 11–13) | — |
 
 **"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
 

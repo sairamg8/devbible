@@ -214,6 +214,17 @@ check it at each step of the trace; check the boundaries first — first and las
 single element — because that is where most bugs are; and say what you are checking so the
 interviewer can point. Staring at the middle of the loop in silence is the failure mode.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Coding interview techniques](https://www.techinterviewhandbook.org/coding-interview-techniques/) — Tech Interview Handbook: draw the problem, solve it by hand, try more examples, break it into independent parts (*read*)
+- **Beyond the docs:** [Solving Coding Problems Without Overthinking](https://algocademy.com/blog/solving-coding-problems-without-overthinking-how-to-trust-your-instincts/) — AlgoCademy, Oct 15, 2024: share initial thoughts even when not sure they are correct, and do not dismiss a hint the interviewer offers (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06 · Spaced repetition and the log](06-spaced-repetition-and-the-mistake-log.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [08 · Testing your code live](08-testing-your-own-code-live.md)

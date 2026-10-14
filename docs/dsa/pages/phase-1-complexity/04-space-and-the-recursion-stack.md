@@ -179,6 +179,17 @@ partition is empty and the recursion is n deep. The array itself is sorted in pl
 a randomised or median-of-three pivot, and recursing on the smaller side first while looping
 on the larger, which bounds the stack to log n regardless of pivot quality.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Recursion and stack](https://javascript.info/recursion) — javascript.info: depth equals the number of contexts on the stack, 10000 is a safe depth and 100000 probably is not, tail-call optimisation "not yet supported everywhere" (*read*)
+- **Also good:** [ECMAScript 6 Proper Tail Calls in WebKit](https://webkit.org/blog/6240/ecmascript-6-proper-tail-calls-in-webkit/) — WebKit blog, May 23, 2016: what a proper tail call reuses and the strict-mode and return conditions; describes JavaScriptCore only and names no other engine (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03b · Union-find, and the limits of amortised](03b-union-find-and-the-limits-of-amortised.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [04b · Tail calls, and the explicit stack](04b-tail-calls-and-the-explicit-stack.md)
