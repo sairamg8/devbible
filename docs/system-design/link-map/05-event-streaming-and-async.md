@@ -7,7 +7,7 @@ sidebar_position: 5
 # Link map · System design · Part 5 (phases 8–9)
 
 Covers every topic row of `docs/system-design/syllabus/05-event-streaming-and-async.md`: Phase 8 (messaging fundamentals and choosing a broker, 19 rows) and Phase 9 (Kafka, CDC and event-driven architecture, 18 rows). Our pages under `docs/system-design/pages` stop at phase 3, so all 37 rows are marked not written; the "Our delta" line then records what the syllabus row promises.
-*read* = I read the passage that supports the claim in the fetched text; *headings only* = fetched at 200, headings or opening checked, passage not read. Fetches returned condensed text, so *read* means the stated claim was in that text. Third-party links carry a date only where the page or its address shows one. No `#anchors` are given. Where no good non-official explanation turned up, the block has no "Beyond the docs" line. Every URL below was fetched on 2026-10-14 and returned 200 at the address shown. Kafka pages are the 4.3 documentation.
+*read* = I read the passage that supports the claim in the fetched text; *headings only* = fetched at 200, headings or opening checked, passage not read. Fetches returned condensed text, so *read* means the stated claim was in that text. Third-party links carry a date only where the page or its address shows one. No `#anchors` are given. Where no good non-official explanation turned up, the block has no "Beyond the docs" line. Every URL below was fetched on 2026-10-14 and served its content at the address shown (the O'Reilly and GitHub wiki pages answer a bare `curl` with 403 but load in a browser). Kafka pages are the 4.3 documentation.
 
 ---
 
@@ -109,6 +109,8 @@ Covers every topic row of `docs/system-design/syllabus/05-event-streaming-and-as
 - **Read this:** [Messaging spans semantic conventions](https://opentelemetry.io/docs/specs/semconv/messaging/messaging-spans/) · OpenTelemetry · producers attach a creation context to each message; receive and process spans use links, since a span has one parent (*read*) · covers our angle: **partial** — tracing across the hop only; no lag or DLQ dashboards · fetched 2026-10-14
 - **Also good:** [Kafka monitoring](https://kafka.apache.org/43/operations/monitoring/) · Apache Kafka 4.3 docs · `records-lag-max`, `UnderReplicatedPartitions`, `UnderMinIsrPartitionCount` and what each should read (*read*) · fetched 2026-10-14
 - **Also good:** [Avoiding insurmountable queue backlogs](https://builder.aws.com/content/3EuRcgkTP1MI0c7zM8W6HL3WIqA/avoiding-insurmountable-queue-backlogs) · Amazon Builders' Library · age of oldest message beats error rates as the alarm (*read*) · fetched 2026-10-14
+- **Also good:** [Available CloudWatch metrics for Amazon SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-available-cloudwatch-metrics.html) · AWS · `ApproximateAgeOfOldestMessage` and its traps: poison messages are excluded from it, the age resets when a message moves to a DLQ, and `ApproximateNumberOfMessagesVisible` is the metric to watch on the DLQ itself (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [Burrow consumer lag evaluation rules](https://github.com/linkedin/Burrow/wiki/Consumer-Lag-Evaluation-Rules) · LinkedIn Burrow wiki · lag judged over a sliding window of committed offsets rather than a fixed threshold, with explicit STALLED, STOPPED and falling-behind states (*read*) · fetched 2026-10-14
 - **Our delta:** continues Part 8 with the four async signals: trace across the hop, lag, dead-letter alerts and oldest-message age.
 
 ### T08-17 · The storefront's order events end to end — Understand · 🔲 not written
@@ -124,6 +126,7 @@ Covers every topic row of `docs/system-design/syllabus/05-event-streaming-and-as
 ### T08-19 · Priority and fairness — Know · 🔲 not written
 - **Read this:** [RabbitMQ priority queues](https://www.rabbitmq.com/docs/priority) · RabbitMQ docs · classic queues cost a sub-queue per level, so use 2 to 4; strict priority on quorum queues can starve lower classes, so separate queues are suggested (*read*) · covers our angle: **partial** · fetched 2026-10-14
 - **Also good:** [Priority Queue pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/priority-queue) · Microsoft Learn · single versus multiple queues and consumer pools; low priority can wait forever unless aged up (*read*) · fetched 2026-10-14
+- **Also good:** [Amazon SQS fair queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fair-queues.html) · AWS · exactly this row's incident: a tenant's backlog raises dwell time for everyone; tagging messages with a tenant `MessageGroupId` on a standard queue lets SQS favour quiet tenants without capping the noisy one (*read*) · fetched 2026-10-14
 - **Beyond the docs:** [Fairness in multi-tenant systems](https://builder.aws.com/content/3Eupj3d2bo4fEvlzYbICMZNhQ3B/fairness-in-multi-tenant-systems) · Amazon Builders' Library · per-tenant quotas, token buckets and cheap load shedding give each client a single-tenant experience (*read*) · fetched 2026-10-14
 - **Our delta:** the tenant whose backlog starves everyone else.
 
@@ -149,7 +152,7 @@ Covers every topic row of `docs/system-design/syllabus/05-event-streaming-and-as
 
 ### T09-04 · In-sync replicas and durability — Master · 🔲 not written
 - **Read this:** [Kafka design](https://kafka.apache.org/43/design/_print/) · Apache Kafka 4.3 docs · `min.insync.replicas` with `acks=all`, `replica.lag.time.max.ms`, and `unclean.leader.election.enable` false by default so Kafka favours consistency (*read*) · covers our angle: **partial** — does not walk through when "acked by all" still loses data · fetched 2026-10-14
-- **Also good:** [Kafka monitoring](https://kafka.apache.org/43/operations/monitoring/) · Apache Kafka 4.3 docs · `UnderMinIsrPartitionCount` above zero means `acks=all` producers may fail; any `UncleanLeaderElectionsPerSec` can mean data loss (*read*) · fetched 2026-10-14
+- **Also good:** [Kafka monitoring](https://kafka.apache.org/43/operations/monitoring/) · Apache Kafka 4.3 docs · `UnderMinIsrPartitionCount` (ISR smaller than `min.insync.replicas`) and `UncleanLeaderElectionsPerSec` both list a normal value of 0; what a non-zero value costs is our inference, not the page's (*read*) · fetched 2026-10-14
 - **Our delta:** exactly what "acknowledged by all" promises.
 
 ### T09-05 · Exactly-once within Kafka — Master · 🔲 not written
@@ -165,9 +168,9 @@ Covers every topic row of `docs/system-design/syllabus/05-event-streaming-and-as
 
 ### T09-07 · Change data capture with Debezium — Master · 🔲 not written
 - **Read this:** [Logical decoding concepts](https://www.postgresql.org/docs/current/logicaldecoding-explanation.html) · PostgreSQL docs · "replication slots ... know nothing about the state of their consumer(s)", so WAL piles up and in extreme cases the database can shut down to avoid transaction ID wraparound (*read*) · covers our angle: **partial** — the slot disk risk exactly; no Debezium specifics · fetched 2026-10-14
-- **Also good:** [Debezium PostgreSQL connector](https://debezium.io/documentation/reference/stable/connectors/postgresql.html) · Debezium docs · first-start consistent snapshot, `snapshot.mode` default `initial`, `pgoutput` plug-in on PostgreSQL 10+ (*read*) · fetched 2026-10-14
+- **Also good:** [Debezium PostgreSQL connector](https://debezium.io/documentation/reference/stable/connectors/postgresql.html) · Debezium docs · first-start consistent snapshot, `snapshot.mode` default `initial`, `pgoutput` plug-in on PostgreSQL 10+; its "WAL disk space consumption" section names the busy-database, few-captured-tables case and prescribes `heartbeat.interval.ms` with the heartbeat table added to the publication (*read*) · fetched 2026-10-14
 - **Also good:** [Outbox event router](https://debezium.io/documentation/reference/stable/transformations/outbox-event-router.html) · Debezium docs · `aggregateid` becomes the Kafka key; the outbox is insert-only (*read*) · fetched 2026-10-14
-- **Beyond the docs:** [Turning the database inside-out](https://martin.kleppmann.com/2015/03/04/turning-the-database-inside-out.html) · Martin Kleppmann, 2015 · replication, indexes, caches and materialized views as derived data from one log (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [Mastering Postgres replication slots](https://www.morling.dev/blog/mastering-postgres-replication-slots/) · Gunnar Morling, July 2025 · the stalled-slot incident from the former Debezium lead: a stopped consumer means unbounded WAL backlog, an idle database's slot never advances because WAL is per instance but slots are per database, `max_slot_wal_keep_size` (PostgreSQL 13+) invalidates the slot and forces a re-snapshot, `pg_logical_emit_message` (14+) as a table-less heartbeat, and deleting a connector does not drop its slot (*read*) · fetched 2026-10-14
 - **Our delta:** the outbox implemented through CDC and the stalled-consumer slot incident.
 
 ### T09-08 · Kafka as a system-design component — Master · 🔲 not written
@@ -183,12 +186,14 @@ Covers every topic row of `docs/system-design/syllabus/05-event-streaming-and-as
 
 ### T09-10 · Kafka Connect — Understand · 🔲 not written
 - **Read this:** [Kafka Connect overview](https://kafka.apache.org/43/kafka-connect/overview/) · Apache Kafka 4.3 docs · scalable streaming between Kafka and other systems; standalone or distributed mode; offsets managed for you (*read*) · covers our angle: **partial** — no source-versus-sink detail, no CDC-versus-polling argument · fetched 2026-10-14
+- **Also good:** [Kafka Connect](https://docs.confluent.io/platform/current/connect/index.html) · Confluent docs · the vocabulary the Apache overview lacks: source connectors ingest databases and table updates, sink connectors deliver to secondary indexes such as Elasticsearch, plus workers, stateless tasks, converters, single-message transforms and the sink dead letter queue under `errors.tolerance` (*read*) · fetched 2026-10-14
 - **Also good:** [Dead Letter Channel](https://www.enterpriseintegrationpatterns.com/patterns/messaging/DeadLetterChannel.html) · Enterprise Integration Patterns · Kafka Connect sink errors go to a DLQ with `errors.tolerance = all` (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [Data ingestion with Kafka Connect and change data capture](https://developer.confluent.io/courses/data-pipelines/kafka-data-ingestion-with-cdc/) · Confluent Developer, Tim Berglund · the CDC-versus-polling argument directly: a polling query cannot see deletes, misses intermediate changes between polls and trades staleness against load on the database, while log-based CDC sees every mutation (*read*) · fetched 2026-10-14
 - **Our delta:** why a CDC source beats a polling one, and sinks into search and the warehouse.
 
 ### T09-11 · Stream processing — Understand · 🔲 not written
 - **Read this:** [Kafka Streams core concepts](https://kafka.apache.org/43/streams/core-concepts/) · Apache Kafka 4.3 docs · windows per key with a grace period, event versus processing time, state stores, stream-table duality (*read*) · covers our angle: **partial** — no tumbling, hopping or session taxonomy, no batch-replacement framing · fetched 2026-10-14
-- **Beyond the docs:** [The world beyond batch: Streaming 101](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/) · Tyler Akidau, O'Reilly · event time versus processing time; fixed, sliding and session windows; completeness as an optimisation (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [The world beyond batch: Streaming 101](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/) · Tyler Akidau, O'Reilly, 2015 · event time versus processing time; fixed, sliding and session windows; completeness as an optimisation (*read*) · fetched 2026-10-14
 - **Our delta:** where a stream processor replaces a nightly batch.
 
 ### T09-12 · Event sourcing — Understand · 🔲 not written
@@ -210,8 +215,10 @@ Covers every topic row of `docs/system-design/syllabus/05-event-streaming-and-as
 - **Our delta:** the coupling that events hide instead of removing.
 
 ### T09-15 · Clients in this stack — Understand · 🔲 not written
-- **Read this:** [KafkaJS consuming messages](https://kafka.js.org/docs/consuming) · KafkaJS docs · `autoCommit` on by default; handlers must not outlast the 30000 ms session timeout or a rebalance follows; `heartbeat()` for slow work; shutdown is not documented on this page (*read*) · covers our angle: **partial** — Node side only · fetched 2026-10-14
-- **Also good:** [Spring Kafka message listener containers](https://docs.spring.io/spring-kafka/reference/kafka/receiving-messages/message-listener-container.html) · Spring docs · `AckMode` defaults to `BATCH`, framework sets `enable.auto.commit` false; stop behaviour not documented here (*read*) · fetched 2026-10-14
+- **Read this:** [KafkaJS consuming messages](https://kafka.js.org/docs/consuming) · KafkaJS docs · `autoCommit` on by default; handlers must not outlast the 30000 ms session timeout or a rebalance follows; `heartbeat()` for slow work; shutdown is not documented on this page; the last stable KafkaJS release on npm is 2.2.4 (February 2023) (*read*) · covers our angle: **partial** — Node side only · fetched 2026-10-14
+- **Also good:** [Migrate to the Confluent JavaScript client](https://docs.confluent.io/kafka-clients/javascript/current/migration.html) · Confluent docs · the librdkafka-based Node client with a KafkaJS-compatible API, and where semantics differ: auto-commit is periodic (5 s default) not per message, heartbeats are automatic, `stop` is unsupported so you disconnect to stop, `rebalanceTimeout` also sets the max poll interval (*read*) · fetched 2026-10-14
+- **Also good:** [Spring Kafka message listener containers](https://docs.spring.io/spring-kafka/reference/kafka/receiving-messages/message-listener-container.html) · Spring docs · `AckMode` defaults to `BATCH`, framework sets `enable.auto.commit` false unless you set it; stop behaviour not documented here (*read*) · fetched 2026-10-14
+- **Also good:** [Spring Kafka listener container properties](https://docs.spring.io/spring-kafka/reference/kafka/container-props.html) · Spring docs · the shutdown dials: `shutdownTimeout` (10000 ms) bounds how long `stop()` blocks for consumers to finish, and `stopImmediate` (false) decides whether a stop finishes the rest of the last poll or only the current record (*read*) · fetched 2026-10-14
 - **Our delta:** the deploy that lost messages on restart.
 
 ### T09-16 · Schema registry in practice — Understand · 🔲 not written
@@ -226,5 +233,6 @@ Covers every topic row of `docs/system-design/syllabus/05-event-streaming-and-as
 
 ### T09-18 · Multi-cluster and cross-region replication — Know · 🔲 not written
 - **Read this:** [Geo-replication (MirrorMaker 2)](https://kafka.apache.org/43/operations/geo-replication-cross-cluster-data-mirroring/) · Apache Kafka 4.3 docs · replicates topics, configs, consumer-group offsets and ACLs; active/active versus active/passive flows; the page gives no failover procedure or offset-translation detail (*read*) · covers our angle: **partial** · fetched 2026-10-14
+- **Also good:** [KIP-382: MirrorMaker 2.0](https://cwiki.apache.org/confluence/spaces/KAFKA/pages/95650722/KIP-382+MirrorMaker+2.0) · Apache Kafka wiki · the design the docs page omits: checkpoints emitted to a compacted `us-west.checkpoints.internal`-style topic, `RemoteClusterUtils.translateOffsets` for consumer migration and failover, only some offsets translatable, and source-prefixed topic names that make active/active cycle-free (*read*) · fetched 2026-10-14
 - **Also good:** [Apache Kafka 101 architecture course](https://developer.confluent.io/courses/architecture/get-started/) · Confluent Developer · has a Geo-Replication module and a Cluster Linking exercise (*headings only*) · fetched 2026-10-14
 - **Our delta:** active-active pitfalls, offset translation and disaster recovery for the log.
