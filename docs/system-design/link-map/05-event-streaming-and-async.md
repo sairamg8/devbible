@@ -63,7 +63,7 @@ Covers every topic row of `docs/system-design/syllabus/05-event-streaming-and-as
 ### T08-09 · Three things called "events" — Master · 🔲 not written
 - **Read this:** [What do you mean by Event-Driven?](https://martinfowler.com/articles/201701-event-driven.html) · Martin Fowler · separates event notification, event-carried state transfer, event sourcing and CQRS, with the coupling and duplication cost of each (*read*) · covers our angle: **partial** — the taxonomy is the same; it does not pick one for an inventory service · fetched 2026-10-14
 - **Also good:** [Event-driven architecture style](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven) · Microsoft Learn · full-payload events versus keys-only events and the consistency and coupling trade-off (*read*) · fetched 2026-10-14
-- **Also good:** [Introduction to designing events and event streams](https://developer.confluent.io/courses/event-design/intro/) · Confluent Developer · fact versus delta events and state transfer as an event purpose (*read*) · fetched 2026-10-14
+- **Also good:** [Introduction to designing events and event streams](https://developer.confluent.io/courses/event-design/intro/) · Confluent Developer · an intro module that names fact versus delta events and "transferring state" as an event purpose; the detail is in later modules (*read*) · fetched 2026-10-14
 - **Our delta:** which of the three the storefront's inventory service actually wants.
 
 ### T08-10 · Choosing the broker — Master · 🔲 not written
@@ -71,7 +71,8 @@ Covers every topic row of `docs/system-design/syllabus/05-event-streaming-and-as
 - **Also good:** [RabbitMQ work queues tutorial](https://www.rabbitmq.com/tutorials/tutorial-two-python) · RabbitMQ · per-message acks, round-robin and fair dispatch with prefetch (*read*) · fetched 2026-10-14
 - **Also good:** [NATS JetStream](https://docs.nats.io/concepts/jetstream) · NATS docs · core NATS is at-most-once and never replayed; JetStream adds persistence, at-least-once and replay (*read*) · fetched 2026-10-14
 - **Also good:** [Redis Streams](https://redis.io/docs/latest/develop/data-types/streams/) · Redis docs · append-only log with consumer groups, `XACK`, `XPENDING`, and `MAXLEN` trimming (*read*) · fetched 2026-10-14
-- **Also good:** [Pub/Sub overview](https://docs.cloud.google.com/pubsub/docs/overview) · Google Cloud · managed topics and subscriptions with no partitions to operate (*read*) · fetched 2026-10-14
+- **Also good:** [Pub/Sub overview](https://docs.cloud.google.com/pubsub/docs/overview) · Google Cloud · contrasts itself with partitioned systems, where the partition count caps concurrent clients; Pub/Sub leases individual messages to subscribers instead (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [RabbitMQ vs Kafka Part 1 - Two Different Takes on Messaging](https://jack-vanlightly.com/blog/2017/12/4/rabbitmq-vs-kafka-part-1-messaging-topologies) · Jack Vanlightly, December 2017 · exchanges and queues against the partitioned log, consumer offsets and groups, push versus pull and ordering, side by side; part 1 of a six-part series that goes on to delivery semantics and fault tolerance (*read*) · fetched 2026-10-14
 - **Our delta:** a decision table by access pattern, built to survive "why not the other one?".
 
 ### T08-11 · Push vs pull — Understand · 🔲 not written
