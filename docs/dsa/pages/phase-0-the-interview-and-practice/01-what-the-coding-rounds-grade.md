@@ -231,6 +231,16 @@ force that is too slow for the constraints before the time is spent writing it �
 to a hundred thousand is too slow; I need the map" — which is the reading-the-constraints skill
 the next pages build.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How candidates are evaluated in coding interviews at top tech companies](https://www.techinterviewhandbook.org/coding-signals/) — Tech Interview Handbook: one page that names the graded signals (communication, problem solving, technical competency, testing) and how they combine into a hire decision
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [02 · The 45-minute shape](02-the-45-minute-shape.md)

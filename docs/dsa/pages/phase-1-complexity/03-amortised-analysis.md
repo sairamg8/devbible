@@ -213,6 +213,17 @@ work becomes Θ(E) and the visited check has silently moved; the traversal is st
 still Θ(V + E) overall, but the "each vertex once" sentence is false and the queue can hold more
 than V entries. Marking on enqueue keeps the sentence true and the queue bounded by V.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Lecture 25: Amortized Analysis](https://www.cs.cornell.edu/courses/cs3110/2014fa/lectures/25/lec25.html) — Cornell CS 3110: the doubling-table argument worked out (resizing a hash table or array), including why a fixed increment fails
+- **Also good:** [Amortized analysis](https://en.wikipedia.org/wiki/Amortized_analysis) — Wikipedia: aggregate, accounting and potential methods side by side
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02b · Recursion as a tree](02b-recursion-as-a-tree.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [03b · Union-find, and the limits of amortised](03b-union-find-and-the-limits-of-amortised.md)

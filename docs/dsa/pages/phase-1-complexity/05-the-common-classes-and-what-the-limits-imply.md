@@ -276,6 +276,17 @@ structure. The limit is the setter saying that anything that touches the input's
 even once is too slow — and in JavaScript it is also a reminder that the value exceeds
 `Number.MAX_SAFE_INTEGER`, so `BigInt` or modular arithmetic is needed.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Complexity calculations](https://usaco.guide/bronze/time-comp) — USACO Guide: pairs each class with the input size it allows
+- **Also good:** [Big-O Algorithm Complexity Cheat Sheet](https://www.bigocheatsheet.com/) — bigocheatsheet.com: the growth chart (O(1) to O(n!)) for the classes
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [04b · Tail calls, and the explicit stack](04b-tail-calls-and-the-explicit-stack.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [06 · Hidden costs](06-hidden-costs.md)

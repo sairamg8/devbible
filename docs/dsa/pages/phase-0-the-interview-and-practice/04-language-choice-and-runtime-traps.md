@@ -244,6 +244,17 @@ approximately, so distinct values can compare equal — MDN's example is `MAX_SA
 MAX_SAFE_INTEGER + 2` being true. The fixes are `BigInt`, or reducing modulo before multiplying
 in modular problems. Bitwise operators are separately limited to 32-bit integers.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) — MDN: the sort page states the stability guarantee since ES2019 and the comparator rules that cause most JS interview bugs
+- **Also good:** [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) — MDN: what BigInt can and cannot mix with
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03 · The method](03-the-method.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [04b · Java traps and sorting](04b-java-traps-and-sorting.md)

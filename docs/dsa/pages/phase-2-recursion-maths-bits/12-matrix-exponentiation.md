@@ -229,6 +229,17 @@ are raising a larger matrix to a power for nothing, at a cubic cost in the dimen
 same principle as choosing a DP state — the state is what the future depends on, no more — and it is
 why the augmentations on this page each add exactly one component per thing the future needs.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Matrix Exponentiation](https://algomaster.io/learn/dsa/matrix-exponentiation) — AlgoMaster: from a recurrence to a matrix, then binary exponentiation of it, then any linear recurrence
+- **Also good:** [Fibonacci Numbers](https://cp-algorithms.com/algebra/fibonacci-numbers.html) — cp-algorithms: matrix and fast-doubling forms
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11j · Base conversion and digit sums](11j-base-conversion-and-digit-sums.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [12b · Augmenting the state](12b-augmenting-the-state.md)

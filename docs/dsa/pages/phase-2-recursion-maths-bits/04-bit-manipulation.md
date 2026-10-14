@@ -264,6 +264,17 @@ work is `BigInt`, where MDN documents that there is no truncation at all and neg
 as if they have infinitely many leading one bits — but BigInt and Number cannot be mixed in a
 single bitwise expression without a `TypeError`.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Bit manipulation](https://cp-algorithms.com/algebra/bit-manipulation.html) — cp-algorithms: set, clear and test a bit, clearing the rightmost set bit, the power-of-two check and the C++ popcount helpers in one page
+- **Beyond the docs:** [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html) — Sean Eron Anderson, Stanford: the classic catalogue: counting bits set (including Brian Kernighan's way), parity, power-of-two test, swapping with XOR
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03l · Why modulo a large prime](03l-why-answers-are-taken-modulo-a-large-prime.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [04b · Single-bit idioms and masks](04b-the-single-bit-idioms-and-masks.md)

@@ -273,6 +273,18 @@ and `put`, so the eldest is the least recently used, and the map removes it on i
 ten lines, and it is the answer an interviewer expects unless they ask for the doubly linked
 list explicitly.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [PriorityQueue (Java SE 21)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/PriorityQueue.html) — Oracle: the implementation note gives log time for `offer`/`poll` and linear for `remove(Object)`/`contains`
+- **Also good:** [TreeMap (Java SE 21)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/TreeMap.html) — Oracle: guaranteed log(n) time for containsKey, get, put, remove
+- **Also good:** [ArrayDeque (Java SE 21)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayDeque.html) — Oracle: most operations amortised constant, with the linear-time exceptions (remove, contains, bulk operations) listed
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11 · Communication mechanics](11-communication-mechanics.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [13 · This track and the JS track](13-how-this-track-relates-to-javascript.md)

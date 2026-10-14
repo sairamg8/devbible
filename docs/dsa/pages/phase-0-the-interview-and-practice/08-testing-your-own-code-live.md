@@ -197,6 +197,17 @@ Invariant: the answer is in `[lo, hi)` with `hi` starting at the length. Iterati
 length, which the caller must treat as not found; the empty array returns 0 without entering the
 loop.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How candidates are evaluated in coding interviews (section 4, Testing)](https://www.techinterviewhandbook.org/coding-signals/) — Tech Interview Handbook: lists testing signals (typical and corner cases, self-corrected bugs, acting like a debugger) as a scored dimension
+- **Also good:** [Time Management in Coding Interviews](https://algomaster.io/learn/dsa/time-management-in-coding-interviews) — AlgoMaster: the "Phase 4: Test (Minutes 35-45)" budget, which argues skipping tests costs more than it saves
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07 · The when-stuck protocol](07-the-when-stuck-protocol.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [09 · The ladders](09-the-ladders.md)

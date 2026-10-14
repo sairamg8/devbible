@@ -194,6 +194,17 @@ The kind counts in the log fall over a month — fewer "pattern not matched", fe
 and repetitions start passing at day 3 that used to fail. Problem count rising says nothing;
 a candidate can raise it indefinitely without changing the kinds of mistakes they make.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [LeetCode Tip 9: Spaced Repetition](https://www.redgreencode.com/leetcode-tip-9-spaced-repetition/) — Red-Green-Code: why spaced repetition is needed after studying a model solution (a problem practised daily becomes hard again after 30 days off)
+- **Also good:** [LeetCode Tip 10: Planning a Spaced Repetition Schedule](https://www.redgreencode.com/leetcode-tip-10-planning-a-spaced-repetition-schedule/) — Red-Green-Code: a concrete schedule: start at one-day intervals, then double after each successful repetition
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05 · Reading the constraints](05-reading-the-constraints.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [07 · The when-stuck protocol](07-the-when-stuck-protocol.md)

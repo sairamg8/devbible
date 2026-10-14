@@ -160,6 +160,17 @@ list is the general list resampled, and it is useful in the last two weeks befor
 loop as timed practice. It is not a syllabus; a pattern learned from a tagged list is the same
 pattern, and the phase order is what to climb regardless of the tag.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Grind 75](https://www.techinterviewhandbook.org/grind75/) — Tech Interview Handbook: an interactive tool by the author of Blind 75 that goes beyond 75 questions and lets you set available time, difficulty and topics (the page itself is app UI, with little prose; the handbook's prep guide below describes the algori
+- **Also good:** [Coding interview preparation guide](https://www.techinterviewhandbook.org/coding-interview-prep/) — Tech Interview Handbook: where the ladder sits in a whole plan, and how the Grind 75 tool ranks questions by priority and balances breadth with depth
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [08 · Testing your code live](08-testing-your-own-code-live.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [10 · Mock interviews](10-mock-interviews.md)

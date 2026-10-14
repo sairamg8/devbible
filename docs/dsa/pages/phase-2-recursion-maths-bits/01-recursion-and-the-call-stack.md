@@ -221,6 +221,17 @@ output is 2ⁿ items of length up to n." Separating the two is how you avoid quo
 space bound for a recursion that holds n frames, and how you avoid quoting Θ(n) for a function
 that is about to materialise every permutation.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Recursion and stack](https://javascript.info/recursion) — javascript.info: the execution context stack and recursion depth explained in JS
+- **Beyond the docs:** [How to Convert a Recursive Solution to Iterative on LeetCode Using a Stack](https://dev.to/alex_hunter_44f4c9ed6671e/how-to-convert-a-recursive-solution-to-iterative-on-leetcode-using-a-stack-3d39) — DEV Community: a step-by-step recipe in TypeScript (decide what a frame holds, push right before left, re-push with a visited flag for post-order)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [01b · The three ways the contract breaks](01b-the-three-ways-the-contract-breaks.md)

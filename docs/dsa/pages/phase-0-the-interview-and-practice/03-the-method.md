@@ -247,6 +247,16 @@ sliding window fails; prefix sums instead." Thirty seconds and visible reasoning
 forcing a pattern that does not fit, costs a rewrite at minute twenty and reads as not having
 checked.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [UMPIRE Interview Strategy](https://guides.codepath.com/compsci/UMPIRE-Interview-Strategy) — CodePath: the six-step method under exactly our letters, with Match as the pattern-recognition step, a worked linked-list example, and Review framed as debugging by hand
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02 · The 45-minute shape](02-the-45-minute-shape.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [04 · Language choice and traps](04-language-choice-and-runtime-traps.md)

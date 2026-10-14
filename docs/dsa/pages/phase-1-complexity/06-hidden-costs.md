@@ -240,6 +240,18 @@ elements and the sum is Θ(n²). The functional shape hides it — `reduce` with
 accumulator reads as idiomatic — but the copy is in the semantics. `push` onto a local array is
 amortised constant, and returning that array at the end gives the same result in Θ(n).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Back to Basics](https://www.joelonsoftware.com/2001/12/11/back-to-basics/) — Joel on Software: the classic walk-through of why repeated string appends go quadratic (the strcat example)
+- **Also good:** [How to Work with Strings in JavaScript - Tips for Efficient String Concatenation](https://www.freecodecamp.org/news/efficient-string-building-in-javascript/) — freeCodeCamp: the JavaScript side of concatenation cost; caveat: it assumes a full copy on every append, which V8's ropes (next line) often avoid, and its own timings are one browser on one machine
+- **Also good:** [Strings in V8](https://chromium.googlesource.com/v8/v8.git/+/main/docs/objects/strings.md) — V8 source docs: a ConsString is a pair of pointers, so `+` is cheap until the string is read or flattened, and very short concatenations skip the rope
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05 · The common classes and the limits](05-the-common-classes-and-what-the-limits-imply.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [06b · Hash keys, and the test for hidden loops](06b-hash-keys-and-the-test-for-hidden-loops.md)

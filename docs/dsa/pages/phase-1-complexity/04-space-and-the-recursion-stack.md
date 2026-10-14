@@ -179,6 +179,17 @@ partition is empty and the recursion is n deep. The array itself is sorted in pl
 a randomised or median-of-three pivot, and recursing on the smaller side first while looping
 on the larger, which bounds the stack to log n regardless of pivot quality.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Your recursion is lying to you about stack safety](https://hackernoon.com/your-recursion-is-lying-to-you-about-stack-safety) — HackerNoon: a per-runtime table showing V8 (Chrome, Node, Deno) and Firefox give no reliable proper tail calls and Safari is inconsistent
+- **Also good:** [InternalError: too much recursion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion) — MDN: the failure mode itself (the page is the Firefox wording)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03b · Union-find, and the limits of amortised](03b-union-find-and-the-limits-of-amortised.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [04b · Tail calls, and the explicit stack](04b-tail-calls-and-the-explicit-stack.md)

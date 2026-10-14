@@ -184,6 +184,16 @@ hint — there is no one to give it — and it grades narration less honestly, b
 does not notice silence. It is a weaker substitute for a peer mock, not for solo drills, which
 train patterns rather than behaviour.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [How to Think Out Loud in a Coding Interview](https://ad.intervue.io/blog/how-to-think-out-loud-coding-interview) — Intervue: three practice methods: record yourself narrating a timed problem, peer practice with turns as interviewer, expert mocks
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · The ladders](09-the-ladders.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [11 · Communication mechanics](11-communication-mechanics.md)

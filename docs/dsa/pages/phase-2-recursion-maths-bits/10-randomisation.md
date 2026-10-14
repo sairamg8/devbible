@@ -215,6 +215,18 @@ Fisher–Yates achieves it. The interesting corollary is the one in
 [10b](10b-fisher-yates-in-practice.md): a generator whose entire state is 64 bits cannot supply
 `log2(n!)` bits for `n` past about 20, no matter how many times you call it.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle) — Wikipedia: the algorithm, its modulo-bias and naive-implementation pitfalls, and why sorting with a random comparison function gives a non-uniform shuffle
+- **Also good:** [Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling) — Wikipedia: the streaming sample
+- **Beyond the docs:** [Fisher-Yates Shuffle](https://bost.ocks.org/mike/shuffle/) — Mike Bostock: a visual walk-through: slow and bad shuffles first, then the in-place O(n) version, with matrix diagrams for seeing bias
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09i · Where n stops fitting](09i-where-n-stops-fitting.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [10b · Fisher–Yates in practice](10b-fisher-yates-in-practice.md)

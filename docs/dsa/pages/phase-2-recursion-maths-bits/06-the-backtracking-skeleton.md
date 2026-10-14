@@ -241,6 +241,17 @@ answer (subsets is exactly that), and it is worth saying which of the two shapes
 because it changes whether the recursion needs a base case at all: a subsets search terminates
 because `start` runs off the end of the array, so the base case is the empty loop.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Introduction to Backtracking](https://algomaster.io/learn/dsa/backtracking-introduction) — AlgoMaster: sections on the template, choose-explore-unchoose, base case and pruning
+- **Beyond the docs:** [Backtracking (chapter 2)](https://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf) — Jeff Erickson, Algorithms book (PDF): the recursive-strategy view from a textbook author, opening with n Queens
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [05f · The cross-language trap](05f-the-cross-language-trap.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06k · State that is not the path](06k-state-that-is-not-the-path.md)

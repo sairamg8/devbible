@@ -235,6 +235,17 @@ theorem, if the size is a constant fraction, or unrolling if it is not. If the f
 memoised, the recurrence no longer describes the cost; count distinct states times work per
 state instead.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [1.9 Master Theorem and Summary of Common Recurrences](https://web.engr.oregonstate.edu/~huanlian/algorithms_course/1-datastructures/master.html) — Oregon State course notes: the three cases (leaf-heavy, balanced, root-heavy) with examples and a summary of common recurrences
+- **Also good:** [Master theorem (analysis of algorithms)](https://en.wikipedia.org/wiki/Master_theorem_%28analysis_of_algorithms%29) — Wikipedia: states the regularity condition for case 3 and gives examples
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07 · Complexity of the built-ins](07-complexity-of-the-built-ins.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [09 · Best, average and worst](09-best-average-and-worst.md)

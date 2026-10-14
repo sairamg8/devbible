@@ -197,6 +197,18 @@ is the real answer; quicksort's nothing, which is why its space is just the stac
 algorithm's presorted arrays. Answering "Θ(log n)" for merge sort is the standard mistake, and it
 comes from counting only the recursion.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [2.2 Mergesort](https://algs4.cs.princeton.edu/22mergesort/) — Princeton Algorithms: merge sort with analysis and code
+- **Also good:** [Divide and Conquer: Counting Inversions](https://cs.dartmouth.edu/~deepc/LecNotes/cs31/lec5.pdf) — Dartmouth lecture notes (PDF): defines inversions and counts the cross inversions in a divide-and-conquer recurrence
+- **Also good:** [Quickselect](https://en.wikipedia.org/wiki/Quickselect) — Wikipedia: the algorithm, with average O(n) and worst-case O(n squared)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01h · Choosing, and reading the overflow](01h-choosing-recursion-and-reading-the-overflow.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [02b · Base cases, induction, and when to reach for it](02b-base-cases-induction-and-when-to-reach-for-it.md)

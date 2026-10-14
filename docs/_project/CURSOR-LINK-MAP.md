@@ -7,6 +7,13 @@ metadata:
 
 # 🔴 START HERE — the link map ("hub + delta", one place)
 
+## 🔴 RESUME HERE — 2026-10-14 (DSA done, system-design next)
+
+- **DSA DONE 2026-10-14:** 301 topics, 23 files in `docs/dsa/link-map/`. Run with the Agent tool (not Workflow): 8 medium researchers, then high verifiers for parts 1-5, 7, 8 (part 6 not verified: its researcher already read 53 of 62 picks). Limit hit once (monthly spend limit, resets 2:20pm UTC): agents resumed via SendMessage with context intact.
+- **Recipe notes:** keep ≤5 agents alive; announce effort first; a verifier per file set upgrades *headings only* → *read* and replaces JS-only/code-only/paywalled picks (NeetCode returns 200 for nonexistent slugs; Hello Interview paywalls past headings; walkccc is code-only; algo.monster/techiedelight flaky). Shared scratchpad files get overwritten between agents: tell agents to use unique names.
+- **Owed:** system-design link map (13 files); a verifier for DSA part 6; DSA gaps with no source: T17-15 (LLD vs coding round), T18-12 (Node timer internals).
+- **Central progress note:** `sairamg8/claude-context` `shared/progress_devbible_linkmap_routine_20261013.md`.
+
 ## 🔴 RESUME HERE — 2026-10-14 (CSS done, PR open)
 
 - **CSS DONE 2026-10-14** (74 topics, 4 files; linkcheck + mdxcheck clean; the check script is `scripts/mdxcheck.mjs` — `mdxcheck.py` no longer exists; needs `corepack enable && yarn install`). PR left open for the user. **Next language: webpack** (nextjs DONE 115 topics, vite DONE 72 blocks, 2026-10-14), then webpack, jest-rtl, playwright, tanstack-query, storybook, babel, eslint-oxlint, framer-motion, dsa, system-design.
@@ -66,7 +73,8 @@ metadata:
 | babel | 20 blocks (16 pages) | ✅ complete 2026-10-14 (17 pages got Further reading) | — |
 | eslint-oxlint | 24 blocks (21 pages) | ✅ complete 2026-10-14 (21 pages got Further reading) | — |
 | framer-motion | 22 blocks (16 sections) | ✅ complete 2026-10-14 (21 pages got Further reading, 1 over cap) | — |
-| dsa · system-design | — | ⬜ not started — **RESUME HERE** (both have syllabus/ dirs: dsa 8 files, system-design 13 files; use mktab.py-style extraction, lanes = syllabus files, ≤5 lanes) | — |
+| dsa | 301 | ✅ complete 2026-10-14 (8 researchers + 7 verifiers; parts 1-5, 7, 8 verified, part 6 researcher-read only; 34 pages got Further reading, 4 over cap; merged to main) | 2026-10-14 |
+| system-design | — | ⬜ not started — **RESUME HERE** (13 syllabus files in `docs/system-design/syllabus/`; lanes = syllabus files, ≤5 alive; injector glob is `0*.md` so files 10-13 need that fixed first) | — |
 
 **"Further reading" links** are also injected into the existing written pages (additive, 0 lines removed) by `python3 scripts/linkmap-inject.py <track>` — run it for every language the moment its map completes; pages that would pass 300 lines are skipped and need splitting first (skipped so far: 10 in mongodb/redux/node, 8 in postgresql).
 

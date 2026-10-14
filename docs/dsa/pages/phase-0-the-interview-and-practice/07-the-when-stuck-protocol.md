@@ -214,6 +214,17 @@ check it at each step of the trace; check the boundaries first — first and las
 single element — because that is where most bugs are; and say what you are checking so the
 interviewer can point. Staring at the middle of the loop in silence is the failure mode.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Tricks For Getting Unstuck During a Coding Interview](https://www.interviewcake.com/tricks-for-getting-unstuck-programming-interview) — Interview Cake: a checklist of moves (hand-solve a sample input, solve a simpler version, start with brute force, look for repeat work, state where you are, pay attention to the interviewer)
+- **Also good:** [What To Do If You Get Stuck In A Technical Interview](https://anthonydmays.com/blog/2018/01/13/what-to-do-if-you-get-stuck-in-a-technical-interview) — Anthony D. Mays: candidate-side tips: tell the interviewer where you are stuck, ask more questions, simplify the problem
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06 · Spaced repetition and the log](06-spaced-repetition-and-the-mistake-log.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [08 · Testing your code live](08-testing-your-own-code-live.md)

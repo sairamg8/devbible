@@ -244,6 +244,17 @@ two on the brute force, four or five optimising, eight to ten coding, four testi
 complexity. The plan-aloud moment before typing survives unchanged, because it is the only
 evidence of judgement the round produces and it costs a minute at any length.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Time Management in Coding Interviews](https://algomaster.io/learn/dsa/time-management-in-coding-interviews) — AlgoMaster: a minute-by-minute breakdown (understand 0-5, approach 5-10, code 10-35, test 35-45) with pitfalls such as the five-minute trap in the understand phase
+- **Also good:** [Top techniques to approach and solve coding interview questions](https://www.techinterviewhandbook.org/coding-interview-techniques/) — Tech Interview Handbook: draw it out, solve it by hand, break it into smaller parts
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01 · What the rounds grade](01-what-the-coding-rounds-grade.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [03 · The method](03-the-method.md)

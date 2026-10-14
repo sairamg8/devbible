@@ -193,6 +193,16 @@ better, and then defend it — the interviewer will either confirm it or point a
 misses. Saying it shows the constraint was read; silently presenting the polynomial solution
 leaves the interviewer wondering whether you noticed the bound at all.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Complexity calculations](https://usaco.guide/bronze/time-comp) — USACO Guide: includes the table from the bound on n to the intended complexity class
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [04b · Java traps and sorting](04b-java-traps-and-sorting.md) · Index: [Phase 0 — The DSA interview and the practice system](README.md) · Next → [06 · Spaced repetition and the log](06-spaced-repetition-and-the-mistake-log.md)

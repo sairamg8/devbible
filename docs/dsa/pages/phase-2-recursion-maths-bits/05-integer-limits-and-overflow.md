@@ -255,6 +255,18 @@ depend on. Java also gives you an opt-in that turns the wrap into an exception, 
 its family ([05c](05c-javas-int-and-the-checked-arithmetic.md)); JavaScript has no equivalent for
 the rounding, only the choice to use a different type.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Number.MAX_SAFE_INTEGER](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) — MDN: the safe range and why it exists (52-bit mantissa)
+- **Also good:** [Math (Java SE 21)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Math.html) — Oracle: `addExact` and the exact-arithmetic family
+- **Also good:** [BigInt: arbitrary-precision integers in JavaScript](https://v8.dev/features/bigint) — V8: when BigInt is the fix
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [04g · The 32-bit ceiling, and what to use instead](04g-the-32-bit-ceiling-and-what-to-use-instead.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [05b · BigInt, and when to reach for it](05b-bigint-and-when-to-reach-for-it.md)

@@ -251,6 +251,16 @@ into the array — `const x = queue[head++]` — which is Θ(1) per dequeue and 
 at Θ(V + E); or use a deque. In Java, `ArrayDeque` is the queue, and its javadoc says most
 operations run in amortised constant time.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Algorithm Analysis](https://cs.lmu.edu/~ray/notes/alganalysis/) — LMU course notes: derives a halving loop as the ceiling of log base 2 of n, plus nested loops and a cubic matrix multiply
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01 · Big-O, Theta and Omega](01-big-o-theta-and-omega.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [02b · Recursion as a tree](02b-recursion-as-a-tree.md)

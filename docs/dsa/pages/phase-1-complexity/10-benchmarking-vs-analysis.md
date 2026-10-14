@@ -220,6 +220,17 @@ the linear traversal to reach the insertion point costs two orders of magnitude 
 than the array's linear shift. The JDK's own documentation recommends `ArrayDeque` over
 `LinkedList` for stack and queue use.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [1.4 Analysis of Algorithms](https://algs4.cs.princeton.edu/14analysis/) — Princeton Algorithms: the scientific method of timing runs (doubling tests) against mathematical models
+- **Also good:** [Experimental analysis](https://tarjotin.cs.aalto.fi/CS-A1140/2023/notes/intro-experimental.html) — Aalto CS-A1140 notes: why constant factors need measurement (examples in Scala)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · Best, average and worst](09-best-average-and-worst.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [11 · Proving optimality](11-proving-optimality.md)
