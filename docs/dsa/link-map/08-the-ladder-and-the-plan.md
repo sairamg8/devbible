@@ -14,18 +14,18 @@ Covers every topic row of phases 19 and 20 in `docs/dsa/syllabus/08-the-ladder-a
 ## Phase 19 — The problem ladder, pattern by pattern
 
 ### T19-01 · Arrays and hashing — Master · 🔲 not written
-- **Read this:** [Array interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/array/) · Tech Interview Handbook · essential questions Two Sum, Product of Array Except Self and Maximum Subarray, recommended Contains Duplicate and others; no Valid Anagram or Top K Frequent on this page (*read*) · covers our angle: **partial** — the array half of the row only; the hashing half is on the next page · fetched 2026-10-14
+- **Read this:** [Array interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/array/) · Tech Interview Handbook · essential questions Two Sum, Best Time to Buy and Sell Stock, Product of Array Except Self and Maximum Subarray, recommended Contains Duplicate and others; no Valid Anagram or Top K Frequent on this page (*read*) · covers our angle: **partial** — the array half of the row only; the hashing half is on the next page · fetched 2026-10-14
 - **Also good:** [Hash table interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/hash-table/) · Tech Interview Handbook · essentials Two Sum and Ransom Note, recommended Group Anagrams, Insert Delete GetRandom O(1), LRU Cache; says average-case complexity is the one that matters in interviews (*read*) · fetched 2026-10-14
 - **Also good:** [String interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/string/) · Tech Interview Handbook · Valid Anagram essential, Group Anagrams and Encode and Decode Strings recommended; a counter over a fixed alphabet is O(1) space (*read*) · fetched 2026-10-14
 - **Our delta:** the eight named problems in easy, medium, hard order, with the pattern to name before coding each one.
 
 ### T19-02 · Two pointers — Master · 🔲 not written
-- **Read this:** [Array interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/array/) · Tech Interview Handbook · two pointers is the broader pattern where pointers can cross and run over different arrays; 3Sum and Container With Most Water are on the recommended list (*read*) · covers our angle: **partial** — no Valid Palindrome, sorted two-sum or Trapping Rain Water here · fetched 2026-10-14
+- **Read this:** [Array interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/array/) · Tech Interview Handbook · two pointers is the broader pattern where pointers can cross and run over different arrays; 3Sum and Container With Most Water are on the recommended list (*read*) · covers our angle: **partial** — no Valid Palindrome (it is an essential on the string cheatsheet), sorted two-sum or Trapping Rain Water here · fetched 2026-10-14
 - **Also good:** [Stack interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/stack/) · Tech Interview Handbook · lists Trapping Rain Water among its recommended questions (*read*) · fetched 2026-10-14
 - **Our delta:** the five-problem set with the pointer-move rule stated for each, and trapping rain water as the hard that proves the pattern.
 
 ### T19-03 · Sliding window — Master · 🔲 not written
-- **Read this:** [Array interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/array/) · Tech Interview Handbook · sliding window suits many subarray and substring problems; both pointers move the same way and never pass each other, so each value is visited at most twice and the work stays O(n); Sliding Window Maximum is listed (*read*) · covers our angle: **partial** — no per-problem walk-through · fetched 2026-10-14
+- **Read this:** [Array interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/array/) · Tech Interview Handbook · sliding window suits many subarray and substring problems; both pointers move the same way and never pass each other, so each value is visited at most twice and the work stays O(n); Best Time to Buy and Sell Stock is an essential and Sliding Window Maximum is recommended (*read*) · covers our angle: **partial** — no per-problem walk-through · fetched 2026-10-14
 - **Also good:** [String interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/string/) · Tech Interview Handbook · Longest Substring Without Repeating Characters essential; Longest Repeating Character Replacement and Minimum Window Substring recommended (*read*) · fetched 2026-10-14
 - **Our delta:** the six-problem set ordered from stock profit to window maximum, with the shrink condition written out per problem.
 
@@ -43,7 +43,7 @@ Covers every topic row of phases 19 and 20 in `docs/dsa/syllabus/08-the-ladder-a
 - **Our delta:** the eleven-problem set, with LRU cache and k-group reversal as the proof problems.
 
 ### T19-07 · Trees — Master · 🔲 not written
-- **Read this:** [Tree interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/tree/) · Tech Interview Handbook · essentials Maximum Depth, Invert and LCA of a BST; recommended Same Tree, Subtree of Another Tree, Level Order, Right Side View, Validate BST, Kth Smallest, Build from Preorder and Inorder, Maximum Path Sum, Serialize and Deserialize; recursion with a null base case, BFS for level problems (*read*) · covers our angle: **full** for the problem set apart from diameter, balanced and count good nodes · fetched 2026-10-14
+- **Read this:** [Tree interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/tree/) · Tech Interview Handbook · essentials Maximum Depth, Invert and LCA of a BST; recommended Same Tree, Subtree of Another Tree, Level Order, Right Side View, Validate BST, Kth Smallest, Build from Preorder and Inorder, Maximum Path Sum, Serialize and Deserialize; recursion with a null base case, BFS for level problems (*read*) · covers our angle: **partial** — twelve of the fifteen problems; no diameter, balanced or count good nodes · fetched 2026-10-14
 - **Our delta:** the fifteen-problem set with the recursive return-value shape named for each.
 
 ### T19-08 · Heaps — Master · 🔲 not written
@@ -74,7 +74,7 @@ Covers every topic row of phases 19 and 20 in `docs/dsa/syllabus/08-the-ladder-a
 
 ### T19-14 · How the ladders nest — Master · ✅ written `docs/dsa/pages/phase-0-the-interview-and-practice/09-the-ladders.md`
 - **Read this:** [Grind 75](https://www.techinterviewhandbook.org/grind75/) · Tech Interview Handbook · "A better Blind 75 you can customize", by the author of Blind 75; the page says nothing about weeks or ordering (*read*) · covers our angle: **partial** — names the list but not how it relates to the 150 · fetched 2026-10-14
-- **Also good:** [Coding interview study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/) · Tech Interview Handbook · weeks 1 to 4 by topic, weeks 5 to 12 the 75 Grind 75 problems ordered by difficulty; says to skip or redo problems already done (*read*) · fetched 2026-10-14
+- **Also good:** [Coding interview study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/) · Tech Interview Handbook · weeks 1 to 4 by topic, weeks 5 to 12 the 75 Grind 75 problems split by week, each labelled easy, medium or hard, with the hards only in weeks 11 and 12; says problems already done in weeks 1 to 4 may be skipped or redone (*read*) · fetched 2026-10-14
 - **Beyond the docs:** [Blind 75 vs NeetCode 150 vs Educative](https://www.educative.io/blog/blind75-vs-neetcode-vs-educative) · Aisha Noor, Educative blog, June 15, 2026 · says the 150 "adds 75 more problems" to the Blind 75 and is organised by category, finish the easy ones in a category first; the article is vendor marketing for Educative, so the nesting claim is the only part to rely on · fetched 2026-10-14 (*read*)
 - **Our delta:** the three depths (75, 150, long sheets) and the pattern-by-pattern order, easy then medium then the one hard.
 
@@ -90,6 +90,7 @@ Covers every topic row of phases 19 and 20 in `docs/dsa/syllabus/08-the-ladder-a
 
 ### T19-17 · Advanced graphs — Understand · 🔲 not written
 - **Read this:** [Eulerian path](https://en.wikipedia.org/wiki/Eulerian_path) · Wikipedia · for a directed trail at most one vertex has out minus in equal to 1 and at most one the reverse; Hierholzer's algorithm runs in O(E) (*read*) · covers our angle: **partial** — reconstruct itinerary only · fetched 2026-10-14
+- **Also good:** [Graph interview cheatsheet](https://www.techinterviewhandbook.org/algorithms/graph/) · Tech Interview Handbook · lists Alien Dictionary under topological sorting, a recommended question (*read*) · fetched 2026-10-14
 - **Also good:** [Dijkstra's algorithm](https://cp-algorithms.com/graph/dijkstra.html) · cp-algorithms · edge weights must be non-negative; the main version is O(n squared plus m) with a sparse-graph variant elsewhere; path restored through a predecessor array (*read*) · fetched 2026-10-14
 - **Also good:** [Minimum spanning tree: Kruskal](https://cp-algorithms.com/graph/mst_kruskal.html) · cp-algorithms · sort edges, add an edge when its ends lie in different trees; the DSU version is about O(M log N) (*read*) · fetched 2026-10-14
 - **Also good:** [Bellman-Ford](https://cp-algorithms.com/graph/bellman_ford.html) · cp-algorithms · after phase i every shortest path of at most i edges is correct, which is the hook for a stop cap on edges (*read*) · fetched 2026-10-14
@@ -114,12 +115,12 @@ Covers every topic row of phases 19 and 20 in `docs/dsa/syllabus/08-the-ladder-a
 - **Our delta:** seven problems tied to the idioms taught in phase 2, with the 32-bit overflow case of reverse integer.
 
 ### T19-21 · Timing drills — Understand · 🔲 not written
-- **Read this:** [Coding interview preparation](https://www.techinterviewhandbook.org/coding-interview-prep/) · Tech Interview Handbook · a round is 30 to 45 minutes and the page budgets about 30 minutes per question; it does not recommend timed drills explicitly (*read*) · covers our angle: **partial** — the round length, no targets for a medium or a hard · fetched 2026-10-14
+- **Read this:** [Coding interview preparation](https://www.techinterviewhandbook.org/coding-interview-prep/) · Tech Interview Handbook · a round is 30 to 45 minutes, and the page uses 30 minutes per question in an estimate of how many questions fit in a few weeks; it does not recommend timed drills (*read*) · covers our angle: **partial** — the round length, no targets for a medium or a hard · fetched 2026-10-14
 - **Also good:** [Coding interview study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/) · Tech Interview Handbook · gives each of the 75 problems a suggested duration, mostly 15 to 45 minutes (*read*) · fetched 2026-10-14
 - **Our delta:** twenty-five minutes for a medium and forty for a hard, read the solution when time is up, then re-solve the next day without it.
 
 ### T19-22 · The whiteboard and the editor — Understand · 🔲 not written
-- **Read this:** [Coding interview cheatsheet](https://www.techinterviewhandbook.org/coding-interview-cheatsheet/) · Tech Interview Handbook · set up editor shortcuts in CoderPad or CodePen, leave gaps between lines on a whiteboard, explain as you code, write working code rather than pseudocode (*read*) · covers our angle: **partial** — nothing about practising without autocomplete · fetched 2026-10-14
+- **Read this:** [Coding interview cheatsheet](https://www.techinterviewhandbook.org/coding-interview-cheatsheet/) · Tech Interview Handbook · set up the editor shortcuts and turn on autocompletion in CoderPad or CodePen, leave gaps between lines on a whiteboard, explain as you code, write working code rather than pseudocode (*read*) · covers our angle: **partial** — it advises turning autocompletion on where the tool has it, the opposite of our practise-without-it rule, which is for tools that lack it · fetched 2026-10-14
 - **Also good:** [Interview formats](https://www.techinterviewhandbook.org/software-engineering-interview-guide/) · Tech Interview Handbook · phone screens use a collaborative editor where you usually cannot run code, though CoderPad can (*read*) · fetched 2026-10-14
 - **Our delta:** practising with autocomplete off, in the interviewer's tool, camera on and talking throughout.
 
@@ -134,7 +135,7 @@ Covers every topic row of phases 19 and 20 in `docs/dsa/syllabus/08-the-ladder-a
 - **Our delta:** two coding rounds plus design at product companies, a screen and a loop at large firms, a take-home or pairing at startups, and the order to confirm the real process per company.
 
 ### T20-02 · The twelve-week plan — Master · 🔲 not written
-- **Read this:** [Coding interview study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/) · Tech Interview Handbook · about 11 hours a week over 12 weeks; weeks 1 to 4 topic study (array, string, hash table, recursion, then sorting, matrix, linked list, queue, stack, then tree, graph, heap, trie, then interval, DP, binary, math); weeks 5 to 12 the 75 Grind 75 problems with hards in weeks 11 and 12; mocks from about 60 percent of the way through (*read*) · covers our angle: **partial** — no HLD and LLD pairing and no timed mixed sets · fetched 2026-10-14
+- **Read this:** [Coding interview study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/) · Tech Interview Handbook · about 11 hours a week over 12 weeks; weeks 1 to 4 topic study (array, string, hash table, recursion, then sorting, matrix, linked list, queue, stack, then tree, graph, heap, trie, then interval, DP, binary, math, geometry); weeks 5 to 12 the 75 Grind 75 problems with hards in weeks 11 and 12; mocks from about 60 percent of the way through (*read*) · covers our angle: **partial** — no HLD and LLD pairing and no timed mixed sets · fetched 2026-10-14
 - **Also good:** [Software engineering interview guide](https://www.techinterviewhandbook.org/software-engineering-interview-guide/) · Tech Interview Handbook · recommends about 3 months at roughly 11 hours a week, 2 to 3 hours a day (*read*) · fetched 2026-10-14
 - **Our delta:** the pattern-first weeks, hards and mocks in weeks nine and ten, and one HLD and one LLD a week from the System Design track.
 
@@ -149,15 +150,15 @@ Covers every topic row of phases 19 and 20 in `docs/dsa/syllabus/08-the-ladder-a
 
 ### T20-05 · The mock cadence — Understand · ✅ written `docs/dsa/pages/phase-0-the-interview-and-practice/10-mock-interviews.md`
 - **Read this:** [Coding interview study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/) · Tech Interview Handbook · start scheduling mock coding interviews once about 60 percent of the plan is done, using interviewing.io (*read*) · covers our angle: **partial** — a start point, no weekly cadence, rubric or recording · fetched 2026-10-14
-- **Also good:** [Mock interviews](https://interviewing.io/mocks) · interviewing.io · a library of recorded mock interviews shared with both participants' permission; the page describes no feedback process (*headings only*) · fetched 2026-10-14
+- **Also good:** [Mock interviews](https://interviewing.io/mocks) · interviewing.io · a library of recorded mock interviews shared with both participants' permission; the page describes no feedback process (*read*) · fetched 2026-10-14
 - **Our delta:** one peer mock a week from week five, graded against the rubric, recorded and reviewed, acting on one piece of feedback per mock.
 
 ### T20-06 · Tracking readiness — Understand · 🔲 not written
-- **Read this:** [Coding interview rubrics](https://www.techinterviewhandbook.org/coding-interview-rubrics/) · Tech Interview Handbook · four graded dimensions scored in bands from strong hire to strong no hire, the yardstick a readiness dashboard should be measured against (*headings only*) · covers our angle: **partial** — the grading dimensions, no per-pattern tracking · fetched 2026-10-14
+- **Read this:** [Coding interview rubrics](https://www.techinterviewhandbook.org/coding-interview-rubrics/) · Tech Interview Handbook · four graded dimensions (communication, problem solving, technical competency, testing) scored in bands from strong hire to strong no hire, the yardstick a readiness dashboard should be measured against (*read*) · covers our angle: **partial** — the grading dimensions, no per-pattern tracking · fetched 2026-10-14
 - **Our delta:** problems per pattern, solve rate and time per medium on one simple dashboard that says whether you are ready rather than whether you feel ready.
 
 ### T20-07 · The day-of checklist — Understand · 🔲 not written
-- **Read this:** [Coding interview cheatsheet](https://www.techinterviewhandbook.org/coding-interview-cheatsheet/) · Tech Interview Handbook · virtual onsite: pen and paper, earphones, quiet room, test internet, webcam and audio; ask at least two or three clarifying questions, test before saying you are done, ask closing questions; gives no advice for the night before (*read*) · covers our angle: **partial** — no rule for when to stop practising · fetched 2026-10-14
+- **Read this:** [Coding interview cheatsheet](https://www.techinterviewhandbook.org/coding-interview-cheatsheet/) · Tech Interview Handbook · virtual onsite: pen and paper, earphones or headphones, a quiet room, a working internet connection, and the webcam turned off if possible; ask at least two or three clarifying questions, test before saying you are done, ask closing questions; gives no advice for the night before (*read*) · covers our angle: **partial** — no rule for when to stop practising · fetched 2026-10-14
 - **Our delta:** the setup, the tool, the opening questions, the closing summary and when to stop practising the night before.
 
 ### T20-08 · After a rejection — Understand · 🔲 not written
@@ -166,8 +167,8 @@ Covers every topic row of phases 19 and 20 in `docs/dsa/syllabus/08-the-ladder-a
 - **Our delta:** asking for feedback, a cooling-off period, and re-entering the ladder at the pattern that failed rather than restarting the plan.
 
 ### T20-09 · Contest-style against interview-style — Know · ✅ written `docs/dsa/pages/phase-0-the-interview-and-practice/14-competitive-programming-vs-interviews.md`
-- **Read this:** [CPFAQ: how do coding interviews differ from coding contests?](https://www.redgreencode.com/cpfaq-how-do-coding-interviews-differ-from-coding-contests/) · Duncan Smith, Red-Green-Code, December 13 (year not shown) · a human interviewer forgives syntax and expects collaboration; contests use a wider range of algorithms; "Competitive programming is narrow and deep", interview preparation "wide and shallow" (*read*) · covers our angle: **full** for the contrast; no advice on using contests for timing · fetched 2026-10-14
-- **Also good:** [Greedy algorithms with sorting](https://usaco.guide/silver/greedy-sorting) · USACO Guide · a sample of contest-style problems with CSES and Codeforces practice sets (*headings only*) · fetched 2026-10-14
+- **Read this:** [CPFAQ: how do coding interviews differ from coding contests?](https://www.redgreencode.com/cpfaq-how-do-coding-interviews-differ-from-coding-contests/) · Duncan Smith, Red-Green-Code, December 13 (year not shown) · a human interviewer forgives syntax and expects collaboration; contests use a wider range of algorithms; a quoted answer (Imtiaz Mohammad) calls competitive programming "narrow and deep" and interview preparation "wide and shallow"; nothing on contests as timing practice (*read*) · covers our angle: **full** for the contrast; no advice on using contests for timing · fetched 2026-10-14
+- **Also good:** [Greedy algorithms with sorting](https://usaco.guide/silver/greedy-sorting) · USACO Guide · a sample of contest-style problems with CSES, Codeforces and USACO practice sets (*read*) · fetched 2026-10-14
 - **Our delta:** speed and tricks against communication and clean code, with contests kept for timing practice only.
 
 ### T20-10 · Keeping the edge after the offer — Know · 🔲 not written
