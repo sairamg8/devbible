@@ -226,6 +226,18 @@ topic and dynamic programming: enumerate to list, count or optimise by other mea
 side is [Part 6](../../syllabus/06-backtracking-greedy-and-dp.md) and the combinatorial side is
 this phase's own [08 · Combinatorics for counting problems](08-combinatorics-for-counting-problems.md).
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) — Wikipedia: the article is about the method rather than its cost, and does not give branching-factor-to-depth bounds (*read*)
+- **Also good:** [Algorithms, Chapter 2: Backtracking](https://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf) — Jeff Erickson, University of Illinois course text: works out running times of the recursive searches by solving recurrences, for example T(n) at most 2T(n minus 1) plus O(1), giving O(2 to the n) for subset sum (*read*)
+- **Also good:** [Eight queens puzzle](https://en.wikipedia.org/wiki/Eight_queens_puzzle) — Wikipedia: the n-queens enumeration as the standard example whose node count is hard to state (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06b · Copies and the two path designs](06b-copies-and-the-two-path-designs.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06d · Subsets and combinations](06d-subsets-and-combinations.md)

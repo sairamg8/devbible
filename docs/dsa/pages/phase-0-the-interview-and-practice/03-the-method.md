@@ -253,7 +253,8 @@ checked.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [UMPIRE Interview Strategy](https://guides.codepath.com/compsci/UMPIRE-Interview-Strategy) — CodePath: the six-step method under exactly our letters, with Match as the pattern-recognition step, a worked linked-list example, and Review framed as debugging by hand
+- **Read this:** [How to Solve It](https://en.wikipedia.org/wiki/How_to_Solve_It) — Wikipedia: Polya's four phases (understand, devise a plan, carry out, look back) and the heuristics list: related simpler problem, look for a pattern, work backwards (*read*)
+- **Also good:** [Coding interview techniques](https://www.techinterviewhandbook.org/coding-interview-techniques/) — Tech Interview Handbook: "apply common data structures and algorithms", starting with hash maps (*read*)
 
 {/* LINKMAP:END */}
 

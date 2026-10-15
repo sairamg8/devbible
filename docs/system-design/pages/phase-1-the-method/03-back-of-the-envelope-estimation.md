@@ -206,6 +206,17 @@ the clause that says which precision matters: "correct me if any of those is off
 magnitude; smaller errors don't change the design." Written assumptions are requirements the
 interviewer can redirect, and the clause shows you know which digits are load-bearing.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Back-of-the-envelope estimation](https://bytebytego.com/courses/system-design-interview/back-of-the-envelope-estimation) — ByteByteGo, from Alex Xu's book: powers of two as thousand, million, billion, round numbers, write assumptions down, label units, and a worked example giving about 3,500 posts per second, a peak of about 7,000 and 30 TB per day of media (*read*)
+- **Also good:** [Little's law](https://en.wikipedia.org/wiki/Little%27s_law) — Wikipedia: concurrency equals arrival rate times time in system, useful for turning QPS into connections or workers (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [02 · Non-functional requirements](02-non-functional-requirements.md) · Index: [Phase 1 — The method](README.md) · Next → [04 · Traffic shapes](04-traffic-shapes.md)

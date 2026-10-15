@@ -218,8 +218,8 @@ optimal" needs the second kind; without it, the honest form is "this is the best
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Lower Bounds for Sorting](https://tarjotin.cs.aalto.fi/cs-a1141/OpenDSA/Books/CS-A1141/html/SortingLowerBound.html) — Aalto OpenDSA: the decision-tree proof of the n log n lower bound for comparison sorting
-- **Also good:** [Comparison sort](https://en.wikipedia.org/wiki/Comparison_sort) — Wikipedia: the bound stated with its limits
+- **Read this:** [Comparison sort](https://en.wikipedia.org/wiki/Comparison_sort) — Wikipedia: the decision-tree argument: n factorial leaves force at least log2 of n factorial comparisons, which is Omega of n log n (*read*)
+- **Also good:** [Mergesort](https://algs4.cs.princeton.edu/22mergesort/) — Princeton, Sedgewick and Wayne: no compare-based sort can beat lg(N!) compares, so mergesort is asymptotically optimal (*read*)
 
 {/* LINKMAP:END */}
 

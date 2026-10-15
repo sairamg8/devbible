@@ -253,6 +253,17 @@ sale rather than one a quarter: admission at the gateway becomes standing, and t
 counter moves out of the row into a counter service. The primary is still not sharded; at a
 hundred times, partitioning orders by time is the first real sharding step.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Scale from zero to millions of users](https://bytebytego.com/courses/system-design-interview/scale-from-zero-to-millions-of-users) — ByteByteGo, from Alex Xu's book: builds one server up through balancer, database replication, cache, CDN, stateless tier, data centres, message queue and finally database sharding, most steps with the problem that motivates them (*read*)
+- **Also good:** [The Twelve-Factor App](https://12factor.net/) — Heroku: stateless processes as what makes horizontal scaling possible (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [11b · The load walk and the price of redundancy](11b-the-load-walk-and-the-price-of-redundancy.md) · Index: [Phase 1 — The method](README.md) · Next → [13 · Designing for cost](13-designing-for-cost.md)

@@ -255,8 +255,8 @@ mergesort — TimSort — with n log n worst case by construction and a stabilit
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Quicksort](https://en.wikipedia.org/wiki/Quicksort) — Wikipedia: the worst-case quadratic, best and average figures and the pivot choices behind them
-- **Also good:** [Hash table](https://en.wikipedia.org/wiki/Hash_table) — Wikipedia: average vs worst for lookups and the load factor
+- **Read this:** [Best, worst and average case](https://en.wikipedia.org/wiki/Best,_worst_and_average_case) — Wikipedia: the three definitions, hash tables as poor worst case but rarely hit, quicksort average n log n against worst n squared (*read*)
+- **Also good:** [Quicksort](https://en.wikipedia.org/wiki/Quicksort) — Wikipedia: worst case when the pivot is always the smallest or largest, a random pivot makes the expected bound hold for any input (*read*, first 100000 characters)
 
 {/* LINKMAP:END */}
 

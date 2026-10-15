@@ -238,6 +238,19 @@ the same thing with one lookup instead of two. In Java the equivalent is assigni
 a boxed `Long` or `Boolean` and comparing against `null`, never unboxing before the null check —
 which would throw a `NullPointerException` on the first miss.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Memoization](https://en.wikipedia.org/wiki/Memoization) — Wikipedia: an optimisation that stores the results of expensive calls to pure functions and returns them when the same inputs recur (*read*)
+- **Also good:** [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) — MDN: the keyed collection a memo table uses in JavaScript; key equality is SameValueZero and object keys compare by identity, so a fresh array key never hits (*read*)
+- **Also good:** [InternalError: too much recursion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion) — MDN: the error thrown as InternalError: too much recursion or Maximum call stack size exceeded when recursion runs too deep (*read*)
+- **Also good:** [StackOverflowError](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/StackOverflowError.html) — Oracle Java SE 21 API: thrown when a stack overflow occurs because an application recurses too deeply (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [01d · Tail position and mutual recursion](01d-tail-position-and-mutual-recursion.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [01f · Converting to an explicit stack](01f-converting-recursion-to-an-explicit-stack.md)

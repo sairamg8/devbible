@@ -221,6 +221,17 @@ retry-after header, a wait page that polls on a schedule rather than on refresh,
 fast at the edge so a rejected request costs milliseconds rather than a held connection keep the
 retry load bounded.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using load shedding to avoid overload](https://builder.aws.com/content/3Eun1EEyX6p2e3VYNyRLSJzLuMV/using-load-shedding-to-avoid-overload) — Amazon Builders' Library: overload feeds itself through timeouts and retries, so a server sheds excess requests early to keep goodput up; shedding is one layer next to autoscaling and headroom for losing a zone, not a replacement for them (*read*)
+- **Also good:** [Handling Overload](https://sre.google/sre-book/handling-overload/) — Google SRE book: per-customer limits, client-side throttling, four criticality levels that decide what is rejected first, and retry budgets (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03 · Estimation](03-back-of-the-envelope-estimation.md) · Index: [Phase 1 — The method](README.md) · Next → [05 · The API sketch](05-the-api-sketch.md)

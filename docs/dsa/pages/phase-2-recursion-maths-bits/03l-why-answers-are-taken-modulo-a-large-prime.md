@@ -228,6 +228,18 @@ prime powers to be pairwise coprime, as they are by construction. Or avoid divis
 Pascal's-triangle recurrence for binomial coefficients uses only addition, so it works modulo
 anything at all, at `Θ(n²)` time and `Θ(n)` space if you keep one row.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic) — Wikipedia: congruence and its compatibility with addition and multiplication, and the modular inverse, which exists exactly when the number is coprime with the modulus (so every non-zero residue has one when the modulus is prime) (*read*)
+- **Also good:** [Catalan number](https://en.wikipedia.org/wiki/Catalan_number) — Wikipedia: a counting sequence that grows asymptotically like 4 to the n over n to the 3/2, which is why such counts outgrow 64-bit integers; the modulus itself is not discussed (*read*)
+- **Also good:** [Binary exponentiation](https://cp-algorithms.com/algebra/binary-exp.html) — cp-algorithms: fast power, with applications to large exponents modulo a number and to multiplying two numbers modulo m (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [03k · The remainder trap](03k-the-remainder-trap-in-indices-hashes-and-shards.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [04 · Bit manipulation](04-bit-manipulation.md)

@@ -270,10 +270,10 @@ single bitwise expression without a `TypeError`.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Bit manipulation](https://cp-algorithms.com/algebra/bit-manipulation.html) — cp-algorithms: set, clear and test a bit, clearing the rightmost set bit, the power-of-two check and the C++ popcount helpers in one page
-- **Beyond the docs:** [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html) — Sean Eron Anderson, Stanford: the classic catalogue: counting bits set (including Brian Kernighan's way), parity, power-of-two test, swapping with XOR
-- **Read this:** [Common Bit Manipulation Techniques](https://labuladong.online/algo/en/frequency-interview/bitwise-operation/) — labuladong: the n AND (n minus 1) trick for Hamming weight and power of two, then XOR cancellation (a XOR a is 0) for single number and missing number
-- **Also good:** [Hamming weight](https://en.wikipedia.org/wiki/Hamming_weight) — Wikipedia: population count definition, the Hamming distance as the weight of an XOR, and mask-and-add implementations
+- **Read this:** [Bit manipulation](https://cp-algorithms.com/algebra/bit-manipulation.html) — cp-algorithms: `n & (n-1)` clears the lowest set bit, `n & -n` extracts it, Kernighan popcount, the power-of-two test with the zero guard; submask iteration is not on this page (*read*)
+- **Also good:** [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html) — Sean Eron Anderson, Stanford: the power-of-2 test with its zero caveat, several ways to count set bits (naive, table, Kernighan, parallel), and XOR swap with its same-location failure (*read*)
+- **Also good:** [Bitwise AND](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) — MDN: Number operands are converted to 32-bit integers and higher bits discarded; BigInt has no truncation (*read*)
+- **Also good:** [Integer](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html) — Oracle Java SE 21: `bitCount`, `lowestOneBit`, `numberOfTrailingZeros` (*read*)
 
 {/* LINKMAP:END */}
 

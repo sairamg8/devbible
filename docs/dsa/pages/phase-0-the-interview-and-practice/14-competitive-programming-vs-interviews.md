@@ -123,7 +123,9 @@ covers all four; the speed and the pattern recognition they already have take ca
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [CPFAQ: How Do Coding Interviews Differ from Coding Contests?](https://www.redgreencode.com/cpfaq-how-do-coding-interviews-differ-from-coding-contests/) — Red-Green-Code: direct comparison of format, topics and difficulty, plus the case for contests as long-term practice
+- **Read this:** [Competitive programming](https://en.wikipedia.org/wiki/Competitive_programming) — Wikipedia: contests are judged automatically on secret tests; contest skill helps with interviews, and Norvig's Google observation on contest winners is quoted with his later caveat (*read*)
+- **Beyond the docs:** [How do coding interviews differ from coding contests](https://www.redgreencode.com/cpfaq-how-do-coding-interviews-differ-from-coding-contests/) — Duncan Smith, redgreencode: a compiler needs exact syntax, a person forgives it; interviews are collaborative and draw on a narrower range of algorithms (*read*)
+- **Also good:** [Greedy algorithms with sorting](https://usaco.guide/silver/greedy-sorting) — USACO Guide: a sample of contest-style problems with CSES, Codeforces and USACO practice sets (*read*)
 
 {/* LINKMAP:END */}
 

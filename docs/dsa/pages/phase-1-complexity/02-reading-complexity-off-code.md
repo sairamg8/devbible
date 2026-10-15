@@ -257,7 +257,7 @@ operations run in amortised constant time.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Algorithm Analysis](https://cs.lmu.edu/~ray/notes/alganalysis/) — LMU course notes: derives a halving loop as the ceiling of log base 2 of n, plus nested loops and a cubic matrix multiply
+- **Read this:** [Analysis of algorithms](https://algs4.cs.princeton.edu/14analysis/) — Princeton, Sedgewick and Wayne: worked loop fragments (exercise 2): a halving outer loop whose inner loop runs to the current n is linear (N + N/2 + N/4 + …), a doubling outer loop whose inner loop runs to N is linearithmic (*read*)
 
 {/* LINKMAP:END */}
 

@@ -263,9 +263,9 @@ concatenation, sliced strings — as unguaranteed, so the safe code uses `join` 
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Big-O Algorithm Complexity Cheat Sheet](https://www.bigocheatsheet.com/) — bigocheatsheet.com: array, hash and tree operation tables and the sorting table
-- **Also good:** [ECMAScript Language Specification, Set objects](https://tc39.es/ecma262/#sec-set-objects) — TC39: requires Map and Set (separate sections) to give on average sublinear access
-- **Also good:** [ArrayList (Java SE 21)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html) — Oracle: documented cost: get and set constant, add amortised constant, the rest linear
+- **Read this:** [ArrayList](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html) — Oracle Java SE 21: `get`, `set`, `size` constant, `add` amortised constant, everything else roughly linear (*read*)
+- **Also good:** [LinkedList](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/LinkedList.html) — Oracle Java SE 21: indexed operations traverse from whichever end is closer; no Big-O stated (*read*)
+- **Also good:** [Know Thy Complexities](https://www.bigocheatsheet.com/) — bigocheatsheet.com: tables for structures and sorts (*headings only*)
 
 {/* LINKMAP:END */}
 

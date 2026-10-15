@@ -250,8 +250,10 @@ in modular problems. Bitwise operators are separately limited to 32-bit integers
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) — MDN: the sort page states the stability guarantee since ES2019 and the comparator rules that cause most JS interview bugs
-- **Also good:** [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) — MDN: what BigInt can and cannot mix with
+- **Read this:** [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) — MDN: default sort compares UTF-16 strings, comparator returns negative, positive or zero, sort has been stable since ES2019 (*read*)
+- **Also good:** [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) — MDN: precision past `Number.MAX_SAFE_INTEGER`, no implicit mixing with Number, `Math` rejects BigInt (*read*)
+- **Also good:** [Too much recursion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion) — MDN: the stack-overflow error across engines, base case, convert unbounded recursion to a loop; gives no numeric limit (*read*)
+- **Also good:** [java.lang.Math](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Math.html) — Oracle Java SE 21: `addExact` and `multiplyExact` throw on `int` or `long` overflow, `floorMod` follows the divisor sign (*read*)
 
 {/* LINKMAP:END */}
 

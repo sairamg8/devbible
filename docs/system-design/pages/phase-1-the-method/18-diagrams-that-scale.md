@@ -232,6 +232,20 @@ a provider callback arriving after the reservation expired, a refund on an order
 fulfilled. The reconciliation job is written from that picture, and the missing transition is
 the bug that would otherwise ship.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [C4 abstractions](https://c4model.com/abstractions) — Simon Brown: the four levels: software system, container (applications and data stores), component, code (*read*)
+- **Also good:** [C4 dynamic diagram](https://c4model.com/diagrams/dynamic) — Simon Brown: how static elements collaborate at runtime for one feature, drawn either collaboration-style with numbered interactions or sequence-style (*read*)
+- **Also good:** [Mermaid introduction](https://mermaid.js.org/intro/) — Mermaid: text-based flowcharts and sequence diagrams that live in the repository (*read*)
+- **Also good:** [Structurizr](https://structurizr.com/) — Simon Brown: models as code for C4: one model in a DSL, many diagrams from it (*read*)
+- **Also good:** [PlantUML](https://plantuml.com/) — PlantUML: sequence and component diagrams from text (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [17 · The same method in writing](17-the-same-method-in-writing.md) · Index: [Phase 1 — The method](README.md) · Next phase → [Part 2 of the syllabus — the network path and caching](../../syllabus/02-the-network-path-and-caching.md)

@@ -203,8 +203,9 @@ loop.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [How candidates are evaluated in coding interviews (section 4, Testing)](https://www.techinterviewhandbook.org/coding-signals/) — Tech Interview Handbook: lists testing signals (typical and corner cases, self-corrected bugs, acting like a debugger) as a scored dimension
-- **Also good:** [Time Management in Coding Interviews](https://algomaster.io/learn/dsa/time-management-in-coding-interviews) — AlgoMaster: the "Phase 4: Test (Minutes 35-45)" budget, which argues skipping tests costs more than it saves
+- **Read this:** [Coding interview rubrics](https://www.techinterviewhandbook.org/coding-interview-rubrics/) — Tech Interview Handbook, updated Aug 7, 2026: Testing is a graded dimension: common and corner cases, and whether you fix your own bugs (*read*)
+- **Also good:** [Coding interview techniques](https://www.techinterviewhandbook.org/coding-interview-techniques/) — Tech Interview Handbook: reuse the extra examples you invented as test cases (*read*)
+- **Also good:** [Data structures and algorithms study cheatsheets](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) — Tech Interview Handbook: the General interview tips list includes validating inputs, checking for off-by-one errors and testing with example inputs; each study guide lists corner cases per topic (*read*)
 
 {/* LINKMAP:END */}
 

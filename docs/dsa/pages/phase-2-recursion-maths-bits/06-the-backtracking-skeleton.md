@@ -247,10 +247,9 @@ because `start` runs off the end of the array, so the base case is the empty loo
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Introduction to Backtracking](https://algomaster.io/learn/dsa/backtracking-introduction) — AlgoMaster: sections on the template, choose-explore-unchoose, base case and pruning
-- **Beyond the docs:** [Backtracking (chapter 2)](https://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf) — Jeff Erickson, Algorithms book (PDF): the recursive-strategy view from a textbook author, opening with n Queens
-- **Read this:** [Backtracking Algorithm Common Patterns and Code Template](https://labuladong.online/algo/en/essential-technique/backtrack-framework/) — labuladong: choose, recurse, undo loop worked through on permutations
-- **Also good:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) — Wikipedia: definition, the search-tree view (the traversed tree is only a part of the potential tree) and the eight queens example
+- **Read this:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) — Wikipedia: the reject, accept, first and next skeleton over a potential search tree, and pruning as the main performance lever (*read*)
+- **Also good:** [Algorithms, Chapter 2: Backtracking](https://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf) — Jeff Erickson, University of Illinois course text: N-Queens, game trees, subset sum, then a section on the general pattern: each recursive call makes one decision consistent with the earlier ones, carrying a summary of past decisions that should be as small as possible (*read*)
+- **Beyond the docs:** [Backtracking Algorithms](https://www.geeksforgeeks.org/dsa/backtracking-algorithms/) — GeeksforGeeks: a hub of links to the standard problems grouped by difficulty (N-Queen, Sudoku, subset sum, combinational sum, palindromic partitions and more); the hub itself has no explanation or code, the linked pages do (*read*)
 
 {/* LINKMAP:END */}
 

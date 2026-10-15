@@ -237,7 +237,8 @@ the next pages build.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [How candidates are evaluated in coding interviews at top tech companies](https://www.techinterviewhandbook.org/coding-signals/) — Tech Interview Handbook: one page that names the graded signals (communication, problem solving, technical competency, testing) and how they combine into a hire decision
+- **Read this:** [Coding interview rubrics](https://www.techinterviewhandbook.org/coding-interview-rubrics/) — Tech Interview Handbook, updated Aug 7, 2026: four graded dimensions (communication, problem solving, technical competency, testing), each scored in bands from strong hire to strong no hire (*read*)
+- **Also good:** [Coding interview preparation](https://www.techinterviewhandbook.org/coding-interview-prep/) — Tech Interview Handbook: lists the four criteria (communication, problem solving, technical competency, testing) and says a round is typically 30 to 45 minutes; it defines no stages (*read*)
 
 {/* LINKMAP:END */}
 

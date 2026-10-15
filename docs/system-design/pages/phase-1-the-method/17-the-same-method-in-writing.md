@@ -268,6 +268,19 @@ requirement and what it costs, the rejected ones with the failure that rejected 
 decision in the four-clause form at the top. The non-goals, the risks table and the rollout's
 step back are the other tells; a description has none of them.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Design Docs at Google](https://www.industrialempathy.com/posts/design-docs-at-google/) — Malte Ubl, 2020: recommended sections are context and scope, goals and non-goals, the design, alternatives considered and cross-cutting concerns; a non-goal is something that could reasonably be a goal but is excluded; reviews range from a mailing
+- **Also good:** [Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) — Michael Nygard, 2011: an ADR has title, context, decision, status and consequences, one or two pages, kept in the repository and numbered sequentially, superseded rather than deleted (*read*)
+- **Also good:** [Architectural Decision Records](https://adr.github.io/) — ADR GitHub organisation: templates and tooling for ADRs (*headings only*)
+- **Beyond the docs:** [RFCs and Design Docs](https://blog.pragmaticengineer.com/rfcs-and-design-docs/) — Gergely Orosz, The Pragmatic Engineer, 2022, updated 2024: section outlines from about a dozen companies (Google, Uber, HashiCorp, Monzo and others) and a list of firms that run the process (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [16 · Estimation worked examples](16-estimation-worked-examples.md) · Index: [Phase 1 — The method](README.md) · Next → [18 · Diagrams that scale with the conversation](18-diagrams-that-scale.md)

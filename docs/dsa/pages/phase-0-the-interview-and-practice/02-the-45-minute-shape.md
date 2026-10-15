@@ -250,8 +250,8 @@ evidence of judgement the round produces and it costs a minute at any length.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Time Management in Coding Interviews](https://algomaster.io/learn/dsa/time-management-in-coding-interviews) — AlgoMaster: a minute-by-minute breakdown (understand 0-5, approach 5-10, code 10-35, test 35-45) with pitfalls such as the five-minute trap in the understand phase
-- **Also good:** [Top techniques to approach and solve coding interview questions](https://www.techinterviewhandbook.org/coding-interview-techniques/) — Tech Interview Handbook: draw it out, solve it by hand, break it into smaller parts
+- **Read this:** [Coding interview preparation](https://www.techinterviewhandbook.org/coding-interview-prep/) — Tech Interview Handbook: a round is "typically 30 - 45 minutes"; the page grades four criteria but names no stages and gives no per-step time breakdown (*read*)
+- **Also good:** [Coding interview techniques](https://www.techinterviewhandbook.org/coding-interview-techniques/) — Tech Interview Handbook: discuss a few approaches before coding, draw the problem, write the high-level function first and fill in helpers (*read*)
 
 {/* LINKMAP:END */}
 

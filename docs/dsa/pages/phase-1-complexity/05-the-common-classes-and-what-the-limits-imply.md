@@ -282,8 +282,8 @@ even once is too slow — and in JavaScript it is also a reminder that the value
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Complexity calculations](https://usaco.guide/bronze/time-comp) — USACO Guide: pairs each class with the input size it allows
-- **Also good:** [Big-O Algorithm Complexity Cheat Sheet](https://www.bigocheatsheet.com/) — bigocheatsheet.com: the growth chart (O(1) to O(n!)) for the classes
+- **Read this:** [Time complexity](https://en.wikipedia.org/wiki/Time_complexity) — Wikipedia: the table of classes from constant to factorial with example algorithms (*read*)
+- **Also good:** [Time complexity](https://usaco.guide/bronze/time-comp) — USACO Guide: the n-to-class table (*read*)
 
 {/* LINKMAP:END */}
 

@@ -229,6 +229,18 @@ recordings show summaries and cost-statements arriving without effort. When the 
 same line blank for a month, the practice is not working on that line and a session dedicated to
 it alone is the fix.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [System Design in a Hurry: Introduction](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction) — Hello Interview: how to use the guide when short of time (the delivery framework first) and an estimate of about three to four weeks of preparation for a newcomer, under a week with experience (*read*)
+- **Also good:** [System design interview](https://www.techinterviewhandbook.org/system-design/) — Tech Interview Handbook: no study plan, but a curated list of courses, free guides and books, and common prompts that serve as a drill bank (*read*)
+- **Beyond the docs:** [System Design Primer](https://github.com/donnemartin/system-design-primer) — Donne Martin: a study guide split by short, medium and long timelines, plus practice questions with worked solutions (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [09 · Communication mechanics](09-communication-mechanics.md) · Index: [Phase 0 — What system design interviews test](README.md) · Next → [11 · Whiteboard and remote tooling](11-whiteboard-and-remote-tooling.md)

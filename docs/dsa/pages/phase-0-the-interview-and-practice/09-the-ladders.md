@@ -166,10 +166,10 @@ pattern, and the phase order is what to climb regardless of the tag.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Grind 75](https://www.techinterviewhandbook.org/grind75/) — Tech Interview Handbook: an interactive tool by the author of Blind 75 that goes beyond 75 questions and lets you set available time, difficulty and topics (the page itself is app UI, with little prose; the handbook's prep guide below describes the algori
-- **Also good:** [Coding interview preparation guide](https://www.techinterviewhandbook.org/coding-interview-prep/) — Tech Interview Handbook: where the ladder sits in a whole plan, and how the Grind 75 tool ranks questions by priority and balances breadth with depth
-- **Read this:** [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) — NeetCode: states the list is the Blind 75 plus 75 more problems, meant for people who already know basic algorithms and data structures
-- **Also good:** [Best practice questions](https://www.techinterviewhandbook.org/best-practice-questions/) — Tech Interview Handbook: the author of Blind 75 explains how the list spread, then gives a 50-question, 5-week schedule and points to Grind 75 as the customisable successor
+- **Read this:** [Coding interview study plan](https://www.techinterviewhandbook.org/coding-interview-study-plan/) — Tech Interview Handbook: three months at about 11 hours a week, topics by priority, then 75 questions from the Grind 75 tool, worked in order of priority, high-priority topics first (*read*)
+- **Also good:** [NeetCode 150](https://neetcode.io/practice/practice/neetcode150) — NeetCode: Blind 75 plus 75 more, 28 easy, 101 medium, 21 hard, in 18 categories (*read*)
+- **Also good:** [Grind 75](https://www.techinterviewhandbook.org/grind75/) — Tech Interview Handbook: "a better Blind 75 you can customize, by the author of Blind 75"; the fetched page gives no list detail (*headings only*)
+- **Beyond the docs:** [Blind 75 vs NeetCode 150 vs Educative](https://www.educative.io/blog/blind75-vs-neetcode-vs-educative) — Educative blog, Aisha Noor, Jun 15, 2026: compares Blind 75, NeetCode 150 and Educative's pattern paths and advises working category by category, easy before hard within each (*read*)
 
 {/* LINKMAP:END */}
 

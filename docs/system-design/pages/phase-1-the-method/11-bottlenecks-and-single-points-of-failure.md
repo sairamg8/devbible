@@ -165,6 +165,17 @@ the Raft paper's rule that a cluster is available while a majority can communica
 tolerate two failures. The complete answer includes the failover's time: writes pause for the
 election, reads continue on replicas, and the synchronous replica costs a round trip per commit.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/) — Google SRE book: a failure that grows through positive feedback; when one cluster fails its load shifts to the next, which overloads and fails in turn (*read*)
+- **Also good:** [Static stability using Availability Zones](https://builder.aws.com/content/3K9SiqiJ369TGkkGzqPM95BuYWI/static-stability-using-availability-zones) — Amazon Builders' Library: a statically stable system keeps working when a dependency is impaired, by being provisioned for the zone loss beforehand rather than reacting to it (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [10 · Trade-offs in one sentence](10-trade-offs-in-one-sentence.md) · Index: [Phase 1 — The method](README.md) · Next → [11b · The load walk and the price of redundancy](11b-the-load-walk-and-the-price-of-redundancy.md)

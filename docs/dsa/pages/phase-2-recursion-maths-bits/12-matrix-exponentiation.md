@@ -235,8 +235,9 @@ why the augmentations on this page each add exactly one component per thing the 
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Matrix Exponentiation](https://algomaster.io/learn/dsa/matrix-exponentiation) — AlgoMaster: from a recurrence to a matrix, then binary exponentiation of it, then any linear recurrence
-- **Also good:** [Fibonacci Numbers](https://cp-algorithms.com/algebra/fibonacci-numbers.html) — cp-algorithms: matrix and fast-doubling forms
+- **Read this:** [Fibonacci numbers](https://cp-algorithms.com/algebra/fibonacci-numbers.html) — cp-algorithms: the matrix of ones and a zero raised to the n, plus the fast-doubling identities; the page ties O(log n) to the matrix route (*read*)
+- **Also good:** [Binary exponentiation](https://cp-algorithms.com/algebra/binary-exp.html) — cp-algorithms: applications include Fibonacci, path counting and transformation matrices (*read*)
+- **Beyond the docs:** [Fast Fibonacci algorithms](https://www.nayuki.io/page/fast-fibonacci-algorithms) — Project Nayuki: shows fast doubling as matrix exponentiation with redundant work removed, with benchmarks on one old machine (*read*)
 
 {/* LINKMAP:END */}
 

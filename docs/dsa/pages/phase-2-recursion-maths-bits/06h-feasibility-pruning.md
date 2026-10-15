@@ -230,6 +230,18 @@ is not being restored: some set, counter or marked cell that the test consults w
 earlier subtree's un-choose. That split covers nearly every case and costs nothing to check, which
 matters because these searches are exponential and stepping through one is not a strategy.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Branch and bound](https://en.wikipedia.org/wiki/Branch_and_bound) — Wikipedia: enumerates candidates as a tree and discards a branch whose bound shows it cannot produce a better solution than the best found so far, usually tracked in a global best (*read*)
+- **Also good:** [Backtracking](https://en.wikipedia.org/wiki/Backtracking) — Wikipedia: builds candidates step by step and abandons a partial candidate as soon as it cannot possibly be completed to a valid solution, which prunes whole branches; uses the eight queens puzzle as its classic example and names Sudoku and 
+- **Beyond the docs:** [Backtracking Algorithms](https://www.geeksforgeeks.org/dsa/backtracking-algorithms/) — GeeksforGeeks: a hub of links to the standard problems grouped by difficulty (N-Queen, Sudoku, subset sum, combinational sum, palindromic partitions and more); the hub itself has no explanation or code, the linked pages do (*read*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [06g · Duplicates in permutations](06g-duplicates-in-permutations.md) · Index: [Phase 2 — Recursion, maths and bits](README.md) · Next → [06i · Bound pruning and ordering](06i-bound-pruning-and-ordering.md)

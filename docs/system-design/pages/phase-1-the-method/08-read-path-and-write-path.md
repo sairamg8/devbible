@@ -248,6 +248,17 @@ that the replica has applied up to the write's position before serving from it. 
 goes to the replica, where lag is invisible. The choice is said, because "we have replicas" is
 otherwise a bug on the confirmation page.
 
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Eventually Consistent](https://www.allthingsdistributed.com/2008/12/eventually_consistent.html) — Werner Vogels, 2008: with N replicas, W write acknowledgements and R read replicas, W plus R greater than N makes the sets overlap; R of 1 optimises reads and W of 1 optimises writes, and client guarantees such as read-your-writes and monotonic reads 
+- **Also good:** [Designing Data-Intensive Applications](https://dataintensive.net/) — Martin Kleppmann: replication and derived data cover the two paths in depth (*headings only*)
+
+{/* LINKMAP:END */}
+
 ---
 
 ← Prev: [07 · The high-level diagram](07-the-high-level-diagram.md) · Index: [Phase 1 — The method](README.md) · Next → [09 · Choosing the deep dives](09-choosing-the-deep-dives.md)

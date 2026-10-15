@@ -279,9 +279,10 @@ list explicitly.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [PriorityQueue (Java SE 21)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/PriorityQueue.html) — Oracle: the implementation note gives log time for `offer`/`poll` and linear for `remove(Object)`/`contains`
-- **Also good:** [TreeMap (Java SE 21)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/TreeMap.html) — Oracle: guaranteed log(n) time for containsKey, get, put, remove
-- **Also good:** [ArrayDeque (Java SE 21)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayDeque.html) — Oracle: most operations amortised constant, with the linear-time exceptions (remove, contains, bulk operations) listed
+- **Read this:** [PriorityQueue](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/PriorityQueue.html) — Oracle Java SE 21: `offer`, `poll`, `add` are O(log n), `remove(Object)` and `contains` are linear, iteration order is not sorted, null is rejected, not thread-safe (*read*)
+- **Also good:** [TreeMap](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/TreeMap.html) — Oracle Java SE 21: guaranteed log(n) for `containsKey`, `get`, `put`, `remove`; `floorKey` and `ceilingKey` return the nearest key or null, with no stated bound (*read*)
+- **Also good:** [ArrayDeque](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayDeque.html) — Oracle Java SE 21: faster than `Stack` and `LinkedList` as stack or queue, nulls prohibited, most operations amortised constant (*read*)
+- **Also good:** [Collections Framework overview](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/doc-files/coll-overview.html) — Oracle Java SE 21: the table of general-purpose implementations by interface (*read*)
 
 {/* LINKMAP:END */}
 

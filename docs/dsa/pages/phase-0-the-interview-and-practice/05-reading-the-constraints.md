@@ -199,7 +199,8 @@ leaves the interviewer wondering whether you noticed the bound at all.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Complexity calculations](https://usaco.guide/bronze/time-comp) — USACO Guide: includes the table from the bound on n to the intended complexity class
+- **Read this:** [Time complexity](https://usaco.guide/bronze/time-comp) — USACO Guide: a table of conservative upper bounds on n per class (n up to 5
+- **Also good:** [Time complexity](https://en.wikipedia.org/wiki/Time_complexity) — Wikipedia: the table of named classes from constant to factorial with example algorithms (*read*)
 
 {/* LINKMAP:END */}
 

@@ -220,8 +220,8 @@ interviewer can point. Staring at the middle of the loop in silence is the failu
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Tricks For Getting Unstuck During a Coding Interview](https://www.interviewcake.com/tricks-for-getting-unstuck-programming-interview) — Interview Cake: a checklist of moves (hand-solve a sample input, solve a simpler version, start with brute force, look for repeat work, state where you are, pay attention to the interviewer)
-- **Also good:** [What To Do If You Get Stuck In A Technical Interview](https://anthonydmays.com/blog/2018/01/13/what-to-do-if-you-get-stuck-in-a-technical-interview) — Anthony D. Mays: candidate-side tips: tell the interviewer where you are stuck, ask more questions, simplify the problem
+- **Read this:** [Coding interview techniques](https://www.techinterviewhandbook.org/coding-interview-techniques/) — Tech Interview Handbook: draw the problem, solve it by hand, try more examples, break it into independent parts (*read*)
+- **Beyond the docs:** [Solving Coding Problems Without Overthinking](https://algocademy.com/blog/solving-coding-problems-without-overthinking-how-to-trust-your-instincts/) — AlgoCademy, Oct 15, 2024: share initial thoughts even when not sure they are correct, and do not dismiss a hint the interviewer offers (*read*)
 
 {/* LINKMAP:END */}
 

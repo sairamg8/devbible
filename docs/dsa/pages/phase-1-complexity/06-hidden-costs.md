@@ -246,9 +246,10 @@ amortised constant, and returning that array at the end gives the same result in
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Back to Basics](https://www.joelonsoftware.com/2001/12/11/back-to-basics/) — Joel on Software: the classic walk-through of why repeated string appends go quadratic (the strcat example)
-- **Also good:** [How to Work with Strings in JavaScript - Tips for Efficient String Concatenation](https://www.freecodecamp.org/news/efficient-string-building-in-javascript/) — freeCodeCamp: the JavaScript side of concatenation cost; caveat: it assumes a full copy on every append, which V8's ropes (next line) often avoid, and its own timings are one browser on one machine
-- **Also good:** [Strings in V8](https://chromium.googlesource.com/v8/v8.git/+/main/docs/objects/strings.md) — V8 source docs: a ConsString is a pair of pointers, so `+` is cheap until the string is read or flattened, and very short concatenations skip the rope
+- **Read this:** [Array.prototype.shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) — MDN: shift moves every remaining value left by one and reindexes; the page states no complexity (*read*)
+- **Also good:** [Array.prototype.includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) — MDN: searches front to back with SameValueZero; no complexity stated (*read*)
+- **Also good:** [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) — MDN: the spec requires sublinear average access, and `has` is on average faster than `includes` on an equal-size array (*read*)
+- **Also good:** [HashMap](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html) — Oracle Java SE 21: constant time only if the hash disperses well, and many equal-hash keys are "a sure way to slow down" the table (*read*)
 
 {/* LINKMAP:END */}
 

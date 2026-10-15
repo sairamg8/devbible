@@ -203,9 +203,9 @@ comes from counting only the recursion.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [2.2 Mergesort](https://algs4.cs.princeton.edu/22mergesort/) — Princeton Algorithms: merge sort with analysis and code
-- **Also good:** [Divide and Conquer: Counting Inversions](https://cs.dartmouth.edu/~deepc/LecNotes/cs31/lec5.pdf) — Dartmouth lecture notes (PDF): defines inversions and counts the cross inversions in a divide-and-conquer recurrence
-- **Also good:** [Quickselect](https://en.wikipedia.org/wiki/Quickselect) — Wikipedia: the algorithm, with average O(n) and worst-case O(n squared)
+- **Read this:** [Mergesort](https://algs4.cs.princeton.edu/22mergesort/) — Princeton, Sedgewick and Wayne: top-down mergesort splits, sorts halves and merges, with N log N time and N extra space (*read*)
+- **Also good:** [Quickselect](https://en.wikipedia.org/wiki/Quickselect) — Wikipedia: average O(n), worst O(n squared), recurses into one side only, median of medians gives a linear worst case (*read*)
+- **Also good:** [Inversion (discrete mathematics)](https://en.wikipedia.org/wiki/Inversion_(discrete_mathematics) — ): Wikipedia
 
 {/* LINKMAP:END */}
 

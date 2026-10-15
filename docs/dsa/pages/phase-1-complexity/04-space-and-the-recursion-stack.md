@@ -185,8 +185,8 @@ on the larger, which bounds the stack to log n regardless of pivot quality.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Your recursion is lying to you about stack safety](https://hackernoon.com/your-recursion-is-lying-to-you-about-stack-safety) — HackerNoon: a per-runtime table showing V8 (Chrome, Node, Deno) and Firefox give no reliable proper tail calls and Safari is inconsistent
-- **Also good:** [InternalError: too much recursion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion) — MDN: the failure mode itself (the page is the Firefox wording)
+- **Read this:** [Recursion and stack](https://javascript.info/recursion) — javascript.info: depth equals the number of contexts on the stack, 10000 is a safe depth and 100000 probably is not, tail-call optimisation "not yet supported everywhere" (*read*)
+- **Also good:** [ECMAScript 6 Proper Tail Calls in WebKit](https://webkit.org/blog/6240/ecmascript-6-proper-tail-calls-in-webkit/) — WebKit blog, May 23, 2016: what a proper tail call reuses and the strict-mode and return conditions; describes JavaScriptCore only and names no other engine (*read*)
 
 {/* LINKMAP:END */}
 

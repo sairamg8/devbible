@@ -239,3 +239,15 @@ paths have to be idempotent or key-protected, because a client that receives a 5
 you need that retry to be safe.
 
 ← Prev: [18d · Abuse that is business logic](18d-abuse-that-is-business-logic.md) · Index: [Phase 2 — The request path](README.md) · Next → **Phase 3 — Caching everywhere** *(not written yet)*
+
+{/* LINKMAP:START */}
+
+## Further reading
+
+*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
+
+- **Read this:** [Using load shedding to avoid overload](https://builder.aws.com/content/3Eun1EEyX6p2e3VYNyRLSJzLuMV/using-load-shedding-to-avoid-overload) — Amazon Builders' Library: when a server approaches overload it should reject excess requests so it can serve the ones it lets in, keeping their latency low enough to beat the client timeout (*read*)
+- **Also good:** [Handling Overload](https://sre.google/sre-book/handling-overload/) — Google SRE book, ch. 21: every backend request carries one of four criticality values, CRITICAL_PLUS down to SHEDDABLE, used by quotas and throttling (*read*)
+- **Also good:** [REL05-BP01 Implement graceful degradation](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_mitigate_interaction_failure_graceful_degradation.html) — AWS Well-Architected: turn hard dependencies into soft ones so a component keeps its core function while serving stale, alternate or no data (*read*)
+
+{/* LINKMAP:END */}

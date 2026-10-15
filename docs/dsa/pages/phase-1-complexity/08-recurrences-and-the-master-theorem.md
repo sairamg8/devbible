@@ -241,8 +241,7 @@ state instead.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [1.9 Master Theorem and Summary of Common Recurrences](https://web.engr.oregonstate.edu/~huanlian/algorithms_course/1-datastructures/master.html) — Oregon State course notes: the three cases (leaf-heavy, balanced, root-heavy) with examples and a summary of common recurrences
-- **Also good:** [Master theorem (analysis of algorithms)](https://en.wikipedia.org/wiki/Master_theorem_%28analysis_of_algorithms%29) — Wikipedia: states the regularity condition for case 3 and gives examples
+- **Read this:** [Master theorem](https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms) — ): Wikipedia
 
 {/* LINKMAP:END */}
 

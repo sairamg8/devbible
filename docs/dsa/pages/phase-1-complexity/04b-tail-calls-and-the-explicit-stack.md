@@ -150,17 +150,6 @@ processed; process it on the second pop. Or keep an index into each node's child
 stack entry and advance it, processing the node when the index runs out. Pre-order does not
 need this because the node is processed on the first pop.
 
-{/* LINKMAP:START */}
-
-## Further reading
-
-*Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
-
-- **Read this:** [Iterative Binary Tree Traversal Using Stack](https://www.enjoyalgorithms.com/blog/iterative-binary-tree-traversals-using-stack/) — EnjoyAlgorithms: starts from the shape of recursive traversal, then pre-, in- and post-order with a stack
-- **Also good:** [Inorder Tree Traversal - Iterative and Recursive](https://www.techiedelight.com/inorder-tree-traversal-iterative-recursive) — Techie Delight: compact side-by-side of both forms
-
-{/* LINKMAP:END */}
-
 ---
 
 ← Prev: [04 · Space and the recursion stack](04-space-and-the-recursion-stack.md) · Index: [Phase 1 — Complexity analysis](README.md) · Next → [05 · The common classes and the limits](05-the-common-classes-and-what-the-limits-imply.md)

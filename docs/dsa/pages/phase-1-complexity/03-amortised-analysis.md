@@ -219,8 +219,10 @@ than V entries. Marking on enqueue keeps the sentence true and the queue bounded
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Lecture 25: Amortized Analysis](https://www.cs.cornell.edu/courses/cs3110/2014fa/lectures/25/lec25.html) — Cornell CS 3110: the doubling-table argument worked out (resizing a hash table or array), including why a fixed increment fails
-- **Also good:** [Amortized analysis](https://en.wikipedia.org/wiki/Amortized_analysis) — Wikipedia: aggregate, accounting and potential methods side by side
+- **Read this:** [Amortized analysis](https://en.wikipedia.org/wiki/Amortized_analysis) — Wikipedia: aggregate, accounting and potential methods, and the dynamic-array push worked as a geometric series totalling O(n) (*read*)
+- **Also good:** [Disjoint set union](https://cp-algorithms.com/data_structures/disjoint_set_union.html) — cp-algorithms: path compression with union by size gives amortised O(alpha(n)), with inverse Ackermann at most 4 for any reasonable n (*read*)
+- **Also good:** [Analysis of algorithms](https://algs4.cs.princeton.edu/14analysis/) — Princeton: resizing arrays take time proportional to N for any N operations, so amortised constant (*read*)
+- **Also good:** [Minimum stack / Minimum queue](https://cp-algorithms.com/data_structures/stack_queue_modification.html) — cp-algorithms: method 3 simulates a queue with two modified stacks (*read*)
 
 {/* LINKMAP:END */}
 

@@ -261,9 +261,9 @@ the rounding, only the choice to use a different type.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Number.MAX_SAFE_INTEGER](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) — MDN: the safe range and why it exists (52-bit mantissa)
-- **Also good:** [Math (Java SE 21)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Math.html) — Oracle: `addExact` and the exact-arithmetic family
-- **Also good:** [BigInt: arbitrary-precision integers in JavaScript](https://v8.dev/features/bigint) — V8: when BigInt is the fix
+- **Read this:** [Number.MAX_SAFE_INTEGER](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) — MDN: integers are exact only up to 2^53 minus 1, past which `MAX_SAFE_INTEGER + 1 === MAX_SAFE_INTEGER + 2`; use BigInt beyond it (*read*)
+- **Also good:** [java.lang.Math](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Math.html) — Oracle Java SE 21: the `Exact` methods throw `ArithmeticException` on overflow; `abs` of `Integer.MIN_VALUE` silently stays negative (*read*, first 100000 characters)
+- **Also good:** [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) — MDN: do not coerce between BigInt and Number (*read*)
 
 {/* LINKMAP:END */}
 

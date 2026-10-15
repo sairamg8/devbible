@@ -227,8 +227,8 @@ that is about to materialise every permutation.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Recursion and stack](https://javascript.info/recursion) — javascript.info: the execution context stack and recursion depth explained in JS
-- **Beyond the docs:** [How to Convert a Recursive Solution to Iterative on LeetCode Using a Stack](https://dev.to/alex_hunter_44f4c9ed6671e/how-to-convert-a-recursive-solution-to-iterative-on-leetcode-using-a-stack-3d39) — DEV Community: a step-by-step recipe in TypeScript (decide what a frame holds, push right before left, re-push with a visited flag for post-order)
+- **Read this:** [Recursion and stack](https://javascript.info/recursion) — javascript.info: each call pushes an execution context, depth is limited by the engine, "any recursion can be rewritten as a loop" (*read*)
+- **Also good:** [Too much recursion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion) — MDN: a missing base case or too many calls triggers the error; it gives no numeric depth (*read*)
 
 {/* LINKMAP:END */}
 

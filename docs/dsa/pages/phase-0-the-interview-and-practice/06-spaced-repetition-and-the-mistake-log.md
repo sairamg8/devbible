@@ -200,9 +200,8 @@ a candidate can raise it indefinitely without changing the kinds of mistakes the
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [LeetCode Tip 9: Spaced Repetition](https://www.redgreencode.com/leetcode-tip-9-spaced-repetition/) — Red-Green-Code: why spaced repetition is needed after studying a model solution (a problem practised daily becomes hard again after 30 days off)
-- **Also good:** [LeetCode Tip 10: Planning a Spaced Repetition Schedule](https://www.redgreencode.com/leetcode-tip-10-planning-a-spaced-repetition-schedule/) — Red-Green-Code: a concrete schedule: start at one-day intervals, then double after each successful repetition
-- **Also good:** [Spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition) — Wikipedia: expanding intervals, the Leitner box system and the forgetting-curve background; it does not give any 3, 7, 21 schedule
+- **Read this:** [Spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition) — Wikipedia: the spacing effect, Mace's 1932 proposal of gaps roughly doubling from one day, and the note that meta-analyses often find expanding and uniform spacing similar (*read*)
+- **Also good:** [Forgetting curve](https://en.wikipedia.org/wiki/Forgetting_curve) — Wikipedia: Ebbinghaus's 1885 curve; each repetition lengthens the interval before the next review (*read*)
 
 {/* LINKMAP:END */}
 

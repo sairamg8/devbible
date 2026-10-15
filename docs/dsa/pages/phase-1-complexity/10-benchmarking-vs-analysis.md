@@ -226,8 +226,7 @@ than the array's linear shift. The JDK's own documentation recommends `ArrayDequ
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [1.4 Analysis of Algorithms](https://algs4.cs.princeton.edu/14analysis/) — Princeton Algorithms: the scientific method of timing runs (doubling tests) against mathematical models
-- **Also good:** [Experimental analysis](https://tarjotin.cs.aalto.fi/CS-A1140/2023/notes/intro-experimental.html) — Aalto CS-A1140 notes: why constant factors need measurement (examples in Scala)
+- **Read this:** [Galactic algorithm](https://en.wikipedia.org/wiki/Galactic_algorithm) — Wikipedia: asymptotically better methods whose constants make them lose on any realistic input, such as the expected linear-time minimum spanning tree that beats Borůvka only above about 9
 
 {/* LINKMAP:END */}
 

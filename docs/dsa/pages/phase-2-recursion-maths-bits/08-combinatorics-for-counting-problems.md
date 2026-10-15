@@ -282,9 +282,9 @@ wrong counts are one of those two conditions violated silently, and both take on
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [Binomial Coefficients](https://cp-algorithms.com/combinatorics/binomial-coefficients.html) — cp-algorithms: the base for counting: formulas, Pascal's recurrence, computing modulo m
-- **Also good:** [Catalan Numbers](https://cp-algorithms.com/combinatorics/catalan-numbers.html) — cp-algorithms: includes the balanced-parentheses interpretation
-- **Also good:** [The Inclusion-Exclusion Principle](https://cp-algorithms.com/combinatorics/inclusion-exclusion.html) — cp-algorithms: the principle with worked uses
+- **Read this:** [Catalan numbers](https://cp-algorithms.com/combinatorics/catalan-numbers.html) — cp-algorithms: counts bracket sequences, binary trees and triangulations; the sum recurrence and the closed form C(2n, n) over n+1 (*read*)
+- **Also good:** [Inclusion-exclusion](https://cp-algorithms.com/combinatorics/inclusion-exclusion.html) — cp-algorithms: the alternating-sum principle with derangements as an application (*read*)
+- **Also good:** [Binomial coefficients](https://cp-algorithms.com/combinatorics/binomial-coefficients.html) — cp-algorithms: Pascal's triangle in O(n squared) and the modular route (*read*)
 
 {/* LINKMAP:END */}
 

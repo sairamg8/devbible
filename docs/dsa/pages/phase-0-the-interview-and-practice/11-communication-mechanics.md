@@ -166,8 +166,9 @@ the hint in the same breath.
 
 *Best explanations found elsewhere on the web — added alongside this page, nothing here replaces it.*
 
-- **Read this:** [How candidates are evaluated in coding interviews (section 1, Communication)](https://www.techinterviewhandbook.org/coding-signals/) — Tech Interview Handbook: lists the communication signals (clarifying questions, approach and tradeoffs, constant narration while coding)
-- **Also good:** [The Jedi Way to Talk Through Code in Interviews](https://dev.to/timevolt/the-jedi-way-to-talk-through-code-in-interviews-5ap0) — DEV Community: a State, Plan, Execute script with sample wording, plus advice to state test cases and complexity aloud
+- **Read this:** [Coding interview rubrics](https://www.techinterviewhandbook.org/coding-interview-rubrics/) — Tech Interview Handbook, updated Aug 7, 2026: Communication means asking clarifying questions and explaining approach and reasoning while coding (*read*)
+- **Also good:** [Coding interview techniques](https://www.techinterviewhandbook.org/coding-interview-techniques/) — Tech Interview Handbook: outline the high-level functions first to show structured thinking, and state the best theoretical time complexity to the interviewer (*read*)
+- **Beyond the docs:** [Solving Coding Problems Without Overthinking](https://algocademy.com/blog/solving-coding-problems-without-overthinking-how-to-trust-your-instincts/) — AlgoCademy, Oct 15, 2024: narrating your process lets the interviewer follow the logic and step in with guidance (*read*)
 
 {/* LINKMAP:END */}
 
