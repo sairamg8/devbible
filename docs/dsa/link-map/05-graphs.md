@@ -31,8 +31,10 @@ Covers every topic row of phases 12 and 13 in `docs/dsa/syllabus/05-graphs.md`: 
 - **Our delta:** recursive and iterative forms that visit in the same order, the visited discipline, and the three colours as the whole cycle test for directed graphs.
 
 ### T12-04 · Connected components and flood fill — Master · 🔲 not written
-- **Read this:** [Search for connected components in a graph](https://cp-algorithms.com/graph/search-for-connected-components.html) · cp-algorithms · a series of DFS rounds, each started at an unvisited node and marking its whole component, in O(n+m), with an iterative version to avoid stack overflow on big graphs (*read*) · covers our angle: **partial** — plain graphs only, no grid, island count or surrounded-regions variant · fetched 2026-10-14
+- **Read this:** [Flood fill and connected components (USACO Guide)](https://usaco.guide/silver/flood-fill) · USACO Guide · grid components with a visited array, a recursive form then a stack-or-queue form, a warning that deep recursion can overflow the stack, and a padding trick for bounds checks (*read*) · covers our angle: **partial** — grid only, Python only, no in-place sinking · fetched 2026-10-15
+- **Also good:** [Search for connected components in a graph](https://cp-algorithms.com/graph/search-for-connected-components.html) · cp-algorithms · a series of DFS rounds, each started at an unvisited node and marking its whole component, in O(n+m), with an iterative version to avoid stack overflow on big graphs (*read*) · fetched 2026-10-14
 - **Also good:** [Flood fill](https://en.wikipedia.org/wiki/Flood_fill) · Wikipedia · four-way against eight-way connectivity, and moving the recursion into a stack or queue to prevent stack overflow, at a memory cost (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [200. Number of Islands](https://neetcode.io/solutions/number-of-islands) · NeetCode · DFS, BFS and union-find solutions, land marked as water in place, and the pitfall that forgetting to mark cells loops forever (*read*) · fetched 2026-10-15
 - **Our delta:** the grid forms (count islands, largest area, surrounded regions) on one template, and marking visited in place as a trade against mutating the input.
 
 ### T12-05 · Cycle detection — Master · 🔲 not written
@@ -41,18 +43,23 @@ Covers every topic row of phases 12 and 13 in `docs/dsa/syllabus/05-graphs.md`: 
 - **Our delta:** why undirected and directed need different tests, the parent check and where it breaks, and the same question answered by union-find.
 
 ### T12-06 · Topological sort — Master · 🔲 not written
-- **Read this:** [Topological Sorting](https://cp-algorithms.com/graph/topological-sort.html) · cp-algorithms · runs DFS from every unvisited vertex, records exit order and reverses it; says an order exists only without cycles, and leaves cycle checking to the DFS article (*read*) · covers our angle: **partial** — no Kahn's algorithm and no cycle detection inside the procedure · fetched 2026-10-14
+- **Read this:** [Topological Sort (USACO Guide)](https://usaco.guide/gold/toposort) · USACO Guide · DFS and Kahn versions, a cycle shown by the output being shorter than the vertex count, a priority queue in Kahn for the lexicographically smallest order, and DP on the result (*read*) · covers our angle: **partial** — Python code only · fetched 2026-10-15
+- **Also good:** [Topological Sorting](https://cp-algorithms.com/graph/topological-sort.html) · cp-algorithms · runs DFS from every unvisited vertex, records exit order and reverses it; says an order exists only without cycles, and leaves cycle checking to the DFS article (*read*) · fetched 2026-10-14
 - **Also good:** [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting) · Wikipedia · describes both Kahn's algorithm and the DFS-based one, and states an order is possible if and only if the graph has no directed cycles (*read*) · fetched 2026-10-14
 - **Also good:** [Algorithms 4th ed., 4.2 Directed Graphs](https://algs4.cs.princeton.edu/42digraph/) · Sedgewick and Wayne, Princeton · reverse DFS postorder of a DAG is a topological order, in time proportional to V+E (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [Topological Sort: Kahn's Algorithm and DFS Approach](https://www.techinterview.org/post/3233460122/topological-sort-kahns-algorithm-and-dfs-approach/) · techinterview · both methods on course prerequisites, each returning no order when a cycle exists (Python) (*read*) · page dated 2026-04-16 · fetched 2026-10-15
 - **Our delta:** Kahn's count of processed nodes as the "no order exists" test, side by side with the DFS form, applied to the course-schedule family.
 
 ### T12-07 · Multi-source BFS — Master · 🔲 not written
-- **Read this:** [Breadth-first search](https://cp-algorithms.com/graph/breadth-first-search.html) · cp-algorithms · the single-source queue the technique extends; the page does not cover multi-source BFS itself (*read*) · covers our angle: **partial** — the queue discipline only; seeding with every source is not shown · fetched 2026-10-14
+- **Read this:** [Multi-Source BFS: Solving the Rotting Oranges Problem](https://johnkavanagh.co.uk/articles/multi-source-bfs-solving-the-rotting-oranges-problem) · John Kavanagh · every rotten orange seeded into the queue first, one BFS level per minute, a fresh-orange count for the return value, and why DFS is the wrong fit, in TypeScript (*read*) · page dated 2026-03-09 · covers our angle: **partial** — one problem, no walls and gates · fetched 2026-10-15
 - **Also good:** [Red Blob Games, grids and graphs](https://www.redblobgames.com/pathfinding/grids/graphs.html) · Red Blob Games · cells, neighbours and direction offsets for the grid versions of rotting oranges and walls and gates (*read*) · page dated 2026-03-23 · fetched 2026-10-14
+- **Also good:** [Breadth-first search](https://cp-algorithms.com/graph/breadth-first-search.html) · cp-algorithms · the single-source queue the technique extends; the page does not cover multi-source BFS itself (*read*) · fetched 2026-10-14
 - **Our delta:** putting every source in the queue at distance zero as one BFS, and why that equals a hidden super-source joined to all of them.
 
 ### T12-08 · BFS on implicit graphs — Master · 🔲 not written
-- **Read this:** [Breadth-first search](https://cp-algorithms.com/graph/breadth-first-search.html) · cp-algorithms · treats game states as vertices so that BFS yields the fewest moves, and builds an auxiliary graph of vertex and parity states (*read*) · covers our angle: **partial** — states as vertices is there, but word ladder, mutations and knight moves are not worked · fetched 2026-10-14
+- **Read this:** [Word Ladder: BFS on Implicit Graphs Explained](https://www.techinterview.org/post/3233460139/word-ladder-bfs-on-implicit-graphs-explained/) · techinterview · words as nodes, single-letter differences as edges, wildcard patterns to group neighbours, and a bidirectional BFS optimisation (Python) (*read*) · page dated 2026-04-16 · covers our angle: **partial** — no knight moves or minimum mutations · fetched 2026-10-15
+- **Also good:** [1293. Shortest Path in a Grid with Obstacles Elimination](https://algo.monster/liteproblems/1293) · AlgoMonster · BFS over the state (row, column, eliminations left), visited tracked per state so the same cell can be revisited with a different count (*read*) · fetched 2026-10-15
+- **Also good:** [Breadth-first search](https://cp-algorithms.com/graph/breadth-first-search.html) · cp-algorithms · treats game states as vertices so that BFS yields the fewest moves, and builds an auxiliary graph of vertex and parity states (*read*) · fetched 2026-10-14
 - **Also good:** [Grids and graphs](https://www.redblobgames.com/pathfinding/grids/graphs.html) · Red Blob Games · neighbours computed on demand instead of storing edges (*read*) · page dated 2026-03-23 · fetched 2026-10-14
 - **Our delta:** the state as the node and the neighbour function as the edges, with word ladder's wildcard-bucket trick for generating neighbours cheaply.
 
@@ -66,27 +73,31 @@ Covers every topic row of phases 12 and 13 in `docs/dsa/syllabus/05-graphs.md`: 
 ### T12-10 · Grid tricks — Master · 🔲 not written
 - **Read this:** [Grids and graphs](https://www.redblobgames.com/pathfinding/grids/graphs.html) · Red Blob Games · a `dirs` list of offset pairs added to the current coordinates, a neighbours function filtered by bounds or membership, four edges per cell and four more for diagonals (*read*) · page dated 2026-03-23 · covers our angle: **partial** — no cell-as-one-integer encoding and no in-place visited marks · fetched 2026-10-14
 - **Also good:** [Flood fill](https://en.wikipedia.org/wiki/Flood_fill) · Wikipedia · four-way against eight-way movement (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [Matrix Traversal (AlgoMaster)](https://algomaster.io/learn/dsa/matrix-traversal-introduction) · AlgoMaster · a grid as an implicit graph with neighbours computed from direction arrays, in-place marking with a warning that it changes the input, plus iterative DFS and BFS (code blocks are tabs and were not read) (*read*) · fetched 2026-10-15
 - **Our delta:** the direction-vector array, the bounds check written once, encoding a cell as row times width plus column, and marking visited in place.
 
 ### T12-11 · Bipartite check — Understand · 🔲 not written
 - **Read this:** [Check whether a graph is bipartite](https://cp-algorithms.com/graph/bipartite-check.html) · cp-algorithms · BFS from each unvisited vertex, flipping the side with `side[v] ^ 1` for each new neighbour, and a neighbour on the same side means not bipartite (*read*) · covers our angle: **partial** — the BFS form and the loop over disconnected parts are there; the DFS form and the possible-bipartition problem are not · fetched 2026-10-14
 - **Also good:** [Bipartite graph](https://en.wikipedia.org/wiki/Bipartite_graph) · Wikipedia · bipartite means no odd-length cycle, equivalently two-colourable, and a linear-time DFS or BFS two-colouring tests it (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [How to Determine a Bipartite Graph](https://labuladong.online/en/algo/data-structure/bipartite-graph/) · labuladong · the two-colour framing in DFS and BFS, with Is Graph Bipartite and Possible Bipartition as the worked problems (*read*) · fetched 2026-10-15
 - **Our delta:** the same test in BFS and DFS, the disconnected-graph loop, and the possible-bipartition problem as the interview wrapper.
 
 ### T12-12 · Cloning and constructing graphs — Understand · 🔲 not written
-- **Read this:** [Graph (abstract data type)](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)) · Wikipedia · the adjacency-list structure that a deep copy has to reproduce node by node (*read*) · covers our angle: **partial** — no cloning algorithm · fetched 2026-10-14
+- **Read this:** [133. Clone Graph](https://neetcode.io/solutions/clone-graph) · NeetCode · an old-to-new hash map with DFS and BFS, the map stopping the recursion on cycles, O(V + E) time (*read*) · covers our angle: full · fetched 2026-10-15
 - **Also good:** [Depth First Search](https://cp-algorithms.com/graph/depth-first-search.html) · cp-algorithms · the traversal that clone-by-DFS rides on (*read*) · fetched 2026-10-14
+- **Also good:** [Graph (abstract data type)](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)) · Wikipedia · the adjacency-list structure that a deep copy has to reproduce node by node (*read*) · fetched 2026-10-14
 - **Our delta:** the old-to-new map doing double duty as the visited set, so cycles do not recurse forever, in DFS and BFS forms.
 
 ### T12-13 · Minimum spanning tree — Understand · 🔲 not written
-- **Read this:** [Minimum spanning tree, Kruskal's algorithm](https://cp-algorithms.com/graph/mst_kruskal.html) · cp-algorithms · sort edges and merge components; O(M log N + N squared) with a naive relabelling, about O(M log N) once a DSU replaces it (*read*) · covers our angle: **partial** — DSU is linked, not implemented, and no minimum-cost-to-connect-points problem · fetched 2026-10-14
+- **Read this:** [Algorithms 4th ed., 4.3 Minimum Spanning Trees](https://algs4.cs.princeton.edu/43mst/) · Sedgewick and Wayne, Princeton · Kruskal with a priority queue and union-find in E log E; lazy Prim in E log E and eager Prim in E log V (*read*) · covers our angle: **partial** — Java only, no minimum cost to connect points · fetched 2026-10-14
+- **Also good:** [Minimum spanning tree, Kruskal's algorithm](https://cp-algorithms.com/graph/mst_kruskal.html) · cp-algorithms · sort edges and merge components; O(M log N + N squared) with a naive relabelling, about O(M log N) with a DSU, which is on [the sibling page](https://cp-algorithms.com/graph/mst_kruskal_with_dsu.html) (*read*) · fetched 2026-10-14
 - **Also good:** [Minimum spanning tree, Prim's algorithm](https://cp-algorithms.com/graph/mst_prim.html) · cp-algorithms · O(n squared) for dense graphs with plain arrays and O(m log n) for sparse graphs with a `set` (a red-black tree); no heap (*read*) · fetched 2026-10-14
-- **Also good:** [Algorithms 4th ed., 4.3 Minimum Spanning Trees](https://algs4.cs.princeton.edu/43mst/) · Sedgewick and Wayne, Princeton · Kruskal with a priority queue and union-find in E log E; lazy Prim in E log E and eager Prim in E log V (*read*) · fetched 2026-10-14
 - **Beyond the docs:** [VisuAlgo, minimum spanning tree](https://visualgo.net/en/mst) · VisuAlgo, National University of Singapore · animates Kruskal on union-find and Prim on a priority queue (*read*) · fetched 2026-10-14
 - **Our delta:** Kruskal with union-find and Prim with a heap shown as the same cut rule, and the dense-points problem where an O(n squared) Prim beats building all edges.
 
 ### T12-14 · 0-1 BFS — Understand · 🔲 not written
 - **Read this:** [0-1 BFS](https://cp-algorithms.com/graph/01_bfs.html) · cp-algorithms · a single deque with weight-0 edges pushed to the front and weight-1 edges to the back; also gives a two-vector variant reported 1.15 times faster on cache-sized graphs, and Dial's algorithm (*read*) · covers our angle: **partial** — C++ only, and no Java or TypeScript deque · fetched 2026-10-14
+- **Also good:** [0-1 BFS (Shortest Path in a Binary Weight Graph)](https://www.geeksforgeeks.org/0-1-bfs-shortest-path-binary-graph/) · GeeksforGeeks · the deque version against Dijkstra, O(V + E) against O(E log V) (*read*; the C++ code was seen, the Java tab was not read) · fetched 2026-10-15
 - **Also good:** [ArrayDeque (Java SE 21)](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayDeque.html) · Oracle · the Java deque for both ends, null elements prohibited, amortised constant-time operations (*read*) · fetched 2026-10-14
 - **Our delta:** why the deque keeps distances in nondecreasing order, and the TypeScript stand-in for a deque, since an array's `shift` is linear.
 
@@ -97,7 +108,8 @@ Covers every topic row of phases 12 and 13 in `docs/dsa/syllabus/05-graphs.md`: 
 - **Our delta:** `Map<number, number[]>` against `List<List<Integer>>`, the depth at which recursive DFS fails on a large grid in each language, and the explicit-stack fallback.
 
 ### T12-16 · Graph problems that are really trees — Know · 🔲 not written
-- **Read this:** [Tree (graph theory)](https://en.wikipedia.org/wiki/Tree_(graph_theory)) · Wikipedia · a tree on n vertices is equivalent to connected with n minus 1 edges, or acyclic with n minus 1 edges; a forest is defined separately as an acyclic graph or a disjoint union of trees (*read*) · covers our angle: **partial** — no valid-tree interview test or parent array · fetched 2026-10-14
+- **Read this:** [261. Graph Valid Tree](https://neetcode.io/solutions/graph-valid-tree) · NeetCode · a tree is connected with no cycle and n minus 1 edges, solved by DFS with a parent skip, BFS and union-find, with the edge-count shortcut and false cycles from parent edges as pitfalls (*read*) · covers our angle: full · fetched 2026-10-15
+- **Also good:** [Tree (graph theory)](https://en.wikipedia.org/wiki/Tree_(graph_theory)) · Wikipedia · a tree on n vertices is equivalent to connected with n minus 1 edges, or acyclic with n minus 1 edges; a forest is defined separately as an acyclic graph or a disjoint union of trees (*read*) · fetched 2026-10-14
 - **Also good:** [Disjoint Set Union](https://cp-algorithms.com/data_structures/disjoint_set_union.html) · cp-algorithms · the union-find route to the same edge-by-edge cycle test (*read*) · fetched 2026-10-14
 - **Our delta:** the edge-count test (n minus 1 edges plus connected, or plus acyclic) as the one-line valid-tree check, and the parent array for a rooted forest.
 
@@ -114,13 +126,16 @@ Covers every topic row of phases 12 and 13 in `docs/dsa/syllabus/05-graphs.md`: 
 - **Our delta:** the relaxation invariant stated once, a hand-written TypeScript heap against Java's built-in, and network delay and minimum effort as the two problem shapes.
 
 ### T13-02 · Constrained shortest paths — Master · 🔲 not written
-- **Read this:** [Bellman-Ford Algorithm](https://cp-algorithms.com/graph/bellman_ford.html) · cp-algorithms · the invariant that after phase i the algorithm has found all shortest paths of at most i edges; the page has no separate k-edges-limited variant (*read*) · covers our angle: **partial** — the invariant behind the bounded rounds, not the cheapest-flights problem · fetched 2026-10-14
+- **Read this:** [787. Cheapest Flights Within K Stops](https://neetcode.io/solutions/cheapest-flights-within-k-stops) · NeetCode · Dijkstra with the stop count tracked, Bellman-Ford with a temporary prices array per round, and SPFA, with pitfalls for stops against flights and for a missing temporary array (*read*) · covers our angle: full for the two solutions the gate asks for · fetched 2026-10-15
+- **Also good:** [Cheapest Flights Within K Stops (AlgoMaster)](https://algomaster.io/learn/dsa/cheapest-flights-within-k-stops) · AlgoMaster · BFS with level tracking, modified Bellman-Ford, and Dijkstra with the flight count in the state (*read*) · fetched 2026-10-15
+- **Also good:** [Bellman-Ford Algorithm](https://cp-algorithms.com/graph/bellman_ford.html) · cp-algorithms · the invariant that after phase i the algorithm has found all shortest paths of at most i edges; the page has no separate k-edges-limited variant (*read*) · fetched 2026-10-14
 - **Also good:** [Breadth-first search](https://cp-algorithms.com/graph/breadth-first-search.html) · cp-algorithms · states as vertices, the layered idea for stop counts (*read*) · fetched 2026-10-14
 - **Our delta:** cheapest flights within k stops solved two ways, by layered rounds with a copy of the distance array each round and by Dijkstra over a (city, stops) state, with the reason the plain visited-once Dijkstra is wrong.
 
 ### T13-03 · The decision table — Master · 🔲 not written
 - **Read this:** [Shortest path problem](https://en.wikipedia.org/wiki/Shortest_path_problem) · Wikipedia · Dijkstra for non-negative weights, Bellman-Ford if weights may be negative, Floyd-Warshall for all pairs, BFS for unweighted in O(E+V), and topological sorting for a DAG in Theta(E+V) even with arbitrary weights (*read*) · covers our angle: **partial** — complexity tables per graph class, but no single decision table keyed on the graph's shape · fetched 2026-10-14
 - **Also good:** [Algorithms 4th ed., 4.4 Shortest Paths](https://algs4.cs.princeton.edu/44sp/) · Sedgewick and Wayne, Princeton · acyclic digraphs relaxed in topological order handle negative weights in E+V; Bellman-Ford in E times V (*read*) · fetched 2026-10-14
+- **Also good:** [Shortest Paths with Non-Negative Edge Weights (USACO Guide)](https://usaco.guide/gold/shortest-paths) · USACO Guide · Bellman-Ford, Floyd-Warshall and Dijkstra (O(N squared) and O(M log N)) on one page, with a note that the loop order for Floyd-Warshall is k, i, j (*read*) · fetched 2026-10-15
 - **Our delta:** one table keyed on the graph's shape, with the cost of each entry and the one-line reason for each rung, built to be reproduced on a blank page.
 
 ### T13-04 · Bellman–Ford — Understand · 🔲 not written
@@ -135,7 +150,9 @@ Covers every topic row of phases 12 and 13 in `docs/dsa/syllabus/05-graphs.md`: 
 - **Our delta:** why `k` must be outermost, a feel for the n at which cubic stops fitting the limit, and the threshold-neighbours style of problem.
 
 ### T13-06 · Shortest paths over an extended state — Understand · 🔲 not written
-- **Read this:** [Breadth-first search](https://cp-algorithms.com/graph/breadth-first-search.html) · cp-algorithms · the auxiliary graph of (vertex, parity) states, the same move as cell plus remaining budget (*read*) · covers our angle: **partial** — a parity example, not an obstacle-removal grid · fetched 2026-10-14
+- **Read this:** [1293. Shortest Path in a Grid with Obstacles Elimination](https://algo.monster/liteproblems/1293) · AlgoMonster · BFS over (row, column, eliminations left), visited tracked per state, O(m n k) states, and the k at least m plus n minus 3 shortcut (*read*) · covers our angle: full · fetched 2026-10-15
+- **Also good:** [Shortest Path in a Grid with Obstacles Elimination (AlgoMaster)](https://algomaster.io/learn/dsa/shortest-path-in-a-grid-with-obstacles-elimination) · AlgoMaster · BFS with state tracking, then an A-star variant with a Manhattan heuristic on the same states (*read*) · fetched 2026-10-15
+- **Also good:** [Breadth-first search](https://cp-algorithms.com/graph/breadth-first-search.html) · cp-algorithms · the auxiliary graph of (vertex, parity) states, the same move as cell plus remaining budget (*read*) · fetched 2026-10-14
 - **Also good:** [Algorithms 4th ed., 4.4 Shortest Paths](https://algs4.cs.princeton.edu/44sp/) · Sedgewick and Wayne, Princeton · Dijkstra's relaxation over whatever the vertices are (*read*) · fetched 2026-10-14
 - **Our delta:** cell plus remaining removals as the node, the visited array gaining a dimension, and when BFS suffices and when a heap is needed.
 
@@ -149,6 +166,7 @@ Covers every topic row of phases 12 and 13 in `docs/dsa/syllabus/05-graphs.md`: 
 - **Read this:** [Finding bridges in a graph in O(N+M)](https://cp-algorithms.com/graph/bridge-searching.html) · cp-algorithms · `tin` is the DFS entry time, `low` the smallest entry time reachable by one back edge from the subtree, and a tree edge (v, to) is a bridge exactly when low of `to` is greater than tin of v (*read*) · covers our angle: **partial** — bridges only, in C++ · fetched 2026-10-14
 - **Also good:** [Finding articulation points in a graph in O(N+M)](https://cp-algorithms.com/graph/cutpoints.html) · cp-algorithms · the vertex version: low of a child at least tin of v, with the root a cut vertex only if it has more than one DFS child, in O(N+M) (*read*) · fetched 2026-10-14
 - **Also good:** [Algorithms 4th ed., 4.1 Undirected Graphs](https://algs4.cs.princeton.edu/41graph/) · Sedgewick and Wayne, Princeton · brute-force bridge finding costs O(E(V+E)) and DFS-based methods reduce it to O(V+E) (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [Bridges and Articulation Points (SOI wiki)](https://soi.ch/wiki/bridges-articulationpoints/) · Swiss Olympiad in Informatics · bridge test low of v greater than pre of u after a DFS, then the articulation-point version with the root special case (C++) (*read*) · fetched 2026-10-15
 - **Our delta:** the low-link rule explained once with the parent edge handled, and critical connections as the shape.
 
 ### T13-09 · Eulerian paths — Understand · 🔲 not written
@@ -157,12 +175,16 @@ Covers every topic row of phases 12 and 13 in `docs/dsa/syllabus/05-graphs.md`: 
 - **Our delta:** the directed variant with sorted adjacency for the lexicographically smallest itinerary, and why the answer is built in reverse.
 
 ### T13-10 · Ordering from constraints — Understand · 🔲 not written
-- **Read this:** [Topological Sorting](https://cp-algorithms.com/graph/topological-sort.html) · cp-algorithms · the ordering machinery the alien-dictionary graph is fed into (*read*) · covers our angle: **partial** — no graph-building from comparisons and no contradiction handling · fetched 2026-10-14
+- **Read this:** [269. Alien Dictionary](https://algo.monster/liteproblems/269) · AlgoMonster · edges from the first differing character of adjacent words, the prefix pitfall for an invalid order, contradictory edges, then Kahn's algorithm with a cycle check (TypeScript among the tabs) (*read*) · covers our angle: **partial** — no tie-breaking · fetched 2026-10-15
+- **Also good:** [Topological Sort (USACO Guide)](https://usaco.guide/gold/toposort) · USACO Guide · a priority queue in Kahn's algorithm gives the lexicographically smallest order, and a short output means a cycle (*read*) · fetched 2026-10-15
+- **Also good:** [Topological Sorting](https://cp-algorithms.com/graph/topological-sort.html) · cp-algorithms · the ordering machinery the alien-dictionary graph is fed into (*read*) · fetched 2026-10-14
 - **Also good:** [Topological sorting](https://en.wikipedia.org/wiki/Topological_sorting) · Wikipedia · Kahn's algorithm, which is the natural fit for tie-breaking and for noticing a cycle (*read*) · fetched 2026-10-14
 - **Our delta:** edges from the first differing character of adjacent words, the prefix trap that signals an invalid dictionary, and a cycle as a contradiction.
 
 ### T13-11 · DP on DAGs — Understand · 🔲 not written
-- **Read this:** [Longest path problem](https://en.wikipedia.org/wiki/Longest_path_problem) · Wikipedia · on a DAG longest paths are found in linear time, because negating the weights creates no negative cycle; used in critical path analysis (*read*) · covers our angle: **partial** — no path-counting and no code · fetched 2026-10-14
+- **Read this:** [CSE 421 Dynamic Programming: Longest Path in a DAG](https://courses.cs.washington.edu/courses/cse421/22sp/lecture-20.pdf) · University of Washington · topological order as the DP order, OPT(j) = 1 plus the best predecessor, and a note that longest path is NP-hard on general digraphs (*read*) · covers our angle: **partial** — no path counting · fetched 2026-10-15
+- **Also good:** [DAGs, sinks, extraction order, and dynamic programming](https://courses.grainger.illinois.edu/CS374AL1/fa2024/lec/notes/dags.pdf) · Illinois (Har-Peled) · longest path by edge count and weighted s-to-t in linear time (*read*) · fetched 2026-10-15
+- **Also good:** [Longest path problem](https://en.wikipedia.org/wiki/Longest_path_problem) · Wikipedia · on a DAG longest paths are found in linear time, because negating the weights creates no negative cycle; used in critical path analysis (*read*) · fetched 2026-10-14
 - **Also good:** [Algorithms 4th ed., 4.4 Shortest Paths](https://algs4.cs.princeton.edu/44sp/) · Sedgewick and Wayne, Princeton · relax vertices in topological order for E+V, and flip the inequality for longest paths, applied to job scheduling (*read*) · fetched 2026-10-14
 - **Our delta:** topological order first and DP second as the standard recipe, with counting paths as the same loop over a different recurrence, and the hand-off to Part 6.
 
@@ -176,16 +198,21 @@ Covers every topic row of phases 12 and 13 in `docs/dsa/syllabus/05-graphs.md`: 
 - **Read this:** [Maximum flow, Ford-Fulkerson and Edmonds-Karp](https://cp-algorithms.com/graph/edmonds_karp.html) · cp-algorithms · repeatedly find a source-to-sink path with spare residual capacity and push flow along it; BFS for paths gives O(VE squared); also the max-flow min-cut theorem (*read*) · covers our angle: **partial** — no matching reduction · fetched 2026-10-14
 - **Also good:** [Kuhn's algorithm for maximum bipartite matching](https://cp-algorithms.com/graph/kuhn_maximum_bipartite_matching.html) · cp-algorithms · an augmenting path is an alternating path with unsaturated ends, and the algorithm runs in O(nm) (*read*) · fetched 2026-10-14
 - **Also good:** [Maximum flow problem](https://en.wikipedia.org/wiki/Maximum_flow_problem) · Wikipedia · a maximum bipartite matching as a unit-capacity max flow, with a source on one side and a sink on the other (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [CSE 421 Lecture 18: Efficient Maximum Flow and Applications](https://courses.cs.washington.edu/courses/cse421/26wi/lecture/lecture18.pdf) · University of Washington · the augmenting-path proof, then bipartite matching as a flow with the integer-flow bijection (*read*) · fetched 2026-10-15
 - **Our delta:** the augmenting-path idea in a paragraph, and the short list of problems where it appears.
 
 ### T13-14 · The NP-hard boundary — Know · 🔲 not written
 - **Read this:** [Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) · Wikipedia · TSP is NP-hard, Held-Karp dynamic programming runs in O(n squared times 2 to the n) against O(n factorial) brute force, and heuristics such as nearest neighbour, Christofides-Serdyukov and 2-opt exist (*read*) · covers our angle: **partial** — no interview advice on how to react · fetched 2026-10-14
 - **Also good:** [Graph coloring](https://en.wikipedia.org/wiki/Graph_coloring) · Wikipedia · deciding k-colourability is NP-complete for every k except 0, 1 and 2 (*read*) · fetched 2026-10-14
 - **Also good:** [Independent set (graph theory)](https://en.wikipedia.org/wiki/Independent_set_(graph_theory)) · Wikipedia · maximum independent set is strongly NP-hard, and its decision version is NP-complete (*read*) · fetched 2026-10-14
+- **Also good:** [Bitmask DP (USACO Guide)](https://usaco.guide/gold/dp-bitmasks) · USACO Guide · subset DP over visited cities with the Hamiltonian Flights problem, O(2 to the N times N squared) (*read*; the code is Python and was not run) · fetched 2026-10-15
+- **Beyond the docs:** [Version SAT](https://research.swtch.com/version-sat) · Russ Cox · package version selection shown NP-complete, a concrete case of spotting a hard problem in real work (*read*) · page dated 2016-12-13 · fetched 2026-10-15
 - **Our delta:** recognising the shape in thirty seconds, saying so aloud, then reaching for bitmask DP when n is about 20 or a heuristic when it is not; the TSP mask DP itself is already written in `docs/dsa/pages/phase-2-recursion-maths-bits/09f-dp-over-masks-with-a-last-element.md`, which this page should link rather than repeat.
 
 ### T13-15 · Graphs in real systems — Know · 🔲 not written
 - **Read this:** [Dependency graph](https://en.wikipedia.org/wiki/Dependency_graph) · Wikipedia · edges mean one object needs another evaluated first, any topological order is a valid build order, a cycle means no order exists; names Make and npm (*read*) · covers our angle: **partial** — the dependency graph only; roads and social graphs are not there · fetched 2026-10-14
 - **Also good:** [Contraction hierarchies](https://en.wikipedia.org/wiki/Contraction_hierarchies) · Wikipedia · road networks reach tens of millions of vertices, so plain Dijkstra is impractical and precomputed shortcuts give queries in microseconds (*read*) · fetched 2026-10-14
+- **Also good:** [TAO: Facebook's Distributed Data Store for the Social Graph](https://www.usenix.org/system/files/conference/atc13/atc13-bronson.pdf) · USENIX ATC 2013 · the social graph as objects and associations, served by a graph-aware cache in front of MySQL (*read*) · fetched 2026-10-15
 - **Also good:** [Social graph](https://en.wikipedia.org/wiki/Social_graph) · Wikipedia · the graph of social ties, people as nodes and friendships as edges (*read*) · fetched 2026-10-14
+- **Beyond the docs:** [Version SAT](https://research.swtch.com/version-sat) · Russ Cox · package-manager dependency resolution as a constraint problem over the dependency graph, and why a diamond dependency can leave no valid choice (*read*) · page dated 2016-12-13 · fetched 2026-10-15
 - **Our delta:** the three real graphs mapped back to the algorithms of these two phases, with a pointer to the System Design track's map and feed problems.
